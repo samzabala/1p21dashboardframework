@@ -1,0 +1,29 @@
+
+//Brand styleguide
+	//type
+		$body-font: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+			$body-font-weight: 500;
+				$body-font-weight-bold: 500;
+			$body-font-size: 15px;
+			$body-line-height: 30 / 15;
+
+	//color schemes
+		$color-base: #000000;
+		$color-primary: #0480fe;
+			$color-primary-alt: #4b5be3;
+		$color-accent: #d415af;
+			$color-accent-alt: #843ecd;
+
+
+		$white: #ffffff;
+			$white-alt: #e4e6e9;
+		$gray: #8d8d8d;
+
+		$info: $gray;
+		$success: #15b800;
+		$caution: #fd7f03;
+		$error: #fd0303;
+	
+	//padding
+		$gutter-container-x: 70px;
+		$gutter-container-y: 50px;

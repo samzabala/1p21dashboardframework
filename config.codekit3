@@ -9,6 +9,39 @@
 	],
 "creatorBuild": "31491",
 "files": {
+	"/assets/framework.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/framework.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/handlebars.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/handlebars.min-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/jquery.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/jquery.min-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/style.min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1822,6 +1855,14 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/content.php",
+		"oF": 0
+		},
 	"/data/profiles.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -1838,36 +1879,36 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/includes/content.php": {
+	"/footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/includes/content.php",
+		"oAP": "/footer.php",
 		"oF": 0
 		},
-	"/includes/footer.php": {
+	"/header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/includes/footer.php",
+		"oAP": "/header.php",
 		"oF": 0
 		},
-	"/includes/header.php": {
+	"/helpers.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/includes/header.php",
+		"oAP": "/helpers.php",
 		"oF": 0
 		},
-	"/includes/helpers.php": {
+	"/includes/nav.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/includes/helpers.php",
+		"oAP": "/includes/nav.php",
 		"oF": 0
 		},
 	"/includes/sidebar.php": {
@@ -1884,6 +1925,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.php",
+		"oF": 0
+		},
+	"/readme.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/readme.html",
 		"oF": 0
 		},
 	"/readme.md": {
@@ -1905,7 +1954,18 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/src/scss/_modules.scss": {
+	"/src/js/framework.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/framework.min.js",
+		"oF": 2,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/scss/dashboard/_header.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1913,12 +1973,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/_modules.css",
+		"oAP": "/src/scss/dashboard/_header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/src/scss/_reset.scss": {
+	"/src/scss/dashboard/_main.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1926,12 +1986,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/_reset.css",
+		"oAP": "/src/scss/dashboard/_main.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/src/scss/_template_profile.scss": {
+	"/src/scss/dashboard/_sidebar.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1939,12 +1999,29 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/_template_profile.css",
+		"oAP": "/src/scss/dashboard/_sidebar.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/src/scss/_trumbowyg-custom.scss": {
+	"/src/scss/framework/____reference for vars.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 0,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/____reference for vars.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/src/scss/framework/_buttons.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1952,7 +2029,85 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/_trumbowyg-custom.css",
+		"oAP": "/src/scss/framework/_buttons.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/_mixins.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/_mixins.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/_modules.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/_modules.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/_reset.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/_reset.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/_scaffolding.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/_scaffolding.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/_trumbowyg-custom.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/_trumbowyg-custom.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/_vars.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/_vars.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1969,6 +2124,22 @@
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
+		},
+	"/templates/error.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/error.php",
+		"oF": 0
+		},
+	"/templates/home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/home.php",
+		"oF": 0
 		}
 	},
 "hooks": [

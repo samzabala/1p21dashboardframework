@@ -1,2 +1,19 @@
-@import '_reset';
-@import '_trumbowyg-custom';
+//google font
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+//FRAMEWORK
+	@import 'framework/_reset';
+
+	//plugins
+	@import 'framework/_trumbowyg-custom';
+
+	@import 'framework/_vars';
+	@import 'framework/_mixins';
+	@import 'framework/_scaffolding';
+	@import 'framework/_modules';
+	@import 'framework/_buttons';
+
+//DASHBOARD
+	@import 'dashboard/_header';
+	@import 'dashboard/_sidebar';
+	@import 'dashboard/_main';
