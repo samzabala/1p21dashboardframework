@@ -1,0 +1,29 @@
+#dashboard {
+	display:flex;
+	flex-wrap:wrap;
+	background: color(w,alt);
+	min-height: 100vh;
+	&-block {
+		&-sidebar {
+			width: 285px;
+			background: color(w);
+			box-shadow: 0 0 10px -5px color(b);
+		}
+
+		&-main {
+			width:calc(100% - 285px);
+			padding: 50px;
+		}
+
+		@include br(sm-max) {
+			&-sidebar {
+				width: 80px;
+			}
+
+			&-main {
+
+			width:calc(100% - 80px);
+			}
+		}
+	}
+}

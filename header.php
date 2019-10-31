@@ -10,4 +10,4 @@
 	
 	<link rel="stylesheet" type="text/css" href="<?=DASHBOARD_URL;?>/assets/style.min.css">
 </head>
-<body>
+<body id="dashboard">

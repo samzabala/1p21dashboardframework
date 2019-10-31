@@ -1,7 +1,9 @@
 //google font
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-//FRAMEWORK
+/*! 
+FRAMEWORK/SCAFFOLDING STYLES
+****************************************************************************/
 	@import 'framework/_reset';
 
 	//plugins
@@ -13,7 +15,7 @@
 	@import 'framework/_modules';
 	@import 'framework/_buttons';
 
-//DASHBOARD
-	@import 'dashboard/_header';
-	@import 'dashboard/_sidebar';
-	@import 'dashboard/_main';
+/*! 
+DASHBOARD/CUSTOM STYLES
+****************************************************************************/
+	@import 'dashboard/_dashboard';

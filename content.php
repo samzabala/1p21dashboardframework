@@ -1,7 +1,12 @@
 
 
 
-	<main class="block-main">
+	<!-- Sidebar -->
+	<aside id="dashboard-block-sidebar">
+		<?php require_once DASHBOARD_ROOT.'/includes/sidebar.php'; ?>
+	</aside>
+
+	<main id="dashboard-block-main">
 		<!-- Navigation -->
 		<?php require_once DASHBOARD_ROOT.'/includes/nav.php'; ?>
 
@@ -12,15 +17,4 @@
 			<?php app_init_content(); ?>
 		</div>
 
-		<?php
-		echo '<pre>'; 
-		print_r($_SERVER);
-		print_r($_REQUEST);
-		echo '</pre>';
-		?>
 	</main>
-
-	<!-- Sidebar -->
-	<aside class="block-sidebar">
-	<?php require_once DASHBOARD_ROOT.'/includes/sidebar.php'; ?>
-	</aside>

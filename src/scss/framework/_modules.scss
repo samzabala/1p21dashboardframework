@@ -1,0 +1,15 @@
+$prefix: '.module';
+#{$prefix} {
+	&-grid {
+		display: grid;
+	}
+
+	& {
+		background: color(w);
+
+		padding-top: $gutter-container-y;
+		padding-bottom: $gutter-container-y;
+		padding-left: $gutter-container-x;
+		padding-right: $gutter-container-x;
+	}
+}
