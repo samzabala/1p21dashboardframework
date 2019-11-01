@@ -1,0 +1,58 @@
+
+/*! 
+MODULES
+****************************************************************************/
+
+$prefix: '.module';
+#{$prefix} {
+	&-grid {
+		display: grid;
+	}
+
+	& {
+		background: $module-bg-color;
+	}
+
+	&,
+	&-heading {
+		padding-top: $module-gutter-y;
+		border-top-left-radius: $module-border-radius;
+		border-top-right-radius: $module-border-radius;
+	}
+
+	&-heading {
+		margin-top: $module-gutter-y * -1;
+	}
+
+	&,
+	&-heading,
+	&-content,
+	&-footer {
+		padding-left: $module-gutter-x;
+		padding-right: $module-gutter-x;
+		overflow:hidden;
+	}
+
+	&-heading,
+	&-content,
+	&-footer {
+		margin-left: $module-gutter-x * -1;
+		margin-right: $module-gutter-x * -1;
+	}
+
+	&,
+	&-footer {
+		padding-bottom: $module-gutter-y;
+		border-bottom-left-radius: $module-border-radius;
+		border-bottom-right-radius: $module-border-radius;
+	}
+
+	&-footer {
+		margin-bottom: $module-gutter-y * -1;
+	}
+
+	&-heading {
+
+	}
+
+}

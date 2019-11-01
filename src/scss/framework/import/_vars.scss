@@ -1,0 +1,165 @@
+
+/* 
+Brand Styleguide + Scaffolding
+****************************************************************************/
+
+	//type
+		$body-font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif !default;
+		$body-font-weight: 500 !default;
+			$body-font-weight-bold: 600 !default;
+			$body-font-weight-bolder: 700 !default;
+		$body-font-size: 15px !default;
+		$body-line-height: 30px !default;
+
+	//color schemes
+		$brand-base: #000000 !default;
+		$brand-primary: #0480fe !default;
+			// $brand-primary-alt: #4b5be3 !default;
+		$brand-accent: #d415af !default;
+			// $brand-accent-alt: #843ecd !default;
+
+
+		$brand-background: #ffffff !default;
+			$brand-background-alt: #e4e6e9 !default;
+		$brand-neutral: #8d8d8d !default;
+
+		$brand-info: $brand-neutral !default;
+		$brand-success: #15b800 !default;
+		$brand-caution: #fd7f03 !default;
+		$brand-error: #fd0303 !default;
+
+		$brand-intensity-1: $brand-primary !default;
+		$brand-intensity-2: #4b5be3 !default;
+		$brand-intensity-3: #843ecd!default;
+		$brand-intensity-4: #d415af !default;
+		$brand-intensity-5: $brand-accent !default;
+
+		$gradient-start: $brand-primary !default;
+		$gradient-end: $brand-accent !default;
+	
+	//padding
+		$gutter-base: 50px !default;
+			$gutter-large: 70px !default;
+			$gutter-medium: 50px !default;
+			$gutter-small: 20px !default;
+
+		$border-radius-base: 10px;
+				$border-radius-small: $border-radius-base * .5 !default;
+				$border-radius-large: $border-radius-base * 2 !default;
+
+	//icons
+		$icon-size: 30px !default;
+
+
+	//svg
+		$svg-gradient-color-start: $gradient-start !default;
+		$svg-gradient-color-end: $gradient-end !default;
+
+	//typography
+		$anchor-color : $brand-accent !default;
+		$anchor-color-hover : $brand-primary !default;
+/* 
+ANIMATION
+****************************************************************************/
+	$transition-duration-base: .25s !default;
+	$transition-duration-short: .125s !default;
+	$transition-duration-long: .5s !default;
+	$transition-timing: ease-in-out !default;
+
+/* 
+LAYOUT ELEMENTS
+****************************************************************************/
+	//container
+		$container-gutter: $gutter-medium !default;
+			$container-gutter-wide: $gutter-small !default;
+			$container-gutter-slim: $gutter-large !default;
+		$container-max-width: 1800px !default;
+
+/* 
+UI ELEMENTS
+****************************************************************************/
+
+	//nav 
+		$nav-height: 75px;
+		$nav-gutter: $icon-size !default;
+		$nav-background: $brand-background !default;
+		$nav-icon-width: $icon-size !default;
+		$nav-icon-height: $icon-size !default;
+		$nav-line-height: $icon-size !default;
+
+		$nav-current-size: 5px;
+
+		$nav-top-height: 72px !default;
+			$nav-item-height: 35px !default;
+		$nav-top-font-size: 19px !default;
+		$nav-line-height: 38px !default;
+		$nav-font-size: $body-font-size !default;
+
+		$nav-color: inherit !default;
+		$nav-color-hover: $brand-primary !default;
+	
+	//Modules
+		$module-bg-color: $brand-background !default;
+		$module-gutter-x: $gutter-large !default;
+		$module-gutter-y: $gutter-base !default;
+		$module-border-radius: $border-radius-base !default;
+
+	// dropdown + tooltip
+		$popper-gutter-x: $gutter-small !default;
+		$popper-gutter-y: $gutter-small !default;
+		$popper-border-radius: $border-radius-base !default;
+		
+
+
+
+
+/* 
+PLUGIN DEPENDENCIES
+****************************************************************************/
+	
+	//Trumbowyg
+
+		$light-color: #ecf0f1;
+		$dark-color: #222;
+		
+		$modal-submit-color: $brand-primary;
+		$modal-reset-color: $brand-background-alt;
+		
+		$transition-duration: 150ms;
+		$slow-transition-duration: 300ms;
+
+	//mixins shithole
+		$color-base: $brand-base;
+		$color-primary: $brand-primary;
+			// $color-primary-alt:$brand-primary-alt;
+		$color-accent: $brand-accent;
+			// $color-accent-alt: $brand-accent-alt;
+
+		$white: $brand-background;
+			$white-alt: $brand-background-alt;
+		$gray: $brand-neutral;
+
+		$info: $brand-info;
+		$success: $brand-success;
+		$caution: $brand-caution;
+		$error: $brand-error;
+
+
+/* 
+For internal sass programming
+DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
+****************************************************************************/
+$brand-declarations : (
+	base,
+	primary,
+	accent,
+	background,
+	background-alt,
+	neutral,
+	// primary-alt,
+	// accent-alt,
+	info,
+	success,
+	caution,
+	error,
+);

@@ -1,0 +1,26 @@
+@import 'import/_reset';
+
+	//vars
+		@import 'import/_vars';
+
+		// @error $color-primary;
+	//plugins
+		@import 'import/plugins/_trumbowyg-custom';
+		@import 'import/plugins/_shithole';
+
+	//mixins 
+		@import 'import/_mixins';
+	
+	//partials
+		//to cascade + helpers
+		@import 'import/_scaffolding';
+		@import 'import/_typography';
+		@import 'import/_helpers';
+		@import 'import/_images';
+
+		//ui elements
+		@import 'import/_nav';
+		@import 'import/_buttons';
+		@import 'import/_popper';
+		@import 'import/_layout';
+		@import 'import/_modules';

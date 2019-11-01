@@ -4,13 +4,11 @@ While the structure is setup to be dynamic ready, The current setup is to view d
 Feel free to fuck it up when the boi is ready to be fuckened up
 */
 
-define('DASHBOARD_ROOT', $_SERVER['DOCUMENT_ROOT'].'/1p21dashboard' );
-define('DASHBOARD_URL', ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http" ).'://'.$_SERVER['HTTP_HOST'].'/1p21dashboard' );
 
+require_once 'config.php';
+require_once 'helpers.php';
+require_once 'header.php';
 
-require_once DASHBOARD_ROOT.'/helpers.php';
-require_once DASHBOARD_ROOT.'/header.php';
+require_once 'content.php';
 
-require_once DASHBOARD_ROOT.'/content.php';
-
-require_once DASHBOARD_ROOT.'/footer.php';
+require_once 'footer.php';

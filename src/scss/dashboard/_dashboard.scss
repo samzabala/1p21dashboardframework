@@ -1,28 +1,77 @@
+
+
 #dashboard {
-	display:flex;
-	flex-wrap:wrap;
 	background: color(w,alt);
-	min-height: 100vh;
+	&-svg-styles {
+		width:0;
+		height:0;
+		position:absolute;
+		z-index:-9999;
+		top:0;
+		left:0;
+		display:block;
+		overflow:hidden;
+	}
 	&-block {
+		&-sidebar,&-main {
+			overflow-y:scroll;
+			overflow-x:hidden;
+			height: 100vh;
+
+			&::-webkit-scrollbar {
+				display:none!important;
+			}
+		}
 		&-sidebar {
 			width: 285px;
 			background: color(w);
 			box-shadow: 0 0 10px -5px color(b);
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			padding-top: 45px;
+			padding-bottom: 45px;
+			z-index:99999;
+
+			.sidebar {
+				&-logo {
+
+					&,
+					img,
+					svg {
+						margin: 0 auto 65px;
+						display:block;
+					}
+				}
+			}
+
+			&-nav {
+				margin: 0 ($gutter-small * -1);
+			}
+
+			@include br(sm-max) {
+				width: 80px;
+				text-align:center;
+			}
 		}
 
 		&-main {
 			width:calc(100% - 285px);
-			padding: 50px;
-		}
+			padding-top: 50px;
+			padding-bottom: 50px;
+			margin-left: auto;
 
-		@include br(sm-max) {
-			&-sidebar {
-				width: 80px;
+			&-nav {
+				left: 285px;
+				z-index:99998;
 			}
 
-			&-main {
 
-			width:calc(100% - 80px);
+
+			@include br(sm-max) {
+
+				width:calc(100% - 80px);
 			}
 		}
 	}

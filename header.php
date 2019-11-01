@@ -8,6 +8,13 @@
 
 	<!-- styles -->
 	
-	<link rel="stylesheet" type="text/css" href="<?=DASHBOARD_URL;?>/assets/style.min.css">
+	<link rel="stylesheet" type="text/css" href="<?=DASHBOARD_ROOT_URL;?>/assets/style.min.css">
+
+		<script src="<?=DASHBOARD_ROOT_URL;?>/assets/scripts/jquery.min.js"></script>
+		<script src="<?=DASHBOARD_ROOT_URL;?>/assets/scripts/handlebars.min.js"></script>
+		<script src="<?=DASHBOARD_ROOT_URL;?>/assets/scripts/trumbowyg.min.js"></script>
 </head>
-<body id="dashboard">
+<body id="dashboard" class="cf dashboard-<?=DASHBOARD_SLUG ?>">
+	<!--SVG Styles  -->
+	<?php app_get_template_part('includes/svg-globals'); ?>
+	

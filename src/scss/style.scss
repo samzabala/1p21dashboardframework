@@ -1,21 +1,19 @@
 //google font
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
+
+
+
 
 /*! 
-FRAMEWORK/SCAFFOLDING STYLES
+CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 ****************************************************************************/
-	@import 'framework/_reset';
-
-	//plugins
-	@import 'framework/_trumbowyg-custom';
-
-	@import 'framework/_vars';
-	@import 'framework/_mixins';
-	@import 'framework/_scaffolding';
-	@import 'framework/_modules';
-	@import 'framework/_buttons';
+// $brand-base: red;
+/*! 
+FRAMEWORK / SCAFFOLDING STYLES
+****************************************************************************/
+	@import 'framework/framework';
 
 /*! 
-DASHBOARD/CUSTOM STYLES
+DASHBOARD / CUSTOM STYLES
 ****************************************************************************/
 	@import 'dashboard/_dashboard';

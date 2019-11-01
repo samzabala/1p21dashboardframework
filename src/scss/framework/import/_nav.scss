@@ -1,0 +1,131 @@
+
+/*! 
+MODULES
+****************************************************************************/
+$prefix: '.nav';
+#{$prefix} {
+	height: $nav-height;
+	background: $nav-background;
+
+	&,
+	&-list {
+		@include flex();
+	}
+	&#{$prefix}-sticky {
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+
+	}
+	&#{$prefix}-vertical {
+		display:block;
+		#{$prefix}-list,
+		&-dropdown {
+			display:block;
+		}
+	}
+
+	&-item {
+
+		> a {
+	
+			@include type-set((
+				size: em($nav-font-size / $body-font-size),
+				leading: em($nav-line-height / $nav-font-size ),
+				color: $nav-color
+			));
+			
+			padding-top: calc( (#{$nav-item-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
+			padding-bottom: calc( (#{$nav-item-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
+			padding-left: $nav-gutter;
+			padding-right: $nav-gutter;
+			display:flex;
+			align-items: center;
+		}
+
+		&:hover {
+			color: $nav-color-hover;
+		}
+	}
+
+	&-icon {
+		width: $nav-icon-width;
+		height: $nav-icon-height;
+		max-width:none;
+		display:inline-block;
+		vertical-align: middle;
+		line-height:type-lead($nav-line-height,$nav-font-size);
+
+		&:first-child {
+			margin-right: 1em;
+		}
+	}
+
+	&-list > #{$prefix}-item {
+
+		>a {
+			@include type-set((
+				size: em($nav-top-font-size/$nav-font-size),
+				weight: $body-font-weight-bold,
+			));
+			position:relative;
+			padding-top: calc( (#{$nav-top-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
+			padding-bottom: calc( (#{$nav-top-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
+
+			&:after {
+				content:"";
+				position:absolute;
+				bottom:0;
+				right:0;
+				left:0;
+				height:0;
+				transition: $transition-duration-short all $transition-timing;
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 0deg,
+					use-shorthand:false
+				));
+
+
+				#{$prefix}-vertical & {
+					height:auto;
+					width: 0;
+					top:0;
+					left:auto;
+
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 90deg,
+						use-shorthand:false
+					));
+				}
+			}
+		}
+		&:hover,
+		&.open,
+		&.current {
+			> a:after {
+				height: $nav-current-size;
+
+				#{$prefix}-vertical & {
+					height:auto;
+					width:$nav-current-size;
+				}
+			}	
+		}
+	}
+
+	&-dropdown {
+		@extend %pop;
+
+
+	#{$prefix}-item {
+
+			>a {
+			}
+		}
+	}
+}

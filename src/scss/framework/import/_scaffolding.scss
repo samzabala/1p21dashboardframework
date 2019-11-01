@@ -1,0 +1,50 @@
+
+/*! 
+SCAFFOLDING
+****************************************************************************/
+
+body {
+	@include type-set((
+		size: $body-font-size,
+		font: $body-font-family,
+		weight: $body-font-weight,
+		leading: $body-line-height,
+		color: $color-base,
+	));
+	word-wrap: break-word;
+	min-width:320px;
+}
+
+// flex classes
+	.flex {
+
+		&-xs {
+		@extend %flex-xs;
+		}
+		
+		&-sm {
+		@extend %flex-sm;
+		}
+		
+		&-md {
+		@extend %flex-md;
+		}
+		
+		&-lg {
+		@extend %flex-lg;
+		}
+	}
+
+/// super global styles + basic fixes
+
+	img,svg {
+		max-width:100%;
+		height:auto;
+	}
+
+	iframe,
+	object,
+	embed {
+		max-width:100%!important;
+	}
+

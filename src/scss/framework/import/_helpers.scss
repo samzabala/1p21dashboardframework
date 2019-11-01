@@ -1,0 +1,156 @@
+
+/// hide & show classes
+	.desktop-only {
+		display: none !important;
+	}
+
+	.laptop-only {
+		display: none !important;
+	}
+
+	.tablet-only {
+		display: none !important;
+	}
+
+	.mobile-only {
+		display: none !important;
+	}
+
+	.internal-only {
+		display: none !important;
+	}
+
+	body:not(*.home) .internal-only {
+		display: block !important;
+	}
+
+
+	@include breakpoint(lg) {
+		.desktop-only {
+			display: block !important;
+		}
+		
+		.desktop-hide {
+			display:none!important;
+		}
+	}
+
+	@include breakpoint((md,md-max)) {
+		.laptop-only {
+			display: block !important;
+		}
+		
+		.laptop-hide {
+			display:none!important;
+		}
+	}
+
+	@include breakpoint((sm,sm-max)) {
+
+		.tablet-only {
+			display: block !important;
+		}
+		
+		.tablet-hide {
+			display:none!important;
+		}
+	}
+
+	@include breakpoint(xs-max) {
+		.mobile-only {
+			display: block !important;
+		}
+		
+		.mobile-hide {
+			display:none!important;
+		}
+	}
+
+	.sr-only {
+		display:none!important;
+	}
+
+//background color
+.background {
+	@each $color in $brand-declarations {
+		&-#{$color} {
+			background-color: color($color);
+		}
+
+	}
+
+	&-gradient {
+
+		& {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 0deg,
+				use-shorthand:false
+			))
+		}
+
+		&-45 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 45deg,
+				use-shorthand:false
+			))
+		}
+
+		&-90 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 90deg,
+				use-shorthand:false
+			))
+		}
+
+		&-135 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 135deg,
+				use-shorthand:false
+			))
+		}
+
+		&-180 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 180deg,
+				use-shorthand:false
+			))
+		}
+
+		&-225 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 225deg,
+				use-shorthand:false
+			))
+		}
+
+		&-270 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 270deg,
+				use-shorthand:false
+			))
+		}
+
+		&-315 {
+			@include gradient((
+				color1: $gradient-start,
+				color2: $gradient-end,
+				angle: 315deg,
+				use-shorthand:false
+			))
+		}
+	}
+}

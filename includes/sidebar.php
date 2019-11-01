@@ -1,11 +1,7 @@
-<a href="/" class="sidebar-logo">
-	<img src="" alt="">
-</a>
+<div class="container container-wide">
+	<a href="<?=DASHBOARD_ROOT_URL ?>" class="sidebar-logo">
+		<img data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/logo.svg" alt="Logo">
+	</a>
 
-<ul id="navigation">
-	<li>
-		<a href="/">
-		<svg .icon></svg> <span>Home</span>
-		</a>
-	</li>
-</ul>
+	<?php app_get_template_part('includes/sidebar-nav',DASHBOARD_SLUG); ?>
+</div>
