@@ -1,0 +1,230 @@
+
+
+/* 
+For internal framework sass programming 
+DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
+****************************************************************************/
+
+//for helpers
+$brand-color-declarations : (
+	base: $brand-color-base,
+	primary: $brand-color-primary,
+	accent: $brand-color-accent,
+	neutral: $brand-color-neutral,
+	info: $brand-color-info,
+	success: $brand-color-success,
+	caution: $brand-color-caution,
+	error: $brand-color-error,
+);
+
+$brand-intensity: (
+	$brand-color-intensity-1,
+	$brand-color-intensity-2,
+	$brand-color-intensity-3,
+	$brand-color-intensity-4,
+	$brand-color-intensity-5
+);
+
+
+$body-heading-size: (
+	$body-size-h1,
+	$body-size-h2,
+	$body-size-h3,
+	$body-size-h4,
+	$body-size-h5,
+	$body-size-h6
+);
+
+$btn-schemes: (
+
+    default: (
+        init: (
+            background: $btn-background-default,
+            border: $btn-border-default,
+            color: $btn-color-default,
+        ),
+
+        hover: (
+            background: $btn-background-default-hover,
+            border: $btn-border-default-hover,
+            color: $btn-color-default-hover,
+        ),
+
+        active: (
+            background: $btn-background-default-active,
+            border: $btn-border-default-active,
+            color: $btn-color-default-active,
+        )
+    ),
+    base: (
+        init: (
+            background: $btn-background-base,
+            border: $btn-border-base,
+            color: $btn-color-base,
+        ),
+
+        hover: (
+            background: $btn-background-base-hover,
+            border: $btn-border-base-hover,
+            color: $btn-color-base-hover,
+        ),
+
+        active: (
+            background: $btn-background-base-active,
+            border: $btn-border-base-active,
+            color: $btn-color-base-active,
+        )
+    ),
+	primary: (
+        init: (
+            background: $btn-background-primary,
+            border: $btn-border-primary,
+            color: $btn-color-primary,
+        ),
+
+        hover: (
+            background: $btn-background-primary-hover,
+            border: $btn-border-primary-hover,
+            color: $btn-color-primary-hover,
+        ),
+
+        active: (
+            background: $btn-background-primary-active,
+            border: $btn-border-primary-active,
+            color: $btn-color-primary-active,
+        )
+    ),
+	accent: (
+        init: (
+            background: $btn-background-accent,
+            border: $btn-border-accent,
+            color: $btn-color-accent,
+        ),
+
+        hover: (
+            background: $btn-background-accent-hover,
+            border: $btn-border-accent-hover,
+            color: $btn-color-accent-hover,
+        ),
+
+        active: (
+            background: $btn-background-accent-active,
+            border: $btn-border-accent-active,
+            color: $btn-color-accent-active,
+        )
+    ),
+	neutral: (
+        init: (
+            background: $btn-background-neutral,
+            border: $btn-border-neutral,
+            color: $btn-color-neutral,
+        ),
+
+        hover: (
+            background: $btn-background-neutral-hover,
+            border: $btn-border-neutral-hover,
+            color: $btn-color-neutral-hover,
+        ),
+
+        active: (
+            background: $btn-background-neutral-active,
+            border: $btn-border-neutral-active,
+            color: $btn-color-neutral-active,
+        )
+    ),
+	info: (
+        init: (
+            background: $btn-background-info,
+            border: $btn-border-info,
+            color: $btn-color-info,
+        ),
+
+        hover: (
+            background: $btn-background-info-hover,
+            border: $btn-border-info-hover,
+            color: $btn-color-info-hover,
+        ),
+
+        active: (
+            background: $btn-background-info-active,
+            border: $btn-border-info-active,
+            color: $btn-color-info-active,
+        )
+    ),
+	success: (
+        init: (
+            background: $btn-background-success,
+            border: $btn-border-success,
+            color: $btn-color-success,
+        ),
+
+        hover: (
+            background: $btn-background-success-hover,
+            border: $btn-border-success-hover,
+            color: $btn-color-success-hover,
+        ),
+
+        active: (
+            background: $btn-background-success-active,
+            border: $btn-border-success-active,
+            color: $btn-color-success-active,
+        )
+    ),
+	caution: (
+        init: (
+            background: $btn-background-caution,
+            border: $btn-border-caution,
+            color: $btn-color-caution,
+        ),
+
+        hover: (
+            background: $btn-background-caution-hover,
+            border: $btn-border-caution-hover,
+            color: $btn-color-caution-hover,
+        ),
+
+        active: (
+            background: $btn-background-caution-active,
+            border: $btn-border-caution-active,
+            color: $btn-color-caution-active,
+        )
+    ),
+	error:(
+        init: (
+            background: $btn-background-error,
+            border: $btn-border-error,
+            color: $btn-color-error,
+        ),
+
+        hover: (
+            background: $btn-background-error-hover,
+            border: $btn-border-error-hover,
+            color: $btn-color-error-hover,
+        ),
+
+        active: (
+            background: $btn-background-error-active,
+            border: $btn-border-error-active,
+            color: $btn-color-error-active,
+        )
+    ),
+	link:(
+        init: (
+            background: $btn-background-link,
+            border: $btn-border-link,
+            color: $btn-color-link,
+        ),
+
+        hover: (
+            background: $btn-background-link-hover,
+            border: $btn-border-link-hover,
+            color: $btn-color-link-hover,
+        ),
+
+        active: (
+            background: $btn-background-link-active,
+            border: $btn-border-link-active,
+            color: $btn-color-link-active,
+        )
+    )
+)

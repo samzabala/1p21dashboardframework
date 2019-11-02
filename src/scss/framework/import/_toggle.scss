@@ -1,0 +1,8 @@
+$prefix : '.toggle';
+#{$prefix} {
+    &-accordion {
+        &:not(.open) {
+            display:none;
+        }
+    }
+}

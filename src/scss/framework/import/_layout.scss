@@ -5,25 +5,34 @@ LAYOUT
 	//container
 	$prefix: '.container';
 	#{$prefix} {
-		width:100%;
-		padding-left: $container-gutter;
-		padding-right: $container-gutter;
-		margin: 0 auto;
-		max-width: $container-max-width;
+		& {
+			width:100%;
+			padding-left: $container-gutter;
+			padding-right: $container-gutter;
+			margin: 0 auto;
+			max-width: $container-max-width;
+		}
 
 		&#{$prefix}-fluid {
 			max-width: none;
 		}
 
-
-		&#{$prefix}-wide {
-			max-width: none;
-			padding-left: $container-gutter-wide;
-			padding-right: $container-gutter-wide;
+		@include br(md) {
+			&#{$prefix}-wide {
+				padding-left: $container-gutter-wide;
+				padding-right: $container-gutter-wide;
+			}
+			&#{$prefix}-slim {
+				padding-left: $container-gutter-slim;
+				padding-right: $container-gutter-slim;
+			}
 		}
-		&#{$prefix}-slim {
-			max-width: none;
-			padding-left: $container-gutter-slim;
-			padding-right: $container-gutter-slim;
+
+		@include br(sm-max) {
+
+			& {
+				padding-left: $container-gutter-mobile;
+				padding-right: $container-gutter-mobile;
+			}
 		}
 	}

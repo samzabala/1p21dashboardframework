@@ -4,12 +4,20 @@ MODULES
 ****************************************************************************/
 $prefix: '.nav';
 #{$prefix} {
-	height: $nav-height;
-	background: $nav-background;
+	&{
+		height: $nav-height;
+		background: $nav-background;
+		.body-inverse & {
+
+			background: $nav-background-inverse;
+		}
+	}
 
 	&,
 	&-list {
 		@include flex();
+		padding: 0;
+		margin: 0;
 	}
 	&#{$prefix}-sticky {
 		position:fixed;
@@ -20,28 +28,35 @@ $prefix: '.nav';
 	}
 	&#{$prefix}-vertical {
 		display:block;
+
 		#{$prefix}-list,
-		&-dropdown {
+		#{$prefix}-dropdown {
+			display:block;
+		}
+
+		#{$prefix}-item > a {
 			display:block;
 		}
 	}
 
 	&-item {
+		&:before {
+			content:none;
+		}
 
 		> a {
 	
 			@include type-set((
 				size: em($nav-font-size / $body-font-size),
-				leading: em($nav-line-height / $nav-font-size ),
+				leading: strip-unit($nav-line-height / $nav-font-size),
 				color: $nav-color
 			));
 			
-			padding-top: calc( (#{$nav-item-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
-			padding-bottom: calc( (#{$nav-item-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
+			padding-top: calc( (#{$nav-item-height} - (1em * #{( type-lead($nav-font-size,$body-line-height) )})) * .5 );
+			padding-bottom: calc( (#{$nav-item-height} - (1em * #{( type-lead($nav-font-size,$body-line-height) )})) * .5 );
 			padding-left: $nav-gutter;
 			padding-right: $nav-gutter;
-			display:flex;
-			align-items: center;
+			display:inline-block;
 		}
 
 		&:hover {
@@ -57,8 +72,10 @@ $prefix: '.nav';
 		vertical-align: middle;
 		line-height:type-lead($nav-line-height,$nav-font-size);
 
-		&:first-child {
-			margin-right: 1em;
+		+ #{$prefix}-item-text {
+			margin-left: 1em;
+			display:inline-block;
+			vertical-align: middle;
 		}
 	}
 
@@ -126,6 +143,13 @@ $prefix: '.nav';
 
 			>a {
 			}
+		}
+	}
+
+	@include br(sm-max) {
+		&-item > a {
+			padding-left: $nav-gutter-mobile;
+			padding-right: $nav-gutter-mobile;
 		}
 	}
 }

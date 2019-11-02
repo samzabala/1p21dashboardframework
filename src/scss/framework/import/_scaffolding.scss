@@ -2,6 +2,12 @@
 /*! 
 SCAFFOLDING
 ****************************************************************************/
+$prefix:'.body';
+
+html,body {
+	width:100%;
+	min-width:320px;
+}
 
 body {
 	@include type-set((
@@ -9,10 +15,19 @@ body {
 		font: $body-font-family,
 		weight: $body-font-weight,
 		leading: $body-line-height,
-		color: $color-base,
+		color: $body-color,
 	));
 	word-wrap: break-word;
-	min-width:320px;
+	background: $body-background;
+
+	&#{$prefix}-inverse {
+		background: $body-background-inverse;
+		color: $body-color-inverse;
+	}
+
+	&#{$prefix}-nav-sticky-offset {
+		padding-top: $nav-height;
+	}
 }
 
 // flex classes

@@ -3,61 +3,85 @@
 Brand Styleguide + Scaffolding
 ****************************************************************************/
 
-	//type
-		$body-font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif !default;
-		$body-font-weight: 500 !default;
-			$body-font-weight-bold: 600 !default;
-			$body-font-weight-bolder: 700 !default;
-		$body-font-size: 15px !default;
-		$body-line-height: 30px !default;
-
 	//color schemes
-		$brand-base: #000000 !default;
-		$brand-primary: #0480fe !default;
-			// $brand-primary-alt: #4b5be3 !default;
-		$brand-accent: #d415af !default;
-			// $brand-accent-alt: #843ecd !default;
+		$brand-color-base: #000000 !default;
+			$brand-color-base-alt: #111 !default;
+
+		$brand-color-background: #FFFFFF !default;
+			$brand-color-background-alt: #e4e6e9 !default;
+
+		$brand-color-neutral: #8d8d8d !default;
+			$brand-color-neutral-light:lighten($brand-color-neutral,5) !default;
+			$brand-color-neutral-dark: darken($brand-color-neutral,10) !default;
+		
+		$brand-color-primary: #0480fe !default;
+			$brand-color-primary-light:lighten($brand-color-primary,5) !default;
+			$brand-color-primary-dark: darken($brand-color-primary,10) !default;
+		
+		$brand-color-accent: #d415af !default;
+			$brand-color-accent-light: #fc01a7 !default;
+			$brand-color-accent-dark: darken($brand-color-accent,10) !default;
+
+		$brand-color-info: $brand-color-primary-light !default;
+			$brand-color-info-light:lighten($brand-color-info,5) !default;
+			$brand-color-info-dark: darken($brand-color-info,10) !default;
+
+		$brand-color-success: #15b800 !default;
+			$brand-color-success-light:lighten($brand-color-success,5) !default;
+			$brand-color-success-dark: darken($brand-color-success,10) !default;
+
+		$brand-color-caution: #fd7f03 !default;
+			$brand-color-caution-light:lighten($brand-color-caution,5) !default;
+			$brand-color-caution-dark: darken($brand-color-caution,10) !default;
+
+		$brand-color-error: #fd0303 !default;
+			$brand-color-error-light:lighten($brand-color-error,10) !default;
+			$brand-color-error-dark: darken($brand-color-error,10) !default;
 
 
-		$brand-background: #ffffff !default;
-			$brand-background-alt: #e4e6e9 !default;
-		$brand-neutral: #8d8d8d !default;
+		$brand-color-intensity-1: $brand-color-primary !default;
+		$brand-color-intensity-2: #4b5be3 !default;
+		$brand-color-intensity-3: #843ecd!default;
+		$brand-color-intensity-4: $brand-color-accent !default;
+		$brand-color-intensity-5: $brand-color-accent-light !default;
 
-		$brand-info: $brand-neutral !default;
-		$brand-success: #15b800 !default;
-		$brand-caution: #fd7f03 !default;
-		$brand-error: #fd0303 !default;
+		$gradient-start: $brand-color-primary !default;
+		$gradient-end: $brand-color-accent !default;
 
-		$brand-intensity-1: $brand-primary !default;
-		$brand-intensity-2: #4b5be3 !default;
-		$brand-intensity-3: #843ecd!default;
-		$brand-intensity-4: #d415af !default;
-		$brand-intensity-5: $brand-accent !default;
+	//type
+		$brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif !default;
+		$brand-font-accent: $brand-font-primary !default;
+		$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace !default;
+		
+	//global from all the bullshiet
+		$global-background: $brand-color-background;
+			$global-background-inverse: #202020;
 
-		$gradient-start: $brand-primary !default;
-		$gradient-end: $brand-accent !default;
-	
+		$global-color: $brand-color-base;
+			$global-color-inverse: $brand-color-background;
+
+		$global-background-contrast: $brand-color-background-alt;
+			$global-background-contrast-inverse: $brand-color-base-alt;
+		$global-font-size: 16px !default;
+			$global-line-height: 32px !default;
+
+		$global-font-weight: 400 !default;
+			$global-font-weight-bold: 600 !default;
+			$global-font-weight-bolder: 700 !default;
+
 	//padding
 		$gutter-base: 50px !default;
 			$gutter-large: 70px !default;
 			$gutter-medium: 50px !default;
 			$gutter-small: 20px !default;
+			$gutter-micro: 10px !default;
 
 		$border-radius-base: 10px;
-				$border-radius-small: $border-radius-base * .5 !default;
-				$border-radius-large: $border-radius-base * 2 !default;
+			$border-radius-small: $border-radius-base * .5 !default;
+			$border-radius-large: $border-radius-base * 2 !default;
 
 	//icons
 		$icon-size: 30px !default;
-
-
-	//svg
-		$svg-gradient-color-start: $gradient-start !default;
-		$svg-gradient-color-end: $gradient-end !default;
-
-	//typography
-		$anchor-color : $brand-accent !default;
-		$anchor-color-hover : $brand-primary !default;
 /* 
 ANIMATION
 ****************************************************************************/
@@ -67,12 +91,74 @@ ANIMATION
 	$transition-timing: ease-in-out !default;
 
 /* 
+SCAFFOLDING
+****************************************************************************/
+
+	//body styles to cascade
+	$body-font-family: $brand-font-primary !default;
+	$body-font-weight: $global-font-weight !default;
+		$body-font-weight-bold: $global-font-weight-bold !default;
+		$body-font-weight-bolder:  $global-font-weight-bolder !default;
+	$body-font-size: $global-font-size !default;
+	$body-line-height: $global-line-height !default;
+	
+
+
+	$body-text-gutter-bottom: 30px !default;
+
+
+	$body-heading-gutter-top: 1em !default;
+	$body-heading-gutter-bottom: .5em !default;
+	$body-heading-line-height: calc(1em + 10px);
+	$body-heading-font-weight: $global-font-weight-bold !default;
+
+
+	$body-size-h1: 36px !default;
+	$body-size-h2: 28px !default;
+	$body-size-h3: 24px !default;
+	$body-size-h4: 20px !default;
+	$body-size-h5: $body-font-size !default;
+	$body-size-h6: 14px !default;
+
+	$body-anchor-color: $brand-color-accent !default;
+	$body-anchor-color-hover: $brand-color-primary !default;
+
+	$body-list-bullsize: 6px !default;
+	$body-list-offset: 25px !default;
+	$body-bullet-color: $brand-color-primary !default;
+
+
+	$body-blockquote-font-size: 24px !default;
+	$body-blockquote-line-height: inherit !default;
+	$body-blockquote-weight: $body-font-weight-bold !default;
+
+	$body-blockquote-gutter-x: 40px !default;
+	$body-blockquote-border-width: 4px !default;
+	$body-blockquote-border-color: $brand-color-primary !default;
+
+	$body-blockquote-margin-y: $gutter-micro !default;
+	$body-blockquote-padding-y: $gutter-micro !default;
+
+
+	$body-background: $brand-color-background-alt !default;
+		$body-background-inverse: $brand-color-base !default;
+
+	$body-color: $brand-color-base !default;
+		$body-color-inverse: $brand-color-background !default;
+
+
+	//svg
+		$svg-gradient-color-start: $gradient-start !default;
+		$svg-gradient-color-end: $gradient-end !default;
+
+/* 
 LAYOUT ELEMENTS
 ****************************************************************************/
 	//container
 		$container-gutter: $gutter-medium !default;
 			$container-gutter-wide: $gutter-small !default;
 			$container-gutter-slim: $gutter-large !default;
+			$container-gutter-mobile: $gutter-micro !default;
 		$container-max-width: 1800px !default;
 
 /* 
@@ -81,34 +167,204 @@ UI ELEMENTS
 
 	//nav 
 		$nav-height: 75px;
-		$nav-gutter: $icon-size !default;
-		$nav-background: $brand-background !default;
+		$nav-gutter: $gutter-small !default;
+			$nav-gutter-mobile: $gutter-micro !default;
+		$nav-background: $global-background !default;
+			$nav-background-inverse: $global-background-inverse !default;
 		$nav-icon-width: $icon-size !default;
 		$nav-icon-height: $icon-size !default;
 		$nav-line-height: $icon-size !default;
-
 		$nav-current-size: 5px;
-
 		$nav-top-height: 72px !default;
 			$nav-item-height: 35px !default;
 		$nav-top-font-size: 19px !default;
 		$nav-line-height: 38px !default;
-		$nav-font-size: $body-font-size !default;
-
+		$nav-font-size: $global-font-size !default;
 		$nav-color: inherit !default;
-		$nav-color-hover: $brand-primary !default;
+		$nav-color-hover: $brand-color-primary !default;
 	
 	//Modules
-		$module-bg-color: $brand-background !default;
+		$module-bg-color:  $global-background !default;
+			$module-bg-color-inverse:  $global-background-inverse !default;
 		$module-gutter-x: $gutter-large !default;
+			$module-gutter-x-mobile: $gutter-small !default;
 		$module-gutter-y: $gutter-base !default;
+		
+			$module-gutter-y-mobile: $gutter-small !default;
+		
 		$module-border-radius: $border-radius-base !default;
+
+		$module-title-font-size: $body-font-size !default;
+		$module-title-line-height: $body-line-height !default;
+		$module-title-color: $brand-color-primary !default;
+		$module-case: uppercase !default;
 
 	// dropdown + tooltip
 		$popper-gutter-x: $gutter-small !default;
 		$popper-gutter-y: $gutter-small !default;
 		$popper-border-radius: $border-radius-base !default;
+		$popper-box-shadow: 0px 0px 15px -12px $brand-color-base !default;
+
+	//thumbnail
+
 		
+		$thumbnail-font-size: 72px !default;
+			$thumbnail-font-size-inline: 18px !default;
+
+		$thumbnail-size: 200px !default;
+			$thumbnail-size-inline: 50px !default;
+
+		$thumbnail-border-radius: $thumbnail-size * .5 !default;
+
+	//btn
+		$btn-height: 45px !default;
+		$btn-height-large: 75px !default;   
+		$btn-height-small: 25px !default;            
+		$btn-font-size: 16px !default;
+			$btn-font-size-large: 23px !default;
+			$btn-font-size-small: 13px !default;
+		$btn-line-height: 20px !default;
+		$btn-font-family: $brand-font-primary !default;
+		$btn-case: none !default;
+		$btn-gutter: 30px;
+			$btn-gutter-mobile: $gutter-small !default;
+		$btn-border-width: 1px !default;
+		$btn-border-radius: $border-radius-base !default;
+			$btn-border-radius-large: $border-radius-large !default;
+			$btn-border-radius-small: $border-radius-small !default;
+		$btn-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
+			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-neutral !default;
+
+		//schemes
+			$btn-border-default: $brand-color-background !default;
+			$btn-background-default: $brand-color-background !default;
+			$btn-color-default: $brand-color-base !default;
+
+				$btn-border-default-hover: $brand-color-background !default;
+				$btn-background-default-hover: $brand-color-background !default;
+				$btn-color-default-hover: $brand-color-primary !default;
+			
+				$btn-border-default-active: $brand-color-background-alt !default;
+				$btn-background-default-active: $brand-color-background-alt !default;
+				$btn-color-default-active: $brand-color-primary !default;
+
+			
+			$btn-border-base: $brand-color-base !default;
+			$btn-background-base: $brand-color-base !default;
+			$btn-color-base: $brand-color-background !default;
+
+				$btn-border-base-hover: $brand-color-neutral-dark !default;
+				$btn-background-base-hover: $brand-color-neutral-dark !default;
+				$btn-color-base-hover: $brand-color-background !default;
+				
+				$btn-border-base-active: $brand-color-base !default;
+				$btn-background-base-active: $brand-color-base !default;
+				$btn-color-base-active: $brand-color-background !default;
+
+			$btn-border-primary: $brand-color-primary !default;
+			$btn-background-primary: $brand-color-primary !default;
+			$btn-color-primary: $brand-color-background !default;
+
+				$btn-border-primary-hover: $brand-color-primary-light !default;
+				$btn-background-primary-hover: $brand-color-primary-light !default;
+				$btn-color-primary-hover: $brand-color-background !default;
+				
+				$btn-border-primary-active: $brand-color-primary-dark !default;
+				$btn-background-primary-active: $brand-color-primary-dark !default;
+				$btn-color-primary-active: $brand-color-background !default;
+
+
+			$btn-border-accent: $brand-color-accent !default;
+			$btn-background-accent: $brand-color-accent !default;
+			$btn-color-accent: $brand-color-background !default;
+
+				$btn-border-accent-hover: $brand-color-accent-light !default;
+				$btn-background-accent-hover: $brand-color-accent-light !default;
+				$btn-color-accent-hover: $brand-color-background !default;
+				
+				$btn-border-accent-active: $brand-color-accent-dark !default;
+				$btn-background-accent-active: $brand-color-accent-dark !default;
+				$btn-color-accent-active: $brand-color-background !default;
+
+
+			$btn-border-neutral: $brand-color-neutral !default;
+			$btn-background-neutral: $brand-color-neutral !default;
+			$btn-color-neutral: $brand-color-base !default;
+
+				$btn-border-neutral-hover: $brand-color-neutral-light !default;
+				$btn-background-neutral-hover: $brand-color-neutral-light !default;
+				$btn-color-neutral-hover: $brand-color-background !default;
+				
+				$btn-border-neutral-active: $brand-color-neutral-dark !default;
+				$btn-background-neutral-active: $brand-color-neutral-dark !default;
+				$btn-color-neutral-active: $brand-color-background !default;
+
+			
+
+			$btn-border-info: $brand-color-info !default;
+			$btn-background-info: $brand-color-info !default;
+			$btn-color-info: $brand-color-background !default;
+
+				$btn-border-info-hover: $brand-color-info-light !default;
+				$btn-background-info-hover: $brand-color-info-light !default;
+				$btn-color-info-hover: $brand-color-background !default;
+				
+				$btn-border-info-active: $brand-color-info-dark !default;
+				$btn-background-info-active: $brand-color-info-dark !default;
+				$btn-color-info-active: $brand-color-background !default;
+
+			
+
+		$btn-border-success: $brand-color-success !default;
+		$btn-background-success: $brand-color-success !default;
+		$btn-color-success: $brand-color-background !default;
+
+			$btn-border-success-hover: $brand-color-success-light !default;
+			$btn-background-success-hover: $brand-color-success-light !default;
+			$btn-color-success-hover: $brand-color-background !default;
+		
+			$btn-border-success-active: $brand-color-success-dark !default;
+			$btn-background-success-active: $brand-color-success-dark !default;
+			$btn-color-success-active: $brand-color-background !default;
+			
+		$btn-border-caution: $brand-color-caution !default;
+		$btn-background-caution: $brand-color-caution !default;
+		$btn-color-caution: $brand-color-background !default;
+
+			$btn-border-caution-hover: $brand-color-caution-light !default;
+			$btn-background-caution-hover: $brand-color-caution-light !default;
+			$btn-color-caution-hover: $brand-color-background !default;
+			
+			$btn-border-caution-active: $brand-color-caution-dark !default;
+			$btn-background-caution-active: $brand-color-caution-dark !default;
+			$btn-color-caution-active: $brand-color-background !default;
+
+
+		$btn-border-error: $brand-color-error !default;
+		$btn-background-error: $brand-color-error !default;
+		$btn-color-error: $brand-color-background !default;
+			
+			$btn-border-error-hover: $brand-color-error-light !default;
+			$btn-background-error-hover: $brand-color-error-light !default;
+			$btn-color-error-hover: $brand-color-background !default;
+			
+			$btn-border-error-active: $brand-color-error-dark !default;
+			$btn-background-error-active: $brand-color-error-dark !default;
+			$btn-color-error-active: $brand-color-background !default;
+
+
+
+		$btn-border-link: transparent !default;
+		$btn-background-link: transparent !default;
+		$btn-color-link: $body-anchor-color !default;
+			
+			$btn-border-link-hover: transparent !default;
+			$btn-background-link-hover: transparent !default;
+			$btn-color-link-hover: $brand-color-primary !default;
+			
+			$btn-border-link-active: transparent!default;
+			$btn-background-link-active: transparent!default;
+			$btn-color-link-active:  $body-anchor-color !default;
 
 
 
@@ -122,44 +378,29 @@ PLUGIN DEPENDENCIES
 		$light-color: #ecf0f1;
 		$dark-color: #222;
 		
-		$modal-submit-color: $brand-primary;
-		$modal-reset-color: $brand-background-alt;
+		$modal-submit-color: $brand-color-primary;
+		$modal-reset-color: $brand-color-background-alt;
 		
 		$transition-duration: 150ms;
 		$slow-transition-duration: 300ms;
 
 	//mixins shithole
-		$color-base: $brand-base;
-		$color-primary: $brand-primary;
-			// $color-primary-alt:$brand-primary-alt;
-		$color-accent: $brand-accent;
-			// $color-accent-alt: $brand-accent-alt;
+		$color-base: $brand-color-base;
+			$color-base-alt: $brand-color-base-alt;
+		$color-primary: $brand-color-primary;
+			$color-primary-alt:$brand-color-primary-dark;
+		$color-accent: $brand-color-accent;
+			$color-accent-alt: $brand-color-accent-dark;
 
-		$white: $brand-background;
-			$white-alt: $brand-background-alt;
-		$gray: $brand-neutral;
+		$white: $brand-color-background;
+			$white-alt: $brand-color-background-alt;
+		$gray: $brand-color-neutral;
 
-		$info: $brand-info;
-		$success: $brand-success;
-		$caution: $brand-caution;
-		$error: $brand-error;
+		$info: $brand-color-info;
+		$success: $brand-color-success;
+		$caution: $brand-color-caution;
+		$error: $brand-color-error;
 
+		$font-base: $brand-font-primary;
+		$font-monospace: $brand-font-monospace;
 
-/* 
-For internal sass programming
-DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
-****************************************************************************/
-$brand-declarations : (
-	base,
-	primary,
-	accent,
-	background,
-	background-alt,
-	neutral,
-	// primary-alt,
-	// accent-alt,
-	info,
-	success,
-	caution,
-	error,
-);

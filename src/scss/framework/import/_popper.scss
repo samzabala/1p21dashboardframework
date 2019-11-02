@@ -4,10 +4,11 @@ pops / drodpwon + tooltip
 
 %pop {
 	position:absolute;
-	background: $brand-background;
+	background: $brand-color-background;
 	border-radius: $popper-border-radius;
 	padding: $popper-gutter-x $popper-gutter-y;
-	box-shadow: 0px 0px 10px -5px rgba($color-base,.5);
+	box-shadow: $popper-box-shadow;
+	display:none;
 }
 
 

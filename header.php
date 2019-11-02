@@ -7,14 +7,16 @@
 	<title>1p21 Dashboard</title>
 
 	<!-- styles -->
-	
-	<link rel="stylesheet" type="text/css" href="<?=DASHBOARD_ROOT_URL;?>/assets/style.min.css">
+	<?= app_inline_style( DASHBOARD_ROOT_PATH.'/assets/style.min.css'); ?>
 
-		<script src="<?=DASHBOARD_ROOT_URL;?>/assets/scripts/jquery.min.js"></script>
-		<script src="<?=DASHBOARD_ROOT_URL;?>/assets/scripts/handlebars.min.js"></script>
-		<script src="<?=DASHBOARD_ROOT_URL;?>/assets/scripts/trumbowyg.min.js"></script>
+	<!-- SCRIPT -->
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/jquery.min.js'); ?>
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/handlebars.min.js'); ?>
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.min.js'); ?>
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?>
+
 </head>
-<body id="dashboard" class="cf dashboard-<?=DASHBOARD_SLUG ?>">
+<body id="dashboard" class="body-nav-sticky-offset body-inverse cf dashboard-<?=DASHBOARD_SLUG ?>">
 	<!--SVG Styles  -->
 	<?php app_get_template_part('includes/svg-globals'); ?>
 	

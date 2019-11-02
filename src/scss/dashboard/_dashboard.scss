@@ -1,7 +1,9 @@
 
-
+$sidebar-base: 285px;
+$sidebar-sm: 80px;
+$sidebar-xs: 60px;
 #dashboard {
-	background: color(w,alt);
+	
 	&-svg-styles {
 		width:0;
 		height:0;
@@ -23,8 +25,7 @@
 			}
 		}
 		&-sidebar {
-			width: 285px;
-			background: color(w);
+			width: $sidebar-base;
 			box-shadow: 0 0 10px -5px color(b);
 			position:fixed;
 			top:0;
@@ -47,31 +48,51 @@
 			}
 
 			&-nav {
-				margin: 0 ($gutter-small * -1);
+				margin: 0 ($container-gutter-wide * -1);
 			}
 
 			@include br(sm-max) {
-				width: 80px;
+				width: $sidebar-sm;
 				text-align:center;
+
+				&-nav {
+					margin: 0 ($container-gutter-mobile * -1);
+				}
+			}
+
+			@include br(xs-max) {
+				width: $sidebar-xs;
 			}
 		}
 
 		&-main {
-			width:calc(100% - 285px);
+			width:calc(100% - #{$sidebar-base});
 			padding-top: 50px;
 			padding-bottom: 50px;
 			margin-left: auto;
 
 			&-nav {
-				left: 285px;
+				left: $sidebar-base;
 				z-index:99998;
 			}
 
-
-
 			@include br(sm-max) {
+				padding-top: $gutter-micro;
+				padding-bottom: $gutter-micro;
+				width:calc(100% - #{$sidebar-sm});
 
-				width:calc(100% - 80px);
+				&-nav {
+					left: $sidebar-sm;
+				}
+			}
+
+
+			@include br(xs-max) {
+				width:calc(100% - #{$sidebar-xs});
+
+				&-nav {
+					left: $sidebar-xs;
+				}
 			}
 		}
 	}

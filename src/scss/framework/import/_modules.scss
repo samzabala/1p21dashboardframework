@@ -11,6 +11,11 @@ $prefix: '.module';
 
 	& {
 		background: $module-bg-color;
+
+		.body-inverse & {
+
+		background: $module-bg-color-inverse;
+		}
 	}
 
 	&,
@@ -22,6 +27,17 @@ $prefix: '.module';
 
 	&-heading {
 		margin-top: $module-gutter-y * -1;
+	}
+
+	&,
+	&-footer {
+		padding-bottom: $module-gutter-y;
+		border-bottom-left-radius: $module-border-radius;
+		border-bottom-right-radius: $module-border-radius;
+	}
+
+	&-footer {
+		margin-bottom: $module-gutter-y * -1;
 	}
 
 	&,
@@ -38,21 +54,60 @@ $prefix: '.module';
 	&-footer {
 		margin-left: $module-gutter-x * -1;
 		margin-right: $module-gutter-x * -1;
-	}
 
-	&,
-	&-footer {
-		padding-bottom: $module-gutter-y;
-		border-bottom-left-radius: $module-border-radius;
-		border-bottom-right-radius: $module-border-radius;
-	}
-
-	&-footer {
-		margin-bottom: $module-gutter-y * -1;
+		&#{$prefix}-no-gutter {
+			padding: 0;
+		}
 	}
 
 	&-heading {
 
+	}
+
+	&-title {
+		@include type-set((
+
+			size:em($module-title-font-size/$body-font-size),
+			leading: strip-unit($module-title-line-height/$module-title-font-size),
+			color: $module-title-color,
+			case: $module-case,
+		))
+	}
+
+	@include br(sm-max) {
+		&,
+		&-heading,
+		&-content,
+		&-footer {
+			padding-left: $module-gutter-x-mobile;
+			padding-right: $module-gutter-x-mobile;
+			overflow:hidden;
+		}
+
+		&-heading,
+		&-content,
+		&-footer {
+			margin-left: $module-gutter-x-mobile * -1;
+			margin-right: $module-gutter-x-mobile * -1;
+		}
+
+		&,
+		&-heading {
+			padding-top: $module-gutter-y-mobile;
+		}
+
+		&-heading {
+			margin-top: $module-gutter-y-mobile * -1;
+		}
+
+		&,
+		&-footer {
+			padding-bottom: $module-gutter-y-mobile;
+		}
+
+		&-footer {
+			margin-bottom: $module-gutter-y-mobile * -1;
+		}
 	}
 
 }

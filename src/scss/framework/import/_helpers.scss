@@ -70,87 +70,180 @@
 		display:none!important;
 	}
 
+
+//clippy bois
+  	$prefix: '.overflow';
+
+	#{$prefix}{
+		/* emulate background cover on image tags */
+		&-cover {
+			position: relative;
+			overflow:hidden;
+			
+			img {
+				position:absolute;
+				width: 100%;
+				height: 100%;
+				max-width:none;
+				top:-50%;
+				left:-50%;
+				right:-50%;
+				bottom:-50%;
+				margin:auto;
+				object-fit: cover;
+				display: block;
+			}
+		}
+
+
+		/* cut overflowing single line to ellipsis */
+		&-ellipsis {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+
 //background color
-.background {
-	@each $color in $brand-declarations {
-		&-#{$color} {
-			background-color: color($color);
+	$prefix: '.background';
+
+	#{$prefix} {
+
+		&-global {
+			background-color: $global-background;
+
+			.body-inverse & {
+				background-color: $global-background-inverse;
+			}
 		}
 
+
+		&-global-contrast {
+			background-color: $global-background-contrast;
+
+			.body-inverse & {
+				background-color: $global-background-contrast-inverse;
+			}
+
+		}
+
+		&-intensity {
+			@for $i from 1 through length($brand-intensity) {
+				&-#{$i} {
+					background-color: nth($brand-intensity,$i);
+				}
+			}
+		}
+
+		&-gradient {
+
+			& {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 0deg,
+					use-shorthand:false
+				))
+			}
+
+			&-45 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 45deg,
+					use-shorthand:false
+				))
+			}
+
+			&-90 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 90deg,
+					use-shorthand:false
+				))
+			}
+
+			&-135 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 135deg,
+					use-shorthand:false
+				))
+			}
+
+			&-180 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 180deg,
+					use-shorthand:false
+				))
+			}
+
+			&-225 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 225deg,
+					use-shorthand:false
+				))
+			}
+
+			&-270 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 270deg,
+					use-shorthand:false
+				))
+			}
+
+			&-315 {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 315deg,
+					use-shorthand:false
+				))
+			}
+		}
+
+
+		@each $tag,$color in $brand-color-declarations {
+			&-#{$tag} {
+				background-color: $color;
+			}
+		}
 	}
 
-	&-gradient {
+//color
+	$prefix: '.color';
 
-		& {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 0deg,
-				use-shorthand:false
-			))
+	#{$prefix} {
+		&-global {
+			color: $global-color;
+
+			.body-inverse & {
+				color: $global-color-inverse;
+			}
 		}
 
-		&-45 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 45deg,
-				use-shorthand:false
-			))
+		&-intensity {
+			@for $i from 1 through length($brand-intensity) {
+				&-#{$i} {
+					color: nth($brand-intensity,$i);
+				}
+			}
 		}
 
-		&-90 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 90deg,
-				use-shorthand:false
-			))
-		}
 
-		&-135 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 135deg,
-				use-shorthand:false
-			))
-		}
-
-		&-180 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 180deg,
-				use-shorthand:false
-			))
-		}
-
-		&-225 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 225deg,
-				use-shorthand:false
-			))
-		}
-
-		&-270 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 270deg,
-				use-shorthand:false
-			))
-		}
-
-		&-315 {
-			@include gradient((
-				color1: $gradient-start,
-				color2: $gradient-end,
-				angle: 315deg,
-				use-shorthand:false
-			))
+		@each $tag,$color in $brand-color-declarations {
+			&-#{$tag} {
+				color: $color;
+			}
 		}
 	}
-}
+
