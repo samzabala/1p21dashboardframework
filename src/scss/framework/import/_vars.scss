@@ -54,6 +54,9 @@
 		$global-color: $brand-color-base !default;
 			$global-color-inverse: $brand-color-background !default;
 
+			$global-color-contrast: $brand-color-base-alt !default;
+				$global-color-contrast-inverse: $brand-color-background-alt !default;
+
 		$global-background-contrast: $brand-color-background-alt !default;
 			$global-background-contrast-inverse: $brand-color-base-alt !default;
 
@@ -73,7 +76,8 @@
 	// TABLE
 		$table-cell-min-height: 70px !default;
 			$table-cell-min-height-large: 105px !default;
-		$table-cell-border-color: $brand-color-background-alt !default;
+		$table-cell-border-color: $global-background-contrast !default;
+			$table-cell-border-color-inverse: $global-background-contrast-inverse !default;
 		$table-cell-border-width: 1px !default;
 		$table-cell-gutter-y-compact: 5px !default;
 		$table-cell-gutter: 20px !default;
@@ -82,9 +86,11 @@
 		$table-heading-min-height: 45px !default;
 		$table-heading-font-weight: 900 !default;
 		$table-heading-font-style: normal !default;
-		$table-heading-color: $brand-color-base-alt !default;
+		$table-heading-color: $global-color-contrast !default;
+			$table-heading-color-inverse: $global-color-contrast-inverse !default;
 		$table-heading-text-transform: uppercase !default;
-		$table-heading-background: $brand-color-background-alt !default;
+		$table-heading-background: $global-background-contrast !default;
+			$table-heading-background-inverse: $global-background-contrast-inverse !default;
 		$table-cell-tag-width: 12px !default;
 		$table-cell-tag-height: 57px !default;
 		$table-cell-tag-border-radius: 2px !default;
@@ -113,7 +119,8 @@
 		$body-heading-line-height: calc(1em + 10px) !default;
 		$body-heading-font-weight: $body-font-weight-bold !default;
 		$body-heading-font-style: inherit !default;
-		$body-heading-color: $brand-color-base-alt !default;
+		$body-heading-color: $global-color-contrast !default;
+			$body-heading-color-inverse: $global-color-contrast-inverse !default;
 
 		$body-size-h1: 36px !default;
 		$body-size-h2: 28px !default;
@@ -168,8 +175,14 @@
 		$icon-size: 30px !default;
 
 	//symbol 
-	$symbol-caret-width: 8px !default;
-	$symbol-caret-height: 5px !default;
+		$symbol-caret-width: 8px !default;
+		$symbol-caret-height: 5px !default;
+
+	// input 
+		$input-height: 45px !default;
+		$input-height-large: 75px !default;   
+		$input-height-small: 25px !default;  
+
 
 	// NAV
 		$nav-height: 75px;
@@ -240,108 +253,109 @@
 			$btn-border-radius-small: $border-radius-small !default;
 		$btn-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
 			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-base !default;
-		$btn-group-separator-color: rgba($brand-color-base,.1) !default;
+		$btn-group-separator-color: rgba($brand-color-neutral,.5) !default;
+		$btn-disabled-opacity: .5 !default;
 
 		// SCHEMES
-			$btn-border-default: $brand-color-background !default;
+			$btn-border-default: transparent !default;
 			$btn-background-default: $brand-color-background !default;
 			$btn-color-default: $brand-color-base !default;
 
-				$btn-border-default-hover: $brand-color-background !default;
+				$btn-border-default-hover: transparent !default;
 				$btn-background-default-hover: $brand-color-background !default;
 				$btn-color-default-hover: $brand-color-primary !default;
 			
-				$btn-border-default-active: $brand-color-primary !default;
+				$btn-border-default-active: transparent !default;
 				$btn-background-default-active: $brand-color-primary !default;
 				$btn-color-default-active: $brand-color-background !default;
 
 			
-			$btn-border-base: $brand-color-base !default;
+			$btn-border-base: transparent !default;
 			$btn-background-base: $brand-color-base !default;
 			$btn-color-base: $brand-color-background !default;
 
-				$btn-border-base-hover: $brand-color-neutral-dark !default;
+				$btn-border-base-hover: transparent !default;
 				$btn-background-base-hover: $brand-color-neutral-dark !default;
 				$btn-color-base-hover: $brand-color-background !default;
 				
-				$btn-border-base-active: $brand-color-base !default;
+				$btn-border-base-active: transparent !default;
 				$btn-background-base-active: $brand-color-base !default;
 				$btn-color-base-active: $brand-color-background !default;
 
-			$btn-border-primary: $brand-color-primary !default;
+			$btn-border-primary: transparent !default;
 			$btn-background-primary: $brand-color-primary !default;
 			$btn-color-primary: $brand-color-background !default;
 
-				$btn-border-primary-hover: $brand-color-primary-light !default;
+				$btn-border-primary-hover: transparent !default;
 				$btn-background-primary-hover: $brand-color-primary-light !default;
 				$btn-color-primary-hover: $brand-color-background !default;
 				
-				$btn-border-primary-active: $brand-color-primary-dark !default;
+				$btn-border-primary-active: transparent !default;
 				$btn-background-primary-active: $brand-color-primary-dark !default;
 				$btn-color-primary-active: $brand-color-background !default;
 
 
-			$btn-border-accent: $brand-color-accent !default;
+			$btn-border-accent: transparent !default;
 			$btn-background-accent: $brand-color-accent !default;
 			$btn-color-accent: $brand-color-background !default;
 
-				$btn-border-accent-hover: $brand-color-accent-light !default;
+				$btn-border-accent-hover: transparent !default;
 				$btn-background-accent-hover: $brand-color-accent-light !default;
 				$btn-color-accent-hover: $brand-color-background !default;
 				
-				$btn-border-accent-active: $brand-color-accent-dark !default;
+				$btn-border-accent-active: transparent !default;
 				$btn-background-accent-active: $brand-color-accent-dark !default;
 				$btn-color-accent-active: $brand-color-background !default;
 
 
-			$btn-border-neutral: $brand-color-neutral !default;
+			$btn-border-neutral: transparent !default;
 			$btn-background-neutral: $brand-color-neutral !default;
 			$btn-color-neutral: $brand-color-base !default;
 
-				$btn-border-neutral-hover: $brand-color-neutral-light !default;
+				$btn-border-neutral-hover: transparent !default;
 				$btn-background-neutral-hover: $brand-color-neutral-light !default;
 				$btn-color-neutral-hover: $brand-color-background !default;
 				
-				$btn-border-neutral-active: $brand-color-neutral-dark !default;
+				$btn-border-neutral-active: transparent !default;
 				$btn-background-neutral-active: $brand-color-neutral-dark !default;
 				$btn-color-neutral-active: $brand-color-background !default;
 
 
-			$btn-border-success: $brand-color-success !default;
+			$btn-border-success: transparent !default;
 			$btn-background-success: $brand-color-success !default;
 			$btn-color-success: $brand-color-background !default;
 
-				$btn-border-success-hover: $brand-color-success-light !default;
+				$btn-border-success-hover: transparent !default;
 				$btn-background-success-hover: $brand-color-success-light !default;
 				$btn-color-success-hover: $brand-color-background !default;
 			
-				$btn-border-success-active: $brand-color-success-dark !default;
+				$btn-border-success-active: transparent !default;
 				$btn-background-success-active: $brand-color-success-dark !default;
 				$btn-color-success-active: $brand-color-background !default;
 		
 				
-			$btn-border-caution: $brand-color-caution !default;
+			$btn-border-caution: transparent !default;
 			$btn-background-caution: $brand-color-caution !default;
 			$btn-color-caution: $brand-color-background !default;
 
-				$btn-border-caution-hover: $brand-color-caution-light !default;
+				$btn-border-caution-hover: transparent !default;
 				$btn-background-caution-hover: $brand-color-caution-light !default;
 				$btn-color-caution-hover: $brand-color-background !default;
 				
-				$btn-border-caution-active: $brand-color-caution-dark !default;
+				$btn-border-caution-active: transparent !default;
 				$btn-background-caution-active: $brand-color-caution-dark !default;
 				$btn-color-caution-active: $brand-color-background !default;
 
 
-			$btn-border-error: $brand-color-error !default;
+			$btn-border-error: transparent !default;
 			$btn-background-error: $brand-color-error !default;
 			$btn-color-error: $brand-color-background !default;
 				
-				$btn-border-error-hover: $brand-color-error-light !default;
+				$btn-border-error-hover: transparent !default;
 				$btn-background-error-hover: $brand-color-error-light !default;
 				$btn-color-error-hover: $brand-color-background !default;
 				
-				$btn-border-error-active: $brand-color-error-dark !default;
+				$btn-border-error-active: transparent !default;
 				$btn-background-error-active: $brand-color-error-dark !default;
 				$btn-color-error-active: $brand-color-background !default;
 

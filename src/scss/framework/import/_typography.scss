@@ -19,6 +19,10 @@ h6,.h6 {
 	&:not(:first-child) {
 		margin-top: $body-heading-gutter-top;
 	}
+
+	.body-inverse & {
+		color:$body-heading-color-inverse;
+	}
 	
 }
 

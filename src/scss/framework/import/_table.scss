@@ -24,6 +24,10 @@ $prefix: '.table';
             height:100%;
             display:table-row;
             border-bottom: $table-cell-border-width solid $table-cell-border-color;
+
+            .body-inverse & {
+                border-bottom: $table-cell-border-width solid $table-cell-border-color-inverse;
+            }
             
         }
         @at-root & th,td,
@@ -50,6 +54,11 @@ $prefix: '.table';
                 style: $table-heading-font-style,
                 case: $table-heading-text-transform,
             ));
+
+            .body-inverse & {
+                background:$table-heading-background-inverse;
+                color: $table-heading-color-inverse
+            }
         }
 
         @at-root & td,

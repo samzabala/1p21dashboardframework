@@ -58,31 +58,35 @@ $prefix: '.btn';
             @at-root & {
                 @include internal-btn-set-scheme($properties)
             }
+            
+            &#{$prefix}-disabled,
             &#{$prefix}-disabled:hover,
             &#{$prefix}-disabled:focus,
             &#{$prefix}-disabled.focus,
             &#{$prefix}-disabled:active,
             &#{$prefix}-disabled.active,
 
+            &#{$prefix}-no-interaction,
             &#{$prefix}-no-interaction:hover,
             &#{$prefix}-no-interaction:focus,
             &#{$prefix}-no-interaction.focus,
             &#{$prefix}-no-interaction:active,
             &#{$prefix}-no-interaction.active,
             
+            #{$prefix}-group-disabled &,
             #{$prefix}-group-disabled:hover &,
             #{$prefix}-group-disabled:focus &,
             #{$prefix}-group-disabled.focus &,
             #{$prefix}-group-disabled:active &,
             #{$prefix}-group-disabled.active & {
-                @include internal-btn-set-scheme($properties,true);
+                @include internal-btn-set-scheme($properties,true,true);
             }
         }
     }
 
 }
 
-@mixin internal-btn-set-scheme($properties,$add-important: false) {
+@mixin internal-btn-set-scheme($properties,$add-important: false,$is-disabled: false) {
 
 
     $important: '';
@@ -93,17 +97,37 @@ $prefix: '.btn';
     }
 
     @if map-get($properties,border) {
-        border-color: map-get($properties,border) #{$important};
+        @if $is-disabled {
+            border-color: internal-btn-calculate-disabled( map-get($properties,border) ) #{$important};
+        }@else{
+            border-color: map-get($properties,border) #{$important};
+        }
     }
 
     @if map-get($properties,background) {
-        background: map-get($properties,background) #{$important};
+        @if $is-disabled {
+            background: internal-btn-calculate-disabled( map-get($properties,background) ) #{$important};
+        }@else{
+            background: map-get($properties,background) #{$important};
+        }
     }
 
     @if map-get($properties,color) {
-        color: map-get($properties,color) #{$important};
+        @if $is-disabled {
+            color: internal-btn-calculate-disabled( map-get($properties,color) ) #{$important};
+        }@else{
+            color: map-get($properties,color) #{$important};
+        }
     }
 
+}
+
+@function internal-btn-calculate-disabled($color){
+    @if $color != transparent {
+        @return rgba( $color,$btn-disabled-opacity );
+    }@else {
+        @return $color;
+    }
 }
 
 
@@ -160,7 +184,7 @@ $prefix: '.btn';
 
     &-disabled,
     #{$prefix}-group-disabled & {
-        opacity: .5;
+        // opacity: $btn-disabled-opacity;
         cursor:no-drop;
     }
 
@@ -178,10 +202,8 @@ $prefix: '.btn';
         font-size: em($btn-font-size-small / $body-font-size);
         padding-top: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead($btn-font-size,$btn-line-height) }) ) * .5 );
         padding-bottom: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead($btn-font-size,$btn-line-height) }) ) * .5 );
-
         padding-right: em($btn-gutter-small / $btn-font-size-small);
         padding-left: em($btn-gutter-small / $btn-font-size-small);
-        
         border-radius: $btn-border-radius-small;
     }
 
@@ -229,8 +251,9 @@ $prefix: '.btn';
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
 
-                &,&:hover {
-                    border-left-color: $btn-group-separator-color;
+                &,
+                &:hover {
+                    border-left-color: $btn-group-separator-color !important;
                 }
             }
         }
@@ -247,8 +270,9 @@ $prefix: '.btn';
                 border-top-right-radius: 0;
                 border-top-left-radius: 0;
 
-                &,&:hover {
-                    border-bottom-color: $btn-group-separator-color;
+                &,
+                &:hover {
+                    border-top-color: $btn-group-separator-color !important;
                 }
             }
         }
