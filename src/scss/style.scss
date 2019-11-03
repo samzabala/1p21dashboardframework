@@ -1,5 +1,5 @@
 //google font
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 
 
@@ -7,13 +7,14 @@
 /*! 
 CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 ****************************************************************************/
-// $brand-color-base: red;
+
 /*! 
 FRAMEWORK / SCAFFOLDING STYLES
 ****************************************************************************/
-	@import 'framework/framework';
+	@import 'framework/_framework';
+
 
 /*! 
-DASHBOARD / CUSTOM STYLES
+DASHBOARD / OUR CUSTOM STYLES
 ****************************************************************************/
-	@import 'dashboard/_dashboard';
+	@import '_dashboard';

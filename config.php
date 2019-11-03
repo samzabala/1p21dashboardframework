@@ -16,3 +16,4 @@ if(isset($_GET['dashboard_environment'])):
 endif;
 
 define('DASHBOARD_SLUG',$slug);
+

@@ -23,7 +23,6 @@
     $white: #FFF !default;
     $gray: #888 !default;
 
-    $info: $gray !default;
     $success: #15b800 !default;
     $caution: #fd7f03 !default;
     $error: #fd0303 !default;
@@ -54,7 +53,6 @@
         gray-lighter: $gray-lighter,
         gray-dark: $gray-dark,
 		gray-darker: $gray-darker,
-		info: $info,
 		success: $success,
 		caution: $caution,
 		error: $error,
@@ -64,7 +62,6 @@
         a: $color-accent,
         w: $white,
 		g: $gray,
-		i: $info,
 		s: $success,
 		c: $caution,
 		e: $error,
@@ -2023,6 +2020,7 @@
             change-directions: false, //if pseudo is both, make their directions oppposite to one another
             direction: 'up', //if pseudo is set to both, this will set the direction of :before, :after will be opposite of it
             color: null,
+            override: false,
             change-color: null,
             size-base: inherit,
             main-size: .4em,//orientation of direction
@@ -2075,7 +2073,9 @@
                 content: "";
             }
             background: transparent;
-            display: map-get($opts,display);
+            @if map-get($opts,display) {
+                display: map-get($opts,display);
+            }
             width:0;
             height:0;
             
@@ -2088,12 +2088,22 @@
             }
             
             @if $cross-border-sides != null  and $main-border-sides != null{
-                border-#{nth($cross-border-sides,1)}: $cross-border-size solid transparent;
-                border-#{nth($cross-border-sides,2)}: $cross-border-size solid transparent;
+                @if map-get($opts,override) != false {
+
+                    border-#{nth($cross-border-sides,1)}: $cross-border-size solid transparent;
+                    border-#{nth($cross-border-sides,2)}: $cross-border-size solid transparent;
                 
+                    border-#{nth($main-border-sides,1)}: $main-border-size solid transparent;
+                    border-#{nth($main-border-sides,2)}: $main-border-size solid transparent;
+                }@else {
                 
-                border-#{nth($main-border-sides,1)}: $main-border-size solid map-get($opts,color);
-                border-#{nth($main-border-sides,2)}: 0 solid map-get($opts,color);
+                    border-#{nth($cross-border-sides,1)}: $cross-border-size solid transparent;
+                    border-#{nth($cross-border-sides,2)}: $cross-border-size solid transparent;
+                
+                    border-#{nth($main-border-sides,1)}: $main-border-size solid map-get($opts,color);
+                    border-#{nth($main-border-sides,2)}: 0 solid map-get($opts,color);
+
+                }
             }@else {
                 @error provide a valid direction;
             }
@@ -2103,7 +2113,7 @@
             }
         }
 
-        @if map-get($opts,change-state) == true {
+        @if map-get($opts,change-state) == true and map-get($opts,override) != false {
             @at-root &#{ map-get($opts,change-selector) } {
 
                 #{internal__pseudo-generator(map-get($opts,pseudo))} {
@@ -2302,12 +2312,20 @@
             vmax: 100vmax
         );
         @if $unit {
-            @return strip-unit($number) * map-get($available-units,$unit);
+            @if type-of($number) == number {
+                @return strip-unit($number) * map-get($available-units,$unit);
+            }@else{
+                @return $number;
+            }
         }
     }
 
     @function em($number) {
         @return to-unit($number,em);
+    }
+
+    @function rem($number) {
+        @return to-unit($number,rem);
     }
 
     @function px($number) {

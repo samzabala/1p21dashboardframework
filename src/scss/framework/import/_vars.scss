@@ -1,14 +1,12 @@
 
-/* 
-Brand Styleguide + Scaffolding
-****************************************************************************/
+//VARS
 
-	//color schemes
+	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
-			$brand-color-base-alt: #111 !default;
+			$brand-color-base-alt: #3d3d3d !default;
 
 		$brand-color-background: #FFFFFF !default;
-			$brand-color-background-alt: #e4e6e9 !default;
+			$brand-color-background-alt: #ecedf0 !default;
 
 		$brand-color-neutral: #8d8d8d !default;
 			$brand-color-neutral-light:lighten($brand-color-neutral,5) !default;
@@ -21,10 +19,6 @@ Brand Styleguide + Scaffolding
 		$brand-color-accent: #d415af !default;
 			$brand-color-accent-light: #fc01a7 !default;
 			$brand-color-accent-dark: darken($brand-color-accent,10) !default;
-
-		$brand-color-info: $brand-color-primary-light !default;
-			$brand-color-info-light:lighten($brand-color-info,5) !default;
-			$brand-color-info-dark: darken($brand-color-info,10) !default;
 
 		$brand-color-success: #15b800 !default;
 			$brand-color-success-light:lighten($brand-color-success,5) !default;
@@ -48,124 +42,134 @@ Brand Styleguide + Scaffolding
 		$gradient-start: $brand-color-primary !default;
 		$gradient-end: $brand-color-accent !default;
 
-	//type
+	// FONT
 		$brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif !default;
 		$brand-font-accent: $brand-font-primary !default;
 		$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace !default;
 		
-	//global from all the bullshiet
-		$global-background: $brand-color-background;
-			$global-background-inverse: #202020;
+	// GLOBAL html + body coloring
+		$global-background: $brand-color-background !default;
+			$global-background-inverse: #202020 !default;
 
-		$global-color: $brand-color-base;
-			$global-color-inverse: $brand-color-background;
+		$global-color: $brand-color-base !default;
+			$global-color-inverse: $brand-color-background !default;
 
-		$global-background-contrast: $brand-color-background-alt;
-			$global-background-contrast-inverse: $brand-color-base-alt;
-		$global-font-size: 16px !default;
-			$global-line-height: 32px !default;
+		$global-background-contrast: $brand-color-background-alt !default;
+			$global-background-contrast-inverse: $brand-color-base-alt !default;
 
-		$global-font-weight: 400 !default;
-			$global-font-weight-bold: 600 !default;
-			$global-font-weight-bolder: 700 !default;
-
-	//padding
+	// PADDING
 		$gutter-base: 50px !default;
 			$gutter-large: 70px !default;
 			$gutter-medium: 50px !default;
 			$gutter-small: 20px !default;
 			$gutter-micro: 10px !default;
 
-		$border-radius-base: 10px;
+		$border-radius-base: 10px !default;
 			$border-radius-small: $border-radius-base * .5 !default;
 			$border-radius-large: $border-radius-base * 2 !default;
 
-	//icons
-		$icon-size: 30px !default;
-/* 
-ANIMATION
-****************************************************************************/
+	
+
+	// TABLE
+		$table-cell-min-height: 70px !default;
+			$table-cell-min-height-large: 105px !default;
+		$table-cell-border-color: $brand-color-background-alt !default;
+		$table-cell-border-width: 1px !default;
+		$table-gutter: 20px !default;
+		
+		$table-heading-font-size: 14px !default;
+		$table-heading-min-height: 45px !default;
+		$table-heading-font-weight: 900 !default;
+		$table-heading-font-style: normal !default;
+		$table-heading-color: $brand-color-base-alt !default;
+		$table-heading-text-transform: uppercase !default;
+		$table-heading-background: $brand-color-background-alt !default;
+		$table-cell-tag-width: 12px !default;
+		$table-cell-tag-offset: 15px !default;
+
+// ANIMATION
 	$transition-duration-base: .25s !default;
 	$transition-duration-short: .125s !default;
 	$transition-duration-long: .5s !default;
 	$transition-timing: ease-in-out !default;
 
-/* 
-SCAFFOLDING
-****************************************************************************/
+// CONTENT
+	// SCAFFOLD
+		$body-font-family: $brand-font-primary !default;
+		$body-font-weight: 500 !default;
+			$body-font-weight-bold:600 !default;
+		$body-font-size: 16px !default;
+		$body-line-height: 32px !default;
+		$body-background: $brand-color-background-alt !default;
+			$body-background-inverse: $brand-color-base !default;
+		$body-color: $brand-color-base !default;
+			$body-color-inverse: $brand-color-background !default;
+		$body-text-gutter-y: 30px !default;
 
-	//body styles to cascade
-	$body-font-family: $brand-font-primary !default;
-	$body-font-weight: $global-font-weight !default;
-		$body-font-weight-bold: $global-font-weight-bold !default;
-		$body-font-weight-bolder:  $global-font-weight-bolder !default;
-	$body-font-size: $global-font-size !default;
-	$body-line-height: $global-line-height !default;
-	
+		$body-heading-gutter-top: 1em !default;
+		$body-heading-gutter-bottom: .5em !default;
+		$body-heading-line-height: calc(1em + 10px) !default;
+		$body-heading-font-weight: $body-font-weight-bold !default;
+		$body-heading-font-style: inherit !default;
+		$body-heading-color: $brand-color-base-alt !default;
 
+		$body-size-h1: 36px !default;
+		$body-size-h2: 28px !default;
+		$body-size-h3: 24px !default;
+		$body-size-h4: 20px !default;
+		$body-size-h5: $body-font-size !default;
+		$body-size-h6: 14px !default;
 
-	$body-text-gutter-bottom: 30px !default;
+		$body-anchor-color: $brand-color-primary !default;
+		$body-anchor-color-hover: $brand-color-accent !default;
 
+		$body-list-bullsize: 6px !default;
+		$body-list-offset: 25px !default;
+		$body-bullet-color: $brand-color-primary !default;
 
-	$body-heading-gutter-top: 1em !default;
-	$body-heading-gutter-bottom: .5em !default;
-	$body-heading-line-height: calc(1em + 10px);
-	$body-heading-font-weight: $global-font-weight-bold !default;
+		$body-blockquote-font-size: inherit !default;
+		$body-blockquote-line-height: inherit !default;
+		$body-blockquote-font-weight: 300 !default;
+		$body-blockquote-font-style: none !default;
+		$body-blockquote-color: $brand-color-neutral !default;
+		$body-blockquote-gutter-x: $gutter-medium !default;
+		$body-blockquote-border-width: 4px !default;
+		$body-blockquote-border-color: $brand-color-primary !default;
+		$body-blockquote-margin-y: $body-text-gutter-y !default;
+		$body-blockquote-padding-y: $body-text-gutter-y !default;
 
+		$body-cite-font-size: $body-font-size !default;
+		$body-cite-font-weight: 300 !default;
+		$body-cite-font-style: italic !default;
+		$body-cite-gutter-y: 30px !default;
 
-	$body-size-h1: 36px !default;
-	$body-size-h2: 28px !default;
-	$body-size-h3: 24px !default;
-	$body-size-h4: 20px !default;
-	$body-size-h5: $body-font-size !default;
-	$body-size-h6: 14px !default;
+		$body-mono-background: $global-background-contrast!default;
+		$body-mono-background-inverse: $global-background-contrast-inverse!default;
+			$body-pre-padding: $gutter-micro!default;
 
-	$body-anchor-color: $brand-color-accent !default;
-	$body-anchor-color-hover: $brand-color-primary !default;
-
-	$body-list-bullsize: 6px !default;
-	$body-list-offset: 25px !default;
-	$body-bullet-color: $brand-color-primary !default;
-
-
-	$body-blockquote-font-size: 24px !default;
-	$body-blockquote-line-height: inherit !default;
-	$body-blockquote-weight: $body-font-weight-bold !default;
-
-	$body-blockquote-gutter-x: 40px !default;
-	$body-blockquote-border-width: 4px !default;
-	$body-blockquote-border-color: $brand-color-primary !default;
-
-	$body-blockquote-margin-y: $gutter-micro !default;
-	$body-blockquote-padding-y: $gutter-micro !default;
-
-
-	$body-background: $brand-color-background-alt !default;
-		$body-background-inverse: $brand-color-base !default;
-
-	$body-color: $brand-color-base !default;
-		$body-color-inverse: $brand-color-background !default;
-
-
-	//svg
+	// SVG
 		$svg-gradient-color-start: $gradient-start !default;
 		$svg-gradient-color-end: $gradient-end !default;
 
-/* 
-LAYOUT ELEMENTS
-****************************************************************************/
-	//container
+// LAYOUT
+
+	// CONTAINERS
 		$container-gutter: $gutter-medium !default;
 			$container-gutter-wide: $gutter-small !default;
 			$container-gutter-slim: $gutter-large !default;
 			$container-gutter-mobile: $gutter-micro !default;
 		$container-max-width: 1800px !default;
 
-/* 
-UI ELEMENTS
-****************************************************************************/
+// UI ELEMENTS
 
-	//nav 
+	// ICONS
+		$icon-size: 30px !default;
+
+	//symbol 
+	$symbol-caret-width: 8px !default;
+	$symbol-caret-height: 5px !default;
+
+	// NAV
 		$nav-height: 75px;
 		$nav-gutter: $gutter-small !default;
 			$nav-gutter-mobile: $gutter-micro !default;
@@ -174,40 +178,38 @@ UI ELEMENTS
 		$nav-icon-width: $icon-size !default;
 		$nav-icon-height: $icon-size !default;
 		$nav-line-height: $icon-size !default;
-		$nav-current-size: 5px;
+		$nav-current-size: 5px !default;
 		$nav-top-height: 72px !default;
 			$nav-item-height: 35px !default;
 		$nav-top-font-size: 19px !default;
 		$nav-line-height: 38px !default;
-		$nav-font-size: $global-font-size !default;
+		$nav-font-size: $body-font-size !default;
 		$nav-color: inherit !default;
 		$nav-color-hover: $brand-color-primary !default;
 	
-	//Modules
+	// MODULE
 		$module-bg-color:  $global-background !default;
 			$module-bg-color-inverse:  $global-background-inverse !default;
 		$module-gutter-x: $gutter-large !default;
 			$module-gutter-x-mobile: $gutter-small !default;
 		$module-gutter-y: $gutter-base !default;
-		
 			$module-gutter-y-mobile: $gutter-small !default;
-		
+		$module-gutter-between: 30px !default;
+			$module-gutter-between-mobile: 15px !default;
 		$module-border-radius: $border-radius-base !default;
 
 		$module-title-font-size: $body-font-size !default;
 		$module-title-line-height: $body-line-height !default;
 		$module-title-color: $brand-color-primary !default;
-		$module-case: uppercase !default;
+		$module-text-transform: uppercase !default;
 
-	// dropdown + tooltip
+	// POPPER = DROPDOWN || TOOLTIP
 		$popper-gutter-x: $gutter-small !default;
 		$popper-gutter-y: $gutter-small !default;
 		$popper-border-radius: $border-radius-base !default;
 		$popper-box-shadow: 0px 0px 15px -12px $brand-color-base !default;
 
-	//thumbnail
-
-		
+	// THUMBNAIL
 		$thumbnail-font-size: 72px !default;
 			$thumbnail-font-size-inline: 18px !default;
 
@@ -216,7 +218,7 @@ UI ELEMENTS
 
 		$thumbnail-border-radius: $thumbnail-size * .5 !default;
 
-	//btn
+	// BTN
 		$btn-height: 45px !default;
 		$btn-height-large: 75px !default;   
 		$btn-height-small: 25px !default;            
@@ -225,17 +227,20 @@ UI ELEMENTS
 			$btn-font-size-small: 13px !default;
 		$btn-line-height: 20px !default;
 		$btn-font-family: $brand-font-primary !default;
-		$btn-case: none !default;
-		$btn-gutter: 30px;
-			$btn-gutter-mobile: $gutter-small !default;
+		$btn-font-weight: 600 !default;
+		$btn-font-style: normal !default;
+		$btn-text-transform: none !default;
+		$btn-gutter: 30px !default;
+			$btn-gutter-small: $gutter-micro !default;
 		$btn-border-width: 1px !default;
 		$btn-border-radius: $border-radius-base !default;
 			$btn-border-radius-large: $border-radius-large !default;
 			$btn-border-radius-small: $border-radius-small !default;
 		$btn-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
-			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-neutral !default;
+			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-base !default;
+		$btn-group-separator-color: rgba($brand-color-base,.1) !default;
 
-		//schemes
+		// SCHEMES
 			$btn-border-default: $brand-color-background !default;
 			$btn-background-default: $brand-color-background !default;
 			$btn-color-default: $brand-color-base !default;
@@ -244,9 +249,9 @@ UI ELEMENTS
 				$btn-background-default-hover: $brand-color-background !default;
 				$btn-color-default-hover: $brand-color-primary !default;
 			
-				$btn-border-default-active: $brand-color-background-alt !default;
-				$btn-background-default-active: $brand-color-background-alt !default;
-				$btn-color-default-active: $brand-color-primary !default;
+				$btn-border-default-active: $brand-color-primary !default;
+				$btn-background-default-active: $brand-color-primary !default;
+				$btn-color-default-active: $brand-color-background !default;
 
 			
 			$btn-border-base: $brand-color-base !default;
@@ -299,79 +304,61 @@ UI ELEMENTS
 				$btn-background-neutral-active: $brand-color-neutral-dark !default;
 				$btn-color-neutral-active: $brand-color-background !default;
 
+
+			$btn-border-success: $brand-color-success !default;
+			$btn-background-success: $brand-color-success !default;
+			$btn-color-success: $brand-color-background !default;
+
+				$btn-border-success-hover: $brand-color-success-light !default;
+				$btn-background-success-hover: $brand-color-success-light !default;
+				$btn-color-success-hover: $brand-color-background !default;
 			
-
-			$btn-border-info: $brand-color-info !default;
-			$btn-background-info: $brand-color-info !default;
-			$btn-color-info: $brand-color-background !default;
-
-				$btn-border-info-hover: $brand-color-info-light !default;
-				$btn-background-info-hover: $brand-color-info-light !default;
-				$btn-color-info-hover: $brand-color-background !default;
-				
-				$btn-border-info-active: $brand-color-info-dark !default;
-				$btn-background-info-active: $brand-color-info-dark !default;
-				$btn-color-info-active: $brand-color-background !default;
-
-			
-
-		$btn-border-success: $brand-color-success !default;
-		$btn-background-success: $brand-color-success !default;
-		$btn-color-success: $brand-color-background !default;
-
-			$btn-border-success-hover: $brand-color-success-light !default;
-			$btn-background-success-hover: $brand-color-success-light !default;
-			$btn-color-success-hover: $brand-color-background !default;
+				$btn-border-success-active: $brand-color-success-dark !default;
+				$btn-background-success-active: $brand-color-success-dark !default;
+				$btn-color-success-active: $brand-color-background !default;
 		
-			$btn-border-success-active: $brand-color-success-dark !default;
-			$btn-background-success-active: $brand-color-success-dark !default;
-			$btn-color-success-active: $brand-color-background !default;
-			
-		$btn-border-caution: $brand-color-caution !default;
-		$btn-background-caution: $brand-color-caution !default;
-		$btn-color-caution: $brand-color-background !default;
+				
+			$btn-border-caution: $brand-color-caution !default;
+			$btn-background-caution: $brand-color-caution !default;
+			$btn-color-caution: $brand-color-background !default;
 
-			$btn-border-caution-hover: $brand-color-caution-light !default;
-			$btn-background-caution-hover: $brand-color-caution-light !default;
-			$btn-color-caution-hover: $brand-color-background !default;
-			
-			$btn-border-caution-active: $brand-color-caution-dark !default;
-			$btn-background-caution-active: $brand-color-caution-dark !default;
-			$btn-color-caution-active: $brand-color-background !default;
+				$btn-border-caution-hover: $brand-color-caution-light !default;
+				$btn-background-caution-hover: $brand-color-caution-light !default;
+				$btn-color-caution-hover: $brand-color-background !default;
+				
+				$btn-border-caution-active: $brand-color-caution-dark !default;
+				$btn-background-caution-active: $brand-color-caution-dark !default;
+				$btn-color-caution-active: $brand-color-background !default;
 
 
-		$btn-border-error: $brand-color-error !default;
-		$btn-background-error: $brand-color-error !default;
-		$btn-color-error: $brand-color-background !default;
-			
-			$btn-border-error-hover: $brand-color-error-light !default;
-			$btn-background-error-hover: $brand-color-error-light !default;
-			$btn-color-error-hover: $brand-color-background !default;
-			
-			$btn-border-error-active: $brand-color-error-dark !default;
-			$btn-background-error-active: $brand-color-error-dark !default;
-			$btn-color-error-active: $brand-color-background !default;
+			$btn-border-error: $brand-color-error !default;
+			$btn-background-error: $brand-color-error !default;
+			$btn-color-error: $brand-color-background !default;
+				
+				$btn-border-error-hover: $brand-color-error-light !default;
+				$btn-background-error-hover: $brand-color-error-light !default;
+				$btn-color-error-hover: $brand-color-background !default;
+				
+				$btn-border-error-active: $brand-color-error-dark !default;
+				$btn-background-error-active: $brand-color-error-dark !default;
+				$btn-color-error-active: $brand-color-background !default;
 
 
+			$btn-border-link: transparent !default;
+			$btn-background-link: transparent !default;
+			$btn-color-link: $body-anchor-color !default;
+				
+				$btn-border-link-hover: transparent !default;
+				$btn-background-link-hover: transparent !default;
+				$btn-color-link-hover: $body-anchor-color-hover !default;
+				
+				$btn-border-link-active: transparent!default;
+				$btn-background-link-active: transparent!default;
+				$btn-color-link-active:  $body-anchor-color !default;
 
-		$btn-border-link: transparent !default;
-		$btn-background-link: transparent !default;
-		$btn-color-link: $body-anchor-color !default;
-			
-			$btn-border-link-hover: transparent !default;
-			$btn-background-link-hover: transparent !default;
-			$btn-color-link-hover: $brand-color-primary !default;
-			
-			$btn-border-link-active: transparent!default;
-			$btn-background-link-active: transparent!default;
-			$btn-color-link-active:  $body-anchor-color !default;
+	
 
-
-
-
-/* 
-PLUGIN DEPENDENCIES
-****************************************************************************/
+//PLUGIN DEPENDENCIES
 	
 	//Trumbowyg
 
@@ -396,7 +383,6 @@ PLUGIN DEPENDENCIES
 			$white-alt: $brand-color-background-alt;
 		$gray: $brand-color-neutral;
 
-		$info: $brand-color-info;
 		$success: $brand-color-success;
 		$caution: $brand-color-caution;
 		$error: $brand-color-error;

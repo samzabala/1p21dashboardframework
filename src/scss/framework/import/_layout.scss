@@ -1,38 +1,36 @@
+/*** LAYOUTING CONTAINERS AND SHIT ***/
 
-/*! 
-LAYOUT
-****************************************************************************/
-	//container
-	$prefix: '.container';
-	#{$prefix} {
-		& {
-			width:100%;
-			padding-left: $container-gutter;
-			padding-right: $container-gutter;
-			margin: 0 auto;
-			max-width: $container-max-width;
-		}
-
-		&#{$prefix}-fluid {
-			max-width: none;
-		}
-
-		@include br(md) {
-			&#{$prefix}-wide {
-				padding-left: $container-gutter-wide;
-				padding-right: $container-gutter-wide;
-			}
-			&#{$prefix}-slim {
-				padding-left: $container-gutter-slim;
-				padding-right: $container-gutter-slim;
-			}
-		}
-
-		@include br(sm-max) {
-
+	/* CONTAINER */
+		$prefix: '.container';
+		#{$prefix} {
 			& {
-				padding-left: $container-gutter-mobile;
-				padding-right: $container-gutter-mobile;
+				width:100%;
+				padding-left: $container-gutter;
+				padding-right: $container-gutter;
+				margin: 0 auto;
+				max-width: $container-max-width;
+			}
+
+			&#{$prefix}-fluid {
+				max-width: none;
+			}
+
+			@include br(md) {
+				&#{$prefix}-wide {
+					padding-left: $container-gutter-wide;
+					padding-right: $container-gutter-wide;
+				}
+				&#{$prefix}-slim {
+					padding-left: $container-gutter-slim;
+					padding-right: $container-gutter-slim;
+				}
+			}
+
+			@include br(sm-max) {
+
+				& {
+					padding-left: $container-gutter-mobile;
+					padding-right: $container-gutter-mobile;
+				}
 			}
 		}
-	}

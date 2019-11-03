@@ -117,7 +117,13 @@
 			$(this).siblings('.toggle-accordion').first().slideToggle(); 
 			$(this).toggleClass('open'); 
 			$(this).siblings('.toggle-accordion').first().toggleClass('open'); 
-		})
+		});
+
+		$('body').on('click','.btn-group-toggle .btn',function(e){
+			e.preventDefault();
+			$(this).siblings('.btn').removeClass('active');
+			$(this).addClass('active');
+		});
 	})
 
 

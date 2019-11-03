@@ -62,6 +62,9 @@ function app_inline_script($filepath = ''){
 	echo '</script>';
 }
 
+/*
+Functions
+*******************************************/
 
 
 
@@ -73,7 +76,7 @@ CREATE DYNAMIC BOIS
 * @param $hendlebars - html string of handleebars template
 */
 
-function app_render_handlebars_module($id = '',$data = '',$handlebars = ''){
+function app_render_handlebars_module($id = '',$data = null,$handlebars = null){
 	if($id):
 	?>
 
@@ -89,20 +92,36 @@ function app_render_handlebars_module($id = '',$data = '',$handlebars = ''){
 			</script>
 
 			<!-- DATA -->
+			<?php
+				$data_to_output = $data;
+				if(is_array($data) ):
+					$data_arr = array();
+
+					foreach($data as $set) {
+						array_push($data_arr,$set);
+					}
+
+					$data_to_output = $data_arr;
+
+				endif;
+			 ?>
 			<script id="<?= $id; ?>-hb-data" type="application/json">		
-				<?= $data; ?>
+				<?= $data_to_output; ?>
 			</script>
 
 
 			<!-- Initiate -->
 			<script>
-				(function(_1p21){
-					_1p21.initTemplate(
-						document.getElementById("<?= $id; ?>-hb-template").innerHTML,
-						JSON.parse( document.getElementById("<?= $id; ?>-hb-data").innerHTML ),
-						'#<?= $id; ?>-hb-append'
-					)
-				}(_1p21))
+				(function(_1p21,$){
+					$(window).load(function(){
+
+						_1p21.initTemplate(
+							document.getElementById("<?= $id; ?>-hb-template").innerHTML,
+							JSON.parse( document.getElementById("<?= $id; ?>-hb-data").innerHTML ),
+							'#<?= $id; ?>-hb-append'
+						)
+					})
+				}(_1p21,jQuery))
 			</script>
 
 		</div>

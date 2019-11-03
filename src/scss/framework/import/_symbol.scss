@@ -1,0 +1,161 @@
+/*** SET ***/
+
+/* SUBSET */
+$prefix: '.symbol';
+#{$prefix} {
+    position:relative;
+    display:inline-block;
+    height: rem(16px / $body-font-size);
+    width: rem(16px / $body-font-size);
+    vertical-align:middle;
+    transform-origin: center center;
+
+	&:before,&:after {
+        content: "";
+        color: inherit;
+        position:absolute;
+        top:-1em;
+        bottom:-1em;
+        left:-1em;
+        right:-1em;
+        margin: auto;
+    }
+
+    &-arrow,
+    &-plus,
+    &-minus,
+    &-kebab {
+        &:before,&:after {
+            background: currentColor;
+        }
+    }
+
+    &-arrow,
+    &-plus,
+    &-minus{
+        &:before,&:after {
+            border-radius:  rem(1.5px / $body-font-size);
+        }
+    }
+    &-plus,
+    &-minus{
+        &:after{
+            height: rem(3px / $body-font-size);
+            width:100%;
+        }
+
+        &:before {
+            height:100%;
+        }
+    }
+
+    &-plus:before,
+    &-minus:before,
+    &-arrow:after,
+    &-arrow:before{
+        width: rem(3px / $body-font-size);
+    }
+    
+    &-minus {
+        &:before{
+            content:none;
+        }
+    }
+
+    &-arrow {
+
+        &:before,&:after {
+            transform-origin: center rem(1px / $body-font-size);
+            height: rem(11px/$body-font-size);
+        }
+
+        &:before{
+            transform: rotate(-45deg);
+        }
+
+        &:after{
+            transform: rotate(45deg);
+        }
+
+
+    }
+
+    &-kebab {
+        &:before {
+            content: none;
+        }
+        &:after {
+            width: rem(5px/$body-font-size);
+            height: rem(5px/$body-font-size);
+            border-radius: 50%;
+        }
+
+        &-vertical {
+            &:after {
+                box-shadow: 
+                    0 rem(-10px/$body-font-size) 0 0,
+                    0 rem(10px/$body-font-size) 0 0
+                    ;
+            }
+        }
+
+        &-horizontal {
+            &:after {
+                box-shadow: 
+                    rem(-10px/$body-font-size) 0 0 0,
+                    rem(10px/$body-font-size) 0 0 0
+                    ;
+            }
+        }
+    }
+
+    &-caret {
+        width: rem(($symbol-caret-width * .5) / $body-font-size);
+        // width:0;
+
+        @include arrow-triangle((
+            pseudo: after, 
+            direction: 'up', //if pseudo is set to both, this will set the direction of :before, :after will be opposite of 
+            display: null,
+            size-base: inherit,
+            main-size: rem($symbol-caret-height / $body-font-size),//orientation of direction
+            cross-size: rem($symbol-caret-width / $body-font-size),// perpendicular orientation of direction
+        )){
+            display:inline-block;
+            vertical-align:middle;
+        };
+
+
+    }
+
+    &-caret,
+    &-arrow {
+
+
+        &-up,
+        .active > &-toggle-up,
+        .open > &-toggle-up {
+            transform: rotate(0deg);
+        }
+
+        &-down,
+        .active > &-toggle-down,
+        .open > &-toggle-down {
+            transform: rotate(180deg);
+        }
+
+        &-left,
+        .active > &-toggle-left,
+        .open > &-toggle-left {
+            transform: rotate(-90deg);
+        }
+
+        &-right,
+        .active > &-toggle-right,
+        .open > &-toggle-right {
+            transform: rotate(90deg);
+        }
+    }
+
+    
+}

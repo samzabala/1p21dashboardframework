@@ -12,17 +12,22 @@
 		@import 'import/_internal-vars';
 		@import 'import/_mixins';
 	
-	//partials
-		//to cascade + helpers
+	//to cascade
 		@import 'import/_scaffolding';
 		@import 'import/_typography';
-		@import 'import/_helpers';
 		@import 'import/_images';
+		@import 'import/_table';
 
-		//ui elements
+	//ui elements
 		@import 'import/_nav';
+		@import 'import/_badge';
+		@import 'import/_symbol';
 		@import 'import/_buttons';
 		@import 'import/_popper';
 		@import 'import/_layout';
 		@import 'import/_modules';
 		@import 'import/_toggle';
+		@import 'import/_thumbnail';
+
+	//helpers
+		@import 'import/_helpers';

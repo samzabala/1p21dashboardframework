@@ -1,8 +1,7 @@
 
-/*! 
-Styleguide
-****************************************************************************/
+/*** TYPOGRAPHY ***/
 
+/* heading */
 h1,.h1,
 h2,.h2,
 h3,.h3,
@@ -10,8 +9,10 @@ h4,.h4,
 h5,.h5,
 h6,.h6 {
 	@include type-set((
+		color: $body-heading-color,
 		leading: $body-heading-line-height,
 		weight:$body-heading-font-weight,
+		style: $body-heading-font-style,
 	));
 	margin-bottom: $body-heading-gutter-bottom;
 
@@ -29,8 +30,7 @@ h6,.h6 {
 }
 
 
-
-
+/* OTHER SHIT */
 
 strong,b{
 	// font-family: '';
@@ -53,10 +53,11 @@ a {
 
 p,
 ul,
-ol  {
-	margin-bottom: em($body-text-gutter-bottom / $body-font-size);
+ol,
+address,
+pre {
+	margin-bottom: em($body-text-gutter-y / $body-font-size);
 }
-
 
 ol,ul{
 	padding-left: em($body-list-offset / $body-font-size);
@@ -77,7 +78,6 @@ ol,ul{
 			display: inline;
 			margin: 0 .5em;
 		}
-
 	}
 
 	li {
@@ -89,6 +89,10 @@ ol,ul{
 			position: absolute;
 			right: 100%;
 		}
+	}
+
+	li & {
+		margin-bottom:0;
 	}
 }
 
@@ -131,7 +135,8 @@ blockquote {
 	@include type-set((
 		size: em($body-blockquote-font-size / $body-font-size),
 		leading: strip-unit($body-blockquote-line-height / $nav-font-size),
-		weight: $body-blockquote-weight,
+		weight: $body-blockquote-font-weight,
+		style: $body-blockquote-font-style
 	));
 
 	padding-left: $body-blockquote-gutter-x;
@@ -152,7 +157,12 @@ blockquote {
 	}
 }
 
-pre,code{
+dd {
+
+}
+
+
+pre,code,kbd,tt{
 	@include type-set((
 		font: $font-monospace
 	));
@@ -160,18 +170,65 @@ pre,code{
 	white-space: pre-wrap;
 }
 
+
+code,kbd {
+	background: $body-mono-background;
+	padding: em(( $body-pre-padding  * .125 ) / $body-font-size);
+
+	.body-inverse & {
+
+		background: $body-mono-background-inverse;
+	}
+}
+
 pre {
+	background: $body-mono-background;
+	padding: em($body-pre-padding / $body-font-size);
+
 
 	*{
 		border:0;
 		margin:0;
 		padding:1em;
-		background: color(w,alt);
+	}
+
+	.body-inverse & {
+
+		background: $body-mono-background-inverse;
 	}
 }
 
-.symbol {
-	&:before,&:after {
-		content: "";
-	}
+cite {
+	@include type-set((
+		size: em($body-cite-font-size / $body-font-size),
+		weight: $body-cite-font-weight,
+		style: $body-cite-font-style
+	));
 }
+
+
+/* obscure fucks I can fuck with myself */
+q {
+	font-style: italic;
+}
+del,strike {
+	text-decoration: line-through;
+}
+
+ins {
+	text-decoration: underline;
+}
+sup,sub {
+	font-size: .75em;
+}
+sup {
+	vertical-align: top;
+}
+sub {
+	vertical-align: bottom;
+}
+var {
+	font-style:italic;
+	font-family: font(a);
+}
+

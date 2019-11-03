@@ -1,7 +1,4 @@
-
-/*! 
-MODULES
-****************************************************************************/
+/*** MODULES ***/
 
 $prefix: '.module';
 #{$prefix} {
@@ -59,9 +56,15 @@ $prefix: '.module';
 			padding: 0;
 		}
 	}
+	
+	&-heading,
+	&-content {
+		padding-bottom: $module-gutter-between * .5;
+	}
 
-	&-heading {
-
+	&-footer,
+	&-content {
+		padding-top: $module-gutter-between * .5;
 	}
 
 	&-title {
@@ -70,8 +73,39 @@ $prefix: '.module';
 			size:em($module-title-font-size/$body-font-size),
 			leading: strip-unit($module-title-line-height/$module-title-font-size),
 			color: $module-title-color,
-			case: $module-case,
+			case: $module-text-transform,
 		))
+	}
+
+	&-functions {
+
+	}
+
+	&-content {
+		overflow-y:scroll;
+		overflow-x:hidden;
+
+		&::-webkit-scrollbar {
+			display:none;
+		}
+	}
+
+	@include br(md){
+		&-heading {
+			display:flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-title,&-function {
+			width: 50%;
+		}
+	
+		&-functions {
+			flex: 1 1;
+			text-align: right;
+		}
 	}
 
 	@include br(sm-max) {
@@ -107,6 +141,16 @@ $prefix: '.module';
 
 		&-footer {
 			margin-bottom: $module-gutter-y-mobile * -1;
+		}
+	
+		&-heading,
+		&-content {
+			padding-bottom: $module-gutter-between-mobile * .5;
+		}
+	
+		&-footer,
+		&-content {
+			padding-top: $module-gutter-between-mobile * .5;
 		}
 	}
 

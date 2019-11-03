@@ -11,7 +11,6 @@ $brand-color-declarations : (
 	primary: $brand-color-primary,
 	accent: $brand-color-accent,
 	neutral: $brand-color-neutral,
-	info: $brand-color-info,
 	success: $brand-color-success,
 	caution: $brand-color-caution,
 	error: $brand-color-error,
@@ -130,25 +129,6 @@ $btn-schemes: (
             background: $btn-background-neutral-active,
             border: $btn-border-neutral-active,
             color: $btn-color-neutral-active,
-        )
-    ),
-	info: (
-        init: (
-            background: $btn-background-info,
-            border: $btn-border-info,
-            color: $btn-color-info,
-        ),
-
-        hover: (
-            background: $btn-background-info-hover,
-            border: $btn-border-info-hover,
-            color: $btn-color-info-hover,
-        ),
-
-        active: (
-            background: $btn-background-info-active,
-            border: $btn-border-info-active,
-            color: $btn-color-info-active,
         )
     ),
 	success: (

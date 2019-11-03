@@ -151,13 +151,13 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/style.min.css": {
+	"/assets/styles/style.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/assets/style.min-min.css",
+		"oAP": "/assets/styles/style.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -393,6 +393,14 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/placeholder/data/loggedin-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/placeholder/data/overall.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/placeholder/data/overall-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -781,7 +789,7 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/src/scss/dashboard/_dashboard.scss": {
+	"/src/scss/_dashboard.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -789,8 +797,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/dashboard/_dashboard.css",
-		"oF": 0,
+		"oAP": "/assets/styles/dashboard.min.css",
+		"oF": 3,
 		"oS": 0,
 		"uL": 1
 		},
@@ -810,7 +818,7 @@
 		"sI": 0,
 		"sU": 0
 		},
-	"/src/scss/framework/framework.scss": {
+	"/src/scss/framework/_framework.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -818,7 +826,20 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/framework/framework.css",
+		"oAP": "/assets/styles/framework.min.css",
+		"oF": 3,
+		"oS": 3,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_badge.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_badge.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -966,6 +987,58 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/src/scss/framework/import/_symbol.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_symbol.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_table.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_table.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_TEMPLATE.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_TEMPLATE.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_thumbnail.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_thumbnail.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/src/scss/framework/import/_toggle.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1039,7 +1112,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/assets/style.min.css",
+		"oAP": "/assets/styles/style.min.css",
 		"oF": 2,
 		"oS": 0,
 		"uL": 1

@@ -1,16 +1,16 @@
-{
-	"profile" : {
-		"id": "1",
-		"username" : "mikep",
+
+{ "loggedIn" : {
+		"id": "mikeperez",
 		"name": "Mike Perez",
-		"profile_image": "placeholder/profiles/team-boss-mike.jpg",
-		"is_available": "true",
-		"is_online": "true",
+		"profileImage": "placeholder/profiles/team-boss-mike.jpg",
+		"isAvailable": "true",
+		"isOnline": "true",
 		"department": "boss",
+		
 		"avgDaysCount": "69",
 		"currentProjectsCount": "666",
 		"ytdProjectsCount": "420",
-
+	
 		"recentlyUpdated": [{
 			"name": "Fowler Pickert",
 			"recentUpdate": "12-28-18"
@@ -21,17 +21,21 @@
 			"name": "1Point21",
 			"recentUpdate": "12-28-18"
 		}],
-
-		"currentProjects": [{
-			"name": "Smith & Wesson",
-			"level": "Compete+",
-			"type": "Web Design",
-			"startDate": "4-20-69",
-			"endDate": "9-9-99",
-			"initComp": "3",
-			"designApproval": "21",
-			"leadDev": "Rhan",
-			"bugherds": "69"
-		}]
+	
+		"associatedProjects": [
+			"rmfwlaw",
+			"fieldinglaw",
+			"ebtrialattorneys",
+			"ubersexualassaultlawyer",
+			"liljegrenlaw"
+		],
+		
+		"accountsCount": "69",
+		"avgHRRank": "20.6",
+		"avgRank": "14.1",
+	
+		"linksCount": "88",
+		"onPageCount": "32",
+		"toDosCount": "00"
 	}
 }

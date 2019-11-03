@@ -1,0 +1,21 @@
+
+/*** IMAGES ***/
+$prefix: '.thumbnail';
+#{$prefix} {
+	@include aspect-ratio($thumbnail-size,$thumbnail-size);
+	width:$thumbnail-size;
+	display:block;
+	border-radius: $thumbnail-border-radius;
+
+	&#{$prefix}-inline {
+		width:$thumbnail-size-inline;
+		display:inline-block;
+		vertical-align:middle;
+	}
+
+	&-content {
+		display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

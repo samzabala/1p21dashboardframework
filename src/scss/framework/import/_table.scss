@@ -1,0 +1,73 @@
+/*** SET ***/
+
+/* SUBSET */
+$prefix: '.table';
+#{$prefix} {
+    @at-root &,
+    table {
+        display: table;
+        width:100%;
+        overflow-x:hidden;
+        
+
+        tr,
+        #{$prefix}-row {
+            border-bottom: $table-cell-border-width solid $table-cell-border-color;
+        }
+        @at-root & th,td,
+        #{$prefix}-cell,
+        #{$prefix}-cell#{$prefix}-cell-heading {
+            text-align: inherit;
+            padding-left: $table-gutter;
+            padding-right: $table-gutter;
+            vertical-align:middle;
+            height:100%;
+            display: table-cell;
+        }
+
+        @at-root & th,
+        #{$prefix}-cell-heading {
+            padding-top: calc((#{$table-heading-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
+            padding-bottom: calc((#{$table-heading-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
+            background:$table-heading-background;
+
+            @include type-set((
+                color: $table-heading-color,
+                weight:$table-heading-font-weight,
+                style: $table-heading-font-style,
+                case: $table-heading-text-transform,
+            ));
+        }
+
+        @at-root & td,
+        #{$prefix}-cell {
+            padding-top: calc((#{$table-cell-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
+            padding-bottom: calc((#{$table-cell-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
+
+            &#{$prefix}-cell-no-gutter {
+                padding-left:0;
+                padding-right:0;
+            }
+        }
+
+        @at-root #{$prefix}-cell {
+            &-label {
+                height: 100%;
+                width: $table-cell-tag-width;
+                display:block;
+                margin-top:$table-cell-tag-offset * -1;
+                margin-bottom:$table-cell-tag-offset * -1;
+                
+                @each $tag,$color in $brand-color-declarations {
+                    &-#{$tag} {
+                        background-color: $color;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+}

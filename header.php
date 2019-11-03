@@ -7,7 +7,7 @@
 	<title>1p21 Dashboard</title>
 
 	<!-- styles -->
-	<?= app_inline_style( DASHBOARD_ROOT_PATH.'/assets/style.min.css'); ?>
+	<?= app_inline_style( DASHBOARD_ROOT_PATH.'/assets/styles/style.min.css'); ?>
 
 	<!-- SCRIPT -->
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/jquery.min.js'); ?>
@@ -16,7 +16,7 @@
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?>
 
 </head>
-<body id="dashboard" class="body-nav-sticky-offset body-inverse cf dashboard-<?=DASHBOARD_SLUG ?>">
+<body id="dashboard" class="body-nav-sticky-offset cf dashboard-<?=DASHBOARD_SLUG ?>">
 	<!--SVG Styles  -->
 	<?php app_get_template_part('includes/svg-globals'); ?>
 	

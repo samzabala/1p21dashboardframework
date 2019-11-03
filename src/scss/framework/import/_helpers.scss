@@ -1,249 +1,260 @@
 
-/// hide & show classes
-	.desktop-only {
-		display: none !important;
-	}
+/*** HELPERS ***/
 
-	.laptop-only {
-		display: none !important;
-	}
-
-	.tablet-only {
-		display: none !important;
-	}
-
-	.mobile-only {
-		display: none !important;
-	}
-
-	.internal-only {
-		display: none !important;
-	}
-
-	body:not(*.home) .internal-only {
-		display: block !important;
-	}
-
-
-	@include breakpoint(lg) {
+	/* HIDEY CLASSES */
 		.desktop-only {
-			display: block !important;
+			display: none !important;
 		}
-		
-		.desktop-hide {
-			display:none!important;
-		}
-	}
 
-	@include breakpoint((md,md-max)) {
 		.laptop-only {
-			display: block !important;
+			display: none !important;
 		}
-		
-		.laptop-hide {
-			display:none!important;
-		}
-	}
-
-	@include breakpoint((sm,sm-max)) {
 
 		.tablet-only {
-			display: block !important;
+			display: none !important;
 		}
-		
-		.tablet-hide {
-			display:none!important;
-		}
-	}
 
-	@include breakpoint(xs-max) {
 		.mobile-only {
-			display: block !important;
+			display: none !important;
 		}
-		
-		.mobile-hide {
+
+		@include breakpoint(lg) {
+			.desktop-only {
+				display: block !important;
+			}
+			
+			.desktop-hide {
+				display:none!important;
+			}
+		}
+
+		@include breakpoint((md,md-max)) {
+			.laptop-only {
+				display: block !important;
+			}
+			
+			.laptop-hide {
+				display:none!important;
+			}
+		}
+
+		@include breakpoint((sm,sm-max)) {
+
+			.tablet-only {
+				display: block !important;
+			}
+			
+			.tablet-hide {
+				display:none!important;
+			}
+		}
+
+		@include breakpoint(xs-max) {
+			.mobile-only {
+				display: block !important;
+			}
+			
+			.mobile-hide {
+				display:none!important;
+			}
+		}
+
+		.sr-only {
 			display:none!important;
 		}
-	}
-
-	.sr-only {
-		display:none!important;
-	}
 
 
-//clippy bois
-  	$prefix: '.overflow';
+	/* CLIPPY CLASSES */		
+		$prefix: '.overflow';
+		#{$prefix}{
+			/* emulate background cover on image tags */
+			&-cover {
+				position: relative;
+				overflow:hidden;
+				
+				img {
+					position:absolute;
+					width: 100%;
+					height: 100%;
+					max-width:none;
+					top:-50%;
+					left:-50%;
+					right:-50%;
+					bottom:-50%;
+					margin:auto;
+					object-fit: cover;
+					display: block;
+				}
+			}
 
-	#{$prefix}{
-		/* emulate background cover on image tags */
-		&-cover {
-			position: relative;
-			overflow:hidden;
+
+			/* cut overflowing single line to ellipsis */
+			&-ellipsis {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+
+
+	/* BACKGROUND CLASSES */
+		$prefix: '.background';
+		#{$prefix} {
+
+			&-global {
+				background-color: $global-background;
+
+				.body-inverse & {
+					background-color: $global-background-inverse;
+				}
+			}
+
+
+			&-global-contrast {
+				background-color: $global-background-contrast;
+
+				.body-inverse & {
+					background-color: $global-background-contrast-inverse;
+				}
+
+			}
+
+			&-intensity {
+				@for $i from 1 through length($brand-intensity) {
+					&-#{$i} {
+						background-color: nth($brand-intensity,$i);
+					}
+				}
+			}
+
+			&-gradient {
+
+				& {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 0deg,
+						use-shorthand:false
+					))
+				}
+
+				&-45 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 45deg,
+						use-shorthand:false
+					))
+				}
+
+				&-90 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 90deg,
+						use-shorthand:false
+					))
+				}
+
+				&-135 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 135deg,
+						use-shorthand:false
+					))
+				}
+
+				&-180 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 180deg,
+						use-shorthand:false
+					))
+				}
+
+				&-225 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 225deg,
+						use-shorthand:false
+					))
+				}
+
+				&-270 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 270deg,
+						use-shorthand:false
+					))
+				}
+
+				&-315 {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 315deg,
+						use-shorthand:false
+					))
+				}
+			}
+
+
+			@each $tag,$color in $brand-color-declarations {
+				&-#{$tag} {
+					background-color: $color;
+				}
+			}
+		}
+
+	/* COLOR CLASSES */
+		$prefix: '.color';
+		#{$prefix} {
+			&-global {
+				color: $global-color;
+
+				.body-inverse & {
+					color: $global-color-inverse;
+				}
+			}
+
+			&-intensity {
+				@for $i from 1 through length($brand-intensity) {
+					&-#{$i} {
+						color: nth($brand-intensity,$i);
+					}
+				}
+			}
+
+
+			@each $tag,$color in $brand-color-declarations {
+				&-#{$tag} {
+					color: $color;
+				}
+			}
+		}
+
+
+
+	/* BACKGROUND CLASSES */
+		.flex {
+
+			&-xs {
+				@extend %flex-xs;
+			}
 			
-			img {
-				position:absolute;
-				width: 100%;
-				height: 100%;
-				max-width:none;
-				top:-50%;
-				left:-50%;
-				right:-50%;
-				bottom:-50%;
-				margin:auto;
-				object-fit: cover;
-				display: block;
+			&-sm {
+				@extend %flex-sm;
+			}
+			
+			&-md {
+				@extend %flex-md;
+			}
+			
+			&-lg {
+				@extend %flex-lg;
 			}
 		}
-
-
-		/* cut overflowing single line to ellipsis */
-		&-ellipsis {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-	}
-
-
-//background color
-	$prefix: '.background';
-
-	#{$prefix} {
-
-		&-global {
-			background-color: $global-background;
-
-			.body-inverse & {
-				background-color: $global-background-inverse;
-			}
-		}
-
-
-		&-global-contrast {
-			background-color: $global-background-contrast;
-
-			.body-inverse & {
-				background-color: $global-background-contrast-inverse;
-			}
-
-		}
-
-		&-intensity {
-			@for $i from 1 through length($brand-intensity) {
-				&-#{$i} {
-					background-color: nth($brand-intensity,$i);
-				}
-			}
-		}
-
-		&-gradient {
-
-			& {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 0deg,
-					use-shorthand:false
-				))
-			}
-
-			&-45 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 45deg,
-					use-shorthand:false
-				))
-			}
-
-			&-90 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 90deg,
-					use-shorthand:false
-				))
-			}
-
-			&-135 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 135deg,
-					use-shorthand:false
-				))
-			}
-
-			&-180 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 180deg,
-					use-shorthand:false
-				))
-			}
-
-			&-225 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 225deg,
-					use-shorthand:false
-				))
-			}
-
-			&-270 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 270deg,
-					use-shorthand:false
-				))
-			}
-
-			&-315 {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 315deg,
-					use-shorthand:false
-				))
-			}
-		}
-
-
-		@each $tag,$color in $brand-color-declarations {
-			&-#{$tag} {
-				background-color: $color;
-			}
-		}
-	}
-
-//color
-	$prefix: '.color';
-
-	#{$prefix} {
-		&-global {
-			color: $global-color;
-
-			.body-inverse & {
-				color: $global-color-inverse;
-			}
-		}
-
-		&-intensity {
-			@for $i from 1 through length($brand-intensity) {
-				&-#{$i} {
-					color: nth($brand-intensity,$i);
-				}
-			}
-		}
-
-
-		@each $tag,$color in $brand-color-declarations {
-			&-#{$tag} {
-				color: $color;
-			}
-		}
-	}
-
