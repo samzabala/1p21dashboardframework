@@ -110,7 +110,7 @@
 
 	<h2>a vertical</h2>
 
-	<div class="btn-group btn-group-vertical btn-group-toggle">
+	<div class="btn-group btn-group-vertical btn-group-toggle  btn-group-toggle-multiple">
 	<a href="#" class="btn btn-default">butt</a>
 	<a href="#" class="btn btn-default btn-disabled">butt</a>
 	<a href="#" class="btn btn-default">butt</a>
@@ -184,6 +184,18 @@
 			<button type="button" class="btn btn-default">Butt</button>
 			<button type="button" class="btn btn-default"> Butt</button>
 	</div>
+
+<h3>toggle group but multiple allowed and theres a resetter</h3>
+
+
+<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple">
+
+		<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
+		<button type="button" class=" btn btn-default"> butt</button>
+		<button type="button" class="btn btn-default">  Butt </button>
+		<button type="button" class="btn btn-default">Butt</button>
+		<button type="button" class="btn btn-default"> Butt</button>
+</div>
 
 	
 	<h2>symbols with toggle classes on them to react during .open and or .active (has to be child of whatever is active or open tho)

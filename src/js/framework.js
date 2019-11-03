@@ -121,8 +121,18 @@
 
 		$('body').on('click','.btn-group-toggle .btn',function(e){
 			e.preventDefault();
-			$(this).siblings('.btn').removeClass('active');
-			$(this).addClass('active');
+
+			$(this).siblings('.btn-toggle-reset').removeClass('active');
+
+			if(
+				(!$(this).closest('.btn-group-toggle-multiple').length)
+				|| ($(this).hasClass('btn-toggle-reset'))
+			){
+				$(this).siblings('.btn').removeClass('active');
+				$(this).addClass('active');
+			}else{
+				$(this).toggleClass('active');
+			}
 		});
 	})
 
