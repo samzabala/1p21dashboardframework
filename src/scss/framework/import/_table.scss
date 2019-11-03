@@ -5,24 +5,37 @@ $prefix: '.table';
 #{$prefix} {
     @at-root &,
     table {
-        display: table;
-        width:100%;
-        overflow-x:hidden;
+        overflow-x:scroll;
+        display:table;
+
+
+        &,
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        #{$prefix}-row {
+            width:100%;
+        }
         
 
         tr,
         #{$prefix}-row {
+            height:100%;
+            display:table-row;
             border-bottom: $table-cell-border-width solid $table-cell-border-color;
+            
         }
         @at-root & th,td,
         #{$prefix}-cell,
         #{$prefix}-cell#{$prefix}-cell-heading {
             text-align: inherit;
-            padding-left: $table-gutter;
-            padding-right: $table-gutter;
-            vertical-align:middle;
+            padding-left: $table-cell-gutter;
+            padding-right: $table-cell-gutter;
+            // vertical-align:middle;
             height:100%;
-            display: table-cell;
+            // display: table-cell;
+            position:relative;
         }
 
         @at-root & th,
@@ -45,18 +58,29 @@ $prefix: '.table';
             padding-bottom: calc((#{$table-cell-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
 
             &#{$prefix}-cell-no-gutter {
-                padding-left:0;
-                padding-right:0;
+                padding:0;
             }
         }
 
         @at-root #{$prefix}-cell {
+            &-align {
+                &-left{
+                    text-align:left;
+                }
+                &-center{
+                    text-align:center;
+                }
+                &-right{
+                    text-align:right;
+                }
+            }
             &-label {
-                height: 100%;
                 width: $table-cell-tag-width;
-                display:block;
-                margin-top:$table-cell-tag-offset * -1;
-                margin-bottom:$table-cell-tag-offset * -1;
+                height: 100%;
+                min-height:$table-cell-tag-height;
+                border-radius: $table-cell-tag-border-radius;
+                display:inline-block;
+                vertical-align:middle;
                 
                 @each $tag,$color in $brand-color-declarations {
                     &-#{$tag} {

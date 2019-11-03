@@ -75,7 +75,8 @@
 			$table-cell-min-height-large: 105px !default;
 		$table-cell-border-color: $brand-color-background-alt !default;
 		$table-cell-border-width: 1px !default;
-		$table-gutter: 20px !default;
+		$table-cell-gutter-y-compact: 5px !default;
+		$table-cell-gutter: 20px !default;
 		
 		$table-heading-font-size: 14px !default;
 		$table-heading-min-height: 45px !default;
@@ -85,7 +86,8 @@
 		$table-heading-text-transform: uppercase !default;
 		$table-heading-background: $brand-color-background-alt !default;
 		$table-cell-tag-width: 12px !default;
-		$table-cell-tag-offset: 15px !default;
+		$table-cell-tag-height: 57px !default;
+		$table-cell-tag-border-radius: 2px !default;
 
 // ANIMATION
 	$transition-duration-base: .25s !default;

@@ -215,6 +215,7 @@
 			<th>Column heading</th>
 			<th>Column heading</th>
 			<th>Column heading</th>
+			<th>Total</th>
 		</tr>
 	</thead>
 <tbody>
@@ -222,44 +223,51 @@
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-primary"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">69</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">420</td>
 	</tr>
 	
 	<tr class="table-row-success">
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-success"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td>Column content</td>
+		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+		<td class="table-cell-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+		<td class="table-cell-align-center">666</td>
 	</tr>
 	<tr class="table-row-error">
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-error"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
 	</tr>
 	<tr class="table-row-caution">
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-caution"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
 	</tr>
 	<tr class="table-row-primary">
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-primary"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
 	</tr>
 	<tr class="table-row-disabled">
 		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
 	</tr>
 </tbody>
 </table>

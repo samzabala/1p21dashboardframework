@@ -826,26 +826,32 @@ p,
 ul,
 ol,
 address,
-pre {
+pre,
+dl {
   margin-bottom: 1.875em; }
 
-ol, ul {
+ol, ul, dd {
   padding-left: 1.5625em; }
-  ol.unstyled, ol.unstyled li, ol.inline, ol.inline li, ul.unstyled, ul.unstyled li, ul.inline, ul.inline li {
-    padding-left: 0; }
-  ol.unstyled li:before, ol.inline li:before, ul.unstyled li:before, ul.inline li:before {
-    content: none; }
-  ol.inline li, ul.inline li {
-    display: inline;
-    margin: 0 .5em; }
-  ol li, ul li {
-    list-style: none;
-    position: relative; }
-    ol li:before, ul li:before {
-      position: absolute;
-      right: 100%; }
-  li ol, li ul {
-    margin-bottom: 0; }
+
+ol.unstyled, ol.unstyled li, ol.inline, ol.inline li, ul.unstyled, ul.unstyled li, ul.inline, ul.inline li {
+  padding-left: 0; }
+
+ol.unstyled li:before, ol.inline li:before, ul.unstyled li:before, ul.inline li:before {
+  content: none; }
+
+ol.inline li, ul.inline li {
+  display: inline;
+  margin: 0 .5em; }
+
+ol li, ul li {
+  list-style: none;
+  position: relative; }
+  ol li:before, ul li:before {
+    position: absolute;
+    right: 100%; }
+
+li ol, li ul {
+  margin-bottom: 0; }
 
 ul > li:before {
   content: "";
@@ -893,10 +899,10 @@ pre, code, kbd, tt {
   word-wrap: break-word;
   white-space: pre-wrap; }
 
-code, kbd {
+code, kbd, tt {
   background: #ecedf0;
   padding: 0.078125em; }
-  .body-inverse code, .body-inverse kbd {
+  .body-inverse code, .body-inverse kbd, .body-inverse tt {
     background: #3d3d3d; }
 
 pre {
@@ -974,13 +980,27 @@ body:not(.lazy-initialized) .lazy {
 /* SUBSET */
 .table,
 table {
-  display: table;
-  width: 100%;
-  overflow-x: hidden; }
+  overflow-x: scroll;
+  display: table; }
+  .table,
+  .table thead,
+  .table tbody,
+  .table tfoot,
+  .table tr,
+  .table .table-row,
+  table,
+  table thead,
+  table tbody,
+  table tfoot,
+  table tr,
+  table .table-row {
+    width: 100%; }
   .table tr,
   .table .table-row,
   table tr,
   table .table-row {
+    height: 100%;
+    display: table-row;
     border-bottom: 1px solid #ecedf0; }
   .table th, td,
   .table-cell,
@@ -989,9 +1009,8 @@ table {
     text-align: inherit;
     padding-left: 20px;
     padding-right: 20px;
-    vertical-align: middle;
     height: 100%;
-    display: table-cell; }
+    position: relative; }
   .table th,
   .table-cell-heading,
   table th {
@@ -1010,14 +1029,20 @@ table {
     .table td.table-cell-no-gutter,
     .table-cell.table-cell-no-gutter,
     table td.table-cell-no-gutter {
-      padding-left: 0;
-      padding-right: 0; }
+      padding: 0; }
+  .table-cell-align-left {
+    text-align: left; }
+  .table-cell-align-center {
+    text-align: center; }
+  .table-cell-align-right {
+    text-align: right; }
   .table-cell-label {
-    height: 100%;
     width: 12px;
-    display: block;
-    margin-top: -15px;
-    margin-bottom: -15px; }
+    height: 100%;
+    min-height: 57px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle; }
     .table-cell-label-base {
       background-color: #000000; }
     .table-cell-label-primary {

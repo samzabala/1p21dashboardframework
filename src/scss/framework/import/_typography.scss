@@ -55,12 +55,15 @@ p,
 ul,
 ol,
 address,
-pre {
+pre,
+dl {
 	margin-bottom: em($body-text-gutter-y / $body-font-size);
 }
 
-ol,ul{
+ol,ul,dd{
 	padding-left: em($body-list-offset / $body-font-size);
+}
+ol,ul{
 
 	&.unstyled,&.inline {
 
@@ -157,10 +160,6 @@ blockquote {
 	}
 }
 
-dd {
-
-}
-
 
 pre,code,kbd,tt{
 	@include type-set((
@@ -171,7 +170,7 @@ pre,code,kbd,tt{
 }
 
 
-code,kbd {
+code,kbd,tt {
 	background: $body-mono-background;
 	padding: em(( $body-pre-padding  * .125 ) / $body-font-size);
 
