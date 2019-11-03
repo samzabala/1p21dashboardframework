@@ -14,4 +14,10 @@ $prefix: '.popper';
 
 #{$prefix}{
 	@extend %pop;
+
+	li {
+		&:before {
+			content: none;
+		}
+	}
 }

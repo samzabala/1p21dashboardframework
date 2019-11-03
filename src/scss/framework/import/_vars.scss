@@ -1,5 +1,6 @@
 
 //VARS
+$debug: false;
 
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
@@ -91,9 +92,10 @@
 		$table-heading-text-transform: uppercase !default;
 		$table-heading-background: $global-background-contrast !default;
 			$table-heading-background-inverse: $global-background-contrast-inverse !default;
-		$table-cell-tag-width: 12px !default;
-		$table-cell-tag-height: 57px !default;
-		$table-cell-tag-border-radius: 2px !default;
+		$table-label-width: 12px !default;
+		$table-label-offset: 5px !default;
+		$table-label-border-radius: 2px !default;
+		$table-row-background-opacity: .2 !default;
 
 // ANIMATION
 	$transition-duration-base: .25s !default;
@@ -137,7 +139,7 @@
 		$body-bullet-color: $brand-color-primary !default;
 
 		$body-blockquote-font-size: inherit !default;
-		$body-blockquote-line-height: inherit !default;
+		// $body-blockquote-line-height: inherit !default;
 		$body-blockquote-font-weight: 300 !default;
 		$body-blockquote-font-style: none !default;
 		$body-blockquote-color: $brand-color-neutral !default;
@@ -155,6 +157,8 @@
 		$body-mono-background: $global-background-contrast!default;
 		$body-mono-background-inverse: $global-background-contrast-inverse!default;
 			$body-pre-padding: $gutter-micro!default;
+
+		$global-disabled-opacity: .5 !default;
 
 	// SVG
 		$svg-gradient-color-start: $gradient-start !default;
@@ -185,19 +189,18 @@
 
 
 	// NAV
-		$nav-height: 75px;
+		// $nav-height: 75px;
+		$nav-height: 75px !default;
 		$nav-gutter: $gutter-small !default;
 			$nav-gutter-mobile: $gutter-micro !default;
 		$nav-background: $global-background !default;
 			$nav-background-inverse: $global-background-inverse !default;
 		$nav-icon-width: $icon-size !default;
 		$nav-icon-height: $icon-size !default;
-		$nav-line-height: $icon-size !default;
 		$nav-current-size: 5px !default;
-		$nav-top-height: 72px !default;
 			$nav-item-height: 35px !default;
 		$nav-top-font-size: 19px !default;
-		$nav-line-height: 38px !default;
+		// $nav-line-height: 38px !default;
 		$nav-font-size: $body-font-size !default;
 		$nav-color: inherit !default;
 		$nav-color-hover: $brand-color-primary !default;
@@ -214,7 +217,7 @@
 		$module-border-radius: $border-radius-base !default;
 
 		$module-title-font-size: $body-font-size !default;
-		$module-title-line-height: $body-line-height !default;
+		// $module-title-line-height: $body-line-height !default;
 		$module-title-color: $brand-color-primary !default;
 		$module-text-transform: uppercase !default;
 
@@ -232,6 +235,13 @@
 			$thumbnail-size-inline: 50px !default;
 
 		$thumbnail-border-radius: $thumbnail-size * .5 !default;
+
+	//form 
+		$input-height: 45px !default;
+		$input-border-width: 1px !default;          
+		$input-font-size: 16px !default;
+		
+
 
 	// BTN
 		$btn-height: 45px !default;
@@ -254,7 +264,6 @@
 		$btn-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
 			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-base !default;
 		$btn-group-separator-color: rgba($brand-color-neutral,.5) !default;
-		$btn-disabled-opacity: .5 !default;
 
 		// SCHEMES
 			$btn-border-default: transparent !default;

@@ -27,9 +27,9 @@ h6,.h6 {
 }
 
 
-@for $i from 1 through length($body-heading-size) {
+@for $i from 1 through length($calculated-body-heading-size) {
 	h#{$i},.h#{$i} {
-		@include type( em(nth($body-heading-size,$i) / $body-font-size) );
+		@include type( em(nth($calculated-body-heading-size,$i) / $body-font-size) );
 	}
 }
 
@@ -141,7 +141,7 @@ ol {
 blockquote {
 	@include type-set((
 		size: em($body-blockquote-font-size / $body-font-size),
-		leading: strip-unit($body-blockquote-line-height / $nav-font-size),
+		// leading: strip-unit($body-blockquote-line-height / $nav-font-size),
 		weight: $body-blockquote-font-weight,
 		style: $body-blockquote-font-style
 	));

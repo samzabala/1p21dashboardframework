@@ -120,9 +120,9 @@
 			}
 
 			&-intensity {
-				@for $i from 1 through length($brand-intensity) {
+				@for $i from 1 through length($calculated-color-brand-intensity) {
 					&-#{$i} {
-						background-color: nth($brand-intensity,$i);
+						background-color: nth($calculated-color-brand-intensity,$i);
 					}
 				}
 			}
@@ -136,6 +136,17 @@
 						angle: 0deg,
 						use-shorthand:false
 					))
+				}
+
+				&,
+				&-45,
+				&-90,
+				&-135,
+				&-180,
+				&-225,
+				&-270,
+				&-315 {
+					background-color: $gradient-start;
 				}
 
 				&-45 {
@@ -203,7 +214,7 @@
 			}
 
 
-			@each $tag,$color in $brand-color-declarations {
+			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
 					background-color: $color;
 				}
@@ -222,15 +233,15 @@
 			}
 
 			&-intensity {
-				@for $i from 1 through length($brand-intensity) {
+				@for $i from 1 through length($calculated-color-brand-intensity) {
 					&-#{$i} {
-						color: nth($brand-intensity,$i);
+						color: nth($calculated-color-brand-intensity,$i);
 					}
 				}
 			}
 
 
-			@each $tag,$color in $brand-color-declarations {
+			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
 					color: $color;
 				}

@@ -7,19 +7,28 @@ $prefix: '.table';
     table {
         overflow-x:scroll;
         display:table;
+        width:100%;
+        border-collapse: collapse;
+        border-spacing: 0;
 
 
-        &,
         thead,
         tbody,
         tfoot,
         tr,
         #{$prefix}-row {
-            width:100%;
+            min-width:100%;
+        }
+
+        thead,
+        tbody,
+        tfoot {
+                display: table-header-group;
+                vertical-align: middle;
         }
         
 
-        tr,
+        @at-root & tr,
         #{$prefix}-row {
             height:100%;
             display:table-row;
@@ -33,19 +42,20 @@ $prefix: '.table';
         @at-root & th,td,
         #{$prefix}-cell,
         #{$prefix}-cell#{$prefix}-cell-heading {
+            vertical-align: inherit;
             text-align: inherit;
             padding-left: $table-cell-gutter;
             padding-right: $table-cell-gutter;
             // vertical-align:middle;
             height:100%;
-            // display: table-cell;
+            display: table-cell;
             position:relative;
         }
 
         @at-root & th,
-        #{$prefix}-cell-heading {
-            padding-top: calc((#{$table-heading-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
-            padding-bottom: calc((#{$table-heading-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
+        #{$prefix}-cell#{$prefix}-cell-heading {
+            padding-top: calc((#{$table-heading-min-height} - (#{$calculated-body-single-line})) * .5);
+            padding-bottom: calc((#{$table-heading-min-height} - (#{$calculated-body-single-line})) * .5);
             background:$table-heading-background;
 
             @include type-set((
@@ -63,11 +73,21 @@ $prefix: '.table';
 
         @at-root & td,
         #{$prefix}-cell {
-            padding-top: calc((#{$table-cell-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
-            padding-bottom: calc((#{$table-cell-min-height} - (1em * #{type-lead( $body-font-size,$body-line-height )})) * .5);
+            padding-top: calc((#{$table-cell-min-height} - (1em * #{$calculated-body-line-height})) * .5);
+            padding-bottom: calc((#{$table-cell-min-height} - (1em * #{$calculated-body-line-height})) * .5);
 
             &#{$prefix}-cell-no-gutter {
                 padding:0;
+            }
+        }
+
+
+
+        &#{$prefix}-large {
+            td,
+            #{$prefix}-cell {
+                padding-top: calc((#{$table-cell-min-height-large} - (1em * #{$calculated-body-line-height})) * .5);
+                padding-bottom: calc((#{$table-cell-min-height-large} - (1em * #{$calculated-body-line-height})) * .5);
             }
         }
 
@@ -83,17 +103,35 @@ $prefix: '.table';
                     text-align:right;
                 }
             }
-            &-label {
-                width: $table-cell-tag-width;
-                height: 100%;
-                min-height:$table-cell-tag-height;
-                border-radius: $table-cell-tag-border-radius;
-                display:inline-block;
-                vertical-align:middle;
-                
-                @each $tag,$color in $brand-color-declarations {
-                    &-#{$tag} {
-                        background-color: $color;
+        }
+
+
+        @at-root #{$prefix}-label {
+            width: $table-label-width;
+            height: 100%;
+            height:$table-cell-min-height - ($table-label-offset * 2);
+            border-radius: $table-label-border-radius;
+            display:inline-block;
+            vertical-align:middle;
+            
+            @each $tag,$color in $calculated-brand-color-declarations {
+                &-#{$tag} {
+                    background-color: $color;
+                }
+            }
+        }
+
+        @at-root #{$prefix}-row {
+            @each $tag,$color in $calculated-brand-color-declarations {
+                &-#{$tag} {
+                    background-color: rgba($color,$table-row-background-opacity);
+                }
+
+                &-disabled {
+                    td,
+                    #{$prefix}-cell {
+                        opacity: $global-disabled-opacity;
+                        cursor: no-drop;
                     }
                 }
             }

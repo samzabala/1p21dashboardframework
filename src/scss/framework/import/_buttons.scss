@@ -30,13 +30,13 @@ $prefix: '.btn';
             
         
             @at-root &:hover,
-            #{$prefix}-group:not(#{$prefix}-group-toggle):hover &,
+            #{$prefix}-group#{$prefix}-group-unite:hover &,
             
             &:focus,
-            #{$prefix}-group:not(#{$prefix}-group-toggle):focus &,
+            #{$prefix}-group#{$prefix}-group-unite:focus &,
 
             &.focus,
-            #{$prefix}-group:not(#{$prefix}-group-toggle).focus &{
+            #{$prefix}-group#{$prefix}-group-unite.focus &{
                 @include internal-btn-set-scheme($properties)
             }
             // @at-root &:hover,
@@ -48,8 +48,8 @@ $prefix: '.btn';
         }@else if $state == 'active' {
             @at-root &:active,
             &.active,
-            #{$prefix}-group:not(#{$prefix}-group-toggle):active &,
-            #{$prefix}-group:not(#{$prefix}-group-toggle).active & {
+            #{$prefix}-group#{$prefix}-group-unite:active &,
+            #{$prefix}-group#{$prefix}-group-unite.active & {
                 @include internal-btn-set-scheme($properties);
             }
             
@@ -59,19 +59,21 @@ $prefix: '.btn';
                 @include internal-btn-set-scheme($properties)
             }
             
+            &#{$prefix}-no-interaction,
+            &#{$prefix}-no-interaction:hover,
+            &#{$prefix}-no-interaction:focus,
+            &#{$prefix}-no-interaction.focus,
+            &#{$prefix}-no-interaction:active,
+            &#{$prefix}-no-interaction.active {
+                @include internal-btn-set-scheme($properties,false,true);
+            }
+            
             &#{$prefix}-disabled,
             &#{$prefix}-disabled:hover,
             &#{$prefix}-disabled:focus,
             &#{$prefix}-disabled.focus,
             &#{$prefix}-disabled:active,
             &#{$prefix}-disabled.active,
-
-            &#{$prefix}-no-interaction,
-            &#{$prefix}-no-interaction:hover,
-            &#{$prefix}-no-interaction:focus,
-            &#{$prefix}-no-interaction.focus,
-            &#{$prefix}-no-interaction:active,
-            &#{$prefix}-no-interaction.active,
             
             #{$prefix}-group-disabled &,
             #{$prefix}-group-disabled:hover &,
@@ -86,7 +88,7 @@ $prefix: '.btn';
 
 }
 
-@mixin internal-btn-set-scheme($properties,$add-important: false,$is-disabled: false) {
+@mixin internal-btn-set-scheme($properties,$is-disabled: false,$add-important: false,) {
 
 
     $important: '';
@@ -124,7 +126,7 @@ $prefix: '.btn';
 
 @function internal-btn-calculate-disabled($color){
     @if $color != transparent {
-        @return rgba( $color,$btn-disabled-opacity );
+        @return rgba( $color,$global-disabled-opacity );
     }@else {
         @return $color;
     }
@@ -134,7 +136,7 @@ $prefix: '.btn';
 #{$prefix} {
     @include type-set((
         size: em($btn-font-size / $body-font-size),
-        leading: strip-unit($btn-line-height / $btn-font-size),
+        leading: #{$calculated-btn-line-height},
         weight: $btn-font-weight,
         style: $btn-font-style,
         font: $btn-font-family,
@@ -143,8 +145,8 @@ $prefix: '.btn';
         case: $btn-text-transform,
     ));
     // overflow:hidden;
-    padding-top: calc(  (  (#{$btn-height} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead( $btn-font-size,$btn-line-height ) }) ) * .5 );
-    padding-bottom: calc(  (  (#{$btn-height} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead( $btn-font-size,$btn-line-height ) }) ) * .5 );
+    padding-top: calc(  (  (#{$btn-height} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+    padding-bottom: calc(  (  (#{$btn-height} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
     padding-right: em($btn-gutter / $btn-font-size);
     padding-left: em($btn-gutter / $btn-font-size);
     display:inline-block;
@@ -157,6 +159,10 @@ $prefix: '.btn';
     max-width:100%;
     border: $btn-border-width solid transparent;
     transition: $transition-duration-short all $transition-timing;
+    
+    &#{$prefix}-no-radius {
+        border-radius: 0!important;
+    }
 
     &-group,
     :not(#{$prefix}-group) > & {
@@ -184,15 +190,14 @@ $prefix: '.btn';
 
     &-disabled,
     #{$prefix}-group-disabled & {
-        // opacity: $btn-disabled-opacity;
         cursor:no-drop;
     }
 
     &#{$prefix}-large,
     #{$prefix}-group#{$prefix}-large & {
         font-size: em($btn-font-size-large / $body-font-size);
-        padding-top: calc(  (  (#{$btn-height-large} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead($btn-font-size,$btn-line-height) }) ) * .5 );
-        padding-bottom: calc(  (  (#{$btn-height-large} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead($btn-font-size,$btn-line-height) }) ) * .5 );
+        padding-top: calc(  (  (#{$btn-height-large} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{$btn-height-large} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 
         border-radius: $btn-border-radius-large;
     }
@@ -200,8 +205,8 @@ $prefix: '.btn';
     &#{$prefix}-small,
     #{$prefix}-group#{$prefix}-small & {
         font-size: em($btn-font-size-small / $body-font-size);
-        padding-top: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead($btn-font-size,$btn-line-height) }) ) * .5 );
-        padding-bottom: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (1em * #{ type-lead($btn-font-size,$btn-line-height) }) ) * .5 );
+        padding-top: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
         padding-right: em($btn-gutter-small / $btn-font-size-small);
         padding-left: em($btn-gutter-small / $btn-font-size-small);
         border-radius: $btn-border-radius-small;
@@ -242,12 +247,12 @@ $prefix: '.btn';
             max-width:100%;
             
 
-            #{$prefix}:nth-last-child(n+2) {
+            > #{$prefix}:nth-last-child(n+2) {
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
 
-            #{$prefix}:nth-child(n+2) {
+            > #{$prefix}:nth-child(n+2) {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
 
@@ -261,12 +266,12 @@ $prefix: '.btn';
         &#{&}-vertical {
             flex-direction:column;
 
-            #{$prefix}:nth-last-child(n+2) {
+            > #{$prefix}:nth-last-child(n+2) {
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 0;
             }
 
-            #{$prefix}:nth-child(n+2) {
+            > #{$prefix}:nth-child(n+2) {
                 border-top-right-radius: 0;
                 border-top-left-radius: 0;
 
@@ -278,7 +283,7 @@ $prefix: '.btn';
         }
     }
 
-    @each $scheme,$properties in $btn-schemes {
+    @each $scheme,$properties in $calculated-btn-schemes {
         &-#{$scheme} {
             @include button-generate-schemes($properties);
         }

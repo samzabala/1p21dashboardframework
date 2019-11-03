@@ -6,6 +6,7 @@ $prefix: '.thumbnail';
 	width:$thumbnail-size;
 	display:block;
 	border-radius: $thumbnail-border-radius;
+	@extend .background-gradient-135;
 
 	&#{$prefix}-inline {
 		width:$thumbnail-size-inline;

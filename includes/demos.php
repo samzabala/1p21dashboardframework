@@ -94,6 +94,12 @@
 	<button type="button" class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></button>
 	</div>
 
+	<h3>group but hover effects are triggered together btn-group-unite</h3>
+	<div class="btn-group btn-group-horizontal btn-group-unite">
+	<button type="button" class="btn btn-default"><strong>00:00</strong> Hours</button>
+	<button type="button" class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></button>
+	</div>
+
 	<h3>another group but one is disabled and one has interactive animations disabled</h3>
 	<div class="btn-group btn-group-horizontal">
 	<span class="btn btn-default btn-no-interaction"><strong>00:00</strong> Hours</span>
@@ -118,57 +124,63 @@
 	<a href="#" class="btn btn-default">butt</a>
 	</div>
 
-	<h2>groups</h2>
-	<div class="btn-group btn-group-horizontal">
+	<h2>groups and symbols</h2>
+
+	<div class="btn-group btn-group-horizontal btn-group-unite">
+		<a href="#" class="btn btn-default">Symbol Search</a>
+		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></a>
+	</div>
+
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol arrow down</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-down"></i></a>
 	</div>
 
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol arrow up</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-up"></i></a>
 	</div>
 
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol arrow left</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-left"></i></a>
 	</div>
 
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol arrow right</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-right"></i></a>
 	</div>
 
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol +</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></a>
 	</div>
 
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol -</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></a>
 	</div>
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol kebab vertical</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-vertical"></i></a>
 	</div>
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol kebab horizontal</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-horizontal"></i></a>
 	</div>
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol caret up</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-up"></i></a>
 	</div>
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol caret down</button>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-down"></i></a>
 	</div>
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol caret right</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-left"></i></a>
 	</div>
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol caret left</a>
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-right"></i></a>
 	</div>
@@ -218,7 +230,144 @@
 	</div>
 
 
+<h1>list group</h1>
+<ul class="list-group">
+	<li>
+	<span class="badge badge-primary"></span>
+	Cras justo odio
+	</li>
+	<li>
+	Dapibus ac facilisis in
+	</li>
+	<li>
+	Morbi leo risus
+	</li>
+</ul>
+
+
+<h1>SPECIAL TEXT</h1>
+<p class="special-jumbo">
+Yo I'm jumbo fight me
+</p>
+<p class="special-subtitle">
+	I'm a subtitle huhuhuhu
+</p>
+
+<h1>Thumbnail</h1>
+<div class="thumbnail thumbnail-inline">
+    <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+</div>
+<div class="thumbnail">
+    <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+</div>
+
+<div class="thumbnail">
+    <span class="thumbnail-text">
+		ASS
+	</span>
+</div>
+
+<h1>Badges</h1>
+<span class="badge badge-primary"></span>
+<span class="badge badge-accent"></span>
+<span class="badge badge-base"></span>
+<span class="badge badge-neutral"></span>
+<span class="badge badge-success"></span>
+<span class="badge badge-caution"></span>
+<span class="badge badge-error"></span>
+<h4>Custom color</h4>
+<span class="badge" style="background-color: pink"></span>
+
+<h1>Legends</h1>
+<span class="legend legend-primary"></span>
+<span class="legend legend-accent"></span>
+<span class="legend legend-base"></span>
+<span class="legend legend-neutral"></span>
+<span class="legend legend-success"></span>
+<span class="legend legend-caution"></span>
+<span class="legend legend-error"></span>
+
+<h4>Custom color</h4>
+<span class="badge" style="background-color: pink"></span>
 	
+
+<h1>Tags</h1>
+<span class="tag tag-primary">Primary</span>
+<span class="tag tag-accent">Accent</span>
+<span class="tag tag-base">Base</span>
+<span class="tag tag-neutral">Neutral</span>
+<span class="tag tag-success">Success</span>
+<span class="tag tag-caution">Caution</span>
+<span class="tag tag-error">Error</span>
+<h4>Custom color</h4>
+<span class="tag" style="background-color: pink">Custom</span>
+
+<h1>Progress Bar</h1>
+
+	<h3 id="progress-basic">Basic</h3>
+	<div class="progress">
+		<div class="progress-bar" style="width: 60%;"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-info" style="width: 20%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+	</div>
+
+	<h3 id="progress-basic">custom background colors with special fx woooo</h3>
+	<div class="progress">
+		<div class="progress-bar" style="width: 2%; background-color:teal;"></div>
+		<div class="progress-bar" style="width: 8%; background-color:aliceblue;"></div>
+		<div class="progress-bar" style="width: 5%; background-color:BlueViolet;"></div>
+		<div class="progress-bar" style="width: 5%; background-color:BurlyWood;"></div>
+		<div class="progress-bar" style="width: 7%; background-color:#fe85d6;"></div>
+		<div class="progress-bar" style="width: 3%; background-color:#006c3d;"></div>
+		<div class="progress-bar" style="width: 10%; background-color:#01c6ab;"></div>
+		<div class="progress-bar" style="width: 20%; background-color:#b6e4b6;"></div>
+		<div class="progress-bar" style="width: 15%; background-color:#0037b4;"></div>
+		<div class="progress-bar" style="width: 5%; background-color:#a168d9;"></div>
+		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"></div>
+		<div class="progress-bar" style="width: 20%; background-color:#fd7f03;"></div>
+		<div class="tooltip">
+			<div class="badge" style="background-color:#b6e4b6;"></div>
+		</div>
+	</div>
+	
+	<h3 id="progress-striped">Striped</h3>
+	
+	<div class="progress progress-striped">
+		<div class="progress-bar progress-bar-info" style="width: 20%"></div>
+	</div>
+	<div class="progress progress-striped">
+		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
+	</div>
+	<div class="progress progress-striped">
+		<div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+	</div>
+	<div class="progress progress-striped">
+		<div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+	</div>
+
+	<h3 id="progress-animated">Animated</h3>
+	
+	<div class="progress progress-striped active">
+		<div class="progress-bar" style="width: 45%"></div>
+	</div>
+	<h3 id="progress-stacked">Stacked</h3>
+	
+	<div class="progress">
+		<div class="progress-bar progress-bar-success" style="width: 35%"></div>
+		<div class="progress-bar progress-bar-warning" style="width: 20%"></div>
+		<div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+	</div>
+
 <h1>Table</h1>
 <table class="table">
 	<thead>
@@ -232,50 +381,50 @@
 	</thead>
 <tbody>
 	<tr>
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-primary"></span></td>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
 		<td class="table-cell-align-right">Column content</td>
 		<td class="table-cell-align-center">69</td>
 	</tr>
 	<tr>
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-accent"></span></td>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
 		<td class="table-cell-align-right">Column content</td>
 		<td class="table-cell-align-center">420</td>
 	</tr>
 	
-	<tr class="table-row-success">
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-success"></span></td>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
 		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 		<td class="table-cell-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 		<td class="table-cell-align-center">666</td>
 	</tr>
-	<tr class="table-row-error">
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-error"></span></td>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
 		<td class="table-cell-align-right">Column content</td>
 		<td class="table-cell-align-center">0</td>
 	</tr>
-	<tr class="table-row-caution">
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-caution"></span></td>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
 		<td class="table-cell-align-right">Column content</td>
 		<td class="table-cell-align-center">0</td>
 	</tr>
-	<tr class="table-row-primary">
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-primary"></span></td>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
 		<td class="table-cell-align-right">Column content</td>
 		<td class="table-cell-align-center">0</td>
 	</tr>
-	<tr class="table-row-disabled">
-		<td class="table-cell-no-gutter"><span class="table-cell-label table-cell-label-accent"></span></td>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
 		<td class="table-cell-align-right">Column content</td>
@@ -283,6 +432,162 @@
 	</tr>
 </tbody>
 </table>
+
+<h2>Table but large spacing + color scheme</h2>
+
+<table class="table table-large">
+	<thead>
+	<tr>
+			<th class="table-cell-no-gutter">#</th>
+			<th>Column heading</th>
+			<th>Column heading</th>
+			<th>Column heading</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+<tbody>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+		<td><div class="thumbnail thumbnail-inline"><span class="thumbnail-text">YS</span></div></td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">69</td>
+	</tr>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">420</td>
+	</tr>
+	<tr>
+		<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
+		<td>Custom label color</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">420</td>
+	</tr>
+	
+	<tr class="table-row-success">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+		<td>Success</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">666</td>
+	</tr>
+	<tr class="table-row-error">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+		<td>Error</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+	<tr class="table-row-caution">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+		<td>Caution</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+	<tr class="table-row-primary">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+		<td>Primary</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+	<tr class="table-row-accent">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+		<td>accent</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+	<tr class="table-row-neutral">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
+		<td>neutral</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+	<tr class="table-row-base">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
+		<td>base</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+	<tr class="table-row-disabled">
+		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+		<td>Disabled</td>
+		<td>Column content</td>
+		<td class="table-cell-align-right">Column content</td>
+		<td class="table-cell-align-center">0</td>
+	</tr>
+</tbody>
+</table>
+
+
+<h2>Table but just generated with dem classes</h2>
+<div class="table">
+	<div class="table-row">
+			<p class="table-cell table-cell-no-gutter table-cell table-cell-heading">#</p>
+			<p class="table-cell table-cell-heading">Column heading</p>
+			<p class="table-cell table-cell-heading">Column heading</p>
+			<p class="table-cell table-cell-heading">Column heading</p>
+			<p class="table-cell table-cell-heading">Total</p>
+	</div>
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell table-cell-align-right">Column content</p>
+		<p class="table-cell table-cell-align-center">69</p>
+	</div>
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell table-cell-align-right">Column content</p>
+		<p class="table-cell table-cell-align-center">420</p>
+	</div>
+	
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-success"></span></p>
+		<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+		<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+		<p class="table-cell table-cell-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+		<p class="table-cell table-cell-align-center">666</p>
+	</div>
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-error"></span></p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell table-cell-align-right">Column content</p>
+		<p class="table-cell table-cell-align-center">0</p>
+	</div>
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-caution"></span></p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell table-cell-align-right">Column content</p>
+		<p class="table-cell table-cell-align-center">0</p>
+	</div>
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell table-cell-align-right">Column content</p>
+		<p class="table-cell table-cell-align-center">0</p>
+	</div>
+	<div class="table-row">
+		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell">Column content</p>
+		<p class="table-cell table-cell-align-right">Column content</p>
+		<p class="table-cell table-cell-align-center">0</p>
+	</div>
+</div>
 
 <h1>Form</h1>
 <form class="form-horizontal">

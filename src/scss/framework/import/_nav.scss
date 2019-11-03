@@ -26,6 +26,7 @@ $prefix: '.nav';
 	}
 	&#{$prefix}-vertical {
 		display:block;
+		height: auto;
 
 		#{$prefix}-list,
 		#{$prefix}-dropdown {
@@ -46,12 +47,11 @@ $prefix: '.nav';
 	
 			@include type-set((
 				size: em($nav-font-size / $body-font-size),
-				leading: strip-unit($nav-line-height / $nav-font-size),
 				color: $nav-color
 			));
 			
-			padding-top: calc( (#{$nav-item-height} - (1em * #{( type-lead($nav-font-size,$body-line-height) )})) * .5 );
-			padding-bottom: calc( (#{$nav-item-height} - (1em * #{( type-lead($nav-font-size,$body-line-height) )})) * .5 );
+			padding-top: calc( (#{$nav-item-height} - (#{$calculated-body-single-line})) * .5 );
+			padding-bottom: calc( (#{$nav-item-height} - (#{$calculated-body-single-line})) * .5 );
 			padding-left: $nav-gutter;
 			padding-right: $nav-gutter;
 			display:inline-block;
@@ -68,7 +68,7 @@ $prefix: '.nav';
 		max-width:none;
 		display:inline-block;
 		vertical-align: middle;
-		line-height:type-lead($nav-line-height,$nav-font-size);
+		line-height: inherit;
 
 		+ #{$prefix}-item-text {
 			margin-left: 1em;
@@ -85,8 +85,8 @@ $prefix: '.nav';
 				weight: $body-font-weight-bold,
 			));
 			position:relative;
-			padding-top: calc( (#{$nav-top-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
-			padding-bottom: calc( (#{$nav-top-height} - (1em * #{( type-lead($body-font-size,$body-line-height) )})) * .5 );
+			padding-top: calc( (#{$nav-height} - (#{$calculated-body-single-line})) * .5 );
+			padding-bottom: calc( (#{$nav-height} - (#{$calculated-body-single-line})) * .5 );
 
 			&:after {
 				content:"";

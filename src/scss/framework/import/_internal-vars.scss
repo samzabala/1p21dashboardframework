@@ -5,8 +5,24 @@ For internal framework sass programming
 DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
 ****************************************************************************/
 
+//line-heights 
+    $calculated-body-line-height: type-lead( $body-font-size,$body-line-height );
+
+    $calculated-body-single-line: $calculated-body-line-height;
+    @if unitless($calculated-body-single-line) {
+        $calculated-body-single-line: 1em * #{ type-lead( $body-font-size,$body-line-height ) }
+    }
+
+    $calculated-btn-line-height: type-lead( $btn-font-size,$btn-line-height );
+
+    $calculated-btn-single-line: $calculated-btn-line-height;
+    @if unitless($calculated-btn-single-line) {
+        $calculated-btn-single-line: 1em * #{ type-lead( $btn-font-size,$btn-line-height ) }
+    }
+
+
 //for helpers
-$brand-color-declarations : (
+$calculated-brand-color-declarations : (
 	base: $brand-color-base,
 	primary: $brand-color-primary,
 	accent: $brand-color-accent,
@@ -16,7 +32,7 @@ $brand-color-declarations : (
 	error: $brand-color-error,
 );
 
-$brand-intensity: (
+$calculated-color-brand-intensity: (
 	$brand-color-intensity-1,
 	$brand-color-intensity-2,
 	$brand-color-intensity-3,
@@ -25,7 +41,7 @@ $brand-intensity: (
 );
 
 
-$body-heading-size: (
+$calculated-body-heading-size: (
 	$body-size-h1,
 	$body-size-h2,
 	$body-size-h3,
@@ -34,7 +50,7 @@ $body-heading-size: (
 	$body-size-h6
 );
 
-$btn-schemes: (
+$calculated-btn-schemes: (
 
     default: (
         init: (

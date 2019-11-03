@@ -30,7 +30,7 @@ $prefix: '.svg';
 
 
 .fill {
-	@each $tag,$color in $brand-color-declarations {
+	@each $tag,$color in $calculated-brand-color-declarations {
 		&-#{$tag} {
 			fill: $color;
 		}
