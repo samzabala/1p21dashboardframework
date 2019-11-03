@@ -20,7 +20,7 @@
 		?>
 
 		<a href="#nav-account-dropdown" class="btn btn-link"  data-toggle="accordion"> 
-			<i class="symbol symbol-kebab symbole-kebab-vertical"></i> <span class="sr-only">More</span>
+			<i class="symbol symbol-kebab symbol-kebab-vertical"></i> <span class="sr-only">More</span>
 		</a>
 			
 
