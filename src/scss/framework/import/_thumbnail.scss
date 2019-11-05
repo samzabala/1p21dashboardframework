@@ -2,16 +2,41 @@
 /*** IMAGES ***/
 $prefix: '.thumbnail';
 #{$prefix} {
+	@extend .background-gradient-135;
+	@extend .fit-image;
 	@include aspect-ratio($thumbnail-size,$thumbnail-size);
 	width:$thumbnail-size;
 	display:block;
 	border-radius: $thumbnail-border-radius;
-	@extend .background-gradient-135;
+	@include type-set((
+		size: rem($thumbnail-font-size / $body-font-size),
+		leading: $thumbnail-line-height,
+		color: $thumbnail-color,
+		weight:$thumbnail-font-weight,
+		style: $thumbnail-font-style,
+		case: $thumbnail-text-transform,
+	));
+
+	img {
+		max-width: none;
+	}
+	
 
 	&#{$prefix}-inline {
 		width:$thumbnail-size-inline;
 		display:inline-block;
 		vertical-align:middle;
+		line-height: inherit;
+		font-size: rem($thumbnail-font-size-inline / $body-font-size)
+	}
+
+	&-text {
+		display:flex;
+		text-align: center;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+
 	}
 
 	&-content {

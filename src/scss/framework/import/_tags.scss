@@ -1,0 +1,17 @@
+/*** SET ***/
+
+/* SUBSET */
+$prefix: '.tag';
+#{$prefix} {
+	@include type-set((
+		size: rem($tag-font-size / $body-font-size),
+		leading: $tag-line-height,
+		weight: $tag-font-weight,
+		style: $tag-font-style,
+		case: $tag-text-transform
+	));
+	padding-top: calc(  (  (#{rem($tag-height/$body-font-size)} - (#{ em( type-lead($tag-font-size,$tag-line-height) ) }) ) * .5 ));
+	padding-bottom: calc(  (  (#{rem($tag-height/$body-font-size)} - (#{ em( type-lead($tag-font-size,$tag-line-height) ) }) ) * .5 ));
+	padding-left: em($tag-gutter-x/$tag-font-size);
+	padding-right: em($tag-gutter-x/$tag-font-size);
+}

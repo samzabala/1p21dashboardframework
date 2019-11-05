@@ -7,7 +7,7 @@
 		"uuidString": "BA404931-7B6F-427D-980F-D9DB0ADF1963"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "31491",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -784,7 +784,7 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/assets/scripts/framework.min.js",
+		"oAP": "/src/js/framework.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 0
@@ -797,8 +797,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/assets/styles/dashboard.min.css",
-		"oF": 3,
+		"oAP": "/src/scss/_dashboard.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
@@ -807,6 +807,7 @@
 		"bl": 0,
 		"eJ": 0,
 		"ft": 1,
+		"ie": 0,
 		"iI": 0,
 		"ma": 1,
 		"mS": 0,
@@ -826,9 +827,9 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/assets/styles/framework.min.css",
-		"oF": 3,
-		"oS": 3,
+		"oAP": "/src/scss/framework/_framework.css",
+		"oF": 0,
+		"oS": 0,
 		"uL": 1
 		},
 	"/src/scss/framework/import/_badge.scss": {
@@ -918,6 +919,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/framework/import/_layout.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_list-groups.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_list-groups.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1022,6 +1036,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/framework/import/_table.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_tags.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_tags.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1591,7 +1618,6 @@
 			"flagValue": -1
 			}
 		},
-	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -1693,10 +1719,6 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
-			"active": 0,
-			"optionString": ""
-			},
-		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1862,7 +1884,7 @@
 			},
 		"new-parens": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "'always'"
 			},
 		"newline-per-chained-call": {
 			"active": 0,
@@ -2046,10 +2068,6 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
-			"optionString": ""
-			},
-		"no-import-assign": {
-			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -2475,10 +2493,6 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
-			},
-		"prefer-regex-literals": {
-			"active": 0,
-			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -3088,6 +3102,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
+		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -3227,9 +3242,6 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"rollupExternals": "",
-	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
-	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,

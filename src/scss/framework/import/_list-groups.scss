@@ -1,0 +1,19 @@
+/*** SET ***/
+
+/* SUBSET */
+$prefix: '.list-group';
+#{$prefix} {
+	padding: 0;
+	border-bottom: $list-group-border-width solid $list-group-border-color;
+
+	li {
+		border-top: $list-group-border-width solid $list-group-border-color;
+
+        padding-top: calc(  (  (#{$calculated-list-group-height} - #{$list-group-border-width}) - (#{$calculated-body-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{$calculated-list-group-height} - #{$list-group-border-width}) - (#{$calculated-body-single-line}) ) * .5 );
+
+		&:before {
+			content: none;
+		}
+	}
+}

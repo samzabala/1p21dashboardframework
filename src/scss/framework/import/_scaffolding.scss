@@ -4,9 +4,6 @@
 	html,body {
 		width:100%;
 		min-width:320px;
-	}
-
-	body {
 		@include type-set((
 			size: $body-font-size,
 			font: $body-font-family,
@@ -15,9 +12,12 @@
 			color: $body-color,
 		));
 		word-wrap: break-word;
+	}
+
+	body {
 		background: $body-background;
 
-		&#{$prefix}-inverse {
+		&.inverse {
 			background: $body-background-inverse;
 			color: $body-color-inverse;
 		}
@@ -118,6 +118,9 @@
 	  }
 	  
 	  button {
+		  margin:0;
+		  padding:0;
+		  outline:0;
 		border: none;
 		cursor: pointer;
 	  }

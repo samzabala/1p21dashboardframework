@@ -1,6 +1,37 @@
 
 /*** TYPOGRAPHY ***/
 
+/* special */
+$prefix: '.special';
+    #{$prefix} {
+		&-primary {
+            @include type-set((
+                size: em($special-primary-font-size / $body-font-size),
+                leading: $special-primary-line-height,
+                color: $special-primary-color,
+                weight:$special-primary-font-weight,
+                style: $special-primary-font-style,
+                case: $special-primary-text-transform,
+            ));
+			margin-bottom: $special-primary-gutter-y;
+			margin-top: $special-primary-gutter-y;
+		}
+
+		&-secondary {
+            @include type-set((
+                size: em($special-secondary-font-size / $body-font-size),
+                leading: $special-secondary-line-height,
+                color: $special-secondary-color,
+                weight:$special-secondary-font-weight,
+                style: $special-secondary-font-style,
+                case: $special-secondary-text-transform,
+            ));
+			margin-bottom: $special-secondary-gutter-y;
+			margin-top: $special-secondary-gutter-y;
+		}
+    }
+
+
 /* heading */
 h1,.h1,
 h2,.h2,
@@ -13,6 +44,7 @@ h6,.h6 {
 		leading: $body-heading-line-height,
 		weight:$body-heading-font-weight,
 		style: $body-heading-font-style,
+		case: $body-heading-text-transform,
 	));
 	margin-bottom: $body-heading-gutter-bottom;
 
@@ -20,7 +52,7 @@ h6,.h6 {
 		margin-top: $body-heading-gutter-top;
 	}
 
-	.body-inverse & {
+	.inverse & {
 		color:$body-heading-color-inverse;
 	}
 	
@@ -141,9 +173,10 @@ ol {
 blockquote {
 	@include type-set((
 		size: em($body-blockquote-font-size / $body-font-size),
-		// leading: strip-unit($body-blockquote-line-height / $nav-font-size),
+		leading: $body-blockquote-line-height,
 		weight: $body-blockquote-font-weight,
-		style: $body-blockquote-font-style
+		style: $body-blockquote-font-style,
+		case: $body-blockquote-text-transform
 	));
 
 	padding-left: $body-blockquote-gutter-x;
@@ -178,7 +211,7 @@ code,kbd,tt {
 	background: $body-mono-background;
 	padding: em(( $body-pre-padding  * .125 ) / $body-font-size);
 
-	.body-inverse & {
+	.inverse & {
 
 		background: $body-mono-background-inverse;
 	}
@@ -195,7 +228,7 @@ pre {
 		padding:1em;
 	}
 
-	.body-inverse & {
+	.inverse & {
 
 		background: $body-mono-background-inverse;
 	}
@@ -234,4 +267,6 @@ var {
 	font-style:italic;
 	font-family: font(a);
 }
+
+
 

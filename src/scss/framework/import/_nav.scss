@@ -3,9 +3,9 @@
 $prefix: '.nav';
 #{$prefix} {
 	&{
-		height: $nav-height;
+		height: rem($nav-height / $body-font-size);
 		background: $nav-background;
-		.body-inverse & {
+		.inverse & {
 
 			background: $nav-background-inverse;
 		}
@@ -46,12 +46,12 @@ $prefix: '.nav';
 		> a {
 	
 			@include type-set((
-				size: em($nav-font-size / $body-font-size),
-				color: $nav-color
+				size: rem($nav-font-size / $body-font-size),
+				color: $nav-color,
 			));
 			
-			padding-top: calc( (#{$nav-item-height} - (#{$calculated-body-single-line})) * .5 );
-			padding-bottom: calc( (#{$nav-item-height} - (#{$calculated-body-single-line})) * .5 );
+			padding-top: calc( ( #{rem($nav-item-height / $body-font-size)} - ( #{ em( type-lead($body-font-size,$body-line-height) ) })) * .5 );
+			padding-bottom: calc( ( #{rem($nav-item-height / $body-font-size)} - ( #{ em( type-lead($body-font-size,$body-line-height) ) })) * .5 );
 			padding-left: $nav-gutter;
 			padding-right: $nav-gutter;
 			display:inline-block;
@@ -63,8 +63,8 @@ $prefix: '.nav';
 	}
 
 	&-icon {
-		width: $nav-icon-width;
-		height: $nav-icon-height;
+		width: em($nav-icon-width / $nav-top-font-size);
+		height: em($nav-icon-height / $nav-top-font-size);
 		max-width:none;
 		display:inline-block;
 		vertical-align: middle;
@@ -81,12 +81,14 @@ $prefix: '.nav';
 
 		>a {
 			@include type-set((
-				size: em($nav-top-font-size/$nav-font-size),
-				weight: $body-font-weight-bold,
+				size: rem($nav-top-font-size/$nav-font-size),
+				style: $nav-top-font-style,
+				weight: $nav-top-font-weight,
+				case: $nav-top-text-transform
 			));
 			position:relative;
-			padding-top: calc( (#{$nav-height} - (#{$calculated-body-single-line})) * .5 );
-			padding-bottom: calc( (#{$nav-height} - (#{$calculated-body-single-line})) * .5 );
+			padding-top: calc( (#{rem($nav-height / $body-font-size)} - ( #{ em( type-lead($body-font-size,$body-line-height) ) })) * .5 );
+			padding-bottom: calc( (#{rem($nav-height / $body-font-size)} - ( #{ em( type-lead($body-font-size,$body-line-height) ) })) * .5 );
 
 			&:after {
 				content:"";

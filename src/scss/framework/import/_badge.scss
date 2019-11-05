@@ -1,6 +1,37 @@
 /*** BADGE ***/
-
+/*
+$badge-size-large: 25px !default;
+$badge-size-large: 30px !default;
+$badge-border-color: $brand-color-background !default;
+$badge-border-width: 7px !default;
+*/
 /* SUBSET */
 $prefix: '.badge';
 #{$prefix} {
+	display:inline-block;
+	vertical-align: middle;
+	line-height: inherit;
+	width: $badge-size;
+	height: $badge-size;
+	border-radius: $badge-size * .5;
+	border: $badge-border-width solid $badge-border-color;
+	box-shadow: $badge-box-shadow;
+
+	&#{&}-large {
+		width: $badge-size-large;
+		height: $badge-size-large;
+		border-radius: $badge-size-large * .5;
+	}
+	&#{&}-small {
+		width: $badge-size-small;
+		height: $badge-size-small;
+		border-radius: $badge-size-small * .5;
+	}
+
+	@each $tag,$color in $calculated-brand-color-declarations {
+		&-#{$tag} {
+			background-color: $color;
+		}
+	}
+
 }

@@ -12,7 +12,7 @@ $prefix: '.table';
         border-spacing: 0;
 
 
-        thead,
+        @at-root thead,
         tbody,
         tfoot,
         tr,
@@ -20,7 +20,7 @@ $prefix: '.table';
             min-width:100%;
         }
 
-        thead,
+        @at-root thead,
         tbody,
         tfoot {
                 display: table-header-group;
@@ -28,18 +28,18 @@ $prefix: '.table';
         }
         
 
-        @at-root & tr,
+        @at-root tr,
         #{$prefix}-row {
             height:100%;
             display:table-row;
             border-bottom: $table-cell-border-width solid $table-cell-border-color;
 
-            .body-inverse & {
+            .inverse & {
                 border-bottom: $table-cell-border-width solid $table-cell-border-color-inverse;
             }
             
         }
-        @at-root & th,td,
+        @at-root th,td,
         #{$prefix}-cell,
         #{$prefix}-cell#{$prefix}-cell-heading {
             vertical-align: inherit;
@@ -52,10 +52,10 @@ $prefix: '.table';
             position:relative;
         }
 
-        @at-root & th,
+        @at-root th,
         #{$prefix}-cell#{$prefix}-cell-heading {
-            padding-top: calc((#{$table-heading-min-height} - (#{$calculated-body-single-line})) * .5);
-            padding-bottom: calc((#{$table-heading-min-height} - (#{$calculated-body-single-line})) * .5);
+            padding-top: calc((#{$calculated-table-heading-height} - (#{$calculated-body-single-line})) * .5);
+            padding-bottom: calc((#{$calculated-table-heading-height} - (#{$calculated-body-single-line})) * .5);
             background:$table-heading-background;
 
             @include type-set((
@@ -65,54 +65,43 @@ $prefix: '.table';
                 case: $table-heading-text-transform,
             ));
 
-            .body-inverse & {
+            .inverse & {
                 background:$table-heading-background-inverse;
                 color: $table-heading-color-inverse
             }
         }
 
-        @at-root & td,
+        @at-root td,
         #{$prefix}-cell {
-            padding-top: calc((#{$table-cell-min-height} - (1em * #{$calculated-body-line-height})) * .5);
-            padding-bottom: calc((#{$table-cell-min-height} - (1em * #{$calculated-body-line-height})) * .5);
+            padding-top: calc((#{$calculated-table-cell-height} - (1em * #{$calculated-body-line-height})) * .5);
+            padding-bottom: calc((#{$calculated-table-cell-height} - (1em * #{$calculated-body-line-height})) * .5);
 
             &#{$prefix}-cell-no-gutter {
-                padding:0;
+                padding:0!important;
             }
         }
 
 
 
-        &#{$prefix}-large {
+        @at-root&#{$prefix}-large {
             td,
             #{$prefix}-cell {
-                padding-top: calc((#{$table-cell-min-height-large} - (1em * #{$calculated-body-line-height})) * .5);
-                padding-bottom: calc((#{$table-cell-min-height-large} - (1em * #{$calculated-body-line-height})) * .5);
-            }
-        }
-
-        @at-root #{$prefix}-cell {
-            &-align {
-                &-left{
-                    text-align:left;
-                }
-                &-center{
-                    text-align:center;
-                }
-                &-right{
-                    text-align:right;
-                }
+                padding-top: calc((#{$calculated-table-cell-height-large} - (1em * #{$calculated-body-line-height})) * .5);
+                padding-bottom: calc((#{$calculated-table-cell-height-large} - (1em * #{$calculated-body-line-height})) * .5);
             }
         }
 
 
         @at-root #{$prefix}-label {
             width: $table-label-width;
-            height: 100%;
-            height:$table-cell-min-height - ($table-label-offset * 2);
+            height: calc(#{$calculated-table-cell-height} - (#{$table-label-offset} * 2));
             border-radius: $table-label-border-radius;
             display:inline-block;
             vertical-align:middle;
+
+            #{$prefix}-large & {
+                height: calc(#{$calculated-table-cell-height-large} - (#{$table-label-offset} * 2));
+            }
             
             @each $tag,$color in $calculated-brand-color-declarations {
                 &-#{$tag} {

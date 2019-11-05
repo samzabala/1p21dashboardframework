@@ -9,7 +9,7 @@ $prefix: '.module';
 	& {
 		background: $module-bg-color;
 
-		.body-inverse & {
+		.inverse & {
 
 		background: $module-bg-color-inverse;
 		}
@@ -70,10 +70,12 @@ $prefix: '.module';
 	&-title {
 		@include type-set((
 
-			size:em($module-title-font-size/$body-font-size),
+			size:rem($module-title-font-size/$body-font-size),
 			// leading: strip-unit($module-title-line-height/$module-title-font-size),
 			color: $module-title-color,
-			case: $module-text-transform,
+			case: $module-title-text-transform,
+			weight: $module-title-font-weight,
+			style: $module-title-font-style
 		))
 	}
 

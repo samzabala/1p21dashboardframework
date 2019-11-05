@@ -1,6 +1,7 @@
 
 
-</ol>
+	<h1>Dropdowns</h1>
+	<h1>Tooltips</h1>
 	<h1>Nav</h1>
 	<div class="nav">
 	
@@ -74,7 +75,7 @@
 
 	<h2>Block</h2>
 
-	<button type="button" class="btn btn-block btn-primary"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
+	<button type="button" class="btn btn-large btn-block btn-success text-weight-300"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
 	<h2>
 		Disabled
 	</h2>
@@ -125,6 +126,12 @@
 	</div>
 
 	<h2>groups and symbols</h2>
+
+
+	<div class="btn-group btn-group-horizontal btn-group-unite">
+		<a href="#" class="btn btn-default">Symbol Square</a>
+		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></a>
+	</div>
 
 	<div class="btn-group btn-group-horizontal btn-group-unite">
 		<a href="#" class="btn btn-default">Symbol Search</a>
@@ -185,6 +192,15 @@
 		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-right"></i></a>
 	</div>
 
+		<div class="btn-group btn-small btn-group-horizontal btn-group-unite">
+			<a href="#" class="btn btn-default">Small butt</a>
+			<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></a>
+		</div>
+
+		<div class="btn-group btn-large btn-group-horizontal btn-group-unite">
+			<a href="#" class="btn btn-default">large butt</a>
+			<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></a>
+		</div>
 
 	<h3>toggle group</h3>
 
@@ -246,17 +262,16 @@
 
 
 <h1>SPECIAL TEXT</h1>
-<p class="special-jumbo">
+<p class="special-primary">
 Yo I'm jumbo fight me
 </p>
-<p class="special-subtitle">
-	I'm a subtitle huhuhuhu
+
+<p class="special-secondary background-gradient text-clip-background">
+Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-background
 </p>
 
+
 <h1>Thumbnail</h1>
-<div class="thumbnail thumbnail-inline">
-    <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
-</div>
 <div class="thumbnail">
     <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 </div>
@@ -266,15 +281,53 @@ Yo I'm jumbo fight me
 		ASS
 	</span>
 </div>
+<h2>Thumbnail but inline</h2>
+<div class="thumbnail thumbnail-inline">
+    <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+</div>
+<div class="thumbnail thumbnail-inline">
+    <span class="thumbnail-text">
+		MF
+	</span>
+</div>
+
+<h2>Ugly image size</h2>
+<div class="thumbnail">
+<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+</div>
+
 
 <h1>Badges</h1>
-<span class="badge badge-primary"></span>
-<span class="badge badge-accent"></span>
-<span class="badge badge-base"></span>
-<span class="badge badge-neutral"></span>
-<span class="badge badge-success"></span>
-<span class="badge badge-caution"></span>
-<span class="badge badge-error"></span>
+<p>
+	<span class="badge badge-primary"></span> Primary
+</p>
+<p>
+	<span class="badge badge-accent"></span> Accent
+</p>
+<p>
+	<span class="badge badge-base"></span> Base
+</p>
+<p>
+	<span class="badge badge-neutral"></span> Neutral
+</p>
+<p>
+	<span class="badge badge-success"></span> Success
+</p>
+<p>
+	<span class="badge badge-caution"></span> Caution
+</p>
+<p>
+	<span class="badge badge-error"></span> Error
+</p>
+
+
+<p>
+	<span class="badge badge-primary badge-small"></span> Small
+</p>
+<p>
+	<span class="badge badge-primary badge-large"></span> Large
+</p>
+
 <h4>Custom color</h4>
 <span class="badge" style="background-color: pink"></span>
 
@@ -288,7 +341,7 @@ Yo I'm jumbo fight me
 <span class="legend legend-error"></span>
 
 <h4>Custom color</h4>
-<span class="badge" style="background-color: pink"></span>
+<span class="legend" style="background-color: pink"></span>
 	
 
 <h1>Tags</h1>
@@ -306,19 +359,19 @@ Yo I'm jumbo fight me
 
 	<h3 id="progress-basic">Basic</h3>
 	<div class="progress">
-		<div class="progress-bar" style="width: 60%;"></div>
+		<div class="progress-bar background-primary" style="width: 20%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar progress-bar-info" style="width: 20%"></div>
+		<div class="progress-bar background-accent" style="width: 60%;"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
+		<div class="progress-bar background-success" style="width: 40%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+		<div class="progress-bar background-caution" style="width: 60%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+		<div class="progress-bar background-error" style="width: 80%"></div>
 	</div>
 
 	<h3 id="progress-basic">custom background colors with special fx woooo</h3>
@@ -342,30 +395,48 @@ Yo I'm jumbo fight me
 	
 	<h3 id="progress-striped">Striped</h3>
 	
-	<div class="progress progress-striped">
-		<div class="progress-bar progress-bar-info" style="width: 20%"></div>
+	
+	<div class="progress progress-bar-striped">
+		<div class="progress-bar background-primary" style="width: 20%"></div>
 	</div>
-	<div class="progress progress-striped">
-		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
+	<div class="progress">
+		<div class="progress-bar background-accent" style="width: 60%;"></div>
 	</div>
-	<div class="progress progress-striped">
-		<div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+	<div class="progress">
+		<div class="progress-bar background-success" style="width: 40%"></div>
 	</div>
-	<div class="progress progress-striped">
-		<div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+	<div class="progress">
+		<div class="progress-bar background-caution" style="width: 60%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar background-error" style="width: 80%"></div>
 	</div>
 
 	<h3 id="progress-animated">Animated</h3>
 	
-	<div class="progress progress-striped active">
-		<div class="progress-bar" style="width: 45%"></div>
+	
+	<div class="progress progress-bar-striped active">
+		<div class="progress-bar background-primary" style="width: 20%"></div>
 	</div>
+	<div class="progress">
+		<div class="progress-bar background-accent" style="width: 60%;"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar background-success" style="width: 40%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar background-caution" style="width: 60%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar background-error" style="width: 80%"></div>
+	</div>
+
 	<h3 id="progress-stacked">Stacked</h3>
 	
 	<div class="progress">
-		<div class="progress-bar progress-bar-success" style="width: 35%"></div>
-		<div class="progress-bar progress-bar-warning" style="width: 20%"></div>
-		<div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+		<div class="progress-bar background-bar-success" style="width: 35%"></div>
+		<div class="progress-bar background-bar-error" style="width: 20%"></div>
+		<div class="progress-bar background-bar-caution" style="width: 10%"></div>
 	</div>
 
 <h1>Table</h1>
@@ -375,7 +446,7 @@ Yo I'm jumbo fight me
 			<th class="table-cell-no-gutter">#</th>
 			<th>Column heading</th>
 			<th>Column heading</th>
-			<th>Column heading</th>
+			<th class="text-align-right">Column heading</th>
 			<th>Total</th>
 		</tr>
 	</thead>
@@ -384,51 +455,51 @@ Yo I'm jumbo fight me
 		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">69</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">69</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">420</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">420</td>
 	</tr>
 	
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
 		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-		<td class="table-cell-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-		<td class="table-cell-align-center">666</td>
+		<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+		<td class="text-align-center">666</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 </tbody>
 </table>
@@ -441,8 +512,8 @@ Yo I'm jumbo fight me
 			<th class="table-cell-no-gutter">#</th>
 			<th>Column heading</th>
 			<th>Column heading</th>
-			<th>Column heading</th>
-			<th>Total</th>
+			<th class="text-align-right">Column heading</th>
+			<th class="text-align-center">Total</th>
 		</tr>
 	</thead>
 <tbody>
@@ -450,79 +521,79 @@ Yo I'm jumbo fight me
 		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
 		<td><div class="thumbnail thumbnail-inline"><span class="thumbnail-text">YS</span></div></td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">69</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">69</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>Column content</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">420</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">420</td>
 	</tr>
 	<tr>
 		<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
 		<td>Custom label color</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">420</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">420</td>
 	</tr>
 	
 	<tr class="table-row-success">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
 		<td>Success</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">666</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">666</td>
 	</tr>
 	<tr class="table-row-error">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
 		<td>Error</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr class="table-row-caution">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
 		<td>Caution</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr class="table-row-primary">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
 		<td>Primary</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr class="table-row-accent">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>accent</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr class="table-row-neutral">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
 		<td>neutral</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr class="table-row-base">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
 		<td>base</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 	<tr class="table-row-disabled">
 		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 		<td>Disabled</td>
 		<td>Column content</td>
-		<td class="table-cell-align-right">Column content</td>
-		<td class="table-cell-align-center">0</td>
+		<td class="text-align-right">Column content</td>
+		<td class="text-align-center">0</td>
 	</tr>
 </tbody>
 </table>
@@ -541,51 +612,51 @@ Yo I'm jumbo fight me
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
 		<p class="table-cell">Column content</p>
 		<p class="table-cell">Column content</p>
-		<p class="table-cell table-cell-align-right">Column content</p>
-		<p class="table-cell table-cell-align-center">69</p>
+		<p class="table-cell text-align-right">Column content</p>
+		<p class="table-cell text-align-center">69</p>
 	</div>
 	<div class="table-row">
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
 		<p class="table-cell">Column content</p>
 		<p class="table-cell">Column content</p>
-		<p class="table-cell table-cell-align-right">Column content</p>
-		<p class="table-cell table-cell-align-center">420</p>
+		<p class="table-cell text-align-right">Column content</p>
+		<p class="table-cell text-align-center">420</p>
 	</div>
 	
 	<div class="table-row">
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-success"></span></p>
 		<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
 		<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
-		<p class="table-cell table-cell-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
-		<p class="table-cell table-cell-align-center">666</p>
+		<p class="table-cell text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+		<p class="table-cell text-align-center">666</p>
 	</div>
 	<div class="table-row">
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-error"></span></p>
 		<p class="table-cell">Column content</p>
 		<p class="table-cell">Column content</p>
-		<p class="table-cell table-cell-align-right">Column content</p>
-		<p class="table-cell table-cell-align-center">0</p>
+		<p class="table-cell text-align-right">Column content</p>
+		<p class="table-cell text-align-center">0</p>
 	</div>
 	<div class="table-row">
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-caution"></span></p>
 		<p class="table-cell">Column content</p>
 		<p class="table-cell">Column content</p>
-		<p class="table-cell table-cell-align-right">Column content</p>
-		<p class="table-cell table-cell-align-center">0</p>
+		<p class="table-cell text-align-right">Column content</p>
+		<p class="table-cell text-align-center">0</p>
 	</div>
 	<div class="table-row">
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
 		<p class="table-cell">Column content</p>
 		<p class="table-cell">Column content</p>
-		<p class="table-cell table-cell-align-right">Column content</p>
-		<p class="table-cell table-cell-align-center">0</p>
+		<p class="table-cell text-align-right">Column content</p>
+		<p class="table-cell text-align-center">0</p>
 	</div>
 	<div class="table-row">
 		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
 		<p class="table-cell">Column content</p>
 		<p class="table-cell">Column content</p>
-		<p class="table-cell table-cell-align-right">Column content</p>
-		<p class="table-cell table-cell-align-center">0</p>
+		<p class="table-cell text-align-right">Column content</p>
+		<p class="table-cell text-align-center">0</p>
 	</div>
 </div>
 

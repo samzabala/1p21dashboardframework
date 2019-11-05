@@ -5,8 +5,10 @@ $prefix: '.symbol';
 #{$prefix} {
     position:relative;
     display:inline-block;
-    height: rem(16px / $body-font-size);
-    width: rem(16px / $body-font-size);
+    line-height:inherit;
+    font-size:inherit;
+    height: 1em;
+    width: 1em;
     vertical-align:middle;
     transform-origin: center center;
 
@@ -14,6 +16,7 @@ $prefix: '.symbol';
         content: "";
         color: inherit;
         position:absolute;
+        display:block;
         top:-1em;
         bottom:-1em;
         left:-1em;
@@ -24,7 +27,9 @@ $prefix: '.symbol';
     &-arrow,
     &-plus,
     &-minus,
-    &-kebab {
+    &-kebab,
+    &-search,
+    &-square {
         &:before,&:after {
             background: currentColor;
         }
@@ -32,15 +37,16 @@ $prefix: '.symbol';
 
     &-arrow,
     &-plus,
-    &-minus{
+    &-minus,
+    &-search{
         &:before,&:after {
-            border-radius:  rem(1.5px / $body-font-size);
+            border-radius:  em(3px / $body-font-size) * .5;
         }
     }
     &-plus,
     &-minus{
         &:after{
-            height: rem(3px / $body-font-size);
+            height: em(3px / $body-font-size);
             width:100%;
         }
 
@@ -52,8 +58,9 @@ $prefix: '.symbol';
     &-plus:before,
     &-minus:before,
     &-arrow:after,
-    &-arrow:before{
-        width: rem(3px / $body-font-size);
+    &-arrow:before,
+    &-search:after{
+        width: em(3px / $body-font-size);
     }
     
     &-minus {
@@ -65,8 +72,8 @@ $prefix: '.symbol';
     &-arrow {
 
         &:before,&:after {
-            transform-origin: center rem(1px / $body-font-size);
-            height: rem(11px/$body-font-size);
+            transform-origin: center em(1px / $body-font-size);
+            height: em(11px/$body-font-size);
         }
 
         &:before{
@@ -85,16 +92,16 @@ $prefix: '.symbol';
             content: none;
         }
         &:after {
-            width: rem(5px/$body-font-size);
-            height: rem(5px/$body-font-size);
-            border-radius: 50%;
+            width: em(5px/$body-font-size);
+            height: em(5px/$body-font-size);
+            border-radius: em(5px/$body-font-size);
         }
 
         &-vertical {
             &:after {
                 box-shadow: 
-                    0 rem(-10px/$body-font-size) 0 0,
-                    0 rem(10px/$body-font-size) 0 0
+                    0 em(-10px/$body-font-size) 0 0,
+                    0 em(10px/$body-font-size) 0 0
                     ;
             }
         }
@@ -102,15 +109,15 @@ $prefix: '.symbol';
         &-horizontal {
             &:after {
                 box-shadow: 
-                    rem(-10px/$body-font-size) 0 0 0,
-                    rem(10px/$body-font-size) 0 0 0
+                    em(-10px/$body-font-size) 0 0 0,
+                    em(10px/$body-font-size) 0 0 0
                     ;
             }
         }
     }
 
     &-caret {
-        width: rem(($symbol-caret-width * .5) / $body-font-size);
+        width: em(($symbol-caret-width * .5) / $body-font-size);
         // width:0;
 
         @include arrow-triangle((
@@ -118,8 +125,8 @@ $prefix: '.symbol';
             direction: 'up', //if pseudo is set to both, this will set the direction of :before, :after will be opposite of 
             display: null,
             size-base: inherit,
-            main-size: rem($symbol-caret-height / $body-font-size),//orientation of direction
-            cross-size: rem($symbol-caret-width / $body-font-size),// perpendicular orientation of direction
+            main-size: em($symbol-caret-height / $body-font-size),//orientation of direction
+            cross-size: em($symbol-caret-width / $body-font-size),// perpendicular orientation of direction
         )){
             display:inline-block;
             vertical-align:middle;
@@ -154,6 +161,40 @@ $prefix: '.symbol';
         .active > &-toggle-right,
         .open > &-toggle-right {
             transform: rotate(90deg);
+        }
+    }
+    &-square {
+        &:before {
+            content: none;
+        }
+        &:after {
+            width: .875em;
+            height: .875em;
+        }
+    }
+
+    &-search {
+        &:before {
+            width: 1em;
+            height: 1em;
+            background:none;
+            border-radius: 50%;
+            border: em(3px / $body-font-size) solid;
+            top:-.1875em;
+            left:-.125em;
+            bottom:auto;
+            right:auto;
+
+        }
+
+        &:after {
+            height: .625em;
+            bottom: 0;
+            right:em(3px / $body-font-size) * -1;
+            top:auto;
+            left:auto;
+            transform-origin: center bottom;
+            transform: rotate(-45deg);
         }
     }
 

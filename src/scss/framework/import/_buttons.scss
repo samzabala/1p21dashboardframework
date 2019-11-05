@@ -31,12 +31,15 @@ $prefix: '.btn';
         
             @at-root &:hover,
             #{$prefix}-group#{$prefix}-group-unite:hover &,
+            #{$prefix}-group#{$prefix}-group-unite #{$prefix}:hover ~ &,
             
             &:focus,
             #{$prefix}-group#{$prefix}-group-unite:focus &,
+            #{$prefix}-group#{$prefix}-group-unite #{$prefix}:focus ~ &,
 
             &.focus,
-            #{$prefix}-group#{$prefix}-group-unite.focus &{
+            #{$prefix}-group#{$prefix}-group-unite.focus &
+            #{$prefix}-group#{$prefix}-group-unite #{$prefix}.focus ~ & {
                 @include internal-btn-set-scheme($properties)
             }
             // @at-root &:hover,
@@ -47,9 +50,12 @@ $prefix: '.btn';
 
         }@else if $state == 'active' {
             @at-root &:active,
-            &.active,
             #{$prefix}-group#{$prefix}-group-unite:active &,
-            #{$prefix}-group#{$prefix}-group-unite.active & {
+            #{$prefix}-group#{$prefix}-group-unite #{$prefix}:active ~ &,
+
+            &.active,
+            #{$prefix}-group#{$prefix}-group-unite.active &,
+            #{$prefix}-group#{$prefix}-group-unite #{$prefix}.active ~ & {
                 @include internal-btn-set-scheme($properties);
             }
             
@@ -135,8 +141,8 @@ $prefix: '.btn';
 
 #{$prefix} {
     @include type-set((
-        size: em($btn-font-size / $body-font-size),
-        leading: #{$calculated-btn-line-height},
+        size: rem($btn-font-size / $body-font-size),
+        leading: $btn-line-height,
         weight: $btn-font-weight,
         style: $btn-font-style,
         font: $btn-font-family,
@@ -145,8 +151,8 @@ $prefix: '.btn';
         case: $btn-text-transform,
     ));
     // overflow:hidden;
-    padding-top: calc(  (  (#{$btn-height} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-    padding-bottom: calc(  (  (#{$btn-height} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+    padding-top: calc(  (  (#{ rem($btn-height/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
+    padding-bottom: calc(  (  (#{ rem($btn-height/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
     padding-right: em($btn-gutter / $btn-font-size);
     padding-left: em($btn-gutter / $btn-font-size);
     display:inline-block;
@@ -195,27 +201,35 @@ $prefix: '.btn';
 
     &#{$prefix}-large,
     #{$prefix}-group#{$prefix}-large & {
-        font-size: em($btn-font-size-large / $body-font-size);
-        padding-top: calc(  (  (#{$btn-height-large} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        padding-bottom: calc(  (  (#{$btn-height-large} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        font-size: rem($btn-font-size-large / $body-font-size);
+        padding-top: calc(  (  (#{ rem($btn-height-large/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
+        padding-bottom: calc(  (  (#{ rem($btn-height-large/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
 
         border-radius: $btn-border-radius-large;
     }
 
     &#{$prefix}-small,
     #{$prefix}-group#{$prefix}-small & {
-        font-size: em($btn-font-size-small / $body-font-size);
-        padding-top: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        padding-bottom: calc(  (  (#{$btn-height-small} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        padding-right: em($btn-gutter-small / $btn-font-size-small);
-        padding-left: em($btn-gutter-small / $btn-font-size-small);
+        font-size: rem($btn-font-size-small / $body-font-size);
+        padding-top: calc(  (  (#{rem($btn-height-small/$body-font-size)} - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
+        padding-bottom: calc(  (  (#{rem($btn-height-small/$body-font-size)} - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
         border-radius: $btn-border-radius-small;
     }
 
     &-symbol {
-        width: $btn-height;
+        width: rem($btn-height/$body-font-size);
         padding-left:0;
         padding-right:0;
+
+        #{$prefix}-small &{
+            width: rem($btn-height-small/$body-font-size);
+        }
+
+        #{$prefix}-large &{
+            width: rem($btn-height-large/$body-font-size) ;
+        }
+
+
 
         .symbol {
             margin-left:auto;
@@ -234,6 +248,7 @@ $prefix: '.btn';
     &-group {
         display:inline-flex;
         overflow:hidden;
+        position:relative;
 
         &#{$prefix}-large {
             border-radius: $btn-border-radius-large;
@@ -284,7 +299,7 @@ $prefix: '.btn';
     }
 
     @each $scheme,$properties in $calculated-btn-schemes {
-        &-#{$scheme} {
+        &#{&}-#{$scheme} {
             @include button-generate-schemes($properties);
         }
     }
