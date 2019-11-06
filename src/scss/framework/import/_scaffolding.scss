@@ -17,13 +17,13 @@
 	body {
 		background: $body-background;
 
-		&.inverse {
+		&.body-inverse {
 			background: $body-background-inverse;
 			color: $body-color-inverse;
 		}
 
 		&#{$prefix}-nav-sticky-offset {
-			padding-top: $nav-height;
+			padding-top: $calculated-nav-height;
 		}
 	}
 

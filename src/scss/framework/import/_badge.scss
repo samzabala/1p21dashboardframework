@@ -1,31 +1,47 @@
 /*** BADGE ***/
-/*
-$badge-size-large: 25px !default;
-$badge-size-large: 30px !default;
-$badge-border-color: $brand-color-background !default;
-$badge-border-width: 7px !default;
-*/
-/* SUBSET */
+
+$calculated-badge-size: $badge-size;
+@if internal-is-convertable($badge-size) {
+    $calculated-badge-size: rem($badge-size / $body-font-size)
+}
+
+
+$calculated-badge-size-small:  $badge-size-small;
+@if internal-is-convertable($badge-size-small) {
+    $calculated-badge-size-small: rem($badge-size-small / $body-font-size)
+}
+$calculated-badge-size-large: $badge-size-large;
+@if internal-is-convertable($badge-size-large) {
+    $calculated-badge-size-large: rem($badge-size-large / $body-font-size)
+}
+
+
+$calculated-badge-border-width: $badge-border-width;
+@if internal-is-convertable($badge-border-width) {
+    $calculated-badge-border-width: rem($badge-border-width / $body-font-size)
+}
+
+
 $prefix: '.badge';
 #{$prefix} {
 	display:inline-block;
 	vertical-align: middle;
 	line-height: inherit;
-	width: $badge-size;
-	height: $badge-size;
-	border-radius: $badge-size * .5;
-	border: $badge-border-width solid $badge-border-color;
+	width: $calculated-badge-size;
+	height: $calculated-badge-size;
+	border-radius: calc(#{$calculated-badge-size} * .5);
+	border: $calculated-badge-border-width solid $badge-border-color;
 	box-shadow: $badge-box-shadow;
 
 	&#{&}-large {
-		width: $badge-size-large;
-		height: $badge-size-large;
-		border-radius: $badge-size-large * .5;
+		width: $calculated-badge-size-large;
+		height: $calculated-badge-size-large;
+		border-radius: calc(#{$calculated-badge-size-large} * .5);
 	}
 	&#{&}-small {
-		width: $badge-size-small;
-		height: $badge-size-small;
-		border-radius: $badge-size-small * .5;
+		width: $calculated-badge-size-small;
+		height: $calculated-badge-size-small;
+		border-radius: calc(#{$calculated-badge-size-small} * .5);
 	}
 
 	@each $tag,$color in $calculated-brand-color-declarations {

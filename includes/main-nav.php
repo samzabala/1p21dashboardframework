@@ -7,25 +7,27 @@
 		<button type="submit" class="sr-only">Search</button>
 	</form>
 	<div id="nav-account">
+		<div id="nav-account-info">
+		</div>
 
-
+		
 		<?php
 		
 		app_render_handlebars_module(
-			'nav-account',
+			'nav-account-info',
 			app_get_file_content_as_string(DASHBOARD_ROOT_PATH.'/placeholder/data/loggedin.json'),
 			app_get_file_content_as_string(DASHBOARD_ROOT_PATH.'/handlebars/nav-account.hbs')
 		);
 		
 		?>
 
-		<a href="#nav-account-dropdown" class="btn btn-link"  data-toggle="accordion"> 
+		<a href="#nav-account-dropdown" class="btn btn-link"  data-toggle="dropdown"> 
 			<i class="symbol symbol-kebab symbol-kebab-vertical"></i> <span class="sr-only">More</span>
 		</a>
 			
 
 
-		<ul class=" nav-dropdown popper popper-caret popper-caret-top toggle-accordion">
+		<ul id="nav-account-dropdown" class="dropdown popper popper-caret popper-caret-top">
 			<!-- PLACEHOLDEr -->
 			<li class=""><a href="#">Account</a></li>
 			<li class=""><a href="#">Item</a></li>

@@ -52,7 +52,7 @@ h6,.h6 {
 		margin-top: $body-heading-gutter-top;
 	}
 
-	.inverse & {
+	.body-inverse & {
 		color:$body-heading-color-inverse;
 	}
 	
@@ -92,7 +92,8 @@ ul,
 ol,
 address,
 pre,
-dl {
+dl,
+table {
 	margin-bottom: em($body-text-gutter-y / $body-font-size);
 }
 
@@ -211,7 +212,7 @@ code,kbd,tt {
 	background: $body-mono-background;
 	padding: em(( $body-pre-padding  * .125 ) / $body-font-size);
 
-	.inverse & {
+	.body-inverse & {
 
 		background: $body-mono-background-inverse;
 	}
@@ -228,7 +229,7 @@ pre {
 		padding:1em;
 	}
 
-	.inverse & {
+	.body-inverse & {
 
 		background: $body-mono-background-inverse;
 	}

@@ -1,6 +1,40 @@
 
 /*  BUTTONS ***/
 
+//internal vars
+$calculated-btn-font-size: $btn-font-size;
+@if internal-is-convertable($btn-font-size) {
+    $calculated-btn-font-size: rem($btn-font-size / $body-font-size)
+}
+
+$calculated-btn-line-height: type-lead( $btn-font-size,$btn-line-height );
+
+$calculated-btn-single-line: $calculated-btn-line-height;
+@if unitless($calculated-btn-single-line) and unit($btn-font-size) == px {
+    $calculated-btn-single-line: 1em * #{ type-lead( $btn-font-size,$btn-line-height ) }
+}
+
+$calculated-btn-height: $btn-height;
+@if internal-is-convertable($btn-height,$btn-font-size) {
+    $calculated-btn-height: rem($btn-height/$btn-font-size)
+}
+
+
+    $calculated-btn-height-large: $btn-height-large;
+    @if internal-is-convertable($btn-height-large,$btn-font-size) {
+        $calculated-btn-height-large: rem($btn-height-large/$btn-font-size)
+    }
+
+    $calculated-btn-height-small: $btn-height-small;
+    @if internal-is-convertable($btn-height-small,$btn-font-size){
+        $calculated-btn-height-small: rem($btn-height-small/$btn-font-size)
+    }
+
+$calculated-btn-gutter-x: $btn-gutter-x;
+@if internal-is-convertable($btn-gutter-x,$btn-font-size) {
+    $calculated-btn-gutter-x: em($btn-gutter-x / $btn-font-size)
+}
+
 $prefix: '.btn';
 @mixin button-generate-schemes($args:()){
     $defaults: (
@@ -141,8 +175,8 @@ $prefix: '.btn';
 
 #{$prefix} {
     @include type-set((
-        size: rem($btn-font-size / $body-font-size),
-        leading: $btn-line-height,
+        size: #{$calculated-btn-font-size},
+        leading: #{$calculated-btn-line-height},
         weight: $btn-font-weight,
         style: $btn-font-style,
         font: $btn-font-family,
@@ -151,10 +185,10 @@ $prefix: '.btn';
         case: $btn-text-transform,
     ));
     // overflow:hidden;
-    padding-top: calc(  (  (#{ rem($btn-height/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
-    padding-bottom: calc(  (  (#{ rem($btn-height/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
-    padding-right: em($btn-gutter / $btn-font-size);
-    padding-left: em($btn-gutter / $btn-font-size);
+    padding-top: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+    padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+    padding-right: $calculated-btn-gutter-x;
+    padding-left: $calculated-btn-gutter-x;
     display:inline-block;
     vertical-align: middle;
     background:none;
@@ -202,31 +236,30 @@ $prefix: '.btn';
     &#{$prefix}-large,
     #{$prefix}-group#{$prefix}-large & {
         font-size: rem($btn-font-size-large / $body-font-size);
-        padding-top: calc(  (  (#{ rem($btn-height-large/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
-        padding-bottom: calc(  (  (#{ rem($btn-height-large/$body-font-size) } - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
-
+        padding-top: calc(  (  (#{ rem($btn-height-large/$btn-font-size) } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{ rem($btn-height-large/$btn-font-size) } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
         border-radius: $btn-border-radius-large;
     }
 
     &#{$prefix}-small,
     #{$prefix}-group#{$prefix}-small & {
         font-size: rem($btn-font-size-small / $body-font-size);
-        padding-top: calc(  (  (#{rem($btn-height-small/$body-font-size)} - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
-        padding-bottom: calc(  (  (#{rem($btn-height-small/$body-font-size)} - (#{$btn-border-width} * 2)) - (#{ em( type-lead($btn-font-size,$btn-line-height) ) }) ) * .5 );
+        padding-top: calc(  (  (#{rem($btn-height-small/$btn-font-size)} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{rem($btn-height-small/$btn-font-size)} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
         border-radius: $btn-border-radius-small;
     }
 
     &-symbol {
-        width: rem($btn-height/$body-font-size);
+        width: rem($btn-height/$btn-font-size);
         padding-left:0;
         padding-right:0;
 
         #{$prefix}-small &{
-            width: rem($btn-height-small/$body-font-size);
+            width: rem($btn-height-small/$btn-font-size);
         }
 
         #{$prefix}-large &{
-            width: rem($btn-height-large/$body-font-size) ;
+            width: rem($btn-height-large/$btn-font-size) ;
         }
 
 

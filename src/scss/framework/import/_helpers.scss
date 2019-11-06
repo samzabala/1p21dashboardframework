@@ -73,7 +73,7 @@
 			&-global {
 				background-color: $global-background;
 
-				.inverse & {
+				.body-inverse & {
 					background-color: $global-background-inverse;
 				}
 			}
@@ -82,7 +82,7 @@
 			&-global-contrast {
 				background-color: $global-background-contrast;
 
-				.inverse & {
+				.body-inverse & {
 					background-color: $global-background-contrast-inverse;
 				}
 
@@ -196,7 +196,7 @@
 			&-global {
 				color: $global-color;
 
-				.inverse & {
+				.body-inverse & {
 					color: $global-color-inverse;
 				}
 			}

@@ -1,39 +1,43 @@
-[{
-	"id": "mikeperez",
-	"name": "Mike Perez",
-	"profileImage": "placeholder/profiles/team-boss-mike.jpg",
-	"isAvailable": "true",
-	"isOnline": "true",
-	"department": "boss",
-	
-	"avgDaysCount": "69",
-	"currentProjectsCount": "666",
-	"ytdProjectsCount": "420",
+{
+	"profiles":[
+		{
+			"id": "mikeperez",
+			"name": "Mike Perez",
+			"profileImage": "placeholder/profiles/team-boss-mike.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "boss",
+			
+			"avgDaysCount": "69",
+			"currentProjectsCount": "666",
+			"ytdProjectsCount": "420",
 
-	"recentlyUpdated": [{
-		"name": "Fowler Pickert",
-		"recentUpdate": "12-28-18"
-	},{
-		"name": "Wilkenson Law Group",
-		"recentUpdate": "12-28-18"
-	},{
-		"name": "1Point21",
-		"recentUpdate": "12-28-18"
-	}],
+			"recentlyUpdated": [{
+				"name": "Fowler Pickert",
+				"recentUpdate": "12-28-18"
+			},{
+				"name": "Wilkenson Law Group",
+				"recentUpdate": "12-28-18"
+			},{
+				"name": "1Point21",
+				"recentUpdate": "12-28-18"
+			}],
 
-	"associatedProjects": [
-		"rmfwlaw",
-		"fieldinglaw",
-		"ebtrialattorneys",
-		"ubersexualassaultlawyer",
-		"liljegrenlaw"
-	],
-	
-	"accountsCount": "69",
-	"avgHRRank": "20.6",
-	"avgRank": "14.1",
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
 
-	"linksCount": "88",
-	"onPageCount": "32",
-	"toDosCount": "00"
-}]
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		}
+	]
+}

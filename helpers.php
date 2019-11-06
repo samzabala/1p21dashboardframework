@@ -81,9 +81,6 @@ function app_render_handlebars_module($id = '',$data = null,$handlebars = null){
 	?>
 
 		<div id="<?= $id; ?>-hb">
-				
-			<!-- Appendage -->
-			<div id="<?= $id; ?>-hb-append"></div>
 
 			<!-- Template -->
 			<script id="<?= $id; ?>-hb-template" type="text/x-handlebars-template">
@@ -118,7 +115,7 @@ function app_render_handlebars_module($id = '',$data = null,$handlebars = null){
 						_1p21.initTemplate(
 							document.getElementById("<?= $id; ?>-hb-template").innerHTML,
 							JSON.parse( document.getElementById("<?= $id; ?>-hb-data").innerHTML ),
-							'#<?= $id; ?>-hb-append'
+							'#<?= $id; ?>'
 						)
 					})
 				}(_1p21,jQuery))

@@ -47,11 +47,11 @@ $prefix: '.symbol';
     &-minus{
         &:after{
             height: em(3px / $body-font-size);
-            width:100%;
+            width:.9375em;
         }
 
         &:before {
-            height:100%;
+            height:.9375em;
         }
     }
 

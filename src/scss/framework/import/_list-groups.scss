@@ -1,5 +1,11 @@
 /*** SET ***/
 
+//internal vars
+$calculated-list-group-height: rem( $list-group-height / $body-font-size);
+@if internal-is-convertable($list-group-height) {
+	$calculated-list-group-height: $list-group-height;
+}
+
 /* SUBSET */
 $prefix: '.list-group';
 #{$prefix} {

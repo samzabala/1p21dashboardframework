@@ -9,7 +9,7 @@ $prefix: '.module';
 	& {
 		background: $module-bg-color;
 
-		.inverse & {
+		.body-inverse & {
 
 		background: $module-bg-color-inverse;
 		}

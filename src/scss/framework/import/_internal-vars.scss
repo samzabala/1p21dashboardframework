@@ -14,65 +14,12 @@ DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
         $calculated-body-single-line: 1em * #{ type-lead( $body-font-size,$body-line-height ) }
     }
 
-//btn
 
-    // $calculated-btn-line-height: type-lead( $btn-font-size,$btn-line-height );
-
-    // $calculated-btn-single-line: $calculated-btn-line-height;
-    // @if unitless($calculated-btn-single-line) {
-    //     $calculated-btn-single-line: 1em * #{ type-lead( $btn-font-size,$btn-line-height ) }
-    // }
+    $calculated-nav-height: $nav-height;
+    @if internal-is-convertable($nav-height) { 
+        $calculated-nav-height: rem( $nav-height / $body-font-size);
+	}
     
-    // $calculated-btn-height: rem( $btn-height / $body-font-size);
-    // @if unit($btn-height) != px {
-    //     $calculated-btn-height: $btn-height;
-    // }
-
-    
-    // $calculated-btn-height-large: rem( $btn-height-large / $body-font-size);
-    // @if unit($btn-height-large) != px {
-    //     $calculated-btn-height-large: $btn-height-large;
-    // }
-
-    
-    // $calculated-btn-height-small: rem( $btn-height-small / $body-font-size);
-    // @if unit($btn-height-small) != px {
-    //     $calculated-btn-height-small: $btn-height-small;
-    // }
-
-//nav
-    $calculated-nav-height: rem( $nav-height / $body-font-size);
-    @if unit($nav-height) != px {
-        $calculated-nav-height: $nav-height;
-    }
-    $calculated-nav-item-height: rem( $nav-item-height / $body-font-size);
-    @if unit($nav-item-height) != px {
-        $calculated-nav-item-height: $nav-item-height;
-    }
-//table
-    $calculated-table-heading-height: rem( $table-heading-height / $body-font-size);
-    @if unit($table-heading-height) != px {
-        $calculated-table-heading-height: $table-heading-height;
-    }
-
-
-    $calculated-table-cell-height: rem( $table-cell-height / $body-font-size);
-    @if unit($table-cell-height) != px {
-        $calculated-table-cell-height: $table-cell-height;
-    }
-
-    $calculated-table-cell-height-large: rem( $table-cell-height-large / $body-font-size);
-    @if unit($table-cell-height-large) != px {
-        $calculated-table-cell-height-large: $table-cell-height-large;
-    }
-
-
-//list group
-
-    $calculated-list-group-height: rem( $list-group-height / $body-font-size);
-    @if unit($list-group-height) != px {
-        $calculated-list-group-height: $list-group-height;
-    }
 
 
 //for helpers

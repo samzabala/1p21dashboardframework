@@ -1,6 +1,6 @@
 
 //VARS
-$debug: true;
+$debug: false;
 
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
@@ -145,11 +145,11 @@ $debug: true;
 		$body-blockquote-text-transform: 300 !default;
 		$body-blockquote-font-style: none !default;
 		$body-blockquote-color: $brand-color-neutral !default;
-		$body-blockquote-gutter-x: $gutter-medium !default;
+		$body-blockquote-gutter-x: $gutter-small !default;
 		$body-blockquote-border-width: 4px !default;
 		$body-blockquote-border-color: $brand-color-primary !default;
 		$body-blockquote-margin-y: $body-text-gutter-y !default;
-		$body-blockquote-padding-y: $body-text-gutter-y !default;
+		$body-blockquote-padding-y: $body-text-gutter-y * .5 !default;
 
 		$body-cite-font-size: $body-font-size !default;
 		$body-cite-font-weight: 300 !default;
@@ -211,21 +211,28 @@ $debug: true;
 
 	// NAV
 		$nav-height: 75px !default;
-		$nav-gutter: $gutter-small !default;
-			$nav-gutter-mobile: $gutter-micro !default;
+		$nav-gutter-x: $gutter-small !default;
+			$nav-gutter-x-mobile: $gutter-micro !default;
 		$nav-background: $global-background !default;
+			$nav-dropdown-background: $nav-background !default;
 			$nav-background-inverse: $global-background-inverse !default;
 		$nav-icon-width: $icon-size !default;
 		$nav-icon-height: $icon-size !default;
 		$nav-current-size: 5px !default;
 			$nav-item-height: 35px !default;
 		$nav-font-size: $body-font-size !default;
+		$nav-line-height: 1.5 !default;
 		$nav-color: inherit !default;
-		$nav-color-hover: $brand-color-primary !default;
+			$nav-color-hover: $brand-color-primary !default;
+		$nav-font-weight: 400 !default;
+		$nav-font-style: normal !default;
+		$nav-text-transform: none !default;
+		
 
 		$nav-top-font-size: 19px !default;
 		$nav-top-font-style: normal !default;
 		$nav-top-font-weight: 600 !default;
+		$nav-top-font-color: inherit !default;
 		$nav-top-text-transform: none !default;
 	
 	// MODULE
@@ -255,6 +262,13 @@ $debug: true;
 		$popper-gutter-y: $gutter-small !default;
 		$popper-border-radius: $border-radius-base !default;
 		$popper-box-shadow: 0px 0px 15px -12px $brand-color-base !default;
+
+		$dropdown-width: 300px !default;
+
+	// progress
+		$progress-size: 20px !default;
+		$progress-background: 20px !default;
+	
 
 	// THUMBNAIL
 
@@ -300,12 +314,13 @@ $debug: true;
 		$tag-height: 25px !default;
 		$tag-gutter-x: 15px !default;
 		$tag-font-size: 13px !default;
-		$tag-font-weight: 500 !default;
+		$tag-font-weight: 600 !default;
 		$tag-line-height: 1.25 !default;
 		$tag-font-style: normal !default;
 		$tag-color: $brand-color-background !default;
-		$tag-text-transform: none !default;
-		$tag-gutter-y: .25em;
+		$tag-text-transform: uppercase !default;
+		$tag-gutter-x: 20px;
+		$tag-border-radius: $border-radius-small;
 
 
 
@@ -316,14 +331,13 @@ $debug: true;
 
 		$btn-font-size: 16px !default;
 			$btn-font-size-large: 23px !default;
-			$btn-font-size-small: 12px !default;
+			$btn-font-size-small: 14px !default;
 		$btn-line-height: 20px !default;
 		$btn-font-family: $brand-font-primary !default;
 		$btn-font-weight: 600 !default;
 		$btn-font-style: normal !default;
 		$btn-text-transform: none !default;
-		$btn-gutter: 30px !default;
-			$btn-gutter-small: $gutter-micro !default;
+		$btn-gutter-x: 30px !default;
 		$btn-border-width: 1px !default;
 		$btn-border-radius: $border-radius-base !default;
 			$btn-border-radius-large: $border-radius-large !default;

@@ -1,1 +1,10 @@
-/*** MIXIN ***/
+/*** MIXINS + FUNCTIONS ***/
+
+@function internal-is-convertable($value,$font-value: $body-font-size) {
+	
+	@if unit($value) == px and unit($font-value) == px {
+		@return true;
+	}@else{
+		@return false;
+	}
+}

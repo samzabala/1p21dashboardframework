@@ -7,9 +7,9 @@
 	
 	<ul class="nav-list">
 		<!-- HOME -->
-		<li class="nav-item current">
+		<li class="nav-item">
 			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="tablet-hide mobile-hide">Home</span>
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="nav-item-text">Item</span>
 			</a>
 		</li>
 
@@ -17,23 +17,31 @@
 
 		<!-- PROJ -->
 		<li class="nav-item">
-			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="tablet-hide mobile-hide">Projects</span>
+			<a href="#nav-demo-dropdown" data-toggle="accordion">
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
 			</a>
+			<ul class="dropdown" id="nav-demo-dropdown" >
+				<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+			</ul>
 		</li>
 
 
 		<!-- DESIGNERS -->
 		<li class="nav-item">
 			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="tablet-hide mobile-hide">Designers</span>
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="nav-item-text">Item</span>
 			</a>
 		</li>
 
 		<!-- DEVELOPERS -->
 		<li class="nav-item">
 			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="tablet-hide mobile-hide">Developers</span>
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="nav-item-text">Item</span>
 			</a>
 		</li>
 	</ul>
@@ -128,69 +136,69 @@
 	<h2>groups and symbols</h2>
 
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol Square</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol Square</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol Search</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol Search</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol arrow down</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-down"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol arrow down</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-down"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol arrow up</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-up"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol arrow up</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-up"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol arrow left</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-left"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol arrow left</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-left"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol arrow right</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-right"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol arrow right</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-right"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol +</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol +</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></span>
+	</a>
 
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol -</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></a>
-	</div>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol kebab vertical</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-vertical"></i></a>
-	</div>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol kebab horizontal</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-horizontal"></i></a>
-	</div>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol caret up</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-up"></i></a>
-	</div>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol caret down</button>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-down"></i></a>
-	</div>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol caret right</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-left"></i></a>
-	</div>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<a href="#" class="btn btn-default">Symbol caret left</a>
-		<a href="#" class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-right"></i></a>
-	</div>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol -</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol kebab vertical</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-vertical"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol kebab horizontal</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-horizontal"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol caret up</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-up"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol caret down</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-down"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol caret right</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-left"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol caret left</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-right"></i></span>
+	</a>
 
 		<div class="btn-group btn-small btn-group-horizontal btn-group-unite">
 			<a href="#" class="btn btn-default">Small butt</a>
@@ -278,7 +286,7 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 
 <div class="thumbnail">
     <span class="thumbnail-text">
-		ASS
+		eh
 	</span>
 </div>
 <h2>Thumbnail but inline</h2>
@@ -296,6 +304,57 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
 </div>
 
+<h1>Symbols reprise but with color classes on em</h1>
+
+	<p>
+		Symbol Square <i class="color-primary symbol symbol-square"></i>
+	</p>
+
+	<p>
+		Symbol Search <i class="color-accent symbol symbol-search"></i>
+	</p>
+
+	<p>
+		Symbol arrow down <i class="color-base symbol symbol-arrow symbol-arrow-down"></i>
+	</p>
+
+	<p>
+		Symbol arrow up <i class="color-neutral symbol symbol-arrow symbol-arrow-up"></i>
+	</p>
+
+	<p>
+		Symbol arrow left <i class="color-success symbol symbol-arrow symbol-arrow-left"></i>
+	</p>
+
+	<p>
+		Symbol arrow right <i class="color-caution symbol symbol-arrow symbol-arrow-right"></i>
+	</p>
+
+	<p>
+		Symbol + <i class="color-error symbol symbol-plus"></i>
+	</p>
+
+	<p>
+		Symbol - <i class="color-primary symbol symbol-minus"></i>
+	</p>
+	<p>
+		Symbol kebab vertical <i class="color-accent symbol symbol-kebab symbol-kebab-vertical"></i>
+	</p>
+	<p>
+		Symbol kebab horizontal <i class="color-base symbol symbol-kebab symbol-kebab-horizontal"></i>
+	</p>
+	<p>
+		Symbol caret up <i class="color-neutral symbol symbol-caret symbol-caret-up"></i>
+	</p>
+	<p>
+		Symbol caret down <i class="color-success symbol symbol-caret symbol-caret-down"></i>
+	</p>
+	<p>
+		Symbol caret right <i class="color-caution symbol symbol-caret symbol-caret-left"></i>
+	</p>
+	<p>
+		Symbol caret left <i class="color-error symbol symbol-caret symbol-caret-right"></i>
+	</p>
 
 <h1>Badges</h1>
 <p>
@@ -332,16 +391,36 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <span class="badge" style="background-color: pink"></span>
 
 <h1>Legends</h1>
-<span class="legend legend-primary"></span>
-<span class="legend legend-accent"></span>
-<span class="legend legend-base"></span>
-<span class="legend legend-neutral"></span>
-<span class="legend legend-success"></span>
-<span class="legend legend-caution"></span>
-<span class="legend legend-error"></span>
+<p>
+	<span class="legend legend-primary"></span> Primary
+</p>
+
+<p>
+	<span class="legend legend-accent"></span> Accent
+</p>
+
+<p>
+	<span class="legend legend-base"></span> Base
+</p>
+
+<p>
+	<span class="legend legend-neutral"></span> Neutral
+</p>
+
+<p>
+	<span class="legend legend-success"></span> Success
+</p>
+
+<p>
+	<span class="legend legend-caution"></span> Caution
+</p>
+
+<p>
+	<span class="legend legend-error"></span> Error
+</p>
 
 <h4>Custom color</h4>
-<span class="legend" style="background-color: pink"></span>
+<span class="legend" style="background-color: pink"></span> Custom
 	
 
 <h1>Tags</h1>
@@ -353,7 +432,7 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <span class="tag tag-caution">Caution</span>
 <span class="tag tag-error">Error</span>
 <h4>Custom color</h4>
-<span class="tag" style="background-color: pink">Custom</span>
+<span class="tag" style="background-color: violet">Custom</span>
 
 <h1>Progress Bar</h1>
 
@@ -434,9 +513,9 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 	<h3 id="progress-stacked">Stacked</h3>
 	
 	<div class="progress">
-		<div class="progress-bar background-bar-success" style="width: 35%"></div>
-		<div class="progress-bar background-bar-error" style="width: 20%"></div>
-		<div class="progress-bar background-bar-caution" style="width: 10%"></div>
+		<div class="progress-bar background-success" style="width: 35%"></div>
+		<div class="progress-bar background-error" style="width: 20%"></div>
+		<div class="progress-bar background-caution" style="width: 10%"></div>
 	</div>
 
 <h1>Table</h1>

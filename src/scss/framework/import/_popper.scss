@@ -7,13 +7,25 @@
 	padding: $popper-gutter-x $popper-gutter-y;
 	box-shadow: $popper-box-shadow;
 	display:none;
+	z-index:2;
 }
 
 
-$prefix: '.popper';
+$prefix: '.tooltip';
 
-#{$prefix}{
+.tooltip {
 	@extend %pop;
+
+	&:before,&:after {
+		content:"display:block;"
+	}
+}
+
+
+
+.dropdown {
+	@extend %pop;
+	width: $dropdown-width;
 
 	li {
 		&:before {

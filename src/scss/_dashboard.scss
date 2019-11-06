@@ -50,6 +50,11 @@ $sidebar-xs: 60px;
 
 			&-nav {
 				margin: 0 ($container-gutter-wide * -1);
+
+				.nav-list .nav-item > .dropdown {
+					width:calc(100% - 30px - 1.5rem);
+					margin-left: auto;
+				}
 			}
 
 			@include br(sm-max) {

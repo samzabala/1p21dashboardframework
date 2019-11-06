@@ -19,18 +19,19 @@
 		@import 'import/_table';
 
 	//ui elements
-		@import 'import/_badge';
-		@import 'import/_tags';
-		@import 'import/_buttons';
-		@import 'import/_form';
+		@import 'import/_nav';
 		@import 'import/_layout';
 		@import 'import/_list-groups';
 		@import 'import/_modules';
-		@import 'import/_nav';
-		@import 'import/_popper';
-		@import 'import/_symbol';
 		@import 'import/_thumbnail';
+		@import 'import/_progress';
+		@import 'import/_badge';
+		@import 'import/_tags';
+		@import 'import/_symbol';
+		@import 'import/_buttons';
+		@import 'import/_form';
 		@import 'import/_toggle';
+		@import 'import/_popper';
 
 	//helpers
 		@import 'import/_helpers';
