@@ -2,15 +2,24 @@
 <h1>Form</h1>
 <form class="form-horizontal">
 	<fieldset>
-		<legend>Legend</legend>
-		<p class="input-wrapper input-wrapper-horizontal">
-			<label class="input-label" for="inputEmail">Email</label>
-			<input class="input input-single-line" id="inputEmail" placeholder="Email" type="text">
+		<h2>sizes</h2>
+		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+		</p>
+		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+			<label class="input-label input-label-small" for="Small">Small</label>
+			<input class="input input-single-line input-small" id="Small" placeholder="Small" type="text">
+		</p>
+
+		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+			<label class="input-label input-label-large" for="Large">Large</label>
+			<input class="input input-single-line input-large" id="Large" placeholder="Large" type="text">
 		</p>
 
 
 
-		<h4>colors</h4>
+		<h2>colors</h2>
 
 			<p class="input-wrapper input-wrapper-horizontal">
 				<label class="input-label input-label-primary" for="input-primary">Primary: </label>
@@ -40,10 +49,16 @@
 				<label class="input-label input-label-error" for="input-error">error: </label>
 				<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
 			</p>
+			
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-disabled" for="input-disabled">disabled: </label>
+				<input class="input input-single-line" disabled id="input-disabled" placeholder="disabled" type="text">
+			</p>
 
 
 
 
+		<h2>types</h2>
 
 		<p class="input-wrapper input-wrapper-horizontal">
 				<label class="input-label" for="inputPassword">Password</label>
@@ -54,37 +69,40 @@
 		<p class="input-wrapper input-wrapper-horizontal">
 			<label class="input-label"><input type="checkbox"> Checkbox</label>
 		</p>
-
-		<label class="input-label"><input type="checkbox"> Another Checkbox</label>
+		<p>
+			<label class="input-label"><input type="checkbox"> Another Checkbox but not in input wrap</label>
+		</p>
 		
 		<p class="input-wrapper input-wrapper-vertical">
 			<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
 		
-				<textarea class="input input-multiple-line" id="textArea"></textarea> <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+				<textarea class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
 			</div>
 		</p>
 		<p class="input-wrapper input-wrapper-horizontal">
-			<label class="input-label">Radios</label>
-		
-				<div class="radio">
-					<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
-				</div>
-				<div class="radio">
-					<label><input class="input input-checkbox" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
-				</div>
+				<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
+				
+				
+				<label><input class="input input-checkbox" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+					
 				
 		</p>
-		<p class="input-wrapper input-wrapper-horizontal">
+
+		
+		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 			<label class="input-label" for="select">Selects</label>
-				<div class="input-group input-group-horizontal">
-					<select class="input-single-line" id="select-demo">
-						<option>Available option 1</option>
-						<option>Available option 2</option>
-						<option>Available option 3</option>
-						<option>Available option 4</option>
-						<option>Available option 5</option>
-					</select>
-				</div>
+			
+				<select class="input-single-line" id="select-demo">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+					
+
+		</p>
+		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 				<select class="input-middle-line" multiple>
 					<option>Available option 1</option>
 					<option>Available option 2</option>
@@ -104,7 +122,151 @@
 				</select>
 				
 		</p>
-			<button class="btn btn-default">Cancel</button> <button class="btn btn-primary" type="submit">Submit</button>
+
+
+
+
+		<h2>wrapper</h2>
+		<h4>inline horizontal</h4>
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+		</p>
+		<h4>block horizontal</h4>
+		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+		</p>
+
+
+		<h3>inline vertical</h3>
+		<p class="input-wrapper input-wrapper-vertical">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+		</p>
+		<h3>block vertical</h3>
+		<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+		</p>
+
+
+
+		<h2>group</h2>
+
+		<h3>group horizontal</h3>
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<span class="input-group input-group-horizontal input-group-responsive">
+
+				<select class="input-single-line" id="select-demo-group-1">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-2">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-3">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-4">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+			</span>
+		</p>
+		<h4>small</h4>
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<span class="input-group input-group-horizontal input-group-horizontal input-group-small input-group-responsive">
+
+				<select class="input-single-line" id="select-demo-group-1">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-2">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-3">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-4">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+			</span>
+		</p>
+		<h4>large</h4>
+		<span class="input-group input-group-horizontal input-group-large input-group-responsive">
+
+				<select class="input-single-line" id="select-demo-group-1">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-2">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-3">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+
+				<select class="input-single-line" id="select-demo-group-4">
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+			</span>
+
+		<button class="btn btn-default">Cancel</button> <button class="btn btn-primary" type="submit">Submit</button>
 	</fieldset>
 </form>
 
@@ -323,8 +485,10 @@
 
 	<h3>toggle group</h3>
 
+	<p>note: all have btn-group-responsive on them because the buttons are a LOT and in context should wrap into a column on mobile</p>
 
-	<div class="btn-group btn-group-horizontal btn-group-toggle">
+
+	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
 			<button type="button" class="active btn btn-default"> butt</button>
 			<button type="button" class="btn btn-default">  Butt </button>
@@ -335,7 +499,7 @@
 <h3>toggle group but multiple allowed and theres a resetter</h3>
 
 
-<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple">
+<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
 
 		<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
 		<button type="button" class=" btn btn-default"> butt</button>
@@ -347,7 +511,7 @@
 	
 	<h2>symbols with toggle classes on them to react during .open and or .active (has to be child of whatever is active or open tho)
 	</h2>
-	<div class="btn-group btn-group-horizontal btn-group-toggle">
+	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
 			<button type="button" class="active btn btn-default"><i class="symbol symbol-caret symbol-caret-down"></i> Toggle Butt down</button>
 			<button type="button" class="btn btn-default"><i class="symbol symbol-caret symbol-caret-toggle-up symbol-caret-down"></i> Toggle Butt up</button>
@@ -356,7 +520,7 @@
 	</div>
 
 
-	<div class="btn-group btn-group-horizontal btn-group-toggle">
+	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
 			<button type="button" class="active btn btn-default"><i class="symbol symbol-arrow symbol-arrow-down"></i> Toggle Butt down</button>
 			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow symbol-arrow-toggle-up symbol-arrow-down"></i> Toggle Butt up</button>

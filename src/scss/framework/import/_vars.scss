@@ -207,14 +207,6 @@ $debug: false;
 		$symbol-caret-width: 8px !default;
 		$symbol-caret-height: 5px !default;
 
-	// input + form
-		$input-height: 45px !default;
-			$input-height-large: 75px !default;
-			$input-height-small: 25px !default;
-			
-		$input-border-width: 1px !default;
-		$input-font-size: 16px !default;
-
 	// NAV
 		$nav-height: 75px !default;
 		$nav-gutter-x: $gutter-small !default;
@@ -335,26 +327,56 @@ $debug: false;
 
 	// input
 		$input-height: 45px !default;
+			$input-height-large: 75px !default;
+			$input-height-small: 30px !default;
 		$input-height-multiple-factor: 4 !default;
 
 		$input-font-size: 16px !default;
+			$input-font-size-large: 22px !default;
+			$input-font-size-small: 14px !default;
+
+		$input-select-dropdown-color: $brand-color-primary !default;
 		
 		$input-color: inherit !default;
+			$input-color-inverse: inherit !default;
+		$input-placeholder-color: $brand-color-neutral !default;
 		$input-background: none !default;
+			$input-background-inverse: none !default;
 		$input-line-height: 20px !default;
 		$input-font-family: $brand-font-primary !default;
 		$input-font-weight: 600 !default;
 		$input-font-style: normal !default;
 		$input-text-transform: none !default;
+		
 		$input-gutter-x: 20px !default;
 		$input-border-width: 1px !default;
 		$input-border-color: transparent !default;
 		$input-border-color-focus: rgba($brand-color-neutral,.2) !default;
 		$input-border-radius: $border-radius-base !default;
-		$input-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
-		$input-box-shadow-brand-basis: 0px 5px 15px -10px !default;
+			$input-border-radius-large: $border-radius-large !default;
+			$input-border-radius-small: $border-radius-small !default;
+		$input-box-shadow: 0px 3px 15px -10px $brand-color-base !default;
+		$input-box-shadow-brand-basis: 0px 3px 15px -10px !default;
 			$input-box-shadow-focus: 0px 0 10px -5px $brand-color-primary !default;
 		$input-group-separator-color: rgba($brand-color-neutral,.5) !default;
+
+		$input-label-gutter: 20px !default;
+
+		$input-label-line-height: 1.25 !default;
+		$input-label-font-size: 14px !default;
+			$input-label-font-size-large: 20px !default;
+			$input-label-font-size-small: 14px !default;
+		
+		$input-label-color: $brand-color-neutral !default;
+			$input-label-color-inverse: inherit !default;
+		
+			$input-label-font-family: $brand-font-primary !default;
+			$input-label-font-weight: 600 !default;
+			$input-label-font-style: normal !default;
+			$input-label-text-transform: uppercase !default;
+		
+			$input-label-horizontal-width-md: 40% !default;
+			$input-label-horizontal-width-lg: 30% !default;
 
 	// BTN
 		$btn-height: 45px !default;
@@ -362,7 +384,7 @@ $debug: false;
 			$btn-height-small: 30px !default;
 
 		$btn-font-size: 16px !default;
-			$btn-font-size-large: 23px !default;
+			$btn-font-size-large: 22px !default;
 			$btn-font-size-small: 14px !default;
 		$btn-line-height: 20px !default;
 		$btn-font-family: $brand-font-primary !default;

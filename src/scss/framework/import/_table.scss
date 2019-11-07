@@ -153,7 +153,7 @@ $prefix: '.table';
                     td,
                     #{$prefix}-cell {
                         opacity: $global-disabled-opacity;
-                        cursor: no-drop;
+                        cursor: not-allowed;
                     }
                 }
             }

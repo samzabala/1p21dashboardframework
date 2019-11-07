@@ -1,5 +1,9 @@
 /*** SET ***/
 
+$calculated-symbol-caret-height:$symbol-caret-height;
+$calculated-symbol-caret-width:$symbol-caret-width;
+
+
 /* SUBSET */
 $prefix: '.symbol';
 #{$prefix} {
@@ -117,7 +121,7 @@ $prefix: '.symbol';
     }
 
     &-caret {
-        width: em(($symbol-caret-width * .5) / $body-font-size);
+        width: em(($calculated-symbol-caret-width * .5) / $body-font-size);
         // width:0;
 
         @include arrow-triangle((
@@ -125,8 +129,8 @@ $prefix: '.symbol';
             direction: 'up', //if pseudo is set to both, this will set the direction of :before, :after will be opposite of 
             display: null,
             size-base: inherit,
-            main-size: em($symbol-caret-height / $body-font-size),//orientation of direction
-            cross-size: em($symbol-caret-width / $body-font-size),// perpendicular orientation of direction
+            main-size: em($calculated-symbol-caret-height / $body-font-size),//orientation of direction
+            cross-size: em($calculated-symbol-caret-width / $body-font-size),// perpendicular orientation of direction
         )){
             display:inline-block;
             vertical-align:middle;

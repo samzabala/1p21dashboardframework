@@ -5,25 +5,72 @@ $calculated-input-font-size: $input-font-size;
     $calculated-input-font-size: rem($input-font-size / $body-font-size)
 }
 
+    $calculated-input-font-size-large: $input-font-size-large;
+    @if internal-is-convertable($input-font-size-large) {
+        $calculated-input-font-size-large: rem($input-font-size-large / $body-font-size)
+    }
+
+    $calculated-input-font-size-small: $input-font-size-small;
+    @if internal-is-convertable($input-font-size-small) {
+        $calculated-input-font-size-small: rem($input-font-size-small / $body-font-size)
+    }
+
+
+	$calculated-input-label-font-size: $input-label-font-size;
+	@if internal-is-convertable($input-label-font-size) {
+		$calculated-input-label-font-size: rem($input-label-font-size / $body-font-size)
+	}
+	
+		$calculated-input-label-font-size-large: $input-label-font-size-large;
+		@if internal-is-convertable($input-label-font-size-large) {
+			$calculated-input-label-font-size-large: rem($input-label-font-size-large / $body-font-size)
+		}
+	
+		$calculated-input-label-font-size-small: $input-label-font-size-small;
+		@if internal-is-convertable($input-label-font-size-small) {
+			$calculated-input-label-font-size-small: rem($input-label-font-size-small / $body-font-size)
+		}
+
+
 $calculated-input-line-height: type-lead( $input-font-size,$input-line-height );
+
+	$calculated-input-label-line-height: type-lead( $input-label-font-size,$input-label-line-height );
 
 $calculated-input-single-line: $calculated-input-line-height;
 @if unitless($calculated-input-single-line) and unit($input-font-size) == px {
     $calculated-input-single-line: 1em * #{ type-lead( $input-font-size,$input-line-height ) }
 }
 
+	$calculated-input-label-single-line: $calculated-input-label-line-height;
+	@if unitless($calculated-input-label-single-line) and unit($input-label-font-size) == px {
+		$calculated-input-label-single-line: 1em * #{ type-lead( $input-label-font-size,$input-label-line-height ) }
+	}
+
 $calculated-input-height: $input-height;
-@if internal-is-convertable($input-height,$input-font-size) {
-    $calculated-input-height: rem($input-height/$input-font-size)
-}@else if internal-is-convertable($input-height){
-	$calculated-input-height: rem($input-height/$body-font-size);
+@if internal-is-convertable($input-height){
+    $calculated-input-height: rem($input-height/$body-font-size);
 }
+
+// @error $calculated-input-height;
+
+    $calculated-input-height-large: $input-height-large;
+    @if internal-is-convertable($input-height-large){
+        $calculated-input-height-large: rem($input-height-large/$body-font-size);
+    }
+
+    $calculated-input-height-small: $input-height-small;
+    @if internal-is-convertable($input-height-small){
+        $calculated-input-height-small: rem($input-height-small/$body-font-size);
+	}
+
+
+	
 
 $calculated-input-gutter-x: $input-gutter-x;
 @if internal-is-convertable($input-gutter-x,$input-font-size) {
     $calculated-input-gutter-x: em($input-gutter-x / $input-font-size)
 }@else if internal-is-convertable($input-gutter-x){
-    $calculated-input-height: rem($input-gutter-x/$body-font-size);
+	$calculated-input-gutter-x: rem($input-gutter-x/$body-font-size);
 }
 
 /*** SET ***/
@@ -31,106 +78,257 @@ $calculated-input-gutter-x: $input-gutter-x;
 /* SUBSET */
 $prefix: '.input';
 
-
-input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
-textarea,
-select,
-#{$prefix}-single-line,
-#{$prefix}-multiple-line-line
-
-
-// label,
-// #{$prefix}-label
-
-{
-	@include type-set((
-		size: #{$calculated-input-font-size},
-		color:$input-color,
-		leading: #{ $calculated-input-line-height } ,
-		weight: $input-font-weight,
-		style: $input-font-style,
-		font: $input-font-family,
-		align:inherit,
-		decoration:none,
-		case: $input-text-transform,
-	));
-	// overflow:hidden;
-	padding-top: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
-	padding-bottom: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
-	padding-right: $calculated-input-gutter-x;
-	padding-left: $calculated-input-gutter-x;
-	background: $input-background;
-	border: $input-border-width solid $input-border-color;
-	box-shadow: $input-box-shadow;
-	transition: $transition-duration-short all $transition-timing;
-	max-width:100%;
-	display:inline-block;
-	vertical-align: middle;
-	background:none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
-	#{$prefix}-wrapper & {
-		display: block;
-		flex: 1 1;
+%for-form {
+	&-global {
+		transition: $transition-duration-short color $transition-timing, $transition-duration-short border $transition-timing, $transition-duration-short box-shadow $transition-timing;
 	}
 
-	&:focus,&.focus {
-		box-shadow: $input-box-shadow-focus;
-		border-color: $input-border-color-focus!important;
-	}
-
-	.nav & {
-
-		padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
-		padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
-		height: #{ $calculated-nav-height };
-		border-radius: 0;
-	}
-
-
-	&#{$prefix}-disabled {
-		opacity: $global-disabled-opacity;
-	}
-
-	@each $tag,$color in $calculated-brand-color-declarations {
-		@at-root #{$prefix}-label#{$prefix}-label-#{$tag} {
-			&,&:focus {
-				color: $color!important;
-			}
-		}
-
-		@at-root &#{$prefix}-#{$tag}  {
-
-			&:not(:focus):not(.focus) {
-				box-shadow: $input-box-shadow-brand-basis $color;
-			}
-
-			&,&:focus,&.focus {
-
-				border-color: $color!important;
-			}
-		}
-	}
-
-	@at-root &,
-	#{$prefix}-group {
+	&-input-and-group {
 		border-radius: $input-border-radius;
-	}
-	
+		box-shadow: $input-box-shadow;
 
-	@at-root #{$prefix}-group,
-	:not(#{$prefix}-group) > & {
+		&#{$prefix}-no-radius {
+			border-radius: 0!important;
+		}
 
 		.nav & {
 			border-radius: 0 !important;
 		}
 	}
 
-	&#{$prefix}-no-radius {
-		border-radius: 0!important;
+	&-label {
+		& {
+			@include type-set((
+				size: #{$calculated-input-label-font-size},
+				color:$input-label-color,
+				leading: $calculated-input-label-line-height ,
+				weight: $input-label-font-weight,
+				style: $input-label-font-style,
+				font: $input-label-font-family,
+				align:inherit,
+				decoration:none,
+				case: $input-label-text-transform,
+			));
+			margin-right: 1rem;
+			display:inline-block;
+			padding-top: calc( (#{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
+			padding-bottom: calc( (  #{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
+
+			&#{$prefix}-label-large {
+				font-size: $calculated-input-font-size-large;
+				padding-top: calc(   (#{ $calculated-input-height-large } - (#{$calculated-input-label-single-line}) ) * .5 );
+				padding-bottom: calc(  (#{ $calculated-input-height-large } - (#{$calculated-input-label-single-line}) ) * .5 );
+				border-radius: $input-border-radius-large;
+			}
+
+			&#{$prefix}-label-small {
+				font-size: $calculated-input-font-size-small;
+				padding-top: calc(  (#{$calculated-input-height-small} - (#{$calculated-input-label-single-line}) ) * .5 );
+				padding-bottom: calc(  (#{$calculated-input-height-small} - (#{$calculated-input-label-single-line}) ) * .5 );
+				border-radius: $input-border-radius-small;
+			}
+
+			.body-inverse & {
+				color:$input-label-color-inverse;
+			}
+		}
+	}
+
+	&-input {
+		& {
+			-webkit-appearance: none;
+			appearance: none;
+			@include type-set((
+				size: #{$calculated-input-font-size},
+				color:$input-color,
+				leading: #{ $calculated-input-line-height } ,
+				weight: $input-font-weight,
+				style: $input-font-style,
+				font: $input-font-family,
+				align:inherit,
+				decoration:none,
+				case: $input-text-transform,
+			));
+			background: $input-background;
+			border: $input-border-width solid $input-border-color;
+			max-width:100%;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			padding-right: $calculated-input-gutter-x;
+			padding-left: $calculated-input-gutter-x;
+			padding-top: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+			padding-bottom: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+
+			&#{$prefix}-large,
+			#{$prefix}-group#{$prefix}-group-large & {
+				font-size: $calculated-input-font-size-large;
+				padding-top: calc(  (  (#{ $calculated-input-height-large } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+				padding-bottom: calc(  (  (#{ $calculated-input-height-large } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+				border-radius: $input-border-radius-large;
+			}
+	
+			&#{$prefix}-small,
+			#{$prefix}-group#{$prefix}-group-small & {
+				font-size: $calculated-input-font-size-small;
+				padding-top: calc(  (  (#{$calculated-input-height-small} - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+				padding-bottom: calc(  (  (#{$calculated-input-height-small} - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+				border-radius: $input-border-radius-small;
+			}
+
+			.body-inverse & {
+				color:$input-color-inverse;
+				background: $input-background-inverse;
+			}
+
+
+			#{$prefix}-group & {
+				box-shadow: none;
+			}
+
+			&::-webkit-input-placeholder {
+				color: $input-placeholder-color;
+			}
+			
+			&:-moz-placeholder {
+				color: $input-placeholder-color;
+			}
+			
+			&:-ms-input-placeholder{
+				color: $input-placeholder-color;
+			}
+			
+			&:focus::-webkit-input-placeholder {
+				color: transparent !important;
+			}
+			
+			&:focus:-moz-placeholder {
+				color: transparent !important;
+			}
+			
+			&:focus:-ms-input-placeholder{
+				color: transparent !important;
+			}
+
+			
+			&.focus::-webkit-input-placeholder {
+				color: transparent !important;
+			}
+			
+			&.focus:-moz-placeholder {
+				color: transparent !important;
+			}
+			
+			&.focus:-ms-input-placeholder{
+				color: transparent !important;
+			}
+
+			&#{$prefix}-disabled,
+			&[disabled] {
+
+				&,
+				&:focus,
+				&.focus {
+					border-color: $input-border-color;
+				}
+			}
+
+			&:focus,
+			&.focus {
+				box-shadow: $input-box-shadow-focus;
+				border-color: $input-border-color-focus;
+			}
+
+		}
+
+
+
+
+		&-single-line {
+			@extend %for-form-input;
+			height: $calculated-input-height;
+			vertical-align: middle;
+			display:inline-block;
+
+			&#{$prefix}-large,
+			#{$prefix}-group#{$prefix}-group-large & {
+				height: $calculated-input-height-large;
+			}
+	
+			&#{$prefix}-small,
+			#{$prefix}-group#{$prefix}-group-small & {
+				height: $calculated-input-height-small;
+			}
+
+		}
+
+		&-multiple-line {
+			@extend %for-form-input;
+			min-height: $calculated-input-height * $input-height-multiple-factor;
+			vertical-align: top;
+			display:block;
+
+		}
+
+		@each $tag,$color in $calculated-brand-color-declarations {
+			@at-root #{$prefix}-label#{$prefix}-label-#{$tag} {
+				&,&:focus {
+					color: $color!important;
+				}
+			}
+	
+			@at-root &#{$prefix}-#{$tag}  {
+	
+				&:not(:focus):not(.focus) {
+					box-shadow: $input-box-shadow-brand-basis $color;
+				}
+	
+				&,
+				&:focus,
+				&.focus {
+	
+					border-color: $color;
+				}
+			}
+		}
+	}
+}
+
+#{$prefix} {
+
+}
+
+
+#{$prefix}-label,
+label {
+	@extend %for-form-global;
+	@extend %for-form-label;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
+textarea,
+select,
+#{$prefix}-single-line,
+#{$prefix}-multiple-line-line {
+	@extend %for-form-global;
+	@extend %for-form-input;
+
+	.nav & {
+		padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+		padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+		height: #{ $calculated-nav-height };
+		border-radius: 0;
+	}
+
+	#{$prefix}-wrapper & {
+		display: block;
+		flex: 1 1;
+	}
+
+	@at-root &,
+	#{$prefix}-group {
+		@extend %for-form-input-and-group;
 	}
 	
 	@at-root .btn,
@@ -176,23 +374,22 @@ select,
 input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
 select,
 #{$prefix}-single-line {
-
-	height: $calculated-input-height;
+	@extend %for-form-input-single-line;
 }
 
 select[multiple],
 textarea,
 #{$prefix}-multiple-line-line {
-	min-height: $calculated-input-height * $input-height-multiple-factor;
+	@extend %for-form-input-multiple-line;
 }
 
 select:not([multiple]) {
 	padding-right: $calculated-input-gutter-x * 2;
 	background-image:
-		linear-gradient(-135deg, $brand-color-primary 0%, $brand-color-primary 50%, transparent 50%, transparent 100%),
-		linear-gradient(135deg, $brand-color-primary 0%, $brand-color-primary 50%, transparent 50%, transparent 100%);
-	background-size: .25em .375em, .25em .375em,;
-	background-position: calc(100% - 1.25em) 50%, calc(100% - 1em) 50%;
+		linear-gradient(-135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%),
+		linear-gradient(135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%);
+	background-size: .3125em .375em, .3125em .375em;
+	background-position: calc(100% - 1.3125em) 50%, calc(100% - 1em) 50%;
 	background-repeat: no-repeat,no-repeat;
 }
 
@@ -212,45 +409,141 @@ select[multiple]{
 
 #{$prefix} {
 
-
 	&-wrapper {
-		display:inline-flex;
-		&#{&}-block,
-		&-vertical {
+		@include br(md){
+			display:inline-flex;
+			margin-right: 2rem;
+			&#{&}-block {
 
-		display:flex;
+			display:flex;
+			margin-right: 0;
+			}
+
+			&-horizontal {
+				flex-direction: row;
+				align-items: flex-start;
+				flex-wrap: wrap;
+			}
+
+			&-vertical {
+				flex-direction: column;
+			}
 		}
+}
 
-		&-horizontal {
-			flex-direction: row;
-			align-items: center;
-			flex-wrap: wrap;
-		}
-
-
-		&-vertical {
-			flex-direction: column;
-		}
-	}
-
-
-
+	///updates here should match btn-group 
 	&-group {
 		display:inline-flex;
-		position:relative;
+        position:relative;
 		max-width:100%;
-		// overflow: hidden;
+		
 
-		#{$prefix}-wrapper & {
-			display:flex;
-		}
+        &#{$prefix}-large {
+            border-radius: $input-border-radius-large;
+        }
 
-		&#{&}-block {
+        &#{$prefix}-small {
+            border-radius: $input-border-radius-small;
+        }
 
-			display:flex;
-		}
+        &#{&}-horizontal {
+            max-width:100%;
+            
+
+            &:not(#{$prefix}-group-responsive) {
+
+                > #{$prefix}:nth-last-child(n+2) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+
+                > #{$prefix}:nth-child(n+2) {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+
+                    &,
+                    &:hover {
+                        border-left-color: $input-group-separator-color !important;
+                    }
+                }
+            }
+        }
+
+        &#{&}-vertical {
+            flex-direction:column;
+
+            > #{$prefix}:nth-last-child(n+2) {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            > #{$prefix}:nth-child(n+2) {
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+
+                &,
+                &:hover {
+                    border-top-color: $input-group-separator-color !important;
+                }
+            }
+        }
+
+        &#{&}-responsive {
+
+            @include br(md){
+
+                &#{$prefix}-group-horizontal {
+                    > #{$prefix}:nth-last-child(n+2) {
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+
+                    > #{$prefix}:nth-child(n+2) {
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+
+                        &,
+                        &:hover {
+                            border-left-color: $input-group-separator-color !important;
+                        }
+                    }
+                }
+            }
+            @include br(sm-max) {
+                width:100%;
+                
+                flex-wrap:wrap;
+                display:flex;
+                flex-direction:column;
+
+                > #{$prefix}:nth-last-child(n+2) {
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                > #{$prefix}:nth-child(n+2) {
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+
+                    &,
+                    &:hover {
+                        border-top-color: $input-group-separator-color !important;
+                    }
+                }
+            }
+        } 
 	}
 }
+
+
+//disabled
+#{$prefix}-label-disabled,
+[disabled],
+#{$prefix}-disabled {
+		opacity: $global-disabled-opacity!important;
+		cursor: not-allowed!important;
+}
+
 
 fieldset,.fieldset {
 
