@@ -1,4 +1,115 @@
 
+<h1>Form</h1>
+<form class="form-horizontal">
+	<fieldset>
+		<legend>Legend</legend>
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label" for="inputEmail">Email</label>
+			<input class="input input-single-line" id="inputEmail" placeholder="Email" type="text">
+		</p>
+
+
+
+		<h4>colors</h4>
+
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-primary" for="input-primary">Primary: </label>
+				<input class="input input-single-line input-primary" id="input-primary" placeholder="Primary" type="text">
+			</p>
+
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-accent" for="input-accent">accent: </label>
+				<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
+			</p>
+
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-base" for="input-base">base: </label>
+				<input class="input input-single-line input-base" id="input-base" placeholder="base" type="text">
+			</p>
+
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-success" for="input-success">success: </label>
+				<input class="input input-single-line input-success" id="input-success" placeholder="success" type="text">
+			</p>
+
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-caution" for="input-caution">caution: </label>
+				<input class="input input-single-line input-caution" id="input-caution" placeholder="caution" type="text">
+			</p>
+			<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label input-label-error" for="input-error">error: </label>
+				<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
+			</p>
+
+
+
+
+
+		<p class="input-wrapper input-wrapper-horizontal">
+				<label class="input-label" for="inputPassword">Password</label>
+				<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
+			</div>
+		</p>
+
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label"><input type="checkbox"> Checkbox</label>
+		</p>
+
+		<label class="input-label"><input type="checkbox"> Another Checkbox</label>
+		
+		<p class="input-wrapper input-wrapper-vertical">
+			<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
+		
+				<textarea class="input input-multiple-line" id="textArea"></textarea> <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+			</div>
+		</p>
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label">Radios</label>
+		
+				<div class="radio">
+					<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
+				</div>
+				<div class="radio">
+					<label><input class="input input-checkbox" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+				</div>
+				
+		</p>
+		<p class="input-wrapper input-wrapper-horizontal">
+			<label class="input-label" for="select">Selects</label>
+				<div class="input-group input-group-horizontal">
+					<select class="input-single-line" id="select-demo">
+						<option>Available option 1</option>
+						<option>Available option 2</option>
+						<option>Available option 3</option>
+						<option>Available option 4</option>
+						<option>Available option 5</option>
+					</select>
+				</div>
+				<select class="input-middle-line" multiple>
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+					<option>Available option 1</option>
+					<option>Available option 2</option>
+					<option>Available option 3</option>
+					<option>Available option 4</option>
+					<option>Available option 5</option>
+				</select>
+				
+		</p>
+			<button class="btn btn-default">Cancel</button> <button class="btn btn-primary" type="submit">Submit</button>
+	</fieldset>
+</form>
+
+<h1>trumbowyg</h1>
+<div id="trumbowyg-demo" class="trumbowyg"></div>
 
 	<h1>Dropdowns</h1>
 	<h1>Tooltips</h1>
@@ -438,19 +549,44 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 
 	<h3 id="progress-basic">Basic</h3>
 	<div class="progress">
-		<div class="progress-bar background-primary" style="width: 20%"></div>
+		<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar background-accent" style="width: 60%;"></div>
+		<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar background-success" style="width: 40%"></div>
+		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar background-caution" style="width: 60%"></div>
+		<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
 	</div>
 	<div class="progress">
-		<div class="progress-bar background-error" style="width: 80%"></div>
+		<div class="progress-bar progress-bar-error" style="width: 80%"></div>
+	</div>
+
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient" style="width: 20%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-45" style="width: 60%;"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-90" style="width: 40%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-135" style="width: 60%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-180" style="width: 80%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-225" style="width: 80%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-270" style="width: 80%"></div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-gradient-315" style="width: 80%"></div>
 	</div>
 
 	<h3 id="progress-basic">custom background colors with special fx woooo</h3>
@@ -466,56 +602,37 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 		<div class="progress-bar" style="width: 15%; background-color:#0037b4;"></div>
 		<div class="progress-bar" style="width: 5%; background-color:#a168d9;"></div>
 		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"></div>
-		<div class="progress-bar" style="width: 20%; background-color:#fd7f03;"></div>
+		<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"></div>
 		<div class="tooltip">
 			<div class="badge" style="background-color:#b6e4b6;"></div>
 		</div>
-	</div>
-	
-	<h3 id="progress-striped">Striped</h3>
-	
-	
-	<div class="progress progress-bar-striped">
-		<div class="progress-bar background-primary" style="width: 20%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar background-accent" style="width: 60%;"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar background-success" style="width: 40%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar background-caution" style="width: 60%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar background-error" style="width: 80%"></div>
 	</div>
 
 	<h3 id="progress-animated">Animated</h3>
 	
 	
-	<div class="progress progress-bar-striped active">
-		<div class="progress-bar background-primary" style="width: 20%"></div>
+	<div class="progress active">
+		<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
 	</div>
-	<div class="progress">
-		<div class="progress-bar background-accent" style="width: 60%;"></div>
+	<div class="progress active">
+		<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
 	</div>
-	<div class="progress">
-		<div class="progress-bar background-success" style="width: 40%"></div>
+	<div class="progress active">
+		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
 	</div>
-	<div class="progress">
-		<div class="progress-bar background-caution" style="width: 60%"></div>
+	<div class="progress active">
+		<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
 	</div>
-	<div class="progress">
-		<div class="progress-bar background-error" style="width: 80%"></div>
+	<div class="progress active">
+		<div class="progress-bar progress-bar-error" style="width: 80%"></div>
 	</div>
 
 	<h3 id="progress-stacked">Stacked</h3>
 	
 	<div class="progress">
-		<div class="progress-bar background-success" style="width: 35%"></div>
-		<div class="progress-bar background-error" style="width: 20%"></div>
-		<div class="progress-bar background-caution" style="width: 10%"></div>
+		<div class="progress-bar progress-bar-success" style="width: 35%"></div>
+		<div class="progress-bar progress-bar-error" style="width: 20%"></div>
+		<div class="progress-bar progress-bar-caution" style="width: 10%"></div>
 	</div>
 
 <h1>Table</h1>
@@ -529,60 +646,127 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 			<th>Total</th>
 		</tr>
 	</thead>
-<tbody>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">69</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">420</td>
-	</tr>
-	
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
-		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-		<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-		<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-		<td class="text-align-center">666</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-</tbody>
+	<tbody>
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td class="text-align-right">Column content</td>
+			<td class="text-align-center">69</td>
+		</tr>
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td class="text-align-right">Column content</td>
+			<td class="text-align-center">420</td>
+		</tr>
+		
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+			<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+			<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+			<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+			<td class="text-align-center">666</td>
+		</tr>
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td class="text-align-right">Column content</td>
+			<td class="text-align-center">0</td>
+		</tr>
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td class="text-align-right">Column content</td>
+			<td class="text-align-center">0</td>
+		</tr>
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td class="text-align-right">Column content</td>
+			<td class="text-align-center">0</td>
+		</tr>
+		<tr>
+			<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td class="text-align-right">Column content</td>
+			<td class="text-align-center">0</td>
+		</tr>
+	</tbody>
 </table>
 
+<h2>Table but with wrapper so you can scroll through the bullshit</h2>
+<div class="table-wrapper">
+	<table class="table">
+		<thead>
+		<tr>
+				<th class="table-cell-no-gutter">#</th>
+				<th>Column heading</th>
+				<th>Column heading</th>
+				<th class="text-align-right">Column heading</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">69</td>
+			</tr>
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">420</td>
+			</tr>
+			
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+				<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+				<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+				<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+				<td class="text-align-center">666</td>
+			</tr>
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+				<td>Column content</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
 <h2>Table but large spacing + color scheme</h2>
 
 <table class="table table-large">
@@ -739,67 +923,50 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 	</div>
 </div>
 
-<h1>Form</h1>
-<form class="form-horizontal">
-	<fieldset>
-		<legend>Legend</legend>
-		<div class="input-group">
-			<label class="input-label" for="inputEmail">Email</label>
-			<input class="input" id="inputEmail" placeholder="Email" type="text">
-		</div>
-		<div class="input-group">
-			<label class="input-label" for="inputPassword">Password</label>
-				<input class="input" id="inputPassword" placeholder="Password" type="password">
-			</div>
-		</div>
 
-		<div class="input-group">
-			<label class="input-label"><input type="checkbox"> Checkbox</label>
-		</div>
+<h2>Helper classes: Colors</h2>
+<p class="color-base">Color Base</p>
+<p class="color-primary">Color Primary</p>
+<p class="color-accent">Color Accent</p>
+<p class="color-neutral">Color Neutral</p>
+<p class="color-success">Color Success</p>
+<p class="color-caution">Color Caution</p>
+<p class="color-error">Color Error</p>
 
-		<label class="input-label"><input type="checkbox"> Another Checkbox</label>
-		
-		<div class="input-group">
-			<label class="input-label" for="textArea">Textarea</label>
-		
-				<textarea class="input" id="textArea" rows="3"></textarea> <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-			</div>
-		</div>
-		<div class="input-group">
-			<label class="input-label">Radios</label>
-		
-				<div class="radio">
-					<label><input checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
-				</div>
-				<div class="radio">
-					<label><input id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
-				</div>
-				
-		</div>
-		<div class="input-group">
-			<label class="input-label" for="select">Selects</label>
-		
-				<select class="input" id="select">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select><br>
-				<select class="input" multiple>
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
-				
-		</div>
-		<div class="input-group">
-			<button class="btn btn-default">Cancel</button> <button class="btn btn-primary" type="submit">Submit</button>
-		</div>
-	</fieldset>
-</form>
+<p class="color-intensity-1">Color Intensity 1</p>
+<p class="color-intensity-2">Color Intensity 2</p>
+<p class="color-intensity-3">Color Intensity 3</p>
+<p class="color-intensity-4">Color Intensity 4</p>
+<p class="color-intensity-5">Color Intensity 5</p>
+
+<h2>Helper classes: backgrounds</h2>
+
+<p class="background-base">background Base</p>
+<p class="background-primary">Background Primary</p>
+<p class="background-accent">Background Accent</p>
+<p class="background-neutral">Background Neutral</p>
+<p class="background-success">Background Success</p>
+<p class="background-caution">Background Caution</p>
+<p class="background-error">Background Error</p>
+
+<p class="background-intensity-1">Background Intensity 1</p>
+<p class="background-intensity-2">Background Intensity 2</p>
+<p class="background-intensity-3">Background Intensity 3</p>
+<p class="background-intensity-4">Background Intensity 4</p>
+<p class="background-intensity-5">Background Intensity 5</p>
+
+
+<p class="background-gradient">Background Gradient</p>
+<p class="background-gradient-45">Background Gradient 45</p>
+<p class="background-gradient-90">Background Gradient 90</p>
+<p class="background-gradient-135">Background Gradient 135</p>
+<p class="background-gradient-180">Background Gradient 180</p>
+<p class="background-gradient-225">Background Gradient 225</p>
+<p class="background-gradient-270">Background Gradient 270</p>
+<p class="background-gradient-315">Background Gradient 315</p>
+
+<div id="content-sample" style="font-size:inherit;">
+
 
 <h1>Text</h1>
 <h3 class="true-title">Page Markup And Formatting</h3>						
@@ -944,45 +1111,4 @@ United States</address>
 <p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
 <p><strong>Variable Tag</strong></p>
 <p>This allows you to denote <var>variables</var>.</p>
-
-
-<h2>Helper classes: Colors</h2>
-<p class="color-base">Color Base</p>
-<p class="color-primary">Color Primary</p>
-<p class="color-accent">Color Accent</p>
-<p class="color-neutral">Color Neutral</p>
-<p class="color-success">Color Success</p>
-<p class="color-caution">Color Caution</p>
-<p class="color-error">Color Error</p>
-
-<p class="color-intensity-1">Color Intensity 1</p>
-<p class="color-intensity-2">Color Intensity 2</p>
-<p class="color-intensity-3">Color Intensity 3</p>
-<p class="color-intensity-4">Color Intensity 4</p>
-<p class="color-intensity-5">Color Intensity 5</p>
-
-<h2>Helper classes: backgrounds</h2>
-
-<p class="background-base">background Base</p>
-<p class="background-primary">Background Primary</p>
-<p class="background-accent">Background Accent</p>
-<p class="background-neutral">Background Neutral</p>
-<p class="background-success">Background Success</p>
-<p class="background-caution">Background Caution</p>
-<p class="background-error">Background Error</p>
-
-<p class="background-intensity-1">Background Intensity 1</p>
-<p class="background-intensity-2">Background Intensity 2</p>
-<p class="background-intensity-3">Background Intensity 3</p>
-<p class="background-intensity-4">Background Intensity 4</p>
-<p class="background-intensity-5">Background Intensity 5</p>
-
-
-<p class="background-gradient">Background Gradient</p>
-<p class="background-gradient-45">Background Gradient 45</p>
-<p class="background-gradient-90">Background Gradient 90</p>
-<p class="background-gradient-135">Background Gradient 135</p>
-<p class="background-gradient-180">Background Gradient 5</p>
-<p class="background-gradient-225">Background Gradient 225</p>
-<p class="background-gradient-270">Background Gradient 270</p>
-<p class="background-gradient-315">Background Gradient 315</p>
+</div>

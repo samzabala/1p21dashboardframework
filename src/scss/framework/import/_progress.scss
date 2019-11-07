@@ -1,6 +1,103 @@
 /*** SET ***/
 
+
+
+$calculated-progress-height: $progress-height;
+@if internal-is-convertable($progress-height) {
+    $calculated-progress-height: rem($progress-height / $body-font-size)
+}
+
+
 /* SUBSET */
 $prefix: '.progress';
 #{$prefix} {
+	width:100%;
+	display:block;
+	background-color: $progress-background-color;
+	border-radius: $progress-border-radius;
+	overflow:hidden;
+	@extend %cf;
+	margin-bottom:$calculated-body-text-gutter-y;
+
+	&:before {
+
+		content:"";
+		display:block;
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		@include gradient((
+			type: repeating-linear,
+			colors: (
+				(
+					color: $progress-background-stripe-color,
+					offset:0%
+				),
+				(
+					color: $progress-background-stripe-color,
+					offset:1px
+				),
+				(
+					color: $progress-background-color,
+					offset:1px
+				),
+				(
+					color: $progress-background-color,
+					offset:4px
+				)
+			)
+		))
+	}
+
+	.body-inverse & {
+		background-color: $progress-background-color-inverse;
+	}
+
+	&,
+	&-bar {
+		position: relative;
+		height: $calculated-progress-height;
+		z-index:1;
+		transition: $progress-transition-duration all $transition-timing;
+	}
+	@keyframes progress-bar-stripes {
+		from {
+			background-position: 50px 0
+		}
+		to {
+			background-position: 0 0
+		}
+	}
+
+	&.active {
+		&:before {
+			animation-name: progress-bar-stripes;
+			animation-duration: $progress-transition-duration;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+	}
+
+	&-bar {
+		float: left;
+
+
+		@each $tag,$color in $calculated-brand-color-declarations {
+			&-#{$tag} {
+				@extend %background-#{$tag};
+			}
+		}
+
+		&-gradient {
+			@extend %background-gradient;
+	
+			@each $angle in $calculated-gradient-angles {
+				&-#{$angle} {
+					@extend %background-gradient-#{$angle};
+				}
+			}
+		}
+	}
 }

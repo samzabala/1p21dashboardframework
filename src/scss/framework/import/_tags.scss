@@ -40,7 +40,7 @@ $prefix: '.tag';
 
 	@each $tag,$color in $calculated-brand-color-declarations {
 		&-#{$tag} {
-			background-color: $color;
+			@extend %background-#{$tag};
 		}
 	}
 }

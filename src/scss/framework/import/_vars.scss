@@ -135,15 +135,16 @@ $debug: false;
 		$body-anchor-color: $brand-color-primary !default;
 		$body-anchor-color-hover: $brand-color-accent !default;
 
-		$body-list-bullsize: 6px !default;
+		$body-list-bullet-size: 6px !default;
+		$body-list-bullet-color: $brand-color-primary !default;
+		$body-list-bullet-border-radius:50% !default;
 		$body-list-offset: 25px !default;
-		$body-bullet-color: $brand-color-primary !default;
 
 		$body-blockquote-font-size: inherit !default;
 		$body-blockquote-font-weight: 300 !default;
 		$body-blockquote-line-height: inherit !default;
-		$body-blockquote-text-transform: 300 !default;
-		$body-blockquote-font-style: none !default;
+		$body-blockquote-text-transform: normal !default;
+		$body-blockquote-font-style: normal !default;
 		$body-blockquote-color: $brand-color-neutral !default;
 		$body-blockquote-gutter-x: $gutter-small !default;
 		$body-blockquote-border-width: 4px !default;
@@ -196,6 +197,11 @@ $debug: false;
 
 	// ICONS
 		$icon-size: 30px !default;
+
+	// legend
+		$legend-width: 30px !default;
+		$legend-height: 8px !default;
+		$legend-border-radius: 0 !default;
 
 	//symbol 
 		$symbol-caret-width: 8px !default;
@@ -266,8 +272,12 @@ $debug: false;
 		$dropdown-width: 300px !default;
 
 	// progress
-		$progress-size: 20px !default;
-		$progress-background: 20px !default;
+		$progress-height: 20px !default;
+		$progress-background-color: rgba($global-background-contrast,.01) !default;
+			$progress-background-color-inverse: rgba($global-background-contrast-inverse,.01) !default;
+		$progress-border-radius: 20px !default;
+		$progress-background-stripe-color: $brand-color-neutral !default;
+		$progress-transition-duration: $transition-duration-long * 4 !default;
 	
 
 	// THUMBNAIL
@@ -323,6 +333,28 @@ $debug: false;
 		$tag-border-radius: $border-radius-small;
 
 
+	// input
+		$input-height: 45px !default;
+		$input-height-multiple-factor: 4 !default;
+
+		$input-font-size: 16px !default;
+		
+		$input-color: inherit !default;
+		$input-background: none !default;
+		$input-line-height: 20px !default;
+		$input-font-family: $brand-font-primary !default;
+		$input-font-weight: 600 !default;
+		$input-font-style: normal !default;
+		$input-text-transform: none !default;
+		$input-gutter-x: 20px !default;
+		$input-border-width: 1px !default;
+		$input-border-color: transparent !default;
+		$input-border-color-focus: rgba($brand-color-neutral,.2) !default;
+		$input-border-radius: $border-radius-base !default;
+		$input-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
+		$input-box-shadow-brand-basis: 0px 5px 15px -10px !default;
+			$input-box-shadow-focus: 0px 0 10px -5px $brand-color-primary !default;
+		$input-group-separator-color: rgba($brand-color-neutral,.5) !default;
 
 	// BTN
 		$btn-height: 45px !default;

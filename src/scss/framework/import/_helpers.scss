@@ -67,6 +67,41 @@
 
 
 	/* BACKGROUND CLASSES */
+
+
+
+// extend for elements that needs backgrounds so we can extend with responsibility
+	%background {
+		@each $tag,$color in $calculated-brand-color-declarations {
+			&-#{$tag} {
+				background-color: $color;
+			}
+		}
+
+		&-gradient {
+
+			& {
+				@include gradient((
+					color1: $gradient-start,
+					color2: $gradient-end,
+					angle: 0deg,
+					use-shorthand:false
+				))
+			}
+
+			@each $angle in $calculated-gradient-angles {
+				&-#{$angle} {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: to-unit($angle,deg),
+						use-shorthand:false
+					))
+				}
+			}
+		}
+	}
+
 		$prefix: '.background';
 		#{$prefix} {
 
@@ -97,95 +132,29 @@
 			}
 
 			&-gradient {
+				@extend %background-gradient;
 
-				& {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 0deg,
-						use-shorthand:false
-					))
+				$calculated-gradient-selector: #{&};
+
+				@each $angle in $calculated-gradient-angles {
+					$calculated-gradient-selector:  #{ $calculated-gradient-selector ', '+ & +'-' + $angle };
 				}
 
-				&,
-				&-45,
-				&-90,
-				&-135,
-				&-180,
-				&-225,
-				&-270,
-				&-315 {
+				@at-root #{$calculated-gradient-selector} {
 					background-color: $gradient-start;
 				}
 
-				&-45 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 45deg,
-						use-shorthand:false
-					))
-				}
-
-				&-90 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 90deg,
-						use-shorthand:false
-					))
-				}
-
-				&-135 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 135deg,
-						use-shorthand:false
-					))
-				}
-
-				&-180 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 180deg,
-						use-shorthand:false
-					))
-				}
-
-				&-225 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 225deg,
-						use-shorthand:false
-					))
-				}
-
-				&-270 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 270deg,
-						use-shorthand:false
-					))
-				}
-
-				&-315 {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: 315deg,
-						use-shorthand:false
-					))
+				@each $angle in $calculated-gradient-angles {
+					&-#{$angle} {
+						@extend %background-gradient-#{$angle};
+					}
 				}
 			}
 
 
 			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
-					background-color: $color;
+					@extend %background-#{$tag};
 				}
 			}
 		}

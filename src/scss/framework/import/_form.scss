@@ -1,0 +1,251 @@
+
+//internal vars
+$calculated-input-font-size: $input-font-size;
+@if internal-is-convertable($input-font-size) {
+    $calculated-input-font-size: rem($input-font-size / $body-font-size)
+}
+
+$calculated-input-line-height: type-lead( $input-font-size,$input-line-height );
+
+$calculated-input-single-line: $calculated-input-line-height;
+@if unitless($calculated-input-single-line) and unit($input-font-size) == px {
+    $calculated-input-single-line: 1em * #{ type-lead( $input-font-size,$input-line-height ) }
+}
+
+$calculated-input-height: $input-height;
+@if internal-is-convertable($input-height,$input-font-size) {
+    $calculated-input-height: rem($input-height/$input-font-size)
+}@else if internal-is-convertable($input-height){
+	$calculated-input-height: rem($input-height/$body-font-size);
+}
+
+$calculated-input-gutter-x: $input-gutter-x;
+@if internal-is-convertable($input-gutter-x,$input-font-size) {
+    $calculated-input-gutter-x: em($input-gutter-x / $input-font-size)
+}@else if internal-is-convertable($input-gutter-x){
+    $calculated-input-height: rem($input-gutter-x/$body-font-size);
+}
+
+/*** SET ***/
+
+/* SUBSET */
+$prefix: '.input';
+
+
+input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
+textarea,
+select,
+#{$prefix}-single-line,
+#{$prefix}-multiple-line-line {
+	@include type-set((
+		size: #{$calculated-input-font-size},
+		color:$input-color,
+		leading: #{ $calculated-input-line-height } ,
+		weight: $input-font-weight,
+		style: $input-font-style,
+		font: $input-font-family,
+		align:inherit,
+		decoration:none,
+		case: $input-text-transform,
+	));
+	// overflow:hidden;
+	padding-top: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+	padding-bottom: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+	padding-right: $calculated-input-gutter-x;
+	padding-left: $calculated-input-gutter-x;
+	background: $input-background;
+	border: $input-border-width solid $input-border-color;
+	box-shadow: $input-box-shadow;
+	transition: $transition-duration-short all $transition-timing;
+	max-width:100%;
+	display:inline-block;
+	vertical-align: middle;
+	background:none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	#{$prefix}-wrapper & {
+		display: block;
+		flex: 1 1;
+	}
+
+	&:focus,&.focus {
+		box-shadow: $input-box-shadow-focus;
+		border-color: $input-border-color-focus!important;
+	}
+
+	.nav & {
+
+		padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+		padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+		height: #{ $calculated-nav-height };
+		border-radius: 0;
+	}
+
+
+	&#{$prefix}-disabled {
+		opacity: $global-disabled-opacity;
+	}
+
+	@each $tag,$color in $calculated-brand-color-declarations {
+		@at-root #{$prefix}-label#{$prefix}-label-#{$tag} {
+			&,&:focus {
+				color: $color!important;
+			}
+		}
+
+		@at-root &#{$prefix}-#{$tag}  {
+
+			&:not(:focus):not(.focus) {
+				box-shadow: $input-box-shadow-brand-basis $color;
+			}
+
+			&,&:focus,&.focus {
+
+				border-color: $color!important;
+			}
+		}
+	}
+
+	@at-root &,
+	#{$prefix}-group {
+		border-radius: $input-border-radius;
+	}
+	
+
+	@at-root #{$prefix}-group,
+	:not(#{$prefix}-group) > & {
+
+		.nav & {
+			border-radius: 0 !important;
+		}
+	}
+
+	&#{$prefix}-no-radius {
+		border-radius: 0!important;
+	}
+	
+	@at-root .btn,
+	& {
+		#{$prefix}-group-horizontal &{
+			&:nth-last-child(n+2){
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			&:nth-child(n+2) {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+
+				&,
+				&:hover {
+					border-left-color: $input-group-separator-color !important;
+				}
+			}
+		}
+
+
+		#{$prefix}-group-vertical &{
+			&:nth-last-child(n+2){
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			&:nth-child(n+2) {
+				border-top-right-radius: 0;
+				border-top-left-radius: 0;
+
+				&,
+				&:hover {
+					border-top-color: $input-group-separator-color !important;
+				}
+			}
+		}
+	}
+
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
+select,
+#{$prefix}-single-line {
+
+	height: $calculated-input-height;
+}
+
+select[multiple],
+textarea,
+#{$prefix}-multiple-line-line {
+	min-height: $calculated-input-height * $input-height-multiple-factor;
+}
+
+select:not([multiple]) {
+	padding-right: $calculated-input-gutter-x * 2;
+	background-image:
+		linear-gradient(-135deg, $brand-color-primary 0%, $brand-color-primary 50%, transparent 50%, transparent 100%),
+		linear-gradient(135deg, $brand-color-primary 0%, $brand-color-primary 50%, transparent 50%, transparent 100%);
+	background-size: .25em .375em, .25em .375em,;
+	background-position: calc(100% - 1.25em) 50%, calc(100% - 1em) 50%;
+	background-repeat: no-repeat,no-repeat;
+}
+
+select[multiple]{
+	line-height: $calculated-input-height;
+	overflow-y: auto;
+
+	option {
+
+		padding-right: $calculated-input-gutter-x;
+		padding-left: $calculated-input-gutter-x;
+		margin-right: $calculated-input-gutter-x * -1;
+		margin-left: $calculated-input-gutter-x * -1;
+	}
+}
+
+
+#{$prefix} {
+
+
+	&-wrapper {
+		display:inline-flex;
+		&#{&}-block,
+		&-vertical {
+
+		display:flex;
+		}
+
+		&-horizontal {
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+
+		&-vertical {
+			flex-direction: column;
+		}
+	}
+
+
+
+	&-group {
+		display:inline-flex;
+		position:relative;
+		max-width:100%;
+		// overflow: hidden;
+
+		#{$prefix}-wrapper & {
+			display:flex;
+		}
+
+		&#{&}-block {
+
+			display:flex;
+		}
+	}
+}
+
+fieldset,.fieldset {
+
+}

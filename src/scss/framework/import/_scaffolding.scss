@@ -43,89 +43,91 @@
 
 	*:focus {
 		outline: none;
-	  }
-	  
-	  .clearfix:after {
+	}
+	
+	.clearfix:after {
 		visibility: hidden;
 		display: block;
 		font-size: 0;
 		content: '';
 		clear: both;
 		height: 0;
-	  }
-	  
-	  * html .clearfix {
+	}
+	
+	* html .clearfix {
 		zoom: 1;
-	  }
-	  
-	  /* IE6 */
-	  
-	  *:first-child+html .clearfix {
+	}
+	
+	/* IE6 */
+	
+	*:first-child+html .clearfix {
 		zoom: 1;
-	  }
-	  
-	  /* IE7 */
-	  
-	  *,
-	  *:before,
-	  *:after {
+	}
+	
+	/* IE7 */
+	
+	*,
+	*:before,
+	*:after {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-	  }
-	  
-	  * {
+	}
+	
+	* {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		/* Firefox 25*/
-	  }
-	  
-	  input:not([type=checkbox]):not([type=radio]),
-	  textarea,
-	  select,
-	  button {
+	}
+	
+	input:not([type=checkbox]):not([type=radio]),
+	textarea,
+	select,
+	option,
+	button {
+		background:none;
 		-webkit-appearance: none;
 		appearance: none;
 		-webkit-border-radius: 0;
 		border: none;
 		resize: none;
-		display: block;
-		font-family: inherit;
-		color: inherit;
-	  }
-	  input::-webkit-input-placeholder,
-	  textarea::-webkit-input-placeholder {
+		// 	display: block;
+		// color: inherit;
+		font: inherit;
+	}
+	input::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder {
 		-webkit-transition: all .25s ease-in-out;
 		-moz-transition: all .25s ease-in-out;
 		-ms-transition: all .25s ease-in-out;
 		-o-transition: all .25s ease-in-out;
 		transition: all .25s ease-in-out;
-	  }
-	  
-	  input:focus::-webkit-input-placeholder,
-	  textarea:focus::-webkit-input-placeholder {
+	}
+	
+	input:focus::-webkit-input-placeholder,
+	textarea:focus::-webkit-input-placeholder {
 		color: transparent !important;
-	  }
-	  
-	  input:focus:-moz-placeholder,
-	  textarea:focus:-moz-placeholder {
+	}
+	
+	input:focus:-moz-placeholder,
+	textarea:focus:-moz-placeholder {
 		color: transparent !important;
-	  }
-	  
-	  input:focus:-ms-input-placeholder,
-	  textarea:focus:-ms-input-placeholder {
+	}
+	
+	input:focus:-ms-input-placeholder,
+	textarea:focus:-ms-input-placeholder {
 		color: transparent !important;
-	  }
-	  
-	  button {
-		  margin:0;
-		  padding:0;
-		  outline:0;
+	}
+	
+	button {
+		margin:0;
+		padding:0;
+		outline:0;
 		border: none;
 		cursor: pointer;
-	  }
-	  
-	  a {
+	}
+	
+	a {
 		text-decoration: none;
-	  }
+	}
 

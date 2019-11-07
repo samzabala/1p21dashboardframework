@@ -17,22 +17,30 @@ $calculated-btn-single-line: $calculated-btn-line-height;
 $calculated-btn-height: $btn-height;
 @if internal-is-convertable($btn-height,$btn-font-size) {
     $calculated-btn-height: rem($btn-height/$btn-font-size)
+}@else if internal-is-convertable($btn-height){
+    $calculated-btn-height: rem($btn-height/$body-font-size);
 }
 
 
     $calculated-btn-height-large: $btn-height-large;
     @if internal-is-convertable($btn-height-large,$btn-font-size) {
         $calculated-btn-height-large: rem($btn-height-large/$btn-font-size)
+    }@else if internal-is-convertable($btn-height-large){
+        $calculated-btn-height: rem($btn-height-large/$body-font-size);
     }
 
     $calculated-btn-height-small: $btn-height-small;
     @if internal-is-convertable($btn-height-small,$btn-font-size){
         $calculated-btn-height-small: rem($btn-height-small/$btn-font-size)
+    }@else if internal-is-convertable($btn-height-small){
+        $calculated-btn-height: rem($btn-height-small/$body-font-size);
     }
 
 $calculated-btn-gutter-x: $btn-gutter-x;
 @if internal-is-convertable($btn-gutter-x,$btn-font-size) {
     $calculated-btn-gutter-x: em($btn-gutter-x / $btn-font-size)
+}@else if internal-is-convertable($btn-gutter-x){
+    $calculated-btn-height: rem($btn-gutter-x/$body-font-size);
 }
 
 $prefix: '.btn';
@@ -65,15 +73,15 @@ $prefix: '.btn';
         
             @at-root &:hover,
             #{$prefix}-group#{$prefix}-group-unite:hover &,
-            #{$prefix}-group#{$prefix}-group-unite #{$prefix}:hover ~ &,
+            .input-group:hover &,
             
             &:focus,
             #{$prefix}-group#{$prefix}-group-unite:focus &,
-            #{$prefix}-group#{$prefix}-group-unite #{$prefix}:focus ~ &,
+            .input-group:focus &,
 
             &.focus,
-            #{$prefix}-group#{$prefix}-group-unite.focus &
-            #{$prefix}-group#{$prefix}-group-unite #{$prefix}.focus ~ & {
+            #{$prefix}-group#{$prefix}-group-unite.focus &,
+            .input-group.focus & {
                 @include internal-btn-set-scheme($properties)
             }
             // @at-root &:hover,
@@ -85,17 +93,17 @@ $prefix: '.btn';
         }@else if $state == 'active' {
             @at-root &:active,
             #{$prefix}-group#{$prefix}-group-unite:active &,
-            #{$prefix}-group#{$prefix}-group-unite #{$prefix}:active ~ &,
+            .input-group:active &,
 
             &.active,
             #{$prefix}-group#{$prefix}-group-unite.active &,
-            #{$prefix}-group#{$prefix}-group-unite #{$prefix}.active ~ & {
+            .input-group.active & {
                 @include internal-btn-set-scheme($properties);
             }
             
         }@else{
         
-            @at-root & {
+            @at-root &{
                 @include internal-btn-set-scheme($properties)
             }
             
@@ -120,7 +128,15 @@ $prefix: '.btn';
             #{$prefix}-group-disabled:focus &,
             #{$prefix}-group-disabled.focus &,
             #{$prefix}-group-disabled:active &,
-            #{$prefix}-group-disabled.active & {
+            #{$prefix}-group-disabled.active &,
+            
+            
+            .input-group-disabled &,
+            .input-group-disabled:hover &,
+            .input-group-disabled:focus &,
+            .input-group-disabled.focus &,
+            .input-group-disabled:active &,
+            .input-group-disabled.active & {
                 @include internal-btn-set-scheme($properties,true,true);
             }
         }
@@ -128,7 +144,7 @@ $prefix: '.btn';
 
 }
 
-@mixin internal-btn-set-scheme($properties,$is-disabled: false,$add-important: false,) {
+@mixin internal-btn-set-scheme($properties,$is-disabled: false,$add-important: false) {
 
 
     $important: '';
@@ -189,16 +205,19 @@ $prefix: '.btn';
     padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
     padding-right: $calculated-btn-gutter-x;
     padding-left: $calculated-btn-gutter-x;
-    display:inline-block;
+    border: $btn-border-width solid transparent;
+    transition: $transition-duration-short all $transition-timing;
+    max-width:100%;
+    display:inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     vertical-align: middle;
     background:none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    max-width:100%;
-    border: $btn-border-width solid transparent;
-    transition: $transition-duration-short all $transition-timing;
     
     &#{$prefix}-no-radius {
         border-radius: 0!important;

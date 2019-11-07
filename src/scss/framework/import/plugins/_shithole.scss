@@ -1323,7 +1323,7 @@
             background#{ $shorthand-image }: -webkit-#{ map-get($opts,type)  }-gradient( map-get($opts,angle) #{$points} ); /* Chrome10-25,Safari5.1-6 */
         }
         background#{ $shorthand-image }: #{ map-get($opts,type)  }-gradient(
-            (90 - ( map-get($opts,angle))) #{$points} ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            (#{ 90deg -  map-get($opts,angle) } ) #{$points} ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
 
     //fancy as border shit like in farah and farah. you have to setup in a certain direction. i cant explain. but figure it out. good luck
@@ -2298,6 +2298,7 @@
         $available-units: (
             em: 1em,
             px: 1px,
+            deg: 1deg,
             vw: 100vw,
             vh: 100vh,
             cm: 1cm,

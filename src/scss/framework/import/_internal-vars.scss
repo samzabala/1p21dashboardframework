@@ -20,6 +20,10 @@ DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
         $calculated-nav-height: rem( $nav-height / $body-font-size);
 	}
     
+    $calculated-body-text-gutter-y: $body-text-gutter-y;
+    @if internal-is-convertable($calculated-body-text-gutter-y){
+        $calculated-body-text-gutter-y: em($body-text-gutter-y / $body-font-size)
+    }
 
 
 //for helpers
@@ -42,14 +46,6 @@ $calculated-color-brand-intensity: (
 );
 
 
-$calculated-body-heading-size: (
-	$body-size-h1,
-	$body-size-h2,
-	$body-size-h3,
-	$body-size-h4,
-	$body-size-h5,
-	$body-size-h6
-);
 
 $calculated-btn-schemes: (
 
@@ -224,4 +220,6 @@ $calculated-btn-schemes: (
             color: $btn-color-link-active,
         )
     )
-)
+);
+
+$calculated-gradient-angles:(45,90,135,180,225,270,315);

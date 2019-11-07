@@ -8,6 +8,10 @@
 		throw new Error('jQuery not found bro, what did you do?');
 	}
 
+
+
+	$.trumbowyg.svgPath = false;
+
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
@@ -108,6 +112,14 @@
 		modal
 		
 		*/
+
+		$('.trumbowyg:not(.trumbowyg-custom)').each(function(){
+			$('#trumbowyg-demo').trumbowyg({
+				btns: [['strong', 'em',], ['insertImage']],
+				prefix: 'trumbowyg-',
+				autogrow: true
+			});
+		})
 	
 		$('body').on('click','*[data-toggle="accordion"]',function(e){
 			console.log($(this));
@@ -121,7 +133,6 @@
 				$(this).toggleClass('open'); 
 				$(this).siblings('.toggle-accordion').first().toggleClass('open'); 
 			}else{
-				console.log($(this).attr('href'));
 				$($(this).attr('href')).slideToggle(); 
 				$(this).toggleClass('open'); 
 				$($(this).attr('href')).toggleClass('open'); 
@@ -134,14 +145,12 @@
 			e.preventDefault();
 			// console.log(e.target);
 
-			console.log($(this).siblings('.dropdown').first().length);
 			if($(this).siblings('.dropdown').first().length > 0){
 	
 				$(this).siblings('.dropdown').first().slideToggle(); 
 				$(this).closest('li,.nav-item').toggleClass('open'); 
 				$(this).siblings('.dropdown').first().toggleClass('open'); 
 			}else{
-				console.log($(this).attr('href'));
 				$($(this).attr('href')).slideToggle(); 
 				$(this).closest('li,.nav-item').toggleClass('open'); 
 				$($(this).attr('href')).toggleClass('open'); 
@@ -163,6 +172,20 @@
 			}else{
 				$(this).toggleClass('active');
 			}
+		});
+		
+
+
+		$('body').on('click','*[data-toggle="select"]',function(e){
+			console.log($(this));
+			e.preventDefault();
+			// console.log(e.target);
+			var selector = ($(this).siblings('select').first().length > 0) ? $(this).siblings('select').first() : $($(this).attr('href'));
+
+			
+			
+			selector.val(selector.val());
+			selector.trigger('change');
 		});
 	})
 

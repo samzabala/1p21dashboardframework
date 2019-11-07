@@ -84,7 +84,6 @@ function app_render_handlebars_module($id = '',$data = null,$handlebars = null){
 
 			<!-- Template -->
 			<script id="<?= $id; ?>-hb-template" type="text/x-handlebars-template">
-						
 				<?= $handlebars; ?>
 			</script>
 
