@@ -36,7 +36,13 @@ input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]
 textarea,
 select,
 #{$prefix}-single-line,
-#{$prefix}-multiple-line-line {
+#{$prefix}-multiple-line-line,
+
+
+// label,
+// #{$prefix}-label
+
+{
 	@include type-set((
 		size: #{$calculated-input-font-size},
 		color:$input-color,
