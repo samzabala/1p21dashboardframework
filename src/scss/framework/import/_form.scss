@@ -81,6 +81,12 @@ $prefix: '.input';
 %for-form {
 	&-global {
 		transition: $transition-duration-short color $transition-timing, $transition-duration-short border $transition-timing, $transition-duration-short box-shadow $transition-timing;
+
+		&-disabled {
+
+			opacity: $global-disabled-opacity!important;
+			cursor: not-allowed!important;
+		}
 	}
 
 	&-input-and-group {
@@ -135,6 +141,15 @@ $prefix: '.input';
 	}
 
 	&-input {
+		&-itself {
+			resize: none;
+			font: inherit;
+			max-width:100%;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
 		& {
 			-webkit-appearance: none;
 			appearance: none;
@@ -151,11 +166,6 @@ $prefix: '.input';
 			));
 			background: $input-background;
 			border: $input-border-width solid $input-border-color;
-			max-width:100%;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
 			padding-right: $calculated-input-gutter-x;
 			padding-left: $calculated-input-gutter-x;
 			padding-top: calc(  (  (#{ $calculated-input-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
@@ -168,7 +178,7 @@ $prefix: '.input';
 				padding-bottom: calc(  (  (#{ $calculated-input-height-large } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
 				border-radius: $input-border-radius-large;
 			}
-	
+
 			&#{$prefix}-small,
 			#{$prefix}-group#{$prefix}-group-small & {
 				font-size: $calculated-input-font-size-small;
@@ -180,6 +190,11 @@ $prefix: '.input';
 			.body-inverse & {
 				color:$input-color-inverse;
 				background: $input-background-inverse;
+			}
+
+			option {
+
+				font:inherit;
 			}
 
 
@@ -240,9 +255,8 @@ $prefix: '.input';
 				border-color: $input-border-color-focus;
 			}
 
+
 		}
-
-
 
 
 		&-single-line {
@@ -268,6 +282,15 @@ $prefix: '.input';
 			min-height: $calculated-input-height * $input-height-multiple-factor;
 			vertical-align: top;
 			display:block;
+			
+			overflow-y: auto;
+
+			option {
+				padding-right: $calculated-input-gutter-x;
+				padding-left: $calculated-input-gutter-x;
+				margin-right: $calculated-input-gutter-x * -1;
+				margin-left: $calculated-input-gutter-x * -1;
+			}
 
 		}
 
@@ -297,117 +320,93 @@ $prefix: '.input';
 
 #{$prefix} {
 
-}
 
-
-#{$prefix}-label,
-label {
-	@extend %for-form-global;
-	@extend %for-form-label;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
-textarea,
-select,
-#{$prefix}-single-line,
-#{$prefix}-multiple-line-line {
-	@extend %for-form-global;
-	@extend %for-form-input;
-
-	.nav & {
-		padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
-		padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
-		height: #{ $calculated-nav-height };
-		border-radius: 0;
+	& {
+		@extend %for-form-input-itself;
 	}
 
-	#{$prefix}-wrapper & {
-		display: block;
-		flex: 1 1;
+	&-label  {
+		@extend %for-form-global;
+		@extend %for-form-label;
 	}
 
-	@at-root &,
-	#{$prefix}-group {
-		@extend %for-form-input-and-group;
+	&-label-disabled,
+	&-disabled {
+		@extend %for-form-global-disabled;
+	}
+
+
+	&-single-line,
+	&-multiple-line {
+		@extend %for-form-global;
+		@extend %for-form-input;
+
+		.nav & {
+			padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+			padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
+			height: #{ $calculated-nav-height };
+			border-radius: 0;
+		}
+
+		#{$prefix}-wrapper & {
+			display: block;
+			flex: 1 1;
+		}
+
+		@at-root &,
+		#{$prefix}-group {
+			@extend %for-form-input-and-group;
+		}
+		
+		@at-root .btn,
+		& {
+			#{$prefix}-group-horizontal &{
+				&:nth-last-child(n+2){
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+
+				&:nth-child(n+2) {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+
+					&,
+					&:hover {
+						border-left-color: $input-group-separator-color !important;
+					}
+				}
+			}
+
+
+			#{$prefix}-group-vertical &{
+				&:nth-last-child(n+2){
+					border-bottom-right-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+
+				&:nth-child(n+2) {
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+
+					&,
+					&:hover {
+						border-top-color: $input-group-separator-color !important;
+					}
+				}
+			}
+		}
+
 	}
 	
-	@at-root .btn,
-	& {
-		#{$prefix}-group-horizontal &{
-			&:nth-last-child(n+2){
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-			}
 
-			&:nth-child(n+2) {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-
-				&,
-				&:hover {
-					border-left-color: $input-group-separator-color !important;
-				}
-			}
-		}
-
-
-		#{$prefix}-group-vertical &{
-			&:nth-last-child(n+2){
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: 0;
-			}
-
-			&:nth-child(n+2) {
-				border-top-right-radius: 0;
-				border-top-left-radius: 0;
-
-				&,
-				&:hover {
-					border-top-color: $input-group-separator-color !important;
-				}
-			}
-		}
+	&-single-line {
+		@extend %for-form-input-single-line;
 	}
-
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
-select,
-#{$prefix}-single-line {
-	@extend %for-form-input-single-line;
-}
-
-select[multiple],
-textarea,
-#{$prefix}-multiple-line-line {
-	@extend %for-form-input-multiple-line;
-}
-
-select:not([multiple]) {
-	padding-right: $calculated-input-gutter-x * 2;
-	background-image:
-		linear-gradient(-135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%),
-		linear-gradient(135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%);
-	background-size: .3125em .375em, .3125em .375em;
-	background-position: calc(100% - 1.3125em) 50%, calc(100% - 1em) 50%;
-	background-repeat: no-repeat,no-repeat;
-}
-
-select[multiple]{
-	line-height: $calculated-input-height;
-	overflow-y: auto;
-
-	option {
-
-		padding-right: $calculated-input-gutter-x;
-		padding-left: $calculated-input-gutter-x;
-		margin-right: $calculated-input-gutter-x * -1;
-		margin-left: $calculated-input-gutter-x * -1;
+	
+	&-multiple-line,
+	&[multiple] {
+		@extend %for-form-input-multiple-line;
 	}
-}
-
-
-#{$prefix} {
 
 	&-wrapper {
 		@include br(md){
@@ -429,7 +428,7 @@ select[multiple]{
 				flex-direction: column;
 			}
 		}
-}
+	}
 
 	///updates here should match btn-group 
 	&-group {
@@ -489,6 +488,7 @@ select[multiple]{
         }
 
         &#{&}-responsive {
+			overflow-x:auto;
 
             @include br(md){
 
@@ -517,34 +517,64 @@ select[multiple]{
                 flex-direction:column;
 
                 > #{$prefix}:nth-last-child(n+2) {
-                    border-bottom-right-radius: 0;
-                    border-bottom-left-radius: 0;
-                }
-
-                > #{$prefix}:nth-child(n+2) {
-                    border-top-right-radius: 0;
-                    border-top-left-radius: 0;
-
-                    &,
-                    &:hover {
-                        border-top-color: $input-group-separator-color !important;
-                    }
-                }
+					border-bottom-right-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+	
+				> #{$prefix}:nth-child(n+2) {
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
+	
+					&,
+					&:hover {
+						border-top-color: $input-group-separator-color !important;
+					}
+				}
             }
         } 
 	}
 }
 
 
+
+
+// label
+
+// input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
+// textarea,
+// select,
+
+// input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
+// select,
+
+
+// select[multiple],
+// textarea,
+
+
+
+// input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
+// select,
+
+
+[disabled] {
+	@extend %for-form-global-disabled;
+}
+
+//select gets special treatment because it's such a bitch
+
+select:not([multiple]) {
+	padding-right: $calculated-input-gutter-x * 2;
+	background-image:
+		linear-gradient(-135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%),
+		linear-gradient(135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%);
+	background-size: .3125em .375em, .3125em .375em;
+	background-position: calc(100% - 1.3125em) 50%, calc(100% - 1em) 50%;
+	background-repeat: no-repeat,no-repeat;
+}
+
+select[multiple]{
+}
+
+
 //disabled
-#{$prefix}-label-disabled,
-[disabled],
-#{$prefix}-disabled {
-		opacity: $global-disabled-opacity!important;
-		cursor: not-allowed!important;
-}
-
-
-fieldset,.fieldset {
-
-}

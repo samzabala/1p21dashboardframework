@@ -80,19 +80,17 @@
 		/* Firefox 25*/
 	}
 	
-	input:not([type=checkbox]):not([type=radio]),
-	textarea,
-	select,
-	option,
-	button {
-		background:none;
-		-webkit-border-radius: 0;
-		border: none;
-		resize: none;
-		// 	display: block;
-		// color: inherit;
-		font: inherit;
-	}
+	// input:not([type=checkbox]):not([type=radio]),
+	// textarea,
+	// select,
+	// option,
+	// button {
+	// 	background:none;
+	// 	-webkit-border-radius: 0;
+	// 	border: none;
+	// 	// 	display: block;
+	// 	// color: inherit;
+	// }
 	
 	button {
 		margin:0;

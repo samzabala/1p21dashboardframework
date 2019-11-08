@@ -67,10 +67,10 @@
 		</p>
 
 		<p class="input-wrapper input-wrapper-horizontal">
-			<label class="input-label"><input type="checkbox"> Checkbox</label>
+			<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
 		</p>
 		<p>
-			<label class="input-label"><input type="checkbox"> Another Checkbox but not in input wrap</label>
+			<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 		</p>
 		
 		<p class="input-wrapper input-wrapper-vertical">
@@ -83,7 +83,7 @@
 				<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
 				
 				
-				<label><input class="input input-checkbox" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+				<label><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
 					
 				
 		</p>
@@ -92,7 +92,7 @@
 		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 			<label class="input-label" for="select">Selects</label>
 			
-				<select class="input-single-line" id="select-demo">
+				<select class="input input-single-line" id="select-demo">
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -103,7 +103,7 @@
 
 		</p>
 		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<select class="input-middle-line" multiple>
+				<select class="input input-multiple-line" multiple>
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
