@@ -1,31 +1,161 @@
 /*** POPPER, USED BY DROPDOWNS AND TOOLTIPS TOO ***/
+$tooltip-point: 20px;
+$calculated-tooltip-point: rem(20px / $body-font-size);
+$calculated-gutter-hypotenus: to-unit( sqrt((strip-unit($tooltip-point) * strip-unit($tooltip-point)) * 2),unit($tooltip-point) );
 
 %pop {
 	position:absolute;
-	background: $brand-color-background;
+	background: $popper-background;
 	border-radius: $popper-border-radius;
 	padding: $popper-gutter-x $popper-gutter-y;
 	box-shadow: $popper-box-shadow;
-	display:none;
 	z-index:2;
+	display: none;
+	opacity: .5;
+
+	&.open {
+		display: block;
+	}
 }
 
 
 $prefix: '.tooltip';
 
-.tooltip {
+#{$prefix} {
 	@extend %pop;
+	pointer-events:none;
 
 	&:before,&:after {
-		content:"display:block;"
+		content:"";
+		display: block;
+		background: $popper-background;
+		position: absolute;
+		z-index:-1;
+	}
+
+	&:after {
+		// background: red;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		border-radius: inherit;
+	}
+
+	&:before {
+		// background: blue;
+		margin:auto;
+		box-shadow: $popper-arrow-box-shadow;
+		width: $popper-gutter-x;
+		height: $popper-gutter-x;
+		transform-origin: center center;
+		transform: rotate(45deg);
+	}
+
+	&-badge {
+		position:absolute;
+		margin: auto;
+	}
+
+	&#{&}-top {
+
+		&:before,
+		#{$prefix}-badge {
+			left:0;
+			right:0;
+		}
+
+		&:before{
+			bottom: $popper-gutter-x * -.5;
+		}
+
+		#{$prefix}-badge {
+			top: calc(100% + #{ $calculated-gutter-hypotenus } * .5);
+		}
+	}
+	&#{&}-bottom {
+
+		&:before,
+		#{$prefix}-badge {
+			left:0;
+			right:0;
+		}
+
+		&:before{
+			top: $popper-gutter-x * -.5;
+		}
+
+		#{$prefix}-badge {
+			bottom: calc(100% + #{ $calculated-gutter-hypotenus } * .5);
+		}
+	}
+
+	&#{&}-right {
+		&:before,
+		#{$prefix}-badge {
+			bottom:0;
+			top: 0;
+		}
+
+		&:before{
+			left: $popper-gutter-x * -.5;
+		}
+
+		#{$prefix}-badge {
+			right: calc(100% + #{ $calculated-gutter-hypotenus } * .5);
+		}
+	}
+
+
+
+	&#{&}-left {
+		&:before,
+		#{$prefix}-badge {
+			bottom:0;
+			top: 0;
+		}
+
+		&:before{
+			right: $popper-gutter-x * -.5;
+		}
+
+		#{$prefix}-badge {
+			left: calc(100% + #{ $calculated-gutter-hypotenus } * .5);
+		}
 	}
 }
 
 
 
-.dropdown {
+
+$prefix: '.dropdown';
+#{$prefix} {
 	@extend %pop;
 	width: $dropdown-width;
+	display:none;
+	left:0;
+	top:100%;
+
+	&#{&}-up {
+		top: auto;
+		bottom:100%;
+	}
+
+	&#{&}-left {
+		top:0;
+		left: auto;
+		right:100%;
+	}
+
+	&#{&}-right {
+		top:0;
+		left: 100%;
+		right:auto;
+	}
+
+	&.open {
+		display:block;
+	}
 
 	li {
 		&:before {

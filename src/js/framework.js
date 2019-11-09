@@ -3,6 +3,7 @@
 
 	_1p21.lazyLoad = _1p21.lazyLoad || true;
 
+	var _ = {};
 
 	if(!$) {
 		throw new Error('jQuery not found bro, what did you do?');
@@ -15,6 +16,8 @@
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
+
+	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
 	_1p21.initLayout = function(selector,arr){
 		defaults = {
@@ -122,39 +125,94 @@
 		})
 	
 		$('body').on('click','*[data-toggle="accordion"]',function(e){
-			console.log($(this));
+			
 			e.preventDefault();
 			// console.log(e.target);
 
-			console.log($(this).siblings('.toggle-accordion').first().length);
-			if($(this).siblings('.toggle-accordion').first().length > 0){
-	
-				$(this).siblings('.toggle-accordion').first().slideToggle(); 
-				$(this).toggleClass('open'); 
-				$(this).siblings('.toggle-accordion').first().toggleClass('open'); 
-			}else{
-				$($(this).attr('href')).slideToggle(); 
-				$(this).toggleClass('open'); 
-				$($(this).attr('href')).toggleClass('open'); 
+			var selector =  (function(clicked){
+				console.log( clicked );
+				if( clicked.attr('href') ){
+					return $( clicked.attr('href') );
+
+				}else if( clicked.attr('data-href') ){
+					return $( clicked.attr('data-href') )
+					
+				}else if( clicked.next('.accordion').first().length > 0 ){
+					return clicked.next('.accordion').first();
+
+				}else{
+					return false;
+				}
+			}( $(this) ));
+
+
+			if( selector ){
+				console.log(selector)
+				
+				if( selector.hasClass('open') && $(this).hasClass('open') ){
+
+					selector.slideUp(); 
+					$(this).removeClass('open'); 
+					selector.removeClass('open'); 
+				}else{
+
+					if(selector.closest('.accordion-group:not(.accordion-group-multiple)').length) {
+						console.log('bitch ass');
+						selector.siblings('.accordion').slideUp(); 
+						$(this).siblings('.open').removeClass('open'); 
+						selector.siblings('.accordion').removeClass('open'); 
+					}
+
+					selector.slideDown(); 
+					$(this).addClass('open'); 
+					selector.addClass('open'); 
+				}
 			}
 		});
 
 
 		$('body').on('click','*[data-toggle="dropdown"]',function(e){
-			console.log($(this));
 			e.preventDefault();
 			// console.log(e.target);
 
-			if($(this).siblings('.dropdown').first().length > 0){
-	
-				$(this).siblings('.dropdown').first().slideToggle(); 
-				$(this).closest('li,.nav-item').toggleClass('open'); 
-				$(this).siblings('.dropdown').first().toggleClass('open'); 
-			}else{
-				$($(this).attr('href')).slideToggle(); 
-				$(this).closest('li,.nav-item').toggleClass('open'); 
-				$($(this).attr('href')).toggleClass('open'); 
+			var selector =  (function(clicked){
+				if( clicked.attr('href') ){
+					return $( clicked.attr('href') );
+
+				}else if( clicked.attr('data-href') ){
+					return $( clicked.attr('data-href') )
+					
+				}else if( clicked.next('.dropdown').first().length > 0 ){
+					return clicked.next('.dropdown').first();
+
+				}else{
+					return false;
+				}
+			}( $(this) ));
+
+			if( selector ){
+				
+				if( selector.hasClass('open') && $(this).hasClass('open') ){
+
+					selector.slideUp(); 
+					$(this).closest('li , .nav-item').removeClass('open'); 
+					$(this).removeClass('open'); 
+					selector.removeClass('open'); 
+				}else{
+
+					if(selector.closest('li , .nav-item').length) {
+						selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').slideUp(); 
+						$(this).closest('li , .nav-item').siblings('li,.nav-item').find('*[data-toggle="dropdown"]').removeClass('open'); 
+						selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').removeClass('open'); 
+					}
+
+					selector.slideDown(); 
+					$(this).closest('li,.nav-item').addClass('open'); 
+					$(this).addClass('open'); 
+					selector.addClass('open'); 
+				}
 			}
+			
 		});
 
 
@@ -173,20 +231,231 @@
 				$(this).toggleClass('active');
 			}
 		});
-		
 
 
-		$('body').on('click','*[data-toggle="select"]',function(e){
-			console.log($(this));
-			e.preventDefault();
-			// console.log(e.target);
-			var selector = ($(this).siblings('select').first().length > 0) ? $(this).siblings('select').first() : $($(this).attr('href'));
+		_1p21.createToolTip = function(triggerer,arr) {
+			if(triggerer) {
+				var defaults = {
+
+					placement: 'left',
+					badge: false,
+					badgeBg: 'primary',
+					badgeSize: '',
+					content: '',
+					centerX: false,
+					centerY: false,
+
+				};
+				
+				var args = defaults;
+				for (var prop in arr) {
+					if(arr.hasOwnProperty(prop) && arr[prop]) {
+						// Push each value from `obj` into `extended`
+						args[prop] = arr[prop];
+					}
+				}
+
+				console.log(args);
+
+				_1p21.destroyToolTip(triggerer,'siblings');
+
+
+				triggerer.after(function(){
+					var html = '<div class="tooltip tooltip-'+ args.placement+'">';
+					if( args.badge ) {
+						html += '<span class="badge tooltip-badge';
+						if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
+							html += ' badge-'+args.badgeSize;
+						}
+						if(args.badgeBg) {
+							if(_.palette.includes(args.badgeBg)) {
+								html += ' badge-'+args.badgeBg;
+							}else{
+
+								html += '" style="background-color:'+args.badgeBg+';';
+							}
+						}
+						
+						html += '"></span>'
+					}
+					html += args.content
+					html += '</div>';
+
+					return html;
+				});
+
+				var tooltip = triggerer.next('.tooltip');
+					tooltip.fadeIn()
+					tooltip.addClass('open');
+
+
+
+				var pos = {
+					x: function(){
+						var toReturn = 0;
+
+						if(args.centerX){
+							switch(args.placement){
+								case 'top':
+								case 'bottom':
+										toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
+									break;
+								case 'right':
+										toReturn = triggerer.offset().left + ( triggerer.outerWidth() * .5);
+										break;
+								default: //left
+										toReturn = triggerer.offset().left - ( triggerer.outerWidth() * .5) ;
+									break;
+							}
+							
+						}else{
+							switch(args.placement){
+								case 'top':
+								case 'bottom':
+										toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
+
+										break;
+								case 'right':
+									toReturn = triggerer.offset().left + triggerer.outerWidth();
+									break;
+								default: //left
+									toReturn = triggerer.offset().left - tooltip.outerWidth();
+									break;
+
+
+							}
+						}
+
+						if(
+							(tooltip.find('.tooltip-badge').first().length > 0)
+							&& (
+								(
+									args.placement == 'left'
+									|| args.placement == 'right'
+								)
+							)
+						) {
+							toReturn += (args.placement == 'left' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -1) : tooltip.find('.tooltip-badge').first().outerWidth();
+						}
+						
+						return toReturn;
+					},
+					y: function(){
+						var toReturn = 0;
+						if(args.centerY){
+							
+							switch(args.placement){
+								case 'top':
+										toReturn = (triggerer.offset().top) - tooltip.outerHeight()  + (triggerer.outerHeight() * .5);
+									break;
+								case 'bottom':
+										toReturn = (triggerer.offset().top) - (triggerer.outerHeight() * .5);
+									break;
+								case 'right':
+								default: //left
+									toReturn  = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5)
+									break;
+							}
+							
+
+						}else{
+							
+							switch(args.placement){
+								case 'top':
+										toReturn = triggerer.offset().top - tooltip.outerHeight();
+									break;
+								case 'bottom':
+										toReturn = triggerer.offset().top + triggerer.outerHeight();
+									break;
+								case 'right':
+								default: //left
+									toReturn  = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5)
+									break;
+							}
+
+						}
+
+
+						if(
+							(tooltip.find('.tooltip-badge').first().length > 0)
+							&& (
+								args.placement == 'top'
+								|| args.placement == 'bottom'
+							)
+						) {
+							toReturn += (args.placement == 'top' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -1) : tooltip.find('.tooltip-badge').first().outerWidth();
+						}
+
+
+						return toReturn;
+					}
+				}
+
+				triggerer.next('.tooltip').css({
+					'top': pos.y(),
+					'left': pos.x()
+				})
+
+			}
+
+		}
+
+		_1p21.destroyToolTip = function(triggerer,method){
+			method = method || 'next';
+			triggerer[method]('.tooltip').fadeOut(null,function(){
+				$(this).remove()
+			});
+		}
+
+
+
+		$('body').on('click','*[data-toggle="tooltip-click"]',function(e){
+			var self = $(this);
+			var args =  {
+				placement: self.data('tooltip-placement'),
+				badge: self.data('tooltip-badge'),
+				badgeBg: self.data('background'),
+				badgeSize: self.data('tooltip-badge-size'),
+				content: self.data('tooltip-content'),
+				centerX: self.data('tooltip-center-x'),
+				centerY: self.data('tooltip-center-y'),
+			}
+
+
+			if(self.next('.tooltip').length > 0) {
+				_1p21.destroyToolTip(self);
+			}else{
+				_1p21.createToolTip(self,args);
+			}
+
 
 			
-			
-			selector.val(selector.val());
-			selector.trigger('change');
 		});
+
+
+
+		$('body').on('mouseenter','*[data-toggle="tooltip-hover"]',function(e){
+			var self = $(this);
+			var args =  {
+				placement: self.data('tooltip-placement'),
+				badge: self.data('tooltip-badge'),
+				badgeBg: self.data('tooltip-badge-background'),
+				badgeSize: self.data('tooltip-badge-size'),
+				content: self.data('tooltip-content'),
+				centerX: self.data('tooltip-center-x'),
+				centerY: self.data('tooltip-center-y')
+			}
+
+			_1p21.createToolTip(self,args);
+
+			
+		});
+
+		$('body').on('mouseleave','*[data-toggle="tooltip-hover"]',function(e){
+			var self = $(this);
+			_1p21.destroyToolTip(self);
+		});
+
 	})
 
 

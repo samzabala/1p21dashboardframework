@@ -25,6 +25,14 @@ DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
         $calculated-body-text-gutter-y: em($body-text-gutter-y / $body-font-size)
     }
 
+$calculated-symbol-caret-height:$symbol-caret-height;
+@if internal-is-convertable($symbol-caret-height){
+    $calculated-symbol-caret-height: em($calculated-symbol-caret-height / $body-font-size);
+}
+$calculated-symbol-caret-width:$symbol-caret-width;
+@if internal-is-convertable($symbol-caret-width){
+    $calculated-symbol-caret-width: em($calculated-symbol-caret-width / $body-font-size);
+}
 
 //for helpers
 $calculated-brand-color-declarations : (

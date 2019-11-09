@@ -17,13 +17,6 @@ $sidebar-xs: 60px;
 	}
 	&-block {
 		&-sidebar,&-main {
-			overflow-y:scroll;
-			overflow-x:hidden;
-			height: 100vh;
-
-			&::-webkit-scrollbar {
-				display:none!important;
-			}
 		}
 		&-sidebar {
 			width: $sidebar-base;
@@ -35,6 +28,13 @@ $sidebar-xs: 60px;
 			padding-top: 45px;
 			padding-bottom: 45px;
 			z-index:99999;
+			overflow-y:scroll;
+			overflow-x:hidden;
+			height: 100vh;
+
+			&::-webkit-scrollbar {
+				display:none!important;
+			}
 
 			.sidebar {
 				&-logo {

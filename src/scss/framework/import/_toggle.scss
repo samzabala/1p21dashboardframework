@@ -4,4 +4,8 @@
 
 .accordion {
     display:none;
+
+    &.open {
+        display: block;
+    }
 }

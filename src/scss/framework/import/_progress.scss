@@ -18,38 +18,27 @@ $prefix: '.progress';
 	overflow:hidden;
 	@extend %cf;
 	margin-bottom:$calculated-body-text-gutter-y;
-
-	&:before {
-
-		content:"";
-		display:block;
-		position:absolute;
-		top:0;
-		bottom:0;
-		right:0;
-		left:0;
-		@include gradient((
-			type: repeating-linear,
-			colors: (
-				(
-					color: $progress-background-stripe-color,
-					offset:0%
-				),
-				(
-					color: $progress-background-stripe-color,
-					offset:1px
-				),
-				(
-					color: $progress-background-color,
-					offset:1px
-				),
-				(
-					color: $progress-background-color,
-					offset:4px
-				)
+	@include gradient((
+		type: repeating-linear,
+		colors: (
+			(
+				color: $progress-background-stripe-color,
+				offset:0%
+			),
+			(
+				color: $progress-background-stripe-color,
+				offset:1px
+			),
+			(
+				color: $progress-background-color,
+				offset:1px
+			),
+			(
+				color: $progress-background-color,
+				offset:4px
 			)
-		))
-	}
+		)
+	));
 
 	.body-inverse & {
 		background-color: $progress-background-color-inverse;
@@ -57,9 +46,7 @@ $prefix: '.progress';
 
 	&,
 	&-bar {
-		position: relative;
 		height: $calculated-progress-height;
-		z-index:1;
 		transition: $progress-transition-duration all $transition-timing;
 	}
 	@keyframes progress-bar-stripes {
@@ -72,12 +59,10 @@ $prefix: '.progress';
 	}
 
 	&.active {
-		&:before {
-			animation-name: progress-bar-stripes;
-			animation-duration: $progress-transition-duration;
-			animation-timing-function: linear;
-			animation-iteration-count: infinite;
-		}
+		animation-name: progress-bar-stripes;
+		animation-duration: $progress-transition-duration;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
 	}
 
 	&-bar {

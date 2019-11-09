@@ -323,6 +323,46 @@ $prefix: '.input';
 
 	& {
 		@extend %for-form-input-itself;
+
+		&[disabled] {
+			@extend %for-form-global-disabled;
+		}
+		
+		@at-root select#{$prefix}:not([multiple]),
+		&-select:not([multiple]) {
+			padding-right: $calculated-input-gutter-x * 2;
+		}
+
+		@at-root select#{$prefix},
+		&-select {
+			background-image:
+				linear-gradient(-135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%),
+				linear-gradient(135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%)
+				;
+			background-size:
+				#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height,
+				#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height
+				;
+			background-position:
+				calc(100% - (1em + #{$calculated-symbol-caret-width * .425} )) 50%,
+				calc(100% - 1em) 50%
+				;
+			background-repeat: no-repeat,no-repeat;
+			
+		}
+
+		@at-root select#{$prefix}[multiple],
+		&-select[multiple]{
+			background-image: none;
+		}
+
+		&-radio,
+		&-checkbox,
+		&[type=radio],
+		&[type=checkbox] {
+			vertical-align: middle;
+			display:inline-block;
+		}
 	}
 
 	&-label  {
@@ -358,44 +398,6 @@ $prefix: '.input';
 			@extend %for-form-input-and-group;
 		}
 		
-		@at-root .btn,
-		& {
-			#{$prefix}-group-horizontal &{
-				&:nth-last-child(n+2){
-					border-top-right-radius: 0;
-					border-bottom-right-radius: 0;
-				}
-
-				&:nth-child(n+2) {
-					border-top-left-radius: 0;
-					border-bottom-left-radius: 0;
-
-					&,
-					&:hover {
-						border-left-color: $input-group-separator-color !important;
-					}
-				}
-			}
-
-
-			#{$prefix}-group-vertical &{
-				&:nth-last-child(n+2){
-					border-bottom-right-radius: 0;
-					border-bottom-left-radius: 0;
-				}
-
-				&:nth-child(n+2) {
-					border-top-right-radius: 0;
-					border-top-left-radius: 0;
-
-					&,
-					&:hover {
-						border-top-color: $input-group-separator-color !important;
-					}
-				}
-			}
-		}
-
 	}
 	
 
@@ -409,14 +411,18 @@ $prefix: '.input';
 	}
 
 	&-wrapper {
-		@include br(md){
-			display:inline-flex;
-			margin-right: 2rem;
-			&#{&}-block {
+		max-width:100%;
+
+		&#{&}-block {
 
 			display:flex;
 			margin-right: 0;
-			}
+		}
+		
+		@include br(md){
+			display:inline-flex;
+			margin-right: 2rem;
+			
 
 			&-horizontal {
 				flex-direction: row;
@@ -428,6 +434,12 @@ $prefix: '.input';
 				flex-direction: column;
 			}
 		}
+
+		@include br(sm-max) {
+			&#{&}-block {
+				flex-direction: column;
+			}
+		}
 	}
 
 	///updates here should match btn-group 
@@ -435,6 +447,7 @@ $prefix: '.input';
 		display:inline-flex;
         position:relative;
 		max-width:100%;
+		overflow-x:auto;
 		
 
         &#{$prefix}-large {
@@ -446,88 +459,103 @@ $prefix: '.input';
         }
 
         &#{&}-horizontal {
-            max-width:100%;
             
 
             &:not(#{$prefix}-group-responsive) {
 
-                > #{$prefix}:nth-last-child(n+2) {
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
-                }
+                > #{$prefix},.btn{
+					&:nth-last-child(n+2) {
+						border-top-right-radius: 0;
+						border-bottom-right-radius: 0;
+					}
+				}
 
-                > #{$prefix}:nth-child(n+2) {
-                    border-top-left-radius: 0;
-                    border-bottom-left-radius: 0;
+                > #{$prefix},.btn{
+					&:nth-child(n+2) {
+						border-top-left-radius: 0;
+						border-bottom-left-radius: 0;
 
-                    &,
-                    &:hover {
-                        border-left-color: $input-group-separator-color !important;
-                    }
-                }
+						&,
+						&:hover {
+							border-left-color: $input-group-separator-color !important;
+						}
+					}
+				}
             }
         }
 
         &#{&}-vertical {
             flex-direction:column;
 
-            > #{$prefix}:nth-last-child(n+2) {
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-            }
+            > #{$prefix},.btn{
+				&:nth-last-child(n+2) {
+					border-bottom-right-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
 
-            > #{$prefix}:nth-child(n+2) {
-                border-top-right-radius: 0;
-                border-top-left-radius: 0;
+            > #{$prefix},.btn{
+				&:nth-child(n+2) {
+					border-top-right-radius: 0;
+					border-top-left-radius: 0;
 
-                &,
-                &:hover {
-                    border-top-color: $input-group-separator-color !important;
-                }
+					&,
+					&:hover {
+						border-top-color: $input-group-separator-color !important;
+					}
+				}
             }
         }
 
         &#{&}-responsive {
-			overflow-x:auto;
+			&#{$prefix}-group-horizontal {
 
-            @include br(md){
+				@include br(md){
 
-                &#{$prefix}-group-horizontal {
-                    > #{$prefix}:nth-last-child(n+2) {
-                        border-top-right-radius: 0;
-                        border-bottom-right-radius: 0;
-                    }
+                    > #{$prefix},.btn{
+						&:nth-last-child(n+2) {
+							border-top-right-radius: 0;
+							border-bottom-right-radius: 0;
+						}
+					}
 
-                    > #{$prefix}:nth-child(n+2) {
-                        border-top-left-radius: 0;
-                        border-bottom-left-radius: 0;
+                    > #{$prefix},.btn{
+						&:nth-child(n+2) {
+							border-top-left-radius: 0;
+							border-bottom-left-radius: 0;
 
-                        &,
-                        &:hover {
-                            border-left-color: $input-group-separator-color !important;
-                        }
-                    }
-                }
-            }
-            @include br(sm-max) {
-                width:100%;
-                
-                flex-wrap:wrap;
-                display:flex;
-                flex-direction:column;
-
-                > #{$prefix}:nth-last-child(n+2) {
-					border-bottom-right-radius: 0;
-					border-bottom-left-radius: 0;
+							&,
+							&:hover {
+								border-left-color: $input-group-separator-color !important;
+							}
+						}
+					}
+					
 				}
+				@include br(sm-max) {
+					width:100%;
+					
+					flex-wrap:wrap;
+					display:flex;
+					flex-direction:column;
 	
-				> #{$prefix}:nth-child(n+2) {
-					border-top-right-radius: 0;
-					border-top-left-radius: 0;
-	
-					&,
-					&:hover {
-						border-top-color: $input-group-separator-color !important;
+					> #{$prefix},.btn{
+						&:nth-last-child(n+2) {
+							border-bottom-right-radius: 0;
+							border-bottom-left-radius: 0;
+						}
+					}
+		
+					> #{$prefix},.btn{
+						&:nth-child(n+2) {
+							border-top-right-radius: 0;
+							border-top-left-radius: 0;
+			
+							&,
+							&:hover {
+								border-top-color: $input-group-separator-color !important;
+							}
+						}
 					}
 				}
             }
@@ -557,24 +585,9 @@ $prefix: '.input';
 // select,
 
 
-[disabled] {
-	@extend %for-form-global-disabled;
-}
 
 //select gets special treatment because it's such a bitch
 
-select:not([multiple]) {
-	padding-right: $calculated-input-gutter-x * 2;
-	background-image:
-		linear-gradient(-135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%),
-		linear-gradient(135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%);
-	background-size: .3125em .375em, .3125em .375em;
-	background-position: calc(100% - 1.3125em) 50%, calc(100% - 1em) 50%;
-	background-repeat: no-repeat,no-repeat;
-}
-
-select[multiple]{
-}
 
 
 //disabled

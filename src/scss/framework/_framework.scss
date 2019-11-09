@@ -37,6 +37,6 @@
 	//helpers
 		@import 'import/_helpers';
 
-@if $debug == true {
-	*{outline:1px solid red;}
+@if variable-exists(debug) and $debug == true {
+	*,*:before,*:after{outline:1px solid rgba(red,.5)!important;}
 }

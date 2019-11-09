@@ -43,7 +43,7 @@ $prefix: '.module';
 	&-footer {
 		padding-left: $module-gutter-x;
 		padding-right: $module-gutter-x;
-		overflow:hidden;
+		// overflow:hidden;
 	}
 
 	&-heading,
@@ -84,7 +84,7 @@ $prefix: '.module';
 	}
 
 	&-content {
-		overflow-y:scroll;
+		overflow-y:auto;
 		overflow-x:hidden;
 
 		&::-webkit-scrollbar {

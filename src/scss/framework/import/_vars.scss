@@ -1,6 +1,6 @@
 
 //VARS
-$debug: false;
+// $debug: true !default;
 
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
@@ -107,7 +107,7 @@ $debug: false;
 	// SCAFFOLD
 		$body-font-family: $brand-font-primary !default;
 		$body-font-weight: 500 !default;
-			$body-font-weight-bold:600 !default;
+			$body-font-weight-bold:900 !default;
 		$body-font-size: 16px !default;
 		$body-line-height: 32px !default;
 		$body-background: $brand-color-background-alt !default;
@@ -260,6 +260,8 @@ $debug: false;
 		$popper-gutter-y: $gutter-small !default;
 		$popper-border-radius: $border-radius-base !default;
 		$popper-box-shadow: 0px 0px 15px -12px $brand-color-base !default;
+		$popper-arrow-box-shadow: 0px 0px 20px -5px $brand-color-base !default;
+		$popper-background: $brand-color-background !default;
 
 		$dropdown-width: 300px !default;
 
@@ -354,7 +356,7 @@ $debug: false;
 		$input-border-color-focus: rgba($brand-color-neutral,.2) !default;
 		$input-border-radius: $border-radius-base !default;
 			$input-border-radius-large: $border-radius-large !default;
-			$input-border-radius-small: $border-radius-small !default;
+			$input-border-radius-small: $border-radius-base !default;
 		$input-box-shadow: 0px 3px 15px -10px $brand-color-base !default;
 		$input-box-shadow-brand-basis: 0px 3px 15px -10px !default;
 			$input-box-shadow-focus: 0px 0 10px -5px $brand-color-primary !default;
@@ -375,8 +377,7 @@ $debug: false;
 			$input-label-font-style: normal !default;
 			$input-label-text-transform: uppercase !default;
 		
-			$input-label-horizontal-width-md: 40% !default;
-			$input-label-horizontal-width-lg: 30% !default;
+			$input-label-horizontal-width: 30% !default;
 
 	// BTN
 		$btn-height: 45px !default;
@@ -395,7 +396,7 @@ $debug: false;
 		$btn-border-width: 1px !default;
 		$btn-border-radius: $border-radius-base !default;
 			$btn-border-radius-large: $border-radius-large !default;
-			$btn-border-radius-small: $border-radius-small !default;
+			$btn-border-radius-small: $border-radius-base !default;
 		$btn-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
 			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-base !default;
 		$btn-group-separator-color: rgba($brand-color-neutral,.5) !default;

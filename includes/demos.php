@@ -1,11 +1,345 @@
 
-<h1>Form</h1>
+<h1>Tooltips</h1>
+	<h2>Tooltip on click</h2>
+	
+		<div class="btn btn-primary"
+			data-toggle="tooltip-click"
+			data-tooltip-placement="left"
+			data-tooltip-content="<span class=&quot;badge tooltip-badge badge-primary&quot;></span>This bitch empty<br><strong>YEET</strong>">
+			Bitch boi to the left
+		</div>
+		
+		<div class="btn btn-primary"
+			data-toggle="tooltip-click"
+			data-tooltip-placement="bottom"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="error"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi on the bottom
+		</div>
+		
+		<div class="btn btn-primary"
+			data-toggle="tooltip-click"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="caution"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi on the top
+		</div>
+		
+		<div class="btn btn-primary"
+			data-toggle="tooltip-click"
+			data-tooltip-placement="right"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="accent"
+			data-tooltip-badge-size="small"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi to the right
+		</div>
+		
+
+	<h2>Tooltip on hover</h2>
+	
+		<div class="btn btn-primary"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="left"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="success"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi to the left
+		</div>
+		
+		<div class="btn btn-primary"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="bottom"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="base"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi on bottom
+		</div>
+		
+		<div class="btn btn-primary"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="neutral"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi on top
+		</div>
+		
+		<div class="btn btn-primary"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="right"
+			data-tooltip-badge="true"
+			data-tooltip-badge-background="#f00"
+			data-tooltip-content="<strong>YEET</strong>">
+			Bitch boi to the right
+		</div>
+		
+
+<h1>trumbowyg</h1>
+<div id="trumbowyg-demo" class="trumbowyg"></div>
+	<h1>Nav</h1>
+	<div class="nav">
+	
+	<ul class="nav-list">
+		<!-- HOME -->
+		<li class="nav-item">
+			<a href="<?=DASHBOARD_ROOT_URL ?>">
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="nav-item-text">Item</span>
+			</a>
+		</li>
+
+
+
+		<!-- PROJ -->
+		<li class="nav-item">
+			<a href="#nav-demo-dropdown" data-toggle="accordion">
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
+			</a>
+			<ul class="dropdown" id="nav-demo-dropdown" >
+				<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+				<li><a href="#">Drop item</a></li>
+			</ul>
+		</li>
+
+
+		<!-- DESIGNERS -->
+		<li class="nav-item">
+			<a href="<?=DASHBOARD_ROOT_URL ?>">
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="nav-item-text">Item</span>
+			</a>
+		</li>
+
+		<!-- DEVELOPERS -->
+		<li class="nav-item">
+			<a href="<?=DASHBOARD_ROOT_URL ?>">
+			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="nav-item-text">Item</span>
+			</a>
+		</li>
+	</ul>
+	</div>
+
+
+<h1>Progress Bar</h1>
+
+<h3 id="progress-basic">Basic</h3>
+<div class="progress">
+	<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-success" style="width: 40%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-error" style="width: 80%"></div>
+</div>
+
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient" style="width: 20%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-45" style="width: 60%;"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-90" style="width: 40%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-135" style="width: 60%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-180" style="width: 80%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-225" style="width: 80%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-270" style="width: 80%"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar progress-bar-gradient-315" style="width: 80%"></div>
+</div>
+
+<h3 id="progress-basic">custom background colors with special fx woooo</h3>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<div class="progress">
+		<div class="progress-bar" style="width: 2%; background-color:teal;"></div>
+		<div class="progress-bar" style="width: 8%; background-color:aliceblue;"></div>
+		<div class="progress-bar" style="width: 5%; background-color:BlueViolet;"></div>
+		<div class="progress-bar" style="width: 5%; background-color:BurlyWood;"></div>
+		<div class="progress-bar" style="width: 7%; background-color:#fe85d6;"></div>
+		<div class="progress-bar" style="width: 3%; background-color:#006c3d;"></div>
+		<div class="progress-bar" style="width: 10%; background-color:#01c6ab;"
+		data-toggle="tooltip-hover"
+			data-tooltip-placement="left"
+			data-tooltip-badge="true"
+			data-tooltip-badge-size="large"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#01c6ab"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
+			></div>
+		<div class="progress-bar" style="width: 20%; background-color:#b6e4b6;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-badge-size="large"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#b6e4b6"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
+			></div>
+		<div class="progress-bar" style="width: 15%; background-color:#0037b4;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="bottom"
+			data-tooltip-badge="true"
+			data-tooltip-badge-size="large"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#0037b4"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
+			></div>
+		<div class="progress-bar" style="width: 5%; background-color:#a168d9;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="right"
+			data-tooltip-badge="true"
+			data-tooltip-badge-size="large"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#a168d9"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
+			></div>
+		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"></div>
+		<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"></div>
+	</div>
+
+	<!-- <div class="tooltip tooltip-top" style="display:block;left: 45%;bottom: 37px;">
+		<div class="badge tooltip-badge" style="background-color:#b6e4b6;"></div>
+		Hey demon,<br>
+		it's me.<br>
+		<strong>Ya Boi</strong>
+	</div>
+	<div class="tooltip tooltip-left" style="display:block;left: 72%;bottom: -57px;">
+		<div class="badge tooltip-badge" style="background-color:#0037b4;"></div>
+		Hey demon,<br>
+		it's me.<br>
+		<strong>Ya Boi</strong>
+	</div>
+	<div class="tooltip tooltip-right" style="display:block;left: 17.5%;bottom: -57px;">
+		<div class="badge tooltip-badge" style="background-color:#006c3d;"></div>
+		Hey demon,<br>
+		it's me.<br>
+		<strong>Ya Boi</strong>
+	</div>
+	<div class="tooltip tooltip-bottom" style="display:block;left: 0;top: 36px;">
+		<div class="badge tooltip-badge" style="background-color:#006c3d;"></div>
+		Hey demon,<br>
+		it's me.<br>
+		<strong>Ya Boi</strong>
+	</div> -->
+
+<br>
+<br>
+<br>
+<br>
+
+<h3 id="progress-animated">Animated</h3>
+
+
+<div class="progress active">
+	<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+</div>
+<div class="progress active">
+	<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
+</div>
+<div class="progress active">
+	<div class="progress-bar progress-bar-success" style="width: 40%"></div>
+</div>
+<div class="progress active">
+	<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
+</div>
+<div class="progress active">
+	<div class="progress-bar progress-bar-error" style="width: 80%"></div>
+</div>
+
+<h3 id="progress-stacked">Stacked</h3>
+
+<div class="progress">
+	<div class="progress-bar progress-bar-success" style="width: 35%"></div>
+	<div class="progress-bar progress-bar-error" style="width: 20%"></div>
+	<div class="progress-bar progress-bar-caution" style="width: 10%"></div>
+</div>
+
+
+
+	<h1>Dropdowns</h1>
+	<br>
+	<br>
+	<br>
+	<br>
+	<ul class="inline">
+		<li style="position:relative;">
+			<div class="btn btn-link open" data-toggle="dropdown" data-href="#dropdown-demo-down">Drop DOWN</div>
+			<ul class="dropdown open" id="dropdown-demo-down">
+				I'm a dropdown and your mother will never love you
+			</ul>
+		</li>
+
+
+		<li style="position:relative;">
+			<div class="btn btn-link" data-toggle="dropdown" data-href="#dropdown-demo-up">Drop DOWN</div>
+			<ul class="dropdown dropdown-up" id="dropdown-demo-up">
+				I'm a dropdown and your mother will never love you
+			</ul>
+		</li>
+
+		<li style="position:relative;">
+			<div class="btn btn-link" data-toggle="dropdown" data-href="#dropdown-demo-left">Drop DOWN</div>
+			<ul class="dropdown dropdown-left" id="dropdown-demo-left">
+				I'm a dropdown and your mother will never love you
+			</ul>
+		</li>
+
+		<li style="position:relative;">
+			<div class="btn btn-link" data-toggle="dropdown" data-href="#dropdown-demo-right">Drop DOWN</div>
+			<ul class="dropdown dropdown-right" id="dropdown-demo-right">
+				I'm a dropdown and your mother will never love you
+			</ul>
+		</li>
+	</ul>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+
+	<h1>Form</h1>
 <form class="form-horizontal">
 	<fieldset>
 		<h2>sizes</h2>
 		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
-			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+			<label class="input-label" >Basic Ass</label>
+			<input class="input input-single-line" placeholder="Basic Ass" type="text">
 		</p>
 		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 			<label class="input-label input-label-small" for="Small">Small</label>
@@ -73,7 +407,7 @@
 			<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 		</p>
 		
-		<p class="input-wrapper input-wrapper-vertical">
+		<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
 			<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
 		
 				<textarea class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
@@ -129,25 +463,25 @@
 		<h2>wrapper</h2>
 		<h4>inline horizontal</h4>
 		<p class="input-wrapper input-wrapper-horizontal">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
-			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+			<label class="input-label" >Basic Ass</label>
+			<input class="input input-single-line" placeholder="Basic Ass" type="text">
 		</p>
 		<h4>block horizontal</h4>
 		<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
-			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+			<label class="input-label" >Basic Ass</label>
+			<input class="input input-single-line" placeholder="Basic Ass" type="text">
 		</p>
 
 
 		<h3>inline vertical</h3>
 		<p class="input-wrapper input-wrapper-vertical">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
-			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+			<label class="input-label" >Basic Ass</label>
+			<input class="input input-single-line" placeholder="Basic Ass" type="text">
 		</p>
 		<h3>block vertical</h3>
 		<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
-			<input class="input input-single-line" id="Basic Ass" placeholder="Basic Ass" type="text">
+			<label class="input-label" >Basic Ass</label>
+			<input class="input input-single-line" placeholder="Basic Ass" type="text">
 		</p>
 
 
@@ -156,10 +490,10 @@
 
 		<h3>group horizontal</h3>
 		<p class="input-wrapper input-wrapper-horizontal">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<label class="input-label" >Basic Ass</label>
 			<span class="input-group input-group-horizontal input-group-responsive">
 
-				<select class="input-single-line" id="select-demo-group-1">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -167,7 +501,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-2">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -175,7 +509,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-3">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -183,7 +517,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-4">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -194,10 +528,10 @@
 		</p>
 		<h4>small</h4>
 		<p class="input-wrapper input-wrapper-horizontal">
-			<label class="input-label" for="Basic Ass">Basic Ass</label>
+			<label class="input-label" >Basic Ass</label>
 			<span class="input-group input-group-horizontal input-group-horizontal input-group-small input-group-responsive">
 
-				<select class="input-single-line" id="select-demo-group-1">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -205,7 +539,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-2">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -213,7 +547,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-3">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -221,7 +555,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-4">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -233,7 +567,7 @@
 		<h4>large</h4>
 		<span class="input-group input-group-horizontal input-group-large input-group-responsive">
 
-				<select class="input-single-line" id="select-demo-group-1">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -241,7 +575,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-2">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -249,7 +583,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-3">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -257,7 +591,7 @@
 					<option>Available option 5</option>
 				</select>
 
-				<select class="input-single-line" id="select-demo-group-4">
+				<select class="input input-single-line" >
 					<option>Available option 1</option>
 					<option>Available option 2</option>
 					<option>Available option 3</option>
@@ -266,61 +600,109 @@
 				</select>
 			</span>
 
+			<h1>Accordion</h1>
+
+			<div class="accordion-group accordion-group-multiple">
+
+				<h2 data-href="#shit-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down"></i></h2>
+				<div id="shit-accordion" class="accordion open">
+					<input type="button">
+					<input type="checkbox">
+					<input type="color">
+					<input type="date">
+					<input type="datetime-local">
+					<input type="email">
+					<input type="file">
+					<input type="hidden">
+					<input type="image">
+					<input type="month">
+					<input type="number">
+					<input type="password">
+					<input type="radio">
+					<input type="range">
+					<input type="reset">
+					<input type="search">
+					<input type="submit">
+					<input type="tel">
+					<input type="text">
+					<input type="time">
+					<input type="url">
+					<input type="week">
+					<input list="browsers">
+					<datalist id="browsers">
+						<option value="Internet Explorer">
+						<option value="Firefox">
+						<option value="Chrome">
+						<option value="Opera">
+						<option value="Safari">
+					</datalist>
+
+					<select name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea name="message" rows="10" cols="30">
+					The cat was playing in the garden.
+					</textarea>
+				</div>
+
+
+				<h2 data-href="#bitch-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down"></i></h2>
+				<div id="bitch-accordion" class="accordion">
+					<input class="input" type="button">
+					<input class="input" type="checkbox">
+					<input class="input" type="color">
+					<input class="input" type="date">
+					<input class="input" type="datetime-local">
+					<input class="input" type="email">
+					<input class="input" type="file">
+					<input class="input" type="hidden">
+					<input class="input" type="image">
+					<input class="input" type="month">
+					<input class="input" type="number">
+					<input class="input" type="password">
+					<input class="input" type="radio">
+					<input class="input" type="range">
+					<input class="input" type="reset">
+					<input class="input" type="search">
+					<input class="input" type="submit">
+					<input class="input" type="tel">
+					<input class="input" type="text">
+					<input class="input" type="time">
+					<input class="input" type="url">
+					<input class="input" type="week">
+					<input class="input" list="browsers">
+					<datalist id="browsers">
+						<option value="Internet Explorer">
+						<option value="Firefox">
+						<option value="Chrome">
+						<option value="Opera">
+						<option value="Safari">
+					</datalist>
+
+					<select name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea name="message" rows="10" cols="30">
+					The cat was playing in the garden.
+					</textarea>
+				</div>
+			</div>
+
 		<button class="btn btn-default">Cancel</button> <button class="btn btn-primary" type="submit">Submit</button>
+
+		<input class="btn btn-primary" type="submit" value="sumbnititit">
 	</fieldset>
 </form>
 
-<h1>trumbowyg</h1>
-<div id="trumbowyg-demo" class="trumbowyg"></div>
-
-	<h1>Dropdowns</h1>
-	<h1>Tooltips</h1>
-	<h1>Nav</h1>
-	<div class="nav">
-	
-	<ul class="nav-list">
-		<!-- HOME -->
-		<li class="nav-item">
-			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="nav-item-text">Item</span>
-			</a>
-		</li>
-
-
-
-		<!-- PROJ -->
-		<li class="nav-item">
-			<a href="#nav-demo-dropdown" data-toggle="accordion">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
-			</a>
-			<ul class="dropdown" id="nav-demo-dropdown" >
-				<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
-				<li><a href="#">Drop item</a></li>
-				<li><a href="#">Drop item</a></li>
-				<li><a href="#">Drop item</a></li>
-				<li><a href="#">Drop item</a></li>
-				<li><a href="#">Drop item</a></li>
-			</ul>
-		</li>
-
-
-		<!-- DESIGNERS -->
-		<li class="nav-item">
-			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="nav-item-text">Item</span>
-			</a>
-		</li>
-
-		<!-- DEVELOPERS -->
-		<li class="nav-item">
-			<a href="<?=DASHBOARD_ROOT_URL ?>">
-			<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="nav-item-text">Item</span>
-			</a>
-		</li>
-	</ul>
-	</div>
-
-	<h1>Btn</h1>
+<h1>Btn</h1>
 	<h2>Basic</h2>
 	<button type="button" class="btn btn-default">Default</button>
 	<button type="button" class="btn btn-primary">Primary</button>
@@ -491,6 +873,15 @@
 	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
 			<button type="button" class="active btn btn-default"> butt</button>
+			<button type="button" class="btn btn-default">  Butt </button>
+			<button type="button" class="btn btn-default">Butt</button>
+			<button type="button" class="btn btn-default"> Butt</button>
+			<button type="button" class="btn btn-default">  Butt </button>
+			<button type="button" class="btn btn-default">Butt</button>
+			<button type="button" class="btn btn-default"> Butt</button>
+			<button type="button" class="btn btn-default">  Butt </button>
+			<button type="button" class="btn btn-default">Butt</button>
+			<button type="button" class="btn btn-default"> Butt</button>
 			<button type="button" class="btn btn-default">  Butt </button>
 			<button type="button" class="btn btn-default">Butt</button>
 			<button type="button" class="btn btn-default"> Butt</button>
@@ -709,95 +1100,6 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <h4>Custom color</h4>
 <span class="tag" style="background-color: violet">Custom</span>
 
-<h1>Progress Bar</h1>
-
-	<h3 id="progress-basic">Basic</h3>
-	<div class="progress">
-		<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-error" style="width: 80%"></div>
-	</div>
-
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient" style="width: 20%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-45" style="width: 60%;"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-90" style="width: 40%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-135" style="width: 60%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-180" style="width: 80%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-225" style="width: 80%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-270" style="width: 80%"></div>
-	</div>
-	<div class="progress">
-		<div class="progress-bar progress-bar-gradient-315" style="width: 80%"></div>
-	</div>
-
-	<h3 id="progress-basic">custom background colors with special fx woooo</h3>
-	<div class="progress">
-		<div class="progress-bar" style="width: 2%; background-color:teal;"></div>
-		<div class="progress-bar" style="width: 8%; background-color:aliceblue;"></div>
-		<div class="progress-bar" style="width: 5%; background-color:BlueViolet;"></div>
-		<div class="progress-bar" style="width: 5%; background-color:BurlyWood;"></div>
-		<div class="progress-bar" style="width: 7%; background-color:#fe85d6;"></div>
-		<div class="progress-bar" style="width: 3%; background-color:#006c3d;"></div>
-		<div class="progress-bar" style="width: 10%; background-color:#01c6ab;"></div>
-		<div class="progress-bar" style="width: 20%; background-color:#b6e4b6;"></div>
-		<div class="progress-bar" style="width: 15%; background-color:#0037b4;"></div>
-		<div class="progress-bar" style="width: 5%; background-color:#a168d9;"></div>
-		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"></div>
-		<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"></div>
-		<div class="tooltip">
-			<div class="badge" style="background-color:#b6e4b6;"></div>
-		</div>
-	</div>
-
-	<h3 id="progress-animated">Animated</h3>
-	
-	
-	<div class="progress active">
-		<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
-	</div>
-	<div class="progress active">
-		<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
-	</div>
-	<div class="progress active">
-		<div class="progress-bar progress-bar-success" style="width: 40%"></div>
-	</div>
-	<div class="progress active">
-		<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
-	</div>
-	<div class="progress active">
-		<div class="progress-bar progress-bar-error" style="width: 80%"></div>
-	</div>
-
-	<h3 id="progress-stacked">Stacked</h3>
-	
-	<div class="progress">
-		<div class="progress-bar progress-bar-success" style="width: 35%"></div>
-		<div class="progress-bar progress-bar-error" style="width: 20%"></div>
-		<div class="progress-bar progress-bar-caution" style="width: 10%"></div>
-	</div>
 
 <h1>Table</h1>
 <table class="table">

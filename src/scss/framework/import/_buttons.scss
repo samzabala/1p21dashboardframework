@@ -313,7 +313,8 @@ $prefix: '.btn';
     &-group {
         display:inline-flex;
         position:relative;
-        max-width:100%;
+		max-width:100%;
+		overflow-x:auto;
 
         &#{$prefix}-large {
             border-radius: $btn-border-radius-large;
@@ -324,7 +325,6 @@ $prefix: '.btn';
         }
 
         &#{&}-horizontal {
-            max-width:100%;
             
 
             &:not(#{$prefix}-group-responsive) {

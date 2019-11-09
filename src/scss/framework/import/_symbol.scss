@@ -1,7 +1,5 @@
 /*** SET ***/
 
-$calculated-symbol-caret-height:$symbol-caret-height;
-$calculated-symbol-caret-width:$symbol-caret-width;
 
 
 /* SUBSET */
@@ -9,9 +7,9 @@ $prefix: '.symbol';
 #{$prefix} {
     position:relative;
     display:inline-block;
-    line-height:inherit;
+    line-height:0;
     font-size:inherit;
-    height: 1em;
+    height: 0em; //bitch does weird overflow scroll shit on where it shouldnt on things i want to scroll when overflowing and shit so bitchs height is like that now
     width: 1em;
     vertical-align:middle;
     transform-origin: center center;
@@ -78,6 +76,7 @@ $prefix: '.symbol';
         &:before,&:after {
             transform-origin: center em(1px / $body-font-size);
             height: em(11px/$body-font-size);
+            top:-0.8em;
         }
 
         &:before{
@@ -121,19 +120,24 @@ $prefix: '.symbol';
     }
 
     &-caret {
-        width: em(($calculated-symbol-caret-width * .5) / $body-font-size);
+        // width: em(($calculated-symbol-caret-width * .5) / $body-font-size);
         // width:0;
+
+        &:before {
+            content:none;
+        }
 
         @include arrow-triangle((
             pseudo: after, 
             direction: 'up', //if pseudo is set to both, this will set the direction of :before, :after will be opposite of 
             display: null,
             size-base: inherit,
-            main-size: em($calculated-symbol-caret-height / $body-font-size),//orientation of direction
-            cross-size: em($calculated-symbol-caret-width / $body-font-size),// perpendicular orientation of direction
+            main-size: $calculated-symbol-caret-height,//orientation of direction
+            cross-size: $calculated-symbol-caret-width,// perpendicular orientation of direction
         )){
             display:inline-block;
             vertical-align:middle;
+            // top: $calculated-symbol-caret-height * -.25;
         };
 
 
@@ -184,7 +188,7 @@ $prefix: '.symbol';
             background:none;
             border-radius: 50%;
             border: em(3px / $body-font-size) solid;
-            top:-.1875em;
+            top:-.6875em;
             left:-.125em;
             bottom:auto;
             right:auto;
@@ -193,7 +197,7 @@ $prefix: '.symbol';
 
         &:after {
             height: .625em;
-            bottom: 0;
+            bottom: -.5em;
             right:em(3px / $body-font-size) * -1;
             top:auto;
             left:auto;
