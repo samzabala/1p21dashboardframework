@@ -171,11 +171,6 @@
 </div>
 
 <h3 id="progress-basic">custom background colors with special fx woooo</h3>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 	<div class="progress">
 		<div class="progress-bar" style="width: 2%; background-color:teal;"></div>
@@ -189,6 +184,7 @@
 			data-tooltip-placement="left"
 			data-tooltip-badge="true"
 			data-tooltip-badge-size="large"
+			data-tooltip-classes="text-align-center"
 			data-tooltip-center-y="true"
 			data-tooltip-center-x="true"
 			data-tooltip-badge-background="#01c6ab"
@@ -200,22 +196,24 @@
 			data-tooltip-placement="top"
 			data-tooltip-badge="true"
 			data-tooltip-badge-size="large"
+			data-tooltip-classes="text-align-justify"
 			data-tooltip-center-y="true"
 			data-tooltip-center-x="true"
 			data-tooltip-badge-background="#b6e4b6"
 			data-tooltip-badge-size="large"
-			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
+			data-tooltip-content="dAEMON I am jusrtifyed"
 			></div>
 		<div class="progress-bar" style="width: 15%; background-color:#0037b4;"
 			data-toggle="tooltip-hover"
 			data-tooltip-placement="bottom"
 			data-tooltip-badge="true"
 			data-tooltip-badge-size="large"
+			data-tooltip-classes="text-align-right"
 			data-tooltip-center-y="true"
 			data-tooltip-center-x="true"
 			data-tooltip-badge-background="#0037b4"
 			data-tooltip-badge-size="large"
-			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
+			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong><br> skinny penis"
 			></div>
 		<div class="progress-bar" style="width: 5%; background-color:#a168d9;"
 			data-toggle="tooltip-hover"
@@ -231,36 +229,6 @@
 		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"></div>
 		<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"></div>
 	</div>
-
-	<!-- <div class="tooltip tooltip-top" style="display:block;left: 45%;bottom: 37px;">
-		<div class="badge tooltip-badge" style="background-color:#b6e4b6;"></div>
-		Hey demon,<br>
-		it's me.<br>
-		<strong>Ya Boi</strong>
-	</div>
-	<div class="tooltip tooltip-left" style="display:block;left: 72%;bottom: -57px;">
-		<div class="badge tooltip-badge" style="background-color:#0037b4;"></div>
-		Hey demon,<br>
-		it's me.<br>
-		<strong>Ya Boi</strong>
-	</div>
-	<div class="tooltip tooltip-right" style="display:block;left: 17.5%;bottom: -57px;">
-		<div class="badge tooltip-badge" style="background-color:#006c3d;"></div>
-		Hey demon,<br>
-		it's me.<br>
-		<strong>Ya Boi</strong>
-	</div>
-	<div class="tooltip tooltip-bottom" style="display:block;left: 0;top: 36px;">
-		<div class="badge tooltip-badge" style="background-color:#006c3d;"></div>
-		Hey demon,<br>
-		it's me.<br>
-		<strong>Ya Boi</strong>
-	</div> -->
-
-<br>
-<br>
-<br>
-<br>
 
 <h3 id="progress-animated">Animated</h3>
 
@@ -1389,6 +1357,27 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 	</div>
 </div>
 
+
+<h2>Helper classes: text align</h2>
+
+<p class="text-align-center">
+	Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+</p>
+<p class="text-align-left">
+	Left Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+</p>
+<p class="text-align-right">
+	Right Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+</p>
+<p class="text-align-justify">
+	Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+</p>
+
+
+<h2>Helper classes: text transform</h2>
+<p class="text-transform-uppercase">Uppercase</p>
+<p class="text-transform-lowercase">Lowercase</p>
+<p class="text-transform-capitalize">Capitalize</p>
 
 <h2>Helper classes: Colors</h2>
 <p class="color-base">Color Base</p>

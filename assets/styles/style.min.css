@@ -2259,6 +2259,14 @@ table.table-large .table-cell {
   overflow-x: auto;
 }
 
+.btn-group-block {
+  display: flex;
+}
+
+.btn-group-block .btn {
+  flex: 1 1;
+}
+
 .btn-group.btn-large {
   border-radius: 20px;
 }
@@ -3245,7 +3253,6 @@ select.input[multiple], .input-select[multiple] {
   box-shadow: 0px 0px 15px -12px #000000;
   z-index: 2;
   display: none;
-  opacity: .5;
 }
 
 .open.tooltip, .open.dropdown {

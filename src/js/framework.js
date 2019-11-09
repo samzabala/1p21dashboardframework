@@ -233,14 +233,26 @@
 		});
 
 
-		_1p21.createToolTip = function(triggerer,arr) {
+		_1p21.createToolTip = function(triggerer) {
 			if(triggerer) {
+				var arr =  {
+					placement: triggerer.data('tooltip-placement'),
+					badge: triggerer.data('tooltip-badge'),
+					badgeBg: triggerer.data('tooltip-badge-background'),
+					badgeSize: triggerer.data('tooltip-badge-size'),
+					content: triggerer.data('tooltip-content'),
+					classes: triggerer.data('tooltip-classes'),
+					centerX: triggerer.data('tooltip-center-x'),
+					centerY: triggerer.data('tooltip-center-y'),
+				};
+
 				var defaults = {
 
 					placement: 'left',
 					badge: false,
 					badgeBg: 'primary',
 					badgeSize: '',
+					classes: '',
 					content: '',
 					centerX: false,
 					centerY: false,
@@ -255,13 +267,11 @@
 					}
 				}
 
-				console.log(args);
-
-				_1p21.destroyToolTip(triggerer,'siblings');
+				_1p21.destroyToolTip();
 
 
-				triggerer.after(function(){
-					var html = '<div class="tooltip tooltip-'+ args.placement+'">';
+				$('body').append(function(){
+					var html = '<div class="tooltip tooltip-'+ args.placement+' '+args.classes+'">';
 					if( args.badge ) {
 						html += '<span class="badge tooltip-badge';
 						if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
@@ -284,46 +294,42 @@
 					return html;
 				});
 
-				var tooltip = triggerer.next('.tooltip');
+				var tooltip = $('body').children('.tooltip').first();
 					tooltip.fadeIn()
 					tooltip.addClass('open');
 
+				var toolPoint = parseFloat(window.getComputedStyle( tooltip[0], ':before').getPropertyValue('width'));
+					toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
 
+					isNaN(toolPoint) && (toolPoint = 15);
 
 				var pos = {
 					x: function(){
-						var toReturn = 0;
+						var toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
+						var offset = 0;
 
 						if(args.centerX){
+
 							switch(args.placement){
-								case 'top':
-								case 'bottom':
-										toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
-									break;
 								case 'right':
-										toReturn = triggerer.offset().left + ( triggerer.outerWidth() * .5);
+									toReturn = triggerer.offset().left + ( triggerer.outerWidth() * .5) + toolPoint;
 										break;
-								default: //left
-										toReturn = triggerer.offset().left - ( triggerer.outerWidth() * .5) ;
+								case 'left':
+									toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint) + (triggerer.outerWidth() * .5);
 									break;
 							}
 							
 						}else{
+
 							switch(args.placement){
-								case 'top':
-								case 'bottom':
-										toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
-
-										break;
 								case 'right':
-									toReturn = triggerer.offset().left + triggerer.outerWidth();
+									toReturn = triggerer.offset().left + triggerer.outerWidth() + toolPoint;
 									break;
-								default: //left
-									toReturn = triggerer.offset().left - tooltip.outerWidth();
+								case 'left':
+									toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint);
 									break;
-
-
 							}
+
 						}
 
 						if(
@@ -335,46 +341,39 @@
 								)
 							)
 						) {
-							toReturn += (args.placement == 'left' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -1) : tooltip.find('.tooltip-badge').first().outerWidth();
+							offset = (args.placement == 'left' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
 						}
+						
+
+						toReturn += offset;
 						
 						return toReturn;
 					},
 					y: function(){
-						var toReturn = 0;
+						var toReturn = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5); // left and right
+						var offset = 0;
 						if(args.centerY){
 							
 							switch(args.placement){
 								case 'top':
-										toReturn = (triggerer.offset().top) - tooltip.outerHeight()  + (triggerer.outerHeight() * .5);
+									toReturn = (triggerer.offset().top - (tooltip.outerHeight() + toolPoint) + (triggerer.outerHeight() * .5));
 									break;
 								case 'bottom':
-										toReturn = (triggerer.offset().top) - (triggerer.outerHeight() * .5);
-									break;
-								case 'right':
-								default: //left
-									toReturn  = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5)
+									toReturn = (triggerer.offset().top + ((triggerer.outerHeight() * .5)) + toolPoint);
 									break;
 							}
-							
 
 						}else{
 							
 							switch(args.placement){
 								case 'top':
-										toReturn = triggerer.offset().top - tooltip.outerHeight();
+									toReturn = triggerer.offset().top - (tooltip.outerHeight() + toolPoint);
 									break;
 								case 'bottom':
-										toReturn = triggerer.offset().top + triggerer.outerHeight();
-									break;
-								case 'right':
-								default: //left
-									toReturn  = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5)
+									toReturn = triggerer.offset().top + (triggerer.outerHeight() + toolPoint);
 									break;
 							}
-
 						}
-
 
 						if(
 							(tooltip.find('.tooltip-badge').first().length > 0)
@@ -383,15 +382,16 @@
 								|| args.placement == 'bottom'
 							)
 						) {
-							toReturn += (args.placement == 'top' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -1) : tooltip.find('.tooltip-badge').first().outerWidth();
+							offset = (args.placement == 'top' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
 						}
 
+						toReturn += offset;
 
 						return toReturn;
 					}
 				}
 
-				triggerer.next('.tooltip').css({
+				tooltip.css({
 					'top': pos.y(),
 					'left': pos.x()
 				})
@@ -400,33 +400,16 @@
 
 		}
 
-		_1p21.destroyToolTip = function(triggerer,method){
-			method = method || 'next';
-			triggerer[method]('.tooltip').fadeOut(null,function(){
-				$(this).remove()
-			});
+		_1p21.destroyToolTip = function(){
+			$('body').children('.tooltip').hide().remove();
 		}
 
 
 
 		$('body').on('click','*[data-toggle="tooltip-click"]',function(e){
 			var self = $(this);
-			var args =  {
-				placement: self.data('tooltip-placement'),
-				badge: self.data('tooltip-badge'),
-				badgeBg: self.data('background'),
-				badgeSize: self.data('tooltip-badge-size'),
-				content: self.data('tooltip-content'),
-				centerX: self.data('tooltip-center-x'),
-				centerY: self.data('tooltip-center-y'),
-			}
 
-
-			if(self.next('.tooltip').length > 0) {
-				_1p21.destroyToolTip(self);
-			}else{
-				_1p21.createToolTip(self,args);
-			}
+			_1p21.createToolTip(self);
 
 
 			
@@ -436,24 +419,15 @@
 
 		$('body').on('mouseenter','*[data-toggle="tooltip-hover"]',function(e){
 			var self = $(this);
-			var args =  {
-				placement: self.data('tooltip-placement'),
-				badge: self.data('tooltip-badge'),
-				badgeBg: self.data('tooltip-badge-background'),
-				badgeSize: self.data('tooltip-badge-size'),
-				content: self.data('tooltip-content'),
-				centerX: self.data('tooltip-center-x'),
-				centerY: self.data('tooltip-center-y')
-			}
 
-			_1p21.createToolTip(self,args);
+			_1p21.createToolTip(self);
 
 			
 		});
 
 		$('body').on('mouseleave','*[data-toggle="tooltip-hover"]',function(e){
 			var self = $(this);
-			_1p21.destroyToolTip(self);
+			_1p21.destroyToolTip();
 		});
 
 	})
