@@ -5,7 +5,6 @@
 
 		// @error $color-primary;
 	//plugins
-		@import 'import/plugins/_trumbowyg-custom';
 		@import 'import/plugins/_shithole';
 
 	//mixins 
@@ -31,6 +30,7 @@
 		@import 'import/_legend';
 		@import 'import/_buttons';
 		@import 'import/_form';
+		@import 'import/_trumbowyg';
 		@import 'import/_toggle';
 		@import 'import/_popper';
 

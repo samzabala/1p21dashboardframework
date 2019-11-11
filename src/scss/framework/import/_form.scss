@@ -72,15 +72,33 @@ $calculated-input-gutter-x: $input-gutter-x;
 }@else if internal-is-convertable($input-gutter-x){
 	$calculated-input-gutter-x: rem($input-gutter-x/$body-font-size);
 }
+//info
+
+$calculated-input-info-font-size: $input-info-font-size;
+@if internal-is-convertable($input-info-font-size) {
+	$calculated-input-info-font-size: rem($input-info-font-size / $body-font-size)
+}
+
+$calculated-input-info-line-height: type-lead( $input-info-font-size,$input-info-line-height );
+
+
+$calculated-input-info-margin-top: $input-info-margin-top;
+@if internal-is-convertable($input-info-margin-top) {
+	$calculated-input-info-margin-top: em($input-info-margin-top / $input-info-font-size)
+}
+
+
 
 /*** SET ***/
 
-/* SUBSET */
+
+/* input clasees */
 $prefix: '.input';
 
 %for-form {
 	&-global {
 		transition: $transition-duration-short color $transition-timing, $transition-duration-short border $transition-timing, $transition-duration-short box-shadow $transition-timing;
+		max-width:100%;
 
 		&-disabled {
 
@@ -142,13 +160,17 @@ $prefix: '.input';
 
 	&-input {
 		&-itself {
-			resize: none;
 			font: inherit;
-			max-width:100%;
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
+
+			&:focus {
+
+				outline: none;
+				box-shadow: $input-box-shadow-focus;
+			}
 		}
 		& {
 			-webkit-appearance: none;
@@ -164,6 +186,7 @@ $prefix: '.input';
 				decoration:none,
 				case: $input-text-transform,
 			));
+			display:inline-block;
 			background: $input-background;
 			border: $input-border-width solid $input-border-color;
 			padding-right: $calculated-input-gutter-x;
@@ -263,7 +286,6 @@ $prefix: '.input';
 			@extend %for-form-input;
 			height: $calculated-input-height;
 			vertical-align: middle;
-			display:inline-block;
 
 			&#{$prefix}-large,
 			#{$prefix}-group#{$prefix}-group-large & {
@@ -281,7 +303,7 @@ $prefix: '.input';
 			@extend %for-form-input;
 			min-height: $calculated-input-height * $input-height-multiple-factor;
 			vertical-align: top;
-			display:block;
+			max-height:100%;
 			
 			overflow-y: auto;
 
@@ -323,9 +345,19 @@ $prefix: '.input';
 
 	& {
 		@extend %for-form-input-itself;
+		background-color: $input-background;
+
+		.body-inverse & {
+			background-color: $input-background-inverse;
+		}
 
 		&[disabled] {
 			@extend %for-form-global-disabled;
+			background-color: $input-background-disabled;
+
+			.body-inverse & {
+				background-color: $input-background-disabled-inverse;
+			}
 		}
 		
 		@at-root select#{$prefix}:not([multiple]),
@@ -336,8 +368,8 @@ $prefix: '.input';
 		@at-root select#{$prefix},
 		&-select {
 			background-image:
-				linear-gradient(-135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%),
-				linear-gradient(135deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 50%, transparent 100%)
+				linear-gradient(-130deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 51%, transparent 100%),
+				linear-gradient(130deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 51%, transparent 100%)
 				;
 			background-size:
 				#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height,
@@ -360,8 +392,28 @@ $prefix: '.input';
 		&-checkbox,
 		&[type=radio],
 		&[type=checkbox] {
-			vertical-align: middle;
+			vertical-align: baseline;
 			display:inline-block;
+			margin-right: .5em;
+		}
+	}
+
+	&-info {
+
+		@include type-set((
+			size: $calculated-input-info-font-size,
+			leading: $calculated-input-info-line-height,
+			color: $input-info-color,
+			weight:$input-info-font-weight,
+			style: $input-info-font-style,
+			case: $input-info-text-transform,
+		));
+		margin-top:$input-info-margin-top;
+		display:block;
+		#{$prefix}-wrapper-horizontal & {
+			width: calc(100% - #{$input-label-horizontal-width});
+			align-self: flex-end;
+			margin-left: auto;
 		}
 	}
 
@@ -428,6 +480,16 @@ $prefix: '.input';
 				flex-direction: row;
 				align-items: flex-start;
 				flex-wrap: wrap;
+
+				#{$prefix}-label {
+					flex: 0 0 $input-label-horizontal-width;
+
+					&:first-child:last-child {
+					/* labels that typically wrapp radio and checboxes*/
+						flex: 1 1 auto;
+					}
+				}
+				
 			}
 
 			&-vertical {
@@ -448,13 +510,22 @@ $prefix: '.input';
         position:relative;
 		max-width:100%;
 		overflow-x:auto;
+		overflow-y:visible;
+        
+        &-block {
+            display:flex;
+
+            .input,.trumbowyg {
+                flex: 1 1;
+            }
+        }
 		
 
-        &#{$prefix}-large {
+        &#{&}-large {
             border-radius: $input-border-radius-large;
         }
 
-        &#{$prefix}-small {
+        &#{&}-small {
             border-radius: $input-border-radius-small;
         }
 
@@ -463,14 +534,14 @@ $prefix: '.input';
 
             &:not(#{$prefix}-group-responsive) {
 
-                > #{$prefix},.btn{
+                > #{$prefix},.btn,.trumbowyg{
 					&:nth-last-child(n+2) {
 						border-top-right-radius: 0;
 						border-bottom-right-radius: 0;
 					}
 				}
 
-                > #{$prefix},.btn{
+                > #{$prefix},.btn,.trumbowyg{
 					&:nth-child(n+2) {
 						border-top-left-radius: 0;
 						border-bottom-left-radius: 0;
@@ -487,14 +558,14 @@ $prefix: '.input';
         &#{&}-vertical {
             flex-direction:column;
 
-            > #{$prefix},.btn{
+            > #{$prefix},.btn,.trumbowyg{
 				&:nth-last-child(n+2) {
 					border-bottom-right-radius: 0;
 					border-bottom-left-radius: 0;
 				}
 			}
 
-            > #{$prefix},.btn{
+            > #{$prefix},.btn,.trumbowyg{
 				&:nth-child(n+2) {
 					border-top-right-radius: 0;
 					border-top-left-radius: 0;
@@ -512,14 +583,14 @@ $prefix: '.input';
 
 				@include br(md){
 
-                    > #{$prefix},.btn{
+                    > #{$prefix},.btn,.trumbowyg{
 						&:nth-last-child(n+2) {
 							border-top-right-radius: 0;
 							border-bottom-right-radius: 0;
 						}
 					}
 
-                    > #{$prefix},.btn{
+                    > #{$prefix},.btn,.trumbowyg{
 						&:nth-child(n+2) {
 							border-top-left-radius: 0;
 							border-bottom-left-radius: 0;
@@ -539,14 +610,14 @@ $prefix: '.input';
 					display:flex;
 					flex-direction:column;
 	
-					> #{$prefix},.btn{
+					> #{$prefix},.btn,.trumbowyg{
 						&:nth-last-child(n+2) {
 							border-bottom-right-radius: 0;
 							border-bottom-left-radius: 0;
 						}
 					}
 		
-					> #{$prefix},.btn{
+					> #{$prefix},.btn,.trumbowyg{
 						&:nth-child(n+2) {
 							border-top-right-radius: 0;
 							border-top-left-radius: 0;
@@ -561,6 +632,44 @@ $prefix: '.input';
             }
         } 
 	}
+
+	&-legend {
+		display:block;
+	}
+}
+
+
+
+.special-form {
+	padding: $special-form-gutter-y $special-form-gutter-x 0;
+	background: $special-form-background;
+	border-radius: $special-form-border-radius;
+	
+
+	.body-inverse & {
+		background: $special-form-background-inverse;
+	}
+
+
+	#{$prefix}-wrapper-block,
+	#{$prefix}-trumbowyg-box {
+		max-width: none;
+
+		&:nth-child(n+2) {
+			border-top: 1px solid gray;
+		}
+	}
+
+	#{$prefix}-single-line,
+	#{$prefix}-multiple-line,
+	#{$prefix}-trumbowyg-editor {
+		background:transparent;
+		padding-left: 0;
+		padding-right:0;
+		box-shadow: none;
+		border-radius:0;
+	}
+	
 }
 
 

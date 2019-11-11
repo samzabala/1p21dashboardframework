@@ -218,6 +218,7 @@ a {
 }
 
 p,
+.p,
 ul,
 ol,
 address,
@@ -331,13 +332,17 @@ blockquote {
 	}
 }
 
+%code-styles {
 
-pre,code,kbd,tt{
 	@include type-set((
 		font: $font-monospace
 	));
 	word-wrap: break-word;
 	white-space: pre-wrap;
+}
+
+pre,code,kbd,tt{
+	@extend %code-styles;
 }
 
 

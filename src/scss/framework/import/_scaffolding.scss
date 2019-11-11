@@ -40,10 +40,6 @@
 	embed {
 		max-width:100%!important;
 	}
-
-	*:focus {
-		outline: none;
-	}
 	
 	.clearfix:after {
 		visibility: hidden;
@@ -80,17 +76,25 @@
 		/* Firefox 25*/
 	}
 	
-	// input:not([type=checkbox]):not([type=radio]),
-	// textarea,
-	// select,
-	// option,
-	// button {
-	// 	background:none;
-	// 	-webkit-border-radius: 0;
-	// 	border: none;
-	// 	// 	display: block;
-	// 	// color: inherit;
-	// }
+	input,
+	textarea,
+	fieldset,
+	legend,
+	select,
+	option,
+	button {
+		// background:none;
+		// -webkit-border-radius: 0;
+		// border-radius: 0;
+		// border: none;
+		margin: 0;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		max-width:100%;
+		// 	display: block;
+		// color: inherit;
+	}
 	
 	button {
 		margin:0;

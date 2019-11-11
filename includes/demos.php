@@ -1,6 +1,6 @@
 
 <h1>Tooltips</h1>
-	<h2>Tooltip on click</h2>
+	<h2>Tooltip on click </h2>
 	
 		<div class="btn btn-primary"
 			data-toggle="tooltip-click"
@@ -78,8 +78,147 @@
 		</div>
 		
 
-<h1>trumbowyg</h1>
-<div id="trumbowyg-demo" class="trumbowyg"></div>
+<h1>trumbowyg / editor</h1>
+<form class="special-form" action="" method="get">
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+
+		<label for="" class="sr-only">uuugh</label>
+		<input type="text" class="input-large input-single-line font-weight-600" placeholder="title">
+	</div>
+
+
+	<div class="input-wrapper input-wrapper-horizontal">
+		<label class="input-label" for="inputPassword">Password</label>
+		<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
+	</div>
+
+	<div class="input-wrapper input-wrapper-horizontal">
+		<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
+		
+		<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
+	</div>
+
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+		<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
+
+			<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+
+	<div class="input-wrapper input-wrapper-horizontal">
+			<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
+			
+			
+			<label><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+	</div>
+
+
+
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+	<label for="" class="sr-only">uuugh</label>
+	<textarea id="editor-demo" class="input input-trumbowyg input-multiple-line " placeholder="Please write your new note here..."><h1 id="thefuckintop">Header one</h1>
+	<h2>Header two</h2>
+	<h3>Header three</h3>
+	<h4>Header four</h4>
+	<h5>Header five</h5>
+	<h6>Header six</h6>
+	<h2>Blockquotes</h2>
+	<p>Single line blockquote:</p>
+	<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+	<p>Multi line blockquote with a cite reference:</p>
+	<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+	<!-- 
+	<h2>Unordered Lists (Nested)</h2>
+	<ul>
+	<li>List item one
+	<ul>
+	<li>List item one
+	<ul>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	<h2>Ordered List (Nested)</h2>
+	<ol>
+	<li>List item one
+	<ol>
+	<li>List item one
+	<ol>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	<h2>HTML Tags</h2>
+	<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+	<p><strong>Address Tag</strong></p>
+	<address>1 Infinite Loop<br>
+	Cupertino, CA 95014<br>
+	United States</address>
+	<p><strong>Anchor Tag (aka. Link)</strong></p>
+	<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+	<p><strong>Abbreviation Tag</strong></p>
+	<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+	<p><strong>Acronym Tag</strong></p>
+	<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+	<p><strong>Big Tag</strong></p>
+	<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+	<p><strong>Cite Tag</strong></p>
+	<p>“Code is poetry.” —<cite>Automattic</cite></p>
+	<p><strong>Code Tag</strong></p>
+	<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+	<p><strong>Delete Tag</strong></p>
+	<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p>
+	<p><strong>Emphasize Tag</strong></p>
+	<p>The emphasize tag should <em>italicize</em> text.</p>
+	<p><strong>Insert Tag</strong></p>
+	<p>This tag should denote <ins>inserted</ins> text.</p>
+	<p><strong>Keyboard Tag</strong></p>
+	<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p>
+	<p><strong>Preformatted Tag</strong></p>
+	<p>This tag styles large blocks of code.</p>
+	<pre>.post-title {
+		margin: 0 0 5px;
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 1.2;
+	}</pre>
+	<p><strong>Quote Tag</strong></p>
+	<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+	<p><strong>Strong Tag</strong></p>
+	<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+	<p><strong>Subscript Tag</strong></p>
+	<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+	<p><strong>Superscript Tag</strong></p>
+	<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+	<p><strong>Teletype Tag</strong></p>
+	<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p>
+	<p><strong>Variable Tag</strong></p> -->
+	<p>This allows you to denote <var>variables</var>.</p></textarea>
+	
+	<a href="#" class="btn btn-primary">Submet et</a>
+	</div>
+</form>
 	<h1>Nav</h1>
 	<div class="nav">
 	
@@ -173,12 +312,59 @@
 <h3 id="progress-basic">custom background colors with special fx woooo</h3>
 
 	<div class="progress">
-		<div class="progress-bar" style="width: 2%; background-color:teal;"></div>
-		<div class="progress-bar" style="width: 8%; background-color:aliceblue;"></div>
-		<div class="progress-bar" style="width: 5%; background-color:BlueViolet;"></div>
-		<div class="progress-bar" style="width: 5%; background-color:BurlyWood;"></div>
-		<div class="progress-bar" style="width: 7%; background-color:#fe85d6;"></div>
-		<div class="progress-bar" style="width: 3%; background-color:#006c3d;"></div>
+		<div class="progress-bar" style="width: 2%; background-color:teal;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-classes="text-align-center"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="teal"
+			data-tooltip-content="I have center x and center y so the badge boi is centered to the tooltip triggerer and shit"></div>
+		<div class="progress-bar" style="width: 8%; background-color:aliceblue;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-classes="text-align-center"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="aliceblue"
+			data-tooltip-content="This is without the badge boi. eat shit fucker"></div>
+		<div class="progress-bar" style="width: 5%; background-color:BlueViolet;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="right"
+			data-tooltip-badge="true"
+			data-tooltip-classes="text-align-center"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="BlueViolet"
+			data-tooltip-content="I'm placed on the right. Starved dogs eat their masters."></div>
+		<div class="progress-bar" style="width: 5%; background-color:BurlyWood;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-classes="text-align-center"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="BurlyWood"
+			data-tooltip-content="The color of your anus is the color of your eyes"></div>
+		<div class="progress-bar" style="width: 7%; background-color:#fe85d6;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-classes="text-align-center"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#fe85d6"
+			data-tooltip-content="<strong>KNEEL!</strong>"></div>
+		<div class="progress-bar" style="width: 3%; background-color:#006c3d;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="top"
+			data-tooltip-badge="true"
+			data-tooltip-classes="text-align-center"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#006c3d"
+			data-tooltip-content="<em>butthole!</em>"></div>
 		<div class="progress-bar" style="width: 10%; background-color:#01c6ab;"
 		data-toggle="tooltip-hover"
 			data-tooltip-placement="left"
@@ -226,8 +412,28 @@
 			data-tooltip-badge-size="large"
 			data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
 			></div>
-		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"></div>
-		<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"></div>
+		<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="bottom"
+			data-tooltip-badge="true"
+			data-tooltip-badge-size="large"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#f7bc00"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="That's what she said"
+			></div>
+		<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"
+			data-toggle="tooltip-hover"
+			data-tooltip-placement="left"
+			data-tooltip-badge="true"
+			data-tooltip-badge-size="large"
+			data-tooltip-center-y="true"
+			data-tooltip-center-x="true"
+			data-tooltip-badge-background="#fd7f03"
+			data-tooltip-badge-size="large"
+			data-tooltip-content="Dwight you ignorant slut"
+			></div>
 	</div>
 
 <h3 id="progress-animated">Animated</h3>
@@ -365,7 +571,6 @@
 		<p class="input-wrapper input-wrapper-horizontal">
 				<label class="input-label" for="inputPassword">Password</label>
 				<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
-			</div>
 		</p>
 
 		<p class="input-wrapper input-wrapper-horizontal">
@@ -378,16 +583,14 @@
 		<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
 			<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
 		
-				<textarea class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-			</div>
+				<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+
 		</p>
 		<p class="input-wrapper input-wrapper-horizontal">
 				<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
 				
 				
 				<label><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
-					
-				
 		</p>
 
 		
@@ -572,7 +775,7 @@
 
 			<div class="accordion-group accordion-group-multiple">
 
-				<h2 data-href="#shit-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down"></i></h2>
+				<h2 data-href="#shit-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h2>
 				<div id="shit-accordion" class="accordion open">
 					<input type="button">
 					<input type="checkbox">
@@ -612,13 +815,11 @@
 					<option value="audi">Audi</option>
 					</select>
 
-					<textarea name="message" rows="10" cols="30">
-					The cat was playing in the garden.
-					</textarea>
+					<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 
 
-				<h2 data-href="#bitch-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down"></i></h2>
+				<h2 data-href="#bitch-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h2>
 				<div id="bitch-accordion" class="accordion">
 					<input class="input" type="button">
 					<input class="input" type="checkbox">
@@ -658,15 +859,13 @@
 					<option value="audi">Audi</option>
 					</select>
 
-					<textarea name="message" rows="10" cols="30">
-					The cat was playing in the garden.
-					</textarea>
+					<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 			</div>
 
-		<button class="btn btn-default">Cancel</button> <button class="btn btn-primary" type="submit">Submit</button>
+		<button class="btn btn-default">Cancel</button> <button class="btn btn-primary">Submit</button>
 
-		<input class="btn btn-primary" type="submit" value="sumbnititit">
+		<input class="btn btn-primary" value="sumbnititit">
 	</fieldset>
 </form>
 
@@ -721,34 +920,34 @@
 	<button type="button" class="btn btn-disabled btn-link">Link</button>
 	<h2>groups</h2>
 	<h3>Basic</h3>
-	<div class="btn-group btn-group-horizontal">
-	<button type="button" class="btn btn-default"><strong>00:00</strong> Hours</button>
-	<button type="button" class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></button>
-	</div>
+	<button class="btn-group btn-group-horizontal">
+	<span class="btn btn-default"><strong>00:00</strong> Hours</span>
+	<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
+	</button>
 
 	<h3>group but hover effects are triggered together btn-group-unite</h3>
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-	<button type="button" class="btn btn-default"><strong>00:00</strong> Hours</button>
-	<button type="button" class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></button>
-	</div>
+	<button class="btn-group btn-group-horizontal btn-group-unite">
+	<span class="btn btn-default"><strong>00:00</strong> Hours</span>
+	<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
+	</button>
 
 	<h3>another group but one is disabled and one has interactive animations disabled</h3>
-	<div class="btn-group btn-group-horizontal">
+	<button class="btn-group btn-group-horizontal">
 	<span class="btn btn-default btn-no-interaction"><strong>00:00</strong> Hours</span>
-	<button type="button" class="btn btn-primary btn-disabled">Add Time to Project <i class="symbol symbol-plus"></i></button>
-	</div>
+	<span class="btn btn-primary btn-disabled">Add Time to Project <i class="symbol symbol-plus"></i></span>
+	</button>
 
 	<h3>group it's all disabled interaction enabled</h3>
-	<div class="btn-group btn-group-horizontal btn-group-disabled">
-	<a href="#" class="btn btn-default">Default</a>
-	<a href="#" class="btn btn-primary">Primary</a>
-	<a href="#" class="btn btn-accent">accent</a>
-	</div>
+	<button class="btn-group btn-group-horizontal btn-group-disabled">
+	<span class="btn btn-default">Default</span>
+	<span class="btn btn-primary">Primary</span>
+	<span class="btn btn-accent">accent</span>
+	</button>
 
 
-	<h2>a vertical</h2>
+	<h2>a vertical btn group</h2>
 
-	<div class="btn-group btn-group-vertical btn-group-toggle  btn-group-toggle-multiple">
+	<div class="btn-group btn-group-vertical btn-group-toggle">
 	<a href="#" class="btn btn-default">butt</a>
 	<a href="#" class="btn btn-default btn-disabled">butt</a>
 	<a href="#" class="btn btn-default">butt</a>

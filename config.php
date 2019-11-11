@@ -1,7 +1,7 @@
 <?php
 //file paths n url
-define('DASHBOARD_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'].'/1p21dashboard' );
-define('DASHBOARD_ROOT_URL', ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http" ).'://'.$_SERVER['HTTP_HOST'].'/1p21dashboard' );
+define('DASHBOARD_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] );
+define('DASHBOARD_ROOT_URL', ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http" ).'://'.$_SERVER['HTTP_HOST'] );
 
 // modify preview content
 // whether user is on scoreboard or production board

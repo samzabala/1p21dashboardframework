@@ -15,6 +15,7 @@
 						<a href="#sidebar-dropdown" data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text tablet-hide mobile-hide">SEO</span>
+							<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</a>
 						<ul id="sidebar-dropdown" class="dropdown">
 							<?php

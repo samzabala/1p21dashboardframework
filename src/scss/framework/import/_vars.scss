@@ -1,6 +1,6 @@
 
 //VARS
-// $debug: true !default;
+$debug: true !default;
 
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
@@ -49,8 +49,6 @@
 		$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace !default;
 		
 	// GLOBAL html + body coloring
-		$global-background: $brand-color-background !default;
-			$global-background-inverse: #202020 !default;
 
 		$global-color: $brand-color-base !default;
 			$global-color-inverse: $brand-color-background !default;
@@ -58,8 +56,11 @@
 			$global-color-contrast: $brand-color-base-alt !default;
 				$global-color-contrast-inverse: $brand-color-background-alt !default;
 
-		$global-background-contrast: $brand-color-background-alt !default;
-			$global-background-contrast-inverse: $brand-color-base-alt !default;
+		$global-background: $brand-color-background !default;
+			$global-background-inverse: $brand-color-base-alt !default;
+
+			$global-background-contrast: $brand-color-background-alt !default;
+				$global-background-contrast-inverse: #333333 !default;
 
 	// PADDING
 		$gutter-base: 50px !default;
@@ -183,7 +184,7 @@
 		$special-primary-font-style: normal !default;
 		$special-primary-color: inherit !default;
 		$special-primary-text-transform: none !default;
-		$special-primary-gutter-y: 0;
+		$special-primary-gutter-y: 0 !default;
 
 		$special-secondary-font-size: 38px !default;
 		$special-secondary-font-weight: 300 !default;
@@ -191,7 +192,7 @@
 		$special-secondary-font-style: normal !default;
 		$special-secondary-color: inherit !default;
 		$special-secondary-text-transform: none !default;
-		$special-secondary-gutter-y: .25em;
+		$special-secondary-gutter-y: .25em !default;
 
 // UI ELEMENTS
 
@@ -265,6 +266,8 @@
 
 		$dropdown-width: 300px !default;
 
+		$tooltip-max-width: 300px !default;
+
 	// progress
 		$progress-height: 20px !default;
 		$progress-background-color: rgba($global-background-contrast,.01) !default;
@@ -323,30 +326,35 @@
 		$tag-font-style: normal !default;
 		$tag-color: $brand-color-background !default;
 		$tag-text-transform: uppercase !default;
-		$tag-gutter-x: 20px;
-		$tag-border-radius: $border-radius-small;
+		$tag-gutter-x: 20px !default;
+		$tag-border-radius: $border-radius-small !default;
 
 
 	// input
 		$input-height: 45px !default;
-			$input-height-large: 75px !default;
-			$input-height-small: 30px !default;
+			$input-height-large: 50px !default;
+			$input-height-small: 35px !default;
 		$input-height-multiple-factor: 4 !default;
 
+		$input-background: transparent !default;
+			$input-background-inverse: $global-background-contrast-inverse !default;
+			$input-background-disabled: rgba($brand-color-neutral,.2) !default;
+				$input-background-disabled-inverse: transparent !default;
+
 		$input-font-size: 16px !default;
-			$input-font-size-large: 22px !default;
+			$input-font-size-large: 25px !default;
 			$input-font-size-small: 14px !default;
 
 		$input-select-dropdown-color: $brand-color-primary !default;
 		
 		$input-color: inherit !default;
 			$input-color-inverse: inherit !default;
-		$input-placeholder-color: $brand-color-neutral !default;
+		$input-placeholder-color: rgba($brand-color-base,.5) !default;
 		$input-background: none !default;
 			$input-background-inverse: none !default;
 		$input-line-height: 20px !default;
 		$input-font-family: $brand-font-primary !default;
-		$input-font-weight: 600 !default;
+		$input-font-weight: inherit !default;
 		$input-font-style: normal !default;
 		$input-text-transform: none !default;
 		
@@ -355,11 +363,11 @@
 		$input-border-color: transparent !default;
 		$input-border-color-focus: rgba($brand-color-neutral,.2) !default;
 		$input-border-radius: $border-radius-base !default;
-			$input-border-radius-large: $border-radius-large !default;
+			$input-border-radius-large: $border-radius-base !default;
 			$input-border-radius-small: $border-radius-base !default;
 		$input-box-shadow: 0px 3px 15px -10px $brand-color-base !default;
 		$input-box-shadow-brand-basis: 0px 3px 15px -10px !default;
-			$input-box-shadow-focus: 0px 0 10px -5px $brand-color-primary !default;
+			$input-box-shadow-focus: 0px 0 5px 0px $brand-color-primary !default;
 		$input-group-separator-color: rgba($brand-color-neutral,.5) !default;
 
 		$input-label-gutter: 20px !default;
@@ -377,7 +385,31 @@
 			$input-label-font-style: normal !default;
 			$input-label-text-transform: uppercase !default;
 		
-			$input-label-horizontal-width: 30% !default;
+			$input-label-horizontal-width: 25% !default;
+
+
+			$input-info-font-size: .875em !default;
+			$input-info-font-weight: 300 !default;
+			$input-info-line-height: 1.25 !default;
+			$input-info-font-style: italic !default;
+			$input-info-color: $brand-color-neutral !default;
+			$input-info-text-transform: none !default;
+			$input-info-margin-top: .5em !default;
+
+		//special-form
+			$special-form-gutter-x: 35px !default;
+			$special-form-gutter-y: 30px !default;
+			$special-form-background: $global-background-contrast !default;
+			$special-form-background-inverse: $global-background-contrast-inverse !default;
+			
+			$special-form-border-radius: $border-radius-base !default;
+
+
+		//trumbowyg
+			$trumbowyg-border-radius: $special-form-border-radius !default;
+
+			$trumbowyg-icon-color: $brand-color-neutral !default;
+			$trumbowyg-button-pane-height: 40px !default;
 
 	// BTN
 		$btn-height: 45px !default;
@@ -511,6 +543,7 @@
 				$btn-background-link-active: transparent!default;
 				$btn-color-link-active: $body-anchor-color !default;
 
+
 	
 
 //PLUGIN DEPENDENCIES
@@ -518,13 +551,13 @@
 	//Trumbowyg
 
 		$light-color: #ecf0f1;
-		$dark-color: #222;
+		$dark-color: $brand-color-primary-light;
 		
 		$modal-submit-color: $brand-color-primary;
 		$modal-reset-color: $brand-color-background-alt;
 		
-		$transition-duration: 150ms;
-		$slow-transition-duration: 300ms;
+		$transition-duration: $transition-duration-short;
+		$slow-transition-duration: $transition-duration-base;
 
 	//mixins shithole
 		$color-base: $brand-color-base;

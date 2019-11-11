@@ -9,9 +9,14 @@
 		throw new Error('jQuery not found bro, what did you do?');
 	}
 
+	if(!$.trumbowyg) {
+		throw new Error('Trumbowyg is not included. woa boi');
+	}
 
 
-	$.trumbowyg.svgPath = false;
+
+	$.trumbowyg.svgPath = '/assets/fonts/icons.svg';
+	$.trumbowyg.hideButtonTexts = true;
 
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
@@ -116,11 +121,29 @@
 		
 		*/
 
-		$('.trumbowyg:not(.trumbowyg-custom)').each(function(){
-			$('#trumbowyg-demo').trumbowyg({
-				btns: [['strong', 'em',], ['insertImage']],
-				prefix: 'trumbowyg-',
-				autogrow: true
+		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+			$(this).trumbowyg({
+				btns: [
+					['viewHTML'],
+					['undo', 'redo'], // Only supported in Blink browsers
+					['formatting'],
+					['strong', 'em', 'del'],
+					['superscript', 'subscript'],
+					['link'],
+					['insertImage'],
+					['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+					['unorderedList', 'orderedList'],
+					['horizontalRule'],
+					['removeformat'],
+					['fullscreen'],
+					['upload']
+				],
+				// btns: [['strong', 'em',], ['insertImage'],['link'],['unorderedList', 'orderedList'],['upload']],
+				prefix: 'input-trumbowyg-',
+				// autogrow: true,
+				// autogrowOnEnter: true,
+				removeformatPasted: true,
+				tagsToRemove: ['script']
 			});
 		})
 	

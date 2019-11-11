@@ -218,6 +218,7 @@ $prefix: '.btn';
     border: $btn-border-width solid transparent;
     transition: $transition-duration-short all $transition-timing;
     max-width:100%;
+    width:auto;
     display:inline-flex;
     align-content: center;
     justify-content: center;
