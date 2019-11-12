@@ -1136,7 +1136,7 @@ table.table-large .table-cell {
   padding-top: 20px;
 }
 
-.module-title {
+.module-title, .input-trumbowyg-modal-box .input-trumbowyg-modal-title {
   font-size: 1rem;
   color: #0480fe;
   font-weight: 900;
@@ -1160,7 +1160,7 @@ table.table-large .table-cell {
     justify-content: space-between;
     align-items: center;
   }
-  .module-title, .module-function {
+  .module-title, .input-trumbowyg-modal-box .input-trumbowyg-modal-title, .module-function {
     width: 50%;
   }
   .module-functions {
@@ -1197,6 +1197,19 @@ table.table-large .table-cell {
   .module-footer, .module-content {
     padding-top: 7.5px;
   }
+}
+
+/*** SET ***/
+/* SUBSET */
+.modal, .input-trumbowyg-modal-box {
+  padding: 50px 50px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  position: absolute;
+}
+
+.body-inverse .modal, .body-inverse .input-trumbowyg-modal-box {
+  background: #3d3d3d;
 }
 
 /*** IMAGES ***/
@@ -1356,7 +1369,7 @@ table.table-large .table-cell {
 }
 
 /*  BUTTONS ***/
-.btn {
+.btn, .input-trumbowyg-modal-box .input-trumbowyg-modal-button {
   font-size: 1rem;
   line-height: 1.25;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1385,21 +1398,21 @@ table.table-large .table-cell {
   user-select: none;
 }
 
+.btn, .btn-group, .input-trumbowyg-modal-box .input-trumbowyg-modal-button {
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px -10px #000000;
+}
+
+.btn:hover, .btn-group:hover, .input-trumbowyg-modal-box .input-trumbowyg-modal-button:hover {
+  box-shadow: 0px 5px 15px -10px #000000;
+}
+
 .btn.btn-no-radius {
   border-radius: 0 !important;
 }
 
 .btn-group .btn, .btn-group .btn:hover {
   box-shadow: none;
-}
-
-.btn, .btn-group {
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px -10px #000000;
-}
-
-.btn:hover, .btn-group:hover {
-  box-shadow: 0px 5px 15px -10px #000000;
 }
 
 .btn.btn-no-shadow, .btn.btn-link {
@@ -1548,469 +1561,557 @@ table.table-large .table-cell {
   }
 }
 
-.btn.btn-default {
+.btn-default, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
   border-color: transparent ;
   background: #FFFFFF ;
   color: #000000 ;
 }
 
-.btn.btn-default.btn-no-interaction, .btn.btn-default.btn-no-interaction:hover, .btn.btn-default.btn-no-interaction:focus, .btn.btn-default.btn-no-interaction.focus, .btn.btn-default.btn-no-interaction:active, .btn.btn-default.btn-no-interaction.active {
+.btn-default.btn-no-interaction, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default.btn-no-interaction:hover, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-reset:hover, .btn-default.btn-no-interaction:focus, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-reset:focus, .btn-default.btn-no-interaction.focus, .input-trumbowyg-modal-box .btn-no-interaction.focus.input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default.btn-no-interaction:active, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-reset:active, .btn-default.btn-no-interaction.active, .input-trumbowyg-modal-box .btn-no-interaction.active.input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
   border-color: transparent !important;
   background: #FFFFFF !important;
   color: #000000 !important;
 }
 
-.btn.btn-default.btn-disabled, .btn.btn-default.btn-disabled:hover, .btn.btn-default.btn-disabled:focus, .btn.btn-default.btn-disabled.focus, .btn.btn-default.btn-disabled:active, .btn.btn-default.btn-disabled.active,
-.btn-group-disabled .btn.btn-default,
-.btn-group-disabled:hover .btn.btn-default,
-.btn-group-disabled:focus .btn.btn-default,
-.btn-group-disabled.focus .btn.btn-default,
-.btn-group-disabled:active .btn.btn-default,
-.btn-group-disabled.active .btn.btn-default,
-.input-group-disabled .btn.btn-default,
-.input-group-disabled:hover .btn.btn-default,
-.input-group-disabled:focus .btn.btn-default,
-.input-group-disabled.focus .btn.btn-default,
-.input-group-disabled:active .btn.btn-default,
-.input-group-disabled.active .btn.btn-default {
+.btn-default.btn-disabled, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default.btn-disabled:hover, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-reset:hover, .btn-default.btn-disabled:focus, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-reset:focus, .btn-default.btn-disabled.focus, .input-trumbowyg-modal-box .btn-disabled.focus.input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default.btn-disabled:active, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-reset:active, .btn-default.btn-disabled.active, .input-trumbowyg-modal-box .btn-disabled.active.input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group-disabled .btn-default,
+.btn-group-disabled .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group-disabled .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group-disabled:hover .btn-default,
+.btn-group-disabled:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group-disabled:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group-disabled:focus .btn-default,
+.btn-group-disabled:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group-disabled:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group-disabled.focus .btn-default,
+.btn-group-disabled.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group-disabled.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group-disabled:active .btn-default,
+.btn-group-disabled:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group-disabled:active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group-disabled.active .btn-default,
+.btn-group-disabled.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group-disabled.active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group-disabled .btn-default,
+.input-group-disabled .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group-disabled .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group-disabled:hover .btn-default,
+.input-group-disabled:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group-disabled:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group-disabled:focus .btn-default,
+.input-group-disabled:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group-disabled:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group-disabled.focus .btn-default,
+.input-group-disabled.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group-disabled.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group-disabled:active .btn-default,
+.input-group-disabled:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group-disabled:active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group-disabled.active .btn-default,
+.input-group-disabled.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group-disabled.active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
   border-color: transparent !important;
   background: rgba(255, 255, 255, 0.5) !important;
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.btn.btn-default:hover,
-.btn-group.btn-group-unite:hover .btn.btn-default,
-.input-group:hover .btn.btn-default, .btn.btn-default:focus,
-.btn-group.btn-group-unite:focus .btn.btn-default,
-.input-group:focus .btn.btn-default, .btn.btn-default.focus,
-.btn-group.btn-group-unite.focus .btn.btn-default,
-.input-group.focus .btn.btn-default {
+.btn-default:hover, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:hover,
+.btn-group.btn-group-unite:hover .btn-default,
+.btn-group.btn-group-unite:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group:hover .btn-default,
+.input-group:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default:focus, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:focus,
+.btn-group.btn-group-unite:focus .btn-default,
+.btn-group.btn-group-unite:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group:focus .btn-default,
+.input-group:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default.focus, .input-trumbowyg-modal-box .focus.input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group.btn-group-unite.focus .btn-default,
+.btn-group.btn-group-unite.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group.focus .btn-default,
+.input-group.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
   border-color: transparent ;
   background: #FFFFFF ;
   color: #0480fe ;
 }
 
-.btn.btn-default:active,
-.btn-group.btn-group-unite:active .btn.btn-default,
-.input-group:active .btn.btn-default, .btn.btn-default.active,
-.btn-group.btn-group-unite.active .btn.btn-default,
-.input-group.active .btn.btn-default {
+.btn-default:active, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:active,
+.btn-group.btn-group-unite:active .btn-default,
+.btn-group.btn-group-unite:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite:active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group:active .btn-default,
+.input-group:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group:active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .btn-default.active, .input-trumbowyg-modal-box .active.input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.btn-group.btn-group-unite.active .btn-default,
+.btn-group.btn-group-unite.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite.active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-group.active .btn-default,
+.input-group.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset,
+.input-trumbowyg-modal-box .input-group.active .input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
   border-color: transparent ;
   background: #0480fe ;
   color: #FFFFFF ;
 }
 
-.btn.btn-base {
+.btn-base {
   border-color: transparent ;
   background: #000000 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-base.btn-no-interaction, .btn.btn-base.btn-no-interaction:hover, .btn.btn-base.btn-no-interaction:focus, .btn.btn-base.btn-no-interaction.focus, .btn.btn-base.btn-no-interaction:active, .btn.btn-base.btn-no-interaction.active {
+.btn-base.btn-no-interaction, .btn-base.btn-no-interaction:hover, .btn-base.btn-no-interaction:focus, .btn-base.btn-no-interaction.focus, .btn-base.btn-no-interaction:active, .btn-base.btn-no-interaction.active {
   border-color: transparent !important;
   background: #000000 !important;
   color: #FFFFFF !important;
 }
 
-.btn.btn-base.btn-disabled, .btn.btn-base.btn-disabled:hover, .btn.btn-base.btn-disabled:focus, .btn.btn-base.btn-disabled.focus, .btn.btn-base.btn-disabled:active, .btn.btn-base.btn-disabled.active,
-.btn-group-disabled .btn.btn-base,
-.btn-group-disabled:hover .btn.btn-base,
-.btn-group-disabled:focus .btn.btn-base,
-.btn-group-disabled.focus .btn.btn-base,
-.btn-group-disabled:active .btn.btn-base,
-.btn-group-disabled.active .btn.btn-base,
-.input-group-disabled .btn.btn-base,
-.input-group-disabled:hover .btn.btn-base,
-.input-group-disabled:focus .btn.btn-base,
-.input-group-disabled.focus .btn.btn-base,
-.input-group-disabled:active .btn.btn-base,
-.input-group-disabled.active .btn.btn-base {
+.btn-base.btn-disabled, .btn-base.btn-disabled:hover, .btn-base.btn-disabled:focus, .btn-base.btn-disabled.focus, .btn-base.btn-disabled:active, .btn-base.btn-disabled.active,
+.btn-group-disabled .btn-base,
+.btn-group-disabled:hover .btn-base,
+.btn-group-disabled:focus .btn-base,
+.btn-group-disabled.focus .btn-base,
+.btn-group-disabled:active .btn-base,
+.btn-group-disabled.active .btn-base,
+.input-group-disabled .btn-base,
+.input-group-disabled:hover .btn-base,
+.input-group-disabled:focus .btn-base,
+.input-group-disabled.focus .btn-base,
+.input-group-disabled:active .btn-base,
+.input-group-disabled.active .btn-base {
   border-color: transparent !important;
   background: rgba(0, 0, 0, 0.5) !important;
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn.btn-base:hover,
-.btn-group.btn-group-unite:hover .btn.btn-base,
-.input-group:hover .btn.btn-base, .btn.btn-base:focus,
-.btn-group.btn-group-unite:focus .btn.btn-base,
-.input-group:focus .btn.btn-base, .btn.btn-base.focus,
-.btn-group.btn-group-unite.focus .btn.btn-base,
-.input-group.focus .btn.btn-base {
+.btn-base:hover,
+.btn-group.btn-group-unite:hover .btn-base,
+.input-group:hover .btn-base, .btn-base:focus,
+.btn-group.btn-group-unite:focus .btn-base,
+.input-group:focus .btn-base, .btn-base.focus,
+.btn-group.btn-group-unite.focus .btn-base,
+.input-group.focus .btn-base {
   border-color: transparent ;
   background: #747474 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-base:active,
-.btn-group.btn-group-unite:active .btn.btn-base,
-.input-group:active .btn.btn-base, .btn.btn-base.active,
-.btn-group.btn-group-unite.active .btn.btn-base,
-.input-group.active .btn.btn-base {
+.btn-base:active,
+.btn-group.btn-group-unite:active .btn-base,
+.input-group:active .btn-base, .btn-base.active,
+.btn-group.btn-group-unite.active .btn-base,
+.input-group.active .btn-base {
   border-color: transparent ;
   background: #000000 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-primary {
+.btn-primary, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
   border-color: transparent ;
   background: #0480fe ;
   color: #FFFFFF ;
 }
 
-.btn.btn-primary.btn-no-interaction, .btn.btn-primary.btn-no-interaction:hover, .btn.btn-primary.btn-no-interaction:focus, .btn.btn-primary.btn-no-interaction.focus, .btn.btn-primary.btn-no-interaction:active, .btn.btn-primary.btn-no-interaction.active {
+.btn-primary.btn-no-interaction, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary.btn-no-interaction:hover, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-submit:hover, .btn-primary.btn-no-interaction:focus, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-submit:focus, .btn-primary.btn-no-interaction.focus, .input-trumbowyg-modal-box .btn-no-interaction.focus.input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary.btn-no-interaction:active, .input-trumbowyg-modal-box .btn-no-interaction.input-trumbowyg-modal-button.input-trumbowyg-modal-submit:active, .btn-primary.btn-no-interaction.active, .input-trumbowyg-modal-box .btn-no-interaction.active.input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
   border-color: transparent !important;
   background: #0480fe !important;
   color: #FFFFFF !important;
 }
 
-.btn.btn-primary.btn-disabled, .btn.btn-primary.btn-disabled:hover, .btn.btn-primary.btn-disabled:focus, .btn.btn-primary.btn-disabled.focus, .btn.btn-primary.btn-disabled:active, .btn.btn-primary.btn-disabled.active,
-.btn-group-disabled .btn.btn-primary,
-.btn-group-disabled:hover .btn.btn-primary,
-.btn-group-disabled:focus .btn.btn-primary,
-.btn-group-disabled.focus .btn.btn-primary,
-.btn-group-disabled:active .btn.btn-primary,
-.btn-group-disabled.active .btn.btn-primary,
-.input-group-disabled .btn.btn-primary,
-.input-group-disabled:hover .btn.btn-primary,
-.input-group-disabled:focus .btn.btn-primary,
-.input-group-disabled.focus .btn.btn-primary,
-.input-group-disabled:active .btn.btn-primary,
-.input-group-disabled.active .btn.btn-primary {
+.btn-primary.btn-disabled, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary.btn-disabled:hover, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-submit:hover, .btn-primary.btn-disabled:focus, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-submit:focus, .btn-primary.btn-disabled.focus, .input-trumbowyg-modal-box .btn-disabled.focus.input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary.btn-disabled:active, .input-trumbowyg-modal-box .btn-disabled.input-trumbowyg-modal-button.input-trumbowyg-modal-submit:active, .btn-primary.btn-disabled.active, .input-trumbowyg-modal-box .btn-disabled.active.input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group-disabled .btn-primary,
+.btn-group-disabled .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group-disabled .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group-disabled:hover .btn-primary,
+.btn-group-disabled:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group-disabled:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group-disabled:focus .btn-primary,
+.btn-group-disabled:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group-disabled:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group-disabled.focus .btn-primary,
+.btn-group-disabled.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group-disabled.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group-disabled:active .btn-primary,
+.btn-group-disabled:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group-disabled:active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group-disabled.active .btn-primary,
+.btn-group-disabled.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group-disabled.active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group-disabled .btn-primary,
+.input-group-disabled .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group-disabled .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group-disabled:hover .btn-primary,
+.input-group-disabled:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group-disabled:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group-disabled:focus .btn-primary,
+.input-group-disabled:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group-disabled:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group-disabled.focus .btn-primary,
+.input-group-disabled.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group-disabled.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group-disabled:active .btn-primary,
+.input-group-disabled:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group-disabled:active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group-disabled.active .btn-primary,
+.input-group-disabled.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group-disabled.active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
   border-color: transparent !important;
   background: rgba(4, 128, 254, 0.5) !important;
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn.btn-primary:hover,
-.btn-group.btn-group-unite:hover .btn.btn-primary,
-.input-group:hover .btn.btn-primary, .btn.btn-primary:focus,
-.btn-group.btn-group-unite:focus .btn.btn-primary,
-.input-group:focus .btn.btn-primary, .btn.btn-primary.focus,
-.btn-group.btn-group-unite.focus .btn.btn-primary,
-.input-group.focus .btn.btn-primary {
+.btn-primary:hover, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:hover,
+.btn-group.btn-group-unite:hover .btn-primary,
+.btn-group.btn-group-unite:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group:hover .btn-primary,
+.input-group:hover .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group:hover .input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary:focus, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:focus,
+.btn-group.btn-group-unite:focus .btn-primary,
+.btn-group.btn-group-unite:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group:focus .btn-primary,
+.input-group:focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group:focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary.focus, .input-trumbowyg-modal-box .focus.input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group.btn-group-unite.focus .btn-primary,
+.btn-group.btn-group-unite.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group.focus .btn-primary,
+.input-group.focus .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group.focus .input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
   border-color: transparent ;
   background: #1d8dfe ;
   color: #FFFFFF ;
 }
 
-.btn.btn-primary:active,
-.btn-group.btn-group-unite:active .btn.btn-primary,
-.input-group:active .btn.btn-primary, .btn.btn-primary.active,
-.btn-group.btn-group-unite.active .btn.btn-primary,
-.input-group.active .btn.btn-primary {
+.btn-primary:active, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:active,
+.btn-group.btn-group-unite:active .btn-primary,
+.btn-group.btn-group-unite:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite:active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group:active .btn-primary,
+.input-group:active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group:active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .btn-primary.active, .input-trumbowyg-modal-box .active.input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.btn-group.btn-group-unite.active .btn-primary,
+.btn-group.btn-group-unite.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .btn-group.btn-group-unite.active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-group.active .btn-primary,
+.input-group.active .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit,
+.input-trumbowyg-modal-box .input-group.active .input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
   border-color: transparent ;
   background: #0167ce ;
   color: #FFFFFF ;
 }
 
-.btn.btn-accent {
+.btn-accent {
   border-color: transparent ;
   background: #d415af ;
   color: #FFFFFF ;
 }
 
-.btn.btn-accent.btn-no-interaction, .btn.btn-accent.btn-no-interaction:hover, .btn.btn-accent.btn-no-interaction:focus, .btn.btn-accent.btn-no-interaction.focus, .btn.btn-accent.btn-no-interaction:active, .btn.btn-accent.btn-no-interaction.active {
+.btn-accent.btn-no-interaction, .btn-accent.btn-no-interaction:hover, .btn-accent.btn-no-interaction:focus, .btn-accent.btn-no-interaction.focus, .btn-accent.btn-no-interaction:active, .btn-accent.btn-no-interaction.active {
   border-color: transparent !important;
   background: #d415af !important;
   color: #FFFFFF !important;
 }
 
-.btn.btn-accent.btn-disabled, .btn.btn-accent.btn-disabled:hover, .btn.btn-accent.btn-disabled:focus, .btn.btn-accent.btn-disabled.focus, .btn.btn-accent.btn-disabled:active, .btn.btn-accent.btn-disabled.active,
-.btn-group-disabled .btn.btn-accent,
-.btn-group-disabled:hover .btn.btn-accent,
-.btn-group-disabled:focus .btn.btn-accent,
-.btn-group-disabled.focus .btn.btn-accent,
-.btn-group-disabled:active .btn.btn-accent,
-.btn-group-disabled.active .btn.btn-accent,
-.input-group-disabled .btn.btn-accent,
-.input-group-disabled:hover .btn.btn-accent,
-.input-group-disabled:focus .btn.btn-accent,
-.input-group-disabled.focus .btn.btn-accent,
-.input-group-disabled:active .btn.btn-accent,
-.input-group-disabled.active .btn.btn-accent {
+.btn-accent.btn-disabled, .btn-accent.btn-disabled:hover, .btn-accent.btn-disabled:focus, .btn-accent.btn-disabled.focus, .btn-accent.btn-disabled:active, .btn-accent.btn-disabled.active,
+.btn-group-disabled .btn-accent,
+.btn-group-disabled:hover .btn-accent,
+.btn-group-disabled:focus .btn-accent,
+.btn-group-disabled.focus .btn-accent,
+.btn-group-disabled:active .btn-accent,
+.btn-group-disabled.active .btn-accent,
+.input-group-disabled .btn-accent,
+.input-group-disabled:hover .btn-accent,
+.input-group-disabled:focus .btn-accent,
+.input-group-disabled.focus .btn-accent,
+.input-group-disabled:active .btn-accent,
+.input-group-disabled.active .btn-accent {
   border-color: transparent !important;
   background: rgba(212, 21, 175, 0.5) !important;
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn.btn-accent:hover,
-.btn-group.btn-group-unite:hover .btn.btn-accent,
-.input-group:hover .btn.btn-accent, .btn.btn-accent:focus,
-.btn-group.btn-group-unite:focus .btn.btn-accent,
-.input-group:focus .btn.btn-accent, .btn.btn-accent.focus,
-.btn-group.btn-group-unite.focus .btn.btn-accent,
-.input-group.focus .btn.btn-accent {
+.btn-accent:hover,
+.btn-group.btn-group-unite:hover .btn-accent,
+.input-group:hover .btn-accent, .btn-accent:focus,
+.btn-group.btn-group-unite:focus .btn-accent,
+.input-group:focus .btn-accent, .btn-accent.focus,
+.btn-group.btn-group-unite.focus .btn-accent,
+.input-group.focus .btn-accent {
   border-color: transparent ;
   background: #fc01a7 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-accent:active,
-.btn-group.btn-group-unite:active .btn.btn-accent,
-.input-group:active .btn.btn-accent, .btn.btn-accent.active,
-.btn-group.btn-group-unite.active .btn.btn-accent,
-.input-group.active .btn.btn-accent {
+.btn-accent:active,
+.btn-group.btn-group-unite:active .btn-accent,
+.input-group:active .btn-accent, .btn-accent.active,
+.btn-group.btn-group-unite.active .btn-accent,
+.input-group.active .btn-accent {
   border-color: transparent ;
   background: #a61089 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-neutral {
+.btn-neutral {
   border-color: transparent ;
   background: #8d8d8d ;
   color: #000000 ;
 }
 
-.btn.btn-neutral.btn-no-interaction, .btn.btn-neutral.btn-no-interaction:hover, .btn.btn-neutral.btn-no-interaction:focus, .btn.btn-neutral.btn-no-interaction.focus, .btn.btn-neutral.btn-no-interaction:active, .btn.btn-neutral.btn-no-interaction.active {
+.btn-neutral.btn-no-interaction, .btn-neutral.btn-no-interaction:hover, .btn-neutral.btn-no-interaction:focus, .btn-neutral.btn-no-interaction.focus, .btn-neutral.btn-no-interaction:active, .btn-neutral.btn-no-interaction.active {
   border-color: transparent !important;
   background: #8d8d8d !important;
   color: #000000 !important;
 }
 
-.btn.btn-neutral.btn-disabled, .btn.btn-neutral.btn-disabled:hover, .btn.btn-neutral.btn-disabled:focus, .btn.btn-neutral.btn-disabled.focus, .btn.btn-neutral.btn-disabled:active, .btn.btn-neutral.btn-disabled.active,
-.btn-group-disabled .btn.btn-neutral,
-.btn-group-disabled:hover .btn.btn-neutral,
-.btn-group-disabled:focus .btn.btn-neutral,
-.btn-group-disabled.focus .btn.btn-neutral,
-.btn-group-disabled:active .btn.btn-neutral,
-.btn-group-disabled.active .btn.btn-neutral,
-.input-group-disabled .btn.btn-neutral,
-.input-group-disabled:hover .btn.btn-neutral,
-.input-group-disabled:focus .btn.btn-neutral,
-.input-group-disabled.focus .btn.btn-neutral,
-.input-group-disabled:active .btn.btn-neutral,
-.input-group-disabled.active .btn.btn-neutral {
+.btn-neutral.btn-disabled, .btn-neutral.btn-disabled:hover, .btn-neutral.btn-disabled:focus, .btn-neutral.btn-disabled.focus, .btn-neutral.btn-disabled:active, .btn-neutral.btn-disabled.active,
+.btn-group-disabled .btn-neutral,
+.btn-group-disabled:hover .btn-neutral,
+.btn-group-disabled:focus .btn-neutral,
+.btn-group-disabled.focus .btn-neutral,
+.btn-group-disabled:active .btn-neutral,
+.btn-group-disabled.active .btn-neutral,
+.input-group-disabled .btn-neutral,
+.input-group-disabled:hover .btn-neutral,
+.input-group-disabled:focus .btn-neutral,
+.input-group-disabled.focus .btn-neutral,
+.input-group-disabled:active .btn-neutral,
+.input-group-disabled.active .btn-neutral {
   border-color: transparent !important;
   background: rgba(141, 141, 141, 0.5) !important;
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.btn.btn-neutral:hover,
-.btn-group.btn-group-unite:hover .btn.btn-neutral,
-.input-group:hover .btn.btn-neutral, .btn.btn-neutral:focus,
-.btn-group.btn-group-unite:focus .btn.btn-neutral,
-.input-group:focus .btn.btn-neutral, .btn.btn-neutral.focus,
-.btn-group.btn-group-unite.focus .btn.btn-neutral,
-.input-group.focus .btn.btn-neutral {
+.btn-neutral:hover,
+.btn-group.btn-group-unite:hover .btn-neutral,
+.input-group:hover .btn-neutral, .btn-neutral:focus,
+.btn-group.btn-group-unite:focus .btn-neutral,
+.input-group:focus .btn-neutral, .btn-neutral.focus,
+.btn-group.btn-group-unite.focus .btn-neutral,
+.input-group.focus .btn-neutral {
   border-color: transparent ;
   background: #9a9a9a ;
   color: #FFFFFF ;
 }
 
-.btn.btn-neutral:active,
-.btn-group.btn-group-unite:active .btn.btn-neutral,
-.input-group:active .btn.btn-neutral, .btn.btn-neutral.active,
-.btn-group.btn-group-unite.active .btn.btn-neutral,
-.input-group.active .btn.btn-neutral {
+.btn-neutral:active,
+.btn-group.btn-group-unite:active .btn-neutral,
+.input-group:active .btn-neutral, .btn-neutral.active,
+.btn-group.btn-group-unite.active .btn-neutral,
+.input-group.active .btn-neutral {
   border-color: transparent ;
   background: #747474 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-success {
+.btn-success {
   border-color: transparent ;
   background: #15b800 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-success.btn-no-interaction, .btn.btn-success.btn-no-interaction:hover, .btn.btn-success.btn-no-interaction:focus, .btn.btn-success.btn-no-interaction.focus, .btn.btn-success.btn-no-interaction:active, .btn.btn-success.btn-no-interaction.active {
+.btn-success.btn-no-interaction, .btn-success.btn-no-interaction:hover, .btn-success.btn-no-interaction:focus, .btn-success.btn-no-interaction.focus, .btn-success.btn-no-interaction:active, .btn-success.btn-no-interaction.active {
   border-color: transparent !important;
   background: #15b800 !important;
   color: #FFFFFF !important;
 }
 
-.btn.btn-success.btn-disabled, .btn.btn-success.btn-disabled:hover, .btn.btn-success.btn-disabled:focus, .btn.btn-success.btn-disabled.focus, .btn.btn-success.btn-disabled:active, .btn.btn-success.btn-disabled.active,
-.btn-group-disabled .btn.btn-success,
-.btn-group-disabled:hover .btn.btn-success,
-.btn-group-disabled:focus .btn.btn-success,
-.btn-group-disabled.focus .btn.btn-success,
-.btn-group-disabled:active .btn.btn-success,
-.btn-group-disabled.active .btn.btn-success,
-.input-group-disabled .btn.btn-success,
-.input-group-disabled:hover .btn.btn-success,
-.input-group-disabled:focus .btn.btn-success,
-.input-group-disabled.focus .btn.btn-success,
-.input-group-disabled:active .btn.btn-success,
-.input-group-disabled.active .btn.btn-success {
+.btn-success.btn-disabled, .btn-success.btn-disabled:hover, .btn-success.btn-disabled:focus, .btn-success.btn-disabled.focus, .btn-success.btn-disabled:active, .btn-success.btn-disabled.active,
+.btn-group-disabled .btn-success,
+.btn-group-disabled:hover .btn-success,
+.btn-group-disabled:focus .btn-success,
+.btn-group-disabled.focus .btn-success,
+.btn-group-disabled:active .btn-success,
+.btn-group-disabled.active .btn-success,
+.input-group-disabled .btn-success,
+.input-group-disabled:hover .btn-success,
+.input-group-disabled:focus .btn-success,
+.input-group-disabled.focus .btn-success,
+.input-group-disabled:active .btn-success,
+.input-group-disabled.active .btn-success {
   border-color: transparent !important;
   background: rgba(21, 184, 0, 0.5) !important;
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn.btn-success:hover,
-.btn-group.btn-group-unite:hover .btn.btn-success,
-.input-group:hover .btn.btn-success, .btn.btn-success:focus,
-.btn-group.btn-group-unite:focus .btn.btn-success,
-.input-group:focus .btn.btn-success, .btn.btn-success.focus,
-.btn-group.btn-group-unite.focus .btn.btn-success,
-.input-group.focus .btn.btn-success {
+.btn-success:hover,
+.btn-group.btn-group-unite:hover .btn-success,
+.input-group:hover .btn-success, .btn-success:focus,
+.btn-group.btn-group-unite:focus .btn-success,
+.input-group:focus .btn-success, .btn-success.focus,
+.btn-group.btn-group-unite.focus .btn-success,
+.input-group.focus .btn-success {
   border-color: transparent ;
   background: #18d200 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-success:active,
-.btn-group.btn-group-unite:active .btn.btn-success,
-.input-group:active .btn.btn-success, .btn.btn-success.active,
-.btn-group.btn-group-unite.active .btn.btn-success,
-.input-group.active .btn.btn-success {
+.btn-success:active,
+.btn-group.btn-group-unite:active .btn-success,
+.input-group:active .btn-success, .btn-success.active,
+.btn-group.btn-group-unite.active .btn-success,
+.input-group.active .btn-success {
   border-color: transparent ;
   background: #0f8500 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-caution {
+.btn-caution {
   border-color: transparent ;
   background: #fd7f03 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-caution.btn-no-interaction, .btn.btn-caution.btn-no-interaction:hover, .btn.btn-caution.btn-no-interaction:focus, .btn.btn-caution.btn-no-interaction.focus, .btn.btn-caution.btn-no-interaction:active, .btn.btn-caution.btn-no-interaction.active {
+.btn-caution.btn-no-interaction, .btn-caution.btn-no-interaction:hover, .btn-caution.btn-no-interaction:focus, .btn-caution.btn-no-interaction.focus, .btn-caution.btn-no-interaction:active, .btn-caution.btn-no-interaction.active {
   border-color: transparent !important;
   background: #fd7f03 !important;
   color: #FFFFFF !important;
 }
 
-.btn.btn-caution.btn-disabled, .btn.btn-caution.btn-disabled:hover, .btn.btn-caution.btn-disabled:focus, .btn.btn-caution.btn-disabled.focus, .btn.btn-caution.btn-disabled:active, .btn.btn-caution.btn-disabled.active,
-.btn-group-disabled .btn.btn-caution,
-.btn-group-disabled:hover .btn.btn-caution,
-.btn-group-disabled:focus .btn.btn-caution,
-.btn-group-disabled.focus .btn.btn-caution,
-.btn-group-disabled:active .btn.btn-caution,
-.btn-group-disabled.active .btn.btn-caution,
-.input-group-disabled .btn.btn-caution,
-.input-group-disabled:hover .btn.btn-caution,
-.input-group-disabled:focus .btn.btn-caution,
-.input-group-disabled.focus .btn.btn-caution,
-.input-group-disabled:active .btn.btn-caution,
-.input-group-disabled.active .btn.btn-caution {
+.btn-caution.btn-disabled, .btn-caution.btn-disabled:hover, .btn-caution.btn-disabled:focus, .btn-caution.btn-disabled.focus, .btn-caution.btn-disabled:active, .btn-caution.btn-disabled.active,
+.btn-group-disabled .btn-caution,
+.btn-group-disabled:hover .btn-caution,
+.btn-group-disabled:focus .btn-caution,
+.btn-group-disabled.focus .btn-caution,
+.btn-group-disabled:active .btn-caution,
+.btn-group-disabled.active .btn-caution,
+.input-group-disabled .btn-caution,
+.input-group-disabled:hover .btn-caution,
+.input-group-disabled:focus .btn-caution,
+.input-group-disabled.focus .btn-caution,
+.input-group-disabled:active .btn-caution,
+.input-group-disabled.active .btn-caution {
   border-color: transparent !important;
   background: rgba(253, 127, 3, 0.5) !important;
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn.btn-caution:hover,
-.btn-group.btn-group-unite:hover .btn.btn-caution,
-.input-group:hover .btn.btn-caution, .btn.btn-caution:focus,
-.btn-group.btn-group-unite:focus .btn.btn-caution,
-.input-group:focus .btn.btn-caution, .btn.btn-caution.focus,
-.btn-group.btn-group-unite.focus .btn.btn-caution,
-.input-group.focus .btn.btn-caution {
+.btn-caution:hover,
+.btn-group.btn-group-unite:hover .btn-caution,
+.input-group:hover .btn-caution, .btn-caution:focus,
+.btn-group.btn-group-unite:focus .btn-caution,
+.input-group:focus .btn-caution, .btn-caution.focus,
+.btn-group.btn-group-unite.focus .btn-caution,
+.input-group.focus .btn-caution {
   border-color: transparent ;
   background: #fd8c1c ;
   color: #FFFFFF ;
 }
 
-.btn.btn-caution:active,
-.btn-group.btn-group-unite:active .btn.btn-caution,
-.input-group:active .btn.btn-caution, .btn.btn-caution.active,
-.btn-group.btn-group-unite.active .btn.btn-caution,
-.input-group.active .btn.btn-caution {
+.btn-caution:active,
+.btn-group.btn-group-unite:active .btn-caution,
+.input-group:active .btn-caution, .btn-caution.active,
+.btn-group.btn-group-unite.active .btn-caution,
+.input-group.active .btn-caution {
   border-color: transparent ;
   background: #cb6602 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-error {
+.btn-error {
   border-color: transparent ;
   background: #fd0303 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-error.btn-no-interaction, .btn.btn-error.btn-no-interaction:hover, .btn.btn-error.btn-no-interaction:focus, .btn.btn-error.btn-no-interaction.focus, .btn.btn-error.btn-no-interaction:active, .btn.btn-error.btn-no-interaction.active {
+.btn-error.btn-no-interaction, .btn-error.btn-no-interaction:hover, .btn-error.btn-no-interaction:focus, .btn-error.btn-no-interaction.focus, .btn-error.btn-no-interaction:active, .btn-error.btn-no-interaction.active {
   border-color: transparent !important;
   background: #fd0303 !important;
   color: #FFFFFF !important;
 }
 
-.btn.btn-error.btn-disabled, .btn.btn-error.btn-disabled:hover, .btn.btn-error.btn-disabled:focus, .btn.btn-error.btn-disabled.focus, .btn.btn-error.btn-disabled:active, .btn.btn-error.btn-disabled.active,
-.btn-group-disabled .btn.btn-error,
-.btn-group-disabled:hover .btn.btn-error,
-.btn-group-disabled:focus .btn.btn-error,
-.btn-group-disabled.focus .btn.btn-error,
-.btn-group-disabled:active .btn.btn-error,
-.btn-group-disabled.active .btn.btn-error,
-.input-group-disabled .btn.btn-error,
-.input-group-disabled:hover .btn.btn-error,
-.input-group-disabled:focus .btn.btn-error,
-.input-group-disabled.focus .btn.btn-error,
-.input-group-disabled:active .btn.btn-error,
-.input-group-disabled.active .btn.btn-error {
+.btn-error.btn-disabled, .btn-error.btn-disabled:hover, .btn-error.btn-disabled:focus, .btn-error.btn-disabled.focus, .btn-error.btn-disabled:active, .btn-error.btn-disabled.active,
+.btn-group-disabled .btn-error,
+.btn-group-disabled:hover .btn-error,
+.btn-group-disabled:focus .btn-error,
+.btn-group-disabled.focus .btn-error,
+.btn-group-disabled:active .btn-error,
+.btn-group-disabled.active .btn-error,
+.input-group-disabled .btn-error,
+.input-group-disabled:hover .btn-error,
+.input-group-disabled:focus .btn-error,
+.input-group-disabled.focus .btn-error,
+.input-group-disabled:active .btn-error,
+.input-group-disabled.active .btn-error {
   border-color: transparent !important;
   background: rgba(253, 3, 3, 0.5) !important;
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.btn.btn-error:hover,
-.btn-group.btn-group-unite:hover .btn.btn-error,
-.input-group:hover .btn.btn-error, .btn.btn-error:focus,
-.btn-group.btn-group-unite:focus .btn.btn-error,
-.input-group:focus .btn.btn-error, .btn.btn-error.focus,
-.btn-group.btn-group-unite.focus .btn.btn-error,
-.input-group.focus .btn.btn-error {
+.btn-error:hover,
+.btn-group.btn-group-unite:hover .btn-error,
+.input-group:hover .btn-error, .btn-error:focus,
+.btn-group.btn-group-unite:focus .btn-error,
+.input-group:focus .btn-error, .btn-error.focus,
+.btn-group.btn-group-unite.focus .btn-error,
+.input-group.focus .btn-error {
   border-color: transparent ;
   background: #fd3636 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-error:active,
-.btn-group.btn-group-unite:active .btn.btn-error,
-.input-group:active .btn.btn-error, .btn.btn-error.active,
-.btn-group.btn-group-unite.active .btn.btn-error,
-.input-group.active .btn.btn-error {
+.btn-error:active,
+.btn-group.btn-group-unite:active .btn-error,
+.input-group:active .btn-error, .btn-error.active,
+.btn-group.btn-group-unite.active .btn-error,
+.input-group.active .btn-error {
   border-color: transparent ;
   background: #cb0202 ;
   color: #FFFFFF ;
 }
 
-.btn.btn-link {
+.btn-link {
   border-color: transparent ;
   background: transparent ;
   color: #0480fe ;
 }
 
-.btn.btn-link.btn-no-interaction, .btn.btn-link.btn-no-interaction:hover, .btn.btn-link.btn-no-interaction:focus, .btn.btn-link.btn-no-interaction.focus, .btn.btn-link.btn-no-interaction:active, .btn.btn-link.btn-no-interaction.active {
+.btn-link.btn-no-interaction, .btn-link.btn-no-interaction:hover, .btn-link.btn-no-interaction:focus, .btn-link.btn-no-interaction.focus, .btn-link.btn-no-interaction:active, .btn-link.btn-no-interaction.active {
   border-color: transparent !important;
   background: transparent !important;
   color: #0480fe !important;
 }
 
-.btn.btn-link.btn-disabled, .btn.btn-link.btn-disabled:hover, .btn.btn-link.btn-disabled:focus, .btn.btn-link.btn-disabled.focus, .btn.btn-link.btn-disabled:active, .btn.btn-link.btn-disabled.active,
-.btn-group-disabled .btn.btn-link,
-.btn-group-disabled:hover .btn.btn-link,
-.btn-group-disabled:focus .btn.btn-link,
-.btn-group-disabled.focus .btn.btn-link,
-.btn-group-disabled:active .btn.btn-link,
-.btn-group-disabled.active .btn.btn-link,
-.input-group-disabled .btn.btn-link,
-.input-group-disabled:hover .btn.btn-link,
-.input-group-disabled:focus .btn.btn-link,
-.input-group-disabled.focus .btn.btn-link,
-.input-group-disabled:active .btn.btn-link,
-.input-group-disabled.active .btn.btn-link {
+.btn-link.btn-disabled, .btn-link.btn-disabled:hover, .btn-link.btn-disabled:focus, .btn-link.btn-disabled.focus, .btn-link.btn-disabled:active, .btn-link.btn-disabled.active,
+.btn-group-disabled .btn-link,
+.btn-group-disabled:hover .btn-link,
+.btn-group-disabled:focus .btn-link,
+.btn-group-disabled.focus .btn-link,
+.btn-group-disabled:active .btn-link,
+.btn-group-disabled.active .btn-link,
+.input-group-disabled .btn-link,
+.input-group-disabled:hover .btn-link,
+.input-group-disabled:focus .btn-link,
+.input-group-disabled.focus .btn-link,
+.input-group-disabled:active .btn-link,
+.input-group-disabled.active .btn-link {
   border-color: transparent !important;
   background: transparent !important;
   color: rgba(4, 128, 254, 0.5) !important;
 }
 
-.btn.btn-link:hover,
-.btn-group.btn-group-unite:hover .btn.btn-link,
-.input-group:hover .btn.btn-link, .btn.btn-link:focus,
-.btn-group.btn-group-unite:focus .btn.btn-link,
-.input-group:focus .btn.btn-link, .btn.btn-link.focus,
-.btn-group.btn-group-unite.focus .btn.btn-link,
-.input-group.focus .btn.btn-link {
+.btn-link:hover,
+.btn-group.btn-group-unite:hover .btn-link,
+.input-group:hover .btn-link, .btn-link:focus,
+.btn-group.btn-group-unite:focus .btn-link,
+.input-group:focus .btn-link, .btn-link.focus,
+.btn-group.btn-group-unite.focus .btn-link,
+.input-group.focus .btn-link {
   border-color: transparent ;
   background: transparent ;
   color: #d415af ;
 }
 
-.btn.btn-link:active,
-.btn-group.btn-group-unite:active .btn.btn-link,
-.input-group:active .btn.btn-link, .btn.btn-link.active,
-.btn-group.btn-group-unite.active .btn.btn-link,
-.input-group.active .btn.btn-link {
+.btn-link:active,
+.btn-group.btn-group-unite:active .btn-link,
+.input-group:active .btn-link, .btn-link.active,
+.btn-group.btn-group-unite.active .btn-link,
+.input-group.active .btn-link {
   border-color: transparent ;
   background: transparent ;
   color: #0480fe ;
@@ -2018,7 +2119,7 @@ table.table-large .table-cell {
 
 /*** SET ***/
 /* input clasees */
-.input-label, .input-single-line, .input-multiple-line, .input-trumbowyg-editor {
+.input-label, .input-single-line, .input-multiple-line, .input-trumbowyg, .input-trumbowyg-editor {
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%;
 }
@@ -2029,18 +2130,18 @@ table.table-large .table-cell {
 }
 
 .input-single-line,
-.input-group, .input-multiple-line, .input-trumbowyg-editor {
+.input-group, .input-multiple-line, .input-trumbowyg, .input-trumbowyg-editor {
   border-radius: 10px;
   box-shadow: 0px 3px 15px -10px #000000;
 }
 
 .input-no-radius.input-single-line,
-.input-no-radius.input-group, .input-no-radius.input-multiple-line, .input-no-radius.input-trumbowyg-editor {
+.input-no-radius.input-group, .input-no-radius.input-multiple-line, .input-no-radius.input-trumbowyg, .input-no-radius.input-trumbowyg-editor {
   border-radius: 0 !important;
 }
 
 .nav .input-single-line,
-.nav .input-group, .nav .input-multiple-line, .nav .input-trumbowyg-editor {
+.nav .input-group, .nav .input-multiple-line, .nav .input-trumbowyg, .nav .input-trumbowyg-editor {
   border-radius: 0 !important;
 }
 
@@ -2091,7 +2192,7 @@ table.table-large .table-cell {
   box-shadow: 0px 0 5px 0px #0480fe;
 }
 
-.input-single-line, .input-multiple-line, .input[multiple], .input-trumbowyg-editor {
+.input-single-line, .input-multiple-line, .input[multiple], .input-trumbowyg, .input-trumbowyg-editor {
   -webkit-appearance: none;
   appearance: none;
   font-size: 1rem;
@@ -2112,10 +2213,11 @@ table.table-large .table-cell {
   padding-bottom: calc(  (  (2.8125rem - (1px * 2)) - (1em * 1.25) ) * .5);
 }
 
-.input-large.input-single-line, .input-large.input-multiple-line, .input-large.input[multiple], .input-large.input-trumbowyg-editor,
+.input-large.input-single-line, .input-large.input-multiple-line, .input-large.input[multiple], .input-large.input-trumbowyg, .input-large.input-trumbowyg-editor,
 .input-group.input-group-large .input-single-line,
 .input-group.input-group-large .input-multiple-line,
 .input-group.input-group-large .input[multiple],
+.input-group.input-group-large .input-trumbowyg,
 .input-group.input-group-large .input-trumbowyg-editor {
   font-size: 1.5625rem;
   padding-top: calc(  (  (3.125rem - (1px * 2)) - (1em * 1.25) ) * .5);
@@ -2123,10 +2225,11 @@ table.table-large .table-cell {
   border-radius: 10px;
 }
 
-.input-small.input-single-line, .input-small.input-multiple-line, .input-small.input[multiple], .input-small.input-trumbowyg-editor,
+.input-small.input-single-line, .input-small.input-multiple-line, .input-small.input[multiple], .input-small.input-trumbowyg, .input-small.input-trumbowyg-editor,
 .input-group.input-group-small .input-single-line,
 .input-group.input-group-small .input-multiple-line,
 .input-group.input-group-small .input[multiple],
+.input-group.input-group-small .input-trumbowyg,
 .input-group.input-group-small .input-trumbowyg-editor {
   font-size: 0.875rem;
   padding-top: calc(  (  (2.1875rem - (1px * 2)) - (1em * 1.25) ) * .5);
@@ -2134,60 +2237,60 @@ table.table-large .table-cell {
   border-radius: 10px;
 }
 
-.body-inverse .input-single-line, .body-inverse .input-multiple-line, .body-inverse .input[multiple], .body-inverse .input-trumbowyg-editor {
+.body-inverse .input-single-line, .body-inverse .input-multiple-line, .body-inverse .input[multiple], .body-inverse .input-trumbowyg, .body-inverse .input-trumbowyg-editor {
   color: inherit;
   background: #333333;
 }
 
-.input-single-line option, .input-multiple-line option, .input[multiple] option, .input-trumbowyg-editor option {
+.input-single-line option, .input-multiple-line option, .input[multiple] option, .input-trumbowyg option, .input-trumbowyg-editor option {
   font: inherit;
 }
 
-.input-group .input-single-line, .input-group .input-multiple-line, .input-group .input[multiple], .input-group .input-trumbowyg-editor {
+.input-group .input-single-line, .input-group .input-multiple-line, .input-group .input[multiple], .input-group .input-trumbowyg, .input-group .input-trumbowyg-editor {
   box-shadow: none;
 }
 
-.input-single-line::-webkit-input-placeholder, .input-multiple-line::-webkit-input-placeholder, .input[multiple]::-webkit-input-placeholder, .input-trumbowyg-editor::-webkit-input-placeholder {
+.input-single-line::-webkit-input-placeholder, .input-multiple-line::-webkit-input-placeholder, .input[multiple]::-webkit-input-placeholder, .input-trumbowyg::-webkit-input-placeholder, .input-trumbowyg-editor::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.input-single-line:-moz-placeholder, .input-multiple-line:-moz-placeholder, .input[multiple]:-moz-placeholder, .input-trumbowyg-editor:-moz-placeholder {
+.input-single-line:-moz-placeholder, .input-multiple-line:-moz-placeholder, .input[multiple]:-moz-placeholder, .input-trumbowyg:-moz-placeholder, .input-trumbowyg-editor:-moz-placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.input-single-line:-ms-input-placeholder, .input-multiple-line:-ms-input-placeholder, .input[multiple]:-ms-input-placeholder, .input-trumbowyg-editor:-ms-input-placeholder {
+.input-single-line:-ms-input-placeholder, .input-multiple-line:-ms-input-placeholder, .input[multiple]:-ms-input-placeholder, .input-trumbowyg:-ms-input-placeholder, .input-trumbowyg-editor:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.input-single-line:focus::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input[multiple]:focus::-webkit-input-placeholder, .input-trumbowyg-editor:focus::-webkit-input-placeholder {
+.input-single-line:focus::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input[multiple]:focus::-webkit-input-placeholder, .input-trumbowyg:focus::-webkit-input-placeholder, .input-trumbowyg-editor:focus::-webkit-input-placeholder {
   color: transparent !important;
 }
 
-.input-single-line:focus:-moz-placeholder, .input-multiple-line:focus:-moz-placeholder, .input[multiple]:focus:-moz-placeholder, .input-trumbowyg-editor:focus:-moz-placeholder {
+.input-single-line:focus:-moz-placeholder, .input-multiple-line:focus:-moz-placeholder, .input[multiple]:focus:-moz-placeholder, .input-trumbowyg:focus:-moz-placeholder, .input-trumbowyg-editor:focus:-moz-placeholder {
   color: transparent !important;
 }
 
-.input-single-line:focus:-ms-input-placeholder, .input-multiple-line:focus:-ms-input-placeholder, .input[multiple]:focus:-ms-input-placeholder, .input-trumbowyg-editor:focus:-ms-input-placeholder {
+.input-single-line:focus:-ms-input-placeholder, .input-multiple-line:focus:-ms-input-placeholder, .input[multiple]:focus:-ms-input-placeholder, .input-trumbowyg:focus:-ms-input-placeholder, .input-trumbowyg-editor:focus:-ms-input-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input[multiple]::-webkit-input-placeholder, .focus.input-trumbowyg-editor::-webkit-input-placeholder {
+.focus.input-single-line::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input[multiple]::-webkit-input-placeholder, .focus.input-trumbowyg::-webkit-input-placeholder, .focus.input-trumbowyg-editor::-webkit-input-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line:-moz-placeholder, .focus.input-multiple-line:-moz-placeholder, .focus.input[multiple]:-moz-placeholder, .focus.input-trumbowyg-editor:-moz-placeholder {
+.focus.input-single-line:-moz-placeholder, .focus.input-multiple-line:-moz-placeholder, .focus.input[multiple]:-moz-placeholder, .focus.input-trumbowyg:-moz-placeholder, .focus.input-trumbowyg-editor:-moz-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line:-ms-input-placeholder, .focus.input-multiple-line:-ms-input-placeholder, .focus.input[multiple]:-ms-input-placeholder, .focus.input-trumbowyg-editor:-ms-input-placeholder {
+.focus.input-single-line:-ms-input-placeholder, .focus.input-multiple-line:-ms-input-placeholder, .focus.input[multiple]:-ms-input-placeholder, .focus.input-trumbowyg:-ms-input-placeholder, .focus.input-trumbowyg-editor:-ms-input-placeholder {
   color: transparent !important;
 }
 
-.input-disabled.input-single-line, .input-disabled.input-multiple-line, .input-disabled.input[multiple], .input-disabled.input-trumbowyg-editor, .input-disabled.input-single-line:focus, .input-disabled.input-multiple-line:focus, .input-disabled.input[multiple]:focus, .input-disabled.input-trumbowyg-editor:focus, .input-disabled.focus.input-single-line, .input-disabled.focus.input-multiple-line, .input-disabled.focus.input[multiple], .input-disabled.focus.input-trumbowyg-editor, .input-single-line[disabled], .input-multiple-line[disabled], .input[disabled][multiple], .input-trumbowyg-editor[disabled], .input-single-line[disabled]:focus, .input-multiple-line[disabled]:focus, .input[disabled][multiple]:focus, .input-trumbowyg-editor[disabled]:focus, [disabled].focus.input-single-line, [disabled].focus.input-multiple-line, [disabled].focus.input[multiple], [disabled].focus.input-trumbowyg-editor {
+.input-disabled.input-single-line, .input-disabled.input-multiple-line, .input-disabled.input[multiple], .input-disabled.input-trumbowyg, .input-disabled.input-trumbowyg-editor, .input-disabled.input-single-line:focus, .input-disabled.input-multiple-line:focus, .input-disabled.input[multiple]:focus, .input-disabled.input-trumbowyg:focus, .input-disabled.input-trumbowyg-editor:focus, .input-disabled.focus.input-single-line, .input-disabled.focus.input-multiple-line, .input-disabled.focus.input[multiple], .input-disabled.focus.input-trumbowyg, .input-disabled.focus.input-trumbowyg-editor, .input-single-line[disabled], .input-multiple-line[disabled], .input[disabled][multiple], .input-trumbowyg[disabled], .input-trumbowyg-editor[disabled], .input-single-line[disabled]:focus, .input-multiple-line[disabled]:focus, .input[disabled][multiple]:focus, .input-trumbowyg[disabled]:focus, .input-trumbowyg-editor[disabled]:focus, [disabled].focus.input-single-line, [disabled].focus.input-multiple-line, [disabled].focus.input[multiple], [disabled].focus.input-trumbowyg, [disabled].focus.input-trumbowyg-editor {
   border-color: transparent;
 }
 
-.input-single-line:focus, .input-multiple-line:focus, .input[multiple]:focus, .input-trumbowyg-editor:focus, .focus.input-single-line, .focus.input-multiple-line, .focus.input[multiple], .focus.input-trumbowyg-editor {
+.input-single-line:focus, .input-multiple-line:focus, .input[multiple]:focus, .input-trumbowyg:focus, .input-trumbowyg-editor:focus, .focus.input-single-line, .focus.input-multiple-line, .focus.input[multiple], .focus.input-trumbowyg, .focus.input-trumbowyg-editor {
   box-shadow: 0px 0 5px 0px #0480fe;
   border-color: rgba(141, 141, 141, 0.2);
 }
@@ -2225,11 +2328,11 @@ table.table-large .table-cell {
   color: #000000 !important;
 }
 
-.input-base.input-single-line:not(:focus):not(.focus), .input-base.input-multiple-line:not(:focus):not(.focus), .input-base.input[multiple]:not(:focus):not(.focus), .input-base.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-base.input-single-line:not(:focus):not(.focus), .input-base.input-multiple-line:not(:focus):not(.focus), .input-base.input[multiple]:not(:focus):not(.focus), .input-base.input-trumbowyg:not(:focus):not(.focus), .input-base.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #000000;
 }
 
-.input-base.input-single-line, .input-base.input-multiple-line, .input-base.input[multiple], .input-base.input-trumbowyg-editor, .input-base.input-single-line:focus, .input-base.input-multiple-line:focus, .input-base.input[multiple]:focus, .input-base.input-trumbowyg-editor:focus, .input-base.focus.input-single-line, .input-base.focus.input-multiple-line, .input-base.focus.input[multiple], .input-base.focus.input-trumbowyg-editor {
+.input-base.input-single-line, .input-base.input-multiple-line, .input-base.input[multiple], .input-base.input-trumbowyg, .input-base.input-trumbowyg-editor, .input-base.input-single-line:focus, .input-base.input-multiple-line:focus, .input-base.input[multiple]:focus, .input-base.input-trumbowyg:focus, .input-base.input-trumbowyg-editor:focus, .input-base.focus.input-single-line, .input-base.focus.input-multiple-line, .input-base.focus.input[multiple], .input-base.focus.input-trumbowyg, .input-base.focus.input-trumbowyg-editor {
   border-color: #000000;
 }
 
@@ -2237,11 +2340,11 @@ table.table-large .table-cell {
   color: #0480fe !important;
 }
 
-.input-primary.input-single-line:not(:focus):not(.focus), .input-primary.input-multiple-line:not(:focus):not(.focus), .input-primary.input[multiple]:not(:focus):not(.focus), .input-primary.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-primary.input-single-line:not(:focus):not(.focus), .input-primary.input-multiple-line:not(:focus):not(.focus), .input-primary.input[multiple]:not(:focus):not(.focus), .input-primary.input-trumbowyg:not(:focus):not(.focus), .input-primary.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #0480fe;
 }
 
-.input-primary.input-single-line, .input-primary.input-multiple-line, .input-primary.input[multiple], .input-primary.input-trumbowyg-editor, .input-primary.input-single-line:focus, .input-primary.input-multiple-line:focus, .input-primary.input[multiple]:focus, .input-primary.input-trumbowyg-editor:focus, .input-primary.focus.input-single-line, .input-primary.focus.input-multiple-line, .input-primary.focus.input[multiple], .input-primary.focus.input-trumbowyg-editor {
+.input-primary.input-single-line, .input-primary.input-multiple-line, .input-primary.input[multiple], .input-primary.input-trumbowyg, .input-primary.input-trumbowyg-editor, .input-primary.input-single-line:focus, .input-primary.input-multiple-line:focus, .input-primary.input[multiple]:focus, .input-primary.input-trumbowyg:focus, .input-primary.input-trumbowyg-editor:focus, .input-primary.focus.input-single-line, .input-primary.focus.input-multiple-line, .input-primary.focus.input[multiple], .input-primary.focus.input-trumbowyg, .input-primary.focus.input-trumbowyg-editor {
   border-color: #0480fe;
 }
 
@@ -2249,11 +2352,11 @@ table.table-large .table-cell {
   color: #d415af !important;
 }
 
-.input-accent.input-single-line:not(:focus):not(.focus), .input-accent.input-multiple-line:not(:focus):not(.focus), .input-accent.input[multiple]:not(:focus):not(.focus), .input-accent.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-accent.input-single-line:not(:focus):not(.focus), .input-accent.input-multiple-line:not(:focus):not(.focus), .input-accent.input[multiple]:not(:focus):not(.focus), .input-accent.input-trumbowyg:not(:focus):not(.focus), .input-accent.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #d415af;
 }
 
-.input-accent.input-single-line, .input-accent.input-multiple-line, .input-accent.input[multiple], .input-accent.input-trumbowyg-editor, .input-accent.input-single-line:focus, .input-accent.input-multiple-line:focus, .input-accent.input[multiple]:focus, .input-accent.input-trumbowyg-editor:focus, .input-accent.focus.input-single-line, .input-accent.focus.input-multiple-line, .input-accent.focus.input[multiple], .input-accent.focus.input-trumbowyg-editor {
+.input-accent.input-single-line, .input-accent.input-multiple-line, .input-accent.input[multiple], .input-accent.input-trumbowyg, .input-accent.input-trumbowyg-editor, .input-accent.input-single-line:focus, .input-accent.input-multiple-line:focus, .input-accent.input[multiple]:focus, .input-accent.input-trumbowyg:focus, .input-accent.input-trumbowyg-editor:focus, .input-accent.focus.input-single-line, .input-accent.focus.input-multiple-line, .input-accent.focus.input[multiple], .input-accent.focus.input-trumbowyg, .input-accent.focus.input-trumbowyg-editor {
   border-color: #d415af;
 }
 
@@ -2261,11 +2364,11 @@ table.table-large .table-cell {
   color: #8d8d8d !important;
 }
 
-.input-neutral.input-single-line:not(:focus):not(.focus), .input-neutral.input-multiple-line:not(:focus):not(.focus), .input-neutral.input[multiple]:not(:focus):not(.focus), .input-neutral.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-neutral.input-single-line:not(:focus):not(.focus), .input-neutral.input-multiple-line:not(:focus):not(.focus), .input-neutral.input[multiple]:not(:focus):not(.focus), .input-neutral.input-trumbowyg:not(:focus):not(.focus), .input-neutral.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #8d8d8d;
 }
 
-.input-neutral.input-single-line, .input-neutral.input-multiple-line, .input-neutral.input[multiple], .input-neutral.input-trumbowyg-editor, .input-neutral.input-single-line:focus, .input-neutral.input-multiple-line:focus, .input-neutral.input[multiple]:focus, .input-neutral.input-trumbowyg-editor:focus, .input-neutral.focus.input-single-line, .input-neutral.focus.input-multiple-line, .input-neutral.focus.input[multiple], .input-neutral.focus.input-trumbowyg-editor {
+.input-neutral.input-single-line, .input-neutral.input-multiple-line, .input-neutral.input[multiple], .input-neutral.input-trumbowyg, .input-neutral.input-trumbowyg-editor, .input-neutral.input-single-line:focus, .input-neutral.input-multiple-line:focus, .input-neutral.input[multiple]:focus, .input-neutral.input-trumbowyg:focus, .input-neutral.input-trumbowyg-editor:focus, .input-neutral.focus.input-single-line, .input-neutral.focus.input-multiple-line, .input-neutral.focus.input[multiple], .input-neutral.focus.input-trumbowyg, .input-neutral.focus.input-trumbowyg-editor {
   border-color: #8d8d8d;
 }
 
@@ -2273,11 +2376,11 @@ table.table-large .table-cell {
   color: #15b800 !important;
 }
 
-.input-success.input-single-line:not(:focus):not(.focus), .input-success.input-multiple-line:not(:focus):not(.focus), .input-success.input[multiple]:not(:focus):not(.focus), .input-success.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-success.input-single-line:not(:focus):not(.focus), .input-success.input-multiple-line:not(:focus):not(.focus), .input-success.input[multiple]:not(:focus):not(.focus), .input-success.input-trumbowyg:not(:focus):not(.focus), .input-success.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #15b800;
 }
 
-.input-success.input-single-line, .input-success.input-multiple-line, .input-success.input[multiple], .input-success.input-trumbowyg-editor, .input-success.input-single-line:focus, .input-success.input-multiple-line:focus, .input-success.input[multiple]:focus, .input-success.input-trumbowyg-editor:focus, .input-success.focus.input-single-line, .input-success.focus.input-multiple-line, .input-success.focus.input[multiple], .input-success.focus.input-trumbowyg-editor {
+.input-success.input-single-line, .input-success.input-multiple-line, .input-success.input[multiple], .input-success.input-trumbowyg, .input-success.input-trumbowyg-editor, .input-success.input-single-line:focus, .input-success.input-multiple-line:focus, .input-success.input[multiple]:focus, .input-success.input-trumbowyg:focus, .input-success.input-trumbowyg-editor:focus, .input-success.focus.input-single-line, .input-success.focus.input-multiple-line, .input-success.focus.input[multiple], .input-success.focus.input-trumbowyg, .input-success.focus.input-trumbowyg-editor {
   border-color: #15b800;
 }
 
@@ -2285,11 +2388,11 @@ table.table-large .table-cell {
   color: #fd7f03 !important;
 }
 
-.input-caution.input-single-line:not(:focus):not(.focus), .input-caution.input-multiple-line:not(:focus):not(.focus), .input-caution.input[multiple]:not(:focus):not(.focus), .input-caution.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-caution.input-single-line:not(:focus):not(.focus), .input-caution.input-multiple-line:not(:focus):not(.focus), .input-caution.input[multiple]:not(:focus):not(.focus), .input-caution.input-trumbowyg:not(:focus):not(.focus), .input-caution.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #fd7f03;
 }
 
-.input-caution.input-single-line, .input-caution.input-multiple-line, .input-caution.input[multiple], .input-caution.input-trumbowyg-editor, .input-caution.input-single-line:focus, .input-caution.input-multiple-line:focus, .input-caution.input[multiple]:focus, .input-caution.input-trumbowyg-editor:focus, .input-caution.focus.input-single-line, .input-caution.focus.input-multiple-line, .input-caution.focus.input[multiple], .input-caution.focus.input-trumbowyg-editor {
+.input-caution.input-single-line, .input-caution.input-multiple-line, .input-caution.input[multiple], .input-caution.input-trumbowyg, .input-caution.input-trumbowyg-editor, .input-caution.input-single-line:focus, .input-caution.input-multiple-line:focus, .input-caution.input[multiple]:focus, .input-caution.input-trumbowyg:focus, .input-caution.input-trumbowyg-editor:focus, .input-caution.focus.input-single-line, .input-caution.focus.input-multiple-line, .input-caution.focus.input[multiple], .input-caution.focus.input-trumbowyg, .input-caution.focus.input-trumbowyg-editor {
   border-color: #fd7f03;
 }
 
@@ -2297,11 +2400,11 @@ table.table-large .table-cell {
   color: #fd0303 !important;
 }
 
-.input-error.input-single-line:not(:focus):not(.focus), .input-error.input-multiple-line:not(:focus):not(.focus), .input-error.input[multiple]:not(:focus):not(.focus), .input-error.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-error.input-single-line:not(:focus):not(.focus), .input-error.input-multiple-line:not(:focus):not(.focus), .input-error.input[multiple]:not(:focus):not(.focus), .input-error.input-trumbowyg:not(:focus):not(.focus), .input-error.input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #fd0303;
 }
 
-.input-error.input-single-line, .input-error.input-multiple-line, .input-error.input[multiple], .input-error.input-trumbowyg-editor, .input-error.input-single-line:focus, .input-error.input-multiple-line:focus, .input-error.input[multiple]:focus, .input-error.input-trumbowyg-editor:focus, .input-error.focus.input-single-line, .input-error.focus.input-multiple-line, .input-error.focus.input[multiple], .input-error.focus.input-trumbowyg-editor {
+.input-error.input-single-line, .input-error.input-multiple-line, .input-error.input[multiple], .input-error.input-trumbowyg, .input-error.input-trumbowyg-editor, .input-error.input-single-line:focus, .input-error.input-multiple-line:focus, .input-error.input[multiple]:focus, .input-error.input-trumbowyg:focus, .input-error.input-trumbowyg-editor:focus, .input-error.focus.input-single-line, .input-error.focus.input-multiple-line, .input-error.focus.input[multiple], .input-error.focus.input-trumbowyg, .input-error.focus.input-trumbowyg-editor {
   border-color: #fd0303;
 }
 
@@ -2359,14 +2462,14 @@ select.input[multiple], .input-select[multiple] {
   margin-left: auto;
 }
 
-.nav .input-single-line, .nav .input-multiple-line {
+.nav .input-single-line, .nav .input-multiple-line, .nav .input-trumbowyg {
   padding-top: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.25) ) * .5);
   padding-bottom: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.25) ) * .5);
   height: 4.6875rem;
   border-radius: 0;
 }
 
-.input-wrapper .input-single-line, .input-wrapper .input-multiple-line {
+.input-wrapper .input-single-line, .input-wrapper .input-multiple-line, .input-wrapper .input-trumbowyg {
   display: block;
   flex: 1 1;
 }
@@ -2522,18 +2625,21 @@ select.input[multiple], .input-select[multiple] {
 
 .special-form .input-single-line,
 .special-form .input-multiple-line,
+.special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg,
 .special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg-editor {
   background: transparent;
+  width: calc(100% + (35px * 2));
+  max-width: none;
   padding-left: 35px;
   padding-right: 35px;
   margin-left: -35px;
   margin-right: -35px;
-  max-width: none;
   border-radius: 0;
 }
 
 .special-form .input-single-line:not(:focus):not(.focus),
 .special-form .input-multiple-line:not(:focus):not(.focus),
+.special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg:not(:focus):not(.focus),
 .special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg-editor:not(:focus):not(.focus) {
   box-shadow: none;
 }
@@ -2583,19 +2689,14 @@ CUSTOM STYLES FOR TRUMBOWYG
   margin: 0;
 }
 
-@media (min-width: 1201px) {
-  .input-trumbowyg-box {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-
 .input-trumbowyg-editor {
   min-height: 800px;
 }
 
 .input-trumbowyg-box.input-trumbowyg-fullscreen {
   background: #FFFFFF;
+  border-radius: 0;
+  box-shadow: none !important;
 }
 
 .input-trumbowyg-editor, .input-trumbowyg-textarea {
@@ -2606,10 +2707,27 @@ CUSTOM STYLES FOR TRUMBOWYG
   outline: none;
   overflow: auto;
   user-select: text;
+  line-height: 2;
+  min-height: 500px;
 }
 
 .input-trumbowyg-editor.input-trumbowyg-autogrow-on-enter, .input-trumbowyg-textarea.input-trumbowyg-autogrow-on-enter {
   transition: height 0.25s ease-out;
+}
+
+.input-trumbowyg-editor:focus, .input-trumbowyg-editor.focus, .input-trumbowyg-textarea:focus, .input-trumbowyg-textarea.focus {
+  box-shadow: none;
+}
+
+.input-trumbowyg-box.input-trumbowyg-fullscreen .input-trumbowyg-editor, .input-trumbowyg-box.input-trumbowyg-fullscreen .input-trumbowyg-textarea {
+  background: #FFFFFF;
+  border-radius: 0;
+  box-shadow: none !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
 .input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-box-blur .input-trumbowyg-editor::before {
@@ -2636,7 +2754,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .input-trumbowyg-textarea {
   position: relative;
-  display: block;
   overflow: auto;
   border: none;
   font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
@@ -2673,7 +2790,6 @@ CUSTOM STYLES FOR TRUMBOWYG
   padding: 0;
   position: relative;
   list-style-type: none;
-  line-height: 10px;
   backface-visibility: hidden;
   z-index: 11;
 }
@@ -2689,8 +2805,8 @@ CUSTOM STYLES FOR TRUMBOWYG
 .input-trumbowyg-button-pane button {
   display: inline-block;
   position: relative;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   padding: 1px 6px !important;
   margin-bottom: 1px;
   overflow: hidden;
@@ -2703,7 +2819,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .input-trumbowyg-button-pane button.input-trumbowyg-textual-button {
   width: auto;
-  line-height: 35px;
+  line-height: 40px;
   user-select: none;
 }
 
@@ -2722,8 +2838,13 @@ CUSTOM STYLES FOR TRUMBOWYG
 .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):hover,
 .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):focus,
 .input-trumbowyg-button-pane button.input-trumbowyg-active {
-  background-color: #FFF;
   outline: none;
+}
+
+.input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):hover svg,
+.input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):focus svg,
+.input-trumbowyg-button-pane button.input-trumbowyg-active svg {
+  fill: #0480fe;
 }
 
 .input-trumbowyg-button-pane .input-trumbowyg-open-dropdown::after {
@@ -2806,32 +2927,16 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 .input-trumbowyg-modal-box {
-  position: absolute;
   top: 0;
   left: 50%;
-  border-radius: 10px;
   transform: translateX(-50%);
   max-width: 500px;
   width: calc(100% - 20px);
-  padding-bottom: 45px;
+  padding: 50px 20px;
   z-index: 1;
-  background-color: #FFF;
-  text-align: center;
-  font-size: 14px;
+  background-color: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
   backface-visibility: hidden;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-title {
-  border-radius: 10px 10px 0 0;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0 0 20px;
-  padding: 15px 0 13px;
-  display: block;
-  border-bottom: 1px solid #EEE;
-  color: #333;
-  background: #fbfcfc;
 }
 
 .input-trumbowyg-modal-box .input-trumbowyg-progress {
@@ -2867,8 +2972,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .input-trumbowyg-modal-box label .input-trumbowyg-input-infos span {
   display: block;
-  color: #69878f;
-  background-color: #fbfcfc;
   border: 1px solid #DEDEDE;
   padding: 0 7px;
   width: 150px;
@@ -2927,59 +3030,15 @@ CUSTOM STYLES FOR TRUMBOWYG
 .input-trumbowyg-modal-box .error {
   margin-top: 25px;
   display: block;
-  color: red;
+  color: #fd0303;
 }
 
 .input-trumbowyg-modal-box .input-trumbowyg-modal-button {
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  text-decoration: none;
-  color: #FFF;
-  display: block;
-  width: 100px;
-  height: 35px;
-  line-height: 33px;
-  margin: 0 10px;
-  background-color: #333;
-  border: none;
-  cursor: pointer;
-  font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif;
-  font-size: 16px;
-  transition: all 0.125s;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
-  right: 110px;
-  background: #0178f2;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:hover, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:focus {
-  background: #1d8dfe;
-  outline: none;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:active {
-  background: #0167ce;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
-  color: #555;
-  background: #e3e5e9;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:hover, .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:focus {
-  background: #fafbfb;
-  outline: none;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:active {
-  background: #d0d2da;
+  margin: 0 .125em;
 }
 
 .input-trumbowyg-overlay {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
   height: 100%;
   width: 100%;
   left: 0;
@@ -3043,111 +3102,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .input-trumbowyg-editor img {
   cursor: move;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css {
-  background: #FEFEFE !important;
-  font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.45em !important;
-  color: #333;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css a {
-  color: #15c !important;
-  text-decoration: underline !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css div,
-.input-trumbowyg-editor.input-trumbowyg-reset-css p,
-.input-trumbowyg-editor.input-trumbowyg-reset-css ul,
-.input-trumbowyg-editor.input-trumbowyg-reset-css ol,
-.input-trumbowyg-editor.input-trumbowyg-reset-css blockquote {
-  box-shadow: none !important;
-  background: none !important;
-  margin: 0 !important;
-  margin-bottom: 15px !important;
-  line-height: 1.4em !important;
-  font-family: "Trebuchet MS", Helvetica, Verdana, sans-serif !important;
-  font-size: 14px !important;
-  border: none;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css iframe,
-.input-trumbowyg-editor.input-trumbowyg-reset-css object,
-.input-trumbowyg-editor.input-trumbowyg-reset-css hr {
-  margin-bottom: 15px !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css blockquote {
-  margin-left: 32px !important;
-  font-style: italic !important;
-  color: #555;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css ul {
-  list-style: disc;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css ol {
-  list-style: decimal;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css ul,
-.input-trumbowyg-editor.input-trumbowyg-reset-css ol {
-  padding-left: 20px !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css ul ul,
-.input-trumbowyg-editor.input-trumbowyg-reset-css ol ol,
-.input-trumbowyg-editor.input-trumbowyg-reset-css ul ol,
-.input-trumbowyg-editor.input-trumbowyg-reset-css ol ul {
-  border: none;
-  margin: 2px !important;
-  padding: 0 !important;
-  padding-left: 24px !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css hr {
-  display: block;
-  height: 1px;
-  border: none;
-  border-top: 1px solid #CCC;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css h1,
-.input-trumbowyg-editor.input-trumbowyg-reset-css h2,
-.input-trumbowyg-editor.input-trumbowyg-reset-css h3,
-.input-trumbowyg-editor.input-trumbowyg-reset-css h4 {
-  color: #111;
-  background: none;
-  margin: 0 !important;
-  padding: 0 !important;
-  font-weight: bold;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css h1 {
-  font-size: 32px !important;
-  line-height: 38px !important;
-  margin-bottom: 20px !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css h2 {
-  font-size: 26px !important;
-  line-height: 34px !important;
-  margin-bottom: 15px !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css h3 {
-  font-size: 22px !important;
-  line-height: 28px !important;
-  margin-bottom: 7px !important;
-}
-
-.input-trumbowyg-editor.input-trumbowyg-reset-css h4 {
-  font-size: 16px !important;
-  line-height: 22px !important;
-  margin-bottom: 7px !important;
 }
 
 .body-inverse .input-trumbowyg .input-trumbowyg-textarea, .input-trumbowyg-dark .input-trumbowyg-textarea {

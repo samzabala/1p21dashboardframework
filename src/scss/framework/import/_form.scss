@@ -429,7 +429,8 @@ $prefix: '.input';
 
 
 	&-single-line,
-	&-multiple-line {
+	&-multiple-line,
+	&-trumbowyg {
 		@extend %for-form-global;
 		@extend %for-form-input;
 
@@ -661,13 +662,15 @@ $prefix: '.input';
 
 	#{$prefix}-single-line,
 	#{$prefix}-multiple-line,
+	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg,
 	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg-editor {
 		background:transparent;
+		width:calc(100% + (#{$special-form-gutter-x} * 2));
+		max-width:none;
 		padding-left: $special-form-gutter-x;
 		padding-right:$special-form-gutter-x;
 		margin-left: $special-form-gutter-x * -1;
 		margin-right:$special-form-gutter-x * -1;
-		max-width:none;
 		border-radius:0;
 
 		&:not(:focus):not(.focus) {
@@ -676,32 +679,3 @@ $prefix: '.input';
 	}
 	
 }
-
-
-
-
-// label
-
-// input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
-// textarea,
-// select,
-
-// input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
-// select,
-
-
-// select[multiple],
-// textarea,
-
-
-
-// input:not([type=checkbox]):not([type=radio]):not([type=reset]):not([type=submit]),
-// select,
-
-
-
-//select gets special treatment because it's such a bitch
-
-
-
-//disabled

@@ -77,6 +77,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/images/icon-paperclip.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/icon-paperclip.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/images/icon-projects.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -159,17 +169,6 @@
 		"oA": 1,
 		"oAP": "/assets/scripts/trumbowyg.upload.min-min.js",
 		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/scripts/upload/trumbowyg.upload.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/upload/trumbowyg.upload-min.js",
-		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -984,7 +983,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/src/scss/framework/import/_modules.scss": {
+	"/src/scss/framework/import/_modal.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -992,7 +991,20 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/src/scss/framework/import/_modules.css",
+		"oAP": "/src/scss/framework/import/_modal.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/src/scss/framework/import/_module.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/src/scss/framework/import/_module.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

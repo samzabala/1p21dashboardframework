@@ -255,6 +255,14 @@
 		$module-title-font-style: normal !default;
 		$module-title-color: $brand-color-primary !default;
 		$module-title-text-transform: uppercase !default;
+	
+	// modal
+		$modal-gutter-x: $gutter-small !default;
+		$modal-gutter-y: $gutter-base !default;
+		$modal-background: $global-background;
+		$modal-background-inverse: $global-background-inverse !default;
+		$modal-border-radius: $border-radius-base !default;
+		$modal-box-shadow: 0px 0px 15px -12px $brand-color-base !default !default;
 
 	// POPPER = DROPDOWN || TOOLTIP
 		$popper-gutter-x: $gutter-small !default;
@@ -406,9 +414,10 @@
 
 
 		//trumbowyg
-			$trumbowyg-border-radius: $special-form-border-radius !default;
+			$trumbowyg-modal-max-width: 520px !default;
 
 			$trumbowyg-icon-color: $brand-color-neutral !default;
+				$trumbowyg-icon-color-hover: $brand-color-primary !default;
 			$trumbowyg-button-pane-height: 40px !default;
 
 	// BTN

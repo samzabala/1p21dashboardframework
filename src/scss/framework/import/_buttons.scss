@@ -113,7 +113,7 @@ $prefix: '.btn';
             
         }@else{
         
-            @at-root &{
+            &{
                 @include internal-btn-set-scheme($properties)
             }
             
@@ -198,8 +198,7 @@ $prefix: '.btn';
     }
 }
 
-
-#{$prefix} {
+%btn {
     @include type-set((
         size: #{$calculated-btn-font-size},
         leading: #{$calculated-btn-line-height},
@@ -229,6 +228,21 @@ $prefix: '.btn';
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    &-itself-and-group {
+
+        border-radius: $btn-border-radius;
+        box-shadow: $btn-box-shadow;
+
+        &:hover {
+            box-shadow: $btn-box-shadow-hover;
+        }
+    }
+
+}
+
+#{$prefix} {
+    @extend %btn;
     
     &#{$prefix}-no-radius {
         border-radius: 0!important;
@@ -241,12 +255,7 @@ $prefix: '.btn';
     }
 
     &,&-group {
-        border-radius: $btn-border-radius;
-        box-shadow: $btn-box-shadow;
-
-        &:hover {
-            box-shadow: $btn-box-shadow-hover;
-        }
+        @extend %btn-itself-and-group;
     }
 
     &#{$prefix}-no-shadow,
@@ -301,6 +310,7 @@ $prefix: '.btn';
             margin-right:auto;
         }
     }
+
     .symbol {
         &:last-child {
             margin-left: .25em;
@@ -421,7 +431,7 @@ $prefix: '.btn';
     }
 
     @each $scheme,$properties in $calculated-btn-schemes {
-        &#{&}-#{$scheme} {
+        &-#{$scheme} {
             @include button-generate-schemes($properties);
         }
     }

@@ -1,0 +1,20 @@
+/*** SET ***/
+
+/* SUBSET */
+$prefix: '.modal';
+
+%modal {
+
+	padding: $modal-gutter-y $modal-gutter-y;
+	border-radius: $modal-border-radius;
+	background: $modal-background;
+	position: absolute;
+
+	.body-inverse & {
+		background: $modal-background-inverse;
+	}
+}
+
+#{$prefix} {
+	@extend %modal;
+}

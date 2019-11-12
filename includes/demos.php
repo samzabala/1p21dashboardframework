@@ -91,7 +91,7 @@
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 	<label for="" class="sr-only">uuugh</label>
-	<textarea id="editor-demo" class="input input-trumbowyg input-multiple-line " placeholder="Please write your new note here..."><h1 id="thefuckintop">Header one</h1>
+	<textarea id="editor-demo" class="input input-trumbowyg" placeholder="Please write your new note here..."><h1 id="thefuckintop">Header one</h1>
 	<h2>Header two</h2>
 	<h3>Header three</h3>
 	<h4>Header four</h4>
