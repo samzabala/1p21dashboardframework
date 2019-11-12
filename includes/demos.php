@@ -83,33 +83,9 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 
 		<label for="" class="sr-only">uuugh</label>
-		<input type="text" class="input-large input-single-line font-weight-600" placeholder="title">
+		<input type="text" class="input-large input-single-line font-weight-600" placeholder="Enter title here">
 	</div>
 
-
-	<div class="input-wrapper input-wrapper-horizontal">
-		<label class="input-label" for="inputPassword">Password</label>
-		<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
-	</div>
-
-	<div class="input-wrapper input-wrapper-horizontal">
-		<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
-		
-		<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
-	</div>
-
-	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-		<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
-
-			<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-	</div>
-
-	<div class="input-wrapper input-wrapper-horizontal">
-			<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
-			
-			
-			<label><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
-	</div>
 
 
 
@@ -126,7 +102,6 @@
 	<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
 	<p>Multi line blockquote with a cite reference:</p>
 	<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-	<!-- 
 	<h2>Unordered Lists (Nested)</h2>
 	<ul>
 	<li>List item one
@@ -213,7 +188,7 @@
 	<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
 	<p><strong>Teletype Tag</strong></p>
 	<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p>
-	<p><strong>Variable Tag</strong></p> -->
+	<p><strong>Variable Tag</strong></p>
 	<p>This allows you to denote <var>variables</var>.</p></textarea>
 	
 	</div>

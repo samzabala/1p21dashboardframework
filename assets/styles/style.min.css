@@ -2390,10 +2390,10 @@ select.input[multiple], .input-select[multiple] {
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  .input-wrapper-horizontal .input-label {
+  .input-wrapper-horizontal > .input-label {
     flex: 0 0 25%;
   }
-  .input-wrapper-horizontal .input-label:first-child:last-child {
+  .input-wrapper-horizontal > .input-label:first-child:last-child {
     /* labels that typically wrapp radio and checboxes*/
     flex: 1 1 auto;
   }
@@ -2512,13 +2512,11 @@ select.input[multiple], .input-select[multiple] {
   background: #333333;
 }
 
-.special-form .input-wrapper-block,
-.special-form .input-trumbowyg-box {
+.special-form .input-wrapper {
   max-width: none;
 }
 
-.special-form .input-wrapper-block:nth-child(n+2),
-.special-form .input-trumbowyg-box:nth-child(n+2) {
+.special-form .input-wrapper:nth-child(n+2) {
   border-top: 1px solid gray;
 }
 
@@ -2526,10 +2524,18 @@ select.input[multiple], .input-select[multiple] {
 .special-form .input-multiple-line,
 .special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg-editor {
   background: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  box-shadow: none;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-left: -35px;
+  margin-right: -35px;
+  max-width: none;
   border-radius: 0;
+}
+
+.special-form .input-single-line:not(:focus):not(.focus),
+.special-form .input-multiple-line:not(:focus):not(.focus),
+.special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg-editor:not(:focus):not(.focus) {
+  box-shadow: none;
 }
 
 /* 
