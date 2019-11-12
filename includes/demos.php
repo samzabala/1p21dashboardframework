@@ -216,8 +216,8 @@
 	<p><strong>Variable Tag</strong></p> -->
 	<p>This allows you to denote <var>variables</var>.</p></textarea>
 	
-	<a href="#" class="btn btn-primary">Submet et</a>
 	</div>
+	<a href="#" class="btn btn-primary">Submet et</a>
 </form>
 	<h1>Nav</h1>
 	<div class="nav">

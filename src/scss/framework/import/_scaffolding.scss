@@ -83,6 +83,7 @@
 	select,
 	option,
 	button {
+		display:inline-block;
 		// background:none;
 		// -webkit-border-radius: 0;
 		// border-radius: 0;
@@ -92,8 +93,13 @@
 		font-size: inherit;
 		line-height: inherit;
 		max-width:100%;
-		// 	display: block;
 		// color: inherit;
+	}
+
+	fieldset {
+
+		min-width: 0;
+		resize: none;
 	}
 	
 	button {

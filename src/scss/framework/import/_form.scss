@@ -662,7 +662,7 @@ $prefix: '.input';
 
 	#{$prefix}-single-line,
 	#{$prefix}-multiple-line,
-	#{$prefix}-trumbowyg-editor {
+	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg-editor {
 		background:transparent;
 		padding-left: 0;
 		padding-right:0;

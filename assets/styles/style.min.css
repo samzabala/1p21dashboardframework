@@ -177,11 +177,17 @@ legend,
 select,
 option,
 button {
+  display: inline-block;
   margin: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   max-width: 100%;
+}
+
+fieldset {
+  min-width: 0;
+  resize: none;
 }
 
 button {
@@ -2519,7 +2525,7 @@ select.input[multiple], .input-select[multiple] {
 
 .special-form .input-single-line,
 .special-form .input-multiple-line,
-.special-form .input-trumbowyg-editor {
+.special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg-editor {
   background: transparent;
   padding-left: 0;
   padding-right: 0;
@@ -3814,12 +3820,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .text-weight-900 {
   font-weight: 900;
-}
-
-*,
-*:before,
-*:after {
-  outline: 1px solid rgba(255, 0, 0, 0.5) !important;
 }
 
 /*! 
