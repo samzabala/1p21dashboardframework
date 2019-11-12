@@ -177,7 +177,6 @@ legend,
 select,
 option,
 button {
-  display: inline-block;
   margin: 0;
   font-family: inherit;
   font-size: inherit;
