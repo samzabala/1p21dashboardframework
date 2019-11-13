@@ -187,7 +187,7 @@ $prefix: '.input';
 				case: $input-text-transform,
 			));
 			display:inline-block;
-			background: $input-background;
+			background-color: $input-background;
 			border: $input-border-width solid $input-border-color;
 			padding-right: $calculated-input-gutter-x;
 			padding-left: $calculated-input-gutter-x;
@@ -212,7 +212,7 @@ $prefix: '.input';
 
 			.body-inverse & {
 				color:$input-color-inverse;
-				background: $input-background-inverse;
+				background-color: $input-background-inverse;
 			}
 
 			option {
@@ -226,15 +226,15 @@ $prefix: '.input';
 			}
 
 			&::-webkit-input-placeholder {
-				color: $input-placeholder-color;
+				color: inherit;
 			}
 			
 			&:-moz-placeholder {
-				color: $input-placeholder-color;
+				color: inherit;
 			}
 			
 			&:-ms-input-placeholder{
-				color: $input-placeholder-color;
+				color: inherit;
 			}
 			
 			&:focus::-webkit-input-placeholder {
@@ -317,13 +317,15 @@ $prefix: '.input';
 		}
 
 		@each $tag,$color in $calculated-brand-color-declarations {
-			@at-root #{$prefix}-label#{$prefix}-label-#{$tag} {
+			@at-root #{$prefix}-label#{$prefix}-label-#{$tag},
+			#{$prefix}-wrapper-#{$tag} #{$prefix}-label {
 				&,&:focus {
 					color: $color!important;
 				}
 			}
 	
-			@at-root &#{$prefix}-#{$tag}  {
+			@at-root &#{$prefix}-#{$tag},
+			#{$prefix}-wrapper-#{$tag} &  {
 	
 				&:not(:focus):not(.focus) {
 					box-shadow: $input-box-shadow-brand-basis $color;
@@ -410,6 +412,7 @@ $prefix: '.input';
 		));
 		margin-top:$input-info-margin-top;
 		display:block;
+
 		#{$prefix}-wrapper-horizontal & {
 			width: calc(100% - #{$input-label-horizontal-width});
 			align-self: flex-end;
@@ -444,6 +447,10 @@ $prefix: '.input';
 		#{$prefix}-wrapper & {
 			display: block;
 			flex: 1 1;
+			order: 2;
+		}
+		#{$prefix}-wrapper-horizontal#{$prefix}-wrapper-block & {
+			width: calc(100% - #{$input-label-horizontal-width});
 		}
 
 		@at-root &,
@@ -664,7 +671,7 @@ $prefix: '.input';
 	#{$prefix}-multiple-line,
 	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg,
 	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg-editor {
-		background:transparent;
+		background-color:transparent;
 		width:calc(100% + (#{$special-form-gutter-x} * 2));
 		max-width:none;
 		padding-left: $special-form-gutter-x;

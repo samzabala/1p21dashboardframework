@@ -1548,6 +1548,19 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 </p>
 
 
+
+<h2>Helper classes: font weight (note: only works properly if loaded font actually has that font weight. installing all font-weights is not recommended)</h2>
+<p class="font-weight-100">100: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-200">200: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-300">300: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-400">400: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-500">500: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-600">600: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-700">700: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-800">800: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+<p class="font-weight-900">900: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+
+
 <h2>Helper classes: text transform</h2>
 <p class="text-transform-uppercase">Uppercase</p>
 <p class="text-transform-lowercase">Lowercase</p>

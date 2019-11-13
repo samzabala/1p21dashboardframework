@@ -123,22 +123,28 @@
 
 		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
 			$(this).trumbowyg({
+				// btns: [
+				// 	['viewHTML'],
+				// 	['undo', 'redo'], // Only supported in Blink browsers
+				// 	['formatting'],
+				// 	['strong', 'em', 'del'],
+				// 	// ['superscript', 'subscript'],
+				// 	['link'],
+				// 	['insertImage'],
+				// 	// ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+				// 	['unorderedList', 'orderedList'],
+				// 	['horizontalRule'],
+				// 	['removeformat'],
+				// 	['fullscreen'],
+				// 	['upload']
+				// ],
 				btns: [
 					['viewHTML'],
-					['undo', 'redo'], // Only supported in Blink browsers
-					['formatting'],
-					['strong', 'em', 'del'],
-					// ['superscript', 'subscript'],
-					['link'],
+					['strong', 'em',],
 					['insertImage'],
-					// ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-					['unorderedList', 'orderedList'],
-					['horizontalRule'],
-					['removeformat'],
-					['fullscreen'],
-					['upload']
+					['link'],
+					['unorderedList', 'orderedList'],['upload']
 				],
-				// btns: [['strong', 'em',], ['insertImage'],['link'],['unorderedList', 'orderedList'],['upload']],
 				prefix: 'input-trumbowyg-',
 				// autogrow: true,
 				// autogrowOnEnter: true,

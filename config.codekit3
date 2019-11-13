@@ -150,6 +150,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/assets/scripts/trumbowyg.1p21.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/scripts/trumbowyg.1p21-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/scripts/trumbowyg.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -158,6 +169,17 @@
 		"oA": 1,
 		"oAP": "/assets/scripts/trumbowyg.min-min.js",
 		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/scripts/trumbowyg.upload.1p21.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/scripts/trumbowyg.upload.1p21-min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},

@@ -15,6 +15,11 @@ $calculated-gutter-hypotenus: to-unit( sqrt((strip-unit($tooltip-point) * strip-
 	&.open {
 		display: block;
 	}
+
+	.body-inverse & {
+
+		background: $popper-background-inverse;
+	}
 }
 
 
@@ -30,6 +35,11 @@ $prefix: '.tooltip';
 		background: $popper-background;
 		position: absolute;
 		z-index:-1;
+
+		.body-inverse & {
+			background: $popper-background-inverse;
+
+		}
 	}
 
 	&:after {

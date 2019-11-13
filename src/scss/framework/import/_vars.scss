@@ -268,9 +268,10 @@
 		$popper-gutter-x: $gutter-small !default;
 		$popper-gutter-y: $gutter-small !default;
 		$popper-border-radius: $border-radius-base !default;
-		$popper-box-shadow: 0px 0px 15px -12px $brand-color-base !default;
+		$popper-box-shadow: 0px 0px 15px -10px $brand-color-base !default;
 		$popper-arrow-box-shadow: 0px 0px 20px -5px $brand-color-base !default;
-		$popper-background: $brand-color-background !default;
+		$popper-background: $global-background !default;
+		$popper-background-inverse: $global-background-inverse !default;
 
 		$dropdown-width: 300px !default;
 
@@ -282,7 +283,11 @@
 			$progress-background-color-inverse: rgba($global-background-contrast-inverse,.01) !default;
 		$progress-border-radius: 20px !default;
 		$progress-background-stripe-color: $brand-color-neutral !default;
+		$progress-background-stripe-color-inverse: $brand-color-neutral !default;
 		$progress-transition-duration: $transition-duration-long * 4 !default;
+
+
+		$progress-bar-background-color: $brand-color-neutral !default;
 	
 
 	// THUMBNAIL
@@ -358,6 +363,7 @@
 		$input-color: inherit !default;
 			$input-color-inverse: inherit !default;
 		$input-placeholder-color: rgba($brand-color-base,.5) !default;
+			$input-placeholder-color-inverse: rgba($brand-color-background,.5) !default;
 		$input-background: none !default;
 			$input-background-inverse: none !default;
 		$input-line-height: 20px !default;
@@ -419,6 +425,11 @@
 			$trumbowyg-icon-color: $brand-color-neutral !default;
 				$trumbowyg-icon-color-hover: $brand-color-primary !default;
 			$trumbowyg-button-pane-height: 40px !default;
+
+
+		
+			$trumbowyg-transition-duration: $transition-duration-short;
+			$trumbowyg-transition-duration-slow: $transition-duration-base;
 
 	// BTN
 		$btn-height: 45px !default;
@@ -557,16 +568,8 @@
 
 //PLUGIN DEPENDENCIES
 	
-	//Trumbowyg
 
-		$light-color: #ecf0f1;
-		$dark-color: $brand-color-primary-light;
 		
-		$modal-submit-color: $brand-color-primary;
-		$modal-reset-color: $brand-color-background-alt;
-		
-		$transition-duration: $transition-duration-short;
-		$slow-transition-duration: $transition-duration-base;
 
 	//mixins shithole
 		$color-base: $brand-color-base;

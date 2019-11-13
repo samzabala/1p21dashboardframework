@@ -30,18 +30,19 @@ CUSTOM STYLES FOR TRUMBOWYG
 		svg {
 			width: 20px;
 			height: 100%;
-			fill: $trumbowyg-icon-color;
+			fill: currentColor;
 		}
 	}
+
 	&-box,
 	&-editor {
-
 		display: block;
 		position: relative;
 		margin: 0;
 	}
 	
-	&-editor {
+	&-editor,
+	&-textarea {
 		@extend %for-form-global;
 		@extend %for-form-input-and-group;
 		@extend %for-form-input;
@@ -49,7 +50,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 	}
 	
 	&-box#{$prefix}-fullscreen {
-		background: $global-background;
 		border-radius:0;
 		box-shadow:none !important;
 
@@ -65,12 +65,13 @@ CUSTOM STYLES FOR TRUMBOWYG
 		outline: none;
 		overflow: auto;
 		user-select: text; // Avoid issues on iOS
+		font-size: 1rem;
 		line-height: $calculated-body-line-height;
 		// min-height: rem()
 		min-height: 500px;
 	
 		&#{$prefix}-autogrow-on-enter {
-			transition: height $slow-transition-duration ease-out;
+			transition: height $trumbowyg-transition-duration-slow ease-out;
 		}
 
 		&:focus,&.focus {
@@ -78,7 +79,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 
 		#{$prefix}-box#{$prefix}-fullscreen & {
-			background: $global-background;
 			border-radius:0;
 			box-shadow:none !important;
 			padding-left: $gutter-small;
@@ -90,24 +90,16 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 	}
 	
-	&-box-blur #{$prefix}-editor {
-		*,
-		&::before {
-			color: transparent !important;
-			text-shadow: 0 0 7px $brand-color-base-alt;
-	
-			@media screen and (min-width: 0 \0) {
-				color: rgba($brand-color-neutral, 0.6) !important;
-			}
-			@supports (-ms-accelerator:true) {
-				color: rgba($brand-color-neutral, 0.6) !important;
-			}
-		}
-		img,
-		hr {
-			opacity: 0.2;
-		}
-	}
+	// &-box-blur #{$prefix}-editor {
+	// 	*,
+	// 	&::before {
+	// 		opacity: .2;
+	// 	}
+	// 	img,
+	// 	hr {
+	// 		opacity: 0.2;
+	// 	}
+	// }
 	
 	&-textarea {
 		position: relative;
@@ -122,7 +114,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 			width: 25%;
 			min-height: 0 !important;
 			padding: 0 !important;
-			background: none;
+			background: none!important;
 			opacity: 0 !important;
 			flex: 0 0 auto!important;
 		}
@@ -131,7 +123,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 	&-box#{$prefix}-editor-hidden {
 		#{$prefix}-textarea {
 			display: block;
-			margin-bottom: 1px;
 		}
 		#{$prefix}-editor {
 			display: none;
@@ -161,10 +152,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 	
 		#{$prefix}-button-group {
 			display: inline-block;
-	
-			#{$prefix}-fullscreen-button svg {
-				color: transparent;
-			}
 		}
 	
 		button {
@@ -172,14 +159,14 @@ CUSTOM STYLES FOR TRUMBOWYG
 			position: relative;
 			width: $trumbowyg-button-pane-height;
 			height: $trumbowyg-button-pane-height;
-			padding: 1px 6px !important;
+			color:$trumbowyg-icon-color;
 			margin-bottom: 1px;
 			overflow: hidden;
 			border: none;
 			cursor: pointer;
 			background: none;
 			vertical-align: middle;
-			transition: background-color $transition-duration, opacity $transition-duration;
+			transition: background-color $trumbowyg-transition-duration, opacity $trumbowyg-transition-duration;
 	
 			&#{$prefix}-textual-button {
 				width: auto;
@@ -197,17 +184,15 @@ CUSTOM STYLES FOR TRUMBOWYG
 		&#{$prefix}-disable,
 		#{$prefix}-disabled & {
 			#{$prefix}-button-group::before {
-				background: darken($light-color, 3%);
+				// background: darken($light-color, 3%);
+				opacity: $global-disabled-opacity;
 			}
 		}
 	
 		button:not(#{$prefix}-disable):hover,
 		button:not(#{$prefix}-disable):focus,
 		button#{$prefix}-active {
-			svg {
-				
-			fill: $trumbowyg-icon-color-hover;
-			}
+			color: $trumbowyg-icon-color-hover;
 			outline: none;
 		}
 	
@@ -246,7 +231,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 		overflow-y: auto;
 		overflow-x: hidden;
 		white-space: nowrap;
-		border: 1px solid $light-color;
 		padding: 5px 0;
 		border-top: none;
 		background: #FFF;
@@ -262,17 +246,12 @@ CUSTOM STYLES FOR TRUMBOWYG
 			text-decoration: none;
 			background: #FFF;
 			padding: 0 20px 0 10px;
-			color: #333 !important;
+			color: inherit;
 			border: none;
 			cursor: pointer;
 			text-align: left;
 			font-size: 15px;
-			transition: all $transition-duration;
-	
-			&:hover,
-			&:focus {
-				background: $light-color;
-			}
+			transition: all $trumbowyg-transition-duration;
 	
 			svg {
 				float: left;
@@ -281,27 +260,33 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 	}
 	
-	/* Modal box */
-	&-modal {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		max-width: $trumbowyg-modal-max-width;
-		width: 100%;
-		height: 350px;
-		z-index: 12;
-		overflow: hidden;
-		backface-visibility: hidden;
+	/* Modal box but i make it overlay */
+	&-modal { 
+		position: fixed;
+		top: 0!important;
+		left: 0!important;
+		right: 0!important;
+		bottom: 0!important;
+		margin: auto;
+		width: 100vw!important;
+		height: 100vh!important;
+		padding: $gutter-base;
+		overflow-y: scroll;
+		background: rgba($brand-color-base,.2);
+		/* height: 350px; */
+		z-index: 99999;
+
+		@include br(sm-max) {
+			padding: $gutter-small;
+		}
 	}
 	
 	&-modal-box {
 		@extend %modal;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		max-width: 500px;
-		width: calc(100% - 20px);
+		position:static;
+		margin: auto;
+		max-width: $trumbowyg-modal-max-width;
+		width: 100%;
 		padding: $gutter-base $gutter-small;
 		z-index: 1;
 		background-color: $global-background;
@@ -311,80 +296,54 @@ CUSTOM STYLES FOR TRUMBOWYG
 		#{$prefix}-modal-title {
 			@extend .module-title;
 		}
-	
-		#{$prefix}-progress {
-			width: 100%;
-			height: 3px;
-			position: absolute;
-			top: 58px;
-	
-			#{$prefix}-progress-bar {
-				background: #2BC06A;
-				width: 0;
-				height: 100%;
-				transition: width $transition-duration linear;
-			}
-		}
-	
 		label {
-			display: block;
-			position: relative;
-			margin: 15px 12px;
-			height: 29px;
-			line-height: 29px;
-			overflow: hidden;
+			// display: block;
+			// position: relative;
+			// margin: $input-gutter-x 0;
+			// height: $calculated-input-height;
+			// line-height: $calculated-input-height;
+			// overflow: hidden;
 	
 			#{$prefix}-input-infos {
-				display: block;
-				text-align: left;
-				height: 25px;
-				line-height: 25px;
-				transition: all 150ms;
+				// display: block;
+				// text-align: left;
+				// height: $calculated-input-height;
+				// line-height: $calculated-input-height;
+				// transition: all 150ms;
 	
-				span {
-					display: block;
-					border: 1px solid #DEDEDE;
-					padding: 0 7px;
-					width: 150px;
-				}
-				span#{$prefix}-msg-error {
-					color: #e74c3c;
-				}
-			}
-	
-			&#{$prefix}-input-error {
-				input,
-				textarea {
-					border: 1px solid #e74c3c;
-				}
-	
-				#{$prefix}-input-infos {
-					margin-top: -27px;
-				}
+				// span {
+				// 	display: block;
+				// 	border: 1px solid #DEDEDE;
+				// 	padding: 0 7px;
+				// 	width: 150px;
+				// }
+				// span#{$prefix}-msg-error {
+				// 	color: #e74c3c;
+				// }
 			}
 	
 			input {
-				position: absolute;
-				top: 0;
-				right: 0;
-				height: 27px;
-				line-height: 27px;
-				border: 1px solid #DEDEDE;
-				background: #fff;
-				font-size: 14px;
-				max-width: 330px;
-				width: 70%;
-				padding: 0 7px;
-				transition: all $transition-duration;
+				// position: absolute;
+				// top: 0;
+				// right: 0;
+				// height: 27px;
+				// line-height: 27px;
+				// border: 1px solid #DEDEDE;
+				// background: #fff;
+				// font-size: 14px;
+				// max-width: 330px;
+				// width: 70%;
+				// padding: 0 7px;
+				// transition: all $trumbowyg-transition-duration;
 	
-				&:hover,
-				&:focus {
-					outline: none;
-					border: 1px solid #95a5a6;
-				}
-				&:focus {
-					background: lighten($light-color, 5%);
-				}
+				// &:hover,
+				// &:focus {
+				// 	outline: none;
+				// 	border: 1px solid #95a5a6;
+				// }
+				// &:focus {
+				// 	// background: lighten($light-color, 5%);
+				// }
 			}
 	
 			input[type="checkbox"]{
@@ -469,6 +428,12 @@ CUSTOM STYLES FOR TRUMBOWYG
 		margin: 0;
 		padding: 0;
 		z-index: 99999;
+		background: $global-background;
+
+		@at-root #{$prefix}-dark,
+		.body-inverse & {
+			background: $global-background-inverse;
+		}
 	
 		&#{$prefix}-box,
 		#{$prefix}-editor {
@@ -482,9 +447,16 @@ CUSTOM STYLES FOR TRUMBOWYG
 		#{$prefix}-overlay {
 			height: 100% !important;
 		}
-		#{$prefix}-button-group #{$prefix}-fullscreen-button svg {
-			color: $dark-color;
+
+	
+		&-button svg  {
+			fill: $trumbowyg-icon-color;
+			color: transparent;
+		}
+
+		#{$prefix}-fullscreen-button svg  {
 			fill: transparent;
+			color: currentColor;
 		}
 	}
 	
@@ -603,176 +575,157 @@ CUSTOM STYLES FOR TRUMBOWYG
 		// }
 	}
 	
-	/*
-	* Dark theme
-	*/
-	.body-inverse &,
-	&-dark {
-		#{$prefix}-textarea {
-			background: #111;
-			color: #ddd;
-		}
-		#{$prefix}-box {
-			border: 1px solid lighten($dark-color, 7%);
+	// /*
+	// * Dark theme
+	// */
+	// .body-inverse &,
+	// &-dark {
+	// 	#{$prefix}-textarea {
+	// 		background: #111;
+	// 		color: #ddd;
+	// 	}
+	// 	#{$prefix}-box {
+	// 		// border: 1px solid lighten($dark-color, 7%);
 	
-			&#{$prefix}-fullscreen {
-				background: #111;
-			}
-			&#{$prefix}-box-blur #{$prefix}-editor {
-				*,
-				&::before {
-					text-shadow: 0 0 7px #ccc;
+	// 		&#{$prefix}-fullscreen {
+	// 			background: #111;
+	// 		}
+	// 		&#{$prefix}-box-blur #{$prefix}-editor {
+	// 			*,
+	// 			&::before {
+	// 				text-shadow: 0 0 7px #ccc;
 	
-					@media screen and (min-width: 0 \0
-					) {
-						color: rgba(20, 20, 20, 0.6) !important;
-					}
-					@supports (-ms-accelerator:true) {
-						color: rgba(20, 20, 20, 0.6) !important;
-					}
-				}
-			}
+	// 				@media screen and (min-width: 0 \0
+	// 				) {
+	// 					color: rgba(20, 20, 20, 0.6) !important;
+	// 				}
+	// 				@supports (-ms-accelerator:true) {
+	// 					color: rgba(20, 20, 20, 0.6) !important;
+	// 				}
+	// 			}
+	// 		}
 	
-			svg {
-				fill: $light-color;
-				color: $light-color;
-			}
-		}
-		#{$prefix}-button-pane {
-			background-color: $dark-color;
-			border-bottom-color: lighten($dark-color, 7%);
+	// 		svg {
+	// 			// fill: $light-color;
+	// 			// color: $light-color;
+	// 		}
+	// 	}
+	// 	#{$prefix}-button-pane {
+			
 	
-			&::after {
-				background: lighten($dark-color, 7%);
-			}
+	// 		&#{$prefix}-disable {
+	// 			#{$prefix}-button-group::after {
+	// 				// background-color: lighten($dark-color, 3%);
+	// 			}
+	// 		}
 	
-			#{$prefix}-button-group:not(:empty) {
-				&::after {
-					background-color: lighten($dark-color, 7%);
-				}
-				#{$prefix}-fullscreen-button svg {
-					color: transparent;
-				}
-			}
+	// 		button:not(#{$prefix}-disable):hover,
+	// 		button:not(#{$prefix}-disable):focus,
+	// 		button#{$prefix}-active {
+	// 			background-color: #333;
+	// 		}
 	
-			&#{$prefix}-disable {
-				#{$prefix}-button-group::after {
-					background-color: lighten($dark-color, 3%);
-				}
-			}
+	// 		#{$prefix}-open-dropdown::after {
+	// 			border-top-color: #fff;
+	// 		}
+	// 	}
+		
 	
-			button:not(#{$prefix}-disable):hover,
-			button:not(#{$prefix}-disable):focus,
-			button#{$prefix}-active {
-				background-color: #333;
-			}
+	// 	#{$prefix}-dropdown {
+	// 		// border-color: $dark-color;
+	// 		background: #333;
+	// 		box-shadow: rgba(0, 0, 0, .3) 0 2px 3px;
 	
-			#{$prefix}-open-dropdown::after {
-				border-top-color: #fff;
-			}
-		}
-		#{$prefix}-fullscreen {
-			#{$prefix}-button-pane #{$prefix}-button-group:not(:empty) #{$prefix}-fullscreen-button svg {
-				color: $light-color;
-				fill: transparent;
-			}
-		}
+	// 		button {
+	// 			background: #333;
+	// 			color: #fff !important;
 	
-		#{$prefix}-dropdown {
-			border-color: $dark-color;
-			background: #333;
-			box-shadow: rgba(0, 0, 0, .3) 0 2px 3px;
+	// 			&:hover,
+	// 			&:focus {
+	// 				// background: $dark-color;
+	// 			}
+	// 		}
+	// 	}
 	
-			button {
-				background: #333;
-				color: #fff !important;
+	// 	// Modal box
+	// 	#{$prefix}-modal-box {
+	// 		// background-color: $dark-color;
 	
-				&:hover,
-				&:focus {
-					background: $dark-color;
-				}
-			}
-		}
+	// 		#{$prefix}-modal-title {
+	// 			border-bottom: 1px solid #555;
+	// 			color: #fff;
+	// 			// background: lighten($dark-color, 10%);
+	// 		}
 	
-		// Modal box
-		#{$prefix}-modal-box {
-			background-color: $dark-color;
+	// 		label {
+	// 			display: block;
+	// 			position: relative;
+	// 			margin: 15px 12px;
+	// 			height: 27px;
+	// 			line-height: 27px;
+	// 			overflow: hidden;
 	
-			#{$prefix}-modal-title {
-				border-bottom: 1px solid #555;
-				color: #fff;
-				background: lighten($dark-color, 10%);
-			}
+	// 			#{$prefix}-input-infos {
+	// 				span {
+	// 					color: #eee;
+	// 					// background-color: lighten($dark-color, 5%);
+	// 					// border-color: $dark-color;
+	// 				}
+	// 				span#{$prefix}-msg-error {
+	// 					color: #e74c3c;
+	// 				}
+	// 			}
 	
-			label {
-				display: block;
-				position: relative;
-				margin: 15px 12px;
-				height: 27px;
-				line-height: 27px;
-				overflow: hidden;
+	// 			&#{$prefix}-input-error {
+	// 				input,
+	// 				textarea {
+	// 					border-color: #e74c3c;
+	// 				}
+	// 			}
 	
-				#{$prefix}-input-infos {
-					span {
-						color: #eee;
-						background-color: lighten($dark-color, 5%);
-						border-color: $dark-color;
-					}
-					span#{$prefix}-msg-error {
-						color: #e74c3c;
-					}
-				}
+	// 			input {
+	// 				// border-color: $dark-color;
+	// 				color: #eee;
+	// 				background: #333;
 	
-				&#{$prefix}-input-error {
-					input,
-					textarea {
-						border-color: #e74c3c;
-					}
-				}
+	// 				&:hover,
+	// 				&:focus {
+	// 					// border-color: lighten($dark-color, 25%);
+	// 				}
+	// 				&:focus {
+	// 					// background-color: lighten($dark-color, 5%);
+	// 				}
+	// 			}
+	// 		}
 	
-				input {
-					border-color: $dark-color;
-					color: #eee;
-					background: #333;
+	// 		#{$prefix}-modal-button {
+	// 			&#{$prefix}-modal-submit {
+	// 				// background: darken($modal-submit-color, 20%);
 	
-					&:hover,
-					&:focus {
-						border-color: lighten($dark-color, 25%);
-					}
-					&:focus {
-						background-color: lighten($dark-color, 5%);
-					}
-				}
-			}
+	// 				// &:hover,
+	// 				// &:focus {
+	// 				// 	background: darken($modal-submit-color, 10%);
+	// 				// }
+	// 				// &:active {
+	// 				// 	background: darken($modal-submit-color, 25%);
+	// 				// }
+	// 			}
+	// 			&#{$prefix}-modal-reset {
+	// 				// background: #333;
+	// 				// color: #ccc;
 	
-			#{$prefix}-modal-button {
-				&#{$prefix}-modal-submit {
-					background: darken($modal-submit-color, 20%);
-	
-					&:hover,
-					&:focus {
-						background: darken($modal-submit-color, 10%);
-					}
-					&:active {
-						background: darken($modal-submit-color, 25%);
-					}
-				}
-				&#{$prefix}-modal-reset {
-					background: #333;
-					color: #ccc;
-	
-					&:hover,
-					&:focus {
-						background: #444;
-					}
-					&:active {
-						background: #111;
-					}
-				}
-			}
-		}
-		#{$prefix}-overlay {
-			background-color: rgba(15, 15, 15, 0.6);
-		}
-	}
+	// 				// &:hover,
+	// 				// &:focus {
+	// 				// 	background: #444;
+	// 				// }
+	// 				// &:active {
+	// 				// 	background: #111;
+	// 				// }
+	// 			}
+	// 		}
+	// 	}
+	// 	#{$prefix}-overlay {
+	// 		background-color: rgba(15, 15, 15, 0.6);
+	// 	}
+	// }
  }

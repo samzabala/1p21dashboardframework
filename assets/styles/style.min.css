@@ -462,6 +462,14 @@ var {
   font-family: Times, serif;
 }
 
+hr {
+  display: block;
+  border: 0;
+  border-top: 1px solid;
+  height: 0;
+  opacity: .2;
+}
+
 /*** IMAGES ***/
 /* LAZYLOAD */
 body:not(.lazy-initialized) .lazy {
@@ -1289,6 +1297,12 @@ table.table-large .table-cell {
 
 .body-inverse .progress {
   background-color: rgba(51, 51, 51, 0.01);
+  background: -moz-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(51, 51, 51, 0.01) 1px,  rgba(51, 51, 51, 0.01) 4px);
+  /* FF3.6-15 */
+  background: -webkit-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(51, 51, 51, 0.01) 1px,  rgba(51, 51, 51, 0.01) 4px);
+  /* Chrome10-25,Safari5.1-6 */
+  background: repeating-linear-gradient(135deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(51, 51, 51, 0.01) 1px,  rgba(51, 51, 51, 0.01) 4px);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress, .progress-bar {
@@ -1314,6 +1328,7 @@ table.table-large .table-cell {
 
 .progress-bar {
   float: left;
+  background-color: #8d8d8d;
 }
 
 /*** BADGE ***/
@@ -2119,7 +2134,7 @@ table.table-large .table-cell {
 
 /*** SET ***/
 /* input clasees */
-.input-label, .input-single-line, .input-multiple-line, .input-trumbowyg, .input-trumbowyg-editor {
+.input-label, .input-single-line, .input-multiple-line, .input-trumbowyg, .input-trumbowyg-editor, .input-trumbowyg-textarea {
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%;
 }
@@ -2130,18 +2145,18 @@ table.table-large .table-cell {
 }
 
 .input-single-line,
-.input-group, .input-multiple-line, .input-trumbowyg, .input-trumbowyg-editor {
+.input-group, .input-multiple-line, .input-trumbowyg, .input-trumbowyg-editor, .input-trumbowyg-textarea {
   border-radius: 10px;
   box-shadow: 0px 3px 15px -10px #000000;
 }
 
 .input-no-radius.input-single-line,
-.input-no-radius.input-group, .input-no-radius.input-multiple-line, .input-no-radius.input-trumbowyg, .input-no-radius.input-trumbowyg-editor {
+.input-no-radius.input-group, .input-no-radius.input-multiple-line, .input-no-radius.input-trumbowyg, .input-no-radius.input-trumbowyg-editor, .input-no-radius.input-trumbowyg-textarea {
   border-radius: 0 !important;
 }
 
 .nav .input-single-line,
-.nav .input-group, .nav .input-multiple-line, .nav .input-trumbowyg, .nav .input-trumbowyg-editor {
+.nav .input-group, .nav .input-multiple-line, .nav .input-trumbowyg, .nav .input-trumbowyg-editor, .nav .input-trumbowyg-textarea {
   border-radius: 0 !important;
 }
 
@@ -2192,7 +2207,7 @@ table.table-large .table-cell {
   box-shadow: 0px 0 5px 0px #0480fe;
 }
 
-.input-single-line, .input-multiple-line, .input[multiple], .input-trumbowyg, .input-trumbowyg-editor {
+.input-single-line, .input-multiple-line, .input[multiple], .input-trumbowyg, .input-trumbowyg-editor, .input-trumbowyg-textarea {
   -webkit-appearance: none;
   appearance: none;
   font-size: 1rem;
@@ -2205,7 +2220,7 @@ table.table-large .table-cell {
   text-align: inherit;
   font-style: normal;
   display: inline-block;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid transparent;
   padding-right: 1.25em;
   padding-left: 1.25em;
@@ -2213,84 +2228,86 @@ table.table-large .table-cell {
   padding-bottom: calc(  (  (2.8125rem - (1px * 2)) - (1em * 1.25) ) * .5);
 }
 
-.input-large.input-single-line, .input-large.input-multiple-line, .input-large.input[multiple], .input-large.input-trumbowyg, .input-large.input-trumbowyg-editor,
+.input-large.input-single-line, .input-large.input-multiple-line, .input-large.input[multiple], .input-large.input-trumbowyg, .input-large.input-trumbowyg-editor, .input-large.input-trumbowyg-textarea,
 .input-group.input-group-large .input-single-line,
 .input-group.input-group-large .input-multiple-line,
 .input-group.input-group-large .input[multiple],
 .input-group.input-group-large .input-trumbowyg,
-.input-group.input-group-large .input-trumbowyg-editor {
+.input-group.input-group-large .input-trumbowyg-editor,
+.input-group.input-group-large .input-trumbowyg-textarea {
   font-size: 1.5625rem;
   padding-top: calc(  (  (3.125rem - (1px * 2)) - (1em * 1.25) ) * .5);
   padding-bottom: calc(  (  (3.125rem - (1px * 2)) - (1em * 1.25) ) * .5);
   border-radius: 10px;
 }
 
-.input-small.input-single-line, .input-small.input-multiple-line, .input-small.input[multiple], .input-small.input-trumbowyg, .input-small.input-trumbowyg-editor,
+.input-small.input-single-line, .input-small.input-multiple-line, .input-small.input[multiple], .input-small.input-trumbowyg, .input-small.input-trumbowyg-editor, .input-small.input-trumbowyg-textarea,
 .input-group.input-group-small .input-single-line,
 .input-group.input-group-small .input-multiple-line,
 .input-group.input-group-small .input[multiple],
 .input-group.input-group-small .input-trumbowyg,
-.input-group.input-group-small .input-trumbowyg-editor {
+.input-group.input-group-small .input-trumbowyg-editor,
+.input-group.input-group-small .input-trumbowyg-textarea {
   font-size: 0.875rem;
   padding-top: calc(  (  (2.1875rem - (1px * 2)) - (1em * 1.25) ) * .5);
   padding-bottom: calc(  (  (2.1875rem - (1px * 2)) - (1em * 1.25) ) * .5);
   border-radius: 10px;
 }
 
-.body-inverse .input-single-line, .body-inverse .input-multiple-line, .body-inverse .input[multiple], .body-inverse .input-trumbowyg, .body-inverse .input-trumbowyg-editor {
+.body-inverse .input-single-line, .body-inverse .input-multiple-line, .body-inverse .input[multiple], .body-inverse .input-trumbowyg, .body-inverse .input-trumbowyg-editor, .body-inverse .input-trumbowyg-textarea {
   color: inherit;
-  background: #333333;
+  background-color: #333333;
 }
 
-.input-single-line option, .input-multiple-line option, .input[multiple] option, .input-trumbowyg option, .input-trumbowyg-editor option {
+.input-single-line option, .input-multiple-line option, .input[multiple] option, .input-trumbowyg option, .input-trumbowyg-editor option, .input-trumbowyg-textarea option {
   font: inherit;
 }
 
-.input-group .input-single-line, .input-group .input-multiple-line, .input-group .input[multiple], .input-group .input-trumbowyg, .input-group .input-trumbowyg-editor {
+.input-group .input-single-line, .input-group .input-multiple-line, .input-group .input[multiple], .input-group .input-trumbowyg, .input-group .input-trumbowyg-editor, .input-group .input-trumbowyg-textarea {
   box-shadow: none;
 }
 
-.input-single-line::-webkit-input-placeholder, .input-multiple-line::-webkit-input-placeholder, .input[multiple]::-webkit-input-placeholder, .input-trumbowyg::-webkit-input-placeholder, .input-trumbowyg-editor::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+.input-single-line::-webkit-input-placeholder, .input-multiple-line::-webkit-input-placeholder, .input[multiple]::-webkit-input-placeholder, .input-trumbowyg::-webkit-input-placeholder, .input-trumbowyg-editor::-webkit-input-placeholder, .input-trumbowyg-textarea::-webkit-input-placeholder {
+  color: inherit;
 }
 
-.input-single-line:-moz-placeholder, .input-multiple-line:-moz-placeholder, .input[multiple]:-moz-placeholder, .input-trumbowyg:-moz-placeholder, .input-trumbowyg-editor:-moz-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+.input-single-line:-moz-placeholder, .input-multiple-line:-moz-placeholder, .input[multiple]:-moz-placeholder, .input-trumbowyg:-moz-placeholder, .input-trumbowyg-editor:-moz-placeholder, .input-trumbowyg-textarea:-moz-placeholder {
+  color: inherit;
 }
 
-.input-single-line:-ms-input-placeholder, .input-multiple-line:-ms-input-placeholder, .input[multiple]:-ms-input-placeholder, .input-trumbowyg:-ms-input-placeholder, .input-trumbowyg-editor:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.5);
+.input-single-line:-ms-input-placeholder, .input-multiple-line:-ms-input-placeholder, .input[multiple]:-ms-input-placeholder, .input-trumbowyg:-ms-input-placeholder, .input-trumbowyg-editor:-ms-input-placeholder, .input-trumbowyg-textarea:-ms-input-placeholder {
+  color: inherit;
 }
 
-.input-single-line:focus::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input[multiple]:focus::-webkit-input-placeholder, .input-trumbowyg:focus::-webkit-input-placeholder, .input-trumbowyg-editor:focus::-webkit-input-placeholder {
+.input-single-line:focus::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input[multiple]:focus::-webkit-input-placeholder, .input-trumbowyg:focus::-webkit-input-placeholder, .input-trumbowyg-editor:focus::-webkit-input-placeholder, .input-trumbowyg-textarea:focus::-webkit-input-placeholder {
   color: transparent !important;
 }
 
-.input-single-line:focus:-moz-placeholder, .input-multiple-line:focus:-moz-placeholder, .input[multiple]:focus:-moz-placeholder, .input-trumbowyg:focus:-moz-placeholder, .input-trumbowyg-editor:focus:-moz-placeholder {
+.input-single-line:focus:-moz-placeholder, .input-multiple-line:focus:-moz-placeholder, .input[multiple]:focus:-moz-placeholder, .input-trumbowyg:focus:-moz-placeholder, .input-trumbowyg-editor:focus:-moz-placeholder, .input-trumbowyg-textarea:focus:-moz-placeholder {
   color: transparent !important;
 }
 
-.input-single-line:focus:-ms-input-placeholder, .input-multiple-line:focus:-ms-input-placeholder, .input[multiple]:focus:-ms-input-placeholder, .input-trumbowyg:focus:-ms-input-placeholder, .input-trumbowyg-editor:focus:-ms-input-placeholder {
+.input-single-line:focus:-ms-input-placeholder, .input-multiple-line:focus:-ms-input-placeholder, .input[multiple]:focus:-ms-input-placeholder, .input-trumbowyg:focus:-ms-input-placeholder, .input-trumbowyg-editor:focus:-ms-input-placeholder, .input-trumbowyg-textarea:focus:-ms-input-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input[multiple]::-webkit-input-placeholder, .focus.input-trumbowyg::-webkit-input-placeholder, .focus.input-trumbowyg-editor::-webkit-input-placeholder {
+.focus.input-single-line::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input[multiple]::-webkit-input-placeholder, .focus.input-trumbowyg::-webkit-input-placeholder, .focus.input-trumbowyg-editor::-webkit-input-placeholder, .focus.input-trumbowyg-textarea::-webkit-input-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line:-moz-placeholder, .focus.input-multiple-line:-moz-placeholder, .focus.input[multiple]:-moz-placeholder, .focus.input-trumbowyg:-moz-placeholder, .focus.input-trumbowyg-editor:-moz-placeholder {
+.focus.input-single-line:-moz-placeholder, .focus.input-multiple-line:-moz-placeholder, .focus.input[multiple]:-moz-placeholder, .focus.input-trumbowyg:-moz-placeholder, .focus.input-trumbowyg-editor:-moz-placeholder, .focus.input-trumbowyg-textarea:-moz-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line:-ms-input-placeholder, .focus.input-multiple-line:-ms-input-placeholder, .focus.input[multiple]:-ms-input-placeholder, .focus.input-trumbowyg:-ms-input-placeholder, .focus.input-trumbowyg-editor:-ms-input-placeholder {
+.focus.input-single-line:-ms-input-placeholder, .focus.input-multiple-line:-ms-input-placeholder, .focus.input[multiple]:-ms-input-placeholder, .focus.input-trumbowyg:-ms-input-placeholder, .focus.input-trumbowyg-editor:-ms-input-placeholder, .focus.input-trumbowyg-textarea:-ms-input-placeholder {
   color: transparent !important;
 }
 
-.input-disabled.input-single-line, .input-disabled.input-multiple-line, .input-disabled.input[multiple], .input-disabled.input-trumbowyg, .input-disabled.input-trumbowyg-editor, .input-disabled.input-single-line:focus, .input-disabled.input-multiple-line:focus, .input-disabled.input[multiple]:focus, .input-disabled.input-trumbowyg:focus, .input-disabled.input-trumbowyg-editor:focus, .input-disabled.focus.input-single-line, .input-disabled.focus.input-multiple-line, .input-disabled.focus.input[multiple], .input-disabled.focus.input-trumbowyg, .input-disabled.focus.input-trumbowyg-editor, .input-single-line[disabled], .input-multiple-line[disabled], .input[disabled][multiple], .input-trumbowyg[disabled], .input-trumbowyg-editor[disabled], .input-single-line[disabled]:focus, .input-multiple-line[disabled]:focus, .input[disabled][multiple]:focus, .input-trumbowyg[disabled]:focus, .input-trumbowyg-editor[disabled]:focus, [disabled].focus.input-single-line, [disabled].focus.input-multiple-line, [disabled].focus.input[multiple], [disabled].focus.input-trumbowyg, [disabled].focus.input-trumbowyg-editor {
+.input-disabled.input-single-line, .input-disabled.input-multiple-line, .input-disabled.input[multiple], .input-disabled.input-trumbowyg, .input-disabled.input-trumbowyg-editor, .input-disabled.input-trumbowyg-textarea, .input-disabled.input-single-line:focus, .input-disabled.input-multiple-line:focus, .input-disabled.input[multiple]:focus, .input-disabled.input-trumbowyg:focus, .input-disabled.input-trumbowyg-editor:focus, .input-disabled.input-trumbowyg-textarea:focus, .input-disabled.focus.input-single-line, .input-disabled.focus.input-multiple-line, .input-disabled.focus.input[multiple], .input-disabled.focus.input-trumbowyg, .input-disabled.focus.input-trumbowyg-editor, .input-disabled.focus.input-trumbowyg-textarea, .input-single-line[disabled], .input-multiple-line[disabled], .input[disabled][multiple], .input-trumbowyg[disabled], .input-trumbowyg-editor[disabled], .input-trumbowyg-textarea[disabled], .input-single-line[disabled]:focus, .input-multiple-line[disabled]:focus, .input[disabled][multiple]:focus, .input-trumbowyg[disabled]:focus, .input-trumbowyg-editor[disabled]:focus, .input-trumbowyg-textarea[disabled]:focus, [disabled].focus.input-single-line, [disabled].focus.input-multiple-line, [disabled].focus.input[multiple], [disabled].focus.input-trumbowyg, [disabled].focus.input-trumbowyg-editor, [disabled].focus.input-trumbowyg-textarea {
   border-color: transparent;
 }
 
-.input-single-line:focus, .input-multiple-line:focus, .input[multiple]:focus, .input-trumbowyg:focus, .input-trumbowyg-editor:focus, .focus.input-single-line, .focus.input-multiple-line, .focus.input[multiple], .focus.input-trumbowyg, .focus.input-trumbowyg-editor {
+.input-single-line:focus, .input-multiple-line:focus, .input[multiple]:focus, .input-trumbowyg:focus, .input-trumbowyg-editor:focus, .input-trumbowyg-textarea:focus, .focus.input-single-line, .focus.input-multiple-line, .focus.input[multiple], .focus.input-trumbowyg, .focus.input-trumbowyg-editor, .focus.input-trumbowyg-textarea {
   box-shadow: 0px 0 5px 0px #0480fe;
   border-color: rgba(141, 141, 141, 0.2);
 }
@@ -2324,87 +2341,269 @@ table.table-large .table-cell {
   margin-left: -1.25em;
 }
 
-.input-label.input-label-base, .input-label.input-label-base:focus {
+.input-label.input-label-base, .input-label.input-label-base:focus,
+.input-wrapper-base .input-label,
+.input-wrapper-base .input-label:focus {
   color: #000000 !important;
 }
 
-.input-base.input-single-line:not(:focus):not(.focus), .input-base.input-multiple-line:not(:focus):not(.focus), .input-base.input[multiple]:not(:focus):not(.focus), .input-base.input-trumbowyg:not(:focus):not(.focus), .input-base.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-base.input-single-line:not(:focus):not(.focus), .input-base.input-multiple-line:not(:focus):not(.focus), .input-base.input[multiple]:not(:focus):not(.focus), .input-base.input-trumbowyg:not(:focus):not(.focus), .input-base.input-trumbowyg-editor:not(:focus):not(.focus), .input-base.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-base .input-single-line:not(:focus):not(.focus),
+.input-wrapper-base .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-base .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-base .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-base .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-base .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #000000;
 }
 
-.input-base.input-single-line, .input-base.input-multiple-line, .input-base.input[multiple], .input-base.input-trumbowyg, .input-base.input-trumbowyg-editor, .input-base.input-single-line:focus, .input-base.input-multiple-line:focus, .input-base.input[multiple]:focus, .input-base.input-trumbowyg:focus, .input-base.input-trumbowyg-editor:focus, .input-base.focus.input-single-line, .input-base.focus.input-multiple-line, .input-base.focus.input[multiple], .input-base.focus.input-trumbowyg, .input-base.focus.input-trumbowyg-editor {
+.input-base.input-single-line, .input-base.input-multiple-line, .input-base.input[multiple], .input-base.input-trumbowyg, .input-base.input-trumbowyg-editor, .input-base.input-trumbowyg-textarea, .input-base.input-single-line:focus, .input-base.input-multiple-line:focus, .input-base.input[multiple]:focus, .input-base.input-trumbowyg:focus, .input-base.input-trumbowyg-editor:focus, .input-base.input-trumbowyg-textarea:focus, .input-base.focus.input-single-line, .input-base.focus.input-multiple-line, .input-base.focus.input[multiple], .input-base.focus.input-trumbowyg, .input-base.focus.input-trumbowyg-editor, .input-base.focus.input-trumbowyg-textarea,
+.input-wrapper-base .input-single-line,
+.input-wrapper-base .input-multiple-line,
+.input-wrapper-base .input[multiple],
+.input-wrapper-base .input-trumbowyg,
+.input-wrapper-base .input-trumbowyg-editor,
+.input-wrapper-base .input-trumbowyg-textarea,
+.input-wrapper-base .input-single-line:focus,
+.input-wrapper-base .input-multiple-line:focus,
+.input-wrapper-base .input[multiple]:focus,
+.input-wrapper-base .input-trumbowyg:focus,
+.input-wrapper-base .input-trumbowyg-editor:focus,
+.input-wrapper-base .input-trumbowyg-textarea:focus,
+.input-wrapper-base .focus.input-single-line,
+.input-wrapper-base .focus.input-multiple-line,
+.input-wrapper-base .focus.input[multiple],
+.input-wrapper-base .focus.input-trumbowyg,
+.input-wrapper-base .focus.input-trumbowyg-editor,
+.input-wrapper-base .focus.input-trumbowyg-textarea {
   border-color: #000000;
 }
 
-.input-label.input-label-primary, .input-label.input-label-primary:focus {
+.input-label.input-label-primary, .input-label.input-label-primary:focus,
+.input-wrapper-primary .input-label,
+.input-wrapper-primary .input-label:focus {
   color: #0480fe !important;
 }
 
-.input-primary.input-single-line:not(:focus):not(.focus), .input-primary.input-multiple-line:not(:focus):not(.focus), .input-primary.input[multiple]:not(:focus):not(.focus), .input-primary.input-trumbowyg:not(:focus):not(.focus), .input-primary.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-primary.input-single-line:not(:focus):not(.focus), .input-primary.input-multiple-line:not(:focus):not(.focus), .input-primary.input[multiple]:not(:focus):not(.focus), .input-primary.input-trumbowyg:not(:focus):not(.focus), .input-primary.input-trumbowyg-editor:not(:focus):not(.focus), .input-primary.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-primary .input-single-line:not(:focus):not(.focus),
+.input-wrapper-primary .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-primary .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-primary .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-primary .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-primary .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #0480fe;
 }
 
-.input-primary.input-single-line, .input-primary.input-multiple-line, .input-primary.input[multiple], .input-primary.input-trumbowyg, .input-primary.input-trumbowyg-editor, .input-primary.input-single-line:focus, .input-primary.input-multiple-line:focus, .input-primary.input[multiple]:focus, .input-primary.input-trumbowyg:focus, .input-primary.input-trumbowyg-editor:focus, .input-primary.focus.input-single-line, .input-primary.focus.input-multiple-line, .input-primary.focus.input[multiple], .input-primary.focus.input-trumbowyg, .input-primary.focus.input-trumbowyg-editor {
+.input-primary.input-single-line, .input-primary.input-multiple-line, .input-primary.input[multiple], .input-primary.input-trumbowyg, .input-primary.input-trumbowyg-editor, .input-primary.input-trumbowyg-textarea, .input-primary.input-single-line:focus, .input-primary.input-multiple-line:focus, .input-primary.input[multiple]:focus, .input-primary.input-trumbowyg:focus, .input-primary.input-trumbowyg-editor:focus, .input-primary.input-trumbowyg-textarea:focus, .input-primary.focus.input-single-line, .input-primary.focus.input-multiple-line, .input-primary.focus.input[multiple], .input-primary.focus.input-trumbowyg, .input-primary.focus.input-trumbowyg-editor, .input-primary.focus.input-trumbowyg-textarea,
+.input-wrapper-primary .input-single-line,
+.input-wrapper-primary .input-multiple-line,
+.input-wrapper-primary .input[multiple],
+.input-wrapper-primary .input-trumbowyg,
+.input-wrapper-primary .input-trumbowyg-editor,
+.input-wrapper-primary .input-trumbowyg-textarea,
+.input-wrapper-primary .input-single-line:focus,
+.input-wrapper-primary .input-multiple-line:focus,
+.input-wrapper-primary .input[multiple]:focus,
+.input-wrapper-primary .input-trumbowyg:focus,
+.input-wrapper-primary .input-trumbowyg-editor:focus,
+.input-wrapper-primary .input-trumbowyg-textarea:focus,
+.input-wrapper-primary .focus.input-single-line,
+.input-wrapper-primary .focus.input-multiple-line,
+.input-wrapper-primary .focus.input[multiple],
+.input-wrapper-primary .focus.input-trumbowyg,
+.input-wrapper-primary .focus.input-trumbowyg-editor,
+.input-wrapper-primary .focus.input-trumbowyg-textarea {
   border-color: #0480fe;
 }
 
-.input-label.input-label-accent, .input-label.input-label-accent:focus {
+.input-label.input-label-accent, .input-label.input-label-accent:focus,
+.input-wrapper-accent .input-label,
+.input-wrapper-accent .input-label:focus {
   color: #d415af !important;
 }
 
-.input-accent.input-single-line:not(:focus):not(.focus), .input-accent.input-multiple-line:not(:focus):not(.focus), .input-accent.input[multiple]:not(:focus):not(.focus), .input-accent.input-trumbowyg:not(:focus):not(.focus), .input-accent.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-accent.input-single-line:not(:focus):not(.focus), .input-accent.input-multiple-line:not(:focus):not(.focus), .input-accent.input[multiple]:not(:focus):not(.focus), .input-accent.input-trumbowyg:not(:focus):not(.focus), .input-accent.input-trumbowyg-editor:not(:focus):not(.focus), .input-accent.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-accent .input-single-line:not(:focus):not(.focus),
+.input-wrapper-accent .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-accent .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-accent .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-accent .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-accent .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #d415af;
 }
 
-.input-accent.input-single-line, .input-accent.input-multiple-line, .input-accent.input[multiple], .input-accent.input-trumbowyg, .input-accent.input-trumbowyg-editor, .input-accent.input-single-line:focus, .input-accent.input-multiple-line:focus, .input-accent.input[multiple]:focus, .input-accent.input-trumbowyg:focus, .input-accent.input-trumbowyg-editor:focus, .input-accent.focus.input-single-line, .input-accent.focus.input-multiple-line, .input-accent.focus.input[multiple], .input-accent.focus.input-trumbowyg, .input-accent.focus.input-trumbowyg-editor {
+.input-accent.input-single-line, .input-accent.input-multiple-line, .input-accent.input[multiple], .input-accent.input-trumbowyg, .input-accent.input-trumbowyg-editor, .input-accent.input-trumbowyg-textarea, .input-accent.input-single-line:focus, .input-accent.input-multiple-line:focus, .input-accent.input[multiple]:focus, .input-accent.input-trumbowyg:focus, .input-accent.input-trumbowyg-editor:focus, .input-accent.input-trumbowyg-textarea:focus, .input-accent.focus.input-single-line, .input-accent.focus.input-multiple-line, .input-accent.focus.input[multiple], .input-accent.focus.input-trumbowyg, .input-accent.focus.input-trumbowyg-editor, .input-accent.focus.input-trumbowyg-textarea,
+.input-wrapper-accent .input-single-line,
+.input-wrapper-accent .input-multiple-line,
+.input-wrapper-accent .input[multiple],
+.input-wrapper-accent .input-trumbowyg,
+.input-wrapper-accent .input-trumbowyg-editor,
+.input-wrapper-accent .input-trumbowyg-textarea,
+.input-wrapper-accent .input-single-line:focus,
+.input-wrapper-accent .input-multiple-line:focus,
+.input-wrapper-accent .input[multiple]:focus,
+.input-wrapper-accent .input-trumbowyg:focus,
+.input-wrapper-accent .input-trumbowyg-editor:focus,
+.input-wrapper-accent .input-trumbowyg-textarea:focus,
+.input-wrapper-accent .focus.input-single-line,
+.input-wrapper-accent .focus.input-multiple-line,
+.input-wrapper-accent .focus.input[multiple],
+.input-wrapper-accent .focus.input-trumbowyg,
+.input-wrapper-accent .focus.input-trumbowyg-editor,
+.input-wrapper-accent .focus.input-trumbowyg-textarea {
   border-color: #d415af;
 }
 
-.input-label.input-label-neutral, .input-label.input-label-neutral:focus {
+.input-label.input-label-neutral, .input-label.input-label-neutral:focus,
+.input-wrapper-neutral .input-label,
+.input-wrapper-neutral .input-label:focus {
   color: #8d8d8d !important;
 }
 
-.input-neutral.input-single-line:not(:focus):not(.focus), .input-neutral.input-multiple-line:not(:focus):not(.focus), .input-neutral.input[multiple]:not(:focus):not(.focus), .input-neutral.input-trumbowyg:not(:focus):not(.focus), .input-neutral.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-neutral.input-single-line:not(:focus):not(.focus), .input-neutral.input-multiple-line:not(:focus):not(.focus), .input-neutral.input[multiple]:not(:focus):not(.focus), .input-neutral.input-trumbowyg:not(:focus):not(.focus), .input-neutral.input-trumbowyg-editor:not(:focus):not(.focus), .input-neutral.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-neutral .input-single-line:not(:focus):not(.focus),
+.input-wrapper-neutral .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-neutral .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-neutral .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-neutral .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-neutral .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #8d8d8d;
 }
 
-.input-neutral.input-single-line, .input-neutral.input-multiple-line, .input-neutral.input[multiple], .input-neutral.input-trumbowyg, .input-neutral.input-trumbowyg-editor, .input-neutral.input-single-line:focus, .input-neutral.input-multiple-line:focus, .input-neutral.input[multiple]:focus, .input-neutral.input-trumbowyg:focus, .input-neutral.input-trumbowyg-editor:focus, .input-neutral.focus.input-single-line, .input-neutral.focus.input-multiple-line, .input-neutral.focus.input[multiple], .input-neutral.focus.input-trumbowyg, .input-neutral.focus.input-trumbowyg-editor {
+.input-neutral.input-single-line, .input-neutral.input-multiple-line, .input-neutral.input[multiple], .input-neutral.input-trumbowyg, .input-neutral.input-trumbowyg-editor, .input-neutral.input-trumbowyg-textarea, .input-neutral.input-single-line:focus, .input-neutral.input-multiple-line:focus, .input-neutral.input[multiple]:focus, .input-neutral.input-trumbowyg:focus, .input-neutral.input-trumbowyg-editor:focus, .input-neutral.input-trumbowyg-textarea:focus, .input-neutral.focus.input-single-line, .input-neutral.focus.input-multiple-line, .input-neutral.focus.input[multiple], .input-neutral.focus.input-trumbowyg, .input-neutral.focus.input-trumbowyg-editor, .input-neutral.focus.input-trumbowyg-textarea,
+.input-wrapper-neutral .input-single-line,
+.input-wrapper-neutral .input-multiple-line,
+.input-wrapper-neutral .input[multiple],
+.input-wrapper-neutral .input-trumbowyg,
+.input-wrapper-neutral .input-trumbowyg-editor,
+.input-wrapper-neutral .input-trumbowyg-textarea,
+.input-wrapper-neutral .input-single-line:focus,
+.input-wrapper-neutral .input-multiple-line:focus,
+.input-wrapper-neutral .input[multiple]:focus,
+.input-wrapper-neutral .input-trumbowyg:focus,
+.input-wrapper-neutral .input-trumbowyg-editor:focus,
+.input-wrapper-neutral .input-trumbowyg-textarea:focus,
+.input-wrapper-neutral .focus.input-single-line,
+.input-wrapper-neutral .focus.input-multiple-line,
+.input-wrapper-neutral .focus.input[multiple],
+.input-wrapper-neutral .focus.input-trumbowyg,
+.input-wrapper-neutral .focus.input-trumbowyg-editor,
+.input-wrapper-neutral .focus.input-trumbowyg-textarea {
   border-color: #8d8d8d;
 }
 
-.input-label.input-label-success, .input-label.input-label-success:focus {
+.input-label.input-label-success, .input-label.input-label-success:focus,
+.input-wrapper-success .input-label,
+.input-wrapper-success .input-label:focus {
   color: #15b800 !important;
 }
 
-.input-success.input-single-line:not(:focus):not(.focus), .input-success.input-multiple-line:not(:focus):not(.focus), .input-success.input[multiple]:not(:focus):not(.focus), .input-success.input-trumbowyg:not(:focus):not(.focus), .input-success.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-success.input-single-line:not(:focus):not(.focus), .input-success.input-multiple-line:not(:focus):not(.focus), .input-success.input[multiple]:not(:focus):not(.focus), .input-success.input-trumbowyg:not(:focus):not(.focus), .input-success.input-trumbowyg-editor:not(:focus):not(.focus), .input-success.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-success .input-single-line:not(:focus):not(.focus),
+.input-wrapper-success .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-success .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-success .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-success .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-success .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #15b800;
 }
 
-.input-success.input-single-line, .input-success.input-multiple-line, .input-success.input[multiple], .input-success.input-trumbowyg, .input-success.input-trumbowyg-editor, .input-success.input-single-line:focus, .input-success.input-multiple-line:focus, .input-success.input[multiple]:focus, .input-success.input-trumbowyg:focus, .input-success.input-trumbowyg-editor:focus, .input-success.focus.input-single-line, .input-success.focus.input-multiple-line, .input-success.focus.input[multiple], .input-success.focus.input-trumbowyg, .input-success.focus.input-trumbowyg-editor {
+.input-success.input-single-line, .input-success.input-multiple-line, .input-success.input[multiple], .input-success.input-trumbowyg, .input-success.input-trumbowyg-editor, .input-success.input-trumbowyg-textarea, .input-success.input-single-line:focus, .input-success.input-multiple-line:focus, .input-success.input[multiple]:focus, .input-success.input-trumbowyg:focus, .input-success.input-trumbowyg-editor:focus, .input-success.input-trumbowyg-textarea:focus, .input-success.focus.input-single-line, .input-success.focus.input-multiple-line, .input-success.focus.input[multiple], .input-success.focus.input-trumbowyg, .input-success.focus.input-trumbowyg-editor, .input-success.focus.input-trumbowyg-textarea,
+.input-wrapper-success .input-single-line,
+.input-wrapper-success .input-multiple-line,
+.input-wrapper-success .input[multiple],
+.input-wrapper-success .input-trumbowyg,
+.input-wrapper-success .input-trumbowyg-editor,
+.input-wrapper-success .input-trumbowyg-textarea,
+.input-wrapper-success .input-single-line:focus,
+.input-wrapper-success .input-multiple-line:focus,
+.input-wrapper-success .input[multiple]:focus,
+.input-wrapper-success .input-trumbowyg:focus,
+.input-wrapper-success .input-trumbowyg-editor:focus,
+.input-wrapper-success .input-trumbowyg-textarea:focus,
+.input-wrapper-success .focus.input-single-line,
+.input-wrapper-success .focus.input-multiple-line,
+.input-wrapper-success .focus.input[multiple],
+.input-wrapper-success .focus.input-trumbowyg,
+.input-wrapper-success .focus.input-trumbowyg-editor,
+.input-wrapper-success .focus.input-trumbowyg-textarea {
   border-color: #15b800;
 }
 
-.input-label.input-label-caution, .input-label.input-label-caution:focus {
+.input-label.input-label-caution, .input-label.input-label-caution:focus,
+.input-wrapper-caution .input-label,
+.input-wrapper-caution .input-label:focus {
   color: #fd7f03 !important;
 }
 
-.input-caution.input-single-line:not(:focus):not(.focus), .input-caution.input-multiple-line:not(:focus):not(.focus), .input-caution.input[multiple]:not(:focus):not(.focus), .input-caution.input-trumbowyg:not(:focus):not(.focus), .input-caution.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-caution.input-single-line:not(:focus):not(.focus), .input-caution.input-multiple-line:not(:focus):not(.focus), .input-caution.input[multiple]:not(:focus):not(.focus), .input-caution.input-trumbowyg:not(:focus):not(.focus), .input-caution.input-trumbowyg-editor:not(:focus):not(.focus), .input-caution.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-caution .input-single-line:not(:focus):not(.focus),
+.input-wrapper-caution .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-caution .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-caution .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-caution .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-caution .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #fd7f03;
 }
 
-.input-caution.input-single-line, .input-caution.input-multiple-line, .input-caution.input[multiple], .input-caution.input-trumbowyg, .input-caution.input-trumbowyg-editor, .input-caution.input-single-line:focus, .input-caution.input-multiple-line:focus, .input-caution.input[multiple]:focus, .input-caution.input-trumbowyg:focus, .input-caution.input-trumbowyg-editor:focus, .input-caution.focus.input-single-line, .input-caution.focus.input-multiple-line, .input-caution.focus.input[multiple], .input-caution.focus.input-trumbowyg, .input-caution.focus.input-trumbowyg-editor {
+.input-caution.input-single-line, .input-caution.input-multiple-line, .input-caution.input[multiple], .input-caution.input-trumbowyg, .input-caution.input-trumbowyg-editor, .input-caution.input-trumbowyg-textarea, .input-caution.input-single-line:focus, .input-caution.input-multiple-line:focus, .input-caution.input[multiple]:focus, .input-caution.input-trumbowyg:focus, .input-caution.input-trumbowyg-editor:focus, .input-caution.input-trumbowyg-textarea:focus, .input-caution.focus.input-single-line, .input-caution.focus.input-multiple-line, .input-caution.focus.input[multiple], .input-caution.focus.input-trumbowyg, .input-caution.focus.input-trumbowyg-editor, .input-caution.focus.input-trumbowyg-textarea,
+.input-wrapper-caution .input-single-line,
+.input-wrapper-caution .input-multiple-line,
+.input-wrapper-caution .input[multiple],
+.input-wrapper-caution .input-trumbowyg,
+.input-wrapper-caution .input-trumbowyg-editor,
+.input-wrapper-caution .input-trumbowyg-textarea,
+.input-wrapper-caution .input-single-line:focus,
+.input-wrapper-caution .input-multiple-line:focus,
+.input-wrapper-caution .input[multiple]:focus,
+.input-wrapper-caution .input-trumbowyg:focus,
+.input-wrapper-caution .input-trumbowyg-editor:focus,
+.input-wrapper-caution .input-trumbowyg-textarea:focus,
+.input-wrapper-caution .focus.input-single-line,
+.input-wrapper-caution .focus.input-multiple-line,
+.input-wrapper-caution .focus.input[multiple],
+.input-wrapper-caution .focus.input-trumbowyg,
+.input-wrapper-caution .focus.input-trumbowyg-editor,
+.input-wrapper-caution .focus.input-trumbowyg-textarea {
   border-color: #fd7f03;
 }
 
-.input-label.input-label-error, .input-label.input-label-error:focus {
+.input-label.input-label-error, .input-label.input-label-error:focus,
+.input-wrapper-error .input-label,
+.input-wrapper-error .input-label:focus {
   color: #fd0303 !important;
 }
 
-.input-error.input-single-line:not(:focus):not(.focus), .input-error.input-multiple-line:not(:focus):not(.focus), .input-error.input[multiple]:not(:focus):not(.focus), .input-error.input-trumbowyg:not(:focus):not(.focus), .input-error.input-trumbowyg-editor:not(:focus):not(.focus) {
+.input-error.input-single-line:not(:focus):not(.focus), .input-error.input-multiple-line:not(:focus):not(.focus), .input-error.input[multiple]:not(:focus):not(.focus), .input-error.input-trumbowyg:not(:focus):not(.focus), .input-error.input-trumbowyg-editor:not(:focus):not(.focus), .input-error.input-trumbowyg-textarea:not(:focus):not(.focus),
+.input-wrapper-error .input-single-line:not(:focus):not(.focus),
+.input-wrapper-error .input-multiple-line:not(:focus):not(.focus),
+.input-wrapper-error .input[multiple]:not(:focus):not(.focus),
+.input-wrapper-error .input-trumbowyg:not(:focus):not(.focus),
+.input-wrapper-error .input-trumbowyg-editor:not(:focus):not(.focus),
+.input-wrapper-error .input-trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #fd0303;
 }
 
-.input-error.input-single-line, .input-error.input-multiple-line, .input-error.input[multiple], .input-error.input-trumbowyg, .input-error.input-trumbowyg-editor, .input-error.input-single-line:focus, .input-error.input-multiple-line:focus, .input-error.input[multiple]:focus, .input-error.input-trumbowyg:focus, .input-error.input-trumbowyg-editor:focus, .input-error.focus.input-single-line, .input-error.focus.input-multiple-line, .input-error.focus.input[multiple], .input-error.focus.input-trumbowyg, .input-error.focus.input-trumbowyg-editor {
+.input-error.input-single-line, .input-error.input-multiple-line, .input-error.input[multiple], .input-error.input-trumbowyg, .input-error.input-trumbowyg-editor, .input-error.input-trumbowyg-textarea, .input-error.input-single-line:focus, .input-error.input-multiple-line:focus, .input-error.input[multiple]:focus, .input-error.input-trumbowyg:focus, .input-error.input-trumbowyg-editor:focus, .input-error.input-trumbowyg-textarea:focus, .input-error.focus.input-single-line, .input-error.focus.input-multiple-line, .input-error.focus.input[multiple], .input-error.focus.input-trumbowyg, .input-error.focus.input-trumbowyg-editor, .input-error.focus.input-trumbowyg-textarea,
+.input-wrapper-error .input-single-line,
+.input-wrapper-error .input-multiple-line,
+.input-wrapper-error .input[multiple],
+.input-wrapper-error .input-trumbowyg,
+.input-wrapper-error .input-trumbowyg-editor,
+.input-wrapper-error .input-trumbowyg-textarea,
+.input-wrapper-error .input-single-line:focus,
+.input-wrapper-error .input-multiple-line:focus,
+.input-wrapper-error .input[multiple]:focus,
+.input-wrapper-error .input-trumbowyg:focus,
+.input-wrapper-error .input-trumbowyg-editor:focus,
+.input-wrapper-error .input-trumbowyg-textarea:focus,
+.input-wrapper-error .focus.input-single-line,
+.input-wrapper-error .focus.input-multiple-line,
+.input-wrapper-error .focus.input[multiple],
+.input-wrapper-error .focus.input-trumbowyg,
+.input-wrapper-error .focus.input-trumbowyg-editor,
+.input-wrapper-error .focus.input-trumbowyg-textarea {
   border-color: #fd0303;
 }
 
@@ -2472,6 +2671,11 @@ select.input[multiple], .input-select[multiple] {
 .input-wrapper .input-single-line, .input-wrapper .input-multiple-line, .input-wrapper .input-trumbowyg {
   display: block;
   flex: 1 1;
+  order: 2;
+}
+
+.input-wrapper-horizontal.input-wrapper-block .input-single-line, .input-wrapper-horizontal.input-wrapper-block .input-multiple-line, .input-wrapper-horizontal.input-wrapper-block .input-trumbowyg {
+  width: calc(100% - 25%);
 }
 
 .input-wrapper {
@@ -2627,7 +2831,7 @@ select.input[multiple], .input-select[multiple] {
 .special-form .input-multiple-line,
 .special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg,
 .special-form .input-trumbowyg-box:not(.input-trumbowyg-fullscreen) .input-trumbowyg-editor {
-  background: transparent;
+  background-color: transparent;
   width: calc(100% + (35px * 2));
   max-width: none;
   padding-left: 35px;
@@ -2660,12 +2864,9 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 .input-trumbowyg {
-  /* Modal box */
+  /* Modal box but i make it overlay */
   /**
 	* Fullscreen
-	*/
-  /*
-	* Dark theme
 	*/
 }
 
@@ -2680,7 +2881,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 .input-trumbowyg-box svg, .input-trumbowyg-modal svg {
   width: 20px;
   height: 100%;
-  fill: #8d8d8d;
+  fill: currentColor;
 }
 
 .input-trumbowyg-box, .input-trumbowyg-editor {
@@ -2689,12 +2890,11 @@ CUSTOM STYLES FOR TRUMBOWYG
   margin: 0;
 }
 
-.input-trumbowyg-editor {
+.input-trumbowyg-editor, .input-trumbowyg-textarea {
   min-height: 800px;
 }
 
 .input-trumbowyg-box.input-trumbowyg-fullscreen {
-  background: #FFFFFF;
   border-radius: 0;
   box-shadow: none !important;
 }
@@ -2707,6 +2907,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   outline: none;
   overflow: auto;
   user-select: text;
+  font-size: 1rem;
   line-height: 2;
   min-height: 500px;
 }
@@ -2720,7 +2921,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 .input-trumbowyg-box.input-trumbowyg-fullscreen .input-trumbowyg-editor, .input-trumbowyg-box.input-trumbowyg-fullscreen .input-trumbowyg-textarea {
-  background: #FFFFFF;
   border-radius: 0;
   box-shadow: none !important;
   padding-left: 20px;
@@ -2728,28 +2928,6 @@ CUSTOM STYLES FOR TRUMBOWYG
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0;
-}
-
-.input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-box-blur .input-trumbowyg-editor::before {
-  color: transparent !important;
-  text-shadow: 0 0 7px #3d3d3d;
-}
-
-@media screen and (min-width: 0 \0) {
-  .input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-box-blur .input-trumbowyg-editor::before {
-    color: rgba(141, 141, 141, 0.6) !important;
-  }
-}
-
-@supports (-ms-accelerator: true) {
-  .input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-box-blur .input-trumbowyg-editor::before {
-    color: rgba(141, 141, 141, 0.6) !important;
-  }
-}
-
-.input-trumbowyg-box-blur .input-trumbowyg-editor img,
-.input-trumbowyg-box-blur .input-trumbowyg-editor hr {
-  opacity: 0.2;
 }
 
 .input-trumbowyg-textarea {
@@ -2764,14 +2942,13 @@ CUSTOM STYLES FOR TRUMBOWYG
   width: 25%;
   min-height: 0 !important;
   padding: 0 !important;
-  background: none;
+  background: none !important;
   opacity: 0 !important;
   flex: 0 0 auto !important;
 }
 
 .input-trumbowyg-box.input-trumbowyg-editor-hidden .input-trumbowyg-textarea {
   display: block;
-  margin-bottom: 1px;
 }
 
 .input-trumbowyg-box.input-trumbowyg-editor-hidden .input-trumbowyg-editor {
@@ -2798,16 +2975,12 @@ CUSTOM STYLES FOR TRUMBOWYG
   display: inline-block;
 }
 
-.input-trumbowyg-button-pane .input-trumbowyg-button-group .input-trumbowyg-fullscreen-button svg {
-  color: transparent;
-}
-
 .input-trumbowyg-button-pane button {
   display: inline-block;
   position: relative;
   width: 40px;
   height: 40px;
-  padding: 1px 6px !important;
+  color: #8d8d8d;
   margin-bottom: 1px;
   overflow: hidden;
   border: none;
@@ -2832,19 +3005,14 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .input-trumbowyg-button-pane.input-trumbowyg-disable .input-trumbowyg-button-group::before,
 .input-trumbowyg-disabled .input-trumbowyg-button-pane .input-trumbowyg-button-group::before {
-  background: #e3e9eb;
+  opacity: 0.5;
 }
 
 .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):hover,
 .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):focus,
 .input-trumbowyg-button-pane button.input-trumbowyg-active {
+  color: #0480fe;
   outline: none;
-}
-
-.input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):hover svg,
-.input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):focus svg,
-.input-trumbowyg-button-pane button.input-trumbowyg-active svg {
-  fill: #0480fe;
 }
 
 .input-trumbowyg-button-pane .input-trumbowyg-open-dropdown::after {
@@ -2879,7 +3047,6 @@ CUSTOM STYLES FOR TRUMBOWYG
   overflow-y: auto;
   overflow-x: hidden;
   white-space: nowrap;
-  border: 1px solid #ecf0f1;
   padding: 5px 0;
   border-top: none;
   background: #FFF;
@@ -2896,16 +3063,12 @@ CUSTOM STYLES FOR TRUMBOWYG
   text-decoration: none;
   background: #FFF;
   padding: 0 20px 0 10px;
-  color: #333 !important;
+  color: inherit;
   border: none;
   cursor: pointer;
   text-align: left;
   font-size: 15px;
   transition: all 0.125s;
-}
-
-.input-trumbowyg-dropdown button:hover, .input-trumbowyg-dropdown button:focus {
-  background: #ecf0f1;
 }
 
 .input-trumbowyg-dropdown button svg {
@@ -2914,104 +3077,37 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 .input-trumbowyg-modal {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 520px;
-  width: 100%;
-  height: 350px;
-  z-index: 12;
-  overflow: hidden;
-  backface-visibility: hidden;
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  margin: auto;
+  width: 100vw !important;
+  height: 100vh !important;
+  padding: 50px;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.2);
+  /* height: 350px; */
+  z-index: 99999;
+}
+
+@media (max-width: 1200px) {
+  .input-trumbowyg-modal {
+    padding: 20px;
+  }
 }
 
 .input-trumbowyg-modal-box {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 500px;
-  width: calc(100% - 20px);
+  position: static;
+  margin: auto;
+  max-width: 520px;
+  width: 100%;
   padding: 50px 20px;
   z-index: 1;
   background-color: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
   backface-visibility: hidden;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-progress {
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  top: 58px;
-}
-
-.input-trumbowyg-modal-box .input-trumbowyg-progress .input-trumbowyg-progress-bar {
-  background: #2BC06A;
-  width: 0;
-  height: 100%;
-  transition: width 0.125s linear;
-}
-
-.input-trumbowyg-modal-box label {
-  display: block;
-  position: relative;
-  margin: 15px 12px;
-  height: 29px;
-  line-height: 29px;
-  overflow: hidden;
-}
-
-.input-trumbowyg-modal-box label .input-trumbowyg-input-infos {
-  display: block;
-  text-align: left;
-  height: 25px;
-  line-height: 25px;
-  transition: all 150ms;
-}
-
-.input-trumbowyg-modal-box label .input-trumbowyg-input-infos span {
-  display: block;
-  border: 1px solid #DEDEDE;
-  padding: 0 7px;
-  width: 150px;
-}
-
-.input-trumbowyg-modal-box label .input-trumbowyg-input-infos span.input-trumbowyg-msg-error {
-  color: #e74c3c;
-}
-
-.input-trumbowyg-modal-box label.input-trumbowyg-input-error input,
-.input-trumbowyg-modal-box label.input-trumbowyg-input-error textarea {
-  border: 1px solid #e74c3c;
-}
-
-.input-trumbowyg-modal-box label.input-trumbowyg-input-error .input-trumbowyg-input-infos {
-  margin-top: -27px;
-}
-
-.input-trumbowyg-modal-box label input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 27px;
-  line-height: 27px;
-  border: 1px solid #DEDEDE;
-  background: #fff;
-  font-size: 14px;
-  max-width: 330px;
-  width: 70%;
-  padding: 0 7px;
-  transition: all 0.125s;
-}
-
-.input-trumbowyg-modal-box label input:hover, .input-trumbowyg-modal-box label input:focus {
-  outline: none;
-  border: 1px solid #95a5a6;
-}
-
-.input-trumbowyg-modal-box label input:focus {
-  background: #fbfcfc;
 }
 
 .input-trumbowyg-modal-box label input[type="checkbox"] {
@@ -3060,6 +3156,12 @@ CUSTOM STYLES FOR TRUMBOWYG
   margin: 0;
   padding: 0;
   z-index: 99999;
+  background: #FFFFFF;
+}
+
+.input-trumbowyg-dark,
+.body-inverse .input-trumbowyg-fullscreen {
+  background: #3d3d3d;
 }
 
 .input-trumbowyg-fullscreen.input-trumbowyg-box,
@@ -3077,9 +3179,14 @@ CUSTOM STYLES FOR TRUMBOWYG
   height: 100% !important;
 }
 
-.input-trumbowyg-fullscreen .input-trumbowyg-button-group .input-trumbowyg-fullscreen-button svg {
-  color: #1d8dfe;
+.input-trumbowyg-fullscreen-button svg {
+  fill: #8d8d8d;
+  color: transparent;
+}
+
+.input-trumbowyg-fullscreen .input-trumbowyg-fullscreen-button svg {
   fill: transparent;
+  color: currentColor;
 }
 
 .input-trumbowyg-editor {
@@ -3104,171 +3211,6 @@ CUSTOM STYLES FOR TRUMBOWYG
   cursor: move;
 }
 
-.body-inverse .input-trumbowyg .input-trumbowyg-textarea, .input-trumbowyg-dark .input-trumbowyg-textarea {
-  background: #111;
-  color: #ddd;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-box, .input-trumbowyg-dark .input-trumbowyg-box {
-  border: 1px solid #419ffe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-fullscreen, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-fullscreen {
-  background: #111;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor *, .body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor::before, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor::before {
-  text-shadow: 0 0 7px #ccc;
-}
-
-@media screen and (min-width: 0 \0 					) {
-  .body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor *, .body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor::before, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor::before {
-    color: rgba(20, 20, 20, 0.6) !important;
-  }
-}
-
-@supports (-ms-accelerator: true) {
-  .body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor *, .body-inverse .input-trumbowyg .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor::before, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor *, .input-trumbowyg-dark .input-trumbowyg-box.input-trumbowyg-box-blur .input-trumbowyg-editor::before {
-    color: rgba(20, 20, 20, 0.6) !important;
-  }
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-box svg, .input-trumbowyg-dark .input-trumbowyg-box svg {
-  fill: #ecf0f1;
-  color: #ecf0f1;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane, .input-trumbowyg-dark .input-trumbowyg-button-pane {
-  background-color: #1d8dfe;
-  border-bottom-color: #419ffe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane::after, .input-trumbowyg-dark .input-trumbowyg-button-pane::after {
-  background: #419ffe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane .input-trumbowyg-button-group:not(:empty)::after, .input-trumbowyg-dark .input-trumbowyg-button-pane .input-trumbowyg-button-group:not(:empty)::after {
-  background-color: #419ffe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane .input-trumbowyg-button-group:not(:empty) .input-trumbowyg-fullscreen-button svg, .input-trumbowyg-dark .input-trumbowyg-button-pane .input-trumbowyg-button-group:not(:empty) .input-trumbowyg-fullscreen-button svg {
-  color: transparent;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane.input-trumbowyg-disable .input-trumbowyg-button-group::after, .input-trumbowyg-dark .input-trumbowyg-button-pane.input-trumbowyg-disable .input-trumbowyg-button-group::after {
-  background-color: #2d95fe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):hover,
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):focus,
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane button.input-trumbowyg-active, .input-trumbowyg-dark .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):hover,
-.input-trumbowyg-dark .input-trumbowyg-button-pane button:not(.input-trumbowyg-disable):focus,
-.input-trumbowyg-dark .input-trumbowyg-button-pane button.input-trumbowyg-active {
-  background-color: #333;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-button-pane .input-trumbowyg-open-dropdown::after, .input-trumbowyg-dark .input-trumbowyg-button-pane .input-trumbowyg-open-dropdown::after {
-  border-top-color: #fff;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-fullscreen .input-trumbowyg-button-pane .input-trumbowyg-button-group:not(:empty) .input-trumbowyg-fullscreen-button svg, .input-trumbowyg-dark .input-trumbowyg-fullscreen .input-trumbowyg-button-pane .input-trumbowyg-button-group:not(:empty) .input-trumbowyg-fullscreen-button svg {
-  color: #ecf0f1;
-  fill: transparent;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-dropdown, .input-trumbowyg-dark .input-trumbowyg-dropdown {
-  border-color: #1d8dfe;
-  background: #333;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-dropdown button, .input-trumbowyg-dark .input-trumbowyg-dropdown button {
-  background: #333;
-  color: #fff !important;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-dropdown button:hover, .body-inverse .input-trumbowyg .input-trumbowyg-dropdown button:focus, .input-trumbowyg-dark .input-trumbowyg-dropdown button:hover, .input-trumbowyg-dark .input-trumbowyg-dropdown button:focus {
-  background: #1d8dfe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box, .input-trumbowyg-dark .input-trumbowyg-modal-box {
-  background-color: #1d8dfe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-title, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-title {
-  border-bottom: 1px solid #555;
-  color: #fff;
-  background: #50a7fe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label, .input-trumbowyg-dark .input-trumbowyg-modal-box label {
-  display: block;
-  position: relative;
-  margin: 15px 12px;
-  height: 27px;
-  line-height: 27px;
-  overflow: hidden;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label .input-trumbowyg-input-infos span, .input-trumbowyg-dark .input-trumbowyg-modal-box label .input-trumbowyg-input-infos span {
-  color: #eee;
-  background-color: #379afe;
-  border-color: #1d8dfe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label .input-trumbowyg-input-infos span.input-trumbowyg-msg-error, .input-trumbowyg-dark .input-trumbowyg-modal-box label .input-trumbowyg-input-infos span.input-trumbowyg-msg-error {
-  color: #e74c3c;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label.input-trumbowyg-input-error input,
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label.input-trumbowyg-input-error textarea, .input-trumbowyg-dark .input-trumbowyg-modal-box label.input-trumbowyg-input-error input,
-.input-trumbowyg-dark .input-trumbowyg-modal-box label.input-trumbowyg-input-error textarea {
-  border-color: #e74c3c;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label input, .input-trumbowyg-dark .input-trumbowyg-modal-box label input {
-  border-color: #1d8dfe;
-  color: #eee;
-  background: #333;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label input:hover, .body-inverse .input-trumbowyg .input-trumbowyg-modal-box label input:focus, .input-trumbowyg-dark .input-trumbowyg-modal-box label input:hover, .input-trumbowyg-dark .input-trumbowyg-modal-box label input:focus {
-  border-color: #9ccdff;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box label input:focus, .input-trumbowyg-dark .input-trumbowyg-modal-box label input:focus {
-  background-color: #379afe;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit {
-  background: #014d9b;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:hover, .body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:focus, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:hover, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:focus {
-  background: #0167ce;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:active, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-submit:active {
-  background: #014182;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset {
-  background: #333;
-  color: #ccc;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:hover, .body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:focus, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:hover, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:focus {
-  background: #444;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:active, .input-trumbowyg-dark .input-trumbowyg-modal-box .input-trumbowyg-modal-button.input-trumbowyg-modal-reset:active {
-  background: #111;
-}
-
-.body-inverse .input-trumbowyg .input-trumbowyg-overlay, .input-trumbowyg-dark .input-trumbowyg-overlay {
-  background-color: rgba(15, 15, 15, 0.6);
-}
-
 /*** TOGGLES ***/
 .accordion {
   display: none;
@@ -3284,13 +3226,17 @@ CUSTOM STYLES FOR TRUMBOWYG
   background: #FFFFFF;
   border-radius: 10px;
   padding: 20px 20px;
-  box-shadow: 0px 0px 15px -12px #000000;
+  box-shadow: 0px 0px 15px -10px #000000;
   z-index: 2;
   display: none;
 }
 
 .open.tooltip, .open.dropdown {
   display: block;
+}
+
+.body-inverse .tooltip, .body-inverse .dropdown {
+  background: #3d3d3d;
 }
 
 .tooltip {
@@ -3303,6 +3249,10 @@ CUSTOM STYLES FOR TRUMBOWYG
   background: #FFFFFF;
   position: absolute;
   z-index: -1;
+}
+
+.body-inverse .tooltip:before, .body-inverse .tooltip:after {
+  background: #3d3d3d;
 }
 
 .tooltip:after {
@@ -3745,39 +3695,39 @@ CUSTOM STYLES FOR TRUMBOWYG
   text-overflow: ellipsis;
 }
 
-.text-weight-100 {
+.font-weight-100 {
   font-weight: 100;
 }
 
-.text-weight-200 {
+.font-weight-200 {
   font-weight: 200;
 }
 
-.text-weight-300 {
+.font-weight-300 {
   font-weight: 300;
 }
 
-.text-weight-400 {
+.font-weight-400 {
   font-weight: 400;
 }
 
-.text-weight-500 {
+.font-weight-500 {
   font-weight: 500;
 }
 
-.text-weight-600 {
+.font-weight-600 {
   font-weight: 600;
 }
 
-.text-weight-700 {
+.font-weight-700 {
   font-weight: 700;
 }
 
-.text-weight-800 {
+.font-weight-800 {
   font-weight: 800;
 }
 
-.text-weight-900 {
+.font-weight-900 {
   font-weight: 900;
 }
 
