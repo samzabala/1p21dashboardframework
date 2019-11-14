@@ -4,7 +4,7 @@
 			<li class="nav-item">
 				<a href="<?=DASHBOARD_ROOT_URL ?>">
 					<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg">
-					<span class="nav-item-text tablet-hide mobile-hide">Home</span>
+					<span class="nav-item-text">Home</span>
 				</a>
 			</li>
 			
@@ -14,7 +14,7 @@
 					<li class="nav-item">
 						<a href="#sidebar-dropdown" data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
-							<span class="nav-item-text tablet-hide mobile-hide">SEO</span>
+							<span class="nav-item-text">SEO</span>
 							<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</a>
 						<ul id="sidebar-dropdown" class="dropdown">
@@ -42,7 +42,7 @@
 					<li class="nav-item">
 						<a href="<?=DASHBOARD_ROOT_URL ?>">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg">
-							<span class="nav-item-text tablet-hide mobile-hide">Projects</span>
+							<span class="nav-item-text">Projects</span>
 						</a>
 					</li>
 
@@ -51,7 +51,7 @@
 					<li class="nav-item">
 						<a href="<?=DASHBOARD_ROOT_URL ?>">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg">
-							<span class="nav-item-text tablet-hide mobile-hide">Designers</span>
+							<span class="nav-item-text">Designers</span>
 						</a>
 					</li>
 
@@ -59,7 +59,7 @@
 					<li class="nav-item">
 						<a href="<?=DASHBOARD_ROOT_URL ?>">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
-							<span class="nav-item-text tablet-hide mobile-hide">Developers</span>
+							<span class="nav-item-text">Developers</span>
 						</a>
 					</li>
 			<?php endif; ?>

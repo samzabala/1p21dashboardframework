@@ -12,7 +12,20 @@
 		'thumbnail avgtime availability'
 		'thumbnail avgtime updated'
 		'assigned assigned assigned'
-		'ass ass ass'">
+		'ass ass ass'"
+		
+	
+	data-grid-template-rows-sm="auto auto auto auto auto"
+	data-grid-template-columns-sm="50%"
+	data-grid-template-areas-sm="
+		'thumbnail availability'
+		'thumbnail updated'
+		'avgtime updated'
+		'assigned assigned'
+		'ass ass'"
+		>
+
+
 	<div class="module" data-grid-area="thumbnail">
 		profile igdi
 	</div>

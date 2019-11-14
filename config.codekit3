@@ -117,6 +117,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/scripts/dashboard.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/scripts/dashboard.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/scripts/framework.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -203,6 +214,14 @@
 		"oAP": "/assets/styles/style.min-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/assets/styles/style.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/styles/style.min.css.map",
+		"oF": 0
 		},
 	"/config.php": {
 		"cB": 0,
@@ -826,9 +845,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "/src/js/dashboard-min.js",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "/assets/scripts/dashboard.min.js",
+		"oF": 3,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1282,12 +1301,12 @@
 		"uL": 1
 		},
 	"/src/scss/style.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "/assets/styles/style.min.css",
 		"oF": 2,

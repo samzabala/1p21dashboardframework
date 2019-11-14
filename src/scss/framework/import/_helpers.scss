@@ -74,7 +74,11 @@
 	%background {
 		@each $tag,$color in $calculated-brand-color-declarations {
 			&-#{$tag} {
-				background-color: $color;
+				background-color: $color ;
+			}
+
+			&-important-#{$tag} {
+				background-color: $color !important;
 			}
 		}
 
@@ -85,8 +89,18 @@
 					color1: $gradient-start,
 					color2: $gradient-end,
 					angle: 0deg,
-					use-shorthand:false
-				))
+					use-shorthand:false,
+				));
+
+				&-important {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: 0deg,
+						use-shorthand:false,
+						add-important: true
+					));
+				}
 			}
 
 			@each $angle in $calculated-gradient-angles {
@@ -95,8 +109,22 @@
 						color1: $gradient-start,
 						color2: $gradient-end,
 						angle: to-unit($angle,deg),
-						use-shorthand:false
-					))
+						use-shorthand:false,
+					));
+				}
+
+
+
+				@each $angle in $calculated-gradient-angles {
+					&-important-#{$angle} {
+						@include gradient((
+							color1: $gradient-start,
+							color2: $gradient-end,
+							angle: to-unit($angle,deg),
+							use-shorthand:false,
+							add-important: true
+						));
+					}
 				}
 			}
 		}
@@ -106,19 +134,19 @@
 		#{$prefix} {
 
 			&-global {
-				background-color: $global-background;
+				background-color: $global-background!important;
 
 				.body-inverse & {
-					background-color: $global-background-inverse;
+					background-color: $global-background-inverse!important;
 				}
 			}
 
 
 			&-global-contrast {
-				background-color: $global-background-contrast;
+				background-color: $global-background-contrast!important;
 
 				.body-inverse & {
-					background-color: $global-background-contrast-inverse;
+					background-color: $global-background-contrast-inverse!important;
 				}
 
 			}
@@ -126,13 +154,13 @@
 			&-intensity {
 				@for $i from 1 through length($calculated-color-brand-intensity) {
 					&-#{$i} {
-						background-color: nth($calculated-color-brand-intensity,$i);
+						background-color: nth($calculated-color-brand-intensity,$i)!important;
 					}
 				}
 			}
 
 			&-gradient {
-				@extend %background-gradient;
+				@extend %background-gradient-important;
 
 				$calculated-gradient-selector: #{&};
 
@@ -141,20 +169,24 @@
 				}
 
 				@at-root #{$calculated-gradient-selector} {
-					background-color: $gradient-start;
+					background-color: $gradient-start!important;
 				}
 
 				@each $angle in $calculated-gradient-angles {
 					&-#{$angle} {
-						@extend %background-gradient-#{$angle};
+						@extend %background-gradient-important-#{$angle};
 					}
 				}
+			}
+
+			&-transparent {
+				background-color:transparent!important;
 			}
 
 
 			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
-					@extend %background-#{$tag};
+					@extend %background-important-#{$tag};
 				}
 			}
 		}
@@ -163,29 +195,29 @@
 		$prefix: '.color';
 		#{$prefix} {
 			&-global {
-				color: $global-color;
+				color: $global-color!important;
 
 				.body-inverse & {
-					color: $global-color-inverse;
+					color: $global-color-inverse!important;
 				}
 			}
 
 			&-intensity {
 				@for $i from 1 through length($calculated-color-brand-intensity) {
 					&-#{$i} {
-						color: nth($calculated-color-brand-intensity,$i);
+						color: nth($calculated-color-brand-intensity,$i)!important;
 					}
 				}
 			}
 
 			&-inherit {
-				color: inherit;
+				color: inherit!important;
 			}
 
 
 			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
-					color: $color;
+					color: $color!important;
 				}
 			}
 		}
@@ -245,84 +277,107 @@
 
 		&-align {
 			&-center {
-				text-align: center;
+				text-align: center!important;
 			}
 			&-left {
-				text-align: left;
+				text-align: left!important;
 			}
 			&-right {
-				text-align: right;
+				text-align: right!important;
 			}
 			&-justify {
-				text-align: justify;
+				text-align: justify!important;
 			}
 		}
 
 		&-transform {
 			&-uppercase {
-				text-transform: uppercase;
+				text-transform: uppercase!important;
 			}
 			&-lowercase {
-				text-transform: lowercase;
+				text-transform: lowercase!important;
 			}
 			&-capitalize {
-				text-transform: capitalize;
+				text-transform: capitalize!important;
 			}
 		}
 
-		&-clip {
+		&-wrap {
 
-			//gradient text
-			&-background {
-				@supports not (-webkit-background-clip: text) {
-					background: transparent;
-					color: color(p);
-				}
-
-				@supports (-webkit-background-clip: text) {
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-				}
-			}
 
 			/* cut overflowing single line to ellipsis */
-			&-line-break {
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
+			&-ellipsis {
+				white-space: nowrap!important;
+				overflow: hidden!important;
+				text-overflow: ellipsis!important;
+			}
+
+			&-nowrap {
+
+				white-space: nowrap!important;
+			}
+
+			&-break {
+				word-break: break-word!important;
+				overflow-wrap: break-word!important;
 			}
 		}
 
+		&-clip-background {
+			@supports not (-webkit-background-clip: text) {
+				background: transparent!important;
+				color: color(p)!important;
+			}
+
+			@supports (-webkit-background-clip: text) {
+				-webkit-background-clip: text!important;
+				-webkit-text-fill-color: transparent!important;
+			}
+		}
 	}
 
 
 
-	.font-weight {
+.font{
+
+	&-weight {
+
 		&-100 {
-			font-weight: 100;
+			font-weight: 100!important;
 		}
 		&-200 {
-			font-weight: 200;
+			font-weight: 200!important;
 		}
 		&-300 {
-			font-weight: 300;
+			font-weight: 300!important;
 		}
 		&-400 {
-			font-weight: 400;
+			font-weight: 400!important;
 		}
 		&-500 {
-			font-weight: 500;
+			font-weight: 500!important;
 		}
 		&-600 {
-			font-weight: 600;
+			font-weight: 600!important;
 		}
 		&-700 {
-			font-weight: 700;
+			font-weight: 700!important;
 		}
 		&-800 {
-			font-weight: 800;
+			font-weight: 800!important;
 		}
 		&-900 {
-			font-weight: 900;
+			font-weight: 900!important;
+		}
+
+	}
+
+	&-style {
+		&-italic {
+			font-style: italic!important;
+		}
+		&-oblique {
+			font-style: oblique!important;
 		}
 	}
+}

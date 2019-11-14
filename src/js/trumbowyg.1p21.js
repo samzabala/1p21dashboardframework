@@ -1594,12 +1594,12 @@ Object.defineProperty(jQuery.trumbowyg, 'defaultOptions', {
                 var attr = Object.keys(a).map(function (prop) {
                     return prop + '="' + a[prop] + '"';
                 }).join(' ');
-
+                
                 html += '<label class="p input-wrapper input-wrapper-horizontal input-wrapper-block"><input class="input input-single-line" type="' + (field.type || 'text') + '" name="' + n + '"' +
                     (field.type === 'checkbox' && field.value ? ' checked="checked"' : ' value="' + (field.value || '').replace(/"/g, '&quot;')) +
                     '"' + attr + '><span class="' + prefix + 'input-infos input-label"><span>' +
                     (lg[l] ? lg[l] : l) +
-                    '</span></span></label>';
+                    '</span></span></label>';// @1p21MODIFIED
             });
 
             return t.openModal(title, html)
@@ -1658,14 +1658,14 @@ Object.defineProperty(jQuery.trumbowyg, 'defaultOptions', {
 
             $field
                 .on('change keyup', function () {
-                    $label.removeClass(prefix + 'input-error input-wrapper-error');
+                    $label.removeClass(prefix + 'input-error input-wrapper-error');// @1p21MODIFIED
                     setTimeout(function () {
                         $label.find('.' + spanErrorClass).remove();
                     }, 150);
                 });
 
             $label
-                .addClass(prefix + 'input-error input-wrapper-error')
+                .addClass(prefix + 'input-error input-wrapper-error')// @1p21MODIFIED
                 .find('input+span')
                 .append(
                     $('<span/>', {

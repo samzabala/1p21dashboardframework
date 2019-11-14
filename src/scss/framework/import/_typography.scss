@@ -161,6 +161,11 @@ $prefix: '.special';
 		}
     }
 
+	%for {
+		&-p {
+			margin-bottom: $calculated-body-text-gutter-y;
+		}
+	}
 
 /* heading */
 	h1,.h1,
@@ -176,6 +181,7 @@ $prefix: '.special';
 			style: $body-heading-font-style,
 			case: $body-heading-text-transform,
 		));
+		display:block;
 		margin-bottom: $body-heading-gutter-bottom;
 
 		&:not(:first-child) {
@@ -224,7 +230,7 @@ ol,
 address,
 pre,
 dl {
-	margin-bottom: $calculated-body-text-gutter-y;
+	@extend %for-p;
 }
 
 ol,ul,dd{

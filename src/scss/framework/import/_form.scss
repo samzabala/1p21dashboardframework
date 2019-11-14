@@ -109,7 +109,7 @@ $prefix: '.input';
 		}
 	}
 
-	&-input-and-group {
+	&-shadow-and-border {
 		border-radius: $input-border-radius;
 		box-shadow: $input-box-shadow;
 
@@ -161,9 +161,24 @@ $prefix: '.input';
 				color:$input-label-color-inverse;
 			}
 		}
+		
+		&-color {
+			
+			@each $tag,$color in $calculated-brand-color-declarations {
+				
+				&-#{$tag} {
+					&,&:focus {
+						color: $color!important;
+					}
+				}
+				
+			}
+		}
 	}
 
 	&-input {
+		
+		
 		&-itself {
 			font: inherit;
 			-webkit-user-select: none;
@@ -299,6 +314,25 @@ $prefix: '.input';
 
 
 		}
+		
+		&-color {
+			@each $tag,$color in $calculated-brand-color-declarations {
+			
+				&-#{$tag}  {
+		
+					&:not(:focus):not(.focus) {
+						box-shadow: $input-box-shadow-brand-basis $color;
+					}
+		
+					&,
+					&:focus,
+					&.focus {
+		
+						border-color: $color;
+					}
+				}
+			}
+		}
 
 
 		&-single-line {
@@ -371,25 +405,62 @@ $prefix: '.input';
 		@each $tag,$color in $calculated-brand-color-declarations {
 		@at-root #{$prefix}-label#{$prefix}-label-#{$tag},
 			#{$prefix}-wrapper-#{$tag} #{$prefix}-label {
-				&,&:focus {
-					color: $color!important;
-				}
+				@extend %for-form-label-color-#{$tag};
 			}
 	
 			@at-root &#{$prefix}-#{$tag},
 			#{$prefix}-wrapper-#{$tag} &  {
 	
-				&:not(:focus):not(.focus) {
-					box-shadow: $input-box-shadow-brand-basis $color;
-				}
-	
-				&,
-				&:focus,
-				&.focus {
-	
-					border-color: $color;
+				@extend %for-form-input-color-#{$tag};
+			}
+		}
+	}
+
+	&-wrapper {
+		& {
+			max-width:100%;
+
+			@include br(md){
+				display:inline-flex;
+				margin-right: 2rem;
+			}
+		}
+			
+
+		&-horizontal {
+			@include br(md){
+				flex-direction: row;
+				align-items: flex-start;
+				flex-wrap: wrap;
+
+				> #{$prefix}-label {
+					flex: 0 0 $input-label-horizontal-width;
+					order: -1;
+
+					&:first-child:last-child {
+					/* labels that typically wrapp radio and checboxes*/
+						flex: 1 1 auto;
+					}
 				}
 			}
+			
+		}
+
+		&-vertical {
+			@include br(md){
+				flex-direction: column;
+			}
+		}
+
+		&-block {
+
+			display:flex;
+			margin-right: 0;
+
+			@include br(sm-max) {
+				flex-direction: column;
+			}
+
 		}
 	}
 }
@@ -424,6 +495,14 @@ $prefix: '.input';
 		}
 	}
 
+	&#{$prefix}-no-radius {
+		border-radius: 0!important;
+	}
+
+	&#{$prefix}-no-shadow {
+		box-shadow:none!important;
+	}
+
 	&-info {
 
 		@include type-set((
@@ -436,6 +515,8 @@ $prefix: '.input';
 		));
 		margin-top:$input-info-margin-top;
 		display:block;
+
+		order: 3;
 
 		#{$prefix}-wrapper-horizontal & {
 			width: calc(100% - #{$input-label-horizontal-width});
@@ -465,7 +546,6 @@ $prefix: '.input';
 			padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
 			padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$input-border-width} * 2)) - (#{$calculated-input-single-line}) ) * .5 );
 			height: #{ $calculated-nav-height };
-			border-radius: 0;
 		}
 
 		#{$prefix}-wrapper & {
@@ -480,7 +560,7 @@ $prefix: '.input';
 
 		@at-root &,
 		#{$prefix}-group {
-			@extend %for-form-input-and-group;
+			@extend %for-form-shadow-and-border;
 		}
 		
 	}
@@ -498,63 +578,20 @@ $prefix: '.input';
 
 	&-wrapper {
 
-		// @extend %for-form-wrapper;
+		@extend %for-form-wrapper;
 
-		// &#{&}-block {
-		// 	@extend %for-form-wrapper-block;
-		// }
-
-		// &-horizontal {
-		// 	@extend %for-form-wrapper-horizontal;
-		// }
-
-		// &-vertical {
-		// 	@extend %for-form-wrapper-vertical;
-		// }
-		& {
-			max-width:100%;
-
-			@include br(md){
-				display:inline-flex;
-				margin-right: 2rem;
-			}
+		&#{&}-block {
+			@extend %for-form-wrapper-block;
 		}
-			
 
 		&-horizontal {
-			@include br(md){
-				flex-direction: row;
-				align-items: flex-start;
-				flex-wrap: wrap;
-
-				> #{$prefix}-label {
-					flex: 0 0 $input-label-horizontal-width;
-
-					&:first-child:last-child {
-					/* labels that typically wrapp radio and checboxes*/
-						flex: 1 1 auto;
-					}
-				}
-			}
-			
+			@extend %for-form-wrapper-horizontal;
 		}
 
 		&-vertical {
-			@include br(md){
-				flex-direction: column;
-			}
+			@extend %for-form-wrapper-vertical;
 		}
-
-		&#{&}-block {
-
-			display:flex;
-			margin-right: 0;
-
-			@include br(sm-max) {
-				flex-direction: column;
-			}
-
-		}
+		
 	}
 
 	///updates here should match btn-group 
@@ -632,18 +669,19 @@ $prefix: '.input';
         }
 
         &#{&}-responsive {
-			&#{$prefix}-group-horizontal {
 
-				@include br(md){
+			@include br(md){
+				
+				&#{$prefix}-group-horizontal {
 
-                    > #{$prefix},.btn,.trumbowyg{
+					> #{$prefix},.btn,.trumbowyg{
 						&:nth-last-child(n+2) {
 							border-top-right-radius: 0;
 							border-bottom-right-radius: 0;
 						}
 					}
 
-                    > #{$prefix},.btn,.trumbowyg{
+					> #{$prefix},.btn,.trumbowyg{
 						&:nth-child(n+2) {
 							border-top-left-radius: 0;
 							border-bottom-left-radius: 0;
@@ -654,35 +692,36 @@ $prefix: '.input';
 							}
 						}
 					}
-					
 				}
-				@include br(sm-max) {
-					width:100%;
-					
-					flex-wrap:wrap;
-					display:flex;
-					flex-direction:column;
+				
+			}
+
+			@include br(sm-max) {
+				width:100%;
+				
+				flex-wrap:wrap;
+				display:flex;
+				flex-direction:column;
+
+				> #{$prefix},.btn,.trumbowyg{
+					&:nth-last-child(n+2) {
+						border-bottom-right-radius: 0;
+						border-bottom-left-radius: 0;
+					}
+				}
 	
-					> #{$prefix},.btn,.trumbowyg{
-						&:nth-last-child(n+2) {
-							border-bottom-right-radius: 0;
-							border-bottom-left-radius: 0;
-						}
-					}
+				> #{$prefix},.btn,.trumbowyg{
+					&:nth-child(n+2) {
+						border-top-right-radius: 0;
+						border-top-left-radius: 0;
 		
-					> #{$prefix},.btn,.trumbowyg{
-						&:nth-child(n+2) {
-							border-top-right-radius: 0;
-							border-top-left-radius: 0;
-			
-							&,
-							&:hover {
-								border-top-color: $input-group-separator-color !important;
-							}
+						&,
+						&:hover {
+							border-top-color: $input-group-separator-color !important;
 						}
 					}
 				}
-            }
+			}
         } 
 	}
 }

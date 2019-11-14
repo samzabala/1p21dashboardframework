@@ -90,6 +90,7 @@ $prefix: '.table';
             padding-top: calc((#{$calculated-table-heading-height} - (#{ $calculated-body-single-line } )) * .5);
             padding-bottom: calc((#{$calculated-table-heading-height} - (#{ $calculated-body-single-line } )) * .5);
             background:$table-heading-background;
+            vertical-align:middle;
 
             @include type-set((
                 color: $table-heading-color,

@@ -3,7 +3,7 @@
 /* SUBSET */
 $prefix: '.modal';
 
-%modal {
+%for-modal {
 
 	padding: $modal-gutter-y $modal-gutter-y;
 	border-radius: $modal-border-radius;
@@ -16,5 +16,5 @@ $prefix: '.modal';
 }
 
 #{$prefix} {
-	@extend %modal;
+	@extend %for-modal;
 }

@@ -1274,6 +1274,7 @@
             color2: $color-primary,
             color1-offset: 0%,
             color2-offset:100%,
+            add-important: false,
 
             angle: -45deg,
             autoprefix: true,
@@ -1291,6 +1292,13 @@
         
         $shorthand-image: '';
         $shorthand-color: '';
+
+        $important: '';
+
+        @if(map-get($opts,use-important) == true) {
+
+        $important: ' !important';
+        }
 
         @if(map-get($opts,use-shorthand) == false) {
             $shorthand-image: '-image';
@@ -1319,11 +1327,11 @@
         }
 
         @if $autoprefix == true {
-            background#{ $shorthand-image }: -moz-#{ map-get($opts,type)  }-gradient( map-get($opts,angle) #{$points} ); /* FF3.6-15 */
-            background#{ $shorthand-image }: -webkit-#{ map-get($opts,type)  }-gradient( map-get($opts,angle) #{$points} ); /* Chrome10-25,Safari5.1-6 */
+            background#{ $shorthand-image }: -moz-#{ map-get($opts,type)  }-gradient( map-get($opts,angle) #{$points} ) #{$important}; /* FF3.6-15 */
+            background#{ $shorthand-image }: -webkit-#{ map-get($opts,type)  }-gradient( map-get($opts,angle) #{$points} ) #{$important}; /* Chrome10-25,Safari5.1-6 */
         }
         background#{ $shorthand-image }: #{ map-get($opts,type)  }-gradient(
-            (#{ 90deg -  map-get($opts,angle) } ) #{$points} ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            (#{ 90deg -  map-get($opts,angle) } ) #{$points} ) #{$important}; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
 
     //fancy as border shit like in farah and farah. you have to setup in a certain direction. i cant explain. but figure it out. good luck

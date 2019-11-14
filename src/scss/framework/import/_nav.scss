@@ -36,6 +36,7 @@ $calculated-nav-icon-height: $nav-icon-height;
 	$calculated-nav-icon-height: em($nav-icon-width / $nav-top-font-size)
 }
 
+
 $prefix: '.nav';
 #{$prefix} {
 
@@ -216,7 +217,6 @@ $prefix: '.nav';
 	.dropdown {
 		background: $nav-dropdown-background;
 		margin:auto;
-		top:100%;
 	}
 
 	@include br(sm-max) {

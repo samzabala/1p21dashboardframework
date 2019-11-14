@@ -3,7 +3,7 @@ $tooltip-point: 20px;
 $calculated-tooltip-point: rem(20px / $body-font-size);
 $calculated-gutter-hypotenus: to-unit( sqrt((strip-unit($tooltip-point) * strip-unit($tooltip-point)) * 2),unit($tooltip-point) );
 
-%pop {
+%for-pop {
 	position:absolute;
 	background: $popper-background;
 	border-radius: $popper-border-radius;
@@ -26,7 +26,7 @@ $calculated-gutter-hypotenus: to-unit( sqrt((strip-unit($tooltip-point) * strip-
 $prefix: '.tooltip';
 
 #{$prefix} {
-	@extend %pop;
+	@extend %for-pop;
 	pointer-events:none;
 	max-width: $tooltip-max-width;
 
@@ -139,14 +139,14 @@ $prefix: '.tooltip';
 
 $prefix: '.dropdown';
 #{$prefix} {
-	@extend %pop;
+	@extend %for-pop;
 	width: $dropdown-width;
 	display:none;
 
 	&#{&}-bottom {
 		bottom:0;
 		&-flush {
-			top: 100%;
+			bottom: 100%;
 		}
 	}
 

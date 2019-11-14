@@ -18,6 +18,62 @@
 	$.trumbowyg.svgPath = '/assets/fonts/icons.svg';
 	$.trumbowyg.hideButtonTexts = true;
 
+	// console.log('init',$.fn.trumbowyg.prototype);
+
+
+	//maxs
+	_.br_vals = {
+		xxs: 0,
+		xs: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-xs') ) || 600,
+		sm: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-sm') ) || 1200,
+		md: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-md') ) || 1600,
+		lg: 9999999
+	};
+	_.br_arr = Object.keys(_.br_vals);
+
+	_.validBr = function(breakpoint,mode) {
+		mode = mode || 'below'; //below,within,above
+
+		var currIndex = _.br_arr.indexOf(breakpoint);
+
+		console.log(breakpoint,'prev',_.br_vals[ _.br_arr[currIndex - 1] ]);
+
+		switch(mode) {
+			case 'below':
+				return window.innerWidth <= _.br_vals[breakpoint];
+				break;
+			case 'within':
+				return (
+					window.innerWidth <= _.br_vals[breakpoint]
+				) && (
+					window.innerWidth > _.br_vals[ _.br_arr[currIndex - 1] ]
+				)
+				break;
+			case 'above':
+				return window.innerWidth > _.br_vals[ _.br_arr[currIndex - 1] ];
+				break;
+		}
+		
+
+	}
+
+	$(window).resize(function(){
+		console.log(
+			'below '+window.innerWidth+"\n",
+			'xs '+_.validBr('xs','below')+"\n",
+			'sm '+_.validBr('sm','below')+"\n",
+			'md '+_.validBr('md','below')+"\n",
+			'within '+window.innerWidth+"\n",
+			'xs '+_.validBr('xs','within')+"\n",
+			'sm '+_.validBr('sm','within')+"\n",
+			'md '+_.validBr('md','within')+"\n",
+			'above '+window.innerWidth+"\n",
+			'xs '+_.validBr('xs','above')+"\n",
+			'sm '+_.validBr('sm','above')+"\n",
+			'md '+_.validBr('md','above')+"\n",
+		);
+	})
+
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
@@ -69,7 +125,7 @@
 
 		availablePropetiesParent.forEach(function(pProperty){
 
-			console.log(pProperty,moduleGrid.data(pProperty));
+			// console.log(pProperty,moduleGrid.data(pProperty));
 
 			if(moduleGrid.data(pProperty)) {
 				moduleGrid.css(pProperty, moduleGrid.data(pProperty))
@@ -93,7 +149,7 @@
 
 		function renderTemplate(sourceMarkup) {
 			var template = Handlebars.compile(sourceMarkup);
-			console.log(sourceMarkup,template(data));
+			// console.log(sourceMarkup,template(data));
 			$(selector).html(template(data));
 		}
 
@@ -243,7 +299,7 @@
 				}else{
 
 					if(selector.closest('.accordion-group:not(.accordion-group-multiple)').length) {
-						console.log('bitch ass');
+						// console.log('bitch ass');
 						selector.siblings('.accordion').slideUp(); 
 						$(this).siblings('.open').removeClass('open'); 
 						selector.siblings('.accordion').removeClass('open'); 
@@ -339,7 +395,7 @@
 					badgeBg: 'primary',
 					badgeSize: '',
 					classes: '',
-					content: '',
+					content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
 					centerX: false,
 					centerY: false,
 

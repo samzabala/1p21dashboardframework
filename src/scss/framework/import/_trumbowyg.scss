@@ -19,6 +19,10 @@ CUSTOM STYLES FOR TRUMBOWYG
  
 
  #{$prefix} {
+
+	 &-msg-error {
+		display:none;
+	 }
 	&-box,
 	&-modal {
 		*,
@@ -44,7 +48,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 	&-editor,
 	&-textarea {
 		@extend %for-form-global;
-		@extend %for-form-input-and-group;
+		@extend %for-form-shadow-and-border;
 		@extend %for-form-input;
 		min-height: 800px;
 		min-width:100%;
@@ -285,7 +289,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 	}
 	
 	&-modal-box {
-		@extend %modal;
+		@extend %for-modal;
 		position:static;
 		margin: auto;
 		max-width: $trumbowyg-modal-max-width;
@@ -300,53 +304,32 @@ CUSTOM STYLES FOR TRUMBOWYG
 			@extend .module-title;
 		}
 		label {
-			// display: block;
-			// position: relative;
-			// margin: $input-gutter-x 0;
-			// height: $calculated-input-height;
-			// line-height: $calculated-input-height;
-			// overflow: hidden;
+			@extend %for-form-wrapper;
+			@extend %for-form-wrapper-block;
+			@extend %for-form-wrapper-horizontal;
+			@extend %for-p;
 	
 			#{$prefix}-input-infos {
-				// display: block;
-				// text-align: left;
-				// height: $calculated-input-height;
-				// line-height: $calculated-input-height;
-				// transition: all 150ms;
-	
-				// span {
-				// 	display: block;
-				// 	border: 1px solid #DEDEDE;
-				// 	padding: 0 7px;
-				// 	width: 150px;
-				// }
-				// span#{$prefix}-msg-error {
-				// 	color: #e74c3c;
-				// }
+				@extend %for-form-label;
+				margin-right: 0;
+				@include br(md) {
+					//@COPIEDOVER
+					flex: 0 0 $input-label-horizontal-width;
+					order: -1;
+				}
 			}
 	
-			input {
-				// position: absolute;
-				// top: 0;
-				// right: 0;
-				// height: 27px;
-				// line-height: 27px;
-				// border: 1px solid #DEDEDE;
-				// background: #fff;
-				// font-size: 14px;
-				// max-width: 330px;
-				// width: 70%;
-				// padding: 0 7px;
-				// transition: all $trumbowyg-transition-duration;
-	
-				// &:hover,
-				// &:focus {
-				// 	outline: none;
-				// 	border: 1px solid #95a5a6;
-				// }
-				// &:focus {
-				// 	// background: lighten($light-color, 5%);
-				// }
+			input:not([type="checkbox"]):not([type="radio"]) {
+				@extend %for-form-global;
+				@extend %for-form-input;
+				@extend %for-form-input-itself;
+				@extend %for-form-shadow-and-border;
+				@extend %for-form-input-single-line;
+				//@COPIEDOVER
+				@include br(md){
+					width: calc(100% - #{$input-label-horizontal-width});
+				}
+				
 			}
 	
 			input[type="checkbox"]{
@@ -361,6 +344,17 @@ CUSTOM STYLES FOR TRUMBOWYG
 					padding-left: 25px;
 				}
 			}
+
+			&#{$prefix}-input-error {
+
+				input:not([type="checkbox"]):not([type="radio"]) {
+					@extend %for-form-input-color-error;
+				}
+
+				#{$prefix}-input-infos {
+					@extend %for-form-label-color-error;
+				}
+			}
 		}
 	
 		.error {
@@ -370,37 +364,16 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 	
 		#{$prefix}-modal-button {
-			@extend %btn;
-			@extend %btn-itself-and-group;
+			@extend %for-btn;
+			@extend %for-btn-itself-and-group;
 			margin: 0 .125em;
 	
 			&#{$prefix}-modal-submit {
-				@extend .btn-primary;
-				// background: darken($modal-submit-color, 3%);
-	
-				// &:hover,
-				// &:focus {
-				// 	background: lighten($modal-submit-color, 5%);
-				// 	outline: none;
-				// }
-				// &:active {
-				// 	background: darken($modal-submit-color, 10%);
-				// }
+				@extend .btn.btn-primary;
 			}
 	
 			&#{$prefix}-modal-reset {
-				@extend .btn-default;
-				// color: inherit;
-				// background: darken($modal-reset-color, 3%);
-	
-				// &:hover,
-				// &:focus {
-				// 	background: lighten($modal-reset-color, 5%);
-				// 	outline: none;
-				// }
-				// &:active {
-				// 	background: darken($modal-reset-color, 10%);
-				// }
+				@extend .btn.btn-default;
 			}
 		}
 	}

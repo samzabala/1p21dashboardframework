@@ -4,9 +4,9 @@
 
 	//breakpiont
 	 //breakpoints
-	 $brxs: 600px !default;
-	 $brsm: 1200px !default;
-	 $brmd: 1800px !default;
+	 $br-xs: 600px !default;
+	 $br-sm: 1200px !default;
+	 $br-md: 1800px !default;
  
 	 //extra breakpoints
 	 $brxxs: 400px !default;
@@ -158,7 +158,7 @@
 		$body-blockquote-color: $brand-color-neutral !default;
 		$body-blockquote-gutter-x: $gutter-small !default;
 		$body-blockquote-border-width: 4px !default;
-		$body-blockquote-border-color: $brand-color-primary !default;
+		$body-blockquote-border-color: $brand-color-neutral !default;
 		$body-blockquote-margin-y: $body-text-gutter-y !default;
 		$body-blockquote-padding-y: $body-text-gutter-y * .5 !default;
 
@@ -582,6 +582,9 @@
 //PLUGIN DEPENDENCIES
 	
 
+	$brxs: $br-xs;
+	$brsm: $br-sm;
+	$brmd: $br-md;
 		
 
 	//mixins shithole
@@ -603,3 +606,73 @@
 		$font-base: $brand-font-primary;
 		$font-monospace: $brand-font-monospace;
 
+
+
+	
+
+//ROOT VAR FOR JS
+
+:root {
+	--br-xs: #{$brxs};
+	--br-sm: #{$brsm};
+	--br-md: #{$brmd};
+
+		--brand-color-base: #{$brand-color-base};
+		--brand-color-base-alt: #{$brand-color-base-alt};
+
+		--brand-color-background: #{$brand-color-background};
+		--brand-color-background-alt: #{$brand-color-background-alt};
+
+		--brand-color-neutral: #{$brand-color-neutral};
+			--brand-color-neutral-light: #{$brand-color-neutral-light};
+			--brand-color-neutral-dark: #{$brand-color-neutral-dark};
+		
+		--brand-color-primary: #{$brand-color-primary};
+			--brand-color-primary-light: #{$brand-color-primary-light};
+			--brand-color-primary-dark: #{$brand-color-primary-dark};
+		
+		--brand-color-accent: #{$brand-color-accent};
+			--brand-color-accent-light: #{$brand-color-accent-light};
+			--brand-color-accent-dark: #{$brand-color-accent-dark};
+
+		--brand-color-success: #{$brand-color-success};
+			--brand-color-success-light: #{$brand-color-success-light};
+			--brand-color-success-dark: #{$brand-color-success-dark};
+
+		--brand-color-caution: #{$brand-color-caution};
+			--brand-color-caution-light: #{$brand-color-caution-light};
+			--brand-color-caution-dark: #{$brand-color-caution-dark};
+
+		--brand-color-error: #{$brand-color-error};
+			--brand-color-error-light: #{$brand-color-error-light};
+			--brand-color-error-dark: #{$brand-color-error-dark};
+
+
+		--brand-color-intensity-1: #{$brand-color-intensity-1};
+		--brand-color-intensity-2: #{$brand-color-intensity-2};
+		--brand-color-intensity-3: #{$brand-color-intensity-3};
+		--brand-color-intensity-4: #{$brand-color-intensity-4};
+		--brand-color-intensity-5: #{$brand-color-intensity-5};
+
+		--gradient-start: #{$gradient-start};
+		--gradient-end: #{$gradient-end};
+
+	// FONT
+		--brand-font-primary: #{$brand-font-primary};
+		--brand-font-accent: #{$brand-font-accent};
+		--brand-font-monospace: #{$brand-font-monospace};
+		
+	// GLOBAL html + body coloring
+
+		--global-color: #{$global-color};
+			--global-color-inverse: #{$global-color-inverse};
+
+			--global-color-contrast: #{$global-color-contrast};
+				--global-color-contrast-inverse: #{$global-color-contrast-inverse};
+
+		--global-background: #{$global-background};
+			--global-background-inverse: #{$global-background-inverse};
+
+			--global-background-contrast: #{$global-background-contrast};
+				--global-background-contrast-inverse: #{$global-background-contrast-inverse};
+}

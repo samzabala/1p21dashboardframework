@@ -29,6 +29,7 @@ $prefix: '.symbol';
     &-plus,
     &-minus,
     &-kebab,
+    &-burger,
     &-search,
     &-square {
         &:before,&:after {
@@ -56,6 +57,23 @@ $prefix: '.symbol';
         }
     }
 
+    &-burger {
+        &:before {
+            content: none;
+        }
+
+        &:after {
+            box-shadow:
+                0 #{em(2px / $body-font-size) * 3} 0 0,
+                0 #{em(2px / $body-font-size) * -3} 0 0
+                ;
+            height:  em(2px / $body-font-size);
+            left: -.1em;
+            right: -.1em;
+            border-radius:  em(2px / $body-font-size) * .5;
+        }
+    }
+
     &-plus:before,
     &-minus:before,
     &-arrow:after,
@@ -75,7 +93,7 @@ $prefix: '.symbol';
         &:before,&:after {
             transform-origin: center em(1px / $body-font-size);
             height: em(11px/$body-font-size);
-            top: em(3px / $body-font-size) * .5;
+            top: em(3px / $body-font-size);
         }
 
         &:before{

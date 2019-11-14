@@ -1,11 +1,13 @@
 
 
 <div id="dashboard-block-main-nav" class="nav nav-sticky">
-	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get">
-	<label for="search"></label>
-		<i class="symbol symbol-search"></i>
-		<input class="input input-single-line" type="text" name="search" placeholder="Search Projects" id="search">
-		<button type="submit" class="sr-only">Search</button>
+	<a href="#" class="btn btn-default btn-symbol btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large desktop-hide laptop-hide nav-toggle">
+		<i class="symbol symbol-burger"></i>
+	</a>
+	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">
+		
+		<input class="input input-single-line input-no-radius input-no-shadow font-weight-500" type="text" name="search" placeholder="Search projects..." id="search">
+		<button type="submit" class="btn btn-no-radius btn-no-shadow" title="Search"><i class="color-primary symbol symbol-search"></i></i></button>
 	</form>
 	<div id="nav-account">
 		<div id="nav-account-info">
