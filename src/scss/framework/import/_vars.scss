@@ -2,6 +2,15 @@
 //VARS
 // $debug: true !default;
 
+	//breakpiont
+	 //breakpoints
+	 $brxs: 600px !default;
+	 $brsm: 1200px !default;
+	 $brmd: 1800px !default;
+ 
+	 //extra breakpoints
+	 $brxxs: 400px !default;
+
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
 			$brand-color-base-alt: #3d3d3d !default;
@@ -60,7 +69,7 @@
 			$global-background-inverse: $brand-color-base-alt !default;
 
 			$global-background-contrast: $brand-color-background-alt !default;
-				$global-background-contrast-inverse: #333333 !default;
+				$global-background-contrast-inverse: #222222 !default;
 
 	// PADDING
 		$gutter-base: 50px !default;
@@ -176,7 +185,8 @@
 			$container-gutter-slim: $gutter-large !default;
 			$container-gutter-mobile: $gutter-micro !default;
 		$container-max-width: 1800px !default;
-
+			$container-max-width-mobile: 900px !default;
+	
 	// speshal bois
 		$special-primary-font-size: 65px !default;
 		$special-primary-font-weight: 300 !default;
@@ -247,6 +257,9 @@
 		
 		$module-gutter-between: 40px !default;
 			$module-gutter-between-mobile: 15px !default;
+
+		$module-gutter-grid-gap: 15px !default;
+		$module-grid-gutter: 30px !default;
 		
 		$module-border-radius: $border-radius-base !default;
 
@@ -438,7 +451,7 @@
 
 		$btn-font-size: 16px !default;
 			$btn-font-size-large: 22px !default;
-			$btn-font-size-small: 14px !default;
+			$btn-font-size-small: 16px !default;
 		$btn-line-height: 20px !default;
 		$btn-font-family: $brand-font-primary !default;
 		$btn-font-weight: 600 !default;

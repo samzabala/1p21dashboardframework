@@ -178,6 +178,10 @@
 				}
 			}
 
+			&-inherit {
+				color: inherit;
+			}
+
 
 			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
@@ -206,6 +210,10 @@
 			&-lg {
 				@extend %flex-lg;
 			}
+
+			// &-justify-content {
+			// 	&-
+			// }
 		}
 
 	

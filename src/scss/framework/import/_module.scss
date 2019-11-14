@@ -3,15 +3,50 @@
 $prefix: '.module';
 #{$prefix} {
 	&-grid {
-		display: grid;
+		display: block;
+		max-width:100%;
+
+		&:nth-child(n+2) {
+			margin-top: $module-grid-gutter;
+		}
+		@include br(md){
+			grid-template-columns: 100%;
+			grid-template-rows: auto;
+			display: grid;
+			grid-gap: $module-gutter-grid-gap;
+			transition:$transition-duration-long opacity $transition-timing;
+
+			.body-loading & {
+				opacity: 0;
+			}
+
+			.body-loaded & {
+				opacity: 1;
+			}
+		}
+	}
+	&,&-grid {
+		max-width:100%;
 	}
 
 	& {
 		background: $module-bg-color;
+		overflow:hidden;
+
+		&#{&}-no-gutter {
+			padding:0;
+		}
 
 		.body-inverse & {
 
-		background: $module-bg-color-inverse;
+			background: $module-bg-color-inverse;
+		}
+
+		@include br(sm-max) {
+			&:nth-child(n+2){
+
+			margin-top: $module-gutter-grid-gap;
+			}
 		}
 	}
 

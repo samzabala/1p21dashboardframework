@@ -95,6 +95,8 @@ $calculated-input-info-margin-top: $input-info-margin-top;
 /* input clasees */
 $prefix: '.input';
 
+
+// extends so trumbowyg's stupid ass can use too
 %for-form {
 	&-global {
 		transition: $transition-duration-short color $transition-timing, $transition-duration-short border $transition-timing, $transition-duration-short box-shadow $transition-timing;
@@ -117,6 +119,9 @@ $prefix: '.input';
 
 		.nav & {
 			border-radius: 0 !important;
+			&:not(.focus):not(:focus) {
+				box-shadow:none;
+			}
 		}
 	}
 
@@ -165,13 +170,28 @@ $prefix: '.input';
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
+			background-color: $input-background;
 
 			&:focus {
 
 				outline: none;
 				box-shadow: $input-box-shadow-focus;
 			}
+
+			.body-inverse & {
+				background-color: $input-background-inverse;
+			}
+
+			&[disabled] {
+				@extend %for-form-global-disabled;
+				background-color: $input-background-disabled;
+
+				.body-inverse & {
+					background-color: $input-background-disabled-inverse;
+				}
+			}
 		}
+
 		& {
 			-webkit-appearance: none;
 			appearance: none;
@@ -216,7 +236,6 @@ $prefix: '.input';
 			}
 
 			option {
-
 				font:inherit;
 			}
 
@@ -304,7 +323,6 @@ $prefix: '.input';
 			min-height: $calculated-input-height * $input-height-multiple-factor;
 			vertical-align: top;
 			max-height:100%;
-			
 			overflow-y: auto;
 
 			option {
@@ -316,8 +334,42 @@ $prefix: '.input';
 
 		}
 
+		&-select {
+			&-multiple {
+				background-image: none;
+			}
+
+			&-not-multiple {
+				padding-right: $calculated-input-gutter-x * 2;
+			}
+
+			& {
+				background-image:
+					linear-gradient(-130deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 51%, transparent 100%),
+					linear-gradient(130deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 51%, transparent 100%)
+					;
+				background-size:
+					#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height,
+					#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height
+					;
+				background-position:
+					calc(100% - (1em + #{$calculated-symbol-caret-width * .425} )) 50%,
+					calc(100% - 1em) 50%
+					;
+				background-repeat: no-repeat,no-repeat;
+
+			}
+			
+		}
+
+		&-inlines {
+			vertical-align: baseline;
+			display:inline-block;
+			margin-right: .5em;
+		}
+
 		@each $tag,$color in $calculated-brand-color-declarations {
-			@at-root #{$prefix}-label#{$prefix}-label-#{$tag},
+		@at-root #{$prefix}-label#{$prefix}-label-#{$tag},
 			#{$prefix}-wrapper-#{$tag} #{$prefix}-label {
 				&,&:focus {
 					color: $color!important;
@@ -344,59 +396,31 @@ $prefix: '.input';
 
 #{$prefix} {
 
-
 	& {
 		@extend %for-form-input-itself;
-		background-color: $input-background;
-
-		.body-inverse & {
-			background-color: $input-background-inverse;
-		}
-
-		&[disabled] {
-			@extend %for-form-global-disabled;
-			background-color: $input-background-disabled;
-
-			.body-inverse & {
-				background-color: $input-background-disabled-inverse;
-			}
-		}
+		
 		
 		@at-root select#{$prefix}:not([multiple]),
 		&-select:not([multiple]) {
-			padding-right: $calculated-input-gutter-x * 2;
+			@extend %for-form-input-select-not-multiple;
 		}
 
 		@at-root select#{$prefix},
 		&-select {
-			background-image:
-				linear-gradient(-130deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 51%, transparent 100%),
-				linear-gradient(130deg, $input-select-dropdown-color 0%, $input-select-dropdown-color 50%, transparent 51%, transparent 100%)
-				;
-			background-size:
-				#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height,
-				#{$calculated-symbol-caret-width * .5} $calculated-symbol-caret-height
-				;
-			background-position:
-				calc(100% - (1em + #{$calculated-symbol-caret-width * .425} )) 50%,
-				calc(100% - 1em) 50%
-				;
-			background-repeat: no-repeat,no-repeat;
+			@extend %for-form-input-select;
 			
 		}
 
 		@at-root select#{$prefix}[multiple],
 		&-select[multiple]{
-			background-image: none;
+			@extend %for-form-input-select-multiple;
 		}
 
 		&-radio,
 		&-checkbox,
 		&[type=radio],
 		&[type=checkbox] {
-			vertical-align: baseline;
-			display:inline-block;
-			margin-right: .5em;
+			@extend %for-form-input-inlines;
 		}
 	}
 
@@ -449,6 +473,7 @@ $prefix: '.input';
 			flex: 1 1;
 			order: 2;
 		}
+		
 		#{$prefix}-wrapper-horizontal#{$prefix}-wrapper-block & {
 			width: calc(100% - #{$input-label-horizontal-width});
 		}
@@ -470,21 +495,34 @@ $prefix: '.input';
 		@extend %for-form-input-multiple-line;
 	}
 
+
 	&-wrapper {
-		max-width:100%;
 
-		&#{&}-block {
+		// @extend %for-form-wrapper;
 
-			display:flex;
-			margin-right: 0;
+		// &#{&}-block {
+		// 	@extend %for-form-wrapper-block;
+		// }
+
+		// &-horizontal {
+		// 	@extend %for-form-wrapper-horizontal;
+		// }
+
+		// &-vertical {
+		// 	@extend %for-form-wrapper-vertical;
+		// }
+		& {
+			max-width:100%;
+
+			@include br(md){
+				display:inline-flex;
+				margin-right: 2rem;
+			}
 		}
-		
-		@include br(md){
-			display:inline-flex;
-			margin-right: 2rem;
 			
 
-			&-horizontal {
+		&-horizontal {
+			@include br(md){
 				flex-direction: row;
 				align-items: flex-start;
 				flex-wrap: wrap;
@@ -497,18 +535,25 @@ $prefix: '.input';
 						flex: 1 1 auto;
 					}
 				}
-				
 			}
+			
+		}
 
-			&-vertical {
+		&-vertical {
+			@include br(md){
 				flex-direction: column;
 			}
 		}
 
-		@include br(sm-max) {
-			&#{&}-block {
+		&#{&}-block {
+
+			display:flex;
+			margin-right: 0;
+
+			@include br(sm-max) {
 				flex-direction: column;
 			}
+
 		}
 	}
 
@@ -640,10 +685,6 @@ $prefix: '.input';
             }
         } 
 	}
-
-	&-legend {
-		display:block;
-	}
 }
 
 
@@ -652,6 +693,9 @@ $prefix: '.input';
 	padding: $special-form-gutter-y $special-form-gutter-x 0;
 	background: $special-form-background;
 	border-radius: $special-form-border-radius;
+	position:relative;
+	margin-bottom: $special-form-gutter-y;
+	overflow:hidden;
 	
 
 	.body-inverse & {
@@ -669,8 +713,8 @@ $prefix: '.input';
 
 	#{$prefix}-single-line,
 	#{$prefix}-multiple-line,
-	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg,
-	& #{$prefix}-trumbowyg-box:not(#{$prefix}-trumbowyg-fullscreen) #{$prefix}-trumbowyg-editor {
+	& .trumbowyg-box:not(.trumbowyg-fullscreen) .trumbowyg-textarea,
+	& .trumbowyg-box:not(.trumbowyg-fullscreen) .trumbowyg-editor {
 		background-color:transparent;
 		width:calc(100% + (#{$special-form-gutter-x} * 2));
 		max-width:none;
@@ -679,10 +723,13 @@ $prefix: '.input';
 		margin-left: $special-form-gutter-x * -1;
 		margin-right:$special-form-gutter-x * -1;
 		border-radius:0;
-
-		&:not(:focus):not(.focus) {
-			box-shadow:none;
-		}
+		box-shadow: none;
 	}
-	
+
+	.btn:last-child {
+		position:absolute;
+		top:100%;
+		right:0;
+		margin-top:$special-form-gutter-y;
+	}
 }

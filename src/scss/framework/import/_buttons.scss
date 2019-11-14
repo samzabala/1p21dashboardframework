@@ -199,35 +199,48 @@ $prefix: '.btn';
 }
 
 %btn {
-    @include type-set((
-        size: #{$calculated-btn-font-size},
-        leading: #{$calculated-btn-line-height},
-        weight: $btn-font-weight,
-        style: $btn-font-style,
-        font: $btn-font-family,
-        align:center,
-        decoration:none,
-        case: $btn-text-transform,
-    ));
-    // overflow:hidden;
-    padding-top: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-    padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-    padding-right: $calculated-btn-gutter-x;
-    padding-left: $calculated-btn-gutter-x;
-    border: $btn-border-width solid transparent;
-    transition: $transition-duration-short all $transition-timing;
-    max-width:100%;
-    width:auto;
-    display:inline-flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    background:none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
+    & {
+        @include type-set((
+            size: #{$calculated-btn-font-size},
+            leading: #{$calculated-btn-line-height},
+            weight: $btn-font-weight,
+            style: $btn-font-style,
+            font: $btn-font-family,
+            align:center,
+            decoration:none,
+            case: $btn-text-transform,
+        ));
+        // overflow:hidden;
+        padding-top: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        // min-height:$calculated-btn-height;
+        padding-right: $calculated-btn-gutter-x;
+        padding-left: $calculated-btn-gutter-x;
+        border: $btn-border-width solid transparent;
+        transition: $transition-duration-short all $transition-timing;
+        max-width:100%;
+        width:auto;
+        display:inline-flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        background:none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .symbol {
+            &:last-child {
+                margin-left: .25em;
+            }
+            &:first-child {
+                margin-right: .25em;
+            }
+        }
+    }
 
     &-itself-and-group {
 
@@ -239,11 +252,60 @@ $prefix: '.btn';
         }
     }
 
+    &-large {
+
+        font-size: $calculated-btn-font-size-large;
+        padding-top: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        border-radius: $btn-border-radius-large;
+        // min-height:$calculated-btn-height-large;
+    }
+
+    &-small {
+
+        font-size: $calculated-btn-font-size-small;
+        padding-top: calc(  (  (#{ $calculated-btn-height-small } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        padding-bottom: calc(  (  (#{ $calculated-btn-height-small } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+        border-radius: $btn-border-radius-small;
+        // min-height:$calculated-btn-height-small;
+    }
+
+    &-disabled{
+        cursor:not-allowed;
+    }
+
+    &-symbol {
+
+        & {
+            width: $calculated-btn-height;
+            padding-left:0;
+            padding-right:0;
+
+
+            .symbol {
+                margin-left:auto;
+                margin-right:auto;
+            }
+        }
+
+        &-large {
+            width: $calculated-btn-height-large ;
+
+        }
+
+        &-small {
+            width: $calculated-btn-height-small;
+
+        }
+    }
+
 }
 
 #{$prefix} {
-    @extend %btn;
-    
+    & {
+        @extend %btn;
+    }
+
     &#{$prefix}-no-radius {
         border-radius: 0!important;
     }
@@ -271,52 +333,28 @@ $prefix: '.btn';
 
     &-disabled,
     #{$prefix}-group-disabled & {
-        cursor:not-allowed;
+        @extend %btn-disabled;
     }
 
     &#{$prefix}-large,
     #{$prefix}-group#{$prefix}-large & {
-        font-size: $calculated-btn-font-size-large;
-        padding-top: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        padding-bottom: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        border-radius: $btn-border-radius-large;
+        @extend %btn-large;
     }
 
     &#{$prefix}-small,
     #{$prefix}-group#{$prefix}-small & {
-        font-size: $calculated-btn-font-size-small;
-        padding-top: calc(  (  (#{$calculated-btn-height-small} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        padding-bottom: calc(  (  (#{$calculated-btn-height-small} - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-        border-radius: $btn-border-radius-small;
+        @extend %btn-small;
     }
 
     &-symbol {
-        width: $calculated-btn-height;
-        padding-left:0;
-        padding-right:0;
+        @extend %btn-symbol;
 
         #{$prefix}-small &{
-            width: $calculated-btn-height-small;
+            @extend %btn-symbol-small;
         }
 
         #{$prefix}-large &{
-            width: $calculated-btn-height-large ;
-        }
-
-
-
-        .symbol {
-            margin-left:auto;
-            margin-right:auto;
-        }
-    }
-
-    .symbol {
-        &:last-child {
-            margin-left: .25em;
-        }
-        &:first-child {
-            margin-right: .25em;
+            @extend %btn-symbol-large;
         }
     }
     
@@ -431,7 +469,7 @@ $prefix: '.btn';
     }
 
     @each $scheme,$properties in $calculated-btn-schemes {
-        &-#{$scheme} {
+        &#{&}-#{$scheme} {
             @include button-generate-schemes($properties);
         }
     }

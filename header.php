@@ -12,12 +12,15 @@
 	<!-- SCRIPT -->
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/jquery.min.js'); ?>
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/handlebars.min.js'); ?>
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.1p21.js'); ?>
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.1p21.min.js'); ?>
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.min.js'); ?>
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?>
 
+
+
+
 </head>
-<body id="dashboard" class="body-nav-sticky-offset cf dashboard-<?=DASHBOARD_SLUG ?>">
+<body id="dashboard" class="body-nav-sticky-offset cf body-loading dashboard-<?=DASHBOARD_SLUG ?>">
 	<!--SVG Styles  -->
 	<?php app_get_template_part('includes/svg-globals'); ?>
 	

@@ -91,8 +91,16 @@
 		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
-		max-width:100%;
 		// color: inherit;
+	}
+
+	input,
+	textarea,
+	fieldset,
+	legend,
+	select,
+	button {
+		max-width:100%;
 	}
 
 	fieldset {

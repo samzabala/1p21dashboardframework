@@ -24,17 +24,69 @@
 
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
-	_1p21.initLayout = function(selector,arr){
-		defaults = {
-			//column setup
-			modules : [
-				{
-					//idk setup the grid
-					id : '',
+	_1p21.initGrid = function(moduleGrid){
+		
 
+		var availablePropetiesParent = [
+			'grid-template-rows',
+			'grid-template-columns',
+			'grid-template-areas',
+
+
+			'grid-column-start',
+			'grid-template-end',
+			'grid-template',
+			'grid-column-gap',
+			'grid-row-gap',
+			'justify-items',
+			'align-items',
+			'justify-content',
+			'align-content',
+			'place-content',
+			'grid-auto-columns',
+			'grid-auto-rows',
+			'grid-auto-flow',
+			'grid'
+		];
+
+
+
+		var availablePropertiesChildren = [
+			'grid-area',
+
+			'grid-column',
+			'grid-row',
+			
+			'grid-column-start',
+			'grid-column-end',
+			'grid-row-start',
+			'grid-row-end',
+			'justify-self',
+			'align-self',
+			'place-self',
+		];
+
+
+		availablePropetiesParent.forEach(function(pProperty){
+
+			console.log(pProperty,moduleGrid.data(pProperty));
+
+			if(moduleGrid.data(pProperty)) {
+				moduleGrid.css(pProperty, moduleGrid.data(pProperty))
+			}
+		});
+
+		//chchchchchildren
+
+		moduleGrid.children('.module').each(function(){
+			var moduleChild = $(this);
+			availablePropertiesChildren.forEach(function(cProperty){
+				if(moduleChild.data(cProperty)) {
+					moduleChild.css(cProperty, moduleChild.data(cProperty))
 				}
-			]
-		}
+			});
+		});
+		
 	}
 
 	_1p21.initTemplate = function(templateSrc,data,selector) {
@@ -120,6 +172,9 @@
 		modal
 		
 		*/
+		$('.module-grid:not(.module-grid-custom)').each(function(){
+			_1p21.initGrid($(this));
+		});
 
 		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
 			$(this).trumbowyg({
@@ -143,9 +198,11 @@
 					['strong', 'em',],
 					['insertImage'],
 					['link'],
-					['unorderedList', 'orderedList'],['upload']
+					['unorderedList', 'orderedList'],
+					['upload'],
+					['fullscreen']
 				],
-				prefix: 'input-trumbowyg-',
+				// prefix: 'input-trumbowyg-',
 				// autogrow: true,
 				// autogrowOnEnter: true,
 				removeformatPasted: true,
@@ -437,10 +494,7 @@
 
 		$('body').on('click','*[data-toggle="tooltip-click"]',function(e){
 			var self = $(this);
-
 			_1p21.createToolTip(self);
-
-
 			
 		});
 
@@ -458,6 +512,11 @@
 			var self = $(this);
 			_1p21.destroyToolTip();
 		});
+
+
+
+
+		$('body').removeClass('body-loading').addClass('body-loaded');
 
 	})
 

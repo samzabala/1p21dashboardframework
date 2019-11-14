@@ -91,12 +91,7 @@
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 	<label for="" class="sr-only">uuugh</label>
-	<textarea id="editor-demo" class="input input-trumbowyg" placeholder="Please write your new note here..."><h1 id="thefuckintop">Header one</h1>
-	<h2>Header two</h2>
-	<h3>Header three</h3>
-	<h4>Header four</h4>
-	<h5>Header five</h5>
-	<h6>Header six</h6>
+<textarea id="editor-demo" class="input input-trumbowyg" placeholder="Please write your new note here...">
 	<h2>Blockquotes</h2>
 	<p>Single line blockquote:</p>
 	<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
@@ -189,11 +184,22 @@
 	<p><strong>Teletype Tag</strong></p>
 	<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p>
 	<p><strong>Variable Tag</strong></p>
-	<p>This allows you to denote <var>variables</var>.</p></textarea>
+	<p>This allows you to denote <var>variables</var>.</p>
+	<h1 id="thefuckintop">Header one</h1>
+	<h2>Header two</h2>
+	<h3>Header three</h3>
+	<h4>Header four</h4>
+	<h5>Header five</h5>
+	<h6>Header six</h6>
+</textarea>
 	
 	</div>
 	<a href="#" class="btn btn-primary">Submet et</a>
 </form>
+
+
+<h2>alternatives</h2>
+
 	<h1>Nav</h1>
 	<div class="nav">
 	
@@ -748,9 +754,9 @@
 
 			<h1>Accordion</h1>
 
-			<div class="accordion-group accordion-group-multiple">
+			<div class="accordion-group ">
 
-				<h2 data-href="#shit-accordion" data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h2>
+				<h2 data-href="#shit-accordion" data-toggle="accordion" class="open">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h2>
 				<div id="shit-accordion" class="accordion open">
 					<input type="button">
 					<input type="checkbox">
@@ -880,7 +886,7 @@
 
 	<h2>Block</h2>
 
-	<button type="button" class="btn btn-large btn-block btn-success text-weight-300"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
+	<button type="button" class="btn btn-large btn-block btn-success font-weight-300"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
 	<h2>
 		Disabled
 	</h2>
