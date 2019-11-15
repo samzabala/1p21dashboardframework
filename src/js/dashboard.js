@@ -14,8 +14,9 @@
 //   }
 
 (function($,Handlebars,_1p21,window){
-	
-	$('body').on('click','*.dashboard-sidenav-toggle',function(e){
+	console.log('init dashy');
+	console.log($('.dashboard-sidenav-toggle'));
+	$('body').on('click','.dashboard-sidenav-toggle',function(e){
 		e.preventDefault();
 		console.log('hola bitchacho');
 		$('#dashboard-block-sidebar').toggleClass('open');

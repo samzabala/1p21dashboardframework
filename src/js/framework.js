@@ -57,23 +57,6 @@
 
 	}
 
-	$(window).resize(function(){
-		console.log(
-			'below '+window.innerWidth+"\n",
-			'xs '+_.validBr('xs','below')+"\n",
-			'sm '+_.validBr('sm','below')+"\n",
-			'md '+_.validBr('md','below')+"\n",
-			'within '+window.innerWidth+"\n",
-			'xs '+_.validBr('xs','within')+"\n",
-			'sm '+_.validBr('sm','within')+"\n",
-			'md '+_.validBr('md','within')+"\n",
-			'above '+window.innerWidth+"\n",
-			'xs '+_.validBr('xs','above')+"\n",
-			'sm '+_.validBr('sm','above')+"\n",
-			'md '+_.validBr('md','above')+"\n",
-		);
-	})
-
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
