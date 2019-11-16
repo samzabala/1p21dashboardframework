@@ -61,7 +61,7 @@ table {
 }
 
 :root {
-  --br-xs: 600px;
+  --br-xs: 700px;
   --br-sm: 1200px;
   --br-md: 1800px;
   --brand-color-base: #000000;
@@ -107,7 +107,7 @@ table {
 }
 
 /* heading bars or rules from tiny rectangles to long rules and what not. */
-.progress:after {
+.progress:after, .trumbowyg-progress:after {
   content: "";
   clear: both;
   display: table;
@@ -115,14 +115,12 @@ table {
 }
 
 .flex-xs {
-  display: -webkit-box!important;
   display: flex!important;
   flex-wrap: wrap;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 701px) {
   .flex-sm {
-    display: -webkit-box!important;
     display: flex!important;
     flex-wrap: wrap;
   }
@@ -130,7 +128,6 @@ table {
 
 @media (min-width: 1201px) {
   .flex-md {
-    display: -webkit-box!important;
     display: flex!important;
     flex-wrap: wrap;
   }
@@ -138,7 +135,6 @@ table {
 
 @media (min-width: 1801px) {
   .flex-lg {
-    display: -webkit-box!important;
     display: flex!important;
     flex-wrap: wrap;
   }
@@ -209,6 +205,8 @@ embed {
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -361,7 +359,6 @@ em, i {
 a {
   color: #0480fe;
   text-decoration: none;
-  -webkit-transition: 0.25s all ease-in-out;
   transition: 0.25s all ease-in-out;
 }
 
@@ -765,8 +762,7 @@ table.table-large .table-cell {
   height: 1em;
   width: 1em;
   vertical-align: middle;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform-origin: center center;
 }
 
 .symbol:before, .symbol:after {
@@ -818,20 +814,17 @@ table.table-large .table-cell {
 }
 
 .symbol-arrow:before, .symbol-arrow:after {
-  -webkit-transform-origin: center 0.0625em;
-          transform-origin: center 0.0625em;
+  transform-origin: center 0.0625em;
   height: 0.6875em;
   top: 0.1875em;
 }
 
 .symbol-arrow:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .symbol-arrow:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .symbol-kebab:before {
@@ -875,8 +868,7 @@ table.table-large .table-cell {
 .open > .symbol-caret-toggle-up, .symbol-arrow-up,
 .active > .symbol-arrow-toggle-up,
 .open > .symbol-arrow-toggle-up {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .symbol-caret-down,
@@ -884,8 +876,7 @@ table.table-large .table-cell {
 .open > .symbol-caret-toggle-down, .symbol-arrow-down,
 .active > .symbol-arrow-toggle-down,
 .open > .symbol-arrow-toggle-down {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .symbol-caret-left,
@@ -893,8 +884,7 @@ table.table-large .table-cell {
 .open > .symbol-caret-toggle-left, .symbol-arrow-left,
 .active > .symbol-arrow-toggle-left,
 .open > .symbol-arrow-toggle-left {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .symbol-caret-right,
@@ -902,8 +892,7 @@ table.table-large .table-cell {
 .open > .symbol-caret-toggle-right, .symbol-arrow-right,
 .active > .symbol-arrow-toggle-right,
 .open > .symbol-arrow-toggle-right {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .symbol-square:before {
@@ -916,8 +905,7 @@ table.table-large .table-cell {
 }
 
 .symbol-search {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .symbol-search:before {
@@ -963,7 +951,6 @@ table.table-large .table-cell {
 }
 
 .nav, .nav-list {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -1063,13 +1050,11 @@ table.table-large .table-cell {
   right: 0;
   left: 0;
   height: 0;
-  -webkit-transition: 0.125s all ease-in-out;
   transition: 0.125s all ease-in-out;
+  background-image: -moz-linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, right top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(left , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
@@ -1080,11 +1065,10 @@ table.table-large .table-cell {
   width: 0;
   top: 0;
   left: auto;
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
@@ -1119,8 +1103,6 @@ table.table-large .table-cell {
   .nav-list > li > a,
   .nav-vertical .nav-list .nav-item > a,
   .nav-vertical .nav-list li > a {
-    padding-left: 10px;
-    padding-right: 10px;
     display: block;
   }
 }
@@ -1177,7 +1159,11 @@ table.table-large .table-cell {
 
 /*** MODULES ***/
 .module-grid {
-  display: block;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  display: grid;
+  grid-gap: 15px;
+  transition: 0.5s opacity ease-in-out;
   max-width: 100%;
 }
 
@@ -1186,14 +1172,6 @@ table.table-large .table-cell {
 }
 
 @media (min-width: 1201px) {
-  .module-grid {
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    display: grid;
-    grid-gap: 15px;
-    -webkit-transition: 0.5s opacity ease-in-out;
-    transition: 0.5s opacity ease-in-out;
-  }
   .body-loading .module-grid {
     opacity: 0;
   }
@@ -1286,20 +1264,16 @@ table.table-large .table-cell {
 
 @media (min-width: 1201px) {
   .module-heading {
-    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
   .module-title, .trumbowyg-modal-box .trumbowyg-modal-title, .module-function {
     width: 50%;
   }
   .module-functions {
-    -webkit-box-flex: 1;
-            flex: 1 1;
+    flex: 1 1;
     text-align: right;
   }
 }
@@ -1353,11 +1327,11 @@ table.table-large .table-cell {
   display: block;
   overflow: hidden;
   width: 3.0769230769em;
-  display: block;
+  display: inline-block;
   border-radius: 50%;
   font-size: 4.0625rem;
   line-height: 1.25;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: 900;
   text-transform: uppercase;
   font-style: normal;
@@ -1392,65 +1366,63 @@ table.table-large .table-cell {
 }
 
 .thumbnail-text {
-  display: -webkit-box;
   display: flex;
   text-align: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .thumbnail-content {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /*** SET ***/
-/* SUBSET */
-.progress {
+.progress, .trumbowyg-progress {
   width: 100%;
   display: block;
   background-color: rgba(236, 237, 240, 0.01);
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 1.875em;
+  background: -moz-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(236, 237, 240, 0.01) 1px,  rgba(236, 237, 240, 0.01) 4px) ;
   /* FF3.6-15 */
   background: -webkit-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(236, 237, 240, 0.01) 1px,  rgba(236, 237, 240, 0.01) 4px) ;
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-repeating-linear-gradient(315deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(236, 237, 240, 0.01) 1px,  rgba(236, 237, 240, 0.01) 4px) ;
   background: repeating-linear-gradient(135deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(236, 237, 240, 0.01) 1px,  rgba(236, 237, 240, 0.01) 4px) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.body-inverse .progress {
+.active.progress, .active.trumbowyg-progress {
+  animation-name: progress-bar-stripes;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.body-inverse .progress, .body-inverse .trumbowyg-progress {
   background-color: rgba(34, 34, 34, 0.01);
+  background: -moz-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
   /* FF3.6-15 */
   background: -webkit-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-repeating-linear-gradient(315deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
   background: repeating-linear-gradient(135deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.progress, .progress-bar {
+.progress, .progress-bar, .trumbowyg-progress, .trumbowyg-progress-bar {
   height: 1.25rem;
-  -webkit-transition: 2s all ease-in-out;
   transition: 2s all ease-in-out;
 }
 
-@-webkit-keyframes progress-bar-stripes {
-  from {
-    background-position: 50px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
+.progress-bar, .trumbowyg-progress-bar {
+  float: left;
+}
+
+.progress-bar, .trumbowyg-progress-bar {
+  background-color: #8d8d8d;
 }
 
 @keyframes progress-bar-stripes {
@@ -1462,22 +1434,7 @@ table.table-large .table-cell {
   }
 }
 
-.progress.active {
-  -webkit-animation-name: progress-bar-stripes;
-          animation-name: progress-bar-stripes;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.progress-bar {
-  float: left;
-  background-color: #8d8d8d;
-}
-
+/* SUBSET */
 /*** BADGE ***/
 .badge {
   display: inline-block;
@@ -1530,6 +1487,164 @@ table.table-large .table-cell {
   margin-right: .5rem;
 }
 
+/*** POPPER, USED BY DROPDOWNS AND TOOLTIPS TOO ***/
+.tooltip, .dropdown {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-shadow: 0px 0px 15px -10px #000000;
+  z-index: 2;
+  display: none;
+}
+
+.open.tooltip, .open.dropdown {
+  display: block;
+}
+
+.body-inverse .tooltip, .body-inverse .dropdown {
+  background: #3d3d3d;
+}
+
+.tooltip {
+  pointer-events: none;
+  max-width: 300px;
+}
+
+.tooltip:before, .tooltip:after {
+  content: "";
+  background: #FFFFFF;
+  position: absolute;
+  z-index: -1;
+}
+
+.body-inverse .tooltip:before, .body-inverse .tooltip:after {
+  background: #3d3d3d;
+}
+
+.tooltip:after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: inherit;
+}
+
+.tooltip:before {
+  margin: auto;
+  box-shadow: 0px 0px 20px -5px #000000;
+  width: 20px;
+  height: 20px;
+  transform-origin: center center;
+  transform: rotate(45deg);
+}
+
+.tooltip-badge {
+  position: absolute;
+  margin: auto;
+}
+
+.tooltip.tooltip-top:before,
+.tooltip.tooltip-top .tooltip-badge {
+  left: 0;
+  right: 0;
+}
+
+.tooltip.tooltip-top:before {
+  bottom: -10px;
+}
+
+.tooltip.tooltip-top .tooltip-badge {
+  top: calc(100% + 28.2857142857px * .5);
+}
+
+.tooltip.tooltip-bottom:before,
+.tooltip.tooltip-bottom .tooltip-badge {
+  left: 0;
+  right: 0;
+}
+
+.tooltip.tooltip-bottom:before {
+  top: -10px;
+}
+
+.tooltip.tooltip-bottom .tooltip-badge {
+  bottom: calc(100% + 28.2857142857px * .5);
+}
+
+.tooltip.tooltip-right:before,
+.tooltip.tooltip-right .tooltip-badge {
+  bottom: 0;
+  top: 0;
+}
+
+.tooltip.tooltip-right:before {
+  left: -10px;
+}
+
+.tooltip.tooltip-right .tooltip-badge {
+  right: calc(100% + 28.2857142857px * .5);
+}
+
+.tooltip.tooltip-left:before,
+.tooltip.tooltip-left .tooltip-badge {
+  bottom: 0;
+  top: 0;
+}
+
+.tooltip.tooltip-left:before {
+  right: -10px;
+}
+
+.tooltip.tooltip-left .tooltip-badge {
+  left: calc(100% + 28.2857142857px * .5);
+}
+
+.dropdown {
+  width: 300px;
+  display: none;
+}
+
+.dropdown.dropdown-bottom {
+  bottom: 0;
+}
+
+.dropdown.dropdown-bottom-flush {
+  bottom: 100%;
+}
+
+.dropdown.dropdown-top {
+  top: 0;
+}
+
+.dropdown.dropdown-top-flush {
+  top: 100%;
+}
+
+.dropdown.dropdown-left {
+  left: 0;
+}
+
+.dropdown.dropdown-left-flush {
+  right: 100%;
+}
+
+.dropdown.dropdown-right {
+  right: 0;
+}
+
+.dropdown.dropdown-right-flush {
+  left: 100%;
+}
+
+.dropdown.open {
+  display: block;
+}
+
+.dropdown li:before {
+  content: none;
+}
+
 /*  BUTTONS ***/
 .btn, .trumbowyg-modal-box .trumbowyg-modal-button {
   font-size: 1rem;
@@ -1545,17 +1660,13 @@ table.table-large .table-cell {
   padding-right: 1.875em;
   padding-left: 1.875em;
   border: 1px solid transparent;
-  -webkit-transition: 0.125s all ease-in-out;
   transition: 0.125s all ease-in-out;
   max-width: 100%;
   width: auto;
-  display: -webkit-inline-box;
   display: inline-flex;
   align-content: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   vertical-align: middle;
   background: none;
   -webkit-user-select: none;
@@ -1645,7 +1756,6 @@ table.table-large .table-cell {
 }
 
 .btn-group {
-  display: -webkit-inline-box;
   display: inline-flex;
   position: relative;
   max-width: 100%;
@@ -1654,13 +1764,11 @@ table.table-large .table-cell {
 }
 
 .btn-group-block {
-  display: -webkit-box;
   display: flex;
 }
 
 .btn-group-block .btn {
-  -webkit-box-flex: 1;
-          flex: 1 1;
+  flex: 1 1;
 }
 
 .btn-group.btn-large {
@@ -1686,9 +1794,7 @@ table.table-large .table-cell {
 }
 
 .btn-group.btn-group-vertical {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .btn-group.btn-group-vertical > .btn:nth-last-child(n+2) {
@@ -1723,11 +1829,8 @@ table.table-large .table-cell {
   .btn-group.btn-group-responsive {
     width: 100%;
     flex-wrap: wrap;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
   .btn-group.btn-group-responsive > .btn:nth-last-child(n+2) {
     border-bottom-right-radius: 0;
@@ -2300,8 +2403,7 @@ table.table-large .table-cell {
 
 /*** SET ***/
 /* input clasees */
-.input-label, .input-single-line, .input-multiple-line, .input-trumbowyg, .trumbowyg-editor, .trumbowyg-textarea, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
-  -webkit-transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
+.input-label, .input-single-line, .input-multiple-line, .input-editor, .trumbowyg-editor, .trumbowyg-textarea, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%;
 }
@@ -2312,23 +2414,23 @@ table.table-large .table-cell {
 }
 
 .input-single-line,
-.input-group, .input-multiple-line, .input-trumbowyg, .trumbowyg-editor, .trumbowyg-textarea, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
+.input-group, .input-multiple-line, .input-editor, .trumbowyg-editor, .trumbowyg-textarea, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   border-radius: 10px;
   box-shadow: 0px 3px 15px -10px #000000;
 }
 
 .input-no-radius.input-single-line,
-.input-no-radius.input-group, .input-no-radius.input-multiple-line, .input-no-radius.input-trumbowyg, .input-no-radius.trumbowyg-editor, .input-no-radius.trumbowyg-textarea, .trumbowyg-modal-box label input.input-no-radius:not([type="checkbox"]):not([type="radio"]) {
+.input-no-radius.input-group, .input-no-radius.input-multiple-line, .input-no-radius.input-editor, .input-no-radius.trumbowyg-editor, .input-no-radius.trumbowyg-textarea, .trumbowyg-modal-box label input.input-no-radius:not([type="checkbox"]):not([type="radio"]) {
   border-radius: 0 !important;
 }
 
 .nav .input-single-line,
-.nav .input-group, .nav .input-multiple-line, .nav .input-trumbowyg, .nav .trumbowyg-editor, .nav .trumbowyg-textarea, .nav .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .nav input:not([type="checkbox"]):not([type="radio"]) {
+.nav .input-group, .nav .input-multiple-line, .nav .input-editor, .nav .trumbowyg-editor, .nav .trumbowyg-textarea, .nav .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .nav input:not([type="checkbox"]):not([type="radio"]) {
   border-radius: 0 !important;
 }
 
 .nav .input-single-line:not(.focus):not(:focus),
-.nav .input-group:not(.focus):not(:focus), .nav .input-multiple-line:not(.focus):not(:focus), .nav .input-trumbowyg:not(.focus):not(:focus), .nav .trumbowyg-editor:not(.focus):not(:focus), .nav .trumbowyg-textarea:not(.focus):not(:focus), .nav .trumbowyg-modal-box label input:not(.focus):not(:focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .nav input:not(.focus):not(:focus):not([type="checkbox"]):not([type="radio"]) {
+.nav .input-group:not(.focus):not(:focus), .nav .input-multiple-line:not(.focus):not(:focus), .nav .input-editor:not(.focus):not(:focus), .nav .trumbowyg-editor:not(.focus):not(:focus), .nav .trumbowyg-textarea:not(.focus):not(:focus), .nav .trumbowyg-modal-box label input:not(.focus):not(:focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .nav input:not(.focus):not(:focus):not([type="checkbox"]):not([type="radio"]) {
   box-shadow: none;
 }
 
@@ -2434,10 +2536,9 @@ table.table-large .table-cell {
   background-color: transparent;
 }
 
-.input-single-line, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .input-multiple-line, .input[multiple], .input-trumbowyg, .trumbowyg-editor, .trumbowyg-textarea {
+.input-single-line, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .input-multiple-line, .input[multiple], .input-editor, .trumbowyg-editor, .trumbowyg-textarea {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   font-size: 1rem;
   line-height: 1.25;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2456,13 +2557,13 @@ table.table-large .table-cell {
   padding-bottom: calc(  (  (2.8125rem - (1px * 2)) - (1em * 1.25) ) * .5);
 }
 
-.input-large.input-single-line, .trumbowyg-modal-box label input.input-large:not([type="checkbox"]):not([type="radio"]), .input-large.input-multiple-line, .input-large.input[multiple], .input-large.input-trumbowyg, .input-large.trumbowyg-editor, .input-large.trumbowyg-textarea,
+.input-large.input-single-line, .trumbowyg-modal-box label input.input-large:not([type="checkbox"]):not([type="radio"]), .input-large.input-multiple-line, .input-large.input[multiple], .input-large.input-editor, .input-large.trumbowyg-editor, .input-large.trumbowyg-textarea,
 .input-group.input-group-large .input-single-line,
 .input-group.input-group-large .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]),
 .trumbowyg-modal-box label .input-group.input-group-large input:not([type="checkbox"]):not([type="radio"]),
 .input-group.input-group-large .input-multiple-line,
 .input-group.input-group-large .input[multiple],
-.input-group.input-group-large .input-trumbowyg,
+.input-group.input-group-large .input-editor,
 .input-group.input-group-large .trumbowyg-editor,
 .input-group.input-group-large .trumbowyg-textarea {
   font-size: 1.5625rem;
@@ -2471,13 +2572,13 @@ table.table-large .table-cell {
   border-radius: 10px;
 }
 
-.input-small.input-single-line, .trumbowyg-modal-box label input.input-small:not([type="checkbox"]):not([type="radio"]), .input-small.input-multiple-line, .input-small.input[multiple], .input-small.input-trumbowyg, .input-small.trumbowyg-editor, .input-small.trumbowyg-textarea,
+.input-small.input-single-line, .trumbowyg-modal-box label input.input-small:not([type="checkbox"]):not([type="radio"]), .input-small.input-multiple-line, .input-small.input[multiple], .input-small.input-editor, .input-small.trumbowyg-editor, .input-small.trumbowyg-textarea,
 .input-group.input-group-small .input-single-line,
 .input-group.input-group-small .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]),
 .trumbowyg-modal-box label .input-group.input-group-small input:not([type="checkbox"]):not([type="radio"]),
 .input-group.input-group-small .input-multiple-line,
 .input-group.input-group-small .input[multiple],
-.input-group.input-group-small .input-trumbowyg,
+.input-group.input-group-small .input-editor,
 .input-group.input-group-small .trumbowyg-editor,
 .input-group.input-group-small .trumbowyg-textarea {
   font-size: 0.875rem;
@@ -2486,117 +2587,117 @@ table.table-large .table-cell {
   border-radius: 10px;
 }
 
-.body-inverse .input-single-line, .body-inverse .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .body-inverse input:not([type="checkbox"]):not([type="radio"]), .body-inverse .input-multiple-line, .body-inverse .input[multiple], .body-inverse .input-trumbowyg, .body-inverse .trumbowyg-editor, .body-inverse .trumbowyg-textarea {
+.body-inverse .input-single-line, .body-inverse .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .body-inverse input:not([type="checkbox"]):not([type="radio"]), .body-inverse .input-multiple-line, .body-inverse .input[multiple], .body-inverse .input-editor, .body-inverse .trumbowyg-editor, .body-inverse .trumbowyg-textarea {
   color: inherit;
   background-color: #222222;
 }
 
-.input-single-line option, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) option, .input-multiple-line option, .input[multiple] option, .input-trumbowyg option, .trumbowyg-editor option, .trumbowyg-textarea option {
+.input-single-line option, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) option, .input-multiple-line option, .input[multiple] option, .input-editor option, .trumbowyg-editor option, .trumbowyg-textarea option {
   font: inherit;
 }
 
-.input-group .input-single-line, .input-group .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-group input:not([type="checkbox"]):not([type="radio"]), .input-group .input-multiple-line, .input-group .input[multiple], .input-group .input-trumbowyg, .input-group .trumbowyg-editor, .input-group .trumbowyg-textarea {
+.input-group .input-single-line, .input-group .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-group input:not([type="checkbox"]):not([type="radio"]), .input-group .input-multiple-line, .input-group .input[multiple], .input-group .input-editor, .input-group .trumbowyg-editor, .input-group .trumbowyg-textarea {
   box-shadow: none;
 }
 
-.input-single-line::-webkit-input-placeholder, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .input-multiple-line::-webkit-input-placeholder, .input[multiple]::-webkit-input-placeholder, .input-trumbowyg::-webkit-input-placeholder, .trumbowyg-editor::-webkit-input-placeholder, .trumbowyg-textarea::-webkit-input-placeholder {
+.input-single-line::-webkit-input-placeholder, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .input-multiple-line::-webkit-input-placeholder, .input[multiple]::-webkit-input-placeholder, .input-editor::-webkit-input-placeholder, .trumbowyg-editor::-webkit-input-placeholder, .trumbowyg-textarea::-webkit-input-placeholder {
   color: inherit;
 }
 
-.input-single-line:-moz-placeholder, .trumbowyg-modal-box label input:-moz-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:-moz-placeholder, .input[multiple]:-moz-placeholder, .input-trumbowyg:-moz-placeholder, .trumbowyg-editor:-moz-placeholder, .trumbowyg-textarea:-moz-placeholder {
+.input-single-line:-moz-placeholder, .trumbowyg-modal-box label input:-moz-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:-moz-placeholder, .input[multiple]:-moz-placeholder, .input-editor:-moz-placeholder, .trumbowyg-editor:-moz-placeholder, .trumbowyg-textarea:-moz-placeholder {
   color: inherit;
 }
 
-.input-single-line:-ms-input-placeholder, .trumbowyg-modal-box label input:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:-ms-input-placeholder, .input[multiple]:-ms-input-placeholder, .input-trumbowyg:-ms-input-placeholder, .trumbowyg-editor:-ms-input-placeholder, .trumbowyg-textarea:-ms-input-placeholder {
+.input-single-line:-ms-input-placeholder, .trumbowyg-modal-box label input:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:-ms-input-placeholder, .input[multiple]:-ms-input-placeholder, .input-editor:-ms-input-placeholder, .trumbowyg-editor:-ms-input-placeholder, .trumbowyg-textarea:-ms-input-placeholder {
   color: inherit;
 }
 
-.input-single-line:focus::-webkit-input-placeholder, .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input[multiple]:focus::-webkit-input-placeholder, .input-trumbowyg:focus::-webkit-input-placeholder, .trumbowyg-editor:focus::-webkit-input-placeholder, .trumbowyg-textarea:focus::-webkit-input-placeholder {
+.input-single-line:focus::-webkit-input-placeholder, .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input[multiple]:focus::-webkit-input-placeholder, .input-editor:focus::-webkit-input-placeholder, .trumbowyg-editor:focus::-webkit-input-placeholder, .trumbowyg-textarea:focus::-webkit-input-placeholder {
   color: transparent !important;
 }
 
-.input-single-line:focus:-moz-placeholder, .trumbowyg-modal-box label input:focus:-moz-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:focus:-moz-placeholder, .input[multiple]:focus:-moz-placeholder, .input-trumbowyg:focus:-moz-placeholder, .trumbowyg-editor:focus:-moz-placeholder, .trumbowyg-textarea:focus:-moz-placeholder {
+.input-single-line:focus:-moz-placeholder, .trumbowyg-modal-box label input:focus:-moz-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:focus:-moz-placeholder, .input[multiple]:focus:-moz-placeholder, .input-editor:focus:-moz-placeholder, .trumbowyg-editor:focus:-moz-placeholder, .trumbowyg-textarea:focus:-moz-placeholder {
   color: transparent !important;
 }
 
-.input-single-line:focus:-ms-input-placeholder, .trumbowyg-modal-box label input:focus:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:focus:-ms-input-placeholder, .input[multiple]:focus:-ms-input-placeholder, .input-trumbowyg:focus:-ms-input-placeholder, .trumbowyg-editor:focus:-ms-input-placeholder, .trumbowyg-textarea:focus:-ms-input-placeholder {
+.input-single-line:focus:-ms-input-placeholder, .trumbowyg-modal-box label input:focus:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:focus:-ms-input-placeholder, .input[multiple]:focus:-ms-input-placeholder, .input-editor:focus:-ms-input-placeholder, .trumbowyg-editor:focus:-ms-input-placeholder, .trumbowyg-textarea:focus:-ms-input-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line::-webkit-input-placeholder, .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input[multiple]::-webkit-input-placeholder, .focus.input-trumbowyg::-webkit-input-placeholder, .focus.trumbowyg-editor::-webkit-input-placeholder, .focus.trumbowyg-textarea::-webkit-input-placeholder {
+.focus.input-single-line::-webkit-input-placeholder, .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input[multiple]::-webkit-input-placeholder, .focus.input-editor::-webkit-input-placeholder, .focus.trumbowyg-editor::-webkit-input-placeholder, .focus.trumbowyg-textarea::-webkit-input-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line:-moz-placeholder, .trumbowyg-modal-box label input.focus:-moz-placeholder:not([type="checkbox"]):not([type="radio"]), .focus.input-multiple-line:-moz-placeholder, .focus.input[multiple]:-moz-placeholder, .focus.input-trumbowyg:-moz-placeholder, .focus.trumbowyg-editor:-moz-placeholder, .focus.trumbowyg-textarea:-moz-placeholder {
+.focus.input-single-line:-moz-placeholder, .trumbowyg-modal-box label input.focus:-moz-placeholder:not([type="checkbox"]):not([type="radio"]), .focus.input-multiple-line:-moz-placeholder, .focus.input[multiple]:-moz-placeholder, .focus.input-editor:-moz-placeholder, .focus.trumbowyg-editor:-moz-placeholder, .focus.trumbowyg-textarea:-moz-placeholder {
   color: transparent !important;
 }
 
-.focus.input-single-line:-ms-input-placeholder, .trumbowyg-modal-box label input.focus:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]), .focus.input-multiple-line:-ms-input-placeholder, .focus.input[multiple]:-ms-input-placeholder, .focus.input-trumbowyg:-ms-input-placeholder, .focus.trumbowyg-editor:-ms-input-placeholder, .focus.trumbowyg-textarea:-ms-input-placeholder {
+.focus.input-single-line:-ms-input-placeholder, .trumbowyg-modal-box label input.focus:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]), .focus.input-multiple-line:-ms-input-placeholder, .focus.input[multiple]:-ms-input-placeholder, .focus.input-editor:-ms-input-placeholder, .focus.trumbowyg-editor:-ms-input-placeholder, .focus.trumbowyg-textarea:-ms-input-placeholder {
   color: transparent !important;
 }
 
-.input-disabled.input-single-line, .trumbowyg-modal-box label input.input-disabled:not([type="checkbox"]):not([type="radio"]), .input-disabled.input-multiple-line, .input-disabled.input[multiple], .input-disabled.input-trumbowyg, .input-disabled.trumbowyg-editor, .input-disabled.trumbowyg-textarea, .input-disabled.input-single-line:focus, .trumbowyg-modal-box label input.input-disabled:focus:not([type="checkbox"]):not([type="radio"]), .input-disabled.input-multiple-line:focus, .input-disabled.input[multiple]:focus, .input-disabled.input-trumbowyg:focus, .input-disabled.trumbowyg-editor:focus, .input-disabled.trumbowyg-textarea:focus, .input-disabled.focus.input-single-line, .trumbowyg-modal-box label input.input-disabled.focus:not([type="checkbox"]):not([type="radio"]), .input-disabled.focus.input-multiple-line, .input-disabled.focus.input[multiple], .input-disabled.focus.input-trumbowyg, .input-disabled.focus.trumbowyg-editor, .input-disabled.focus.trumbowyg-textarea, .input-single-line[disabled], .trumbowyg-modal-box label input[disabled]:not([type="checkbox"]):not([type="radio"]), .input-multiple-line[disabled], .input[disabled][multiple], .input-trumbowyg[disabled], .trumbowyg-editor[disabled], .trumbowyg-textarea[disabled], .input-single-line[disabled]:focus, .trumbowyg-modal-box label input[disabled]:focus:not([type="checkbox"]):not([type="radio"]), .input-multiple-line[disabled]:focus, .input[disabled][multiple]:focus, .input-trumbowyg[disabled]:focus, .trumbowyg-editor[disabled]:focus, .trumbowyg-textarea[disabled]:focus, [disabled].focus.input-single-line, .trumbowyg-modal-box label input[disabled].focus:not([type="checkbox"]):not([type="radio"]), [disabled].focus.input-multiple-line, [disabled].focus.input[multiple], [disabled].focus.input-trumbowyg, [disabled].focus.trumbowyg-editor, [disabled].focus.trumbowyg-textarea {
+.input-disabled.input-single-line, .trumbowyg-modal-box label input.input-disabled:not([type="checkbox"]):not([type="radio"]), .input-disabled.input-multiple-line, .input-disabled.input[multiple], .input-disabled.input-editor, .input-disabled.trumbowyg-editor, .input-disabled.trumbowyg-textarea, .input-disabled.input-single-line:focus, .trumbowyg-modal-box label input.input-disabled:focus:not([type="checkbox"]):not([type="radio"]), .input-disabled.input-multiple-line:focus, .input-disabled.input[multiple]:focus, .input-disabled.input-editor:focus, .input-disabled.trumbowyg-editor:focus, .input-disabled.trumbowyg-textarea:focus, .input-disabled.focus.input-single-line, .trumbowyg-modal-box label input.input-disabled.focus:not([type="checkbox"]):not([type="radio"]), .input-disabled.focus.input-multiple-line, .input-disabled.focus.input[multiple], .input-disabled.focus.input-editor, .input-disabled.focus.trumbowyg-editor, .input-disabled.focus.trumbowyg-textarea, .input-single-line[disabled], .trumbowyg-modal-box label input[disabled]:not([type="checkbox"]):not([type="radio"]), .input-multiple-line[disabled], .input[disabled][multiple], .input-editor[disabled], .trumbowyg-editor[disabled], .trumbowyg-textarea[disabled], .input-single-line[disabled]:focus, .trumbowyg-modal-box label input[disabled]:focus:not([type="checkbox"]):not([type="radio"]), .input-multiple-line[disabled]:focus, .input[disabled][multiple]:focus, .input-editor[disabled]:focus, .trumbowyg-editor[disabled]:focus, .trumbowyg-textarea[disabled]:focus, [disabled].focus.input-single-line, .trumbowyg-modal-box label input[disabled].focus:not([type="checkbox"]):not([type="radio"]), [disabled].focus.input-multiple-line, [disabled].focus.input[multiple], [disabled].focus.input-editor, [disabled].focus.trumbowyg-editor, [disabled].focus.trumbowyg-textarea {
   border-color: transparent;
 }
 
-.input-single-line:focus, .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:focus, .input[multiple]:focus, .input-trumbowyg:focus, .trumbowyg-editor:focus, .trumbowyg-textarea:focus, .focus.input-single-line, .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .focus.input-multiple-line, .focus.input[multiple], .focus.input-trumbowyg, .focus.trumbowyg-editor, .focus.trumbowyg-textarea {
+.input-single-line:focus, .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .input-multiple-line:focus, .input[multiple]:focus, .input-editor:focus, .trumbowyg-editor:focus, .trumbowyg-textarea:focus, .focus.input-single-line, .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .focus.input-multiple-line, .focus.input[multiple], .focus.input-editor, .focus.trumbowyg-editor, .focus.trumbowyg-textarea {
   box-shadow: 0px 0 5px 0px #0480fe;
   border-color: rgba(141, 141, 141, 0.2);
 }
 
-.input-base.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-base:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-base.input-multiple-line:not(:focus):not(.focus), .input-base.input[multiple]:not(:focus):not(.focus), .input-base.input-trumbowyg:not(:focus):not(.focus), .input-base.trumbowyg-editor:not(:focus):not(.focus), .input-base.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-base .input-single-line:not(:focus):not(.focus), .input-wrapper-base .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .input-multiple-line:not(:focus):not(.focus), .input-wrapper-base .input[multiple]:not(:focus):not(.focus), .input-wrapper-base .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-base .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-base .trumbowyg-textarea:not(:focus):not(.focus) {
+.input-base.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-base:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-base.input-multiple-line:not(:focus):not(.focus), .input-base.input[multiple]:not(:focus):not(.focus), .input-base.input-editor:not(:focus):not(.focus), .input-base.trumbowyg-editor:not(:focus):not(.focus), .input-base.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-base .input-single-line:not(:focus):not(.focus), .input-wrapper-base .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .input-multiple-line:not(:focus):not(.focus), .input-wrapper-base .input[multiple]:not(:focus):not(.focus), .input-wrapper-base .input-editor:not(:focus):not(.focus), .input-wrapper-base .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-base .trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #000000;
 }
 
-.input-base.input-single-line, .trumbowyg-modal-box label input.input-base:not([type="checkbox"]):not([type="radio"]), .input-base.input-multiple-line, .input-base.input[multiple], .input-base.input-trumbowyg, .input-base.trumbowyg-editor, .input-base.trumbowyg-textarea, .input-wrapper-base .input-single-line, .input-wrapper-base .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .input-multiple-line, .input-wrapper-base .input[multiple], .input-wrapper-base .input-trumbowyg, .input-wrapper-base .trumbowyg-editor, .input-wrapper-base .trumbowyg-textarea, .input-base.input-single-line:focus, .trumbowyg-modal-box label input.input-base:focus:not([type="checkbox"]):not([type="radio"]), .input-base.input-multiple-line:focus, .input-base.input[multiple]:focus, .input-base.input-trumbowyg:focus, .input-base.trumbowyg-editor:focus, .input-base.trumbowyg-textarea:focus, .input-wrapper-base .input-single-line:focus, .input-wrapper-base .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .input-multiple-line:focus, .input-wrapper-base .input[multiple]:focus, .input-wrapper-base .input-trumbowyg:focus, .input-wrapper-base .trumbowyg-editor:focus, .input-wrapper-base .trumbowyg-textarea:focus, .focus.input-base.input-single-line, .trumbowyg-modal-box label input.focus.input-base:not([type="checkbox"]):not([type="radio"]), .focus.input-base.input-multiple-line, .focus.input-base.input[multiple], .focus.input-base.input-trumbowyg, .focus.input-base.trumbowyg-editor, .focus.input-base.trumbowyg-textarea, .input-wrapper-base .focus.input-single-line, .input-wrapper-base .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .focus.input-multiple-line, .input-wrapper-base .focus.input[multiple], .input-wrapper-base .focus.input-trumbowyg, .input-wrapper-base .focus.trumbowyg-editor, .input-wrapper-base .focus.trumbowyg-textarea {
+.input-base.input-single-line, .trumbowyg-modal-box label input.input-base:not([type="checkbox"]):not([type="radio"]), .input-base.input-multiple-line, .input-base.input[multiple], .input-base.input-editor, .input-base.trumbowyg-editor, .input-base.trumbowyg-textarea, .input-wrapper-base .input-single-line, .input-wrapper-base .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .input-multiple-line, .input-wrapper-base .input[multiple], .input-wrapper-base .input-editor, .input-wrapper-base .trumbowyg-editor, .input-wrapper-base .trumbowyg-textarea, .input-base.input-single-line:focus, .trumbowyg-modal-box label input.input-base:focus:not([type="checkbox"]):not([type="radio"]), .input-base.input-multiple-line:focus, .input-base.input[multiple]:focus, .input-base.input-editor:focus, .input-base.trumbowyg-editor:focus, .input-base.trumbowyg-textarea:focus, .input-wrapper-base .input-single-line:focus, .input-wrapper-base .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .input-multiple-line:focus, .input-wrapper-base .input[multiple]:focus, .input-wrapper-base .input-editor:focus, .input-wrapper-base .trumbowyg-editor:focus, .input-wrapper-base .trumbowyg-textarea:focus, .focus.input-base.input-single-line, .trumbowyg-modal-box label input.focus.input-base:not([type="checkbox"]):not([type="radio"]), .focus.input-base.input-multiple-line, .focus.input-base.input[multiple], .focus.input-base.input-editor, .focus.input-base.trumbowyg-editor, .focus.input-base.trumbowyg-textarea, .input-wrapper-base .focus.input-single-line, .input-wrapper-base .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-base input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-base .focus.input-multiple-line, .input-wrapper-base .focus.input[multiple], .input-wrapper-base .focus.input-editor, .input-wrapper-base .focus.trumbowyg-editor, .input-wrapper-base .focus.trumbowyg-textarea {
   border-color: #000000;
 }
 
-.input-primary.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-primary:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-primary.input-multiple-line:not(:focus):not(.focus), .input-primary.input[multiple]:not(:focus):not(.focus), .input-primary.input-trumbowyg:not(:focus):not(.focus), .input-primary.trumbowyg-editor:not(:focus):not(.focus), .input-primary.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-primary .input-single-line:not(:focus):not(.focus), .input-wrapper-primary .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .input-multiple-line:not(:focus):not(.focus), .input-wrapper-primary .input[multiple]:not(:focus):not(.focus), .input-wrapper-primary .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-primary .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-primary .trumbowyg-textarea:not(:focus):not(.focus) {
+.input-primary.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-primary:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-primary.input-multiple-line:not(:focus):not(.focus), .input-primary.input[multiple]:not(:focus):not(.focus), .input-primary.input-editor:not(:focus):not(.focus), .input-primary.trumbowyg-editor:not(:focus):not(.focus), .input-primary.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-primary .input-single-line:not(:focus):not(.focus), .input-wrapper-primary .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .input-multiple-line:not(:focus):not(.focus), .input-wrapper-primary .input[multiple]:not(:focus):not(.focus), .input-wrapper-primary .input-editor:not(:focus):not(.focus), .input-wrapper-primary .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-primary .trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #0480fe;
 }
 
-.input-primary.input-single-line, .trumbowyg-modal-box label input.input-primary:not([type="checkbox"]):not([type="radio"]), .input-primary.input-multiple-line, .input-primary.input[multiple], .input-primary.input-trumbowyg, .input-primary.trumbowyg-editor, .input-primary.trumbowyg-textarea, .input-wrapper-primary .input-single-line, .input-wrapper-primary .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .input-multiple-line, .input-wrapper-primary .input[multiple], .input-wrapper-primary .input-trumbowyg, .input-wrapper-primary .trumbowyg-editor, .input-wrapper-primary .trumbowyg-textarea, .input-primary.input-single-line:focus, .trumbowyg-modal-box label input.input-primary:focus:not([type="checkbox"]):not([type="radio"]), .input-primary.input-multiple-line:focus, .input-primary.input[multiple]:focus, .input-primary.input-trumbowyg:focus, .input-primary.trumbowyg-editor:focus, .input-primary.trumbowyg-textarea:focus, .input-wrapper-primary .input-single-line:focus, .input-wrapper-primary .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .input-multiple-line:focus, .input-wrapper-primary .input[multiple]:focus, .input-wrapper-primary .input-trumbowyg:focus, .input-wrapper-primary .trumbowyg-editor:focus, .input-wrapper-primary .trumbowyg-textarea:focus, .focus.input-primary.input-single-line, .trumbowyg-modal-box label input.focus.input-primary:not([type="checkbox"]):not([type="radio"]), .focus.input-primary.input-multiple-line, .focus.input-primary.input[multiple], .focus.input-primary.input-trumbowyg, .focus.input-primary.trumbowyg-editor, .focus.input-primary.trumbowyg-textarea, .input-wrapper-primary .focus.input-single-line, .input-wrapper-primary .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .focus.input-multiple-line, .input-wrapper-primary .focus.input[multiple], .input-wrapper-primary .focus.input-trumbowyg, .input-wrapper-primary .focus.trumbowyg-editor, .input-wrapper-primary .focus.trumbowyg-textarea {
+.input-primary.input-single-line, .trumbowyg-modal-box label input.input-primary:not([type="checkbox"]):not([type="radio"]), .input-primary.input-multiple-line, .input-primary.input[multiple], .input-primary.input-editor, .input-primary.trumbowyg-editor, .input-primary.trumbowyg-textarea, .input-wrapper-primary .input-single-line, .input-wrapper-primary .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .input-multiple-line, .input-wrapper-primary .input[multiple], .input-wrapper-primary .input-editor, .input-wrapper-primary .trumbowyg-editor, .input-wrapper-primary .trumbowyg-textarea, .input-primary.input-single-line:focus, .trumbowyg-modal-box label input.input-primary:focus:not([type="checkbox"]):not([type="radio"]), .input-primary.input-multiple-line:focus, .input-primary.input[multiple]:focus, .input-primary.input-editor:focus, .input-primary.trumbowyg-editor:focus, .input-primary.trumbowyg-textarea:focus, .input-wrapper-primary .input-single-line:focus, .input-wrapper-primary .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .input-multiple-line:focus, .input-wrapper-primary .input[multiple]:focus, .input-wrapper-primary .input-editor:focus, .input-wrapper-primary .trumbowyg-editor:focus, .input-wrapper-primary .trumbowyg-textarea:focus, .focus.input-primary.input-single-line, .trumbowyg-modal-box label input.focus.input-primary:not([type="checkbox"]):not([type="radio"]), .focus.input-primary.input-multiple-line, .focus.input-primary.input[multiple], .focus.input-primary.input-editor, .focus.input-primary.trumbowyg-editor, .focus.input-primary.trumbowyg-textarea, .input-wrapper-primary .focus.input-single-line, .input-wrapper-primary .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-primary input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-primary .focus.input-multiple-line, .input-wrapper-primary .focus.input[multiple], .input-wrapper-primary .focus.input-editor, .input-wrapper-primary .focus.trumbowyg-editor, .input-wrapper-primary .focus.trumbowyg-textarea {
   border-color: #0480fe;
 }
 
-.input-accent.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-accent:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-accent.input-multiple-line:not(:focus):not(.focus), .input-accent.input[multiple]:not(:focus):not(.focus), .input-accent.input-trumbowyg:not(:focus):not(.focus), .input-accent.trumbowyg-editor:not(:focus):not(.focus), .input-accent.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-accent .input-single-line:not(:focus):not(.focus), .input-wrapper-accent .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .input-multiple-line:not(:focus):not(.focus), .input-wrapper-accent .input[multiple]:not(:focus):not(.focus), .input-wrapper-accent .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-accent .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-accent .trumbowyg-textarea:not(:focus):not(.focus) {
+.input-accent.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-accent:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-accent.input-multiple-line:not(:focus):not(.focus), .input-accent.input[multiple]:not(:focus):not(.focus), .input-accent.input-editor:not(:focus):not(.focus), .input-accent.trumbowyg-editor:not(:focus):not(.focus), .input-accent.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-accent .input-single-line:not(:focus):not(.focus), .input-wrapper-accent .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .input-multiple-line:not(:focus):not(.focus), .input-wrapper-accent .input[multiple]:not(:focus):not(.focus), .input-wrapper-accent .input-editor:not(:focus):not(.focus), .input-wrapper-accent .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-accent .trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #d415af;
 }
 
-.input-accent.input-single-line, .trumbowyg-modal-box label input.input-accent:not([type="checkbox"]):not([type="radio"]), .input-accent.input-multiple-line, .input-accent.input[multiple], .input-accent.input-trumbowyg, .input-accent.trumbowyg-editor, .input-accent.trumbowyg-textarea, .input-wrapper-accent .input-single-line, .input-wrapper-accent .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .input-multiple-line, .input-wrapper-accent .input[multiple], .input-wrapper-accent .input-trumbowyg, .input-wrapper-accent .trumbowyg-editor, .input-wrapper-accent .trumbowyg-textarea, .input-accent.input-single-line:focus, .trumbowyg-modal-box label input.input-accent:focus:not([type="checkbox"]):not([type="radio"]), .input-accent.input-multiple-line:focus, .input-accent.input[multiple]:focus, .input-accent.input-trumbowyg:focus, .input-accent.trumbowyg-editor:focus, .input-accent.trumbowyg-textarea:focus, .input-wrapper-accent .input-single-line:focus, .input-wrapper-accent .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .input-multiple-line:focus, .input-wrapper-accent .input[multiple]:focus, .input-wrapper-accent .input-trumbowyg:focus, .input-wrapper-accent .trumbowyg-editor:focus, .input-wrapper-accent .trumbowyg-textarea:focus, .focus.input-accent.input-single-line, .trumbowyg-modal-box label input.focus.input-accent:not([type="checkbox"]):not([type="radio"]), .focus.input-accent.input-multiple-line, .focus.input-accent.input[multiple], .focus.input-accent.input-trumbowyg, .focus.input-accent.trumbowyg-editor, .focus.input-accent.trumbowyg-textarea, .input-wrapper-accent .focus.input-single-line, .input-wrapper-accent .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .focus.input-multiple-line, .input-wrapper-accent .focus.input[multiple], .input-wrapper-accent .focus.input-trumbowyg, .input-wrapper-accent .focus.trumbowyg-editor, .input-wrapper-accent .focus.trumbowyg-textarea {
+.input-accent.input-single-line, .trumbowyg-modal-box label input.input-accent:not([type="checkbox"]):not([type="radio"]), .input-accent.input-multiple-line, .input-accent.input[multiple], .input-accent.input-editor, .input-accent.trumbowyg-editor, .input-accent.trumbowyg-textarea, .input-wrapper-accent .input-single-line, .input-wrapper-accent .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .input-multiple-line, .input-wrapper-accent .input[multiple], .input-wrapper-accent .input-editor, .input-wrapper-accent .trumbowyg-editor, .input-wrapper-accent .trumbowyg-textarea, .input-accent.input-single-line:focus, .trumbowyg-modal-box label input.input-accent:focus:not([type="checkbox"]):not([type="radio"]), .input-accent.input-multiple-line:focus, .input-accent.input[multiple]:focus, .input-accent.input-editor:focus, .input-accent.trumbowyg-editor:focus, .input-accent.trumbowyg-textarea:focus, .input-wrapper-accent .input-single-line:focus, .input-wrapper-accent .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .input-multiple-line:focus, .input-wrapper-accent .input[multiple]:focus, .input-wrapper-accent .input-editor:focus, .input-wrapper-accent .trumbowyg-editor:focus, .input-wrapper-accent .trumbowyg-textarea:focus, .focus.input-accent.input-single-line, .trumbowyg-modal-box label input.focus.input-accent:not([type="checkbox"]):not([type="radio"]), .focus.input-accent.input-multiple-line, .focus.input-accent.input[multiple], .focus.input-accent.input-editor, .focus.input-accent.trumbowyg-editor, .focus.input-accent.trumbowyg-textarea, .input-wrapper-accent .focus.input-single-line, .input-wrapper-accent .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-accent input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-accent .focus.input-multiple-line, .input-wrapper-accent .focus.input[multiple], .input-wrapper-accent .focus.input-editor, .input-wrapper-accent .focus.trumbowyg-editor, .input-wrapper-accent .focus.trumbowyg-textarea {
   border-color: #d415af;
 }
 
-.input-neutral.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-neutral:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-neutral.input-multiple-line:not(:focus):not(.focus), .input-neutral.input[multiple]:not(:focus):not(.focus), .input-neutral.input-trumbowyg:not(:focus):not(.focus), .input-neutral.trumbowyg-editor:not(:focus):not(.focus), .input-neutral.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-neutral .input-single-line:not(:focus):not(.focus), .input-wrapper-neutral .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .input-multiple-line:not(:focus):not(.focus), .input-wrapper-neutral .input[multiple]:not(:focus):not(.focus), .input-wrapper-neutral .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-neutral .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-neutral .trumbowyg-textarea:not(:focus):not(.focus) {
+.input-neutral.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-neutral:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-neutral.input-multiple-line:not(:focus):not(.focus), .input-neutral.input[multiple]:not(:focus):not(.focus), .input-neutral.input-editor:not(:focus):not(.focus), .input-neutral.trumbowyg-editor:not(:focus):not(.focus), .input-neutral.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-neutral .input-single-line:not(:focus):not(.focus), .input-wrapper-neutral .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .input-multiple-line:not(:focus):not(.focus), .input-wrapper-neutral .input[multiple]:not(:focus):not(.focus), .input-wrapper-neutral .input-editor:not(:focus):not(.focus), .input-wrapper-neutral .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-neutral .trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #8d8d8d;
 }
 
-.input-neutral.input-single-line, .trumbowyg-modal-box label input.input-neutral:not([type="checkbox"]):not([type="radio"]), .input-neutral.input-multiple-line, .input-neutral.input[multiple], .input-neutral.input-trumbowyg, .input-neutral.trumbowyg-editor, .input-neutral.trumbowyg-textarea, .input-wrapper-neutral .input-single-line, .input-wrapper-neutral .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .input-multiple-line, .input-wrapper-neutral .input[multiple], .input-wrapper-neutral .input-trumbowyg, .input-wrapper-neutral .trumbowyg-editor, .input-wrapper-neutral .trumbowyg-textarea, .input-neutral.input-single-line:focus, .trumbowyg-modal-box label input.input-neutral:focus:not([type="checkbox"]):not([type="radio"]), .input-neutral.input-multiple-line:focus, .input-neutral.input[multiple]:focus, .input-neutral.input-trumbowyg:focus, .input-neutral.trumbowyg-editor:focus, .input-neutral.trumbowyg-textarea:focus, .input-wrapper-neutral .input-single-line:focus, .input-wrapper-neutral .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .input-multiple-line:focus, .input-wrapper-neutral .input[multiple]:focus, .input-wrapper-neutral .input-trumbowyg:focus, .input-wrapper-neutral .trumbowyg-editor:focus, .input-wrapper-neutral .trumbowyg-textarea:focus, .focus.input-neutral.input-single-line, .trumbowyg-modal-box label input.focus.input-neutral:not([type="checkbox"]):not([type="radio"]), .focus.input-neutral.input-multiple-line, .focus.input-neutral.input[multiple], .focus.input-neutral.input-trumbowyg, .focus.input-neutral.trumbowyg-editor, .focus.input-neutral.trumbowyg-textarea, .input-wrapper-neutral .focus.input-single-line, .input-wrapper-neutral .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .focus.input-multiple-line, .input-wrapper-neutral .focus.input[multiple], .input-wrapper-neutral .focus.input-trumbowyg, .input-wrapper-neutral .focus.trumbowyg-editor, .input-wrapper-neutral .focus.trumbowyg-textarea {
+.input-neutral.input-single-line, .trumbowyg-modal-box label input.input-neutral:not([type="checkbox"]):not([type="radio"]), .input-neutral.input-multiple-line, .input-neutral.input[multiple], .input-neutral.input-editor, .input-neutral.trumbowyg-editor, .input-neutral.trumbowyg-textarea, .input-wrapper-neutral .input-single-line, .input-wrapper-neutral .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .input-multiple-line, .input-wrapper-neutral .input[multiple], .input-wrapper-neutral .input-editor, .input-wrapper-neutral .trumbowyg-editor, .input-wrapper-neutral .trumbowyg-textarea, .input-neutral.input-single-line:focus, .trumbowyg-modal-box label input.input-neutral:focus:not([type="checkbox"]):not([type="radio"]), .input-neutral.input-multiple-line:focus, .input-neutral.input[multiple]:focus, .input-neutral.input-editor:focus, .input-neutral.trumbowyg-editor:focus, .input-neutral.trumbowyg-textarea:focus, .input-wrapper-neutral .input-single-line:focus, .input-wrapper-neutral .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .input-multiple-line:focus, .input-wrapper-neutral .input[multiple]:focus, .input-wrapper-neutral .input-editor:focus, .input-wrapper-neutral .trumbowyg-editor:focus, .input-wrapper-neutral .trumbowyg-textarea:focus, .focus.input-neutral.input-single-line, .trumbowyg-modal-box label input.focus.input-neutral:not([type="checkbox"]):not([type="radio"]), .focus.input-neutral.input-multiple-line, .focus.input-neutral.input[multiple], .focus.input-neutral.input-editor, .focus.input-neutral.trumbowyg-editor, .focus.input-neutral.trumbowyg-textarea, .input-wrapper-neutral .focus.input-single-line, .input-wrapper-neutral .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-neutral input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-neutral .focus.input-multiple-line, .input-wrapper-neutral .focus.input[multiple], .input-wrapper-neutral .focus.input-editor, .input-wrapper-neutral .focus.trumbowyg-editor, .input-wrapper-neutral .focus.trumbowyg-textarea {
   border-color: #8d8d8d;
 }
 
-.input-success.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-success:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-success.input-multiple-line:not(:focus):not(.focus), .input-success.input[multiple]:not(:focus):not(.focus), .input-success.input-trumbowyg:not(:focus):not(.focus), .input-success.trumbowyg-editor:not(:focus):not(.focus), .input-success.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-success .input-single-line:not(:focus):not(.focus), .input-wrapper-success .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .input-multiple-line:not(:focus):not(.focus), .input-wrapper-success .input[multiple]:not(:focus):not(.focus), .input-wrapper-success .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-success .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-success .trumbowyg-textarea:not(:focus):not(.focus) {
+.input-success.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-success:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-success.input-multiple-line:not(:focus):not(.focus), .input-success.input[multiple]:not(:focus):not(.focus), .input-success.input-editor:not(:focus):not(.focus), .input-success.trumbowyg-editor:not(:focus):not(.focus), .input-success.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-success .input-single-line:not(:focus):not(.focus), .input-wrapper-success .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .input-multiple-line:not(:focus):not(.focus), .input-wrapper-success .input[multiple]:not(:focus):not(.focus), .input-wrapper-success .input-editor:not(:focus):not(.focus), .input-wrapper-success .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-success .trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #15b800;
 }
 
-.input-success.input-single-line, .trumbowyg-modal-box label input.input-success:not([type="checkbox"]):not([type="radio"]), .input-success.input-multiple-line, .input-success.input[multiple], .input-success.input-trumbowyg, .input-success.trumbowyg-editor, .input-success.trumbowyg-textarea, .input-wrapper-success .input-single-line, .input-wrapper-success .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .input-multiple-line, .input-wrapper-success .input[multiple], .input-wrapper-success .input-trumbowyg, .input-wrapper-success .trumbowyg-editor, .input-wrapper-success .trumbowyg-textarea, .input-success.input-single-line:focus, .trumbowyg-modal-box label input.input-success:focus:not([type="checkbox"]):not([type="radio"]), .input-success.input-multiple-line:focus, .input-success.input[multiple]:focus, .input-success.input-trumbowyg:focus, .input-success.trumbowyg-editor:focus, .input-success.trumbowyg-textarea:focus, .input-wrapper-success .input-single-line:focus, .input-wrapper-success .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .input-multiple-line:focus, .input-wrapper-success .input[multiple]:focus, .input-wrapper-success .input-trumbowyg:focus, .input-wrapper-success .trumbowyg-editor:focus, .input-wrapper-success .trumbowyg-textarea:focus, .focus.input-success.input-single-line, .trumbowyg-modal-box label input.focus.input-success:not([type="checkbox"]):not([type="radio"]), .focus.input-success.input-multiple-line, .focus.input-success.input[multiple], .focus.input-success.input-trumbowyg, .focus.input-success.trumbowyg-editor, .focus.input-success.trumbowyg-textarea, .input-wrapper-success .focus.input-single-line, .input-wrapper-success .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .focus.input-multiple-line, .input-wrapper-success .focus.input[multiple], .input-wrapper-success .focus.input-trumbowyg, .input-wrapper-success .focus.trumbowyg-editor, .input-wrapper-success .focus.trumbowyg-textarea {
+.input-success.input-single-line, .trumbowyg-modal-box label input.input-success:not([type="checkbox"]):not([type="radio"]), .input-success.input-multiple-line, .input-success.input[multiple], .input-success.input-editor, .input-success.trumbowyg-editor, .input-success.trumbowyg-textarea, .input-wrapper-success .input-single-line, .input-wrapper-success .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .input-multiple-line, .input-wrapper-success .input[multiple], .input-wrapper-success .input-editor, .input-wrapper-success .trumbowyg-editor, .input-wrapper-success .trumbowyg-textarea, .input-success.input-single-line:focus, .trumbowyg-modal-box label input.input-success:focus:not([type="checkbox"]):not([type="radio"]), .input-success.input-multiple-line:focus, .input-success.input[multiple]:focus, .input-success.input-editor:focus, .input-success.trumbowyg-editor:focus, .input-success.trumbowyg-textarea:focus, .input-wrapper-success .input-single-line:focus, .input-wrapper-success .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .input-multiple-line:focus, .input-wrapper-success .input[multiple]:focus, .input-wrapper-success .input-editor:focus, .input-wrapper-success .trumbowyg-editor:focus, .input-wrapper-success .trumbowyg-textarea:focus, .focus.input-success.input-single-line, .trumbowyg-modal-box label input.focus.input-success:not([type="checkbox"]):not([type="radio"]), .focus.input-success.input-multiple-line, .focus.input-success.input[multiple], .focus.input-success.input-editor, .focus.input-success.trumbowyg-editor, .focus.input-success.trumbowyg-textarea, .input-wrapper-success .focus.input-single-line, .input-wrapper-success .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-success input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-success .focus.input-multiple-line, .input-wrapper-success .focus.input[multiple], .input-wrapper-success .focus.input-editor, .input-wrapper-success .focus.trumbowyg-editor, .input-wrapper-success .focus.trumbowyg-textarea {
   border-color: #15b800;
 }
 
-.input-caution.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-caution:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-caution.input-multiple-line:not(:focus):not(.focus), .input-caution.input[multiple]:not(:focus):not(.focus), .input-caution.input-trumbowyg:not(:focus):not(.focus), .input-caution.trumbowyg-editor:not(:focus):not(.focus), .input-caution.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-caution .input-single-line:not(:focus):not(.focus), .input-wrapper-caution .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .input-multiple-line:not(:focus):not(.focus), .input-wrapper-caution .input[multiple]:not(:focus):not(.focus), .input-wrapper-caution .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-caution .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-caution .trumbowyg-textarea:not(:focus):not(.focus) {
+.input-caution.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-caution:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-caution.input-multiple-line:not(:focus):not(.focus), .input-caution.input[multiple]:not(:focus):not(.focus), .input-caution.input-editor:not(:focus):not(.focus), .input-caution.trumbowyg-editor:not(:focus):not(.focus), .input-caution.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-caution .input-single-line:not(:focus):not(.focus), .input-wrapper-caution .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .input-multiple-line:not(:focus):not(.focus), .input-wrapper-caution .input[multiple]:not(:focus):not(.focus), .input-wrapper-caution .input-editor:not(:focus):not(.focus), .input-wrapper-caution .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-caution .trumbowyg-textarea:not(:focus):not(.focus) {
   box-shadow: 0px 3px 15px -10px #fd7f03;
 }
 
-.input-caution.input-single-line, .trumbowyg-modal-box label input.input-caution:not([type="checkbox"]):not([type="radio"]), .input-caution.input-multiple-line, .input-caution.input[multiple], .input-caution.input-trumbowyg, .input-caution.trumbowyg-editor, .input-caution.trumbowyg-textarea, .input-wrapper-caution .input-single-line, .input-wrapper-caution .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .input-multiple-line, .input-wrapper-caution .input[multiple], .input-wrapper-caution .input-trumbowyg, .input-wrapper-caution .trumbowyg-editor, .input-wrapper-caution .trumbowyg-textarea, .input-caution.input-single-line:focus, .trumbowyg-modal-box label input.input-caution:focus:not([type="checkbox"]):not([type="radio"]), .input-caution.input-multiple-line:focus, .input-caution.input[multiple]:focus, .input-caution.input-trumbowyg:focus, .input-caution.trumbowyg-editor:focus, .input-caution.trumbowyg-textarea:focus, .input-wrapper-caution .input-single-line:focus, .input-wrapper-caution .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .input-multiple-line:focus, .input-wrapper-caution .input[multiple]:focus, .input-wrapper-caution .input-trumbowyg:focus, .input-wrapper-caution .trumbowyg-editor:focus, .input-wrapper-caution .trumbowyg-textarea:focus, .focus.input-caution.input-single-line, .trumbowyg-modal-box label input.focus.input-caution:not([type="checkbox"]):not([type="radio"]), .focus.input-caution.input-multiple-line, .focus.input-caution.input[multiple], .focus.input-caution.input-trumbowyg, .focus.input-caution.trumbowyg-editor, .focus.input-caution.trumbowyg-textarea, .input-wrapper-caution .focus.input-single-line, .input-wrapper-caution .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .focus.input-multiple-line, .input-wrapper-caution .focus.input[multiple], .input-wrapper-caution .focus.input-trumbowyg, .input-wrapper-caution .focus.trumbowyg-editor, .input-wrapper-caution .focus.trumbowyg-textarea {
+.input-caution.input-single-line, .trumbowyg-modal-box label input.input-caution:not([type="checkbox"]):not([type="radio"]), .input-caution.input-multiple-line, .input-caution.input[multiple], .input-caution.input-editor, .input-caution.trumbowyg-editor, .input-caution.trumbowyg-textarea, .input-wrapper-caution .input-single-line, .input-wrapper-caution .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .input-multiple-line, .input-wrapper-caution .input[multiple], .input-wrapper-caution .input-editor, .input-wrapper-caution .trumbowyg-editor, .input-wrapper-caution .trumbowyg-textarea, .input-caution.input-single-line:focus, .trumbowyg-modal-box label input.input-caution:focus:not([type="checkbox"]):not([type="radio"]), .input-caution.input-multiple-line:focus, .input-caution.input[multiple]:focus, .input-caution.input-editor:focus, .input-caution.trumbowyg-editor:focus, .input-caution.trumbowyg-textarea:focus, .input-wrapper-caution .input-single-line:focus, .input-wrapper-caution .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .input-multiple-line:focus, .input-wrapper-caution .input[multiple]:focus, .input-wrapper-caution .input-editor:focus, .input-wrapper-caution .trumbowyg-editor:focus, .input-wrapper-caution .trumbowyg-textarea:focus, .focus.input-caution.input-single-line, .trumbowyg-modal-box label input.focus.input-caution:not([type="checkbox"]):not([type="radio"]), .focus.input-caution.input-multiple-line, .focus.input-caution.input[multiple], .focus.input-caution.input-editor, .focus.input-caution.trumbowyg-editor, .focus.input-caution.trumbowyg-textarea, .input-wrapper-caution .focus.input-single-line, .input-wrapper-caution .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-caution input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-caution .focus.input-multiple-line, .input-wrapper-caution .focus.input[multiple], .input-wrapper-caution .focus.input-editor, .input-wrapper-caution .focus.trumbowyg-editor, .input-wrapper-caution .focus.trumbowyg-textarea {
   border-color: #fd7f03;
 }
 
-.input-error.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-error:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-error.input-multiple-line:not(:focus):not(.focus), .input-error.input[multiple]:not(:focus):not(.focus), .input-error.input-trumbowyg:not(:focus):not(.focus), .input-error.trumbowyg-editor:not(:focus):not(.focus), .input-error.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-error .input-single-line:not(:focus):not(.focus), .input-wrapper-error .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .input-multiple-line:not(:focus):not(.focus), .input-wrapper-error .input[multiple]:not(:focus):not(.focus), .input-wrapper-error .input-trumbowyg:not(:focus):not(.focus), .input-wrapper-error .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-error .trumbowyg-textarea:not(:focus):not(.focus), .trumbowyg-modal-box label.trumbowyg-input-error input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]) {
+.input-error.input-single-line:not(:focus):not(.focus), .trumbowyg-modal-box label input.input-error:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-error.input-multiple-line:not(:focus):not(.focus), .input-error.input[multiple]:not(:focus):not(.focus), .input-error.input-editor:not(:focus):not(.focus), .input-error.trumbowyg-editor:not(:focus):not(.focus), .input-error.trumbowyg-textarea:not(:focus):not(.focus), .input-wrapper-error .input-single-line:not(:focus):not(.focus), .input-wrapper-error .trumbowyg-modal-box label input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .input-multiple-line:not(:focus):not(.focus), .input-wrapper-error .input[multiple]:not(:focus):not(.focus), .input-wrapper-error .input-editor:not(:focus):not(.focus), .input-wrapper-error .trumbowyg-editor:not(:focus):not(.focus), .input-wrapper-error .trumbowyg-textarea:not(:focus):not(.focus), .trumbowyg-modal-box label.trumbowyg-input-error input:not(:focus):not(.focus):not([type="checkbox"]):not([type="radio"]) {
   box-shadow: 0px 3px 15px -10px #fd0303;
 }
 
-.input-error.input-single-line, .trumbowyg-modal-box label input.input-error:not([type="checkbox"]):not([type="radio"]), .input-error.input-multiple-line, .input-error.input[multiple], .input-error.input-trumbowyg, .input-error.trumbowyg-editor, .input-error.trumbowyg-textarea, .input-wrapper-error .input-single-line, .input-wrapper-error .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .input-multiple-line, .input-wrapper-error .input[multiple], .input-wrapper-error .input-trumbowyg, .input-wrapper-error .trumbowyg-editor, .input-wrapper-error .trumbowyg-textarea, .trumbowyg-modal-box label.trumbowyg-input-error input:not([type="checkbox"]):not([type="radio"]), .input-error.input-single-line:focus, .trumbowyg-modal-box label input.input-error:focus:not([type="checkbox"]):not([type="radio"]), .input-error.input-multiple-line:focus, .input-error.input[multiple]:focus, .input-error.input-trumbowyg:focus, .input-error.trumbowyg-editor:focus, .input-error.trumbowyg-textarea:focus, .input-wrapper-error .input-single-line:focus, .input-wrapper-error .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .input-multiple-line:focus, .input-wrapper-error .input[multiple]:focus, .input-wrapper-error .input-trumbowyg:focus, .input-wrapper-error .trumbowyg-editor:focus, .input-wrapper-error .trumbowyg-textarea:focus, .trumbowyg-modal-box label.trumbowyg-input-error input:focus:not([type="checkbox"]):not([type="radio"]), .focus.input-error.input-single-line, .trumbowyg-modal-box label input.focus.input-error:not([type="checkbox"]):not([type="radio"]), .focus.input-error.input-multiple-line, .focus.input-error.input[multiple], .focus.input-error.input-trumbowyg, .focus.input-error.trumbowyg-editor, .focus.input-error.trumbowyg-textarea, .input-wrapper-error .focus.input-single-line, .input-wrapper-error .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .focus.input-multiple-line, .input-wrapper-error .focus.input[multiple], .input-wrapper-error .focus.input-trumbowyg, .input-wrapper-error .focus.trumbowyg-editor, .input-wrapper-error .focus.trumbowyg-textarea, .trumbowyg-modal-box label.trumbowyg-input-error input.focus:not([type="checkbox"]):not([type="radio"]) {
+.input-error.input-single-line, .trumbowyg-modal-box label input.input-error:not([type="checkbox"]):not([type="radio"]), .input-error.input-multiple-line, .input-error.input[multiple], .input-error.input-editor, .input-error.trumbowyg-editor, .input-error.trumbowyg-textarea, .input-wrapper-error .input-single-line, .input-wrapper-error .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input:not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .input-multiple-line, .input-wrapper-error .input[multiple], .input-wrapper-error .input-editor, .input-wrapper-error .trumbowyg-editor, .input-wrapper-error .trumbowyg-textarea, .trumbowyg-modal-box label.trumbowyg-input-error input:not([type="checkbox"]):not([type="radio"]), .input-error.input-single-line:focus, .trumbowyg-modal-box label input.input-error:focus:not([type="checkbox"]):not([type="radio"]), .input-error.input-multiple-line:focus, .input-error.input[multiple]:focus, .input-error.input-editor:focus, .input-error.trumbowyg-editor:focus, .input-error.trumbowyg-textarea:focus, .input-wrapper-error .input-single-line:focus, .input-wrapper-error .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input:focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .input-multiple-line:focus, .input-wrapper-error .input[multiple]:focus, .input-wrapper-error .input-editor:focus, .input-wrapper-error .trumbowyg-editor:focus, .input-wrapper-error .trumbowyg-textarea:focus, .trumbowyg-modal-box label.trumbowyg-input-error input:focus:not([type="checkbox"]):not([type="radio"]), .focus.input-error.input-single-line, .trumbowyg-modal-box label input.focus.input-error:not([type="checkbox"]):not([type="radio"]), .focus.input-error.input-multiple-line, .focus.input-error.input[multiple], .focus.input-error.input-editor, .focus.input-error.trumbowyg-editor, .focus.input-error.trumbowyg-textarea, .input-wrapper-error .focus.input-single-line, .input-wrapper-error .trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]), .trumbowyg-modal-box label .input-wrapper-error input.focus:not([type="checkbox"]):not([type="radio"]), .input-wrapper-error .focus.input-multiple-line, .input-wrapper-error .focus.input[multiple], .input-wrapper-error .focus.input-editor, .input-wrapper-error .focus.trumbowyg-editor, .input-wrapper-error .focus.trumbowyg-textarea, .trumbowyg-modal-box label.trumbowyg-input-error input.focus:not([type="checkbox"]):not([type="radio"]) {
   border-color: #fd0303;
 }
 
@@ -2619,14 +2720,14 @@ table.table-large .table-cell {
   height: 2.1875rem;
 }
 
-.input-multiple-line, .input[multiple] {
+.input-multiple-line, .input[multiple], .input-editor {
   min-height: 11.25rem;
   vertical-align: top;
   max-height: 100%;
   overflow-y: auto;
 }
 
-.input-multiple-line option, .input[multiple] option {
+.input-multiple-line option, .input[multiple] option, .input-editor option {
   padding-right: 1.25em;
   padding-left: 1.25em;
   margin-right: -1.25em;
@@ -2642,7 +2743,6 @@ select.input:not([multiple]), .input-select:not([multiple]) {
 }
 
 select.input, .input-select {
-  background-image: -webkit-linear-gradient(220deg, #0480fe 0%, #0480fe 50%, transparent 51%, transparent 100%), -webkit-linear-gradient(320deg, #0480fe 0%, #0480fe 50%, transparent 51%, transparent 100%);
   background-image: linear-gradient(-130deg, #0480fe 0%, #0480fe 50%, transparent 51%, transparent 100%), linear-gradient(130deg, #0480fe 0%, #0480fe 50%, transparent 51%, transparent 100%);
   background-size: 0.25em 0.3125em, 0.25em 0.3125em;
   background-position: calc(100% - (1em + 0.2125em )) 50%, calc(100% - 1em) 50%;
@@ -2661,7 +2761,6 @@ select.input, .input-select {
 
 @media (min-width: 1201px) {
   .input-wrapper, .trumbowyg-modal-box label {
-    display: -webkit-inline-box;
     display: inline-flex;
     margin-right: 2rem;
   }
@@ -2669,45 +2768,34 @@ select.input, .input-select {
 
 @media (min-width: 1201px) {
   .input-wrapper-horizontal, .trumbowyg-modal-box label {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    -webkit-box-align: start;
-            align-items: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
   .input-wrapper-horizontal > .input-label, .trumbowyg-modal-box label > .input-label {
-    -webkit-box-flex: 0;
-            flex: 0 0 25%;
-    -webkit-box-ordinal-group: 0;
-            order: -1;
+    flex: 0 0 25%;
+    order: -1;
   }
   .input-wrapper-horizontal > .input-label:first-child:last-child, .trumbowyg-modal-box label > .input-label:first-child:last-child {
     /* labels that typically wrapp radio and checboxes*/
-    -webkit-box-flex: 1;
-            flex: 1 1 auto;
+    flex: 1 1 auto;
   }
 }
 
 @media (min-width: 1201px) {
   .input-wrapper-vertical {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 .input-wrapper.input-wrapper-block, .trumbowyg-modal-box label {
-  display: -webkit-box;
   display: flex;
   margin-right: 0;
 }
 
 @media (max-width: 1200px) {
   .input-wrapper.input-wrapper-block, .trumbowyg-modal-box label {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -2728,8 +2816,7 @@ select.input, .input-select {
   font-style: italic;
   margin-top: 0.5em;
   display: block;
-  -webkit-box-ordinal-group: 4;
-          order: 3;
+  order: 3;
 }
 
 .input-wrapper-horizontal .input-info {
@@ -2738,26 +2825,27 @@ select.input, .input-select {
   margin-left: auto;
 }
 
-.nav .input-single-line, .nav .input-multiple-line, .nav .input-trumbowyg {
+.nav .input-single-line, .nav .input-multiple-line, .nav .input-editor {
   padding-top: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.25) ) * .5);
   padding-bottom: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.25) ) * .5);
   height: 4.6875rem;
 }
 
-.input-wrapper .input-single-line, .input-wrapper .input-multiple-line, .input-wrapper .input-trumbowyg {
+.input-wrapper .input-single-line, .input-wrapper .input-multiple-line, .input-wrapper .input-editor {
   display: block;
-  -webkit-box-flex: 1;
-          flex: 1 1;
-  -webkit-box-ordinal-group: 3;
-          order: 2;
+  flex: 1 1;
+  order: 2;
 }
 
-.input-wrapper-horizontal.input-wrapper-block .input-single-line, .input-wrapper-horizontal.input-wrapper-block .input-multiple-line, .input-wrapper-horizontal.input-wrapper-block .input-trumbowyg {
+.input-wrapper-horizontal.input-wrapper-block .input-single-line, .input-wrapper-horizontal.input-wrapper-block .input-multiple-line, .input-wrapper-horizontal.input-wrapper-block .input-editor {
   width: calc(100% - 25%);
 }
 
+.input-editor {
+  display: block;
+}
+
 .input-group {
-  display: -webkit-inline-box;
   display: inline-flex;
   position: relative;
   max-width: 100%;
@@ -2766,13 +2854,11 @@ select.input, .input-select {
 }
 
 .input-group-block {
-  display: -webkit-box;
   display: flex;
 }
 
-.input-group-block .input, .input-group-block .trumbowyg {
-  -webkit-box-flex: 1;
-          flex: 1 1;
+.input-group-block .input {
+  flex: 1 1;
 }
 
 .input-group.input-group-large {
@@ -2798,9 +2884,7 @@ select.input, .input-select {
 }
 
 .input-group.input-group-vertical {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .input-group.input-group-vertical > .input:nth-last-child(n+2), .input-group.input-group-vertical .btn:nth-last-child(n+2), .input-group.input-group-vertical .trumbowyg:nth-last-child(n+2) {
@@ -2835,11 +2919,8 @@ select.input, .input-select {
   .input-group.input-group-responsive {
     width: 100%;
     flex-wrap: wrap;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
   .input-group.input-group-responsive > .input:nth-last-child(n+2), .input-group.input-group-responsive .btn:nth-last-child(n+2), .input-group.input-group-responsive .trumbowyg:nth-last-child(n+2) {
     border-bottom-right-radius: 0;
@@ -2877,8 +2958,8 @@ select.input, .input-select {
 
 .special-form .input-single-line,
 .special-form .input-multiple-line,
-.special-form .trumbowyg-box:not(.trumbowyg-fullscreen) .trumbowyg-textarea,
-.special-form .trumbowyg-box:not(.trumbowyg-fullscreen) .trumbowyg-editor {
+.special-form .trumbowyg-editor,
+.special-form .trumbowyg-textarea {
   background-color: transparent;
   width: calc(100% + (35px * 2));
   max-width: none;
@@ -2960,17 +3041,13 @@ CUSTOM STYLES FOR TRUMBOWYG
   resize: none;
   outline: none;
   overflow: auto;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  user-select: text;
   font-size: 1rem;
   line-height: 2;
   min-height: 500px;
 }
 
 .trumbowyg-editor.trumbowyg-autogrow-on-enter, .trumbowyg-textarea.trumbowyg-autogrow-on-enter {
-  -webkit-transition: height 0.25s ease-out;
   transition: height 0.25s ease-out;
 }
 
@@ -2988,14 +3065,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 .trumbowyg-box.trumbowyg-editor-visible .trumbowyg-textarea {
-  height: 1px !important;
-  width: 25%;
-  min-height: 0 !important;
-  padding: 0 !important;
-  background: none !important;
-  opacity: 0 !important;
-  -webkit-box-flex: 0 !important;
-          flex: 0 0 auto !important;
+  display: none !important;
 }
 
 .trumbowyg-box.trumbowyg-editor-hidden .trumbowyg-textarea {
@@ -3022,17 +3092,13 @@ CUSTOM STYLES FOR TRUMBOWYG
   cursor: pointer;
   background: none;
   vertical-align: middle;
-  -webkit-transition: background-color 0.125s, opacity 0.125s;
   transition: background-color 0.125s, opacity 0.125s;
 }
 
 .trumbowyg button.trumbowyg-textual-button {
   width: auto;
   line-height: 40px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .trumbowyg.trumbowyg-disable button:not(.trumbowyg-not-disable):not(.trumbowyg-active),
@@ -3061,8 +3127,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   padding: 0;
   position: relative;
   list-style-type: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   z-index: 11;
 }
 
@@ -3136,7 +3201,6 @@ CUSTOM STYLES FOR TRUMBOWYG
   cursor: pointer;
   text-align: left;
   font-size: 15px;
-  -webkit-transition: all 0.125s;
   transition: all 0.125s;
 }
 
@@ -3176,8 +3240,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   z-index: 1;
   background-color: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .trumbowyg-modal-box label .trumbowyg-input-infos {
@@ -3186,10 +3249,8 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 @media (min-width: 1201px) {
   .trumbowyg-modal-box label .trumbowyg-input-infos {
-    -webkit-box-flex: 0;
-            flex: 0 0 25%;
-    -webkit-box-ordinal-group: 0;
-            order: -1;
+    flex: 0 0 25%;
+    order: -1;
   }
 }
 
@@ -3305,170 +3366,11 @@ CUSTOM STYLES FOR TRUMBOWYG
 /*** TOGGLES ***/
 .accordion {
   display: none;
+  overflow: hidden;
 }
 
 .accordion.open {
   display: block;
-}
-
-/*** POPPER, USED BY DROPDOWNS AND TOOLTIPS TOO ***/
-.tooltip, .dropdown {
-  position: absolute;
-  background: #FFFFFF;
-  border-radius: 10px;
-  padding: 20px 20px;
-  box-shadow: 0px 0px 15px -10px #000000;
-  z-index: 2;
-  display: none;
-}
-
-.open.tooltip, .open.dropdown {
-  display: block;
-}
-
-.body-inverse .tooltip, .body-inverse .dropdown {
-  background: #3d3d3d;
-}
-
-.tooltip {
-  pointer-events: none;
-  max-width: 300px;
-}
-
-.tooltip:before, .tooltip:after {
-  content: "";
-  background: #FFFFFF;
-  position: absolute;
-  z-index: -1;
-}
-
-.body-inverse .tooltip:before, .body-inverse .tooltip:after {
-  background: #3d3d3d;
-}
-
-.tooltip:after {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: inherit;
-}
-
-.tooltip:before {
-  margin: auto;
-  box-shadow: 0px 0px 20px -5px #000000;
-  width: 20px;
-  height: 20px;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.tooltip-badge {
-  position: absolute;
-  margin: auto;
-}
-
-.tooltip.tooltip-top:before,
-.tooltip.tooltip-top .tooltip-badge {
-  left: 0;
-  right: 0;
-}
-
-.tooltip.tooltip-top:before {
-  bottom: -10px;
-}
-
-.tooltip.tooltip-top .tooltip-badge {
-  top: calc(100% + 28.2857142857px * .5);
-}
-
-.tooltip.tooltip-bottom:before,
-.tooltip.tooltip-bottom .tooltip-badge {
-  left: 0;
-  right: 0;
-}
-
-.tooltip.tooltip-bottom:before {
-  top: -10px;
-}
-
-.tooltip.tooltip-bottom .tooltip-badge {
-  bottom: calc(100% + 28.2857142857px * .5);
-}
-
-.tooltip.tooltip-right:before,
-.tooltip.tooltip-right .tooltip-badge {
-  bottom: 0;
-  top: 0;
-}
-
-.tooltip.tooltip-right:before {
-  left: -10px;
-}
-
-.tooltip.tooltip-right .tooltip-badge {
-  right: calc(100% + 28.2857142857px * .5);
-}
-
-.tooltip.tooltip-left:before,
-.tooltip.tooltip-left .tooltip-badge {
-  bottom: 0;
-  top: 0;
-}
-
-.tooltip.tooltip-left:before {
-  right: -10px;
-}
-
-.tooltip.tooltip-left .tooltip-badge {
-  left: calc(100% + 28.2857142857px * .5);
-}
-
-.dropdown {
-  width: 300px;
-  display: none;
-}
-
-.dropdown.dropdown-bottom {
-  bottom: 0;
-}
-
-.dropdown.dropdown-bottom-flush {
-  bottom: 100%;
-}
-
-.dropdown.dropdown-top {
-  top: 0;
-}
-
-.dropdown.dropdown-top-flush {
-  top: 100%;
-}
-
-.dropdown.dropdown-left {
-  left: 0;
-}
-
-.dropdown.dropdown-left-flush {
-  right: 100%;
-}
-
-.dropdown.dropdown-right {
-  right: 0;
-}
-
-.dropdown.dropdown-right-flush {
-  left: 100%;
-}
-
-.dropdown.open {
-  display: block;
-}
-
-.dropdown li:before {
-  content: none;
 }
 
 /*** HELPERS ***/
@@ -3507,7 +3409,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   }
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 701px) and (max-width: 1200px) {
   .tablet-only {
     display: block !important;
   }
@@ -3516,7 +3418,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .mobile-only {
     display: block !important;
   }
@@ -3587,549 +3489,523 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 .progress-bar-gradient, .legend-gradient {
+  background-image: -moz-linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, right top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(left , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient {
+  background-image: -moz-linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, right top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(left , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-45, .legend-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-90, .legend-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-135, .legend-gradient-135 {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-180, .legend-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-225, .legend-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-270, .legend-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .progress-bar-gradient-315, .legend-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-45 {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left bottom, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(bottom , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-135, .thumbnail {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , right top, left top , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(right , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-225 {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-gradient(linear , left top, left bottom , from(#0480fe), to(#d415af)) ;
-  background-image: -webkit-linear-gradient(top , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .background-gradient-315 {
+  background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* Chrome10-25,Safari5.1-6 */
-  background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   background-image: linear-gradient(-225deg , #0480fe 0%, #d415af 100%) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
@@ -4257,8 +4133,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   right: -50%;
   bottom: -50%;
   margin: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* TEXT CLASSES */
@@ -4416,9 +4291,14 @@ DASHBOARD / OUR CUSTOM STYLES
 }
 
 @media (max-width: 1200px) {
+  #dashboard-block-sidebar-nav {
+    margin: 0 -10px;
+  }
+}
+
+@media (max-width: 700px) {
   #dashboard-block-sidebar {
     left: -100%;
-    -webkit-transition: left 0.25s ease-in-out;
     transition: left 0.25s ease-in-out;
   }
   #dashboard-block-sidebar.open {
@@ -4436,11 +4316,19 @@ DASHBOARD / OUR CUSTOM STYLES
 #dashboard-block-main-nav {
   left: 285px;
   z-index: 99998;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
+}
+
+#dashboard-block-main-nav-toggle {
+  transition: left 0.25s ease-in-out;
+  position: relative;
+  z-index: 99999;
+  left: 0;
 }
 
 #nav-search {
+  margin-right: auto;
+  flex: 1 1;
   position: relative;
 }
 
@@ -4448,8 +4336,7 @@ DASHBOARD / OUR CUSTOM STYLES
   width: auto;
   padding-right: 0;
   padding-left: 30px;
-  -webkit-box-ordinal-group: 0;
-          order: -1;
+  order: -1;
 }
 
 #nav-search .input {
@@ -4467,14 +4354,13 @@ DASHBOARD / OUR CUSTOM STYLES
 }
 
 #nav-account {
-  display: -webkit-box;
+  flex: 0 1;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
   #dashboard-block-main {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -4483,5 +4369,12 @@ DASHBOARD / OUR CUSTOM STYLES
   #dashboard-block-main-nav {
     left: 0;
   }
+  #dashboard-block-main-nav-toggle.open {
+    left: 285px;
+  }
+  #nav-search .btn {
+    padding-left: 0;
+  }
 }
+
 /*# sourceMappingURL=style.min.css.map */

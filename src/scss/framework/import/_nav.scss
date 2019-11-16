@@ -229,8 +229,6 @@ $prefix: '.nav';
 		#{$prefix}-vertical &-list #{$prefix}-item,
 		#{$prefix}-vertical &-list li {
 			> a {
-				padding-left: $nav-gutter-x-mobile;
-				padding-right: $nav-gutter-x-mobile;
 				display:block;
 			}
 		}

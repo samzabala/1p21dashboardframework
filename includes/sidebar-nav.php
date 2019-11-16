@@ -1,8 +1,9 @@
 <div id="dashboard-block-sidebar-nav" class="nav nav-vertical">
+
 	<ul class="nav-list">
 			<!-- HOME -->
 			<li class="nav-item">
-				<a href="<?=DASHBOARD_ROOT_URL ?>">
+				<a href="<?=DASHBOARD_ROOT_URL ?>?template=home">
 					<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg">
 					<span class="nav-item-text">Home</span>
 				</a>
@@ -27,7 +28,7 @@
 									app_get_file_content_as_string(DASHBOARD_ROOT_PATH.'/placeholder/data/profiles.json'),
 									"
 										{{#each profiles}}
-										<li><a href=\"\"> {{ this.name }} </a></li>
+										<li><a href=\"".DASHBOARD_ROOT_URL."?template=projects\"> {{ this.name }} </a></li>
 										{{/each}}
 									"
 								);
@@ -40,7 +41,7 @@
 
 					<!-- PROJ -->
 					<li class="nav-item">
-						<a href="<?=DASHBOARD_ROOT_URL ?>">
+						<a href="<?=DASHBOARD_ROOT_URL ?>?template=projects">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg">
 							<span class="nav-item-text">Projects</span>
 						</a>
@@ -49,7 +50,7 @@
 
 					<!-- DESIGNERS -->
 					<li class="nav-item">
-						<a href="<?=DASHBOARD_ROOT_URL ?>">
+						<a href="<?=DASHBOARD_ROOT_URL ?>?template=designers">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg">
 							<span class="nav-item-text">Designers</span>
 						</a>
@@ -57,7 +58,7 @@
 
 					<!-- DEVELOPERS -->
 					<li class="nav-item">
-						<a href="<?=DASHBOARD_ROOT_URL ?>">
+						<a href="<?=DASHBOARD_ROOT_URL ?>?template=developers">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">Developers</span>
 						</a>

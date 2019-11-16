@@ -1,28 +1,22 @@
 
 
 <div id="dashboard-block-main-nav" class="nav nav-sticky">
-	<a href="#" class="btn btn-default btn-symbol btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large desktop-hide laptop-hide nav-toggle">
+	<a href="#" id="dashboard-block-main-nav-toggle" class="btn btn-default btn-symbol btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large tablet-hide desktop-hide laptop-hide nav-toggle">
 		<i class="symbol symbol-burger"></i>
 	</a>
 	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">
-		
+		<label for="search" class="btn btn-no-radius btn-no-shadow" title="Search"><i class="color-primary symbol symbol-search"></i></i></label>
 		<input class="input input-single-line input-no-radius input-no-shadow font-weight-500" type="text" name="search" placeholder="Search projects..." id="search">
-		<button type="submit" class="btn btn-no-radius btn-no-shadow" title="Search"><i class="color-primary symbol symbol-search"></i></i></button>
 	</form>
 	<div id="nav-account">
 		<div id="nav-account-info">
+									
+			<a href="#profile" class="thumbnail thumbnail-inline">
+				<!-- <img src="" alt="{{ loggedIn.name }}"> -->
+				<span class="thumbnail-text">MP</span>
+			</a>
+			<a href="#" id="nav-account-name" class="color-inherit font-weight-500 mobile-hide tablet-hide">Testing</a>
 		</div>
-
-		
-		<?php
-		
-		app_render_handlebars_module(
-			'nav-account-info',
-			app_get_file_content_as_string(DASHBOARD_ROOT_PATH.'/placeholder/data/loggedin.json'),
-			app_get_file_content_as_string(DASHBOARD_ROOT_PATH.'/handlebars/nav-account.hbs')
-		);
-		
-		?>
 
 		<a href="#nav-account-dropdown" class="btn btn-link btn-symbol"  data-toggle="dropdown" title="More"> 
 			<i class="symbol symbol-kebab symbol-kebab-vertical"></i>

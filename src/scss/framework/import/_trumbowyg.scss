@@ -64,7 +64,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 	&-textarea {
 		position: relative;
 		box-sizing: border-box;
-		// padding: $trumbowyg-gutter-x $trumbowyg-gutter-y;
+		// padding: $wysiwyg-gutter-x $wysiwyg-gutter-y;
 		border-style: none;
 		resize: none;
 		outline: none;
@@ -76,7 +76,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 		min-height: 500px;
 	
 		&#{$prefix}-autogrow-on-enter {
-			transition: height $trumbowyg-transition-duration-slow ease-out;
+			transition: height $wysiwyg-transition-duration-slow ease-out;
 		}
 
 		#{$prefix}-box#{$prefix}-fullscreen & {
@@ -107,13 +107,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 	
 	&-box#{$prefix}-editor-visible {
 		#{$prefix}-textarea {
-			height: 1px !important;
-			width: 25%;
-			min-height: 0 !important;
-			padding: 0 !important;
-			background: none!important;
-			opacity: 0 !important;
-			flex: 0 0 auto!important;
+			display:none!important;
 		}
 	}
 	
@@ -137,18 +131,18 @@ CUSTOM STYLES FOR TRUMBOWYG
 		display: inline-block;
 		position: relative;
 		width: auto;
-		height: $trumbowyg-button-pane-height;
-		color:$trumbowyg-icon-color;
+		height: $wysiwyg-button-pane-height;
+		color:$wysiwyg-icon-color;
 		overflow: hidden;
 		border: none;
 		cursor: pointer;
 		background: none;
 		vertical-align: middle;
-		transition: background-color $trumbowyg-transition-duration, opacity $trumbowyg-transition-duration;
+		transition: background-color $wysiwyg-transition-duration, opacity $wysiwyg-transition-duration;
 
 		&#{$prefix}-textual-button {
 			width: auto;
-			line-height: $trumbowyg-button-pane-height;
+			line-height: $wysiwyg-button-pane-height;
 			user-select: none;
 		}
 	}
@@ -170,13 +164,13 @@ CUSTOM STYLES FOR TRUMBOWYG
 	button:not(#{$prefix}-disable):hover,
 	button:not(#{$prefix}-disable):focus,
 	button#{$prefix}-active {
-		color: $trumbowyg-icon-color-hover;
+		color: $wysiwyg-icon-color-hover;
 		outline: none;
 	}
 	
 	&-button-pane {
 		width: 100%;
-		min-height: $trumbowyg-button-pane-height;
+		min-height: $wysiwyg-button-pane-height;
 		margin: 0;
 		padding: 0;
 		position: relative;
@@ -258,7 +252,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 			cursor: pointer;
 			text-align: left;
 			font-size: 15px;
-			transition: all $trumbowyg-transition-duration;
+			transition: all $wysiwyg-transition-duration;
 	
 			svg {
 				float: left;
@@ -292,7 +286,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 		@extend %for-modal;
 		position:static;
 		margin: auto;
-		max-width: $trumbowyg-modal-max-width;
+		max-width: $wysiwyg-modal-max-width;
 		width: 100%;
 		padding: $gutter-base $gutter-small;
 		z-index: 1;
@@ -435,7 +429,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 	
 		&-button svg  {
-			fill: $trumbowyg-icon-color;
+			fill: $wysiwyg-icon-color;
 			color: transparent;
 		}
 
@@ -458,6 +452,19 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 		img {
 			cursor: move;
+		}
+	}
+
+	&-progress 
+		{@extend %for-progress;
+
+		&,
+		&-bar {
+			@extend %for-progress-and-bar;
+		}
+		&-bar {
+			@extend %for-progress-bar;
+			@extend %for-progress-bar-default;
 		}
 	}
  }

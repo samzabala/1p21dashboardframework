@@ -5,15 +5,32 @@ define('DASHBOARD_ROOT_URL', ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !
 
 // modify preview content
 // whether user is on scoreboard or production board
-if(isset($_GET['dashboard_environment'])):
-	$_GET['dashboard_environment'] = filter_var($_GET['dashboard_environment'], FILTER_SANITIZE_STRING);
+if(isset($_GET['env'])):
+	$_GET['env'] = filter_var($_GET['env'], FILTER_SANITIZE_STRING);
 endif;
 
 $slug = '';
 
-if(isset($_GET['dashboard_environment'])):
-	$slug = $_GET['dashboard_environment'];
+if(isset($_GET['env'])):
+	$slug = $_GET['env'];
 endif;
 
+
 define('DASHBOARD_SLUG',$slug);
+
+
+
+
+if(isset($_GET['template'])):
+	$_GET['template'] = filter_var($_GET['template'], FILTER_SANITIZE_STRING);
+endif;
+
+$slug = '';
+
+if(isset($_GET['template'])):
+	$slug = $_GET['template'];
+endif;
+
+
+define('DASHBOARD_TEMPLATE',$slug);
 

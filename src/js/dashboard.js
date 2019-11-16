@@ -13,14 +13,17 @@
 // 	});
 //   }
 
-(function($,Handlebars,_1p21,window){
-	console.log('init dashy');
-	console.log($('.dashboard-sidenav-toggle'));
-	$('body').on('click','.dashboard-sidenav-toggle',function(e){
-		e.preventDefault();
-		console.log('hola bitchacho');
-		$('#dashboard-block-sidebar').toggleClass('open');
-	});
+(function($,_1p21,window){
+	
+	$(window).load(function(){
+
+		$('body').on('click','.dashboard-sidenav-toggle',function(e){
+			e.preventDefault();
+			console.log('hola bitchacho');
+			$(this).toggleClass('open');
+			$('#dashboard-block-sidebar').toggleClass('open');
+		});
+	})
 
 
-}(jQuery,Handlebars,_1p21,window));
+}(jQuery,_1p21,window));

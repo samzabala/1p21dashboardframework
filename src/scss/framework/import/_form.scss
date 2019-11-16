@@ -352,7 +352,9 @@ $prefix: '.input';
 
 		}
 
-		&-multiple-line {
+
+		&-multiple-line,
+		&-editor {
 			@extend %for-form-input;
 			min-height: $calculated-input-height * $input-height-multiple-factor;
 			vertical-align: top;
@@ -538,7 +540,7 @@ $prefix: '.input';
 
 	&-single-line,
 	&-multiple-line,
-	&-trumbowyg {
+	&-editor {
 		@extend %for-form-global;
 		@extend %for-form-input;
 
@@ -571,8 +573,12 @@ $prefix: '.input';
 	}
 	
 	&-multiple-line,
-	&[multiple] {
+	&[multiple],
+	&-editor {
 		@extend %for-form-input-multiple-line;
+	}
+	&-editor {
+		display:block;
 	}
 
 
@@ -605,7 +611,7 @@ $prefix: '.input';
         &-block {
             display:flex;
 
-            .input,.trumbowyg {
+            .input {
                 flex: 1 1;
             }
         }
@@ -624,14 +630,14 @@ $prefix: '.input';
 
             &:not(#{$prefix}-group-responsive) {
 
-                > #{$prefix},.btn,.trumbowyg{
+				> #{$prefix},.btn, .trumbowyg {
 					&:nth-last-child(n+2) {
 						border-top-right-radius: 0;
 						border-bottom-right-radius: 0;
 					}
 				}
 
-                > #{$prefix},.btn,.trumbowyg{
+				> #{$prefix},.btn, .trumbowyg {
 					&:nth-child(n+2) {
 						border-top-left-radius: 0;
 						border-bottom-left-radius: 0;
@@ -648,14 +654,14 @@ $prefix: '.input';
         &#{&}-vertical {
             flex-direction:column;
 
-            > #{$prefix},.btn,.trumbowyg{
+			> #{$prefix},.btn, .trumbowyg {
 				&:nth-last-child(n+2) {
 					border-bottom-right-radius: 0;
 					border-bottom-left-radius: 0;
 				}
 			}
 
-            > #{$prefix},.btn,.trumbowyg{
+			> #{$prefix},.btn, .trumbowyg {
 				&:nth-child(n+2) {
 					border-top-right-radius: 0;
 					border-top-left-radius: 0;
@@ -674,14 +680,14 @@ $prefix: '.input';
 				
 				&#{$prefix}-group-horizontal {
 
-					> #{$prefix},.btn,.trumbowyg{
+					> #{$prefix},.btn, .trumbowyg {
 						&:nth-last-child(n+2) {
 							border-top-right-radius: 0;
 							border-bottom-right-radius: 0;
 						}
 					}
 
-					> #{$prefix},.btn,.trumbowyg{
+					> #{$prefix},.btn, .trumbowyg {
 						&:nth-child(n+2) {
 							border-top-left-radius: 0;
 							border-bottom-left-radius: 0;
@@ -703,14 +709,14 @@ $prefix: '.input';
 				display:flex;
 				flex-direction:column;
 
-				> #{$prefix},.btn,.trumbowyg{
+				> #{$prefix},.btn, .trumbowyg {
 					&:nth-last-child(n+2) {
 						border-bottom-right-radius: 0;
 						border-bottom-left-radius: 0;
 					}
 				}
 	
-				> #{$prefix},.btn,.trumbowyg{
+				> #{$prefix},.btn, .trumbowyg {
 					&:nth-child(n+2) {
 						border-top-right-radius: 0;
 						border-top-left-radius: 0;
@@ -752,8 +758,8 @@ $prefix: '.input';
 
 	#{$prefix}-single-line,
 	#{$prefix}-multiple-line,
-	& .trumbowyg-box:not(.trumbowyg-fullscreen) .trumbowyg-textarea,
-	& .trumbowyg-box:not(.trumbowyg-fullscreen) .trumbowyg-editor {
+	.trumbowyg-editor,
+	.trumbowyg-textarea {
 		background-color:transparent;
 		width:calc(100% + (#{$special-form-gutter-x} * 2));
 		max-width:none;

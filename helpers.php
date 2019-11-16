@@ -22,11 +22,16 @@ function app_get_template_part($filename = '', $slug =''){
 function app_init_content($slug = ''){
 	$template_to_use = 'home';
 	
-	if(isset($_GET['demo_template'])):
+	if(isset($_GET['template'])):
 
-		$template_part = filter_var($_GET['demo_template'],FILTER_SANITIZE_STRING);
+		$template_part = filter_var($_GET['template'],FILTER_SANITIZE_STRING);
 
 		switch($template_part):
+			case 'profile':
+			case 'home':
+
+				app_get_template_part('templates/'.$template_part,$slug);
+				break;
 			default:
 				app_get_template_part('templates/error',$slug);
 				break;
@@ -108,16 +113,7 @@ function app_render_handlebars_module($id = '',$data = null,$handlebars = null){
 
 			<!-- Initiate -->
 			<script>
-				(function(_1p21,$){
-					$(window).load(function(){
-
-						_1p21.initTemplate(
-							document.getElementById("<?= $id; ?>-hb-template").innerHTML,
-							JSON.parse( document.getElementById("<?= $id; ?>-hb-data").innerHTML ),
-							'#<?= $id; ?>'
-						)
-					})
-				}(_1p21,jQuery))
+				
 			</script>
 
 		</div>

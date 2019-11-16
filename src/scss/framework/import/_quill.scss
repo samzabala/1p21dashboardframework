@@ -1,0 +1,924 @@
+/*!
+* Quill Editor v1.3.6
+* https://quilljs.com/
+* Copyright (c) 2014, Jason Chen
+* Copyright (c) 2013, salesforce.com
+*/
+
+$prefix: '.ql';
+#{$prefix} {
+	
+	&-container {
+		height: 100%;
+		margin: 0px;
+		position: relative;
+
+		&#{$prefix}-disabled #{$prefix}-tooltip {
+			visibility: hidden;
+		}
+		&#{$prefix}-disabled #{$prefix}-editor ul[data-checked] > li::before {
+			pointer-events: none;
+		}
+	}
+	&-clipboard {
+		left: -99999rem;
+		height: 1px;
+		overflow-y: hidden;
+		position: absolute;
+		top: 50%;
+	}
+	&-clipboard p {
+		margin: 0;
+		padding: 0;
+	}
+	&-editor {
+		box-sizing: border-box;
+		line-height: $calculated-body-line-height;
+		height: 100%;
+		outline: none;
+		overflow-y: auto;
+		tab-size: 4;
+		-moz-tab-size: 4;
+		text-align: left;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+	
+	&-editor {
+		> * {
+			cursor: text;
+		}
+
+		
+
+		// ol,
+		// ul {
+		// 	padding-left: 1.5em;
+		// }
+		// ol > li,
+		// ul > li {
+		// 	list-style-type: none;
+		// }
+		// ul > li::before {
+		// 	content: '\2022';
+		// }
+		ul[data-checked=true],
+		ul[data-checked=false] {
+			pointer-events: none;
+		}
+		ul[data-checked=true] > li *,
+		ul[data-checked=false] > li * {
+			pointer-events: all;
+		}
+		ul[data-checked=true] > li::before,
+		ul[data-checked=false] > li::before {
+			color: $brand-color-neutral;
+			cursor: pointer;
+			pointer-events: all;
+		}
+		ul[data-checked=true] > li::before {
+			content: '\2611';
+		}
+		ul[data-checked=false] > li::before {
+			content: '\2610';
+		}
+		// li::before {
+		// 	display: inline-block;
+		// 	white-space: nowrap;
+		// 	width: 1.2em;
+		// }
+		// li:not(#{$prefix}-direction-rtl)::before {
+		// 	margin-left: -1.5em;
+		// 	margin-right: 0.3em;
+		// 	text-align: right;
+		// }
+		// li#{$prefix}-direction-rtl::before {
+		// 	margin-left: 0.3em;
+		// 	margin-right: -1.5em;
+		// }
+		// ol li:not(#{$prefix}-direction-rtl),
+		// ul li:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 1.5em;
+		// }
+		// ol li#{$prefix}-direction-rtl,
+		// ul li#{$prefix}-direction-rtl {
+		// 	padding-right: 1.5em;
+		// }
+		// ol li {
+		// 	counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+		// 	counter-increment: list-0;
+		// }
+		// ol li:before {
+		// 	content: counter(list-0, decimal) '. ';
+		// }
+		// ol li#{$prefix}-indent-1 {
+		// 	counter-increment: list-1;
+		// }
+		// ol li#{$prefix}-indent-1:before {
+		// 	content: counter(list-1, lower-alpha) '. ';
+		// }
+		// ol li#{$prefix}-indent-1 {
+		// 	counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-2 {
+		// 	counter-increment: list-2;
+		// }
+		// ol li#{$prefix}-indent-2:before {
+		// 	content: counter(list-2, lower-roman) '. ';
+		// }
+		// ol li#{$prefix}-indent-2 {
+		// 	counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-3 {
+		// 	counter-increment: list-3;
+		// }
+		// ol li#{$prefix}-indent-3:before {
+		// 	content: counter(list-3, decimal) '. ';
+		// }
+		// ol li#{$prefix}-indent-3 {
+		// 	counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-4 {
+		// 	counter-increment: list-4;
+		// }
+		// ol li#{$prefix}-indent-4:before {
+		// 	content: counter(list-4, lower-alpha) '. ';
+		// }
+		// ol li#{$prefix}-indent-4 {
+		// 	counter-reset: list-5 list-6 list-7 list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-5 {
+		// 	counter-increment: list-5;
+		// }
+		// ol li#{$prefix}-indent-5:before {
+		// 	content: counter(list-5, lower-roman) '. ';
+		// }
+		// ol li#{$prefix}-indent-5 {
+		// 	counter-reset: list-6 list-7 list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-6 {
+		// 	counter-increment: list-6;
+		// }
+		// ol li#{$prefix}-indent-6:before {
+		// 	content: counter(list-6, decimal) '. ';
+		// }
+		// ol li#{$prefix}-indent-6 {
+		// 	counter-reset: list-7 list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-7 {
+		// 	counter-increment: list-7;
+		// }
+		// ol li#{$prefix}-indent-7:before {
+		// 	content: counter(list-7, lower-alpha) '. ';
+		// }
+		// ol li#{$prefix}-indent-7 {
+		// 	counter-reset: list-8 list-9;
+		// }
+		// ol li#{$prefix}-indent-8 {
+		// 	counter-increment: list-8;
+		// }
+		// ol li#{$prefix}-indent-8:before {
+		// 	content: counter(list-8, lower-roman) '. ';
+		// }
+		// ol li#{$prefix}-indent-8 {
+		// 	counter-reset: list-9;
+		// }
+		// ol li#{$prefix}-indent-9 {
+		// 	counter-increment: list-9;
+		// }
+		// ol li#{$prefix}-indent-9:before {
+		// 	content: counter(list-9, decimal) '. ';
+		// }
+		// #{$prefix}-indent-1:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 3em;
+		// }
+		// li#{$prefix}-indent-1:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 4.5em;
+		// }
+		// #{$prefix}-indent-1#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 3em;
+		// }
+		// li#{$prefix}-indent-1#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 4.5em;
+		// }
+		// #{$prefix}-indent-2:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 6em;
+		// }
+		// li#{$prefix}-indent-2:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 7.5em;
+		// }
+		// #{$prefix}-indent-2#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 6em;
+		// }
+		// li#{$prefix}-indent-2#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 7.5em;
+		// }
+		// #{$prefix}-indent-3:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 9em;
+		// }
+		// li#{$prefix}-indent-3:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 10.5em;
+		// }
+		// #{$prefix}-indent-3#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 9em;
+		// }
+		// li#{$prefix}-indent-3#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 10.5em;
+		// }
+		// #{$prefix}-indent-4:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 12em;
+		// }
+		// li#{$prefix}-indent-4:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 13.5em;
+		// }
+		// #{$prefix}-indent-4#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 12em;
+		// }
+		// li#{$prefix}-indent-4#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 13.5em;
+		// }
+		// #{$prefix}-indent-5:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 15em;
+		// }
+		// li#{$prefix}-indent-5:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 16.5em;
+		// }
+		// #{$prefix}-indent-5#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 15em;
+		// }
+		// li#{$prefix}-indent-5#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 16.5em;
+		// }
+		// #{$prefix}-indent-6:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 18em;
+		// }
+		// li#{$prefix}-indent-6:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 19.5em;
+		// }
+		// #{$prefix}-indent-6#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 18em;
+		// }
+		// li#{$prefix}-indent-6#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 19.5em;
+		// }
+		// #{$prefix}-indent-7:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 21em;
+		// }
+		// li#{$prefix}-indent-7:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 22.5em;
+		// }
+		// #{$prefix}-indent-7#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 21em;
+		// }
+		// li#{$prefix}-indent-7#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 22.5em;
+		// }
+		// #{$prefix}-indent-8:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 24em;
+		// }
+		// li#{$prefix}-indent-8:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 25.5em;
+		// }
+		// #{$prefix}-indent-8#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 24em;
+		// }
+		// li#{$prefix}-indent-8#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 25.5em;
+		// }
+		// #{$prefix}-indent-9:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 27em;
+		// }
+		// li#{$prefix}-indent-9:not(#{$prefix}-direction-rtl) {
+		// 	padding-left: 28.5em;
+		// }
+		// #{$prefix}-indent-9#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 27em;
+		// }
+		// li#{$prefix}-indent-9#{$prefix}-direction-rtl#{$prefix}-align-right {
+		// 	padding-right: 28.5em;
+		// }
+		#{$prefix}-video {
+			display: block;
+			max-width: 100%;
+		}
+		#{$prefix}-video#{$prefix}-align-center {
+			margin: 0 auto;
+		}
+		#{$prefix}-video#{$prefix}-align-right {
+			margin: 0 0 0 auto;
+		}
+		#{$prefix}-bg-black {
+			background-color: #000;
+		}
+		#{$prefix}-bg-red {
+			background-color: #e60000;
+		}
+		#{$prefix}-bg-orange {
+			background-color: #f90;
+		}
+		#{$prefix}-bg-yellow {
+			background-color: #ff0;
+		}
+		#{$prefix}-bg-green {
+			background-color: #008a00;
+		}
+		#{$prefix}-bg-blue {
+			background-color: $wysiwyg-icon-color-hover;
+		}
+		#{$prefix}-bg-purple {
+			background-color: #93f;
+		}
+		#{$prefix}-color-white {
+			color: #fff;
+		}
+		#{$prefix}-color-red {
+			color: #e60000;
+		}
+		#{$prefix}-color-orange {
+			color: #f90;
+		}
+		#{$prefix}-color-yellow {
+			color: #ff0;
+		}
+		#{$prefix}-color-green {
+			color: #008a00;
+		}
+		#{$prefix}-color-blue {
+			color: $wysiwyg-icon-color-hover;
+		}
+		#{$prefix}-color-purple {
+			color: #93f;
+		}
+		#{$prefix}-font-serif {
+			font-family: Georgia, Times New Roman, serif;
+		}
+		#{$prefix}-font-monospace {
+			font-family: Monaco, Courier New, monospace;
+		}
+		#{$prefix}-size-small {
+			font-size: 0.75em;
+		}
+		#{$prefix}-size-large {
+			font-size: 1.5em;
+		}
+		#{$prefix}-size-huge {
+			font-size: 2.5em;
+		}
+		#{$prefix}-direction-rtl {
+			direction: rtl;
+			text-align: inherit;
+		}
+		#{$prefix}-align-center {
+			text-align: center;
+		}
+		#{$prefix}-align-justify {
+			text-align: justify;
+		}
+		#{$prefix}-align-right {
+			text-align: right;
+		}
+		&#{$prefix}-blank::before {
+			color: rgba(0,0,0,0.6);
+			content: attr(data-placeholder);
+			font-style: italic;
+			left: 15px;
+			pointer-events: none;
+			position: absolute;
+			right: 15px;
+		}
+	}
+
+
+	// &-toolbar {
+	// 	button {
+	// 		-webkit-appearance: none;
+	// 		appearance: none;
+	// 		border: none;
+	// 		cursor: pointer;
+	// 		display: inline-flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+
+	// 		height: $wysiwyg-button-pane-height;
+	// 		width: $wysiwyg-button-pane-height;
+	// 	}
+	// }
+
+
+
+
+	// &-formats {
+	// 	color: $wysiwyg-icon-color;
+		
+	// 	svg {
+
+	// 		height: 1em;
+	// 		width: 1em;
+
+	// 		display:inline-flex;
+
+	// 		#{$prefix}-stroke {
+	// 			stroke: currentColor;
+	// 			stroke-linecap: round;
+	// 			stroke-linejoin: round;
+	// 			stroke-width: 2;
+	// 			fill:none;
+	// 		}
+
+	// 		#{$prefix}-thin,
+	// 		#{$prefix}-stroke#{$prefix}-thin {
+	// 			stroke-width: 1;
+	// 		}
+
+	// 		#{$prefix}-fill {
+
+	// 			fill: currentColor;
+	// 			stroke:none;
+	// 		}
+	// 	}
+	// }
+
+
+
+
+	
+
+
+
+	//custom theme
+	&-toolbar:after,
+	&-toolbar:after {
+		clear: both;
+		content: '';
+		display: table;
+		}
+	&-toolbar button,
+	&-toolbar button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		display: inline-block;
+		float: left;
+		height: 24px;
+		padding: 3px 5px;
+		width: $wysiwyg-button-pane-height;
+		}
+	&-toolbar button svg,
+	&-toolbar button svg {
+		float: left;
+		height: 100%;
+		}
+	&-toolbar button:active:hover,
+	&-toolbar button:active:hover {
+		outline: none;
+		}
+	&-toolbar input#{$prefix}-image[type=file],
+	&-toolbar input#{$prefix}-image[type=file] {
+		display: none;
+		}
+	&-toolbar button:hover,
+	&-toolbar button:hover,
+	&-toolbar button:focus,
+	&-toolbar button:focus,
+	&-toolbar button#{$prefix}-active,
+	&-toolbar button#{$prefix}-active,
+	&-toolbar #{$prefix}-picker-label:hover,
+	&-toolbar #{$prefix}-picker-label:hover,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active,
+	&-toolbar #{$prefix}-picker-item:hover,
+	&-toolbar #{$prefix}-picker-item:hover,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected {
+		color: $wysiwyg-icon-color-hover;
+		}
+	&-toolbar button:hover #{$prefix}-fill,
+	&-toolbar button:hover #{$prefix}-fill,
+	&-toolbar button:focus #{$prefix}-fill,
+	&-toolbar button:focus #{$prefix}-fill,
+	&-toolbar button#{$prefix}-active #{$prefix}-fill,
+	&-toolbar button#{$prefix}-active #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-fill,
+	&-toolbar button:hover #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar button:hover #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar button:focus #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar button:focus #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar button#{$prefix}-active #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar button#{$prefix}-active #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-stroke#{$prefix}-fill {
+		fill: $wysiwyg-icon-color-hover;
+		}
+	&-toolbar button:hover #{$prefix}-stroke,
+	&-toolbar button:hover #{$prefix}-stroke,
+	&-toolbar button:focus #{$prefix}-stroke,
+	&-toolbar button:focus #{$prefix}-stroke,
+	&-toolbar button#{$prefix}-active #{$prefix}-stroke,
+	&-toolbar button#{$prefix}-active #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-stroke,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-stroke,
+	&-toolbar button:hover #{$prefix}-stroke-miter,
+	&-toolbar button:hover #{$prefix}-stroke-miter,
+	&-toolbar button:focus #{$prefix}-stroke-miter,
+	&-toolbar button:focus #{$prefix}-stroke-miter,
+	&-toolbar button#{$prefix}-active #{$prefix}-stroke-miter,
+	&-toolbar button#{$prefix}-active #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-label:hover #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-label#{$prefix}-active #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-item:hover #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-stroke-miter,
+	&-toolbar #{$prefix}-picker-item#{$prefix}-selected #{$prefix}-stroke-miter {
+		stroke: $wysiwyg-icon-color-hover;
+		}
+		@media (pointer: coarse) {
+	&-toolbar button:hover:not(#{$prefix}-active),
+	&-toolbar button:hover:not(#{$prefix}-active) {
+			color: #444;
+		}
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-fill,
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-fill,
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-stroke#{$prefix}-fill,
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-stroke#{$prefix}-fill {
+			fill: #444;
+		}
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-stroke,
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-stroke,
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-stroke-miter,
+	&-toolbar button:hover:not(#{$prefix}-active) #{$prefix}-stroke-miter {
+			stroke: #444;
+		}
+		}
+		
+	&-hidden {
+		display: none;
+		}
+	&-out-bottom,
+	&-out-top {
+		visibility: hidden;
+		}
+	&-tooltip {
+		position: absolute;
+		transform: translateY(10px);
+		}
+	&-tooltip a {
+		cursor: pointer;
+		text-decoration: none;
+		}
+	&-tooltip#{$prefix}-flip {
+		transform: translateY(-10px);
+		}
+	&-formats {
+		display: inline-block;
+		vertical-align: middle;
+		}
+	&-formats:after {
+		clear: both;
+		content: '';
+		display: table;
+		}
+	&-stroke {
+		fill: none;
+		stroke: #444;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 2;
+		}
+	&-stroke-miter {
+		fill: none;
+		stroke: #444;
+		stroke-miterlimit: 10;
+		stroke-width: 2;
+		}
+	&-fill,
+	&-stroke#{$prefix}-fill {
+		fill: #444;
+		}
+	&-empty {
+		fill: none;
+		}
+	&-even {
+		fill-rule: evenodd;
+		}
+	&-thin,
+	&-stroke#{$prefix}-thin {
+		stroke-width: 1;
+		}
+	&-transparent {
+		opacity: 0.4;
+		}
+	&-direction svg:last-child {
+		display: none;
+		}
+	&-direction#{$prefix}-active svg:last-child {
+		display: inline;
+		}
+	&-direction#{$prefix}-active svg:first-child {
+		display: none;
+		}
+	
+	&-picker {
+		display: inline-flex;
+		align-items: center;	
+		position:relative;
+	}
+	&-picker-label {
+		cursor: pointer;
+		display: inline-block;
+		height: 100%;
+		padding-left: 8px;
+		padding-right: 2px;
+		position: relative;
+		width: 100%;
+		}
+	&-picker-label::before {
+		display: inline-block;
+		line-height: 22px;
+		}
+	&-picker-options {
+		@extend %for-pop;
+		min-width: 150px;
+		}
+	&-picker-options #{$prefix}-picker-item {
+		cursor: pointer;
+		display: block;
+		}
+	&-picker#{$prefix}-expanded #{$prefix}-picker-label {
+		color: #ccc;
+		z-index: 2;
+		}
+	&-picker#{$prefix}-expanded #{$prefix}-picker-label #{$prefix}-fill {
+		fill: #ccc;
+		}
+	&-picker#{$prefix}-expanded #{$prefix}-picker-label #{$prefix}-stroke {
+		stroke: #ccc;
+		}
+	&-picker#{$prefix}-expanded #{$prefix}-picker-options {
+		display: block;
+		margin-top: -1px;
+		top: 100%;
+		z-index: 1;
+		}
+	&-color-picker,
+	&-icon-picker {
+		width: $wysiwyg-button-pane-height;
+		}
+	&-color-picker #{$prefix}-picker-label,
+	&-icon-picker #{$prefix}-picker-label {
+		padding: 2px 4px;
+		}
+	&-color-picker #{$prefix}-picker-label svg,
+	&-icon-picker #{$prefix}-picker-label svg {
+		right: 4px;
+		}
+	&-icon-picker #{$prefix}-picker-options {
+		padding: 4px 0px;
+		}
+	&-icon-picker #{$prefix}-picker-item {
+		height: 24px;
+		width: 24px;
+		padding: 2px 4px;
+		}
+	&-color-picker #{$prefix}-picker-options {
+		padding: 3px 5px;
+		width: 152px;
+		}
+	&-color-picker #{$prefix}-picker-item {
+		border: 1px solid transparent;
+		float: left;
+		height: 16px;
+		margin: 2px;
+		padding: 0px;
+		width: 16px;
+		}
+	&-picker:not(#{$prefix}-color-picker):not(#{$prefix}-icon-picker) svg {
+		height: 1em;
+		width: auto;
+		}
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-label]:not([data-label=''])::before,
+	&-picker#{$prefix}-font #{$prefix}-picker-label[data-label]:not([data-label=''])::before,
+	&-picker#{$prefix}-size #{$prefix}-picker-label[data-label]:not([data-label=''])::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-label]:not([data-label=''])::before,
+	&-picker#{$prefix}-font #{$prefix}-picker-item[data-label]:not([data-label=''])::before,
+	&-picker#{$prefix}-size #{$prefix}-picker-item[data-label]:not([data-label=''])::before {
+		content: attr(data-label);
+		}
+		
+	&-picker#{$prefix}-header #{$prefix}-picker-label::before {
+		content: 'Format';
+		}
+
+	&-picker#{$prefix}-header #{$prefix}-picker-item::before {
+		content: 'Normal';
+		}
+
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-value="1"]::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-value="1"]::before {
+		content: 'Heading 1';
+		}
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-value="2"]::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-value="2"]::before {
+		content: 'Heading 2';
+		}
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-value="3"]::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-value="3"]::before {
+		content: 'Heading 3';
+		}
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-value="4"]::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-value="4"]::before {
+		content: 'Heading 4';
+		}
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-value="5"]::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-value="5"]::before {
+		content: 'Heading 5';
+		}
+	&-picker#{$prefix}-header #{$prefix}-picker-label[data-value="6"]::before,
+	&-picker#{$prefix}-header #{$prefix}-picker-item[data-value="6"]::before {
+		content: 'Heading 6';
+		}
+	// &-picker#{$prefix}-header #{$prefix}-picker-item[data-value="1"]::before {
+	// 	font-size: 2em;
+	// 	}
+	// &-picker#{$prefix}-header #{$prefix}-picker-item[data-value="2"]::before {
+	// 	font-size: 1.5em;
+	// 	}
+	// &-picker#{$prefix}-header #{$prefix}-picker-item[data-value="3"]::before {
+	// 	font-size: 1.17em;
+	// 	}
+	// &-picker#{$prefix}-header #{$prefix}-picker-item[data-value="4"]::before {
+	// 	font-size: 1em;
+	// 	}
+	// &-picker#{$prefix}-header #{$prefix}-picker-item[data-value="5"]::before {
+	// 	font-size: 0.83em;
+	// 	}
+	// &-picker#{$prefix}-header #{$prefix}-picker-item[data-value="6"]::before {
+	// 	font-size: 0.67em;
+	// 	}
+	&-picker#{$prefix}-font {
+		width: 108px;
+		}
+	&-picker#{$prefix}-font #{$prefix}-picker-label::before,
+	&-picker#{$prefix}-font #{$prefix}-picker-item::before {
+		content: 'Sans Serif';
+		}
+	&-picker#{$prefix}-font #{$prefix}-picker-label[data-value=serif]::before,
+	&-picker#{$prefix}-font #{$prefix}-picker-item[data-value=serif]::before {
+		content: 'Serif';
+		}
+	&-picker#{$prefix}-font #{$prefix}-picker-label[data-value=monospace]::before,
+	&-picker#{$prefix}-font #{$prefix}-picker-item[data-value=monospace]::before {
+		content: 'Monospace';
+		}
+	&-picker#{$prefix}-font #{$prefix}-picker-item[data-value=serif]::before {
+		font-family: Georgia, Times New Roman, serif;
+		}
+	&-picker#{$prefix}-font #{$prefix}-picker-item[data-value=monospace]::before {
+		font-family: Monaco, Courier New, monospace;
+		}
+	&-picker#{$prefix}-size {
+		width: auto;
+		}
+	&-picker#{$prefix}-size #{$prefix}-picker-label::before {
+		content: 'Size';
+		}
+
+	&-picker#{$prefix}-size #{$prefix}-picker-item::before {
+		content: 'Normal';
+		}
+	&-picker#{$prefix}-size #{$prefix}-picker-label[data-value=small]::before,
+	&-picker#{$prefix}-size #{$prefix}-picker-item[data-value=small]::before {
+		content: 'Small';
+		}
+	&-picker#{$prefix}-size #{$prefix}-picker-label[data-value=large]::before,
+	&-picker#{$prefix}-size #{$prefix}-picker-item[data-value=large]::before {
+		content: 'Large';
+		}
+	&-picker#{$prefix}-size #{$prefix}-picker-label[data-value=huge]::before,
+	&-picker#{$prefix}-size #{$prefix}-picker-item[data-value=huge]::before {
+		content: 'Huge';
+		}
+	// &-picker#{$prefix}-size #{$prefix}-picker-item[data-value=small]::before {
+	// 	font-size: 10px;
+	// 	}
+	// &-picker#{$prefix}-size #{$prefix}-picker-item[data-value=large]::before {
+	// 	font-size: 18px;
+	// 	}
+	// &-picker#{$prefix}-size #{$prefix}-picker-item[data-value=huge]::before {
+	// 	font-size: 32px;
+	// 	}
+	&-color-picker#{$prefix}-background #{$prefix}-picker-item {
+		background-color: #fff;
+		}
+	&-color-picker#{$prefix}-color #{$prefix}-picker-item {
+		background-color: #000;
+		}
+	&-toolbar {
+		display: flex;
+		height: $wysiwyg-button-pane-height;
+		align-items: center;
+	}
+	&-toolbar #{$prefix}-formats {
+		margin-right: 15px;
+		}
+	&-toolbar #{$prefix}-picker-label {
+		display:inline-flex;
+		align-items: center;
+	}
+	&-toolbar #{$prefix}-picker-options {
+		border: 1px solid transparent;
+		box-shadow: rgba(0,0,0,0.2) 0 2px 8px;
+		}
+	&-toolbar #{$prefix}-color-picker #{$prefix}-picker-item#{$prefix}-selected,
+	&-toolbar #{$prefix}-color-picker #{$prefix}-picker-item:hover {
+		border-color: #000;
+		}
+	&-toolbar + #{$prefix}-container {
+		border-top: 0px;
+		}
+	&-tooltip {
+		background-color: #fff;
+		box-shadow: 0px 0px 5px #ddd;
+		color: #444;
+		padding: 5px 12px;
+		white-space: nowrap;
+		}
+	&-tooltip::before {
+		content: "Visit URL:";
+		line-height: 26px;
+		margin-right: 8px;
+		}
+	&-tooltip input[type=text] {
+		display: none;
+		border: 1px solid #ccc;
+		font-size: 13px;
+		height: 26px;
+		margin: 0px;
+		padding: 3px 5px;
+		width: 170px;
+		}
+	&-tooltip a#{$prefix}-preview {
+		display: inline-block;
+		max-width: 200px;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		vertical-align: top;
+		}
+	&-tooltip a#{$prefix}-action::after {
+		border-right: 1px solid #ccc;
+		content: 'Edit';
+		margin-left: 16px;
+		padding-right: 8px;
+		}
+	&-tooltip a#{$prefix}-remove::before {
+		content: 'Remove';
+		margin-left: 8px;
+		}
+	&-tooltip a {
+		line-height: 26px;
+		}
+	&-tooltip#{$prefix}-editing a#{$prefix}-preview,
+	&-tooltip#{$prefix}-editing a#{$prefix}-remove {
+		display: none;
+		}
+	&-tooltip#{$prefix}-editing input[type=text] {
+		display: inline-block;
+		}
+	&-tooltip#{$prefix}-editing a#{$prefix}-action::after {
+		border-right: 0px;
+		content: 'Save';
+		padding-right: 0px;
+		}
+	&-tooltip[data-mode=link]::before {
+		content: "Enter link:";
+		}
+	&-tooltip[data-mode=formula]::before {
+		content: "Enter formula:";
+		}
+	&-tooltip[data-mode=video]::before {
+		content: "Enter video:";
+		}
+		
+
+}
+

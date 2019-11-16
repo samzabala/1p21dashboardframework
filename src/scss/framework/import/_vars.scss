@@ -4,7 +4,7 @@
 
 	//breakpiont
 	 //breakpoints
-	 $br-xs: 600px !default;
+	 $br-xs: 700px !default;
 	 $br-sm: 1200px !default;
 	 $br-md: 1800px !default;
  
@@ -221,7 +221,6 @@
 	// NAV
 		$nav-height: 75px !default;
 		$nav-gutter-x: $gutter-small !default;
-			$nav-gutter-x-mobile: $gutter-micro !default;
 		$nav-background: $global-background !default;
 			$nav-dropdown-background: $nav-background !default;
 			$nav-background-inverse: $global-background-inverse !default;
@@ -432,17 +431,17 @@
 			$special-form-border-radius: $border-radius-base !default;
 
 
-		//trumbowyg
-			$trumbowyg-modal-max-width: 520px !default;
+		//wysiwyg
+			$wysiwyg-modal-max-width: 520px !default;
 
-			$trumbowyg-icon-color: $brand-color-neutral !default;
-				$trumbowyg-icon-color-hover: $brand-color-primary !default;
-			$trumbowyg-button-pane-height: 40px !default;
+			$wysiwyg-icon-color: $brand-color-neutral !default;
+				$wysiwyg-icon-color-hover: $brand-color-primary !default;
+			$wysiwyg-button-pane-height: 40px !default;
 
 
 		
-			$trumbowyg-transition-duration: $transition-duration-short;
-			$trumbowyg-transition-duration-slow: $transition-duration-base;
+			$wysiwyg-transition-duration: $transition-duration-short;
+			$wysiwyg-transition-duration-slow: $transition-duration-base;
 
 	// BTN
 		$btn-height: 45px !default;

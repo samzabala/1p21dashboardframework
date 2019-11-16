@@ -3,18 +3,17 @@
 $prefix: '.module';
 #{$prefix} {
 	&-grid {
-		display: block;
+		grid-template-columns: 100%;
+		grid-template-rows: auto;
+		display: grid;
+		grid-gap: $module-gutter-grid-gap;
+		transition:$transition-duration-long opacity $transition-timing;
 		max-width:100%;
 
 		&:nth-child(n+2) {
 			margin-top: $module-grid-gutter;
 		}
 		@include br(md){
-			grid-template-columns: 100%;
-			grid-template-rows: auto;
-			display: grid;
-			grid-gap: $module-gutter-grid-gap;
-			transition:$transition-duration-long opacity $transition-timing;
 
 			.body-loading & {
 				opacity: 0;

@@ -39,12 +39,12 @@ $prefix: '.thumbnail';
 	@extend .fit-image;
 	@include aspect-ratio($thumbnail-size,$thumbnail-size);
 	width:$calculated-thumbnail-size;
-	display:block;
+	display:inline-block;
 	border-radius: $thumbnail-border-radius;
 	@include type-set((
 		size: $calculated-thumbnail-font-size,
 		leading: $calculated-thumbnail-line-height,
-		color: $thumbnail-color,
+		color: $thumbnail-color !important,
 		weight:$thumbnail-font-weight,
 		style: $thumbnail-font-style,
 		case: $thumbnail-text-transform,
