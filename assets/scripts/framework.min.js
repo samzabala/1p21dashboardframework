@@ -472,7 +472,8 @@
 		_1p21.addEvent(document.body,'click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
-				selector = _1p21.getTheToggled(e.target,'.dropdown');
+				selector = _1p21.getTheToggled(clicked,'.dropdown');
+				console.log(clicked,selector);
 				selectorAncestor = selector.closest('li,.nav-item');
 
 				selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){

@@ -780,6 +780,7 @@ table.table-large .table-cell {
   width: 1em;
   vertical-align: middle;
   transform-origin: center center;
+  pointer-events: none;
 }
 
 .symbol:before, .symbol:after {
@@ -4511,7 +4512,6 @@ DASHBOARD / OUR CUSTOM STYLES
 }
 
 #nav-account {
-  flex: 0 1;
   display: flex;
   align-items: center;
   position: relative;
