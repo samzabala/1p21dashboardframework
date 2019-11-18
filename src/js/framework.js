@@ -18,6 +18,35 @@
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
+	String.prototype.toCamelCase = function(){
+
+		var str = this;
+
+		return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+			return index == 0 ? word.toLowerCase() : word.toUpperCase();
+		}).replace(/-|\s/g, '');
+
+	}
+
+
+	//polyifiulls
+	if (!Element.prototype.matches) {
+		Element.prototype.matches = Element.prototype.msMatchesSelector || 
+									Element.prototype.webkitMatchesSelector;
+	}
+	
+	if (!Element.prototype.closest) {
+	Element.prototype.closest = function(s) {
+		var el = this;
+	
+		do {
+		if (el.matches(s)) return el;
+		el = el.parentElement || el.parentNode;
+		} while (el !== null && el.nodeType === 1);
+		return null;
+	};
+	}
+	
 	//maxs
 
 	_.br_vals = {
@@ -30,7 +59,14 @@
 
 	_.br_arr = Object.keys(_.br_vals);
 
-
+	 _1p21.addEvent = function(parent, evt, selector, handler) {
+		parent.addEventListener(evt, function(event) {
+			
+		  if (event.target.matches(selector + ', ' + selector + ' *')) {
+			handler.apply(event.target.closest(selector), arguments);
+		  }
+		}, true);
+	  }
 
 
 	/*
@@ -74,31 +110,7 @@
 		}, 400 );
 	}
 
-	_1p21.getClosest = function (elem, selector) {
-
-		// Element.matches() polyfill
-		if (!Element.prototype.matches) {
-			Element.prototype.matches =
-				Element.prototype.matchesSelector ||
-				Element.prototype.mozMatchesSelector ||
-				Element.prototype.msMatchesSelector ||
-				Element.prototype.oMatchesSelector ||
-				Element.prototype.webkitMatchesSelector ||
-				function(s) {
-					var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-						i = matches.length;
-					while (--i >= 0 && matches.item(i) !== this) {}
-					return i > -1;
-				};
-		}
 	
-		// Get the closest matching element
-		for ( ; elem && elem !== document; elem = elem.parentNode ) {
-			if ( elem.matches( selector ) ) return elem;
-		}
-		return null;
-	
-	};
 
 	_1p21.getSiblings = function (elem) {
 
@@ -149,164 +161,171 @@
 
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
-	// _1p21.initGrid = function(moduleGrid){
-	// 	console.log('grid bitch is running');
+	_1p21.initGrid = function(moduleGrid){
+		
 		
 
-	// 	var availablePropetiesParent = [
-	// 		'grid-template-rows',
-	// 		'grid-template-columns',
-	// 		'grid-template-areas',
+		var availablePropetiesParent = [
+			'grid-template-rows',
+			'grid-template-columns',
+			'grid-template-areas',
 
 
-	// 		'grid-column-start',
-	// 		'grid-template-end',
-	// 		'grid-template',
-	// 		'grid-column-gap',
-	// 		'grid-row-gap',
-	// 		'justify-items',
-	// 		'align-items',
-	// 		'justify-content',
-	// 		'align-content',
-	// 		'place-content',
-	// 		'grid-auto-columns',
-	// 		'grid-auto-rows',
-	// 		'grid-auto-flow',
-	// 		'grid'
-	// 	];
+			'grid-column-start',
+			'grid-template-end',
+			'grid-template',
+			'grid-column-gap',
+			'grid-row-gap',
+			'justify-items',
+			'align-items',
+			'justify-content',
+			'align-content',
+			'place-content',
+			'grid-auto-columns',
+			'grid-auto-rows',
+			'grid-auto-flow',
+			'grid'
+		];
 
 
 
-	// 	var availablePropertiesChildren = [
-	// 		'grid-area',
+		var availablePropertiesChildren = [
+			'grid-area',
 
-	// 		'grid-column',
-	// 		'grid-row',
+			'grid-column',
+			'grid-row',
 			
-	// 		'grid-column-start',
-	// 		'grid-column-end',
-	// 		'grid-row-start',
-	// 		'grid-row-end',
-	// 		'justify-self',
-	// 		'align-self',
-	// 		'place-self',
-	// 	];
+			'grid-column-start',
+			'grid-column-end',
+			'grid-row-start',
+			'grid-row-end',
+			'justify-self',
+			'align-self',
+			'place-self',
+		];
 
-	// 	function renderProps(modElement,props){
+		function renderProps(modElement,props){
 
-	// 		props.forEach(function(prop){
-	// 			var propsSet = false;
+			props.forEach(function(prop){
+				// modElement.style[prop.toCamelCase()] = '';
+				var propsSet = false;
 				
-	// 			//check for breakpointz first
-	// 			reverseArray(_.br_arr).forEach(function(br){
+				//check for breakpointz first
+				reverseArray(_.br_arr).forEach(function(br){
 					
-	// 				if( modElement.data(prop+'-'+br) && !propsSet ) {
-	// 					if( _1p21.validateBr(br,'below') ){
-	// 						console.log('i was here',br);
-	// 						modElement.css(prop, modElement.data(prop+'-'+br));
-	// 						propsSet = true;
-	// 					}
+					if( modElement.getAttribute('data-'+prop+'-'+br) && !propsSet) {
+						if( _1p21.validateBr(br,'above') ){
+							modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop+'-'+br)
+							propsSet = true;
+						}
 
-	// 				}
-	// 			})
+					}
+				})
 	
-	// 			if(modElement.data(prop) && !propsSet) {
-					
-	// 				modElement.css(prop, modElement.data(prop))
-	// 			}
-	// 		}); 
-	// 	}
+				if(modElement.getAttribute('data-'+prop) && !propsSet) {
+					console.log(prop.toCamelCase());
+					console.log(modElement.style[prop.toCamelCase()],modElement.getAttribute('data-'+prop));
+					modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop)
+					propsSet = true;
+				}
+			}); 
+		}
 
 
-	// 	renderProps(moduleGrid,availablePropetiesParent);
+		renderProps(moduleGrid,availablePropetiesParent);
 
 
 
-	// 	//chchchchchildren
+		//chchchchchildren
 
-	// 	moduleGrid.children('.module').each(function(){
-	// 		var moduleChild = $(this);
-	// 		renderProps(moduleChild,availablePropertiesChildren);
-	// 	});
+		var moduleChildren = Array.from(moduleGrid.children).filter(function(child){
+			return child.matches('.module');
+		})
+
+
+		moduleChildren.forEach(function(child){
+			renderProps(child,availablePropertiesChildren);
+		});
 		
-	// }
+	}
 
 
 
 
 	// //will run. right away. boi
 	// //lazyload
-	// _1p21.loadImages = function() {
-	// 	//css images
-	// 	// images
-	// 	$('*[data-src]').each(function () {
-	// 		// $('img, picture > source')
+	_1p21.loadImages = function() {
+		//css images
+		// images
+		var toLazy = document.querySelectorAll('*[data-src]');
 
-	// 		var img = $(this),
-	// 				imgSrc = $(this).data('src'),
-	// 				imgSrcset = $(this).data('srcset');
+		toLazy.forEach(function(img){
 
-	// 		if(
-	// 			img.is('img')
-	// 			|| ( img.is('source') && img.closest('picture').length )
-	// 		){
-	// 			if(img.attr('data-src').getFileExtension() == 'svg' ){
-	// 				var imgID = img.attr('id');
-	// 				var imgClass = img.attr('class');
-	// 				$.get(imgSrc, function(data) {
-	// 					var svg = $(data).find('svg');
-	// 					if (typeof imgID !== 'undefined') {
-	// 						svg = svg.attr('id', imgID);
-	// 					}
-	// 					if (typeof imgClass !== 'undefined') {
-	// 						svg = svg.attr('class', imgClass + ' replaced-svg');
-	// 					}
-	// 					svg = svg.removeAttr('xmlns:a');
-	// 					img.replaceWith(svg);
-	// 				}, 'xml');
-	// 			}else {
-	// 				(imgSrc !== 'undefined') && img.attr('src', imgSrc);
-	// 				(imgSrcset !== 'undefined') && img.attr('srcset', imgSrcset);
-	// 			}
-	// 		}else{
-	// 			// img.css('background-image', 'url(' + imgSrc + ')');
-	// 		}
+			imgSrc = img.getAttribute('data-src'),
+			imgSrcset = img.getAttribute('data-srcset');
 
-	// 		img.addClass('lazy-loaded');
-	// 	});
+			if(img.matches('img') || img.closest('picture').length) {
 
-	// 	//css images
-	// 	$('body').addClass('lazy-initialized');
-	// }
+				if(imgSrc.getFileExtension() == 'svg' ){
+					var imgID = img.getAttribute('id') || null;
+					var imgClass = img.getAttribute('class') || null;
+
+					fetch(imgSrc)
+					.then(response => response.text())
+					.then((markup)=> {
+
+						var parser = new DOMParser();
+						var doc = parser.parseFromString(markup, "text/html");
+
+						var svg = doc.querySelector('svg');
+
+							if (typeof imgID !== null) {
+								svg.setAttribute('id', imgID);
+							}
+							if (typeof imgClass !== null) {
+								svg.setAttribute('class', imgClass + ' replaced-svg');
+							}
+
+							svg.removeAttribute('xmlns:a');
+							img.replaceWith(svg);
+							
+
+					})
+					
+				}else {
+					(imgSrc !== 'undefined') && img.setAttribute('src', imgSrc);
+					(imgSrcset !== 'undefined') && img.setAttribute('srcset', imgSrcset);
+				}
+			}else{
+				img.style.backgroundImage = 'url(' + imgSrc + ')';
+			}
+			img.classList.add('lazy-loaded');
+
+		});
+		
+		document.querySelector('body').classList.add('lazy-initialized');
+	}
 
 
-	// function readyGrid(){
-
-	// 	$('.module-grid:not(.module-grid-custom)').each(function(){
-	// 		_1p21.initGrid($(this));
-	// 	});
-	// }
-	// _.functions_on_load.push(readyGrid);
-	// _.functions_on_resize.push(readyGrid);
+	function readyGrid(){
+		console.log('grid is run');
+		var grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
+		grids.forEach(function(grid){
+			_1p21.initGrid(grid);
+		});
+	}
+	_.functions_on_load.push(readyGrid);
+	_.functions_on_resize.push(readyGrid);
 
 	window.addEventListener('load',function(){
 
-		// _1p21.lazyLoad && _1p21.loadImages();
-
-		//toggles
-		/*
-		accordion
-		modal
-		
-		*/
+		_1p21.lazyLoad && _1p21.loadImages();
 
 		_.functions_on_load.forEach(function(fn){
 			fn();
-		})
-
+		});
 
 		var resizeTimerInternal;
-
 		window.addEventListener('resize', function() {
 		
 			clearTimeout(resizeTimerInternal)
@@ -318,88 +337,114 @@
 			}, 100)
 		
 		});
-		
-		//click events on ui components
-		document.addEventListener('click',function(e){
-			e.preventDefault();
 
+		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+			$(this).trumbowyg({
+				// btns: [
+				// 	['viewHTML'],
+				// 	['undo', 'redo'], // Only supported in Blink browsers
+				// 	['formatting'],
+				// 	['strong', 'em', 'del'],
+				// 	// ['superscript', 'subscript'],
+				// 	['link'],
+				// 	['insertImage'],
+				// 	// ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+				// 	['unorderedList', 'orderedList'],
+				// 	['horizontalRule'],
+				// 	['removeformat'],
+				// 	['fullscreen'],
+				// 	['upload']
+				// ],
+				btns: [
+					['viewHTML'],
+					['strong', 'em',],
+					['insertImage'],
+					['link'],
+					['unorderedList', 'orderedList'],
+					['upload'],
+					['fullscreen']
+				],
+				// prefix: 'input-trumbowyg-',
+				// autogrow: true,
+				// autogrowOnEnter: true,
+				removeformatPasted: true,
+				tagsToRemove: ['script']
+			});
+		});
 
-			var clicked = e.target,
-				selector,
-				selectorAncestor,
-				selectorSiblings,
-				clickedSiblings;
-				console.log(clicked);
-
-			function theToggled (selector){
+		_1p21.getTheToggled = function(clicked,selector){
 				
-				if( clicked.getAttribute('href') ){
-					return document.querySelector( clicked.getAttribute('href') );
+			if( clicked.getAttribute('href') ){
+				return document.querySelector( clicked.getAttribute('href') );
 
-				}else if( clicked.getAttribute('data-href') ){
-					return document.querySelector( clicked.getAttribute('data-href') )
-					
-				}else{
-					var possibleSiblings = clicked.nextElementSibling;
+			}else if( clicked.getAttribute('data-href') ){
+				return document.querySelector( clicked.getAttribute('data-href') )
+				
+			}else{
+				var possibleSiblings = clicked.nextElementSibling;
 
-					while (possibleSiblings) {
-						if (possibleSiblings.matches(selector)){
-							return possibleSiblings;
-						}
-						possibleSiblings = possibleSiblings.nextElementSibling
+				while (possibleSiblings) {
+					if (possibleSiblings.matches(selector)){
+						return possibleSiblings;
 					}
-
-					return possibleSiblings;
+					possibleSiblings = possibleSiblings.nextElementSibling
 				}
-			};
 
-			if( clicked.matches('*[data-toggle="accordion"]') ) {
-				selector = theToggled('.accordion');
-				selectorAncestor = _1p21.getClosest(selector,'.accordion-group');
+				return possibleSiblings;
+			}
+		};
 
+		
+		_1p21.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
+			e.preventDefault();
+			var clicked = e.target;
+				selector = _1p21.getTheToggled(e.target,'.accordion');
+				selectorAncestor = selector.closest('.accordion-group');
 				selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('.accordion');
 				});
-
 				clickedSiblings = _1p21.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('*[data-toggle="accordion"]');
 				})
 
-
-				if( selector ){
-							
-					if(
-						selector.classList.contains('open')
-						&& clicked.classList.contains('open')
-					){
-	
-						slideUp(selector); 
-						clicked.classList.remove('open'); 
-						selector.classList.remove('open'); 
-
-					}else{
+			if( selector ){
 						
-						if(selectorAncestor && !selectorAncestor.matches('.accordion-group-multiple') ) {
-							
-							selectorSiblings.forEach(function(sibling){
-								slideUp(sibling)
-								sibling.classList.remove('open');
-							});
+				if(
+					selector.classList.contains('open')
+					&& clicked.classList.contains('open')
+				){
 
-							clickedSiblings.forEach(function(sibling){
-								sibling.classList.remove('open');
-							});
+					slideUp(selector); 
+					clicked.classList.remove('open'); 
+					selector.classList.remove('open'); 
+
+				}else{
+					
+					if(selectorAncestor && !selectorAncestor.matches('.accordion-group-multiple') ) {
 						
-						}; 
-	
-						slideDown(selector); 
-						clicked.classList.add('open'); 
-						selector.classList.add('open'); 
-					}
+						selectorSiblings.forEach(function(sibling){
+							slideUp(sibling)
+							sibling.classList.remove('open');
+						});
+
+						clickedSiblings.forEach(function(sibling){
+							sibling.classList.remove('open');
+						});
+					
+					}; 
+
+					slideDown(selector); 
+					clicked.classList.add('open'); 
+					selector.classList.add('open'); 
 				}
-			}else if( clicked.matches('*[data-toggle="dropdown"]') ) {
-				selector = theToggled('.dropdown');
-				selectorAncestor = _1p21.getClosest(selector,'li,.nav-item');
+			}
+		});
+
+		_1p21.addEvent(document.body,'click','*[data-toggle="dropdown"]',function(e){
+			e.preventDefault();
+			var clicked = e.target;
+				selector = _1p21.getTheToggled(e.target,'.dropdown');
+				selectorAncestor = selector.closest('li,.nav-item');
 
 				selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('.dropdown');
@@ -411,7 +456,6 @@
 
 
 				if( selector ){
-							console.log(clicked);
 					if(
 						selector.classList.contains('open')
 						&& clicked.classList.contains('open')
@@ -443,226 +487,230 @@
 						selector.classList.add('open'); 
 					}
 				}
-				
-			}
+		})
+
+		//btn group
+		_1p21.addEvent(document.body,'click','.btn-group-toggle .btn',function(e){
+			
+			e.preventDefault();
+		})
+
+		//tooltip
+		_1p21.addEvent(document.body,'click','*[data-toggle="tooltip-click"]',function(e){
+			e.preventDefault();
+			_1p21.createToolTip(e.target);
 		});
 
+		document.body.addEventListener('click',function(e){
+			if(!e.target.matches('*[data-toggle="tooltip-click"]')){
+				_1p21.destroyToolTip();
+			}
+		})
+			
+			_1p21.addEvent(document.body,'mouseenter','*[data-toggle="tooltip-hover"]',function(e){
+				_1p21.createToolTip(this);
+			});
 
-	
-		
-
-
-
-		// $('body').on('click','.btn-group-toggle .btn',function(e){
-		// 	e.preventDefault();
-
-		// 	$(this).siblings('.btn-toggle-reset').removeClass('active');
-
-		// 	if(
-		// 		(!$(this).closest('.btn-group-toggle-multiple').length)
-		// 		|| ($(this).hasClass('btn-toggle-reset'))
-		// 	){
-		// 		$(this).siblings('.btn').removeClass('active');
-		// 		$(this).addClass('active');
-		// 	}else{
-		// 		$(this).toggleClass('active');
-		// 	}
-		// });
+			_1p21.addEvent(document.body,'mouseleave','*[data-toggle="tooltip-hover"]',function(e){
+				_1p21.destroyToolTip();
+			});
 
 
-		// _1p21.createToolTip = function(triggerer) {
-		// 	if(triggerer) {
-		// 		var arr =  {
-		// 			placement: triggerer.data('tooltip-placement'),
-		// 			badge: triggerer.data('tooltip-badge'),
-		// 			badgeBg: triggerer.data('tooltip-badge-background'),
-		// 			badgeSize: triggerer.data('tooltip-badge-size'),
-		// 			content: triggerer.data('tooltip-content'),
-		// 			classes: triggerer.data('tooltip-classes'),
-		// 			centerX: triggerer.data('tooltip-center-x'),
-		// 			centerY: triggerer.data('tooltip-center-y'),
-		// 		};
 
-		// 		var defaults = {
 
-		// 			placement: 'left',
-		// 			badge: false,
-		// 			badgeBg: 'primary',
-		// 			badgeSize: '',
-		// 			classes: '',
-		// 			content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
-		// 			centerX: false,
-		// 			centerY: false,
+		_1p21.createToolTip = function(triggerer) {
+			if(triggerer) {
+				_1p21.destroyToolTip();
+				var arr =  {
+					placement: triggerer.getAttribute('data-tooltip-placement') || null,
+					badge: triggerer.getAttribute('data-tooltip-badge') || null,
+					badgeBg: triggerer.getAttribute('data-tooltip-badge-background') || null,
+					badgeSize: triggerer.getAttribute('data-tooltip-badge-size') || null,
+					content: triggerer.getAttribute('data-tooltip-content') || null,
+					classes: triggerer.getAttribute('data-tooltip-classes') || null,
+					centerX: triggerer.getAttribute('data-tooltip-center-x') || null,
+					centerY: triggerer.getAttribute('data-tooltip-center-y') || null,
+				};
 
-		// 		};
+				var defaults = {
+
+					placement: 'left',
+					badge: false,
+					badgeBg: 'primary',
+					badgeSize: '',
+					classes: '',
+					content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
+					centerX: false,
+					centerY: false,
+
+				};
 				
-		// 		var args = defaults;
-		// 		for (var prop in arr) {
-		// 			if(arr.hasOwnProperty(prop) && arr[prop]) {
-		// 				// Push each value from `obj` into `extended`
-		// 				args[prop] = arr[prop];
-		// 			}
-		// 		}
+				var args = defaults;
+				for (var prop in arr) {
+					if(arr.hasOwnProperty(prop) && arr[prop] !== '' && arr[prop] !== null) {
+						// Push each value from `obj` into `extended`
+						args[prop] = arr[prop];
+					}
+				}
 
-		// 		_1p21.destroyToolTip();
+				var toolTip = document.createElement('div');
+				document.querySelector('body').appendChild(toolTip);
+				
+				toolTip.className = 'tooltip tooltip-'+ args.placement+' '+ args.classes;
+
+				var ttHtml = ''
 
 
-		// 		$('body').append(function(){
-		// 			var html = '<div class="tooltip tooltip-'+ args.placement+' '+args.classes+'">';
-		// 			if( args.badge ) {
-		// 				html += '<span class="badge tooltip-badge';
-		// 				if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
-		// 					html += ' badge-'+args.badgeSize;
-		// 				}
-		// 				if(args.badgeBg) {
-		// 					if(_.palette.includes(args.badgeBg)) {
-		// 						html += ' badge-'+args.badgeBg;
-		// 					}else{
+				if( args.badge ) {
+					ttHtml += '<span class="badge tooltip-badge';
+					if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
+						ttHtml += ' badge-'+args.badgeSize;
+					}
+					if(args.badgeBg) {
+						if(_.palette.includes(args.badgeBg)) {
+							ttHtml += ' badge-'+args.badgeBg;
+						}else{
 
-		// 						html += '" style="background-color:'+args.badgeBg+';';
-		// 					}
-		// 				}
-						
-		// 				html += '"></span>'
-		// 			}
-		// 			html += args.content
-		// 			html += '</div>';
+							ttHtml += '" style="background-color:'+args.badgeBg+';';
+						}
+					}
+					
+					ttHtml += '"></span>'
+				}
+				ttHtml += args.content;
+				ttHtml += '</div>';
 
-		// 			return html;
-		// 		});
+				toolTip.innerHTML += ttHtml;
 
-		// 		var tooltip = $('body').children('.tooltip').first();
-		// 			tooltip.fadeIn()
-		// 			tooltip.addClass('open');
 
-		// 		var toolPoint = parseFloat(window.getComputedStyle( tooltip[0], ':before').getPropertyValue('width'));
-		// 			toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
+				// var tooltip = $('body').children('.tooltip').first();
+					toolTip.classList.add('open');
 
-		// 			isNaN(toolPoint) && (toolPoint = 15);
+				var toolPoint = parseFloat(window.getComputedStyle( toolTip, ':before').getPropertyValue('width'));
+					toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
+					isNaN(toolPoint) && (toolPoint = 15);
 
-		// 		var pos = {
-		// 			x: function(){
-		// 				var toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
-		// 				var offset = 0;
 
-		// 				if(args.centerX){
 
-		// 					switch(args.placement){
-		// 						case 'right':
-		// 							toReturn = triggerer.offset().left + ( triggerer.outerWidth() * .5) + toolPoint;
-		// 								break;
-		// 						case 'left':
-		// 							toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint) + (triggerer.outerWidth() * .5);
-		// 							break;
-		// 					}
+					var triggererProps = {
+						top: triggerer.getBoundingClientRect().top + window.pageYOffset,
+						left: triggerer.getBoundingClientRect().left + window.pageXOffset,
+						height: triggerer.getBoundingClientRect().height,
+						width: triggerer.getBoundingClientRect().width,
+					};
+
+					var toolTipProps = {
+						height: toolTip.getBoundingClientRect().height,
+						width: toolTip.getBoundingClientRect().width,
+					};
+
+					console.log(triggerer.getBoundingClientRect().top + document.body.scrollTop);
+
+					var toolTipBadge = toolTip.querySelector('.tooltip-badge');
+
+					var pos = {
+						x: function(){
+							var toReturn = triggererProps.left + ((triggererProps.width * .5) - (toolTipProps.width * .5));
+							var offset = 0;
+
+							if(args.centerX){
+
+								switch(args.placement){
+									case 'right':
+										toReturn = triggererProps.left + ( triggererProps.width * .5) + toolPoint;
+											break;
+									case 'left':
+										toReturn = triggererProps.left - (toolTipProps.width + toolPoint) + (triggererProps.width * .5);
+										break;
+								}
+								
+							}else{
+
+								switch(args.placement){
+									case 'right':
+										toReturn = triggererProps.left + triggererProps.width + toolPoint;
+										break;
+									case 'left':
+										toReturn = triggererProps.left - (toolTipProps.width + toolPoint);
+										break;
+								}
+
+							}
+
+							if(
+								( toolTipBadge )
+								&& (
+									(
+										args.placement == 'left'
+										|| args.placement == 'right'
+									)
+								)
+							) {
+
+								offset = (args.placement == 'left' ) ? (toolTipBadge.getBoundingClientRect().width * -.5) : toolTipBadge.getBoundingClientRect().width * .5;
+							}
 							
-		// 				}else{
 
-		// 					switch(args.placement){
-		// 						case 'right':
-		// 							toReturn = triggerer.offset().left + triggerer.outerWidth() + toolPoint;
-		// 							break;
-		// 						case 'left':
-		// 							toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint);
-		// 							break;
-		// 					}
-
-		// 				}
-
-		// 				if(
-		// 					(tooltip.find('.tooltip-badge').first().length > 0)
-		// 					&& (
-		// 						(
-		// 							args.placement == 'left'
-		// 							|| args.placement == 'right'
-		// 						)
-		// 					)
-		// 				) {
-		// 					offset = (args.placement == 'left' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
-		// 				}
-						
-
-		// 				toReturn += offset;
-						
-		// 				return toReturn;
-		// 			},
-		// 			y: function(){
-		// 				var toReturn = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5); // left and right
-		// 				var offset = 0;
-		// 				if(args.centerY){
+							toReturn += offset;
 							
-		// 					switch(args.placement){
-		// 						case 'top':
-		// 							toReturn = (triggerer.offset().top - (tooltip.outerHeight() + toolPoint) + (triggerer.outerHeight() * .5));
-		// 							break;
-		// 						case 'bottom':
-		// 							toReturn = (triggerer.offset().top + ((triggerer.outerHeight() * .5)) + toolPoint);
-		// 							break;
-		// 					}
+							return toReturn;
+						},
+						y: function(){
+							var toReturn = (triggererProps.top + (triggererProps.height * .5)) - (toolTipProps.height * .5); // left and right
+							var offset = 0;
+							if(args.centerY){
+								
+								switch(args.placement){
+									case 'top':
+										toReturn = (triggererProps.top - (toolTipProps.height + toolPoint) + (triggererProps.height * .5));
+										break;
+									case 'bottom':
+										toReturn = (triggererProps.top + ((triggererProps.height * .5)) + toolPoint);
+										break;
+								}
 
-		// 				}else{
-							
-		// 					switch(args.placement){
-		// 						case 'top':
-		// 							toReturn = triggerer.offset().top - (tooltip.outerHeight() + toolPoint);
-		// 							break;
-		// 						case 'bottom':
-		// 							toReturn = triggerer.offset().top + (triggerer.outerHeight() + toolPoint);
-		// 							break;
-		// 					}
-		// 				}
+							}else{
+								
+								switch(args.placement){
+									case 'top':
+										toReturn = triggererProps.top - (toolTipProps.height + toolPoint);
+										break;
+									case 'bottom':
+										toReturn = triggererProps.top + (triggererProps.height + toolPoint);
+										break;
+								}
+							}
 
-		// 				if(
-		// 					(tooltip.find('.tooltip-badge').first().length > 0)
-		// 					&& (
-		// 						args.placement == 'top'
-		// 						|| args.placement == 'bottom'
-		// 					)
-		// 				) {
-		// 					offset = (args.placement == 'top' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
-		// 				}
+							if(
+								( toolTipBadge )
+								&& (
+									args.placement == 'top'
+									|| args.placement == 'bottom'
+								)
+							) {
+								offset = (args.placement == 'top' ) ? (toolTipBadge.getBoundingClientRect().width * -.5) : toolTipBadge.getBoundingClientRect().width * .5;
+							}
 
-		// 				toReturn += offset;
+							toReturn += offset;
 
-		// 				return toReturn;
-		// 			}
-		// 		}
+							return toReturn;
+						}
+					}
 
-		// 		tooltip.css({
-		// 			'top': pos.y(),
-		// 			'left': pos.x()
-		// 		})
+				toolTip.style.top = pos.y()+'px';
+				toolTip.style.left = pos.x()+'px';
 
-		// 	}
-
-		// }
-
-		// _1p21.destroyToolTip = function(){
-		// 	$('body').children('.tooltip').hide().remove();
-		// }
-
+				_1p21.activeToolTipTrigger = triggerer
 
 
-		// $('body').on('click','*[data-toggle="tooltip-click"]',function(e){
-		// 	var self = $(this);
-		// 	_1p21.createToolTip(self);
-			
-		// });
+			}
 
+		}
 
-
-		// $('body').on('mouseenter','*[data-toggle="tooltip-hover"]',function(e){
-		// 	var self = $(this);
-
-		// 	_1p21.createToolTip(self);
-
-			
-		// });
-
-		// $('body').on('mouseleave','*[data-toggle="tooltip-hover"]',function(e){
-		// 	var self = $(this);
-		// 	_1p21.destroyToolTip();
-		// });
+		_1p21.destroyToolTip = function(){
+			var toolTip = document.querySelector('body > .tooltip');
+			toolTip && toolTip.parentNode.removeChild(toolTip);
+		}
 
 
 

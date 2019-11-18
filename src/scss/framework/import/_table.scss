@@ -26,7 +26,6 @@ $prefix: '.table';
         width:100%;
         display:block;
         overflow-x: auto;
-        margin-bottom: $calculated-body-text-gutter-y;
 
         @at-root & .table,
         & table {
@@ -42,7 +41,6 @@ $prefix: '.table';
         max-width: 100%;
         border-collapse: collapse;
         border-spacing: 0;
-        margin-bottom: $calculated-body-text-gutter-y;
 
 
         @at-root thead,
@@ -67,8 +65,16 @@ $prefix: '.table';
             display:table-row;
             border-bottom: $table-cell-border-width solid $table-cell-border-color;
 
+            &:first-child {
+                border-top: $table-cell-border-width solid $table-cell-border-color;
+            }
+
             .body-inverse & {
                 border-bottom: $table-cell-border-width solid $table-cell-border-color-inverse;
+
+                &:first-child {
+                    border-top: $table-cell-border-width solid $table-cell-border-color-inverse;
+                }
             }
             
         }

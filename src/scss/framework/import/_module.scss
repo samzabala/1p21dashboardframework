@@ -9,10 +9,7 @@ $prefix: '.module';
 		grid-gap: $module-gutter-grid-gap;
 		transition:$transition-duration-long opacity $transition-timing;
 		max-width:100%;
-
-		&:nth-child(n+2) {
-			margin-top: $module-grid-gutter;
-		}
+		
 		@include br(md){
 
 			.body-loading & {
@@ -32,42 +29,41 @@ $prefix: '.module';
 		background: $module-bg-color;
 		overflow:hidden;
 
-		&#{&}-no-gutter {
-			padding:0;
-		}
-
 		.body-inverse & {
 
 			background: $module-bg-color-inverse;
 		}
-
-		@include br(sm-max) {
-			&:nth-child(n+2){
-
-			margin-top: $module-gutter-grid-gap;
-			}
-		}
+		
 	}
 
 	&,
-	&-heading {
+	&-heading:first-child,
+	&-content:first-child,
+	&-footer:first-child {
 		padding-top: $module-gutter-y;
 		border-top-left-radius: $module-border-radius;
 		border-top-right-radius: $module-border-radius;
 	}
 
-	&-heading {
+	&-heading:first-child,
+	&-content:first-child,
+	&-footer:first-child {
 		margin-top: $module-gutter-y * -1;
 	}
 
 	&,
-	&-footer {
+	&-heading:last-child,
+	&-content:last-child,
+	&-footer:last-child {
 		padding-bottom: $module-gutter-y;
 		border-bottom-left-radius: $module-border-radius;
 		border-bottom-right-radius: $module-border-radius;
 	}
 
-	&-footer {
+	
+	&-heading:last-child,
+	&-content:last-child,
+	&-footer:last-child {
 		margin-bottom: $module-gutter-y * -1;
 	}
 
@@ -91,14 +87,12 @@ $prefix: '.module';
 		}
 	}
 	
-	&-heading,
-	&-content {
-		padding-bottom: $module-gutter-between * .5;
+	&-heading:not(:last-child) {
+		margin-bottom: $module-gutter-between;
 	}
 
-	&-footer,
-	&-content {
-		padding-top: $module-gutter-between * .5;
+	&-footer:not(:first-child){
+		margin-top: $module-gutter-between;
 	}
 
 	&-title {
@@ -132,10 +126,11 @@ $prefix: '.module';
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-		}
 
-		&-title,&-function {
-			width: 50%;
+			#{$prefix}-title:not(:first-child:last-child),
+			#{$prefix}-function:not(:first-child:last-child) {
+				width: 50%;
+			}
 		}
 	
 		&-functions {
@@ -179,14 +174,32 @@ $prefix: '.module';
 			margin-bottom: $module-gutter-y-mobile * -1;
 		}
 	
-		&-heading,
-		&-content {
-			padding-bottom: $module-gutter-between-mobile * .5;
-		}
+		
 	
-		&-footer,
-		&-content {
-			padding-top: $module-gutter-between-mobile * .5;
+		&-heading:not(:last-child) {
+			margin-bottom: $module-gutter-between-mobile;
+		}
+
+		&-footer:not(:first-child){
+			margin-top: $module-gutter-between-mobile;
+		}
+	}
+
+
+
+	&#{&}-no-gutter {
+	}
+
+	&-no-gutter {
+		padding:0;
+		
+		#{$prefix}-heading,
+		#{$prefix}-content,
+		#{$prefix}-footer {
+			padding-top: 0;
+			padding-bottom:0;
+			margin:0 auto;
+
 		}
 	}
 

@@ -59,6 +59,16 @@
 	}
 
 
+	$calculated-body-size-small: $body-size-small;
+	@if internal-is-convertable($body-size-small) {
+		$calculated-body-size-small: em($body-size-small / $body-font-size);
+	}
+	$calculated-body-size-large: $body-size-large;
+	@if internal-is-convertable($body-size-large) {
+		$calculated-body-size-large: em($body-size-large / $body-font-size);
+	}
+
+
 	$calculated-body-heading-size: (
 		$calculated-body-size-h1,
 		$calculated-body-size-h2,
@@ -232,6 +242,8 @@ pre,
 dl {
 	@extend %for-p;
 }
+
+
 
 ol,ul,dd{
 	padding-left: $calculated-body-list-offset;
@@ -422,4 +434,9 @@ hr {
 	opacity: .2;
 }
 
-
+small {
+	font-size: $calculated-body-size-small;
+}
+big {
+	font-size: $calculated-body-size-large;
+}

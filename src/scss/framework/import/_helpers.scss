@@ -243,9 +243,43 @@
 				@extend %flex-lg;
 			}
 
-			// &-justify-content {
-			// 	&-
-			// }
+			&-justify-content {
+				&-space-between {
+					justify-content: space-between;
+				}
+			}
+
+			&-align {
+				&-items {
+					&-center {
+						align-items: center;
+					}
+				}
+			}
+
+			&-wrap {
+				flex-wrap:wrap;
+			}
+
+			&-nowrap {
+				flex-wrap:nowrap;
+			}
+
+			&-1-1 {
+				flex: 1 1;
+			}
+
+			&-1-0 {
+				flex: 1 0;
+			}
+
+			&-0-1 {
+				flex: 0 1;
+			}
+
+			&-0-0 {
+				flex: 0 0;
+			}
 		}
 
 	
@@ -275,6 +309,14 @@
 	$prefix: '.text';
 	#{$prefix}{
 
+		&-block {
+			display:block;
+		}
+		&-gutter {
+			@extend %for-p;
+		}
+		
+
 		&-align {
 			&-center {
 				text-align: center!important;
@@ -299,6 +341,33 @@
 			}
 			&-capitalize {
 				text-transform: capitalize!important;
+			}
+		}
+
+		&-vertical-align {
+			&-middle {
+				vertical-align:middle!important;
+			}
+			&-baseline {
+				vertical-align:baseline!important;
+			}
+			&-top {
+				vertical-align:top!important;
+			}
+			&-bottom {
+				vertical-align:bottom!important;
+			}
+			&-text-top {
+				vertical-align:text-top!important;
+			}
+			&-text-bottom {
+				vertical-align:text-bottom!important;
+			}
+			&-sub {
+				vertical-align:sub!important;
+			}
+			&-super {
+				vertical-align:super!important;
 			}
 		}
 
@@ -372,6 +441,18 @@
 
 	}
 
+	&-size {
+		&-large {
+			font-size: $calculated-body-size-large;
+		}
+		&-small {
+			font-size: $calculated-body-size-small;
+		}
+		&-normalize {
+			font-size: 1rem;
+		}
+	}
+
 	&-style {
 		&-italic {
 			font-style: italic!important;
@@ -379,5 +460,70 @@
 		&-oblique {
 			font-style: oblique!important;
 		}
+	}
+}
+
+//gutters and paddings
+
+.no-margin {
+	margin:0!important;
+
+	&-x {
+		margin-left:0!important;
+		margin-right:0!important;
+	}
+
+
+	&-y {
+		margin-top:0!important;
+		margin-bottom:0!important;
+	}
+
+	&-top {
+		margin-top:0!important;
+	}
+
+	&-bottom {
+		margin-bottom:0!important;
+	}
+
+	&-left {
+		margin-left:0!important;
+	}
+
+	&-right {
+		margin-right:0!important;
+	}
+}
+
+
+.no-padding {
+	padding:0!important;
+
+	&-x {
+		padding-left:0!important;
+		padding-right:0!important;
+	}
+
+
+	&-y {
+		padding-top:0!important;
+		padding-bottom:0!important;
+	}
+
+	&-top {
+		padding-top:0!important;
+	}
+
+	&-bottom {
+		padding-bottom:0!important;
+	}
+
+	&-left {
+		padding-left:0!important;
+	}
+
+	&-right {
+		padding-right:0!important;
 	}
 }

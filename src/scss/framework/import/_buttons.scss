@@ -232,7 +232,7 @@ $prefix: '.btn';
 		-ms-user-select: none;
 		user-select: none;
 
-		.symbol {
+		.symbol,.badge {
 			&:last-child {
 				margin-left: .25em;
 			}

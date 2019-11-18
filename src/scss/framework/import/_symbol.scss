@@ -9,6 +9,7 @@ $prefix: '.symbol';
     display:inline-block;
     line-height:0;
     font-size:inherit;
+    flex: 0 0 auto; //retain dimensions
     height: 1em; //bitch does weird overflow scroll shit on where it shouldnt on things i want to scroll when overflowing and shit so bitchs height is like that now
     width: 1em;
     vertical-align:middle;

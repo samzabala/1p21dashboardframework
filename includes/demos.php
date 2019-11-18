@@ -1723,6 +1723,12 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <p class="font-weight-900">900: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
 
 
+<h2>Helper classes: font size</h2>
+<p class="font-size-normalize">normalize. inherits set body font size</p>
+<p class="font-size-large">large. is chonky</p>
+<p class="font-size-small">smal. is smol</p>
+
+
 <h2>Helper classes: text transform</h2>
 <p class="text-transform-uppercase">Uppercase</p>
 <p class="text-transform-lowercase">Lowercase</p>

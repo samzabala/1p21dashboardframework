@@ -116,10 +116,10 @@
 // CONTENT
 	// SCAFFOLD
 		$body-font-family: $brand-font-primary !default;
-		$body-font-weight: 500 !default;
+		$body-font-weight: 400 !default;
 			$body-font-weight-bold:900 !default;
 		$body-font-size: 16px !default;
-		$body-line-height: 32px !default;
+		$body-line-height: 24px !default;
 		$body-background: $brand-color-background-alt !default;
 			$body-background-inverse: $brand-color-base !default;
 		$body-color: $brand-color-base !default;
@@ -127,7 +127,7 @@
 		$body-text-gutter-y: 30px !default;
 
 		$body-heading-gutter-top: 1em !default;
-		$body-heading-gutter-bottom: .5em !default;
+		$body-heading-gutter-bottom: .25em !default;
 		$body-heading-line-height: calc(1em + 10px) !default;
 		$body-heading-font-weight: $body-font-weight-bold !default;
 		$body-heading-font-style: inherit !default;
@@ -141,6 +141,9 @@
 		$body-size-h4: 20px !default;
 		$body-size-h5: $body-font-size !default;
 		$body-size-h6: 12px !default;
+
+		$body-size-small: 14px !default;
+		$body-size-large: 18px !default;
 
 		$body-anchor-color: $brand-color-primary !default;
 		$body-anchor-color-hover: $brand-color-accent !default;
@@ -254,8 +257,8 @@
 		$module-gutter-y: $gutter-small !default;
 			$module-gutter-y-mobile: $gutter-small !default;
 		
-		$module-gutter-between: 40px !default;
-			$module-gutter-between-mobile: 15px !default;
+		$module-gutter-between: 20px !default;
+			$module-gutter-between-mobile:8px !default;
 
 		$module-gutter-grid-gap: 15px !default;
 		$module-grid-gutter: 30px !default;
@@ -451,7 +454,7 @@
 		$btn-font-size: 16px !default;
 			$btn-font-size-large: 22px !default;
 			$btn-font-size-small: 16px !default;
-		$btn-line-height: 20px !default;
+		$btn-line-height: 30px !default;
 		$btn-font-family: $brand-font-primary !default;
 		$btn-font-weight: 600 !default;
 		$btn-font-style: normal !default;

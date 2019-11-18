@@ -26,6 +26,7 @@ $prefix: '.badge';
 #{$prefix} {
 	display:inline-block;
 	vertical-align: middle;
+    flex: 0 0 auto; //retain dimensions
 	line-height: inherit;
 	width: $calculated-badge-size;
 	height: $calculated-badge-size;
@@ -43,6 +44,7 @@ $prefix: '.badge';
 		height: $calculated-badge-size-small;
 		border-radius: calc(#{$calculated-badge-size-small} * .5);
 	}
+
 
 	@each $tag,$color in $calculated-brand-color-declarations {
 		&-#{$tag} {
