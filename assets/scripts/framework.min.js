@@ -209,6 +209,7 @@
 			props.forEach(function(prop){
 				// modElement.style[prop.toCamelCase()] = '';
 				var propsSet = false;
+				var propSetBr = false;
 				
 				//check for breakpointz first
 				reverseArray(_.br_arr).forEach(function(br){
@@ -217,17 +218,25 @@
 						if( _1p21.validateBr(br,'above') ){
 							modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop+'-'+br)
 							propsSet = true;
+							propSetBr = true;
 						}
 
 					}
 				})
+				console.log(prop, 'prop is set'+propsSet,'prop is set via br '+propSetBr);
 	
-				if(modElement.getAttribute('data-'+prop) && !propsSet) {
+				if(modElement.getAttribute('data-'+prop) && !propsSet && !propSetBr) {
 					console.log(prop.toCamelCase());
 					console.log(modElement.style[prop.toCamelCase()],modElement.getAttribute('data-'+prop));
 					modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop)
 					propsSet = true;
 				}
+				
+				
+				if(!propsSet && !propSetBr){
+					modElement.style[prop.toCamelCase()] = null;
+				}
+				
 			}); 
 		}
 
