@@ -116,7 +116,7 @@
 // CONTENT
 	// SCAFFOLD
 		$body-font-family: $brand-font-primary !default;
-		$body-font-weight: 400 !default;
+		$body-font-weight: 500 !default;
 			$body-font-weight-bold:900 !default;
 		$body-font-size: 16px !default;
 		$body-line-height: 24px !default;
@@ -187,8 +187,8 @@
 			$container-gutter-wide: $gutter-small !default;
 			$container-gutter-slim: $gutter-large !default;
 			$container-gutter-mobile: $gutter-micro !default;
-		$container-max-width: 1800px !default;
-			$container-max-width-mobile: 900px !default;
+		$container-max-width: 1600px !default;
+			$container-max-width-mobile: 800px !default;
 	
 	// speshal bois
 		$special-primary-font-size: 65px !default;
@@ -615,9 +615,9 @@
 //ROOT VAR FOR JS
 
 :root {
-	--br-xs: #{$brxs};
-	--br-sm: #{$brsm};
-	--br-md: #{$brmd};
+	--br-xs: #{$br-xs};
+	--br-sm: #{$br-sm};
+	--br-md: #{$br-md};
 
 		--brand-color-base: #{$brand-color-base};
 		--brand-color-base-alt: #{$brand-color-base-alt};

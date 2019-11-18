@@ -27,11 +27,8 @@
 			}
 
 			@include br(sm-max) {
-
-				& {
-					padding-left: $container-gutter-mobile;
-					padding-right: $container-gutter-mobile;
-					max-width: $container-max-width-mobile;
-				}
+				padding-left: $container-gutter-mobile;
+				padding-right: $container-gutter-mobile;
+				max-width: $container-max-width-mobile;
 			}
 		}

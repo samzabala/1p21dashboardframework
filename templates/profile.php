@@ -4,25 +4,15 @@
 	I'm a fucking title
 </h3>
 <div class="module-grid"
-	data-grid-template-rows-lg="auto auto auto auto"
+
 	data-grid-template-columns-lg="350px 33.33% 1fr"
 	data-grid-template-areas-lg="
 		'thumbnail avgtime availability'
 		'thumbnail avgtime updated'
 		'assigned assigned assigned'
 		'ass ass ass'"
-
-	data-grid-template-rows-sm="auto auto auto auto"
-	data-grid-template-columns-sm="50%"
-	data-grid-template-areas-sm="
-		'availability availability'
-		'thumbnail avgtime'
-		'updated updated'
-		'assigned assigned'
-		'ass ass'"
-		
 	
-	data-grid-template-rows-md="auto auto auto auto auto"
+	data-grid-template-rows-md="75px auto auto auto auto"
 	data-grid-template-columns-md="50%"
 	data-grid-template-areas-md="
 		'thumbnail availability'
@@ -31,6 +21,18 @@
 		'assigned assigned'
 		'ass ass'"
 		>
+
+
+		<div class="module module-no-gutter flex-xs flex-wrap" data-grid-area-md="availability">
+		
+			<div class="module-heading mobile-hide laptop-hide tablet-hide">
+
+				<h3 class="module-title text-align-center">Availability</h3>
+			</div>
+			<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
+				<span class="badge badge-large badge-success"></span> Available for Project</span>
+			</div>
+	</div>
 
 
 	<div class="module" data-grid-area-md="thumbnail">
@@ -68,19 +70,6 @@
 			</ul>
 		</div>
 	</div>
-	<div class="module module-no-gutter" data-grid-area-md="availability">
-		<div class="flex-xs flex-wrap flex-align-items-center">
-			
-		
-		<div class="module-heading">
-
-		<div class="module-title text-align-center">Availability</div>
-		</div>
-		<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-radius flex-1-1">
-		<span class="badge badge-large badge-success"></span> Available for Project
-		</div>
-		</div>
-	</div>
 	<div class="module" data-grid-area-md="avgtime">
 		<div class="module-heading">
 			<h3 class="module-title">
@@ -92,7 +81,7 @@
 		</div>
 	</div>
 	<div class="module" data-grid-area-md="updated">
-		<div class="module-heading no-margin-bottom">
+		<div class="module-heading">
 			<h3 class="module-title">
 				Recent Updates
 			</h3>
@@ -171,24 +160,23 @@
 	I'm a fucking title
 </h3>
 <div class="module-grid"
-	data-grid-template-rows="auto auto auto auto"
-	data-grid-template-columns="350px 33.33% 1fr"
-	data-grid-template-areas="
+	data-grid-template-rows-lg="auto auto auto auto"
+	data-grid-template-columns-lg="350px 33.33% 1fr"
+	data-grid-template-areas-lg="
 		'thumbnail avgtime availability'
 		'thumbnail avgtime updated'
 		'assigned assigned assigned'
 		'ass ass ass'"
-		
+
 	
-	data-grid-template-rows-sm="auto auto auto auto auto"
-	data-grid-template-columns-sm="50%"
-	data-grid-template-areas-sm="
+	data-grid-template-rows-md="auto auto auto auto auto"
+	data-grid-template-columns-md="50%"
+	data-grid-template-areas-md="
 		'thumbnail availability'
-		'thumbnail updated'
-		'avgtime updated'
+		'thumbnail avgtime'
+		'updated updated'
 		'assigned assigned'
-		'ass ass'"
-		>
+		'ass ass'">
 
 
 	<div class="module" data-grid-area-md="thumbnail">

@@ -154,7 +154,7 @@ html, body {
   line-height: 1.5;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000000;
-  font-weight: 400;
+  font-weight: 500;
   word-wrap: break-word;
 }
 
@@ -627,14 +627,14 @@ tr:first-child,
   border-top: 1px solid #ecedf0;
 }
 
-.body-inverse tr, .body-inverse
-.table-row {
-  border-bottom: 1px solid #222222;
-}
-
 .body-inverse tr:first-child, .body-inverse
 .table-row:first-child {
   border-top: 1px solid #222222;
+}
+
+.body-inverse tr, .body-inverse
+.table-row {
+  border-bottom: 1px solid #222222;
 }
 
 th, td,
@@ -1131,7 +1131,7 @@ table.table-large .table-cell {
   padding-left: 50px;
   padding-right: 50px;
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: 1600px;
 }
 
 .container.container-fluid {
@@ -1153,7 +1153,7 @@ table.table-large .table-cell {
   .container {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 900px;
+    max-width: 800px;
   }
 }
 

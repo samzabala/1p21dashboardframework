@@ -56,8 +56,38 @@
 		md: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-md') ) || 1600,
 		lg: 9999999
 	};
-
 	_.br_arr = Object.keys(_.br_vals);
+	_.br_to_loop =  ['xs','sm','md','lg'];
+
+
+	_.functions_on_load = [];
+	_.functions_on_resize = [];
+
+
+	_1p21.validateBr = function(breakpoint,mode) {
+		mode = mode || 'below'; //below,within,above
+		var currIndex = _.br_arr.indexOf(breakpoint);
+
+
+		switch(mode) {
+			case 'below': //max-width
+				return window.outerWidth <= _.br_vals[breakpoint];
+				break;
+			case 'within':
+				return (
+					window.outerWidth <= _.br_vals[breakpoint] //max
+				) && (
+					window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] //min
+				)
+				break;
+			case 'above':
+				return (currIndex > 0) ? ( window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] ) : (window.outerWidth > _.br_vals[ _.br_arr[currIndex] ]);
+				break;
+		}
+		
+
+	}
+
 
 	 _1p21.addEvent = function(parent, evt, selector, handler) {
 		parent.addEventListener(evt, function(event) {
@@ -132,33 +162,6 @@
 
 
 
-	_1p21.validateBr = function(breakpoint,mode) {
-		mode = mode || 'below'; //below,within,above
-
-		var currIndex = _.br_arr.indexOf(breakpoint);
-
-		switch(mode) {
-			case 'below':
-				return window.innerWidth <= _.br_vals[breakpoint];
-				break;
-			case 'within':
-				return (
-					window.innerWidth <= _.br_vals[breakpoint]
-				) && (
-					window.innerWidth > _.br_vals[ _.br_arr[currIndex - 1] ]
-				)
-				break;
-			case 'above':
-				return window.innerWidth > _.br_vals[ _.br_arr[currIndex - 1] ];
-				break;
-		}
-		
-
-	}
-
-	_.functions_on_load = [];
-	_.functions_on_resize = [];
-
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
 	_1p21.initGrid = function(moduleGrid){
@@ -166,25 +169,30 @@
 		
 
 		var availablePropetiesParent = [
+			'grid',
+			'grid-template',
 			'grid-template-rows',
 			'grid-template-columns',
 			'grid-template-areas',
 
-
 			'grid-column-start',
-			'grid-template-end',
-			'grid-template',
+			'grid-column-end',
+			'grid-row-start',
+			'grid-row-end',
+
+			'grid-auto-flow',
+			
+			'grid-auto-columns',
+			'grid-auto-rows',
+			
 			'grid-column-gap',
 			'grid-row-gap',
+			
 			'justify-items',
 			'align-items',
 			'justify-content',
 			'align-content',
 			'place-content',
-			'grid-auto-columns',
-			'grid-auto-rows',
-			'grid-auto-flow',
-			'grid'
 		];
 
 
@@ -199,6 +207,7 @@
 			'grid-column-end',
 			'grid-row-start',
 			'grid-row-end',
+
 			'justify-self',
 			'align-self',
 			'place-self',
@@ -210,11 +219,14 @@
 				// modElement.style[prop.toCamelCase()] = '';
 				var propsSet = false;
 				var propSetBr = false;
+				var smallestStyledBr = null;
+				
 				
 				//check for breakpointz first
-				reverseArray(_.br_arr).forEach(function(br){
+				reverseArray(_.br_to_loop).forEach(function(br){
 					
-					if( modElement.getAttribute('data-'+prop+'-'+br) && !propsSet) {
+					if( modElement.hasAttribute('data-'+prop+'-'+br) && !propsSet) {
+						smallestStyledBr = br;
 						if( _1p21.validateBr(br,'above') ){
 							modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop+'-'+br)
 							propsSet = true;
@@ -222,19 +234,27 @@
 						}
 
 					}
-				})
-				console.log(prop, 'prop is set'+propsSet,'prop is set via br '+propSetBr);
-	
-				if(modElement.getAttribute('data-'+prop) && !propsSet && !propSetBr) {
-					console.log(prop.toCamelCase());
-					console.log(modElement.style[prop.toCamelCase()],modElement.getAttribute('data-'+prop));
-					modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop)
-					propsSet = true;
-				}
+				});
+
+
+				if( modElement.hasAttribute('data-'+prop) ){
+
 				
-				
-				if(!propsSet && !propSetBr){
-					modElement.style[prop.toCamelCase()] = null;
+					//check for all breakpoint
+					if(!propsSet && !propSetBr) {
+						modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop)
+						propsSet = true;
+					}
+				}else{
+
+					
+					if(
+						modElement.style[prop.toCamelCase()] !== null
+						&& smallestStyledBr
+						&& !_1p21.validateBr(smallestStyledBr,'above')
+					){
+						modElement.style[prop.toCamelCase()] = null;
+					}
 				}
 				
 			}); 
@@ -317,7 +337,7 @@
 
 
 	function readyGrid(){
-		console.log('grid is run');
+		
 		var grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
 		grids.forEach(function(grid){
 			_1p21.initGrid(grid);
@@ -342,7 +362,7 @@
 			resizeTimerInternal = setTimeout(function() {
 				_.functions_on_resize.forEach(function(fn){
 					fn();
-				})
+				});
 			}, 100)
 		
 		});
@@ -612,8 +632,6 @@
 						height: toolTip.getBoundingClientRect().height,
 						width: toolTip.getBoundingClientRect().width,
 					};
-
-					console.log(triggerer.getBoundingClientRect().top + document.body.scrollTop);
 
 					var toolTipBadge = toolTip.querySelector('.tooltip-badge');
 
