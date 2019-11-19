@@ -6,7 +6,7 @@
 
 <div class="module-grid">
 	<div class="module" id="home-section-1">
-		<div class="module-heading">
+		<div class="module-header">
 			<h3 class="module-title">Average Rank by SEO</h3>
 			<div class="module-functions">
 				<span class="text-label">HR Rank:</span>

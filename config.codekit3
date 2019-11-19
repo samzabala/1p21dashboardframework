@@ -1193,18 +1193,18 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/placeholder/data/loggedin.json": {
+	"/placeholder/data/global.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/placeholder/data/loggedin-min.json",
+		"oAP": "/placeholder/data/global-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/placeholder/data/overall.json": {
+	"/placeholder/data/loggedin.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/placeholder/data/overall-min.json",
+		"oAP": "/placeholder/data/loggedin-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1

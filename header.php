@@ -17,7 +17,7 @@
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.min.js'); ?>
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.min.js'); ?>
 
-	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?>
@@ -29,22 +29,25 @@
 
 
 </head>
-<body id="dashboard" class="body-nav-sticky-offset cf body-loading dashboard-<?=DASHBOARD_SLUG ?>">
+<body class="body-nav-sticky-offset cf body-loading">
 	<!--SVG Styles  -->
+	<div id="dashboard">
+		<!-- Sidebar -->
+		<aside id="dashboard-block-sidebar"
+		:class="{open:sideNav.open}"
+		class="background-global">
+			<?php app_get_template_part('includes/sidebar',DASHBOARD_SLUG); ?>
+		</aside>
+
+			<main id="dashboard-block-main" class="background-global-contrast">
+
+				<!-- Navigation -->
+
+				<?php app_get_template_part('includes/main-nav',DASHBOARD_SLUG); ?>
+
+				<!-- App Content -->
+				<div id="content-wrapper">
+					<div class="container">
+
+
 	
-
-
-	<!-- Sidebar -->
-	<aside id="dashboard-block-sidebar" class="background-global">
-		<?php app_get_template_part('includes/sidebar',DASHBOARD_SLUG); ?>
-	</aside>
-
-	<main id="dashboard-block-main" class="background-global-contrast">
-
-		<!-- Navigation -->
-
-		<?php app_get_template_part('includes/main-nav',DASHBOARD_SLUG); ?>
-
-		<!-- App Content -->
-		<div id="content-wrapper">
-			<div class="container">

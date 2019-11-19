@@ -1,7 +1,7 @@
 {
 	"profiles":[
 		{
-			"id": "mikeperez",
+			"id": "mikep",
 			"name": "Mike Perez",
 			"profileImage": "placeholder/profiles/team-boss-mike.jpg",
 			"isAvailable": "true",
@@ -13,15 +13,40 @@
 			"ytdProjectsCount": "420",
 
 			"recentlyUpdated": [{
-				"name": "Fowler Pickert",
-				"recentUpdate": "12-28-18"
+				"name": "fowlerpickert",
+				"date": "12-28-18"
 			},{
-				"name": "Wilkenson Law Group",
-				"recentUpdate": "12-28-18"
+				"name": "wilkensonlawgroup",
+				"date": "12-28-18"
 			},{
-				"name": "1Point21",
-				"recentUpdate": "12-28-18"
+				"name": "1point21",
+				"date": "12-28-18"
 			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
 
 			"associatedProjects": [
 				"rmfwlaw",
@@ -38,6 +63,1926 @@
 			"linksCount": "88",
 			"onPageCount": "32",
 			"toDosCount": "00"
+		},
+		{
+			"id": "billys",
+			"name": "Billy",
+			"profileImage": "placeholder/profiles/team-des-billy.jpg",
+			"isAvailable": "false",
+			"isOnline": "false",
+			"department": "des",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "breeh",
+			"name": "Bree",
+			"profileImage": "placeholder/profiles/team-des-bree.jpg",
+			"isAvailable": "false",
+			"isOnline": "true",
+			"department": "des",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "chuyl",
+			"name": "Chuy",
+			"profileImage": "placeholder/profiles/team-des-chuy.jpg",
+			"isAvailable": "false",
+			"isOnline": "true",
+			"department": "des",
+			
+			"avgDaysCount": "9",
+			"currentProjectsCount": "2",
+			"ytdProjectsCount": "1",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "jenna",
+			"name": "Jenn Aquino",
+			"profileImage": "placeholder/profiles/team-des-jenn.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "des",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "jennac",
+			"name": "Jenna Clayton",
+			"profileImage": "placeholder/profiles/team-des-jenna.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "des",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "stacyw",
+			"name": "Stacy Wheeler",
+			"profileImage": "placeholder/profiles/team-des-jenna.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "des",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "garrettc",
+			"name": "Garret",
+			"profileImage": "placeholder/profiles/team-dev-garret.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "dev",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"dev"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "michaels",
+			"name": "Michael S",
+			"profileImage": "placeholder/profiles/team-dev-michael.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "dev",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"dev"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "nadiar",
+			"name": "Nadia Rodriguez",
+			"profileImage": "placeholder/profiles/team-dev-nadia.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "dev",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"dev"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "samz",
+			"name": "Sam Zabala",
+			"profileImage": "placeholder/profiles/team-dev-sam.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "dev",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"dev"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "samz",
+			"name": "Sam Zabala",
+			"profileImage": "placeholder/profiles/team-dev-sam.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "dev",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"dev"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "rhanp",
+			"name": "Rhan",
+			"profileImage": "placeholder/profiles/team-dev-rhan.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "dev",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"dev"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "careyg",
+			"name": "Carey G",
+			"profileImage": "placeholder/profiles/team-dev-man.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "man",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "debelle",
+			"name": "debelle",
+			"profileImage": "placeholder/profiles/team-man-debelle.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "man",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "derrickt",
+			"name": "Derrick",
+			"profileImage": "placeholder/profiles/team-man-derrick.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "man",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "meganb",
+			"name": "Megan",
+			"profileImage": "placeholder/profiles/team-man-megan.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "man",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "derekl",
+			"name": "Derek",
+			"profileImage": "placeholder/profiles/team-sales-derek.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "sales",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "ahmedl",
+			"name": "Ahmed",
+			"profileImage": "placeholder/profiles/team-seo-ahmed.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "666",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "42",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "00"
+		},
+		{
+			"id": "alanal",
+			"name": "Alana",
+			"profileImage": "placeholder/profiles/team-seo-alana.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "alicial",
+			"name": "Alicia",
+			"profileImage": "placeholder/profiles/team-seo-alicia.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "ashlynl",
+			"name": "Ashlyn",
+			"profileImage": "placeholder/profiles/team-seo-ashlyn.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "brandonl",
+			"name": "Brandon",
+			"profileImage": "placeholder/profiles/team-seo-brandon.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "brendae",
+			"name": "Brenda E",
+			"profileImage": "placeholder/profiles/team-seo-brendae.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "jhanal",
+			"name": "Jhana",
+			"profileImage": "placeholder/profiles/team-seo-jhana.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "macl",
+			"name": "Mac",
+			"profileImage": "placeholder/profiles/team-seo-mac.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "marielal",
+			"name": "Mariela",
+			"profileImage": "placeholder/profiles/team-seo-mariela.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "melissal",
+			"name": "Melissa",
+			"profileImage": "placeholder/profiles/team-seo-melissa.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "saml",
+			"name": "Sam L",
+			"profileImage": "placeholder/profiles/team-seo-sam.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "stephl",
+			"name": "Steph",
+			"profileImage": "placeholder/profiles/team-seo-steph.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
+		},
+		{
+			"id": "zackl",
+			"name": "Zack",
+			"profileImage": "placeholder/profiles/team-seo-zack.jpg",
+			"isAvailable": "true",
+			"isOnline": "true",
+			"department": "seo",
+			
+			"avgDaysCount": "999",
+			"currentProjectsCount": "420",
+			"ytdProjectsCount": "69",
+
+			"recentlyUpdated": [{
+				"name": "fowlerpickert",
+				"date": "12-69-18"
+			},{
+				"name": "wilkensonlawgroup",
+				"date": "666-28-18"
+			},{
+				"name": "1point21",
+				"date": "12-28-18"
+			}],
+
+			"assignedTasks": [
+
+				{
+					"id": "rmfwlaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"des"
+				},
+				{
+					"id": "fieldinglaw",
+					"task": "Homepage Design",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"creview"
+				},
+				{
+					"id": "ebtrialattorneys",
+					"task": "Homepage Review",
+					"taskLink":"#",
+					"taskDateStarted":"4-20-69",
+					"taskStatus":"ireview"
+				}
+			],
+
+			"associatedProjects": [
+				"rmfwlaw",
+				"fieldinglaw",
+				"ebtrialattorneys",
+				"ubersexualassaultlawyer",
+				"liljegrenlaw"
+			],
+			
+			"accountsCount": "69",
+			"avgHRRank": "20.6",
+			"avgRank": "14.1",
+
+			"linksCount": "88",
+			"onPageCount": "32",
+			"toDosCount": "9999"
 		}
 	]
 }

@@ -112,19 +112,17 @@
 						use-shorthand:false,
 					));
 				}
+			}
 
-
-
-				@each $angle in $calculated-gradient-angles {
-					&-important-#{$angle} {
-						@include gradient((
-							color1: $gradient-start,
-							color2: $gradient-end,
-							angle: to-unit($angle,deg),
-							use-shorthand:false,
-							add-important: true
-						));
-					}
+			@each $angle in $calculated-gradient-angles {
+				&-important-#{$angle} {
+					@include gradient((
+						color1: $gradient-start,
+						color2: $gradient-end,
+						angle: to-unit($angle,deg),
+						use-shorthand:false,
+						add-important: true
+					));
 				}
 			}
 		}
@@ -241,6 +239,21 @@
 			
 			&-lg {
 				@extend %flex-lg;
+			}
+
+			&-direction {
+				&-row {
+					flex-direction: row;
+				}
+				&-row-reverse {
+					flex-direction: row-reverse;
+				}
+				&-column {
+					flex-direction: column;
+				}
+				&-column-reverse {
+					flex-direction: column-reverse;
+				}
 			}
 
 			&-justify-content {
@@ -395,7 +408,6 @@
 		/* emulate background cover on image tags */
 		.fit-image {
 			position: relative;
-			overflow:hidden;
 			
 			img {
 				position:absolute;

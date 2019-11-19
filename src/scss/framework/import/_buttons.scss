@@ -253,12 +253,13 @@ $prefix: '.btn';
 	}
 
 	&-large {
-
-		font-size: $calculated-btn-font-size-large;
 		padding-top: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		padding-bottom: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		border-radius: $btn-border-radius-large;
 		// min-height:$calculated-btn-height-large;
+		@include br(xs){
+			font-size: $calculated-btn-font-size-large;
+		}
 	}
 
 	&-small {

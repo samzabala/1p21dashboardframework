@@ -37,8 +37,9 @@ $prefix: '.thumbnail';
 #{$prefix} {
 	@extend .background-gradient-135;
 	@extend .fit-image;
-	@include aspect-ratio($thumbnail-size,$thumbnail-size);
+	@include aspect-ratio($thumbnail-size,$thumbnail-size,false,true,false);
 	width:$calculated-thumbnail-size;
+	max-width:100%;
 	display:inline-block;
 	border-radius: $thumbnail-border-radius;
 	@include type-set((
@@ -52,6 +53,14 @@ $prefix: '.thumbnail';
 
 	img {
 		max-width: none;
+		border-radius:inherit;
+	}
+
+	.badge {
+		bottom: auto;
+		right: auto;
+		top: 8%;
+		left: 8%;
 	}
 	
 

@@ -1470,9 +1470,9 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 	</tbody>
 </table>
 
-<h2>Table but with wrapper so you can scroll through the bullshit</h2>
+<h2>Table small and with wrapper so you can scroll through the bullshit</h2>
 <div class="table-wrapper">
-	<table class="table">
+	<table class="table-small">
 		<thead>
 		<tr>
 				<th class="table-cell-no-gutter">#</th>

@@ -1,0 +1,17 @@
+{
+    "overall": {
+        "statStatusDesign": "10",
+        "statStatusDev": "4",
+        "statStatusReview": "12",
+        "statStatusLaunched": "15"
+    },
+    "tags": {
+        "department": {
+            "des": "Design",
+            "dev": "Developer",
+            "man": "Manager",
+            "seo": "SEO",
+            "sales": "Sales"
+        }
+    }
+}

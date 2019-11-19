@@ -1,3 +1,4 @@
+jQuery.noConflict();
 (function($,window){
 	var _1p21 = window._1p21 || {};
 

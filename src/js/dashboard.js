@@ -12,18 +12,18 @@
 // 		});
 // 	});
 //   }
-$.noConflict();
+jQuery.noConflict();
 (function($,_1p21,window){
 	
-	$(window).load(function(){
+	// $(window).load(function(){
 
-		$('body').on('click','.dashboard-sidenav-toggle',function(e){
-			e.preventDefault();
-			console.log('hola bitchacho');
-			$(this).toggleClass('open');
-			$('#dashboard-block-sidebar').toggleClass('open');
-		});
-	})
+	// 	$('body').on('click','.dashboard-sidenav-toggle',function(e){
+	// 		e.preventDefault();
+	// 		console.log('hola bitchacho');
+	// 		$(this).toggleClass('open');
+	// 		$('#dashboard-block-sidebar').toggleClass('open');
+	// 	});
+	// })
 
 
 }(jQuery,_1p21,window));

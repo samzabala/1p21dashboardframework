@@ -1,7 +1,24 @@
 
 
 <div id="dashboard-block-main-nav" class="nav nav-sticky">
-	<a href="#" id="dashboard-block-main-nav-toggle" class="btn btn-default btn-symbol btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large tablet-hide desktop-hide laptop-hide nav-toggle">
+	<a href="#"
+		id="dashboard-block-main-nav-toggle"
+		
+		class="btn
+		btn-default
+		btn-symbol
+		btn-no-radius
+		dashboard-sidenav-toggle
+		btn-no-shadow
+		btn-large
+		tablet-hide
+		desktop-hide
+		laptop-hide
+		nav-toggle"
+
+		:class="{open:sideNav.open}"
+		
+		@click="sideNav.open = !sideNav.open">
 		<i class="symbol symbol-burger"></i>
 	</a>
 	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">

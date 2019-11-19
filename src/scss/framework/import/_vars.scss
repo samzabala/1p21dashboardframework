@@ -4,8 +4,8 @@
 
 	//breakpiont
 	 //breakpoints
-	 $br-xs: 700px !default;
-	 $br-sm: 1200px !default;
+	 $br-xs: 767px !default;
+	 $br-sm: 1280px !default;
 	 $br-md: 1800px !default;
  
 	 //extra breakpoints
@@ -188,7 +188,7 @@
 			$container-gutter-slim: $gutter-large !default;
 			$container-gutter-mobile: $gutter-micro !default;
 		$container-max-width: 1600px !default;
-			$container-max-width-mobile: 800px !default;
+			$container-max-width-mobile: 750px !default;
 	
 	// speshal bois
 		$special-primary-font-size: 65px !default;
@@ -252,13 +252,14 @@
 		
 		$module-gutter-x: $gutter-base !default;
 			$module-gutter-x-mobile: $gutter-small !default;
+
+		$module-box-shadow-hover: 10px 10px 20px -10px $brand-color-base-alt !default; 
 		
 		$module-gutter-y: 40px !default;
 		$module-gutter-y: $gutter-small !default;
 			$module-gutter-y-mobile: $gutter-small !default;
 		
 		$module-gutter-between: 20px !default;
-			$module-gutter-between-mobile:8px !default;
 
 		$module-gutter-grid-gap: 15px !default;
 		$module-grid-gutter: 30px !default;
@@ -270,6 +271,18 @@
 		$module-title-font-style: normal !default;
 		$module-title-color: $brand-color-primary !default;
 		$module-title-text-transform: uppercase !default;
+
+		$module-grid-title-font-size: 19px !default;
+		$module-grid-title-font-weight: 900 !default;
+		$module-grid-title-font-style: normal !default;
+		$module-grid-title-color: $brand-color-primary !default;
+		$module-grid-title-text-transform: uppercase !default;
+		$module-grid-title-rule-height: 1px !default;
+		$module-grid-title-rule-color: $brand-color-neutral !default;
+			$module-grid-title-rule-inverse: $brand-color-neutral !default;
+
+		$module-grid-title-margin-bottom:1em !default;
+		$module-grid-title-margin-top:100px !default;
 	
 	// modal
 		$modal-gutter-x: $gutter-small !default;
@@ -277,7 +290,7 @@
 		$modal-background: $global-background;
 		$modal-background-inverse: $global-background-inverse !default;
 		$modal-border-radius: $border-radius-base !default;
-		$modal-box-shadow: 0px 0px 15px -12px $brand-color-base !default !default;
+		$modal-box-shadow: 0px 0px 30px -30px $brand-color-base !default !default;
 
 	// POPPER = DROPDOWN || TOOLTIP
 		$popper-gutter-x: $gutter-small !default;

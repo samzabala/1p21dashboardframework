@@ -1,4 +1,4 @@
-$.noConflict();
+jQuery.noConflict();
 (function(window,$){
 	var _1p21 = window._1p21 || {};
 
@@ -10,7 +10,7 @@ $.noConflict();
 	var _ = {};
 
 	
-	function reverseArray(arr) {
+	_.reverseArray = function(arr) {
 	var newArray = [];
 	for (var i = arr.length - 1; i >= 0; i--) {
 		newArray.push(arr[i]);
@@ -227,7 +227,7 @@ $.noConflict();
 				
 				
 				//check for breakpointz first
-				reverseArray(_.br_to_loop).forEach(function(br){
+				_.reverseArray(_.br_to_loop).forEach(function(br){
 					
 					if( modElement.hasAttribute('data-'+prop+'-'+br) && !propsSet) {
 						smallestStyledBr = br;
@@ -294,8 +294,8 @@ $.noConflict();
 
 		toLazy.forEach(function(img){
 
-			imgSrc = img.getAttribute('data-src'),
-			imgSrcset = img.getAttribute('data-srcset');
+			var imgSrc = img.getAttribute('data-src'),
+				imgSrcset = img.getAttribute('data-srcset');
 
 			if(img.matches('img') || img.closest('picture').length) {
 
@@ -326,8 +326,8 @@ $.noConflict();
 					})
 					
 				}else {
-					(imgSrc !== 'undefined') && img.setAttribute('src', imgSrc);
-					(imgSrcset !== 'undefined') && img.setAttribute('srcset', imgSrcset);
+					(img.hasAttribute('data-src')) && img.setAttribute('src', imgSrc);
+					(img.hasAttribute('data-srcset')) && img.setAttribute('srcset', imgSrcset);
 				}
 			}else{
 				img.style.backgroundImage = 'url(' + imgSrc + ')';
@@ -405,7 +405,7 @@ $.noConflict();
 			});
 		});
 
-		_1p21.getTheToggled = function(clicked,selector){
+		_.getTheToggled = function(clicked,selector){
 				
 			if( clicked.getAttribute('href') ){
 				return document.querySelector( clicked.getAttribute('href') );
@@ -431,7 +431,7 @@ $.noConflict();
 		_1p21.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
-				selector = _1p21.getTheToggled(e.target,'.accordion');
+				selector = _.getTheToggled(e.target,'.accordion');
 				selectorAncestor = selector.closest('.accordion-group');
 				selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('.accordion');
@@ -476,7 +476,7 @@ $.noConflict();
 		_1p21.addEvent(document.body,'click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
-				selector = _1p21.getTheToggled(clicked,'.dropdown');
+				selector = _.getTheToggled(clicked,'.dropdown');
 				console.log(clicked,selector);
 				selectorAncestor = selector.closest('li,.nav-item');
 
