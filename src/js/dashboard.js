@@ -12,7 +12,7 @@
 // 		});
 // 	});
 //   }
-
+$.noConflict();
 (function($,_1p21,window){
 	
 	$(window).load(function(){

@@ -296,7 +296,7 @@
         /// @param $extend: false !default | (boolean) | extend the extend or nah
         /// @param $br: xs | (string) | set breakpoint where flex starts happening. xs wond generate a media query huhuhu
         /// @param $add-important: false | (boolean) | add important to flex becausE SOME BITCHES FEEL LIKE THERE SHOULD BE AN !IMPORTANT TO SHIT???
-        @mixin flex($extend: false,$br: xs,$add-important: false){
+        @mixin flex($extend: false,$br: xs,$add-important: false,$add-wrap:false){
             
             $important: '';
 
@@ -310,11 +310,15 @@
                 @if $br != xs {
                     @include br($br) {
                         display:flex#{$important};
-                        flex-wrap:wrap;
+                        @if $add-wrap {
+                            flex-wrap:wrap;
+                        }
                     }
                 }@else {
                     display:flex#{$important};
-                    flex-wrap:wrap;
+                    @if $add-wrap {
+                        flex-wrap:wrap;
+                    }
                 }
             }
         }

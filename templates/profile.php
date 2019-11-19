@@ -12,7 +12,7 @@
 		'assigned assigned assigned'
 		'ass ass ass'"
 	
-	data-grid-template-rows-md="75px auto auto auto auto"
+	data-grid-template-rows-md="repeat( auto-fit, minmax(75px, auto) )"
 	data-grid-template-columns-md="50%"
 	data-grid-template-areas-md="
 		'thumbnail availability'

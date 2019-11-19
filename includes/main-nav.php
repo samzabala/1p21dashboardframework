@@ -6,7 +6,7 @@
 	</a>
 	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">
 		<label for="search" class="btn btn-no-radius btn-no-shadow" title="Search"><i class="color-primary symbol symbol-search"></i></i></label>
-		<input class="input input-single-line input-no-radius input-no-shadow font-weight-500" type="text" name="search" placeholder="Search projects..." id="search">
+		<input class="input input-single-line input-no-radius input-no-shadow font-weight-500 flex-1-1" type="text" name="search" placeholder="Search projects..." id="search">
 	</form>
 	<div id="nav-account">
 		<div id="nav-account-info">

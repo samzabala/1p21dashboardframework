@@ -116,27 +116,23 @@ table {
 
 .flex-xs {
   display: flex!important;
-  flex-wrap: wrap;
 }
 
 @media (min-width: 701px) {
   .flex-sm {
     display: flex!important;
-    flex-wrap: wrap;
   }
 }
 
 @media (min-width: 1201px) {
   .flex-md {
     display: flex!important;
-    flex-wrap: wrap;
   }
 }
 
 @media (min-width: 1801px) {
   .flex-lg {
     display: flex!important;
-    flex-wrap: wrap;
   }
 }
 
@@ -970,7 +966,6 @@ table.table-large .table-cell {
 
 .nav, .nav-list {
   display: flex;
-  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -4134,12 +4129,140 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 /* BACKGROUND CLASSES */
+.flex-justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.flex-justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.flex-justify-content-center {
+  justify-content: center;
+}
+
 .flex-justify-content-space-between {
   justify-content: space-between;
 }
 
+.flex-justify-content-space-around {
+  justify-content: space-around;
+}
+
+.flex-justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-justify-content-start {
+  justify-content: start;
+}
+
+.flex-justify-content-end {
+  justify-content: end;
+}
+
+.flex-justify-content-left {
+  justify-content: left;
+}
+
+.flex-justify-content-right {
+  justify-content: right;
+}
+
+.flex-align-self-stretch {
+  align-self: stretch;
+}
+
+.flex-align-self-center {
+  align-self: center;
+}
+
+.flex-align-self-flex-start {
+  align-self: flex-start;
+}
+
+.flex-align-self-flex-end {
+  align-self: flex-end;
+}
+
+.flex-align-self-baseline {
+  align-self: baseline;
+}
+
+.flex-align-items-stretch {
+  align-items: stretch;
+}
+
 .flex-align-items-center {
   align-items: center;
+}
+
+.flex-align-items-flex-start {
+  align-items: flex-start;
+}
+
+.flex-align-items-flex-end {
+  align-items: flex-end;
+}
+
+.flex-align-items-baseline {
+  align-items: baseline;
+}
+
+.flex-align-items-start {
+  align-items: start;
+}
+
+.flex-align-items-end {
+  align-items: end;
+}
+
+.flex-align-content-flex-start {
+  align-content: flex-start;
+}
+
+.flex-align-content-flex-end {
+  align-content: flex-end;
+}
+
+.flex-align-content-center {
+  align-content: center;
+}
+
+.flex-align-content-space-between {
+  align-content: space-between;
+}
+
+.flex-align-content-space-around {
+  align-content: space-around;
+}
+
+.flex-align-content-space-evenly {
+  align-content: space-evenly;
+}
+
+.flex-align-content-stretch {
+  align-content: stretch;
+}
+
+.flex-align-content-baseline {
+  align-content: baseline;
+}
+
+.flex-align-content-start {
+  align-content: start;
+}
+
+.flex-align-content-end {
+  align-content: end;
+}
+
+.flex-align-content-left {
+  align-content: left;
+}
+
+.flex-align-content-right {
+  align-content: right;
 }
 
 .flex-wrap {
@@ -4148,6 +4271,10 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 .flex-1-1 {
@@ -4487,6 +4614,7 @@ DASHBOARD / OUR CUSTOM STYLES
 #nav-search {
   margin-right: auto;
   flex: 1 1;
+  overflow-x: hidden;
   position: relative;
 }
 

@@ -1,5 +1,9 @@
-(function(window){
+$.noConflict();
+(function(window,$){
 	var _1p21 = window._1p21 || {};
+
+	$.trumbowyg.svgPath = '/assets/fonts/icons.svg';
+	$.trumbowyg.hideButtonTexts = true;
 
 	_1p21.lazyLoad = _1p21.lazyLoad || true;
 
@@ -363,7 +367,7 @@
 				_.functions_on_resize.forEach(function(fn){
 					fn();
 				});
-			}, 100)
+			}, 50)
 		
 		});
 
@@ -756,4 +760,4 @@
 	window._1p21 = _1p21;
 
 
-}(window));
+}(window,jQuery));
