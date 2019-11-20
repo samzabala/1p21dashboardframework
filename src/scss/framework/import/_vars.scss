@@ -66,10 +66,10 @@
 				$global-color-contrast-inverse: $brand-color-background-alt !default;
 
 		$global-background: $brand-color-background !default;
-			$global-background-inverse: $brand-color-base-alt !default;
+			$global-background-inverse:#222222 !default;
 
 			$global-background-contrast: $brand-color-background-alt !default;
-				$global-background-contrast-inverse: #222222 !default;
+				$global-background-contrast-inverse: $brand-color-base !default;
 
 	// PADDING
 		$gutter-base: 50px !default;
@@ -377,8 +377,8 @@
 			$input-height-small: 35px !default;
 		$input-height-multiple-factor: 4 !default;
 
-		$input-background: transparent !default;
-			$input-background-inverse: $global-background-contrast-inverse !default;
+		$input-background: $global-background !default;
+			$input-background-inverse: $global-background-inverse !default;
 			$input-background-disabled: rgba($brand-color-neutral,.2) !default;
 				$input-background-disabled-inverse: transparent !default;
 
@@ -493,6 +493,7 @@
 				$btn-border-default-active: transparent !default;
 				$btn-background-default-active: $brand-color-primary !default;
 				$btn-color-default-active: $brand-color-background !default;
+
 			
 			$btn-border-base: transparent !default;
 			$btn-background-base: $brand-color-base !default;

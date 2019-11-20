@@ -69,156 +69,322 @@
 	/* BACKGROUND CLASSES */
 
 
-
 // extend for elements that needs backgrounds so we can extend with responsibility
-	%background {
-		@each $tag,$color in $calculated-brand-color-declarations {
-			&-#{$tag} {
-				background-color: $color ;
+	%for{
+		&-color {
+			&-intensity {
+				@for $i from 1 through length($calculated-color-brand-intensity) {
+					&-#{$i} {
+						color: nth($calculated-color-brand-intensity,$i);
+	
+						&-important {
+							color: nth($calculated-color-brand-intensity,$i) !important;
+						}
+					}
+				}
 			}
-
-			&-important-#{$tag} {
-				background-color: $color !important;
+	
+			@each $tag,$color in $calculated-brand-color-declarations {
+				&-#{$tag} {
+					color: $color;
+	
+					&-important {
+						color: $color !important;
+					}
+				}
 			}
 		}
 
-		&-gradient {
+		&-background {
+			@each $tag,$color in $calculated-brand-color-declarations {
+				&-#{$tag} {
+					background-color: $color ;
+				}
+	
+				&-#{$tag}-important {
+					background-color: $color !important;
+				}
+			}
 
-			& {
-				@include gradient((
-					color1: $gradient-start,
-					color2: $gradient-end,
-					angle: 0deg,
-					use-shorthand:false,
-				));
-
-				&-important {
+			&-intensity {
+				@for $i from 1 through length($calculated-color-brand-intensity) {
+					&-#{$i} {
+						background-color: nth($calculated-color-brand-intensity,$i);
+	
+						&-important {
+							background-color: nth($calculated-color-brand-intensity,$i) !important;
+						}
+					}
+				}
+			}
+	
+			&-gradient {
+	
+				& {
 					@include gradient((
 						color1: $gradient-start,
 						color2: $gradient-end,
 						angle: 0deg,
 						use-shorthand:false,
-						add-important: true
 					));
+	
+					&-important {
+						@include gradient((
+							color1: $gradient-start,
+							color2: $gradient-end,
+							angle: 0deg,
+							use-shorthand:false,
+							add-important: true
+						));
+					}
 				}
-			}
-
-			@each $angle in $calculated-gradient-angles {
-				&-#{$angle} {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: to-unit($angle,deg),
-						use-shorthand:false,
-					));
-				}
-			}
-
-			@each $angle in $calculated-gradient-angles {
-				&-important-#{$angle} {
-					@include gradient((
-						color1: $gradient-start,
-						color2: $gradient-end,
-						angle: to-unit($angle,deg),
-						use-shorthand:false,
-						add-important: true
-					));
+	
+				@each $angle in $calculated-gradient-angles {
+					&-#{$angle} {
+						@include gradient((
+							color1: $gradient-start,
+							color2: $gradient-end,
+							angle: to-unit($angle,deg),
+							use-shorthand:false,
+						));
+					}
+					
+					&-#{$angle}-important {
+						@include gradient((
+							color1: $gradient-start,
+							color2: $gradient-end,
+							angle: to-unit($angle,deg),
+							use-shorthand:false,
+							add-important: true
+						));
+					}
 				}
 			}
 		}
 	}
 
-		$prefix: '.background';
-		#{$prefix} {
+	$prefix: '.background';
+	#{$prefix} {
 
-			&-global {
-				background-color: $global-background!important;
+		&-global,
+		&-global-hover:hover,
+		&-global-focus:focus,
+		&-global-focus.focus,
+		&-global-active:active,
+		&-global-active.active,
+		&-global-open.open {
+			background-color: $global-background!important;
 
-				.body-inverse & {
-					background-color: $global-background-inverse!important;
-				}
+			.body-inverse & {
+				background-color: $global-background-inverse!important;
 			}
+		}
 
 
-			&-global-contrast {
-				background-color: $global-background-contrast!important;
+		&-global-contrast,
+		&-global-contrast-hover:hover,
+		&-global-contrast-focus:focus,
+		&-global-contrast-focus.focus,
+		&-global-contrast-active:active,
+		&-global-contrast-active.active,
+		&-global-contrast-open.open {
+			background-color: $global-background-contrast!important;
 
-				.body-inverse & {
-					background-color: $global-background-contrast-inverse!important;
-				}
-
+			.body-inverse & {
+				background-color: $global-background-contrast-inverse!important;
 			}
+		}
 
-			&-intensity {
-				@for $i from 1 through length($calculated-color-brand-intensity) {
-					&-#{$i} {
-						background-color: nth($calculated-color-brand-intensity,$i)!important;
-					}
-				}
+		&-global-color,
+		&-global-color-hover:hover,
+		&-global-color-focus:focus,
+		&-global-color-focus.focus,
+		&-global-color-active:active,
+		&-global-color-active.active,
+		&-global-color-open.open {
+			background-color: $global-color!important;
+
+			.body-inverse & {
+				background-color: $global-color-inverse!important;
 			}
+		}
 
-			&-gradient {
-				@extend %background-gradient-important;
 
-				$calculated-gradient-selector: #{&};
+		&-global-color-contrast,
+		&-global-color-contrast-hover:hover,
+		&-global-color-contrast-focus:focus,
+		&-global-color-contrast-focus.focus,
+		&-global-color-contrast-active:active,
+		&-global-color-contrast-active.active,
+		&-global-color-contrast-open.open {
+			background-color: $global-color-contrast!important;
 
-				@each $angle in $calculated-gradient-angles {
-					$calculated-gradient-selector:  #{ $calculated-gradient-selector ', '+ & +'-' + $angle };
-				}
-
-				@at-root #{$calculated-gradient-selector} {
-					background-color: $gradient-start!important;
-				}
-
-				@each $angle in $calculated-gradient-angles {
-					&-#{$angle} {
-						@extend %background-gradient-important-#{$angle};
-					}
-				}
+			.body-inverse & {
+				background-color: $global-color-contrast-inverse!important;
 			}
+		}
 
-			&-transparent {
-				background-color:transparent!important;
-			}
-
-
-			@each $tag,$color in $calculated-brand-color-declarations {
-				&-#{$tag} {
-					@extend %background-important-#{$tag};
+		&-intensity {
+			@for $i from 1 through length($calculated-color-brand-intensity) {
+				&-#{$i},
+				&-#{$i}-hover:hover,
+				&-#{$i}-focus:focus,
+				&-#{$i}-focus.focus,
+				&-#{$i}-active:active,
+				&-#{$i}-active.active,
+				&-#{$i}-open.open {
+					@extend %for-background-intensity-#{$i}-important;
 				}
 			}
 		}
 
-	/* COLOR CLASSES */
-		$prefix: '.color';
-		#{$prefix} {
-			&-global {
-				color: $global-color!important;
+		&-gradient {
+			@extend %for-background-gradient-important;
 
-				.body-inverse & {
-					color: $global-color-inverse!important;
+			$calculated-gradient-selector: #{&};
+
+			@each $angle in $calculated-gradient-angles {
+				$calculated-gradient-selector:  #{ $calculated-gradient-selector ', '+ & +'-' + $angle };
+			}
+
+			@at-root #{$calculated-gradient-selector} {
+				background-color: $gradient-start!important;
+			}
+
+			@each $angle in $calculated-gradient-angles {
+				
+				&-#{$angle},
+				&-#{$angle}-hover:hover,
+				&-#{$angle}-focus:focus,
+				&-#{$angle}-focus.focus,
+				&-#{$angle}-active:active,
+				&-#{$angle}-active.active,
+				&-#{$angle}-open.open {
+					@extend %for-background-gradient-#{$angle}-important;
 				}
+
+			}
+		}
+
+		&-transparent,
+		&-transparent-hover:hover,
+		&-transparent-focus:focus,
+		&-transparent-focus.focus,
+		&-transparent-active:active,
+		&-transparent-active.active,
+		&-transparent-open.open {
+			background-color:transparent!important;
+		}
+
+		@each $tag,$color in $calculated-brand-color-declarations {
+			
+			&-#{$tag},
+			&-#{$tag}-hover:hover,
+			&-#{$tag}-focus:focus,
+			&-#{$tag}-focus.focus,
+			&-#{$tag}-active:active,
+			&-#{$tag}-active.active,
+			&-#{$tag}-open.open {
+				@extend %for-background-#{$tag}-important;
 			}
 
-			&-intensity {
-				@for $i from 1 through length($calculated-color-brand-intensity) {
-					&-#{$i} {
-						color: nth($calculated-color-brand-intensity,$i)!important;
-					}
-				}
+		}
+	}
+
+/* COLOR CLASSES */
+	$prefix: '.color';
+	#{$prefix} {
+		&-global,
+		&-global-hover:hover,
+		&-global-focus:focus,
+		&-global-focus.focus,
+		&-global-active:active,
+		&-global-active.active,
+		&-global-open.open{
+			color: $global-color!important;
+
+			.body-inverse & {
+				color: $global-color-inverse!important;
 			}
+		}
+		&-global-contrast,
+		&-global-contrast-hover:hover,
+		&-global-contrast-focus:focus,
+		&-global-contrast-focus.focus,
+		&-global-contrast-active:active,
+		&-global-contrast-active.active,
+		&-global-contrast-open.open{
+			color: $global-color-contrast!important;
 
-			&-inherit {
-				color: inherit!important;
+			.body-inverse & {
+				color: $global-color-contrast-inverse!important;
 			}
+		}
 
+		&-global-background,
+		&-global-background-hover:hover,
+		&-global-background-focus:focus,
+		&-global-background-focus.focus,
+		&-global-background-active:active,
+		&-global-background-active.active,
+		&-global-background-open.open{
+			color: $global-background!important;
 
-			@each $tag,$color in $calculated-brand-color-declarations {
-				&-#{$tag} {
-					color: $color!important;
+			.body-inverse & {
+				color: $global-background-inverse!important;
+			}
+		}
+		&-global-background-contrast,
+		&-global-background-contrast-hover:hover,
+		&-global-background-contrast-focus:focus,
+		&-global-background-contrast-focus.focus,
+		&-global-background-contrast-active:active,
+		&-global-background-contrast-active.active,
+		&-global-background-contrast-open.open{
+			color: $global-background-contrast!important;
+
+			.body-inverse & {
+				color: $global-background-contrast-inverse!important;
+			}
+		}
+
+		&-intensity {
+			@for $i from 1 through length($calculated-color-brand-intensity) {
+				&-#{$i},
+				&-#{$i}-hover:hover,
+				&-#{$i}-focus:focus,
+				&-#{$i}-focus.focus,
+				&-#{$i}-active:active,
+				&-#{$i}-active.active,
+				&-#{$i}-open.open {
+					@extend %for-color-intensity-#{$i}-important;
 				}
 			}
 		}
+
+		&-inherit,
+		&-inherit-hover:hover,
+		&-inherit-focus:focus,
+		&-inherit-focus.focus,
+		&-inherit-active:active,
+		&-inherit-active.active,
+		&-inherit-open.open {
+			color: inherit!important;
+		}
+
+
+		@each $tag,$color in $calculated-brand-color-declarations {
+			&-#{$tag},
+			&-#{$tag}-hover:hover,
+			&-#{$tag}-focus:focus,
+			&-#{$tag}-focus.focus,
+			&-#{$tag}-active:active,
+			&-#{$tag}-active.active,
+			&-#{$tag}-open.open {
+				@extend %for-color-#{$tag}-important;
+			}
+		}
+	}
 
 
 

@@ -25,6 +25,9 @@ $prefix: '.symbol';
         left:0;
         right:0;
         margin: auto;
+        // transition:
+        // $transition-duration-short color $transition-timing,
+        // $transition-duration-short background-color $transition-timing;
     }
 
     &-arrow,

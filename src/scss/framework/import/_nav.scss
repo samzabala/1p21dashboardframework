@@ -83,7 +83,7 @@ $prefix: '.nav';
 		box-shadow: 0 2px 5px 0 $body-background;
 
 		.body-inverse & {
-			background: $nav-background-inverse;
+			box-shadow: 0 2px 5px 0 $body-background-inverse;
 		}
 
 	}

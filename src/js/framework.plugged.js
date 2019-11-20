@@ -1,4 +1,4 @@
-jQuery.noConflict();
+window.jQuery && jQuery.noConflict();
 (function($,window){
 	var _1p21 = window._1p21 || {};
 
@@ -15,12 +15,11 @@ jQuery.noConflict();
 	}
 
 
-
 	$.trumbowyg.svgPath = '/assets/fonts/icons.svg';
 	$.trumbowyg.hideButtonTexts = true;
 
 	// console.log('init',$.fn.trumbowyg.prototype);
-	function reverseArray(arr) {
+	_.reverseArray = function(arr) {
 	var newArray = [];
 	for (var i = arr.length - 1; i >= 0; i--) {
 		newArray.push(arr[i]);
@@ -32,6 +31,15 @@ jQuery.noConflict();
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
+	String.prototype.toCamelCase = function(){
+
+		var str = this;
+
+		return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+			return index == 0 ? word.toLowerCase() : word.toUpperCase();
+		}).replace(/-|\s/g, '');
+
+	}
 	//maxs
 
 	_.br_vals = {
@@ -42,35 +50,29 @@ jQuery.noConflict();
 		lg: 9999999
 	};
 	_.br_arr = Object.keys(_.br_vals);
-
-	_1p21.validateBr = function(breakpoint,mode) {
-		mode = mode || 'below'; //below,within,above
-
-		var currIndex = _.br_arr.indexOf(breakpoint);
-
-		console.log(breakpoint,'prev',_.br_vals[ _.br_arr[currIndex - 1] ]);
-
-		switch(mode) {
-			case 'below':
-				return window.innerWidth <= _.br_vals[breakpoint];
-				break;
-			case 'within':
-				return (
-					window.innerWidth <= _.br_vals[breakpoint]
-				) && (
-					window.innerWidth > _.br_vals[ _.br_arr[currIndex - 1] ]
-				)
-				break;
-			case 'above':
-				return window.innerWidth > _.br_vals[ _.br_arr[currIndex - 1] ];
-				break;
-		}
-		
-
-	}
+	_.br_to_loop =  ['xs','sm','md','lg'];
 
 	_.functions_on_load = [];
 	_.functions_on_resize = [];
+
+
+	_1p21.validateBr = function(breakpoint,mode) {
+		mode = mode || 'below'; //below,within,above
+		var currIndex = _.br_arr.indexOf(breakpoint);
+
+		switch(mode) {
+			case 'below': //max-width
+				return window.outerWidth <= _.br_vals[breakpoint];
+			case 'within':
+				return (
+					window.outerWidth <= _.br_vals[breakpoint] //max
+				) && (
+					window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] //min
+				)
+			case 'above':
+				return (currIndex > 0) ? ( window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] ) : (window.outerWidth > _.br_vals[ _.br_arr[currIndex] ]);
+		}
+	}
 
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
@@ -121,31 +123,50 @@ jQuery.noConflict();
 
 			props.forEach(function(prop){
 				var propsSet = false;
+				var propSetBr = false;
+				var smallestStyledBr = false;
 				
 				//check for breakpointz first
-				reverseArray(_.br_arr).forEach(function(br){
+				_.reverseArray(_.br_to_loop).forEach(function(br){
+					
 					
 					if( modElement.data(prop+'-'+br) && !propsSet ) {
-						if( _1p21.validateBr(br,'below') ){
-							console.log('i was here',br);
+						smallestStyledBr = br;
+						
+						if( _1p21.validateBr(br,'above') ){
+							
+							
 							modElement.css(prop, modElement.data(prop+'-'+br));
+							
 							propsSet = true;
+							propSetBr = true;
 						}
 
 					}
-				})
+				});
+
+				console.log('smolest',smallestStyledBr);
 	
 				if(modElement.data(prop) && !propsSet) {
-					
-					modElement.css(prop, modElement.data(prop))
+
+					if(!propsSet && !propSetBr) {
+						modElement.css(prop, modElement.data(prop))
+						propsSet = true;
+					}
+				}else{
+					if(
+						modElement.prop('style')[prop.toCamelCase()] !== null
+						&& smallestStyledBr
+						&& !_1p21.validateBr(smallestStyledBr,'above')
+					){
+						modElement.css(prop,'');
+					}
 				}
 			}); 
 		}
 
 
 		renderProps(moduleGrid,availablePropetiesParent);
-
-
 
 		//chchchchchildren
 
@@ -217,13 +238,6 @@ jQuery.noConflict();
 
 		_1p21.lazyLoad && _1p21.loadImages();
 
-		//toggles
-		/*
-		accordion
-		modal
-		
-		*/
-
 		_.functions_on_load.forEach(function(fn){
 			fn();
 		})
@@ -245,21 +259,6 @@ jQuery.noConflict();
 
 		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
 			$(this).trumbowyg({
-				// btns: [
-				// 	['viewHTML'],
-				// 	['undo', 'redo'], // Only supported in Blink browsers
-				// 	['formatting'],
-				// 	['strong', 'em', 'del'],
-				// 	// ['superscript', 'subscript'],
-				// 	['link'],
-				// 	['insertImage'],
-				// 	// ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-				// 	['unorderedList', 'orderedList'],
-				// 	['horizontalRule'],
-				// 	['removeformat'],
-				// 	['fullscreen'],
-				// 	['upload']
-				// ],
 				btns: [
 					['viewHTML'],
 					['strong', 'em',],
@@ -269,37 +268,10 @@ jQuery.noConflict();
 					['upload'],
 					['fullscreen']
 				],
-				// prefix: 'input-trumbowyg-',
-				// autogrow: true,
-				// autogrowOnEnter: true,
 				removeformatPasted: true,
 				tagsToRemove: ['script']
 			});
 		})
-
-		// document.querySelectorAll('.input-editor').forEach(function(input){
-		// 	var editor = new Quill(input, {
-		// 		debug: 'info',
-		// 		modules : {
-		// 			toolbar: [
-		// 				['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-		// 				['blockquote', 'code-block'],             // custom button values
-		// 				[{ 'list': 'ordered'}, { 'list': 'bullet' }],        // outdent/indent
-
-		// 				[{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-		// 				[{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-		// 				[{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-		// 				[{ 'font': [] }],
-		// 				[{ 'align': [] }],
-
-		// 				['clean']       
-		// 			],
-		// 		},
-		// 		theme: 'snow'
-		// 	});
-		// 	_1p21.editors.push(editor);
-		// })
 	
 		$('body').on('click','*[data-toggle="accordion"]',function(e){
 			

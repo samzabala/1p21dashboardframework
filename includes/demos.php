@@ -1,6 +1,6 @@
 
-<h1> / editor</h1>
-<!-- special-form -->
+<h1 data-toggle="accordion"> / editor <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
 	<form class="special-form" action="" method="get">
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 
@@ -13,15 +13,19 @@
 			<label for="" class="sr-only">uuugh</label>
 		
 			<div id="editor-demo" class="input input-trumbowyg" data-quill-placeholder="Please write your new note here...">
-<h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one</h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6>
+<h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6>
 			</div>
 		</div>
 		<a href="#" class="btn btn-primary">Submet et</a>
 	</form>
-
-<h1>Tooltips</h1>
-	<h2>Tooltip on click </h2>
+</div>
 	
+
+<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
+
+	<h2>Tooltip on click </h2>
+		
 		<div class="btn btn-primary"
 			data-toggle="tooltip-click"
 			data-tooltip-placement="left"
@@ -60,8 +64,8 @@
 		
 
 	<h2>Tooltip on hover</h2>
-	
-		<div class="btn btn-primary"
+
+	<div class="btn btn-primary"
 			data-toggle="tooltip-hover"
 			data-tooltip-placement="left"
 			data-tooltip-badge="true"
@@ -96,14 +100,17 @@
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi to the right
 		</div>
+</div>
 		
 
 
-<h1>Nav</h1>
+<h1 data-toggle="accordion">Nav <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
+
 	<div class="nav">
-	
+		
 		<ul class="nav-list">
-			<!-- HOME -->
+			
 			<li class="nav-item">
 				<a href="<?=DASHBOARD_ROOT_URL ?>">
 				<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="nav-item-text">Item</span>
@@ -111,8 +118,7 @@
 			</li>
 
 
-
-			<!-- PROJ -->
+			
 			<li class="nav-item">
 				<a href="#nav-demo-dropdown" data-toggle="accordion">
 				<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
@@ -128,14 +134,13 @@
 			</li>
 
 
-			<!-- DESIGNERS -->
+			
 			<li class="nav-item">
 				<a href="<?=DASHBOARD_ROOT_URL ?>">
 				<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="nav-item-text">Item</span>
 				</a>
 			</li>
-
-			<!-- DEVELOPERS -->
+			
 			<li class="nav-item">
 				<a href="<?=DASHBOARD_ROOT_URL ?>">
 				<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="nav-item-text">Item</span>
@@ -144,8 +149,11 @@
 		</ul>
 	</div>
 
+</div>
 
-<h1>Progress Bar</h1>
+<h1 data-toggle="accordion">Progress Bar <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
+
 
 	<h3 id="progress-basic">Basic</h3>
 		<div class="progress">
@@ -317,9 +325,7 @@
 		</div>
 
 	<h3 id="progress-animated">Animated</h3>
-
-
-		<div class="progress active">
+	<div class="progress active">
 			<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
 		</div>
 		<div class="progress active">
@@ -342,10 +348,14 @@
 			<div class="progress-bar progress-bar-error" style="width: 20%"></div>
 			<div class="progress-bar progress-bar-caution" style="width: 10%"></div>
 		</div>
+</div>
+
+
+		
 
 
 
-<h1>Dropdowns</h1>
+<h1 data-toggle="accordion">Dropdowns <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 	<h2>Basic offset classes</h2>
 		<br>
 		<br>
@@ -477,274 +487,157 @@
 
 	
 
-	<h1>Form</h1>
-<form class="form-horizontal">
-	<fieldset>
-		<h2>sizes</h2>
-		
-			<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label" >Basic Ass</label>
-				<input class="input input-single-line" placeholder="Basic Ass" type="text">
-			</p>
-			<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label input-label-small" for="Small">Small</label>
-				<input class="input input-single-line input-small" id="Small" placeholder="Small" type="text">
-			</p>
+<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
 
-			<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label input-label-large" for="Large">Large</label>
-				<input class="input input-single-line input-large" id="Large" placeholder="Large" type="text">
-			</p>
-
-		<h2>colors</h2>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-primary" for="input-primary">Primary: </label>
-				<input class="input input-single-line input-primary" id="input-primary" placeholder="Primary" type="text">
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-accent" for="input-accent">accent: </label>
-				<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-base" for="input-base">base: </label>
-				<input class="input input-single-line input-base" id="input-base" placeholder="base" type="text">
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-success" for="input-success">success: </label>
-				<input class="input input-single-line input-success" id="input-success" placeholder="success" type="text">
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-caution" for="input-caution">caution: </label>
-				<input class="input input-single-line input-caution" id="input-caution" placeholder="caution" type="text">
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-error" for="input-error">error: </label>
-				<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
-			</p>
+	<form class="form-horizontal">
+		<fieldset>
+			<h2>sizes</h2>
 			
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label input-label-disabled" for="input-disabled">disabled: </label>
-				<input class="input input-single-line" disabled id="input-disabled" placeholder="disabled" type="text">
-			</p>
-			
-		<h2>types</h2>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-					<label class="input-label" for="inputPassword">Password</label>
-					<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
-			</p>
-
-			<p>
-				<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
-			</p>
-			
-			<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
-				<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
-			
-					<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
-			</p>
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label" for="select">Selects</label>
-				<select class="input input-single-line" id="select-demo">
-					<option>Available option 1</option>
-					<option>Available option 2</option>
-					<option>Available option 3</option>
-					<option>Available option 4</option>
-					<option>Available option 5</option>
-				</select>
-			</p>
-
-			<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<select class="input input-multiple-line" multiple>
-					<option>Available option 1</option>
-					<option>Available option 2</option>
-					<option>Available option 3</option>
-					<option>Available option 4</option>
-					<option>Available option 5</option>
-					<option>Available option 1</option>
-					<option>Available option 2</option>
-					<option>Available option 3</option>
-					<option>Available option 4</option>
-					<option>Available option 5</option>
-					<option>Available option 1</option>
-					<option>Available option 2</option>
-					<option>Available option 3</option>
-					<option>Available option 4</option>
-					<option>Available option 5</option>
-				</select>
-			</p>
-
-		<h2>wrapper</h2>
-
-			<h4>inline horizontal</h4>
-			<p class="input-wrapper input-wrapper-horizontal">
-				<label class="input-label" >Basic Ass</label>
-				<input class="input input-single-line" placeholder="Basic Ass" type="text">
-			</p>
-
-			<h4>block horizontal</h4>
-			<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label" >Basic Ass</label>
-				<input class="input input-single-line" placeholder="Basic Ass" type="text">
-			</p>
-
-			<h3>inline vertical</h3>
-			<p class="input-wrapper input-wrapper-vertical">
-				<label class="input-label" >Basic Ass</label>
-				<input class="input input-single-line" placeholder="Basic Ass" type="text">
-			</p>
-			<h3>block vertical</h3>
-			<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
-				<label class="input-label" >Basic Ass</label>
-				<input class="input input-single-line" placeholder="Basic Ass" type="text">
-			</p>
-
-		<h2>group (all have a .input-group-responsive so they kwan... break to a column layout for mobile and tablet devices)</h2>
-
-			<h3>group horizontal</h3>
-
-				<p class="input-wrapper input-wrapper-horizontal">
-					
+				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 					<label class="input-label" >Basic Ass</label>
-					<span class="input-group input-group-horizontal input-group-responsive">
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-					</span>
-					
+					<input class="input input-single-line" placeholder="Basic Ass" type="text">
+				</p>
+				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+					<label class="input-label input-label-small" for="Small">Small</label>
+					<input class="input input-single-line input-small" id="Small" placeholder="Small" type="text">
 				</p>
 
-				<h4>small</h4>
-				<p class="input-wrapper input-wrapper-horizontal">
-					
-					<label class="input-label" >Basic Ass</label>
-					<span class="input-group input-group-horizontal input-group-small input-group-responsive">
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-
-						<select class="input input-single-line" >
-							<option>Available option 1</option>
-							<option>Available option 2</option>
-							<option>Available option 3</option>
-							<option>Available option 4</option>
-							<option>Available option 5</option>
-						</select>
-					</span>
-					
+				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+					<label class="input-label input-label-large" for="Large">Large</label>
+					<input class="input input-single-line input-large" id="Large" placeholder="Large" type="text">
 				</p>
-				<h4>large</h4>
-				<span class="input-group input-group-horizontal input-group-large input-group-responsive">
 
-					<select class="input input-single-line" >
+			<h2>colors</h2>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-primary" for="input-primary">Primary: </label>
+					<input class="input input-single-line input-primary" id="input-primary" placeholder="Primary" type="text">
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-accent" for="input-accent">accent: </label>
+					<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-base" for="input-base">base: </label>
+					<input class="input input-single-line input-base" id="input-base" placeholder="base" type="text">
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-success" for="input-success">success: </label>
+					<input class="input input-single-line input-success" id="input-success" placeholder="success" type="text">
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-caution" for="input-caution">caution: </label>
+					<input class="input input-single-line input-caution" id="input-caution" placeholder="caution" type="text">
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-error" for="input-error">error: </label>
+					<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
+				</p>
+				
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label input-label-disabled" for="input-disabled">disabled: </label>
+					<input class="input input-single-line" disabled id="input-disabled" placeholder="disabled" type="text">
+				</p>
+				
+			<h2>types</h2>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+						<label class="input-label" for="inputPassword">Password</label>
+						<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
+				</p>
+
+				<p>
+					<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
+				</p>
+				
+				<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
+					<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
+				
+						<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
+				</p>
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+				</p>
+
+				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+					<label class="input-label" for="select">Selects</label>
+					<select class="input input-single-line" id="select-demo">
 						<option>Available option 1</option>
 						<option>Available option 2</option>
 						<option>Available option 3</option>
 						<option>Available option 4</option>
 						<option>Available option 5</option>
 					</select>
+				</p>
 
-					<select class="input input-single-line" >
+				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+					<select class="input input-multiple-line" multiple>
+						<option>Available option 1</option>
+						<option>Available option 2</option>
+						<option>Available option 3</option>
+						<option>Available option 4</option>
+						<option>Available option 5</option>
+						<option>Available option 1</option>
+						<option>Available option 2</option>
+						<option>Available option 3</option>
+						<option>Available option 4</option>
+						<option>Available option 5</option>
 						<option>Available option 1</option>
 						<option>Available option 2</option>
 						<option>Available option 3</option>
 						<option>Available option 4</option>
 						<option>Available option 5</option>
 					</select>
+				</p>
 
-					<select class="input input-single-line" >
-						<option>Available option 1</option>
-						<option>Available option 2</option>
-						<option>Available option 3</option>
-						<option>Available option 4</option>
-						<option>Available option 5</option>
-					</select>
+			<h2>wrapper</h2>
 
-					<select class="input input-single-line" >
-						<option>Available option 1</option>
-						<option>Available option 2</option>
-						<option>Available option 3</option>
-						<option>Available option 4</option>
-						<option>Available option 5</option>
-					</select>
-				</span>
-			
-				<h3>group vertical</h3>
+				<h4>inline horizontal</h4>
+				<p class="input-wrapper input-wrapper-horizontal">
+					<label class="input-label" >Basic Ass</label>
+					<input class="input input-single-line" placeholder="Basic Ass" type="text">
+				</p>
 
-					<p class="input-wrapper input-wrapper-vertical">
+				<h4>block horizontal</h4>
+				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+					<label class="input-label" >Basic Ass</label>
+					<input class="input input-single-line" placeholder="Basic Ass" type="text">
+				</p>
+
+				<h3>inline vertical</h3>
+				<p class="input-wrapper input-wrapper-vertical">
+					<label class="input-label" >Basic Ass</label>
+					<input class="input input-single-line" placeholder="Basic Ass" type="text">
+				</p>
+				<h3>block vertical</h3>
+				<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
+					<label class="input-label" >Basic Ass</label>
+					<input class="input input-single-line" placeholder="Basic Ass" type="text">
+				</p>
+
+			<h2>group (all have a .input-group-responsive so they kwan... break to a column layout for mobile and tablet devices)</h2>
+
+				<h3>group horizontal</h3>
+
+					<p class="input-wrapper input-wrapper-horizontal">
 						
 						<label class="input-label" >Basic Ass</label>
-						<span class="input-group input-group-vertical input-group-responsive">
+						<span class="input-group input-group-horizontal input-group-responsive">
 
 							<select class="input input-single-line" >
 								<option>Available option 1</option>
@@ -783,10 +676,10 @@
 					</p>
 
 					<h4>small</h4>
-					<p class="input-wrapper input-wrapper-vertical">
+					<p class="input-wrapper input-wrapper-horizontal">
 						
 						<label class="input-label" >Basic Ass</label>
-						<span class="input-group input-group-vertical input-group-vertical input-group-small input-group-responsive">
+						<span class="input-group input-group-horizontal input-group-small input-group-responsive">
 
 							<select class="input input-single-line" >
 								<option>Available option 1</option>
@@ -822,9 +715,8 @@
 						</span>
 						
 					</p>
-					
 					<h4>large</h4>
-					<span class="input-group input-group-vertical input-group-large input-group-responsive">
+					<span class="input-group input-group-horizontal input-group-large input-group-responsive">
 
 						<select class="input input-single-line" >
 							<option>Available option 1</option>
@@ -859,150 +751,272 @@
 						</select>
 					</span>
 				
-		<h2>Accordion + checking if the framework doesnt fuck with the unstyled nbois too much</h2>
+					<h3>group vertical</h3>
 
-				<div class="accordion-group ">
+						<p class="input-wrapper input-wrapper-vertical">
+							
+							<label class="input-label" >Basic Ass</label>
+							<span class="input-group input-group-vertical input-group-responsive">
 
-					<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h3>
-					<div class="accordion">
-						<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
-						<input type="button">
-						<input type="checkbox">
-						<input type="color">
-						<input type="date">
-						<input type="datetime-local">
-						<input type="email">
-						<input type="file">
-						<input type="hidden">
-						<input type="image">
-						<input type="month">
-						<input type="number">
-						<input type="password">
-						<input type="radio">
-						<input type="range">
-						<input type="reset">
-						<input type="search">
-						<input type="submit">
-						<input type="tel">
-						<input type="text">
-						<input type="time">
-						<input type="url">
-						<input type="week">
-						<input list="browsers">
-						<datalist id="browsers">
-							<option value="Internet Explorer">
-							<option value="Firefox">
-							<option value="Chrome">
-							<option value="Opera">
-							<option value="Safari">
-						</datalist>
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
 
-						<select name="cars">
-						<option value="volvo">Volvo</option>
-						<option value="saab">Saab</option>
-						<option value="fiat">Fiat</option>
-						<option value="audi">Audi</option>
-						</select>
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
 
-						<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
+
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
+
+							</span>
+							
+						</p>
+
+						<h4>small</h4>
+						<p class="input-wrapper input-wrapper-vertical">
+							
+							<label class="input-label" >Basic Ass</label>
+							<span class="input-group input-group-vertical input-group-vertical input-group-small input-group-responsive">
+
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
+
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
+
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
+
+								<select class="input input-single-line" >
+									<option>Available option 1</option>
+									<option>Available option 2</option>
+									<option>Available option 3</option>
+									<option>Available option 4</option>
+									<option>Available option 5</option>
+								</select>
+							</span>
+							
+						</p>
+						
+						<h4>large</h4>
+						<span class="input-group input-group-vertical input-group-large input-group-responsive">
+
+							<select class="input input-single-line" >
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+							</select>
+
+							<select class="input input-single-line" >
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+							</select>
+
+							<select class="input input-single-line" >
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+							</select>
+
+							<select class="input input-single-line" >
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+							</select>
+						</span>
+					
+			<h2>Accordion + checking if the framework doesnt fuck with the unstyled nbois too much</h2>
+
+					<div class="accordion-group ">
+
+						<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h3>
+						<div class="accordion">
+							<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
+							<input type="button">
+							<input type="checkbox">
+							<input type="color">
+							<input type="date">
+							<input type="datetime-local">
+							<input type="email">
+							<input type="file">
+							<input type="hidden">
+							<input type="image">
+							<input type="month">
+							<input type="number">
+							<input type="password">
+							<input type="radio">
+							<input type="range">
+							<input type="reset">
+							<input type="search">
+							<input type="submit">
+							<input type="tel">
+							<input type="text">
+							<input type="time">
+							<input type="url">
+							<input type="week">
+							<input list="browsers">
+							<datalist id="browsers">
+								<option value="Internet Explorer">
+								<option value="Firefox">
+								<option value="Chrome">
+								<option value="Opera">
+								<option value="Safari">
+							</datalist>
+
+							<select name="cars">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+							</select>
+
+							<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						</div>
+
+						<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h3>
+						<div id="bitch-accordion" class="accordion">
+							<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
+							<input class="input" type="button">
+							<input class="input" type="checkbox">
+							<input class="input" type="color">
+							<input class="input" type="date">
+							<input class="input" type="datetime-local">
+							<input class="input" type="email">
+							<input class="input" type="file">
+							<input class="input" type="hidden">
+							<input class="input" type="image">
+							<input class="input" type="month">
+							<input class="input" type="number">
+							<input class="input" type="password">
+							<input class="input" type="radio">
+							<input class="input" type="range">
+							<input class="input" type="reset">
+							<input class="input" type="search">
+							<input class="input" type="submit">
+							<input class="input" type="tel">
+							<input class="input" type="text">
+							<input class="input" type="time">
+							<input class="input" type="url">
+							<input class="input" type="week">
+							<input class="input" list="browsers">
+							<datalist id="browsers">
+								<option value="Internet Explorer">
+								<option value="Firefox">
+								<option value="Chrome">
+								<option value="Opera">
+								<option value="Safari">
+							</datalist>
+
+							<select name="cars">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+							</select>
+
+							<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						</div>
+
+						<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></a>
+						<div id="other-bitch-accordion" class="accordion">
+							<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
+							<input class="input" type="button">
+							<input class="input" type="checkbox">
+							<input class="input input-single-line" type="color">
+							<input class="input input-single-line" type="date">
+							<input class="input input-single-line" type="datetime-local">
+							<input class="input input-single-line" type="email">
+							<input class="input input-single-line" type="file">
+							<input class="input input-single-line" type="hidden">
+							<input class="input input-single-line" type="image">
+							<input class="input input-single-line" type="month">
+							<input class="input input-single-line" type="number">
+							<input class="input input-single-line" type="password">
+							<input class="input input-single-line" type="radio">
+							<input class="input" type="range">
+							<input class="input" type="reset">
+							<input class="input input-single-line" type="search">
+							<input class="input" type="submit">
+							<input class="input input-single-line" type="tel">
+							<input class="input input-single-line" type="text">
+							<input class="input input-single-line" type="time">
+							<input class="input input-single-line" type="url">
+							<input class="input input-single-line" type="week">
+							<input class="input input-single-line" list="browsers">
+							<datalist id="browsers">
+								<option value="Internet Explorer">
+								<option value="Firefox">
+								<option value="Chrome">
+								<option value="Opera">
+								<option value="Safari">
+							</datalist>
+
+							<select name="cars">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+							</select>
+
+							<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						</div>
 					</div>
 
-					<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h3>
-					<div id="bitch-accordion" class="accordion">
-						<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
-						<input class="input" type="button">
-						<input class="input" type="checkbox">
-						<input class="input" type="color">
-						<input class="input" type="date">
-						<input class="input" type="datetime-local">
-						<input class="input" type="email">
-						<input class="input" type="file">
-						<input class="input" type="hidden">
-						<input class="input" type="image">
-						<input class="input" type="month">
-						<input class="input" type="number">
-						<input class="input" type="password">
-						<input class="input" type="radio">
-						<input class="input" type="range">
-						<input class="input" type="reset">
-						<input class="input" type="search">
-						<input class="input" type="submit">
-						<input class="input" type="tel">
-						<input class="input" type="text">
-						<input class="input" type="time">
-						<input class="input" type="url">
-						<input class="input" type="week">
-						<input class="input" list="browsers">
-						<datalist id="browsers">
-							<option value="Internet Explorer">
-							<option value="Firefox">
-							<option value="Chrome">
-							<option value="Opera">
-							<option value="Safari">
-						</datalist>
+			<button class="btn btn-default">Cancel</button> <button class="btn btn-primary">Submit</button>
 
-						<select name="cars">
-						<option value="volvo">Volvo</option>
-						<option value="saab">Saab</option>
-						<option value="fiat">Fiat</option>
-						<option value="audi">Audi</option>
-						</select>
+			<input class="btn btn-primary" value="sumbnititit">
+		</fieldset>
+	</form>
+</div>
 
-						<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-					</div>
-
-					<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></a>
-					<div id="other-bitch-accordion" class="accordion">
-						<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
-						<input class="input" type="button">
-						<input class="input" type="checkbox">
-						<input class="input input-single-line" type="color">
-						<input class="input input-single-line" type="date">
-						<input class="input input-single-line" type="datetime-local">
-						<input class="input input-single-line" type="email">
-						<input class="input input-single-line" type="file">
-						<input class="input input-single-line" type="hidden">
-						<input class="input input-single-line" type="image">
-						<input class="input input-single-line" type="month">
-						<input class="input input-single-line" type="number">
-						<input class="input input-single-line" type="password">
-						<input class="input input-single-line" type="radio">
-						<input class="input" type="range">
-						<input class="input" type="reset">
-						<input class="input input-single-line" type="search">
-						<input class="input" type="submit">
-						<input class="input input-single-line" type="tel">
-						<input class="input input-single-line" type="text">
-						<input class="input input-single-line" type="time">
-						<input class="input input-single-line" type="url">
-						<input class="input input-single-line" type="week">
-						<input class="input input-single-line" list="browsers">
-						<datalist id="browsers">
-							<option value="Internet Explorer">
-							<option value="Firefox">
-							<option value="Chrome">
-							<option value="Opera">
-							<option value="Safari">
-						</datalist>
-
-						<select name="cars">
-						<option value="volvo">Volvo</option>
-						<option value="saab">Saab</option>
-						<option value="fiat">Fiat</option>
-						<option value="audi">Audi</option>
-						</select>
-
-						<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-					</div>
-				</div>
-
-		<button class="btn btn-default">Cancel</button> <button class="btn btn-primary">Submit</button>
-
-		<input class="btn btn-primary" value="sumbnititit">
-	</fieldset>
-</form>
-
-<h1>Btn</h1>
+<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
 	<h2>Basic</h2>
 	<button type="button" class="btn btn-default">Default</button>
 	<button type="button" class="btn btn-primary">Primary</button>
@@ -1051,6 +1065,7 @@
 	<button type="button" class="btn btn-disabled btn-caution">caution</button>
 	<button type="button" class="btn btn-disabled btn-error">error</button>
 	<button type="button" class="btn btn-disabled btn-link">Link</button>
+	
 	<h2>groups</h2>
 	<h3>Basic</h3>
 	<button class="btn-group btn-group-horizontal">
@@ -1191,17 +1206,17 @@
 			<button type="button" class="btn btn-default"> Butt</button>
 	</div>
 
-<h3>toggle group but multiple allowed and theres a resetter</h3>
+	<h3>toggle group but multiple allowed and theres a resetter</h3>
 
 
-<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
+	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
 
-		<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
-		<button type="button" class=" btn btn-default"> butt</button>
-		<button type="button" class="btn btn-default">  Butt </button>
-		<button type="button" class="btn btn-default">Butt</button>
-		<button type="button" class="btn btn-default"> Butt</button>
-</div>
+			<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
+			<button type="button" class=" btn btn-default"> butt</button>
+			<button type="button" class="btn btn-default">  Butt </button>
+			<button type="button" class="btn btn-default">Butt</button>
+			<button type="button" class="btn btn-default"> Butt</button>
+	</div>
 
 	
 	<h2>symbols with toggle classes on them to react during .open and or .active (has to be child of whatever is active or open tho)
@@ -1222,9 +1237,10 @@
 			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow symbol-arrow-toggle-left symbol-arrow-down"></i>Toggle Butt left</button>
 			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow symbol-arrow-toggle-right symbol-arrow-down"></i> Toggle Butt right</button>
 	</div>
+</div>
 
 
-<h1>list group</h1>
+<h1>list group <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <ul class="list-group">
 	<li>
 	<span class="badge badge-primary"></span>
@@ -1239,7 +1255,7 @@
 </ul>
 
 
-<h1>SPECIAL TEXT</h1>
+<h1>SPECIAL TEXT <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <p class="special-primary">
 Yo I'm jumbo fight me
 </p>
@@ -1249,7 +1265,7 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 </p>
 
 
-<h1>Thumbnail</h1>
+<h1>Thumbnail <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <div class="thumbnail">
     <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 </div>
@@ -1274,8 +1290,8 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
 </div>
 
-<h1>Symbols reprise but with color classes on em</h1>
-
+<h1 data-toggle="accordion">Symbols reprise but with color classes on em <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<div class="accordion">
 	<p>
 		Symbol Square <i class="color-primary symbol symbol-square"></i>
 	</p>
@@ -1326,7 +1342,9 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 		Symbol caret left <i class="color-error symbol symbol-caret symbol-caret-right"></i>
 	</p>
 
-<h1>Badges</h1>
+</div>
+	
+<h1 data-toggle="accordion">Badges <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <p>
 	<span class="badge badge-primary"></span> Primary
 </p>
@@ -1360,7 +1378,7 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <h4>Custom color</h4>
 <span class="badge" style="background-color: pink"></span>
 
-<h1>Legends</h1>
+<h1 data-toggle="accordion">Legends <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <p>
 	<span class="legend legend-primary"></span> Primary
 </p>
@@ -1393,7 +1411,7 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <span class="legend" style="background-color: pink"></span> Custom
 	
 
-<h1>Tags</h1>
+<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <span class="tag tag-primary">Primary</span>
 <span class="tag tag-accent">Accent</span>
 <span class="tag tag-base">Base</span>
@@ -1405,7 +1423,7 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <span class="tag" style="background-color: violet">Custom</span>
 
 
-<h1>Table</h1>
+<h1 data-toggle="accordion">Table <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <table class="table">
 	<thead>
 	<tr>
@@ -1778,10 +1796,10 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 <div id="content-sample" style="font-size:inherit;">
 
 
-<h1>Text</h1>
+<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <h3 class="true-title">Page Markup And Formatting</h3>						
 								<p><strong>Headings</strong></p>
-<h1 id="thefuckintop">Header one</h1>
+<h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
 <h2>Header two</h2>
 <h3>Header three</h3>
 <h4>Header four</h4>

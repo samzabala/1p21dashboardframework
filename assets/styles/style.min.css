@@ -101,9 +101,9 @@ table {
   --global-color-contrast: #3d3d3d;
   --global-color-contrast-inverse: #ecedf0;
   --global-background: #FFFFFF;
-  --global-background-inverse: #3d3d3d;
+  --global-background-inverse: #222222;
   --global-background-contrast: #ecedf0;
-  --global-background-contrast-inverse: #222222;
+  --global-background-contrast-inverse: #000000;
 }
 
 /* heading bars or rules from tiny rectangles to long rules and what not. */
@@ -460,7 +460,7 @@ code, kbd, tt {
 }
 
 .body-inverse code, .body-inverse kbd, .body-inverse tt {
-  background: #222222;
+  background: #000000;
 }
 
 pre {
@@ -475,7 +475,7 @@ pre * {
 }
 
 .body-inverse pre {
-  background: #222222;
+  background: #000000;
 }
 
 cite {
@@ -625,12 +625,12 @@ tr:first-child,
 
 .body-inverse tr:first-child, .body-inverse
 .table-row:first-child {
-  border-top: 1px solid #222222;
+  border-top: 1px solid #000000;
 }
 
 .body-inverse tr, .body-inverse
 .table-row {
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid #000000;
 }
 
 th, td,
@@ -659,7 +659,7 @@ th,
 
 .body-inverse th, .body-inverse
 .table-cell.table-cell-heading {
-  background: #222222;
+  background: #000000;
   color: #ecedf0;
 }
 
@@ -951,7 +951,7 @@ table.table-large .table-cell {
 }
 
 .body-inverse .nav {
-  background: #3d3d3d;
+  background: #222222;
 }
 
 .nav * {
@@ -979,7 +979,7 @@ table.table-large .table-cell {
 }
 
 .body-inverse .nav.nav-sticky {
-  background: #3d3d3d;
+  box-shadow: 0 2px 5px 0 #000000;
 }
 
 .nav.nav-vertical {
@@ -1160,6 +1160,14 @@ table.table-large .table-cell {
   border-bottom: 1px solid #ecedf0;
 }
 
+.body-inverse .list-group {
+  border-bottom-color: #000000;
+}
+
+.body-inverse .list-group li {
+  border-top-color: #000000;
+}
+
 .list-group li {
   border-top: 1px solid #ecedf0;
   padding-top: calc(  (  (3.125rem - 1px) - (1em * 1.5) ) * .5);
@@ -1232,7 +1240,7 @@ table.table-large .table-cell {
 }
 
 .body-inverse .module {
-  background: #3d3d3d;
+  background: #222222;
 }
 
 .module:not(prefix-no-interaction):hover, .module:not(prefix-no-interaction):focus, .module:not(prefix-no-interaction).focus {
@@ -1370,7 +1378,7 @@ table.table-large .table-cell {
 }
 
 .body-inverse .modal, .body-inverse .trumbowyg-modal-box {
-  background: #3d3d3d;
+  background: #222222;
 }
 
 /*** IMAGES ***/
@@ -1463,12 +1471,12 @@ table.table-large .table-cell {
 }
 
 .body-inverse .progress, .body-inverse .trumbowyg-progress {
-  background-color: rgba(34, 34, 34, 0.01);
-  background: -moz-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
+  background-color: rgba(0, 0, 0, 0.01);
+  background: -moz-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(0, 0, 0, 0.01) 1px,  rgba(0, 0, 0, 0.01) 4px) ;
   /* FF3.6-15 */
-  background: -webkit-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
+  background: -webkit-repeating-linear-gradient(-45deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(0, 0, 0, 0.01) 1px,  rgba(0, 0, 0, 0.01) 4px) ;
   /* Chrome10-25,Safari5.1-6 */
-  background: repeating-linear-gradient(135deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(34, 34, 34, 0.01) 1px,  rgba(34, 34, 34, 0.01) 4px) ;
+  background: repeating-linear-gradient(135deg ,  #8d8d8d 0%,  #8d8d8d 1px,  rgba(0, 0, 0, 0.01) 1px,  rgba(0, 0, 0, 0.01) 4px) ;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -1564,7 +1572,7 @@ table.table-large .table-cell {
 }
 
 .body-inverse .tooltip, .body-inverse .dropdown {
-  background: #3d3d3d;
+  background: #222222;
 }
 
 .tooltip {
@@ -1580,7 +1588,7 @@ table.table-large .table-cell {
 }
 
 .body-inverse .tooltip:before, .body-inverse .tooltip:after {
-  background: #3d3d3d;
+  background: #222222;
 }
 
 .tooltip:after {
@@ -2583,7 +2591,7 @@ table.table-large .table-cell {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
+  background-color: #FFFFFF;
 }
 
 .input:focus, .trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]) {
@@ -2616,7 +2624,7 @@ table.table-large .table-cell {
   text-align: inherit;
   font-style: normal;
   display: inline-block;
-  background-color: transparent;
+  background-color: #FFFFFF;
   border: 1px solid transparent;
   padding-right: 1.25em;
   padding-left: 1.25em;
@@ -3012,7 +3020,7 @@ select.input, .input-select {
 }
 
 .body-inverse .special-form {
-  background: #222222;
+  background: #000000;
 }
 
 .special-form .input-wrapper {
@@ -3378,7 +3386,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .trumbowyg-dark,
 .body-inverse .trumbowyg-fullscreen {
-  background: #3d3d3d;
+  background: #222222;
 }
 
 .trumbowyg-fullscreen.trumbowyg-box,
@@ -3499,11 +3507,59 @@ CUSTOM STYLES FOR TRUMBOWYG
 }
 
 /* BACKGROUND CLASSES */
+.color-intensity-1, .color-intensity-1-hover:hover, .color-intensity-1-focus:focus, .color-intensity-1-focus.focus, .color-intensity-1-active:active, .color-intensity-1-active.active, .color-intensity-1-open.open {
+  color: #0480fe !important;
+}
+
+.color-intensity-2, .color-intensity-2-hover:hover, .color-intensity-2-focus:focus, .color-intensity-2-focus.focus, .color-intensity-2-active:active, .color-intensity-2-active.active, .color-intensity-2-open.open {
+  color: #4b5be3 !important;
+}
+
+.color-intensity-3, .color-intensity-3-hover:hover, .color-intensity-3-focus:focus, .color-intensity-3-focus.focus, .color-intensity-3-active:active, .color-intensity-3-active.active, .color-intensity-3-open.open {
+  color: #843ecd !important;
+}
+
+.color-intensity-4, .color-intensity-4-hover:hover, .color-intensity-4-focus:focus, .color-intensity-4-focus.focus, .color-intensity-4-active:active, .color-intensity-4-active.active, .color-intensity-4-open.open {
+  color: #d415af !important;
+}
+
+.color-intensity-5, .color-intensity-5-hover:hover, .color-intensity-5-focus:focus, .color-intensity-5-focus.focus, .color-intensity-5-active:active, .color-intensity-5-active.active, .color-intensity-5-open.open {
+  color: #fc01a7 !important;
+}
+
+.color-base, .color-base-hover:hover, .color-base-focus:focus, .color-base-focus.focus, .color-base-active:active, .color-base-active.active, .color-base-open.open {
+  color: #000000 !important;
+}
+
+.color-primary, .color-primary-hover:hover, .color-primary-focus:focus, .color-primary-focus.focus, .color-primary-active:active, .color-primary-active.active, .color-primary-open.open {
+  color: #0480fe !important;
+}
+
+.color-accent, .color-accent-hover:hover, .color-accent-focus:focus, .color-accent-focus.focus, .color-accent-active:active, .color-accent-active.active, .color-accent-open.open {
+  color: #d415af !important;
+}
+
+.color-neutral, .color-neutral-hover:hover, .color-neutral-focus:focus, .color-neutral-focus.focus, .color-neutral-active:active, .color-neutral-active.active, .color-neutral-open.open {
+  color: #8d8d8d !important;
+}
+
+.color-success, .color-success-hover:hover, .color-success-focus:focus, .color-success-focus.focus, .color-success-active:active, .color-success-active.active, .color-success-open.open {
+  color: #15b800 !important;
+}
+
+.color-caution, .color-caution-hover:hover, .color-caution-focus:focus, .color-caution-focus.focus, .color-caution-active:active, .color-caution-active.active, .color-caution-open.open {
+  color: #fd7f03 !important;
+}
+
+.color-error, .color-error-hover:hover, .color-error-focus:focus, .color-error-focus.focus, .color-error-active:active, .color-error-active.active, .color-error-open.open {
+  color: #fd0303 !important;
+}
+
 .table-label-base, .progress-bar-base, .badge-base, .tag-base, .legend-base {
   background-color: #000000;
 }
 
-.background-base {
+.background-base, .background-base-hover:hover, .background-base-focus:focus, .background-base-focus.focus, .background-base-active:active, .background-base-active.active, .background-base-open.open {
   background-color: #000000 !important;
 }
 
@@ -3511,7 +3567,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   background-color: #0480fe;
 }
 
-.background-primary {
+.background-primary, .background-primary-hover:hover, .background-primary-focus:focus, .background-primary-focus.focus, .background-primary-active:active, .background-primary-active.active, .background-primary-open.open {
   background-color: #0480fe !important;
 }
 
@@ -3519,7 +3575,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   background-color: #d415af;
 }
 
-.background-accent {
+.background-accent, .background-accent-hover:hover, .background-accent-focus:focus, .background-accent-focus.focus, .background-accent-active:active, .background-accent-active.active, .background-accent-open.open {
   background-color: #d415af !important;
 }
 
@@ -3527,7 +3583,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   background-color: #8d8d8d;
 }
 
-.background-neutral {
+.background-neutral, .background-neutral-hover:hover, .background-neutral-focus:focus, .background-neutral-focus.focus, .background-neutral-active:active, .background-neutral-active.active, .background-neutral-open.open {
   background-color: #8d8d8d !important;
 }
 
@@ -3535,7 +3591,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   background-color: #15b800;
 }
 
-.background-success {
+.background-success, .background-success-hover:hover, .background-success-focus:focus, .background-success-focus.focus, .background-success-active:active, .background-success-active.active, .background-success-open.open {
   background-color: #15b800 !important;
 }
 
@@ -3543,7 +3599,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   background-color: #fd7f03;
 }
 
-.background-caution {
+.background-caution, .background-caution-hover:hover, .background-caution-focus:focus, .background-caution-focus.focus, .background-caution-active:active, .background-caution-active.active, .background-caution-open.open {
   background-color: #fd7f03 !important;
 }
 
@@ -3551,8 +3607,28 @@ CUSTOM STYLES FOR TRUMBOWYG
   background-color: #fd0303;
 }
 
-.background-error {
+.background-error, .background-error-hover:hover, .background-error-focus:focus, .background-error-focus.focus, .background-error-active:active, .background-error-active.active, .background-error-open.open {
   background-color: #fd0303 !important;
+}
+
+.background-intensity-1, .background-intensity-1-hover:hover, .background-intensity-1-focus:focus, .background-intensity-1-focus.focus, .background-intensity-1-active:active, .background-intensity-1-active.active, .background-intensity-1-open.open {
+  background-color: #0480fe !important;
+}
+
+.background-intensity-2, .background-intensity-2-hover:hover, .background-intensity-2-focus:focus, .background-intensity-2-focus.focus, .background-intensity-2-active:active, .background-intensity-2-active.active, .background-intensity-2-open.open {
+  background-color: #4b5be3 !important;
+}
+
+.background-intensity-3, .background-intensity-3-hover:hover, .background-intensity-3-focus:focus, .background-intensity-3-focus.focus, .background-intensity-3-active:active, .background-intensity-3-active.active, .background-intensity-3-open.open {
+  background-color: #843ecd !important;
+}
+
+.background-intensity-4, .background-intensity-4-hover:hover, .background-intensity-4-focus:focus, .background-intensity-4-focus.focus, .background-intensity-4-active:active, .background-intensity-4-active.active, .background-intensity-4-open.open {
+  background-color: #d415af !important;
+}
+
+.background-intensity-5, .background-intensity-5-hover:hover, .background-intensity-5-focus:focus, .background-intensity-5-focus.focus, .background-intensity-5-active:active, .background-intensity-5-active.active, .background-intensity-5-open.open {
+  background-color: #fc01a7 !important;
 }
 
 .progress-bar-gradient, .legend-gradient {
@@ -3582,7 +3658,25 @@ CUSTOM STYLES FOR TRUMBOWYG
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.background-gradient-45, .background-gradient-45-hover:hover, .background-gradient-45-focus:focus, .background-gradient-45-focus.focus, .background-gradient-45-active:active, .background-gradient-45-active.active, .background-gradient-45-open.open {
+  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .progress-bar-gradient-90, .legend-gradient-90 {
+  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.background-gradient-90, .background-gradient-90-hover:hover, .background-gradient-90-focus:focus, .background-gradient-90-focus.focus, .background-gradient-90-active:active, .background-gradient-90-active.active, .background-gradient-90-open.open {
   background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
@@ -3600,7 +3694,25 @@ CUSTOM STYLES FOR TRUMBOWYG
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.background-gradient-135, .thumbnail, .background-gradient-135-hover:hover, .background-gradient-135-focus:focus, .background-gradient-135-focus.focus, .background-gradient-135-active:active, .background-gradient-135-active.active, .background-gradient-135-open.open {
+  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .progress-bar-gradient-180, .legend-gradient-180 {
+  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.background-gradient-180, .background-gradient-180-hover:hover, .background-gradient-180-focus:focus, .background-gradient-180-focus.focus, .background-gradient-180-active:active, .background-gradient-180-active.active, .background-gradient-180-open.open {
   background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
@@ -3618,7 +3730,25 @@ CUSTOM STYLES FOR TRUMBOWYG
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.background-gradient-225, .background-gradient-225-hover:hover, .background-gradient-225-focus:focus, .background-gradient-225-focus.focus, .background-gradient-225-active:active, .background-gradient-225-active.active, .background-gradient-225-open.open {
+  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .progress-bar-gradient-270, .legend-gradient-270 {
+  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
+  /* FF3.6-15 */
+  background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.background-gradient-270, .background-gradient-270-hover:hover, .background-gradient-270-focus:focus, .background-gradient-270-focus.focus, .background-gradient-270-active:active, .background-gradient-270-active.active, .background-gradient-270-open.open {
   background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
@@ -3636,61 +3766,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.background-gradient-45 {
-  background-image: -moz-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
-  /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(45deg , #0480fe 0%, #d415af 100%) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.background-gradient-90 {
-  background-image: -moz-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
-  /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(90deg , #0480fe 0%, #d415af 100%) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(0deg , #0480fe 0%, #d415af 100%) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.background-gradient-135, .thumbnail {
-  background-image: -moz-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
-  /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(135deg , #0480fe 0%, #d415af 100%) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(-45deg , #0480fe 0%, #d415af 100%) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.background-gradient-180 {
-  background-image: -moz-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
-  /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(180deg , #0480fe 0%, #d415af 100%) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(-90deg , #0480fe 0%, #d415af 100%) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.background-gradient-225 {
-  background-image: -moz-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
-  /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(225deg , #0480fe 0%, #d415af 100%) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(-135deg , #0480fe 0%, #d415af 100%) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.background-gradient-270 {
-  background-image: -moz-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
-  /* FF3.6-15 */
-  background-image: -webkit-linear-gradient(270deg , #0480fe 0%, #d415af 100%) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background-image: linear-gradient(-180deg , #0480fe 0%, #d415af 100%) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.background-gradient-315 {
+.background-gradient-315, .background-gradient-315-hover:hover, .background-gradient-315-focus:focus, .background-gradient-315-focus.focus, .background-gradient-315-active:active, .background-gradient-315-active.active, .background-gradient-315-open.open {
   background-image: -moz-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
   /* FF3.6-15 */
   background-image: -webkit-linear-gradient(315deg , #0480fe 0%, #d415af 100%) ;
@@ -3699,109 +3775,81 @@ CUSTOM STYLES FOR TRUMBOWYG
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.background-global {
+.background-global, .background-global-hover:hover, .background-global-focus:focus, .background-global-focus.focus, .background-global-active:active, .background-global-active.active, .background-global-open.open {
   background-color: #FFFFFF !important;
 }
 
-.body-inverse .background-global {
-  background-color: #3d3d3d !important;
-}
-
-.background-global-contrast {
-  background-color: #ecedf0 !important;
-}
-
-.body-inverse .background-global-contrast {
+.body-inverse .background-global, .body-inverse .background-global-hover:hover, .body-inverse .background-global-focus:focus, .body-inverse .background-global-focus.focus, .body-inverse .background-global-active:active, .body-inverse .background-global-active.active, .body-inverse .background-global-open.open {
   background-color: #222222 !important;
 }
 
-.background-intensity-1 {
-  background-color: #0480fe !important;
+.background-global-contrast, .background-global-contrast-hover:hover, .background-global-contrast-focus:focus, .background-global-contrast-focus.focus, .background-global-contrast-active:active, .background-global-contrast-active.active, .background-global-contrast-open.open {
+  background-color: #ecedf0 !important;
 }
 
-.background-intensity-2 {
-  background-color: #4b5be3 !important;
+.body-inverse .background-global-contrast, .body-inverse .background-global-contrast-hover:hover, .body-inverse .background-global-contrast-focus:focus, .body-inverse .background-global-contrast-focus.focus, .body-inverse .background-global-contrast-active:active, .body-inverse .background-global-contrast-active.active, .body-inverse .background-global-contrast-open.open {
+  background-color: #000000 !important;
 }
 
-.background-intensity-3 {
-  background-color: #843ecd !important;
+.background-global-color, .background-global-color-hover:hover, .background-global-color-focus:focus, .background-global-color-focus.focus, .background-global-color-active:active, .background-global-color-active.active, .background-global-color-open.open {
+  background-color: #000000 !important;
 }
 
-.background-intensity-4 {
-  background-color: #d415af !important;
+.body-inverse .background-global-color, .body-inverse .background-global-color-hover:hover, .body-inverse .background-global-color-focus:focus, .body-inverse .background-global-color-focus.focus, .body-inverse .background-global-color-active:active, .body-inverse .background-global-color-active.active, .body-inverse .background-global-color-open.open {
+  background-color: #FFFFFF !important;
 }
 
-.background-intensity-5 {
-  background-color: #fc01a7 !important;
+.background-global-color-contrast, .background-global-color-contrast-hover:hover, .background-global-color-contrast-focus:focus, .background-global-color-contrast-focus.focus, .background-global-color-contrast-active:active, .background-global-color-contrast-active.active, .background-global-color-contrast-open.open {
+  background-color: #3d3d3d !important;
+}
+
+.body-inverse .background-global-color-contrast, .body-inverse .background-global-color-contrast-hover:hover, .body-inverse .background-global-color-contrast-focus:focus, .body-inverse .background-global-color-contrast-focus.focus, .body-inverse .background-global-color-contrast-active:active, .body-inverse .background-global-color-contrast-active.active, .body-inverse .background-global-color-contrast-open.open {
+  background-color: #ecedf0 !important;
 }
 
 .background-gradient, .background-gradient-45, .background-gradient-90, .background-gradient-135, .thumbnail, .background-gradient-180, .background-gradient-225, .background-gradient-270, .background-gradient-315 {
   background-color: #0480fe !important;
 }
 
-.background-transparent {
+.background-transparent, .background-transparent-hover:hover, .background-transparent-focus:focus, .background-transparent-focus.focus, .background-transparent-active:active, .background-transparent-active.active, .background-transparent-open.open {
   background-color: transparent !important;
 }
 
 /* COLOR CLASSES */
-.color-global {
+.color-global, .color-global-hover:hover, .color-global-focus:focus, .color-global-focus.focus, .color-global-active:active, .color-global-active.active, .color-global-open.open {
   color: #000000 !important;
 }
 
-.body-inverse .color-global {
+.body-inverse .color-global, .body-inverse .color-global-hover:hover, .body-inverse .color-global-focus:focus, .body-inverse .color-global-focus.focus, .body-inverse .color-global-active:active, .body-inverse .color-global-active.active, .body-inverse .color-global-open.open {
   color: #FFFFFF !important;
 }
 
-.color-intensity-1 {
-  color: #0480fe !important;
+.color-global-contrast, .color-global-contrast-hover:hover, .color-global-contrast-focus:focus, .color-global-contrast-focus.focus, .color-global-contrast-active:active, .color-global-contrast-active.active, .color-global-contrast-open.open {
+  color: #3d3d3d !important;
 }
 
-.color-intensity-2 {
-  color: #4b5be3 !important;
+.body-inverse .color-global-contrast, .body-inverse .color-global-contrast-hover:hover, .body-inverse .color-global-contrast-focus:focus, .body-inverse .color-global-contrast-focus.focus, .body-inverse .color-global-contrast-active:active, .body-inverse .color-global-contrast-active.active, .body-inverse .color-global-contrast-open.open {
+  color: #ecedf0 !important;
 }
 
-.color-intensity-3 {
-  color: #843ecd !important;
+.color-global-background, .color-global-background-hover:hover, .color-global-background-focus:focus, .color-global-background-focus.focus, .color-global-background-active:active, .color-global-background-active.active, .color-global-background-open.open {
+  color: #FFFFFF !important;
 }
 
-.color-intensity-4 {
-  color: #d415af !important;
+.body-inverse .color-global-background, .body-inverse .color-global-background-hover:hover, .body-inverse .color-global-background-focus:focus, .body-inverse .color-global-background-focus.focus, .body-inverse .color-global-background-active:active, .body-inverse .color-global-background-active.active, .body-inverse .color-global-background-open.open {
+  color: #222222 !important;
 }
 
-.color-intensity-5 {
-  color: #fc01a7 !important;
+.color-global-background-contrast, .color-global-background-contrast-hover:hover, .color-global-background-contrast-focus:focus, .color-global-background-contrast-focus.focus, .color-global-background-contrast-active:active, .color-global-background-contrast-active.active, .color-global-background-contrast-open.open {
+  color: #ecedf0 !important;
 }
 
-.color-inherit {
-  color: inherit !important;
-}
-
-.color-base {
+.body-inverse .color-global-background-contrast, .body-inverse .color-global-background-contrast-hover:hover, .body-inverse .color-global-background-contrast-focus:focus, .body-inverse .color-global-background-contrast-focus.focus, .body-inverse .color-global-background-contrast-active:active, .body-inverse .color-global-background-contrast-active.active, .body-inverse .color-global-background-contrast-open.open {
   color: #000000 !important;
 }
 
-.color-primary {
-  color: #0480fe !important;
-}
-
-.color-accent {
-  color: #d415af !important;
-}
-
-.color-neutral {
-  color: #8d8d8d !important;
-}
-
-.color-success {
-  color: #15b800 !important;
-}
-
-.color-caution {
-  color: #fd7f03 !important;
-}
-
-.color-error {
-  color: #fd0303 !important;
+.color-inherit, .color-inherit-hover:hover, .color-inherit-focus:focus, .color-inherit-focus.focus, .color-inherit-active:active, .color-inherit-active.active, .color-inherit-open.open {
+  color: inherit !important;
 }
 
 /* BACKGROUND CLASSES */

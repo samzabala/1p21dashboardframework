@@ -26,16 +26,16 @@ $prefix: '.legend';
 
 	@each $tag,$color in $calculated-brand-color-declarations {
 		&-#{$tag} {
-			@extend %background-#{$tag};
+			@extend %for-background-#{$tag};
 		}
 	}
 	
 	&-gradient {
-		@extend %background-gradient;
+		@extend %for-background-gradient;
 
 		@each $angle in $calculated-gradient-angles {
 			&-#{$angle} {
-				@extend %background-gradient-#{$angle};
+				@extend %for-background-gradient-#{$angle};
 			}
 		}
 	}

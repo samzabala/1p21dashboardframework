@@ -12,6 +12,14 @@ $prefix: '.list-group';
 	padding: 0;
 	border-bottom: $list-group-border-width solid $list-group-border-color;
 
+	.body-inverse & {
+		border-bottom-color: $list-group-border-color-inverse;
+
+		li {
+			border-top-color:  $list-group-border-color-inverse;
+		}
+	}
+
 	li {
 		border-top: $list-group-border-width solid $list-group-border-color;
 

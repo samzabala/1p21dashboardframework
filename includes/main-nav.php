@@ -5,7 +5,11 @@
 		id="dashboard-block-main-nav-toggle"
 		
 		class="btn
-		btn-default
+		color-primary-hover
+		color-primary-active
+		color-primary-focus
+		background-primary-open
+		color-global-background-open
 		btn-symbol
 		btn-no-radius
 		dashboard-sidenav-toggle

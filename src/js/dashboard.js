@@ -12,18 +12,22 @@
 // 		});
 // 	});
 //   }
-jQuery.noConflict();
-(function($,_1p21,window){
+window.jQuery && jQuery.noConflict();
+(function(_1p21,Vue,window){
 	
-	// $(window).load(function(){
+	// const dashboard = {};
+	// dashboard.sidebar
+	// dashboard.content
+ 
+		new Vue ({
+			el: "#dashboard",
+			data: {
+				sideNav: {
+					open: false
+				}
+			}
+		});
+	
 
-	// 	$('body').on('click','.dashboard-sidenav-toggle',function(e){
-	// 		e.preventDefault();
-	// 		console.log('hola bitchacho');
-	// 		$(this).toggleClass('open');
-	// 		$('#dashboard-block-sidebar').toggleClass('open');
-	// 	});
-	// })
 
-
-}(jQuery,_1p21,window));
+}(_1p21,Vue,window));

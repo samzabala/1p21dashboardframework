@@ -1,14 +1,14 @@
-jQuery.noConflict();
-(function(window,$){
+window.jQuery && jQuery.noConflict();
+(function($,window){
 	var _1p21 = window._1p21 || {};
+	var _ = {};
 
-	$.trumbowyg.svgPath = '/assets/fonts/icons.svg';
-	$.trumbowyg.hideButtonTexts = true;
+	$ && ($.trumbowyg.svgPath = '/assets/fonts/icons.svg');
+	$ && ($.trumbowyg.hideButtonTexts = true);
 
 	_1p21.lazyLoad = _1p21.lazyLoad || true;
 
-	var _ = {};
-
+	
 	
 	_.reverseArray = function(arr) {
 	var newArray = [];
@@ -32,7 +32,6 @@ jQuery.noConflict();
 
 	}
 
-
 	//polyifiulls
 	if (!Element.prototype.matches) {
 		Element.prototype.matches = Element.prototype.msMatchesSelector || 
@@ -40,15 +39,15 @@ jQuery.noConflict();
 	}
 	
 	if (!Element.prototype.closest) {
-	Element.prototype.closest = function(s) {
-		var el = this;
-	
-		do {
-		if (el.matches(s)) return el;
-		el = el.parentElement || el.parentNode;
-		} while (el !== null && el.nodeType === 1);
-		return null;
-	};
+		Element.prototype.closest = function(s) {
+			var el = this;
+		
+			do {
+			if (el.matches(s)) return el;
+			el = el.parentElement || el.parentNode;
+			} while (el !== null && el.nodeType === 1);
+			return null;
+		};
 	}
 	
 	//maxs
@@ -72,36 +71,29 @@ jQuery.noConflict();
 		mode = mode || 'below'; //below,within,above
 		var currIndex = _.br_arr.indexOf(breakpoint);
 
-
 		switch(mode) {
 			case 'below': //max-width
 				return window.outerWidth <= _.br_vals[breakpoint];
-				break;
 			case 'within':
 				return (
 					window.outerWidth <= _.br_vals[breakpoint] //max
 				) && (
 					window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] //min
 				)
-				break;
 			case 'above':
 				return (currIndex > 0) ? ( window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] ) : (window.outerWidth > _.br_vals[ _.br_arr[currIndex] ]);
-				break;
 		}
-		
-
 	}
 
 
 	 _1p21.addEvent = function(parent, evt, selector, handler) {
+		parent = parent || selector;
 		parent.addEventListener(evt, function(event) {
-			
 		  if (event.target.matches(selector + ', ' + selector + ' *')) {
 			handler.apply(event.target.closest(selector), arguments);
 		  }
-		}, true);
+		}, false);
 	  }
-
 
 	/*
 	Element to slide gets the following CSS:
@@ -164,39 +156,30 @@ jQuery.noConflict();
 	
 	};
 
-
-
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
 	_1p21.initGrid = function(moduleGrid){
 		
-		
-
 		var availablePropetiesParent = [
-			'grid',
-			'grid-template',
 			'grid-template-rows',
 			'grid-template-columns',
 			'grid-template-areas',
 
-			'grid-column-start',
-			'grid-column-end',
-			'grid-row-start',
-			'grid-row-end',
 
-			'grid-auto-flow',
-			
-			'grid-auto-columns',
-			'grid-auto-rows',
-			
+			'grid-column-start',
+			'grid-template-end',
+			'grid-template',
 			'grid-column-gap',
 			'grid-row-gap',
-			
 			'justify-items',
 			'align-items',
 			'justify-content',
 			'align-content',
 			'place-content',
+			'grid-auto-columns',
+			'grid-auto-rows',
+			'grid-auto-flow',
+			'grid'
 		];
 
 
@@ -211,12 +194,11 @@ jQuery.noConflict();
 			'grid-column-end',
 			'grid-row-start',
 			'grid-row-end',
-
 			'justify-self',
 			'align-self',
 			'place-self',
 		];
-
+		
 		function renderProps(modElement,props){
 
 			props.forEach(function(prop){
@@ -224,7 +206,6 @@ jQuery.noConflict();
 				var propsSet = false;
 				var propSetBr = false;
 				var smallestStyledBr = null;
-				
 				
 				//check for breakpointz first
 				_.reverseArray(_.br_to_loop).forEach(function(br){
@@ -240,17 +221,15 @@ jQuery.noConflict();
 					}
 				});
 
-
-				if( modElement.hasAttribute('data-'+prop) ){
-
+				if( modElement.hasAttribute('data-'+prop) && !propsSet ){
 				
 					//check for all breakpoint
 					if(!propsSet && !propSetBr) {
 						modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop)
 						propsSet = true;
 					}
-				}else{
 
+				}else{
 					
 					if(
 						modElement.style[prop.toCamelCase()] !== null
@@ -264,13 +243,8 @@ jQuery.noConflict();
 			}); 
 		}
 
-
 		renderProps(moduleGrid,availablePropetiesParent);
-
-
-
-		//chchchchchildren
-
+		
 		var moduleChildren = Array.from(moduleGrid.children).filter(function(child){
 			return child.matches('.module');
 		})
@@ -281,9 +255,6 @@ jQuery.noConflict();
 		});
 		
 	}
-
-
-
 
 	// //will run. right away. boi
 	// //lazyload
@@ -339,7 +310,6 @@ jQuery.noConflict();
 		document.querySelector('body').classList.add('lazy-initialized');
 	}
 
-
 	function readyGrid(){
 		
 		var grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
@@ -347,6 +317,7 @@ jQuery.noConflict();
 			_1p21.initGrid(grid);
 		});
 	}
+
 	_.functions_on_load.push(readyGrid);
 	_.functions_on_resize.push(readyGrid);
 
@@ -371,23 +342,8 @@ jQuery.noConflict();
 		
 		});
 
-		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+		$ && $('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
 			$(this).trumbowyg({
-				// btns: [
-				// 	['viewHTML'],
-				// 	['undo', 'redo'], // Only supported in Blink browsers
-				// 	['formatting'],
-				// 	['strong', 'em', 'del'],
-				// 	// ['superscript', 'subscript'],
-				// 	['link'],
-				// 	['insertImage'],
-				// 	// ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-				// 	['unorderedList', 'orderedList'],
-				// 	['horizontalRule'],
-				// 	['removeformat'],
-				// 	['fullscreen'],
-				// 	['upload']
-				// ],
 				btns: [
 					['viewHTML'],
 					['strong', 'em',],
@@ -397,9 +353,6 @@ jQuery.noConflict();
 					['upload'],
 					['fullscreen']
 				],
-				// prefix: 'input-trumbowyg-',
-				// autogrow: true,
-				// autogrowOnEnter: true,
 				removeformatPasted: true,
 				tagsToRemove: ['script']
 			});
@@ -431,12 +384,12 @@ jQuery.noConflict();
 		_1p21.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
-				selector = _.getTheToggled(e.target,'.accordion');
-				selectorAncestor = selector.closest('.accordion-group');
-				selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
+			var selector = _.getTheToggled(e.target,'.accordion');
+			var selectorAncestor = selector.closest('.accordion-group');
+			var selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('.accordion');
 				});
-				clickedSiblings = _1p21.getSiblings(selector).filter(function(sibling){
+			var clickedSiblings = _1p21.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('*[data-toggle="accordion"]');
 				})
 
@@ -478,15 +431,7 @@ jQuery.noConflict();
 			var clicked = e.target;
 				selector = _.getTheToggled(clicked,'.dropdown');
 				console.log(clicked,selector);
-				selectorAncestor = selector.closest('li,.nav-item');
-
-				selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
-					return sibling.matches('.dropdown');
-				});
-
-				clickedSiblings = _1p21.getSiblings(selector).filter(function(sibling){
-					return sibling.matches('*[data-toggle="dropdown"]');
-				})
+				var selectorAncestor = selector.closest('li,.nav-item');
 
 
 				if( selector ){
@@ -523,10 +468,32 @@ jQuery.noConflict();
 				}
 		})
 
-		//btn group
+		// btn group
 		_1p21.addEvent(document.body,'click','.btn-group-toggle .btn',function(e){
 			
 			e.preventDefault();
+			var clicked = e.target;
+			var selectorSiblings = _1p21.getSiblings(clicked);
+
+			var resetter = _1p21.getSiblings(clicked).filter(function(butt){
+				return butt.classList.contains('btn-toggle-reset');
+			});
+
+			resetter.forEach(function(butt){
+				butt.classList.remove('active');
+			})
+
+			if(
+				(!clicked.closest('.btn-group-toggle-multiple'))
+				|| (clicked.classList.contains('btn-toggle-reset'))
+			){
+				selectorSiblings.forEach(function(sibling){
+					sibling.classList.remove('active')
+				})
+				clicked.classList.add('active');
+			}else{
+				clicked.classList.toggle('active');
+			}
 		})
 
 		//tooltip
@@ -534,12 +501,6 @@ jQuery.noConflict();
 			e.preventDefault();
 			_1p21.createToolTip(e.target);
 		});
-
-		document.body.addEventListener('click',function(e){
-			if(!e.target.matches('*[data-toggle="tooltip-click"]')){
-				_1p21.destroyToolTip();
-			}
-		})
 			
 			_1p21.addEvent(document.body,'mouseenter','*[data-toggle="tooltip-hover"]',function(e){
 				_1p21.createToolTip(this);
@@ -548,9 +509,6 @@ jQuery.noConflict();
 			_1p21.addEvent(document.body,'mouseleave','*[data-toggle="tooltip-hover"]',function(e){
 				_1p21.destroyToolTip();
 			});
-
-
-
 
 		_1p21.createToolTip = function(triggerer) {
 			if(triggerer) {
@@ -731,9 +689,7 @@ jQuery.noConflict();
 
 				toolTip.style.top = pos.y()+'px';
 				toolTip.style.left = pos.x()+'px';
-
 				_1p21.activeToolTipTrigger = triggerer
-
 
 			}
 
@@ -744,20 +700,13 @@ jQuery.noConflict();
 			toolTip && toolTip.parentNode.removeChild(toolTip);
 		}
 
-
-
-
 		document.querySelector('body').classList.remove('body-loading');
 		document.querySelector('body').classList.add('body-loaded');
 
-		
-
 	})
-
-
 
 	//put boi on global
 	window._1p21 = _1p21;
 
 
-}(window,jQuery));
+}(window.jQuery, window));

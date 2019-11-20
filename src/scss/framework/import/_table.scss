@@ -150,7 +150,7 @@ $prefix: '.table';
 			
 			@each $tag,$color in $calculated-brand-color-declarations {
 				&-#{$tag} {
-					@extend %background-#{$tag};
+					@extend %for-background-#{$tag};
 				}
 			}
 		}
