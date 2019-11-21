@@ -1,5 +1,5 @@
 
-<h1 data-toggle="accordion"> / editor <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Editor <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 	<form class="special-form" action="" method="get">
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
@@ -12,17 +12,20 @@
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 			<label for="" class="sr-only">uuugh</label>
 		
-			<div id="editor-demo" class="input input-trumbowyg" data-quill-placeholder="Please write your new note here...">
-<h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6>
-			</div>
+			<textarea id="editor-demo" class="input input-trumbowyg">
+<p>Make this textarea a wisywig with <code>.input-trumbowyg</code>.</p><p>To make your own custom trumbo boi add the class <code>.input-tyumbowyg-custom</code> </p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6><h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6>
+			</textarea>
 		</div>
 		<a href="#" class="btn btn-primary">Submet et</a>
 	</form>
 </div>
 	
 
-<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
+	<p>
+		Add a tooltip with <code>data-toggle="tooltip-click"</code> of  <code>data-toggle="tooltip-hover"</code>
+	</p>
 
 	<h2>Tooltip on click </h2>
 		
@@ -104,7 +107,7 @@
 		
 
 
-<h1 data-toggle="accordion">Nav <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Nav <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 
 	<div class="nav">
@@ -151,7 +154,7 @@
 
 </div>
 
-<h1 data-toggle="accordion">Progress Bar <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Progress Bar <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 
 
@@ -350,12 +353,8 @@
 		</div>
 </div>
 
-
-		
-
-
-
-<h1 data-toggle="accordion">Dropdowns <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Dropdowns <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
 	<h2>Basic offset classes</h2>
 		<br>
 		<br>
@@ -487,11 +486,17 @@
 
 	
 
-<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+
+
+
+</div>
+
+
+<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 
 	<form class="form-horizontal">
-		<fieldset>
+	
 			<h2>sizes</h2>
 			
 				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
@@ -1011,11 +1016,11 @@
 			<button class="btn btn-default">Cancel</button> <button class="btn btn-primary">Submit</button>
 
 			<input class="btn btn-primary" value="sumbnititit">
-		</fieldset>
+			
 	</form>
 </div>
 
-<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 	<h2>Basic</h2>
 	<button type="button" class="btn btn-default">Default</button>
@@ -1240,57 +1245,66 @@
 </div>
 
 
-<h1>list group <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<ul class="list-group">
-	<li>
-	<span class="badge badge-primary"></span>
-	Cras justo odio
-	</li>
-	<li>
-	Dapibus ac facilisis in
-	</li>
-	<li>
-	Morbi leo risus
-	</li>
-</ul>
+<h1 data-toggle="accordion">list group <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
 
-
-<h1>SPECIAL TEXT <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<p class="special-primary">
-Yo I'm jumbo fight me
-</p>
-
-<p class="special-secondary background-gradient text-clip-background">
-Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-background
-</p>
-
-
-<h1>Thumbnail <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<div class="thumbnail">
-    <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+	<ul class="list-group">
+		<li>
+		<span class="badge badge-primary"></span>
+		Cras justo odio
+		</li>
+		<li>
+		Dapibus ac facilisis in
+		</li>
+		<li>
+		Morbi leo risus
+		</li>
+	</ul>
 </div>
 
-<div class="thumbnail">
-    <span class="thumbnail-text">
-		eh
-	</span>
-</div>
-<h2>Thumbnail but inline</h2>
-<div class="thumbnail thumbnail-inline">
-    <img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
-</div>
-<div class="thumbnail thumbnail-inline">
-    <span class="thumbnail-text">
-		MF
-	</span>
+<h1 data-toggle="accordion">SPECIAL TEXT <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+	<p class="special-primary">
+		Yo I'm jumbo fight me
+	</p>
+
+	<p class="special-secondary background-gradient text-clip-background">
+		Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-background
+	</p>
+
 </div>
 
-<h2>Ugly image size</h2>
-<div class="thumbnail">
-<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+<h1>Thumbnail <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+	<div class="thumbnail">
+		<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+	</div>
+
+	<div class="thumbnail">
+		<span class="thumbnail-text">
+			eh
+		</span>
+	</div>
+
+	<h2>Thumbnail but inline</h2>
+	<div class="thumbnail thumbnail-inline">
+		<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+	</div>
+
+	<div class="thumbnail thumbnail-inline">
+		<span class="thumbnail-text">
+			MF
+		</span>
+	</div>
+
+	<h2>Ugly image size</h2>
+	<div class="thumbnail">
+		<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+	</div>
+
 </div>
 
-<h1 data-toggle="accordion">Symbols reprise but with color classes on em <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
+<h1 data-toggle="accordion">Symbols reprise but with color classes on em <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 	<p>
 		Symbol Square <i class="color-primary symbol symbol-square"></i>
@@ -1344,166 +1358,241 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 
 </div>
 	
-<h1 data-toggle="accordion">Badges <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<p>
-	<span class="badge badge-primary"></span> Primary
-</p>
-<p>
-	<span class="badge badge-accent"></span> Accent
-</p>
-<p>
-	<span class="badge badge-base"></span> Base
-</p>
-<p>
-	<span class="badge badge-neutral"></span> Neutral
-</p>
-<p>
-	<span class="badge badge-success"></span> Success
-</p>
-<p>
-	<span class="badge badge-caution"></span> Caution
-</p>
-<p>
-	<span class="badge badge-error"></span> Error
-</p>
+<h1 data-toggle="accordion">Badges <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+	<p>
+		<span class="badge badge-primary"></span> Primary
+	</p>
+	<p>
+		<span class="badge badge-accent"></span> Accent
+	</p>
+	<p>
+		<span class="badge badge-base"></span> Base
+	</p>
+	<p>
+		<span class="badge badge-neutral"></span> Neutral
+	</p>
+	<p>
+		<span class="badge badge-success"></span> Success
+	</p>
+	<p>
+		<span class="badge badge-caution"></span> Caution
+	</p>
+	<p>
+		<span class="badge badge-error"></span> Error
+	</p>
 
 
-<p>
-	<span class="badge badge-primary badge-small"></span> Small
-</p>
-<p>
-	<span class="badge badge-primary badge-large"></span> Large
-</p>
+	<p>
+		<span class="badge badge-primary badge-small"></span> Small
+	</p>
+	<p>
+		<span class="badge badge-primary badge-large"></span> Large
+	</p>
 
-<h4>Custom color</h4>
-<span class="badge" style="background-color: pink"></span>
+	<h4>Custom color</h4>
+	<span class="badge" style="background-color: pink"></span>
+</div>
 
-<h1 data-toggle="accordion">Legends <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<p>
-	<span class="legend legend-primary"></span> Primary
-</p>
 
-<p>
-	<span class="legend legend-accent"></span> Accent
-</p>
+<h1 data-toggle="accordion">Legends <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+	<p>
+		<span class="legend legend-primary"></span> Primary
+	</p>
 
-<p>
-	<span class="legend legend-base"></span> Base
-</p>
+	<p>
+		<span class="legend legend-accent"></span> Accent
+	</p>
 
-<p>
-	<span class="legend legend-neutral"></span> Neutral
-</p>
+	<p>
+		<span class="legend legend-base"></span> Base
+	</p>
 
-<p>
-	<span class="legend legend-success"></span> Success
-</p>
+	<p>
+		<span class="legend legend-neutral"></span> Neutral
+	</p>
 
-<p>
-	<span class="legend legend-caution"></span> Caution
-</p>
+	<p>
+		<span class="legend legend-success"></span> Success
+	</p>
 
-<p>
-	<span class="legend legend-error"></span> Error
-</p>
+	<p>
+		<span class="legend legend-caution"></span> Caution
+	</p>
 
-<h4>Custom color</h4>
-<span class="legend" style="background-color: pink"></span> Custom
+	<p>
+		<span class="legend legend-error"></span> Error
+	</p>
+
+	<h4>Custom color</h4>
+	<span class="legend" style="background-color: pink"></span> Custom
+</div>
 	
 
-<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<span class="tag tag-primary">Primary</span>
-<span class="tag tag-accent">Accent</span>
-<span class="tag tag-base">Base</span>
-<span class="tag tag-neutral">Neutral</span>
-<span class="tag tag-success">Success</span>
-<span class="tag tag-caution">Caution</span>
-<span class="tag tag-error">Error</span>
-<h4>Custom color</h4>
-<span class="tag" style="background-color: violet">Custom</span>
+<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+	<span class="tag tag-primary">Primary</span>
+	<span class="tag tag-accent">Accent</span>
+	<span class="tag tag-base">Base</span>
+	<span class="tag tag-neutral">Neutral</span>
+	<span class="tag tag-success">Success</span>
+	<span class="tag tag-caution">Caution</span>
+	<span class="tag tag-error">Error</span>
+	<h4>Custom color</h4>
+	<span class="tag" style="background-color: violet">Custom</span>
+</div>
 
 
-<h1 data-toggle="accordion">Table <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<table class="table">
-	<thead>
-	<tr>
-			<th class="table-cell-no-gutter">#</th>
-			<th>Column heading</th>
-			<th>Column heading</th>
-			<th class="text-align-right">Column heading</th>
-			<th>Total</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-			<td>Column content</td>
-			<td>Column content</td>
-			<td class="text-align-right">Column content</td>
-			<td class="text-align-center">69</td>
-		</tr>
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-			<td>Column content</td>
-			<td>Column content</td>
-			<td class="text-align-right">Column content</td>
-			<td class="text-align-center">420</td>
-		</tr>
-		
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
-			<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-			<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-			<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-			<td class="text-align-center">666</td>
-		</tr>
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-			<td>Column content</td>
-			<td>Column content</td>
-			<td class="text-align-right">Column content</td>
-			<td class="text-align-center">0</td>
-		</tr>
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
-			<td>Column content</td>
-			<td>Column content</td>
-			<td class="text-align-right">Column content</td>
-			<td class="text-align-center">0</td>
-		</tr>
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-			<td>Column content</td>
-			<td>Column content</td>
-			<td class="text-align-right">Column content</td>
-			<td class="text-align-center">0</td>
-		</tr>
-		<tr>
-			<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-			<td>Column content</td>
-			<td>Column content</td>
-			<td class="text-align-right">Column content</td>
-			<td class="text-align-center">0</td>
-		</tr>
-	</tbody>
-</table>
-
-<h2>Table small and with wrapper so you can scroll through the bullshit</h2>
-<div class="table-wrapper">
-	<table class="table-small">
+<h1 data-toggle="accordion">Table <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+	<table class="table">
 		<thead>
-		<tr>
-				<th class="table-cell-no-gutter">#</th>
-				<th>Column heading</th>
-				<th>Column heading</th>
-				<th class="text-align-right">Column heading</th>
-				<th>Total</th>
-			</tr>
-		</thead>
+			<tr>
+					<th class="table-cell-no-gutter">#</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+					<th class="text-align-right">Column heading</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td class="text-align-right">Column content</td>
+					<td class="text-align-center">69</td>
+				</tr>
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td class="text-align-right">Column content</td>
+					<td class="text-align-center">420</td>
+				</tr>
+				
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+					<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+					<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+					<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+					<td class="text-align-center">666</td>
+				</tr>
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td class="text-align-right">Column content</td>
+					<td class="text-align-center">0</td>
+				</tr>
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td class="text-align-right">Column content</td>
+					<td class="text-align-center">0</td>
+				</tr>
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td class="text-align-right">Column content</td>
+					<td class="text-align-center">0</td>
+				</tr>
+				<tr>
+					<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+					<td>Column content</td>
+					<td>Column content</td>
+					<td class="text-align-right">Column content</td>
+					<td class="text-align-center">0</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Table small and with wrapper so you can scroll through the bullshit</h2>
+		<div class="table-wrapper">
+			<table class="table-small">
+				<thead>
+				<tr>
+						<th class="table-cell-no-gutter">#</th>
+						<th>Column heading</th>
+						<th>Column heading</th>
+						<th class="text-align-right">Column heading</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+						<td>Column content</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">69</td>
+					</tr>
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+						<td>Column content</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">420</td>
+					</tr>
+					
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+						<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+						<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+						<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+						<td class="text-align-center">666</td>
+					</tr>
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+						<td>Column content</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+						<td>Column content</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+						<td>Column content</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr>
+						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+						<td>Column content</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		<h2>Table but large spacing + color scheme</h2>
+
+		<table class="table table-large">
+			<thead>
+			<tr>
+					<th class="table-cell-no-gutter">#</th>
+					<th>Column heading</th>
+					<th>Column heading</th>
+					<th class="text-align-right">Column heading</th>
+					<th class="text-align-center">Total</th>
+				</tr>
+			</thead>
 		<tbody>
 			<tr>
 				<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-				<td>Column content</td>
+				<td><div class="thumbnail thumbnail-inline"><span class="thumbnail-text">YS</span></div></td>
 				<td>Column content</td>
 				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">69</td>
@@ -1515,38 +1604,66 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">420</td>
 			</tr>
-			
 			<tr>
+				<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
+				<td>Custom label color</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">420</td>
+			</tr>
+			
+			<tr class="table-row-success">
 				<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
-				<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-				<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
-				<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
+				<td>Success</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">666</td>
 			</tr>
-			<tr>
+			<tr class="table-row-error">
 				<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-				<td>Column content</td>
+				<td>Error</td>
 				<td>Column content</td>
 				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">0</td>
 			</tr>
-			<tr>
+			<tr class="table-row-caution">
 				<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
-				<td>Column content</td>
+				<td>Caution</td>
 				<td>Column content</td>
 				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">0</td>
 			</tr>
-			<tr>
+			<tr class="table-row-primary">
 				<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-				<td>Column content</td>
+				<td>Primary</td>
 				<td>Column content</td>
 				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">0</td>
 			</tr>
-			<tr>
+			<tr class="table-row-accent">
 				<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+				<td>accent</td>
 				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+			<tr class="table-row-neutral">
+				<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
+				<td>neutral</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+			<tr class="table-row-base">
+				<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
+				<td>base</td>
+				<td>Column content</td>
+				<td class="text-align-right">Column content</td>
+				<td class="text-align-center">0</td>
+			</tr>
+			<tr class="table-row-disabled">
+				<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+				<td>Disabled</td>
 				<td>Column content</td>
 				<td class="text-align-right">Column content</td>
 				<td class="text-align-center">0</td>
@@ -1554,389 +1671,297 @@ Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-ba
 		</tbody>
 	</table>
 
-</div>
-<h2>Table but large spacing + color scheme</h2>
 
-<table class="table table-large">
-	<thead>
-	<tr>
-			<th class="table-cell-no-gutter">#</th>
-			<th>Column heading</th>
-			<th>Column heading</th>
-			<th class="text-align-right">Column heading</th>
-			<th class="text-align-center">Total</th>
-		</tr>
-	</thead>
-<tbody>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-		<td><div class="thumbnail thumbnail-inline"><span class="thumbnail-text">YS</span></div></td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">69</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">420</td>
-	</tr>
-	<tr>
-		<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
-		<td>Custom label color</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">420</td>
-	</tr>
-	
-	<tr class="table-row-success">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
-		<td>Success</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">666</td>
-	</tr>
-	<tr class="table-row-error">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-		<td>Error</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr class="table-row-caution">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
-		<td>Caution</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr class="table-row-primary">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-		<td>Primary</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr class="table-row-accent">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-		<td>accent</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr class="table-row-neutral">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
-		<td>neutral</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr class="table-row-base">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
-		<td>base</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-	<tr class="table-row-disabled">
-		<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-		<td>Disabled</td>
-		<td>Column content</td>
-		<td class="text-align-right">Column content</td>
-		<td class="text-align-center">0</td>
-	</tr>
-</tbody>
-</table>
-
-
-<h2>Table but just generated with dem classes</h2>
-<div class="table">
-	<div class="table-row">
-			<p class="table-cell table-cell-no-gutter table-cell table-cell-heading">#</p>
-			<p class="table-cell table-cell-heading">Column heading</p>
-			<p class="table-cell table-cell-heading">Column heading</p>
-			<p class="table-cell table-cell-heading">Column heading</p>
-			<p class="table-cell table-cell-heading">Total</p>
-	</div>
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell text-align-right">Column content</p>
-		<p class="table-cell text-align-center">69</p>
-	</div>
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell text-align-right">Column content</p>
-		<p class="table-cell text-align-center">420</p>
-	</div>
-	
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-success"></span></p>
-		<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
-		<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
-		<p class="table-cell text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
-		<p class="table-cell text-align-center">666</p>
-	</div>
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-error"></span></p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell text-align-right">Column content</p>
-		<p class="table-cell text-align-center">0</p>
-	</div>
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-caution"></span></p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell text-align-right">Column content</p>
-		<p class="table-cell text-align-center">0</p>
-	</div>
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell text-align-right">Column content</p>
-		<p class="table-cell text-align-center">0</p>
-	</div>
-	<div class="table-row">
-		<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell">Column content</p>
-		<p class="table-cell text-align-right">Column content</p>
-		<p class="table-cell text-align-center">0</p>
+	<h2>Table but just generated with dem classes</h2>
+	<div class="table">
+		<div class="table-row">
+				<p class="table-cell table-cell-no-gutter table-cell table-cell-heading">#</p>
+				<p class="table-cell table-cell-heading">Column heading</p>
+				<p class="table-cell table-cell-heading">Column heading</p>
+				<p class="table-cell table-cell-heading">Column heading</p>
+				<p class="table-cell table-cell-heading">Total</p>
+		</div>
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell text-align-right">Column content</p>
+			<p class="table-cell text-align-center">69</p>
+		</div>
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell text-align-right">Column content</p>
+			<p class="table-cell text-align-center">420</p>
+		</div>
+		
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-success"></span></p>
+			<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+			<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+			<p class="table-cell text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
+			<p class="table-cell text-align-center">666</p>
+		</div>
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-error"></span></p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell text-align-right">Column content</p>
+			<p class="table-cell text-align-center">0</p>
+		</div>
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-caution"></span></p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell text-align-right">Column content</p>
+			<p class="table-cell text-align-center">0</p>
+		</div>
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell text-align-right">Column content</p>
+			<p class="table-cell text-align-center">0</p>
+		</div>
+		<div class="table-row">
+			<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell">Column content</p>
+			<p class="table-cell text-align-right">Column content</p>
+			<p class="table-cell text-align-center">0</p>
+		</div>
 	</div>
 </div>
 
+<h1 data-toggle="accordion">Helpers  <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
 
-<h2>Helper classes: text align</h2>
+	<h2>Helper classes: text align</h2>
 
-<p class="text-align-center">
-	Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
-</p>
-<p class="text-align-left">
-	Left Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
-</p>
-<p class="text-align-right">
-	Right Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
-</p>
-<p class="text-align-justify">
-	Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
-</p>
-
-
-
-<h2>Helper classes: font weight (note: only works properly if loaded font actually has that font weight. installing all font-weights is not recommended)</h2>
-<p class="font-weight-100">100: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-200">200: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-300">300: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-400">400: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-500">500: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-600">600: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-700">700: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-800">800: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
-<p class="font-weight-900">900: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="text-align-center">
+		Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+	</p>
+	<p class="text-align-left">
+		Left Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+	</p>
+	<p class="text-align-right">
+		Right Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+	</p>
+	<p class="text-align-justify">
+		Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+	</p>
 
 
-<h2>Helper classes: font size</h2>
-<p class="font-size-normalize">normalize. inherits set body font size</p>
-<p class="font-size-large">large. is chonky</p>
-<p class="font-size-small">smal. is smol</p>
+
+	<h2>Helper classes: font weight (note: only works properly if loaded font actually has that font weight. installing all font-weights is not recommended)</h2>
+	<p class="font-weight-100">100: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-200">200: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-300">300: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-400">400: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-500">500: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-600">600: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-700">700: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-800">800: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
+	<p class="font-weight-900">900: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
 
 
-<h2>Helper classes: text transform</h2>
-<p class="text-transform-uppercase">Uppercase</p>
-<p class="text-transform-lowercase">Lowercase</p>
-<p class="text-transform-capitalize">Capitalize</p>
-
-<h2>Helper classes: Colors</h2>
-<p class="color-base">Color Base</p>
-<p class="color-primary">Color Primary</p>
-<p class="color-accent">Color Accent</p>
-<p class="color-neutral">Color Neutral</p>
-<p class="color-success">Color Success</p>
-<p class="color-caution">Color Caution</p>
-<p class="color-error">Color Error</p>
-
-<p class="color-intensity-1">Color Intensity 1</p>
-<p class="color-intensity-2">Color Intensity 2</p>
-<p class="color-intensity-3">Color Intensity 3</p>
-<p class="color-intensity-4">Color Intensity 4</p>
-<p class="color-intensity-5">Color Intensity 5</p>
-
-<h2>Helper classes: backgrounds</h2>
-
-<p class="background-base">background Base</p>
-<p class="background-primary">Background Primary</p>
-<p class="background-accent">Background Accent</p>
-<p class="background-neutral">Background Neutral</p>
-<p class="background-success">Background Success</p>
-<p class="background-caution">Background Caution</p>
-<p class="background-error">Background Error</p>
-
-<p class="background-intensity-1">Background Intensity 1</p>
-<p class="background-intensity-2">Background Intensity 2</p>
-<p class="background-intensity-3">Background Intensity 3</p>
-<p class="background-intensity-4">Background Intensity 4</p>
-<p class="background-intensity-5">Background Intensity 5</p>
+	<h2>Helper classes: font size</h2>
+	<p class="font-size-normalize">normalize. inherits set body font size</p>
+	<p class="font-size-large">large. is chonky</p>
+	<p class="font-size-small">smal. is smol</p>
 
 
-<p class="background-gradient">Background Gradient</p>
-<p class="background-gradient-45">Background Gradient 45</p>
-<p class="background-gradient-90">Background Gradient 90</p>
-<p class="background-gradient-135">Background Gradient 135</p>
-<p class="background-gradient-180">Background Gradient 180</p>
-<p class="background-gradient-225">Background Gradient 225</p>
-<p class="background-gradient-270">Background Gradient 270</p>
-<p class="background-gradient-315">Background Gradient 315</p>
+	<h2>Helper classes: text transform</h2>
+	<p class="text-transform-uppercase">Uppercase</p>
+	<p class="text-transform-lowercase">Lowercase</p>
+	<p class="text-transform-capitalize">Capitalize</p>
 
-<div id="content-sample" style="font-size:inherit;">
+	<h2>Helper classes: Colors</h2>
+	<p class="color-base">Color Base</p>
+	<p class="color-primary">Color Primary</p>
+	<p class="color-accent">Color Accent</p>
+	<p class="color-neutral">Color Neutral</p>
+	<p class="color-success">Color Success</p>
+	<p class="color-caution">Color Caution</p>
+	<p class="color-error">Color Error</p>
+
+	<p class="color-intensity-1">Color Intensity 1</p>
+	<p class="color-intensity-2">Color Intensity 2</p>
+	<p class="color-intensity-3">Color Intensity 3</p>
+	<p class="color-intensity-4">Color Intensity 4</p>
+	<p class="color-intensity-5">Color Intensity 5</p>
+
+	<h2>Helper classes: backgrounds</h2>
+
+	<p class="background-base">background Base</p>
+	<p class="background-primary">Background Primary</p>
+	<p class="background-accent">Background Accent</p>
+	<p class="background-neutral">Background Neutral</p>
+	<p class="background-success">Background Success</p>
+	<p class="background-caution">Background Caution</p>
+	<p class="background-error">Background Error</p>
+
+	<p class="background-intensity-1">Background Intensity 1</p>
+	<p class="background-intensity-2">Background Intensity 2</p>
+	<p class="background-intensity-3">Background Intensity 3</p>
+	<p class="background-intensity-4">Background Intensity 4</p>
+	<p class="background-intensity-5">Background Intensity 5</p>
 
 
-<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<h3 class="true-title">Page Markup And Formatting</h3>						
-								<p><strong>Headings</strong></p>
-<h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-toggle-down"></i></h1>
-<h2>Header two</h2>
-<h3>Header three</h3>
-<h4>Header four</h4>
-<h5>Header five</h5>
-<h6>Header six</h6>
-<h2>Blockquotes</h2>
-<p>Single line blockquote:</p>
-<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-<p>Multi line blockquote with a cite reference:</p>
-<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-<h2>Basic Bitch Table</h2>
-<table>
-<tbody>
-<tr>
-<th>Employee</th>
-<th class="views">Salary</th>
-<th></th>
-</tr>
-<tr class="odd">
-<td><a href="http://example.com/">Jane</a></td>
-<td>$1</td>
-<td>Because that’s all Steve Job’ needed for a salary.</td>
-</tr>
-<tr class="even">
-<td><a href="http://example.com">John</a></td>
-<td>$100K</td>
-<td>For all the blogging he does.</td>
-</tr>
-<tr class="odd">
-<td><a href="http://example.com/">Jane</a></td>
-<td>$100M</td>
-<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-</tr>
-<tr class="even">
-<td><a href="http://example.com/">Jane</a></td>
-<td>$100B</td>
-<td>With hair like that?! Enough said…</td>
-</tr>
-</tbody>
-</table>
-<h2>Definition Lists</h2>
-<dl>
-<dt>Definition List Title</dt>
-<dd>Definition list division.</dd>
-<dt>Startup</dt>
-<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-<dt>#dowork</dt>
-<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-<dt>Do It Live</dt>
-<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-</dl>
-<h2>Unordered Lists (Nested)</h2>
-<ul>
-<li>List item one
-<ul>
-<li>List item one
-<ul>
-<li>List item one</li>
-<li>List item two</li>
-<li>List item three</li>
-<li>List item four</li>
-</ul>
-</li>
-<li>List item two</li>
-<li>List item three</li>
-<li>List item four</li>
-</ul>
-</li>
-<li>List item two</li>
-<li>List item three</li>
-<li>List item four</li>
-</ul>
-<h2>Ordered List (Nested)</h2>
-<ol>
-<li>List item one
-<ol>
-<li>List item one
-<ol>
-<li>List item one</li>
-<li>List item two</li>
-<li>List item three</li>
-<li>List item four</li>
-</ol>
-</li>
-<li>List item two</li>
-<li>List item three</li>
-<li>List item four</li>
-</ol>
-</li>
-<li>List item two</li>
-<li>List item three</li>
-<li>List item four</li>
-</ol>
-<h2>HTML Tags</h2>
-<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-<p><strong>Address Tag</strong></p>
-<address>1 Infinite Loop<br>
-Cupertino, CA 95014<br>
-United States</address>
-<p><strong>Anchor Tag (aka. Link)</strong></p>
-<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-<p><strong>Abbreviation Tag</strong></p>
-<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-<p><strong>Acronym Tag</strong></p>
-<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-<p><strong>Big Tag</strong></p>
-<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-<p><strong>Cite Tag</strong></p>
-<p>“Code is poetry.” —<cite>Automattic</cite></p>
-<p><strong>Code Tag</strong></p>
-<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-<p><strong>Delete Tag</strong></p>
-<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-<p><strong>Emphasize Tag</strong></p>
-<p>The emphasize tag should <em>italicize</em> text.</p>
-<p><strong>Insert Tag</strong></p>
-<p>This tag should denote <ins>inserted</ins> text.</p>
-<p><strong>Keyboard Tag</strong></p>
-<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-<p><strong>Preformatted Tag</strong></p>
-<p>This tag styles large blocks of code.</p>
-<pre>.post-title {
-	margin: 0 0 5px;
-	font-weight: bold;
-	font-size: 38px;
-	line-height: 1.2;
-}</pre>
-<p><strong>Quote Tag</strong></p>
-<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-<p><strong>Strong Tag</strong></p>
-<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-<p><strong>Subscript Tag</strong></p>
-<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-<p><strong>Superscript Tag</strong></p>
-<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-<p><strong>Teletype Tag</strong></p>
-<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-<p><strong>Variable Tag</strong></p>
-<p>This allows you to denote <var>variables</var>.</p>
+	<p class="background-gradient">Background Gradient</p>
+	<p class="background-gradient-45">Background Gradient 45</p>
+	<p class="background-gradient-90">Background Gradient 90</p>
+	<p class="background-gradient-135">Background Gradient 135</p>
+	<p class="background-gradient-180">Background Gradient 180</p>
+	<p class="background-gradient-225">Background Gradient 225</p>
+	<p class="background-gradient-270">Background Gradient 270</p>
+	<p class="background-gradient-315">Background Gradient 315</p>
+
+	<div id="content-sample" style="font-size:inherit;">
+
+
+	<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+	<h3 class="true-title">Page Markup And Formatting</h3>						
+									<p><strong>Headings</strong></p>
+	<h1>Header one</h1>
+	<h2>Header two</h2>
+	<h3>Header three</h3>
+	<h4>Header four</h4>
+	<h5>Header five</h5>
+	<h6>Header six</h6>
+	<h2>Blockquotes</h2>
+	<p>Single line blockquote:</p>
+	<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+	<p>Multi line blockquote with a cite reference:</p>
+	<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+	<h2>Basic Bitch Table</h2>
+	<table>
+	<tbody>
+	<tr>
+	<th>Employee</th>
+	<th class="views">Salary</th>
+	<th></th>
+	</tr>
+	<tr class="odd">
+	<td><a href="http://example.com/">Jane</a></td>
+	<td>$1</td>
+	<td>Because that’s all Steve Job’ needed for a salary.</td>
+	</tr>
+	<tr class="even">
+	<td><a href="http://example.com">John</a></td>
+	<td>$100K</td>
+	<td>For all the blogging he does.</td>
+	</tr>
+	<tr class="odd">
+	<td><a href="http://example.com/">Jane</a></td>
+	<td>$100M</td>
+	<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+	</tr>
+	<tr class="even">
+	<td><a href="http://example.com/">Jane</a></td>
+	<td>$100B</td>
+	<td>With hair like that?! Enough said…</td>
+	</tr>
+	</tbody>
+	</table>
+	<h2>Definition Lists</h2>
+	<dl>
+	<dt>Definition List Title</dt>
+	<dd>Definition list division.</dd>
+	<dt>Startup</dt>
+	<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+	<dt>#dowork</dt>
+	<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+	<dt>Do It Live</dt>
+	<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+	</dl>
+	<h2>Unordered Lists (Nested)</h2>
+	<ul>
+	<li>List item one
+	<ul>
+	<li>List item one
+	<ul>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	<h2>Ordered List (Nested)</h2>
+	<ol>
+	<li>List item one
+	<ol>
+	<li>List item one
+	<ol>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	<h2>HTML Tags</h2>
+	<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+	<p><strong>Address Tag</strong></p>
+	<address>1 Infinite Loop<br>
+	Cupertino, CA 95014<br>
+	United States</address>
+	<p><strong>Anchor Tag (aka. Link)</strong></p>
+	<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+	<p><strong>Abbreviation Tag</strong></p>
+	<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+	<p><strong>Acronym Tag</strong></p>
+	<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+	<p><strong>Big Tag</strong></p>
+	<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+	<p><strong>Cite Tag</strong></p>
+	<p>“Code is poetry.” —<cite>Automattic</cite></p>
+	<p><strong>Code Tag</strong></p>
+	<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+	<p><strong>Delete Tag</strong></p>
+	<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+	<p><strong>Emphasize Tag</strong></p>
+	<p>The emphasize tag should <em>italicize</em> text.</p>
+	<p><strong>Insert Tag</strong></p>
+	<p>This tag should denote <ins>inserted</ins> text.</p>
+	<p><strong>Keyboard Tag</strong></p>
+	<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+	<p><strong>Preformatted Tag</strong></p>
+	<p>This tag styles large blocks of code.</p>
+	<pre>.post-title {
+		margin: 0 0 5px;
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 1.2;
+	}</pre>
+	<p><strong>Quote Tag</strong></p>
+	<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+	<p><strong>Strong Tag</strong></p>
+	<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+	<p><strong>Subscript Tag</strong></p>
+	<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+	<p><strong>Superscript Tag</strong></p>
+	<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+	<p><strong>Teletype Tag</strong></p>
+	<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+	<p><strong>Variable Tag</strong></p>
+	<p>This allows you to denote <var>variables</var>.</p>
 </div>

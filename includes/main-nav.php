@@ -22,7 +22,7 @@
 
 		:class="{open:sideNav.open}"
 		
-		@click="sideNav.open = !sideNav.open">
+		@click="_1p21.db.sideNav.$data.open = !_1p21.db.sideNav.$data.open">
 		<i class="symbol symbol-burger"></i>
 	</a>
 	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">

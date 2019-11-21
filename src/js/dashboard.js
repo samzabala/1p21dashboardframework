@@ -13,21 +13,21 @@
 // 	});
 //   }
 window.jQuery && jQuery.noConflict();
-(function(_1p21,Vue,window){
-	
-	// const dashboard = {};
-	// dashboard.sidebar
-	// dashboard.content
+(function(Vue,window){
+	//1p21 shit
+	var _1p21 = window._1p21 || {};
+
+	//framework shit
+	_1p21.db = _1p21.db || {};
  
-		new Vue ({
-			el: "#dashboard",
+	_1p21.db.sideNav = new Vue ({
+			el: "#dashboard-block-sidebar",
 			data: {
-				sideNav: {
-					open: false
-				}
+				open: false
 			}
 		});
 	
+	window._1p21 = _1p21;
 
 
-}(_1p21,Vue,window));
+}(Vue,window));

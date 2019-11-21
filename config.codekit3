@@ -989,14 +989,6 @@
 		"oAP": "/footer.php",
 		"oF": 0
 		},
-	"/handlebars/nav-account.hbs": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/handlebars/nav-account.hbs",
-		"oF": 0
-		},
 	"/header.php": {
 		"cB": 0,
 		"ft": 8192,

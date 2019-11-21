@@ -1,8 +1,15 @@
 window.jQuery && jQuery.noConflict();
 (function($,window){
+	//1p21 shit
 	var _1p21 = window._1p21 || {};
 
-	_1p21.lazyLoad = _1p21.lazyLoad || true;
+	//framework shit
+	_1p21.fw = _1p21.fw || {};
+
+	//internal shit
+	var _ = {};
+
+	_1p21.fw.lazyLoad = _1p21.fw.lazyLoad || true;
 
 	var _ = {};
 
@@ -56,7 +63,7 @@ window.jQuery && jQuery.noConflict();
 	_.functions_on_resize = [];
 
 
-	_1p21.validateBr = function(breakpoint,mode) {
+	_1p21.fw.validateBr = function(breakpoint,mode) {
 		mode = mode || 'below'; //below,within,above
 		var currIndex = _.br_arr.indexOf(breakpoint);
 
@@ -76,7 +83,7 @@ window.jQuery && jQuery.noConflict();
 
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
-	_1p21.initGrid = function(moduleGrid){
+	_1p21.fw.initGrid = function(moduleGrid){
 		console.log('grid bitch is running');
 		
 
@@ -133,7 +140,7 @@ window.jQuery && jQuery.noConflict();
 					if( modElement.data(prop+'-'+br) && !propsSet ) {
 						smallestStyledBr = br;
 						
-						if( _1p21.validateBr(br,'above') ){
+						if( _1p21.fw.validateBr(br,'above') ){
 							
 							
 							modElement.css(prop, modElement.data(prop+'-'+br));
@@ -157,7 +164,7 @@ window.jQuery && jQuery.noConflict();
 					if(
 						modElement.prop('style')[prop.toCamelCase()] !== null
 						&& smallestStyledBr
-						&& !_1p21.validateBr(smallestStyledBr,'above')
+						&& !_1p21.fw.validateBr(smallestStyledBr,'above')
 					){
 						modElement.css(prop,'');
 					}
@@ -181,7 +188,7 @@ window.jQuery && jQuery.noConflict();
 
 	//will run. right away. boi
 	//lazyload
-	_1p21.loadImages = function() {
+	_1p21.fw.loadImages = function() {
 		//css images
 		// images
 		$('*[data-src]').each(function () {
@@ -228,7 +235,7 @@ window.jQuery && jQuery.noConflict();
 	function readyGrid(){
 
 		$('.module-grid:not(.module-grid-custom)').each(function(){
-			_1p21.initGrid($(this));
+			_1p21.fw.initGrid($(this));
 		});
 	}
 	_.functions_on_load.push(readyGrid);
@@ -236,7 +243,7 @@ window.jQuery && jQuery.noConflict();
 
 	$(window).load(function(){
 
-		_1p21.lazyLoad && _1p21.loadImages();
+		_1p21.fw.lazyLoad && _1p21.fw.loadImages();
 
 		_.functions_on_load.forEach(function(fn){
 			fn();
@@ -382,7 +389,7 @@ window.jQuery && jQuery.noConflict();
 		});
 
 
-		_1p21.createToolTip = function(triggerer) {
+		_1p21.fw.createToolTip = function(triggerer) {
 			if(triggerer) {
 				var arr =  {
 					placement: triggerer.data('tooltip-placement'),
@@ -416,7 +423,7 @@ window.jQuery && jQuery.noConflict();
 					}
 				}
 
-				_1p21.destroyToolTip();
+				_1p21.fw.destroyToolTip();
 
 
 				$('body').append(function(){
@@ -549,7 +556,7 @@ window.jQuery && jQuery.noConflict();
 
 		}
 
-		_1p21.destroyToolTip = function(){
+		_1p21.fw.destroyToolTip = function(){
 			$('body').children('.tooltip').hide().remove();
 		}
 
@@ -557,7 +564,7 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on('click','*[data-toggle="tooltip-click"]',function(e){
 			var self = $(this);
-			_1p21.createToolTip(self);
+			_1p21.fw.createToolTip(self);
 			
 		});
 
@@ -566,14 +573,14 @@ window.jQuery && jQuery.noConflict();
 		$('body').on('mouseenter','*[data-toggle="tooltip-hover"]',function(e){
 			var self = $(this);
 
-			_1p21.createToolTip(self);
+			_1p21.fw.createToolTip(self);
 
 			
 		});
 
 		$('body').on('mouseleave','*[data-toggle="tooltip-hover"]',function(e){
 			var self = $(this);
-			_1p21.destroyToolTip();
+			_1p21.fw.destroyToolTip();
 		});
 
 

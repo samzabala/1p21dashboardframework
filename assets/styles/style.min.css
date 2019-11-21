@@ -3441,7 +3441,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 /*** TOGGLES ***/
 .accordion {
   display: none;
-  overflow: hidden;
 }
 
 .accordion.open {

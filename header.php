@@ -18,7 +18,7 @@
 	<div id="dashboard">
 		<!-- Sidebar -->
 		<aside id="dashboard-block-sidebar"
-		:class="{open:sideNav.open}"
+		:class="{'open': open }"
 		class="background-global">
 			<?php app_get_template_part('includes/sidebar',DASHBOARD_SLUG); ?>
 		</aside>

@@ -1,12 +1,18 @@
 window.jQuery && jQuery.noConflict();
 (function($,window){
+	//1p21 shit
 	var _1p21 = window._1p21 || {};
+
+	//framework shit
+	_1p21.fw = _1p21.fw || {};
+
+	//internal shit
 	var _ = {};
 
 	$ && ($.trumbowyg.svgPath = '/assets/fonts/icons.svg');
 	$ && ($.trumbowyg.hideButtonTexts = true);
 
-	_1p21.lazyLoad = _1p21.lazyLoad || true;
+	_1p21.fw.lazyLoad = _1p21.fw.lazyLoad || true;
 
 	
 	
@@ -67,7 +73,7 @@ window.jQuery && jQuery.noConflict();
 	_.functions_on_resize = [];
 
 
-	_1p21.validateBr = function(breakpoint,mode) {
+	_1p21.fw.validateBr = function(breakpoint,mode) {
 		mode = mode || 'below'; //below,within,above
 		var currIndex = _.br_arr.indexOf(breakpoint);
 
@@ -86,7 +92,7 @@ window.jQuery && jQuery.noConflict();
 	}
 
 
-	 _1p21.addEvent = function(parent, evt, selector, handler) {
+	 _1p21.fw.addEvent = function(parent, evt, selector, handler) {
 		parent = parent || selector;
 		parent.addEventListener(evt, function(event) {
 		  if (event.target.matches(selector + ', ' + selector + ' *')) {
@@ -138,7 +144,7 @@ window.jQuery && jQuery.noConflict();
 
 	
 
-	_1p21.getSiblings = function (elem) {
+	_1p21.fw.getSiblings = function (elem) {
 
 		// Setup siblings array and get the first sibling
 		var siblings = [];
@@ -158,7 +164,7 @@ window.jQuery && jQuery.noConflict();
 
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
-	_1p21.initGrid = function(moduleGrid){
+	_1p21.fw.initGrid = function(moduleGrid){
 		
 		var availablePropetiesParent = [
 			'grid-template-rows',
@@ -212,7 +218,7 @@ window.jQuery && jQuery.noConflict();
 					
 					if( modElement.hasAttribute('data-'+prop+'-'+br) && !propsSet) {
 						smallestStyledBr = br;
-						if( _1p21.validateBr(br,'above') ){
+						if( _1p21.fw.validateBr(br,'above') ){
 							modElement.style[prop.toCamelCase()] = modElement.getAttribute('data-'+prop+'-'+br)
 							propsSet = true;
 							propSetBr = true;
@@ -234,7 +240,7 @@ window.jQuery && jQuery.noConflict();
 					if(
 						modElement.style[prop.toCamelCase()] !== null
 						&& smallestStyledBr
-						&& !_1p21.validateBr(smallestStyledBr,'above')
+						&& !_1p21.fw.validateBr(smallestStyledBr,'above')
 					){
 						modElement.style[prop.toCamelCase()] = null;
 					}
@@ -258,7 +264,7 @@ window.jQuery && jQuery.noConflict();
 
 	// //will run. right away. boi
 	// //lazyload
-	_1p21.loadImages = function() {
+	_1p21.fw.loadImages = function() {
 		//css images
 		// images
 		var toLazy = document.querySelectorAll('*[data-src]');
@@ -314,7 +320,7 @@ window.jQuery && jQuery.noConflict();
 		
 		var grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
 		grids.forEach(function(grid){
-			_1p21.initGrid(grid);
+			_1p21.fw.initGrid(grid);
 		});
 	}
 
@@ -323,7 +329,7 @@ window.jQuery && jQuery.noConflict();
 
 	window.addEventListener('load',function(){
 
-		_1p21.lazyLoad && _1p21.loadImages();
+		_1p21.fw.lazyLoad && _1p21.fw.loadImages();
 
 		_.functions_on_load.forEach(function(fn){
 			fn();
@@ -381,15 +387,15 @@ window.jQuery && jQuery.noConflict();
 		};
 
 		
-		_1p21.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
+		_1p21.fw.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
 			var selector = _.getTheToggled(e.target,'.accordion');
 			var selectorAncestor = selector.closest('.accordion-group');
-			var selectorSiblings = _1p21.getSiblings(selector).filter(function(sibling){
+			var selectorSiblings = _1p21.fw.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('.accordion');
 				});
-			var clickedSiblings = _1p21.getSiblings(selector).filter(function(sibling){
+			var clickedSiblings = _1p21.fw.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('*[data-toggle="accordion"]');
 				})
 
@@ -426,7 +432,7 @@ window.jQuery && jQuery.noConflict();
 			}
 		});
 
-		_1p21.addEvent(document.body,'click','*[data-toggle="dropdown"]',function(e){
+		_1p21.fw.addEvent(document.body,'click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
 				selector = _.getTheToggled(clicked,'.dropdown');
@@ -449,7 +455,7 @@ window.jQuery && jQuery.noConflict();
 					}else{
 
 						if (selectorAncestor ){
-							var selectorUncles = _1p21.getSiblings(selectorAncestor)
+							var selectorUncles = _1p21.fw.getSiblings(selectorAncestor)
 								.filter(function(sibling){
 									return sibling.matches('li,.nav-item');
 								});
@@ -469,13 +475,13 @@ window.jQuery && jQuery.noConflict();
 		})
 
 		// btn group
-		_1p21.addEvent(document.body,'click','.btn-group-toggle .btn',function(e){
+		_1p21.fw.addEvent(document.body,'click','.btn-group-toggle .btn',function(e){
 			
 			e.preventDefault();
 			var clicked = e.target;
-			var selectorSiblings = _1p21.getSiblings(clicked);
+			var selectorSiblings = _1p21.fw.getSiblings(clicked);
 
-			var resetter = _1p21.getSiblings(clicked).filter(function(butt){
+			var resetter = _1p21.fw.getSiblings(clicked).filter(function(butt){
 				return butt.classList.contains('btn-toggle-reset');
 			});
 
@@ -497,22 +503,22 @@ window.jQuery && jQuery.noConflict();
 		})
 
 		//tooltip
-		_1p21.addEvent(document.body,'click','*[data-toggle="tooltip-click"]',function(e){
+		_1p21.fw.addEvent(document.body,'click','*[data-toggle="tooltip-click"]',function(e){
 			e.preventDefault();
-			_1p21.createToolTip(e.target);
+			_1p21.fw.createToolTip(e.target);
 		});
 			
-			_1p21.addEvent(document.body,'mouseenter','*[data-toggle="tooltip-hover"]',function(e){
-				_1p21.createToolTip(this);
+			_1p21.fw.addEvent(document.body,'mouseenter','*[data-toggle="tooltip-hover"]',function(e){
+				_1p21.fw.createToolTip(this);
 			});
 
-			_1p21.addEvent(document.body,'mouseleave','*[data-toggle="tooltip-hover"]',function(e){
-				_1p21.destroyToolTip();
+			_1p21.fw.addEvent(document.body,'mouseleave','*[data-toggle="tooltip-hover"]',function(e){
+				_1p21.fw.destroyToolTip();
 			});
 
-		_1p21.createToolTip = function(triggerer) {
+		_1p21.fw.createToolTip = function(triggerer) {
 			if(triggerer) {
-				_1p21.destroyToolTip();
+				_1p21.fw.destroyToolTip();
 				var arr =  {
 					placement: triggerer.getAttribute('data-tooltip-placement') || null,
 					badge: triggerer.getAttribute('data-tooltip-badge') || null,
@@ -689,13 +695,13 @@ window.jQuery && jQuery.noConflict();
 
 				toolTip.style.top = pos.y()+'px';
 				toolTip.style.left = pos.x()+'px';
-				_1p21.activeToolTipTrigger = triggerer
+				_1p21.fw.activeToolTipTrigger = triggerer
 
 			}
 
 		}
 
-		_1p21.destroyToolTip = function(){
+		_1p21.fw.destroyToolTip = function(){
 			var toolTip = document.querySelector('body > .tooltip');
 			toolTip && toolTip.parentNode.removeChild(toolTip);
 		}
