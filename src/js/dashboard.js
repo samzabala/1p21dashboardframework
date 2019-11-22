@@ -26,6 +26,10 @@ window.jQuery && jQuery.noConflict();
 				open: false
 			}
 		});
+
+
+
+	// Vue
 	
 	window._1p21 = _1p21;
 

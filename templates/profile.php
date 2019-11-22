@@ -1,8 +1,3 @@
-
-
-<h3 class="module-grid-title">
-	I'm a fucking title
-</h3>
 <div class="module-grid"
 	data-grid-template-rows-md="repeat( auto-fit, minmax(75px, auto) )"
 	data-grid-template-columns-lg="350px 1fr 1fr"
@@ -164,10 +159,6 @@
 
 </div>
 
-
-<h3 class="module-grid-title">
-	I'm a fucking title
-</h3>
 <div class="module-grid"
 	data-grid-template-rows-lg="auto auto auto auto"
 	data-grid-template-columns-lg="350px 33.33% 1fr"

@@ -15,11 +15,16 @@ hello
 *  [Shithole](https://github.com/samzabala)
 *  [Unnamed 1p21 Dashboard Framework](https://github.com/samzabala)
 
-# Classes
+
+
+# Modules
+These are boxes that hold content and can be rearranged in css grid
+
+# .
+
 
 ## `.modules-grid`
-container of our bois
-
+container of a box
 ## `.module`
 THE BOIS
 
