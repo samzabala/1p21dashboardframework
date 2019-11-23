@@ -27,6 +27,21 @@ window.jQuery && jQuery.noConflict();
 			}
 		});
 
+	_1p21.db.mainNav = new Vue ({
+		el: '#dashboard-block-main-nav',
+		computed: {
+			sideNav : _1p21.db.sideNav.$data.open
+		},
+		methods: {
+			navStatus: function(){
+				return _1p21.db.sideNav.$data.open;
+			},
+			toggleNav : function(e) {
+				_1p21.db.sideNav.$data.open = !_1p21.db.sideNav.$data.open
+			}
+		}
+	})
+
 
 
 	// Vue

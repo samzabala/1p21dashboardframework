@@ -20,9 +20,9 @@
 		laptop-hide
 		nav-toggle"
 
-		:class="{open:sideNav.open}"
+		:class="{open: navStatus() }"
 		
-		@click="_1p21.db.sideNav.$data.open = !_1p21.db.sideNav.$data.open">
+		@click="toggleNav">
 		<i class="symbol symbol-burger"></i>
 	</a>
 	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">

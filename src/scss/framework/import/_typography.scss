@@ -185,6 +185,7 @@ $prefix: '.special';
 	h5,.h5,
 	h6,.h6 {
 		@include type-set((
+			font: $body-heading-font-family,
 			color: $body-heading-color,
 			leading: $body-heading-line-height,
 			weight:$body-heading-font-weight,

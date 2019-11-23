@@ -66,7 +66,7 @@ window.jQuery && jQuery.noConflict();
 		lg: 9999999
 	};
 	_.br_arr = Object.keys(_.br_vals);
-	_.br_to_loop =  ['xs','sm','md','lg'];
+	// _.br_to_loop =  ['xs','sm','md','lg'];
 
 
 	_.functions_on_load = [];
@@ -214,7 +214,7 @@ window.jQuery && jQuery.noConflict();
 				var smallestStyledBr = null;
 				
 				//check for breakpointz first
-				_.reverseArray(_.br_to_loop).forEach(function(br){
+				_.reverseArray(_.br_arr).forEach(function(br){
 					
 					if( modElement.hasAttribute('data-'+prop+'-'+br) && !propsSet) {
 						smallestStyledBr = br;

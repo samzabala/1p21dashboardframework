@@ -5,8 +5,8 @@
 	//breakpiont
 	 //breakpoints
 	 $br-xs: 767px !default;
-	 $br-sm: 1280px !default;
-	 $br-md: 1800px !default;
+	 $br-sm: 1279px !default;
+	 $br-md: 1799px !default;
  
 	 //extra breakpoints
 	 $brxxs: 400px !default;
@@ -53,8 +53,8 @@
 		$gradient-end: $brand-color-accent !default;
 
 	// FONT
-		$brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif !default;
-		$brand-font-accent: $brand-font-primary !default;
+		$brand-font-primary: "Roboto",Helvetica,Arial,sans-serif !default;
+		$brand-font-accent: "Georgia",Times,serif !default;
 		$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace !default;
 		
 	// GLOBAL html + body coloring
@@ -116,8 +116,8 @@
 // CONTENT
 	// SCAFFOLD
 		$body-font-family: $brand-font-primary !default;
-		$body-font-weight: 500 !default;
-			$body-font-weight-bold:900 !default;
+		$body-font-weight: 400 !default;
+			$body-font-weight-bold:700 !default;
 		$body-font-size: 16px !default;
 		$body-line-height: 24px !default;
 		$body-background: $brand-color-background-alt !default;
@@ -132,6 +132,7 @@
 		$body-heading-font-weight: $body-font-weight-bold !default;
 		$body-heading-font-style: inherit !default;
 		$body-heading-text-transform: none !default;
+		$body-heading-font-family: $brand-font-accent !default;
 		$body-heading-color: $global-color-contrast !default;
 			$body-heading-color-inverse: $global-color-contrast-inverse !default;
 
@@ -629,6 +630,7 @@
 //ROOT VAR FOR JS
 
 :root {
+	--br-xxs: #{$br-xs};
 	--br-xs: #{$br-xs};
 	--br-sm: #{$br-sm};
 	--br-md: #{$br-md};

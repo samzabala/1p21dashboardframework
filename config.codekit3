@@ -870,17 +870,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/scripts/handlebars.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/handlebars.min-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
 	"/assets/scripts/jquery.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -889,17 +878,6 @@
 		"oA": 1,
 		"oAP": "/assets/scripts/jquery.min-min.js",
 		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/scripts/quill.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/quill.min.min.js",
-		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -981,11 +959,63 @@
 		"oAP": "/content.php",
 		"oF": 0
 		},
+	"/docs/images/badge.png": {
+		"ft": 32768,
+		"iS": 73061,
+		"oA": 0,
+		"oAP": "/docs/images/badge.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/btn-group-toggle-multiple-and-resetter.gif": {
+		"ft": 4194304,
+		"iS": 570989,
+		"oA": 0,
+		"oAP": "/docs/images/btn-group-toggle-multiple-and-resetter.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"/docs/images/btn-group-toggle.png": {
+		"ft": 32768,
+		"iS": 25833,
+		"oA": 0,
+		"oAP": "/docs/images/btn-group-toggle.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/btn-group-vertical.png": {
+		"ft": 32768,
+		"iS": 20236,
+		"oA": 0,
+		"oAP": "/docs/images/btn-group-vertical.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/docs/images/btn-group.png": {
 		"ft": 32768,
 		"iS": 21049,
 		"oA": 0,
 		"oAP": "/docs/images/btn-group.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/btn-symbol.png": {
+		"ft": 32768,
+		"iS": 7438,
+		"oA": 0,
+		"oAP": "/docs/images/btn-symbol.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1002,6 +1032,14 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/docs/images/butt-group-toggle.gif": {
+		"ft": 4194304,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "/docs/images/butt-group-toggle.gif",
+		"oF": 0,
+		"opt": 0
 		},
 	"/docs/images/dropdown.png": {
 		"ft": 32768,
@@ -1091,6 +1129,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/docs/images/legend.png": {
+		"ft": 32768,
+		"iS": 41826,
+		"oA": 0,
+		"oAP": "/docs/images/legend.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/list-group.png": {
+		"ft": 32768,
+		"iS": 28066,
+		"oA": 0,
+		"oAP": "/docs/images/list-group.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/docs/images/module-grid.png": {
 		"ft": 32768,
 		"iS": 692137,
@@ -1148,6 +1208,72 @@
 		"iS": 166740,
 		"oA": 0,
 		"oAP": "/docs/images/special-form.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/special-primary-secondary.png": {
+		"ft": 32768,
+		"iS": 118512,
+		"oA": 0,
+		"oAP": "/docs/images/special-primary-secondary.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/symbol.png": {
+		"ft": 32768,
+		"iS": 94834,
+		"oA": 0,
+		"oAP": "/docs/images/symbol.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/table.png": {
+		"ft": 32768,
+		"iS": 185844,
+		"oA": 0,
+		"oAP": "/docs/images/table.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/tags.png": {
+		"ft": 32768,
+		"iS": 37795,
+		"oA": 0,
+		"oAP": "/docs/images/tags.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/thumbnail-inline.png": {
+		"ft": 32768,
+		"iS": 35892,
+		"oA": 0,
+		"oAP": "/docs/images/thumbnail-inline.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/thumbnail.png": {
+		"ft": 32768,
+		"iS": 385526,
+		"oA": 0,
+		"oAP": "/docs/images/thumbnail.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1813,17 +1939,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/src/js/quill.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/scripts/quill.min.js",
-		"oF": 3,
-		"sC": 3,
-		"tS": 0
-		},
 	"/src/js/trumbowyg.1p21.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2102,19 +2217,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/src/scss/framework/import/_progress.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/src/scss/framework/import/_quill.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/src/scss/framework/import/_quill.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

@@ -61,9 +61,10 @@ table {
 }
 
 :root {
+  --br-xxs: 767px;
   --br-xs: 767px;
-  --br-sm: 1280px;
-  --br-md: 1800px;
+  --br-sm: 1279px;
+  --br-md: 1799px;
   --brand-color-base: #000000;
   --brand-color-base-alt: #3d3d3d;
   --brand-color-background: #FFFFFF;
@@ -124,13 +125,13 @@ table {
   }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .flex-md {
     display: flex!important;
   }
 }
 
-@media (min-width: 1801px) {
+@media (min-width: 1800px) {
   .flex-lg {
     display: flex!important;
   }
@@ -293,6 +294,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   line-height: calc(1em + 10px);
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #3d3d3d;
   font-weight: 900;
   text-transform: none;
@@ -855,6 +857,10 @@ table.table-large .table-cell {
   box-shadow: 0 -0.625em 0 0, 0 0.625em 0 0;
 }
 
+.symbol-kebab-horizontal {
+  width: 1.5625em;
+}
+
 .symbol-kebab-horizontal:after {
   box-shadow: -0.625em 0 0 0, 0.625em 0 0 0;
 }
@@ -1105,7 +1111,7 @@ table.table-large .table-cell {
   margin: auto;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .nav {
     height: auto;
   }
@@ -1134,7 +1140,7 @@ table.table-large .table-cell {
   max-width: none;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .container.container-wide {
     padding-left: 20px;
     padding-right: 20px;
@@ -1145,7 +1151,7 @@ table.table-large .table-cell {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .container {
     padding-left: 10px;
     padding-right: 10px;
@@ -1188,7 +1194,7 @@ table.table-large .table-cell {
   max-width: 100%;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .body-loading .module-grid {
     opacity: 0;
   }
@@ -1316,7 +1322,7 @@ table.table-large .table-cell {
   margin-top: 20px;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .module-header {
     display: flex;
     flex-wrap: wrap;
@@ -1333,7 +1339,7 @@ table.table-large .table-cell {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .module, .module-header:first-child, .module-content:first-child, .module-footer:first-child {
     padding-top: 20px;
   }
@@ -1726,6 +1732,7 @@ table.table-large .table-cell {
   font-style: normal;
   padding-top: calc(  (  (2.8125em - (1px * 2)) - (1em * 1.875) ) * .5);
   padding-bottom: calc(  (  (2.8125em - (1px * 2)) - (1em * 1.875) ) * .5);
+  min-height: 2.8125em;
   padding-right: 1.875em;
   padding-left: 1.875em;
   border: 1px solid transparent;
@@ -1766,6 +1773,7 @@ table.table-large .table-cell {
   padding-top: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.875) ) * .5);
   padding-bottom: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.875) ) * .5);
   border-radius: 20px;
+  min-height: 3.4090909091em;
 }
 
 @media (min-width: 401px) {
@@ -1781,6 +1789,7 @@ table.table-large .table-cell {
   padding-top: calc(  (  (1.875em - (1px * 2)) - (1em * 1.875) ) * .5);
   padding-bottom: calc(  (  (1.875em - (1px * 2)) - (1em * 1.875) ) * .5);
   border-radius: 10px;
+  min-height: 1.875em;
 }
 
 .btn-disabled,
@@ -1886,7 +1895,7 @@ table.table-large .table-cell {
   border-top-color: rgba(141, 141, 141, 0.5) !important;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .btn-group.btn-group-responsive.btn-group-horizontal > .btn:nth-last-child(n+2) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -1900,7 +1909,7 @@ table.table-large .table-cell {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .btn-group.btn-group-responsive {
     width: 100%;
     flex-wrap: wrap;
@@ -2834,14 +2843,14 @@ select.input, .input-select {
   max-width: 100%;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .input-wrapper, .trumbowyg-modal-box label {
     display: inline-flex;
     margin-right: 2rem;
   }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .input-wrapper-horizontal, .trumbowyg-modal-box label {
     flex-direction: row;
     align-items: flex-start;
@@ -2857,7 +2866,7 @@ select.input, .input-select {
   }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .input-wrapper-vertical {
     flex-direction: column;
   }
@@ -2868,7 +2877,7 @@ select.input, .input-select {
   margin-right: 0;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .input-wrapper.input-wrapper-block, .trumbowyg-modal-box label {
     flex-direction: column;
   }
@@ -2976,7 +2985,7 @@ select.input, .input-select {
   border-top-color: rgba(141, 141, 141, 0.5) !important;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .input-group.input-group-responsive.input-group-horizontal > .input:nth-last-child(n+2), .input-group.input-group-responsive.input-group-horizontal .btn:nth-last-child(n+2), .input-group.input-group-responsive.input-group-horizontal .trumbowyg:nth-last-child(n+2) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -2990,7 +2999,7 @@ select.input, .input-select {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .input-group.input-group-responsive {
     width: 100%;
     flex-wrap: wrap;
@@ -3300,7 +3309,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   z-index: 99999;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .trumbowyg-modal {
     padding: 20px;
   }
@@ -3322,14 +3331,14 @@ CUSTOM STYLES FOR TRUMBOWYG
   margin-right: 0;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .trumbowyg-modal-box label .trumbowyg-input-infos {
     flex: 0 0 25%;
     order: -1;
   }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
   .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
     width: calc(100% - 25%);
   }
@@ -3465,7 +3474,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   display: none !important;
 }
 
-@media (min-width: 1801px) {
+@media (min-width: 1800px) {
   .desktop-only {
     display: block !important;
   }
@@ -3474,7 +3483,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   }
 }
 
-@media (min-width: 1281px) and (max-width: 1800px) {
+@media (min-width: 1280px) and (max-width: 1799px) {
   .laptop-only {
     display: block !important;
   }
@@ -3483,7 +3492,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .tablet-only {
     display: block !important;
   }
@@ -4313,7 +4322,7 @@ DASHBOARD / OUR CUSTOM STYLES
   margin-right: 0;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   #dashboard-block-sidebar-nav {
     margin: 0 -10px;
   }

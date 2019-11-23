@@ -214,7 +214,7 @@ $prefix: '.btn';
 		// overflow:hidden;
 		padding-top: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-		// min-height:$calculated-btn-height;
+		min-height:$calculated-btn-height;
 		padding-right: $calculated-btn-gutter-x;
 		padding-left: $calculated-btn-gutter-x;
 		border: $btn-border-width solid transparent;
@@ -256,7 +256,7 @@ $prefix: '.btn';
 		padding-top: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		padding-bottom: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		border-radius: $btn-border-radius-large;
-		// min-height:$calculated-btn-height-large;
+		min-height:$calculated-btn-height-large;
 		@include br(xs){
 			font-size: $calculated-btn-font-size-large;
 		}
@@ -268,7 +268,7 @@ $prefix: '.btn';
 		padding-top: calc(  (  (#{ $calculated-btn-height-small } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		padding-bottom: calc(  (  (#{ $calculated-btn-height-small } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 		border-radius: $btn-border-radius-small;
-		// min-height:$calculated-btn-height-small;
+		min-height:$calculated-btn-height-small;
 	}
 
 	&-disabled{

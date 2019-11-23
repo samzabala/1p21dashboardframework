@@ -125,13 +125,14 @@ $prefix: '.symbol';
         &-vertical {
             &:after {
                 box-shadow: 
-                    0 em(-10px/$body-font-size) 0 0,
-                    0 em(10px/$body-font-size) 0 0
+                    0 em((5px * -2) /$body-font-size) 0 0,
+                    0 em((5px * 2) /$body-font-size) 0 0
                     ;
             }
         }
 
         &-horizontal {
+            width: em((5px * 5)/$body-font-size);
             &:after {
                 box-shadow: 
                     em(-10px/$body-font-size) 0 0 0,

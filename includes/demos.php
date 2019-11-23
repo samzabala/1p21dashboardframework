@@ -1116,6 +1116,8 @@
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
 	</a>
 
+	<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
+
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol Search</span>
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
@@ -1274,7 +1276,7 @@
 
 </div>
 
-<h1>Thumbnail <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Thumbnail <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 	<div class="thumbnail">
 		<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
