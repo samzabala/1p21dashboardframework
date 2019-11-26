@@ -30,14 +30,14 @@ function app_init_content($slug = ''){
 			case 'profile':
 			case 'home':
 
-				app_get_template_part('templates/'.$template_part,$slug);
+				app_get_template_part('template/'.$template_part,$slug);
 				break;
 			default:
-				app_get_template_part('templates/error',$slug);
+				app_get_template_part('template/error',$slug);
 				break;
 		endswitch;
 	else:
-		app_get_template_part('templates/home',$slug);
+		app_get_template_part('template/home',$slug);
 	endif;
 
 }

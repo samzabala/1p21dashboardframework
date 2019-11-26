@@ -471,28 +471,23 @@ $prefix: '.input';
 
 	& {
 		@extend %for-form-input-itself;
-		
-		
-		@at-root select#{$prefix}:not([multiple]),
-		&-select:not([multiple]) {
-			@extend %for-form-input-select-not-multiple;
-		}
 
-		@at-root select#{$prefix},
-		&-select {
+		@at-root select#{$prefix} {
 			@extend %for-form-input-select;
 			
 		}
+		
+		
+		@at-root select#{$prefix}:not([multiple]) {
+			@extend %for-form-input-select-not-multiple;
+		}
 
-		@at-root select#{$prefix}[multiple],
-		&-select[multiple]{
+		@at-root select#{$prefix}[multiple]{
 			@extend %for-form-input-select-multiple;
 		}
 
 		&-radio,
-		&-checkbox,
-		&[type=radio],
-		&[type=checkbox] {
+		&-checkbox {
 			@extend %for-form-input-inlines;
 		}
 	}
@@ -538,6 +533,7 @@ $prefix: '.input';
 	}
 
 
+	@at-root select#{$prefix}[multiple],
 	&-single-line,
 	&-multiple-line,
 	&-editor {
@@ -572,8 +568,9 @@ $prefix: '.input';
 		@extend %for-form-input-single-line;
 	}
 	
+
+	@at-root select#{$prefix}[multiple],
 	&-multiple-line,
-	&[multiple],
 	&-editor {
 		@extend %for-form-input-multiple-line;
 	}

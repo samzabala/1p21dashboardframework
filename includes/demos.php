@@ -591,7 +591,7 @@
 				</p>
 
 				<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-					<select class="input input-multiple-line" multiple>
+					<select class="input input-select" multiple>
 						<option>Available option 1</option>
 						<option>Available option 2</option>
 						<option>Available option 3</option>

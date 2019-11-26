@@ -305,10 +305,10 @@ ul{
 }
 
 ol {
-	counter-reset: list-item;
+	counter-reset: fw-list;
 
 	> li {
-		counter-increment: list-item;
+		counter-increment: fw-list;
 		// padding-left: em(15px / $content-font-size);
 
 		&:before {
@@ -316,7 +316,7 @@ ol {
 				color: $body-list-bullet-color,
 				// family: font(a)
 			));
-			content: counter(list-item);
+			content: counter(fw-list);
 			font-weight: 800;
 			top: 0;
 			margin-right: 1em;

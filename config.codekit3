@@ -17,6 +17,14 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/app.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app.php",
+		"oF": 0
+		},
 	"/assets/fonts/icons.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2390,116 +2398,124 @@
 		"oS": 1,
 		"uL": 1
 		},
-	"/templates/error.php": {
+	"/template/error.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/error.php",
+		"oAP": "/template/error.php",
 		"oF": 0
 		},
-	"/templates/home.php": {
+	"/template/home.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/home.php",
+		"oAP": "/template/home.php",
 		"oF": 0
 		},
-	"/templates/profile.php": {
+	"/template/profile.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/templates/profile.php",
+		"oAP": "/template/profile.php",
 		"oF": 0
 		},
-	"/vue/home-production.vue": {
+	"/vue/includes/profile-card.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/home-production.vue",
+		"oAP": "/vue/includes/profile-card.vue",
 		"oF": 0
 		},
-	"/vue/home-seo.vue": {
+	"/vue/template/home-production.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/home-seo.vue",
+		"oAP": "/vue/template/home-production.vue",
 		"oF": 0
 		},
-	"/vue/last-activity.vue": {
+	"/vue/template/home-seo.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/last-activity.vue",
+		"oAP": "/vue/template/home-seo.vue",
 		"oF": 0
 		},
-	"/vue/new-content.vue": {
+	"/vue/template/last-activity.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/new-content.vue",
+		"oAP": "/vue/template/last-activity.vue",
 		"oF": 0
 		},
-	"/vue/profile-production.vue": {
+	"/vue/template/new-content.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/profile-production.vue",
+		"oAP": "/vue/template/new-content.vue",
 		"oF": 0
 		},
-	"/vue/profile-scoreboard.vue": {
+	"/vue/template/profile-production.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/profile-scoreboard.vue",
+		"oAP": "/vue/template/profile-production.vue",
 		"oF": 0
 		},
-	"/vue/profiles.vue": {
+	"/vue/template/profile-scoreboard.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/profiles.vue",
+		"oAP": "/vue/template/profile-scoreboard.vue",
 		"oF": 0
 		},
-	"/vue/project-production.vue": {
+	"/vue/template/profiles.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/project-production.vue",
+		"oAP": "/vue/template/profiles.vue",
 		"oF": 0
 		},
-	"/vue/project-seo.vue": {
+	"/vue/template/project-production.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/project-seo.vue",
+		"oAP": "/vue/template/project-production.vue",
 		"oF": 0
 		},
-	"/vue/projects.vue": {
+	"/vue/template/project-seo.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/projects.vue",
+		"oAP": "/vue/template/project-seo.vue",
 		"oF": 0
 		},
-	"/vue/unique-links.vue": {
+	"/vue/template/projects.vue": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/vue/unique-links.vue",
+		"oAP": "/vue/template/projects.vue",
+		"oF": 0
+		},
+	"/vue/template/unique-links.vue": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/vue/template/unique-links.vue",
 		"oF": 0
 		}
 	},
