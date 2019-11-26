@@ -19,6 +19,10 @@ $prefix: '.module';
 		grid-gap: $module-gutter-grid-gap;
 		transition:$transition-duration-long opacity $transition-timing;
 		max-width:100%;
+
+		&:nth-child(n+2) {
+			margin-top:$module-grid-gutter;
+		}
 		
 		@include br(md){
 

@@ -1,4 +1,33 @@
 
+
+<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<div class="accordion">
+
+	<a
+		data-toggle="modal"
+		data-modal-has-close-button=""
+		data-modal-header="Bitch"
+		href="#modal-demo">Modal boi</a>
+	
+	<a
+		data-toggle="modal"
+		data-modal-has-close-button=""
+		data-modal-header="Bitch ass"
+		data-href="#modal-demo">Modal boi</a>
+	
+	<a
+		data-toggle="modal"
+		data-modal-has-close-button=""
+		data-modal-header="Bitch ass"
+		data-href="#modal-demo">Modal boi</a>
+
+<div class="modal" id="modal-demo">
+	<h1>Look at this bitchboy going modal and shit</h1>
+</div>
+</div>
+
+
+
 <h1 data-toggle="accordion">Editor <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
 <div class="accordion">
 	<form class="special-form" action="" method="get">

@@ -35,6 +35,25 @@ window.jQuery && jQuery.noConflict();
 	}
 
 
+
+	_.getTheToggled = function(clicked,selector){
+		selector = selector || null;
+				
+		if( clicked.attr('href') ){
+			return $( clicked.attr('href') );
+
+		}else if( clicked.attr('data-href') ){
+			return $( clicked.attr('data-href') )
+			
+		}else if( clicked.next(selector).first().length > 0 ){
+			return clicked.next(selector).first();
+
+		}else{
+			return false;
+		}
+	};
+
+
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
@@ -151,8 +170,6 @@ window.jQuery && jQuery.noConflict();
 
 					}
 				});
-
-				console.log('smolest',smallestStyledBr);
 	
 				if(modElement.data(prop) && !propsSet) {
 
@@ -232,14 +249,231 @@ window.jQuery && jQuery.noConflict();
 	}
 
 
-	function readyGrid(){
+
+	_1p21.fw.createToolTip = function(triggerer) {
+		if(triggerer) {
+			var arr =  {
+				placement: triggerer.data('tooltip-placement'),
+				badge: triggerer.data('tooltip-badge'),
+				badgeBg: triggerer.data('tooltip-badge-background'),
+				badgeSize: triggerer.data('tooltip-badge-size'),
+				content: triggerer.data('tooltip-content'),
+				classes: triggerer.data('tooltip-classes'),
+				centerX: triggerer.data('tooltip-center-x'),
+				centerY: triggerer.data('tooltip-center-y'),
+			};
+
+			var defaults = {
+
+				placement: 'left',
+				badge: false,
+				badgeBg: 'primary',
+				badgeSize: '',
+				classes: '',
+				content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
+				centerX: false,
+				centerY: false,
+
+			};
+			
+			var args = defaults;
+			for (var prop in arr) {
+				if(arr.hasOwnProperty(prop) && arr[prop]) {
+					// Push each value from `obj` into `extended`
+					args[prop] = arr[prop];
+				}
+			}
+
+			_1p21.fw.destroyToolTip();
+
+
+			$('body').append(function(){
+				var html = '<div class="tooltip tooltip-'+ args.placement+' '+args.classes+'">';
+				if( args.badge ) {
+					html += '<span class="badge tooltip-badge';
+					if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
+						html += ' badge-'+args.badgeSize;
+					}
+					if(args.badgeBg) {
+						if(_.palette.includes(args.badgeBg)) {
+							html += ' badge-'+args.badgeBg;
+						}else{
+
+							html += '" style="background-color:'+args.badgeBg+';';
+						}
+					}
+					
+					html += '"></span>'
+				}
+				html += args.content
+				html += '</div>';
+
+				return html;
+			});
+
+			var tooltip = $('body').children('.tooltip').first();
+				tooltip.fadeIn()
+				tooltip.addClass('open');
+
+			var toolPoint = parseFloat(window.getComputedStyle( tooltip[0], ':before').getPropertyValue('width'));
+				toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
+
+				isNaN(toolPoint) && (toolPoint = 15);
+
+			var pos = {
+				x: function(){
+					var toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
+					var offset = 0;
+
+					if(args.centerX){
+
+						switch(args.placement){
+							case 'right':
+								toReturn = triggerer.offset().left + ( triggerer.outerWidth() * .5) + toolPoint;
+									break;
+							case 'left':
+								toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint) + (triggerer.outerWidth() * .5);
+								break;
+						}
+						
+					}else{
+
+						switch(args.placement){
+							case 'right':
+								toReturn = triggerer.offset().left + triggerer.outerWidth() + toolPoint;
+								break;
+							case 'left':
+								toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint);
+								break;
+						}
+
+					}
+
+					if(
+						(tooltip.find('.tooltip-badge').first().length > 0)
+						&& (
+							(
+								args.placement == 'left'
+								|| args.placement == 'right'
+							)
+						)
+					) {
+						offset = (args.placement == 'left' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
+					}
+					
+
+					toReturn += offset;
+					
+					return toReturn;
+				},
+				y: function(){
+					var toReturn = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5); // left and right
+					var offset = 0;
+					if(args.centerY){
+						
+						switch(args.placement){
+							case 'top':
+								toReturn = (triggerer.offset().top - (tooltip.outerHeight() + toolPoint) + (triggerer.outerHeight() * .5));
+								break;
+							case 'bottom':
+								toReturn = (triggerer.offset().top + ((triggerer.outerHeight() * .5)) + toolPoint);
+								break;
+						}
+
+					}else{
+						
+						switch(args.placement){
+							case 'top':
+								toReturn = triggerer.offset().top - (tooltip.outerHeight() + toolPoint);
+								break;
+							case 'bottom':
+								toReturn = triggerer.offset().top + (triggerer.outerHeight() + toolPoint);
+								break;
+						}
+					}
+
+					if(
+						(tooltip.find('.tooltip-badge').first().length > 0)
+						&& (
+							args.placement == 'top'
+							|| args.placement == 'bottom'
+						)
+					) {
+						offset = (args.placement == 'top' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
+					}
+
+					toReturn += offset;
+
+					return toReturn;
+				}
+			}
+
+			tooltip.css({
+				'top': pos.y(),
+				'left': pos.x()
+			})
+
+		}
+
+	}
+
+	_1p21.fw.destroyToolTip = function(){
+		$('body').children('.tooltip').hide().remove();
+	}
+
+
+
+	_1p21.fw.createModal = function(triggerer,contentWrap){
+		contentWrap = contentWrap || null;
+		var id = contentWrap.attr('id') || 'the-modal';
+		if(triggerer && contentWrap) {
+			_1p21.fw.destroyModal();
+
+			console.log(contentWrap);
+			$('body').append(function(){
+				
+				
+				var html = '<div id="'+id+'" class="modal-wrapper"><div class="modal-overlay-close">';
+
+				html += '<div class="modal-popup">';
+
+				html += contentWrap.html();
+				html += '</div>';
+				
+				html +='</div></div>';
+
+				return html;
+			});
+
+			var modal = $('body').children('.modal-wrapper').first();
+				modal.fadeIn()
+				modal.addClass('active');
+		}
+	}
+
+	_1p21.fw.destroyModal = function(){
+		$('body').children('.modal-wrapper').hide().remove();
+	}
+
+
+	function initializePopup(id,contentToPrepend) {
+		id = id || '';
+		contentToPrepend = contentToPrepend || '';
+		$('body #' + id ).after('<div id="' + id + '-popup" class="popup"><div class="popup-overlay popup-close"></div><div class="container-fluid"><div class="popup-content"><div class="popup-content-wrapper">' + contentToPrepend + '</div><button class="popup-close">Close</button></div></div></divid>');
+	}
+
+
+
+	_.readyGrid = function(){
 
 		$('.module-grid:not(.module-grid-custom)').each(function(){
 			_1p21.fw.initGrid($(this));
 		});
 	}
-	_.functions_on_load.push(readyGrid);
-	_.functions_on_resize.push(readyGrid);
+	_.functions_on_load.push(_.readyGrid);
+	_.functions_on_resize.push(_.readyGrid);
+
+
 
 	$(window).load(function(){
 
@@ -285,25 +519,10 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			// console.log(e.target);
 
-			var selector =  (function(clicked){
-				console.log( clicked );
-				if( clicked.attr('href') ){
-					return $( clicked.attr('href') );
-
-				}else if( clicked.attr('data-href') ){
-					return $( clicked.attr('data-href') )
-					
-				}else if( clicked.next('.accordion').first().length > 0 ){
-					return clicked.next('.accordion').first();
-
-				}else{
-					return false;
-				}
-			}( $(this) ));
+			var selector =  _.getTheToggled($(this),'.accordion');
 
 
 			if( selector ){
-				console.log(selector)
 				
 				if( selector.hasClass('open') && $(this).hasClass('open') ){
 
@@ -331,20 +550,7 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			// console.log(e.target);
 
-			var selector =  (function(clicked){
-				if( clicked.attr('href') ){
-					return $( clicked.attr('href') );
-
-				}else if( clicked.attr('data-href') ){
-					return $( clicked.attr('data-href') )
-					
-				}else if( clicked.next('.dropdown').first().length > 0 ){
-					return clicked.next('.dropdown').first();
-
-				}else{
-					return false;
-				}
-			}( $(this) ));
+			var selector =  _.getTheToggled($(this),'.dropdown');
 
 			if( selector ){
 				
@@ -389,177 +595,15 @@ window.jQuery && jQuery.noConflict();
 		});
 
 
-		_1p21.fw.createToolTip = function(triggerer) {
-			if(triggerer) {
-				var arr =  {
-					placement: triggerer.data('tooltip-placement'),
-					badge: triggerer.data('tooltip-badge'),
-					badgeBg: triggerer.data('tooltip-badge-background'),
-					badgeSize: triggerer.data('tooltip-badge-size'),
-					content: triggerer.data('tooltip-content'),
-					classes: triggerer.data('tooltip-classes'),
-					centerX: triggerer.data('tooltip-center-x'),
-					centerY: triggerer.data('tooltip-center-y'),
-				};
-
-				var defaults = {
-
-					placement: 'left',
-					badge: false,
-					badgeBg: 'primary',
-					badgeSize: '',
-					classes: '',
-					content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
-					centerX: false,
-					centerY: false,
-
-				};
-				
-				var args = defaults;
-				for (var prop in arr) {
-					if(arr.hasOwnProperty(prop) && arr[prop]) {
-						// Push each value from `obj` into `extended`
-						args[prop] = arr[prop];
-					}
-				}
-
-				_1p21.fw.destroyToolTip();
-
-
-				$('body').append(function(){
-					var html = '<div class="tooltip tooltip-'+ args.placement+' '+args.classes+'">';
-					if( args.badge ) {
-						html += '<span class="badge tooltip-badge';
-						if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
-							html += ' badge-'+args.badgeSize;
-						}
-						if(args.badgeBg) {
-							if(_.palette.includes(args.badgeBg)) {
-								html += ' badge-'+args.badgeBg;
-							}else{
-
-								html += '" style="background-color:'+args.badgeBg+';';
-							}
-						}
-						
-						html += '"></span>'
-					}
-					html += args.content
-					html += '</div>';
-
-					return html;
-				});
-
-				var tooltip = $('body').children('.tooltip').first();
-					tooltip.fadeIn()
-					tooltip.addClass('open');
-
-				var toolPoint = parseFloat(window.getComputedStyle( tooltip[0], ':before').getPropertyValue('width'));
-					toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
-
-					isNaN(toolPoint) && (toolPoint = 15);
-
-				var pos = {
-					x: function(){
-						var toReturn = triggerer.offset().left + ((triggerer.outerWidth() * .5) - (tooltip.outerWidth() * .5));
-						var offset = 0;
-
-						if(args.centerX){
-
-							switch(args.placement){
-								case 'right':
-									toReturn = triggerer.offset().left + ( triggerer.outerWidth() * .5) + toolPoint;
-										break;
-								case 'left':
-									toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint) + (triggerer.outerWidth() * .5);
-									break;
-							}
-							
-						}else{
-
-							switch(args.placement){
-								case 'right':
-									toReturn = triggerer.offset().left + triggerer.outerWidth() + toolPoint;
-									break;
-								case 'left':
-									toReturn = triggerer.offset().left - (tooltip.outerWidth() + toolPoint);
-									break;
-							}
-
-						}
-
-						if(
-							(tooltip.find('.tooltip-badge').first().length > 0)
-							&& (
-								(
-									args.placement == 'left'
-									|| args.placement == 'right'
-								)
-							)
-						) {
-							offset = (args.placement == 'left' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
-						}
-						
-
-						toReturn += offset;
-						
-						return toReturn;
-					},
-					y: function(){
-						var toReturn = (triggerer.offset().top + (triggerer.outerHeight() * .5)) - (tooltip.outerHeight() * .5); // left and right
-						var offset = 0;
-						if(args.centerY){
-							
-							switch(args.placement){
-								case 'top':
-									toReturn = (triggerer.offset().top - (tooltip.outerHeight() + toolPoint) + (triggerer.outerHeight() * .5));
-									break;
-								case 'bottom':
-									toReturn = (triggerer.offset().top + ((triggerer.outerHeight() * .5)) + toolPoint);
-									break;
-							}
-
-						}else{
-							
-							switch(args.placement){
-								case 'top':
-									toReturn = triggerer.offset().top - (tooltip.outerHeight() + toolPoint);
-									break;
-								case 'bottom':
-									toReturn = triggerer.offset().top + (triggerer.outerHeight() + toolPoint);
-									break;
-							}
-						}
-
-						if(
-							(tooltip.find('.tooltip-badge').first().length > 0)
-							&& (
-								args.placement == 'top'
-								|| args.placement == 'bottom'
-							)
-						) {
-							offset = (args.placement == 'top' ) ? (tooltip.find('.tooltip-badge').first().outerWidth() * -.5) : tooltip.find('.tooltip-badge').first().outerWidth() * .5;
-						}
-
-						toReturn += offset;
-
-						return toReturn;
-					}
-				}
-
-				tooltip.css({
-					'top': pos.y(),
-					'left': pos.x()
-				})
-
-			}
-
-		}
-
-		_1p21.fw.destroyToolTip = function(){
-			$('body').children('.tooltip').hide().remove();
-		}
-
+		
+	
+		initializePopup('case-results','<div id="case-result-full-content"></div>');
+		$('#case-results-popup .popup-content').prepend('');
+	
+		$('body').on('click','.popup .popup-close',function(e){
+			e.preventDefault();
+			$(this).closest('.popup').fadeOut(300);
+		});
 
 
 		$('body').on('click','*[data-toggle="tooltip-click"]',function(e){
@@ -581,6 +625,16 @@ window.jQuery && jQuery.noConflict();
 		$('body').on('mouseleave','*[data-toggle="tooltip-hover"]',function(e){
 			var self = $(this);
 			_1p21.fw.destroyToolTip();
+		});
+
+
+
+
+		$('body').on('click','*[data-toggle="modal"]',function(e){
+			var self = $(this);
+			var contentWrap =  _.getTheToggled(self,'.modal');
+			_1p21.fw.createModal(self,contentWrap);
+			
 		});
 
 

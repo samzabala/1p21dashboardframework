@@ -64,7 +64,7 @@ table {
   --br-xxs: 767px;
   --br-xs: 767px;
   --br-sm: 1279px;
-  --br-md: 1799px;
+  --br-md: 1899px;
   --brand-color-base: #000000;
   --brand-color-base-alt: #3d3d3d;
   --brand-color-background: #FFFFFF;
@@ -131,7 +131,7 @@ table {
   }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1900px) {
   .flex-lg {
     display: flex!important;
   }
@@ -1126,6 +1126,8 @@ table.table-large .table-cell {
   }
 }
 
+/*** PAGINATION ***/
+/* it */
 /*** LAYOUTING CONTAINERS AND SHIT ***/
 /* CONTAINER */
 .container {
@@ -1159,8 +1161,7 @@ table.table-large .table-cell {
   }
 }
 
-/*** SET ***/
-/* SUBSET */
+/*** LIST GROUPS ***/
 .list-group {
   padding: 0;
   border-bottom: 1px solid #ecedf0;
@@ -1192,6 +1193,10 @@ table.table-large .table-cell {
   grid-gap: 15px;
   transition: 0.5s opacity ease-in-out;
   max-width: 100%;
+}
+
+.module-grid:nth-child(n+2) {
+  margin-top: 30px;
 }
 
 @media (min-width: 1280px) {
@@ -1374,17 +1379,24 @@ table.table-large .table-cell {
   margin: 0 auto;
 }
 
-/*** SET ***/
-/* SUBSET */
-.modal, .trumbowyg-modal-box {
+/*** MODAL ***/
+.modal-popup, .trumbowyg-modal-box {
   padding: 50px 50px;
   border-radius: 10px;
   background: #FFFFFF;
   position: absolute;
 }
 
-.body-inverse .modal, .body-inverse .trumbowyg-modal-box {
+.body-inverse .modal-popup, .body-inverse .trumbowyg-modal-box {
   background: #222222;
+}
+
+.modal {
+  display: none !important;
+}
+
+.modal-wrapper {
+  position: fixed;
 }
 
 /*** IMAGES ***/
@@ -1550,8 +1562,7 @@ table.table-large .table-cell {
   border-radius: 5px;
 }
 
-/*** SET ***/
-/* SUBSET */
+/*** LEGENDS ***/
 .legend {
   display: inline-block;
   vertical-align: middle;
@@ -2485,7 +2496,7 @@ table.table-large .table-cell {
   color: #0480fe ;
 }
 
-/*** SET ***/
+/*** input ***/
 /* input clasees */
 .input-label, select.input[multiple], .input-single-line, .input-multiple-line, .input-editor, .trumbowyg-editor, .trumbowyg-textarea, .trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
@@ -3474,7 +3485,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   display: none !important;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1900px) {
   .desktop-only {
     display: block !important;
   }
@@ -3483,7 +3494,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1799px) {
+@media (min-width: 1280px) and (max-width: 1899px) {
   .laptop-only {
     display: block !important;
   }

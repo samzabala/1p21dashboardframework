@@ -1,4 +1,4 @@
-/*** SET ***/
+/*** LEGENDS ***/
 
 $calculated-legend-width: $legend-width;
 @if internal-is-convertable($legend-width) {
@@ -12,7 +12,6 @@ $calculated-legend-height: $legend-height;
 
 
 
-/* SUBSET */
 $prefix: '.legend';
 #{$prefix} {
 	display:inline-block;

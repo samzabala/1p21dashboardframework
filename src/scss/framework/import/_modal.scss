@@ -1,8 +1,10 @@
-/*** SET ***/
+/*** MODAL ***/
 
-/* SUBSET */
+
 $prefix: '.modal';
 
+
+//also used by module
 %for-modal {
 
 	padding: $modal-gutter-y $modal-gutter-y;
@@ -16,5 +18,19 @@ $prefix: '.modal';
 }
 
 #{$prefix} {
-	@extend %for-modal;
+		display:none!important;
+
+
+	&-wrapper {
+		position: fixed;
+
+	}
+
+	&-overlay {
+		
+	}
+
+	&-popup {
+		@extend %for-modal;
+	}
 }

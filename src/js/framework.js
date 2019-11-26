@@ -25,6 +25,31 @@ window.jQuery && jQuery.noConflict();
 	}
 
 
+
+	_.getTheToggled = function(clicked,selector){
+		selector = selector || null;
+				
+		if( clicked.getAttribute('href') ){
+			return document.querySelector( clicked.getAttribute('href') );
+
+		}else if( clicked.getAttribute('data-href') ){
+			return document.querySelector( clicked.getAttribute('data-href') )
+			
+		}else{
+			var possibleSiblings = clicked.nextElementSibling;
+
+			while (possibleSiblings) {
+				if (possibleSiblings.matches(selector)){
+					return possibleSiblings;
+				}
+				possibleSiblings = possibleSiblings.nextElementSibling
+			}
+
+			return possibleSiblings;
+		}
+	};
+
+
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
@@ -316,16 +341,205 @@ window.jQuery && jQuery.noConflict();
 		document.querySelector('body').classList.add('lazy-initialized');
 	}
 
-	function readyGrid(){
+	_1p21.fw.createToolTip = function(triggerer) {
+		if(triggerer) {
+			_1p21.fw.destroyToolTip();
+			var arr =  {
+				placement: triggerer.getAttribute('data-tooltip-placement') || null,
+				badge: triggerer.getAttribute('data-tooltip-badge') || null,
+				badgeBg: triggerer.getAttribute('data-tooltip-badge-background') || null,
+				badgeSize: triggerer.getAttribute('data-tooltip-badge-size') || null,
+				content: triggerer.getAttribute('data-tooltip-content') || null,
+				classes: triggerer.getAttribute('data-tooltip-classes') || null,
+				centerX: triggerer.getAttribute('data-tooltip-center-x') || null,
+				centerY: triggerer.getAttribute('data-tooltip-center-y') || null,
+			};
+
+			var defaults = {
+
+				placement: 'left',
+				badge: false,
+				badgeBg: 'primary',
+				badgeSize: '',
+				classes: '',
+				content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
+				centerX: false,
+				centerY: false,
+
+			};
+			
+			var args = defaults;
+			for (var prop in arr) {
+				if(arr.hasOwnProperty(prop) && arr[prop] !== '' && arr[prop] !== null) {
+					// Push each value from `obj` into `extended`
+					args[prop] = arr[prop];
+				}
+			}
+
+			var toolTip = document.createElement('div');
+			document.querySelector('body').appendChild(toolTip);
+			
+			toolTip.className = 'tooltip tooltip-'+ args.placement+' '+ args.classes;
+
+			var ttHtml = ''
+
+
+			if( args.badge ) {
+				ttHtml += '<span class="badge tooltip-badge';
+				if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
+					ttHtml += ' badge-'+args.badgeSize;
+				}
+				if(args.badgeBg) {
+					if(_.palette.includes(args.badgeBg)) {
+						ttHtml += ' badge-'+args.badgeBg;
+					}else{
+
+						ttHtml += '" style="background-color:'+args.badgeBg+';';
+					}
+				}
+				
+				ttHtml += '"></span>'
+			}
+			ttHtml += args.content;
+			ttHtml += '</div>';
+
+			toolTip.innerHTML += ttHtml;
+
+
+			// var tooltip = $('body').children('.tooltip').first();
+				toolTip.classList.add('open');
+
+			var toolPoint = parseFloat(window.getComputedStyle( toolTip, ':before').getPropertyValue('width'));
+				toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
+				isNaN(toolPoint) && (toolPoint = 15);
+
+
+
+				var triggererProps = {
+					top: triggerer.getBoundingClientRect().top + window.pageYOffset,
+					left: triggerer.getBoundingClientRect().left + window.pageXOffset,
+					height: triggerer.getBoundingClientRect().height,
+					width: triggerer.getBoundingClientRect().width,
+				};
+
+				var toolTipProps = {
+					height: toolTip.getBoundingClientRect().height,
+					width: toolTip.getBoundingClientRect().width,
+				};
+
+				var toolTipBadge = toolTip.querySelector('.tooltip-badge');
+
+				var pos = {
+					x: function(){
+						var toReturn = triggererProps.left + ((triggererProps.width * .5) - (toolTipProps.width * .5));
+						var offset = 0;
+
+						if(args.centerX){
+
+							switch(args.placement){
+								case 'right':
+									toReturn = triggererProps.left + ( triggererProps.width * .5) + toolPoint;
+										break;
+								case 'left':
+									toReturn = triggererProps.left - (toolTipProps.width + toolPoint) + (triggererProps.width * .5);
+									break;
+							}
+							
+						}else{
+
+							switch(args.placement){
+								case 'right':
+									toReturn = triggererProps.left + triggererProps.width + toolPoint;
+									break;
+								case 'left':
+									toReturn = triggererProps.left - (toolTipProps.width + toolPoint);
+									break;
+							}
+
+						}
+
+						if(
+							( toolTipBadge )
+							&& (
+								(
+									args.placement == 'left'
+									|| args.placement == 'right'
+								)
+							)
+						) {
+
+							offset = (args.placement == 'left' ) ? (toolTipBadge.getBoundingClientRect().width * -.5) : toolTipBadge.getBoundingClientRect().width * .5;
+						}
+						
+
+						toReturn += offset;
+						
+						return toReturn;
+					},
+					y: function(){
+						var toReturn = (triggererProps.top + (triggererProps.height * .5)) - (toolTipProps.height * .5); // left and right
+						var offset = 0;
+						if(args.centerY){
+							
+							switch(args.placement){
+								case 'top':
+									toReturn = (triggererProps.top - (toolTipProps.height + toolPoint) + (triggererProps.height * .5));
+									break;
+								case 'bottom':
+									toReturn = (triggererProps.top + ((triggererProps.height * .5)) + toolPoint);
+									break;
+							}
+
+						}else{
+							
+							switch(args.placement){
+								case 'top':
+									toReturn = triggererProps.top - (toolTipProps.height + toolPoint);
+									break;
+								case 'bottom':
+									toReturn = triggererProps.top + (triggererProps.height + toolPoint);
+									break;
+							}
+						}
+
+						if(
+							( toolTipBadge )
+							&& (
+								args.placement == 'top'
+								|| args.placement == 'bottom'
+							)
+						) {
+							offset = (args.placement == 'top' ) ? (toolTipBadge.getBoundingClientRect().width * -.5) : toolTipBadge.getBoundingClientRect().width * .5;
+						}
+
+						toReturn += offset;
+
+						return toReturn;
+					}
+				}
+
+			toolTip.style.top = pos.y()+'px';
+			toolTip.style.left = pos.x()+'px';
+			_1p21.fw.activeToolTipTrigger = triggerer
+
+		}
+
+	}
+
+	_1p21.fw.destroyToolTip = function(){
+		var toolTip = document.querySelector('body > .tooltip');
+		toolTip && toolTip.parentNode.removeChild(toolTip);
+	}
+
+	_.readyGrid = function(){
 		
 		var grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
 		grids.forEach(function(grid){
 			_1p21.fw.initGrid(grid);
 		});
 	}
-
-	_.functions_on_load.push(readyGrid);
-	_.functions_on_resize.push(readyGrid);
+	_.functions_on_load.push(_.readyGrid);
+	_.functions_on_resize.push(_.readyGrid);
 
 	window.addEventListener('load',function(){
 
@@ -348,45 +562,8 @@ window.jQuery && jQuery.noConflict();
 		
 		});
 
-		$ && $('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
-			$(this).trumbowyg({
-				btns: [
-					['viewHTML'],
-					['strong', 'em',],
-					['insertImage'],
-					['link'],
-					['unorderedList', 'orderedList'],
-					['upload'],
-					['fullscreen']
-				],
-				removeformatPasted: true,
-				tagsToRemove: ['script']
-			});
-		});
 
-		_.getTheToggled = function(clicked,selector){
-				
-			if( clicked.getAttribute('href') ){
-				return document.querySelector( clicked.getAttribute('href') );
 
-			}else if( clicked.getAttribute('data-href') ){
-				return document.querySelector( clicked.getAttribute('data-href') )
-				
-			}else{
-				var possibleSiblings = clicked.nextElementSibling;
-
-				while (possibleSiblings) {
-					if (possibleSiblings.matches(selector)){
-						return possibleSiblings;
-					}
-					possibleSiblings = possibleSiblings.nextElementSibling
-				}
-
-				return possibleSiblings;
-			}
-		};
-
-		
 		_1p21.fw.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
@@ -447,7 +624,7 @@ window.jQuery && jQuery.noConflict();
 					){
 
 						selectorAncestor && selectorAncestor.classList.remove('open');
-	
+
 						slideUp(selector);  
 						clicked.classList.remove('open'); 
 						selector.classList.remove('open'); 
@@ -516,195 +693,21 @@ window.jQuery && jQuery.noConflict();
 				_1p21.fw.destroyToolTip();
 			});
 
-		_1p21.fw.createToolTip = function(triggerer) {
-			if(triggerer) {
-				_1p21.fw.destroyToolTip();
-				var arr =  {
-					placement: triggerer.getAttribute('data-tooltip-placement') || null,
-					badge: triggerer.getAttribute('data-tooltip-badge') || null,
-					badgeBg: triggerer.getAttribute('data-tooltip-badge-background') || null,
-					badgeSize: triggerer.getAttribute('data-tooltip-badge-size') || null,
-					content: triggerer.getAttribute('data-tooltip-content') || null,
-					classes: triggerer.getAttribute('data-tooltip-classes') || null,
-					centerX: triggerer.getAttribute('data-tooltip-center-x') || null,
-					centerY: triggerer.getAttribute('data-tooltip-center-y') || null,
-				};
-
-				var defaults = {
-
-					placement: 'left',
-					badge: false,
-					badgeBg: 'primary',
-					badgeSize: '',
-					classes: '',
-					content: '<em class="color-neutral tooltip-placeholder">No info...</em>',
-					centerX: false,
-					centerY: false,
-
-				};
-				
-				var args = defaults;
-				for (var prop in arr) {
-					if(arr.hasOwnProperty(prop) && arr[prop] !== '' && arr[prop] !== null) {
-						// Push each value from `obj` into `extended`
-						args[prop] = arr[prop];
-					}
-				}
-
-				var toolTip = document.createElement('div');
-				document.querySelector('body').appendChild(toolTip);
-				
-				toolTip.className = 'tooltip tooltip-'+ args.placement+' '+ args.classes;
-
-				var ttHtml = ''
-
-
-				if( args.badge ) {
-					ttHtml += '<span class="badge tooltip-badge';
-					if(args.badgeSize == 'small' || args.badgeSize == 'large' ) {
-						ttHtml += ' badge-'+args.badgeSize;
-					}
-					if(args.badgeBg) {
-						if(_.palette.includes(args.badgeBg)) {
-							ttHtml += ' badge-'+args.badgeBg;
-						}else{
-
-							ttHtml += '" style="background-color:'+args.badgeBg+';';
-						}
-					}
-					
-					ttHtml += '"></span>'
-				}
-				ttHtml += args.content;
-				ttHtml += '</div>';
-
-				toolTip.innerHTML += ttHtml;
-
-
-				// var tooltip = $('body').children('.tooltip').first();
-					toolTip.classList.add('open');
-
-				var toolPoint = parseFloat(window.getComputedStyle( toolTip, ':before').getPropertyValue('width'));
-					toolPoint = Math.sqrt((toolPoint * toolPoint) * 2) * .5;
-					isNaN(toolPoint) && (toolPoint = 15);
-
-
-
-					var triggererProps = {
-						top: triggerer.getBoundingClientRect().top + window.pageYOffset,
-						left: triggerer.getBoundingClientRect().left + window.pageXOffset,
-						height: triggerer.getBoundingClientRect().height,
-						width: triggerer.getBoundingClientRect().width,
-					};
-
-					var toolTipProps = {
-						height: toolTip.getBoundingClientRect().height,
-						width: toolTip.getBoundingClientRect().width,
-					};
-
-					var toolTipBadge = toolTip.querySelector('.tooltip-badge');
-
-					var pos = {
-						x: function(){
-							var toReturn = triggererProps.left + ((triggererProps.width * .5) - (toolTipProps.width * .5));
-							var offset = 0;
-
-							if(args.centerX){
-
-								switch(args.placement){
-									case 'right':
-										toReturn = triggererProps.left + ( triggererProps.width * .5) + toolPoint;
-											break;
-									case 'left':
-										toReturn = triggererProps.left - (toolTipProps.width + toolPoint) + (triggererProps.width * .5);
-										break;
-								}
-								
-							}else{
-
-								switch(args.placement){
-									case 'right':
-										toReturn = triggererProps.left + triggererProps.width + toolPoint;
-										break;
-									case 'left':
-										toReturn = triggererProps.left - (toolTipProps.width + toolPoint);
-										break;
-								}
-
-							}
-
-							if(
-								( toolTipBadge )
-								&& (
-									(
-										args.placement == 'left'
-										|| args.placement == 'right'
-									)
-								)
-							) {
-
-								offset = (args.placement == 'left' ) ? (toolTipBadge.getBoundingClientRect().width * -.5) : toolTipBadge.getBoundingClientRect().width * .5;
-							}
-							
-
-							toReturn += offset;
-							
-							return toReturn;
-						},
-						y: function(){
-							var toReturn = (triggererProps.top + (triggererProps.height * .5)) - (toolTipProps.height * .5); // left and right
-							var offset = 0;
-							if(args.centerY){
-								
-								switch(args.placement){
-									case 'top':
-										toReturn = (triggererProps.top - (toolTipProps.height + toolPoint) + (triggererProps.height * .5));
-										break;
-									case 'bottom':
-										toReturn = (triggererProps.top + ((triggererProps.height * .5)) + toolPoint);
-										break;
-								}
-
-							}else{
-								
-								switch(args.placement){
-									case 'top':
-										toReturn = triggererProps.top - (toolTipProps.height + toolPoint);
-										break;
-									case 'bottom':
-										toReturn = triggererProps.top + (triggererProps.height + toolPoint);
-										break;
-								}
-							}
-
-							if(
-								( toolTipBadge )
-								&& (
-									args.placement == 'top'
-									|| args.placement == 'bottom'
-								)
-							) {
-								offset = (args.placement == 'top' ) ? (toolTipBadge.getBoundingClientRect().width * -.5) : toolTipBadge.getBoundingClientRect().width * .5;
-							}
-
-							toReturn += offset;
-
-							return toReturn;
-						}
-					}
-
-				toolTip.style.top = pos.y()+'px';
-				toolTip.style.left = pos.x()+'px';
-				_1p21.fw.activeToolTipTrigger = triggerer
-
-			}
-
-		}
-
-		_1p21.fw.destroyToolTip = function(){
-			var toolTip = document.querySelector('body > .tooltip');
-			toolTip && toolTip.parentNode.removeChild(toolTip);
-		}
+		$ && $('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+			$(this).trumbowyg({
+				btns: [
+					['viewHTML'],
+					['strong', 'em',],
+					['insertImage'],
+					['link'],
+					['unorderedList', 'orderedList'],
+					['upload'],
+					['fullscreen']
+				],
+				removeformatPasted: true,
+				tagsToRemove: ['script']
+			});
+		});
 
 		document.querySelector('body').classList.remove('body-loading');
 		document.querySelector('body').classList.add('body-loaded');

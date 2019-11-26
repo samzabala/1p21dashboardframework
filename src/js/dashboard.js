@@ -20,27 +20,27 @@ window.jQuery && jQuery.noConflict();
 	//framework shit
 	_1p21.db = _1p21.db || {};
  
-	_1p21.db.sideNav = new Vue ({
-			el: "#dashboard-block-sidebar",
-			data: {
-				open: false
-			}
-		});
+	// _1p21.db.sideNav = new Vue ({
+	// 		el: "#dashboard-block-sidebar",
+	// 		data: {
+	// 			open: false
+	// 		}
+	// 	});
 
-	_1p21.db.mainNav = new Vue ({
-		el: '#dashboard-block-main-nav',
-		computed: {
-			sideNav : _1p21.db.sideNav.$data.open
-		},
-		methods: {
-			navStatus: function(){
-				return _1p21.db.sideNav.$data.open;
-			},
-			toggleNav : function(e) {
-				_1p21.db.sideNav.$data.open = !_1p21.db.sideNav.$data.open
-			}
-		}
-	})
+	// _1p21.db.mainNav = new Vue ({
+	// 	el: '#dashboard-block-main-nav',
+	// 	computed: {
+	// 		sideNav : _1p21.db.sideNav.$data.open
+	// 	},
+	// 	methods: {
+	// 		navStatus: function(){
+	// 			return _1p21.db.sideNav.$data.open;
+	// 		},
+	// 		toggleNav : function(e) {
+	// 			_1p21.db.sideNav.$data.open = !_1p21.db.sideNav.$data.open
+	// 		}
+	// 	}
+	// })
 
 
 

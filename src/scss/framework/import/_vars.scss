@@ -6,7 +6,7 @@
 	 //breakpoints
 	 $br-xs: 767px !default;
 	 $br-sm: 1279px !default;
-	 $br-md: 1799px !default;
+	 $br-md: 1899px !default;
  
 	 //extra breakpoints
 	 $brxxs: 400px !default;
@@ -246,6 +246,9 @@
 		$nav-top-font-weight: 600 !default;
 		$nav-top-font-color: inherit !default;
 		$nav-top-text-transform: none !default;
+	//pagination
+
+		// $pagination: 30px !default;
 	
 	// MODULE
 		$module-bg-color: $global-background !default;
