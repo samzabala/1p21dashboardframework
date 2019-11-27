@@ -580,7 +580,7 @@ window.jQuery && jQuery.noConflict();
 				if( selector.hasClass('open') && $(this).hasClass('open') ){
 
 					selector.slideUp(); 
-					$(this).closest('li , .nav-item').removeClass('open'); 
+					$(this).parent().removeClass('open'); 
 					$(this).removeClass('open'); 
 					selector.removeClass('open'); 
 				}else{

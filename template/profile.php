@@ -161,8 +161,8 @@
 					</td>
 					<td class="text-align-center">
 						<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
-						<ul class="dropdown">
-							
+						<ul class="dropdown dropdown-flush-bottom dropdown-right">
+							Things
 						</ul>
 					</td>
 				</tr>
@@ -245,7 +245,7 @@
 					<span class="btn btn-default">Jan 2018</span>
 					<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 				</a>
-				<div class="dropdown">
+				<div class="dropdown dropdown-flush-bottom dropdown-right">
 					Jan 2018
 				</div>
 			</div>

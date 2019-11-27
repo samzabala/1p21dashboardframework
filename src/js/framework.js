@@ -684,7 +684,7 @@ window.jQuery && jQuery.noConflict();
 			var clicked = e.target;
 				selector = _.getTheToggled(clicked,'.dropdown');
 				
-				var selectorAncestor = selector.closest('li,.nav-item');
+				var selectorAncestor = selector.parentNode;
 
 
 				if( selector ){
