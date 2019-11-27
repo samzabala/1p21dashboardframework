@@ -16,7 +16,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.plugged.min.js'); ?>
-	<!-- <?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?> -->
+	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?>
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.min.js'); ?>
 
 	<script>

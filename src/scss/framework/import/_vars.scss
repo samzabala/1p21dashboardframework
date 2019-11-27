@@ -66,10 +66,10 @@
 				$global-color-contrast-inverse: $brand-color-background-alt !default;
 
 		$global-background: $brand-color-background !default;
-			$global-background-inverse:#222222 !default;
+			$global-background-inverse: $brand-color-base-alt !default;
 
 			$global-background-contrast: $brand-color-background-alt !default;
-				$global-background-contrast-inverse: $brand-color-base !default;
+				$global-background-contrast-inverse: #2d2d2d !default;
 
 	// PADDING
 		$gutter-base: 50px !default;
@@ -246,9 +246,15 @@
 		$nav-top-font-weight: 600 !default;
 		$nav-top-font-color: inherit !default;
 		$nav-top-text-transform: none !default;
-	//pagination
 
-		// $pagination: 30px !default;
+	//pagination
+		$pagination-font-size: 65px !default;
+		$pagination-font-weight: 300 !default;
+		$pagination-line-height: 1.25 !default;
+		$pagination-font-style: normal !default;
+		$pagination-color: inherit !default;
+		$pagination-text-transform: none !default;
+		$pagination-gutter-y: 0 !default;
 	
 	// MODULE
 		$module-bg-color: $global-background !default;
@@ -290,11 +296,14 @@
 	
 	// modal
 		$modal-gutter-x: $gutter-small !default;
-		$modal-gutter-y: $gutter-base !default;
-		$modal-background: $global-background;
+		$modal-gutter-y: $gutter-base * .75 !default;
+		$modal-background: $global-background !default;
+		$modal-close-offset: $gutter-small !default;
 		$modal-background-inverse: $global-background-inverse !default;
 		$modal-border-radius: $border-radius-base !default;
 		$modal-box-shadow: 0px 0px 30px -30px $brand-color-base !default !default;
+		$modal-overlay-bg: rgba($brand-color-base,.2) !default;
+		$modal-close-button-font-size: 2rem !default;
 
 	// POPPER = DROPDOWN || TOOLTIP
 		$popper-gutter-x: $gutter-small !default;
@@ -411,7 +420,7 @@
 		$input-border-radius: $border-radius-base !default;
 			$input-border-radius-large: $border-radius-base !default;
 			$input-border-radius-small: $border-radius-base !default;
-		$input-box-shadow: 0px 3px 15px -10px $brand-color-base !default;
+		$input-box-shadow: 0px 3px 20px -10px $brand-color-base !default;
 		$input-box-shadow-brand-basis: 0px 3px 15px -10px !default;
 			$input-box-shadow-focus: 0px 0 5px 0px $brand-color-primary !default;
 		$input-group-separator-color: rgba($brand-color-neutral,.5) !default;
@@ -460,8 +469,8 @@
 
 
 		
-			$wysiwyg-transition-duration: $transition-duration-short;
-			$wysiwyg-transition-duration-slow: $transition-duration-base;
+			$wysiwyg-transition-duration: $transition-duration-short !default;
+			$wysiwyg-transition-duration-slow: $transition-duration-base !default;
 
 	// BTN
 		$btn-height: 45px !default;

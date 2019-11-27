@@ -112,19 +112,66 @@
 		</div>
 	</div>
 	<div class="module" data-grid-area-md="assigned">
-		<div class="module-header">
+		<div class="module-header module-header-break">
 			<div class="module-title">
 				Assigned Tasks
 			</div>
 			<div class="module-functions">
-				<div class="btn-group btn-group-horizontal btn-group-toggle">
+				<div class="btn-group btn-group-horizontal btn-group-responsive btn-group-toggle">
 					<a href="#" class="btn btn-default active">Current</a>
 					<a href="#" class="btn btn-default">Completed</a>
 				</div>
 			</div>
 		</div>
 		<div class="module-content">
-			<p class="color-neutral">Oooh nothing here :/</p>
+
+			<table v-if="assignedTasks">
+				<tr>
+					<th>
+						Domain
+					</th>
+					<th>
+						Task
+					</th>
+
+					<th>
+						<a href="#" class="color-inherit">Started <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
+					</th>
+
+					<th>
+						<a href="#" class="color-inherit">Status <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
+					</th>
+
+					<th class="text-align-center">
+						Action
+					</th>
+				</tr>
+				<tr v-for="task in assignedTasks">
+					<td>
+						rmfwlaw.com
+					</td>
+					<td>
+						Homepage Design
+					</td>
+					<td>
+						4-20-19
+					</td>
+					<td>
+						<span class="tag tag-accent">Design</span>
+					</td>
+					<td class="text-align-center">
+						<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+						<ul class="dropdown">
+							
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+			<p v-else="assignedTasks" class="color-neutral">Oooh nothing here :/</p>
+
+
+			
 		</div>
 		<div class="module-footer">
 			<div class="pagination">
@@ -138,7 +185,77 @@
 		</div>
 	</div>
 	<div class="module" data-grid-area-md="ass">
-		ass
+		
+		<div class="module-header">
+			<div class="module-title">
+				Associated Projects
+			</div>
+			<div class="module-functions">
+				<div class="btn-group btn-group-horizontal btn-group-responsive btn-group-toggle">
+					<a href="#" class="btn btn-default active">Current</a>
+					<a href="#" class="btn btn-default">Completed</a>
+				</div>
+
+
+				<div class="input-group input-group-horizontal input-group-responsive">
+					
+					<select class="input input-single-line" >
+						<option value="" selected>Designer</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+					</select>
+
+					
+					<select class="input input-single-line" >
+						<option value="" selected>Developer</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+					</select>
+					
+					<select class="input input-single-line" >
+						<option value="" selected>Status</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+					</select>
+					
+					<select class="input input-single-line" >
+						<option value="" selected>Project Level</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+						<option value="VAL">VAL</option>
+					</select>
+				</div>
+
+				<a class="btn-group btn-group-horizontal btn-group-unite" data-toggle="dropdown">
+					<span class="btn btn-default">Jan 2018</span>
+					<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
+				</a>
+				<div class="dropdown">
+					Jan 2018
+				</div>
+			</div>
+		</div>
+		<div class="module-content">
+			<p v-else="assignedTasks" class="color-neutral">Oooh nothing here :/</p>
+		</div>
+		<div class="module-footer">
+
+		</div>
 	</div>
 
 </div>

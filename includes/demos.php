@@ -1,34 +1,174 @@
 
 
-<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
 	<a
 		data-toggle="modal"
-		data-modal-has-close-button=""
 		data-modal-header="Bitch"
 		href="#modal-demo">Modal boi</a>
 	
 	<a
 		data-toggle="modal"
-		data-modal-has-close-button=""
+		data-modal-close="false"
+		data-modal-max-width="800px"
 		data-modal-header="Bitch ass"
-		data-href="#modal-demo">Modal boi</a>
+		data-href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
 	
 	<a
 		data-toggle="modal"
-		data-modal-has-close-button=""
-		data-modal-header="Bitch ass"
+		data-modal-header="dumb Bitch juice"
 		data-href="#modal-demo">Modal boi</a>
 
 <div class="modal" id="modal-demo">
 	<h1>Look at this bitchboy going modal and shit</h1>
+
+	<h1>Header one</h1>
+	<h2>Header two</h2>
+	<h3>Header three</h3>
+	<h4>Header four</h4>
+	<h5>Header five</h5>
+	<h6>Header six</h6>
+	<h2>Blockquotes</h2>
+	<p>Single line blockquote:</p>
+	<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+	<p>Multi line blockquote with a cite reference:</p>
+	<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+	<h2>Basic Bitch Table</h2>
+	<table>
+	<tbody>
+	<tr>
+	<th>Employee</th>
+	<th class="views">Salary</th>
+	<th></th>
+	</tr>
+	<tr class="odd">
+	<td><a href="http://example.com/">Jane</a></td>
+	<td>$1</td>
+	<td>Because that’s all Steve Job’ needed for a salary.</td>
+	</tr>
+	<tr class="even">
+	<td><a href="http://example.com">John</a></td>
+	<td>$100K</td>
+	<td>For all the blogging he does.</td>
+	</tr>
+	<tr class="odd">
+	<td><a href="http://example.com/">Jane</a></td>
+	<td>$100M</td>
+	<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+	</tr>
+	<tr class="even">
+	<td><a href="http://example.com/">Jane</a></td>
+	<td>$100B</td>
+	<td>With hair like that?! Enough said…</td>
+	</tr>
+	</tbody>
+	</table>
+	<h2>Definition Lists</h2>
+	<dl>
+	<dt>Definition List Title</dt>
+	<dd>Definition list division.</dd>
+	<dt>Startup</dt>
+	<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+	<dt>#dowork</dt>
+	<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+	<dt>Do It Live</dt>
+	<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+	</dl>
+	<h2>Unordered Lists (Nested)</h2>
+	<ul>
+	<li>List item one
+	<ul>
+	<li>List item one
+	<ul>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ul>
+	<h2>Ordered List (Nested)</h2>
+	<ol>
+	<li>List item one
+	<ol>
+	<li>List item one
+	<ol>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	</li>
+	<li>List item two</li>
+	<li>List item three</li>
+	<li>List item four</li>
+	</ol>
+	<h2>HTML Tags</h2>
+	<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+	<p><strong>Address Tag</strong></p>
+	<address>1 Infinite Loop<br>
+	Cupertino, CA 95014<br>
+	United States</address>
+	<p><strong>Anchor Tag (aka. Link)</strong></p>
+	<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+	<p><strong>Abbreviation Tag</strong></p>
+	<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+	<p><strong>Acronym Tag</strong></p>
+	<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+	<p><strong>Big Tag</strong></p>
+	<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+	<p><strong>Cite Tag</strong></p>
+	<p>“Code is poetry.” —<cite>Automattic</cite></p>
+	<p><strong>Code Tag</strong></p>
+	<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+	<p><strong>Delete Tag</strong></p>
+	<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+	<p><strong>Emphasize Tag</strong></p>
+	<p>The emphasize tag should <em>italicize</em> text.</p>
+	<p><strong>Insert Tag</strong></p>
+	<p>This tag should denote <ins>inserted</ins> text.</p>
+	<p><strong>Keyboard Tag</strong></p>
+	<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+	<p><strong>Preformatted Tag</strong></p>
+	<p>This tag styles large blocks of code.</p>
+	<pre>.post-title {
+		margin: 0 0 5px;
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 1.2;
+	}</pre>
+	<p><strong>Quote Tag</strong></p>
+	<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+	<p><strong>Strong Tag</strong></p>
+	<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+	<p><strong>Subscript Tag</strong></p>
+	<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+	<p><strong>Superscript Tag</strong></p>
+	<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+	<p><strong>Teletype Tag</strong></p>
+	<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+	<p><strong>Variable Tag</strong></p>
+	<p>This allows you to denote <var>variables</var>.</p>
 </div>
 </div>
 
 
 
-<h1 data-toggle="accordion">Editor <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Editor <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<form class="special-form" action="" method="get">
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
@@ -42,7 +182,7 @@
 			<label for="" class="sr-only">uuugh</label>
 		
 			<textarea id="editor-demo" class="input input-trumbowyg">
-<p>Make this textarea a wisywig with <code>.input-trumbowyg</code>.</p><p>To make your own custom trumbo boi add the class <code>.input-tyumbowyg-custom</code> </p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6><h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6>
+<p>Make this textarea a wisywig with <code>.input-trumbowyg</code>.</p><p>To make your own custom trumbo boi add the class <code>.input-tyumbowyg-custom</code> </p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6><h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6>
 			</textarea>
 		</div>
 		<a href="#" class="btn btn-primary">Submet et</a>
@@ -50,7 +190,7 @@
 </div>
 	
 
-<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<p>
 		Add a tooltip with <code>data-toggle="tooltip-click"</code> of  <code>data-toggle="tooltip-hover"</code>
@@ -58,14 +198,14 @@
 
 	<h2>Tooltip on click </h2>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-click"
 			data-tooltip-placement="left"
 			data-tooltip-content="<span class=&quot;badge tooltip-badge badge-primary&quot;></span>This bitch empty<br><strong>YEET</strong>">
 			Bitch boi to the left
-		</div>
+		</a>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-click"
 			data-tooltip-placement="bottom"
 			data-tooltip-badge="true"
@@ -73,18 +213,18 @@
 			data-tooltip-badge-size="large"
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi on the bottom and badge is large
-		</div>
+		</a>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-click"
 			data-tooltip-placement="top"
 			data-tooltip-badge="true"
 			data-tooltip-badge-background="caution"
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi on the top
-		</div>
+		</a>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-click"
 			data-tooltip-placement="right"
 			data-tooltip-badge="true"
@@ -92,51 +232,51 @@
 			data-tooltip-badge-size="small"
 			data-tooltip-content="">
 			Bitch boi to the right and badge is small
-		</div>
+		</a>
 		
 
 	<h2>Tooltip on hover</h2>
 
-	<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-hover"
 			data-tooltip-placement="left"
 			data-tooltip-badge="true"
 			data-tooltip-badge-background="success"
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi to the left
-		</div>
+		</a>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-hover"
 			data-tooltip-placement="bottom"
 			data-tooltip-badge="true"
 			data-tooltip-badge-background="base"
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi on bottom
-		</div>
+		</a>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-hover"
 			data-tooltip-placement="top"
 			data-tooltip-badge="true"
 			data-tooltip-badge-background="neutral"
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi on top
-		</div>
+		</a>
 		
-		<div class="btn btn-primary"
+		<a href="#" class="btn btn-primary"
 			data-toggle="tooltip-hover"
 			data-tooltip-placement="right"
 			data-tooltip-badge="true"
 			data-tooltip-badge-background="#f00"
 			data-tooltip-content="<strong>YEET</strong>">
 			Bitch boi to the right
-		</div>
+		</a>
 </div>
 		
 
 
-<h1 data-toggle="accordion">Nav <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Nav <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
 	<div class="nav">
@@ -183,7 +323,7 @@
 
 </div>
 
-<h1 data-toggle="accordion">Progress Bar <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Progress Bar <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
 
@@ -382,7 +522,7 @@
 		</div>
 </div>
 
-<h1 data-toggle="accordion">Dropdowns <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Dropdowns <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<h2>Basic offset classes</h2>
 		<br>
@@ -521,7 +661,7 @@
 </div>
 
 
-<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
 	<form class="form-horizontal">
@@ -909,7 +1049,7 @@
 
 					<div class="accordion-group ">
 
-						<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h3>
+						<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 						<div class="accordion">
 							<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
 							<input type="button">
@@ -953,7 +1093,7 @@
 							<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 						</div>
 
-						<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h3>
+						<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 						<div id="bitch-accordion" class="accordion">
 							<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
 							<input class="input" type="button">
@@ -997,7 +1137,7 @@
 							<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 						</div>
 
-						<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></a>
+						<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 						<div id="other-bitch-accordion" class="accordion">
 							<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
 							<input class="input" type="button">
@@ -1049,7 +1189,7 @@
 	</form>
 </div>
 
-<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<h2>Basic</h2>
 	<button type="button" class="btn btn-default">Default</button>
@@ -1154,22 +1294,22 @@
 
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol arrow down</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-down"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 	</a>
 
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol arrow up</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-up"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
 	</a>
 
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol arrow left</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-left"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
 	</a>
 
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol arrow right</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow symbol-arrow-right"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
 	</a>
 
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
@@ -1183,11 +1323,11 @@
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol kebab vertical</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-vertical"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol kebab horizontal</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab symbol-kebab-horizontal"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol Burger</span>
@@ -1195,19 +1335,23 @@
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol caret up</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-up"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-up"></i></span>
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol caret down</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-down"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-down"></i></span>
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol caret right</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-left"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-left"></i></span>
 	</a>
 	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Symbol caret left</span>
-		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret symbol-caret-right"></i></span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-right"></i></span>
+	</a>
+	<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+		<span class="btn btn-default">Symbol close</span>
+		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
 	</a>
 
 		<div class="btn-group btn-small btn-group-horizontal btn-group-unite">
@@ -1259,24 +1403,24 @@
 	</h2>
 	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
-			<button type="button" class="active btn btn-default"><i class="symbol symbol-caret symbol-caret-down"></i> Toggle Butt down</button>
-			<button type="button" class="btn btn-default"><i class="symbol symbol-caret symbol-caret-toggle-up symbol-caret-down"></i> Toggle Butt up</button>
-			<button type="button" class="btn btn-default"><i class="symbol symbol-caret symbol-caret-toggle-left symbol-caret-down"></i>Toggle Butt left</button>
-			<button type="button" class="btn btn-default"><i class="symbol symbol-caret symbol-caret-toggle-right symbol-caret-down"></i> Toggle Butt right</button>
+			<button type="button" class="active btn btn-default"><i class="symbol symbol-caret-down"></i> Toggle Butt down</button>
+			<button type="button" class="btn btn-default"><i class="symbol symbol-caret-up-toggle symbol-caret-down"></i> Toggle Butt up</button>
+			<button type="button" class="btn btn-default"><i class="symbol symbol-caret-toggle-left symbol-caret-down"></i>Toggle Butt left</button>
+			<button type="button" class="btn btn-default"><i class="symbol symbol-caret-right-toggle symbol-caret-down"></i> Toggle Butt right</button>
 	</div>
 
 
 	<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
-			<button type="button" class="active btn btn-default"><i class="symbol symbol-arrow symbol-arrow-down"></i> Toggle Butt down</button>
-			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow symbol-arrow-toggle-up symbol-arrow-down"></i> Toggle Butt up</button>
-			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow symbol-arrow-toggle-left symbol-arrow-down"></i>Toggle Butt left</button>
-			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow symbol-arrow-toggle-right symbol-arrow-down"></i> Toggle Butt right</button>
+			<button type="button" class="active btn btn-default"><i class="symbol symbol-arrow-down"></i> Toggle Butt down</button>
+			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-up-toggle symbol-arrow-down"></i> Toggle Butt up</button>
+			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-toggle-left symbol-arrow-down"></i>Toggle Butt left</button>
+			<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-right-toggle symbol-arrow-down"></i> Toggle Butt right</button>
 	</div>
 </div>
 
 
-<h1 data-toggle="accordion">list group <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">list group <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
 	<ul class="list-group">
@@ -1293,7 +1437,7 @@
 	</ul>
 </div>
 
-<h1 data-toggle="accordion">SPECIAL TEXT <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">SPECIAL TEXT <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<p class="special-primary">
 		Yo I'm jumbo fight me
@@ -1305,7 +1449,7 @@
 
 </div>
 
-<h1 data-toggle="accordion">Thumbnail <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Thumbnail <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<div class="thumbnail">
 		<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
@@ -1335,7 +1479,7 @@
 
 </div>
 
-<h1 data-toggle="accordion">Symbols reprise but with color classes on em <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Symbols reprise but with color classes on em <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<p>
 		Symbol Square <i class="color-primary symbol symbol-square"></i>
@@ -1346,19 +1490,19 @@
 	</p>
 
 	<p>
-		Symbol arrow down <i class="color-base symbol symbol-arrow symbol-arrow-down"></i>
+		Symbol arrow down <i class="color-base symbol symbol-arrow-down"></i>
 	</p>
 
 	<p>
-		Symbol arrow up <i class="color-neutral symbol symbol-arrow symbol-arrow-up"></i>
+		Symbol arrow up <i class="color-neutral symbol symbol-arrow-up"></i>
 	</p>
 
 	<p>
-		Symbol arrow left <i class="color-success symbol symbol-arrow symbol-arrow-left"></i>
+		Symbol arrow left <i class="color-success symbol symbol-arrow-left"></i>
 	</p>
 
 	<p>
-		Symbol arrow right <i class="color-caution symbol symbol-arrow symbol-arrow-right"></i>
+		Symbol arrow right <i class="color-caution symbol symbol-arrow-right"></i>
 	</p>
 
 	<p>
@@ -1369,27 +1513,31 @@
 		Symbol - <i class="color-primary symbol symbol-minus"></i>
 	</p>
 	<p>
-		Symbol kebab vertical <i class="color-accent symbol symbol-kebab symbol-kebab-vertical"></i>
+		Symbol kebab vertical <i class="color-accent symbol symbol-kebab-vertical"></i>
 	</p>
 	<p>
-		Symbol kebab horizontal <i class="color-base symbol symbol-kebab symbol-kebab-horizontal"></i>
+		Symbol kebab horizontal <i class="color-base symbol symbol-kebab-horizontal"></i>
 	</p>
 	<p>
-		Symbol caret up <i class="color-neutral symbol symbol-caret symbol-caret-up"></i>
+		Symbol caret up <i class="color-neutral symbol symbol-caret-up"></i>
 	</p>
 	<p>
-		Symbol caret down <i class="color-success symbol symbol-caret symbol-caret-down"></i>
+		Symbol caret down <i class="color-success symbol symbol-caret-down"></i>
 	</p>
 	<p>
-		Symbol caret right <i class="color-caution symbol symbol-caret symbol-caret-left"></i>
+		Symbol caret left <i class="color-caution symbol symbol-caret-left"></i>
 	</p>
 	<p>
-		Symbol caret left <i class="color-error symbol symbol-caret symbol-caret-right"></i>
+		Symbol caret right <i class="color-error symbol symbol-caret-right"></i>
+	</p>
+
+	<p>
+		Symbol close <i class="symbol symbol-close"></i>
 	</p>
 
 </div>
 	
-<h1 data-toggle="accordion">Badges <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Badges <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<p>
 		<span class="badge badge-primary"></span> Primary
@@ -1426,7 +1574,7 @@
 </div>
 
 
-<h1 data-toggle="accordion">Legends <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Legends <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<p>
 		<span class="legend legend-primary"></span> Primary
@@ -1461,7 +1609,7 @@
 </div>
 	
 
-<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<span class="tag tag-primary">Primary</span>
 	<span class="tag tag-accent">Accent</span>
@@ -1475,7 +1623,7 @@
 </div>
 
 
-<h1 data-toggle="accordion">Table <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Table <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<table class="table">
 		<thead>
@@ -1765,7 +1913,7 @@
 	</div>
 </div>
 
-<h1 data-toggle="accordion">Helpers  <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+<h1 data-toggle="accordion">Helpers  <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
 	<h2>Helper classes: text align</h2>
@@ -1852,7 +2000,7 @@
 	<div id="content-sample" style="font-size:inherit;">
 
 
-	<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i></h1>
+	<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 	<h3 class="true-title">Page Markup And Formatting</h3>						
 									<p><strong>Headings</strong></p>
 	<h1>Header one</h1>

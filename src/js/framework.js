@@ -12,44 +12,6 @@ window.jQuery && jQuery.noConflict();
 	$ && ($.trumbowyg.svgPath = '/assets/fonts/icons.svg');
 	$ && ($.trumbowyg.hideButtonTexts = true);
 
-	_1p21.fw.lazyLoad = _1p21.fw.lazyLoad || true;
-
-	
-	
-	_.reverseArray = function(arr) {
-	var newArray = [];
-	for (var i = arr.length - 1; i >= 0; i--) {
-		newArray.push(arr[i]);
-	}
-	return newArray;
-	}
-
-
-
-	_.getTheToggled = function(clicked,selector){
-		selector = selector || null;
-				
-		if( clicked.getAttribute('href') ){
-			return document.querySelector( clicked.getAttribute('href') );
-
-		}else if( clicked.getAttribute('data-href') ){
-			return document.querySelector( clicked.getAttribute('data-href') )
-			
-		}else{
-			var possibleSiblings = clicked.nextElementSibling;
-
-			while (possibleSiblings) {
-				if (possibleSiblings.matches(selector)){
-					return possibleSiblings;
-				}
-				possibleSiblings = possibleSiblings.nextElementSibling
-			}
-
-			return possibleSiblings;
-		}
-	};
-
-
 	String.prototype.getFileExtension = function() {
 		return this.split('.').pop();
 	}
@@ -80,50 +42,14 @@ window.jQuery && jQuery.noConflict();
 			return null;
 		};
 	}
-	
-	//maxs
 
-	_.br_vals = {
-		xxs: 0,
-		xs: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-xs') ) || 600,
-		sm: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-sm') ) || 1200,
-		md: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-md') ) || 1600,
-		lg: 9999999
-	};
-	_.br_arr = Object.keys(_.br_vals);
-	// _.br_to_loop =  ['xs','sm','md','lg'];
-
-
-	_.functions_on_load = [];
-	_.functions_on_resize = [];
-
-
-	_1p21.fw.validateBr = function(breakpoint,mode) {
-		mode = mode || 'below'; //below,within,above
-		var currIndex = _.br_arr.indexOf(breakpoint);
-
-		switch(mode) {
-			case 'below': //max-width
-				return window.outerWidth <= _.br_vals[breakpoint];
-			case 'within':
-				return (
-					window.outerWidth <= _.br_vals[breakpoint] //max
-				) && (
-					window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] //min
-				)
-			case 'above':
-				return (currIndex > 0) ? ( window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] ) : (window.outerWidth > _.br_vals[ _.br_arr[currIndex] ]);
-		}
-	}
-
-
-	 _1p21.fw.addEvent = function(parent, evt, selector, handler) {
+	_1p21.fw.addEvent = function(parent, evt, selector, handler) {
 		parent = parent || selector;
 		parent.addEventListener(evt, function(event) {
 		  if (event.target.matches(selector + ', ' + selector + ' *')) {
 			handler.apply(event.target.closest(selector), arguments);
 		  }
-		}, false);
+		}, true);
 	  }
 
 	/*
@@ -186,6 +112,86 @@ window.jQuery && jQuery.noConflict();
 		return siblings;
 	
 	};
+
+	_1p21.fw.lazyLoad = _1p21.fw.lazyLoad || true;
+	
+	_.reverseArray = function(arr) {
+		var newArray = [];
+		for (var i = arr.length - 1; i >= 0; i--) {
+			newArray.push(arr[i]);
+		}
+		return newArray;
+	}
+
+
+	_.parseArgs = function(arr,defaults) {
+		var args = defaults;
+		for (var prop in arr) {
+			if(arr.hasOwnProperty(prop) && arr[prop] !== null) {
+				// Push each value from `obj` into `extended`
+				args[prop] = arr[prop];
+			}
+		}
+
+		return args;
+	}
+
+
+	_.getTheToggled = function(clicked,selector){
+		selector = selector || null;
+				
+		if( clicked.getAttribute('href') ){
+			return document.querySelector( clicked.getAttribute('href') );
+
+		}else if( clicked.getAttribute('data-href') ){
+			return document.querySelector( clicked.getAttribute('data-href') )
+			
+		}else{
+			var possibleSiblings = clicked.nextElementSibling;
+
+			while (possibleSiblings) {
+				if (possibleSiblings.matches(selector)){
+					return possibleSiblings;
+				}
+				possibleSiblings = possibleSiblings.nextElementSibling
+			}
+
+			return possibleSiblings;
+		}
+	};
+
+	_.br_vals = {
+		xxs: 0,
+		xs: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-xs') ) || 600,
+		sm: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-sm') ) || 1200,
+		md: parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--br-md') ) || 1600,
+		lg: 9999999
+	};
+	_.br_arr = Object.keys(_.br_vals);
+	// _.br_to_loop =  ['xs','sm','md','lg'];
+
+
+	_.functions_on_load = [];
+	_.functions_on_resize = [];
+
+
+	_1p21.fw.validateBr = function(breakpoint,mode) {
+		mode = mode || 'below'; //below,within,above
+		var currIndex = _.br_arr.indexOf(breakpoint);
+
+		switch(mode) {
+			case 'below': //max-width
+				return window.outerWidth <= _.br_vals[breakpoint];
+			case 'within':
+				return (
+					window.outerWidth <= _.br_vals[breakpoint] //max
+				) && (
+					window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] //min
+				)
+			case 'above':
+				return (currIndex > 0) ? ( window.outerWidth > _.br_vals[ _.br_arr[currIndex - 1] ] ) : (window.outerWidth > _.br_vals[ _.br_arr[currIndex] ]);
+		}
+	}
 
 	_.palette = ['primary','accent','base','neutral','error','caution','success']
 
@@ -368,13 +374,8 @@ window.jQuery && jQuery.noConflict();
 
 			};
 			
-			var args = defaults;
-			for (var prop in arr) {
-				if(arr.hasOwnProperty(prop) && arr[prop] !== '' && arr[prop] !== null) {
-					// Push each value from `obj` into `extended`
-					args[prop] = arr[prop];
-				}
-			}
+			
+			var args = _.parseArgs(arr,defaults);
 
 			var toolTip = document.createElement('div');
 			document.querySelector('body').appendChild(toolTip);
@@ -531,6 +532,75 @@ window.jQuery && jQuery.noConflict();
 		toolTip && toolTip.parentNode.removeChild(toolTip);
 	}
 
+
+	_1p21.fw.createModal = function(triggerer){
+		
+		var contentWrap =  _.getTheToggled(triggerer,'.modal');
+		_1p21.fw.destroyModal();
+
+		if(triggerer && contentWrap) {
+
+			var arr =  {
+				header: triggerer.getAttribute('modal-header') || null,
+				close: triggerer.getAttribute('modal-close') || null,
+				maxWidth: triggerer.getAttribute('modal-max-width') || null
+			};
+
+			var defaults = {
+				header: '',
+				close: true,
+				maxWidth: null
+			};
+			
+			var args = _.parseArgs(arr,defaults);
+
+			var id = contentWrap.getAttribute('id') || 'the-modal';
+
+
+			var modal = document.createElement('div');
+			document.querySelector('body').appendChild(modal);
+			
+			modal.className = 'modal-wrapper';
+			modal.setAttribute('id',id)
+
+			var modHttml = '';
+			
+				//overlay 
+				modHttml += '<a href="#" class="modal-close-overlay" data-toggle="modal-close"></a>';
+				modHttml += '<div class="modal-popup">';
+
+					if(args.header !== '') {
+						modHttml += '<div class="modal-header"><h1 class="modal-heading">'+ args.header +'</h1></div>';
+					}
+
+					if(args.close !== false) {
+						modHttml += '<a href="#" class="modal-close" data-toggle="modal-close"><i class="symbol symbol-close"></i></a>';
+					}
+
+					modHttml += '<div class="modal-popup-content">' + contentWrap.innerHTML + '</div>';
+				
+				modHttml += '</div>';
+			modal.innerHTML += modHttml;
+
+			document.body.classList.add('body-modal-active');
+
+			if(args.maxWidth) {
+				modal.querySelector('.modal-popup').style.maxWidth = args.maxWidth;
+			}
+			modal.classList.add('active');
+		}
+	}
+
+
+	_1p21.fw.destroyModal = function(){
+		var modal = document.querySelector('.modal-wrapper');
+		if (modal){
+			modal.classList.remove('active');
+			modal.parentNode.removeChild(modal);
+		}
+		document.body.classList.remove('body-modal-active');
+	}
+
 	_.readyGrid = function(){
 		
 		var grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
@@ -613,7 +683,7 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			var clicked = e.target;
 				selector = _.getTheToggled(clicked,'.dropdown');
-				console.log(clicked,selector);
+				
 				var selectorAncestor = selector.closest('li,.nav-item');
 
 
@@ -684,14 +754,39 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			_1p21.fw.createToolTip(e.target);
 		});
+
+
+		_1p21.fw.addEvent(document.body,'click','*',function(e){
+			e.stopPropagation();
+			console.log( !e.target.matches('[data-toggle="tooltip-click"]') && !e.target.matches('[data-toggle="tooltip-click"] *') );
+
+			if( !e.target.matches('[data-toggle="tooltip-click"]') && !e.target.matches('[data-toggle="tooltip-click"] *') ){
+				_1p21.fw.destroyToolTip();
+			}
+		});
 			
 			_1p21.fw.addEvent(document.body,'mouseenter','*[data-toggle="tooltip-hover"]',function(e){
-				_1p21.fw.createToolTip(this);
+				_1p21.fw.createToolTip(e.target);
 			});
 
 			_1p21.fw.addEvent(document.body,'mouseleave','*[data-toggle="tooltip-hover"]',function(e){
 				_1p21.fw.destroyToolTip();
 			});
+
+			_1p21.fw.addEvent(document.body,'click','*[data-toggle="modal-open"]',function(e){
+				e.preventDefault();
+				_1p21.fw.createModal(e.target);
+			});
+
+			_1p21.fw.addEvent(document.body,'click','*[data-toggle="modal-close"]',function(e){
+				e.preventDefault();
+				_1p21.fw.destroyModal();
+			});
+
+			_1p21.fw.addEvent(document.body,'click','*[data-toggle="modal"]',function(e){
+				(document.querySelector('body > .modal-wrapper')) ? _1p21.fw.destroyModal() : _1p21.fw.createModal(e.target);
+			});
+
 
 		$ && $('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
 			$(this).trumbowyg({

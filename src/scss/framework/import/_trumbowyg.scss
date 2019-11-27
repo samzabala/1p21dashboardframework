@@ -262,37 +262,14 @@ CUSTOM STYLES FOR TRUMBOWYG
 	}
 	
 	/* Modal box but i make it overlay */
-	&-modal { 
-		position: fixed;
-		top: 0!important;
-		left: 0!important;
-		right: 0!important;
-		bottom: 0!important;
-		margin: auto;
-		width: 100vw!important;
-		height: 100vh!important;
-		padding: $gutter-base;
-		overflow-y: scroll;
-		background: rgba($brand-color-base,.2);
-		/* height: 350px; */
-		z-index: 99999;
-
-		@include br(sm-max) {
-			padding: $gutter-small;
-		}
+	&-modal {
+		@extend %for-modal-wrapper;
 	}
 	
 	&-modal-box {
-		@extend %for-modal;
-		position:static;
-		margin: auto;
+		@extend %for-modal-popup;
 		max-width: $wysiwyg-modal-max-width;
-		width: 100%;
-		padding: $gutter-base $gutter-small;
-		z-index: 1;
-		background-color: $global-background;
-		box-shadow: rgba(0, 0, 0, .2) 0 2px 3px;
-		backface-visibility: hidden;
+		// background-color: $global-background;
 	
 		#{$prefix}-modal-title {
 			@extend .module-title;

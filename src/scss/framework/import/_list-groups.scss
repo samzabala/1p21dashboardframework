@@ -10,10 +10,10 @@ $calculated-list-group-height: $list-group-height;
 $prefix: '.list-group';
 #{$prefix} {
 	padding: 0;
-	border-bottom: $list-group-border-width solid $list-group-border-color;
+	// border-bottom: $list-group-border-width solid $list-group-border-color;
 
 	.body-inverse & {
-		border-bottom-color: $list-group-border-color-inverse;
+		// border-bottom-color: $list-group-border-color-inverse;
 
 		li {
 			border-top-color:  $list-group-border-color-inverse;
@@ -21,7 +21,10 @@ $prefix: '.list-group';
 	}
 
 	li {
-		border-top: $list-group-border-width solid $list-group-border-color;
+
+		&:nth-child(n+2) {
+			border-top: $list-group-border-width solid $list-group-border-color;
+		}
 
         padding-top: calc(  (  (#{$calculated-list-group-height} - #{$list-group-border-width}) - (#{$calculated-body-single-line}) ) * .5 );
         padding-bottom: calc(  (  (#{$calculated-list-group-height} - #{$list-group-border-width}) - (#{$calculated-body-single-line}) ) * .5 );

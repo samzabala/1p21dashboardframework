@@ -7,14 +7,51 @@ $prefix: '.modal';
 //also used by module
 %for-modal {
 
-	padding: $modal-gutter-y $modal-gutter-y;
-	border-radius: $modal-border-radius;
-	background: $modal-background;
-	position: absolute;
+	&-popup {
 
-	.body-inverse & {
-		background: $modal-background-inverse;
+
+		padding: $modal-gutter-y $modal-gutter-x;
+		border-radius: $modal-border-radius;
+		background: $modal-background;
+		backface-visibility: hidden;
+		position:relative;
+		margin: auto;
+		z-index:2;
+		box-shadow: rgba(0, 0, 0, .2) 0 2px 3px;
+		width: 100%;
+	
+		.body-inverse & {
+			background: $modal-background-inverse;
+		}
 	}
+
+	&-wrapper { 
+		position: fixed;
+		top: 0!important;
+		left: 0!important;
+		right: 0!important;
+		bottom: 0!important;
+		margin: auto;
+		width: 100vw!important;
+		height: 100vh!important;
+		padding: $gutter-base;
+		overflow-y: scroll;
+		background: $modal-overlay-bg;
+		z-index: 99999;
+
+		&::-webkit-scrollbar {
+			display:none;
+		}
+
+		@include br(sm-max) {
+			padding: $gutter-small;
+		}
+
+	}
+}
+
+.body-modal-active {
+	overflow-y:hidden;
 }
 
 #{$prefix} {
@@ -22,15 +59,26 @@ $prefix: '.modal';
 
 
 	&-wrapper {
-		position: fixed;
-
+		@extend %for-modal-wrapper;
 	}
 
-	&-overlay {
-		
+	&-close {
+		& {
+			font-size: $modal-close-button-font-size;
+			position:absolute;
+			right: $modal-close-offset;
+			top: $modal-close-offset;
+		}
+		&-overlay {
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+		}
 	}
 
 	&-popup {
-		@extend %for-modal;
+		@extend %for-modal-popup;
 	}
 }
