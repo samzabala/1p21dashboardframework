@@ -137,8 +137,9 @@ window.jQuery && jQuery.noConflict();
 	}
 
 
-	_.getTheToggled = function(clicked,selector){
-		selector = selector || null;
+	_.getTheToggled = function(clicked,toggleMode){
+		toggleMode = toggleMode || null;
+		var selector = '.'+toggleMode || null;
 				
 		if( clicked.getAttribute('href') ){
 			return document.querySelector( clicked.getAttribute('href') );
@@ -146,6 +147,8 @@ window.jQuery && jQuery.noConflict();
 		}else if( clicked.getAttribute('data-href') ){
 			return document.querySelector( clicked.getAttribute('data-href') )
 			
+		}else if (clicked.closest('[data-toggle="'+toggleMode+'"]').length){
+			return _.getTheToggled(clicked.closest('[data-toggle="'+toggleMode+'"]'),toggleMode)
 		}else{
 			var possibleSiblings = clicked.nextElementSibling;
 
@@ -535,15 +538,15 @@ window.jQuery && jQuery.noConflict();
 
 	_1p21.fw.createModal = function(triggerer){
 		
-		var contentWrap =  _.getTheToggled(triggerer,'.modal');
+		var contentWrap =  _.getTheToggled(triggerer,'modal');
 		_1p21.fw.destroyModal();
 
 		if(triggerer && contentWrap) {
 
 			var arr =  {
-				header: triggerer.getAttribute('modal-header') || null,
-				close: triggerer.getAttribute('modal-close') || null,
-				maxWidth: triggerer.getAttribute('modal-max-width') || null
+				header: contentWrap.getAttribute('data-modal-title') || triggerer.getAttribute('data-modal-title') || null,
+				close: contentWrap.getAttribute('data-modal-close') || triggerer.getAttribute('data-modal-header')  || null,
+				maxWidth: contentWrap.getAttribute('data-modal-max-width') || triggerer.getAttribute('data-modal-header')  || null
 			};
 
 			var defaults = {
@@ -637,7 +640,7 @@ window.jQuery && jQuery.noConflict();
 		_1p21.fw.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
-			var selector = _.getTheToggled(e.target,'.accordion');
+			var selector = _.getTheToggled(e.target,'accordion');
 			var selectorAncestor = selector.closest('.accordion-group');
 			var selectorSiblings = _1p21.fw.getSiblings(selector).filter(function(sibling){
 					return sibling.matches('.accordion');
@@ -682,12 +685,17 @@ window.jQuery && jQuery.noConflict();
 		_1p21.fw.addEvent(document.body,'click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
 			var clicked = e.target;
-				selector = _.getTheToggled(clicked,'.dropdown');
+				selector = _.getTheToggled(clicked,'dropdown');
 				
 				var selectorAncestor = selector.parentNode;
 
 
 				if( selector ){
+
+					if(clicked.hasAttribute('data-dropdown-width')) {
+						var width = clicked.getAttribute('data-dropdown-width');
+						selector.style.width = width;
+					}
 					if(
 						selector.classList.contains('open')
 						&& clicked.classList.contains('open')
@@ -722,9 +730,9 @@ window.jQuery && jQuery.noConflict();
 		})
 
 		// btn group
-		_1p21.fw.addEvent(document.body,'click','.btn-group-toggle .btn',function(e){
-			
+		_1p21.fw.addEvent(document.body,'click','.btn-group-toggle > .btn',function(e){
 			e.preventDefault();
+
 			var clicked = e.target;
 			var selectorSiblings = _1p21.fw.getSiblings(clicked);
 
@@ -747,7 +755,7 @@ window.jQuery && jQuery.noConflict();
 			}else{
 				clicked.classList.toggle('active');
 			}
-		})
+		});
 
 		//tooltip
 		_1p21.fw.addEvent(document.body,'click','*[data-toggle="tooltip-click"]',function(e){
@@ -758,7 +766,6 @@ window.jQuery && jQuery.noConflict();
 
 		_1p21.fw.addEvent(document.body,'click','*',function(e){
 			e.stopPropagation();
-			console.log( !e.target.matches('[data-toggle="tooltip-click"]') && !e.target.matches('[data-toggle="tooltip-click"] *') );
 
 			if( !e.target.matches('[data-toggle="tooltip-click"]') && !e.target.matches('[data-toggle="tooltip-click"] *') ){
 				_1p21.fw.destroyToolTip();

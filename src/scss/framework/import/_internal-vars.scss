@@ -5,6 +5,7 @@ For internal framework sass programming
 this parses unit input
 DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
 ****************************************************************************/
+$mobile-br-max-opposite: opposite-br(#{$mobile-br-max}-max);
 
 //body
     $calculated-body-line-height: type-lead( $body-font-size,$body-line-height );

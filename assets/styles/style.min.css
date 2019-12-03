@@ -263,6 +263,7 @@ a {
   font-style: normal;
   margin-bottom: 0;
   margin-top: 0;
+  display: block;
 }
 
 .special-secondary {
@@ -274,6 +275,7 @@ a {
   font-style: normal;
   margin-bottom: 0.25em;
   margin-top: 0.25em;
+  display: block;
 }
 
 p,
@@ -607,16 +609,12 @@ tr,
   min-width: 100%;
 }
 
-thead,
-tbody,
-tfoot {
-  vertical-align: middle;
-}
-
 tr,
 .table-row {
   height: 100%;
   display: table-row;
+  vertical-align: inherit;
+  text-align: inherit;
   border-bottom: 1px solid #ecedf0;
 }
 
@@ -638,10 +636,10 @@ tr:first-child,
 th, td,
 .table-cell,
 .table-cell.table-cell-heading {
-  vertical-align: inherit;
   text-align: inherit;
   padding-left: 20px;
   padding-right: 20px;
+  vertical-align: middle;
   height: 100%;
   display: table-cell;
   position: relative;
@@ -831,9 +829,9 @@ table.table-large .table-cell {
 }
 
 .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after {
-  transform-origin: center 0.0625em;
+  transform-origin: center 0.09375em;
   height: 0.6875em;
-  top: 0.1875em;
+  top: 0.09375em;
 }
 
 .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-up:before, .symbol-arrow-down:before {
@@ -1207,8 +1205,6 @@ table.table-large .table-cell {
 
 /*** MODULES ***/
 .module-grid {
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
   display: grid;
   grid-gap: 15px;
   transition: 0.5s opacity ease-in-out;
@@ -1331,10 +1327,15 @@ table.table-large .table-cell {
   .module-header-break .module-function:not(:first-child:last-child) {
     width: 50%;
   }
-  .module-header-break-functions {
+  .module-header-break .module-functions {
+    padding-left: 1rem;
     margin-top: 0;
     flex: 1 1;
     text-align: right;
+  }
+  .module-header-break .module-functions .btn-group, .module-header-break .module-functions .input-group {
+    margin-top: 0;
+    display: inline-flex;
   }
 }
 
@@ -1348,11 +1349,37 @@ table.table-large .table-cell {
 }
 
 .module-functions {
+  margin-top: 20px;
+}
+
+.module-functions > .btn,
+.module-functions > .btn-group,
+.module-functions > .input-group,
+.module-functions > .input-wrapper {
   margin-top: 10px;
+}
+
+@media (min-width: 1280px) {
+  .module-header-break .module-functions > .btn,
+  .module-header-break .module-functions > .btn-group,
+  .module-header-break .module-functions > .input-group,
+  .module-header-break .module-functions > .input-wrapper {
+    margin-top: 0;
+  }
+  .module-functions > .btn:nth-child(n+2),
+  .module-functions > .btn-group:nth-child(n+2),
+  .module-functions > .input-group:nth-child(n+2),
+  .module-functions > .input-wrapper:nth-child(n+2) {
+    margin-left: .5rem;
+  }
 }
 
 .module-functions .btn-group, .module-functions .input-group {
   flex-direction: row;
+}
+
+.module-functions .input-wrapper {
+  margin-right: 0;
 }
 
 .module-content {
@@ -1518,7 +1545,7 @@ table.table-large .table-cell {
 }
 
 .thumbnail.thumbnail-inline {
-  width: 2.7777777778em;
+  width: 2.5em;
   display: inline-block;
   vertical-align: middle;
   line-height: inherit;
@@ -1595,6 +1622,18 @@ table.table-large .table-cell {
 }
 
 /* SUBSET */
+.progress-title {
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  color: #3d3d3d;
+  font-weight: 900;
+  text-transform: none;
+  font-style: normal;
+  display: block;
+  margin-bottom: 0.7142857143em;
+  margin-top: 2.1428571429em;
+}
+
 /*** BADGE ***/
 .badge {
   display: inline-block;
@@ -1763,6 +1802,11 @@ table.table-large .table-cell {
 .dropdown {
   width: 300px;
   display: none;
+  /* undo scadffold*/
+}
+
+.dropdown, .dropdown ul {
+  margin-bottom: 0;
 }
 
 .dropdown.dropdown-bottom {
@@ -1795,6 +1839,16 @@ table.table-large .table-cell {
 
 .dropdown.dropdown-right-flush {
   left: 100%;
+}
+
+.dropdown.dropdown-center-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown.dropdown-center-y {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .dropdown.open {
@@ -1924,20 +1978,39 @@ table.table-large .table-cell {
   width: 100%;
 }
 
+@media (max-width: 1279px) {
+  .btn-block-mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
 .btn-group {
   display: inline-flex;
   position: relative;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: visible;
+  align-items: stretch;
 }
 
 .btn-group-block {
   display: flex;
+  width: 100%;
 }
 
-.btn-group-block .btn {
+.btn-group-block .btn:not(.btn-symbol) {
   flex: 1 1;
+}
+
+@media (max-width: 1279px) {
+  .btn-group-block-mobile {
+    display: flex;
+    width: 100%;
+  }
+  .btn-group-block-mobile .btn:not(.btn-symbol) {
+    flex: 1 1;
+  }
 }
 
 .btn-group.btn-large {
@@ -2926,6 +2999,7 @@ select.input {
 
 .input-wrapper, .trumbowyg-modal-box label {
   max-width: 100%;
+  position: relative;
 }
 
 @media (min-width: 1280px) {
@@ -3024,10 +3098,21 @@ select.input {
 
 .input-group-block {
   display: flex;
+  width: 100%;
 }
 
-.input-group-block .input {
+.input-group-block .btn:not(.btn-symbol) {
   flex: 1 1;
+}
+
+@media (max-width: 1279px) {
+  .input-group-block-mobile {
+    display: flex;
+    width: 100%;
+  }
+  .input-group-block-mobile .btn:not(.btn-symbol) {
+    flex: 1 1;
+  }
 }
 
 .input-group.input-group-large {
@@ -3137,7 +3222,9 @@ select.input {
   margin-left: -35px;
   margin-right: -35px;
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: transparent !important;
 }
 
 .special-form .btn:last-child {
@@ -3503,6 +3590,11 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 /* extend form styles because of uncostimazeable classes */
 /*** TOGGLES ***/
+/* to fix children that dont like their parents events. kinda like neutering them idk */
+[data-toggle] * {
+  pointer-events: none;
+}
+
 .accordion {
   display: none;
 }
@@ -3915,7 +4007,51 @@ CUSTOM STYLES FOR TRUMBOWYG
   color: inherit !important;
 }
 
+.display-block {
+  display: block !important;
+}
+
+.display-inline-block {
+  display: inline-block !important;
+}
+
+.display-inline {
+  display: inline !important;
+}
+
 /* BACKGROUND CLASSES */
+.inline-flex {
+  display: inline-flex !important;
+}
+
+@media (min-width: 401px) {
+  .inline-flex-xs {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .inline-flex-sm {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inline-flex-md {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 1900px) {
+  .inline-flex-lg {
+    display: inline-flex !important;
+  }
+}
+
+.flex {
+  display: flex !important;
+}
+
 .flex-direction-row {
   flex-direction: row;
 }
@@ -4184,7 +4320,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   /* cut overflowing single line to ellipsis */
 }
 
-.text-wrap-ellipsis {
+.text-wrap-ellipsis, .tag {
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
@@ -4267,6 +4403,26 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .font-style-oblique {
   font-style: oblique !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-static {
+  position: static;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
 }
 
 .no-margin {

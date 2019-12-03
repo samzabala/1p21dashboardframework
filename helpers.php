@@ -15,7 +15,25 @@ function app_get_template_part($filename = '', $slug =''){
 		
 
 		require_once $source;
+	}
 }
+
+
+//include a file
+function app_get_component_part($filename = '', $slug =''){
+
+	if($filename !== ''){
+
+		$source = DASHBOARD_ROOT_PATH.'/'.$filename;
+		
+		if($slug !== '' && file_exists( DASHBOARD_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
+			$source .= '-'.$slug;
+		}
+		
+		$source .='.php';
+		
+		include $source;
+	}
 }
 
 //GETS THE TEMPLETE FOR THE BOI WHILE HANDLEBARS IS NOT READY
@@ -27,14 +45,24 @@ function app_init_content($slug = ''){
 		$template_part = filter_var($_GET['template'],FILTER_SANITIZE_STRING);
 
 		switch($template_part):
+			case 'demos':
+			case 'profiles':
+			case 'projects':
+			case 'last-activity':
+			case 'new-content':
+				app_get_template_part('template/'.$template_part);
+				break;
+
 			case 'profile':
 			case 'home':
+			case 'project':
+				app_get_template_part('template/'.$template_part,DASHBOARD_SLUG);
+				break;
 
-				app_get_template_part('template/'.$template_part,$slug);
-				break;
 			default:
-				app_get_template_part('template/error',$slug);
+				app_get_template_part('template/error');
 				break;
+
 		endswitch;
 	else:
 		app_get_template_part('template/home',$slug);

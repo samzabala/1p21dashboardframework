@@ -156,6 +156,7 @@ $prefix: '.special';
             ));
 			margin-bottom: $calculated-special-primary-gutter-y;
 			margin-top: $calculated-special-primary-gutter-y;
+			display:block;
 		}
 		&-secondary {
             @include type-set((
@@ -168,6 +169,7 @@ $prefix: '.special';
             ));
 			margin-bottom: $calculated-special-secondary-gutter-y;
 			margin-top: $calculated-special-secondary-gutter-y;
+			display:block;
 		}
     }
 

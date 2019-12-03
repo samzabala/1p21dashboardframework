@@ -3,13 +3,14 @@
 // $debug: true !default;
 
 	//breakpiont
-	 //breakpoints
 	 $br-xs: 767px !default;
 	 $br-sm: 1279px !default;
 	 $br-md: 1899px !default;
  
 	 //extra breakpoints
 	 $brxxs: 400px !default;
+
+	 $mobile-br-max: 'sm' !default;
 
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
@@ -329,6 +330,16 @@
 
 
 		$progress-bar-background-color: $brand-color-neutral !default;
+
+
+		$progress-title-font-size: 14px !default;
+		$progress-title-font-weight: 900 !default;
+		$progress-title-line-height: 20px !default;
+		$progress-title-font-style: normal !default;
+		$progress-title-color: $brand-color-base-alt !default;
+		$progress-title-text-transform: none !default;
+		$progress-title-margin-bottom: 10px !default;
+		$progress-title-margin-top: 30px !default;
 	
 
 	// THUMBNAIL
@@ -342,7 +353,7 @@
 		$thumbnail-text-transform: uppercase !default;
 
 		$thumbnail-size: 200px !default;
-			$thumbnail-size-inline: 50px !default;
+			$thumbnail-size-inline: 45px !default;
 
 		$thumbnail-border-radius: 50% !default;
 		$thumbnail-font-color: $brand-color-background !default;

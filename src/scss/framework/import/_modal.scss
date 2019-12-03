@@ -43,7 +43,7 @@ $prefix: '.modal';
 			display:none;
 		}
 
-		@include br(sm-max) {
+		@include br(#{$mobile-br-max}-max) {
 			padding: $gutter-small;
 		}
 

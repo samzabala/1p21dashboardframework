@@ -41,6 +41,7 @@ $prefix: '.table';
 		max-width: 100%;
 		border-collapse: collapse;
 		border-spacing: 0;
+		// table-layout: fixed;
 
 
 		@at-root thead,
@@ -51,11 +52,10 @@ $prefix: '.table';
 			min-width:100%;
 		}
 
-		@at-root thead,
-		tbody,
-		tfoot {
-				vertical-align: middle;
-		}
+		// @at-root thead,
+		// tbody,
+		// tfoot {
+		// }
 		
 		
 
@@ -63,6 +63,8 @@ $prefix: '.table';
 		#{$prefix}-row {
 			height:100%;
 			display:table-row;
+			vertical-align: inherit;
+			text-align: inherit;
 
 			&:first-child {
 				border-top: $table-cell-border-width solid $table-cell-border-color;
@@ -86,11 +88,11 @@ $prefix: '.table';
 		@at-root th,td,
 		#{$prefix}-cell,
 		#{$prefix}-cell#{$prefix}-cell-heading {
-			vertical-align: inherit;
+			// vertical-align: inherit;
 			text-align: inherit;
 			padding-left: $table-cell-gutter;
 			padding-right: $table-cell-gutter;
-			// vertical-align:middle;
+			vertical-align:middle;
 			height:100%;
 			display: table-cell;
 			position:relative;

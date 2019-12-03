@@ -335,6 +335,13 @@ $prefix: '.btn';
 	&-block {
 		display:block;
 		width:100%;
+
+		&-mobile {
+			@include br(#{$mobile-br-max}-max) {
+				display:block;
+				width:100%;
+			}
+		}
 	}
 
 
@@ -372,12 +379,25 @@ $prefix: '.btn';
 		max-width:100%;
 		overflow-x:auto;
 		overflow-y:visible;
+		align-items:stretch;
 		
 		&-block {
 			display:flex;
+			width:100%;
 
-			.btn {
+			.btn:not(.btn-symbol) {
 				flex: 1 1;
+			}
+
+			&-mobile {
+				@include br(#{$mobile-br-max}-max) {
+					display:flex;
+					width:100%;
+
+					.btn:not(.btn-symbol) {
+						flex: 1 1;
+					}
+				}
 			}
 		}
 
@@ -432,7 +452,7 @@ $prefix: '.btn';
 
 		&#{&}-responsive {
 
-			@include br(md){
+			@include br($mobile-br-max-opposite){
 
 				&#{$prefix}-group-horizontal {
 					
@@ -452,7 +472,7 @@ $prefix: '.btn';
 					}
 				}
 			}
-			@include br(sm-max) {
+			@include br(#{$mobile-br-max}-max) {
 				width:100%;
 				
 				flex-wrap:wrap;

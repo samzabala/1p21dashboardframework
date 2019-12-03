@@ -386,10 +386,52 @@
 		}
 	}
 
+	.display {
+		&-block {
+			display:block!important;
+		}
+		&-inline-block {
+			display:inline-block!important;
+		}
+		&-inline {
+			display:inline!important;
+		}
+	}
+
 
 
 	/* BACKGROUND CLASSES */
+		.inline-flex {
+			display:inline-flex!important;
+
+
+			&-xs {
+				@include br(xs) {
+					display:inline-flex!important;
+				}
+			}
+			
+			&-sm {
+				@include br(sm) {
+					display:inline-flex!important;
+				}
+			}
+			
+			&-md {
+				@include br(md) {
+					display:inline-flex!important;
+				}
+			}
+			
+			&-lg {
+				@include br(lg) {
+					display:inline-flex!important;
+				} 
+			}
+		}
+
 		.flex {
+			display:flex!important;
 
 			&-xs {
 				@extend %flex-xs;
@@ -744,6 +786,25 @@
 		&-oblique {
 			font-style: oblique!important;
 		}
+	}
+}
+
+//posesetyen
+.position {
+	&-relative {
+		position:relative;
+	}
+	&-static {
+		position:static;
+	}
+	&-absolute {
+		position:absolute;
+	}
+	&-fixed {
+		position:fixed;
+	}
+	&-sticky {
+		position:sticky;
 	}
 }
 

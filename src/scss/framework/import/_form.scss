@@ -421,8 +421,9 @@ $prefix: '.input';
 	&-wrapper {
 		& {
 			max-width:100%;
+			position:relative;
 
-			@include br(md){
+			@include br($mobile-br-max-opposite){
 				display:inline-flex;
 				margin-right: 2rem;
 			}
@@ -430,7 +431,7 @@ $prefix: '.input';
 			
 
 		&-horizontal {
-			@include br(md){
+			@include br($mobile-br-max-opposite){
 				flex-direction: row;
 				align-items: flex-start;
 				flex-wrap: wrap;
@@ -449,7 +450,7 @@ $prefix: '.input';
 		}
 
 		&-vertical {
-			@include br(md){
+			@include br($mobile-br-max-opposite){
 				flex-direction: column;
 			}
 		}
@@ -459,7 +460,7 @@ $prefix: '.input';
 			display:flex;
 			margin-right: 0;
 
-			@include br(sm-max) {
+			@include br(#{$mobile-br-max}-max) {
 				flex-direction: column;
 			}
 
@@ -607,10 +608,22 @@ $prefix: '.input';
         
         &-block {
             display:flex;
+			width:100%;
 
-            .input {
-                flex: 1 1;
-            }
+			.btn:not(.btn-symbol) {
+				flex: 1 1;
+			}
+
+			&-mobile {
+				@include br(#{$mobile-br-max}-max) {
+					display:flex;
+					width:100%;
+
+					.btn:not(.btn-symbol) {
+						flex: 1 1;
+					}
+				}
+			}
         }
 		
 
@@ -673,7 +686,7 @@ $prefix: '.input';
 
         &#{&}-responsive {
 
-			@include br(md){
+			@include br($mobile-br-max-opposite){
 				
 				&#{$prefix}-group-horizontal {
 
@@ -699,7 +712,7 @@ $prefix: '.input';
 				
 			}
 
-			@include br(sm-max) {
+			@include br(#{$mobile-br-max}-max) {
 				width:100%;
 				
 				flex-wrap:wrap;
@@ -765,7 +778,9 @@ $prefix: '.input';
 		margin-left: $special-form-gutter-x * -1;
 		margin-right:$special-form-gutter-x * -1;
 		border-radius:0;
-		box-shadow: none;
+		box-shadow: none !important;
+		outline: none!important;
+		border-color: transparent!important;
 	}
 
 	.btn:last-child {

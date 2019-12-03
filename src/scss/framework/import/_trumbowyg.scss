@@ -283,7 +283,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 			#{$prefix}-input-infos {
 				@extend %for-form-label;
 				margin-right: 0;
-				@include br(md) {
+				@include br($mobile-br-max-opposite) {
 					//@COPIEDOVER
 					flex: 0 0 $input-label-horizontal-width;
 					order: -1;
@@ -297,7 +297,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 				@extend %for-form-shadow-and-border;
 				@extend %for-form-input-single-line;
 				//@COPIEDOVER
-				@include br(md){
+				@include br($mobile-br-max-opposite){
 					width: calc(100% - #{$input-label-horizontal-width});
 				}
 				

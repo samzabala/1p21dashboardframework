@@ -37,6 +37,7 @@ $prefix: '.tag';
 	padding-left: $calculated-tag-gutter-x;
 	padding-right: $calculated-tag-gutter-x;
 	border-radius: $tag-border-radius;
+	@extend .text-wrap-ellipsis;
 
 	@each $tag,$color in $calculated-brand-color-declarations {
 		&-#{$tag} {

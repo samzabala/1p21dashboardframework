@@ -119,9 +119,9 @@ $prefix: '.symbol';
 		&-down {
 
 			&:before,&:after {
-				transform-origin: center em(1px / $body-font-size);
+				transform-origin: center em(1.5px / $body-font-size);
 				height: em(11px/$body-font-size);
-				top: em(3px / $body-font-size);
+				top: em(1.5px / $body-font-size);
 			}
 
 			&:before{

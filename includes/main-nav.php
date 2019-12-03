@@ -18,11 +18,7 @@
 		tablet-hide
 		desktop-hide
 		laptop-hide
-		nav-toggle"
-
-		:class="{open: navStatus() }"
-		
-		@click="toggleNav">
+		nav-toggle">
 		<i class="symbol symbol-burger"></i>
 	</a>
 	<form  id="nav-search" action="<?=DASHBOARD_ROOT_URL?>/" method="get" class="input-group">
@@ -32,11 +28,11 @@
 	<div id="nav-account">
 		<div id="nav-account-info">
 									
-			<a href="#profile" class="thumbnail thumbnail-inline">
+			<a href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>" class="thumbnail thumbnail-inline">
 				<!-- <img src="" alt="{{ loggedIn.name }}"> -->
-				<span class="thumbnail-text">MP</span>
+				<span class="logged-in-initials thumbnail-text">PH</span>
 			</a>
-			<a href="#" id="nav-account-name" class="color-inherit font-weight-500 mobile-hide tablet-hide">Testing</a>
+			<a href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>" id="nav-account-name" class="logged-in-name color-inherit font-weight-500 mobile-hide tablet-hide">Place Holder</a>
 		</div>
 
 		<a href="#nav-account-dropdown" class="btn btn-link btn-symbol"  data-toggle="dropdown" title="More"> 

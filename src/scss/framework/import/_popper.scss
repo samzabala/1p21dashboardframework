@@ -142,6 +142,11 @@ $prefix: '.dropdown';
 	@extend %for-pop;
 	width: $dropdown-width;
 	display:none;
+	/* undo scadffold*/
+
+	&,ul {
+		margin-bottom:0;
+	}
 
 	&#{&}-bottom {
 		bottom:0;
@@ -169,6 +174,19 @@ $prefix: '.dropdown';
 		right:0;
 		&-flush {
 			left: 100%;
+		}
+	}
+
+	&#{&}-center {
+		&-x {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&-y {
+
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 

@@ -145,6 +145,8 @@
             lg: $screen-lg
         );
 
+        $br-tag-list: (xxs-max, xs-max, sm-max, md-max, xs, sm, md, lg);
+
 
 ////////////////////////////////////////////////////////////////////////////// 
 // FRAMEWORK MIXINS + FUNCTIONS
@@ -1094,6 +1096,25 @@
                 @return ceil($gutter * $value);
             }@else{
                 @return $value;
+            }
+        }
+
+
+        // xxs-max: $screen-xxs-max,
+        // xs-max: $screen-xs-max,
+        // sm-max: $screen-sm-max,
+        // md-max: $screen-md-max,
+        // xs: $screen-xs,
+        // sm: $screen-sm,
+        // md: $screen-md,
+        // lg: $screen-lg
+        @function opposite-br($breakpoint) {
+            $current-index: index($br-tag-list,$breakpoint);
+            
+            @if($current-index > 4) {
+                @return  nth($br-tag-list,$current-index - 4);
+            }@else {
+                @return  nth($br-tag-list,$current-index + 4);
             }
         }
 

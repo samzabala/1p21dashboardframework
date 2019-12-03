@@ -63,7 +63,7 @@ $sidebar-base: 285px;
 				}
 			}
 
-			@include br(sm-max) {
+			@include br(#{$mobile-br-max}-max) {
 				&-nav {
 					margin: 0 ($container-gutter-mobile * -1);
 				}

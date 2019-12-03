@@ -62,8 +62,9 @@ window.jQuery && jQuery.noConflict();
 
 
 
-	_.getTheToggled = function(clicked,selector){
-		selector = selector || null;
+	_.getTheToggled = function(clicked,toggleMode){
+		toggleMode = toggleMode || null;
+		var selector = '.'+toggleMode || null;
 				
 		if( clicked.attr('href') ){
 			return $( clicked.attr('href') );
@@ -74,7 +75,10 @@ window.jQuery && jQuery.noConflict();
 		}else if( clicked.next(selector).first().length > 0 ){
 			return clicked.next(selector).first();
 
+		}else if(clicked.closest('[data-toggle="'+toggleMode+'"]').length){
+			return _.getTheToggled(clicked.closest('[data-toggle="'+toggleMode+'"]'),toggleMode)
 		}else{
+
 			return false;
 		}
 	};
@@ -118,8 +122,8 @@ window.jQuery && jQuery.noConflict();
 		
 
 		var availablePropetiesParent = [
-			'grid-template-rows',
 			'grid-template-columns',
+			'grid-template-rows',
 			'grid-template-areas',
 
 
@@ -185,6 +189,7 @@ window.jQuery && jQuery.noConflict();
 				if(modElement.data(prop) && !propsSet) {
 
 					if(!propsSet && !propSetBr) {
+						console.log(modElement.data(prop));
 						modElement.css(prop, modElement.data(prop))
 						propsSet = true;
 					}
@@ -431,17 +436,16 @@ window.jQuery && jQuery.noConflict();
 
 	_1p21.fw.createModal = function(triggerer){
 		
-		var contentWrap =  _.getTheToggled(triggerer,'.modal');
+		var contentWrap =  _.getTheToggled(triggerer,'modal');
 
-		console.log('buthole',contentWrap);
 		_1p21.fw.destroyModal();
 
 		if(triggerer && contentWrap) {
 
 			var arr =  {
-				header: triggerer.data('modal-header'),
-				close: triggerer.data('modal-close'),
-				maxWidth: triggerer.data('modal-max-width')
+				header: contentWrap.data('modal-title') || triggerer.data('modal-title') || null,
+				close: contentWrap.data('modal-close') || triggerer.data('modal-close') || null,
+				maxWidth: contentWrap.data('modal-max-width') || triggerer.data('modal-max-width') || null
 			};
 
 			var defaults = {
@@ -540,7 +544,7 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			// console.log(e.target);
 
-			var selector =  _.getTheToggled($(this),'.accordion');
+			var selector =  _.getTheToggled($(this),'accordion');
 
 
 			if( selector ){
@@ -569,13 +573,19 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on('click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
-			// console.log(e.target);
 
-				console.log( $(this));
 
-			var selector =  _.getTheToggled($(this),'.dropdown');
+			var selector =  _.getTheToggled($(this),'dropdown');
+			console.log(
+				'drodpdown',_.getTheToggled($(this),'dropdown'),"\n",
+				'clicked', $(this)
+			);
 
 			if( selector ){
+				if($(this).data('dropdown-width')) {
+					var width = $(this).data('dropdown-width');
+					selector.css('width',width);
+				}
 				
 				if( selector.hasClass('open') && $(this).hasClass('open') ){
 
@@ -601,7 +611,7 @@ window.jQuery && jQuery.noConflict();
 		});
 
 
-		$('body').on('click','.btn-group-toggle .btn',function(e){
+		$('body').on('click','.btn-group-toggle > .btn',function(e){
 			e.preventDefault();
 
 			$(this).siblings('.btn-toggle-reset').removeClass('active');
@@ -616,9 +626,11 @@ window.jQuery && jQuery.noConflict();
 				$(this).toggleClass('active');
 			}
 		});
+		
 
 
 		$('body').on('click','*[data-toggle="tooltip-click"]',function(e){
+			e.preventDefault();
 			_1p21.fw.createToolTip($(this));
 		});
 

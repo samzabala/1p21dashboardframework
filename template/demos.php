@@ -3,6 +3,15 @@
 <h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 
+<a href="#modal-demo" class="btn-group btn-group-horizontal" data-toggle="modal">
+	<span class="btn-default btn">
+		Bitch ass
+	</span>
+	<span class="btn btn-symbol">
+		<i class="symbol symbol-plus"></i>
+	</span>
+</a>
+
 	<a
 		data-toggle="modal"
 		data-modal-header="Bitch"
@@ -532,17 +541,19 @@
 
 		<ul class="inline">
 			<li style="position:relative;">
-				<div class="btn btn-default open" data-toggle="dropdown">Drop DOWN</div>
+				<div class="btn btn-default open" data-dropdown-width="500" data-toggle="dropdown">Drop DOWN</div>
 				<ul class="dropdown dropdown-bottom open">
 					I'm a bottom dropdown and your mother will never love you
+					<br>has data-width but number
 				</ul>
 			</li>
 
 
 			<li style="position:relative;">
-				<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+				<div class="btn btn-default" data-dropdown-width="500px" data-toggle="dropdown">Drop DOWN</div>
 				<ul class="dropdown dropdown-top">
 					I'm a top dropdown and your mother will never love you
+					<br> has data width but pixeled
 				</ul>
 			</li>
 
@@ -1259,12 +1270,12 @@
 	<span class="btn btn-primary btn-disabled">Add Time to Project <i class="symbol symbol-plus"></i></span>
 	</button>
 
-	<h3>group it's all disabled interaction enabled</h3>
-	<button class="btn-group btn-group-horizontal btn-group-disabled">
-	<span class="btn btn-default">Default</span>
-	<span class="btn btn-primary">Primary</span>
-	<span class="btn btn-accent">accent</span>
-	</button>
+<h3>group it's all disabled interaction enabled</h3>
+<button class="btn-group btn-group-horizontal btn-group-disabled">
+<span class="btn btn-default">Default</span>
+<span class="btn btn-primary">Primary</span>
+<span class="btn btn-accent">accent</span>
+</button>
 
 
 	<h2>a vertical btn group</h2>

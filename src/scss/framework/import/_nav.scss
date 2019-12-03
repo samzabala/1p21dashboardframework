@@ -219,7 +219,7 @@ $prefix: '.nav';
 		margin:auto;
 	}
 
-	@include br(sm-max) {
+	@include br(#{$mobile-br-max}-max) {
 		height:auto;
 		&-list {
 			display:block;

@@ -15,7 +15,7 @@
 				max-width: none;
 			}
 
-			@include br(md) {
+			@include br($mobile-br-max-opposite) {
 				&#{$prefix}-wide {
 					padding-left: $container-gutter-wide;
 					padding-right: $container-gutter-wide;
@@ -26,7 +26,7 @@
 				}
 			}
 
-			@include br(sm-max) {
+			@include br(#{$mobile-br-max}-max) {
 				padding-left: $container-gutter-mobile;
 				padding-right: $container-gutter-mobile;
 				max-width: $container-max-width-mobile;
