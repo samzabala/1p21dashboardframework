@@ -20,14 +20,13 @@
 		<aside id="dashboard-block-sidebar"
 		:class="{'open': open }"
 		class="background-global">
-			<?php app_get_template_part('includes/sidebar',DASHBOARD_SLUG); ?>
+			<?php include_once 'includes/sidebar.php'; ?>
 		</aside>
 
 			<main id="dashboard-block-main" class="background-global-contrast">
 
 				<!-- Navigation -->
-
-				<?php app_get_template_part('includes/main-nav',DASHBOARD_SLUG); ?>
+				<?php include_once 'includes/main-nav.php'; ?>
 
 				<!-- App Content -->
 				<div id="content-wrapper">

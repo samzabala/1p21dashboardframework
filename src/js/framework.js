@@ -692,10 +692,12 @@ window.jQuery && jQuery.noConflict();
 
 				if( selector ){
 
-					if(clicked.hasAttribute('data-dropdown-width')) {
-						var width = clicked.getAttribute('data-dropdown-width');
+					var width =  selector.getAttribute('data-dropdown-width') || clicked.getAttribute('data-dropdown-width') || null;
+					
+					if(width) {
 						selector.style.width = width;
 					}
+
 					if(
 						selector.classList.contains('open')
 						&& clicked.classList.contains('open')

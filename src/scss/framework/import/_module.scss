@@ -144,10 +144,6 @@ $prefix: '.module';
 	&-footer {
 		margin-left: $module-gutter-x * -1;
 		margin-right: $module-gutter-x * -1;
-
-		&#{$prefix}-no-gutter {
-			padding: 0;
-		}
 	}
 
 	&-header {
@@ -228,7 +224,7 @@ $prefix: '.module';
 				> .input-wrapper {
 
 					&:nth-child(n+2) {
-						margin-left: .5rem;
+						margin-left: .75rem;
 					}
 				}
 			}
@@ -312,20 +308,15 @@ $prefix: '.module';
 		}
 	}
 
-
-
-	&#{&}-no-gutter {
-	}
-
 	&-no-gutter {
-		padding:0;
+		padding:0!important;
 		
 		#{$prefix}-header,
 		#{$prefix}-content,
 		#{$prefix}-footer {
-			padding-top: 0;
-			padding-bottom:0;
-			margin:0 auto;
+			padding-top: 0!important;
+			padding-bottom:0!important;
+			margin:0!important;
 
 		}
 	}

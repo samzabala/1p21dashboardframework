@@ -15,12 +15,13 @@ $prefix: '.list-group';
 	.body-inverse & {
 		// border-bottom-color: $list-group-border-color-inverse;
 
-		li {
+		li:nth-child(n+2) {
 			border-top-color:  $list-group-border-color-inverse;
 		}
 	}
 
 	li {
+		margin-bottom:0;
 
 		&:nth-child(n+2) {
 			border-top: $list-group-border-width solid $list-group-border-color;

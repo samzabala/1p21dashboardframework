@@ -10,12 +10,12 @@
 
 
 <div class="module"
-	<?php if(DASHBOARD_SLUG == 'production'): ?>
+	<?php if(DASHBOARD_SLUG == 'production' && DASHBOARD_TEMPLATE == 'profile'): ?>
 		data-grid-area-md="profile-card"
 	<?php endif; ?>
 
 
-	<?php if(DASHBOARD_SLUG == 'scoreboard'): ?>
+	<?php if(DASHBOARD_SLUG == 'scoreboard' && DASHBOARD_TEMPLATE == 'profile'): ?>
 		data-grid-area="profile-card"
 	<?php endif; ?>
 	>
@@ -28,25 +28,18 @@
 				.profile-name -> href
 			-->
 
-			<?php //app_get_component_part('components/profile-image'); ?>
-
-			<a class="thumbnail" href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>">
-				<!-- @if has profile imahe -->
-				<img class="profile-image" data-src="#" alt="">
-
-				<!-- @else -->
-				<span class="thumbnail-text profile-name-initial">PH</span>
-				<!--
-					@dynamic
-						class .badge-success
-				-->
-				<span class="badge badge-success"></span>
-			</a>
+			<?php app_get_component_part('components/profile-image'); ?>
 			
 			<p class="h2 font-weight-500">
-				<a href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>" class="profile-name-full  color-inherit">Profile Name</a>
+				<a href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>" class="profile-name-full  color-inherit">
+					<span class="REPLACE">Profile Name</span>
+				</a>
 			</p>
-			<p class="profile-title color-primary font-weight-700 text-transform-uppercase">Profile Title</p>
+
+			<p class="profile-title color-primary font-weight-700 text-transform-uppercase">
+				<span class="REPLACE">Profile Title</span>
+			</p>
+			
 			<ul class="list-group no-margin-bottom flex-align-self-stretch">
 
 				<!-- @if profile is man,des,dev -->
@@ -59,7 +52,7 @@
 							Avg Time Days 
 						</span>
 						<strong class="status-avg-time-value">
-							25
+							<span class="REPLACE">25</span>
 						</strong>
 					</li>
 					<li class="flex-xs flex-justify-content-space-between">
@@ -67,7 +60,7 @@
 							Current Projects 
 						</span>
 						<strong class="status-current-projects-value">
-							25
+							<span class="REPLACE">25</span>
 						</strong>
 					</li>
 					<li class="flex-xs flex-justify-content-space-between">
@@ -75,7 +68,7 @@
 							Projects YTD
 						</span>
 						<strong class="status-ytd-value">
-							25
+							<span class="REPLACE">285</span>
 						</strong>
 					</li>
 
@@ -93,7 +86,7 @@
 							Total Accounts 
 						</span>
 						<strong class="status-total-accounts-value">
-							18
+							<span class="REPLACE">18</span>
 						</strong>
 					</li>
 					<li class="flex-xs flex-justify-content-space-between">
@@ -101,7 +94,7 @@
 							Avg. HR Rank
 						</span>
 						<strong class="status-avg-hr-rank-value">
-							20.6
+							<span class="REPLACE">20.6</span>
 						</strong>
 					</li>
 					<li class="flex-xs flex-justify-content-space-between">
@@ -109,7 +102,7 @@
 							Avg. Rank
 						</span>
 						<strong class="status-avg-rank-value">
-							14.1
+							<span class="REPLACE">14.1</span>
 						</strong>
 					</li> -->
 

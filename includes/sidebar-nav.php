@@ -3,7 +3,7 @@
 	<ul class="nav-list">
 			<!-- HOME -->
 			<li class="nav-item">
-				<a href="<?=DASHBOARD_ROOT_URL ?>?template=home">
+				<a href="<?=app_create_link(); ?>">
 					<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-home.svg">
 					<span class="nav-item-text">Home</span>
 				</a>
@@ -12,27 +12,36 @@
 
 			<?php if(DASHBOARD_SLUG == 'scoreboard'):?>
 					<!-- SEO -->
+					<!-- 
+					@NOTE:
+						menu items with dropdowns will have
+							-a tags replaced with span[data-toggle="dropdown"];
+								i.symbol.symbol-arrow-down.symbol-arrow-toggle-up as last child
+							ul will have... the .dropdown :O
+
+					 -->
 					<li class="nav-item">
-						<a href="#sidebar-dropdown" data-toggle="dropdown">
+						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">SEO</span>
-							<i class="symbol symbol-arrow symbol-arrow-down symbol-arrow-toggle-up"></i>
-						</a>
-						<ul id="sidebar-dropdown" class="dropdown">
-							<?php
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+						</span>
+						<ul class="dropdown">
 							
-							
-		
-								app_render_handlebars_module(
-									'sidebar-dropdown',
-									app_get_file_content_as_string(DASHBOARD_ROOT_PATH.'/placeholder/data/profiles.json'),
-									"
-										{{#each profiles}}
-										<li><a href=\"".DASHBOARD_ROOT_URL."?template=projects\"> {{ this.name }} </a></li>
-										{{/each}}
-									"
-								);
-							?>
+							<!-- 
+								@dynamic 
+									content li .profile-name
+								@loop li
+							 -->
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
+							</li>
+
+
+
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
+							</li>
 						</ul>
 					</li>
 			<?php else: ?>
@@ -41,27 +50,68 @@
 
 					<!-- PROJ -->
 					<li class="nav-item">
-						<a href="<?=DASHBOARD_ROOT_URL ?>?template=projects">
+
+						<a href="<?=app_create_link( array('template'=>'projects') ); ?>">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg">
 							<span class="nav-item-text">Projects</span>
 						</a>
+
 					</li>
 
 
 					<!-- DESIGNERS -->
 					<li class="nav-item">
-						<a href="<?=DASHBOARD_ROOT_URL ?>?template=designers">
+
+						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg">
 							<span class="nav-item-text">Designers</span>
-						</a>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+						</span>
+
+						<ul class="dropdown">
+							
+							<!-- 
+								@dynamic 
+									content li .profile-name
+								@loop li
+							 -->
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
+							</li>
+
+
+
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
+							</li>
+						</ul>
 					</li>
 
 					<!-- DEVELOPERS -->
 					<li class="nav-item">
-						<a href="<?=DASHBOARD_ROOT_URL ?>?template=developers">
+						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">Developers</span>
-						</a>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+						</span>
+
+						<ul class="dropdown">
+
+							<!-- 
+								@dynamic 
+									content li .profile-name
+								@loop li
+							 -->
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
+							</li>
+
+
+
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
+							</li>
+						</ul>
 					</li>
 			<?php endif; ?>
 		</ul>

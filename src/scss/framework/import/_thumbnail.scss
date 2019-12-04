@@ -35,7 +35,7 @@ $calculated-thumbnail-line-height: $thumbnail-line-height;
 
 $prefix: '.thumbnail';
 #{$prefix} {
-	@extend .background-gradient-135;
+	@extend %for-background-gradient-135;
 	@extend .fit-image;
 	@include aspect-ratio($thumbnail-size,$thumbnail-size,false,true,false);
 	width:$calculated-thumbnail-size;
@@ -50,6 +50,10 @@ $prefix: '.thumbnail';
 		style: $thumbnail-font-style,
 		case: $thumbnail-text-transform,
 	));
+
+	&[class*=background-] {
+		background-image:none;
+	}
 
 	img {
 		max-width: none;

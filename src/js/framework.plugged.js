@@ -582,8 +582,9 @@ window.jQuery && jQuery.noConflict();
 			);
 
 			if( selector ){
-				if($(this).data('dropdown-width')) {
-					var width = $(this).data('dropdown-width');
+
+				var width =  selector.data('dropdown-width') || $(this).data('dropdown-width') || null;
+				if(width) {
 					selector.css('width',width);
 				}
 				

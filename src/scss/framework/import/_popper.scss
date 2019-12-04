@@ -142,10 +142,16 @@ $prefix: '.dropdown';
 	@extend %for-pop;
 	width: $dropdown-width;
 	display:none;
+	color: $nav-color;
 	/* undo scadffold*/
 
 	&,ul {
 		margin-bottom:0;
+	}
+
+	a,
+	[data-toggle="dropdown"] {
+		color:inherit;
 	}
 
 	&#{&}-bottom {

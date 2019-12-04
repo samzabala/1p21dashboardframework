@@ -951,6 +951,70 @@
 		"oAP": "/assets/styles/style.min.css.map",
 		"oF": 0
 		},
+	"/components/filter-date-span.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-date-span.php",
+		"oF": 0
+		},
+	"/components/filter-date.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-date.php",
+		"oF": 0
+		},
+	"/components/filter-my-toggle.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-my-toggle.php",
+		"oF": 0
+		},
+	"/components/filter-production-meta.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-production-meta.php",
+		"oF": 0
+		},
+	"/components/filter-seo.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-seo.php",
+		"oF": 0
+		},
+	"/components/filter-status.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-status.php",
+		"oF": 0
+		},
+	"/components/filter-toggle.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-toggle.php",
+		"oF": 0
+		},
+	"/components/modal-add-task.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/modal-add-task.php",
+		"oF": 0
+		},
 	"/components/pagination.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -981,6 +1045,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/profile-image.php",
+		"oF": 0
+		},
+	"/components/project-link.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/project-link.php",
 		"oF": 0
 		},
 	"/config.php": {
@@ -1448,8 +1520,8 @@
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-01.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1459,8 +1531,8 @@
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-02.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1492,8 +1564,8 @@
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-05.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1536,8 +1608,8 @@
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-09.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

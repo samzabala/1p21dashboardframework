@@ -1,4 +1,8 @@
 <?php
+
+
+// error_reporting(E_ALL & ~E_NOTICE);
+
 //file paths n url
 define('DASHBOARD_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] );
 define('DASHBOARD_ROOT_URL', ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http" ).'://'.$_SERVER['HTTP_HOST'] );
@@ -9,9 +13,9 @@ if(isset($_GET['env'])):
 	$_GET['env'] = filter_var($_GET['env'], FILTER_SANITIZE_STRING);
 endif;
 
-$slug = '';
+$slug = 'production';
 
-if(isset($_GET['env'])):
+if(isset($_GET['env']) && $_GET['env'] !== ''):
 	$slug = $_GET['env'];
 endif;
 
@@ -34,3 +38,13 @@ endif;
 
 define('DASHBOARD_TEMPLATE',$slug);
 
+
+
+
+
+
+
+//search
+if(isset($_GET['is_searching'])):
+	$_GET['search'] = filter_var($_GET['search'], FILTER_SANITIZE_STRING);
+endif;

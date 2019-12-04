@@ -177,6 +177,10 @@ $prefix: '.special';
 		&-p {
 			margin-bottom: $calculated-body-text-gutter-y;
 		}
+
+		&-micro-p {
+			margin-bottom: $calculated-body-text-gutter-y * .5;
+		}
 	}
 
 /* heading */
@@ -235,18 +239,23 @@ a {
 
 	}
 }
-
+// margined shit
 p,
 .p,
 ul,
 ol,
 address,
 pre,
-dl {
+dl,
+hr {
 	@extend %for-p;
+	display:block;
 }
 
+li {
 
+	@extend %for-micro-p;
+}
 
 ol,ul,dd{
 	padding-left: $calculated-body-list-offset;
@@ -266,7 +275,7 @@ ol,ul{
 
 	&.inline {
 		li {
-			display: inline;
+			display: inline-block;
 			margin: 0 .5em;
 		}
 	}
@@ -433,8 +442,10 @@ hr {
 	display: block;
 	border:0;
 	border-top: 1px solid;
-	height: 0;
+	height: 1px;
 	opacity: .2;
+	width:100%;
+	flex: 0 0;
 }
 
 small {

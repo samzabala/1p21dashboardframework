@@ -75,15 +75,13 @@
 	// PADDING
 		$gutter-base: 50px !default;
 			$gutter-large: 70px !default;
-			$gutter-medium: 50px !default;
+			$gutter-medium: 40px !default;
 			$gutter-small: 20px !default;
 			$gutter-micro: 10px !default;
 
 		$border-radius-base: 10px !default;
 			$border-radius-small: $border-radius-base * .5 !default;
 			$border-radius-large: $border-radius-base * 2 !default;
-
-	
 
 	// TABLE
 		$table-cell-height: 70px !default;
@@ -191,6 +189,10 @@
 			$container-gutter-mobile: $gutter-micro !default;
 		$container-max-width: 1600px !default;
 			$container-max-width-mobile: 750px !default;
+
+	//GRIDING AND SHIT
+		$grid-units: 16 !default;
+		$grid-gap: $gutter-small !default;
 	
 	// speshal bois
 		$special-primary-font-size: 65px !default;
@@ -261,7 +263,7 @@
 		$module-bg-color: $global-background !default;
 			$module-bg-color-inverse: $global-background-inverse !default;
 		
-		$module-gutter-x: $gutter-base !default;
+		$module-gutter-x: $gutter-medium !default;
 			$module-gutter-x-mobile: $gutter-small !default;
 
 		$module-box-shadow-hover: 10px 10px 20px -10px $brand-color-base-alt !default; 

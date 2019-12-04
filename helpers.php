@@ -14,7 +14,9 @@ function app_get_template_part($filename = '', $slug =''){
 		$source .='.php';
 		
 
-		require_once $source;
+		if( file_exists( $source ) ){
+			require_once $source;
+		}
 	}
 }
 
@@ -31,8 +33,10 @@ function app_get_component_part($filename = '', $slug =''){
 		}
 		
 		$source .='.php';
-		
-		include $source;
+
+		if( file_exists( $source ) ){
+			include $source;
+		}
 	}
 }
 
@@ -56,7 +60,9 @@ function app_init_content($slug = ''){
 			case 'profile':
 			case 'home':
 			case 'project':
-				app_get_template_part('template/'.$template_part,DASHBOARD_SLUG);
+				if(DASHBOARD_SLUG == 'production' || DASHBOARD_SLUG == 'scoreboard'){
+					app_get_template_part('template/'.$template_part,DASHBOARD_SLUG);
+				}
 				break;
 
 			default:
@@ -68,6 +74,35 @@ function app_init_content($slug = ''){
 		app_get_template_part('template/home',$slug);
 	endif;
 
+}
+
+//DUH
+function app_create_link( $array_of_get_vars = array()) {
+	$url = DASHBOARD_ROOT_URL.'/';
+	$append = '';
+
+	if(isset($array_of_get_vars)) {
+		$append .= '?';
+		$counter = 0;
+
+		if(!isset($array_of_get_vars['env'])) {
+			$array_of_get_vars['env'] = DASHBOARD_SLUG;
+		}
+
+		foreach($array_of_get_vars as $key=>$value) {
+			if($counter > 0 ) {
+				$append .= '&';
+			}
+
+			$value = filter_var( $value,FILTER_SANITIZE_STRING );
+			$append .= "{$key}={$value}";
+
+			$counter++;
+		}
+	}
+
+
+	return $url.$append;
 }
 
 
@@ -93,60 +128,4 @@ function app_inline_script($filepath = ''){
 	echo '<script>';
 	echo app_get_file_content_as_string($filepath);
 	echo '</script>';
-}
-
-/*
-Functions
-*******************************************/
-
-
-
-
-/*
-CREATE DYNAMIC BOIS
-* @param $id - id for the instance of module
-* @param $data - json string of placeholder data or data... wherever our boi goes
-* @param $hendlebars - html string of handleebars template
-*/
-
-function app_render_handlebars_module($id = '',$data = null,$handlebars = null){
-	if($id):
-	?>
-
-		<div id="<?= $id; ?>-hb">
-
-			<!-- Template -->
-			<script id="<?= $id; ?>-hb-template" type="text/x-handlebars-template">
-				<?= $handlebars; ?>
-			</script>
-
-			<!-- DATA -->
-			<?php
-				$data_to_output = $data;
-				if(is_array($data) ):
-					$data_arr = array();
-
-					foreach($data as $set) {
-						array_push($data_arr,$set);
-					}
-
-					$data_to_output = $data_arr;
-
-				endif;
-			 ?>
-			<script id="<?= $id; ?>-hb-data" type="application/json">		
-				<?= $data_to_output; ?>
-			</script>
-
-
-			<!-- Initiate -->
-			<script>
-				
-			</script>
-
-		</div>
-		
-	<?php
-	endif;
-	
 }

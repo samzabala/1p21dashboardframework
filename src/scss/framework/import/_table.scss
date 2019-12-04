@@ -98,6 +98,13 @@ $prefix: '.table';
 			position:relative;
 		}
 
+
+
+
+		#{$prefix}-cell-no-gutter {
+			padding:0!important;
+		}
+
 		@at-root th,
 		#{$prefix}-cell#{$prefix}-cell-heading {
 			padding-top: calc((#{$calculated-table-heading-height} - (#{ $calculated-body-single-line } )) * .5);
@@ -122,15 +129,11 @@ $prefix: '.table';
 		#{$prefix}-cell {
 			padding-top: calc((#{ $calculated-table-cell-height } - ( #{ $calculated-body-single-line } )) * .5);
 			padding-bottom: calc((#{ $calculated-table-cell-height } - ( #{ $calculated-body-single-line } )) * .5);
-
-			&#{$prefix}-cell-no-gutter {
-				padding:0!important;
-			}
 		}
 
 
 
-		@at-root&#{$prefix}-large {
+		@at-root &#{$prefix}-large {
 			td,
 			#{$prefix}-cell {
 				padding-top: calc((#{ $calculated-table-cell-height-large } - ( #{ $calculated-body-single-line } )) * .5);

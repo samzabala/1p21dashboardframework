@@ -29,7 +29,6 @@ $prefix: '.tag';
 		leading: $calculated-tag-line-height,
 		weight: $tag-font-weight,
 		style: $tag-font-style,
-		color: $tag-color,
 		case: $tag-text-transform
 	));
 	padding-top: calc(  (  (#{$calculated-tag-height} - (#{ $calculated-tag-single-line }) ) * .5 ));
@@ -37,7 +36,19 @@ $prefix: '.tag';
 	padding-left: $calculated-tag-gutter-x;
 	padding-right: $calculated-tag-gutter-x;
 	border-radius: $tag-border-radius;
+	display:inline-block;
 	@extend .text-wrap-ellipsis;
+
+
+	&,
+	&:hover,
+	&:focus,
+	&:active,
+	&.focus,
+	&.active {
+
+		color: $tag-color;
+	}
 
 	@each $tag,$color in $calculated-brand-color-declarations {
 		&-#{$tag} {
