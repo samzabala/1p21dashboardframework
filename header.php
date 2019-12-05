@@ -7,7 +7,7 @@
 	<title>1p21 Dashboard</title>
 
 	<!-- styles -->
-	<?= app_inline_style( DASHBOARD_ROOT_PATH.'/assets/styles/style.min.css'); ?>
+	<link href="<?=DASHBOARD_ROOT_URL.'/assets/styles/style.css'?>" rel="stylesheet" />
 
 
 

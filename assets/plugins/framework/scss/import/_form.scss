@@ -605,6 +605,19 @@ $prefix: '.input';
 		max-width:100%;
 		overflow-x:auto;
 		overflow-y:visible;
+		
+		#{$prefix} {
+			position:relative;
+
+			&:hover,
+			&:active,
+			&.active,
+			&:focus,
+			&.focus,
+			&.open {
+				z-index:1;
+			}
+		}
         
         &-block {
             display:flex;
@@ -744,14 +757,27 @@ $prefix: '.input';
 
 
 
-.special-form {
-	padding: $special-form-gutter-y $special-form-gutter-x 0;
-	background: $special-form-background;
-	border-radius: $special-form-border-radius;
+.special-form,
+fieldset {
+	padding: $special-form-gutter-y $special-form-gutter-x;
 	position:relative;
-	margin-bottom: calc((#{$special-form-gutter-y} * 2) + #{$calculated-btn-height-large});
+	margin-bottom: #{$special-form-gutter-y};
 	// overflow:hidden;
+
+	&,
+	legend,
+	.special-form-label {
+		background: $special-form-background;
+		border-radius: $special-form-border-radius;
+	}
 	
+	legend,
+	.special-form-label {
+		padding: ($special-form-gutter-y * .75) $special-form-gutter-x 0;
+		margin-left: $special-form-gutter-x * -1;
+		position:relative;
+		top: -1em;
+	}
 
 	.body-inverse & {
 		background: $special-form-background-inverse;
@@ -761,7 +787,7 @@ $prefix: '.input';
 	#{$prefix}-wrapper {
 		max-width: none;
 
-		&:nth-child(n+2) {
+		&:nth-of-type(n+2) {
 			border-top: 1px solid gray;
 		}
 	}

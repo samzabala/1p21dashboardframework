@@ -1,6 +1,6 @@
 
 
-<div class="input-wrapper filter-date">
+<div class="module-function filter-date">
 	
 	<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
 	<!-- @if label the filter -->

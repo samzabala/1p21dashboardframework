@@ -9,8 +9,8 @@
 		color-primary-hover
 		color-primary-active
 		color-primary-focus
-		background-primary-open
-		color-global-background-open
+		background-primary-toggle
+		color-global-background-toggle
 		btn-symbol
 		btn-no-radius
 		dashboard-sidenav-toggle
@@ -64,13 +64,12 @@
 		</a>
 
 		<ul id="nav-account-dropdown" data-dropdown-width="200px" class="dropdown dropdown-right dropdown-top-flush">
-			<!-- PLACEHOLDEr -->
-			<li class="REPLACE"><a href="#">Account</a></li>
-			<li class="REPLACE"><a href="#">Item</a></li>
-			<li class="REPLACE"><a href="#">Item</a></li>
-			<li class="REPLACE"><a href="#">Item</a></li>
-			<li class="REPLACE"><a href="#">Item</a></li>
-			<li class="REPLACE"><a href="#">Logout</a></li>
+			
+			<!-- @PLACEHOLDER: DELETE QWHEN READY-->
+				<?php app_debug_li() ?>
+				<li class="REPLACE"><a href="#">Item</a></li>
+				<li class="REPLACE"><a href="#">Item</a></li>
+				<li class="REPLACE"><a href="#">Logout</a></li>
 		</ul>
 
 	</div>

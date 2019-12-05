@@ -10,9 +10,12 @@
 	@interactive .module-functions *
  -->
 
- <a class="thumbnail thumbnail-inline" href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>">
+ <a class="thumbnail thumbnail-small" href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>">
 	<!-- @if has profile imahe -->
-	<img class="profile-image" data-src="<?=DASHBOARD_ROOT_URL ?>/REPLACEs/profiles/team-des-jenn.jpg" alt="">
+	<div class="thumbnail-image">
+
+		<img class="profile-image" data-src="<?=DASHBOARD_ROOT_URL ?>/REPLACEs/profiles/team-des-jenn.jpg" alt="">
+	</div>
 
 	<!-- @else -->
 	<span class="thumbnail-text profile-name-initial">

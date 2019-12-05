@@ -54,7 +54,7 @@ $calculated-btn-gutter-x: $btn-gutter-x;
 }
 
 $prefix: '.btn';
-@mixin button-generate-schemes($args:()){
+@mixin button-generate-schemes($args:(),$add-disable-opacity:false,$scheme:''){
 	$defaults: (
 		init: (
 			border: '',
@@ -74,7 +74,6 @@ $prefix: '.btn';
 	);
 	$opts: map-merge($defaults,$args);
 
-	$selector: #{&};
 
 	@each $state,$properties in $opts {
 
@@ -112,42 +111,53 @@ $prefix: '.btn';
 			}
 			
 		}@else{
+
+			@at-root %for-#{$scheme}-no-change {
+				@include internal-btn-set-scheme($properties,false,true);
+			}
 		
 			&{
 				@include internal-btn-set-scheme($properties)
-			}
-			
-			&#{$prefix}-no-interaction,
-			&#{$prefix}-no-interaction:hover,
-			&#{$prefix}-no-interaction:focus,
-			&#{$prefix}-no-interaction.focus,
-			&#{$prefix}-no-interaction:active,
-			&#{$prefix}-no-interaction.active {
-				@include internal-btn-set-scheme($properties,false,true);
-			}
-			
-			&#{$prefix}-disabled,
-			&#{$prefix}-disabled:hover,
-			&#{$prefix}-disabled:focus,
-			&#{$prefix}-disabled.focus,
-			&#{$prefix}-disabled:active,
-			&#{$prefix}-disabled.active,
-			
-			#{$prefix}-group-disabled &,
-			#{$prefix}-group-disabled:hover &,
-			#{$prefix}-group-disabled:focus &,
-			#{$prefix}-group-disabled.focus &,
-			#{$prefix}-group-disabled:active &,
-			#{$prefix}-group-disabled.active &,
-			
-			
-			.input-group-disabled &,
-			.input-group-disabled:hover &,
-			.input-group-disabled:focus &,
-			.input-group-disabled.focus &,
-			.input-group-disabled:active &,
-			.input-group-disabled.active & {
-				@include internal-btn-set-scheme($properties,true,true);
+
+				@at-root &#{$prefix}-no-interaction,
+					&#{$prefix}-no-interaction:hover,
+					&#{$prefix}-no-interaction:focus,
+					&#{$prefix}-no-interaction.focus,
+					&#{$prefix}-no-interaction:active,
+					&#{$prefix}-no-interaction.active {
+						// @include internal-btn-set-scheme($properties,false,true);
+						@extend %for-#{$scheme}-no-change;
+					}
+				
+				@at-root &#{$prefix}-disabled,
+					&#{$prefix}-disabled:hover,
+					&#{$prefix}-disabled:focus,
+					&#{$prefix}-disabled.focus,
+					&#{$prefix}-disabled:active,
+					&#{$prefix}-disabled.active,
+					
+					#{$prefix}-group-disabled &,
+					#{$prefix}-group-disabled:hover &,
+					#{$prefix}-group-disabled:focus &,
+					#{$prefix}-group-disabled.focus &,
+					#{$prefix}-group-disabled:active &,
+					#{$prefix}-group-disabled.active &,
+					
+					
+					.input-group-disabled &,
+					.input-group-disabled:hover &,
+					.input-group-disabled:focus &,
+					.input-group-disabled.focus &,
+					.input-group-disabled:active &,
+					.input-group-disabled.active & {
+
+						opacity: $global-disabled-opacity;
+						@extend %for-#{$scheme}-no-change;
+						// @include internal-btn-set-scheme($properties,true,true);
+						// @if $add-disable-opacity == true {
+						// 	opacity: $global-disabled-opacity;
+						// }
+					}
 			}
 		}
 	}
@@ -191,7 +201,7 @@ $prefix: '.btn';
 }
 
 @function internal-btn-calculate-disabled($color){
-	@if $color != transparent {
+	@if type-of($color) == 'color' and $color != transparent {
 		@return rgba( $color,$global-disabled-opacity );
 	}@else {
 		@return $color;
@@ -246,6 +256,8 @@ $prefix: '.btn';
 
 		border-radius: $btn-border-radius;
 		box-shadow: $btn-box-shadow;
+		background-color:transparent;
+		color:inherit;
 
 		&:hover {
 			box-shadow: $btn-box-shadow-hover;
@@ -382,6 +394,19 @@ $prefix: '.btn';
 		overflow-x:auto;
 		overflow-y:visible;
 		align-items:stretch;
+
+		#{$prefix} {
+			position:relative;
+
+			&:hover,
+			&:active,
+			&.active,
+			&:focus,
+			&.focus,
+			&.open {
+				z-index:1;
+			}
+		}
 		
 		&-block {
 			display:flex;
@@ -501,7 +526,13 @@ $prefix: '.btn';
 
 	@each $scheme,$properties in $calculated-btn-schemes {
 		&#{&}-#{$scheme} {
-			@include button-generate-schemes($properties);
+			$add-disable-opacity: false;
+			@if $scheme == 'default' {
+				$add-disable-opacity: true;
+			}
+			@include button-generate-schemes($properties,$add-disable-opacity,$scheme);
+
+
 		}
 	}
 }

@@ -38,7 +38,6 @@ $prefix: '.tag';
 	border-radius: $tag-border-radius;
 	display:inline-block;
 	vertical-align:middle;
-	@extend .text-wrap-ellipsis;
 
 
 	&,

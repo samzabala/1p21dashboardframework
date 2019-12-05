@@ -26,6 +26,12 @@
 		&#{$prefix}-nav-sticky-offset {
 			padding-top: $calculated-nav-height;
 		}
+
+		&:not(.body-loaded) {
+			*,*:before,*:after {
+				transition:none!important;
+			}
+		}
 	}
 
 

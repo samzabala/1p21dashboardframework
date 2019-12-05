@@ -1,4 +1,4 @@
-<div class="input-wrapper generate-report">
+<div class="module-function modal-generate-report">
 	<a href="#modal-generate-report" data-toggle="modal"  class="btn-group btn-group-horizontal btn-group-unite">
 		<span class="btn btn-default">Genrate Report</span>
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></span>

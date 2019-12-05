@@ -17,24 +17,24 @@
 			class="module"
 			data-grid-area-md="info">
 
-			<div class="flex-grid no-margin-bottom">
+			<div class="flex-grid flex-grid-no-gutter-y">
 
-				<div class="flex-col-xs-1 flex-col-sm-2  flex-1-1 flex-align-self-center no-margin-top">
+				<div class="flex-col-lg-8 flex-col-md-6 flex-align-self-center">
 					<p class="special-secondary background-gradient text-clip-background project-site no-margin"><span class="REPLACE">site.com</span></p>
 					<p class="color-neutral no-margin project-name"><span class="REPLACE">Client Name</span></p>
 				</div>
 				
-				<div class="flex-col-xs-1 flex-col-sm-2 flex-col-md-3 flex-1-1 mobile-hide text-align-right">
-					<ul class="project-meta inline no-margin-top">
-						<li class="text-wrap-nowrap project-meta-level">
-							<span class="font-size-small color-neutral text-transform-uppercase font-weight-700">Level:</span>
-							&nbsp;
+				<div class="flex-col-lg-4 flex-col-md-6 flex-xs flex-align-items-center">
+					<ul class="project-meta unstyled flex-grid flex-grid-compact no-margin-y flex-grid-no-gutter-y flex-justify-content-flex-end flex-1-1">
+						<li class="flex-child text-wrap-nowrap project-meta-level">
+							<span class="mobile-hide tablet-hide font-size-small color-neutral text-transform-uppercase font-weight-700">Level:</span>
+							
 							<span class="font-weight-700 project-level"><span class="REPLACE">Project Level</span></span>
 						</li>
 
-						<li class="text-wrap-nowrap project-meta-status">
-							<span class="font-size-small color-neutral text-transform-uppercase font-weight-700">Status:</span>
-							&nbsp;
+						<li class="flex-child text-wrap-nowrap project-meta-status">
+							<span class="mobile-hide tablet-hide font-size-small color-neutral text-transform-uppercase font-weight-700">Status:</span>
+							
 							<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
 							<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
 								<span class="task-status">Task Status</span>
@@ -56,7 +56,7 @@
 				class="module"
 				data-grid-area-md="days">
 				<div class="module-header module-header-break">
-					<h3 class="module-title">Days in Production: <span class="project-count-days font-size-large font-weight-700 color-base"><span class="REPLACE">69</span></span></h3>
+					<h3 class="module-title">Days in Production: <span class="project-count-days font-size-large font-weight-700 color-global"><span class="REPLACE">69</span></span></h3>
 					<div class="module-functions">
 						<?php app_get_component('components/modal-generate-report') ?>
 						<?php app_get_component('components/modal-track-time') ?>
@@ -155,7 +155,7 @@
 										</div>
 
 
-										<div class="progress">
+										<div class="progress p">
 											<!-- @dynamic
 													attr style->width
 											-->
@@ -188,7 +188,7 @@
 										
 										<div class="project-milestone-time-legend list-group flex-grid">
 
-											<div class="list-group-item flex-col-xs-1 flex-col-md-2 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-global-background-contrast"></i>
 													<span class="project-milestone">Pre-Production</span>
@@ -199,7 +199,7 @@
 												</div>
 											</div>
 											
-											<div class="list-group-item flex-col-xs-1 flex-col-md-2 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-accent"></i>
 													<span class="project-milestone">Design</span>
@@ -210,7 +210,7 @@
 												</div>
 											</div>
 											
-											<div class="list-group-item flex-col-xs-1 flex-col-md-2 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-primary"></i>
 													<span class="project-milestone">Development</span>
@@ -221,7 +221,7 @@
 												</div>
 											</div>
 											
-											<div class="list-group-item flex-col-xs-1 flex-col-md-2 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-caution"></i>
 													<span class="project-milestone">Client Review</span>
@@ -245,7 +245,7 @@
 										</div>
 
 
-										<div class="progress">
+										<div class="progress p">
 
 											<!-- @dynamic
 													attr style->width
@@ -303,16 +303,20 @@
 			</div>
 			<div class="module-content">
 				<!-- ADD NOTE -->
-					<form class="special-form" id="project-production-add-note">
-						<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-							<input type="text" class="input input-large input-single-line font-weight-600" placeholder="Title your note here">
-						</div>
-						<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+					<form id="project-production-add-note">
+						<div class="special-form">
 
-							<textarea name="content" id="content" class="input input-trumbowyg"></textarea>
+							<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+								<input type="text" class="input input-large input-single-line font-weight-600" placeholder="Title your note here">
+							</div>
+							<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+
+								<textarea name="content" id="content" class="input input-trumbowyg"></textarea>
+							</div>
 						</div>
-						<input type="hidden" value="production-add-note">
-						<button class="btn btn-primary">Add Note</button>
+						<div class="text-align-right">
+							<button class="btn btn-primary" type="submit">Add Note</button>
+						</div>
 					</form>
 
 				<!-- NOTES -->

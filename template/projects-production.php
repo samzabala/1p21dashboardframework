@@ -3,17 +3,20 @@
 			
 		<div class="module-header">
 			
-			<div class="module-functions flex-align-items-center flex-md flex-justify-content-space-between">
+			<div class="module-functions flex-align-items-center">
+				<div class="flex-grid flex-grid-no-gutter-y">
 
-				<?php app_get_component('components/filter-toggle-status'); ?>
+					<div class="flex-col-md-9 flex-1-1">
+						<?php app_get_component('components/filter-toggle-status'); ?>
+						<?php app_get_component('components/filter-production-meta'); ?>
+						<?php app_get_component('components/filter-date'); ?>
+					</div>
 
-				<?php app_get_component('components/filter-production-meta'); ?>
+					<div class="flex-col-md-3 flex-1-0 text-align-right">
+						<?php app_get_component('components/modal-add-task'); ?>
+					</div>
 
-				<?php app_get_component('components/filter-date'); ?>
-
-				<?php app_get_component('components/modal-add-task'); ?>
-				
-				
+				</div>
 			</div>
 
 		</div>
@@ -95,7 +98,7 @@
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
-								<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
@@ -159,7 +162,7 @@
 									</td>
 
 									<td class="dashboard-table-cell-action text-align-center">
-										<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+										<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 										<!--
 											@NOTE:

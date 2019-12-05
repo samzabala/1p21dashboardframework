@@ -7,7 +7,7 @@ DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
 ****************************************************************************/
 $mobile-br-max-opposite: opposite-br(#{$mobile-br-max}-max);
 
-$calculated-br-tags: (xs,sm,md,lg);
+$calculated-br-tags: (xxs,xs,sm,md,lg);
 
 //body
     $calculated-body-line-height: type-lead( $body-font-size,$body-line-height );
@@ -61,11 +61,6 @@ $calculated-color-brand-intensity: (
 $calculated-btn-schemes: (
 
     default: (
-        init: (
-            background: $btn-background-default,
-            border: $btn-border-default,
-            color: $btn-color-default,
-        ),
 
         hover: (
             background: $btn-background-default-hover,
@@ -77,14 +72,14 @@ $calculated-btn-schemes: (
             background: $btn-background-default-active,
             border: $btn-border-default-active,
             color: $btn-color-default-active,
+        ),
+        init: (
+            background: $btn-background-default,
+            border: $btn-border-default,
+            color: $btn-color-default,
         )
     ),
     base: (
-        init: (
-            background: $btn-background-base,
-            border: $btn-border-base,
-            color: $btn-color-base,
-        ),
 
         hover: (
             background: $btn-background-base-hover,
@@ -96,14 +91,14 @@ $calculated-btn-schemes: (
             background: $btn-background-base-active,
             border: $btn-border-base-active,
             color: $btn-color-base-active,
+        ),
+        init: (
+            background: $btn-background-base,
+            border: $btn-border-base,
+            color: $btn-color-base,
         )
     ),
 	primary: (
-        init: (
-            background: $btn-background-primary,
-            border: $btn-border-primary,
-            color: $btn-color-primary,
-        ),
 
         hover: (
             background: $btn-background-primary-hover,
@@ -115,14 +110,14 @@ $calculated-btn-schemes: (
             background: $btn-background-primary-active,
             border: $btn-border-primary-active,
             color: $btn-color-primary-active,
+        ),
+        init: (
+            background: $btn-background-primary,
+            border: $btn-border-primary,
+            color: $btn-color-primary,
         )
     ),
 	accent: (
-        init: (
-            background: $btn-background-accent,
-            border: $btn-border-accent,
-            color: $btn-color-accent,
-        ),
 
         hover: (
             background: $btn-background-accent-hover,
@@ -134,14 +129,14 @@ $calculated-btn-schemes: (
             background: $btn-background-accent-active,
             border: $btn-border-accent-active,
             color: $btn-color-accent-active,
+        ),
+        init: (
+            background: $btn-background-accent,
+            border: $btn-border-accent,
+            color: $btn-color-accent,
         )
     ),
 	neutral: (
-        init: (
-            background: $btn-background-neutral,
-            border: $btn-border-neutral,
-            color: $btn-color-neutral,
-        ),
 
         hover: (
             background: $btn-background-neutral-hover,
@@ -153,14 +148,14 @@ $calculated-btn-schemes: (
             background: $btn-background-neutral-active,
             border: $btn-border-neutral-active,
             color: $btn-color-neutral-active,
+        ),
+        init: (
+            background: $btn-background-neutral,
+            border: $btn-border-neutral,
+            color: $btn-color-neutral,
         )
     ),
 	success: (
-        init: (
-            background: $btn-background-success,
-            border: $btn-border-success,
-            color: $btn-color-success,
-        ),
 
         hover: (
             background: $btn-background-success-hover,
@@ -172,14 +167,14 @@ $calculated-btn-schemes: (
             background: $btn-background-success-active,
             border: $btn-border-success-active,
             color: $btn-color-success-active,
+        ),
+        init: (
+            background: $btn-background-success,
+            border: $btn-border-success,
+            color: $btn-color-success,
         )
     ),
 	caution: (
-        init: (
-            background: $btn-background-caution,
-            border: $btn-border-caution,
-            color: $btn-color-caution,
-        ),
 
         hover: (
             background: $btn-background-caution-hover,
@@ -191,14 +186,14 @@ $calculated-btn-schemes: (
             background: $btn-background-caution-active,
             border: $btn-border-caution-active,
             color: $btn-color-caution-active,
+        ),
+        init: (
+            background: $btn-background-caution,
+            border: $btn-border-caution,
+            color: $btn-color-caution,
         )
     ),
 	error:(
-        init: (
-            background: $btn-background-error,
-            border: $btn-border-error,
-            color: $btn-color-error,
-        ),
 
         hover: (
             background: $btn-background-error-hover,
@@ -210,14 +205,14 @@ $calculated-btn-schemes: (
             background: $btn-background-error-active,
             border: $btn-border-error-active,
             color: $btn-color-error-active,
+        ),
+        init: (
+            background: $btn-background-error,
+            border: $btn-border-error,
+            color: $btn-color-error,
         )
     ),
 	link:(
-        init: (
-            background: $btn-background-link,
-            border: $btn-border-link,
-            color: $btn-color-link,
-        ),
 
         hover: (
             background: $btn-background-link-hover,
@@ -229,6 +224,11 @@ $calculated-btn-schemes: (
             background: $btn-background-link-active,
             border: $btn-border-link-active,
             color: $btn-color-link-active,
+        ),
+        init: (
+            background: $btn-background-link,
+            border: $btn-border-link,
+            color: $btn-color-link,
         )
     )
 );

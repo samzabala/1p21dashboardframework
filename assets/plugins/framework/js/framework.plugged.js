@@ -598,7 +598,7 @@ window.jQuery && jQuery.noConflict();
 				if( selector.hasClass('open') && $(this).hasClass('open') ){
 
 					selector.slideUp(); 
-					$(this).parent().removeClass('open'); 
+					$(this).closest('li,.nav-item').removeClass('open'); 
 					$(this).removeClass('open'); 
 					selector.removeClass('open'); 
 				}else{
@@ -608,6 +608,12 @@ window.jQuery && jQuery.noConflict();
 						$(this).closest('li , .nav-item').siblings('li,.nav-item').find('*[data-toggle="dropdown"]').removeClass('open'); 
 						selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').removeClass('open'); 
 					}
+
+
+					$('.dropdown').closest('li,.nav-item').removeClass('open'); 
+					$('.dropdown').slideUp();
+					$('.dropdown').removeClass('open'); 
+					$('*[data-toggle="dropdown"]').removeClass('open'); 
 
 					selector.slideDown(); 
 					$(this).closest('li,.nav-item').addClass('open'); 

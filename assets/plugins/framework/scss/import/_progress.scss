@@ -34,7 +34,7 @@ $calculated-progress-title-font-size: $progress-title-font-size;
 		border-radius: $progress-border-radius;
 		overflow:hidden;
 		@extend %cf;
-		margin-bottom:$calculated-body-text-gutter-y;
+		// margin-bottom:$calculated-body-text-gutter-y;
 		@include gradient((
 			type: repeating-linear,
 			colors: (

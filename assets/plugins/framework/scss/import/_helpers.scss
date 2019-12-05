@@ -171,8 +171,8 @@
 		&-global-focus:focus,
 		&-global-focus.focus,
 		&-global-active:active,
-		&-global-active.active,
-		&-global-open.open {
+		&-global-toggle.active,
+		&-global-toggle.open {
 			background-color: $global-background!important;
 
 			.body-inverse & {
@@ -186,8 +186,8 @@
 		&-global-contrast-focus:focus,
 		&-global-contrast-focus.focus,
 		&-global-contrast-active:active,
-		&-global-contrast-active.active,
-		&-global-contrast-open.open {
+		&-global-contrast-toggle.active,
+		&-global-contrast-toggle.open {
 			background-color: $global-background-contrast!important;
 
 			.body-inverse & {
@@ -200,8 +200,8 @@
 		&-global-color-focus:focus,
 		&-global-color-focus.focus,
 		&-global-color-active:active,
-		&-global-color-active.active,
-		&-global-color-open.open {
+		&-global-color-toggle.active,
+		&-global-color-toggle.open {
 			background-color: $global-color!important;
 
 			.body-inverse & {
@@ -215,8 +215,8 @@
 		&-global-color-contrast-focus:focus,
 		&-global-color-contrast-focus.focus,
 		&-global-color-contrast-active:active,
-		&-global-color-contrast-active.active,
-		&-global-color-contrast-open.open {
+		&-global-color-contrast-toggle.active,
+		&-global-color-contrast-toggle.open {
 			background-color: $global-color-contrast!important;
 
 			.body-inverse & {
@@ -231,8 +231,8 @@
 				&-#{$i}-focus:focus,
 				&-#{$i}-focus.focus,
 				&-#{$i}-active:active,
-				&-#{$i}-active.active,
-				&-#{$i}-open.open {
+				&-#{$i}-toggle.active,
+				&-#{$i}-toggle.open {
 					@extend %for-background-intensity-#{$i}-important;
 				}
 			}
@@ -258,8 +258,8 @@
 				&-#{$angle}-focus:focus,
 				&-#{$angle}-focus.focus,
 				&-#{$angle}-active:active,
-				&-#{$angle}-active.active,
-				&-#{$angle}-open.open {
+				&-#{$angle}-toggle.active,
+				&-#{$angle}-toggle.open {
 					@extend %for-background-gradient-#{$angle}-important;
 				}
 
@@ -271,8 +271,8 @@
 		&-transparent-focus:focus,
 		&-transparent-focus.focus,
 		&-transparent-active:active,
-		&-transparent-active.active,
-		&-transparent-open.open {
+		&-transparent-toggle.active,
+		&-transparent-toggle.open {
 			background-color:transparent!important;
 		}
 
@@ -283,8 +283,8 @@
 			&-#{$tag}-focus:focus,
 			&-#{$tag}-focus.focus,
 			&-#{$tag}-active:active,
-			&-#{$tag}-active.active,
-			&-#{$tag}-open.open {
+			&-#{$tag}-toggle.active,
+			&-#{$tag}-toggle.open {
 				@extend %for-background-#{$tag}-important;
 			}
 
@@ -299,8 +299,8 @@
 		&-global-focus:focus,
 		&-global-focus.focus,
 		&-global-active:active,
-		&-global-active.active,
-		&-global-open.open{
+		&-global-toggle.active,
+		&-global-toggle.open{
 			color: $global-color!important;
 
 			.body-inverse & {
@@ -312,8 +312,8 @@
 		&-global-contrast-focus:focus,
 		&-global-contrast-focus.focus,
 		&-global-contrast-active:active,
-		&-global-contrast-active.active,
-		&-global-contrast-open.open{
+		&-global-contrast-toggle.active,
+		&-global-contrast-toggle.open{
 			color: $global-color-contrast!important;
 
 			.body-inverse & {
@@ -326,8 +326,8 @@
 		&-global-background-focus:focus,
 		&-global-background-focus.focus,
 		&-global-background-active:active,
-		&-global-background-active.active,
-		&-global-background-open.open{
+		&-global-background-toggle.active,
+		&-global-background-toggle.open{
 			color: $global-background!important;
 
 			.body-inverse & {
@@ -339,8 +339,8 @@
 		&-global-background-contrast-focus:focus,
 		&-global-background-contrast-focus.focus,
 		&-global-background-contrast-active:active,
-		&-global-background-contrast-active.active,
-		&-global-background-contrast-open.open{
+		&-global-background-contrast-toggle.active,
+		&-global-background-contrast-toggle.open{
 			color: $global-background-contrast!important;
 
 			.body-inverse & {
@@ -355,8 +355,8 @@
 				&-#{$i}-focus:focus,
 				&-#{$i}-focus.focus,
 				&-#{$i}-active:active,
-				&-#{$i}-active.active,
-				&-#{$i}-open.open {
+				&-#{$i}-toggle.active,
+				&-#{$i}-toggle.open {
 					@extend %for-color-intensity-#{$i}-important;
 				}
 			}
@@ -367,8 +367,8 @@
 		&-inherit-focus:focus,
 		&-inherit-focus.focus,
 		&-inherit-active:active,
-		&-inherit-active.active,
-		&-inherit-open.open {
+		&-inherit-toggle.active,
+		&-inherit-toggle.open {
 			color: inherit!important;
 		}
 
@@ -379,8 +379,8 @@
 			&-#{$tag}-focus:focus,
 			&-#{$tag}-focus.focus,
 			&-#{$tag}-active:active,
-			&-#{$tag}-active.active,
-			&-#{$tag}-open.open {
+			&-#{$tag}-toggle.active,
+			&-#{$tag}-toggle.open {
 				@extend %for-color-#{$tag}-important;
 			}
 		}

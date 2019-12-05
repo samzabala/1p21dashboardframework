@@ -1,4 +1,4 @@
-<div class="input-wrapper filter-production-meta">
+<div class="module-function filter-production-meta">
 	<div class=" filter-profile input-group input-group-horizontal input-group-responsive">
 		<!-- @placeholder option:not([selected]) -->
 		<select class="input input-single-line" >

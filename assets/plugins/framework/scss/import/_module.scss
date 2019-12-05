@@ -174,7 +174,10 @@ $prefix: '.module';
 					flex: 1 1;
 					text-align: right;
 
-					.btn-group,.input-group {
+					> .btn,
+					> .btn-group,
+					> .input-group,
+					> .input-wrapper {
 						margin-top: 0;
 						display:inline-flex;
 					}
@@ -196,41 +199,32 @@ $prefix: '.module';
 			margin-bottom:0;
 		}
 
+		@at-root #{$prefix}-function {
+			position:relative;
+			display:inline-flex;
+		}
+
 		&-functions {
 			margin-top: $module-gutter-between;
 
-
-			> .btn,
-			> .btn-group,
-			> .input-group,
-			> .input-wrapper {
+			#{$prefix}-function {
 				margin-top: $module-gutter-between * .5;
+				margin-bottom: $module-gutter-between * .5;
 			}
 
 			@include br(#{$mobile-br-max-opposite}) {
-				#{$prefix}-header-break & {
-					> .btn,
-					> .btn-group,
-					> .input-group,
-					> .input-wrapper {
-
-						margin-top:0;
-					}
-				}
-
-				> .btn,
-				> .btn-group,
-				> .input-group,
-				> .input-wrapper {
-
+				
+				#{$prefix}-function {
 					&:nth-child(n+2) {
 						margin-left: .75rem;
 					}
 				}
 			}
 
-			@include br(#{$mobile-br-max-opposite}) {
-				
+			@include br(#{$mobile-br-max}-max) {
+				#{$prefix}-function {
+					display:block;
+				}
 			}
 
 			.btn-group,.input-group {
@@ -243,7 +237,8 @@ $prefix: '.module';
 		}
 	
 
-	&-content {
+	&-content,
+	& > *:first-child:last-child {
 		grid-area: content;
 		// overflow-y:visible;
 		// overflow-x:hidden;
@@ -309,15 +304,44 @@ $prefix: '.module';
 	}
 
 	&-no-gutter {
-		padding:0!important;
 		
-		#{$prefix}-header,
-		#{$prefix}-content,
-		#{$prefix}-footer {
-			padding-top: 0!important;
-			padding-bottom:0!important;
-			margin:0!important;
 
+		&,
+		&-x {
+			&,
+			#{$prefix}-header,
+			#{$prefix}-content,
+			#{$prefix}-footer {
+				padding-left: 0!important;
+				padding-right:0!important;
+			}
+
+
+			#{$prefix}-header,
+			#{$prefix}-content,
+			#{$prefix}-footer {
+				margin-left:0!important;
+				margin-right:0!important;
+			}
+		}
+
+		&,
+		&-y {
+			&,
+			#{$prefix}-header,
+			#{$prefix}-content,
+			#{$prefix}-footer {
+				padding-top: 0!important;
+				padding-bottom:0!important;
+			}
+
+
+			#{$prefix}-header,
+			#{$prefix}-content,
+			#{$prefix}-footer {
+				margin-top:0!important;
+				margin-bottom:0!important;
+			}
 		}
 	}
 

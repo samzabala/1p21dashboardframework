@@ -65,7 +65,7 @@ window.jQuery && jQuery.noConflict();
 	 * @param  {Node} elem Element to show and hide
 	 */
 	function slideDown(elem) {
-		elem.style.display = 'block';
+		elem && (elem.style.display = 'block');
 	}
 
 	/**
@@ -74,7 +74,7 @@ window.jQuery && jQuery.noConflict();
 	 * @return {[type]}      [description]
 	 */
 	function slideUp(elem) {
-		elem.style.display = 'none';
+		elem && (elem.style.display = 'none');
 	}
 
 	/**
@@ -724,17 +724,23 @@ window.jQuery && jQuery.noConflict();
 
 					}else{
 
-						if (selectorAncestor ){
+						if (selectorAncestor){
 							var selectorUncles = _1p21.fw.getSiblings(selectorAncestor)
 								.filter(function(sibling){
 									return sibling.matches('li,.nav-item');
 								});
 								selectorUncles.forEach(function(sibling){
-									slideUp( sibling.querySelector('.dropdown') );
-									sibling.querySelector('.dropdown').classList.remove('open');
-									sibling.querySelector('*[data-toggle="dropdown"]').classList.remove('open');
+									sibling.classList.remove('open');
 								});
 						}
+
+						document.querySelectorAll('.dropdown').forEach(function(dropdown){
+							slideUp( dropdown );
+							dropdown.classList.remove('open');
+						});
+						document.querySelectorAll('*[data-toggle="dropdown"]').forEach(function(toggler){
+							toggler.classList.remove('open');
+						});
 
 
 						slideDown(selector); 

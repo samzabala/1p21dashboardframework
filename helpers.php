@@ -76,6 +76,27 @@ function app_init_content($slug = ''){
 
 }
 
+// links for debugging our boi
+function app_debug_li() {
+?>
+
+	<li>
+		<?php 
+			$env_to_switch = DASHBOARD_SLUG == 'production' ? 'scoreboard' : 'production';
+		?>
+		<a href="<?=app_create_link(array('env'=>$env_to_switch)) ?>">Switch to <?=$env_to_switch ?></a>
+	</li>
+
+	<li>
+		<a href="<?=app_create_link(array('template'=>'demos')) ?>">Framework debug</a>
+	</li>
+
+	<li>
+		<a href="#" onclick="event.preventDefault();document.body.classList.toggle('body-inverse')">Toggle Dark Mode</a>
+	</li>
+<?php
+}
+
 //DUH
 function app_create_link( $array_of_get_vars = array()) {
 	$url = DASHBOARD_ROOT_URL.'/';

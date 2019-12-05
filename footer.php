@@ -1,5 +1,11 @@
+				<br>
+				<ul class="inline">
+				
+					<?=app_debug_li(); ?>
+				</ul>
 
 				</div>
+			
 			</div>
 
 		</main>
@@ -21,13 +27,17 @@
 	
 
 	<!-- SCRIPT -->
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/jquery.min.js'); ?>
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.min.js'); ?>
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.min.js'); ?>
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.plugged.min.js'); ?>
-	<!-- <?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/framework.min.js'); ?> -->
-
-	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.min.js'); ?>
+		<!-- DEPENDENCIES OF DEPENDENCIES -->
+		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/jquery.js'; ?>"></script>
+		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/trumbowyg.js'; ?>"></script>
+		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/trumbowyg.upload.js'; ?>"></script>
+	
+		<!-- DEPENDENCIES -->
+		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/framework/js/framework.plugged.js'; ?>"></script>
+		<!-- <script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/framework/js/framework.js'; ?>"></script> -->
+	
+		<!-- THE BOI -->
+		<script src="<?= DASHBOARD_ROOT_URL.'/assets/scripts/dashboard.js'; ?>"></script>
 
 </body>
 </html>

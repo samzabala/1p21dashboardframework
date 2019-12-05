@@ -10,9 +10,9 @@ $calculated-thumbnail-font-size: $thumbnail-font-size;
     $calculated-thumbnail-font-size: rem($thumbnail-font-size / $body-font-size);
 }
 
-	$calculated-thumbnail-font-size-inline: $thumbnail-font-size-inline;
-	@if internal-is-convertable($thumbnail-font-size-inline) {
-		$calculated-thumbnail-font-size-inline: rem($thumbnail-font-size-inline / $body-font-size);
+	$calculated-thumbnail-font-size-small: $thumbnail-font-size-small;
+	@if internal-is-convertable($thumbnail-font-size-small) {
+		$calculated-thumbnail-font-size-small: rem($thumbnail-font-size-small / $body-font-size);
 	}
 
 $calculated-thumbnail-size: $thumbnail-size;
@@ -20,9 +20,9 @@ $calculated-thumbnail-size: $thumbnail-size;
     $calculated-thumbnail-size: em($thumbnail-size / $thumbnail-font-size);
 }
 
-	$calculated-thumbnail-size-inline: $thumbnail-size-inline;
-	@if internal-is-convertable($thumbnail-size-inline,$thumbnail-font-size-inline) {
-		$calculated-thumbnail-size-inline: em($thumbnail-size-inline / $thumbnail-font-size-inline);
+	$calculated-thumbnail-size-small: $thumbnail-size-small;
+	@if internal-is-convertable($thumbnail-size-small,$thumbnail-font-size-small) {
+		$calculated-thumbnail-size-small: em($thumbnail-size-small / $thumbnail-font-size-small);
 	}
 	
 
@@ -36,12 +36,10 @@ $calculated-thumbnail-line-height: $thumbnail-line-height;
 $prefix: '.thumbnail';
 #{$prefix} {
 	@extend %for-background-gradient-135;
-	@extend .fit-image;
-	@include aspect-ratio($thumbnail-size,$thumbnail-size,false,true,false);
+	@include aspect-ratio($thumbnail-size,$thumbnail-size,false,false,false);
 	width:$calculated-thumbnail-size;
 	max-width:100%;
 	display:inline-block;
-	border-radius: $thumbnail-border-radius;
 	@include type-set((
 		size: $calculated-thumbnail-font-size,
 		leading: $calculated-thumbnail-line-height,
@@ -55,9 +53,30 @@ $prefix: '.thumbnail';
 		background-image:none;
 	}
 
+	&,&-image {
+		@extend .fit-image;
+		border-radius: $thumbnail-border-radius;
+	}
+
+	&-image,img {
+		overflow:hidden;
+	}
+
+	> *,
+	img {
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		margin:0;
+		overflow:hidden;
+	}
+
 	img {
 		max-width: none;
 		border-radius:inherit;
+		overflow:hidden;
 	}
 
 	.badge {
@@ -68,12 +87,12 @@ $prefix: '.thumbnail';
 	}
 	
 
-	&#{$prefix}-inline {
-		width:$calculated-thumbnail-size-inline;
+	&#{$prefix}-small {
+		width:$calculated-thumbnail-size-small;
 		display:inline-block;
 		vertical-align:middle;
 		line-height: inherit;
-		font-size: $calculated-thumbnail-font-size-inline
+		font-size: $calculated-thumbnail-font-size-small
 	}
 
 	&-text {

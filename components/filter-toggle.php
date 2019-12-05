@@ -1,4 +1,4 @@
-<div class="filter-toggle input-wrapper">
+<div class="filter-toggle module-function">
 	<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
 	<!-- @if label the filter -->
 	<div class="input-label"><span class="REPLACE">HR Rank</span>:</div>

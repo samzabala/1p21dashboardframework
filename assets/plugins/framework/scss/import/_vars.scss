@@ -3,14 +3,14 @@
 // $debug: true !default;
 
 	//breakpiont
-	 $br-xs: 767px !default;
-	 $br-sm: 1279px !default;
-	 $br-md: 1899px !default;
- 
-	 //extra breakpoints
-	 $brxxs: 400px !default;
+	$br-xs-max: 767px !default;
+	$br-sm-max: 1279px !default;
+	$br-md-max: 1899px !default;
 
-	 $mobile-br-max: 'sm' !default;
+	//extra breakpoints
+	$br-xxs-max: 400px !default;
+
+	$mobile-br-max: 'sm' !default;
 
 	// COLOR SCHEMES
 		$brand-color-base: #000000 !default;
@@ -67,10 +67,10 @@
 				$global-color-contrast-inverse: $brand-color-background-alt !default;
 
 		$global-background: $brand-color-background !default;
-			$global-background-inverse: $brand-color-base-alt !default;
+			$global-background-inverse: #333 !default;
 
 			$global-background-contrast: $brand-color-background-alt !default;
-				$global-background-contrast-inverse: #2d2d2d !default;
+				$global-background-contrast-inverse: #222 !default;
 
 	// PADDING
 		$gutter-base: 40px !default;
@@ -110,6 +110,11 @@
 	$transition-duration-short: .125s !default;
 	$transition-duration-long: .5s !default;
 	$transition-timing: ease-in-out !default;
+
+//BOX SHADOW
+	$box-shadow-base: 0px 2px 15px -8px!default;
+		$box-shadow-mild: 0px 1px 20px -5px!default;
+		$box-shadow-spicy: 0px 10px 20px -10px!default;
 
 // CONTENT
 	// SCAFFOLD
@@ -193,7 +198,7 @@
 		$grid-units: 12 !default;
 		$grid-gap: $gutter-base !default;
 			$grid-gap-compact: $gutter-small !default;
-			$grid-gap-expanded: $gutter-large !default;
+			// $grid-gap-expanded: $gutter-large !default;
 	
 	// speshal bois
 		$special-primary-font-size: 65px !default;
@@ -267,7 +272,7 @@
 		$module-gutter-x: $gutter-base !default;
 			$module-gutter-x-mobile: $gutter-small !default;
 
-		$module-box-shadow-hover: 10px 10px 20px -10px $brand-color-base-alt !default; 
+		$module-box-shadow-hover: $box-shadow-spicy $brand-color-base-alt !default; 
 		
 		$module-gutter-y: 40px !default;
 		$module-gutter-y: $gutter-small !default;
@@ -305,7 +310,7 @@
 		$modal-close-offset: $gutter-small !default;
 		$modal-background-inverse: $global-background-inverse !default;
 		$modal-border-radius: $border-radius-base !default;
-		$modal-box-shadow: 0px 0px 30px -30px $brand-color-base !default !default;
+		$modal-box-shadow: $box-shadow-spicy $brand-color-base !default !default;
 		$modal-overlay-bg: rgba($brand-color-base,.2) !default;
 		$modal-close-button-font-size: 2rem !default;
 
@@ -313,8 +318,8 @@
 		$popper-gutter-x: $gutter-small !default;
 		$popper-gutter-y: $gutter-small !default;
 		$popper-border-radius: $border-radius-base !default;
-		$popper-box-shadow: 0px 0px 15px -10px $brand-color-base !default;
-		$popper-arrow-box-shadow: 0px 0px 20px -5px $brand-color-base !default;
+		$popper-box-shadow: $box-shadow-base $brand-color-base !default;
+		$popper-arrow-box-shadow: $box-shadow-mild $brand-color-base !default;
 		$popper-background: $global-background !default;
 		$popper-background-inverse: $global-background-inverse !default;
 
@@ -346,13 +351,12 @@
 	
 
 	// THUMBNAIL
-
 		$thumbnail-font-size: 65px !default;
-			$thumbnail-font-size-inline: 18px !default;
+			$thumbnail-font-size-small: 18px !default;
 		$thumbnail-text-transform: uppercase !default;
 
 		$thumbnail-size: 200px !default;
-			$thumbnail-size-inline: 45px !default;
+			$thumbnail-size-small: 45px !default;
 
 		$thumbnail-border-radius: 50% !default;
 		$thumbnail-line-height: 1.25 !default;
@@ -372,7 +376,7 @@
 		$badge-size-small: 20px !default;
 		$badge-border-color: $brand-color-background !default;
 		$badge-border-width: 7px !default;
-		$badge-box-shadow: 0px 2px 10px -5px $brand-color-base !default;
+		$badge-box-shadow: $box-shadow-mild $brand-color-base !default;
 
 	// legend
 		$badge-size: 25px !default;
@@ -380,7 +384,7 @@
 		$badge-size-small: 20px !default;
 		$badge-border-color: $brand-color-background !default;
 		$badge-border-width: 7px !default;
-		$badge-box-shadow: 0px 2px 10px -5px $brand-color-base !default;
+		$badge-box-shadow: $box-shadow-mild $brand-color-base !default;
 	
 	// tag
 		$tag-height: 25px !default;
@@ -402,7 +406,7 @@
 		$input-height-multiple-factor: 3 !default;
 
 		$input-background: $global-background !default;
-			$input-background-inverse: $global-background-inverse !default;
+			$input-background-inverse: $brand-color-base-alt !default;
 			$input-background-disabled: rgba($brand-color-neutral,.2) !default;
 				$input-background-disabled-inverse: transparent !default;
 
@@ -431,10 +435,10 @@
 		$input-border-radius: $border-radius-base !default;
 			$input-border-radius-large: $border-radius-base !default;
 			$input-border-radius-small: $border-radius-base !default;
-		$input-box-shadow: 0px 3px 20px -10px $brand-color-base !default;
-		$input-box-shadow-brand-basis: 0px 3px 15px -10px !default;
+		$input-box-shadow: $box-shadow-base $brand-color-base !default;
+		$input-box-shadow-brand-basis: $box-shadow-base !default;
 			$input-box-shadow-focus: 0px 0 5px 0px $brand-color-primary !default;
-		$input-group-separator-color: rgba($brand-color-neutral,.5) !default;
+		$input-group-separator-color: rgba($brand-color-base,.1) !default;
 
 		$input-label-gutter: 20px !default;
 
@@ -496,22 +500,22 @@
 		$btn-font-weight: 600 !default;
 		$btn-font-style: normal !default;
 		$btn-text-transform: none !default;
-		$btn-gutter-x: 30px !default;
+		$btn-gutter-x: 25px !default;
 		$btn-border-width: 1px !default;
 		$btn-border-radius: $border-radius-base !default;
 			$btn-border-radius-large: $border-radius-large !default;
 			$btn-border-radius-small: $border-radius-base !default;
-		$btn-box-shadow: 0px 5px 15px -10px $brand-color-base !default;
-			$btn-box-shadow-hover: 0px 5px 15px -10px $brand-color-base !default;
-		$btn-group-separator-color: rgba($brand-color-neutral,.5) !default;
+		$btn-box-shadow: $box-shadow-base $brand-color-base !default;
+			$btn-box-shadow-hover: $box-shadow-base $brand-color-base !default;
+		$btn-group-separator-color: rgba($brand-color-base,.1) !default;
 
 		// SCHEMES
 			$btn-border-default: transparent !default;
-			$btn-background-default: $brand-color-background !default;
-			$btn-color-default: $brand-color-base !default;
+			$btn-background-default: transparent !default;
+			$btn-color-default: inherit !default;
 
 				$btn-border-default-hover: transparent !default;
-				$btn-background-default-hover: $brand-color-background !default;
+				$btn-background-default-hover: transparent !default;
 				$btn-color-default-hover: $brand-color-primary !default;
 			
 				$btn-border-default-active: transparent !default;
@@ -622,9 +626,9 @@
 //PLUGIN DEPENDENCIES
 	
 
-	$brxs: $br-xs;
-	$brsm: $br-sm;
-	$brmd: $br-md;
+	$brxs: $br-xs-max;
+	$brsm: $br-sm-max;
+	$brmd: $br-md-max;
 		
 
 	//mixins shithole
@@ -653,10 +657,10 @@
 //ROOT VAR FOR JS
 
 :root {
-	--br-xxs: #{$br-xs};
-	--br-xs: #{$br-xs};
-	--br-sm: #{$br-sm};
-	--br-md: #{$br-md};
+	--br-xxs: #{$br-xxs-max};
+	--br-xs: #{$br-xs-max};
+	--br-sm: #{$br-sm-max};
+	--br-md: #{$br-md-max};
 
 		--brand-color-base: #{$brand-color-base};
 		--brand-color-base-alt: #{$brand-color-base-alt};

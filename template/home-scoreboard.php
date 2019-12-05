@@ -36,7 +36,7 @@
 							@dynamic: li
 							@NOTE background-color on .legend will be replaced dynamically based on graph
 						-->
-						<li class="flex-0-1 flex-col-sm-8 flex-col-md-4">
+						<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 								<span class="legend" style="background-color: #fb1818"></span>
 								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 						</li>
@@ -52,7 +52,7 @@
 								
 
 								
-								<li class="flex-0-1 flex-col-sm-8 flex-col-md-4">
+								<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 									<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
 									<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 								</li>
@@ -95,7 +95,7 @@
 							@dynamic: li
 							@NOTE background-color on .legend will be replaced dynamically based on graph
 						-->
-						<li class="flex-0-1 flex-col-sm-8 flex-col-md-4">
+						<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 								<span class="legend" style="background-color: #fb1818"></span>
 								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 						</li>
@@ -110,7 +110,7 @@
 								
 
 								
-								<li class="flex-0-1 flex-col-sm-8 flex-col-md-4">
+								<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 									<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
 									<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 								</li>

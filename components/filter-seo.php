@@ -1,6 +1,6 @@
 
 
-<div class="input-wrapper filter-seo">
+<div class="module-function filter-seo">
 	<button class="btn-group btn-group-block-mobile btn-group-horizontal btn-group-unite" data-dropdown-width="100%" data-toggle="dropdown">
 			<span class="btn btn-default">All SEO</span>
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>

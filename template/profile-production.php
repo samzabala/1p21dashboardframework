@@ -29,22 +29,27 @@
 	<!-- Availability -->
 		<div
 			id="profile-production-availability"
-			class=" module module-no-gutter flex-xs flex-wrap"
+			class=" module module-no-gutter"
 			data-grid-area-md="availability">
-		
-			<div class="flex-align-self-center mobile-hide module-header no-margin-bottom">
-				<h3 class="module-title text-align-center">Availability</h3>
-			</div>
-			<!--
-				@dynamic:
-				classes:  .btn-success, .badge-success
-				content span.availability-status
-			-->
-			<div class="module-content module-no-gutter module-no-border-radius flex-1-1 module-no-gutter flex-xs flex-wrap">
 
-				<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
-					<span class="badge badge-large badge-success "></span >
-					<span class="availability-status">Available for Project</span>
+			<div class="flex-grid flex-grid-no-gutter">
+				<div class="mobile-hide tablet-hide flex-col-md-4 flex-align-self-center">
+					
+					<h3 class="module-title text-align-center">Availability</h3>
+				</div>
+				
+				<div class="flex-col-12 flex-col-md-8 text-align-right flex-xs">
+					
+					<!--
+						@dynamic:
+						classes:  .btn-success, .badge-success
+						content span.availability-status
+					-->
+					<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
+						<span class="badge badge-large badge-success "></span >
+						<span class="availability-status">Available for Project</span>
+					</div>
+					
 				</div>
 			</div>
 
@@ -75,7 +80,7 @@
 				<div class="flex-1-1 text-align-center">
 
 					<div class="p">
-						<img class="REPLACE" style="width: 400px;margin:0 auto" src="/placeholder/charts/prod/chart-03.png" alt="">
+						<img class="REPLACE" style="width:400px;margin:0 auto" src="/placeholder/charts/prod/chart-03.png" alt="">
 					</div>
 
 					<ul class="text-align-center inline no-margin-bottom">
@@ -222,7 +227,7 @@
 
 							<td class="dashboard-table-cell-action text-align-center position-relative">
 								
-								<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
@@ -274,7 +279,7 @@
 
 									<td class="dashboard-table-cell-action text-align-center position-relative">
 										
-										<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+										<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 										<!--
 											@NOTE:
@@ -322,17 +327,20 @@
 			
 			<h3 class="module-title">Associated Projects</h3>
 			
-			<div class="module-functions flex-align-items-center flex-md flex-justify-content-space-between">
+			<div class="module-functions flex-align-items-center">
+				<div class="flex-grid flex-grid-no-gutter-y">
 
-				<?php app_get_component('components/filter-toggle-status'); ?>
+					<div class="flex-col-md-9 flex-1-1">
+						<?php app_get_component('components/filter-toggle-status'); ?>
+						<?php app_get_component('components/filter-production-meta'); ?>
+						<?php app_get_component('components/filter-date'); ?>
+					</div>
 
-				<?php app_get_component('components/filter-production-meta'); ?>
+					<div class="flex-col-md-3 flex-1-0 text-align-right">
+						<?php app_get_component('components/modal-add-task'); ?>
+					</div>
 
-				<?php app_get_component('components/filter-date'); ?>
-
-				<?php app_get_component('components/modal-add-task'); ?>
-				
-				
+				</div>
 			</div>
 
 		</div>
@@ -408,7 +416,7 @@
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
-								<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
@@ -466,7 +474,7 @@
 										</td>
 
 										<td class="dashboard-table-cell-action text-align-center">
-											<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 											<!--
 												@NOTE:

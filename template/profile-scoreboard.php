@@ -159,7 +159,7 @@
 				
 				<p class="progress-title">Link Activity Distribution</p>
 				
-				<div class="progress">
+				<div class="progress p">
 
 					<!--
 						@loop link activity distribution
@@ -297,7 +297,7 @@
 				<?php 
 					$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
 				?>
-				<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
+				<?php for($i=1; $i<=(count($placeholder_colors) - 5 - 1); $i++){ ?>
 					
 
 					<p>
@@ -393,7 +393,7 @@
 								@dynamic: li
 								@NOTE background-color on .legend will be replaced dynamically based on graph
 							-->
-							<li class="flex-0-1 flex-col-sm-8 flex-col-md-4">
+							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 									<span class="legend" style="background-color: #fb1818"></span>
 									<span class="project-name"><span class="REPLACE">Client Name</span></span>
 							</li>
@@ -411,7 +411,7 @@
 									
 
 									
-									<li class="flex-0-1 flex-col-sm-8 flex-col-md-4">
+									<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 										<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
 										<span class="project-name"><span class="REPLACE">Client Name</span></span>
 									
@@ -494,7 +494,7 @@
 
 									<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
 									<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-										<div class="thumbnail project-priority thumbnail-inline background-intensity-5">
+										<div class="thumbnail project-priority thumbnail-small background-intensity-5">
 											<span class="thumbnail-text">
 												<span class="REPLACE">5</span>
 											</span>
@@ -587,7 +587,7 @@
 
 											<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
 											<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-												<div class="thumbnail project-priority thumbnail-inline background-intensity-<?=$i ?>">
+												<div class="thumbnail project-priority thumbnail-small background-intensity-<?=$i ?>">
 													<span class="thumbnail-text">
 														<span class="REPLACE"><?=$i ?></span>
 													</span>

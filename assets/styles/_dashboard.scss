@@ -76,7 +76,7 @@ $sidebar-base: 285px;
 				margin: 0 ($container-gutter-wide * -1);
 
 				.nav-list .nav-item > .dropdown {
-					width:calc(100% - 30px - 1.5rem);
+					width:calc(100% - #{$nav-gutter-x} - #{$nav-icon-width} - 1.5rem);
 					margin-right: 0;
 				}
 			}

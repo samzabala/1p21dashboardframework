@@ -173,6 +173,10 @@ $prefix: '.special';
 			margin-bottom: $calculated-special-primary-gutter-y;
 			margin-top: $calculated-special-primary-gutter-y;
 			display:block;
+
+			@include br(#{$mobile-br-max}-max) {
+				font-size: $calculated-body-size-h1
+			}
 		}
 		&-secondary {
             @include type-set((
@@ -186,6 +190,10 @@ $prefix: '.special';
 			margin-bottom: $calculated-special-secondary-gutter-y;
 			margin-top: $calculated-special-secondary-gutter-y;
 			display:block;
+
+			@include br(#{$mobile-br-max}-max) {
+				font-size: $calculated-body-size-h2;
+			}
 		}
     }
 
