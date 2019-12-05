@@ -8,14 +8,14 @@
 include the following files:
 
 css/sass
-*	[framework scss files](src/scss/framework/)
+*	[framework scss files](scss/framework/)
 
 js files (in order)
 *	jQuery (for trumbowyg support. sad. This will be expendable soon)
-*	[Trumbowyg](src/js/trumbpowyg.js)
-*	[framework js file](src/js/framework.js) 
+*	[Trumbowyg](js/trumbpowyg.js)
+*	[framework js file](js/framework.js) 
 	*	Note: This script uses jQuery only for trumbowyg, the reset are vanilla. will be updated once vanilla trumbowyg version is released.
-	*	If full on jQuery dependency is preferred, [use this boi](src/js/framework.plugged.js)
+	*	If full on jQuery dependency is preferred, [use this boi](js/framework.plugged.js)
 
 and done
 
