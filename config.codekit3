@@ -967,14 +967,6 @@
 		"oAP": "/components/filter-date.php",
 		"oF": 0
 		},
-	"/components/filter-my-toggle.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/components/filter-my-toggle.php",
-		"oF": 0
-		},
 	"/components/filter-production-meta.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -991,12 +983,20 @@
 		"oAP": "/components/filter-seo.php",
 		"oF": 0
 		},
-	"/components/filter-status.php": {
+	"/components/filter-toggle-my.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/filter-status.php",
+		"oAP": "/components/filter-toggle-my.php",
+		"oF": 0
+		},
+	"/components/filter-toggle-status.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-toggle-status.php",
 		"oF": 0
 		},
 	"/components/filter-toggle.php": {
@@ -1007,12 +1007,36 @@
 		"oAP": "/components/filter-toggle.php",
 		"oF": 0
 		},
+	"/components/modal-add-member.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/modal-add-member.php",
+		"oF": 0
+		},
 	"/components/modal-add-task.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/components/modal-add-task.php",
+		"oF": 0
+		},
+	"/components/modal-generate-report.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/modal-generate-report.php",
+		"oF": 0
+		},
+	"/components/modal-track-time.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/modal-track-time.php",
 		"oF": 0
 		},
 	"/components/pagination.php": {
@@ -2539,14 +2563,6 @@
 		"oAP": "/template/last-activity.php",
 		"oF": 0
 		},
-	"/template/new-content.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/template/new-content.php",
-		"oF": 0
-		},
 	"/template/profile-production.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2587,12 +2603,20 @@
 		"oAP": "/template/project-scoreboard.php",
 		"oF": 0
 		},
-	"/template/projects.php": {
+	"/template/projects-production.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/template/projects.php",
+		"oAP": "/template/projects-production.php",
+		"oF": 0
+		},
+	"/template/projects-scoreboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template/projects-scoreboard.php",
 		"oF": 0
 		},
 	"/template/unique-links.php": {

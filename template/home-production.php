@@ -37,8 +37,8 @@
 					Average Project Time for <span class="current-year"><span class="REPLACE">2018</span></span>
 				</h3>
 				<div class="module-functions">
-					<?php app_get_component_part('components/filter-date-span')?>
-					<?php app_get_component_part('components/filter-my-toggle')?>
+					<?php app_get_component('components/filter-date-span')?>
+					<?php app_get_component('components/filter-toggle-my')?>
 					
 				</div>
 			</div>
@@ -50,7 +50,7 @@
 						<img class="REPLACE" style="margin:0 auto;" src="/placeholder/charts/prod/chart-01.png" alt="" />
 					</div>
 
-					<ul class="text-align-right inline no-margin-bottom">
+					<ul class="no-margin text-align-right inline no-margin-bottom">
 						<li>
 							<span class="legend legend-accent"></span> Average Design Time
 						</li>
@@ -85,7 +85,7 @@
 					<div class="table-wrapper">
 						<table class="text-vertical-align-middle">
 							<tr>
-								<th>Client Name</th>
+								<th class="dashboard-table-cell-name">Client Name</th>
 
 								<th>Status</th>
 
@@ -99,15 +99,15 @@
 								content .project-task-name. .project-name
 							-->
 							<tr>
-								<td>
-									<?php app_get_component_part('components/project-link'); ?>
+								<td class="dashboard-table-cell-name">
+									<?php app_get_component('components/project-link'); ?>
 								</td>
 
 								<td>
 									<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
 									<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
 										<span class="task-status">Task Status</span>
-									</span>
+									</a>
 								</td>
 
 								<td>
@@ -117,6 +117,30 @@
 									</span>
 								</td>
 							</tr>
+
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+							<?php for($i=1; $i<=3; $i++){ ?>
+								<tr>
+									<td class="dashboard-table-cell-name">
+										<?php app_get_component('components/project-link'); ?>
+									</td>
+
+									<td>
+										<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
+										<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
+											<span class="task-status">Task Status</span>
+										</a>
+									</td>
+
+									<td>
+										
+										<span class="project-due-date">
+											<span class="REPLACE">4-20-69</span>
+										</span>
+									</td>
+								</tr>
+							<?php } ?>
 						</table>
 						
 					</div>
@@ -127,7 +151,7 @@
 			</div>
 			
 			<div class="module-footer">
-				<?php app_get_component_part('components/pagination'); ?>
+				<?php app_get_component('components/pagination'); ?>
 			</div>
 		</div>
 
@@ -208,7 +232,7 @@
 			</div>
 			
 			<div class="module-footer module-no-gutter">
-				<div class="btn btn-block font-size-large btn-no-radius btn-primary">Generate <span class="current-year"><span class="REPLACE">2018</span></span> Report</div>
+				<div class="btn btn-block font-size-normalize btn-large btn-no-radius btn-primary">Generate <span class="current-year"><span class="REPLACE">2018</span></span> Report</div>
 			</div>
 		</div>
 
@@ -231,7 +255,7 @@
 					<div class="p text-align-center">
 						<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
 					</div>
-					<ul class="unstyled text-align-center flex-sm flex-wrap flex-justify-content-space-evenly">
+					<ul class="unstyled no-margin text-align-center flex-sm flex-wrap flex-justify-content-space-evenly">
 						<li>
 							<i class="symbol symbol-square color-primary"></i> In Progress
 						</li>

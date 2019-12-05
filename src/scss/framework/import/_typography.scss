@@ -59,13 +59,23 @@
 	}
 
 
-	$calculated-body-size-small: $body-size-small;
-	@if internal-is-convertable($body-size-small) {
-		$calculated-body-size-small: em($body-size-small / $body-font-size);
+	$calculated-body-size-small: $body-font-size-small;
+	@if internal-is-convertable($body-font-size-small) {
+		$calculated-body-size-small: em($body-font-size-small / $body-font-size);
 	}
-	$calculated-body-size-large: $body-size-large;
-	@if internal-is-convertable($body-size-large) {
-		$calculated-body-size-large: em($body-size-large / $body-font-size);
+	$calculated-body-size-large: $body-font-size-large;
+	@if internal-is-convertable($body-font-size-large) {
+		$calculated-body-size-large: em($body-font-size-large / $body-font-size);
+	}
+
+	$calculated-body-heading-gutter-bottom: $body-heading-gutter-bottom;
+	@if internal-is-convertable($body-heading-gutter-bottom) {
+		$calculated-body-heading-gutter-bottom: em($body-heading-gutter-bottom / $body-font-size);
+	}
+
+	$calculated-body-heading-gutter-top: $body-heading-gutter-top;
+	@if internal-is-convertable($body-heading-gutter-top) {
+		$calculated-body-heading-gutter-top: rem($body-heading-gutter-top / $body-font-size);
 	}
 
 
@@ -82,6 +92,12 @@
 	$calculated-body-list-offset: $body-list-offset;
 	@if internal-is-convertable($body-list-offset){
 		$calculated-body-list-offset: em($body-list-offset / $body-font-size)
+	}
+
+
+	$calculated-body-list-offset-inline: $body-list-offset-inline;
+	@if internal-is-convertable($body-list-offset-inline){
+		$calculated-body-list-offset-inline: em($body-list-offset-inline / $body-font-size)
 	}
 
 
@@ -178,9 +194,9 @@ $prefix: '.special';
 			margin-bottom: $calculated-body-text-gutter-y;
 		}
 
-		&-micro-p {
-			margin-bottom: $calculated-body-text-gutter-y * .5;
-		}
+		// &-micro-p {
+		// 	margin-bottom: $calculated-body-text-gutter-y * .5;
+		// }
 	}
 
 /* heading */
@@ -199,10 +215,10 @@ $prefix: '.special';
 			case: $body-heading-text-transform,
 		));
 		display:block;
-		margin-bottom: $body-heading-gutter-bottom;
+		margin-bottom: $calculated-body-heading-gutter-bottom;
 
 		&:not(:first-child) {
-			margin-top: $body-heading-gutter-top;
+			margin-top: $calculated-body-heading-gutter-top;
 		}
 
 		.body-inverse & {
@@ -252,10 +268,14 @@ hr {
 	display:block;
 }
 
-li {
-
-	@extend %for-micro-p;
-}
+// li {
+// 	&,
+// 	ul,
+// 	ol,
+// 	dl {
+// 		@extend %for-micro-p;
+// 	}
+// }
 
 ol,ul,dd{
 	padding-left: $calculated-body-list-offset;
@@ -276,7 +296,7 @@ ol,ul{
 	&.inline {
 		li {
 			display: inline-block;
-			margin: 0 .5em;
+			margin: 0 $calculated-body-list-offset-inline;
 		}
 	}
 

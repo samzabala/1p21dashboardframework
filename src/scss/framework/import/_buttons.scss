@@ -363,11 +363,13 @@ $prefix: '.btn';
 	&-symbol {
 		@extend %for-btn-symbol;
 
-		#{$prefix}-small &{
+		#{$prefix}-small &,
+		&#{$prefix}-small {
 			@extend %for-btn-symbol-small;
 		}
 
-		#{$prefix}-large &{
+		#{$prefix}-large &,
+		&#{$prefix}-large {
 			@extend %for-btn-symbol-large;
 		}
 	}

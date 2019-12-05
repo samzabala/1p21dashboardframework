@@ -245,12 +245,12 @@ $prefix: '.module';
 
 	&-content {
 		grid-area: content;
-		overflow-y:auto;
-		overflow-x:hidden;
+		// overflow-y:visible;
+		// overflow-x:hidden;
 
-		&::-webkit-scrollbar {
-			display:none;
-		}
+		// &::-webkit-scrollbar {
+		// 	display:none;
+		// }
 	}
 	
 
@@ -319,6 +319,10 @@ $prefix: '.module';
 			margin:0!important;
 
 		}
+	}
+
+	&-no-border-radius {
+		border-radius: 0!important
 	}
 
 }

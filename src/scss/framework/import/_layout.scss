@@ -1,29 +1,71 @@
 /*** LAYOUTING CONTAINERS AND SHIT ***/
-
 	// mixins and shit
-	@mixin internal-create-columns-classes($prefix:''){
 
-		@include internal-set-flex-basis($prefix);
+
+	// setup widths for all our bois
+	@mixin internal-create-columns-classes($prepend-sel:'',$gap:0){
+
+		@include internal-set-flex-basis($prepend-sel,$gap);
 
 		@each $tag in $calculated-br-tags {
 			@include br($tag) {
-				@include internal-set-flex-basis(#{$prefix}-#{$tag});
+				@include internal-set-flex-basis(#{$prepend-sel}-#{$tag},$gap);
 			}
 		}
+		
+		// @at-root #{ internal-create-all-flex-col-selector($prepend-sel) } {
+		// 	margin-left: #{$gap};
+		// 	margin-top: #{$gap};
+		// 	flex-grow: 0;
+		// 	flex-shrink: 0;
+		// }
 	}
 
-	@mixin internal-set-flex-basis($prefix:'') {
+	@mixin internal-set-flex-basis($prepend-sel:'',$gap:0) {
 
 		@for $i from 1 through $grid-units {
-			@at-root #{$prefix}-#{$i} {
-				// flex-basis: ( 100% / $i ) !important;
-				flex-basis: calc( #{ 100% / $i } - #{$grid-gap} ) !important;
-				margin-right: #{$grid-gap} !important;
+
+			@at-root #{$prepend-sel}-#{$i} {
+				// flex-basis: ( 100% / $i );
+				@if $gap {
+					flex-basis: calc( #{ 100% * ($i/$grid-units ) } - #{$gap} );
+				}@else {
+					flex-basis: #{ 100% * ($i/$grid-units ) };
+				}
 				
 			}
-
 		}
 	}
+
+
+	// // get all them col frid classes and put them in one selector for syles fuck this shit
+	// @function internal-create-all-flex-col-increment($prepend-sel:'') {
+
+	// 	$all-flex-selectors: ();
+
+	// 	@for $i from 1 through $grid-units {
+	// 		$all-flex-selectors: append( #{$prepend-sel}-#{$i}, $all-flex-selectors,'comma');
+	// 	}
+
+	// 	@return $all-flex-selectors;
+
+	// }
+
+	// @function internal-create-all-flex-col-selector($prepend-sel:'') {
+
+	// 	$all-flex-selectors: internal-create-all-flex-col-increment($prepend-sel);
+
+	// 	@each $tag in $calculated-br-tags {
+			
+	// 		$all-flex-selectors: append(
+	// 			internal-create-all-flex-col-increment( #{$prepend-sel}-#{$tag} ),
+	// 			$all-flex-selectors
+	// 		);
+	// 	}
+
+	// 	@return $all-flex-selectors;
+
+	// }
 
 	/* CONTAINER */
 		$prefix: '.container';
@@ -60,222 +102,99 @@
 
 
 
+		// grid layout specifix flex classes
 
-	/* FLEX */
-		.inline-flex {
-			display:inline-flex!important;
-
-
-			&-xs {
-				@include br(xs) {
-					display:inline-flex!important;
-				}
-			}
+		$prefix: '.flex';
+		#{$prefix} {
 			
-			&-sm {
-				@include br(sm) {
-					display:inline-flex!important;
-				}
-			}
-			
-			&-md {
-				@include br(md) {
-					display:inline-flex!important;
-				}
-			}
-			
-			&-lg {
-				@include br(lg) {
-					display:inline-flex!important;
-				} 
-			}
-		}
-
-		.flex {
-			display:flex!important;
-
-			&-xs {
-				@extend %flex-xs;
-			}
-			
-			&-sm {
-				@extend %flex-sm;
-			}
-			
-			&-md {
-				@extend %flex-md;
-			}
-			
-			&-lg {
-				@extend %flex-lg;
-			}
-
-			&-direction {
-				&-row {
-					flex-direction: row;
-				}
-				&-row-reverse {
-					flex-direction: row-reverse;
-				}
-				&-column {
-					flex-direction: column;
-				}
-				&-column-reverse {
-					flex-direction: column-reverse;
-				}
-			}
-
-			&-justify-content {
-				&-flex-start {
-					justify-content: flex-start;
-				}
-				&-flex-end {
-					justify-content: flex-end;
-				}
-				&-center {
-					justify-content: center;
-				}
-				&-space-between {
-					justify-content: space-between;
-				}
-				&-space-around {
-					justify-content: space-around;
-				}
-				&-space-evenly {
-					justify-content: space-evenly;
-				}
-				&-start {
-					justify-content: start;
-				}
-				&-end {
-					justify-content: end;
-				}
-				&-left {
-					justify-content: left;
-				}
-				&-right {
-					justify-content: right;
-				}
-			}
-
-			&-align {
-				&-self {
-
-					&-stretch {
-						align-self: stretch;
-					}
-					&-center {
-						align-self: center;
-					}
-					&-flex-start {
-						align-self: flex-start;
-					}
-					&-flex-end {
-						align-self: flex-end;
-					}
-					&-baseline {
-						align-self: baseline;
-					}
-				}
-				&-items {
-					&-stretch {
-						align-items: stretch;
-					}
-					&-center {
-						align-items: center;
-					}
-					&-flex-start {
-						align-items: flex-start;
-					}
-					&-flex-end {
-						align-items: flex-end;
-					}
-					&-baseline {
-						align-items: baseline;
-					}
-					&-start {
-						align-items: start;
-					}
-					&-end {
-						align-items: end;
-					}
-				}
-
-				&-content {
-					&-flex-start {
-						align-content: flex-start;
-					}
-					&-flex-end {
-						align-content: flex-end;
-					}
-					&-center {
-						align-content: center;
-					}
-					&-space-between {
-						align-content: space-between;
-					}
-					&-space-around {
-						align-content: space-around;
-					}
-					&-space-evenly {
-						align-content: space-evenly;
-					}
-					&-stretch {
-						align-content: stretch;
-					}
-					&-baseline {
-						align-content: baseline;
-					}
-					&-start {
-						align-content: start;
-					}
-					&-end {
-						align-content: end;
-					}
-					&-left {
-						align-content: left;
-					}
-					&-right {
-						align-content: right;
-					}
-				}
-			}
-
-			&-wrap {
+			&-grid {
+				margin-left: $grid-gap * -1;
+				margin-bottom: $grid-gap;
+				display:flex;
 				flex-wrap:wrap;
+
+				&-compact {
+					margin-left: $grid-gap-compact * -1;
+					margin-bottom: $grid-gap-compact;
+
+					> [class*=flex-col-] {
+						flex-basis: calc(100% - #{$grid-gap-compact});
+					}
+
+					> [class*=flex-col-],
+					> #{$prefix}-child {
+						margin-top: #{$grid-gap-compact};
+						margin-left: #{$grid-gap-compact};
+					}
+				}
+
+				&-expanded {
+					margin-left: $grid-gap-expanded * -1;
+					margin-bottom: $grid-gap-expanded;
+
+
+					> [class*=flex-col-] {
+						flex-basis: calc(100% - #{$grid-gap-expanded});
+					}
+
+					> [class*=flex-col-],
+					> #{$prefix}-child {
+						margin-top: #{$grid-gap-expanded};
+						margin-left: #{$grid-gap-expanded};
+					}
+				}
+
+				&-no-gutter {
+					margin-bottom: 0;
+
+					&,
+					> [class*=flex-col-],
+					> #{$prefix}-child {
+						margin-top: 0;
+						margin-left: 0;
+					}
+
+
+					> [class*=flex-col-],
+					> #{$prefix}-child {
+						margin-top: 0;
+					}
+				}
 			}
 
-			&-nowrap {
-				flex-wrap:nowrap;
+
+
+			@at-root [class*=flex-col-] {
+				flex-grow: 0;
+				flex-shrink: 0;
+				flex-basis: calc(100% - #{$grid-gap});
+
+				#{$prefix}-no-gutter & {
+					flex-basis: 100%;
+				}
 			}
 
-			&-wrap-reverse {
-				flex-wrap:wrap-reverse;
-			}
-
-			&-1-1,
-			&-1-0 {
-				flex-grow: 1!important;
-			}
-
-			&-1-1,
-			&-0-1 {
-				flex-shrink: 1!important;
-			}
-
-			&-0-1,
-			&-0-0 {
-				flex-grow: 0!important;
-			}
-
-			&-1-0,
-			&-1-0 {
-				flex-shrink: 0!important;
+			@at-root [class*=flex-col-],
+			#{$prefix}-child {
+				margin-top: #{$grid-gap};
+				margin-left: #{$grid-gap};
 			}
 
 			&-col {
 
-				@include internal-create-columns-classes(#{&});
+				@include internal-create-columns-classes(#{&},$grid-gap);
+
+				#{$prefix}-grid-compact > & {
+
+					@include internal-create-columns-classes(#{&},$grid-gap-compact);
+				}
+				#{$prefix}-grid-expanded > & {
+					@include internal-create-columns-classes(#{&},$grid-gap-expanded);
+				}
+
+				#{$prefix}-no-gutter & {
+					@include internal-create-columns-classes(#{&});
+				}
 
 			}
 		}

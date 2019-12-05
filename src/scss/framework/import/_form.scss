@@ -749,8 +749,8 @@ $prefix: '.input';
 	background: $special-form-background;
 	border-radius: $special-form-border-radius;
 	position:relative;
-	margin-bottom: $special-form-gutter-y;
-	overflow:hidden;
+	margin-bottom: calc((#{$special-form-gutter-y} * 2) + #{$calculated-btn-height-large});
+	// overflow:hidden;
 	
 
 	.body-inverse & {

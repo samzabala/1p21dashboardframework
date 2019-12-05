@@ -50,7 +50,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 		@extend %for-form-global;
 		@extend %for-form-shadow-and-border;
 		@extend %for-form-input;
-		min-height: 800px;
+		min-height: 140px;
 		min-width:100%;
 	}
 	
@@ -73,7 +73,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 		font-size: 1rem;
 		line-height: $calculated-body-line-height;
 		// min-height: rem()
-		min-height: 500px;
 	
 		&#{$prefix}-autogrow-on-enter {
 			transition: height $wysiwyg-transition-duration-slow ease-out;

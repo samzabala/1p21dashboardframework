@@ -51,7 +51,7 @@
 		<div id="nav-account-info">
 									
 			
-			<?php app_get_component_part('components/profile-image-inline');?>
+			<?php app_get_component('components/profile-image-inline');?>
 
 			<a href="<?=app_create_link( array('template'=>'profile') ); ?>" id="nav-account-name" class="profile-name color-inherit font-weight-500 mobile-hide tablet-hide">
 				<span class="REPLACE">Place Name</span>

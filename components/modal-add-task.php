@@ -8,7 +8,7 @@
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 
 				<label for="task-title" class="sr-only">Title</label>
-				<input id="task-title" type="text" class="input-large input-single-line font-weight-600" placeholder="Enter title here">
+				<input id="task-title" type="text" class="input input-large input-single-line font-weight-600" placeholder="Enter title here">
 			</div>
 
 

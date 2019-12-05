@@ -75,6 +75,9 @@ window.jQuery && jQuery.noConflict();
 		}else if( clicked.next(selector).first().length > 0 ){
 			return clicked.next(selector).first();
 
+		}else if( clicked.siblings(selector).first().length > 0 ){
+			return clicked.siblings(selector).first();
+
 		}else if(clicked.closest('[data-toggle="'+toggleMode+'"]').length){
 			return _.getTheToggled(clicked.closest('[data-toggle="'+toggleMode+'"]'),toggleMode)
 		}else{
@@ -548,6 +551,7 @@ window.jQuery && jQuery.noConflict();
 
 
 			if( selector ){
+
 				
 				if( selector.hasClass('open') && $(this).hasClass('open') ){
 
@@ -556,11 +560,14 @@ window.jQuery && jQuery.noConflict();
 					selector.removeClass('open'); 
 				}else{
 
-					if(selector.closest('.accordion-group:not(.accordion-group-multiple)').length) {
+					if(selector.closest('.accordion-group').length && !selector.closest('.accordion-group').is('.accordion-group-multiple')) {
 						// console.log('bitch ass');
-						selector.siblings('.accordion').slideUp(); 
-						$(this).siblings('.open').removeClass('open'); 
-						selector.siblings('.accordion').removeClass('open'); 
+						selector.closest('.accordion-group').find('.accordion').slideUp(); 
+
+						console.log( 'hey bitch');
+
+						$(this).closest('.accordion-group').find('[data-toggle="accordion"]').removeClass('open'); 
+						selector.closest('.accordion-group').find('.accordion').removeClass('open'); 
 					}
 
 					selector.slideDown(); 
@@ -677,6 +684,7 @@ window.jQuery && jQuery.noConflict();
 					['fullscreen']
 				],
 				removeformatPasted: true,
+				tbwresize: true,
 				tagsToRemove: ['script']
 			});
 		})

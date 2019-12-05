@@ -29,7 +29,5 @@
 
 	<?= app_inline_script( DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.min.js'); ?>
 
-	<script>
-	</script>
 </body>
 </html>

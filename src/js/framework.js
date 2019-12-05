@@ -661,16 +661,29 @@ window.jQuery && jQuery.noConflict();
 					selector.classList.remove('open'); 
 
 				}else{
+
+					/*
+					if(selector.closest('.accordion-group:not(.accordion-group-multiple)').length) {
+						// console.log('bitch ass');
+						selector.closest('.accordion-group:not(.accordion-group-multiple)').find('.accordion').slideUp(); 
+						$(this).closest('.accordion-group:not(.accordion-group-multiple)').find('[data-toggle="accordion"]').removeClass('open'); 
+						selector.closest('.accordion-group:not(.accordion-group-multiple)').find('.accordion').removeClass('open'); 
+					}
+					*/
 					
 					if(selectorAncestor && !selectorAncestor.matches('.accordion-group-multiple') ) {
+
+						var accordions = selectorAncestor.querySelectorAll('.accordion');
+
+						var toggles = selectorAncestor.querySelectorAll('[data-toggle="accordion"]');
 						
-						selectorSiblings.forEach(function(sibling){
-							slideUp(sibling)
-							sibling.classList.remove('open');
+						accordions.forEach(function(accordion){
+							slideUp(accordion)
+							accordion.classList.remove('open');
 						});
 
-						clickedSiblings.forEach(function(sibling){
-							sibling.classList.remove('open');
+						toggles.forEach(function(toggle){
+							toggle.classList.remove('open');
 						});
 					
 					}; 
@@ -809,6 +822,7 @@ window.jQuery && jQuery.noConflict();
 					['fullscreen']
 				],
 				removeformatPasted: true,
+				tbwresize: true,
 				tagsToRemove: ['script']
 			});
 		});

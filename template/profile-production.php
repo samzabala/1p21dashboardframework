@@ -32,7 +32,7 @@
 			class=" module module-no-gutter flex-xs flex-wrap"
 			data-grid-area-md="availability">
 		
-			<div class="module-header flex-sm flex-align-items-center mobile-hide">
+			<div class="flex-align-self-center mobile-hide module-header no-margin-bottom">
 				<h3 class="module-title text-align-center">Availability</h3>
 			</div>
 			<!--
@@ -40,15 +40,18 @@
 				classes:  .btn-success, .badge-success
 				content span.availability-status
 			-->
-			<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
-				<span class="badge badge-large badge-success "></span >
-				<span class="availability-status">Available for Project</span>
+			<div class="module-content module-no-gutter module-no-border-radius flex-1-1 module-no-gutter flex-xs flex-wrap">
+
+				<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
+					<span class="badge badge-large badge-success "></span >
+					<span class="availability-status">Available for Project</span>
+				</div>
 			</div>
 
 		</div>
 
 	<!-- Profile card -->
-	<?php app_get_component_part('components/profile-card'); ?>
+	<?php app_get_component('components/profile-card'); ?>
 
 
 	<!-- Average Time -->
@@ -110,7 +113,7 @@
 					<tr class="updated-project">
 
 						<td class="text-align-left">
-							<?php app_get_component_part('components/project-link'); ?>
+							<?php app_get_component('components/project-link'); ?>
 						</td>
 
 						<td class="project-update-date text-align-right text-vertical-align-middle">
@@ -118,6 +121,23 @@
 						</td>
 
 					</tr>
+
+
+					<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+					<?php for($i=1; $i<=3; $i++){ ?>
+						<tr class="updated-project">
+
+							<td class="text-align-left">
+								<?php app_get_component('components/project-link'); ?>
+							</td>
+
+							<td class="project-update-date text-align-right text-vertical-align-middle">
+								<span class="REPLACE">04-20-19</span>
+							</td>
+
+						</tr>
+					<?php } ?>
 					
 				</table>
 			</div>
@@ -135,7 +155,7 @@
 			<h3 class="module-title">Assigned Tasks</h3>
 
 			<div class="module-functions">
-				<?php app_get_component_part('components/filter-status'); ?>
+				<?php app_get_component('components/filter-toggle-status'); ?>
 			</div>
 
 		</div>
@@ -160,7 +180,7 @@
 								<a href="#" class="color-inherit">Status <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
 							</th>
 
-							<th width="110px" class="text-align-center table-cell-no-gutter">Action</th>
+							<th class="dashboard-table-cell-action text-align-center">Action</th>
 						</tr>
 						
 						<!--
@@ -200,7 +220,7 @@
 								</span>
 							</td>
 
-							<td width="110px" class="text-align-center position-relative table-cell-no-gutter">
+							<td class="dashboard-table-cell-action text-align-center position-relative">
 								
 								<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
@@ -210,7 +230,7 @@
 								-->
 								<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
-									<!-- @placeholder -->
+									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
 									<li class="REPLACE"><a href="#">Do another thing</a></li>
 									<li class="REPLACE"><a href="#">Do the other thing</a></li>
@@ -220,6 +240,59 @@
 							</td>
 
 						</tr>
+
+
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php for($i=1; $i<=3; $i++){ ?>
+								<tr>
+
+									<td>
+										<a href="<?=DASHBOARD_ROOT_URL ?>?template=project&env=<?=DASHBOARD_SLUG ?>" class="project-name color-inherit color-primary-hover">
+											<span class="REPLACE">Client Name</span>
+										</a>
+									</td>
+
+									<td>
+										<a href="<?=DASHBOARD_ROOT_URL ?>?template=project&env=<?=DASHBOARD_SLUG ?>" class="project-task-name color-inherit color-primary-hover">
+											<span class="REPLACE">Task Name</span>
+										</a>
+									</td>
+
+									<td>
+										<span class="task-date">
+											<span class="REPLACE">4-20-19</span>
+										</span>
+									</td>
+
+									<td>
+										
+										<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
+										<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="task-status tag tag-accent">
+											<span class="REPLACE">Task Status</span>
+										</span>
+									</td>
+
+									<td class="dashboard-table-cell-action text-align-center position-relative">
+										
+										<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+
+										<!--
+											@NOTE:
+											style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
+										-->
+										<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
+
+											<!-- @PLACEHOLDER: DELETE WHEN READY -->
+											<li class="REPLACE"><a href="#">Do something</a></li>
+											<li class="REPLACE"><a href="#">Do another thing</a></li>
+											<li class="REPLACE"><a href="#">Do the other thing</a></li>
+
+										</ul>
+
+									</td>
+
+								</tr>
+							<?php } ?>
 
 					</table>
 					
@@ -234,7 +307,7 @@
 		</div>
 		
 		<div class="module-footer">
-			<?php app_get_component_part('components/pagination'); ?>
+			<?php app_get_component('components/pagination'); ?>
 		</div>
 
 	</div>
@@ -251,13 +324,13 @@
 			
 			<div class="module-functions flex-align-items-center flex-md flex-justify-content-space-between">
 
-				<?php app_get_component_part('components/filter-status'); ?>
+				<?php app_get_component('components/filter-toggle-status'); ?>
 
-				<?php app_get_component_part('components/filter-production-meta'); ?>
+				<?php app_get_component('components/filter-production-meta'); ?>
 
-				<?php app_get_component_part('components/filter-date'); ?>
+				<?php app_get_component('components/filter-date'); ?>
 
-				<?php app_get_component_part('components/modal-add-task'); ?>
+				<?php app_get_component('components/modal-add-task'); ?>
 				
 				
 			</div>
@@ -270,7 +343,7 @@
 				<div class="table-wrapper">
 					<table class="text-vertical-align-middle">
 						<tr>
-							<th>Client Name</th>
+							<th class="dashboard-table-cell-name">Client Name</th>
 
 							<th>Project Level</th>
 
@@ -281,15 +354,13 @@
 
 							<th>Status</th>
 
-							<th width="90px" class="table-cell-no-gutter text-align-center">Des</th>
+							<th class="dashboard-table-cell-thumbnail text-align-center">Des</th>
 
-							<th width="90px" class="table-cell-no-gutter text-align-center">Dev</th>
+							<th class="dashboard-table-cell-thumbnail text-align-center">Dev</th>
 
-							<th width="90px" class="table-cell-no-gutter text-align-center">PM</th>
+							<th class="dashboard-table-cell-thumbnail text-align-center">PM</th>
 
-							<th width="90px" class="table-cell-no-gutter text-align-center">SLS</th>
-
-							<th width="110px" class="text-align-center table-cell-no-gutter">Action</th>
+							<th class="dashboard-table-cell-action text-align-center">Action</th>
 						</tr>
 
 
@@ -299,8 +370,8 @@
 							content .project-task-name. .project-name
 						-->
 						<tr>
-							<td>
-								<?php app_get_component_part('components/project-link'); ?>
+							<td class="dashboard-table-cell-name">
+								<?php app_get_component('components/project-link'); ?>
 							</td>
 							<td>
 								<a class="color-inherit project-level color-primary-hover" href="<?=app_create_link(array('template'=>'projects')); ?>">
@@ -321,26 +392,22 @@
 								<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
 								<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
 									<span class="task-status">Task Status</span>
-								</span>
+								</a>
 							</td>
 
-							<td width="90px" class="table-cell-no-gutter text-align-center">
-								<?php app_get_component_part('components/profile-image-inline'); ?>
+							<td class="dashboard-table-cell-thumbnail text-align-center">
+								<?php app_get_component('components/profile-image-inline'); ?>
 							</td>
 
-							<td width="90px" class="table-cell-no-gutter text-align-center">
-								<?php app_get_component_part('components/profile-image-inline'); ?>
+							<td class="dashboard-table-cell-thumbnail text-align-center">
+								<?php app_get_component('components/profile-image-inline'); ?>
 							</td>
 
-							<td width="90px" class="table-cell-no-gutter text-align-center">
-								<?php app_get_component_part('components/profile-image-inline'); ?>
+							<td class="dashboard-table-cell-thumbnail text-align-center">
+								<?php app_get_component('components/profile-image-inline'); ?>
 							</td>
 
-							<td width="90px" class="table-cell-no-gutter text-align-center">
-								<?php app_get_component_part('components/profile-image-inline'); ?>
-							</td>
-
-							<td width="110px" class="text-align-center table-cell-no-gutter">
+							<td class="dashboard-table-cell-action text-align-center">
 								<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
@@ -349,7 +416,7 @@
 								-->
 								<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
-									<!-- @placeholder -->
+									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
 									<li class="REPLACE"><a href="#">Do another thing</a></li>
 									<li class="REPLACE"><a href="#">Do the other thing</a></li>
@@ -357,6 +424,65 @@
 								</ul>
 							</td>
 						</tr>
+
+						<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+							<?php for($i=1; $i<=3; $i++){ ?>
+									<tr>
+										<td class="dashboard-table-cell-name">
+											<?php app_get_component('components/project-link'); ?>
+										</td>
+										<td>
+											<a class="color-inherit project-level color-primary-hover" href="<?=app_create_link(array('template'=>'projects')); ?>">
+												<span class="REPLACE">Project Level</span>
+											</a>
+										</td>
+
+										<td>
+											<span class="project-started">
+												<span class="REPLACE">4-20-69</span>
+											</span>
+										</td>
+										<td>
+											<span class="task-duration"><span class="REPLACE">140</span></span> Days
+										</td>
+
+										<td>
+											<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
+											<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
+												<span class="task-status">Task Status</span>
+											</a>
+										</td>
+
+										<td class="dashboard-table-cell-thumbnail text-align-center">
+											<?php app_get_component('components/profile-image-inline'); ?>
+										</td>
+
+										<td class="dashboard-table-cell-thumbnail text-align-center">
+											<?php app_get_component('components/profile-image-inline'); ?>
+										</td>
+
+										<td class="dashboard-table-cell-thumbnail text-align-center">
+											<?php app_get_component('components/profile-image-inline'); ?>
+										</td>
+
+										<td class="dashboard-table-cell-action text-align-center">
+											<span class="btn color-primary color-accent-hover btn-no-shadow" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+
+											<!--
+												@NOTE:
+												style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
+											-->
+											<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
+
+												<!-- @PLACEHOLDER: DELETE WHEN READY -->
+												<li class="REPLACE"><a href="#">Do something</a></li>
+												<li class="REPLACE"><a href="#">Do another thing</a></li>
+												<li class="REPLACE"><a href="#">Do the other thing</a></li>
+
+											</ul>
+										</td>
+									</tr>
+								<?php } ?>
 					</table>
 					
 				</div>
@@ -368,7 +494,7 @@
 		</div>
 
 		<div class="module-footer">
-			<?php app_get_component_part('components/pagination'); ?>
+			<?php app_get_component('components/pagination'); ?>
 		</div>
 
 	</div>

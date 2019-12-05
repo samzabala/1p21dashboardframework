@@ -113,6 +113,64 @@
 							</li>
 						</ul>
 					</li>
+
+
+
+					<!-- MANAGERS -->
+					<li class="nav-item">
+						<span data-toggle="dropdown">
+							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-managers.svg">
+							<span class="nav-item-text">Managers</span>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+						</span>
+
+						<ul class="dropdown">
+
+							<!-- 
+								@dynamic 
+									content li .profile-name
+								@loop li
+							 -->
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
+							</li>
+
+
+
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
+							</li>
+						</ul>
+					</li>
+
+
+
+					<!-- DALES -->
+					<li class="nav-item">
+						<span data-toggle="dropdown">
+							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-sales.svg">
+							<span class="nav-item-text">Sales</span>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+						</span>
+
+						<ul class="dropdown">
+
+							<!-- 
+								@dynamic 
+									content li .profile-name
+								@loop li
+							 -->
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
+							</li>
+
+
+
+							<li>
+								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
+							</li>
+						</ul>
+					</li>
 			<?php endif; ?>
 		</ul>
 	</div>

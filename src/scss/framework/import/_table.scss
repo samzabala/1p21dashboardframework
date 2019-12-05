@@ -36,11 +36,14 @@ $prefix: '.table';
 	}
 	@at-root &,
 	table {
+		white-space: nowrap;
 		display:table;
 		width: 100%;
 		max-width: 100%;
 		border-collapse: collapse;
 		border-spacing: 0;
+		text-align: inherit;
+		background:transparent;
 		// table-layout: fixed;
 
 
@@ -52,10 +55,12 @@ $prefix: '.table';
 			min-width:100%;
 		}
 
-		// @at-root thead,
-		// tbody,
-		// tfoot {
-		// }
+		@at-root thead,
+		tbody,
+		tfoot {
+			vertical-align: inherit;
+			text-align: inherit;
+		}
 		
 		
 

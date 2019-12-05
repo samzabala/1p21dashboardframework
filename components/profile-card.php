@@ -28,7 +28,7 @@
 				.profile-name -> href
 			-->
 
-			<?php app_get_component_part('components/profile-image'); ?>
+			<?php app_get_component('components/profile-image'); ?>
 			
 			<p class="h2 font-weight-500">
 				<a href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>" class="profile-name-full  color-inherit">

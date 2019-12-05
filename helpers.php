@@ -22,7 +22,7 @@ function app_get_template_part($filename = '', $slug =''){
 
 
 //include a file
-function app_get_component_part($filename = '', $slug =''){
+function app_get_component($filename = '', $slug =''){
 
 	if($filename !== ''){
 
@@ -51,7 +51,6 @@ function app_init_content($slug = ''){
 		switch($template_part):
 			case 'demos':
 			case 'profiles':
-			case 'projects':
 			case 'last-activity':
 			case 'new-content':
 				app_get_template_part('template/'.$template_part);
@@ -60,6 +59,7 @@ function app_init_content($slug = ''){
 			case 'profile':
 			case 'home':
 			case 'project':
+			case 'projects':
 				if(DASHBOARD_SLUG == 'production' || DASHBOARD_SLUG == 'scoreboard'){
 					app_get_template_part('template/'.$template_part,DASHBOARD_SLUG);
 				}
@@ -129,3 +129,4 @@ function app_inline_script($filepath = ''){
 	echo app_get_file_content_as_string($filepath);
 	echo '</script>';
 }
+

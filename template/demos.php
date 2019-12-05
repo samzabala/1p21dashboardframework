@@ -2155,3 +2155,22 @@
 	<p><strong>Variable Tag</strong></p>
 	<p>This allows you to denote <var>variables</var>.</p>
 </div>
+
+<!-- BITCH -->
+	<div
+		id=""
+		class="module"
+		data-grid-area="">
+		<div class="module-header">
+			<h3 class="module-title"></h3>
+			<div class="module-functions">
+
+			</div>
+		</div>
+		<div class="module-content">
+
+		</div>
+		<div class="module-footer">
+
+		</div>
+	</div>
