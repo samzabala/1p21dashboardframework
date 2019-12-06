@@ -84,7 +84,7 @@ function app_debug_li() {
 		<?php 
 			$env_to_switch = DASHBOARD_SLUG == 'production' ? 'scoreboard' : 'production';
 		?>
-		<a href="<?=app_create_link(array('env'=>$env_to_switch)) ?>">Switch to <?=$env_to_switch ?></a>
+		<a href="<?=app_create_link(array('env'=>$env_to_switch,'template'=>DASHBOARD_TEMPLATE)) ?>">Switch to <?=$env_to_switch ?></a>
 	</li>
 
 	<li>
@@ -96,7 +96,6 @@ function app_debug_li() {
 	</li>
 <?php
 }
-
 //DUH
 function app_create_link( $array_of_get_vars = array()) {
 	$url = DASHBOARD_ROOT_URL.'/';
@@ -137,17 +136,18 @@ function app_get_file_content_as_string($filepath = '') {
 }
 
 
-//DUH
-function app_inline_style($filepath = ''){
-	echo '<style>';
-	echo app_get_file_content_as_string($filepath);
-	echo '</style>';
-}
+// shits faster if u inline scripts and shit hehe. he
+	//DUH
+	function app_inline_style($filepath = ''){
+		echo '<style>';
+		echo app_get_file_content_as_string($filepath);
+		echo '</style>';
+	}
 
-//DUH
-function app_inline_script($filepath = ''){
-	echo '<script>';
-	echo app_get_file_content_as_string($filepath);
-	echo '</script>';
-}
+	//DUH
+	function app_inline_script($filepath = ''){
+		echo '<script>';
+		echo app_get_file_content_as_string($filepath);
+		echo '</script>';
+	}
 

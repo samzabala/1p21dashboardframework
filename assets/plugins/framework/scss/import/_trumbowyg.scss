@@ -260,7 +260,6 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 	}
 	
-	/* Modal box but i make it overlay */
 	&-modal {
 		@extend %for-modal-wrapper;
 	}
@@ -336,6 +335,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 		#{$prefix}-modal-button {
 			@extend %for-btn;
 			@extend %for-btn-itself-and-group;
+			@extend %for-btn-on-mobile;
 			margin: 0 .125em;
 	
 			&#{$prefix}-modal-submit {
@@ -358,10 +358,8 @@ CUSTOM STYLES FOR TRUMBOWYG
 		z-index: 10;
 	}
 	
-	/**
-	* Fullscreen
-	*/
 	&-body-fullscreen {
+		/* Fullscreen */
 		overflow: hidden;
 	}
 	
@@ -444,5 +442,3 @@ CUSTOM STYLES FOR TRUMBOWYG
 		}
 	}
  }
-
- /* extend form styles because of uncostimazeable classes */

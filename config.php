@@ -29,7 +29,7 @@ if(isset($_GET['template'])):
 	$_GET['template'] = filter_var($_GET['template'], FILTER_SANITIZE_STRING);
 endif;
 
-$slug = '';
+$slug = 'home';
 
 if(isset($_GET['template'])):
 	$slug = $_GET['template'];

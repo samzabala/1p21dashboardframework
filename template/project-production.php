@@ -17,15 +17,15 @@
 			class="module"
 			data-grid-area-md="info">
 
-			<div class="flex-grid flex-grid-no-gutter-y">
+			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
 
-				<div class="flex-col-lg-8 flex-col-md-6 flex-align-self-center">
-					<p class="special-secondary background-gradient text-clip-background project-site no-margin"><span class="REPLACE">site.com</span></p>
+				<div class="flex-col-lg-8 flex-col-md-6 align-self-center">
+					<p class="special-secondary background-gradient text-clip-background project-site no-margin"><span class="REPLACE">sitedomainurlintheweb.com</span></p>
 					<p class="color-neutral no-margin project-name"><span class="REPLACE">Client Name</span></p>
 				</div>
 				
-				<div class="flex-col-lg-4 flex-col-md-6 flex-xs flex-align-items-center">
-					<ul class="project-meta unstyled flex-grid flex-grid-compact no-margin-y flex-grid-no-gutter-y flex-justify-content-flex-end flex-1-1">
+				<div class="flex-col-lg-4 flex-col-md-6 flex-xs align-items-center">
+					<ul class="project-meta unstyled flex-grid flex-grid-compact no-margin-y flex-grid-no-gutter-y justify-content-flex-end flex-1-1">
 						<li class="flex-child text-wrap-nowrap project-meta-level">
 							<span class="mobile-hide tablet-hide font-size-small color-neutral text-transform-uppercase font-weight-700">Level:</span>
 							
@@ -65,7 +65,7 @@
 				<div class="module-content">
 
 					<!-- @if assigned tasks are available -->
-						<div class="flex-grid">
+						<div class="flex-grid flex-grid-expanded flex-grid-no-gutter-y">
 							<div class="flex-1-1 flex-col-md-2 block-left">
 								
 									<div class="table-wrapper">
@@ -188,7 +188,7 @@
 										
 										<div class="project-milestone-time-legend list-group flex-grid">
 
-											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-global-background-contrast"></i>
 													<span class="project-milestone">Pre-Production</span>
@@ -199,7 +199,7 @@
 												</div>
 											</div>
 											
-											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-accent"></i>
 													<span class="project-milestone">Design</span>
@@ -210,7 +210,7 @@
 												</div>
 											</div>
 											
-											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-primary"></i>
 													<span class="project-milestone">Development</span>
@@ -221,7 +221,7 @@
 												</div>
 											</div>
 											
-											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs flex-justify-content-space-between">
+											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
 													<i class="symbol symbol-square color-caution"></i>
 													<span class="project-milestone">Client Review</span>
@@ -298,12 +298,14 @@
 			id="project-production-notes"
 			class="module"
 			data-grid-area-md="notes">
+
 			<div class="module-header">
 				<h3 class="module-title">Notes</h3>
 			</div>
+
 			<div class="module-content">
 				<!-- ADD NOTE -->
-					<form id="project-production-add-note">
+					<form id="project-production-add-note" class="p">
 						<div class="special-form">
 
 							<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
@@ -320,13 +322,13 @@
 					</form>
 
 				<!-- NOTES -->
-					<div class="project-notes accordion-group">
-						<div class="project-note flex-grid flex-grid-compact flex-nowrap">
+					<div class="project-notes accordion-group accordion-group-multiple">
+						<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
 							<div class="block-thumbnail flex-0-0 flex-child">
 								<?php app_get_component('components/profile-image-inline'); ?>
 							</div>
 							<div class="block-content flex-1-1 flex-child">
-								<div data-toggle="accordion" class="flex-xs flex-align-items-center text-leading-compact">
+								<div data-toggle="accordion" class="flex-xs align-items-center text-leading-compact">
 									<div class="flex-1-1">
 
 										<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
@@ -399,12 +401,12 @@
 
 							<?php for($i=1; $i<=3; $i++){ ?>
 								
-								<div class="project-note flex-grid flex-grid-compact flex-nowrap">
+								<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
 									<div class="block-thumbnail flex-0-0 flex-child">
 										<?php app_get_component('components/profile-image-inline'); ?>
 									</div>
 									<div class="block-content flex-1-1 flex-child">
-										<div data-toggle="accordion" class="flex-xs flex-align-items-center text-leading-compact">
+										<div data-toggle="accordion" class="flex-xs align-items-center text-leading-compact">
 											<div class="flex-1-1">
 
 												<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
@@ -491,16 +493,16 @@
 			id="project-production-team"
 			class="module"
 			data-grid-area-md="team">
-			<div class="module-header module-header-break">
-				<h3 class="module-title">Project Team</h3>
-				<div class="module-functions">
+			<div class="module-header">
+				<div class="flex-xs justify-content-space-between align-items-center">
+					<h3 class="module-title ">Project Team</h3>
 					<?php app_get_component('components/modal-add-member')?>
 				</div>
 			</div>
 			<div class="module-content">
 				<div class="list-group text-leading-compact">
 					<div class="list-group-item">
-						<div class="flex-grid flex-grid-compact no-margin-y flex-align-items-center">
+						<div class="flex-grid flex-grid-compact no-margin-y align-items-center">
 							<div class="flex-child flex-0-0 no-margin-y">
 								<?php app_get_component('components/profile-image-inline'); ?>
 							</div>
@@ -526,7 +528,7 @@
 
 						<?php for($i=1; $i<=3; $i++){ ?>
 							<div class="list-group-item">
-								<div class="flex-grid flex-grid-compact no-margin-y flex-align-items-center">
+								<div class="flex-grid flex-grid-compact no-margin-y align-items-center">
 									<div class="flex-child flex-0-0 no-margin-y">
 										<?php app_get_component('components/profile-image-inline'); ?>
 									</div>
@@ -546,11 +548,7 @@
 						<?php } ?>
 
 
-
-
-
 				</div>
-
 			</div>
 		</div>
 </div>

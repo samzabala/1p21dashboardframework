@@ -53,7 +53,7 @@
 			
 			<?php app_get_component('components/profile-image-inline');?>
 
-			<a href="<?=app_create_link( array('template'=>'profile') ); ?>" id="nav-account-name" class="profile-name color-inherit font-weight-500 mobile-hide tablet-hide">
+			<a href="<?=app_create_link( array('template'=>'profile') ); ?>" id="nav-account-name" class="btn btn-no-shadow btn-small color-inherit font-weight-500 mobile-hide profile-name tablet-hide no-padding-x">
 				<span class="REPLACE">Place Name</span>
 			</a>
 			

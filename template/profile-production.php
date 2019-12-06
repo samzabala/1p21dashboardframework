@@ -9,13 +9,7 @@
 			.profile-*
  -->
 <div id="profile-production" class="module-grid"
-	data-grid-template-rows-lg="75px repeat( auto-fit, minmax(75px, auto) )"
-	data-grid-template-columns-lg="350px 1fr 1fr"
-	data-grid-template-areas-lg="
-		'profile-card avgtime availability'
-		'profile-card avgtime updates'
-		'assigned assigned assigned'
-		'ass ass ass'"
+
 	data-grid-template-rows-md=" repeat( auto-fit, minmax(75px, auto) )"
 	data-grid-template-columns-md="350px 1fr"
 	data-grid-template-areas-md="
@@ -24,6 +18,13 @@
 		'updates updates'
 		'assigned assigned'
 		'ass ass'"
+
+	data-grid-template-columns-lg="350px 1fr 1fr"
+	data-grid-template-areas-lg="
+		'profile-card avgtime availability'
+		'profile-card avgtime updates'
+		'assigned assigned assigned'
+		'ass ass ass'"
 		>
 
 	<!-- Availability -->
@@ -32,24 +33,26 @@
 			class=" module module-no-gutter"
 			data-grid-area-md="availability">
 
-			<div class="flex-grid flex-grid-no-gutter">
-				<div class="mobile-hide tablet-hide flex-col-md-4 flex-align-self-center">
-					
-					<h3 class="module-title text-align-center">Availability</h3>
-				</div>
-				
-				<div class="flex-col-12 flex-col-md-8 text-align-right flex-xs">
-					
-					<!--
-						@dynamic:
-						classes:  .btn-success, .badge-success
-						content span.availability-status
-					-->
-					<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
-						<span class="badge badge-large badge-success "></span >
-						<span class="availability-status">Available for Project</span>
+			<div class="module-content flex-xs">
+				<div class="flex-1-1 flex-grid flex-grid-no-gutter">
+					<div class="mobile-hide tablet-hide flex-col-md-4 align-self-center">
+						
+						<h3 class="module-title text-align-center">Availability</h3>
 					</div>
 					
+					<div class="flex-col-12 flex-col-md-8 text-align-right flex-xs">
+						
+						<!--
+							@dynamic:
+							classes:  .btn-success, .badge-success
+							content span.availability-status
+						-->
+						<div class="btn btn-large btn-success font-weight-500 btn-no-interaction btn-no-shadow btn-no-radius flex-1-1">
+							<span class="badge badge-large badge-success "></span >
+							<span class="availability-status">Available for Project</span>
+						</div>
+						
+					</div>
 				</div>
 			</div>
 
@@ -71,7 +74,7 @@
 				</h3>
 			</div>
 
-			<div class="module-content flex-xs flex-wrap flex-align-items-center">
+			<div class="module-content flex-xs flex-wrap align-items-center">
 
 				<!--
 					@placeholder:
@@ -327,13 +330,13 @@
 			
 			<h3 class="module-title">Associated Projects</h3>
 			
-			<div class="module-functions flex-align-items-center">
+			<div class="module-functions align-items-center">
 				<div class="flex-grid flex-grid-no-gutter-y">
 
 					<div class="flex-col-md-9 flex-1-1">
 						<?php app_get_component('components/filter-toggle-status'); ?>
 						<?php app_get_component('components/filter-production-meta'); ?>
-						<?php app_get_component('components/filter-date'); ?>
+						<?php app_get_component('components/filter-dropdown-date'); ?>
 					</div>
 
 					<div class="flex-col-md-3 flex-1-0 text-align-right">
@@ -511,7 +514,7 @@
 
 
 <style scoped>
-	#profile-production-associated .module-header .filter-date {
+	#profile-production-associated .module-header .filter-dropdown-date {
 		margin-right: auto;
 	}
 </style>

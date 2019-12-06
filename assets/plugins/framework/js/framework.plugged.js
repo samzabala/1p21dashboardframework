@@ -448,12 +448,14 @@ window.jQuery && jQuery.noConflict();
 			var arr =  {
 				header: contentWrap.data('modal-title') || triggerer.data('modal-title') || null,
 				close: contentWrap.data('modal-close') || triggerer.data('modal-close') || null,
+				disableOverlay: contentWrap.data('modal-disable-overlay') || triggerer.data('modal-disable-overlay') || null,
 				maxWidth: contentWrap.data('modal-max-width') || triggerer.data('modal-max-width') || null
 			};
 
 			var defaults = {
 				header: '',
 				close: true,
+				disableOverlay: false,
 				maxWidth: null
 			};
 			
@@ -465,7 +467,7 @@ window.jQuery && jQuery.noConflict();
 			$('body').append(function(){
 				var html = '<div id="'+id+'" class="modal-wrapper">';
 						//overlay 
-						html += '<a href="#" class="modal-close-overlay" data-toggle="modal-close"></a>';
+						html += '<a href="#" class="modal-close-overlay" '+( !args.disableOverlay ? 'data-toggle="modal-close"' : '' )+'></a>';
 
 						html += '<div class="modal-popup">';
 
@@ -490,6 +492,8 @@ window.jQuery && jQuery.noConflict();
 
 			var modal = $('body').children('.modal-wrapper').first();
 
+				_.initTrumbo(modal);
+
 				$('body').addClass('body-modal-active');
 
 				if(args.maxWidth) {
@@ -502,7 +506,7 @@ window.jQuery && jQuery.noConflict();
 	}
 
 	_1p21.fw.destroyModal = function(){
-		console.log('bye bye modal');
+		
 		$('body').children('.modal-wrapper').removeClass('active').fadeOut().remove();
 		$('body').removeClass('body-modal-active');
 	}
@@ -517,6 +521,37 @@ window.jQuery && jQuery.noConflict();
 	}
 	_.functions_on_load.push(_.readyGrid);
 	_.functions_on_resize.push(_.readyGrid);
+
+	
+	_.initTrumbo = function(selector){
+
+		selector = selector || document.body;
+
+		$(selector).find('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+			
+			if(!($(this).closest('.modal').length > 0)) { //catch dynamo trumbobois
+				$(this).trumbowyg('destroy');
+				$(this).trumbowyg({
+					btns: [
+						['viewHTML'],
+						['strong', 'em',],
+						['insertImage'],
+						['link'],
+						['unorderedList', 'orderedList'],
+						['upload'],
+						['fullscreen']
+					],
+					removeformatPasted: true,
+					tbwresize: true,
+					tagsToRemove: ['script']
+				});
+			}
+		})
+	}
+	_.functions_on_load.push(_.initTrumbo);
+	_.functions_on_resize.push(_.initTrumbo);
+
+	
 
 
 
@@ -649,7 +684,7 @@ window.jQuery && jQuery.noConflict();
 		});
 
 		$('body').on('click','*',function(e){
-				e.stopPropagation();
+				// e.stopPropagation();
 				if( !$(this).is('[data-toggle="tooltip-click"]') && !$(this).is('[data-toggle="tooltip-click"] *')  )
 				_1p21.fw.destroyToolTip();
 		});
@@ -677,23 +712,6 @@ window.jQuery && jQuery.noConflict();
 			($('body > .modal-wrapper').length) ? _1p21.fw.destroyModal() : _1p21.fw.createModal($(this));
 		});
 
-
-		$('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
-			$(this).trumbowyg({
-				btns: [
-					['viewHTML'],
-					['strong', 'em',],
-					['insertImage'],
-					['link'],
-					['unorderedList', 'orderedList'],
-					['upload'],
-					['fullscreen']
-				],
-				removeformatPasted: true,
-				tbwresize: true,
-				tagsToRemove: ['script']
-			});
-		})
 
 		$('body').removeClass('body-loading').addClass('body-loaded');
 

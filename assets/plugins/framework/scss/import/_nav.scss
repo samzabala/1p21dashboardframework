@@ -63,7 +63,7 @@ $prefix: '.nav';
 		border: 0;
 	}
 	
-	a {
+	a{
 		color: inherit;
 	}
 
@@ -154,7 +154,7 @@ $prefix: '.nav';
 	&-list > #{$prefix}-item,
 	&-list > li {
 
-		>a,
+		> a,
 		> [data-toggle=dropdown] {
 			@include type-set((
 				size: $calculated-nav-top-font-size,
@@ -164,6 +164,7 @@ $prefix: '.nav';
 			));
 			position:relative;
 
+			transition: $transition-duration-short all $transition-timing;
 			padding-left: $nav-gutter-x;
 			padding-right: $nav-gutter-x;
 			padding-top: calc( (#{$calculated-nav-height} - ( #{ $calculated-nav-single-line })) * .5 );

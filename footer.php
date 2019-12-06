@@ -6,38 +6,25 @@
 
 				</div>
 			
+				
 			</div>
 
 		</main>
 	</div>
 
 
-		<!-- MODALS -->
-
-			<!-- SCOREBOARD MODALS -->
-
-			<?php if(DASHBOARD_SLUG == 'scoreboard'): ?>
-				<!-- last activiyu @placeholder -->
-				<div class="modal" id="modal-last-activity" data-modal-max-width="800px" data-modal-title="Last Activity">
-					
-					placeholder
-
-				</div>
-			<?php endif; ?>
-	
-
 	<!-- SCRIPT -->
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
-		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/jquery.js'; ?>"></script>
-		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/trumbowyg.js'; ?>"></script>
-		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/trumbowyg.upload.js'; ?>"></script>
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/jquery.js'); ?>
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/trumbowyg.js'); ?>
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
-		<script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/framework/js/framework.plugged.js'; ?>"></script>
-		<!-- <script src="<?= DASHBOARD_ROOT_URL.'/assets/plugins/framework/js/framework.js'; ?>"></script> -->
+		<!-- <?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/js/framework.plugged.js'); ?> -->
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/js/framework.js'); ?>
 	
 		<!-- THE BOI -->
-		<script src="<?= DASHBOARD_ROOT_URL.'/assets/scripts/dashboard.js'; ?>"></script>
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.js'); ?>
 
 </body>
 </html>

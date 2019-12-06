@@ -1,7 +1,7 @@
 <div class="module-function add-task">
-	<a href="#modal-add-task" data-toggle="modal" class=" btn btn-block-mobile btn-primary"><span>Add Task</span> <i class="symbol symbol-plus"></i></a>
+	<a href="#modal-add-task" data-toggle="modal" class=" btn btn-primary"><span>Add Task</span> <i class="symbol symbol-plus"></i></a>
 
-	<div class="modal" id="modal-add-task" data-modal-max-width="800px" data-modal-title="Add New Task">
+	<div class="modal" id="modal-add-task" data-modal-max-width="800px" data-modal-diable-overlay="true" data-modal-title="Add New Task">
 							
 		<form method="get">
 			<div class="special-form">
@@ -21,8 +21,10 @@
 				</div>
 			</div>
 			<div class="text-align-right">
-				<button class="btn btn-primary" type="submit">Post</button>
-				<button class="btn btn-default" data-toggle="modal-close">Cancel</button>
+				
+
+			<button class="btn btn-primary" type="submit">Post</button>
+			<button class="btn btn-default" data-toggle="modal-close">Cancel</button>
 			</div>
 		</form>
 

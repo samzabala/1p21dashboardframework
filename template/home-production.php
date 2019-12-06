@@ -12,18 +12,18 @@
 	id="home-production"
 	class="module-grid"
 
-	data-grid-template-rows-lg="repeat( auto-fit, minmax(585px, auto) )"
-	data-grid-template-columns-lg="440px 1fr 270px"
-	data-grid-template-areas-lg="
-	'average average status'
-	'total priority status'"
-
 	data-grid-template-rows-md="repeat( auto-fit, minmax(585px, auto) )"
 	data-grid-template-columns-md="1fr 270px"
 	data-grid-template-areas-md="
 	'average average'
 	'priority status'
 	'total status'"
+
+	data-grid-template-rows-lg="repeat( auto-fit, minmax(585px, auto) )"
+	data-grid-template-columns-lg="440px 1fr 270px"
+	data-grid-template-areas-lg="
+	'average average status'
+	'total priority status'"
 	>
 
 	<!-- AVERAGE TIMEE -->
@@ -37,13 +37,13 @@
 					Average Project Time for <span class="current-year"><span class="REPLACE">2018</span></span>
 				</h3>
 				<div class="module-functions">
-					<?php app_get_component('components/filter-date-span')?>
+					<?php app_get_component('components/filter-dropdown-date-span')?>
 					<?php app_get_component('components/filter-toggle-my')?>
 					
 				</div>
 			</div>
 
-			<div class="module-content flex-xs flex-wrap flex-align-items-center">
+			<div class="module-content flex-xs flex-wrap align-items-center">
 				
 				<div class="flex-1-1">
 					<div class="p text-align-center">
@@ -170,7 +170,7 @@
 				</h3>
 			</div>
 			
-			<div class="module-content flex-md flex-direction-column flex-justify-content-space-evenly">
+			<div class="module-content flex-md flex-direction-column justify-content-space-evenly">
 
 				<p class="count text-align-center">
 
@@ -250,12 +250,12 @@
 				</h3>
 			</div>
 			
-			<div class="module-content flex-xs flex-wrap flex-align-items-center">
+			<div class="module-content flex-xs flex-wrap align-items-center">
 				<div class="flex-1-1">
 					<div class="p text-align-center">
 						<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
 					</div>
-					<ul class="unstyled no-margin text-align-center flex-sm flex-wrap flex-justify-content-space-evenly">
+					<ul class="unstyled no-margin text-align-center flex-sm flex-wrap justify-content-space-evenly">
 						<li>
 							<i class="symbol symbol-square color-primary"></i> In Progress
 						</li>

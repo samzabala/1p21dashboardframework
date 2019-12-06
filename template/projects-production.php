@@ -3,13 +3,13 @@
 			
 		<div class="module-header">
 			
-			<div class="module-functions flex-align-items-center">
+			<div class="module-functions align-items-center">
 				<div class="flex-grid flex-grid-no-gutter-y">
 
 					<div class="flex-col-md-9 flex-1-1">
 						<?php app_get_component('components/filter-toggle-status'); ?>
 						<?php app_get_component('components/filter-production-meta'); ?>
-						<?php app_get_component('components/filter-date'); ?>
+						<?php app_get_component('components/filter-dropdown-date'); ?>
 					</div>
 
 					<div class="flex-col-md-3 flex-1-0 text-align-right">
@@ -199,7 +199,7 @@
 
 
 <style scoped>
-	.module-header .filter-date {
+	.module-header .filter-dropdown-date {
 		margin-right: auto;
 	}
 </style>

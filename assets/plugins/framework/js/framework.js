@@ -546,12 +546,14 @@ window.jQuery && jQuery.noConflict();
 			var arr =  {
 				header: contentWrap.getAttribute('data-modal-title') || triggerer.getAttribute('data-modal-title') || null,
 				close: contentWrap.getAttribute('data-modal-close') || triggerer.getAttribute('data-modal-header')  || null,
+				disableOverlay: contentWrap.getAttribute('data-modal-disable-overlay') || triggerer.getAttribute('data-modal-disable-overlay') || null,
 				maxWidth: contentWrap.getAttribute('data-modal-max-width') || triggerer.getAttribute('data-modal-header')  || null
 			};
 
 			var defaults = {
 				header: '',
 				close: true,
+				disableOverlay: false,
 				maxWidth: null
 			};
 			
@@ -561,6 +563,9 @@ window.jQuery && jQuery.noConflict();
 
 
 			var modal = document.createElement('div');
+
+			_.initTrumbo(modal);
+
 			document.querySelector('body').appendChild(modal);
 			
 			modal.className = 'modal-wrapper';
@@ -569,7 +574,7 @@ window.jQuery && jQuery.noConflict();
 			var modHttml = '';
 			
 				//overlay 
-				modHttml += '<a href="#" class="modal-close-overlay" data-toggle="modal-close"></a>';
+				modHttml += '<a href="#" class="modal-close-overlay" '+( !args.disableOverlay ? 'data-toggle="modal-close"' : '' )+'></a>';
 				modHttml += '<div class="modal-popup">';
 
 					if(args.header !== '') {
@@ -613,6 +618,40 @@ window.jQuery && jQuery.noConflict();
 	}
 	_.functions_on_load.push(_.readyGrid);
 	_.functions_on_resize.push(_.readyGrid);
+
+	_.initTrumbo = function(selector){
+
+		selector = selector || document.body;
+
+		if($){
+			$(selector).find('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+
+				console.log('pwet',$(this).closest('.modal').length);
+			
+				if(!($(this).closest('.modal').length > 0)) { //catch dynamo trumbobois
+					console.log('no dynamovoboobo');
+					$(this).trumbowyg('destroy');
+					$(this).trumbowyg({
+						btns: [
+							['viewHTML'],
+							['strong', 'em',],
+							['insertImage'],
+							['link'],
+							['unorderedList', 'orderedList'],
+							['upload'],
+							['fullscreen']
+						],
+						removeformatPasted: true,
+						tbwresize: true,
+						tagsToRemove: ['script']
+					});
+				}
+			})
+		}
+	}
+	_.functions_on_load.push(_.initTrumbo);
+	_.functions_on_resize.push(_.initTrumbo);
+
 
 	window.addEventListener('load',function(){
 
@@ -814,24 +853,6 @@ window.jQuery && jQuery.noConflict();
 			_1p21.fw.addEvent(document.body,'click','*[data-toggle="modal"]',function(e){
 				(document.querySelector('body > .modal-wrapper')) ? _1p21.fw.destroyModal() : _1p21.fw.createModal(e.target);
 			});
-
-
-		$ && $('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
-			$(this).trumbowyg({
-				btns: [
-					['viewHTML'],
-					['strong', 'em',],
-					['insertImage'],
-					['link'],
-					['unorderedList', 'orderedList'],
-					['upload'],
-					['fullscreen']
-				],
-				removeformatPasted: true,
-				tbwresize: true,
-				tagsToRemove: ['script']
-			});
-		});
 
 		document.querySelector('body').classList.remove('body-loading');
 		document.querySelector('body').classList.add('body-loaded');

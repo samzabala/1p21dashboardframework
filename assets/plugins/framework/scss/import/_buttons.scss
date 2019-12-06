@@ -117,9 +117,10 @@ $prefix: '.btn';
 			}
 		
 			&{
-				@include internal-btn-set-scheme($properties)
+				@include internal-btn-set-scheme($properties);
 
-				@at-root &#{$prefix}-no-interaction,
+				@at-root
+					&#{$prefix}-no-interaction,
 					&#{$prefix}-no-interaction:hover,
 					&#{$prefix}-no-interaction:focus,
 					&#{$prefix}-no-interaction.focus,
@@ -129,7 +130,8 @@ $prefix: '.btn';
 						@extend %for-#{$scheme}-no-change;
 					}
 				
-				@at-root &#{$prefix}-disabled,
+				@at-root
+					&#{$prefix}-disabled,
 					&#{$prefix}-disabled:hover,
 					&#{$prefix}-disabled:focus,
 					&#{$prefix}-disabled.focus,
@@ -252,6 +254,16 @@ $prefix: '.btn';
 		}
 	}
 
+
+
+	&-on-mobile {
+		@include br(#{$mobile-br-max}-max) {
+
+			display:flex;
+			width:100%;
+		}
+	}
+
 	&-itself-and-group {
 
 		border-radius: $btn-border-radius;
@@ -337,6 +349,7 @@ $prefix: '.btn';
 
 	&,&-group {
 		@extend %for-btn-itself-and-group;
+		@extend %for-btn-on-mobile;
 	}
 
 	&#{$prefix}-no-shadow,
@@ -414,17 +427,6 @@ $prefix: '.btn';
 
 			.btn:not(.btn-symbol) {
 				flex: 1 1;
-			}
-
-			&-mobile {
-				@include br(#{$mobile-br-max}-max) {
-					display:flex;
-					width:100%;
-
-					.btn:not(.btn-symbol) {
-						flex: 1 1;
-					}
-				}
 			}
 		}
 

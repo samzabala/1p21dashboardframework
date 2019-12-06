@@ -496,8 +496,8 @@
 		&-wrap {
 
 
-			/* cut overflowing single line to ellipsis */
 			&-ellipsis {
+				/* cut overflowing single line to ellipsis */
 				white-space: nowrap!important;
 				overflow: hidden!important;
 				text-overflow: ellipsis!important;
@@ -679,71 +679,10 @@
 	}
 }
 
-/* FLEX */
-.inline-flex {
-	display:inline-flex!important;
 
+// align and justify shit
 
-	&-xs {
-		@include br(xs) {
-			display:inline-flex!important;
-		}
-	}
-	
-	&-sm {
-		@include br(sm) {
-			display:inline-flex!important;
-		}
-	}
-	
-	&-md {
-		@include br(md) {
-			display:inline-flex!important;
-		}
-	}
-	
-	&-lg {
-		@include br(lg) {
-			display:inline-flex!important;
-		} 
-	}
-}
-
-.flex {
-	display:flex!important;
-
-	&-xs {
-		@extend %flex-xs;
-	}
-	
-	&-sm {
-		@extend %flex-sm;
-	}
-	
-	&-md {
-		@extend %flex-md;
-	}
-	
-	&-lg {
-		@extend %flex-lg;
-	}
-
-	&-direction {
-		&-row {
-			flex-direction: row!important;
-		}
-		&-row-reverse {
-			flex-direction: row-reverse!important;
-		}
-		&-column {
-			flex-direction: column!important;
-		}
-		&-column-reverse {
-			flex-direction: column-reverse!important;
-		}
-	}
-
-	&-justify-content {
+	.justify-content {
 		&-flex-start {
 			justify-content: flex-start!important;
 		}
@@ -774,9 +713,15 @@
 		&-right {
 			justify-content: right!important;
 		}
+		&-normal {
+			justify-content: normal!important;
+		}
+		&-stretch {
+			justify-content: stretch!important;
+		}
 	}
 
-	&-align {
+	.align {
 		&-self {
 
 			&-stretch {
@@ -856,8 +801,78 @@
 			&-right {
 				align-content: right!important;
 			}
+			&-normal {
+				align-content: normal!important;
+			}
 		}
 	}
+
+
+/* FLEX */
+.inline-flex {
+	display:inline-flex!important;
+
+
+	&-xs {
+		@include br(xs) {
+			display:inline-flex!important;
+		}
+	}
+	
+	&-sm {
+		@include br(sm) {
+			display:inline-flex!important;
+		}
+	}
+	
+	&-md {
+		@include br(md) {
+			display:inline-flex!important;
+		}
+	}
+	
+	&-lg {
+		@include br(lg) {
+			display:inline-flex!important;
+		} 
+	}
+}
+
+.flex {
+	display:flex!important;
+
+	&-xs {
+		@extend %flex-xs;
+	}
+	
+	&-sm {
+		@extend %flex-sm;
+	}
+	
+	&-md {
+		@extend %flex-md;
+	}
+	
+	&-lg {
+		@extend %flex-lg;
+	}
+
+	&-direction {
+		&-row {
+			flex-direction: row!important;
+		}
+		&-row-reverse {
+			flex-direction: row-reverse!important;
+		}
+		&-column {
+			flex-direction: column!important;
+		}
+		&-column-reverse {
+			flex-direction: column-reverse!important;
+		}
+	}
+
+	
 
 	&-wrap {
 		flex-wrap:wrap!important;

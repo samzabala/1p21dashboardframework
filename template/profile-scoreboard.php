@@ -11,8 +11,8 @@
 			.progress-bar
  -->
  <div id="profile-scoreboard" class="module-grid"
-	data-grid-template-columns="1fr 1fr 1fr"
-	data-grid-template-rows="minmax(330px, auto) 180px repeat( auto-fit, minmax(330px, auto) )"
+	data-grid-template-columns="repeat( 3, 1fr )"
+	data-grid-template-rows="minmax(330px, auto) 100px repeat( auto-fit, minmax(330px, auto) )"
 	data-grid-template-areas="
 		'profile-card profile-card profile-card'
 		'linksbuilt onpage todos'
@@ -43,58 +43,58 @@
 
 	<!-- Links Built -->
 		<div
-			id="profile-links-built"
-			class="module module-no-gutter"
+			id="profile-scoreboard-links-built"
+			class="module module-no-gutter text-align-center"
 			data-grid-area="linksbuilt">
-			
-			<div class="module-content module-no-gutter flex flex-direction-column flex-justify-content-center flex-align-items-center">
 				
-				<span class="special-primary count-links-built">
-					<span class="REPLACE">88</span>
-				</span>
-				<span class="font-size-small color-neutral">Links Built</span>
-
-			</div>
-
+				<div class="module-content">
+					<span class="special-primary count-links-built">
+						<span class="REPLACE">88</span>
+					</span>
+					<span class="font-size-small color-neutral">Links Built</span>
+				</div>
+				
 		</div>
 
 	<!-- On Page -->
 		<div
-			id="profile-on-page"
-			class="module module-no-gutter"
+			id="profile-scoreboard-on-page"
+			class="module module-no-gutter text-align-center"
 			data-grid-area="onpage">
-			
-			<div class="module-content module-no-gutter flex flex-direction-column flex-justify-content-center flex-align-items-center">
 				
+			<div class="module-content">
+					
 				<span class="special-primary count-on-page">
 					<span class="REPLACE">32</span>
 				</span>
 				<span class="font-size-small color-neutral">On-Page</span>
 
 			</div>
-
+			
+			
 		</div>
 
 
 	<!-- Todos -->
 		<div
-			id="profile-to-dos"
-			class="module module-no-gutter"
+			id="profile-scoreboard-to-dos"
+			class="module module-no-gutter text-align-center"
 			data-grid-area="todos">
-			
-			<div class="module-content module-no-gutter flex flex-direction-column flex-justify-content-center flex-align-items-center">
 				
-				<span class="special-primary count-to-dos">
-					<span class="REPLACE">12</span>
-				</span>
-				<span class="font-size-small color-neutral">To-Dos</span>
+				<div class="module-content">
+							
+					<span class="special-primary count-on-page">
+						<span class="REPLACE">32</span>
+					</span>
+					<span class="font-size-small color-neutral">On-Page</span>
 
-			</div>
+				</div>
+				
 		</div>
 
 	<!-- Overall Actions -->
 		<div
-			id="profile-overall-actions"
+			id="profile-scoreboard-overall-actions"
 			class="module"
 			data-grid-area="overall">
 		
@@ -103,12 +103,12 @@
 				<h3 class="module-title">Overall Actions</h3>
 
 				<div class="module-functions">
-					<?php app_get_component('components/filter-date'); ?>
+					<?php app_get_component('components/filter-dropdown-date'); ?>
 				</div>
 
 			</div>
 			
-			<div class="module-content flex-xs flex-align-items-center flex-wrap">
+			<div class="module-content flex-xs align-items-center flex-wrap">
 
 				<div class="flex-1-1">
 
@@ -139,25 +139,20 @@
 	
 	<!-- Activity Distribution -->
 		<div
-			id="profile-activity-distribution"
+			id="profile-scoreboard-activity-distribution"
 			class="module"
 			data-grid-area="distribution">
 
 			<div class="module-header module-header-break">
 				<div class="module-title">Activity Distribution</div>
 				<div class="module-functions">
-
-					<a href="#modal-last-activity" data-toggle="modal" class="btn btn-primary">
-						<span>Last Activity</span>
-						<i class="symbol symbol-plus"></i>
-					</a>
-
+					<?php app_get_component('components/modal-last-activity'); ?>
 				</div>
 			</div>
 
 			<div class="module-content">
 				
-				<p class="progress-title">Link Activity Distribution</p>
+				<p class="progress-title no-margin-top">Link Activity Distribution</p>
 				
 				<div class="progress p">
 
@@ -268,7 +263,7 @@
 	<!-- Client Key -->
 
 		<div
-			id="profile-client-key"
+			id="profile-scoreboard-client-key"
 			class="module"
 			data-grid-area="clientkey">
 			
@@ -297,7 +292,7 @@
 				<?php 
 					$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
 				?>
-				<?php for($i=1; $i<=(count($placeholder_colors) - 5 - 1); $i++){ ?>
+				<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
 					
 
 					<p>
@@ -316,7 +311,7 @@
 
 	<!-- Campaign Actions -->
 		<div
-			id="profile-campaign-actions"
+			id="profile-scoreboard-campaign-actions"
 			class="module"
 			data-grid-area="campaign">
 
@@ -326,7 +321,7 @@
 
 			<div class="module-content">
 
-				<div class="flex-xs flex-align-items-center flex-wrap">
+				<div class="flex-xs align-items-center flex-wrap">
 					<div class="flex-1-1">
 						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-05.png" alt="">
 					</div>
@@ -340,7 +335,7 @@
 	
 	<!-- Average Rank By Account -->
 		<div
-			id="profile-avg-rank"
+			id="profile-scoreboard-avg-rank"
 			class="module"
 			data-grid-area="average">
 			<div class="module-header module-header-break">
@@ -350,29 +345,7 @@
 
 					<?php app_get_component('components/filter-toggle'); ?>
 
-					<div class="input-wrapper filter-accounts">
-						
-						<button class="btn-group btn-group-block-mobile btn-group-horizontal btn-group-unite" data-dropdown-width="100%" data-toggle="dropdown">
-							<span class="btn btn-default">All Acounts</span>
-							<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
-						</button>
-						
-						
-						<ul class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
-							<!-- @dynamic -->
-							<li>
-								<a href="<?= app_create_link( array('template'=>'project') );?>">
-									<span class="project-name">
-										<span class="REPLACE">Client Name</span>
-									</span>
-								</a>
-							</li>
-						</ul>
-
-					</div>
-
-					
-					<?php app_get_component('components/filter-date'); ?>
+					<?php app_get_component('components/filter-dropdown-accounts'); ?>
 
 					<?php app_get_component('components/filter-toggle-my')?>
 
@@ -381,42 +354,12 @@
 
 			<div class="module-content">
 
-				<div class="flex-xs flex-align-items-center flex-wrap">
+				<div class="flex-xs align-items-center flex-wrap">
 
 					<div class="flex-1-1">
-						<div class="p">
+						<div>
 							<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
 						</div>
-						
-						<ul class="average-legend unstyled no-margin-bottom flex-grid flex-grid-compact">
-							<!--
-								@dynamic: li
-								@NOTE background-color on .legend will be replaced dynamically based on graph
-							-->
-							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
-									<span class="legend" style="background-color: #fb1818"></span>
-									<span class="project-name"><span class="REPLACE">Client Name</span></span>
-							</li>
-
-
-
-
-
-							<!-- @PLACEHOLDER: DELETE WHEN READY -->
-
-								<?php 
-									$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-								?>
-								<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
-									
-
-									
-									<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
-										<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-										<span class="project-name"><span class="REPLACE">Client Name</span></span>
-									
-									</li>
-								<?php } ?>
 								
 								
 						</ul>
@@ -435,7 +378,7 @@
 
 	<!-- Table of things -->
 		<div
-			id="profile-accounts"
+			id="profile-scoreboard-accounts"
 			class="module"
 			data-grid-area="accounts">
 			

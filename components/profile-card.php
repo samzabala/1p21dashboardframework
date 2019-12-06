@@ -19,7 +19,7 @@
 		data-grid-area="profile-card"
 	<?php endif; ?>
 	>
-		<div class="module-content text-align-center flex-justify-content-center flex-direction-column flex-xs flex-align-items-center">
+		<div class="module-content text-align-center justify-content-center flex-direction-column flex-xs align-items-center">
 
 			<!--
 				@dynamic:
@@ -40,14 +40,14 @@
 				<span class="REPLACE">Profile Title</span>
 			</p>
 			
-			<ul class="list-group no-margin-bottom flex-align-self-stretch">
+			<ul class="list-group no-margin-bottom align-self-stretch">
 
 				<!-- @if profile is man,des,dev -->
 						<!-- 
 							@dynamic
 							content: .status-*-value
 						-->
-					<li class="flex-xs flex-justify-content-space-between">
+					<li class="flex-xs justify-content-space-between">
 						<span class="status-avg-time-label">
 							Avg Time Days 
 						</span>
@@ -55,7 +55,7 @@
 							<span class="REPLACE">25</span>
 						</strong>
 					</li>
-					<li class="flex-xs flex-justify-content-space-between">
+					<li class="flex-xs justify-content-space-between">
 						<span class="status-current-projects-label">
 							Current Projects 
 						</span>
@@ -63,7 +63,7 @@
 							<span class="REPLACE">25</span>
 						</strong>
 					</li>
-					<li class="flex-xs flex-justify-content-space-between">
+					<li class="flex-xs justify-content-space-between">
 						<span class="status-ytd-label">
 							Projects YTD
 						</span>
@@ -81,7 +81,7 @@
 							@dynamic
 							content: .status-*-value
 						-->
-					<!-- <li class="flex-xs flex-justify-content-space-between">
+					<!-- <li class="flex-xs justify-content-space-between">
 						<span class="status-total-accounts-label">
 							Total Accounts 
 						</span>
@@ -89,7 +89,7 @@
 							<span class="REPLACE">18</span>
 						</strong>
 					</li>
-					<li class="flex-xs flex-justify-content-space-between">
+					<li class="flex-xs justify-content-space-between">
 						<span class="status-avg-hr-rank-label">
 							Avg. HR Rank
 						</span>
@@ -97,7 +97,7 @@
 							<span class="REPLACE">20.6</span>
 						</strong>
 					</li>
-					<li class="flex-xs flex-justify-content-space-between">
+					<li class="flex-xs justify-content-space-between">
 						<span class="status-avg-rank-label">
 							Avg. Rank
 						</span>

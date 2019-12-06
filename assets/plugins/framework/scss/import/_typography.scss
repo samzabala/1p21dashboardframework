@@ -175,7 +175,7 @@ $prefix: '.special';
 			display:block;
 
 			@include br(#{$mobile-br-max}-max) {
-				font-size: $calculated-body-size-h1
+				font-size: $calculated-body-size-h2
 			}
 		}
 		&-secondary {
@@ -192,7 +192,7 @@ $prefix: '.special';
 			display:block;
 
 			@include br(#{$mobile-br-max}-max) {
-				font-size: $calculated-body-size-h2;
+				font-size: $calculated-body-size-h3;
 			}
 		}
     }
@@ -218,7 +218,7 @@ $prefix: '.special';
 			font: $body-heading-font-family,
 			color: $body-heading-color,
 			leading: $body-heading-line-height,
-			weight:$body-heading-font-weight,
+			weight: $body-font-weight-bold,
 			style: $body-heading-font-style,
 			case: $body-heading-text-transform,
 		));

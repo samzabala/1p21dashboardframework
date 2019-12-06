@@ -12,9 +12,9 @@
 
 					<?php app_get_component('components/filter-toggle'); ?>
 
-					<?php app_get_component('components/filter-seo'); ?>
+					<?php app_get_component('components/filter-dropdown-profiles-seo'); ?>
 
-					<?php app_get_component('components/filter-date'); ?>
+					<?php app_get_component('components/filter-dropdown-date'); ?>
 
 					<?php app_get_component('components/filter-toggle-my'); ?>
 
@@ -74,9 +74,9 @@
 				<h3 class="module-title">Unique Links Built by SEO</h3>
 				<div class="module-functions">
 					
-					<?php app_get_component('components/filter-seo'); ?>
+					<?php app_get_component('components/filter-dropdown-profiles-seo'); ?>
 
-					<?php app_get_component('components/filter-date'); ?>
+					<?php app_get_component('components/filter-dropdown-date'); ?>
 
 					<?php app_get_component('components/filter-toggle-my'); ?>
 				</div>
@@ -86,7 +86,7 @@
 				<div class="flex-1-1">
 					
 					<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-01.png" alt="" />
+						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-02.png" alt="" />
 					</div>
 
 
