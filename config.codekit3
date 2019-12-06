@@ -7,7 +7,7 @@
 		"uuidString": "BA404931-7B6F-427D-980F-D9DB0ADF1963"
 		}
 	],
-"creatorBuild": "31491",
+"creatorBuild": "31934",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
@@ -1788,6 +1788,14 @@
 		"oAP": "/components/filter-dropdown-profiles-seo.php",
 		"oF": 0
 		},
+	"/components/filter-input-search.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/filter-input-search.php",
+		"oF": 0
+		},
 	"/components/filter-production-meta.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1836,6 +1844,14 @@
 		"oAP": "/components/modal-add-task.php",
 		"oF": 0
 		},
+	"/components/modal-export.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/components/modal-export.php",
+		"oF": 0
+		},
 	"/components/modal-generate-report.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1876,12 +1892,12 @@
 		"oAP": "/components/profile-card.php",
 		"oF": 0
 		},
-	"/components/profile-image-inline.php": {
+	"/components/profile-image-small.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/components/profile-image-inline.php",
+		"oAP": "/components/profile-image-small.php",
 		"oF": 0
 		},
 	"/components/profile-image.php": {
@@ -1974,7 +1990,7 @@
 		},
 	"/placeholder/charts/prod/chart-01.png": {
 		"ft": 32768,
-		"iS": 249981,
+		"iS": 72545,
 		"oA": 0,
 		"oAP": "/placeholder/charts/prod/chart-01.png",
 		"oF": 0,
@@ -1985,7 +2001,7 @@
 		},
 	"/placeholder/charts/prod/chart-02.png": {
 		"ft": 32768,
-		"iS": 155896,
+		"iS": 39309,
 		"oA": 0,
 		"oAP": "/placeholder/charts/prod/chart-02.png",
 		"oF": 0,
@@ -1996,7 +2012,7 @@
 		},
 	"/placeholder/charts/prod/chart-03.png": {
 		"ft": 32768,
-		"iS": 97021,
+		"iS": 20667,
 		"oA": 0,
 		"oAP": "/placeholder/charts/prod/chart-03.png",
 		"oF": 0,
@@ -2007,7 +2023,7 @@
 		},
 	"/placeholder/charts/seo/chart-01.png": {
 		"ft": 32768,
-		"iS": 847540,
+		"iS": 147870,
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-01.png",
 		"oF": 0,
@@ -2018,18 +2034,18 @@
 		},
 	"/placeholder/charts/seo/chart-02.png": {
 		"ft": 32768,
-		"iS": 439957,
+		"iS": 97155,
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-02.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
 	"/placeholder/charts/seo/chart-03.png": {
 		"ft": 32768,
-		"iS": 167624,
+		"iS": 42467,
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-03.png",
 		"oF": 0,
@@ -2051,7 +2067,7 @@
 		},
 	"/placeholder/charts/seo/chart-05.png": {
 		"ft": 32768,
-		"iS": 153260,
+		"iS": 25082,
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-05.png",
 		"oF": 0,
@@ -2084,18 +2100,18 @@
 		},
 	"/placeholder/charts/seo/chart-08.png": {
 		"ft": 32768,
-		"iS": 351805,
+		"iS": 93954,
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-08.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
 	"/placeholder/charts/seo/chart-09.png": {
 		"ft": 32768,
-		"iS": 846836,
+		"iS": 129223,
 		"oA": 0,
 		"oAP": "/placeholder/charts/seo/chart-09.png",
 		"oF": 0,
@@ -3050,6 +3066,7 @@
 			"flagValue": -1
 			}
 		},
+	"environmentVariablesString": "NODE_ENV:::production",
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
 	"esLintEnvironmentsMask": 1,
@@ -3151,6 +3168,10 @@
 			"optionString": "'all'"
 			},
 		"default-case": {
+			"active": 0,
+			"optionString": ""
+			},
+		"default-param-last": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3500,6 +3521,10 @@
 			},
 		"no-implied-eval": {
 			"active": 0,
+			"optionString": ""
+			},
+		"no-import-assign": {
+			"active": 1,
 			"optionString": ""
 			},
 		"no-inline-comments": {
@@ -3925,6 +3950,10 @@
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
+			},
+		"prefer-regex-literals": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -4534,7 +4563,6 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"enableJavascript": 0,
-		"ieCompatibility": 0,
 		"mathStyle": 0,
 		"outputStyle": 0,
 		"rewriteURLStyle": 0,
@@ -4674,6 +4702,9 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
+	"rollupExternals": "",
+	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
+	"rollupTreeshakingEnabled": 1,
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,

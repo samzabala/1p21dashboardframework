@@ -12,19 +12,17 @@
 	id="home-production"
 	class="module-grid"
 
-	data-grid-template-rows-md="repeat( auto-fit, minmax(585px, auto) )"
-	data-grid-template-columns-md="1fr 270px"
-	data-grid-template-areas-md="
+	data-grid-template-rows-sm="repeat( auto-fit, minmax(585px, auto) )"
+	data-grid-template-columns-sm="1fr 270px"
+	data-grid-template-areas-sm="
 	'average average'
 	'priority status'
 	'total status'"
 
-	data-grid-template-rows-lg="repeat( auto-fit, minmax(585px, auto) )"
-	data-grid-template-columns-lg="440px 1fr 270px"
-	data-grid-template-areas-lg="
+	data-grid-template-columns-md="440px 1fr 270px"
+	data-grid-template-areas-md="
 	'average average status'
-	'total priority status'"
-	>
+	'total priority status'">
 
 	<!-- AVERAGE TIMEE -->
 		<div
@@ -43,23 +41,20 @@
 				</div>
 			</div>
 
-			<div class="module-content flex-xs flex-wrap align-items-center">
-				
-				<div class="flex-1-1">
-					<div class="p text-align-center">
-						<img class="REPLACE" style="margin:0 auto;" src="/placeholder/charts/prod/chart-01.png" alt="" />
-					</div>
-
-					<ul class="no-margin text-align-right inline no-margin-bottom">
-						<li>
-							<span class="legend legend-accent"></span> Average Design Time
-						</li>
-
-						<li>
-							<span class="legend legend-primary"></span> Average Developer Time
-						</li>
-					</ul>
+			<div class="module-content">
+				<div class="p text-align-center">
+					<img class="REPLACE" style="margin:0 auto;" src="/placeholder/charts/prod/chart-01.png" alt="" />
 				</div>
+
+				<ul class="no-margin text-align-right inline no-margin-bottom">
+					<li>
+						<span class="legend legend-accent"></span> Average Design Time
+					</li>
+
+					<li>
+						<span class="legend legend-primary"></span> Average Developer Time
+					</li>
+				</ul>
 
 			</div>
 			
@@ -147,7 +142,7 @@
 			
 
 				<!-- @else NO assigned tasks are available -->
-					<p class="color-neutral">Oooh nothing here :/</p>
+					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 			</div>
 			
 			<div class="module-footer">
@@ -250,25 +245,23 @@
 				</h3>
 			</div>
 			
-			<div class="module-content flex-xs flex-wrap align-items-center">
-				<div class="flex-1-1">
-					<div class="p text-align-center">
-						<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
-					</div>
-					<ul class="unstyled no-margin text-align-center flex-sm flex-wrap justify-content-space-evenly">
-						<li>
-							<i class="symbol symbol-square color-primary"></i> In Progress
-						</li>
-
-						<li>
-							<i class="symbol symbol-square color-accent"></i> Completed
-						</li>
-
-						<li>
-							<i class="symbol symbol-square color-neutral"></i> Hiatus
-						</li>
-					</ul>
+			<div class="module-content">
+				<div class="p text-align-center">
+					<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
 				</div>
+				<ul class="unstyled no-margin text-align-center flex-sm flex-wrap justify-content-space-evenly">
+					<li>
+						<i class="symbol symbol-square color-primary"></i> In Progress
+					</li>
+
+					<li>
+						<i class="symbol symbol-square color-accent"></i> Completed
+					</li>
+
+					<li>
+						<i class="symbol symbol-square color-neutral"></i> Hiatus
+					</li>
+				</ul>
 			</div>
 		</div>
 </div>

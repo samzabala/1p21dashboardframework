@@ -57,6 +57,9 @@ $prefix: '.symbol';
 
 	&-plus,
 	&-minus{
+		&:before,&:after {
+			transform: translateY(-.0625em);
+		}
 		&:after{
 			height: em(3px / $body-font-size);
 			width:.9375em;
@@ -279,6 +282,33 @@ $prefix: '.symbol';
 			height: .625em;
 			top: calc(.75em - (#{em(3px / $body-font-size)} * .5));
 			bottom: auto;
+		}
+	}
+
+	&-map {
+
+		&:before,&:after {
+			background:none!important;
+			transform:translateY(-.5em);
+			transform-origin: top center;
+			bottom:auto;
+		}
+
+		&:before {
+			border-radius: 50%;
+			height:1em;
+			width:1em;
+			border: #{em(4px / $body-font-size)} solid;
+			
+		}
+
+		&:after {
+			border: #{em(6.7px / $body-font-size)} solid transparent;
+			border-top: #{em(12px / $body-font-size)} solid;
+			width: 0;
+			height: 0;
+			margin: 0 auto;
+			top:calc(1em - #{em(3.75px / $body-font-size)});
 		}
 	}
 

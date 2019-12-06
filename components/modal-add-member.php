@@ -1,4 +1,4 @@
-<div class="module-function add-member">
+<div class="module-function modal-add-member">
 	<a href="#modal-add-member" data-toggle="modal"  class="btn btn-small btn-primary btn-symbol" title="Add Member">
 		<i class="symbol symbol-plus"></i>
 	</a>

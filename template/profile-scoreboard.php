@@ -3,16 +3,12 @@
 	@interactive
 		.module-functions *,
 	@dynamic
-		content
-			.count-*
-			.client-*
-			.project-*
 		dom element
 			.progress-bar
  -->
  <div id="profile-scoreboard" class="module-grid"
 	data-grid-template-columns="repeat( 3, 1fr )"
-	data-grid-template-rows="minmax(330px, auto) 100px repeat( auto-fit, minmax(330px, auto) )"
+	data-grid-template-rows="minmax(330px, auto) minmax(120px,min-content) repeat( auto-fit, minmax(330px, auto) )"
 	data-grid-template-areas="
 		'profile-card profile-card profile-card'
 		'linksbuilt onpage todos'
@@ -24,7 +20,7 @@
 		'accounts accounts accounts'"
 
 
-	data-grid-template-rows-md="repeat( 3, minmax(180px, auto) ) repeat( auto-fit, minmax(330px, auto) )"
+	data-grid-template-rows-md="repeat( 3, minmax(180px, auto) )"
 	data-grid-template-columns-md="350px 1fr 1fr 150px"
 	data-grid-template-areas-md="
 		'profile-card overall overall linksbuilt'
@@ -44,51 +40,52 @@
 	<!-- Links Built -->
 		<div
 			id="profile-scoreboard-links-built"
-			class="module module-no-gutter text-align-center"
+			class="module module-no-gutter text-align-center text-leading-compact"
 			data-grid-area="linksbuilt">
 				
-				<div class="module-content">
-					<span class="special-primary count-links-built">
+				<span class="module-content">
+					<span class="special-primary profile-count-links-built">
 						<span class="REPLACE">88</span>
 					</span>
 					<span class="font-size-small color-neutral">Links Built</span>
-				</div>
+				</span>
 				
 		</div>
 
 	<!-- On Page -->
-		<div
+		<a
 			id="profile-scoreboard-on-page"
-			class="module module-no-gutter text-align-center"
+			class="module module-no-gutter text-align-center text-leading-compact color-inherit color-primary-hover"
+			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="onpage">
 				
-			<div class="module-content">
+			<span class="module-content">
 					
-				<span class="special-primary count-on-page">
+				<span class="special-primary profile-count-on-page">
 					<span class="REPLACE">32</span>
 				</span>
 				<span class="font-size-small color-neutral">On-Page</span>
 
-			</div>
+			</span>
 			
 			
-		</div>
+		</a>
 
 
 	<!-- Todos -->
 		<div
 			id="profile-scoreboard-to-dos"
-			class="module module-no-gutter text-align-center"
+			class="module module-no-gutter text-align-center text-leading-compact"
 			data-grid-area="todos">
 				
-				<div class="module-content">
+				<span class="module-content">
 							
-					<span class="special-primary count-on-page">
+					<span class="special-primary profile-count-on-page">
 						<span class="REPLACE">32</span>
 					</span>
 					<span class="font-size-small color-neutral">On-Page</span>
 
-				</div>
+				</span>
 				
 		</div>
 
@@ -108,25 +105,21 @@
 
 			</div>
 			
-			<div class="module-content flex-xs align-items-center flex-wrap">
+			<div class="module-content">
 
-				<div class="flex-1-1">
-
-					<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-03.png" alt="">
-					</div>
-
-					<ul class="text-align-right inline no-margin-bottom">
-						<li>
-							<span class="legend legend-accent"></span> Unique Links Built
-						</li>
-
-						<li>
-							<span class="legend legend-primary"></span> On-Page Updates
-						</li>
-					</ul>
-
+				<div class="p">
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-03.png" alt="">
 				</div>
+
+				<ul class="text-align-right inline no-margin-bottom">
+					<li>
+						<span class="legend legend-accent"></span> Unique Links Built
+					</li>
+
+					<li>
+						<span class="legend legend-primary"></span> On-Page Updates
+					</li>
+				</ul>
 				
 			</div>
 
@@ -320,13 +313,7 @@
 			</div>
 
 			<div class="module-content">
-
-				<div class="flex-xs align-items-center flex-wrap">
-					<div class="flex-1-1">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-05.png" alt="">
-					</div>
-				</div>
-
+				<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-05.png" alt="">
 			</div>
 
 		</div>
@@ -353,19 +340,8 @@
 			</div>
 
 			<div class="module-content">
-
-				<div class="flex-xs align-items-center flex-wrap">
-
-					<div class="flex-1-1">
-						<div>
-							<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
-						</div>
-								
-								
-						</ul>
-
-					</div>
-
+				<div>
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
 				</div>
 
 			</div>
@@ -621,7 +597,7 @@
 				
 
 					<!-- @else NO accounts are available -->
-						<p class="color-neutral">Oooh nothing here :/</p>
+						<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 				</div>
 				<div class="module-footer">

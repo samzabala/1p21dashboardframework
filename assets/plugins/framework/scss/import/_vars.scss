@@ -5,7 +5,7 @@
 	//breakpiont
 	$br-xs-max: 767px !default;
 	$br-sm-max: 1279px !default;
-	$br-md-max: 1899px !default;
+	$br-md-max: 1799px !default;
 
 	//extra breakpoints
 	$br-xxs-max: 400px !default;
@@ -125,8 +125,8 @@
 			$body-font-size-small: 14px !default;
 			$body-font-size-large: 24px !default;
 		$body-line-height: 30px !default;
-		$body-background: $brand-color-background-alt !default;
-			$body-background-inverse: $brand-color-base !default;
+		$body-background: $global-background-contrast !default;
+			$body-background-inverse: $global-background-contrast-inverse !default;
 		$body-color: $brand-color-base !default;
 			$body-color-inverse: $brand-color-background !default;
 		$body-text-gutter-y: 30px !default;
@@ -179,6 +179,8 @@
 			$body-pre-padding: $gutter-micro!default;
 
 		$global-disabled-opacity: .5 !default;
+
+		$body-ellipsis-multiple-max-lines: 2 !default;
 
 	// SVG
 		$svg-gradient-color-start: $gradient-start !default;
@@ -272,7 +274,7 @@
 		$module-gutter-x: $gutter-base !default;
 			$module-gutter-x-mobile: $gutter-small !default;
 
-		$module-box-shadow-hover: $box-shadow-spicy $brand-color-base-alt !default; 
+		$module-box-shadow-hover: $box-shadow-spicy $brand-color-base !default; 
 		
 		$module-gutter-y: 40px !default;
 		$module-gutter-y: $gutter-small !default;
@@ -329,15 +331,15 @@
 
 	// progress
 		$progress-height: 20px !default;
-		$progress-background-color: rgba($global-background-contrast,.01) !default;
-			$progress-background-color-inverse: rgba($global-background-contrast-inverse,.01) !default;
+		$progress-background-color: transparent !default;
+			$progress-background-color-inverse: transparent !default;
 		$progress-border-radius: 20px !default;
-		$progress-background-stripe-color: $brand-color-neutral !default;
-		$progress-background-stripe-color-inverse: $brand-color-neutral !default;
+		$progress-background-stripe-color: rgba($brand-color-base,.2) !default;
+		$progress-background-stripe-color-inverse: rgba($brand-color-base,.2) !default;
 		$progress-transition-duration: $transition-duration-long * 4 !default;
 
 
-		$progress-bar-background-color: $brand-color-neutral !default;
+		$progress-bar-background-color: $brand-color-primary !default;
 
 
 		$progress-title-font-size: 14px !default;
@@ -345,6 +347,7 @@
 		$progress-title-line-height: 20px !default;
 		$progress-title-font-style: normal !default;
 		$progress-title-color: $brand-color-base-alt !default;
+			$progress-title-color-inverse: $brand-color-background-alt !default;
 		$progress-title-text-transform: uppercase !default;
 		$progress-title-margin-bottom: 10px !default;
 		$progress-title-margin-top: 30px !default;
@@ -374,7 +377,8 @@
 		$badge-size: 25px !default;
 		$badge-size-large: 30px !default;
 		$badge-size-small: 20px !default;
-		$badge-border-color: $brand-color-background !default;
+		$badge-border-color: $global-background !default;
+			$badge-border-color-inverse: $global-background-inverse !default;
 		$badge-border-width: 7px !default;
 		$badge-box-shadow: $box-shadow-mild $brand-color-base !default;
 
@@ -508,6 +512,7 @@
 		$btn-box-shadow: $box-shadow-base $brand-color-base !default;
 			$btn-box-shadow-hover: $box-shadow-base $brand-color-base !default;
 		$btn-group-separator-color: rgba($brand-color-base,.1) !default;
+		$btn-transition-duration: $transition-duration-base!default;
 
 		// SCHEMES
 			$btn-border-default: transparent !default;

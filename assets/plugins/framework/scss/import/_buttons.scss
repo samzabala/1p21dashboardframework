@@ -230,7 +230,7 @@ $prefix: '.btn';
 		padding-right: $calculated-btn-gutter-x;
 		padding-left: $calculated-btn-gutter-x;
 		border: $btn-border-width solid transparent;
-		transition: $transition-duration-short all $transition-timing;
+		transition: $btn-transition-duration all $transition-timing;
 		max-width:100%;
 		width:auto;
 		display:inline-flex;

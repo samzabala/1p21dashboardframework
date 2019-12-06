@@ -564,8 +564,6 @@ window.jQuery && jQuery.noConflict();
 
 			var modal = document.createElement('div');
 
-			_.initTrumbo(modal);
-
 			document.querySelector('body').appendChild(modal);
 			
 			modal.className = 'modal-wrapper';
@@ -589,6 +587,8 @@ window.jQuery && jQuery.noConflict();
 				
 				modHttml += '</div>';
 			modal.innerHTML += modHttml;
+
+			_.initTrumbo(modal);
 
 			document.body.classList.add('body-modal-active');
 
@@ -621,15 +621,13 @@ window.jQuery && jQuery.noConflict();
 
 	_.initTrumbo = function(selector){
 
-		selector = selector || document.body;
-
 		if($){
-			$(selector).find('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
 
-				console.log('pwet',$(this).closest('.modal').length);
-			
+			selector = selector || document.body;
+
+			$(selector).find('.input-trumbowyg:not(.input-trumbowyg-custom)').each(function(){
+				
 				if(!($(this).closest('.modal').length > 0)) { //catch dynamo trumbobois
-					console.log('no dynamovoboobo');
 					$(this).trumbowyg('destroy');
 					$(this).trumbowyg({
 						btns: [
@@ -650,7 +648,6 @@ window.jQuery && jQuery.noConflict();
 		}
 	}
 	_.functions_on_load.push(_.initTrumbo);
-	_.functions_on_resize.push(_.initTrumbo);
 
 
 

@@ -92,7 +92,7 @@ function app_debug_li() {
 	</li>
 
 	<li>
-		<a href="#" onclick="event.preventDefault();document.body.classList.toggle('body-inverse')">Toggle Dark Mode</a>
+		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark Mode</a>
 	</li>
 <?php
 }

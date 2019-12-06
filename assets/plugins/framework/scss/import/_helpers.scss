@@ -1,72 +1,7 @@
 
 /*** HELPERS ***/
 
-	/* HIDEY CLASSES */
-		.desktop-only {
-			display: none !important;
-		}
-
-		.laptop-only {
-			display: none !important;
-		}
-
-		.tablet-only {
-			display: none !important;
-		}
-
-		.mobile-only {
-			display: none !important;
-		}
-
-		@include breakpoint(lg) {
-			.desktop-only {
-				display: block !important;
-			}
-			
-			.desktop-hide {
-				display:none!important;
-			}
-		}
-
-		@include breakpoint((md,md-max)) {
-			.laptop-only {
-				display: block !important;
-			}
-			
-			.laptop-hide {
-				display:none!important;
-			}
-		}
-
-		@include breakpoint((sm,sm-max)) {
-
-			.tablet-only {
-				display: block !important;
-			}
-			
-			.tablet-hide {
-				display:none!important;
-			}
-		}
-
-		@include breakpoint(xs-max) {
-			.mobile-only {
-				display: block !important;
-			}
-			
-			.mobile-hide {
-				display:none!important;
-			}
-		}
-
-		.sr-only {
-			display:none!important;
-		}
-	
-		
-
-
-	/* BACKGROUND CLASSES */
+/* BACKGROUND CLASSES */
 
 
 // extend for elements that needs backgrounds so we can extend with responsibility
@@ -501,6 +436,28 @@
 				white-space: nowrap!important;
 				overflow: hidden!important;
 				text-overflow: ellipsis!important;
+				/* gotta be block otherwise shit wont happen */
+				display:block;
+				max-width:100%!important;
+
+				&-multiple {
+					white-space: normal!important;
+					text-overflow: ellipsis!important;
+					display: -webkit-box!important;
+					-webkit-line-clamp: $body-ellipsis-multiple-max-lines!important;
+					-webkit-box-orient: vertical!important;
+					overflow: hidden!important;
+					height: calc((#{$calculated-body-single-line}) * #{$body-ellipsis-multiple-max-lines});
+
+					#{$prefix}-leading-compact &,
+					&#{$prefix}-leading-compact {
+						height: calc((#{$calculated-body-single-line} * .75) * #{$body-ellipsis-multiple-max-lines});
+					}
+					#{$prefix}-leading-expanded &,
+					&#{$prefix}-leading-expanded {
+						height: calc((#{$calculated-body-single-line} * 1.5) * #{$body-ellipsis-multiple-max-lines});
+					}
+				}
 			}
 
 			&-nowrap {
@@ -906,4 +863,70 @@
 		flex-shrink: 0!important;
 	}
 
+}
+
+
+
+
+
+/* HIDEY CLASSES */
+.desktop-only {
+	display: none !important;
+}
+
+.laptop-only {
+	display: none !important;
+}
+
+.tablet-only {
+	display: none !important;
+}
+
+.mobile-only {
+	display: none !important;
+}
+
+@include breakpoint(lg) {
+	.desktop-only {
+		display: block !important;
+	}
+	
+	.desktop-hide {
+		display:none!important;
+	}
+}
+
+@include breakpoint((md,md-max)) {
+	.laptop-only {
+		display: block !important;
+	}
+	
+	.laptop-hide {
+		display:none!important;
+	}
+}
+
+@include breakpoint((sm,sm-max)) {
+
+	.tablet-only {
+		display: block !important;
+	}
+	
+	.tablet-hide {
+		display:none!important;
+	}
+}
+
+@include breakpoint(xs-max) {
+	.mobile-only {
+		display: block !important;
+	}
+	
+	.mobile-hide {
+		display:none!important;
+	}
+}
+
+.sr-only {
+	display:none!important;
 }

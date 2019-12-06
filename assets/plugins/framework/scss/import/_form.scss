@@ -178,6 +178,15 @@ $prefix: '.input';
 	}
 
 	&-input {
+
+
+		&-on-mobile {
+			@include br(#{$mobile-br-max}-max) {
+
+				display:flex;
+				width:100%;
+			}
+		}
 		
 		
 		&-itself {
@@ -597,6 +606,10 @@ $prefix: '.input';
 			@extend %for-form-wrapper-vertical;
 		}
 		
+	}
+
+	&,&-group {
+		@extend %for-form-input-on-mobile;
 	}
 
 	///updates here should match btn-group 

@@ -11,15 +11,20 @@ $sidebar-base: 285px;
 	&-table {
 		&-cell {
 			&-thumbnail {
-				width: 90px; 
+				min-width: 90px; 
 			}
 			&-name {
-				width: 280px;
+				min-width: 280px;
 			}
 
 			&-action {
 
-				width: 100px;
+				min-width: 100px;
+			}
+
+			&-url {
+				max-width: 350px;
+				min-width: 350px;
 			}
 
 

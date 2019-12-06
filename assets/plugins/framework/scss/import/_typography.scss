@@ -163,36 +163,36 @@ $prefix: '.special';
     #{$prefix} {
 		&-primary {
             @include type-set((
-                size: $calculated-special-primary-font-size,
-                leading: $calculated-special-primary-line-height,
-                color: $special-primary-color,
-                weight:$special-primary-font-weight,
-                style: $special-primary-font-style,
-                case: $special-primary-text-transform,
+                size: $calculated-special-primary-font-size!important,
+                leading: $calculated-special-primary-line-height!important,
+                color: $special-primary-color!important,
+                weight:$special-primary-font-weight!important,
+                style: $special-primary-font-style!important,
+                case: $special-primary-text-transform!important,
             ));
 			margin-bottom: $calculated-special-primary-gutter-y;
 			margin-top: $calculated-special-primary-gutter-y;
 			display:block;
 
 			@include br(#{$mobile-br-max}-max) {
-				font-size: $calculated-body-size-h2
+				font-size: $calculated-body-size-h2!important
 			}
 		}
 		&-secondary {
             @include type-set((
-                size: $calculated-special-secondary-font-size,
-                leading: $calculated-special-secondary-line-height,
-                color: $special-secondary-color,
-                weight:$special-secondary-font-weight,
-                style: $special-secondary-font-style,
-                case: $special-secondary-text-transform,
+                size: $calculated-special-secondary-font-size!important,
+                leading: $calculated-special-secondary-line-height!important,
+                color: $special-secondary-color!important,
+                weight:$special-secondary-font-weight!important,
+                style: $special-secondary-font-style!important,
+                case: $special-secondary-text-transform!important,
             ));
 			margin-bottom: $calculated-special-secondary-gutter-y;
 			margin-top: $calculated-special-secondary-gutter-y;
 			display:block;
 
 			@include br(#{$mobile-br-max}-max) {
-				font-size: $calculated-body-size-h3;
+				font-size: $calculated-body-size-h3!important;
 			}
 		}
     }

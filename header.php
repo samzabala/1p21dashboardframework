@@ -18,7 +18,6 @@
 	<div id="dashboard">
 		<!-- Sidebar -->
 		<aside id="dashboard-block-sidebar"
-		:class="{'open': open }"
 		class="background-global">
 			<?php include_once 'includes/sidebar.php'; ?>
 		</aside>

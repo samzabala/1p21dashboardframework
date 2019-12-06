@@ -325,7 +325,7 @@
 					<div class="project-notes accordion-group accordion-group-multiple">
 						<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
 							<div class="block-thumbnail flex-0-0 flex-child">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</div>
 							<div class="block-content flex-1-1 flex-child">
 								<div data-toggle="accordion" class="flex-xs align-items-center text-leading-compact">
@@ -403,7 +403,7 @@
 								
 								<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
 									<div class="block-thumbnail flex-0-0 flex-child">
-										<?php app_get_component('components/profile-image-inline'); ?>
+										<?php app_get_component('components/profile-image-small'); ?>
 									</div>
 									<div class="block-content flex-1-1 flex-child">
 										<div data-toggle="accordion" class="flex-xs align-items-center text-leading-compact">
@@ -504,7 +504,7 @@
 					<div class="list-group-item">
 						<div class="flex-grid flex-grid-compact no-margin-y align-items-center">
 							<div class="flex-child flex-0-0 no-margin-y">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</div>
 
 							<a href="<?= app_create_link(array('template' => 'profile')) ?>"class="flex-child flex-1-1 color-inherit color-primary-hover no-margin-y">
@@ -530,7 +530,7 @@
 							<div class="list-group-item">
 								<div class="flex-grid flex-grid-compact no-margin-y align-items-center">
 									<div class="flex-child flex-0-0 no-margin-y">
-										<?php app_get_component('components/profile-image-inline'); ?>
+										<?php app_get_component('components/profile-image-small'); ?>
 									</div>
 
 									<a href="<?= app_create_link(array('template' => 'profile')) ?>"class="flex-child flex-1-1 color-inherit color-primary-hover no-margin-y">

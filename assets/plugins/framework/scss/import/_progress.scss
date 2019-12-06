@@ -160,5 +160,10 @@ $prefix: '.progress';
 		display:block;
 		margin-bottom: $calculated-progress-title-margin-bottom;
 		margin-top: $calculated-progress-title-margin-top;
+
+		.body-inverse & {
+
+			color: $progress-title-color-inverse;
+		}
 	}
 }

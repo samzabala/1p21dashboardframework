@@ -8,10 +8,12 @@
 CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 ****************************************************************************/
 
-$brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif !default;
-$brand-font-accent: $brand-font-primary !default;
+$brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+$brand-font-accent: $brand-font-primary;
 $brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
 $body-font-weight: 500;
+$global-background-inverse: #2e1e32;
+$global-background-contrast-inverse: #1e1421;
 // $body-font-weight-bold:900;
 
 /*! 

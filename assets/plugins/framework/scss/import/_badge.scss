@@ -34,6 +34,10 @@ $prefix: '.badge';
 	border: $calculated-badge-border-width solid $badge-border-color;
 	box-shadow: $badge-box-shadow;
 
+	.body-inverse & {
+		border-color: $badge-border-color-inverse;
+	}
+
 	&#{&}-large {
 		width: $calculated-badge-size-large;
 		height: $calculated-badge-size-large;

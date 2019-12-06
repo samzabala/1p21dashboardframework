@@ -549,7 +549,6 @@ window.jQuery && jQuery.noConflict();
 		})
 	}
 	_.functions_on_load.push(_.initTrumbo);
-	_.functions_on_resize.push(_.initTrumbo);
 
 	
 

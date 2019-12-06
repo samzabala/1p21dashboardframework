@@ -10,7 +10,7 @@
  -->
 <div id="profile-production" class="module-grid"
 
-	data-grid-template-rows-md=" repeat( auto-fit, minmax(75px, auto) )"
+	data-grid-template-rows-md=" repeat( auto-fit, minmax(75px, min-content) )"
 	data-grid-template-columns-md="350px 1fr"
 	data-grid-template-areas-md="
 		'profile-card availability'
@@ -33,7 +33,7 @@
 			class=" module module-no-gutter"
 			data-grid-area-md="availability">
 
-			<div class="module-content flex-xs">
+			<div class="flex-xs">
 				<div class="flex-1-1 flex-grid flex-grid-no-gutter">
 					<div class="mobile-hide tablet-hide flex-col-md-4 align-self-center">
 						
@@ -74,28 +74,20 @@
 				</h3>
 			</div>
 
-			<div class="module-content flex-xs flex-wrap align-items-center">
+			<div class="module-content text-align-center">
 
-				<!--
-					@placeholder:
-					attributes to keep: class
-				-->
-				<div class="flex-1-1 text-align-center">
-
-					<div class="p">
-						<img class="REPLACE" style="width:400px;margin:0 auto" src="/placeholder/charts/prod/chart-03.png" alt="">
-					</div>
-
-					<ul class="text-align-center inline no-margin-bottom">
-						<li>
-							<span class="legend legend-primary"></span> Avg <span class="profile-category"><span class="REPLACE">Designer</span></span> Time
-						</li>
-						<li>
-							<span class="legend legend-neutral"></span> Whole Project Time
-						</li>
-					</ul>
-
+				<div class="p">
+					<img class="REPLACE" style="width:600px;margin:0 auto" src="/placeholder/charts/prod/chart-03.png" alt="">
 				</div>
+
+				<ul class="text-align-center inline no-margin-bottom">
+					<li>
+						<span class="legend legend-primary"></span> Avg <span class="profile-category"><span class="REPLACE">Designer</span></span> Time
+					</li>
+					<li>
+						<span class="legend legend-neutral"></span> Whole Project Time
+					</li>
+				</ul>
 
 			</div>
 			
@@ -308,7 +300,7 @@
 		
 
 			<!-- @else NO assigned tasks are available -->
-				<p class="color-neutral">Oooh nothing here :/</p>
+				<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 
 			
@@ -407,15 +399,15 @@
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
@@ -465,15 +457,15 @@
 										</td>
 
 										<td class="dashboard-table-cell-thumbnail text-align-center">
-											<?php app_get_component('components/profile-image-inline'); ?>
+											<?php app_get_component('components/profile-image-small'); ?>
 										</td>
 
 										<td class="dashboard-table-cell-thumbnail text-align-center">
-											<?php app_get_component('components/profile-image-inline'); ?>
+											<?php app_get_component('components/profile-image-small'); ?>
 										</td>
 
 										<td class="dashboard-table-cell-thumbnail text-align-center">
-											<?php app_get_component('components/profile-image-inline'); ?>
+											<?php app_get_component('components/profile-image-small'); ?>
 										</td>
 
 										<td class="dashboard-table-cell-action text-align-center">
@@ -500,7 +492,7 @@
 		
 
 			<!-- @else NO assigned tasks are available -->
-				<p class="color-neutral">Oooh nothing here :/</p>
+				<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 		</div>
 

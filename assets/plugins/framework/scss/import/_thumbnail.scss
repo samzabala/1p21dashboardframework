@@ -102,6 +102,10 @@ $prefix: '.thumbnail';
 		align-content: center;
 		align-items: center;
 
+		#{$prefix}#{$prefix}-small & {
+			top: .0625em;
+		}
+
 	}
 
 	&-content {

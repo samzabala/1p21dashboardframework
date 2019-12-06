@@ -82,19 +82,19 @@
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-thumbnail text-align-center">
-								<?php app_get_component('components/profile-image-inline'); ?>
+								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
@@ -146,19 +146,19 @@
 									</td>
 
 									<td class="dashboard-table-cell-thumbnail text-align-center">
-										<?php app_get_component('components/profile-image-inline'); ?>
+										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
 									<td class="dashboard-table-cell-thumbnail text-align-center">
-										<?php app_get_component('components/profile-image-inline'); ?>
+										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
 									<td class="dashboard-table-cell-thumbnail text-align-center">
-										<?php app_get_component('components/profile-image-inline'); ?>
+										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
 									<td class="dashboard-table-cell-thumbnail text-align-center">
-										<?php app_get_component('components/profile-image-inline'); ?>
+										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
 									<td class="dashboard-table-cell-action text-align-center">
@@ -185,7 +185,7 @@
 		
 
 			<!-- @else NO assigned tasks are available -->
-				<p class="color-neutral">Oooh nothing here :/</p>
+				<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 		</div>
 

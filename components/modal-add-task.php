@@ -1,4 +1,4 @@
-<div class="module-function add-task">
+<div class="module-function modal-add-task">
 	<a href="#modal-add-task" data-toggle="modal" class=" btn btn-primary"><span>Add Task</span> <i class="symbol symbol-plus"></i></a>
 
 	<div class="modal" id="modal-add-task" data-modal-max-width="800px" data-modal-diable-overlay="true" data-modal-title="Add New Task">

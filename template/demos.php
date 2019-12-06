@@ -1364,6 +1364,10 @@
 				<span class="btn btn-default">Symbol close</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
 			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol map</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-map"></i></span>
+			</a>
 
 				<div class="btn-group btn-small btn-group-horizontal btn-group-unite">
 					<a href="#" class="btn btn-default">Small butt</a>
@@ -1544,6 +1548,9 @@
 
 			<p>
 				Symbol close <i class="symbol symbol-close"></i>
+			</p>
+			<p>
+				Symbol close <i class="symbol symbol-map"></i>
 			</p>
 
 		</div>

@@ -17,9 +17,7 @@ $prefix: '.list-group';
 
 		li,
 		.list-group-item {
-			&:nth-child(n+2) {
-				border-color:  $list-group-border-color-inverse;
-			}
+			border-color:  $list-group-border-color-inverse;
 		}
 	}
 

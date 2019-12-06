@@ -22,48 +22,43 @@
 
 			</div>
 
-			<div class="module-content flex-xs flex-wrap align-items-center">
-
-				<div class="flex-1-1">
+			<div class="module-content">
 					
-					<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-01.png" alt="" />
-					</div>
-
-
-					<ul class="average-legend unstyled flex-grid flex-grid-compact">
-						<!--
-							@dynamic: li
-							@NOTE background-color on .legend will be replaced dynamically based on graph
-						-->
-						<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
-								<span class="legend" style="background-color: #fb1818"></span>
-								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
-						</li>
-
-
-						
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-
-							<?php 
-								$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-							?>
-							<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
-								
-
-								
-								<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
-									<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
-									<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
-								</li>
-							<?php } ?>
-
-
-
-						</ul>
-
-
+				<div class="p">
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-01.png" alt="" />
 				</div>
+
+
+				<ul class="average-legend unstyled flex-grid flex-grid-compact">
+					<!--
+						@dynamic: li
+						@NOTE background-color on .legend will be replaced dynamically based on graph
+					-->
+					<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+							<span class="legend" style="background-color: #fb1818"></span>
+							<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
+					</li>
+
+
+					
+					<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+						<?php 
+							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+						?>
+						<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
+							
+
+							
+							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+								<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
+								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
+							</li>
+						<?php } ?>
+
+
+
+				</ul>
 			</div>
 		</div>
 	
@@ -81,47 +76,41 @@
 					<?php app_get_component('components/filter-toggle-my'); ?>
 				</div>
 			</div>
-			<div class="module-content flex-xs flex-wrap align-items-center">
-
-				<div class="flex-1-1">
+			<div class="module-content">
 					
-					<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-02.png" alt="" />
-					</div>
-
-
-					<ul class="average-legend unstyled no-margin-bottom flex-grid flex-grid-compact">
-						<!--
-							@dynamic: li
-							@NOTE background-color on .legend will be replaced dynamically based on graph
-						-->
-						<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
-								<span class="legend" style="background-color: #fb1818"></span>
-								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
-						</li>
-
-
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-
-							<?php 
-								$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-							?>
-							<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
-								
-
-								
-								<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
-									<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
-									<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
-								</li>
-							<?php } ?>
-
-					</ul>
-
+				<div class="p">
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-02.png" alt="" />
 				</div>
-			</div>
-			<div class="module-footer">
-				
+
+
+				<ul class="average-legend unstyled no-margin-bottom flex-grid flex-grid-compact">
+					<!--
+						@dynamic: li
+						@NOTE background-color on .legend will be replaced dynamically based on graph
+					-->
+					<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+							<span class="legend" style="background-color: #fb1818"></span>
+							<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
+					</li>
+
+
+					<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+						<?php 
+							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+						?>
+						<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
+							
+
+							
+							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+								<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
+								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
+							</li>
+						<?php } ?>
+
+				</ul>
+
 			</div>
 		</div>
 
@@ -184,7 +173,7 @@
 
 								<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
 								<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-									<?php app_get_component('components/profile-image-inline');?>
+									<?php app_get_component('components/profile-image-small');?>
 								</td>
 
 								<td>
@@ -278,7 +267,7 @@
 
 										<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
 										<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-											<?php app_get_component('components/profile-image-inline');?>
+											<?php app_get_component('components/profile-image-small');?>
 										</td>
 
 										<td>
@@ -367,7 +356,7 @@
 			
 
 				<!-- @else NO accounts are available -->
-					<p class="color-neutral">Oooh nothing here :/</p>
+					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 			</div>
 
 			<div class="module-footer">
