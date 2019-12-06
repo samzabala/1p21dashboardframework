@@ -653,6 +653,9 @@ window.jQuery && jQuery.noConflict();
 	_.functions_on_resize.push(_.initTrumbo);
 
 
+
+
+	
 	window.addEventListener('load',function(){
 
 		_1p21.fw.lazyLoad && _1p21.fw.loadImages();
