@@ -1,49 +1,43 @@
-<!-- 
-
-@dynamic
-
-	content
-		.current-year
-		.count-*
-
- -->
-
 <div
 	id="home-production"
 	class="module-grid"
 
-	data-grid-template-rows-sm="repeat( auto-fit, minmax(585px, auto) )"
-	data-grid-template-columns-sm="1fr 270px"
-	data-grid-template-areas-sm="
-	'average average'
-	'priority status'
-	'total status'"
-
-	data-grid-template-columns-md="440px 1fr 270px"
+	data-grid-template-rows-md="repeat( auto-fit, minmax(585px, auto) )"
+	data-grid-template-columns-md="1fr 270px"
 	data-grid-template-areas-md="
+	'average average'
+	'total status'
+	'priority priority'"
+
+	data-grid-template-columns-lg="440px 1fr 270px"
+	data-grid-template-areas-lg="
 	'average average status'
 	'total priority status'">
 
 	<!-- AVERAGE TIMEE -->
+
 		<div
 			id="home-production-average"
 			class="module"
 			data-grid-area-md="average">
 
 			<div class="module-header module-header-break">
+
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
 				<h3 class="module-title">
 					Average Project Time for <span class="current-year"><span class="REPLACE">2018</span></span>
 				</h3>
-				<div class="module-functions">
+
+				<div class="module-functions accordion accordion-mobile">
 					<?php app_get_component('components/filter-dropdown-date-span')?>
 					<?php app_get_component('components/filter-toggle-my')?>
-					
 				</div>
 			</div>
 
 			<div class="module-content">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="margin:0 auto;" src="/placeholder/charts/prod/chart-01.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto;" src="/PLACEHOLDER/charts/prod/chart-01.png" alt="" />
 				</div>
 
 				<ul class="no-margin text-align-right inline no-margin-bottom">
@@ -61,98 +55,6 @@
 		</div>
 
 
-
-
-	<!-- Priority -->
-		<div
-			id="home-production-priority"
-			class="module"
-			data-grid-area-md="priority">
-			
-			<div class="module-header">
-				<h3 class="module-title">
-					Priority Projects
-				</h3>
-			</div>
-			
-			<div class="module-content">
-				<!-- @if associated projects  are available -->
-					<div class="table-wrapper">
-						<table class="text-vertical-align-middle">
-							<tr>
-								<th class="dashboard-table-cell-name">Client Name</th>
-
-								<th>Status</th>
-
-								<th>Due Date</th>
-							</tr>
-
-
-							<!--
-								@loop tr
-								@dynamic 
-								content .project-task-name. .project-name
-							-->
-							<tr>
-								<td class="dashboard-table-cell-name">
-									<?php app_get_component('components/project-link'); ?>
-								</td>
-
-								<td>
-									<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-									<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
-										<span class="task-status">Task Status</span>
-									</a>
-								</td>
-
-								<td>
-									
-									<span class="project-due-date">
-										<span class="REPLACE">4-20-69</span>
-									</span>
-								</td>
-							</tr>
-
-							<!-- @PLACEHOLDER: DELETE WHEN READY -->
-
-							<?php for($i=1; $i<=3; $i++){ ?>
-								<tr>
-									<td class="dashboard-table-cell-name">
-										<?php app_get_component('components/project-link'); ?>
-									</td>
-
-									<td>
-										<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-										<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
-											<span class="task-status">Task Status</span>
-										</a>
-									</td>
-
-									<td>
-										
-										<span class="project-due-date">
-											<span class="REPLACE">4-20-69</span>
-										</span>
-									</td>
-								</tr>
-							<?php } ?>
-						</table>
-						
-					</div>
-			
-
-				<!-- @else NO assigned tasks are available -->
-					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
-			</div>
-			
-			<div class="module-footer">
-				<?php app_get_component('components/pagination'); ?>
-			</div>
-		</div>
-
-	
-
-
 	<!-- Status -->
 		<div
 			id="home-production-status"
@@ -165,63 +67,72 @@
 				</h3>
 			</div>
 			
-			<div class="module-content flex-md flex-direction-column justify-content-space-evenly">
+			<div class="module-content flex-sm flex-direction-column">
 
-				<p class="count text-align-center">
+				<div class="flex-1-1 text-align-center flex-grid flex-grid-compact flex-grid-fixed align-items-center">
+					
+					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
+						
+						<div class="flex-1-1">
+							<div class="special-primary production-count-design">
+								<span class="REPLACE">40</span>
+							</div>
 
-					<span class="special-primary count-design">
-						<span class="REPLACE">40</span>
-					</span>
+							<div class="font-size-small color-neutral">
+								<span class="REPLACE">Projects in Design</span>
+							</div>
+						</div>
 
-					<span class="font-size-small color-neutral">
-						<span class="REPLACE">Projects in Design</span>
-					</span>
-				</p>
+					</div>
+					<div class="hide-mobile flex-col-md-12">
+						<hr class="no-margin-y">
+					</div>
+					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
+						
+						<div class="flex-1-1">
+							<div class="special-primary production-count-dev">
+								<span class="REPLACE">12</span>
+							</div>
 
+							<div class="font-size-small color-neutral">
+								<span class="REPLACE">Projects in Dev</span>
+							</div>
+						</div>
 
-				<hr>
+					</div>
+					<div class="hide-mobile flex-col-md-12">
+						<hr class="no-margin-y">
+					</div>
+					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
+						
+						<div class="flex-1-1">
+							<div class="special-primary production-count-dev">
+								<span class="REPLACE">12</span>
+							</div>
 
+							<div class="font-size-small color-neutral">
+								<span class="REPLACE">Projects in Dev</span>
+							</div>
+						</div>
 
-				<p class="count text-align-center">
+					</div>
+					<div class="hide-mobile flex-col-md-12">
+						<hr class="no-margin-y">
+					</div>
+					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
+						
+						<div class="flex-1-1">
+							<div class="special-primary production-count-dev">
+								<span class="REPLACE">12</span>
+							</div>
 
-					<span class="special-primary count-dev">
-						<span class="REPLACE">12</span>
-					</span>
+							<div class="font-size-small color-neutral">
+								<span class="REPLACE">Projects in Dev</span>
+							</div>
+						</div>
 
-					<span class="font-size-small color-neutral">
-						<span class="REPLACE">Projects in Dev</span>
-					</span>
-				</p>
-
-
-				<hr>
-
-
-				<p class="count text-align-center">
-
-					<span class="special-primary count-client">
-						<span class="REPLACE">15</span>
-					</span>
-
-					<span class="font-size-small color-neutral">
-						<span class="REPLACE">Projects with Cients</span>
-					</span>
-				</p>
-
-
-				<hr>
-
-
-				<p class="count text-align-center">
-
-					<span class="special-primary count-design">
-						<span class="REPLACE">10</span>
-					</span>
-
-					<span class="font-size-small color-neutral">
-						<span class="REPLACE">Projects Launched</span>
-					</span>
-				</p>
+					</div>
+				</div>
 
 
 			</div>
@@ -247,7 +158,7 @@
 			
 			<div class="module-content">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
+					<img class="REPLACE" style="width:500px;margin:0 auto" src="/PLACEHOLDER/charts/prod/chart-02.png" alt="" />
 				</div>
 				<ul class="unstyled no-margin text-align-center flex-sm flex-wrap justify-content-space-evenly">
 					<li>
@@ -264,4 +175,94 @@
 				</ul>
 			</div>
 		</div>
+
+
+	<!-- Priority -->
+		<div
+			id="home-production-priority"
+			class="module"
+			data-grid-area-md="priority">
+			
+			<div class="module-header">
+				<h3 class="module-title">
+					Priority Projects
+				</h3>
+			</div>
+			
+			<div class="module-content">
+				<!-- @IF associated projects  are available -->
+					<div class="table-wrapper">
+						<table class="text-vertical-align-middle">
+							<tr>
+								<th class="dashboard-table-cell-name">Client Name</th>
+
+								<th>Status</th>
+
+								<th>Due Date</th>
+							</tr>
+
+
+
+							<!-- @LOOP -->
+							<tr>
+								<td class="dashboard-table-cell-name">
+									<?php app_get_component('components/project-link'); ?>
+								</td>
+
+								<td>
+									<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
+									<span class="tag tag-accent">
+										<span class="task-status"><span class="REPLACE">Task Status<span></span>
+									</span>
+								</td>
+
+								<td>
+									
+									<span class="project-due-date">
+										<span class="REPLACE">4-20-69</span>
+									</span>
+								</td>
+							</tr>
+
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+								<?php for($i=1; $i<=3; $i++){ ?>
+									<tr>
+										<td class="dashboard-table-cell-name">
+											<?php app_get_component('components/project-link'); ?>
+										</td>
+
+										<td>
+											<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
+											<span class="tag tag-caution">
+												<span class="task-status"><span class="REPLACE">Task Status<span></span>
+											</span>
+										</td>
+
+										<td>
+											
+											<span class="project-due-date">
+												<span class="REPLACE">4-20-69</span>
+											</span>
+										</td>
+									</tr>
+								<?php } ?>
+
+
+
+						</table>
+						
+					</div>
+			
+
+				<!-- @ELSE NO assigned tasks are available -->
+					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
+			</div>
+			
+			<div class="module-footer">
+				<?php app_get_component('components/pagination'); ?>
+			</div>
+		</div>
+
+		
 </div>

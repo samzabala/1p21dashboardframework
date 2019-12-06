@@ -20,25 +20,27 @@
 			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
 
 				<div class="flex-col-lg-8 flex-col-md-6 align-self-center">
-					<p class="special-secondary background-gradient text-clip-background project-site no-margin"><span class="REPLACE">sitedomainurlintheweb.com</span></p>
+					<h3 class="special-secondary background-gradient text-clip-background project-site no-margin">
+						<span class="REPLACE">sitedomainurlintheweb.com</span>
+					</h3>
 					<p class="color-neutral no-margin project-name"><span class="REPLACE">Client Name</span></p>
 				</div>
 				
 				<div class="flex-col-lg-4 flex-col-md-6 flex-xs align-items-center">
 					<ul class="project-meta unstyled flex-grid flex-grid-compact no-margin-y flex-grid-no-gutter-y justify-content-flex-end flex-1-1">
 						<li class="flex-child text-wrap-nowrap project-meta-level">
-							<span class="mobile-hide tablet-hide font-size-small color-neutral text-transform-uppercase font-weight-700">Level:</span>
+							<span class="hide-mobile font-size-small color-neutral text-transform-uppercase font-weight-700">Level:</span>
 							
 							<span class="font-weight-700 project-level"><span class="REPLACE">Project Level</span></span>
 						</li>
 
 						<li class="flex-child text-wrap-nowrap project-meta-status">
-							<span class="mobile-hide tablet-hide font-size-small color-neutral text-transform-uppercase font-weight-700">Status:</span>
+							<span class="hide-mobile font-size-small color-neutral text-transform-uppercase font-weight-700">Status:</span>
 							
 							<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-							<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
-								<span class="task-status">Task Status</span>
-							</a>
+							<span class="tag tag-accent">
+								<span class="task-status"><span class="REPLACE">Task Status<span></span>
+							</span>
 						</li>
 					</ul>
 					
@@ -56,15 +58,22 @@
 				class="module"
 				data-grid-area-md="days">
 				<div class="module-header module-header-break">
-					<h3 class="module-title">Days in Production: <span class="project-count-days font-size-large font-weight-700 color-global"><span class="REPLACE">69</span></span></h3>
-					<div class="module-functions">
+				
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
+				<h3 class="module-title">Days in Production:
+						<span class="project-duration font-size-large font-weight-700 color-global">
+							<span class="REPLACE">69</span>
+						</span>
+					</h3>
+					<div class="module-functions accordion accordion-mobile">
 						<?php app_get_component('components/modal-generate-report') ?>
 						<?php app_get_component('components/modal-track-time') ?>
 					</div>
 				</div>
 				<div class="module-content">
 
-					<!-- @if assigned tasks are available -->
+					<!-- @IF assigned tasks are available -->
 						<div class="flex-grid flex-grid-expanded flex-grid-no-gutter-y">
 							<div class="flex-1-1 flex-col-md-2 block-left">
 								
@@ -74,17 +83,9 @@
 											
 											
 											
-											<!--
-												@loop tr
-												@dynamic 
-												content
-													.project-task-name.
-													.project-name
-													.task-date
-													.task-status
-											-->
+											<!-- @LOOP tr-->
 											<tr>
-												<!-- @NOTE table-label-COLOR will by @dynamic based on projct-task-category of time track or  yeeee -->
+												<!-- @NOTE table-label-COLOR will by @DYNAMIC based on projct-task-category of time track or  yeeee -->
 												<td class="table-cell-no-gutter">
 													<span class="table-label table-label-primary"></span>
 												</td>
@@ -96,13 +97,13 @@
 												</td>
 
 												<td>
-													<span class="project-milestone-time">
+													<span class="project-milestone-duration">
 														<span class="REPLACE">20</span> Days
 													</span>
 												</td>
 
 												<td>
-													<span class="project-milestone-start">
+													<span class="project-milestone-date-start">
 														<span class="REPLACE">04-20-69</span>
 													</span>
 												</td>
@@ -114,7 +115,7 @@
 												<?php for($i=1; $i<=4; $i++){ ?>
 													
 													<tr>
-														<!-- @NOTE table-label-COLOR will by @dynamic based on projct-task-category of time track or  yeeee -->
+														<!-- @NOTE table-label-COLOR will by @DYNAMIC based on projct-task-category of time track or  yeeee -->
 														<td class="table-cell-no-gutter">
 															<span class="table-label table-label-accent"></span>
 														</td>
@@ -126,13 +127,13 @@
 														</td>
 
 														<td>
-															<span class="project-milestone-time">
+															<span class="project-milestone-duration">
 																<span class="REPLACE">20</span> Days
 															</span>
 														</td>
 
 														<td>
-															<span class="project-milestone-start">
+															<span class="project-milestone-date-start">
 																<span class="REPLACE">04-20-69</span>
 															</span>
 														</td>
@@ -151,12 +152,12 @@
 								<!-- Progress-stats -->
 									<div class="project-progress-stats">
 										<div class="progress-title no-margin-top">
-											Project Time: <span class="project-count-days"><span class="REPLACE">69</span> Days</span>
+											Project Time: <span class="project-duration"><span class="REPLACE">69</span> Days</span>
 										</div>
 
 
 										<div class="progress p">
-											<!-- @dynamic
+											<!-- @DYNAMIC
 													attr style->width
 											-->
 												
@@ -194,7 +195,7 @@
 													<span class="project-milestone">Pre-Production</span>
 												</div>
 
-												<div class="project-progress-pre-days font-weight-700">
+												<div class="project-progress-pre-duration font-weight-700">
 													<span class="REPLACE">22</span> Days
 												</div>
 											</div>
@@ -205,7 +206,7 @@
 													<span class="project-milestone">Design</span>
 												</div>
 
-												<div class="project-progress-des-days font-weight-700">
+												<div class="project-progress-des-duration font-weight-700">
 													<span class="REPLACE">22</span> Days
 												</div>
 											</div>
@@ -216,7 +217,7 @@
 													<span class="project-milestone">Development</span>
 												</div>
 
-												<div class="project-progress-dev-days font-weight-700">
+												<div class="project-progress-dev-duration font-weight-700">
 													<span class="REPLACE">22</span> Days
 												</div>
 											</div>
@@ -227,7 +228,7 @@
 													<span class="project-milestone">Client Review</span>
 												</div>
 
-												<div class="project-progress-rev-days font-weight-700">
+												<div class="project-progress-rev-duration font-weight-700">
 													<span class="REPLACE">22</span> Days
 												</div>
 											</div>
@@ -241,13 +242,13 @@
 									<div class="project-progress-goal">
 
 										<div class="progress-title no-margin-top">
-											Goal: <span class="project-progress-goal-count"><span class="REPLACE">69</span> Days</span>
+											Goal: <span class="project-progress-goal-duration"><span class="REPLACE">69</span> Days</span>
 										</div>
 
 
 										<div class="progress p">
 
-											<!-- @dynamic
+											<!-- @DYNAMIC
 													attr style->width
 											-->
 											<div
@@ -263,13 +264,13 @@
 								<div class="project-progress-average">
 
 									<div class="progress-title no-margin-top">
-										Average: <span class="project-progress-goal-count"><span class="REPLACE">69</span> Days</span>
+										Average: <span class="project-progress-goal-duration"><span class="REPLACE">69</span> Days</span>
 									</div>
 
 
 									<div class="progress">
 
-										<!-- @dynamic
+										<!-- @DYNAMIC
 												attr style->width
 										-->
 										<div
@@ -288,7 +289,7 @@
 
 							
 
-					<!-- @else NO assigned tasks are available -->
+					<!-- @ELSE NO assigned tasks are available -->
 						<p class="color-neutral">Oooh no progress yet:/</p>
 				</div>
 			</div>
@@ -346,7 +347,7 @@
 								<hr>
 								
 
-								<div class="project-note-content accordion">
+								<div class="project-note-content accordion text-leading-expanded">
 									
 
 									<div class="REPLACE">
@@ -424,7 +425,7 @@
 										<hr>
 										
 
-										<div class="project-note-content accordion">
+										<div class="project-note-content accordion text-leading-expanded">
 											
 
 											<div class="REPLACE">

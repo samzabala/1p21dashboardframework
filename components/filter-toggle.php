@@ -1,6 +1,6 @@
 <div class="filter-toggle module-function">
 	<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
-	<!-- @if label the filter -->
+	<!-- @IF label the filter -->
 	<div class="input-label"><span class="REPLACE">HR Rank</span>:</div>
 	
 	<div class="btn-group btn-group-horizontal btn-group-toggle">

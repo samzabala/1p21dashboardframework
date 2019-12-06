@@ -6,9 +6,11 @@
 
 			<div class="module-header module-header-break">
 
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
 				<h3 class="module-title">Average Rank by SEO</h3>
 
-				<div class="module-functions">
+				<div class="module-functions accordion accordion-mobile">
 
 					<?php app_get_component('components/filter-toggle'); ?>
 
@@ -25,16 +27,16 @@
 			<div class="module-content">
 					
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-01.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-01.png" alt="" />
 				</div>
 
 
-				<ul class="average-legend unstyled flex-grid flex-grid-compact">
+				<ul class="average-legend unstyled flex-grid flex-grid-compact flex-grid-fixed">
+					
 					<!--
-						@dynamic: li
-						@NOTE background-color on .legend will be replaced dynamically based on graph
+						@NOTE background-color on .legend will be replaced dynamically based on color-coded graph item and the profile it represents
 					-->
-					<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+					<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
 							<span class="legend" style="background-color: #fb1818"></span>
 							<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 					</li>
@@ -50,7 +52,7 @@
 							
 
 							
-							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+							<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
 								<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
 								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 							</li>
@@ -66,29 +68,36 @@
 	<!-- Unique Links -->
 		<div id="home-scoreboard-unique" class="module">
 			<div class="module-header module-header-break">
+
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
 				<h3 class="module-title">Unique Links Built by SEO</h3>
-				<div class="module-functions">
+
+				<div class="module-functions accordion accordion-mobile">
 					
 					<?php app_get_component('components/filter-dropdown-profiles-seo'); ?>
 
 					<?php app_get_component('components/filter-dropdown-date'); ?>
 
 					<?php app_get_component('components/filter-toggle-my'); ?>
+
+					<?php app_get_component('components/linkto-unique-links'); ?>
 				</div>
 			</div>
 			<div class="module-content">
 					
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-02.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-02.png" alt="" />
 				</div>
 
 
-				<ul class="average-legend unstyled no-margin-bottom flex-grid flex-grid-compact">
+				<ul class="average-legend unstyled flex-grid flex-grid-compact flex-grid-fixed">
+					
 					<!--
-						@dynamic: li
+						@DYNAMIC: li
 						@NOTE background-color on .legend will be replaced dynamically based on graph
 					-->
-					<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+					<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
 							<span class="legend" style="background-color: #fb1818"></span>
 							<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 					</li>
@@ -103,7 +112,7 @@
 							
 
 							
-							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
+							<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
 								<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
 								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 							</li>
@@ -118,7 +127,7 @@
 		<div id="home-scoreboard-accounts" class="module">
 			<div class="module-content">
 				
-				<!-- @if accounts  are available -->
+				<!-- @IF accounts  are available -->
 					<div class="table-wrapper">
 
 						<table class="text-vertical-align-middle">
@@ -126,58 +135,41 @@
 							<tr class="text-align-center font-size-small">
 
 								<th>#</th>
-
 								<th class="dashboard-table-cell-thumbnail">
-									
-									<a href="#" class="color-inherit">SEO <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
+									<a href="#" class="dashboard-sort-table-toggle color-inherit">SEO <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
 								</th>
-
 								<th>Accts</th>
-
-								<th>AVG HR Rank</th>
-
+								<th><a href="#" class="dashboard-sort-table-toggle color-inherit">AVG HR Rank <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a></th>
 								<th>AVG Rank</th>
-
 								<th>On-page</th>
-
 								<th>Content</th>
-
 								<th>Social</th>
-
 								<th>To-dos</th>
-
 								<th>Top 10s</th>
-
 								<th>Links</th>
-
 								<th>Unique Links</th>
-
 								<th>Total</th>
+
 							</tr>
 
 
-							<!--
-								@loop tr
-								@dynamic 
-								content
-									.project-task-name.
-									.project-name
-									.project-started
-									.task-status
-							-->
+							<!-- @LOOP tr-->
 							<tr class="text-align-center">
 								
 								<td>
-									<span class="profile-rank"><span class="REPLACE">01</span></span>
+									<span class="profile-rank">
+										<span class="REPLACE">01</span>
+									</span>
 								</td>
 
-								<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
 								<td class="dashboard-table-cell-thumbnail" class="text-align-center">
 									<?php app_get_component('components/profile-image-small');?>
 								</td>
 
 								<td>
-									<span class="profile-count-account"><span class="REPLACE">333</span></span>
+									<span class="profile-count-account">
+										<span class="REPLACE">333</span>
+									</span>
 								</td>
 
 								<td>
@@ -262,16 +254,20 @@
 									<tr class="text-align-center">
 									
 										<td>
-											<span class="profile-rank"><span class="REPLACE">01</span></span>
+											<span class="profile-rank">
+												<span class="REPLACE">01</span>
+											</span>
 										</td>
 
-										<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
+										<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
 										<td class="dashboard-table-cell-thumbnail" class="text-align-center">
 											<?php app_get_component('components/profile-image-small');?>
 										</td>
 
 										<td>
-											<span class="profile-count-account"><span class="REPLACE">333</span></span>
+											<span class="profile-count-account">
+												<span class="REPLACE">333</span>
+											</span>
 										</td>
 
 										<td>
@@ -355,7 +351,7 @@
 					</div>
 			
 
-				<!-- @else NO accounts are available -->
+				<!-- @ELSE NO accounts are available -->
 					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 			</div>
 

@@ -2174,8 +2174,15 @@
 			class="module"
 			data-grid-area="">
 			<div class="module-header">
+
+
+				<button class="hide-nonmobile btn btn-symbol btn-no-shadow btn-small float-right clear-right" data-toggle="accordion" title="View Available Functions">
+					<i class="symbol symbol-burger"></i>
+				</button>
+
 				<h3 class="module-title"></h3>
-				<div class="module-functions">
+
+				<div class="module-functions accordion accordion-mobile">
 
 				</div>
 			</div>

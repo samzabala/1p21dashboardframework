@@ -1,15 +1,5 @@
-<!--
-	@dynamic
-	content:
-		.profile-name-full,
-		.profile-name-first,
-		.profile-name-last,
 
-	@interactive .module-functions *
- -->
-
-
-<div class="module"
+<div class="module  <?= (DASHBOARD_TEMPLATE == 'profiles') ? 'module-interactive' : ''; ?>"
 	<?php if(DASHBOARD_SLUG == 'production' && DASHBOARD_TEMPLATE == 'profile'): ?>
 		data-grid-area-md="profile-card"
 	<?php endif; ?>
@@ -21,12 +11,6 @@
 	>
 		<div class="module-content text-align-center justify-content-center flex-direction-column flex-xs align-items-center">
 
-			<!--
-				@dynamic:
-				classes:  .btn-success, .badge-success
-				attr .thumbnail -> href
-				.profile-name -> href
-			-->
 
 			<?php app_get_component('components/profile-image'); ?>
 			
@@ -42,11 +26,7 @@
 			
 			<ul class="list-group no-margin-bottom align-self-stretch">
 
-				<!-- @if profile is man,des,dev -->
-						<!-- 
-							@dynamic
-							content: .status-*-value
-						-->
+				<!-- @IF profile is man,des,dev -->
 					<li class="flex-xs justify-content-space-between">
 						<span class="status-avg-time-label">
 							Avg Time Days 
@@ -76,11 +56,7 @@
 
 
 
-				<!-- @if profil is seo -->
-						<!-- 
-							@dynamic
-							content: .status-*-value
-						-->
+				<!-- @IF profil is seo -->
 					<!-- <li class="flex-xs justify-content-space-between">
 						<span class="status-total-accounts-label">
 							Total Accounts 

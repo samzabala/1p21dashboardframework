@@ -173,6 +173,8 @@ window.jQuery && jQuery.noConflict();
 	_.br_arr = Object.keys(_.br_vals);
 	// _.br_to_loop =  ['xs','sm','md','lg'];
 
+	_.br_mobile_max = parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--mobile-br-max') ) ||  'sm';
+
 
 	_.functions_on_load = [];
 	_.functions_on_resize = [];
@@ -689,47 +691,55 @@ window.jQuery && jQuery.noConflict();
 				})
 
 			if( selector ){
-						
+
 				if(
-					selector.classList.contains('open')
-					&& clicked.classList.contains('open')
+					!(
+						selector.classList.contains('accordion-mobile')
+						&& !_1p21.fw.validateBr(_.br_mobile_max,'below')
+					)
 				){
-
-					slideUp(selector); 
-					clicked.classList.remove('open'); 
-					selector.classList.remove('open'); 
-
-				}else{
-
-					/*
-					if(selector.closest('.accordion-group:not(.accordion-group-multiple)').length) {
-						// console.log('bitch ass');
-						selector.closest('.accordion-group:not(.accordion-group-multiple)').find('.accordion').slideUp(); 
-						$(this).closest('.accordion-group:not(.accordion-group-multiple)').find('[data-toggle="accordion"]').removeClass('open'); 
-						selector.closest('.accordion-group:not(.accordion-group-multiple)').find('.accordion').removeClass('open'); 
-					}
-					*/
-					
-					if(selectorAncestor && !selectorAncestor.matches('.accordion-group-multiple') ) {
-
-						var accordions = selectorAncestor.querySelectorAll('.accordion');
-
-						var toggles = selectorAncestor.querySelectorAll('[data-toggle="accordion"]');
 						
-						accordions.forEach(function(accordion){
-							slideUp(accordion)
-							accordion.classList.remove('open');
-						});
+					if(
+						selector.classList.contains('open')
+						&& clicked.classList.contains('open')
+					){
 
-						toggles.forEach(function(toggle){
-							toggle.classList.remove('open');
-						});
-					
-					}; 
+						slideUp(selector); 
+						clicked.classList.remove('open'); 
+						selector.classList.remove('open'); 
 
-					slideDown(selector); 
-					clicked.classList.add('open'); 
-					selector.classList.add('open'); 
+					}else{
+
+						/*
+						if(selector.closest('.accordion-group:not(.accordion-group-multiple)').length) {
+							// console.log('bitch ass');
+							selector.closest('.accordion-group:not(.accordion-group-multiple)').find('.accordion').slideUp(); 
+							$(this).closest('.accordion-group:not(.accordion-group-multiple)').find('[data-toggle="accordion"]').removeClass('open'); 
+							selector.closest('.accordion-group:not(.accordion-group-multiple)').find('.accordion').removeClass('open'); 
+						}
+						*/
+						
+						if(selectorAncestor && !selectorAncestor.matches('.accordion-group-multiple') ) {
+
+							var accordions = selectorAncestor.querySelectorAll('.accordion');
+
+							var toggles = selectorAncestor.querySelectorAll('[data-toggle="accordion"]');
+							
+							accordions.forEach(function(accordion){
+								slideUp(accordion)
+								accordion.classList.remove('open');
+							});
+
+							toggles.forEach(function(toggle){
+								toggle.classList.remove('open');
+							});
+						
+						}; 
+
+						slideDown(selector); 
+						clicked.classList.add('open'); 
+						selector.classList.add('open'); 
+					}
 				}
 			}
 		});

@@ -40,6 +40,7 @@ $prefix: '.thumbnail';
 	width:$calculated-thumbnail-size;
 	max-width:100%;
 	display:inline-block;
+	position:relative;
 	@include type-set((
 		size: $calculated-thumbnail-font-size,
 		leading: $calculated-thumbnail-line-height,
@@ -54,8 +55,12 @@ $prefix: '.thumbnail';
 	}
 
 	&,&-image {
-		@extend .fit-image;
+		@extend %for-fit-image;
 		border-radius: $thumbnail-border-radius;
+	}
+
+	&-image {
+		position:absolute;
 	}
 
 	&-image,img {
@@ -102,9 +107,9 @@ $prefix: '.thumbnail';
 		align-content: center;
 		align-items: center;
 
-		#{$prefix}#{$prefix}-small & {
-			top: .0625em;
-		}
+		// #{$prefix}#{$prefix}-small & {
+		// 	top: .0625em;
+		// }
 
 	}
 

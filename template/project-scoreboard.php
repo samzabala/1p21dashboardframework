@@ -36,7 +36,9 @@
 			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
 
 				<div class="flex-col-md-7 align-self-center">
-					<p class="special-secondary background-gradient text-clip-background project-site no-margin"><span class="REPLACE">sitedomainurlintheweb.com</span></p>
+					<h3 class="special-secondary background-gradient text-clip-background project-site no-margin">
+						<span class="REPLACE">sitedomainurlintheweb.com</span>
+					</h3>
 					<p class="color-neutral no-margin project-name"><span class="REPLACE">Client Name</span></p>
 				</div>
 				
@@ -110,10 +112,9 @@
 			</div>
 
 	<!-- On Page -->
-		<a
+		<div
 			id="project-scoreboard-on-page"
-			class="module module-no-gutter text-align-center text-leading-compact color-inherit color-primary-hover"
-			href="<?= app_create_link(array('template'=>'projects')); ?>"
+			class="module module-no-gutter text-align-center text-leading-compact"
 			data-grid-area="onpage">
 			
 			<span class="module-content">
@@ -126,7 +127,7 @@
 
 			</span>
 			
-		</a>
+		</div>
 
 	<!-- Avg -->
 		<div
@@ -167,30 +168,33 @@
 
 	<!-- Ranking -->
 		<div
-				id="project-scoreboard-ranking"
-				class="module"
-				data-grid-area="ranking">
-				<div class="module-header module-header-break">
-					<h3 class="module-title">Rankings Chart</h3>
-					<div class="module-functions">
-						<?php app_get_component('components/filter-dropdown-date'); ?>
-					</div>
-				</div>
-				<div class="module-content">
-					<div class="p text-align-center">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-08.png" alt="" />
-					</div>
-					<ul class="no-margin text-align-right inline no-margin-bottom">
-						<li>
-							<span class="legend legend-accent"></span> Average Rank
-						</li>
+			id="project-scoreboard-ranking"
+			class="module"
+			data-grid-area="ranking">
+			<div class="module-header module-header-break">
+			
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
 
-						<li>
-							<span class="legend legend-primary"></span> Average HR Rank
-						</li>
-					</ul>
+				<h3 class="module-title">Rankings Chart</h3>
+				<div class="module-functions accordion accordion-mobile">
+					<?php app_get_component('components/filter-dropdown-date'); ?>
 				</div>
 			</div>
+			<div class="module-content">
+				<div class="p text-align-center">
+					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-08.png" alt="" />
+				</div>
+				<ul class="no-margin text-align-right inline no-margin-bottom">
+					<li>
+						<span class="legend legend-accent"></span> Average Rank
+					</li>
+
+					<li>
+						<span class="legend legend-primary"></span> Average HR Rank
+					</li>
+				</ul>
+			</div>
+		</div>
 
 	<!-- Ranking -->
 		<div
@@ -199,8 +203,11 @@
 			data-grid-area="keywords">
 
 			<div class="module-header module-header-break">
+				
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
 				<h3 class="module-title">Rankings Chart</h3>
-				<div class="module-functions">
+				<div class="module-functions accordion accordion-mobile">
 					<?php app_get_component('components/filter-dropdown-keywords'); ?>
 					<?php app_get_component('components/filter-dropdown-date'); ?>
 					<?php app_get_component('components/filter-toggle-my'); ?>
@@ -209,16 +216,16 @@
 
 			<div class="module-content">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
 				</div>
 				
 				
-				<ul class="average-legend unstyled no-margin-bottom flex-grid flex-grid-compact">
+				<ul class="average-legend unstyled flex-grid flex-grid-compact flex-grid-fixed">
 					<!--
-						@dynamic: li
+						@DYNAMIC: li
 						@NOTE background-color on .legend will be replaced dynamically based on graph
 					-->
-					<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					<li class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 							<span class="legend" style="background-color: #fb1818"></span>
 							<span class="project-keyword"><span class="REPLACE">Keyword</span></span>
 					</li>
@@ -236,7 +243,7 @@
 							
 
 							
-							<li class="flex-0-1 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+							<li class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
 								<span class="project-keyword"><span class="REPLACE">Keyword</span></span>
 							
@@ -258,7 +265,7 @@
 			data-grid-area="table">
 			<div class="module-content">
 
-			<!-- @if associated projects  are available -->
+			<!-- @IF associated projects  are available -->
 				<div class="table-wrapper">
 					<table class="text-vertical-align-middle">
 						<tr>
@@ -271,7 +278,7 @@
 							<th>Last Checked</th>
 							<th>Change (30 Days)</th>
 
-							<th class="dashboard-table-cell-thumbnail text-align-center">Rank</th>
+							<th class="dashboard-table-cell-thumbnail">Rank</th>
 						</tr>
 
 
@@ -283,7 +290,7 @@
 							</td>
 							<td class="dashboard-table-cell-url">
 								
-								<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple text-leading-compact" href="#REPLACE-project-page-url" target="_blank" >
+								<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
 									<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
 								</a>
 							</td>
@@ -314,7 +321,7 @@
 							</td>
 							<td>
 								<!--
-									@dynamic
+									@DYNAMIC
 										classes
 											color-error | color-success
 											- changes based on .project-count-change value
@@ -324,7 +331,7 @@
 								</span>
 							</td>
 
-							<td class="dashboard-table-cell-thumbnail text-align-center">
+							<td class="dashboard-table-cell-thumbnail">
 								<span class="thumbnail thumbnail-small background-intensity-5">
 								<span class="project-rank thumbnail-text">
 									<span class="REPLACE">69</span>
@@ -345,7 +352,7 @@
 									</td>
 									<td class="dashboard-table-cell-url">
 										
-										<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple text-leading-compact" href="#REPLACE-project-page-url" target="_blank" >
+										<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
 											<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
 										</a>
 									</td>
@@ -376,7 +383,7 @@
 									</td>
 									<td>
 										<!--
-											@dynamic
+											@DYNAMIC
 												classes
 													color-error | color-success
 													- changes based on .project-count-change value
@@ -386,7 +393,7 @@
 										</span>
 									</td>
 
-									<td class="dashboard-table-cell-thumbnail text-align-center">
+									<td class="dashboard-table-cell-thumbnail">
 										<span class="thumbnail thumbnail-small background-intensity-<?=$i ?>">
 										<span class="project-rank thumbnail-text">
 											<span class="REPLACE"><?= $i * 10 ?></span>
@@ -400,7 +407,7 @@
 				</div>
 
 
-			<!-- @else NO assigned tasks are available -->
+			<!-- @ELSE NO assigned tasks are available -->
 				<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 			</div>

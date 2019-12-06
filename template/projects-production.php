@@ -3,7 +3,9 @@
 			
 		<div class="module-header">
 			
-			<div class="module-functions align-items-center">
+			<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+				
+			<div class="module-functions accordion accordion-mobile align-items-center">
 				<div class="flex-grid flex-grid-no-gutter-y">
 
 					<div class="flex-col-md-9 flex-1-1">
@@ -23,7 +25,7 @@
 
 		<div class="module-content">
 
-			<!-- @if associated projects  are available -->
+			<!-- @IF associated projects  are available -->
 				<div class="table-wrapper">
 					<table class="text-vertical-align-middle">
 					<tr>
@@ -32,29 +34,25 @@
 							<th>Project Level</th>
 
 							<th>
-								<a href="#" class="color-inherit">Started <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
+								<a href="#" class="dashboard-sort-table-toggle color-inherit">Started <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
 							</th>
 							<th>Time</th>
 
 							<th>Status</th>
 
-							<th class="dashboard-table-cell-thumbnail text-align-center">Des</th>
+							<th class="dashboard-table-cell-thumbnail">Des</th>
 
-							<th class="dashboard-table-cell-thumbnail text-align-center">Dev</th>
+							<th class="dashboard-table-cell-thumbnail">Dev</th>
 
-							<th class="dashboard-table-cell-thumbnail text-align-center">PM</th>
+							<th class="dashboard-table-cell-thumbnail">PM</th>
 
-							<th class="dashboard-table-cell-thumbnail text-align-center">SLS</th>
+							<th class="dashboard-table-cell-thumbnail">SLS</th>
 
 							<th class="dashboard-table-cell-action text-align-center">Action</th>
 						</tr>
 
 
-						<!--
-							@loop tr
-							@dynamic 
-							content .project-task-name. .project-name
-						-->
+						<!-- @LOOP tr -->
 						<tr>
 							<td class="dashboard-table-cell-name">
 								<?php app_get_component('components/project-link'); ?>
@@ -76,24 +74,24 @@
 
 							<td>
 								<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-								<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
-									<span class="task-status">Task Status</span>
-								</a>
+								<span class="tag tag-accent">
+									<span class="task-status"><span class="REPLACE">Task Status<span></span>
+								</span>
 							</td>
 
-							<td class="dashboard-table-cell-thumbnail text-align-center">
+							<td class="dashboard-table-cell-thumbnail">
 								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
-							<td class="dashboard-table-cell-thumbnail text-align-center">
+							<td class="dashboard-table-cell-thumbnail">
 								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
-							<td class="dashboard-table-cell-thumbnail text-align-center">
+							<td class="dashboard-table-cell-thumbnail">
 								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
-							<td class="dashboard-table-cell-thumbnail text-align-center">
+							<td class="dashboard-table-cell-thumbnail">
 								<?php app_get_component('components/profile-image-small'); ?>
 							</td>
 
@@ -140,24 +138,24 @@
 
 									<td>
 										<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-										<a href="<?=app_create_link(array('template'=>'projects')); ?>" class="tag tag-accent">
-											<span class="task-status">Task Status</span>
-										</a>
+										<span class="tag tag-accent">
+											<span class="task-status"><span class="REPLACE">Task Status<span></span>
+															</span>
 									</td>
 
-									<td class="dashboard-table-cell-thumbnail text-align-center">
+									<td class="dashboard-table-cell-thumbnail">
 										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
-									<td class="dashboard-table-cell-thumbnail text-align-center">
+									<td class="dashboard-table-cell-thumbnail">
 										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
-									<td class="dashboard-table-cell-thumbnail text-align-center">
+									<td class="dashboard-table-cell-thumbnail">
 										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
-									<td class="dashboard-table-cell-thumbnail text-align-center">
+									<td class="dashboard-table-cell-thumbnail">
 										<?php app_get_component('components/profile-image-small'); ?>
 									</td>
 
@@ -184,7 +182,7 @@
 				</div>
 		
 
-			<!-- @else NO assigned tasks are available -->
+			<!-- @ELSE NO assigned tasks are available -->
 				<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 		</div>

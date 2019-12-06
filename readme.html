@@ -33,6 +33,44 @@ will separate dashboard and framework one the bois are readeh</p>
 <li><a href="https://github.com/samzabala">1p21 Dashboard Framework</a></li>
 </ul>
 
+<h1 id="notes">NOTES</h1>
+
+<ul>
+<li>Overrides to framework or custom styles are prepended with #dashboard or .dashboard</li>
+<li>dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile&#8217;s name data ) but not styled yet</li>
+</ul>
+
+<h2 id="therearehtmlcommentsorstringinstancesbymarkupwithdynamicattributsandorcontent">There are html comments or string instances by markup with dynamic attributs and or content</h2>
+
+<ul>
+<li><p><code>REPLACE</code>
+Meant to be replaced with dynamic content or actual data</p></li>
+<li><p><code>DYNAMIC</code>
+Contains information for something that needs to be dynamicall modified but not necessarily replaced</p></li>
+<li><p><code>LOOP</code></p>
+
+<p>Boi gon loop</p></li>
+<li><p><code>PLACEHOLDER</code></p>
+
+<p>Meant to go away when dynamicness is ready</p></li>
+<li><p><code>NOTE</code></p>
+
+<p>Other elements that rely on server side based&#8230; things</p></li>
+<li><p>@IF @ELSE</p>
+
+<p>Conditional markup</p></li>
+<li><p>Functions</p>
+
+<ul>
+<li><p>app_create_link()</p>
+
+<p>Also counts as REPLACE, this was setup solely to link together the user flow of templates. this creates internal links</p></li>
+<li><p>app_get_component()</p>
+
+<p>Calls on template markups of functionality based template markups. replace or repurpose if needed.</p></li>
+</ul></li>
+</ul>
+
 <h1 id="frameworkdocumentation">Framework Documentation</h1>
 
 <p><a href="assets/plugins/framework/readme.md">Here</a></p>

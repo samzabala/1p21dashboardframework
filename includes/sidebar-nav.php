@@ -21,28 +21,13 @@
 
 					 -->
 					<li class="nav-item">
+						<!-- @IF has a dropdown -->
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">SEO</span>
 							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</span>
-						<ul class="dropdown">
-							
-							<!-- 
-								@dynamic 
-									content li .profile-name
-								@loop li
-							 -->
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
-							</li>
-
-
-
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
-							</li>
-						</ul>
+						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
 			<?php else: ?>
 
@@ -50,7 +35,7 @@
 
 					<!-- PROJ -->
 					<li class="nav-item">
-
+						<!-- @ELSE no dropdown -->
 						<a href="<?=app_create_link( array('template'=>'projects') ); ?>">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg">
 							<span class="nav-item-text">Projects</span>
@@ -62,114 +47,53 @@
 					<!-- DESIGNERS -->
 					<li class="nav-item">
 
+						<!-- @IF has a dropdown -->
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg">
 							<span class="nav-item-text">Designers</span>
 							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</span>
-
-						<ul class="dropdown">
-							
-							<!-- 
-								@dynamic 
-									content li .profile-name
-								@loop li
-							 -->
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
-							</li>
-
-
-
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
-							</li>
-						</ul>
+						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
 
 					<!-- DEVELOPERS -->
 					<li class="nav-item">
+
+						<!-- @IF has a dropdown -->
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">Developers</span>
 							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</span>
-
-						<ul class="dropdown">
-
-							<!-- 
-								@dynamic 
-									content li .profile-name
-								@loop li
-							 -->
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
-							</li>
-
-
-
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
-							</li>
-						</ul>
+						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
 
 
 
 					<!-- MANAGERS -->
 					<li class="nav-item">
+
+						<!-- @IF has a dropdown -->
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-managers.svg">
 							<span class="nav-item-text">Managers</span>
 							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</span>
-
-						<ul class="dropdown">
-
-							<!-- 
-								@dynamic 
-									content li .profile-name
-								@loop li
-							 -->
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
-							</li>
-
-
-
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
-							</li>
-						</ul>
+						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
 
 
 
 					<!-- DALES -->
 					<li class="nav-item">
+
+						<!-- @IF has a dropdown -->
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-sales.svg">
 							<span class="nav-item-text">Sales</span>
 							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
 						</span>
-
-						<ul class="dropdown">
-
-							<!-- 
-								@dynamic 
-									content li .profile-name
-								@loop li
-							 -->
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profile') ); ?>"><span class="profile-name">Profile Name</span></a>
-							</li>
-
-
-
-							<li>
-								<a href="<?=app_create_link( array('template'=>'profiles') ); ?>">View All+</a>
-							</li>
-						</ul>
+						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
 			<?php endif; ?>
 		</ul>

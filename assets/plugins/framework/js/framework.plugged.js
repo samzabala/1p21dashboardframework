@@ -96,6 +96,8 @@ window.jQuery && jQuery.noConflict();
 	_.br_arr = Object.keys(_.br_vals);
 	// _.br_to_loop =  ['xs','sm','md','lg'];
 
+	_.br_mobile_max = parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--mobile-br-max') ) || 'sm';
+
 	_.functions_on_load = [];
 	_.functions_on_resize = [];
 
@@ -585,28 +587,36 @@ window.jQuery && jQuery.noConflict();
 
 
 			if( selector ){
+				
+				if(
+					!(
+						selector.hasClass('accordion-mobile')
+						&& !_1p21.fw.validateBr(_.br_mobile_max,'below')
+					)
+				){
 
 				
-				if( selector.hasClass('open') && $(this).hasClass('open') ){
+					if( selector.hasClass('open') && $(this).hasClass('open') ){
 
-					selector.slideUp(); 
-					$(this).removeClass('open'); 
-					selector.removeClass('open'); 
-				}else{
+						selector.slideUp(); 
+						$(this).removeClass('open'); 
+						selector.removeClass('open'); 
+					}else{
 
-					if(selector.closest('.accordion-group').length && !selector.closest('.accordion-group').is('.accordion-group-multiple')) {
-						// console.log('bitch ass');
-						selector.closest('.accordion-group').find('.accordion').slideUp(); 
+						if(selector.closest('.accordion-group').length && !selector.closest('.accordion-group').is('.accordion-group-multiple')) {
+							// console.log('bitch ass');
+							selector.closest('.accordion-group').find('.accordion').slideUp(); 
 
-						console.log( 'hey bitch');
+							console.log( 'hey bitch');
 
-						$(this).closest('.accordion-group').find('[data-toggle="accordion"]').removeClass('open'); 
-						selector.closest('.accordion-group').find('.accordion').removeClass('open'); 
+							$(this).closest('.accordion-group').find('[data-toggle="accordion"]').removeClass('open'); 
+							selector.closest('.accordion-group').find('.accordion').removeClass('open'); 
+						}
+
+						selector.slideDown(); 
+						$(this).addClass('open'); 
+						selector.addClass('open'); 
 					}
-
-					selector.slideDown(); 
-					$(this).addClass('open'); 
-					selector.addClass('open'); 
 				}
 			}
 		});

@@ -3,7 +3,7 @@
 <div class="module-function filter-dropdown-date">
 	
 	<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
-	<!-- @if label the filter -->
+	<!-- @IF label the filter -->
 	<!-- <div class="input-label"><span class="REPLACE">Date</span>:</div> -->
 
 	<button class="btn-group  btn-group-horizontal btn-group-unite" data-dropdown-width="100%" data-toggle="dropdown">

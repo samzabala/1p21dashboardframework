@@ -46,6 +46,10 @@ $prefix: '.table';
 		background:transparent;
 		// table-layout: fixed;
 
+		// &#{$prefix}-wrap {
+		// 	white-space: normal;
+		// }
+
 
 		@at-root thead,
 		tbody,

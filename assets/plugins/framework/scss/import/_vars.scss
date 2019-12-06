@@ -3,9 +3,9 @@
 // $debug: true !default;
 
 	//breakpiont
-	$br-xs-max: 767px !default;
-	$br-sm-max: 1279px !default;
-	$br-md-max: 1799px !default;
+	$br-xs-max: 600px !default;
+	$br-sm-max: 1200px !default;
+	$br-md-max: 1600px !default;
 
 	//extra breakpoints
 	$br-xxs-max: 400px !default;
@@ -124,12 +124,16 @@
 		$body-font-size: 16px !default;
 			$body-font-size-small: 14px !default;
 			$body-font-size-large: 24px !default;
-		$body-line-height: 30px !default;
+		$body-line-height: 24px !default;
 		$body-background: $global-background-contrast !default;
 			$body-background-inverse: $global-background-contrast-inverse !default;
 		$body-color: $brand-color-base !default;
 			$body-color-inverse: $brand-color-background !default;
 		$body-text-gutter-y: 30px !default;
+
+
+		$body-line-height-compact-factor: .875 !default;
+		$body-line-height-expanded-factor: 1.5 !default;
 
 		$body-heading-gutter-top: 1.75em !default;
 		$body-heading-gutter-bottom: 8px !default;
@@ -180,7 +184,7 @@
 
 		$global-disabled-opacity: .5 !default;
 
-		$body-ellipsis-multiple-max-lines: 2 !default;
+		$body-ellipsis-multiple-factor: 2 !default;
 
 	// SVG
 		$svg-gradient-color-start: $gradient-start !default;
@@ -662,16 +666,22 @@
 //ROOT VAR FOR JS
 
 :root {
-	--br-xxs: #{$br-xxs-max};
-	--br-xs: #{$br-xs-max};
-	--br-sm: #{$br-sm-max};
-	--br-md: #{$br-md-max};
+
+	//br
+		--br-xxs: #{$br-xxs-max};
+		--br-xs: #{$br-xs-max};
+		--br-sm: #{$br-sm-max};
+		--br-md: #{$br-md-max};
+
+		--mobile-br-max: #{$mobile-br-max};
+
+	//colour
 
 		--brand-color-base: #{$brand-color-base};
-		--brand-color-base-alt: #{$brand-color-base-alt};
+			--brand-color-base-alt: #{$brand-color-base-alt};
 
 		--brand-color-background: #{$brand-color-background};
-		--brand-color-background-alt: #{$brand-color-background-alt};
+			--brand-color-background-alt: #{$brand-color-background-alt};
 
 		--brand-color-neutral: #{$brand-color-neutral};
 			--brand-color-neutral-light: #{$brand-color-neutral-light};

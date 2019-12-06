@@ -7,11 +7,30 @@
 }
 
 .accordion {
-    display:none;
-    // transition: $transition-duration-long height $transition-timing;
-    // overflow:hidden;
+    &:not(.accordion-mobile) {
+        display:none;
+        // transition: $transition-duration-long height $transition-timing;
+        // overflow:hidden;
 
-    &.open {
-        display: block;
+        &.open {
+            display: block;
+        }
+    }
+
+    &#{&}-mobile {
+
+        @include br(#{$mobile-br-max}-max) {
+            display:none;
+            // transition: $transition-duration-long height $transition-timing;
+            // overflow:hidden;
+
+            &.open {
+                display: block;
+            }
+        }
+
+        @include br(#{$mobile-br-max-opposite}) {
+            display:block;
+        }
     }
 }

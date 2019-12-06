@@ -49,10 +49,17 @@ function app_init_content($slug = ''){
 		$template_part = filter_var($_GET['template'],FILTER_SANITIZE_STRING);
 
 		switch($template_part):
+
+			case 'new-content':
+			case 'on-page':
+			case 'social-media':
+				app_get_template_part('template/projects-scoreboard');
+				break;
+
 			case 'demos':
 			case 'profiles':
 			case 'last-activity':
-			case 'new-content':
+			case 'unique-links':
 				app_get_template_part('template/'.$template_part);
 				break;
 

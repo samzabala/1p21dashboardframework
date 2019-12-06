@@ -4,22 +4,7 @@
 
 	<a href="#"
 		id="dashboard-block-main-nav-toggle"
-		
-		class="btn
-		color-primary-hover
-		color-primary-active
-		color-primary-focus
-		background-primary-toggle
-		color-global-background-toggle
-		btn-symbol
-		btn-no-radius
-		dashboard-sidenav-toggle
-		btn-no-shadow
-		btn-large
-		tablet-hide
-		desktop-hide
-		laptop-hide
-		nav-toggle">
+		class="btn color-primary-hover color-primary-active color-primary-focus background-primary-toggle color-global-background-toggle btn-symbol btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large hide-nonmobile nav-toggle">
 		<i class="symbol symbol-burger"></i>
 	</a>
 
@@ -53,7 +38,7 @@
 			
 			<?php app_get_component('components/profile-image-small');?>
 
-			<a href="<?=app_create_link( array('template'=>'profile') ); ?>" id="nav-account-name" class="btn btn-no-shadow btn-small color-inherit font-weight-500 mobile-hide profile-name tablet-hide no-padding-x">
+			<a href="<?=app_create_link( array('template'=>'profile') ); ?>" id="nav-account-name" class="btn btn-no-shadow btn-small color-inherit font-weight-500 hide-xs profile-name hide-sm no-padding-x">
 				<span class="REPLACE">Place Name</span>
 			</a>
 			

@@ -337,9 +337,7 @@
 	/* FIT IMAGE */	
 
 		/* emulate background cover on image tags */
-		.fit-image {
-			position: relative;
-			
+		%for-fit-image {
 			img {
 				position:absolute;
 				width: 100%;
@@ -353,6 +351,10 @@
 				object-fit: cover;
 			}
 		}
+		.fit-image {
+			position: relative;
+			@extend %for-fit-image;
+		}
 
 	/* TEXT CLASSES */
 	$prefix: '.text';
@@ -361,11 +363,11 @@
 		&-leading {
 			
 			&-compact {
-				line-height: $calculated-body-line-height * .75 !important;
+				line-height: $calculated-body-line-height * $body-line-height-compact-factor!important;
 			}
 			
 			&-expanded {
-				line-height: $calculated-body-line-height * 1.5!important;
+				line-height: $calculated-body-line-height * $body-line-height-expanded-factor!important;
 			}
 			
 			&-normalize {
@@ -430,6 +432,7 @@
 
 		&-wrap {
 
+			white-space: normal;
 
 			&-ellipsis {
 				/* cut overflowing single line to ellipsis */
@@ -444,18 +447,18 @@
 					white-space: normal!important;
 					text-overflow: ellipsis!important;
 					display: -webkit-box!important;
-					-webkit-line-clamp: $body-ellipsis-multiple-max-lines!important;
+					-webkit-line-clamp: $body-ellipsis-multiple-factor!important;
 					-webkit-box-orient: vertical!important;
 					overflow: hidden!important;
-					height: calc((#{$calculated-body-single-line}) * #{$body-ellipsis-multiple-max-lines});
+					height: calc((#{$calculated-body-single-line}) * #{$body-ellipsis-multiple-factor});
 
 					#{$prefix}-leading-compact &,
 					&#{$prefix}-leading-compact {
-						height: calc((#{$calculated-body-single-line} * .75) * #{$body-ellipsis-multiple-max-lines});
+						height: calc((#{$calculated-body-single-line} * #{$body-line-height-compact-factor}) * #{$body-ellipsis-multiple-factor});
 					}
 					#{$prefix}-leading-expanded &,
 					&#{$prefix}-leading-expanded {
-						height: calc((#{$calculated-body-single-line} * 1.5) * #{$body-ellipsis-multiple-max-lines});
+						height: calc((#{$calculated-body-single-line} * #{$body-line-height-expanded-factor}) * #{$body-ellipsis-multiple-factor});
 					}
 				}
 			}
@@ -568,6 +571,29 @@
 	}
 	&-sticky {
 		position:sticky!important;
+	}
+}
+
+.float {
+	&-left {
+		float: left!important;
+	}
+	&-right {
+		float: right!important;
+	}
+}
+
+
+
+.clear {
+	&-left {
+		clear: left!important;
+	}
+	&-right {
+		clear: right!important;
+	}
+	&-both {
+		clear: both!important;
 	}
 }
 
@@ -870,59 +896,94 @@
 
 
 /* HIDEY CLASSES */
-.desktop-only {
+.only-lg {
 	display: none !important;
 }
 
-.laptop-only {
+.only-md {
 	display: none !important;
 }
 
-.tablet-only {
+.only-sm {
 	display: none !important;
 }
 
-.mobile-only {
+.only-xs {
 	display: none !important;
 }
 
 @include breakpoint(lg) {
-	.desktop-only {
+	.only-lg {
 		display: block !important;
 	}
 	
-	.desktop-hide {
+	.hide-lg {
 		display:none!important;
 	}
 }
 
 @include breakpoint((md,md-max)) {
-	.laptop-only {
+	.only-md {
 		display: block !important;
 	}
 	
-	.laptop-hide {
+	.hide-md {
 		display:none!important;
 	}
 }
 
 @include breakpoint((sm,sm-max)) {
 
-	.tablet-only {
+	.only-sm {
 		display: block !important;
 	}
 	
-	.tablet-hide {
+	.hide-sm {
 		display:none!important;
 	}
 }
 
 @include breakpoint(xs-max) {
-	.mobile-only {
+	.only-xs {
 		display: block !important;
 	}
 	
-	.mobile-hide {
+	.hide-xs {
+		display:none!important;
+	}
+}
+
+
+
+.only-mobile {
+	display: none !important;
+}
+
+
+.only-nonmobile {
+	display: none !important;
+}
+
+
+@include breakpoint(#{$mobile-br-max}-max) {
+
+	.only-mobile {
+		display: block !important;
+	}
+	
+	.hide-mobile {
+		display:none!important;
+	}
+}
+
+
+@include breakpoint(#{$mobile-br-max-opposite}) {
+
+	.only-nonmobile {
+		display: block !important;
+	}
+	
+	.hide-nonmobile {
 		display:none!important;
 	}
 }

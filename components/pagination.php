@@ -1,6 +1,6 @@
 <div class="pagination">
 
-	<!-- @dynamic .pagination *-->
+	<!-- @DYNAMIC .. yes-->
 
 	<a href="#" title="next"><i class="symbol symbol-caret symbol-caret-left"></i></a>
 	
@@ -9,4 +9,5 @@
 	</span>
 
 	<a href="#" title="prev"><i class="symbol symbol-caret symbol-caret-right"></i></a>
+
 </div>

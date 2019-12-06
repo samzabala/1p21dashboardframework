@@ -1,7 +1,7 @@
-<div class="module-function filter-dropdown-accounts">
+<div class="module-function filter-dropdown-projects">
 	
 	<button class="btn-group  btn-group-horizontal btn-group-unite" data-dropdown-width="100%" data-toggle="dropdown">
-		<span class="btn btn-default">All Acounts</span>
+		<span class="btn btn-default">Select Client</span>
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 	</button>
 	

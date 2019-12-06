@@ -1,8 +1,8 @@
 <!--
 
 	@interactive
-		.module-functions *,
-	@dynamic
+		.module-functions accordion accordion-mobile *,
+	@DYNAMIC
 		dom element
 			.progress-bar
  -->
@@ -20,9 +20,19 @@
 		'accounts accounts accounts'"
 
 
-	data-grid-template-rows-md="repeat( 3, minmax(180px, auto) )"
-	data-grid-template-columns-md="350px 1fr 1fr 150px"
+	data-grid-template-rows-md="repeat( auto-fit, minmax(140px, min-content) )"
+	data-grid-template-columns-md="350px 1fr 1fr 1fr"
 	data-grid-template-areas-md="
+		'profile-card linksbuilt onpage todos'
+		'profile-card overall overall overall'
+		'distribution distribution clientkey clientkey'
+		'campaign campaign clientkey clientkey'
+		'average average average average'
+		'accounts accounts accounts accounts'"
+		
+	data-grid-template-rows-lg="repeat( 3, minmax(180px, auto) ) repeat( auto-fit, minmax(180px, min-content) )"
+	data-grid-template-columns-lg="350px 3fr 2fr 150px"
+	data-grid-template-areas-lg="
 		'profile-card overall overall linksbuilt'
 		'profile-card overall overall onpage'
 		'profile-card overall overall todos'
@@ -30,17 +40,16 @@
 		'campaign campaign clientkey clientkey'
 		'average average average average'
 		'accounts accounts accounts accounts'"
-		
-	data-grid-template-columns-lg="350px 3fr 2fr 150px"
 	>
 
 	<!-- Profile card -->
 		<?php app_get_component('components/profile-card',DASHBOARD_SLUG); ?>
 
 	<!-- Links Built -->
-		<div
+		<a
 			id="profile-scoreboard-links-built"
-			class="module module-no-gutter text-align-center text-leading-compact"
+			class="color-inherit color-primary-hover module module-no-gutter text-align-center text-leading-compact"
+			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="linksbuilt">
 				
 				<span class="module-content">
@@ -50,12 +59,12 @@
 					<span class="font-size-small color-neutral">Links Built</span>
 				</span>
 				
-		</div>
+		</a>
 
 	<!-- On Page -->
 		<a
 			id="profile-scoreboard-on-page"
-			class="module module-no-gutter text-align-center text-leading-compact color-inherit color-primary-hover"
+			class="color-inherit color-primary-hover module module-no-gutter text-align-center text-leading-compact"
 			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="onpage">
 				
@@ -73,9 +82,10 @@
 
 
 	<!-- Todos -->
-		<div
+		<a
 			id="profile-scoreboard-to-dos"
-			class="module module-no-gutter text-align-center text-leading-compact"
+			class="color-inherit color-primary-hover module module-no-gutter text-align-center text-leading-compact"
+			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="todos">
 				
 				<span class="module-content">
@@ -83,11 +93,11 @@
 					<span class="special-primary profile-count-on-page">
 						<span class="REPLACE">32</span>
 					</span>
-					<span class="font-size-small color-neutral">On-Page</span>
+					<span class="font-size-small color-neutral">To-dos</span>
 
 				</span>
 				
-		</div>
+		</a>
 
 	<!-- Overall Actions -->
 		<div
@@ -96,10 +106,12 @@
 			data-grid-area="overall">
 		
 			<div class="module-header module-header-break">
+				
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
 
 				<h3 class="module-title">Overall Actions</h3>
 
-				<div class="module-functions">
+				<div class="module-functions accordion accordion-mobile">
 					<?php app_get_component('components/filter-dropdown-date'); ?>
 				</div>
 
@@ -108,7 +120,7 @@
 			<div class="module-content">
 
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-03.png" alt="">
+					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-03.png" alt="">
 				</div>
 
 				<ul class="text-align-right inline no-margin-bottom">
@@ -137,9 +149,12 @@
 			data-grid-area="distribution">
 
 			<div class="module-header module-header-break">
-				<div class="module-title">Activity Distribution</div>
-				<div class="module-functions">
-					<?php app_get_component('components/modal-last-activity'); ?>
+				
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
+				<h3 class="module-title">Activity Distribution</h3>
+				<div class="module-functions accordion accordion-mobile">
+					<?php app_get_component('components/linkto-last-activity'); ?>
 				</div>
 			</div>
 
@@ -151,7 +166,7 @@
 
 					<!--
 						@loop link activity distribution
-						@dynamic all attrbutes EXCEPT class
+						@DYNAMIC all attrbutes EXCEPT class
 					-->
 					<div class="progress-bar"
 
@@ -205,7 +220,7 @@
 					
 					<!--
 						@loop link activity distribution
-						@dynamic all attrbutes EXCEPT class
+						@DYNAMIC all attrbutes EXCEPT class
 					-->
 					<div class="progress-bar"
 
@@ -267,7 +282,7 @@
 			<div class="module-content">
 				
 				<!-- @loop p 
-					@dynamic
+					@DYNAMIC
 						attr style background color
 				-->
 				<p>
@@ -313,7 +328,7 @@
 			</div>
 
 			<div class="module-content">
-				<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-05.png" alt="">
+				<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-05.png" alt="">
 			</div>
 
 		</div>
@@ -326,9 +341,12 @@
 			class="module"
 			data-grid-area="average">
 			<div class="module-header module-header-break">
+				
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
 				<h3 class="module-title">Average Rank By Account</h3>
 				
-				<div class="module-functions">
+				<div class="module-functions accordion accordion-mobile">
 
 					<?php app_get_component('components/filter-toggle'); ?>
 
@@ -341,7 +359,7 @@
 
 			<div class="module-content">
 				<div>
-					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
 				</div>
 
 			</div>
@@ -360,7 +378,7 @@
 			
 				<div class="module-content">
 					
-					<!-- @if accounts  are available -->
+					<!-- @IF accounts  are available -->
 						<div class="table-wrapper">
 
 							<table class="text-vertical-align-middle">
@@ -374,7 +392,7 @@
 										Priority
 									</th>
 
-									<th>AVG HR Rank</th>
+									<th><a href="#" class="dashboard-sort-table-toggle color-inherit">AVG HR Rank <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a></th>
 
 									<th>AVG Rank</th>
 
@@ -396,22 +414,14 @@
 								</tr>
 
 
-								<!--
-									@loop tr
-									@dynamic 
-									content
-										.project-task-name.
-										.project-name
-										.project-started
-										.task-status
-								-->
+								<!-- @LOOP tr -->
 								<tr class="text-align-center">
 									
 									<td class="dashboard-table-cell-name text-align-left">
 										<?php app_get_component('components/project-link'); ?>
 									</td>
 
-									<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
+									<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
 									<td class="dashboard-table-cell-thumbnail" class="text-align-center">
 										<div class="thumbnail project-priority thumbnail-small background-intensity-5">
 											<span class="thumbnail-text">
@@ -504,7 +514,7 @@
 												<?php app_get_component('components/project-link'); ?>
 											</td>
 
-											<!-- @NOTE: @dynamic class .background-intensity-REPLACE -->
+											<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
 											<td class="dashboard-table-cell-thumbnail" class="text-align-center">
 												<div class="thumbnail project-priority thumbnail-small background-intensity-<?=$i ?>">
 													<span class="thumbnail-text">
@@ -596,7 +606,7 @@
 						</div>
 				
 
-					<!-- @else NO accounts are available -->
+					<!-- @ELSE NO accounts are available -->
 						<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 				</div>

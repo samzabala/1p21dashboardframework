@@ -7,7 +7,6 @@
 	
 	
 	<ul class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
-		<!-- @dynamic -->
 		<li>
 			<a href="<?= app_create_link( array('template'=>'project') );?>">
 				<span class="project-keyword">

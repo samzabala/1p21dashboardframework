@@ -224,9 +224,10 @@ $prefix: '.special';
 		));
 		display:block;
 		margin-bottom: $calculated-body-heading-gutter-bottom;
+		margin-top: $calculated-body-heading-gutter-top;
 
-		&:not(:first-child) {
-			margin-top: $calculated-body-heading-gutter-top;
+		&:first-child {
+			margin-top:0;
 		}
 
 		.body-inverse & {
@@ -474,6 +475,7 @@ hr {
 	opacity: .2;
 	width:100%;
 	flex: 0 0;
+	margin-top: $calculated-body-text-gutter-y;
 }
 
 small {
