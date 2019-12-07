@@ -12,7 +12,7 @@
 		'keywords keywords'
 		'table table'"
 
-	data-grid-template-rows-md="auto repeat( 4, minmax(150px, auto) )"
+	data-grid-template-rows-md="auto repeat( 4, minmax(150px, 1fr) )"
 	data-grid-template-columns-md="1fr 275px"
 	data-grid-template-areas-md="
 		'info info'
@@ -31,12 +31,10 @@
 			class="module"
 			data-grid-area="info">
 
-
-
 			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
 
 				<div class="flex-col-md-7 align-self-center">
-					<h3 class="special-secondary background-gradient text-clip-background project-site no-margin">
+					<h3 class="special-secondary background-gradient text-clip-background project-site no-margin text-wrap-ellipsis">
 						<span class="REPLACE">sitedomainurlintheweb.com</span>
 					</h3>
 					<p class="color-neutral no-margin project-name"><span class="REPLACE">Client Name</span></p>
@@ -111,7 +109,9 @@
 					
 			</div>
 
+
 	<!-- On Page -->
+
 		<div
 			id="project-scoreboard-on-page"
 			class="module module-no-gutter text-align-center text-leading-compact"
@@ -129,7 +129,9 @@
 			
 		</div>
 
+
 	<!-- Avg -->
+
 		<div
 			id="project-scoreboard-average"
 			class="module module-no-gutter text-align-center text-leading-compact"
@@ -143,7 +145,6 @@
 				<span class="font-size-small color-neutral">Average Rank</span>
 
 			</div>
-			
 			
 		</div>
 
@@ -180,7 +181,7 @@
 					<?php app_get_component('components/filter-dropdown-date'); ?>
 				</div>
 			</div>
-			<div class="module-content">
+			<div class="module-content align-self-center">
 				<div class="p text-align-center">
 					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-08.png" alt="" />
 				</div>
@@ -214,7 +215,7 @@
 				</div>
 			</div>
 
-			<div class="module-content">
+			<div class="module-content align-self-center">
 				<div class="p text-align-center">
 					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
 				</div>
@@ -232,23 +233,24 @@
 
 
 
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+							<?php 
+								$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+							?>
+							<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
+								
+
+								
+								<li class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+									<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
+									<span class="project-keyword"><span class="REPLACE">Keyword</span></span>
+								
+								</li>
+							<?php } ?>
 
 
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
-						<?php 
-							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-						?>
-						<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
-							
-
-							
-							<li class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
-								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-								<span class="project-keyword"><span class="REPLACE">Keyword</span></span>
-							
-							</li>
-						<?php } ?>
 				</ul>
 
 			</div>
@@ -342,66 +344,68 @@
 
 
 
-						<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
-							<?php for($i=1; $i<=4; $i++){ ?>
-								<tr>
-									<td>
-										<div class="project-query">
-											<span class="REPLACE">Keyword</span>
-										</div>
-									</td>
-									<td class="dashboard-table-cell-url">
-										
-										<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
-											<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
-										</a>
-									</td>
-									<td class="text-align-center">
-										<a class="font-size-large color-neutral project-map-result" href="#REPLACE-project-map-result-url" target="_blank" >
-											<i class="symbol symbol-map"></i>
-										</a>
-									</td>
-									<td class="text-align-center">
-										<span class="project-count-prev-90">
-											<span class="REPLACE">11</span>
-										</span>
-									</td>
-									<td class="text-align-center">
-										<span class="project-count-prev-90">
-											<span class="REPLACE">15</span>
-										</span>
-									</td>
-									<td class="text-align-center">
-										<span class="project-count-prev-90">
-											<span class="REPLACE">69</span>
-										</span>
-									</td>
-									<td>
-										<span class="project-last-checked-date">
-											<span class="REPLACE">04-20-69</span>
-										</span>
-									</td>
-									<td>
-										<!--
-											@DYNAMIC
-												classes
-													color-error | color-success
-													- changes based on .project-count-change value
-										-->
-										<span class="project-count-change color-success font-weight-700">
-											<span class="REPLACE">+<?=$i ?></span>
-										</span>
-									</td>
+							<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+								<?php for($i=1; $i<=4; $i++){ ?>
+									<tr>
+										<td>
+											<div class="project-query">
+												<span class="REPLACE">Keyword</span>
+											</div>
+										</td>
+										<td class="dashboard-table-cell-url">
+											
+											<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
+												<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
+											</a>
+										</td>
+										<td class="text-align-center">
+											<a class="font-size-large color-neutral project-map-result" href="#REPLACE-project-map-result-url" target="_blank" >
+												<i class="symbol symbol-map"></i>
+											</a>
+										</td>
+										<td class="text-align-center">
+											<span class="project-count-prev-90">
+												<span class="REPLACE">11</span>
+											</span>
+										</td>
+										<td class="text-align-center">
+											<span class="project-count-prev-90">
+												<span class="REPLACE">15</span>
+											</span>
+										</td>
+										<td class="text-align-center">
+											<span class="project-count-prev-90">
+												<span class="REPLACE">69</span>
+											</span>
+										</td>
+										<td>
+											<span class="project-last-checked-date">
+												<span class="REPLACE">04-20-69</span>
+											</span>
+										</td>
+										<td>
+											<!--
+												@DYNAMIC
+													classes
+														color-error | color-success
+														- changes based on .project-count-change value
+											-->
+											<span class="project-count-change color-success font-weight-700">
+												<span class="REPLACE">+<?=$i ?></span>
+											</span>
+										</td>
 
-									<td class="dashboard-table-cell-thumbnail">
-										<span class="thumbnail thumbnail-small background-intensity-<?=$i ?>">
-										<span class="project-rank thumbnail-text">
-											<span class="REPLACE"><?= $i * 10 ?></span>
-										</span>
-										</span>
-									</td>
-								</tr>
-							<?php } ?>
+										<td class="dashboard-table-cell-thumbnail">
+											<span class="thumbnail thumbnail-small background-intensity-<?=$i ?>">
+											<span class="project-rank thumbnail-text">
+												<span class="REPLACE"><?= $i * 10 ?></span>
+											</span>
+											</span>
+										</td>
+									</tr>
+								<?php } ?>
+
+								
 					</table>
 					
 				</div>

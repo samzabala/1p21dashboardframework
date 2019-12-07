@@ -1,6 +1,6 @@
 <div
-id="last-activity"
-class="module-grid">
+	id="last-activity"
+	class="module-grid">
 
 
 	<!-- header -->
@@ -19,23 +19,21 @@ class="module-grid">
 						<span class="REPLACE">Profile Name</span>
 					</a>
 				</div>
+
 				<div class="module-functions accordion accordion-mobile">
 					<?php app_get_component('components/filter-dropdown-date'); ?>
 				</div>
+
 			</div>
 
 		</div>
-
-
-	
-
 	
 
 	<!-- ditribution -->
 		<div
 			id="last-activity-distribution"
-			class="module"
-			data-grid-area="">
+			class="module">
+
 			<div class="module-header module-header-break">
 
 				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
@@ -46,12 +44,13 @@ class="module-grid">
 					<?php app_get_component('components/filter-dropdown-projects'); ?>
 				</div>
 			</div>
-			<div class="module-content">
-		
+
+			<div class="module-content align-self-center">
 				<div class="p">
 						<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-07.png" alt="" />
 				</div>
 			</div>
+
 		</div>
 
 	
@@ -59,8 +58,8 @@ class="module-grid">
 	<!-- on page -->
 		<div
 			id="last-activity-on-page"
-			class="module"
-			data-grid-area="">
+			class="module">
+
 			<div class="module-header module-header-break">
 
 
@@ -73,19 +72,22 @@ class="module-grid">
 				<?php app_get_component('components/filter-dropdown-projects'); ?>
 				</div>
 			</div>
-			<div class="module-content">
-		
+
+			<div class="module-content align-self-center">
 				<div class="p">
 						<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-07.png" alt="" />
 				</div>
 			</div>
+
 		</div>
 
 
 	<!-- TABLE -->
 		<div
 			class="module">
+
 			<div class="module-content">
+
 				<div class="module-header module-header-break">
 					
 					<?php app_get_component('components/module-functions-accordion-toggle'); ?>
@@ -98,10 +100,12 @@ class="module-grid">
 						<?php app_get_component('components/filter-input-search'); ?>
 						<?php app_get_component('components/modal-export'); ?>
 					</div>
+
 				</div>
 
 			<!-- @IF associated projects  are available -->
 				<div class="table-wrapper">
+					
 					<table class="text-vertical-align-middle">
 						<tr>
 							<th class="dashboard-table-cell-name">Account</th>
@@ -136,7 +140,6 @@ class="module-grid">
 							</td>
 
 							<td class="text-align-center">
-								
 
 								<span class="project-avg-rank font-weight-900 text-transform-uppercase">
 									<span class="REPLACE">12</span>
@@ -148,102 +151,108 @@ class="module-grid">
 								</span>
 							</td>
 
-
-
 							<td>
 								<span class="profile-last-to-do-date">
 									<span class="REPLACE">04-20-69</span>
 								</span>
 							</td>
+
 							<td>
 								<span class="profile-last-on-page-date">
 									<span class="REPLACE">04-20-69</span>
 								</span>
 							</td>
+
 							<td>
 								<span class="profile-last-link-date">
 									<span class="REPLACE">04-20-69</span>
 								</span>
 							</td>
+
 							<td>
 								<span class="profile-last-link-duration">
 									<span class="REPLACE">69</span> Days
 								</span>
 							</td>
+
 							<td>
 								<span class="profile-last-activity-duration font-weight-700">
 									<span class="REPLACE">69</span> Days
 								</span>
 							</td>
+
 						</tr>
 
 
 
-						<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
-							<?php for($i=1; $i<=4; $i++){ ?>
-								
-
-
-								<tr>
-									<td class="dashboard-table-cell-name">
-										<?php app_get_component('components/project-link') ?>
-									</td>
+							<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+								<?php for($i=1; $i<=4; $i++){ ?>
 									
-									<td class="text-align-center">
 
-										<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
-											<span class="REPLACE">12</span>
-										</span>
 
-										<!-- @NOTE value influences whether to use .color-error and .color-success -->
-										<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
-											(<span class="REPLACE">-5.5</span>)
-										</span>
-
-									</td>
-
-									<td class="text-align-center">
+									<tr>
+										<td class="dashboard-table-cell-name">
+											<?php app_get_component('components/project-link') ?>
+										</td>
 										
+										<td class="text-align-center">
 
-										<span class="project-avg-rank font-weight-900 text-transform-uppercase">
-											<span class="REPLACE">12</span>
-										</span>
+											<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
+												<span class="REPLACE">12</span>
+											</span>
 
-										<!-- @NOTE value influences whether to use .color-error and .color-success -->
-										<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
-											(<span class="REPLACE">+1.2</span>)
-										</span>
-									</td>
+											<!-- @NOTE value influences whether to use .color-error and .color-success -->
+											<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
+												(<span class="REPLACE">-5.5</span>)
+											</span>
+
+										</td>
+
+										<td class="text-align-center">
+											
+
+											<span class="project-avg-rank font-weight-900 text-transform-uppercase">
+												<span class="REPLACE">12</span>
+											</span>
+
+											<!-- @NOTE value influences whether to use .color-error and .color-success -->
+											<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
+												(<span class="REPLACE">+1.2</span>)
+											</span>
+										</td>
 
 
 
-									<td>
-										<span class="profile-last-to-do-date">
-											<span class="REPLACE">04-20-69</span>
-										</span>
-									</td>
-									<td>
-										<span class="profile-last-on-page-date">
-											<span class="REPLACE">04-20-69</span>
-										</span>
-									</td>
-									<td>
-										<span class="profile-last-link-date">
-											<span class="REPLACE">04-20-69</span>
-										</span>
-									</td>
-									<td>
-										<span class="profile-last-link-duration">
-											<span class="REPLACE">69</span> Days
-										</span>
-									</td>
-									<td>
-										<span class="profile-last-activity-duration font-weight-700">
-											<span class="REPLACE">69</span> Days
-										</span>
-									</td>
-								</tr>
-							<?php } ?>
+										<td>
+											<span class="profile-last-to-do-date">
+												<span class="REPLACE">04-20-69</span>
+											</span>
+										</td>
+										<td>
+											<span class="profile-last-on-page-date">
+												<span class="REPLACE">04-20-69</span>
+											</span>
+										</td>
+										<td>
+											<span class="profile-last-link-date">
+												<span class="REPLACE">04-20-69</span>
+											</span>
+										</td>
+										<td>
+											<span class="profile-last-link-duration">
+												<span class="REPLACE">69</span> Days
+											</span>
+										</td>
+										<td>
+											<span class="profile-last-activity-duration font-weight-700">
+												<span class="REPLACE">69</span> Days
+											</span>
+										</td>
+									</tr>
+								<?php } ?>
+
+
+
 					</table>
 					
 				</div>
@@ -253,9 +262,11 @@ class="module-grid">
 				<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
 			</div>
+
 			<div class="module-footer">
 				<?php app_get_component('components/pagination') ?>
 			</div>
+
 		</div>
 	
 </div>

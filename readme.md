@@ -23,7 +23,7 @@ will separate dashboard and framework one the bois are readeh
 
 #	NOTES
 *	Overrides to framework or custom styles are prepended with #dashboard or .dashboard
-*	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not styled yet
+*	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
 
 
 ## There are html comments or string instances by markup with dynamic attributs and or content

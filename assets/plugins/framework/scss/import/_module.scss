@@ -80,7 +80,7 @@ $prefix: '.module';
 
 	& {
 		background: $module-bg-color;
-		overflow:hidden;
+		// overflow:hidden;
 		display: grid;
 		align-items: center;
 		align-content: center;
@@ -266,8 +266,7 @@ $prefix: '.module';
 		// overflow-y:visible;
 		// overflow-x:hidden;
 
-		&:first-child,
-		&:last-child {
+		&:first-child:last-child {
 			align-self:center;
 		}
 

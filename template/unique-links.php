@@ -18,7 +18,7 @@
 				</div>
 			</div>
 
-			<div class="module-content">
+			<div class="module-content align-self-center">
 
 				<div class="p">
 						<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-06.png" alt="" />
@@ -172,77 +172,79 @@
 
 
 
-							<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
-								<?php for($i=1; $i<=4; $i++){ ?>
+								<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+									<?php for($i=1; $i<=4; $i++){ ?>
 
-									<tr>
-										<td class="dashboard-table-cell-name">
-											<?php app_get_component('components/project-link') ?>
-										</td>
-
-										<td>
-											
-											<span class="project-added-date">
-												<strong>A</strong>
-												&nbsp;
-												<span class="REPLACE">04-20-69</span>
-											</span>
-
-											<br>
-
-											<span class="project-created-date">
-												<strong>C</strong>
-												&nbsp;
-												<span class="REPLACE">04-20-69</span>
-											</span>
-										</td>
-
-										<td class="dashboard-table-cell-url">
-											<span class="project-page-title">
-												<span class="REPLACE">Page Title</span>
-											</span>
-											<a class="project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
-												<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
-											</a>
-										</td>
-										
-										<td>
-											<span class="project-link-title-alt text-wrap-ellipsis-multiple">
-												<span class="REPLACE">Possibly an alt, possibly a title. you may never know</span>
-											</span>
-										</td>
-
-										<td>
-											<span class="project-link-type">
-												<span class="REPLACE">Type</span>
-											</span>
-											<br>
-											<span class="project-link-category">
-												<span class="REPLACE">Categoree</span>
-											</span>
-										</td>
-
-										<td class="dashboard-table-cell-thumbnail">
-											<?php app_get_component('components/profile-image-small') ?>
-										</td>
-
-										<td class="text-align-center"> 
-
-											<span class="project-ur">
-												<strong>UR</strong>
-												<span class="REPLACE"><?= $i * 14 - $i * $i ?></span>
-											</span>
-											<br>
-											<span class="project-dr">
-												<strong>DR</strong>
-												<span class="REPLACE"><?= $i * 14 - $i * $i * 2 ?></span>
-											</span>
+										<tr>
+											<td class="dashboard-table-cell-name">
+												<?php app_get_component('components/project-link') ?>
 											</td>
-										</td>
-										
-									</tr>
 
-								<?php } ?>
+											<td>
+												
+												<span class="project-added-date">
+													<strong>A</strong>
+													&nbsp;
+													<span class="REPLACE">04-20-69</span>
+												</span>
+
+												<br>
+
+												<span class="project-created-date">
+													<strong>C</strong>
+													&nbsp;
+													<span class="REPLACE">04-20-69</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-url">
+												<span class="project-page-title">
+													<span class="REPLACE">Page Title</span>
+												</span>
+												<a class="project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
+													<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
+												</a>
+											</td>
+											
+											<td>
+												<span class="project-link-title-alt text-wrap-ellipsis-multiple">
+													<span class="REPLACE">Possibly an alt, possibly a title. you may never know</span>
+												</span>
+											</td>
+
+											<td>
+												<span class="project-link-type">
+													<span class="REPLACE">Type</span>
+												</span>
+												<br>
+												<span class="project-link-category">
+													<span class="REPLACE">Categoree</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-thumbnail">
+												<?php app_get_component('components/profile-image-small') ?>
+											</td>
+
+											<td class="text-align-center"> 
+
+												<span class="project-ur">
+													<strong>UR</strong>
+													<span class="REPLACE"><?= $i * 14 - $i * $i ?></span>
+												</span>
+												<br>
+												<span class="project-dr">
+													<strong>DR</strong>
+													<span class="REPLACE"><?= $i * 14 - $i * $i * 2 ?></span>
+												</span>
+												</td>
+											</td>
+											
+										</tr>
+
+									<?php } ?>
+
+									
 						</table>
 						
 					</div>

@@ -19,6 +19,7 @@
 
 				<!-- @IF associated projects  are available -->
 					<div class="table-wrapper">
+
 						<table class="text-vertical-align-middle">
 							<tr>
 								<th class="dashboard-table-cell-name">Client Name</th>
@@ -83,51 +84,54 @@
 
 
 
-							<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
-								<?php for($i=1; $i<=4; $i++){ ?>
+                                <!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+                                    <?php for($i=1; $i<=4; $i++){ ?>
 
-									<tr>
-										<td class="dashboard-table-cell-name">
-											<?php app_get_component('components/project-link') ?>
-										</td>
+                                        <tr>
+                                            <td class="dashboard-table-cell-name">
+                                                <?php app_get_component('components/project-link') ?>
+                                            </td>
 
-										<td>
-											
-											<span class="project-date">
-												<span class="REPLACE">04-20-69</span>
-											</span>
-										</td>
+                                            <td>
+                                                
+                                                <span class="project-date">
+                                                    <span class="REPLACE">04-20-69</span>
+                                                </span>
+                                            </td>
 
-										<td class="dashboard-table-cell-url">
-											<span class="project-page-title">
-												<span class="REPLACE">Page Title</span>
-											</span>
-											<a class="project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
-												<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
-											</a>
-										</td>
-										
-										<td>
-											<span class="project-link-type">
-												<span class="REPLACE">Type</span>
-											</span>
-										</td>
-										
-										<td class="dashboard-table-cell-url">
-											<span class="project-page-title">
-												<span class="REPLACE">Page Title</span>
-											</span>
-											<a class="project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
-												<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
-											</a>
-										</td>
+                                            <td class="dashboard-table-cell-url">
+                                                <span class="project-page-title">
+                                                    <span class="REPLACE">Page Title</span>
+                                                </span>
+                                                <a class="project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
+                                                    <span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
+                                                </a>
+                                            </td>
+                                            
+                                            <td>
+                                                <span class="project-link-type">
+                                                    <span class="REPLACE">Type</span>
+                                                </span>
+                                            </td>
+                                            
+                                            <td class="dashboard-table-cell-url">
+                                                <span class="project-page-title">
+                                                    <span class="REPLACE">Page Title</span>
+                                                </span>
+                                                <a class="project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
+                                                    <span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
+                                                </a>
+                                            </td>
 
-										<td class="dashboard-table-cell-thumbnail">
-											<?php app_get_component('components/profile-image-small') ?>
-										</th>
-										
-									</tr>
-								<?php } ?>
+                                            <td class="dashboard-table-cell-thumbnail">
+                                                <?php app_get_component('components/profile-image-small') ?>
+                                            </th>
+                                            
+                                        </tr>
+                                    <?php } ?>
+
+
+                                    
 						</table>
 						
 					</div>

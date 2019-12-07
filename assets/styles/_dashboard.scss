@@ -46,8 +46,8 @@ $sidebar-base: 285px;
 		overflow:hidden;
 	}
 	&-block {
-		&-sidebar,&-main {
-		}
+		// &-sidebar,&-main {
+		// }
 		&-sidebar {
 			width: $sidebar-base;
 			box-shadow: 0 0 10px -5px color(b);

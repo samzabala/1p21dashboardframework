@@ -115,68 +115,70 @@
 
 
 
-						<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
-							<?php for($i=1; $i<=3; $i++){ ?>
-								<tr>
-									<td class="dashboard-table-cell-name">
-										<?php app_get_component('components/project-link'); ?>
-									</td>
-									<td>
-										<a class="color-inherit project-level color-primary-hover" href="<?=app_create_link(array('template'=>'projects')); ?>">
-											<span class="REPLACE">Project Level</span>
-										</a>
-									</td>
+							<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+								<?php for($i=1; $i<=3; $i++){ ?>
+									<tr>
+										<td class="dashboard-table-cell-name">
+											<?php app_get_component('components/project-link'); ?>
+										</td>
+										<td>
+											<a class="color-inherit project-level color-primary-hover" href="<?=app_create_link(array('template'=>'projects')); ?>">
+												<span class="REPLACE">Project Level</span>
+											</a>
+										</td>
 
-									<td>
-										<span class="project-started">
-											<span class="REPLACE">4-20-69</span>
-										</span>
-									</td>
-									<td>
-										<span class="task-duration"><span class="REPLACE">140</span></span> Days
-									</td>
+										<td>
+											<span class="project-started">
+												<span class="REPLACE">4-20-69</span>
+											</span>
+										</td>
+										<td>
+											<span class="task-duration"><span class="REPLACE">140</span></span> Days
+										</td>
 
-									<td>
-										<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-										<span class="tag tag-accent">
-											<span class="task-status"><span class="REPLACE">Task Status<span></span>
-															</span>
-									</td>
+										<td>
+											<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
+											<span class="tag tag-accent">
+												<span class="task-status"><span class="REPLACE">Task Status<span></span>
+																</span>
+										</td>
 
-									<td class="dashboard-table-cell-thumbnail">
-										<?php app_get_component('components/profile-image-small'); ?>
-									</td>
+										<td class="dashboard-table-cell-thumbnail">
+											<?php app_get_component('components/profile-image-small'); ?>
+										</td>
 
-									<td class="dashboard-table-cell-thumbnail">
-										<?php app_get_component('components/profile-image-small'); ?>
-									</td>
+										<td class="dashboard-table-cell-thumbnail">
+											<?php app_get_component('components/profile-image-small'); ?>
+										</td>
 
-									<td class="dashboard-table-cell-thumbnail">
-										<?php app_get_component('components/profile-image-small'); ?>
-									</td>
+										<td class="dashboard-table-cell-thumbnail">
+											<?php app_get_component('components/profile-image-small'); ?>
+										</td>
 
-									<td class="dashboard-table-cell-thumbnail">
-										<?php app_get_component('components/profile-image-small'); ?>
-									</td>
+										<td class="dashboard-table-cell-thumbnail">
+											<?php app_get_component('components/profile-image-small'); ?>
+										</td>
 
-									<td class="dashboard-table-cell-action text-align-center">
-										<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+										<td class="dashboard-table-cell-action text-align-center">
+											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
 
-										<!--
-											@NOTE:
-											style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
-										-->
-										<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
+											<!--
+												@NOTE:
+												style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
+											-->
+											<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
-											<!-- @placeholder -->
-											<li class="REPLACE"><a href="#">Do something</a></li>
-											<li class="REPLACE"><a href="#">Do another thing</a></li>
-											<li class="REPLACE"><a href="#">Do the other thing</a></li>
+												<!-- @placeholder -->
+												<li class="REPLACE"><a href="#">Do something</a></li>
+												<li class="REPLACE"><a href="#">Do another thing</a></li>
+												<li class="REPLACE"><a href="#">Do the other thing</a></li>
 
-										</ul>
-									</td>
-								</tr>
-							<?php } ?>
+											</ul>
+										</td>
+									</tr>
+								<?php } ?>
+
+								
 					</table>
 					
 				</div>

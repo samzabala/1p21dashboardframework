@@ -81,42 +81,20 @@
 		$border-radius-base: 10px !default;
 			$border-radius-small: $border-radius-base * .5 !default;
 			$border-radius-large: $border-radius-base * 2 !default;
+	
 
-	// TABLE
-		$table-cell-height: 70px !default;
-			$table-cell-height-large: 105px !default;
-		$table-cell-border-color: $global-background-contrast !default;
-			$table-cell-border-color-inverse: $global-background-contrast-inverse !default;
-		$table-cell-border-width: 1px !default;
-		$table-cell-gutter-y-compact: 5px !default;
-		$table-cell-gutter: 20px !default;
-		
-		$table-heading-font-size: 14px !default;
-		$table-heading-height: 45px !default;
-		$table-heading-font-weight: 700 !default;
-		$table-heading-font-style: normal !default;
-		$table-heading-color: $global-color-contrast !default;
-			$table-heading-color-inverse: $global-color-contrast-inverse !default;
-		$table-heading-text-transform: uppercase !default;
-		$table-heading-background: $global-background-contrast !default;
-			$table-heading-background-inverse: $global-background-contrast-inverse !default;
-		$table-label-width: 12px !default;
-		$table-label-offset: 5px !default;
-		$table-label-border-radius: 2px !default;
-		$table-row-background-opacity: .2 !default;
+	// ANIMATION
+		$transition-duration-base: .25s !default;
+			$transition-duration-short: .125s !default;
+			$transition-duration-long: .5s !default;
+		$transition-timing: ease-in-out !default;
 
-// ANIMATION
-	$transition-duration-base: .25s !default;
-	$transition-duration-short: .125s !default;
-	$transition-duration-long: .5s !default;
-	$transition-timing: ease-in-out !default;
-
-//BOX SHADOW
-	$box-shadow-base: 0px 5px 15px -8px!default;
-		$box-shadow-mild: 0px 2px 20px -5px!default;
-		$box-shadow-spicy: 0px 10px 20px -10px!default;
-
+	//BOX SHADOW
+		$box-shadow-base: 0px 5px 15px -8px!default;
+			$box-shadow-mild: 0px 2px 20px -5px!default;
+			$box-shadow-spicy: 0px 8px 20px -10px!default;
 // CONTENT
+
 	// SCAFFOLD
 		$body-font-family: $brand-font-primary !default;
 		$body-font-weight: 400 !default;
@@ -189,6 +167,31 @@
 	// SVG
 		$svg-gradient-color-start: $gradient-start !default;
 		$svg-gradient-color-end: $gradient-end !default;
+
+
+	// TABLE
+		$table-cell-height: 70px !default;
+			$table-cell-height-large: 105px !default;
+		$table-cell-border-color: $global-background-contrast !default;
+			$table-cell-border-color-inverse: $global-background-contrast-inverse !default;
+		$table-cell-border-width: 1px !default;
+		$table-cell-gutter-y-compact: 5px !default;
+		$table-cell-gutter: 20px !default;
+
+		$table-heading-font-size: 14px !default;
+		$table-heading-height: 45px !default;
+		$table-heading-font-weight: 700 !default;
+		$table-heading-font-style: normal !default;
+		$table-heading-color: $global-color-contrast !default;
+			$table-heading-color-inverse: $global-color-contrast-inverse !default;
+		$table-heading-text-transform: uppercase !default;
+		$table-heading-background: $global-background-contrast !default;
+			$table-heading-background-inverse: $global-background-contrast-inverse !default;
+		$table-label-width: 12px !default;
+		$table-label-offset: 5px !default;
+		$table-label-border-radius: 2px !default;
+		$table-row-background-opacity: .2 !default;
+
 
 // LAYOUT
 
@@ -339,7 +342,7 @@
 			$progress-background-color-inverse: transparent !default;
 		$progress-border-radius: 20px !default;
 		$progress-background-stripe-color: rgba($brand-color-base,.2) !default;
-		$progress-background-stripe-color-inverse: rgba($brand-color-base,.2) !default;
+			$progress-background-stripe-color-inverse: rgba($brand-color-base,.4) !default;
 		$progress-transition-duration: $transition-duration-long * 4 !default;
 
 

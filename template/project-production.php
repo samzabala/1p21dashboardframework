@@ -111,36 +111,36 @@
 											</tr>
 
 
-											<!-- @PLACEHOLDER: DELETE WHEN READY -->
-												<?php for($i=1; $i<=4; $i++){ ?>
-													
-													<tr>
-														<!-- @NOTE table-label-COLOR will by @DYNAMIC based on projct-task-category of time track or  yeeee -->
-														<td class="table-cell-no-gutter">
-															<span class="table-label table-label-accent"></span>
-														</td>
+												<!-- @PLACEHOLDER: DELETE WHEN READY -->
+													<?php for($i=1; $i<=4; $i++){ ?>
+														
+														<tr>
+															<!-- @NOTE table-label-COLOR will by @DYNAMIC based on projct-task-category of time track or  yeeee -->
+															<td class="table-cell-no-gutter">
+																<span class="table-label table-label-accent"></span>
+															</td>
 
-														<td>
-															<span class="font-weight-600 project-milestone">
-																<span class="REPLACE">Project Milestone</span>
-															</span>
-														</td>
+															<td>
+																<span class="font-weight-600 project-milestone">
+																	<span class="REPLACE">Project Milestone</span>
+																</span>
+															</td>
 
-														<td>
-															<span class="project-milestone-duration">
-																<span class="REPLACE">20</span> Days
-															</span>
-														</td>
+															<td>
+																<span class="project-milestone-duration">
+																	<span class="REPLACE">20</span> Days
+																</span>
+															</td>
 
-														<td>
-															<span class="project-milestone-date-start">
-																<span class="REPLACE">04-20-69</span>
-															</span>
-														</td>
+															<td>
+																<span class="project-milestone-date-start">
+																	<span class="REPLACE">04-20-69</span>
+																</span>
+															</td>
 
-													</tr>
-													
-												<?php } ?>
+														</tr>
+														
+													<?php } ?>
 
 										</table>
 										
@@ -398,84 +398,85 @@
 							</div>
 						</div>
 
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
-							<?php for($i=1; $i<=3; $i++){ ?>
-								
-								<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
-									<div class="block-thumbnail flex-0-0 flex-child">
-										<?php app_get_component('components/profile-image-small'); ?>
-									</div>
-									<div class="block-content flex-1-1 flex-child">
-										<div data-toggle="accordion" class="flex-xs align-items-center text-leading-compact">
-											<div class="flex-1-1">
+								<?php for($i=1; $i<=3; $i++){ ?>
+									
+									<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
+										<div class="block-thumbnail flex-0-0 flex-child">
+											<?php app_get_component('components/profile-image-small'); ?>
+										</div>
+										<div class="block-content flex-1-1 flex-child">
+											<div data-toggle="accordion" class="flex-xs align-items-center text-leading-compact">
+												<div class="flex-1-1">
 
-												<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
-													<span class="REPLACE">04-20-69</span>
-												</p>
-												<h2 class="project-note-title no-margin-top">
-													<span class="REPLACE">Note Title goes here</span>
-												</h2>
+													<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
+														<span class="REPLACE">04-20-69</span>
+													</p>
+													<h2 class="project-note-title no-margin-top">
+														<span class="REPLACE">Note Title goes here</span>
+													</h2>
+												</div>
+
+												<i class="font-size-large color-primary symbol symbol-caret-down-toggle symbol-caret-right"></i>
+
 											</div>
 
-											<i class="font-size-large color-primary symbol symbol-caret-down-toggle symbol-caret-right"></i>
-
-										</div>
-
-										<hr>
-										
-
-										<div class="project-note-content accordion text-leading-expanded">
+											<hr>
 											
 
-											<div class="REPLACE">
-											<ul>
-												<li>List item one
-												<ul>
-												<li>List item one
-												<ul>
-												<li>List item one</li>
-												<li>List item two</li>
-												<li>List item three</li>
-												<li>List item four</li>
-												</ul>
-												</li>
-												<li>List item two</li>
-												<li>List item three</li>
-												<li>List item four</li>
-												</ul>
-												</li>
-												<li>List item two</li>
-												<li>List item three</li>
-												<li>List item four</li>
-												</ul>
+											<div class="project-note-content accordion text-leading-expanded">
 												
-												<ol>
-												<li>List item one
-												<ol>
-												<li>List item one
-												<ol>
-												<li>List item one</li>
-												<li>List item two</li>
-												<li>List item three</li>
-												<li>List item four</li>
-												</ol>
-												</li>
-												<li>List item two</li>
-												<li>List item three</li>
-												<li>List item four</li>
-												</ol>
-												</li>
-												<li>List item two</li>
-												<li>List item three</li>
-												<li>List item four</li>
-												</ol>
-												<p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p>
+
+												<div class="REPLACE">
+												<ul>
+													<li>List item one
+													<ul>
+													<li>List item one
+													<ul>
+													<li>List item one</li>
+													<li>List item two</li>
+													<li>List item three</li>
+													<li>List item four</li>
+													</ul>
+													</li>
+													<li>List item two</li>
+													<li>List item three</li>
+													<li>List item four</li>
+													</ul>
+													</li>
+													<li>List item two</li>
+													<li>List item three</li>
+													<li>List item four</li>
+													</ul>
+													
+													<ol>
+													<li>List item one
+													<ol>
+													<li>List item one
+													<ol>
+													<li>List item one</li>
+													<li>List item two</li>
+													<li>List item three</li>
+													<li>List item four</li>
+													</ol>
+													</li>
+													<li>List item two</li>
+													<li>List item three</li>
+													<li>List item four</li>
+													</ol>
+													</li>
+													<li>List item two</li>
+													<li>List item three</li>
+													<li>List item four</li>
+													</ol>
+													<p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							<?php } ?>
+								<?php } ?>
+								
 					</div>
 
 
@@ -525,28 +526,28 @@
 
 
 
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
-						<?php for($i=1; $i<=3; $i++){ ?>
-							<div class="list-group-item">
-								<div class="flex-grid flex-grid-compact no-margin-y align-items-center">
-									<div class="flex-child flex-0-0 no-margin-y">
-										<?php app_get_component('components/profile-image-small'); ?>
+							<?php for($i=1; $i<=3; $i++){ ?>
+								<div class="list-group-item">
+									<div class="flex-grid flex-grid-compact no-margin-y align-items-center">
+										<div class="flex-child flex-0-0 no-margin-y">
+											<?php app_get_component('components/profile-image-small'); ?>
+										</div>
+
+										<a href="<?= app_create_link(array('template' => 'profile')) ?>"class="flex-child flex-1-1 color-inherit color-primary-hover no-margin-y">
+											<span class="font-size-small font-weight-700 color-neutral text-transform-uppercase profile-title">
+												<span class="REPLACE">Profile Title</span>
+											</span>
+											<br>
+
+											<span class="font-size-large font-weight-300 profile-name">
+												<span class="REPLACE">Profile Name</span>
+											</span>
+										</a>
 									</div>
-
-									<a href="<?= app_create_link(array('template' => 'profile')) ?>"class="flex-child flex-1-1 color-inherit color-primary-hover no-margin-y">
-										<span class="font-size-small font-weight-700 color-neutral text-transform-uppercase profile-title">
-											<span class="REPLACE">Profile Title</span>
-										</span>
-										<br>
-
-										<span class="font-size-large font-weight-300 profile-name">
-											<span class="REPLACE">Profile Name</span>
-										</span>
-									</a>
 								</div>
-							</div>
-						<?php } ?>
+							<?php } ?>
 
 
 				</div>

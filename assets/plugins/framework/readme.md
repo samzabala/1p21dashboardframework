@@ -19,6 +19,11 @@ js files (in order)
 
 and done
 
+
+# TOC
+*	[QuickStart](/docs/sections/)
+*	[Variables]
+
 ## Setting up custom variables
 - Set up sass file
 - Framework sass variables can be customized by declaring custom variables fist before integrating the framework

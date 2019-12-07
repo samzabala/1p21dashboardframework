@@ -8,7 +8,7 @@
 	
 	<ul class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
 		<li>
-			<a href="<?= app_create_link( array('template'=>'project') );?>">
+			<a href="#">
 				<span class="project-name">
 					<span class="REPLACE">Client Name</span>
 				</span>

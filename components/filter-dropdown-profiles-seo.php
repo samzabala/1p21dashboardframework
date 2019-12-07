@@ -9,7 +9,7 @@
 	<!-- @placeholder  #profile-assigned-date > li -->
 	<ul class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
 		<li>
-			<a href="<?= app_create_link( array('template'=>'profile') );?>">
+			<a href="#">
 				<span class="profile-name">
 					<span class="REPLACE">Profile Name</span>
 				</span>

@@ -12,7 +12,7 @@ $prefix: '.symbol';
 	flex: 0 0 auto; //retain dimensions
 	height: 1em; //bitch does weird overflow scroll shit on where it shouldnt on things i want to scroll when overflowing and shit so bitchs height is like that now
 	width: 1em;
-	// vertical-align:middle;
+	vertical-align:middle;
 	transform-origin: center center;
 	pointer-events:none;
 	// top:-.25em;
@@ -58,8 +58,7 @@ $prefix: '.symbol';
 
 	&-plus,
 	&-minus{
-		&:before,&:after {
-		}
+		
 		&:after{
 			height: em(3px / $body-font-size);
 			width:.9375em;
@@ -218,16 +217,6 @@ $prefix: '.symbol';
 			};
 		}
 
-		&-up,
-		&-down {
-			&:after {
-				// bottom: $calculated-symbol-caret-height * -.5;
-			}
-
-			// .btn & {
-			// 	bottom: 0;
-			// }
-		}
 	}
 
 	&-caret,

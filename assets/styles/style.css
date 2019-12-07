@@ -645,6 +645,7 @@ table {
   flex: 0 0 auto;
   height: 1em;
   width: 1em;
+  vertical-align: middle;
   transform-origin: center center;
   pointer-events: none; }
   .symbol:before, .symbol:after {
@@ -3262,7 +3263,6 @@ table {
 
 .module {
   background: #FFFFFF;
-  overflow: hidden;
   display: grid;
   align-items: center;
   align-content: center;
@@ -3273,7 +3273,7 @@ table {
   .body-inverse .module {
     background: #1F1B30; }
   .module[data-toggle]:hover, .module[data-toggle]:focus, .module[data-toggle].focus, .module[href]:hover, .module[href]:focus, .module[href].focus, .module-interactive:hover, .module-interactive:focus, .module-interactive.focus {
-    box-shadow: 0px 10px 20px -10px #000000; }
+    box-shadow: 0px 8px 20px -10px #000000; }
 
 .module, .module-header, .module-content, .module-footer {
   padding-left: 40px;
@@ -3362,7 +3362,7 @@ table {
 
 .module-content {
   grid-area: content; }
-  .module-content:first-child, .module-content:last-child {
+  .module-content:first-child:last-child {
     align-self: center; }
 
 .module-footer {
@@ -3561,11 +3561,11 @@ table {
     animation-iteration-count: infinite; }
   .body-inverse .progress, .body-inverse .trumbowyg-progress {
     background-color: transparent;
-    background: -moz-repeating-linear-gradient(-45deg ,  rgba(0, 0, 0, 0.2) 0%,  rgba(0, 0, 0, 0.2) 1px,  transparent 1px,  transparent 4px) ;
+    background: -moz-repeating-linear-gradient(-45deg ,  rgba(0, 0, 0, 0.4) 0%,  rgba(0, 0, 0, 0.4) 1px,  transparent 1px,  transparent 4px) ;
     /* FF3.6-15 */
-    background: -webkit-repeating-linear-gradient(-45deg ,  rgba(0, 0, 0, 0.2) 0%,  rgba(0, 0, 0, 0.2) 1px,  transparent 1px,  transparent 4px) ;
+    background: -webkit-repeating-linear-gradient(-45deg ,  rgba(0, 0, 0, 0.4) 0%,  rgba(0, 0, 0, 0.4) 1px,  transparent 1px,  transparent 4px) ;
     /* Chrome10-25,Safari5.1-6 */
-    background: repeating-linear-gradient(135deg ,  rgba(0, 0, 0, 0.2) 0%,  rgba(0, 0, 0, 0.2) 1px,  transparent 1px,  transparent 4px) ;
+    background: repeating-linear-gradient(135deg ,  rgba(0, 0, 0, 0.4) 0%,  rgba(0, 0, 0, 0.4) 1px,  transparent 1px,  transparent 4px) ;
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
 .progress, .progress-bar, .trumbowyg-progress, .trumbowyg-progress-bar {
@@ -5683,6 +5683,51 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 .font-style-oblique {
   font-style: oblique !important; }
+
+.overflow-visible {
+  overflow: visible !important; }
+
+.overflow-hidden {
+  overflow: hidden !important; }
+
+.overflow-scroll {
+  overflow: scroll !important; }
+
+.overflow-overlay {
+  overflow: overlay !important; }
+
+.overflow-auto {
+  overflow: auto !important; }
+
+.overflow-x-visible {
+  overflow-x: visible !important; }
+
+.overflow-x-hidden {
+  overflow-x: hidden !important; }
+
+.overflow-x-scroll {
+  overflow-x: scroll !important; }
+
+.overflow-x-overlay {
+  overflow-x: overlay !important; }
+
+.overflow-x-auto {
+  overflow-x: auto !important; }
+
+.overflow-y-visible {
+  overflow-y: visible !important; }
+
+.overflow-y-hidden {
+  overflow-y: hidden !important; }
+
+.overflow-y-scroll {
+  overflow-y: scroll !important; }
+
+.overflow-y-overlay {
+  overflow-y: overlay !important; }
+
+.overflow-y-auto {
+  overflow-y: auto !important; }
 
 .position-relative {
   position: relative !important; }

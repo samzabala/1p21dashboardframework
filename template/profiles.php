@@ -32,11 +32,11 @@
 			<?php app_get_template_part('components/profile-card'); ?>
 
 
-			<!-- @PLACEHOLDER: DELETE WHEN READY -->
+				<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
-				<?php for($i=1; $i<=3; $i++){ ?>
-					<?php app_get_component('components/profile-card'); ?>
-				<?php } ?>
+					<?php for($i=1; $i<=3; $i++){ ?>
+						<?php app_get_component('components/profile-card'); ?>
+					<?php } ?>
 
 		</div>
 </div>

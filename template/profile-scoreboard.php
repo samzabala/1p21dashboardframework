@@ -30,7 +30,7 @@
 		'average average average average'
 		'accounts accounts accounts accounts'"
 		
-	data-grid-template-rows-lg="repeat( 3, minmax(180px, auto) ) repeat( auto-fit, minmax(180px, min-content) )"
+	data-grid-template-rows-lg="repeat( 3, minmax(180px, auto) ) repeat( auto-fit, minmax(180px, 1fr) )"
 	data-grid-template-columns-lg="350px 3fr 2fr 150px"
 	data-grid-template-areas-lg="
 		'profile-card overall overall linksbuilt'
@@ -48,7 +48,7 @@
 	<!-- Links Built -->
 		<a
 			id="profile-scoreboard-links-built"
-			class="color-inherit color-primary-hover module module-no-gutter text-align-center text-leading-compact"
+			class="color-inherit color-primary-hover module module-no-gutter-x text-align-center text-leading-compact"
 			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="linksbuilt">
 				
@@ -64,7 +64,7 @@
 	<!-- On Page -->
 		<a
 			id="profile-scoreboard-on-page"
-			class="color-inherit color-primary-hover module module-no-gutter text-align-center text-leading-compact"
+			class="color-inherit color-primary-hover module module-no-gutter-x text-align-center text-leading-compact"
 			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="onpage">
 				
@@ -84,7 +84,7 @@
 	<!-- Todos -->
 		<a
 			id="profile-scoreboard-to-dos"
-			class="color-inherit color-primary-hover module module-no-gutter text-align-center text-leading-compact"
+			class="color-inherit color-primary-hover module module-no-gutter-x text-align-center text-leading-compact"
 			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="todos">
 				
@@ -117,7 +117,7 @@
 
 			</div>
 			
-			<div class="module-content">
+			<div class="module-content align-self-center">
 
 				<div class="p">
 					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-03.png" alt="">
@@ -136,11 +136,6 @@
 			</div>
 
 		</div>
-
-
-
-
-
 	
 	<!-- Activity Distribution -->
 		<div
@@ -158,14 +153,14 @@
 				</div>
 			</div>
 
-			<div class="module-content">
+			<div class="module-content align-self-center">
 				
 				<p class="progress-title no-margin-top">Link Activity Distribution</p>
 				
 				<div class="progress p">
 
 					<!--
-						@loop link activity distribution
+						@LOOP progress-bar
 						@DYNAMIC all attrbutes EXCEPT class
 					-->
 					<div class="progress-bar"
@@ -181,16 +176,9 @@
 						data-tooltip-badge-background="#fb1818"
 						data-tooltip-content="<strong>Percentage</strong><br><span class='font-size-small'>Client Name</span>"></div>
 
-
-
-
-
-
-
 					
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-
-						<?php 
+							<?php 
 								$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
 							?>
 							<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
@@ -219,7 +207,7 @@
 				<div class="progress">
 					
 					<!--
-						@loop link activity distribution
+						@LOOP progress-bar
 						@DYNAMIC all attrbutes EXCEPT class
 					-->
 					<div class="progress-bar"
@@ -239,25 +227,24 @@
 
 
 
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php 
+								$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+							?>
+							<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
+								<div class="progress-bar"
+								
+									style="width: <?=100/($i * 5) ?>%; background-color:<?= $placeholder_colors[$i] ?>;"
 
-						<?php 
-							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-						?>
-						<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
-							<div class="progress-bar"
-							
-								style="width: <?=100/($i * 5) ?>%; background-color:<?= $placeholder_colors[$i] ?>;"
-
-								data-toggle="tooltip-hover"
-								data-tooltip-placement="top"
-								data-tooltip-badge="true"
-								data-tooltip-classes="text-align-center"
-								data-tooltip-center-y="true"
-								data-tooltip-center-x="true"
-								data-tooltip-badge-background="<?= $placeholder_colors[$i] ?>"
-								data-tooltip-content="<strong>Placeholder loop boi <?=$i ?></strong><br><span class='font-size-small'>This is just placeholder</span>"></div>
-						<?php } ?>
+									data-toggle="tooltip-hover"
+									data-tooltip-placement="top"
+									data-tooltip-badge="true"
+									data-tooltip-classes="text-align-center"
+									data-tooltip-center-y="true"
+									data-tooltip-center-x="true"
+									data-tooltip-badge-background="<?= $placeholder_colors[$i] ?>"
+									data-tooltip-content="<strong>Placeholder loop boi <?=$i ?></strong><br><span class='font-size-small'>This is just placeholder</span>"></div>
+							<?php } ?>
 
 						
 
@@ -281,7 +268,7 @@
 			
 			<div class="module-content">
 				
-				<!-- @loop p 
+				<!-- @LOOP p 
 					@DYNAMIC
 						attr style background color
 				-->
@@ -290,26 +277,26 @@
 					<span class="client-name">
 						<span class="REPLACE">Client Name</span>
 					</span>
-					</p>
+				</p>
 
 
 
 
-				<!-- @PLACEHOLDER: DELETE WHEN READY -->
+					<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
-				<?php 
-					$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-				?>
-				<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
-					
+					<?php 
+						$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+					?>
+					<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
+						
 
-					<p>
-						<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-						<span class="client-name">
-							<span class="REPLACE">Client Name</span>
-						</span>
-					</p>
-				<?php } ?>
+						<p>
+							<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
+							<span class="client-name">
+								<span class="REPLACE">Client Name</span>
+							</span>
+						</p>
+					<?php } ?>
 
 			</div>
 
@@ -327,7 +314,7 @@
 				<h3 class="module-title">Campaign Actions</h3>
 			</div>
 
-			<div class="module-content">
+			<div class="module-content align-self-center">
 				<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-05.png" alt="">
 			</div>
 
@@ -357,7 +344,7 @@
 				</div>
 			</div>
 
-			<div class="module-content">
+			<div class="module-content align-self-center">
 				<div>
 					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
 				</div>
@@ -505,99 +492,99 @@
 									</td>
 								</tr>
 								
-								<!-- @PLACEHOLDER: DELETE WHEN READY -->
+									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
-									<?php for($i=1; $i<=4; $i++){ ?>
-										<tr class="text-align-center">
-									
-											<td class="dashboard-table-cell-name text-align-left">
-												<?php app_get_component('components/project-link'); ?>
-											</td>
+										<?php for($i=1; $i<=4; $i++){ ?>
+											<tr class="text-align-center">
+										
+												<td class="dashboard-table-cell-name text-align-left">
+													<?php app_get_component('components/project-link'); ?>
+												</td>
 
-											<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
-											<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-												<div class="thumbnail project-priority thumbnail-small background-intensity-<?=$i ?>">
-													<span class="thumbnail-text">
-														<span class="REPLACE"><?=$i ?></span>
+												<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
+												<td class="dashboard-table-cell-thumbnail" class="text-align-center">
+													<div class="thumbnail project-priority thumbnail-small background-intensity-<?=$i ?>">
+														<span class="thumbnail-text">
+															<span class="REPLACE"><?=$i ?></span>
+														</span>
+													</div>
+												</td>
+
+												<td>
+
+													<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
+														<span class="REPLACE">12</span>
 													</span>
-												</div>
-											</td>
 
-											<td>
+													<!-- @NOTE value influences whether to use .color-error and .color-success -->
+													<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
+														(<span class="REPLACE">-5.5</span>)
+													</span>
 
-												<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
-													<span class="REPLACE">12</span>
-												</span>
+												</td>
 
-												<!-- @NOTE value influences whether to use .color-error and .color-success -->
-												<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
-													(<span class="REPLACE">-5.5</span>)
-												</span>
+												<td>
+													
 
-											</td>
+													<span class="project-avg-rank font-weight-900 text-transform-uppercase">
+														<span class="REPLACE">12</span>
+													</span>
 
-											<td>
-												
+													<!-- @NOTE value influences whether to use .color-error and .color-success -->
+													<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
+														(<span class="REPLACE">+1.2</span>)
+													</span>
+												</td>
 
-												<span class="project-avg-rank font-weight-900 text-transform-uppercase">
-													<span class="REPLACE">12</span>
-												</span>
+												<td>
+													<span class="project-on-page">
+														<span class="REPLACE">0</span>
+													</span>
+												</td>
 
-												<!-- @NOTE value influences whether to use .color-error and .color-success -->
-												<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
-													(<span class="REPLACE">+1.2</span>)
-												</span>
-											</td>
+												<td>
+													<span class="project-content">
+														<span class="REPLACE">12</span>
+													</span>
+												</td>
 
-											<td>
-												<span class="project-on-page">
-													<span class="REPLACE">0</span>
-												</span>
-											</td>
+												<td>
+													<span class="project-social">
+														<span class="REPLACE">5</span>
+													</span>
+												</td>
 
-											<td>
-												<span class="project-content">
-													<span class="REPLACE">12</span>
-												</span>
-											</td>
+												<td>
+													<span class="project-to-dos">
+														<span class="REPLACE">0</span>
+													</span>
+												</td>
 
-											<td>
-												<span class="project-social">
-													<span class="REPLACE">5</span>
-												</span>
-											</td>
+												<td>
+													<span class="project-top-10">
+														<span class="REPLACE">69</span>
+													</span>
+												</td>
 
-											<td>
-												<span class="project-to-dos">
-													<span class="REPLACE">0</span>
-												</span>
-											</td>
+												<td>
+													<span class="project-links">
+														<span class="REPLACE">69</span>
+													</span>
+												</td>
 
-											<td>
-												<span class="project-top-10">
-													<span class="REPLACE">69</span>
-												</span>
-											</td>
+												<td>
+													<span class="project-unique">
+														<span class="REPLACE">69</span>
+													</span>
+												</td>
 
-											<td>
-												<span class="project-links">
-													<span class="REPLACE">69</span>
-												</span>
-											</td>
-
-											<td>
-												<span class="project-unique">
-													<span class="REPLACE">69</span>
-												</span>
-											</td>
-
-											<td>
-												<span class="project-total font-weight-900">
-													<span class="REPLACE">69</span>
-												</span>
-											</td>
-										</tr>
-										<?php } ?>
+												<td>
+													<span class="project-total font-weight-900">
+														<span class="REPLACE">69</span>
+													</span>
+												</td>
+											</tr>
+											<?php } ?>
 
 
 
