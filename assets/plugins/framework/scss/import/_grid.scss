@@ -19,12 +19,16 @@ $prefix-raw: str-replace($prefix,'.','');
 					// width: ( 100% / $i );
 					@if $gap != null {
 						flex-basis: calc( #{ $col-width } - #{$gap} );
+
+						#{$prefix}-grid-fixed > & {
+							width: calc(#{ $col-width } - #{$gap})
+						}
 					}@else {
 						flex-basis: #{ $col-width };
-					}
-
-					#{$prefix}-grid-fixed > & {
-						width: calc(#{ $col-width } - #{$gap})
+						
+						#{$prefix}-grid-fixed > & {
+							width: #{ $col-width }
+						}
 					}
 					
 					#{$prefix}-grid-no-gutter#{$prefix}-grid-fixed > &,
@@ -39,12 +43,16 @@ $prefix-raw: str-replace($prefix,'.','');
 					// flex-basis: ( 100% / $i );
 					@if $gap != null {
 						flex-basis: calc( #{ $col-width } - #{$gap} );
+
+						#{$prefix}-grid-fixed > & {
+							width: calc(#{ $col-width } - #{$gap})
+						}
 					}@else {
 						flex-basis: #{ $col-width };
-					}
-
-					#{$prefix}-grid-fixed > & {
-						width: calc(#{ $col-width } - #{$gap})
+						
+						#{$prefix}-grid-fixed > & {
+							width: #{ $col-width }
+						}
 					}
 					
 					#{$prefix}-grid-no-gutter#{$prefix}-grid-fixed > &,

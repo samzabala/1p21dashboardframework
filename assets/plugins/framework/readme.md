@@ -21,8 +21,37 @@ and done
 
 
 # TOC
-*	[QuickStart](/docs/sections/)
-*	[Variables]
+*	Setup
+	*	[QuickStart](/docs/sections/quickstart.md)
+	*	[Customize](/docs/sections/customize.md)
+*	Layout
+	*	[Flex Grid](/docs/sections/flexgrid.md)
+	*	[Module](/docs/sections/module.md)
+*	Scaffolding
+	*	[Tables](/docs/sections/table.md)
+	*	[Typography](/docs/sections/typography.md)
+	*	[Images](/docs/sections/images.md)
+	*	[Helpers](/docs/sections/helpers.md)
+*	Components (o lawd)
+	*	[Tables](/docs/sections/badge.md)
+	*	[Buttons](/docs/sections/button.md)
+	*	[Form and input fields](/docs/sections/form.md)
+	*	[Legends](/docs/sections/legend.md)
+	*	[List group](/docs/sections/list-group.md)
+	*	[Modal](/docs/sections/modal.md)
+	*	[Nav](/docs/sections/nav.md)
+	*	[Pagination](/docs/sections/pagination.md)
+	*	[Dropdown](/docs/sections/dropdown.md)
+	*	[Tooltip](/docs/sections/tooltip.md)
+	*	[Progress](/docs/sections/progress.md)
+	*	[Symbols](/docs/sections/symbol.md)
+	*	[Tags](/docs/sections/tag.md)
+	*	[Thumbnails](/docs/sections/thumbnail.md)
+	*	[Accordions](/docs/sections/accordion.md)
+	*	[Trumbowyg](/docs/sections/trumbowyg.md)
+*	Other Obscure things
+	*	[Script](/docs/sections/script.md)
+
 
 ## Setting up custom variables
 - Set up sass file

@@ -82,9 +82,9 @@ $calculated-input-info-font-size: $input-info-font-size;
 $calculated-input-info-line-height: type-lead( $input-info-font-size,$input-info-line-height );
 
 
-$calculated-input-info-margin-top: $input-info-margin-top;
-@if internal-is-convertable($input-info-margin-top) {
-	$calculated-input-info-margin-top: em($input-info-margin-top / $input-info-font-size)
+$calculated-input-info-gutter-y: $input-info-gutter-y;
+@if internal-is-convertable($input-info-gutter-y) {
+	$calculated-input-info-gutter-y: em($input-info-gutter-y / $input-info-font-size)
 }
 
 
@@ -521,7 +521,8 @@ $prefix: '.input';
 			style: $input-info-font-style,
 			case: $input-info-text-transform,
 		));
-		margin-top:$input-info-margin-top;
+		margin-top:$calculated-input-info-gutter-y;
+		margin-bottom:$calculated-input-info-gutter-y;
 		display:block;
 
 		order: 3;
@@ -791,6 +792,8 @@ fieldset {
 		margin-left: $special-form-gutter-x * -1;
 		position:relative;
 		top: -1em;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 
 	.body-inverse & {
@@ -800,10 +803,34 @@ fieldset {
 
 	#{$prefix}-wrapper {
 		max-width: none;
+		display:flex;
+		margin-right:0;
 
-		&:nth-of-type(n+2) {
-			border-top: 1px solid gray;
+		&-horizontal {
+			#{$prefix},
+			#{$prefix}-single-line,
+			#{$prefix}-multiple-line {
+				margin-left:0;
+				margin-right:0;
+				padding-left:0;
+				padding-right:0;
+			}
 		}
+
+		&:nth-last-child(n+2) {
+			border-bottom: 1px solid gray;
+		}
+	}
+
+	#{$prefix},
+	#{$prefix}-single-line,
+	#{$prefix}-multiple-line,
+	.trumbowyg-editor,
+	.trumbowyg-textarea {
+
+		outline: none!important;
+		border-color: transparent!important;
+		box-shadow: none !important;
 	}
 
 	#{$prefix}-single-line,
@@ -811,16 +838,13 @@ fieldset {
 	.trumbowyg-editor,
 	.trumbowyg-textarea {
 		background-color:transparent;
-		width:calc(100% + (#{$special-form-gutter-x} * 2));
+		// width:calc(100% + (#{$special-form-gutter-x} * 2));
 		max-width:none;
-		padding-left: $special-form-gutter-x;
-		padding-right:$special-form-gutter-x;
-		margin-left: $special-form-gutter-x * -1;
-		margin-right:$special-form-gutter-x * -1;
+		padding-left: 0;
+		padding-right:0;
+		// margin-left: $special-form-gutter-x * -1;
+		// margin-right:$special-form-gutter-x * -1;
 		border-radius:0;
-		box-shadow: none !important;
-		outline: none!important;
-		border-color: transparent!important;
 	}
 
 	.btn:last-child {

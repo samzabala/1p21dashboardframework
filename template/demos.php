@@ -1055,6 +1055,71 @@
 										<option>Available option 5</option>
 									</select>
 								</span>
+					
+
+
+					<h2>Fieldset / special-form</h2>
+					<fieldset>
+						<legend>butt</legend>
+
+						<div class="input-wrapper p input-wrapper-horizontal">
+								<label class="input-label" for="inputPassword">Password</label>
+								<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
+						</div>
+
+						<div class="input-wrapper p input-wrapper-horizontal">
+							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
+						</div>
+
+						<div>
+							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
+						</div>
+						
+						<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
+							<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
+						
+								<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+
+						</div>
+
+						<div class="input-wrapper p input-wrapper-horizontal">
+							<label class="input-label"><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
+						</div>
+						<div class="input-wrapper p input-wrapper-horizontal">
+							<label class="input-label"><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+						</div>
+
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+							<label class="input-label" for="select">Selects</label>
+							<select class="input input-single-line" id="select-demo">
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+							</select>
+						</div>
+
+						<div class="input-wrapper input-wrapper-horizontal input-wrapper-block">
+							<select class="input input-select" multiple>
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+								<option>Available option 1</option>
+								<option>Available option 2</option>
+								<option>Available option 3</option>
+								<option>Available option 4</option>
+								<option>Available option 5</option>
+							</select>
+						</div>
+					</fieldset>
 							
 					<h2>Accordion + checking if the framework doesnt fuck with the unstyled nbois too much</h2>
 
@@ -1494,63 +1559,62 @@
 
 		</div>
 
-		<h1 data-toggle="accordion">Symbols reprise but with color classes on em <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Symbols repreiiesesse <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
-				Symbol Square <i class="color-primary symbol symbol-square"></i>
+				Square&nbsp;&nbsp; <i class="color-primary symbol symbol-square"></i>
 			</p>
 
 			<p>
-				Symbol Search <i class="color-accent symbol symbol-search"></i>
+				Search&nbsp;&nbsp; <i class="color-primary symbol symbol-search"></i>
 			</p>
 
 			<p>
-				Symbol arrow down <i class="color-base symbol symbol-arrow-down"></i>
+				arrow down&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-down"></i>
 			</p>
 
 			<p>
-				Symbol arrow up <i class="color-neutral symbol symbol-arrow-up"></i>
+				arrow up&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-up"></i>
 			</p>
 
 			<p>
-				Symbol arrow left <i class="color-success symbol symbol-arrow-left"></i>
+				arrow left&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-left"></i>
 			</p>
 
 			<p>
-				Symbol arrow right <i class="color-caution symbol symbol-arrow-right"></i>
+				arrow right&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-right"></i>
 			</p>
 
 			<p>
-				Symbol + <i class="color-error symbol symbol-plus"></i>
+				plus&nbsp;&nbsp; <i class="color-primary symbol symbol-plus"></i>
 			</p>
 
 			<p>
-				Symbol - <i class="color-primary symbol symbol-minus"></i>
+				minus&nbsp;&nbsp; <i class="color-primary symbol symbol-minus"></i>
 			</p>
 			<p>
-				Symbol kebab vertical <i class="color-accent symbol symbol-kebab-vertical"></i>
+				close&nbsp;&nbsp; <i class="color-primary symbol symbol-close"></i>
 			</p>
 			<p>
-				Symbol kebab horizontal <i class="color-base symbol symbol-kebab-horizontal"></i>
+				map&nbsp;&nbsp; <i class="color-primary symbol symbol-map"></i>
 			</p>
 			<p>
-				Symbol caret up <i class="color-neutral symbol symbol-caret-up"></i>
+				kebab vertical&nbsp;&nbsp; <i class="color-primary symbol symbol-kebab-vertical"></i>
 			</p>
 			<p>
-				Symbol caret down <i class="color-success symbol symbol-caret-down"></i>
+				kebab horizontal&nbsp;&nbsp; <i class="color-primary symbol symbol-kebab-horizontal"></i>
 			</p>
 			<p>
-				Symbol caret left <i class="color-caution symbol symbol-caret-left"></i>
+				caret up&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-up"></i>
 			</p>
 			<p>
-				Symbol caret right <i class="color-error symbol symbol-caret-right"></i>
-			</p>
-
-			<p>
-				Symbol close <i class="symbol symbol-close"></i>
+				caret down&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-down"></i>
 			</p>
 			<p>
-				Symbol close <i class="symbol symbol-map"></i>
+				caret left&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-left"></i>
+			</p>
+			<p>
+				caret right&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-right"></i>
 			</p>
 
 		</div>

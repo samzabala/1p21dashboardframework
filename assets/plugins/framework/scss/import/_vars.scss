@@ -58,7 +58,7 @@
 		$brand-font-accent: "Georgia",Times,serif !default;
 		$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace !default;
 		
-	// GLOBAL html + body coloring
+	// GLOBAL html + body coloring..
 
 		$global-color: $brand-color-base !default;
 			$global-color-inverse: $brand-color-background !default;
@@ -475,7 +475,7 @@
 			$input-info-font-style: italic !default;
 			$input-info-color: $brand-color-neutral !default;
 			$input-info-text-transform: none !default;
-			$input-info-margin-top: .5em !default;
+			$input-info-gutter-y: 1em !default;
 
 		//special-form
 			$special-form-gutter-x: 35px !default;
