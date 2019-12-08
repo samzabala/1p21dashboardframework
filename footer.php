@@ -23,7 +23,7 @@
 	
 		<!-- DEPENDENCIES -->
 		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
-		<!-- <?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?> -->
+		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
 	
 		<!-- THE BOI -->
 		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.js'); ?>

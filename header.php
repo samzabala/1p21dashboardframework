@@ -14,7 +14,7 @@
 
 </head>
 <body class="body-nav-sticky-offset cf body-loading">
-	<!--SVG Styles  -->
+
 	<div id="dashboard">
 		<!-- Sidebar -->
 		<aside id="dashboard-block-sidebar"

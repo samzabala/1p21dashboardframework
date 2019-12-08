@@ -13,16 +13,31 @@
 // 	});
 //   }
 window.jQuery && jQuery.noConflict();
-(function($,window){
+(function($,fw,window){
 	//1p21 shit
 	var _1p21 = window._1p21 || {};
 
 	//dashboard shit
 	_1p21.db = _1p21.db || {};
-
 	
-	$ && ($.trumbowyg.svgPath = '/framework/icons/icons.svg');
-	$ && ($.trumbowyg.hideButtonTexts = true);
+	fw.trumbowyg.defaults = {
+		btns: [
+			['viewHTML'],
+			['strong', 'em',],
+			['insertImage'],
+			['link'],
+			['unorderedList', 'orderedList'],
+			['upload'],
+			['fullscreen']
+		],
+		// svgPath:false,
+		// hideButtonTexts:true,
+		removeformatPasted: true,
+		tbwresize: true,
+		tagsToRemove: ['script']
+	}
+
+	console.log(fw);
 
 	//toggle our boi
 	$('body').on('click','.dashboard-sidenav-toggle',function(e){	
@@ -35,4 +50,4 @@ window.jQuery && jQuery.noConflict();
 	window._1p21 = _1p21;
 
 
-}(jQuery,window));
+}(jQuery,frameWork,window));
