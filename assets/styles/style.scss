@@ -11,12 +11,32 @@ CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 $br-xs-max: 767px;
 $br-sm-max: 1279px;
 $br-md-max: 1799px;
+
 $brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
 $brand-font-accent: $brand-font-primary;
 $brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
+
 $body-font-weight: 500;
+
 $global-background-inverse: #292440;
 $global-background-contrast-inverse: #1F1B30;
+
+$brand-color-primary: #0480fe;
+$brand-color-accent: #d415af;
+
+$brand-color-base-alt: #3d3d3d;
+$brand-color-background-alt: #ecedf0;
+
+$brand-color-intensity-1: $brand-color-primary;
+$brand-color-intensity-2: #4b5be3;
+$brand-color-intensity-3: #843ecd;
+$brand-color-intensity-4: $brand-color-accent;
+$brand-color-intensity-5: #fc01a7;
+
+
+// $brand-color-intensity-1: $brand-color-primary;
+// $brand-color-intensity-5: red;
+
 // $body-font-weight-bold:900;
 
 /*! 

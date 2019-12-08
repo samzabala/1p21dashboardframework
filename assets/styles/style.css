@@ -70,7 +70,7 @@ table {
   --brand-color-primary-light: #1d8dfe;
   --brand-color-primary-dark: #0167ce;
   --brand-color-accent: #d415af;
-  --brand-color-accent-light: #fc01a7;
+  --brand-color-accent-light: #e81ac0;
   --brand-color-accent-dark: #a61089;
   --brand-color-success: #15b800;
   --brand-color-success-light: #18d200;
@@ -4231,7 +4231,7 @@ table {
 .btn-group.btn-group-unite.focus .btn.btn-accent,
 .input-group.focus .btn.btn-accent {
   border-color: transparent ;
-  background: #fc01a7 ;
+  background: #e81ac0 ;
   color: #FFFFFF ; }
 
 .btn.btn-accent:active,
