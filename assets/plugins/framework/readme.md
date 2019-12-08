@@ -1,5 +1,5 @@
 # Framework Documentation
-
+A framework for your appy dashboardy needs :')
 
 ##	Setup
 *	[QuickStart](docs/sections/setup/quickstart.md)
