@@ -17,9 +17,14 @@ window.jQuery && jQuery.noConflict();
 	//1p21 shit
 	var _1p21 = window._1p21 || {};
 
-	//framework shit
+	//dashboard shit
 	_1p21.db = _1p21.db || {};
- 
+
+	
+	$ && ($.trumbowyg.svgPath = '/framework/icons/icons.svg');
+	$ && ($.trumbowyg.hideButtonTexts = true);
+
+	//toggle our boi
 	$('body').on('click','.dashboard-sidenav-toggle',function(e){	
 		e.preventDefault();	
 		console.log('hola bitchacho');	

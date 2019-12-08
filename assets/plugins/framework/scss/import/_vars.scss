@@ -90,7 +90,7 @@
 		$transition-timing: ease-in-out !default;
 
 	//BOX SHADOW
-		$box-shadow-base: 0px 5px 15px -8px!default;
+		$box-shadow-base: 0px 5px 15px -6px!default;
 			$box-shadow-mild: 0px 2px 20px -5px!default;
 			$box-shadow-spicy: 0px 8px 20px -10px!default;
 // CONTENT
@@ -275,12 +275,13 @@
 		$pagination-gutter-y: 0 !default;
 	
 	// MODULE
-		$module-bg-color: $global-background !default;
-			$module-bg-color-inverse: $global-background-inverse !default;
-		
+		$module-background-color: $global-background !default;
+			$module-background-color-inverse: $global-background-inverse !default;
+		$module-border-color: $global-background-contrast !default;
+			$module-border-color-inverse: $global-background-contrast-inverse !default;
+		$module-border-width: 1px !default;
 		$module-gutter-x: $gutter-base !default;
 			$module-gutter-x-mobile: $gutter-small !default;
-
 		$module-box-shadow-hover: $box-shadow-spicy $brand-color-base !default; 
 		
 		$module-gutter-y: 40px !default;
@@ -387,7 +388,7 @@
 		$badge-border-color: $global-background !default;
 			$badge-border-color-inverse: $global-background-inverse !default;
 		$badge-border-width: 7px !default;
-		$badge-box-shadow: $box-shadow-mild $brand-color-base !default;
+		$badge-box-shadow: $box-shadow-base $brand-color-base !default;
 
 	// legend
 		$badge-size: 25px !default;
@@ -467,7 +468,6 @@
 			$input-label-text-transform: uppercase !default;
 		
 			$input-label-horizontal-width: 25% !default;
-
 
 			$input-info-font-size: .875em !default;
 			$input-info-font-weight: 300 !default;

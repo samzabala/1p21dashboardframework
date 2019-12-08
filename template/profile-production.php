@@ -62,7 +62,7 @@
 
 			<div class="module-header">
 				<h3 class="module-title">
-					<span class="profile-name-first"><span class="REPLACE">Jenn</span></span>'s Average Time
+					<span class="profile-name-first"><span class="REPLACE">Profile</span></span>'s Average Time
 				</h3>
 			</div>
 

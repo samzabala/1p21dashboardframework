@@ -25,736 +25,6 @@
 		"oAP": "/app.php",
 		"oF": 0
 		},
-	"/assets/fonts/icons.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/align-center.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/align-center.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/align-justify.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/align-justify.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/align-left.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/align-left.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/align-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/align-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/attachment.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/attachment.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/audio.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/audio.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/authorship.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/authorship.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/background.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/background.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/blockquote.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/blockquote.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/bold.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/bold.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/clean.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/clean.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/code.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/code.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/color.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/color.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/comment.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/comment.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/direction-ltr.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/direction-ltr.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/direction-rtl.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/direction-rtl.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/dropdown.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/dropdown.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/embed.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/embed.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/emoji.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/emoji.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/float-center.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/float-center.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/float-full.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/float-full.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/float-left.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/float-left.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/float-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/float-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/font.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/font.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/formula.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/formula.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/hashtag.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/hashtag.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/header-2.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/header-2.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/header-3.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/header-3.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/header-4.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/header-4.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/header-5.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/header-5.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/header-6.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/header-6.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/header.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/header.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/horizontal-rule.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/horizontal-rule.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/image.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/image.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/indent.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/indent.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/italic.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/italic.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/link.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/link.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/list-bullet.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/list-bullet.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/list-check.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/list-check.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/list-ordered.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/list-ordered.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/map.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/map.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/mention.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/mention.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/more.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/more.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/outdent.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/outdent.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/redo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/redo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/size-decrease.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/size-decrease.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/size-increase.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/size-increase.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/size.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/size.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/spacing.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/spacing.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/speech.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/speech.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/strike.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/strike.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/subscript.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/subscript.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/superscript.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/superscript.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-all.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-all.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-bottom.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-bottom.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-left.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-left.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-none.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-none.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-outside.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-outside.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-border-top.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-border-top.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-delete-cells.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-delete-cells.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-delete-columns.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-delete-columns.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-delete-rows.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-delete-rows.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-insert-cells.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-insert-cells.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-insert-columns.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-insert-columns.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-insert-rows.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-insert-rows.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-merge-cells.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-merge-cells.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table-unmerge-cells.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table-unmerge-cells.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/table.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/table.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/underline.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/underline.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/undo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/undo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
-	"/assets/fonts/icons/video.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/fonts/icons/video.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
-		},
 	"/assets/images/icon-bulletedlist.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -845,15 +115,37 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/assets/plugins/framework/css/framework.css": {
+	"/assets/plugins/framework/dist/framework.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/assets/plugins/framework/css/framework-min.css",
+		"oAP": "/assets/plugins/framework/dist/framework-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/assets/plugins/framework/dist/framework.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/dist/framework.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/framework/dist/framework.plugged.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/dist/framework.plugged.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/assets/plugins/framework/docs/images/badge.png": {
 		"ft": 32768,
@@ -1071,7 +363,7 @@
 		},
 	"/assets/plugins/framework/docs/images/module-grid.png": {
 		"ft": 32768,
-		"iS": 692137,
+		"iS": 236182,
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/module-grid.png",
 		"oF": 0,
@@ -1082,7 +374,7 @@
 		},
 	"/assets/plugins/framework/docs/images/module.png": {
 		"ft": 32768,
-		"iS": 105293,
+		"iS": 91167,
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/module.png",
 		"oF": 0,
@@ -1231,7 +523,7 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/plugins/framework/docs/sections/accordion.md": {
+	"/assets/plugins/framework/docs/sections/components/accordion.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1240,8 +532,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/accordion.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/accordion.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1250,7 +542,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/badge.md": {
+	"/assets/plugins/framework/docs/sections/components/badge.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1259,8 +551,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/badge.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/badge.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1269,7 +561,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/button.md": {
+	"/assets/plugins/framework/docs/sections/components/button.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1278,8 +570,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/button.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/button.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1288,7 +580,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/customize.md": {
+	"/assets/plugins/framework/docs/sections/components/dropdown.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1297,8 +589,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/customize.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/dropdown.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1307,7 +599,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/dropdown.md": {
+	"/assets/plugins/framework/docs/sections/components/form.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1316,8 +608,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/dropdown.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/form.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1326,7 +618,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/flexgrid.md": {
+	"/assets/plugins/framework/docs/sections/components/legend.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1335,8 +627,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/flexgrid.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/legend.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1345,7 +637,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/form.md": {
+	"/assets/plugins/framework/docs/sections/components/list-group.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1354,8 +646,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/form.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/list-group.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1364,7 +656,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/helpers.md": {
+	"/assets/plugins/framework/docs/sections/components/modal.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1373,8 +665,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/helpers.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/modal.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1383,7 +675,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/images.md": {
+	"/assets/plugins/framework/docs/sections/components/nav.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1392,8 +684,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/images.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/nav.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1402,7 +694,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/legend.md": {
+	"/assets/plugins/framework/docs/sections/components/pagination.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1411,8 +703,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/legend.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/pagination.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1421,7 +713,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/list-group.md": {
+	"/assets/plugins/framework/docs/sections/components/progress.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1430,8 +722,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/list-group.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/progress.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1440,7 +732,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/modal.md": {
+	"/assets/plugins/framework/docs/sections/components/symbol.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1449,8 +741,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/modal.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/symbol.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1459,7 +751,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/module.md": {
+	"/assets/plugins/framework/docs/sections/components/tooltip.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1468,8 +760,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/module.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/tooltip.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1478,7 +770,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/nav.md": {
+	"/assets/plugins/framework/docs/sections/components/trumbowyg.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1487,8 +779,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/nav.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/components/trumbowyg.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1497,7 +789,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/pagination.md": {
+	"/assets/plugins/framework/docs/sections/layout/flexgrid.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1506,8 +798,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/pagination.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/layout/flexgrid.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1516,7 +808,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/progress.md": {
+	"/assets/plugins/framework/docs/sections/layout/module.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1525,8 +817,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/progress.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/layout/module.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1535,7 +827,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/quickstart.md": {
+	"/assets/plugins/framework/docs/sections/other/script.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1544,8 +836,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/quickstart.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/other/script.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1554,7 +846,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/script.md": {
+	"/assets/plugins/framework/docs/sections/scaffolding/colors.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1563,8 +855,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/script.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/scaffolding/colors.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1573,7 +865,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/symbol.md": {
+	"/assets/plugins/framework/docs/sections/scaffolding/helpers.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1582,8 +874,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/symbol.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/scaffolding/helpers.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1592,7 +884,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/table.md": {
+	"/assets/plugins/framework/docs/sections/scaffolding/images.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1601,8 +893,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/table.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/scaffolding/images.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1611,7 +903,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/tooltip.md": {
+	"/assets/plugins/framework/docs/sections/scaffolding/table.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1620,8 +912,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/tooltip.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/scaffolding/table.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1630,7 +922,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/trumbowyg.md": {
+	"/assets/plugins/framework/docs/sections/scaffolding/typography.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1639,8 +931,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/trumbowyg.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/scaffolding/typography.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1649,7 +941,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/plugins/framework/docs/sections/typography.md": {
+	"/assets/plugins/framework/docs/sections/setup/customize.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -1658,8 +950,8 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/sections/typography.html",
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/setup/customize.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1667,15 +959,44 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/assets/plugins/framework/docs/sections/setup/quickstart.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/framework/docs/sections/setup/quickstart.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/assets/plugins/framework/icons/icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/plugins/framework/icons/icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/plugins/framework/js/framework.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/plugins/framework/js/framework.min.js",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/framework/dist/framework.min.js",
+		"oF": 3,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1684,19 +1005,11 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/plugins/framework/js/framework.plugged.min.js",
-		"oF": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/framework/dist/framework.plugged.min.js",
+		"oF": 3,
 		"sC": 3,
 		"tS": 0
-		},
-	"/assets/plugins/framework/readme.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/readme.html",
-		"oF": 0
 		},
 	"/assets/plugins/framework/readme.md": {
 		"cB": 0,
@@ -1707,7 +1020,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/assets/plugins/framework/readme.html",
 		"oF": 0,
 		"oFM": 0,
@@ -1725,7 +1038,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/assets/plugins/framework/css/framework.css",
+		"oAP": "/assets/plugins/framework/dist/framework.css",
 		"oF": 3,
 		"oS": 0,
 		"uL": 1
@@ -2105,49 +1418,1808 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/plugins/trumbowyg.1p21.js": {
+	"/assets/plugins/trumbowyg/dist/langs/ar.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/plugins/trumbowyg.1p21.min.js",
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ar.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/plugins/trumbowyg.js": {
+	"/assets/plugins/trumbowyg/dist/langs/ar.min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/plugins/trumbowyg.min.js",
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ar.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/plugins/trumbowyg.upload.1p21.js": {
+	"/assets/plugins/trumbowyg/dist/langs/bg.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/plugins/trumbowyg.upload.1p21.min.js",
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/bg.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/plugins/trumbowyg.upload.js": {
+	"/assets/plugins/trumbowyg/dist/langs/bg.min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/assets/plugins/trumbowyg.upload.min.js",
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/bg.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/by.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/by.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/by.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/by.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ca.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ca.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ca.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ca.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/cs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/cs.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/cs.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/cs.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/da.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/da.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/da.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/da.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/de.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/de.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/de.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/de.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/el.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/el.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/el.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/el.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/es.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/es.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/es.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/es.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/es_ar.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/es_ar.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/es_ar.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/es_ar.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/fa.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/fa.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/fa.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/fa.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/fi.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/fi.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/fi.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/fi.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/fr.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/fr.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/fr.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/fr.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/he.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/he.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/he.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/he.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/hr.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/hr.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/hr.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/hr.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/hu.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/hu.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/hu.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/hu.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/id.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/id.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/id.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/id.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/it.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/it.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/it.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/it.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ja.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ja.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ja.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ja.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ko.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ko.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ko.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ko.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/lt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/lt.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/lt.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/lt.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/mn.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/mn.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/mn.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/mn.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/my.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/my.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/my.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/my.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/nl.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/nl.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/nl.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/nl.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/no_nb.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/no_nb.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/no_nb.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/no_nb.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ph.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ph.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ph.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ph.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/pl.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/pl.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/pl.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/pl.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/pt.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/pt.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/pt.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/pt.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/pt_br.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/pt_br.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/pt_br.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/pt_br.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ro.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ro.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ro.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ro.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/rs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/rs.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/rs.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/rs.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/rs_latin.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/rs_latin.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/rs_latin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/rs_latin.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ru.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ru.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ru.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ru.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sk.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sk.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sk.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sk.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sl.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sl.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sl.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sl.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sq.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sq.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sq.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sq.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sv.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sv.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/sv.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/sv.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/th.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/th.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/th.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/th.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/tr.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/tr.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/tr.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/tr.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ua.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ua.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/ua.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/ua.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/vi.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/vi.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/vi.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/vi.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/zh_cn.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/zh_cn.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/zh_cn.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/zh_cn.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/zh_tw.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/zh_tw.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/langs/zh_tw.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/langs/zh_tw.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/base64/trumbowyg.base64.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/base64/trumbowyg.base64.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/base64/trumbowyg.base64.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/base64/trumbowyg.base64.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/cleanpaste/trumbowyg.cleanpaste.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/cleanpaste/trumbowyg.cleanpaste.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/cleanpaste/trumbowyg.cleanpaste.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/cleanpaste/trumbowyg.cleanpaste.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/colors/trumbowyg.colors.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/colors/trumbowyg.colors.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/colors/trumbowyg.colors.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/colors/trumbowyg.colors.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/colors/ui/sass/trumbowyg.colors.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/colors/ui/sass/trumbowyg.colors.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/colors/ui/trumbowyg.colors-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/emoji/trumbowyg.emoji.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/emoji/trumbowyg.emoji.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/emoji/trumbowyg.emoji.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/emoji/trumbowyg.emoji.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/emoji/ui/sass/trumbowyg.emoji.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/emoji/ui/sass/trumbowyg.emoji.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/emoji/ui/trumbowyg.emoji.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/emoji/ui/trumbowyg.emoji-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/emoji/ui/trumbowyg.emoji.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/emoji/ui/trumbowyg.emoji.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/fontfamily/trumbowyg.fontfamily.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/fontfamily/trumbowyg.fontfamily.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/fontfamily/trumbowyg.fontfamily.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/fontfamily/trumbowyg.fontfamily.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/fontsize/trumbowyg.fontsize.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/fontsize/trumbowyg.fontsize.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/fontsize/trumbowyg.fontsize.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/fontsize/trumbowyg.fontsize.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/giphy/trumbowyg.giphy.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/giphy/trumbowyg.giphy.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/giphy/trumbowyg.giphy.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/giphy/trumbowyg.giphy.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/giphy/ui/sass/trumbowyg.giphy.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/giphy/ui/sass/trumbowyg.giphy.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/giphy/ui/trumbowyg.giphy.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/giphy/ui/trumbowyg.giphy-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/giphy/ui/trumbowyg.giphy.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/giphy/ui/trumbowyg.giphy.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/highlight/trumbowyg.highlight.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/highlight/trumbowyg.highlight.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/highlight/trumbowyg.highlight.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/highlight/trumbowyg.highlight.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/highlight/ui/sass/trumbowyg.highlight.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/highlight/ui/sass/trumbowyg.highlight.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/highlight/ui/trumbowyg.highlight.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/highlight/ui/trumbowyg.highlight-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/highlight/ui/trumbowyg.highlight.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/highlight/ui/trumbowyg.highlight.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/history/trumbowyg.history.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/history/trumbowyg.history.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/history/trumbowyg.history.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/history/trumbowyg.history.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/insertaudio/trumbowyg.insertaudio.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/insertaudio/trumbowyg.insertaudio.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/insertaudio/trumbowyg.insertaudio.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/insertaudio/trumbowyg.insertaudio.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/lineheight/trumbowyg.lineheight.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/lineheight/trumbowyg.lineheight.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/lineheight/trumbowyg.lineheight.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/lineheight/trumbowyg.lineheight.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mathml/trumbowyg.mathml.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mathml/trumbowyg.mathml.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mathml/trumbowyg.mathml.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mathml/trumbowyg.mathml.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mathml/ui/sass/trumbowyg.mathml.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mathml/ui/sass/trumbowyg.mathml.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mathml/ui/trumbowyg.mathml.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mathml/ui/trumbowyg.mathml-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mathml/ui/trumbowyg.mathml.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mathml/ui/trumbowyg.mathml.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mention/trumbowyg.mention.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mention/trumbowyg.mention.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mention/trumbowyg.mention.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mention/trumbowyg.mention.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mention/ui/sass/trumbowyg.mention.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mention/ui/sass/trumbowyg.mention.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mention/ui/trumbowyg.mention.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mention/ui/trumbowyg.mention-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/mention/ui/trumbowyg.mention.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/mention/ui/trumbowyg.mention.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/noembed/trumbowyg.noembed.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/noembed/trumbowyg.noembed.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/noembed/trumbowyg.noembed.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/noembed/trumbowyg.noembed.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/pasteembed/trumbowyg.pasteembed.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/pasteembed/trumbowyg.pasteembed.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/pasteembed/trumbowyg.pasteembed.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/pasteembed/trumbowyg.pasteembed.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/pasteimage/trumbowyg.pasteimage.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/pasteimage/trumbowyg.pasteimage.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/pasteimage/trumbowyg.pasteimage.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/pasteimage/trumbowyg.pasteimage.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/preformatted/trumbowyg.preformatted.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/preformatted/trumbowyg.preformatted.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/preformatted/trumbowyg.preformatted.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/preformatted/trumbowyg.preformatted.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/resizimg/trumbowyg.resizimg.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/resizimg/trumbowyg.resizimg.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/resizimg/trumbowyg.resizimg.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/resizimg/trumbowyg.resizimg.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/ruby/trumbowyg.ruby.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/ruby/trumbowyg.ruby.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/ruby/trumbowyg.ruby.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/ruby/trumbowyg.ruby.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/specialchars/trumbowyg.specialchars.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/specialchars/trumbowyg.specialchars.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/specialchars/trumbowyg.specialchars.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/specialchars/trumbowyg.specialchars.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/specialchars/ui/sass/trumbowyg.specialchars.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/specialchars/ui/sass/trumbowyg.specialchars.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/specialchars/ui/trumbowyg.specialchars.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/specialchars/ui/trumbowyg.specialchars-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/specialchars/ui/trumbowyg.specialchars.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/specialchars/ui/trumbowyg.specialchars.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/table/trumbowyg.table.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/table/trumbowyg.table.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/table/trumbowyg.table.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/table/trumbowyg.table.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/table/ui/sass/trumbowyg.table.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/table/ui/sass/trumbowyg.table.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/table/ui/trumbowyg.table.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/table/ui/trumbowyg.table-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/table/ui/trumbowyg.table.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/table/ui/trumbowyg.table.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/template/trumbowyg.template.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/template/trumbowyg.template.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/template/trumbowyg.template.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/template/trumbowyg.template.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/upload/trumbowyg.upload.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/upload/trumbowyg.upload.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/plugins/upload/trumbowyg.upload.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/plugins/upload/trumbowyg.upload.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/trumbowyg.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/trumbowyg.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/trumbowyg.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/trumbowyg.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/plugins/trumbowyg/dist/ui/icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/plugins/trumbowyg/dist/ui/icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/plugins/trumbowyg/dist/ui/sass/trumbowyg.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/plugins/trumbowyg/dist/ui/sass/trumbowyg.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/plugins/trumbowyg/dist/ui/trumbowyg.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/ui/trumbowyg-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/plugins/trumbowyg/dist/ui/trumbowyg.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/plugins/trumbowyg/dist/ui/trumbowyg.min-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/assets/scripts/dashboard.js": {
 		"bF": 0,
@@ -2156,6 +3228,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/assets/scripts/dashboard.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/assets/scripts/trumbowyg.upload.1p21.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/scripts/trumbowyg.upload.1p21.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -2976,7 +4059,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/readme.html",
 		"oF": 0,
 		"oFM": 0,
@@ -3088,14 +4171,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template/unique-links.php",
-		"oF": 0
-		},
-	"/wp-content/mu-plugins/local-by-flywheel-demo-urls.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/wp-content/mu-plugins/local-by-flywheel-demo-urls.php",
 		"oF": 0
 		}
 	},
@@ -5049,7 +6124,7 @@
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",

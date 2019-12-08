@@ -79,7 +79,8 @@ $prefix: '.module';
 	}
 
 	& {
-		background: $module-bg-color;
+		background: $module-background-color;
+		border: $module-border-width solid $module-border-color;
 		// overflow:hidden;
 		display: grid;
 		align-items: center;
@@ -99,7 +100,8 @@ $prefix: '.module';
 
 		.body-inverse & {
 
-			background: $module-bg-color-inverse;
+			background: $module-background-color-inverse;
+				border-color: $module-border-color-inverse;
 		}
 
 		&[data-toggle]:hover,

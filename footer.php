@@ -15,13 +15,15 @@
 
 	<!-- SCRIPT -->
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/jquery.js'); ?>
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/trumbowyg.js'); ?>
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/trumbowyg.upload.1p21.js'); ?>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script>
+
+
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/js/framework.plugged.js'); ?>
-		<!-- <?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/js/framework.js'); ?> -->
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
+		<!-- <?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?> -->
 	
 		<!-- THE BOI -->
 		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.js'); ?>

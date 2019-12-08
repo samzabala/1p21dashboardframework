@@ -135,7 +135,7 @@ function app_create_link( $array_of_get_vars = array()) {
 
 //DUH
 function app_get_file_content_as_string($filepath = '') {
-	if($filepath){
+	if($filepath && file_exists($filepath)){
 		ob_start();
 		include $filepath;
 		return ob_get_clean();
@@ -146,15 +146,19 @@ function app_get_file_content_as_string($filepath = '') {
 // shits faster if u inline scripts and shit hehe. he
 	//DUH
 	function app_inline_style($filepath = ''){
-		echo '<style>';
-		echo app_get_file_content_as_string($filepath);
-		echo '</style>';
+		if($filepath && file_exists($filepath)){
+			echo '<style>';
+			echo app_get_file_content_as_string($filepath);
+			echo '</style>';
+		}
 	}
 
 	//DUH
 	function app_inline_script($filepath = ''){
-		echo '<script>';
-		echo app_get_file_content_as_string($filepath);
-		echo '</script>';
+		if($filepath && file_exists($filepath)){
+			echo '<script>';
+			echo app_get_file_content_as_string($filepath);
+			echo '</script>';
+		}
 	}
 
