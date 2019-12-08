@@ -158,24 +158,29 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/plugins/framework/docs/images/btn-group-multiple-resetter.gif": {
+		"ft": 4194304,
+		"iS": 288744,
+		"oA": 0,
+		"oAP": "/assets/plugins/framework/docs/images/btn-group-multiple-resetter.gif",
+		"oF": 0,
+		"opt": 0
+		},
 	"/assets/plugins/framework/docs/images/btn-group-toggle-multiple-and-resetter.gif": {
 		"ft": 4194304,
-		"iS": 570989,
+		"iS": 232343,
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group-toggle-multiple-and-resetter.gif",
 		"oF": 0,
 		"opt": 0
 		},
-	"/assets/plugins/framework/docs/images/btn-group-toggle.png": {
-		"ft": 32768,
-		"iS": 25833,
+	"/assets/plugins/framework/docs/images/btn-group-toggle.gif": {
+		"ft": 4194304,
+		"iS": 227871,
 		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/btn-group-toggle.png",
+		"oAP": "/assets/plugins/framework/docs/images/btn-group-toggle.gif",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
+		"opt": 0
 		},
 	"/assets/plugins/framework/docs/images/btn-group-vertical.png": {
 		"ft": 32768,
@@ -220,14 +225,6 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
-		},
-	"/assets/plugins/framework/docs/images/butt-group-toggle.gif": {
-		"ft": 4194304,
-		"iS": 607945,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/butt-group-toggle.gif",
-		"oF": 0,
-		"opt": 0
 		},
 	"/assets/plugins/framework/docs/images/dropdown.png": {
 		"ft": 32768,
@@ -361,33 +358,22 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/plugins/framework/docs/images/module-grid.png": {
+	"/assets/plugins/framework/docs/images/nav-horizontal.png": {
 		"ft": 32768,
-		"iS": 236182,
+		"iS": 32302,
 		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/module-grid.png",
+		"oAP": "/assets/plugins/framework/docs/images/nav-horizontal.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/plugins/framework/docs/images/module.png": {
+	"/assets/plugins/framework/docs/images/nav-vertical.png": {
 		"ft": 32768,
-		"iS": 91167,
+		"iS": 61351,
 		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/module.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/assets/plugins/framework/docs/images/nav.png": {
-		"ft": 32768,
-		"iS": 36836,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/nav.png",
+		"oAP": "/assets/plugins/framework/docs/images/nav-vertical.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -396,7 +382,7 @@
 		},
 	"/assets/plugins/framework/docs/images/progress-bar-animated.gif": {
 		"ft": 4194304,
-		"iS": 5444715,
+		"iS": 125458,
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/progress-bar-animated.gif",
 		"oF": 0,
@@ -407,17 +393,6 @@
 		"iS": 19386,
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/progress-bar.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/assets/plugins/framework/docs/images/special-form.png": {
-		"ft": 32768,
-		"iS": 166740,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/special-form.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -468,20 +443,9 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/plugins/framework/docs/images/thumbnail-small.png": {
-		"ft": 32768,
-		"iS": 35892,
-		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/thumbnail-small.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/assets/plugins/framework/docs/images/thumbnail.png": {
 		"ft": 32768,
-		"iS": 385526,
+		"iS": 433401,
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/thumbnail.png",
 		"oF": 0,
@@ -490,11 +454,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/plugins/framework/docs/images/tooltip-with-badge.png": {
+	"/assets/plugins/framework/docs/images/tooltip-width-badge.png": {
 		"ft": 32768,
-		"iS": 28513,
+		"iS": 35457,
 		"oA": 0,
-		"oAP": "/assets/plugins/framework/docs/images/tooltip-with-badge.png",
+		"oAP": "/assets/plugins/framework/docs/images/tooltip-width-badge.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

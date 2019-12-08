@@ -96,7 +96,7 @@
 			</div>
 			
 			<div class="module-content">
-				<table class="table-small">
+				<table class="table-small text-vertical-align-middle">
 					<!-- @LOOP tr -->
 					<tr class="updated-project">
 
