@@ -40,7 +40,7 @@
 					<!--
 						@NOTE background-color on .legend will be replaced dynamically based on color-coded graph item and the profile it represents
 					-->
-					<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
+					<li class="flex-col-xs-6 flex-col-md-3 flex-col-lg-2">
 						<span class="legend" style="background-color: #fb1818"></span>
 						<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 					</li>
@@ -51,7 +51,7 @@
 								$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
 							?>
 							<?php for($i=1; $i<=(count($placeholder_colors) - 1); $i++){ ?>
-								<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
+								<li class="flex-col-xs-6 flex-col-md-3 flex-col-lg-2">
 									<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
 									<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 								</li>
@@ -103,7 +103,7 @@
 						@DYNAMIC: li
 						@NOTE background-color on .legend will be replaced dynamically based on graph
 					-->
-					<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
+					<li class="flex-col-xs-6 flex-col-md-3 flex-col-lg-2">
 							<span class="legend" style="background-color: #fb1818"></span>
 							<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 					</li>
@@ -118,7 +118,7 @@
 								
 
 								
-								<li class="flex-col-xs-6 flex-col-md-4 flex-col-lg-2">
+								<li class="flex-col-xs-6 flex-col-md-3 flex-col-lg-2">
 									<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
 									<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
 								</li>

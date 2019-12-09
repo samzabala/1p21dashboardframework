@@ -18,8 +18,8 @@ $brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
 
 $body-font-weight: 500;
 
-$global-background-inverse: #292440;
-$global-background-contrast-inverse: #1F1B30;
+$theme-background-inverse: #292440;
+$theme-background-contrast-inverse: #1F1B30;
 
 $brand-color-primary: #0480fe;
 $brand-color-accent: #d415af;
@@ -36,6 +36,13 @@ $brand-color-intensity-5: #fc01a7;
 
 $module-grid-title-text-transform: uppercase;
 $module-title-text-transform: uppercase;
+
+
+$btn-font-weight: 600;
+$nav-top-font-weight: 600;
+$tag-font-weight: 600;
+$input-label-font-weight: 600;
+$input-font-weight: 600;
 
 // $brand-color-intensity-1: $brand-color-primary;
 // $brand-color-intensity-5: red;

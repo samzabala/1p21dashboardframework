@@ -72,10 +72,10 @@
 				event.preventDefault();
 				setCookie('_1p21fw_dark',( getCookie('_1p21fw_dark') == '1' ? '0' : '1' ),69 );
 
-				document.body.classList.toggle('body-inverse');
+				document.documentElement.classList.toggle('theme-inverse');
 			}
 			(function(){
-				getCookie('_1p21fw_dark') == '1' && (document.body.classList.add('body-inverse') )
+				getCookie('_1p21fw_dark') == '1' && (document.documentElement.classList.add('theme-inverse') )
 			}())
 		</script>
 

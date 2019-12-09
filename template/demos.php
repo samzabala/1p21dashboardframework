@@ -2041,7 +2041,16 @@
 			<p class="text-transform-capitalize">Capitalize</p>
 
 			<h2>Helper classes: Colors</h2>
+
+
+
+			<p class="color-theme">color theme</p>
+			<p class="color-theme-inverse">color theme inverse</p>
+			<p class="color-theme-contrast">color theme contrast</p>
+			<p class="color-theme-inverse-contrast">color theme inverse contrast</p>
+
 			<p class="color-base">Color Base</p>
+			<p class="color-background">Color Background</p>
 			<p class="color-primary">Color Primary</p>
 			<p class="color-accent">Color Accent</p>
 			<p class="color-neutral">Color Neutral</p>
@@ -2057,7 +2066,14 @@
 
 			<h2>Helper classes: backgrounds</h2>
 
+
+			<p class="background-theme">background theme</p>
+			<p class="background-theme-inverse">background theme inverse</p>
+			<p class="background-theme-contrast">background theme contrast</p>
+			<p class="background-theme-inverse-contrast">background theme inverse contrast</p>
+
 			<p class="background-base">background Base</p>
+			<p class="background-background">background Background</p>
 			<p class="background-primary">Background Primary</p>
 			<p class="background-accent">Background Accent</p>
 			<p class="background-neutral">Background Neutral</p>
@@ -2259,3 +2275,11 @@
 
 			</div>
 		</div>
+
+		<style>
+			*[class*="background-"],
+			*[class*="color-"] {
+				outline: 1px solid rgba(0,0,0,.5);
+			}
+		
+		</style>

@@ -358,6 +358,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/plugins/framework/docs/images/module-grid.png": {
+		"ft": 32768,
+		"iS": 294187,
+		"oA": 0,
+		"oAP": "/assets/plugins/framework/docs/images/module-grid.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/plugins/framework/docs/images/module.png": {
+		"ft": 32768,
+		"iS": 296558,
+		"oA": 0,
+		"oAP": "/assets/plugins/framework/docs/images/module.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/plugins/framework/docs/images/nav-horizontal.png": {
 		"ft": 32768,
 		"iS": 32302,
@@ -3259,7 +3281,7 @@
 		"oA": 0,
 		"oAP": "/assets/styles/style.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"uL": 1
 		},
 	"/components/filter-date.php": {

@@ -13,16 +13,16 @@
 
 
 </head>
-<body class="body-nav-sticky-offset cf body-loading">
+<body class="body-nav-sticky-offset cf body-loading background-theme-contrast">
 
 	<div id="dashboard">
 		<!-- Sidebar -->
 		<aside id="dashboard-block-sidebar"
-		class="background-global">
+		class="background-theme">
 			<?php include_once 'includes/sidebar.php'; ?>
 		</aside>
 
-			<main id="dashboard-block-main" class="background-global-contrast">
+			<main id="dashboard-block-main">
 
 				<!-- Navigation -->
 				<?php include_once 'includes/main-nav.php'; ?>
