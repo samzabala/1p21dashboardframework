@@ -1,6 +1,137 @@
-<div class="module">
+<div class="module" data-sggrc="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
 	<div class="module-content">
-
+	<h1 data-toggle="accordion">SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 742 720" style="enable-background:new 0 0 742 720;" xml:space="preserve" class="alignnone size-medium wp-image-1067 svg replaced-svg">
+				<g transform="translate(71,60)">
+					<g>
+						<text transform="matrix(1 0 0 1 289.9922 -30)" class="font-family-primary">butt</text>
+						<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 671 311.3438)" class="font-family-primary">hole</text>
+					</g>
+					<g>
+						<g transform="translate(0,0)">
+							<path class="st2" d="M600.5-6v6.5H0.5V-6"></path>
+							<g transform="translate(600.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -3.3369 -9)" class="font-family-primary">9</text>
+							</g>
+							<g transform="translate(540.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">10</text>
+							</g>
+							<g transform="translate(480.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.2285 -9)" class="font-family-primary">11</text>
+							</g>
+							<g transform="translate(420.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">12</text>
+							</g>
+							<g transform="translate(360.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary fill-theme-polar">13</text>
+							</g>
+							<g transform="translate(300.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">14</text>
+							</g>
+							<g transform="translate(240.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">15</text>
+							</g>
+							<g transform="translate(180.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">16</text>
+							</g>
+							<g transform="translate(120.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">17</text>
+							</g>
+							<g transform="translate(60.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">18</text>
+							</g>
+							<g transform="translate(0.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">19</text>
+							</g>
+						</g>
+						<g transform="translate(600,0)">
+							<path class="st2" d="M6,0.5H0.5v600H6"></path>
+							<g transform="translate(0,46.47887323943663)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Tony</text>
+							</g>
+							<g transform="translate(0,130.98591549295776)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Jessica</text>
+							</g>
+							<g transform="translate(0,215.49295774647888)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Andrew</text>
+							</g>
+							<g transform="translate(0,300)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Emily</text>
+							</g>
+							<g transform="translate(0,384.5070422535211)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Richard</text>
+							</g>
+							<g transform="translate(0,469.01408450704224)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Tonyboy</text>
+							</g>
+							<g transform="translate(0,553.5211267605633)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">mop</text>
+							</g>
+						</g>
+					</g>
+					<g>
+						<g>
+							<rect x="360" y="8.5" class="fill-theme fill-accent-hover" width="240" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="420" y="93" class="fill-accent" width="180" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="600" y="177.5" class="fill-neutral" width="0" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="480" y="262" class="fill-base" width="120" height="76.1"></rect>
+						</g>
+						<g>
+							<rect y="346.5" class="fill-success stroke-error" width="600" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="300" y="431" class="st6" width="300" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="540" y="515.5" class="st4" width="60" height="76.1"></rect>
+						</g>
+					</g>
+					<g transform="translate(0,528.5409393310547)">
+						<g transform="translate(0, 0)">
+							<rect y="0" class="st3" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">thot</text>
+						</g>
+						<g transform="translate(0, 20.101661682128906)">
+							<rect y="0" class="st4" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">fuckhole</text>
+						</g>
+						<g transform="translate(0, 40.20332336425781)">
+							<rect y="0" class="st5" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">bitch</text>
+						</g>
+						<g transform="translate(0, 60.30498504638672)">
+							<rect y="0" class="st6" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">dumbass</text>
+						</g>
+					</g>
+				</g>
+			</svg>
+		</div>
 
 		<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -2045,9 +2176,9 @@
 
 
 			<p class="color-theme">color theme</p>
-			<p class="color-theme-inverse">color theme inverse</p>
+			<p class="color-theme-polar">color theme polar</p>
 			<p class="color-theme-contrast">color theme contrast</p>
-			<p class="color-theme-inverse-contrast">color theme inverse contrast</p>
+			<p class="color-theme-polar-contrast">color theme polar contrast</p>
 
 			<p class="color-base">Color Base</p>
 			<p class="color-background">Color Background</p>
@@ -2068,9 +2199,9 @@
 
 
 			<p class="background-theme">background theme</p>
-			<p class="background-theme-inverse">background theme inverse</p>
+			<p class="background-theme-polar">background theme polar</p>
 			<p class="background-theme-contrast">background theme contrast</p>
-			<p class="background-theme-inverse-contrast">background theme inverse contrast</p>
+			<p class="background-theme-polar-contrast">background theme polar contrast</p>
 
 			<p class="background-base">background Base</p>
 			<p class="background-background">background Background</p>
@@ -2277,9 +2408,21 @@
 		</div>
 
 		<style>
-			*[class*="background-"],
-			*[class*="color-"] {
+			.accordion *[class*="background-"],
+			.accordion *[class*="color-"] {
 				outline: 1px solid rgba(0,0,0,.5);
+				padding: 1em;
+			}
+
+			.accordion *[class*="color-"]{
+
+				text-shadow:
+
+				
+				1px 0 0 pink,
+				-1px 0 0 pink,
+				0 1px 0 pink,
+				0 -1px 0 pink;
 			}
 		
 		</style>
