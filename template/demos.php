@@ -1829,6 +1829,26 @@
 				<span class="legend legend-error"></span> Error
 			</p>
 
+			<p>
+				<span class="legend legend-intensity-1"></span> Intensity 1
+			</p>
+
+			<p>
+				<span class="legend legend-intensity-2"></span> Intensity 2
+			</p>
+
+			<p>
+				<span class="legend legend-intensity-3"></span> Intensity 3
+			</p>
+
+			<p>
+				<span class="legend legend-intensity-4"></span> Intensity 4
+			</p>
+
+			<p>
+				<span class="legend legend-intensity-5"></span> Intensity 5
+			</p>
+
 			<h4>Custom color</h4>
 			<span class="legend" style="background-color: pink"></span> Custom
 		</div>
