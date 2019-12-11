@@ -99,7 +99,7 @@
 				
 				<div class="module-content">
 					
-					<span class="special-primary project-count-links-built">
+					<span class="special-primary no-margin-y project-count-links-built">
 						<span class="REPLACE">88</span>
 					</span>
 					<span class="font-size-small color-neutral">Links Built</span>
@@ -120,7 +120,7 @@
 			<span class="module-content">
 
 					
-				<span class="special-primary project-count-on-page">
+				<span class="special-primary no-margin-y project-count-on-page">
 					<span class="REPLACE">32</span>
 				</span>
 				<span class="font-size-small color-neutral">On-Page</span>
@@ -139,7 +139,7 @@
 			
 			<div class="module-content">
 					
-				<span class="special-primary project-count-average">
+				<span class="special-primary no-margin-y project-count-average">
 					<span class="REPLACE">33.2</span>
 				</span>
 				<span class="font-size-small color-neutral">Average Rank</span>
@@ -156,7 +156,7 @@
 			
 			<div class="module-content">
 					
-				<span class="special-primary project-count-averagehr">
+				<span class="special-primary no-margin-y project-count-averagehr">
 					<span class="REPLACE">1.1</span>
 				</span>
 				<span class="font-size-small color-neutral">Average HR Rank</span>

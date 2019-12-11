@@ -8,7 +8,7 @@
 			
 					<?php app_get_component('components/module-functions-accordion-toggle'); ?>
 
-					<h3 class="flex-0-0 no-margin-x special-secondary text-clip-background background-gradient">
+					<h3 class="flex-0-0 no-margin-x special-secondary text-clip-background background-gradient no-margin">
                         New Content / On Page / Social Media
                     </h3>
                     <div class="module-functions accordion accordion-mobile">

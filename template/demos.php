@@ -487,28 +487,19 @@
 				</div>
 
 				<div class="progress">
-					<div class="progress-bar progress-bar-gradient" style="width: 20%"></div>
+					<div class="progress-bar progress-bar-intensity-1" style="width: 20%"></div>
 				</div>
 				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-45" style="width: 60%;"></div>
+					<div class="progress-bar progress-bar-intensity-2" style="width: 70%"></div>
 				</div>
 				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-90" style="width: 40%"></div>
+					<div class="progress-bar progress-bar-intensity-3" style="width: 10%"></div>
 				</div>
 				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-135" style="width: 60%"></div>
+					<div class="progress-bar progress-bar-intensity-4" style="width: 35%"></div>
 				</div>
 				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-180" style="width: 80%"></div>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-225" style="width: 80%"></div>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-270" style="width: 80%"></div>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar-gradient-315" style="width: 80%"></div>
+					<div class="progress-bar progress-bar-intensity-5" style="width: 87%"></div>
 				</div>
 
 			<h3 id="progress-basic">custom background colors with special fx woooo</h3>
@@ -1653,11 +1644,15 @@
 		<h1 data-toggle="accordion">SPECIAL TEXT <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p class="special-primary">
-				Yo I'm jumbo fight me
+				Yo I'm jumbo. don't talk to me or my sons ever again
 			</p>
 
-			<p class="special-secondary background-gradient text-clip-background">
-				Yo I'm second jumbo fight me. i also have .background-gradient and .text-clip-background
+			<p class="special-secondary">
+				Yo I'm second jumbo. Fight me weewooweewoo. shit shit shit shit shit shit shit shit it stinks
+			</p>
+
+			<p class="lead">
+				I'm lead, how about you shit yourself. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 
 		</div>
@@ -1775,6 +1770,21 @@
 			<p>
 				<span class="badge badge-error"></span> Error
 			</p>
+			<p>
+				<span class="badge badge-intensity-1"></span> Intensity 1
+			</p>
+			<p>
+				<span class="badge badge-intensity-2"></span> Intensity 2
+			</p>
+			<p>
+				<span class="badge badge-intensity-3"></span> Intensity 3
+			</p>
+			<p>
+				<span class="badge badge-intensity-4"></span> Intensity 4
+			</p>
+			<p>
+				<span class="badge badge-intensity-5"></span> Intensity 5
+			</p>
 
 
 			<p>
@@ -1833,6 +1843,11 @@
 			<span class="tag tag-success">Success</span>
 			<span class="tag tag-caution">Caution</span>
 			<span class="tag tag-error">Error</span>
+			<span class="tag tag-intensity-1">Intensity 1</span>
+			<span class="tag tag-intensity-2">Intensity 2</span>
+			<span class="tag tag-intensity-3">Intensity 3</span>
+			<span class="tag tag-intensity-4">Intensity 4</span>
+			<span class="tag tag-intensity-5">Intensity 5</span>
 			<h4>Custom color</h4>
 			<span class="tag" style="background-color: violet">Custom</span>
 		</div>
@@ -2051,6 +2066,41 @@
 					<tr class="table-row-base">
 						<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
 						<td>base</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr class="table-row-intensity-1">
+						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
+						<td>Intensity </td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr class="table-row-intensity-2">
+						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
+						<td>Intensity </td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr class="table-row-intensity-3">
+						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
+						<td>Intensity </td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr class="table-row-intensity-4">
+						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
+						<td>Intensity </td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr class="table-row-intensity-5">
+						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
+						<td>Intensity </td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
@@ -2408,7 +2458,7 @@
 		</div>
 
 		<style>
-			.accordion *[class*="background-"],
+			.accordion *[class*="background-"]:not(*[class*="clip"]),
 			.accordion *[class*="color-"] {
 				outline: 1px solid rgba(0,0,0,.5);
 				padding: 1em;

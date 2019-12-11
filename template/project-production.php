@@ -163,7 +163,7 @@
 												
 											<!-- Progress: PreProduction -->
 											<div
-												class="project-progress-pre progress-bar background-global-contrast"
+												class="project-progress-pre progress-bar background-theme-contrast"
 												style="width:5%"></div>
 
 												
@@ -191,7 +191,7 @@
 
 											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
-													<i class="symbol symbol-square color-global-background-contrast"></i>
+													<i class="symbol symbol-square color-theme-polar-contrast"></i>
 													<span class="project-milestone">Pre-Production</span>
 												</div>
 

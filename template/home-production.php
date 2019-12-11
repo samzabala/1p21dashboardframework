@@ -74,7 +74,7 @@
 					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
 						
 						<div class="flex-1-1">
-							<div class="special-primary production-count-design">
+							<div class="special-primary no-margin-y production-count-design">
 								<span class="REPLACE">40</span>
 							</div>
 
@@ -92,7 +92,7 @@
 					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
 						
 						<div class="flex-1-1">
-							<div class="special-primary production-count-dev">
+							<div class="special-primary no-margin-y production-count-dev">
 								<span class="REPLACE">12</span>
 							</div>
 
@@ -110,7 +110,7 @@
 					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
 						
 						<div class="flex-1-1">
-							<div class="special-primary production-count-dev">
+							<div class="special-primary no-margin-y production-count-dev">
 								<span class="REPLACE">12</span>
 							</div>
 
@@ -128,7 +128,7 @@
 					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
 						
 						<div class="flex-1-1">
-							<div class="special-primary production-count-dev">
+							<div class="special-primary no-margin-y production-count-dev">
 								<span class="REPLACE">12</span>
 							</div>
 
