@@ -53,7 +53,7 @@
 			data-grid-area="linksbuilt">
 				
 				<span class="module-content">
-					<span class="special-primary profile-count-links-built">
+					<span class="special-primary  no-margin-y profile-count-links-built">
 						<span class="REPLACE">88</span>
 					</span>
 					<span class="font-size-small color-neutral">Links Built</span>
@@ -70,7 +70,7 @@
 				
 			<span class="module-content">
 					
-				<span class="special-primary profile-count-on-page">
+				<span class="special-primary  no-margin-y profile-count-on-page">
 					<span class="REPLACE">32</span>
 				</span>
 				<span class="font-size-small color-neutral">On-Page</span>
@@ -90,7 +90,7 @@
 				
 				<span class="module-content">
 							
-					<span class="special-primary profile-count-on-page">
+					<span class="special-primary  no-margin-y profile-count-on-page">
 						<span class="REPLACE">32</span>
 					</span>
 					<span class="font-size-small color-neutral">To-dos</span>
@@ -266,37 +266,42 @@
 				<h3 class="module-title">Client Key</h3>
 			</div>
 			
-			<div class="module-content">
+			
+			<div>
+				<!-- @if client keys are there -->
+					<!-- @LOOP p 
+						@DYNAMIC
+							attr style background color
+					-->
+					<p>
+						<span class="legend" style="background-color:#ca8a01"></span>
+						<span class="client-name">
+							<span class="REPLACE">Client Name</span>
+						</span>
+					</p>
+
+
+
+
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+
+						<?php 
+							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+						?>
+						<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
+							
+
+							<p>
+								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
+								<span class="client-name">
+									<span class="REPLACE">Client Name</span>
+								</span>
+							</p>
+						<?php } ?>
 				
-				<!-- @LOOP p 
-					@DYNAMIC
-						attr style background color
-				-->
-				<p>
-					<span class="legend" style="background-color:#ca8a01"></span>
-					<span class="client-name">
-						<span class="REPLACE">Client Name</span>
-					</span>
-				</p>
+				<!-- @ELSE NO accounts are available -->
+					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
 
-
-
-
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
-
-					<?php 
-						$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
-					?>
-					<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
-						
-
-						<p>
-							<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-							<span class="client-name">
-								<span class="REPLACE">Client Name</span>
-							</span>
-						</p>
-					<?php } ?>
 
 			</div>
 

@@ -96,13 +96,13 @@
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
-								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
 									style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 								-->
-								<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
+								<ul  data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 									<!-- @placeholder -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
@@ -160,13 +160,13 @@
 										</td>
 
 										<td class="dashboard-table-cell-action text-align-center">
-											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown" data-dropdown-width="200"><i class="symbol symbol-kebab-horizontal"></i></span>
+											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 											<!--
 												@NOTE:
 												style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 											-->
-											<ul class="dropdown dropdown-top-flush dropdown-right text-align-left">
+											<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 												<!-- @placeholder -->
 												<li class="REPLACE"><a href="#">Do something</a></li>

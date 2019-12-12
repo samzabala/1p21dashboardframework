@@ -82,7 +82,7 @@
 			<div class="module-content">
 				<!-- @IF associated projects  are available -->
 					<div class="table-wrapper">
-						<table>
+						<table class="text-vertical-align-middle">
 							<tr>
 								<th class="dashboard-table-cell-name">Client Name</th>
 								

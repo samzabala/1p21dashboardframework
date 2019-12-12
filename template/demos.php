@@ -665,7 +665,7 @@
 
 				<ul class="inline">
 					<li style="position:relative;">
-						<div class="btn btn-default open" data-dropdown-width="500" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default open" data-toggle="dropdown">Drop DOWN</div>
 						<ul class="dropdown dropdown-bottom open">
 							I'm a bottom dropdown and your mother will never love you
 							<br>has data-width but number
@@ -2443,45 +2443,232 @@
 			<p><strong>Variable Tag</strong></p>
 			<p>This allows you to denote <var>variables</var>.</p>
 		</div>
-	</div>
-</div>
 
 
 
 
+		<h1 data-toggle="accordion">Grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+
+			<h2>Typical grid</h2>
 
 
-<!-- BITCH -->
-	<div
-			id=""
-			class="module"
-			data-grid-area="">
-			<div class="module-header">
-
-
-				<button class="hide-nonmobile btn btn-symbol btn-no-shadow btn-small float-right clear-right" data-toggle="accordion" title="View Available Functions">
-					<i class="symbol symbol-burger"></i>
-				</button>
-
-				<h3 class="module-title"></h3>
-
-				<div class="module-functions accordion accordion-mobile">
-
+			<div class="flex-grid">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi
 				</div>
 			</div>
-			<div class="module-content">
 
-			</div>
-			<div class="module-footer">
+			<h3>Compact grid</h3>
 
+			<div class="flex-grid flex-grid-compact">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi but compact
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi but compact
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but compact
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but compact
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but compact
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but compact
+				</div>
 			</div>
+
+
+
+			<h3>Expanded grid</h3>
+
+			<div class="flex-grid flex-grid-expanded">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi but expanded
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi but expanded
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but expanded
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but expanded
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but expanded
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but expanded
+				</div>
+			</div>
+
+			<h3>no gutter grid</h3>
+
+			<div class="flex-grid flex-grid-no-gutter">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi but no gutter
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi but no gutter
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter
+				</div>
+			</div>
+
+
+
+			<h3>no gutter x grid</h3>
+
+			<div class="flex-grid flex-grid-no-gutter-x">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi but no gutter x
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi but no gutter x
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter x
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter x
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter x
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter x
+				</div>
+			</div>
+
+			<h3>no gutter y grid</h3>
+
+			<div class="flex-grid flex-grid-no-gutter-y">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi but no gutter y
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi but no gutter y
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter y
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter y
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter y
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but no gutter y
+				</div>
+			</div>
+
+
+			<h3>fixed grid</h3>
+
+			<div class="flex-grid flex-grid-fixed">
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+					A column boi but fixed
+				</div>
+				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+					A column boi but fixed
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but fixed
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but fixed
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but fixed
+				</div>
+				<div class="flex-col-12 flex-col-md-4">
+					A column boi but fixed
+				</div>
+			</div>
+
+
+			<h3> grid but not necessarily columnized children</h3>
+
+			<div class="flex-grid">
+				<div class="flex-col-6">
+					A column boi but not really column
+				</div>
+				<div class="flex-col-6">
+					A column boi but not really column
+				</div>
+				<div class="flex-col-3 flex-0-1">
+					A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit 
+				</div>
+				<div class="flex-child">
+					A column boi but not really column
+				</div>
+				<div class="flex-child flex-1-1">
+					A column boi but not really column, just has the margin setup and shit 
+				</div>
+				<div class="flex-col-4">
+					A column boi but not really column, just has the margin setup and shit 
+				</div>
+				<div class="flex-col-4">
+					A column boi but not really column, just has the margin setup and shit 
+				</div>
+				<div class="flex-col-4">
+					A column boi but not really column, just has the margin setup and shit 
+				</div>
+			</div>
+			
 		</div>
+
+	</div>
+
+
+
+</div>
 
 		<style>
 			.accordion *[class*="background-"]:not(*[class*="clip"]),
+			.accordion .flex-child,
+			.accordion *[class*="flex-col-"],
 			.accordion *[class*="color-"] {
-				outline: 1px solid rgba(0,0,0,.5);
+				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
+			}
+
+			.accordion .flex-child,
+			.accordion *[class*="flex-col-"] {
+				background: var(--theme-background-contrast);
+				min-height: 200px;
+
 			}
 
 			.accordion *[class*="color-"]{

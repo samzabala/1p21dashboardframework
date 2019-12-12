@@ -80,16 +80,18 @@ table {
   --brand-font-accent: Poppins, Helvetica Neue, Helvetica, Arial, sans-serif;
   --brand-font-monospace: Menlo, Monaco, Consolas, Courier New, monospace;
   --theme-color: #000000;
-  --theme-color-inverse: #FFFFFF;
   --theme-color-contrast: #3d3d3d;
-  --theme-color-contrast-inverse: #ecedf0;
   --theme-background: #FFFFFF;
-  --theme-background-inverse: #292440;
-  --theme-background-contrast: #ecedf0;
-  --theme-background-contrast-inverse: #1F1B30; }
+  --theme-background-contrast: #ecedf0; }
+
+.theme-inverse {
+  --theme-color: #FFFFFF;
+  --theme-color-contrast: #ecedf0;
+  --theme-background: #292440;
+  --theme-background-contrast: #1F1B30; }
 
 /* heading bars or rules from tiny rectangles to long rules and what not. */
-.progress:after, .fw-trumbowyg-progress:after {
+.container:after, .container-fluid:after, .progress:after, .fw-trumbowyg-progress:after, .cf:after {
   content: "";
   clear: both;
   display: table;
@@ -345,8 +347,8 @@ ol, ul, dd {
 ol.unstyled, ol.unstyled li, ol.inline, ol.inline li, ul.unstyled, ul.unstyled li, ul.inline, ul.inline li {
   padding-left: 0; }
 
-ol.unstyled li:before, ol.inline li:before, ul.unstyled li:before, ul.inline li:before {
-  content: none; }
+ol.unstyled li:before, ol.inline li:before, ol.style-none li:before, ul.unstyled li:before, ul.inline li:before, ul.style-none li:before {
+  content: none !important; }
 
 ol.inline li, ul.inline li {
   display: inline-block;
@@ -362,6 +364,7 @@ ol li, ul li {
 li ol, li ul {
   margin-bottom: 0; }
 
+ul.style-disc li:before,
 ul > li:before {
   content: "";
   display: inline-block;
@@ -376,16 +379,35 @@ ul > li:before {
   top: 0.5625em;
   border-radius: 50%; }
 
+ul.style-circle li:before {
+  background: none !important;
+  border: 0.05em solid #0480fe !important; }
+
+ul.style-square li:before {
+  border-radius: 0 !important; }
+
 ol {
-  counter-reset: fw-list; }
+  counter-reset: fwList; }
   ol > li {
-    counter-increment: fw-list; }
+    counter-increment: fwList; }
     ol > li:before {
       color: #0480fe;
-      content: counter(fw-list);
       font-weight: 800;
       top: 0;
       margin-right: 1em; }
+  ol.style-decimal li,
+  ol > li:before {
+    content: counter(fwList, decimal) !important; }
+  ol.style-decimal-leading-zero li:before {
+    content: counter(fwList, decimal-leading-zero) !important; }
+  ol.style-lower-alpha li:before {
+    content: counter(fwList, lower-alpha) !important; }
+  ol.style-lower-roman li:before {
+    content: counter(fwList, lower-roman) !important; }
+  ol.style-upper-alpha li:before {
+    content: counter(fwList, upper-alpha) !important; }
+  ol.style-upper-roman li:before {
+    content: counter(fwList, upper-roman) !important; }
 
 blockquote {
   font-size: inherit;
@@ -431,6 +453,9 @@ cite {
   font-size: 1em;
   font-weight: 300;
   font-style: italic; }
+  blockquote cite {
+    display: block;
+    margin-top: 1.875em; }
 
 /* obscure fucks I can fuck with myself */
 q {
@@ -5658,8 +5683,10 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 /*** TOGGLES ***/
 /* to fix children that dont like their parents events. kinda like neutering them idk */
-[data-toggle] * {
-  pointer-events: none; }
+[data-toggle] {
+  cursor: pointer !important; }
+  [data-toggle] * {
+    pointer-events: none !important; }
 
 .accordion:not(.accordion-mobile) {
   display: none; }
