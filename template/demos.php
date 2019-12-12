@@ -434,7 +434,7 @@
 
 					
 					<li class="nav-item">
-						<a href="#nav-demo-dropdown" data-toggle="accordion">
+						<a href="#nav-demo-dropdown" data-toggle="dropdown">
 						<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
 						</a>
 						<ul class="dropdown" id="nav-demo-dropdown" >
