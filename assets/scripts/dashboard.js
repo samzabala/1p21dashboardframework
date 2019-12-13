@@ -37,8 +37,6 @@ window.jQuery && jQuery.noConflict();
 		tagsToRemove: ['script']
 	}
 
-	console.log(fw);
-
 	//toggle our boi
 	$('body').on('click','.dashboard-sidenav-toggle',function(e){	
 		e.preventDefault();	
