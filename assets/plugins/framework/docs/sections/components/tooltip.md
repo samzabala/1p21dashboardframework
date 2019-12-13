@@ -85,11 +85,11 @@ Idk this is how you add classes or [helper classes](../scaffolding/helpers.md) b
 
 ## **`data-tooltip-center-x`**
 
-By default tooltips attaches the tip by the edge, enable this to center the tooltips tail horizontally
+By default tooltips attaches the tip by the edge, enable this to center the tooltips tail or badge if enabled horizontally
 
 ## **`data-tooltip-center-y`**
 
-By default tooltips attaches the tip by the edge, enable this to center the tooltips tail vertically
+By default tooltips attaches the tip by the edge, enable this to center the tooltips tail or badge if enabled vertically
 
 
 
