@@ -324,7 +324,7 @@
 
 				<!-- NOTES -->
 					<!-- @if has notes -->
-						<div class="project-notes accordion-group accordion-group-multiple">
+						<div class="project-notes accordion-group">
 
 							<!-- @LOOP div -->
 								<div class="project-note flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">

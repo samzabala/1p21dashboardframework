@@ -1,7 +1,7 @@
 <div class="module" data-sggrc="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
 	<div class="module-content">
-	<h1 data-toggle="accordion">SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
+	<h1 data-toggle="accordion" data-href="#accordion-svg" >SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion" id="accordion-svg">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 742 720" style="enable-background:new 0 0 742 720;" xml:space="preserve" class="alignnone size-medium wp-image-1067 svg replaced-svg">
 				<g transform="translate(71,60)">
 					<g>
@@ -133,17 +133,19 @@
 			</svg>
 		</div>
 
-		<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<a href="#modal-demo" class="btn-group btn-group-horizontal" data-toggle="modal">
+			<span  class="btn-group btn-group-horizontal" data-toggle="modal">
 				<span class="btn-default btn">
 					Bitch ass
 				</span>
 				<span class="btn btn-symbol">
 					<i class="symbol symbol-plus"></i>
 				</span>
-			</a>
+			</span>
+
+			<div class="modal">modal</div>
 
 				<a
 					data-toggle="modal"
@@ -796,8 +798,8 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
+		<h1 data-toggle="accordion" class="open">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion open">
 
 			<form class="form-horizontal">
 			
@@ -1247,10 +1249,10 @@
 							
 					<h2>Accordion + checking if the framework doesnt fuck with the unstyled nbois too much</h2>
 
-							<div class="accordion-group ">
+							<div class="accordion-group accordion-group-multiple">
 
 								<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-								<div class="accordion">
+								<div class="accordion open">
 									<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
 									<input type="button">
 									<input type="checkbox">
@@ -1294,9 +1296,9 @@
 								</div>
 
 								<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-								<div id="bitch-accordion" class="accordion">
+								<div id="bitch-accordion" class="accordion open">
 									<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
-									<input class="input" type="button">
+									<input class="input" type="button" value="Bitch">
 									<input class="input" type="checkbox">
 									<input class="input" type="color">
 									<input class="input" type="date">
@@ -1312,36 +1314,44 @@
 									<input class="input" type="range">
 									<input class="input" type="reset">
 									<input class="input" type="search">
-									<input class="input" type="submit">
+									<input class="input" type="submit" value="Bitch">
 									<input class="input" type="tel">
 									<input class="input" type="text">
 									<input class="input" type="time">
 									<input class="input" type="url">
 									<input class="input" type="week">
 									<input class="input" list="browsers">
-									<datalist id="browsers">
+									<datalist class="input" id="browsers">
 										<option value="Internet Explorer">
-										<option value="Firefox">
-										<option value="Chrome">
-										<option value="Opera">
-										<option value="Safari">
-									</datalist>
+										</option><option value="Firefox">
+										</option><option value="Chrome">
+										</option><option value="Opera">
+										</option><option value="Safari">
+									</option></datalist>
 
-									<select name="cars">
+									<select class="input" name="cars">
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
 									<option value="audi">Audi</option>
 									</select>
 
-									<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+									<select class="input" name="cars" multiple>
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+									<textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 								</div>
 
 								<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
-								<div id="other-bitch-accordion" class="accordion">
+								<div id="other-bitch-accordion" class="accordion open">
 									<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
-									<input class="input" type="button">
-									<input class="input" type="checkbox">
+									<input class="input input-inline" type="button" value="Bitch">
+									<input class="input input-inline" type="checkbox">
 									<input class="input input-single-line" type="color">
 									<input class="input input-single-line" type="date">
 									<input class="input input-single-line" type="datetime-local">
@@ -1352,33 +1362,41 @@
 									<input class="input input-single-line" type="month">
 									<input class="input input-single-line" type="number">
 									<input class="input input-single-line" type="password">
-									<input class="input input-single-line" type="radio">
-									<input class="input" type="range">
-									<input class="input" type="reset">
+									<input class="input input-inline" type="radio">
+									<input class="input input-inline" type="range">
+									<input class="input input-inline" type="reset">
 									<input class="input input-single-line" type="search">
-									<input class="input" type="submit">
+									<input class="input input-inline" type="submit">
 									<input class="input input-single-line" type="tel">
 									<input class="input input-single-line" type="text">
 									<input class="input input-single-line" type="time">
 									<input class="input input-single-line" type="url">
 									<input class="input input-single-line" type="week">
 									<input class="input input-single-line" list="browsers">
-									<datalist id="browsers">
+									<datalist class="input" id="browsers">
 										<option value="Internet Explorer">
-										<option value="Firefox">
-										<option value="Chrome">
-										<option value="Opera">
-										<option value="Safari">
-									</datalist>
+										</option><option value="Firefox">
+										</option><option value="Chrome">
+										</option><option value="Opera">
+										</option><option value="Safari">
+									</option></datalist>
 
-									<select name="cars">
+									<select class="input input-single-line" name="cars">
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
 									<option value="audi">Audi</option>
 									</select>
 
-									<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+									<select class="input input-multiple-line" name="cars" multiple>
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+									<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 								</div>
 							</div>
 
@@ -1430,15 +1448,15 @@
 			<h2>
 				Disabled
 			</h2>
-			<button type="button" class="btn btn-disabled btn-default">Default</button>
-			<button type="button" class="btn btn-disabled btn-primary">Primary</button>
-			<button type="button" class="btn btn-disabled btn-accent">accent</button>
-			<button type="button" class="btn btn-disabled btn-neutral">neutral</button>
-			<button type="button" class="btn btn-disabled btn-base">base</button>
-			<button type="button" class="btn btn-disabled btn-success">Success</button>
-			<button type="button" class="btn btn-disabled btn-caution">caution</button>
-			<button type="button" class="btn btn-disabled btn-error">error</button>
-			<button type="button" class="btn btn-disabled btn-link">Link</button>
+			<a href="#" class="btn btn-disabled btn-default">Default</a>
+			<a href="#" class="btn btn-disabled btn-primary">Primary</a>
+			<a href="#" class="btn btn-disabled btn-accent">accent</a>
+			<a href="#" class="btn btn-disabled btn-neutral">neutral</a>
+			<a href="#" class="btn btn-disabled btn-base">base</a>
+			<a href="#" class="btn btn-disabled btn-success">Success</a>
+			<a href="#" class="btn btn-disabled btn-caution">caution</a>
+			<a href="#" class="btn btn-disabled btn-error">error</a>
+			<a href="#" class="btn btn-disabled btn-link">Link</a>
 			
 			<h2>groups</h2>
 			<h3>Basic</h3>
@@ -1460,7 +1478,7 @@
 			</button>
 
 		<h3>group it's all disabled interaction enabled</h3>
-		<button class="btn-group btn-group-horizontal btn-group-disabled">
+		<button class="btn-group btn-group-horizontal btn-disabled">
 		<span class="btn btn-default">Default</span>
 		<span class="btn btn-primary">Primary</span>
 		<span class="btn btn-accent">accent</span>
@@ -1609,7 +1627,7 @@
 
 					<button type="button" class="active btn btn-default"><i class="symbol symbol-caret-down"></i> Toggle Butt down</button>
 					<button type="button" class="btn btn-default"><i class="symbol symbol-caret-up-toggle symbol-caret-down"></i> Toggle Butt up</button>
-					<button type="button" class="btn btn-default"><i class="symbol symbol-caret-toggle-left symbol-caret-down"></i>Toggle Butt left</button>
+					<button type="button" class="btn btn-default"><i class="symbol symbol-caret-left-toggle symbol-caret-down"></i>Toggle Butt left</button>
 					<button type="button" class="btn btn-default"><i class="symbol symbol-caret-right-toggle symbol-caret-down"></i> Toggle Butt right</button>
 			</div>
 
@@ -1617,8 +1635,8 @@
 			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
 
 					<button type="button" class="active btn btn-default"><i class="symbol symbol-arrow-down"></i> Toggle Butt down</button>
-					<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-up-toggle symbol-arrow-down"></i> Toggle Butt up</button>
-					<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-toggle-left symbol-arrow-down"></i>Toggle Butt left</button>
+					<button type="button" class="btn btn-default"><i class="symbol symbol-plus-toggle symbol-minus"></i> Toggle Butt plus</button>
+					<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-left-toggle symbol-arrow-down"></i>Toggle Butt left</button>
 					<button type="button" class="btn btn-default"><i class="symbol symbol-arrow-right-toggle symbol-arrow-down"></i> Toggle Butt right</button>
 			</div>
 		</div>
@@ -1690,59 +1708,62 @@
 		<h1 data-toggle="accordion">Symbols repreiiesesse <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
-				Square&nbsp;&nbsp; <i class="color-primary symbol symbol-square"></i>
+				Square &nbsp;<i class="color-primary symbol symbol-square"></i>
 			</p>
 
 			<p>
-				Search&nbsp;&nbsp; <i class="color-primary symbol symbol-search"></i>
+				Search &nbsp;<i class="color-primary symbol symbol-search"></i>
 			</p>
 
 			<p>
-				arrow down&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-down"></i>
+				arrow down &nbsp;<i class="color-primary symbol symbol-arrow-down"></i>
 			</p>
 
 			<p>
-				arrow up&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-up"></i>
+				arrow up &nbsp;<i class="color-primary symbol symbol-arrow-up"></i>
 			</p>
 
 			<p>
-				arrow left&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-left"></i>
+				arrow left &nbsp;<i class="color-primary symbol symbol-arrow-left"></i>
 			</p>
 
 			<p>
-				arrow right&nbsp;&nbsp; <i class="color-primary symbol symbol-arrow-right"></i>
+				arrow right &nbsp;<i class="color-primary symbol symbol-arrow-right"></i>
 			</p>
 
 			<p>
-				plus&nbsp;&nbsp; <i class="color-primary symbol symbol-plus"></i>
+				plus &nbsp;<i class="color-primary symbol symbol-plus"></i>
 			</p>
 
 			<p>
-				minus&nbsp;&nbsp; <i class="color-primary symbol symbol-minus"></i>
+				minus &nbsp;<i class="color-primary symbol symbol-minus"></i>
 			</p>
 			<p>
-				close&nbsp;&nbsp; <i class="color-primary symbol symbol-close"></i>
+				close &nbsp;<i class="color-primary symbol symbol-close"></i>
 			</p>
 			<p>
-				map&nbsp;&nbsp; <i class="color-primary symbol symbol-map"></i>
+				map &nbsp;<i class="color-primary symbol symbol-map"></i>
 			</p>
 			<p>
-				kebab vertical&nbsp;&nbsp; <i class="color-primary symbol symbol-kebab-vertical"></i>
+				burger &nbsp;<i class="color-primary symbol symbol-burger"></i>
 			</p>
 			<p>
-				kebab horizontal&nbsp;&nbsp; <i class="color-primary symbol symbol-kebab-horizontal"></i>
+				kebab vertical &nbsp;<i class="color-primary symbol symbol-kebab-vertical"></i>
 			</p>
 			<p>
-				caret up&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-up"></i>
+				kebab horizontal &nbsp;<i class="color-primary symbol symbol-kebab-horizontal"></i>
 			</p>
 			<p>
-				caret down&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-down"></i>
+				caret up &nbsp;<i class="color-primary symbol symbol-caret-up"></i>
 			</p>
 			<p>
-				caret left&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-left"></i>
+				caret down &nbsp;<i class="color-primary symbol symbol-caret-down"></i>
 			</p>
 			<p>
-				caret right&nbsp;&nbsp; <i class="color-primary symbol symbol-caret-right"></i>
+				caret left &nbsp;<i class="color-primary symbol symbol-caret-left"></i>
+			</p>
+			<p>
+				caret right &nbsp;<i class="color-primary symbol symbol-caret-right"></i>
 			</p>
 
 		</div>
@@ -2659,7 +2680,7 @@
 			.accordion *[class*="background-"]:not(*[class*="clip"]),
 			.accordion .flex-child,
 			.accordion *[class*="flex-col-"],
-			.accordion *[class*="color-"] {
+			.accordion *[class*="color-"]:not(.symbol) {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
 			}
