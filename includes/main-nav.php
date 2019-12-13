@@ -4,7 +4,13 @@
 
 	<a href="#"
 		id="dashboard-block-main-nav-toggle"
-		class="btn color-primary-hover color-primary-active color-primary-focus background-primary-toggle color-theme-background-toggle btn-symbol btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large only-xs nav-toggle">
+		class="btn
+		color-primary-hover 
+		color-primary-active 
+		color-primary-focus
+		background-primary-toggle
+		color-background-toggle btn-symbol 
+		btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large only-xs nav-toggle">
 		<i class="symbol symbol-burger"></i>
 	</a>
 

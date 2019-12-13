@@ -1,137 +1,5 @@
 <div class="module" data-sggrc="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
 	<div class="module-content">
-	<h1 data-toggle="accordion" data-href="#accordion-svg" >SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion" id="accordion-svg">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 742 720" style="enable-background:new 0 0 742 720;" xml:space="preserve" class="alignnone size-medium wp-image-1067 svg replaced-svg">
-				<g transform="translate(71,60)">
-					<g>
-						<text transform="matrix(1 0 0 1 289.9922 -30)" class="font-family-primary">butt</text>
-						<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 671 311.3438)" class="font-family-primary">hole</text>
-					</g>
-					<g>
-						<g transform="translate(0,0)">
-							<path class="st2" d="M600.5-6v6.5H0.5V-6"></path>
-							<g transform="translate(600.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -3.3369 -9)" class="font-family-primary">9</text>
-							</g>
-							<g transform="translate(540.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">10</text>
-							</g>
-							<g transform="translate(480.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.2285 -9)" class="font-family-primary">11</text>
-							</g>
-							<g transform="translate(420.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">12</text>
-							</g>
-							<g transform="translate(360.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary fill-theme-polar">13</text>
-							</g>
-							<g transform="translate(300.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">14</text>
-							</g>
-							<g transform="translate(240.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">15</text>
-							</g>
-							<g transform="translate(180.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">16</text>
-							</g>
-							<g transform="translate(120.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">17</text>
-							</g>
-							<g transform="translate(60.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">18</text>
-							</g>
-							<g transform="translate(0.5,0)">
-								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
-								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">19</text>
-							</g>
-						</g>
-						<g transform="translate(600,0)">
-							<path class="st2" d="M6,0.5H0.5v600H6"></path>
-							<g transform="translate(0,46.47887323943663)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Tony</text>
-							</g>
-							<g transform="translate(0,130.98591549295776)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Jessica</text>
-							</g>
-							<g transform="translate(0,215.49295774647888)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Andrew</text>
-							</g>
-							<g transform="translate(0,300)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Emily</text>
-							</g>
-							<g transform="translate(0,384.5070422535211)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Richard</text>
-							</g>
-							<g transform="translate(0,469.01408450704224)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Tonyboy</text>
-							</g>
-							<g transform="translate(0,553.5211267605633)">
-								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
-								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">mop</text>
-							</g>
-						</g>
-					</g>
-					<g>
-						<g>
-							<rect x="360" y="8.5" class="fill-theme fill-accent-hover" width="240" height="76.1"></rect>
-						</g>
-						<g>
-							<rect x="420" y="93" class="fill-accent" width="180" height="76.1"></rect>
-						</g>
-						<g>
-							<rect x="600" y="177.5" class="fill-neutral" width="0" height="76.1"></rect>
-						</g>
-						<g>
-							<rect x="480" y="262" class="fill-base" width="120" height="76.1"></rect>
-						</g>
-						<g>
-							<rect y="346.5" class="fill-success stroke-error" width="600" height="76.1"></rect>
-						</g>
-						<g>
-							<rect x="300" y="431" class="st6" width="300" height="76.1"></rect>
-						</g>
-						<g>
-							<rect x="540" y="515.5" class="st4" width="60" height="76.1"></rect>
-						</g>
-					</g>
-					<g transform="translate(0,528.5409393310547)">
-						<g transform="translate(0, 0)">
-							<rect y="0" class="st3" width="12" height="12"></rect>
-							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">thot</text>
-						</g>
-						<g transform="translate(0, 20.101661682128906)">
-							<rect y="0" class="st4" width="12" height="12"></rect>
-							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">fuckhole</text>
-						</g>
-						<g transform="translate(0, 40.20332336425781)">
-							<rect y="0" class="st5" width="12" height="12"></rect>
-							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">bitch</text>
-						</g>
-						<g transform="translate(0, 60.30498504638672)">
-							<rect y="0" class="st6" width="12" height="12"></rect>
-							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">dumbass</text>
-						</g>
-					</g>
-				</g>
-			</svg>
-		</div>
 
 		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -149,19 +17,19 @@
 
 				<a
 					data-toggle="modal"
-					data-modal-header="Bitch"
+					data-modal-title="Bitch"
 					href="#modal-demo">Modal boi</a>
 				
 				<a
 					data-toggle="modal"
 					data-modal-close="false"
 					data-modal-max-width="800px"
-					data-modal-header="Bitch ass"
+					data-modal-title="Bitch ass"
 					data-href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
 				
 				<a
 					data-toggle="modal"
-					data-modal-header="dumb Bitch juice"
+					data-modal-title="dumb Bitch juice"
 					data-href="#modal-demo">Modal boi</a>
 
 			<div class="modal" id="modal-demo">
@@ -472,34 +340,55 @@
 
 
 			<h3 id="progress-basic">Basic</h3>
+
+				<div class="progress">
+					<div class="progress-bar" style="width: 10%"></div>
+				</div>
+				<br>
+				<div class="progress">
+					<div class="progress-bar progress-bar-base" style="width: 46%"></div>
+				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
 				</div>
+				<br>
+				<div class="progress">
+					<div class="progress-bar progress-bar-neutral" style="width: 10%"></div>
+				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-success" style="width: 40%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-caution" style="width: 60%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-error" style="width: 80%"></div>
 				</div>
-
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-intensity-1" style="width: 20%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-intensity-2" style="width: 70%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-intensity-3" style="width: 10%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-intensity-4" style="width: 35%"></div>
 				</div>
+				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-intensity-5" style="width: 87%"></div>
 				</div>
@@ -798,12 +687,8 @@
 		</div>
 
 
-<<<<<<< HEAD
-		<h1 data-toggle="accordion" class="open">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-=======
 		<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
->>>>>>> 74ec97bd9edb1da3facef4fd61ca17f349c98757
-		<div class="accordion open">
+		<div class="accordion">
 
 			<form class="form-horizontal">
 			
@@ -856,7 +741,7 @@
 						</p>
 						
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-disabled" for="input-disabled">disabled: </label>
+							<label class="input-label input-disabled" for="input-disabled">disabled: </label>
 							<input class="input input-single-line" disabled id="input-disabled" placeholder="disabled" type="text">
 						</p>
 						
@@ -891,7 +776,7 @@
 
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 							<label class="input-label" for="select">Selects</label>
-							<select class="input input-single-line" id="select-demo">
+							<select class="input input-select" id="select-demo">
 								<option>Available option 1</option>
 								<option>Available option 2</option>
 								<option>Available option 3</option>
@@ -954,7 +839,7 @@
 								<label class="input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal input-group-responsive">
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -962,7 +847,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -970,7 +855,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -996,7 +881,7 @@
 								<label class="input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal input-group-small input-group-responsive">
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1004,7 +889,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1012,7 +897,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1020,7 +905,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1033,7 +918,7 @@
 							<h4>large</h4>
 							<span class="input-group input-group-horizontal input-group-large input-group-responsive">
 
-								<select class="input input-single-line" >
+								<select class="input input-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -1041,7 +926,7 @@
 									<option>Available option 5</option>
 								</select>
 
-								<select class="input input-single-line" >
+								<select class="input input-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -1049,7 +934,7 @@
 									<option>Available option 5</option>
 								</select>
 
-								<select class="input input-single-line" >
+								<select class="input input-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -1057,7 +942,7 @@
 									<option>Available option 5</option>
 								</select>
 
-								<select class="input input-single-line" >
+								<select class="input input-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -1073,7 +958,7 @@
 									<label class="input-label" >Basic Ass</label>
 									<span class="input-group input-group-vertical input-group-responsive">
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1081,7 +966,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1089,7 +974,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1097,7 +982,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1115,7 +1000,7 @@
 									<label class="input-label" >Basic Ass</label>
 									<span class="input-group input-group-vertical input-group-vertical input-group-small input-group-responsive">
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1123,7 +1008,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1131,7 +1016,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1139,7 +1024,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-single-line" >
+										<select class="input input-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -1153,7 +1038,7 @@
 								<h4>large</h4>
 								<span class="input-group input-group-vertical input-group-large input-group-responsive">
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1161,7 +1046,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1169,7 +1054,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1177,7 +1062,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1190,7 +1075,7 @@
 
 								<span class="input-group input-group-horizontal input-group-large input-group-responsive">
 
-								<select multiple class="input" >
+								<select multiple class="input input-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1240,7 +1125,7 @@
 
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 							<label class="input-label" for="select">Selects</label>
-							<select class="input input-single-line" id="select-demo">
+							<select class="input input-select" id="select-demo">
 								<option>Available option 1</option>
 								<option>Available option 2</option>
 								<option>Available option 3</option>
@@ -1275,7 +1160,7 @@
 							<div class="accordion-group accordion-group-multiple">
 
 								<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-								<div class="accordion open">
+								<div class="accordion">
 									<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
 									<input type="button">
 									<input type="checkbox">
@@ -1319,7 +1204,7 @@
 								</div>
 
 								<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-								<div id="bitch-accordion" class="accordion open">
+								<div id="bitch-accordion" class="accordion">
 									<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
 									<input class="input" type="button" value="Bitch">
 									<input class="input" type="checkbox">
@@ -1371,18 +1256,11 @@
 								</div>
 
 								<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
-								<div id="other-bitch-accordion" class="accordion open">
+								<div id="other-bitch-accordion" class="accordion">
 									<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
-<<<<<<< HEAD
 									<input class="input input-inline" type="button" value="Bitch">
 									<input class="input input-inline" type="checkbox">
 									<input class="input input-single-line" type="color">
-=======
-									<!-- Bitches that can be setup -->
-									<input class="input input-inline" type="button" value="Bitch">
-									<input class="input input-inline" type="checkbox">
-									<input class="input input-inline" type="color">
->>>>>>> 74ec97bd9edb1da3facef4fd61ca17f349c98757
 									<input class="input input-single-line" type="date">
 									<input class="input input-single-line" type="datetime-local">
 									<input class="input input-single-line" type="email">
@@ -1411,7 +1289,7 @@
 										</option><option value="Safari">
 									</option></datalist>
 
-									<select class="input input-single-line" name="cars">
+									<select class="input input-select" name="cars">
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
@@ -1419,7 +1297,7 @@
 									</select>
 
 
-									<select class="input input-multiple-line" name="cars" multiple>
+									<select class="input input-select" name="cars" multiple>
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
@@ -1427,8 +1305,6 @@
 									</select>
 
 									<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-<<<<<<< HEAD
-=======
 
 
 									color
@@ -1466,7 +1342,7 @@
 										</option><option value="Safari">
 									</option></datalist>
 
-									<select class="input input-error input-single-line" name="cars">
+									<select class="input input-error input-select" name="cars">
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
@@ -1474,7 +1350,7 @@
 									</select>
 
 
-									<select class="input input-error input-multiple-line" name="cars" multiple>
+									<select class="input input-error input-select" name="cars" multiple>
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
@@ -1516,7 +1392,7 @@
 										</option><option value="Safari">
 									</option></datalist>
 
-									<select class="input input-large input-single-line" name="cars">
+									<select class="input input-large input-select" name="cars">
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
@@ -1524,7 +1400,7 @@
 									</select>
 
 
-									<select class="input input-large input-multiple-line" name="cars" multiple>
+									<select class="input input-large input-select" name="cars" multiple>
 									<option value="volvo">Volvo</option>
 									<option value="saab">Saab</option>
 									<option value="fiat">Fiat</option>
@@ -1532,7 +1408,56 @@
 									</select>
 
 									<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
->>>>>>> 74ec97bd9edb1da3facef4fd61ca17f349c98757
+
+									<hr>
+
+									<input class="input-large" type="button" value="Bitch">
+									<input class="input-large" type="checkbox">
+									<input class="input-large" type="color">
+									<input class="input-large" type="date">
+									<input class="input-large" type="datetime-local">
+									<input class="input-large" type="email">
+									<input class="input-large" type="file">
+									<input class="input-large" type="hidden">
+									<input class="input-large" type="image">
+									<input class="input-large" type="month">
+									<input class="input-large" type="number">
+									<input class="input-large" type="password">
+									<input class="input-large" type="radio">
+									<input class="input-large" type="range">
+									<input class="input-large" type="reset">
+									<input class="input-large" type="search">
+									<input class="input-large" type="submit">
+									<input class="input-large" type="tel">
+									<input class="input-large" type="text">
+									<input class="input-large" type="time">
+									<input class="input-large" type="url">
+									<input class="input-large" type="week">
+									<input class="input-large" list="browsers">
+									<datalist class="input-large" id="browsers">
+										<option value="Internet Explorer">
+										</option><option value="Firefox">
+										</option><option value="Chrome">
+										</option><option value="Opera">
+										</option><option value="Safari">
+									</option></datalist>
+
+									<select class="input-large" name="cars">
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+
+									<select class=" input-large" name="cars" multiple>
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+									<textarea class=" input-large" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 								</div>
 							</div>
 
@@ -2602,6 +2527,138 @@
 		</div>
 
 
+		<h1 data-toggle="accordion" data-href="#accordion-svg" >SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion" id="accordion-svg">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 742 720" style="enable-background:new 0 0 742 720;" xml:space="preserve" class="alignnone size-medium wp-image-1067 svg replaced-svg">
+				<g transform="translate(71,60)">
+					<g>
+						<text transform="matrix(1 0 0 1 289.9922 -30)" class="font-family-primary">butt</text>
+						<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 671 311.3438)" class="font-family-primary">hole</text>
+					</g>
+					<g>
+						<g transform="translate(0,0)">
+							<path class="st2" d="M600.5-6v6.5H0.5V-6"></path>
+							<g transform="translate(600.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -3.3369 -9)" class="font-family-primary">9</text>
+							</g>
+							<g transform="translate(540.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">10</text>
+							</g>
+							<g transform="translate(480.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.2285 -9)" class="font-family-primary">11</text>
+							</g>
+							<g transform="translate(420.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">12</text>
+							</g>
+							<g transform="translate(360.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary fill-theme-polar">13</text>
+							</g>
+							<g transform="translate(300.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">14</text>
+							</g>
+							<g transform="translate(240.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">15</text>
+							</g>
+							<g transform="translate(180.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">16</text>
+							</g>
+							<g transform="translate(120.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">17</text>
+							</g>
+							<g transform="translate(60.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">18</text>
+							</g>
+							<g transform="translate(0.5,0)">
+								<line class="st2" x1="0" y1="0" x2="0" y2="-6"></line>
+								<text transform="matrix(1 0 0 1 -6.6738 -9)" class="font-family-primary">19</text>
+							</g>
+						</g>
+						<g transform="translate(600,0)">
+							<path class="st2" d="M6,0.5H0.5v600H6"></path>
+							<g transform="translate(0,46.47887323943663)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Tony</text>
+							</g>
+							<g transform="translate(0,130.98591549295776)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Jessica</text>
+							</g>
+							<g transform="translate(0,215.49295774647888)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Andrew</text>
+							</g>
+							<g transform="translate(0,300)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Emily</text>
+							</g>
+							<g transform="translate(0,384.5070422535211)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Richard</text>
+							</g>
+							<g transform="translate(0,469.01408450704224)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">Tonyboy</text>
+							</g>
+							<g transform="translate(0,553.5211267605633)">
+								<line class="st2" x1="0" y1="0" x2="6" y2="0"></line>
+								<text transform="matrix(1 0 0 1 9 3.84)" class="font-family-primary">mop</text>
+							</g>
+						</g>
+					</g>
+					<g>
+						<g>
+							<rect x="360" y="8.5" class="fill-theme fill-accent-hover" width="240" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="420" y="93" class="fill-accent" width="180" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="600" y="177.5" class="fill-neutral" width="0" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="480" y="262" class="fill-base" width="120" height="76.1"></rect>
+						</g>
+						<g>
+							<rect y="346.5" class="fill-success stroke-error" width="600" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="300" y="431" class="st6" width="300" height="76.1"></rect>
+						</g>
+						<g>
+							<rect x="540" y="515.5" class="st4" width="60" height="76.1"></rect>
+						</g>
+					</g>
+					<g transform="translate(0,528.5409393310547)">
+						<g transform="translate(0, 0)">
+							<rect y="0" class="st3" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">thot</text>
+						</g>
+						<g transform="translate(0, 20.101661682128906)">
+							<rect y="0" class="st4" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">fuckhole</text>
+						</g>
+						<g transform="translate(0, 40.20332336425781)">
+							<rect y="0" class="st5" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">bitch</text>
+						</g>
+						<g transform="translate(0, 60.30498504638672)">
+							<rect y="0" class="st6" width="12" height="12"></rect>
+							<text transform="matrix(1 0 0 1 24 15)" class="font-family-primary">dumbass</text>
+						</g>
+					</g>
+				</g>
+			</svg>
+		</div>
 
 
 		<h1 data-toggle="accordion">Grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
