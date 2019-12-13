@@ -798,7 +798,11 @@
 		</div>
 
 
+<<<<<<< HEAD
 		<h1 data-toggle="accordion" class="open">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+=======
+		<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+>>>>>>> 74ec97bd9edb1da3facef4fd61ca17f349c98757
 		<div class="accordion open">
 
 			<form class="form-horizontal">
@@ -974,7 +978,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line" >
+									<select class="input input-single-line input-accent" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -1180,6 +1184,25 @@
 										<option>Available option 4</option>
 										<option>Available option 5</option>
 									</select>
+
+									<a href="#" class="btn btn-primary"> ye</a>
+								</span>
+
+								<span class="input-group input-group-horizontal input-group-large input-group-responsive">
+
+								<select multiple class="input" >
+										<option>Available option 1</option>
+										<option>Available option 2</option>
+										<option>Available option 3</option>
+										<option>Available option 4</option>
+										<option>Available option 5</option>
+									</select>
+
+									<textarea class="input input-multiple-line"></textarea>
+
+									<textarea class="input input-multiple-line"></textarea>
+
+									<textarea class="input input-multiple-line"></textarea>
 								</span>
 					
 
@@ -1350,9 +1373,16 @@
 								<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 								<div id="other-bitch-accordion" class="accordion open">
 									<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
+<<<<<<< HEAD
 									<input class="input input-inline" type="button" value="Bitch">
 									<input class="input input-inline" type="checkbox">
 									<input class="input input-single-line" type="color">
+=======
+									<!-- Bitches that can be setup -->
+									<input class="input input-inline" type="button" value="Bitch">
+									<input class="input input-inline" type="checkbox">
+									<input class="input input-inline" type="color">
+>>>>>>> 74ec97bd9edb1da3facef4fd61ca17f349c98757
 									<input class="input input-single-line" type="date">
 									<input class="input input-single-line" type="datetime-local">
 									<input class="input input-single-line" type="email">
@@ -1397,6 +1427,112 @@
 									</select>
 
 									<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+<<<<<<< HEAD
+=======
+
+
+									color
+
+									<hr>
+
+									<input class="input input-error input-inline" type="button" value="Bitch">
+									<input class="input input-error input-inline" type="checkbox">
+									<input class="input input-error input-inline" type="color">
+									<input class="input input-error input-single-line" type="date">
+									<input class="input input-error input-single-line" type="datetime-local">
+									<input class="input input-error input-single-line" type="email">
+									<input class="input input-error input-single-line" type="file">
+									<input class="input input-error input-single-line" type="hidden">
+									<input class="input input-error input-single-line" type="image">
+									<input class="input input-error input-single-line" type="month">
+									<input class="input input-error input-single-line" type="number">
+									<input class="input input-error input-single-line" type="password">
+									<input class="input input-error input-inline" type="radio">
+									<input class="input input-error input-inline" type="range">
+									<input class="input input-error input-inline" type="reset">
+									<input class="input input-error input-single-line" type="search">
+									<input class="input input-error input-inline" type="submit">
+									<input class="input input-error input-single-line" type="tel">
+									<input class="input input-error input-single-line" type="text">
+									<input class="input input-error input-single-line" type="time">
+									<input class="input input-error input-single-line" type="url">
+									<input class="input input-error input-single-line" type="week">
+									<input class="input input-error input-single-line" list="browsers">
+									<datalist class="input input-error" id="browsers">
+										<option value="Internet Explorer">
+										</option><option value="Firefox">
+										</option><option value="Chrome">
+										</option><option value="Opera">
+										</option><option value="Safari">
+									</option></datalist>
+
+									<select class="input input-error input-single-line" name="cars">
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+
+									<select class="input input-error input-multiple-line" name="cars" multiple>
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+									<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+									<hr>
+
+									<input class="input input-large input-inline" type="button" value="Bitch">
+									<input class="input input-large input-inline" type="checkbox">
+									<input class="input input-large input-inline" type="color">
+									<input class="input input-large input-single-line" type="date">
+									<input class="input input-large input-single-line" type="datetime-local">
+									<input class="input input-large input-single-line" type="email">
+									<input class="input input-large input-single-line" type="file">
+									<input class="input input-large input-single-line" type="hidden">
+									<input class="input input-large input-single-line" type="image">
+									<input class="input input-large input-single-line" type="month">
+									<input class="input input-large input-single-line" type="number">
+									<input class="input input-large input-single-line" type="password">
+									<input class="input input-large input-inline" type="radio">
+									<input class="input input-large input-inline" type="range">
+									<input class="input input-large input-inline" type="reset">
+									<input class="input input-large input-single-line" type="search">
+									<input class="input input-large input-inline" type="submit">
+									<input class="input input-large input-single-line" type="tel">
+									<input class="input input-large input-single-line" type="text">
+									<input class="input input-large input-single-line" type="time">
+									<input class="input input-large input-single-line" type="url">
+									<input class="input input-large input-single-line" type="week">
+									<input class="input input-large input-single-line" list="browsers">
+									<datalist class="input input-large" id="browsers">
+										<option value="Internet Explorer">
+										</option><option value="Firefox">
+										</option><option value="Chrome">
+										</option><option value="Opera">
+										</option><option value="Safari">
+									</option></datalist>
+
+									<select class="input input-large input-single-line" name="cars">
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+
+									<select class="input input-large input-multiple-line" name="cars" multiple>
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+									</select>
+
+									<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+>>>>>>> 74ec97bd9edb1da3facef4fd61ca17f349c98757
 								</div>
 							</div>
 
