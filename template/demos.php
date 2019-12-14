@@ -819,12 +819,12 @@
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
 						</p>
 
-						<h3>inline vertical</h3>
+						<h4>inline vertical</h4>
 						<p class="input-wrapper input-wrapper-vertical">
 							<label class="input-label" >Basic Ass</label>
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
 						</p>
-						<h3>block vertical</h3>
+						<h4>block vertical</h4>
 						<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
 							<label class="input-label" >Basic Ass</label>
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
