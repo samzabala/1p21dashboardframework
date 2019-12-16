@@ -91,15 +91,15 @@ function app_debug_li() {
 		<?php 
 			$env_to_switch = DASHBOARD_SLUG == 'production' ? 'scoreboard' : 'production';
 		?>
-		<a href="<?=app_create_link(array('env'=>$env_to_switch,'template'=>DASHBOARD_TEMPLATE)) ?>">Switch to <?=$env_to_switch ?></a>
+		<a href="<?=app_create_link(array('env'=>$env_to_switch,'template'=>DASHBOARD_TEMPLATE)) ?>">Switch to <?=$env_to_switch ?> environment</a>
 	</li>
 
 	<li>
-		<a href="<?=app_create_link(array('template'=>'demos')) ?>">Framework debug</a>
+		<a href="<?=app_create_link(array('template'=>'demos')) ?>">Debug framework</a>
 	</li>
 
 	<li>
-		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark Mode</a>
+		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark</a>
 	</li>
 <?php
 }
