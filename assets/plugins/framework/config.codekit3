@@ -587,6 +587,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/docs/images/tags.png": {
+		"ft": 32768,
+		"iS": 61930,
+		"oA": 0,
+		"oAP": "/docs/images/tags.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/docs/images/thumbnail.png": {
 		"ft": 32768,
 		"iS": 433401,
