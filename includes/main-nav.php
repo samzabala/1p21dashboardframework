@@ -54,7 +54,7 @@
 			<i class="symbol symbol-kebab-vertical"></i>
 		</a>
 
-		<ul data-dropdown-width="200px" id="nav-account-dropdown" class="position-absolute dropdown dropdown-right dropdown-top-flush">
+		<ul data-dropdown-width="200px" id="nav-account-dropdown" class="dropdown dropdown-right dropdown-top-flush">
 			
 			<!-- @PLACEHOLDER: DELETE QWHEN READY-->
 				<?php app_debug_li() ?>

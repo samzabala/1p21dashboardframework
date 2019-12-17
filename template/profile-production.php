@@ -21,7 +21,7 @@
 	<!-- Availability -->
 		<div
 			id="profile-production-availability"
-			class=" module module-no-gutter"
+			class=" module module-no-gutter overflow-hidden"
 			data-grid-area-md="availability">
 
 			<div class="flex-xs">
