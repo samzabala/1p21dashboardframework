@@ -498,8 +498,16 @@ big {
 
 /*** IMAGES ***/
 /* LAZYLOAD */
-body:not(.lazy-initialized) .lazy {
-  opacity: 0; }
+.lazy,
+*[data-src],
+*[data-srcset] {
+  opacity: 1;
+  -webkit-transition: 0.25s opacity ease-in-out;
+  transition: 0.25s opacity ease-in-out; }
+  html:not(.lazy-initialized) .lazy, html:not(.lazy-initialized)
+  *[data-src], html:not(.lazy-initialized)
+  *[data-srcset] {
+    opacity: 0; }
 
 /* SVGS */
 .svg-gradient-start {
@@ -4431,6 +4439,9 @@ table {
   width: 2.8125em;
   padding-left: 0;
   padding-right: 0; }
+  .nav .btn-symbol {
+    padding-left: .125rem;
+    padding-right: .125rem; }
   .btn-symbol > .symbol {
     margin-left: auto;
     margin-right: auto; }
@@ -4803,7 +4814,7 @@ table {
   font-style: normal;
   -webkit-box-ordinal-group: 0;
           order: -1;
-  margin-right: 1rem;
+  padding-right: 1rem;
   display: inline-block;
   padding-top: calc( (2.8125rem - (1em * 1.25) ) * .5);
   padding-bottom: calc( (  2.8125rem - (1em * 1.25) ) * .5); }
@@ -5022,13 +5033,17 @@ table {
       width: calc(100% - 25%); }
     .input-wrapper.input-wrapper-horizontal > .input-label, .fw-trumbowyg-modal-box label > .input-label {
       -webkit-box-flex: 0;
-              flex: 0 0 25%;
+              flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
       -webkit-box-ordinal-group: 0;
               order: -1; }
       .input-wrapper.input-wrapper-horizontal > .input-label:first-child:last-child, .fw-trumbowyg-modal-box label > .input-label:first-child:last-child {
         /* labels that typically wrapp radio and checboxes*/
         -webkit-box-flex: 1;
-                flex: 1 1 auto; } }
+                flex: 1 1 auto; }
+      .input-wrapper-block.input-wrapper.input-wrapper-horizontal > .input-label, .fw-trumbowyg-modal-box label.input-wrapper-block > .input-label {
+        flex-basis: 25%; } }
 
 @media (min-width: 1280px) {
   .input-wrapper.input-wrapper-vertical {
@@ -5336,7 +5351,7 @@ fieldset {
     max-width: none;
     display: -webkit-box;
     display: flex;
-    margin-right: 0; }
+    padding-right: 0; }
     .special-form .input-wrapper-horizontal .input,
     .special-form .input-wrapper-horizontal .input-single-line,
     .special-form .input-wrapper-horizontal .input-multiple-line,
@@ -6512,6 +6527,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   overflow: scroll !important; }
 
 .overflow-overlay {
+  overflow: scroll !important;
   overflow: overlay !important; }
 
 .overflow-auto {
@@ -6527,6 +6543,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   overflow-x: scroll !important; }
 
 .overflow-x-overlay {
+  overflow-x: scroll !important;
   overflow-x: overlay !important; }
 
 .overflow-x-auto {
@@ -6542,6 +6559,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   overflow-y: scroll !important; }
 
 .overflow-y-overlay {
+  overflow-y: scroll !important;
   overflow-y: overlay !important; }
 
 .overflow-y-auto {
@@ -6969,4 +6987,4 @@ DASHBOARD / OUR CUSTOM STYLES
         #dashboard-block-main-nav-toggle.open {
           left: 285px; }
       #nav-search .btn {
-        padding-left: 0; } }
+        padding-left: .125em; } }
