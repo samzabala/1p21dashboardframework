@@ -4358,9 +4358,9 @@ table {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .btn .symbol:last-child, .fw-trumbowyg-modal-button .symbol:last-child, .btn .badge:last-child, .fw-trumbowyg-modal-button .badge:last-child {
+  .btn .badge:last-child, .fw-trumbowyg-modal-button .badge:last-child {
     margin-left: .25em; }
-  .btn .symbol:first-child, .fw-trumbowyg-modal-button .symbol:first-child, .btn .badge:first-child, .fw-trumbowyg-modal-button .badge:first-child {
+  .btn .badge:first-child, .fw-trumbowyg-modal-button .badge:first-child {
     margin-right: .25em; }
 
 .nav .btn {
@@ -4850,6 +4850,7 @@ table {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
+  outline: none;
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -4870,7 +4871,8 @@ table {
     color: inherit;
     background-color: #292440; }
   .input-select option, .input-single-line option, .input-multiple-line option, .input-editor option, .fw-trumbowyg-editor option, .fw-trumbowyg-textarea option, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) option {
-    font: inherit; }
+    font: inherit;
+    outline: none; }
   .input-group .input-select, .input-group .input-single-line, .input-group .input-multiple-line, .input-group .input-editor, .input-group .fw-trumbowyg-editor, .input-group .fw-trumbowyg-textarea, .input-group .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .input-group input:not([type="checkbox"]):not([type="radio"]) {
     box-shadow: none;
     border-radius: 0 !important; }
@@ -5007,7 +5009,7 @@ table {
     .input-wrapper, .fw-trumbowyg-modal-box label {
       display: -webkit-inline-box;
       display: inline-flex;
-      margin-right: 2rem; } }
+      padding-right: 2rem; } }
 
 @media (min-width: 1280px) {
   .input-wrapper.input-wrapper-horizontal, .fw-trumbowyg-modal-box label {
@@ -5037,7 +5039,7 @@ table {
 .input-wrapper.input-wrapper-block, .fw-trumbowyg-modal-box label {
   display: -webkit-box;
   display: flex;
-  margin-right: 0; }
+  padding-right: 0; }
   @media (max-width: 1279px) {
     .input-wrapper.input-wrapper-block, .fw-trumbowyg-modal-box label {
       -webkit-box-orient: vertical;
