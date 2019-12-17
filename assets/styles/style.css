@@ -91,7 +91,7 @@ table {
   --theme-background-contrast: #1F1B30; }
 
 /* heading bars or rules from tiny rectangles to long rules and what not. */
-.container:after, .container-fluid:after, .progress:after, .fw-trumbowyg-progress:after, .cf:after {
+.container:after, .container-fluid:after, .module:after, .module-header:after, .module-content:after, .module-footer:after, .progress:after, .fw-trumbowyg-progress:after, .cf:after {
   content: "";
   clear: both;
   display: table;
@@ -1320,6 +1320,7 @@ table {
 
 .nav.nav-vertical {
   display: block;
+  min-width: 100%;
   height: auto; }
   .nav.nav-vertical .nav-list {
     display: block; }
@@ -1446,7 +1447,8 @@ table {
   .nav {
     height: auto; }
     .nav-list {
-      display: block; }
+      display: block;
+      min-width: 100%; }
     .nav-list > .nav-item > a,
     .nav-list > .nav-item > [data-toggle=dropdown],
     .nav-list > li > a,
@@ -1498,7 +1500,8 @@ table {
   margin-bottom: 40px;
   display: -webkit-box;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  min-width: 100%; }
   .flex-grid-compact {
     margin-left: -20px;
     margin-bottom: 20px; }
@@ -4215,9 +4218,9 @@ table {
 .tooltip {
   pointer-events: none;
   max-width: 300px;
-  display: none !important; }
+  display: none; }
   .tooltip.active {
-    display: block !important; }
+    display: block; }
   .tooltip:before, .tooltip:after {
     content: "";
     background: #FFFFFF;
@@ -4280,9 +4283,9 @@ table {
   width: 300px;
   display: none;
   color: inherit;
-  display: none !important; }
+  display: none; }
   .dropdown.open {
-    display: block !important; }
+    display: block; }
   .dropdown, .dropdown ul, .dropdown li {
     margin-bottom: 0;
     margin-top: 0; }
@@ -5662,20 +5665,20 @@ CUSTOM STYLES FOR TRUMBOWYG
   [data-toggle] * {
     pointer-events: none !important; }
 
-.accordion:not(.accordion-mobile) {
-  display: none; }
-  .accordion:not(.accordion-mobile).open {
-    display: block; }
-
-@media (max-width: 1279px) {
-  .accordion.accordion-mobile {
+.accordion {
+  min-width: 100%; }
+  .accordion:not(.accordion-mobile) {
     display: none; }
-    .accordion.accordion-mobile.open {
+    .accordion:not(.accordion-mobile).open {
+      display: block; }
+  @media (max-width: 1279px) {
+    .accordion.accordion-mobile {
+      display: none; }
+      .accordion.accordion-mobile.open {
+        display: block; } }
+  @media (min-width: 1280px) {
+    .accordion.accordion-mobile {
       display: block; } }
-
-@media (min-width: 1280px) {
-  .accordion.accordion-mobile {
-    display: block; } }
 
 /*** HELPERS ***/
 /* BACKGROUND CLASSES */
