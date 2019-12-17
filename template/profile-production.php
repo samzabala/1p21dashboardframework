@@ -69,7 +69,7 @@
 			<div class="module-content align-self-center">
 
 				<div class="p text-align-center">
-					<img class="REPLACE" style="width:600px;margin:0 auto" src="/PLACEHOLDER/charts/prod/chart-03.png" alt="">
+					<img class="REPLACE" style="width:600px;margin:0 auto" src="/placeholder/charts/prod/chart-03.png" alt="">
 				</div>
 
 				<ul class="text-align-center inline no-margin-bottom">

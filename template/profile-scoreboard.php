@@ -120,7 +120,7 @@
 			<div class="module-content align-self-center">
 
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-03.png" alt="">
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-03.png" alt="">
 				</div>
 
 				<ul class="text-align-right inline no-margin-bottom">
@@ -320,7 +320,7 @@
 			</div>
 
 			<div class="module-content align-self-center">
-				<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-05.png" alt="">
+				<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-05.png" alt="">
 			</div>
 
 		</div>
@@ -351,7 +351,7 @@
 
 			<div class="module-content align-self-center">
 				<div>
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
 				</div>
 
 			</div>

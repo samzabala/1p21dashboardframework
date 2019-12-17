@@ -37,7 +37,7 @@
 
 			<div class="module-content align-self-center">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="margin:0 auto;" src="/PLACEHOLDER/charts/prod/chart-01.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto;" src="/placeholder/charts/prod/chart-01.png" alt="" />
 				</div>
 
 				<ul class="no-margin text-align-right inline no-margin-bottom">
@@ -167,7 +167,7 @@
 			<div class="module-content align-self-center">
 
 				<div class="p text-align-center">
-					<img class="REPLACE" style="width:500px;margin:0 auto" src="/PLACEHOLDER/charts/prod/chart-02.png" alt="" />
+					<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
 				</div>
 
 				<ul class="unstyled no-margin text-align-center flex-sm flex-wrap justify-content-space-evenly">

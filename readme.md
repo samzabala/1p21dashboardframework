@@ -42,6 +42,10 @@ will separate dashboard and framework one the bois are readeh
 
 	Meant to go away when dynamicness is ready
 
+*	`/placeholder/`
+
+	uri for assets meant to go away when dynamic boi is ready
+
 *	`NOTE`
 
 	Other elements that rely on server side based... things
