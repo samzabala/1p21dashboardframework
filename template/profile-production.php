@@ -208,7 +208,7 @@
 									@NOTE:
 									style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 								-->
-								<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+								<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
@@ -260,7 +260,7 @@
 												@NOTE:
 												style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 											-->
-											<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+											<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 												<!-- @PLACEHOLDER: DELETE WHEN READY -->
 												<li class="REPLACE"><a href="#">Do something</a></li>
@@ -397,7 +397,7 @@
 									@NOTE:
 									style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 								-->
-								<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+								<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
@@ -456,7 +456,7 @@
 													@NOTE:
 													style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 												-->
-												<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+												<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 													<!-- @PLACEHOLDER: DELETE WHEN READY -->
 													<li class="REPLACE"><a href="#">Do something</a></li>
