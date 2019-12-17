@@ -4523,32 +4523,6 @@ table {
   background: #0480fe ;
   color: #FFFFFF ; }
 
-.btn.btn-base, .btn-no-interaction.btn.btn-base, .btn-no-interaction.btn.btn-base:hover, .btn-no-interaction.btn.btn-base:focus, .btn-no-interaction.focus.btn.btn-base, .btn-no-interaction.btn.btn-base:active, .btn-no-interaction.active.btn.btn-base, .btn-disabled.btn.btn-base, .btn-disabled.btn.btn-base:hover, .btn-disabled.btn.btn-base:focus, .btn-disabled.focus.btn.btn-base, .btn-disabled.btn.btn-base:active, .btn-disabled.active.btn.btn-base,
-.btn-disabled .btn.btn-base,
-.btn-disabled:hover .btn.btn-base,
-.btn-disabled:focus .btn.btn-base,
-.btn-disabled.focus .btn.btn-base,
-.btn-disabled:active .btn.btn-base,
-.btn-disabled.active .btn.btn-base {
-  border-color: transparent ;
-  background: #000000 ;
-  color: #FFFFFF ; }
-
-.btn.btn-base:hover,
-.btn-group.btn-group-unite:hover .btn.btn-base, .btn.btn-base:focus,
-.btn-group.btn-group-unite:focus .btn.btn-base, .focus.btn.btn-base,
-.btn-group.btn-group-unite.focus .btn.btn-base {
-  border-color: transparent ;
-  background: #747474 ;
-  color: #FFFFFF ; }
-
-.btn.btn-base:active,
-.btn-group.btn-group-unite:active .btn.btn-base, .active.btn.btn-base,
-.btn-group.btn-group-unite.active .btn.btn-base {
-  border-color: transparent ;
-  background: #000000 ;
-  color: #FFFFFF ; }
-
 .btn.btn-primary, .fw-trumbowyg-modal-submit, .btn-no-interaction.btn.btn-primary, .btn-no-interaction.fw-trumbowyg-modal-submit, .btn-no-interaction.btn.btn-primary:hover, .btn-no-interaction.fw-trumbowyg-modal-submit:hover, .btn-no-interaction.btn.btn-primary:focus, .btn-no-interaction.fw-trumbowyg-modal-submit:focus, .btn-no-interaction.focus.btn.btn-primary, .btn-no-interaction.focus.fw-trumbowyg-modal-submit, .btn-no-interaction.btn.btn-primary:active, .btn-no-interaction.fw-trumbowyg-modal-submit:active, .btn-no-interaction.active.btn.btn-primary, .btn-no-interaction.active.fw-trumbowyg-modal-submit, .btn-disabled.btn.btn-primary, .btn-disabled.fw-trumbowyg-modal-submit, .btn-disabled.btn.btn-primary:hover, .btn-disabled.fw-trumbowyg-modal-submit:hover, .btn-disabled.btn.btn-primary:focus, .btn-disabled.fw-trumbowyg-modal-submit:focus, .btn-disabled.focus.btn.btn-primary, .btn-disabled.focus.fw-trumbowyg-modal-submit, .btn-disabled.btn.btn-primary:active, .btn-disabled.fw-trumbowyg-modal-submit:active, .btn-disabled.active.btn.btn-primary, .btn-disabled.active.fw-trumbowyg-modal-submit,
 .btn-disabled .btn.btn-primary,
 .btn-disabled .fw-trumbowyg-modal-submit,
