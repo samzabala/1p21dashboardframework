@@ -1073,6 +1073,8 @@
 									<a href="#" class="btn btn-primary"> ye</a>
 								</span>
 
+								DOES NOT WORK ON MULTIPLE LINE JUST ON SELECT AND SINGLE LINE BITCH
+
 								<span class="input-group input-group-horizontal input-group-large input-group-responsive">
 
 								<select multiple class="input input-select" >
