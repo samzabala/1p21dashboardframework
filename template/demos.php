@@ -1,7 +1,7 @@
 <div class="module" data-sggrc="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
 	<div class="module-content">
 		<p>
-			I use this bitchacho to debug almost all components in this framework, aner in your own risk because shit's about to get dirrty
+			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present
 		</p>
 		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -21,6 +21,7 @@
 					data-toggle="modal"
 					data-modal-title="Bitch"
 					href="#modal-demo">Modal boi</a>
+					<br>
 				
 				<a
 					data-toggle="modal"
@@ -28,7 +29,8 @@
 					data-modal-disable-overlay="false"
 					data-modal-max-width="800px"
 					data-modal-title="Bitch ass"
-					data-href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
+					data-href="#modal-demo">Modal boi with max width and no close butt but overlay can close the boi <i class="symbol symbol-search"></i></a>
+					<br>
 				
 				<a
 					data-toggle="modal"
@@ -835,7 +837,7 @@
 
 						<h3>group horizontal</h3>
 
-							<p class="input-wrapper input-wrapper-horizontal">
+							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
 								<label class="input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal input-group-responsive">
@@ -877,10 +879,10 @@
 							</p>
 
 							<h4>small</h4>
-							<p class="input-wrapper input-wrapper-horizontal">
+							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
 								<label class="input-label" >Basic Ass</label>
-								<span class="input-group input-group-horizontal input-group-small input-group-responsive">
+								<span class="input-group input-group-horizontal input-small input-group-responsive">
 
 									<select class="input input-select" >
 										<option>Available option 1</option>
@@ -917,7 +919,7 @@
 								
 							</p>
 							<h4>large</h4>
-							<span class="input-group input-group-horizontal input-group-large input-group-responsive">
+							<span class="input-group input-group-horizontal input-large input-group-responsive">
 
 								<select class="input input-select" >
 									<option>Available option 1</option>
@@ -999,7 +1001,7 @@
 								<p class="input-wrapper input-wrapper-vertical">
 									
 									<label class="input-label" >Basic Ass</label>
-									<span class="input-group input-group-vertical input-group-vertical input-group-small input-group-responsive">
+									<span class="input-group input-group-vertical input-group-vertical input-small input-group-responsive">
 
 										<select class="input input-select" >
 											<option>Available option 1</option>
@@ -1037,7 +1039,7 @@
 								</p>
 								
 								<h4>large</h4>
-								<span class="input-group input-group-vertical input-group-large input-group-responsive">
+								<span class="input-group input-group-vertical input-large input-group-responsive">
 
 									<select class="input input-select" >
 										<option>Available option 1</option>
@@ -1076,7 +1078,7 @@
 
 								DOES NOT WORK ON MULTIPLE LINE JUST ON SELECT AND SINGLE LINE BITCH
 
-								<span class="input-group input-group-horizontal input-group-large input-group-responsive">
+								<span class="input-group input-group-horizontal input-large input-group-responsive">
 
 								<select multiple class="input input-select" >
 										<option>Available option 1</option>
@@ -1165,7 +1167,7 @@
 								<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 								<div class="accordion">
 									<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
-									<input type="button">
+									<input type="button" value="bitch">
 									<input type="checkbox">
 									<input type="color">
 									<input type="date">
@@ -1733,6 +1735,10 @@
 				Yo I'm second jumbo. Fight me weewooweewoo. shit shit shit shit shit shit shit shit it stinks
 			</p>
 
+<p class="special-secondary background-gradient text-clip-background">
+	Yo I'm second jumbo. but i have a background-gradient that has been clipped
+</p>
+
 			<p class="lead">
 				I'm lead, how about you shit yourself. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -1772,62 +1778,62 @@
 		<h1 data-toggle="accordion">Symbols repreiiesesse <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
-				Square &nbsp;<i class="color-primary symbol symbol-square"></i>
+				Square <i class="color-primary symbol symbol-square"></i>
 			</p>
 
 			<p>
-				Search &nbsp;<i class="color-primary symbol symbol-search"></i>
+				Search <i class="color-primary symbol symbol-search"></i>
 			</p>
 
 			<p>
-				arrow down &nbsp;<i class="color-primary symbol symbol-arrow-down"></i>
+				arrow down <i class="color-primary symbol symbol-arrow-down"></i>
 			</p>
 
 			<p>
-				arrow up &nbsp;<i class="color-primary symbol symbol-arrow-up"></i>
+				arrow up <i class="color-primary symbol symbol-arrow-up"></i>
 			</p>
 
 			<p>
-				arrow left &nbsp;<i class="color-primary symbol symbol-arrow-left"></i>
+				arrow left <i class="color-primary symbol symbol-arrow-left"></i>
 			</p>
 
 			<p>
-				arrow right &nbsp;<i class="color-primary symbol symbol-arrow-right"></i>
+				arrow right <i class="color-primary symbol symbol-arrow-right"></i>
 			</p>
 
 			<p>
-				plus &nbsp;<i class="color-primary symbol symbol-plus"></i>
+				plus <i class="color-primary symbol symbol-plus"></i>
 			</p>
 
 			<p>
-				minus &nbsp;<i class="color-primary symbol symbol-minus"></i>
+				minus <i class="color-primary symbol symbol-minus"></i>
 			</p>
 			<p>
-				close &nbsp;<i class="color-primary symbol symbol-close"></i>
+				close <i class="color-primary symbol symbol-close"></i>
 			</p>
 			<p>
-				map &nbsp;<i class="color-primary symbol symbol-map"></i>
+				map <i class="color-primary symbol symbol-map"></i>
 			</p>
 			<p>
-				burger &nbsp;<i class="color-primary symbol symbol-burger"></i>
+				burger <i class="color-primary symbol symbol-burger"></i>
 			</p>
 			<p>
-				kebab vertical &nbsp;<i class="color-primary symbol symbol-kebab-vertical"></i>
+				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
 			</p>
 			<p>
-				kebab horizontal &nbsp;<i class="color-primary symbol symbol-kebab-horizontal"></i>
+				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
 			</p>
 			<p>
-				caret up &nbsp;<i class="color-primary symbol symbol-caret-up"></i>
+				caret up <i class="color-primary symbol symbol-caret-up"></i>
 			</p>
 			<p>
-				caret down &nbsp;<i class="color-primary symbol symbol-caret-down"></i>
+				caret down <i class="color-primary symbol symbol-caret-down"></i>
 			</p>
 			<p>
-				caret left &nbsp;<i class="color-primary symbol symbol-caret-left"></i>
+				caret left <i class="color-primary symbol symbol-caret-left"></i>
 			</p>
 			<p>
-				caret right &nbsp;<i class="color-primary symbol symbol-caret-right"></i>
+				caret right <i class="color-primary symbol symbol-caret-right"></i>
 			</p>
 
 		</div>
@@ -2286,6 +2292,48 @@
 		<h1 data-toggle="accordion">Helpers  <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
+			<h2>Helper classes: font family</h2>
+
+			<p class="font-family-primary"> Primary</p>
+			<p class="font-family-accent"> Primary</p>
+
+
+			<h2>Helper classes: font size</h2>
+			<p class="font-size-normalize">normalize. inherits set body font size</p>
+			<p class="font-size-large">large. is chonky</p>
+			<p class="font-size-small">smal. is smol</p>
+
+
+			<h2>Helper classes: font style</h2>
+
+			<p class="font-style-italic"> italic</p>
+			<p class="font-style-oblique"> oblique</p>
+			<p class="font-style-normal"> normal</p>
+
+
+
+			<h2>Helper classes: disple</h2>
+
+			<p class="display-block"> block</p>
+			<p class="display-inline-block"> inline block</p>
+			<p class="display-inline"> inline</p>
+
+
+
+			<h2>Helper classes: text leading or line-height for u nerds</h2>
+
+			<p class="text-leading-expanded">
+				Expanded  Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
+
+			<p class="text-leading-compact">
+				Compact Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
+
+			<p class="text-leading-normalize">
+				Normalize Compact Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
+
 			<h2>Helper classes: text align</h2>
 
 			<p class="text-align-center">
@@ -2314,19 +2362,23 @@
 			<p class="font-weight-800">800: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
 			<p class="font-weight-900">900: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
 
-
-			<h2>Helper classes: font size</h2>
-			<p class="font-size-normalize">normalize. inherits set body font size</p>
-			<p class="font-size-large">large. is chonky</p>
-			<p class="font-size-small">smal. is smol</p>
-
-
 			<h2>Helper classes: text transform</h2>
 			<p class="text-transform-uppercase">Uppercase</p>
 			<p class="text-transform-lowercase">Lowercase</p>
 			<p class="text-transform-capitalize">Capitalize</p>
 
-			<h2>Helper classes: Colors</h2>
+
+			<h2>Helper classes: vertical-align</h2>
+			<button class="text-vertical-align-middle">middle</button>
+			<button class="text-vertical-align-baseline">baseline</button>
+			<button class="text-vertical-align-top">top</button>
+			<button class="text-vertical-align-bottom">bottom</button>
+			<button class="text-vertical-align-text-top">text-top</button>
+			<button class="text-vertical-align-text-bottom">text-bottom</button>
+			<button class="text-vertical-align-sub">sub</button>
+			<button class="text-vertical-align-super">super</button>
+
+			<h2>Helper classes: Colors... there's a text shadow so you can see it shit itself</h2>
 
 
 
@@ -2383,10 +2435,176 @@
 			<p class="background-gradient-270">Background Gradient 270</p>
 			<p class="background-gradient-315">Background Gradient 315</p>
 
+			<h2>Advanced shit: wrap</h2>
 
-			<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-			<h3 class="true-title">Page Markup And Formatting</h3>						
-											<p><strong>Headings</strong></p>
+			<p class="text-wrap">text-wrap Text wrap... it just wraps break it down yo</p>
+
+			<div class="overflow-hidden">
+
+				<p class="text-nowrap">text-nowrap Text wrap... it never wraps. it's like your friend who doesnt know how to wrap what a piece of shit Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+			</div>
+
+			<div class="overflow-hidden">
+
+				<p class="text-wrap-ellipsis">text-wrap-ellipsis put an ellipsis on this shit, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+			</div>
+
+
+			<div class="overflow-hidden">
+
+				<p class="text-wrap-ellipsis-multiple">text-wrap-ellipsis put an ellipsis on this shit but allow multiple lines but that depends on how many lines you set up that one sass var, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+			</div>
+
+
+
+			<p class="special-secondary text-clip-background font-weight-900 text-transform-uppercase" data-src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
+				text-clip-background feat ya boi secondary. i have a background-image and other bullshit classes so u see what the fuck is happening to this child. it's on drugs. look how high the child is. don't do drugs kids. i'm trying to gill up more text so you can see shrek's bitch ass face. do you see it yet? layers motherfucker. if shrek was a graphic designer he'd be photoshop. personally i like illustrator myself because di becters are my life. We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you 
+			</p>
+
+			<h2>Advanced shit: no margin</h2>
+
+
+			<div class="margin-me no-margin">no-margin</div>
+			<div class="margin-me no-margin-x">no-margin-x</div>
+			<div class="margin-me no-margin-y">no-margin-y</div>
+			<div class="margin-me no-margin-top">no-margin-top</div>
+			<div class="margin-me no-margin-bottom">no-margin-bottom</div>
+			<div class="margin-me no-margin-left">no-margin-left</div>
+			<div class="margin-me no-margin-right">no-margin-right</div>
+
+
+
+			<h2>Advanced shit: no padding</h2>
+
+
+			<div class="padding-me no-padding">no-padding</div>
+			<div class="padding-me no-padding-x">no-padding-x</div>
+			<div class="padding-me no-padding-y">no-padding-y</div>
+			<div class="padding-me no-padding-top">no-padding-top</div>
+			<div class="padding-me no-padding-bottom">no-padding-bottom</div>
+			<div class="padding-me no-padding-left">no-padding-left</div>
+			<div class="padding-me no-padding-right">no-padding-right</div>
+
+
+
+
+
+			<h2>Advanced shit: overflow all</h2>
+
+			<h3>Overflow visible</h3>
+			<p>fuck no, test it out urself</p>
+
+
+			<h3>Overflow hidden</h3>
+			<div style="height:69px" class="overflow-hidden">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow scroll</h3>
+			<div style="height:69px" class="overflow-scroll">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow overlay</h3>
+			<div style="height:69px" class="overflow-overlay">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow auto</h3>
+			<div style="height:69px" class="overflow-auto">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+
+
+			<h2>Advanced shit: overflow x</h2>
+
+			<h3>Overflow x visible</h3>
+			<p>fuck no, test it out urself</p>
+
+
+			<h3>Overflow x hidden</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-hidden">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow x scroll</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-scroll">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow x overlay</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-overlay">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow x auto</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-auto">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+
+
+
+			<h2>Advanced shit: overflow y</h2>
+
+			<h3>Overflow y visible</h3>
+			<p>fuck no, test it out urself</p>
+
+
+			<h3>Overflow y hidden</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-hidden">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow y scroll</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-scroll">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow y overlay</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-overlay">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow y auto</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-auto">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+
+			<h2>Advanced shit: position</h2>
+
+			<div style="position:relative;height: 100vh;" class="background-neutral">
+				<div class="position-me position-relative">position-relative</div>
+				<div class="position-me position-absolute">position-absolute</div>
+				<div class="position-me position-static">position-static</div>
+				<p>Fuck no test out position-sticky and position-fixed yourself</p>
+			</div>
+
+			<h2>Advanced shit: float and clear and clearfix</h2>
+
+			<div class="cf">
+				<div class="float-left">float left</div>
+				<div class="float-right">float right</div>
+				<div class="clear-left">clear left</div>
+				<div class="float-left">float left</div>
+				<div class="float-right">float right</div>
+				<div class="clear-right">clear right</div>
+				<div class="float-left">float left</div>
+				<div class="float-right">float right</div>
+				<div class="clear-both">clear both</div>
+			</div>
+
+			<p>
+				Theres also align classes for flex and grid and display none and block but i won't put it here because you suck jk
+			</p>
+
+		</div>
+
+		<h1  data-toggle="accordion" >Typographeee <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<h3 class="true-title">Page Markup And Formatting</h3>				
 			<h1>Header one</h1>
 			<h2>Header two</h2>
 			<h3>Header three</h3>
@@ -2881,6 +3099,35 @@
 				padding: 1em;
 			}
 
+			.margin-me {
+				margin: 3em;
+				outline: 1px solid rgba(0,0,0,.2);
+			}
+
+			.padding-me {
+				padding: 3em;
+				outline: 1px solid rgba(0,0,0,.2);
+			}
+
+			.position-me {
+				width: 100px;
+				height:100px;
+				background: pink;
+				outline: 1px solid rgba(0,0,0,.2);
+			}
+
+			.position-me:first-child {
+				top: 25%;
+				left: 25%;
+
+			}
+
+			.position-me:nth-child(2) {
+				top: 50%;
+				left: 50%;
+
+			}
+
 			.accordion .flex-child,
 			.accordion *[class*="flex-col-"] {
 				background: var(--theme-background-contrast);
@@ -2888,7 +3135,8 @@
 
 			}
 
-			.accordion *[class*="color-"]{
+			.accordion *[class*="color-"],
+			.accordion *[class*="background-"]:not(*[class*="clip"]){
 
 				text-shadow:
 
