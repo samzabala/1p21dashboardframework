@@ -1,6 +1,8 @@
 <div class="module" data-sggrc="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
 	<div class="module-content">
-
+		<p>
+			I use this bitchacho to debug almost all components in this framework, aner in your own risk because shit's about to get dirrty
+		</p>
 		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
@@ -23,6 +25,7 @@
 				<a
 					data-toggle="modal"
 					data-modal-close="false"
+					data-modal-disable-overlay="false"
 					data-modal-max-width="800px"
 					data-modal-title="Bitch ass"
 					data-href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
