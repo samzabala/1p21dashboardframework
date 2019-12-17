@@ -31,8 +31,8 @@
 
 
 
-
-
+		<!-- bugherdo -->
+		<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=nm69ozavxmy6epwwxvzgma" async="true"></script>
 
 
 
