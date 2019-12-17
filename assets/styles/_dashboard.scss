@@ -66,6 +66,15 @@ $sidebar-base: 285px;
 				display:none!important;
 			}
 
+			.container {
+				opacity: 1;
+				transition: opacity $transition-duration-base $transition-timing;
+
+				body:not(.body-loaded) {
+					opacity: 0;
+				}
+			}
+
 			.sidebar {
 				&-logo {
 

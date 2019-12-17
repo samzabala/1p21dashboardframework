@@ -348,9 +348,6 @@
 					<div class="progress-bar" style="width: 10%"></div>
 				</div>
 				<br>
-				<div class="progress">
-					<div class="progress-bar progress-bar-base" style="width: 46%"></div>
-				</div>
 				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
@@ -721,11 +718,6 @@
 						<p class="input-wrapper input-wrapper-horizontal">
 							<label class="input-label input-label-accent" for="input-accent">accent: </label>
 							<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
-						</p>
-
-						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-base" for="input-base">base: </label>
-							<input class="input input-single-line input-base" id="input-base" placeholder="base" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
@@ -1480,7 +1472,6 @@
 			<button type="button" class="btn btn-primary">Primary</button>
 			<button type="button" class="btn btn-accent">accent</button>
 			<button type="button" class="btn btn-neutral">neutral</button>
-			<button type="button" class="btn btn-base">base</button>
 			<button type="button" class="btn btn-success">Success</button>
 			<button type="button" class="btn btn-caution">caution</button>
 			<button type="button" class="btn btn-error">error</button>
@@ -1491,7 +1482,6 @@
 			<button type="button" class="btn btn-small btn-primary">Primary</button>
 			<button type="button" class="btn btn-small btn-accent">accent</button>
 			<button type="button" class="btn btn-small btn-neutral">neutral</button>
-			<button type="button" class="btn btn-small btn-base">base</button>
 			<button type="button" class="btn btn-small btn-success">Success</button>
 			<button type="button" class="btn btn-small btn-caution">caution</button>
 			<button type="button" class="btn btn-small btn-error">error</button>
@@ -1502,7 +1492,7 @@
 			<button type="button" class="btn btn-large btn-primary">Primary</button>
 			<button type="button" class="btn btn-large btn-accent">accent</button>
 			<button type="button" class="btn btn-large btn-neutral">neutral</button>
-			<button type="button" class="btn btn-large btn-base">base</button>
+			
 			<button type="button" class="btn btn-large btn-success">Success</button>
 			<button type="button" class="btn btn-large btn-caution">caution</button>
 			<button type="button" class="btn btn-large btn-error">error</button>
@@ -1510,7 +1500,7 @@
 
 			<h2>Block</h2>
 
-			<button type="button" class="btn btn-large btn-block btn-success font-weight-300"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
+			<button type="button" class="btn btn-large btn-block btn-success"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
 			<h2>
 				Disabled
 			</h2>
@@ -1518,7 +1508,6 @@
 			<a href="#" class="btn btn-disabled btn-primary">Primary</a>
 			<a href="#" class="btn btn-disabled btn-accent">accent</a>
 			<a href="#" class="btn btn-disabled btn-neutral">neutral</a>
-			<a href="#" class="btn btn-disabled btn-base">base</a>
 			<a href="#" class="btn btn-disabled btn-success">Success</a>
 			<a href="#" class="btn btn-disabled btn-caution">caution</a>
 			<a href="#" class="btn btn-disabled btn-error">error</a>
@@ -1846,9 +1835,7 @@
 			<p>
 				<span class="badge badge-accent"></span> Accent
 			</p>
-			<p>
-				<span class="badge badge-base"></span> Base
-			</p>
+			
 			<p>
 				<span class="badge badge-neutral"></span> Neutral
 			</p>
@@ -1901,10 +1888,6 @@
 			</p>
 
 			<p>
-				<span class="legend legend-base"></span> Base
-			</p>
-
-			<p>
 				<span class="legend legend-neutral"></span> Neutral
 			</p>
 
@@ -1949,7 +1932,6 @@
 		<div class="accordion">
 			<span class="tag tag-primary">Primary</span>
 			<span class="tag tag-accent">Accent</span>
-			<span class="tag tag-base">Base</span>
 			<span class="tag tag-neutral">Neutral</span>
 			<span class="tag tag-success">Success</span>
 			<span class="tag tag-caution">Caution</span>
@@ -2170,13 +2152,6 @@
 					<tr class="table-row-neutral">
 						<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
 						<td>neutral</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-base">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
-						<td>base</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
@@ -2845,9 +2820,6 @@
 						</g>
 						<g>
 							<rect x="600" y="177.5" class="fill-neutral" width="0" height="76.1"></rect>
-						</g>
-						<g>
-							<rect x="480" y="262" class="fill-base" width="120" height="76.1"></rect>
 						</g>
 						<g>
 							<rect y="346.5" class="fill-success stroke-error" width="600" height="76.1"></rect>
