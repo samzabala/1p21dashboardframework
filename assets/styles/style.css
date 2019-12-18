@@ -4348,7 +4348,9 @@ table {
   .btn .badge:first-child, .fw-trumbowyg-modal-button .badge:first-child {
     margin-right: .25em; }
 
-.nav .btn {
+.nav .btn, .nav .btn.btn-large, .nav .btn.btn-small,
+.btn-large .nav .btn,
+.btn-small .nav .btn {
   padding-top: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.875) ) * .5);
   padding-bottom: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.875) ) * .5);
   height: 4.6875rem; }
@@ -6846,8 +6848,10 @@ DASHBOARD / OUR CUSTOM STYLES
       width: calc(100% - 20px - 30px - 1.5rem);
       margin-right: 0; }
   @media (max-width: 1279px) {
-    #dashboard-block-sidebar-nav {
-      margin: 0 -10px; } }
+    #dashboard-block-sidebar {
+      width: 245px; }
+      #dashboard-block-sidebar-nav {
+        margin: 0 -10px; } }
   @media (max-width: 767px) {
     #dashboard-block-sidebar {
       left: -100%;
@@ -6858,8 +6862,8 @@ DASHBOARD / OUR CUSTOM STYLES
 
 #dashboard-block-main {
   width: calc(100% - 285px);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   margin-left: auto; }
   #dashboard-block-main-nav {
     left: 285px;
@@ -6935,6 +6939,13 @@ DASHBOARD / OUR CUSTOM STYLES
     -webkit-box-align: center;
             align-items: center;
     position: relative; }
+  @media (max-width: 1279px) {
+    #dashboard-block-main {
+      width: calc(100% - 245px);
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      #dashboard-block-main-nav {
+        left: 245px; } }
   @media (max-width: 767px) {
     #dashboard-block-main {
       padding-top: 10px;
@@ -6943,7 +6954,7 @@ DASHBOARD / OUR CUSTOM STYLES
       #dashboard-block-main-nav {
         left: 0; }
         #dashboard-block-main-nav-toggle.open {
-          left: 285px; }
+          left: 245px; }
       #content-wrapper:before {
         left: 2em; }
       #nav-search .btn {

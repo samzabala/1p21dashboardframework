@@ -1,7 +1,7 @@
 
 
 $sidebar-base: 285px;
-// $sidebar-sm: 80px;
+$sidebar-mobile: 245px;
 // $sidebar-xs: 60px;
 
 
@@ -97,6 +97,7 @@ $sidebar-base: 285px;
 			}
 
 			@include br(#{$mobile-br-max}-max) {
+				width:$sidebar-mobile;
 				&-nav {
 					margin: 0 ($container-gutter-mobile * -1);
 				}
@@ -114,8 +115,8 @@ $sidebar-base: 285px;
 
 		&-main {
 			width:calc(100% - #{$sidebar-base});
-			padding-top: 50px;
-			padding-bottom: 50px;
+			padding-top: $container-gutter;
+			padding-bottom: $container-gutter;
 			margin-left: auto;
 
 			&-nav {
@@ -204,6 +205,17 @@ $sidebar-base: 285px;
 				}
 			}
 
+			@include br(sm-max) {
+				width:calc(100% - #{$sidebar-mobile});
+				padding-top: $container-gutter-mobile;
+				padding-bottom: $container-gutter-mobile;
+	
+				&-nav {
+					left: $sidebar-mobile;
+				}
+
+			}
+
 			@include br(xs-max) {
 				padding-top: $gutter-micro;
 				padding-bottom: $gutter-micro;
@@ -215,7 +227,7 @@ $sidebar-base: 285px;
 					&-toggle {
 	
 						&.open {
-							left: $sidebar-base;
+							left: $sidebar-mobile;
 						}
 					}
 				}
