@@ -1347,8 +1347,8 @@ table {
   color: #0480fe; }
 
 .nav-icon {
-  width: 1.5789473684em;
-  height: 1.5789473684em;
+  width: 1.875em;
+  height: 1.875em;
   max-width: none;
   display: inline-block;
   vertical-align: middle;
@@ -1362,7 +1362,7 @@ table {
 .nav-list > .nav-item > [data-toggle=dropdown],
 .nav-list > li > a,
 .nav-list > li > [data-toggle=dropdown] {
-  font-size: 1.1875rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: none;
   font-style: normal;
