@@ -66,14 +66,14 @@ $sidebar-base: 285px;
 				display:none!important;
 			}
 
-			.container {
-				opacity: 1;
-				transition: opacity $transition-duration-base $transition-timing;
+			// .container {
+			// 	opacity: 1;
+			// 	transition: opacity $transition-duration-base $transition-timing;
 
-				body.body-loading & {
-					opacity: 0;
-				}
-			}
+			// 	body.body-loading & {
+			// 		opacity: 0;
+			// 	}
+			// }
 
 			.sidebar {
 				&-logo {
@@ -131,6 +131,39 @@ $sidebar-base: 285px;
 				}
 			}
 
+			@keyframes dashboardLoading {
+				0% {
+					content:"Loading Stuff.";
+				}
+				50% {
+					content:"Loading Stuff..";
+				}
+				100% {
+					content:"Loading Stuff...";
+				}
+			}
+
+			@at-root #content-wrapper {
+				&:before {
+					animation-name: dashboardLoading;
+					animation-duration: .5s;
+					animation-fill-mode: both;
+					animation-iteration-count: infinite;
+					content:"Loading Stuff...";
+					display:block;
+					font-size: 24px;
+					opacity: .2;
+					position:absolute;
+					top:calc(#{$nav-height} + 2em);
+					left:calc(#{$sidebar-base} + 2em);
+					transition: opacity $transition-duration-base $transition-timing;
+
+					.body-loaded & {
+						opacity:0;
+					}
+				}
+			}
+
 			@at-root #nav {
 				&-search {
 					margin-right: auto;
@@ -184,6 +217,12 @@ $sidebar-base: 285px;
 						&.open {
 							left: $sidebar-base;
 						}
+					}
+				}
+
+				@at-root #content-wrapper {
+					&:before {
+						left: 2em;
 					}
 				}
 

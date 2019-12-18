@@ -6839,12 +6839,6 @@ DASHBOARD / OUR CUSTOM STYLES
   height: 100vh; }
   #dashboard-block-sidebar::-webkit-scrollbar {
     display: none !important; }
-  #dashboard-block-sidebar .container {
-    opacity: 1;
-    -webkit-transition: opacity 0.25s ease-in-out;
-    transition: opacity 0.25s ease-in-out; }
-    body.body-loading #dashboard-block-sidebar .container {
-      opacity: 0; }
   #dashboard-block-sidebar .sidebar-logo,
   #dashboard-block-sidebar .sidebar-logo img,
   #dashboard-block-sidebar .sidebar-logo svg {
@@ -6882,6 +6876,42 @@ DASHBOARD / OUR CUSTOM STYLES
       position: relative;
       z-index: 99999;
       left: 0; }
+
+@-webkit-keyframes dashboardLoading {
+  0% {
+    content: "Loading Stuff."; }
+  50% {
+    content: "Loading Stuff.."; }
+  100% {
+    content: "Loading Stuff..."; } }
+
+@keyframes dashboardLoading {
+  0% {
+    content: "Loading Stuff."; }
+  50% {
+    content: "Loading Stuff.."; }
+  100% {
+    content: "Loading Stuff..."; } }
+  #content-wrapper:before {
+    -webkit-animation-name: dashboardLoading;
+            animation-name: dashboardLoading;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    content: "Loading Stuff...";
+    display: block;
+    font-size: 24px;
+    opacity: .2;
+    position: absolute;
+    top: calc(75px + 2em);
+    left: calc(285px + 2em);
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out; }
+    .body-loaded #content-wrapper:before {
+      opacity: 0; }
   #nav-search {
     margin-right: auto;
     -webkit-box-flex: 1;
@@ -6918,5 +6948,7 @@ DASHBOARD / OUR CUSTOM STYLES
         left: 0; }
         #dashboard-block-main-nav-toggle.open {
           left: 285px; }
+      #content-wrapper:before {
+        left: 2em; }
       #nav-search .btn {
         padding-left: .125em; } }
