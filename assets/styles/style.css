@@ -6843,7 +6843,7 @@ DASHBOARD / OUR CUSTOM STYLES
     opacity: 1;
     -webkit-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out; }
-    #dashboard-block-sidebar .container body:not(.body-loaded) {
+    body.body-loading #dashboard-block-sidebar .container {
       opacity: 0; }
   #dashboard-block-sidebar .sidebar-logo,
   #dashboard-block-sidebar .sidebar-logo img,

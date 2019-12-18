@@ -70,7 +70,7 @@ $sidebar-base: 285px;
 				opacity: 1;
 				transition: opacity $transition-duration-base $transition-timing;
 
-				body:not(.body-loaded) {
+				body.body-loading & {
 					opacity: 0;
 				}
 			}
