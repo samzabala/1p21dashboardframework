@@ -12,9 +12,9 @@
 
 
 		<!--
-			@DYNAMIC
-				class .badge-success
+			@IF user is online 
+				
 		-->
-		<span class="badge badge-success"></span>
+		<span class="badge badge-success badge-large"></span>
 
 	</a>

@@ -78,7 +78,7 @@
 								<span class="REPLACE">40</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Design</span>
 							</div>
 						</div>
@@ -96,7 +96,7 @@
 								<span class="REPLACE">12</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Dev</span>
 							</div>
 						</div>
@@ -114,7 +114,7 @@
 								<span class="REPLACE">12</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Dev</span>
 							</div>
 						</div>
@@ -132,7 +132,7 @@
 								<span class="REPLACE">12</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Dev</span>
 							</div>
 						</div>

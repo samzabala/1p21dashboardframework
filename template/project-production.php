@@ -338,7 +338,7 @@
 												<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
 													<span class="REPLACE">04-20-69</span>
 												</p>
-												<h2 class="project-note-title no-margin-top">
+												<h2 class="project-note-title no-margin-y">
 													<span class="REPLACE">Note Title goes here</span>
 												</h2>
 											</div>
@@ -416,7 +416,7 @@
 															<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
 																<span class="REPLACE">04-20-69</span>
 															</p>
-															<h2 class="project-note-title no-margin-top">
+															<h2 class="project-note-title no-margin-y">
 																<span class="REPLACE">Note Title goes here</span>
 															</h2>
 														</div>

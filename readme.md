@@ -46,6 +46,8 @@ will separate dashboard and framework one the bois are readeh
 
 	uri for assets meant to go away when dynamic boi is ready
 
+	NOTE: graphs will have tooltip integrations through framework setup using `frameWork.createTooltip()` 
+
 *	`NOTE`
 
 	Other elements that rely on server side based... things

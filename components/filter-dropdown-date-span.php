@@ -7,7 +7,7 @@
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 	</button>
 	<!-- @REPLACE  #profile-assigned-date > li -->
-	<ul data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
+	<ul data-dropdown-width="167px" class="text-align-left dropdown dropdown-top-flush dropdown-right">
 
 		<li class="REPLACE">
 			<a href="#">Jan 2018</a>
@@ -24,7 +24,7 @@
 		<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 	</button>
 	<!-- @REPLACE  #profile-assigned-date > li -->
-	<ul data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
+	<ul data-dropdown-width="167px" class="text-align-left dropdown dropdown-top-flush dropdown-right">
 
 		<li class="REPLACE">
 			<a href="#">Jan 2018</a>
