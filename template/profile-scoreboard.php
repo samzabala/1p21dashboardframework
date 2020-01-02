@@ -157,11 +157,14 @@
 				
 				<p class="progress-title no-margin-top">Link Activity Distribution</p>
 				
-				<div class="progress p">
+				<!-- @NOTE this wont use high charts, -->
+				<div id ="lnk-act-dist" class="progress p">
 
 					<!--
 						@LOOP progress-bar
 						@DYNAMIC all attrbutes EXCEPT class
+
+
 					-->
 					<div class="progress-bar"
 

@@ -21,7 +21,17 @@ will separate dashboard and framework one the bois are readeh
 
 #	NOTES
 *	Overrides to framework or custom styles are prepended with #dashboard or .dashboard
+
 *	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
+
+*	Highcharts with tooltips
+
+	To maintain design, we may have to add `events.load` properties to be able to append tooltip attributes
+
+	Documentation for tooltip: [here](assets/plugins/framework/docs/sections/components/tooltip.md)
+
+	`events.load` property solution: [here](https://stackoverflow.com/questions/25493472/rendering-html-data-attributes-on-highcharts-series)
+
 
 
 ## There are html comments or string instances by markup with dynamic attributs and or content
