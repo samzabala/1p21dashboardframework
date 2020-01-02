@@ -150,7 +150,7 @@ $sidebar-mobile: 245px;
 				}
 			}
 
-			@at-root #content-wrapper {
+			@at-root .body-loading #content-wrapper {
 				&:before {
 					animation-name: dashboardLoading;
 					animation-duration: .5s;

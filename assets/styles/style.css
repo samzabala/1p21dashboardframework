@@ -6893,7 +6893,7 @@ DASHBOARD / OUR CUSTOM STYLES
     content: "Loading Stuff.."; }
   100% {
     content: "Loading Stuff..."; } }
-  #content-wrapper:before {
+  .body-loading #content-wrapper:before {
     -webkit-animation-name: dashboardLoading;
             animation-name: dashboardLoading;
     -webkit-animation-duration: .5s;
@@ -6911,7 +6911,7 @@ DASHBOARD / OUR CUSTOM STYLES
     left: calc(285px + 2em);
     -webkit-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out; }
-    .body-loaded #content-wrapper:before {
+    .body-loaded .body-loading #content-wrapper:before {
       opacity: 0; }
   #nav-search {
     margin-right: auto;

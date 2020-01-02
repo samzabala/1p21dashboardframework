@@ -42,7 +42,6 @@ function app_get_component($filename = '', $slug =''){
 
 //GETS THE TEMPLETE FOR THE BOI WHILE HANDLEBARS IS NOT READY
 function app_init_content($slug = ''){
-	$template_to_use = 'home';
 	
 	if(isset($_GET['template'])):
 
@@ -59,6 +58,7 @@ function app_init_content($slug = ''){
 			case 'demos':
 			case 'profiles':
 			case 'last-activity':
+			case 'login':
 			case 'unique-links':
 				app_get_template_part('template/'.$template_part);
 				break;

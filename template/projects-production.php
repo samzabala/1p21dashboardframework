@@ -195,11 +195,3 @@
 
 	</div>
 </div>
-
-
-
-<style scoped>
-	.module-header .filter-dropdown-date {
-		margin-right: auto;
-	}
-</style>
