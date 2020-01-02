@@ -7,8 +7,7 @@ will separate dashboard and framework one the bois are readeh
 
 ## Dependencies
 ### Javascript
-*	Vue
-*	[jQuery (will be deprecated once vanilla trumbowyg is available)](https://jquery.com/)
+*	[jQuery](https://jquery.com/)
 *	[Trumbowyg](https://alex-d.github.io/Trumbowyg/)
 	*	Trumbowyg Upload Plugin (1p21 Dashboard Custom)
 *	[1p21 Dashboard Framework](https://github.com/samzabala)
@@ -16,8 +15,7 @@ will separate dashboard and framework one the bois are readeh
 
 
 ### CSS / SASS
-*	[Trumbowyg](https://alex-d.github.io/Trumbowyg/)
-*	[Shithole (I'll think of a better name eventually)](https://github.com/samzabala)
+*	[Shithole](https://github.com/samzabala)
 *	[1p21 Dashboard Framework](https://github.com/samzabala)
 
 

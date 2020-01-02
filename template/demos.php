@@ -2,7 +2,7 @@
 <div class="module">
 	<div class="module-content">
 		<p>
-			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present
+			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present. it's kinda laggy now because i shat on it too much
 		</p>
 		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -248,6 +248,18 @@
 					data-tooltip-badge-size="small"
 					data-tooltip-content="">
 					Bitch boi to the right and badge is small
+				</a>
+				
+				<a href="#" class="btn btn-primary"
+					data-toggle="tooltip-click"
+					data-tooltip-placement="right"
+					data-tooltip-badge="true"
+					data-tooltip-badge-background="accent"
+					data-tooltip-badge-size="small"
+					data-tooltip-x="500"
+					data-tooltip-y="500"
+					data-tooltip-content="custom">
+					Bitch boi custom
 				</a>
 				
 
@@ -3055,6 +3067,331 @@
 				</div>
 			</div>
 			
+		</div>
+
+		<h1  data-toggle="accordion" >Would toolt tip work for dynamic shit? Idk let's see <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		<div id="kanoski-chart" style="width: 100%;"></div>
+
+			<script>
+			//<![CDATA[
+			//wrap in cdata so google doesn't think it's renderblocking 
+
+			(function(){
+				const isIE = function(){
+				var ua = navigator.userAgent;
+				return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1
+				}
+				//d3 doesnt support older browsers anyway just die
+				if(isIE()){
+				var error =  document.createElement('div')
+				error.className = prefix+'wrapper fatality';
+				error.innerHTML = 'Sorry, this graphic needs D3 to render the data but your browser does not support it.\n\n Newer versions of Chrome, Edge, Firefox and Safari are recommended. \n\nSee <em><a target="_blank" rel="nofollow" href="https://d3-wiki.readthedocs.io/zh_CN/master/Home/#browser-platform-support">the official wiki</a></em> for more information';
+				document.getElementById('kanoski-chart').appendChild(error);
+				
+				// break;
+				throw new Error('D3 not supported by browser');
+				}
+				//give the src of csv data here
+				const csvUrl = 'https://www.kanoski.com/wp-content/uploads/2019/12/DeadliestCarstop25.csv';
+				// const csvUrl = 'data.csv';
+				//make the chart here
+				function kanoskiChart(data){
+				
+				const width = 900;
+				const radius = [.5,.375,.25];
+				const backgroundColor = '#FFF';
+				const strokeWidth = 1;
+				const fontSize = '10pt';
+				const toolTipWidth = 300;
+				const toolTipHeight = 120;
+				const toolTipTailSize = 40;
+				const toolTipTailPyth = Math.sqrt((toolTipTailSize * toolTipTailSize) * 2);
+				const numFormat = d3.format(",d");
+				//our bois
+				var  _ = {};
+				//filter to makes so no error occurs if it doesnt exist
+				data = data.filter(function(d){
+					return d.Make;
+				});
+				//parse fatalities into numbers
+				data.forEach(function(d){
+					d.Fatalities = parseFloat(d.Fatalities);
+				});
+				//sort by make and alphabetically by make
+				data = data.sort((a, b) => {
+					if( a.Make > b.Make){
+					return 1;
+					}
+					if( a.Make < b.Make){
+					return -1;
+					};
+					return 0;
+				});
+				//create separate database for separate pie boi
+				const dataMake = data.reduce((accumulator, curr)=>{
+					if(
+					!accumulator.find((make)=>{
+						return make.Make === curr.Make	
+					})
+					){
+					accumulator.push({
+						Make: curr.Make,
+						Fatalities: curr.Fatalities
+					})
+					} else {
+					const i  = accumulator.findIndex((make)=>make.Make === curr.Make);
+					accumulator[i].Fatalities += curr.Fatalities
+					}
+					return accumulator;
+				}, []);
+				//container
+					const container = d3.select('#kanoski-chart');
+					const svg = container.append('svg')
+						.attr("viewBox", [0, 0, width, width])
+						.style("font", "inherit")
+						.style("background-color", backgroundColor)
+						.style("max-width", '100%')
+						.style("margin", '0 auto')
+						.style("display", 'block')
+						.attr('version','1.1')
+						.attr('x','0px')
+						.attr('y','0px')
+						.attr("preserveAspectRatio", "xMidYMid meet")
+						.attr('xml:space','preserve')
+						.attr('width',width)
+						.attr('height',width);
+						
+				//color scale
+					const colors = d3.scaleOrdinal()
+					.range(['#f49445','#f16038','#ee2b2a','#832339','#4d1e41','#21255c','#3f4494','#737fb9','#a6b9dd'])
+					.domain(data.reduce(function(acc,d){
+						if(!acc.includes(d.Make)){
+						acc.push(d.Make);
+						}
+						return acc;
+					},[]));
+				//get pi path
+					getArcPath = (piData,outerRadius,innerRadius,subMethod) => {
+					var path = d3.arc()
+						.outerRadius( outerRadius )
+						.innerRadius( innerRadius );
+					return subMethod ? path[subMethod](piData) : path(piData);
+					};
+				//get data but pi it
+					getPiData = (data,index) => {
+					var pie =  d3.pie()
+						.sort(null)
+						.value(function(d,i){
+						return d.Fatalities
+						});
+						return pie(data)[index];
+					}
+				//make em
+					makeADonut = (key,dataToUse,outerRadiusIndex,innerRadiusIndex) => {
+					//group
+						_['g'+key] = svg.append('g')
+						.attr('transform', `translate(${width / 2},${width / 2})`);
+					//graph item
+						_['blob'+key] = _['g'+key].append('g')
+						.selectAll('path')
+						.data(dataToUse,d => d[key])
+						.join('path')
+						.attr('data-make', d=> d.Make)
+						.attr('data-model', d=> d.Model)
+						.attr('data-toggle','tooltip-hover')
+						.attr('data-tooltip-content',d=> d.Make)
+						.attr('fill', d => colors(d.Make))
+						.attr('stroke-width',strokeWidth)
+						.on('mousemove',function(){
+							frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
+						})
+						.on('mouseenter',function(){
+							frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
+						})
+						.attr('stroke',backgroundColor)
+						.attr('d', (d,i) => getArcPath( getPiData(dataToUse,i),( width * radius[outerRadiusIndex]),( width * radius[innerRadiusIndex]) ))
+					//text 
+						_['text'+key] = _['g'+key].append("g")
+						.style("user-select", "none")
+						.style("font", "inherit")
+						.style("pointer-events", "none")
+						.selectAll("text")
+						.data(dataToUse,d => d[key])
+						.join("text")
+						.attr("text-anchor", "middle")
+						.attr('dominant-baseline','middle')
+						.attr('fill',backgroundColor)
+						.attr('font-size',fontSize)
+						.attr('font-weight', key == 'Make' ? '900' : 'inherit' )
+						.attr('transform-origin','0 0')
+						.attr('transform',(d,i)=> {
+							var textOrigin = getArcPath(
+							getPiData(dataToUse,i),
+							( width * radius[outerRadiusIndex]),
+							( width * radius[innerRadiusIndex]),
+							'centroid'
+							);
+							var angle = (getPiData(dataToUse,i).startAngle + getPiData(dataToUse,i).endAngle) * 90 / Math.PI - 90;
+							var transform = '';
+							transform = `translate(${textOrigin[0]},${textOrigin[1]})`;
+							transform += `rotate(${angle > 90 ? angle - 180 : angle})`;
+							return transform;
+						})
+						.html(d => {
+							// return '<tspan dy="1em">'+d[key].split(' ').join('</tspan><tspan>')+'</tspan>'
+							return d[key];
+						});
+					}
+				//yes
+					makeADonut('Make',dataMake,1,2);
+					makeADonut('Model',data,0,1);
+				}
+
+
+				document.addEventListener("DOMContentLoaded", function() {
+					jQuery(document).ready(function($) {
+						$.when(
+						$.getScript('https://d3js.org/d3.v5.min.js'),
+						$.getScript('https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js'),
+						$.Deferred(function( deferred ){
+							$( deferred.resolve );
+						})
+						)
+						.done(function(){
+							kanoskiChart([
+								{
+									"Make": "Chevrolet",
+									"Model": "Silverado",
+									"Fatalities": 1774
+								},
+								{
+									"Make": "Ford",
+									"Model": "F150",
+									"Fatalities": 1539
+								},
+								{
+									"Make": "Honda",
+									"Model": "Accord",
+									"Fatalities": 1085
+								},
+								{
+									"Make": "Toyota",
+									"Model": "Camry",
+									"Fatalities": 965
+								},
+								{
+									"Make": "Honda",
+									"Model": "Civic",
+									"Fatalities": 950
+								},
+								{
+									"Make": "Nissan",
+									"Model": "Altima",
+									"Fatalities": 761
+								},
+								{
+									"Make": "Toyota",
+									"Model": "Corolla",
+									"Fatalities": 739
+								},
+								{
+									"Make": "Ford",
+									"Model": "Explorer",
+									"Fatalities": 622
+								},
+								{
+									"Make": "Ford",
+									"Model": "F250",
+									"Fatalities": 594
+								},
+								{
+									"Make": "Dodge",
+									"Model": "Ram 1500*",
+									"Fatalities": 865
+								},
+								{
+									"Make": "Chevrolet",
+									"Model": "Impala",
+									"Fatalities": 543
+								},
+								{
+									"Make": "Chevrolet",
+									"Model": "Malibu",
+									"Fatalities": 514
+								},
+								{
+									"Make": "Ford",
+									"Model": "Ranger",
+									"Fatalities": 498
+								},
+								{
+									"Make": "Ford",
+									"Model": "Focus",
+									"Fatalities": 487
+								},
+								{
+									"Make": "Gmc",
+									"Model": "Sierra",
+									"Fatalities": 464
+								},
+								{
+									"Make": "Jeep",
+									"Model": "Grand Cherokee",
+									"Fatalities": 463
+								},
+								{
+									"Make": "Chevrolet",
+									"Model": "Tahoe",
+									"Fatalities": 425
+								},
+								{
+									"Make": "Ford",
+									"Model": "Mustang",
+									"Fatalities": 416
+								},
+								{
+									"Make": "Ford",
+									"Model": "Escape",
+									"Fatalities": 404
+								},
+								{
+									"Make": "Ford",
+									"Model": "Fusion",
+									"Fatalities": 399
+								},
+								{
+									"Make": "Toyota",
+									"Model": "Tacoma",
+									"Fatalities": 398
+								},
+								{
+									"Make": "Ford",
+									"Model": "F350",
+									"Fatalities": 388
+								},
+								{
+									"Make": "Hyundai",
+									"Model": "Elantra",
+									"Fatalities": 380
+								},
+								{
+									"Make": "Hyundai",
+									"Model": "Sonata",
+									"Fatalities": 376
+								},
+								{
+									"Make": "Honda",
+									"Model": "CR-V",
+									"Fatalities": 367
+								}
+							])
+						})
+					});
+				});
+			}())
+			//]]>
+			</script>
 		</div>
 
 	</div>
