@@ -487,10 +487,3 @@
 	</div>
 
 </div>
-
-
-<style scoped>
-	#profile-production-associated .module-header .filter-dropdown-date {
-		margin-right: auto;
-	}
-</style>

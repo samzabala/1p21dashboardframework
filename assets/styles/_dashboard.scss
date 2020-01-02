@@ -4,6 +4,12 @@ $sidebar-base: 285px;
 $sidebar-mobile: 245px;
 // $sidebar-xs: 60px;
 
+//filters
+#projects-production .module-header .filter-dropdown-date,
+#profile-production-associated .module-header .filter-dropdown-date {
+	margin-right: auto;
+}
+
 
 //custom
 
