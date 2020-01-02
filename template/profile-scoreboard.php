@@ -49,7 +49,7 @@
 		<a
 			id="profile-scoreboard-links-built"
 			class="color-inherit color-primary-hover module module-no-gutter-x text-align-center text-leading-compact"
-			href="<?= app_create_link(array('template'=>'projects')); ?>"
+			href="<?= app_create_link(array('template'=>'unique-links')); ?>"
 			data-grid-area="linksbuilt">
 				
 				<span class="module-content">
@@ -85,7 +85,7 @@
 		<a
 			id="profile-scoreboard-to-dos"
 			class="color-inherit color-primary-hover module module-no-gutter-x text-align-center text-leading-compact"
-			href="<?= app_create_link(array('template'=>'unique-links')); ?>"
+			href="<?= app_create_link(array('template'=>'projects')); ?>"
 			data-grid-area="todos">
 				
 				<span class="module-content">
