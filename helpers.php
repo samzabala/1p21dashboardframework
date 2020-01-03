@@ -55,7 +55,7 @@ function app_init_content($slug = ''){
 				app_get_template_part('template/projects-scoreboard');
 				break;
 
-			case 'demos':
+			case 'debug':
 			case 'profiles':
 			case 'last-activity':
 			case 'login':
@@ -95,7 +95,7 @@ function app_debug_li() {
 	</li>
 
 	<li>
-		<a href="<?=app_create_link(array('template'=>'demos')) ?>">Debug framework</a>
+		<a href="<?=app_create_link(array('template'=>'debug')) ?>">Debug framework</a>
 	</li>
 
 	<li>

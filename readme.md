@@ -20,9 +20,6 @@ will separate dashboard and framework one the bois are readeh
 
 
 #	NOTES
-*	Overrides to framework or custom styles are prepended with #dashboard or .dashboard
-
-*	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
 
 *	Highcharts with tooltips
 
@@ -32,6 +29,61 @@ will separate dashboard and framework one the bois are readeh
 
 	`events.load` property solution: [here](https://stackoverflow.com/questions/25493472/rendering-html-data-attributes-on-highcharts-series)
 
+*	Overrides to framework or custom styles are prepended with #dashboard or .dashboard
+
+*	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
+
+# Structure 
+
+Files to translate
+* assets - front end shit boi
+	* images - duh
+	* plugins - third party bitches
+	* scripts - duh
+	* styles - duh
+* placeholder - they can alll go awei
+* template - markup for each page. this is the holy grail of bitches
+* components - shared or repeating markup. second holy grail
+* includes - template parts
+* header.php - duh
+* footer.php - duh
+
+Files you dont need because it's just to setup the templates for showing off or internal bitches.. or.. whatever pls ignore them they're not needed on the actual dashboardt 
+* config.codekit
+* config.php
+* content.php
+* helpers.php
+* index.php
+
+# Templates
+
+## Equivalent Templates
+
+Found in templates directory
+
+| [New Templates](https://github.com/samzabala/1p21dashboardframework) | Description | [Current Dev Templates](https://github.com/mjp92067/seo_scoreboard) | 
+| -- | -- | -- |
+| error | Internal errors (eg. 404, 503.. )| TBD |
+| home-production | Overall stats: tasks/production | TBD |
+| home-scoreboard | Overall stats: seo scoreboard | dashboard |
+| last-activity | yes | last_user_activity#show,user_last_activity |
+| home-production | | TBD |
+| home-production | | TBD |
+| home-production | | TBD |
+| home-production | | TBD |
+| home-production | | TBD |
+| home-production | | TBD |
+| home-production | | TBD |
+| home-production | | TBD |
+
+
+## Current Templates with no existing equivalent
+* analytics
+* nw_top_tens
+
+## New Templates that are can be disregarded for dashy boi 
+
+* debug.php - used to debug the framework build.
 
 
 ## There are html comments or string instances by markup with dynamic attributs and or content
