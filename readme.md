@@ -8,8 +8,8 @@ will separate dashboard and framework one the bois are readeh
 ## Dependencies
 ### Javascript
 *	[jQuery](https://jquery.com/)
-*	[Trumbowyg](https://alex-d.github.io/Trumbowyg/)
-	*	Trumbowyg Upload Plugin (1p21 Dashboard Custom)
+*	[Trumbowyg](https://alex-d.github.io/Trumbowyg/) (will be replaced with TinyMCE)
+	*	Trumbowyg Upload Plugin (1p21 Dashboard Custom) (will be deprecated when replaced with TinyMCE)
 *	[1p21 Dashboard Framework](https://github.com/samzabala)
 
 
@@ -86,8 +86,28 @@ Found in templates directory
 
 * debug.php - used to debug the framework build.
 
+## Found Features in design that do not exist on current dashboard yet 
 
-## Strings to find dynamic shit
+Will be updated when items are found
+
+| [New&nbsp;Templates](https://github.com/samzabala/1p21dashboardframework) | Feature not ready |
+| -- | -- |
+| error | none |
+| home-production |  |
+| home-scoreboard |  |
+| last-activity |  |
+| login |  |
+| profile-production | online status on profile image<br>Availability status<br>Add new task |
+| profile-scoreboard |  |
+| profiles |  |
+| project-production |  |
+| project-scoreboard |  |
+| projects-production |  |
+| projects-scoreboard |  |
+| unique-links |  |
+
+
+# Strings to find dynamic shit
 
 There are html comments or string instances by markup with dynamic attributes and or content. Initiate a find (but not a replace because wew) on these instances to setup for magic
 
