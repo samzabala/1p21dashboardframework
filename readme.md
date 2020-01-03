@@ -61,20 +61,20 @@ Files you dont need because it's just to setup the templates for showing off or 
 
 Found in templates directory
 
-| [New Templates](https://github.com/samzabala/1p21dashboardframework) | Description | [Current Dev Templates](https://github.com/mjp92067/seo_scoreboard) | 
-| -- | -- | -- |
-| error | Internal errors (eg. 404, 503.. )| TBD |
-| home-production | Overall stats: tasks/production | TBD |
-| home-scoreboard | Overall stats: seo scoreboard | dashboard |
-| last-activity | yes | last_user_activity#show,user_last_activity |
-| home-production | | TBD |
-| home-production | | TBD |
-| home-production | | TBD |
-| home-production | | TBD |
-| home-production | | TBD |
-| home-production | | TBD |
-| home-production | | TBD |
-| home-production | | TBD |
+| [New Templates](https://github.com/samzabala/1p21dashboardframework) | Description | [Current Dev Templates](https://github.com/mjp92067/seo_scoreboard) | New Template Live Link | Local Link(assuming localhost:3000) |
+| -- | -- | -- | -- | -- |
+| error | Internal errors (eg. 404, 503.. )| TBD | http://frameworkdashboarddebug.1p21.io/?template=error |  |
+| home-production | Overall stats: tasks/production | TBD | http://frameworkdashboarddebug.1p21.io/?env=production |  |
+| home-scoreboard | Overall stats: seo scoreboard | dashboard | http://frameworkdashboarddebug.1p21.io/?env=scoreboard |  |
+| last-activity | yes | last_user_activity#show,<br>user_last_activity |  |  |
+| login | | TBD |  |  |
+| profile-production | profile for production ppl | TBD |  |  |
+| profile-scoreboard | profile for seos | TBD | http://frameworkdashboarddebug.1p21.io/?template=profile&env=scoreboard |  |
+| home-production | | TBD |  |  |
+| home-production | | TBD |  |  |
+| home-production | | TBD |  |  |
+| home-production | | TBD |  |  |
+| home-production | | TBD |  |  |
 
 
 ## Current Templates with no existing equivalent
