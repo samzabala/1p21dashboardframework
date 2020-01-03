@@ -3860,7 +3860,8 @@ table {
   text-transform: uppercase;
   font-style: normal;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 10px;
+  align-self: flex-start; }
 
 .module-function {
   position: relative;
