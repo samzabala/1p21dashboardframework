@@ -29,7 +29,7 @@ will separate dashboard and framework one the bois are readeh
 
 	`events.load` property solution: [here](https://stackoverflow.com/questions/25493472/rendering-html-data-attributes-on-highcharts-series)
 
-*	Overrides to framework or custom styles are prepended with #dashboard or .dashboard
+*	Overrides to framework or custom styles are prepended with `#dashboard` or `.dashboard`. `.filter-` are also custom shits and not the framework's bbies
 
 *	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
 
@@ -38,7 +38,7 @@ will separate dashboard and framework one the bois are readeh
 Files to translate
 * assets - front end shit boi
 	* images - duh
-	* plugins - third party bitches
+	* plugins - third party bitches eg framework, trumbowyg, etc
 	* scripts - duh
 	* styles - duh
 * placeholder - they can alll go awei
