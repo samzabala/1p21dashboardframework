@@ -1,11 +1,13 @@
 
 <div id="login" class="module-grid"
-	data-grid-template-columns-md="630px 1fr">
+	data-grid-template-columns-md="1fr 630px 1fr"
+	data-grid-template-areas-md="'SPACERLEFT login-container SPACERRIGHT'">
 
 
 	<div
 		id="login-container"
-		class="module">
+		class="module"
+		data-grid-area-md="login-container">
 			
 
 		<div class="module-content">

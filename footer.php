@@ -1,5 +1,5 @@
 				<br>
-				<ul class="inline">
+				<ul class="inline text-align-center">
 				
 					<?=app_debug_li(); ?>
 				</ul>
