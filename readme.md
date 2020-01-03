@@ -61,20 +61,20 @@ Files you dont need because it's just to setup the templates for showing off or 
 
 Found in templates directory
 
-| [New Templates](https://github.com/samzabala/1p21dashboardframework) | Description | [Current Dev Templates](https://github.com/mjp92067/seo_scoreboard) | New Template Live Link | Local Link(assuming localhost:3000) |
+| [New Templates](https://github.com/samzabala/1p21dashboardframework)	 | Description | [Current Dev Templates](https://github.com/mjp92067/seo_scoreboard) | New Template Live Link | Local Link(assuming localhost:3000) |
 | -- | -- | -- | -- | -- |
-| error | Internal errors (eg. 404, 503.. )| TBD | http://frameworkdashboarddebug.1p21.io/?template=error |  |
-| home-production | Overall stats: tasks/production | TBD | http://frameworkdashboarddebug.1p21.io/?env=production |  |
+| error	 | Internal errors (eg. 404, 503.. ) | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=error |  |
+| home-production | Overall stats: tasks/production | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?env=production |  |
 | home-scoreboard | Overall stats: seo scoreboard | dashboard | http://frameworkdashboarddebug.1p21.io/?env=scoreboard |  |
-| last-activity | yes | last_user_activity#show,<br>user_last_activity |  |  |
-| login | | TBD |  |  |
-| profile-production | profile for production ppl | TBD |  |  |
-| profile-scoreboard | profile for seos | TBD | http://frameworkdashboarddebug.1p21.io/?template=profile&env=scoreboard |  |
-| home-production | | TBD |  |  |
-| home-production | | TBD |  |  |
-| home-production | | TBD |  |  |
-| home-production | | TBD |  |  |
-| home-production | | TBD |  |  |
+| last-activity | yes | last_user_activity#show,<br>user_last_activity | http://frameworkdashboarddebug.1p21.io/?template=last-activity |  |
+| login | yes | login | http://frameworkdashboarddebug.1p21.io/?template=login |  |
+| profile-production | profile for production ppl | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=profile&env=production |  |
+| profile-scoreboard | profile for seos | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=profile&env=scoreboard |  |
+| profiles | list of profiles. subgrouped as well | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=profiles<br> |  |
+| project-production | view of site project for production | *No Match Found* |  |  |
+| project-scoreboard | for SEO | *No Match Found* |  |  |
+| projects-production | list view of projects for production | *No Match Found* |  |  |
+| projects-scoreboard | list view of projects for scoreboard | *No Match Found* |  |  |
 
 
 ## Current Templates with no existing equivalent
@@ -86,10 +86,12 @@ Found in templates directory
 * debug.php - used to debug the framework build.
 
 
-## There are html comments or string instances by markup with dynamic attributs and or content
+## Strings to find dynamic shit
+
+There are html comments or string instances by markup with dynamic attributes and or content. Initiate a find (but not a replace because wew) on these instances to setup for magic
 
 *	`REPLACE`
-	Meant to be replaced with dynamic content or actual data
+	Meant to be replaced with dynamic content or actual data. if it's a span with this class, replace the entire span and its inner
 
 *	`DYNAMIC`
 	Contains information for something that needs to be dynamicall modified but not necessarily replaced
@@ -98,15 +100,15 @@ Found in templates directory
 
 	Boi gon loop
 
-*	`PLACEHOLDER`
+*	`PLACEHOLDER` or `placeholder`
 
-	Meant to go away when dynamicness is ready
+	Meant to go away or even repurposed when dynamicness is ready
 
 *	`/placeholder/`
 
 	uri for assets meant to go away when dynamic boi is ready
 
-	NOTE: graphs will have tooltip integrations through framework setup using `frameWork.createTooltip()` 
+	NOTE: graphs will have tooltip integrations through framework setup using [tooltip framework integration](/assets/plugins/framework/docs/sections/components/tooltip.md#tooltip) 
 
 *	`NOTE`
 
