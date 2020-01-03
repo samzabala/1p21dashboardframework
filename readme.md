@@ -10,13 +10,13 @@ will separate dashboard and framework one the bois are readeh
 *	[jQuery](https://jquery.com/)
 *	[Trumbowyg](https://alex-d.github.io/Trumbowyg/) (will be replaced with TinyMCE)
 	*	Trumbowyg Upload Plugin (1p21 Dashboard Custom) (will be deprecated when replaced with TinyMCE)
-*	[1p21 Dashboard Framework](https://github.com/samzabala)
+*	[1p21 Dashboard Framework](https://github.com/samzabala/framework/)
 
 
 
 ### CSS / SASS
 *	[Shithole](https://github.com/samzabala)
-*	[1p21 Dashboard Framework](https://github.com/samzabala)
+*	[1p21 Dashboard Framework](https://github.com/samzabala/framework/)
 
 
 #	NOTES
@@ -25,7 +25,7 @@ will separate dashboard and framework one the bois are readeh
 
 	To maintain design, we may have to add `events.load` properties to be able to append tooltip attributes
 
-	Documentation for tooltip: [here](assets/plugins/framework/docs/sections/components/tooltip.md)
+	Documentation for tooltip: [here](https://github.com/samzabala/framework/blob/master/docs/sections/components/tooltip.md#tooltip)
 
 	`events.load` property solution: [here](https://stackoverflow.com/questions/25493472/rendering-html-data-attributes-on-highcharts-series)
 
@@ -129,7 +129,7 @@ There are html comments or string instances by markup with dynamic attributes an
 
 	uri for assets meant to go away when dynamic boi is ready
 
-	NOTE: graphs will have tooltip integrations through framework setup using [tooltip framework integration](/assets/plugins/framework/docs/sections/components/tooltip.md#tooltip) 
+	NOTE: graphs will have tooltip integrations through framework setup using [tooltip framework integration](https://github.com/samzabala/framework/blob/master/docs/sections/components/tooltip.md#tooltip) 
 
 *	`NOTE`
 
@@ -150,4 +150,4 @@ There are html comments or string instances by markup with dynamic attributes an
 		Calls on template markups of functionality based template markups. replace or repurpose if needed.
 
 # Framework Documentation
-[Here](assets/plugins/framework/readme.md)
+[Here](https://github.com/samzabala/framework/blob/master/readme.md)
