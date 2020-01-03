@@ -61,20 +61,21 @@ Files you dont need because it's just to setup the templates for showing off or 
 
 Found in templates directory
 
-| [New Templates](https://github.com/samzabala/1p21dashboardframework)	 | Description | [Current Dev Templates](https://github.com/mjp92067/seo_scoreboard) | New Template Live Link | Local Link(assuming localhost:3000) |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[New&nbsp;Templates](https://github.com/samzabala/1p21dashboardframework)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [Matching&nbsp;Current&nbsp;Templates](https://github.com/mjp92067/seo_scoreboard) | New Template Live Link | Current Template Local Link Reference(assuming localhost:3000) |
 | -- | -- | -- | -- | -- |
-| error	 | Internal errors (eg. 404, 503.. ) | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=error |  |
-| home-production | Overall stats: tasks/production | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?env=production |  |
-| home-scoreboard | Overall stats: seo scoreboard | dashboard | http://frameworkdashboarddebug.1p21.io/?env=scoreboard |  |
-| last-activity | yes | last_user_activity#show,<br>user_last_activity | http://frameworkdashboarddebug.1p21.io/?template=last-activity |  |
-| login | yes | login | http://frameworkdashboarddebug.1p21.io/?template=login |  |
-| profile-production | profile for production ppl | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=profile&env=production |  |
-| profile-scoreboard | profile for seos | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=profile&env=scoreboard |  |
-| profiles | list of profiles. subgrouped as well | *No Match Found* | http://frameworkdashboarddebug.1p21.io/?template=profiles<br> |  |
-| project-production | view of site project for production | *No Match Found* |  |  |
-| project-scoreboard | for SEO | *No Match Found* |  |  |
-| projects-production | list view of projects for production | *No Match Found* |  |  |
-| projects-scoreboard | list view of projects for scoreboard | *No Match Found* |  |  |
+| error	 | Internal errors (eg. 404, 503.. ).<br><br>for both envs: production and scoreboard | *No match* | http://frameworkdashboarddebug.1p21.io/?template=error | n/a |
+| home-production | Overall stats: tasks/production | *No match* | http://frameworkdashboarddebug.1p21.io/?env=production | n/a |
+| home-scoreboard | Overall stats: seo scoreboard | dashboard | http://frameworkdashboarddebug.1p21.io/?env=scoreboard | http://localhost:3000/dashboard?date=2020-01 |
+| last-activity | yes | user_last_activity | http://frameworkdashboarddebug.1p21.io/?template=last-activity | http://localhost:3000/seo_team/Natalie/last_activity |
+| login | yes.<br><br>for both envs | login | http://frameworkdashboarddebug.1p21.io/?template=login | http://localhost:3000/login |
+| profile-production | profile for production ppl | *No match* | http://frameworkdashboarddebug.1p21.io/?template=profile&env=production | n/a |
+| profile-scoreboard | profile for seos | user | http://frameworkdashboarddebug.1p21.io/?template=profile&env=scoreboard | http://localhost:3000/seo_team/Alana?date=2020-01 |
+| profiles | list of profiles. subgrouped as well.<br><br>for both envs. | designers,<br>developers | http://frameworkdashboarddebug.1p21.io/?template=profiles | http://localhost:3000/designers?date=ytd |
+| project-production | view of site project/account for production | *No match* | http://frameworkdashboarddebug.1p21.io/?template=project&env=production | n/a |
+| project-scoreboard | view of site project/account for SEO | user_websites | http://frameworkdashboarddebug.1p21.io/?env=scoreboard&template=project | n/a |
+| projects-production | all list view of site project/account for production. e.g. search, view all, etc | *No match* | http://frameworkdashboarddebug.1p21.io/?template=projects&env=production |  |
+| projects-scoreboard | all list view of site project/account for production. e.g. search, view all, etc | todos,<br>user_todos,<br>events,<br>user_events,<br>new_content,<br>user_new_content,<br>social_media,<br>user_social_media | http://frameworkdashboarddebug.1p21.io/?env=scoreboard&template=projects | http://localhost:3000/seo_team/Alana/on_page_updates?date=ytd |
+| unique-links | yes | links,<br>user_links | http://frameworkdashboarddebug.1p21.io/?template=unique-links&env=scoreboard | http://localhost:3000/seo_team/Alana/links?date=ytd |
 
 
 ## Current Templates with no existing equivalent
