@@ -141,11 +141,11 @@ There are html comments or string instances by markup with dynamic attributes an
 
 *	Functions
 
-	*	app_create_link()
+	*	`app_create_link()`
 
 		Also counts as REPLACE, this was setup solely to link together the user flow of templates. this creates internal links
 
-	*	app_get_component()
+	*	`app_get_component()`
 
 		Calls on template markups of functionality based template markups. replace or repurpose if needed.
 
