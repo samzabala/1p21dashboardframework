@@ -153,7 +153,7 @@
 				</div>
 			</div>
 
-			<div class="module-content align-self-center">
+			<div class="module-content flex-xs flex-direction-column justify-content-space-around">
 				
 				<p class="progress-title no-margin-top">Link Activity Distribution</p>
 				
