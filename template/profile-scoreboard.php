@@ -289,16 +289,47 @@
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
 						<?php 
-							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+							$placeholder_colors = array(
+								'#fec87c',
+								'#fb1818',
+								'#f7bc00',
+								'#006943',
+								'#b6e4b6',
+								'#0480fe',
+								'#a168d9',
+								'#fd7f03',
+								'#16b900',
+								'#01c6ab',
+								'#0037b4',
+								'#5e01a8',
+								'#fe85d6',
+								'#fff200',
+								'#d7c368',
+								'#e18256',
+								'#313f76',
+								'#547b80',
+								'#8f4139',
+								'#ecc65f',
+								'#d069a9',
+								'#008eb0',
+								'#5f6046',
+								'#c26558',
+								'#4db7ff',
+								'#5a3b00',
+								'#e1e43c',
+								'#6154a4',
+								'#9e005d',
+								'#000000'
+							);
 						?>
-						<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
+						<?php for($i=1; $i<=(count($placeholder_colors)); $i++){ ?>
 							
 
-							<p>
+							<p class=" display-inline-block">
 								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-								<span class="client-name">
+								<!-- <span class="client-name">
 									<span class="REPLACE">Client Name</span>
-								</span>
+								</span> -->
 							</p>
 						<?php } ?>
 				
