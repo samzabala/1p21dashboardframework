@@ -66,7 +66,7 @@ This one looks for the `data-href` of the boi
 ```
 
 
-This one looks for the `.alert` ancestor and it's a close symbol because it looks cuter
+This one looks for the `.alert` ancestor and it's a close symbol because it looks cuter and also using `.alert-close`
 ```html
 <div class="alert alert-error" id="bitch-alert">
 	<!-- Close butt -->
