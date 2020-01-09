@@ -19,6 +19,9 @@ will separate dashboard and framework one the bois are readeh
 *	[1p21 Dashboard Framework](https://github.com/samzabala/framework/)
 
 
+# Assets Flowchart
+[Flowchart](assets-flow-chart.png)
+
 #	NOTES
 
 *	Highcharts with tooltips
