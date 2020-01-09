@@ -211,7 +211,7 @@ $sidebar-mobile: 245px;
 				}
 			}
 
-			@include br(sm-max) {
+			@include br(#{$mobile-br-max}-max) {
 				width:calc(100% - #{$sidebar-mobile});
 				padding-top: $container-gutter-mobile;
 				padding-bottom: $container-gutter-mobile;
