@@ -1019,6 +1019,12 @@ table {
     .theme-inverse tr, .theme-inverse
     .table-row {
       border-bottom: 1px solid #1F1B30; }
+    .alert tr,
+    .theme-inverse .alert tr, .alert
+    .table-row,
+    .theme-inverse .alert
+    .table-row {
+      border-color: currentColor; }
   th, td,
   .table-cell,
   .table-cell.table-cell-heading {
@@ -1045,6 +1051,13 @@ table {
     .table-cell.table-cell-heading {
       background: #1F1B30;
       color: #ecedf0; }
+    .alert th,
+    .theme-inverse .alert th, .alert
+    .table-cell.table-cell-heading,
+    .theme-inverse .alert
+    .table-cell.table-cell-heading {
+      background: none;
+      color: inherit; }
   td,
   .table-cell {
     padding-top: calc((4.375rem - ( 1em * 1.5 )) * .5);
