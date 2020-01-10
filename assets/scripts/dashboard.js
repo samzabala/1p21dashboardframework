@@ -45,6 +45,8 @@ window.jQuery && jQuery.noConflict();
 		$('#dashboard-block-sidebar').toggleClass('open');	
 	});
 
+	// @TODO kwan sort table scriptoboi goes here with .dashboard-sort-table-toggle
+
 	window._1p21 = _1p21;
 
 
