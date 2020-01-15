@@ -4383,31 +4383,31 @@ table {
       padding-right: 10px;
       padding-left: 10px; } }
   .alert.alert-default {
-    border-color: rgba(141, 141, 141, 0.5);
+    border-color: transparent;
     color: inherit;
     background-color: rgba(141, 141, 141, 0.1); }
   .alert.alert-primary {
-    border-color: #0480fe;
+    border-color: transparent;
     color: #014182;
     background-color: #379afe; }
   .alert.alert-accent {
-    border-color: #d415af;
+    border-color: transparent;
     color: #6e0b5b;
     background-color: #eb31c7; }
   .alert.alert-neutral {
-    border-color: #8d8d8d;
+    border-color: transparent;
     color: #555555;
     background-color: #a7a7a7; }
   .alert.alert-success {
-    border-color: #15b800;
+    border-color: transparent;
     color: #095200;
     background-color: #1beb00; }
   .alert.alert-caution {
-    border-color: #fd7f03;
+    border-color: transparent;
     color: #8f4701;
     background-color: #fd9936; }
   .alert.alert-error {
-    border-color: #fd0303;
+    border-color: transparent;
     color: #7f0101;
     background-color: #fd3636; }
 
@@ -4875,7 +4875,7 @@ table {
     outline: none;
     box-shadow: 0px 0 5px 0px #0480fe; }
   .theme-inverse .input, .theme-inverse .fw-trumbowyg-editor, .theme-inverse .fw-trumbowyg-textarea, .theme-inverse .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .theme-inverse input:not([type="checkbox"]):not([type="radio"]) {
-    background-color: #292440; }
+    background-color: rgba(141, 141, 141, 0.1); }
   .input-large.input, .input-large.fw-trumbowyg-editor, .input-large.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-large:not([type="checkbox"]):not([type="radio"]),
   .input-group.input-large .input,
   .input-group.input-large .fw-trumbowyg-editor,
@@ -4975,7 +4975,8 @@ input.input-calendar {
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  padding-top: 0.75em; }
+  padding-top: 0.75em;
+  padding-bottom: 0.75em; }
 
 .input-calendar-ui-prev {
   -webkit-box-ordinal-group: 0;
@@ -4985,22 +4986,25 @@ input.input-calendar {
 .input-calendar-ui-next {
   margin-left: 1em; }
 
-.input-calendar-ui-row {
+.input-calendar-ui-days, .input-calendar-ui-dates {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-auto-rows: 1fr;
-  grid-gap: 2px;
-  margin-bottom: 0.75em; }
-  .input-calendar-ui-row:nth-child(n+2) {
+  grid-gap: 2px; }
+  .input-calendar-ui-days:nth-child(n+2), .input-calendar-ui-dates:nth-child(n+2) {
     margin-top: 2px; }
 
 .input-calendar-ui-days {
+  margin-bottom: 0.75em;
   border-bottom: 1px solid #8d8d8d;
   color: #8d8d8d;
   font-size: 0.75em; }
   .theme-inverse .input-calendar-ui-days {
     border-bottom: 1px solid #8d8d8d;
     color: #8d8d8d; }
+
+.input-calendar-ui-dates {
+  margin-bottom: 0.375em; }
 
 .input-select, .input-single-line, .input-multiple-line, .input-calendar-ui, .input-editor, .fw-trumbowyg-editor, .fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   -webkit-appearance: none;
@@ -5025,7 +5029,7 @@ input.input-calendar {
   padding-bottom: calc(  (  (2.8125rem - (1px * 2)) - (1em * 1.5) ) * .5); }
   .theme-inverse .input-select, .theme-inverse .input-single-line, .theme-inverse .input-multiple-line, .theme-inverse .input-calendar-ui, .theme-inverse .input-editor, .theme-inverse .fw-trumbowyg-editor, .theme-inverse .fw-trumbowyg-textarea, .theme-inverse .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .theme-inverse input:not([type="checkbox"]):not([type="radio"]) {
     color: inherit;
-    background-color: #292440; }
+    background-color: rgba(141, 141, 141, 0.1); }
   .input-select option, .input-single-line option, .input-multiple-line option, .input-calendar-ui option, .input-editor option, .fw-trumbowyg-editor option, .fw-trumbowyg-textarea option, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) option {
     font: inherit;
     outline: none; }
@@ -5140,10 +5144,10 @@ input.input-calendar {
     min-height: 8.4375rem; }
     .input-large.input-multiple-line,
     .input-large .input-multiple-line {
-      height: 9.375rem; }
+      min-height: 9.375rem; }
     .input-small.input-multiple-line,
     .input-small .input-multiple-line {
-      height: 5.625rem; }
+      min-height: 5.625rem; }
 
 .input-multiple-line {
   display: block; }
