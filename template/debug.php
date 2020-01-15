@@ -4,7 +4,490 @@
 		<p>
 			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present. it's kinda laggy now because i shat on it too much
 		</p>
-		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Kwan Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+<!-- 
+		<h1 data-toggle="accordion">TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		</div>
+-->
+		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class="open"></i></h1>
+		<div class="accordion open">
+			The div is somewhere here... suck a dick
+			<input type="text" class="input input-calendar" data-calendar-start-day="mo" data-calendar-disabled-dates="03/04/2020|03/01/2020" value="01-03-2020" />
+
+
+			<p>This is a static bitch for styles</p>
+
+			<div class="input input-calendar-ui" data-calendar-value="">
+
+				<div class="input-calendar-ui-heading">
+					<div class="input-calendar-ui-title">
+						<span class="input-calendar-ui-month">January</span>
+						<span class="input-calendar-ui-year">2020</span>
+					</div>
+
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-prev">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-left"></i>
+					</a>
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-next">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-right"></i>
+					</a>
+				</div>
+
+				<div class="input-calendar-ui-grid">
+					<div class="input-calendar-ui-row input-calendar-ui-days">
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Sun</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Mon</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Tue</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Wed</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Thu</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Fri</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Sat</div>
+						</div>
+					</div>
+
+					<div class="input-calendar-ui-row input-calendar-ui-week">
+
+						<a href="#" data-value="1" class="active input-calendar-ui-block input-calendar-ui-date">
+							1
+						</a>
+
+						<a href="#" data-value="2" class="active input-calendar-ui-block input-calendar-ui-date">
+							2
+						</a>
+						<a href="#" data-value="3" class="active input-calendar-ui-block input-calendar-ui-date">
+							3
+						</a>
+						<a href="#" data-value="4" class="active input-calendar-ui-block input-calendar-ui-date">
+							4
+						</a>
+						<a href="#" data-value="5" class="active input-calendar-ui-block input-calendar-ui-date">
+							5
+						</a>
+						<a href="#" data-value="6" class="active input-calendar-ui-block input-calendar-ui-date">
+							6
+						</a>
+						<a href="#" data-value="7" class="active input-calendar-ui-block input-calendar-ui-date">
+							7
+						</a>
+						<a href="#" data-value="8" class="active input-calendar-ui-block input-calendar-ui-date">
+							8
+						</a>
+						<a href="#" data-value="9" class="active input-calendar-ui-block input-calendar-ui-date">
+							9
+						</a>
+
+
+
+						<a href="#" data-value="10" class="active input-calendar-ui-block input-calendar-ui-date">
+							10
+						</a>
+						<a href="#" data-value="11" class="active input-calendar-ui-block input-calendar-ui-date">
+							11
+						</a>
+
+						<a href="#" data-value="12" class="input-calendar-ui-block input-calendar-ui-date">
+							12
+						</a>
+						<a href="#" data-value="13" class="input-calendar-ui-block input-calendar-ui-date">
+							13
+						</a>
+						<a href="#" data-value="14" class="input-calendar-ui-block input-calendar-ui-date">
+							14
+						</a>
+						<a href="#" data-value="15" class="input-calendar-ui-block input-calendar-ui-date">
+							15
+						</a>
+						<a href="#" data-value="16" class="input-calendar-ui-block input-calendar-ui-date">
+							16
+						</a>
+						<a href="#" data-value="17" class="input-calendar-ui-block input-calendar-ui-date">
+							17
+						</a>
+						<a href="#" data-value="18" class="input-calendar-ui-block input-calendar-ui-date">
+							18
+						</a>
+						<a href="#" data-value="19" class="input-calendar-ui-block input-calendar-ui-date">
+							19
+						</a>
+
+
+						<a href="#" data-value="20" class="input-calendar-ui-block input-calendar-ui-date">
+							20
+						</a>
+						<a href="#" data-value="21" class="input-calendar-ui-block input-calendar-ui-date">
+							21
+						</a>
+
+						<a href="#" data-value="22" class="input-calendar-ui-block input-calendar-ui-date">
+							22
+						</a>
+						<a href="#" data-value="23" class="input-calendar-ui-block input-calendar-ui-date">
+							23
+						</a>
+						<a href="#" data-value="24" class="input-calendar-ui-block input-calendar-ui-date">
+							24
+						</a>
+						<a href="#" data-value="25" class="input-calendar-ui-block input-calendar-ui-date">
+							25
+						</a>
+						<a href="#" data-value="26" class="input-calendar-ui-block input-calendar-ui-date">
+							26
+						</a>
+						<a href="#" data-value="27" class="input-calendar-ui-block input-calendar-ui-date">
+							27
+						</a>
+						<a href="#" data-value="28" class="input-calendar-ui-block input-calendar-ui-date">
+							28
+						</a>
+						<a href="#" data-value="29" class="input-calendar-ui-block input-calendar-ui-date">
+							29
+						</a>
+
+
+						<a href="#" data-value="30" class="input-calendar-ui-block input-calendar-ui-date">
+							30
+						</a>
+
+
+						
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+			<div class="input input-calendar-ui input-large" data-calendar-value="">
+
+				<div class="input-calendar-ui-heading">
+					<div class="input-calendar-ui-title">
+						<span class="input-calendar-ui-month">January</span>
+						<span class="input-calendar-ui-year">2020</span>
+					</div>
+
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-prev">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-left"></i>
+					</a>
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-next">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-right"></i>
+					</a>
+				</div>
+
+				<div class="input-calendar-ui-grid">
+					<div class="input-calendar-ui-row input-calendar-ui-days">
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Sun</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Mon</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Tue</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Wed</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Thu</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Fri</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Sat</div>
+						</div>
+					</div>
+
+					<div class="input-calendar-ui-row input-calendar-ui-week">
+
+						<a href="#" data-value="1" class="active input-calendar-ui-block input-calendar-ui-date">
+							1
+						</a>
+
+						<a href="#" data-value="2" class="active input-calendar-ui-block input-calendar-ui-date">
+							2
+						</a>
+						<a href="#" data-value="3" class="active input-calendar-ui-block input-calendar-ui-date">
+							3
+						</a>
+						<a href="#" data-value="4" class="active input-calendar-ui-block input-calendar-ui-date">
+							4
+						</a>
+						<a href="#" data-value="5" class="active input-calendar-ui-block input-calendar-ui-date">
+							5
+						</a>
+						<a href="#" data-value="6" class="active input-calendar-ui-block input-calendar-ui-date">
+							6
+						</a>
+						<a href="#" data-value="7" class="active input-calendar-ui-block input-calendar-ui-date">
+							7
+						</a>
+						<a href="#" data-value="8" class="active input-calendar-ui-block input-calendar-ui-date">
+							8
+						</a>
+						<a href="#" data-value="9" class="active input-calendar-ui-block input-calendar-ui-date">
+							9
+						</a>
+
+
+
+						<a href="#" data-value="10" class="active input-calendar-ui-block input-calendar-ui-date">
+							10
+						</a>
+						<a href="#" data-value="11" class="active input-calendar-ui-block input-calendar-ui-date">
+							11
+						</a>
+
+						<a href="#" data-value="12" class="input-calendar-ui-block input-calendar-ui-date">
+							12
+						</a>
+						<a href="#" data-value="13" class="input-calendar-ui-block input-calendar-ui-date">
+							13
+						</a>
+						<a href="#" data-value="14" class="input-calendar-ui-block input-calendar-ui-date">
+							14
+						</a>
+						<a href="#" data-value="15" class="input-calendar-ui-block input-calendar-ui-date">
+							15
+						</a>
+						<a href="#" data-value="16" class="input-calendar-ui-block input-calendar-ui-date">
+							16
+						</a>
+						<a href="#" data-value="17" class="input-calendar-ui-block input-calendar-ui-date">
+							17
+						</a>
+						<a href="#" data-value="18" class="input-calendar-ui-block input-calendar-ui-date">
+							18
+						</a>
+						<a href="#" data-value="19" class="input-calendar-ui-block input-calendar-ui-date">
+							19
+						</a>
+
+
+						<a href="#" data-value="20" class="input-calendar-ui-block input-calendar-ui-date">
+							20
+						</a>
+						<a href="#" data-value="21" class="input-calendar-ui-block input-calendar-ui-date">
+							21
+						</a>
+
+						<a href="#" data-value="22" class="input-calendar-ui-block input-calendar-ui-date">
+							22
+						</a>
+						<a href="#" data-value="23" class="input-calendar-ui-block input-calendar-ui-date">
+							23
+						</a>
+						<a href="#" data-value="24" class="input-calendar-ui-block input-calendar-ui-date">
+							24
+						</a>
+						<a href="#" data-value="25" class="input-calendar-ui-block input-calendar-ui-date">
+							25
+						</a>
+						<a href="#" data-value="26" class="input-calendar-ui-block input-calendar-ui-date">
+							26
+						</a>
+						<a href="#" data-value="27" class="input-calendar-ui-block input-calendar-ui-date">
+							27
+						</a>
+						<a href="#" data-value="28" class="input-calendar-ui-block input-calendar-ui-date">
+							28
+						</a>
+						<a href="#" data-value="29" class="input-calendar-ui-block input-calendar-ui-date">
+							29
+						</a>
+
+
+						<a href="#" data-value="30" class="input-calendar-ui-block input-calendar-ui-date">
+							30
+						</a>
+
+
+						
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+			<div class="input input-calendar-ui input-small" data-calendar-value="">
+
+				<div class="input-calendar-ui-heading">
+					<div class="input-calendar-ui-title">
+						<span class="input-calendar-ui-month">January</span>
+						<span class="input-calendar-ui-year">2020</span>
+					</div>
+
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-prev">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-left"></i>
+					</a>
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-next">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-right"></i>
+					</a>
+				</div>
+
+				<div class="input-calendar-ui-grid">
+					<div class="input-calendar-ui-row input-calendar-ui-days">
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Sun</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Mon</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Tue</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Wed</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Thu</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Fri</div>
+						</div>
+						<div class="input-calendar-ui-block input-calendar-ui-day">
+							<div class="input-calendar-ui-block-content">Sat</div>
+						</div>
+					</div>
+
+					<div class="input-calendar-ui-row input-calendar-ui-week">
+
+						<a href="#" data-value="1" class="active input-calendar-ui-block input-calendar-ui-date">
+							1
+						</a>
+
+						<a href="#" data-value="2" class="active input-calendar-ui-block input-calendar-ui-date">
+							2
+						</a>
+						<a href="#" data-value="3" class="active input-calendar-ui-block input-calendar-ui-date">
+							3
+						</a>
+						<a href="#" data-value="4" class="active input-calendar-ui-block input-calendar-ui-date">
+							4
+						</a>
+						<a href="#" data-value="5" class="active input-calendar-ui-block input-calendar-ui-date">
+							5
+						</a>
+						<a href="#" data-value="6" class="active input-calendar-ui-block input-calendar-ui-date">
+							6
+						</a>
+						<a href="#" data-value="7" class="active input-calendar-ui-block input-calendar-ui-date">
+							7
+						</a>
+						<a href="#" data-value="8" class="active input-calendar-ui-block input-calendar-ui-date">
+							8
+						</a>
+						<a href="#" data-value="9" class="active input-calendar-ui-block input-calendar-ui-date">
+							9
+						</a>
+
+
+
+						<a href="#" data-value="10" class="active input-calendar-ui-block input-calendar-ui-date">
+							10
+						</a>
+						<a href="#" data-value="11" class="active input-calendar-ui-block input-calendar-ui-date">
+							11
+						</a>
+
+						<a href="#" data-value="12" class="input-calendar-ui-block input-calendar-ui-date">
+							12
+						</a>
+						<a href="#" data-value="13" class="input-calendar-ui-block input-calendar-ui-date">
+							13
+						</a>
+						<a href="#" data-value="14" class="input-calendar-ui-block input-calendar-ui-date">
+							14
+						</a>
+						<a href="#" data-value="15" class="input-calendar-ui-block input-calendar-ui-date">
+							15
+						</a>
+						<a href="#" data-value="16" class="input-calendar-ui-block input-calendar-ui-date">
+							16
+						</a>
+						<a href="#" data-value="17" class="input-calendar-ui-block input-calendar-ui-date">
+							17
+						</a>
+						<a href="#" data-value="18" class="input-calendar-ui-block input-calendar-ui-date">
+							18
+						</a>
+						<a href="#" data-value="19" class="input-calendar-ui-block input-calendar-ui-date">
+							19
+						</a>
+
+
+						<a href="#" data-value="20" class="input-calendar-ui-block input-calendar-ui-date">
+							20
+						</a>
+						<a href="#" data-value="21" class="input-calendar-ui-block input-calendar-ui-date">
+							21
+						</a>
+
+						<a href="#" data-value="22" class="input-calendar-ui-block input-calendar-ui-date">
+							22
+						</a>
+						<a href="#" data-value="23" class="input-calendar-ui-block input-calendar-ui-date">
+							23
+						</a>
+						<a href="#" data-value="24" class="input-calendar-ui-block input-calendar-ui-date">
+							24
+						</a>
+						<a href="#" data-value="25" class="input-calendar-ui-block input-calendar-ui-date">
+							25
+						</a>
+						<a href="#" data-value="26" class="input-calendar-ui-block input-calendar-ui-date">
+							26
+						</a>
+						<a href="#" data-value="27" class="input-calendar-ui-block input-calendar-ui-date">
+							27
+						</a>
+						<a href="#" data-value="28" class="input-calendar-ui-block input-calendar-ui-date">
+							28
+						</a>
+						<a href="#" data-value="29" class="input-calendar-ui-block input-calendar-ui-date">
+							29
+						</a>
+
+
+						<a href="#" data-value="30" class="input-calendar-ui-block input-calendar-ui-date">
+							30
+						</a>
+
+
+						
+					</div>
+				</div>
+
+			</div>
+			
+			
+		</div>
+
+		<h1 data-toggle="accordion">Kwan Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<a data-toggle="alert-close-all">Close em all</a>
 			<div class="alert alert-default p" id="life-alert">
@@ -1076,7 +1559,7 @@
 				<p>This allows you to denote <var>variables</var>.</p>
 			</div>
 		</div>
-		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<span  class="btn-group btn-group-horizontal" data-toggle="modal">
