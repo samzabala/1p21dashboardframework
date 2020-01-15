@@ -226,6 +226,108 @@
 
 					<div class="input-calendar-ui-dates">
 
+
+
+					<a href="#" data-value="2020-01-01" class="active input-calendar-ui-block input-calendar-ui-date">
+							1
+						</a>
+
+						<a href="#" data-value="2020-01-02" class="active input-calendar-ui-block input-calendar-ui-date">
+							2
+						</a>
+						<a href="#" data-value="2020-01-03" class="active input-calendar-ui-block input-calendar-ui-date">
+							3
+						</a>
+						<a href="#" data-value="2020-01-04" class="active input-calendar-ui-block input-calendar-ui-date">
+							4
+						</a>
+						<a href="#" data-value="2020-01-05" class="active input-calendar-ui-block input-calendar-ui-date">
+							5
+						</a>
+						<a href="#" data-value="2020-01-06" class="active input-calendar-ui-block input-calendar-ui-date">
+							6
+						</a>
+						<a href="#" data-value="2020-01-07" class="active input-calendar-ui-block input-calendar-ui-date">
+							7
+						</a>
+						<a href="#" data-value="2020-01-08" class="active input-calendar-ui-block input-calendar-ui-date">
+							8
+						</a>
+						<a href="#" data-value="2020-01-09" class="active input-calendar-ui-block input-calendar-ui-date">
+							9
+						</a>
+
+
+
+						<a href="#" data-value="2020-01-10" class="active input-calendar-ui-block input-calendar-ui-date">
+							10
+						</a>
+						<a href="#" data-value="2020-01-11" class="active input-calendar-ui-block input-calendar-ui-date">
+							11
+						</a>
+
+						<a href="#" data-value="2020-01-12" class="input-calendar-ui-block input-calendar-ui-date">
+							12
+						</a>
+						<a href="#" data-value="2020-01-13" class="input-calendar-ui-block input-calendar-ui-date">
+							13
+						</a>
+						<a href="#" data-value="2020-01-14" class="input-calendar-ui-block input-calendar-ui-date">
+							14
+						</a>
+						<a href="#" data-value="2020-01-15" class="input-calendar-ui-block input-calendar-ui-date">
+							15
+						</a>
+						<a href="#" data-value="2020-01-16" class="input-calendar-ui-block input-calendar-ui-date">
+							16
+						</a>
+						<a href="#" data-value="2020-01-17" class="input-calendar-ui-block input-calendar-ui-date">
+							17
+						</a>
+						<a href="#" data-value="2020-01-18" class="input-calendar-ui-block input-calendar-ui-date">
+							18
+						</a>
+						<a href="#" data-value="2020-01-19" class="input-calendar-ui-block input-calendar-ui-date">
+							19
+						</a>
+
+
+						<a href="#" data-value="2020-01-20" class="input-calendar-ui-block input-calendar-ui-date">
+							20
+						</a>
+						<a href="#" data-value="2020-01-21" class="input-calendar-ui-block input-calendar-ui-date">
+							21
+						</a>
+
+						<a href="#" data-value="2020-01-22" class="input-calendar-ui-block input-calendar-ui-date">
+							22
+						</a>
+						<a href="#" data-value="2020-01-23" class="input-calendar-ui-block input-calendar-ui-date">
+							23
+						</a>
+						<a href="#" data-value="2020-01-24" class="input-calendar-ui-block input-calendar-ui-date">
+							24
+						</a>
+						<a href="#" data-value="2020-01-25" class="input-calendar-ui-block input-calendar-ui-date">
+							25
+						</a>
+						<a href="#" data-value="2020-01-26" class="input-calendar-ui-block input-calendar-ui-date">
+							26
+						</a>
+						<a href="#" data-value="2020-01-27" class="input-calendar-ui-block input-calendar-ui-date">
+							27
+						</a>
+						<a href="#" data-value="2020-01-28" class="input-calendar-ui-block input-calendar-ui-date">
+							28
+						</a>
+						<a href="#" data-value="2020-01-29" class="input-calendar-ui-block input-calendar-ui-date">
+							29
+						</a>
+
+
+						<a href="#" data-value="2020-01-30" class="input-calendar-ui-block input-calendar-ui-date">
+							30
+						</a>
 					</div>
 				</div>
 
@@ -257,6 +359,108 @@
 				<div class="input-calendar-ui-grid">
 					<div class="input-calendar-ui-days">
 						
+
+
+					<a href="#" data-value="2020-01-01" class="active input-calendar-ui-block input-calendar-ui-date">
+							1
+						</a>
+
+						<a href="#" data-value="2020-01-02" class="active input-calendar-ui-block input-calendar-ui-date">
+							2
+						</a>
+						<a href="#" data-value="2020-01-03" class="active input-calendar-ui-block input-calendar-ui-date">
+							3
+						</a>
+						<a href="#" data-value="2020-01-04" class="active input-calendar-ui-block input-calendar-ui-date">
+							4
+						</a>
+						<a href="#" data-value="2020-01-05" class="active input-calendar-ui-block input-calendar-ui-date">
+							5
+						</a>
+						<a href="#" data-value="2020-01-06" class="active input-calendar-ui-block input-calendar-ui-date">
+							6
+						</a>
+						<a href="#" data-value="2020-01-07" class="active input-calendar-ui-block input-calendar-ui-date">
+							7
+						</a>
+						<a href="#" data-value="2020-01-08" class="active input-calendar-ui-block input-calendar-ui-date">
+							8
+						</a>
+						<a href="#" data-value="2020-01-09" class="active input-calendar-ui-block input-calendar-ui-date">
+							9
+						</a>
+
+
+
+						<a href="#" data-value="2020-01-10" class="active input-calendar-ui-block input-calendar-ui-date">
+							10
+						</a>
+						<a href="#" data-value="2020-01-11" class="active input-calendar-ui-block input-calendar-ui-date">
+							11
+						</a>
+
+						<a href="#" data-value="2020-01-12" class="input-calendar-ui-block input-calendar-ui-date">
+							12
+						</a>
+						<a href="#" data-value="2020-01-13" class="input-calendar-ui-block input-calendar-ui-date">
+							13
+						</a>
+						<a href="#" data-value="2020-01-14" class="input-calendar-ui-block input-calendar-ui-date">
+							14
+						</a>
+						<a href="#" data-value="2020-01-15" class="input-calendar-ui-block input-calendar-ui-date">
+							15
+						</a>
+						<a href="#" data-value="2020-01-16" class="input-calendar-ui-block input-calendar-ui-date">
+							16
+						</a>
+						<a href="#" data-value="2020-01-17" class="input-calendar-ui-block input-calendar-ui-date">
+							17
+						</a>
+						<a href="#" data-value="2020-01-18" class="input-calendar-ui-block input-calendar-ui-date">
+							18
+						</a>
+						<a href="#" data-value="2020-01-19" class="input-calendar-ui-block input-calendar-ui-date">
+							19
+						</a>
+
+
+						<a href="#" data-value="2020-01-20" class="input-calendar-ui-block input-calendar-ui-date">
+							20
+						</a>
+						<a href="#" data-value="2020-01-21" class="input-calendar-ui-block input-calendar-ui-date">
+							21
+						</a>
+
+						<a href="#" data-value="2020-01-22" class="input-calendar-ui-block input-calendar-ui-date">
+							22
+						</a>
+						<a href="#" data-value="2020-01-23" class="input-calendar-ui-block input-calendar-ui-date">
+							23
+						</a>
+						<a href="#" data-value="2020-01-24" class="input-calendar-ui-block input-calendar-ui-date">
+							24
+						</a>
+						<a href="#" data-value="2020-01-25" class="input-calendar-ui-block input-calendar-ui-date">
+							25
+						</a>
+						<a href="#" data-value="2020-01-26" class="input-calendar-ui-block input-calendar-ui-date">
+							26
+						</a>
+						<a href="#" data-value="2020-01-27" class="input-calendar-ui-block input-calendar-ui-date">
+							27
+						</a>
+						<a href="#" data-value="2020-01-28" class="input-calendar-ui-block input-calendar-ui-date">
+							28
+						</a>
+						<a href="#" data-value="2020-01-29" class="input-calendar-ui-block input-calendar-ui-date">
+							29
+						</a>
+
+
+						<a href="#" data-value="2020-01-30" class="input-calendar-ui-block input-calendar-ui-date">
+							30
+						</a>
 					</div>
 				</div>
 
