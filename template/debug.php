@@ -3015,6 +3015,7 @@
 
 		<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<span class="tag tag-default">Default</span>
 			<span class="tag tag-primary">Primary</span>
 			<span class="tag tag-accent">Accent</span>
 			<span class="tag tag-neutral">Neutral</span>
