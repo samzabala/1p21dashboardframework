@@ -22,6 +22,16 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/style.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -96,19 +106,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_images.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_internal-vars.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_internal-vars.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -291,19 +288,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_table.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_tags.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_tags.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
