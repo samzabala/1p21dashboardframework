@@ -84,19 +84,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_form.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_form.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_grid.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -106,19 +93,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_grid.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_helpers.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_helpers.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -318,19 +292,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_tags.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_tags.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_thumbnail.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -379,19 +340,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_typography.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_vars.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/Users/sam/Desktop/working/1p21dashboard/app/public/assets/plugins/framework/scss/import/_vars.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
