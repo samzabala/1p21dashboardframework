@@ -257,6 +257,7 @@ window.jQuery && jQuery.noConflict();
 
 
 	_.functions_on_load = [];
+	_.functions_on_ready = [];
 	_.functions_on_resize = [];
 
 
@@ -281,6 +282,7 @@ window.jQuery && jQuery.noConflict();
 	_.palette = [
 		'base',
 		'primary',
+		'secondary',
 		'accent',
 		'neutral',
 		'error',
@@ -876,7 +878,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.initGrid(grid);
 		});
 	}
-	_.functions_on_load.push(frameWork.readyGrid);
+	_.functions_on_ready.push(frameWork.readyGrid);
 	_.functions_on_resize.push(frameWork.readyGrid);
 
 	_.initTrumbo = function(selector){
@@ -913,6 +915,10 @@ window.jQuery && jQuery.noConflict();
 
 	frameWork.docReady(function(){
 		frameWork.settings.lazyLoad && frameWork.loadImages();
+
+		_.functions_on_ready.forEach(function(fn){
+			fn();
+		})
 
 		frameWork.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();

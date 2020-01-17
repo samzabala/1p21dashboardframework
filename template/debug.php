@@ -15,6 +15,10 @@
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
+			<div class="alert alert-secondary p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
 			<div class="alert alert-accent p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-accent  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -202,6 +206,152 @@
 			<div class="alert alert-primary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-secondary p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
 				<h1>Header one</h1>
@@ -1316,7 +1466,7 @@
 					data-toggle="tooltip-click"
 					data-tooltip-placement="right"
 					data-tooltip-badge="true"
-					data-tooltip-badge-background="accent"
+					data-tooltip-badge-background="secondary"
 					data-tooltip-badge-size="small"
 					data-tooltip-content="">
 					Bitch boi to the right and badge is small
@@ -1436,6 +1586,10 @@
 				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+				</div>
+				<br>
+				<div class="progress">
+					<div class="progress-bar progress-bar-secondary" style="width: 60%;"></div>
 				</div>
 				<br>
 				<div class="progress">
@@ -1608,6 +1762,9 @@
 			<h3 id="progress-animated">Animated</h3>
 			<div class="progress active">
 					<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+				</div>
+				<div class="progress active">
+					<div class="progress-bar progress-bar-secondary" style="width: 60%;"></div>
 				</div>
 				<div class="progress active">
 					<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
@@ -1784,39 +1941,44 @@
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
 						</p>
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label input-label-small" for="Small">Small</label>
+							<label class="input-label input-small" for="Small">Small</label>
 							<input class="input input-single-line input-small" id="Small" placeholder="Small" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label input-label-large" for="Large">Large</label>
+							<label class="input-label input-large" for="Large">Large</label>
 							<input class="input input-single-line input-large" id="Large" placeholder="Large" type="text">
 						</p>
 
 					<h2>colors</h2>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-primary" for="input-primary">Primary: </label>
+							<label class="input-label input-primary" for="input-primary">Primary: </label>
 							<input class="input input-single-line input-primary" id="input-primary" placeholder="Primary" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-accent" for="input-accent">accent: </label>
+							<label class="input-label input-secondary" for="input-secondary">secondary: </label>
+							<input class="input input-single-line input-secondary" id="input-secondary" placeholder="secondary" type="text">
+						</p>
+
+						<p class="input-wrapper input-wrapper-horizontal">
+							<label class="input-label input-accent" for="input-accent">accent: </label>
 							<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-success" for="input-success">success: </label>
+							<label class="input-label input-success" for="input-success">success: </label>
 							<input class="input input-single-line input-success" id="input-success" placeholder="success" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-caution" for="input-caution">caution: </label>
+							<label class="input-label input-caution" for="input-caution">caution: </label>
 							<input class="input input-single-line input-caution" id="input-caution" placeholder="caution" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-error" for="input-error">error: </label>
+							<label class="input-label input-error" for="input-error">error: </label>
 							<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
 						</p>
 						
@@ -1943,7 +2105,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line input-accent" >
+									<select class="input input-single-line input-secondary" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -2555,6 +2717,7 @@
 			<h2>Basic</h2>
 			<button type="button" class="btn btn-default">Default</button>
 			<button type="button" class="btn btn-primary">Primary</button>
+			<button type="button" class="btn btn-secondary">secondary</button>
 			<button type="button" class="btn btn-accent">accent</button>
 			<button type="button" class="btn btn-neutral">neutral</button>
 			<button type="button" class="btn btn-success">Success</button>
@@ -2565,6 +2728,7 @@
 			<h2>Small</h2>
 			<button type="button" class="btn btn-small btn-default">Default</button>
 			<button type="button" class="btn btn-small btn-primary">Primary</button>
+			<button type="button" class="btn btn-small btn-secondary">secondary</button>
 			<button type="button" class="btn btn-small btn-accent">accent</button>
 			<button type="button" class="btn btn-small btn-neutral">neutral</button>
 			<button type="button" class="btn btn-small btn-success">Success</button>
@@ -2575,6 +2739,7 @@
 			<h2>Large</h2>
 			<button type="button" class="btn btn-large btn-default">Default</button>
 			<button type="button" class="btn btn-large btn-primary">Primary</button>
+			<button type="button" class="btn btn-large btn-secondary">secondary</button>
 			<button type="button" class="btn btn-large btn-accent">accent</button>
 			<button type="button" class="btn btn-large btn-neutral">neutral</button>
 			
@@ -2591,6 +2756,7 @@
 			</h2>
 			<a href="#" class="btn btn-disabled btn-default">Default</a>
 			<a href="#" class="btn btn-disabled btn-primary">Primary</a>
+			<a href="#" class="btn btn-disabled btn-secondary">secondary</a>
 			<a href="#" class="btn btn-disabled btn-accent">accent</a>
 			<a href="#" class="btn btn-disabled btn-neutral">neutral</a>
 			<a href="#" class="btn btn-disabled btn-success">Success</a>
@@ -2621,6 +2787,7 @@
 		<button class="btn-group btn-group-horizontal btn-disabled">
 		<span class="btn btn-default">Default</span>
 		<span class="btn btn-primary">Primary</span>
+		<span class="btn btn-secondary">secondary</span>
 		<span class="btn btn-accent">accent</span>
 		</button>
 
@@ -2918,7 +3085,10 @@
 				<span class="badge badge-primary"></span> Primary
 			</p>
 			<p>
-				<span class="badge badge-accent"></span> Accent
+				<span class="badge badge-secondary"></span> secondary
+			</p>
+			<p>
+				<span class="badge badge-accent"></span> accent
 			</p>
 			
 			<p>
@@ -2969,7 +3139,12 @@
 			</p>
 
 			<p>
-				<span class="legend legend-accent"></span> Accent
+				<span class="legend legend-secondary"></span> secondary
+			</p>
+
+
+			<p>
+				<span class="legend legend-accent"></span> accent
 			</p>
 
 			<p>
@@ -3015,8 +3190,10 @@
 
 		<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<span class="tag tag-default">Default</span>
 			<span class="tag tag-primary">Primary</span>
-			<span class="tag tag-accent">Accent</span>
+			<span class="tag tag-secondary">secondary</span>
+			<span class="tag tag-accent">accent</span>
 			<span class="tag tag-neutral">Neutral</span>
 			<span class="tag tag-success">Success</span>
 			<span class="tag tag-caution">Caution</span>
@@ -3052,6 +3229,13 @@
 							<td class="text-align-center">69</td>
 						</tr>
 						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">420</td>
+						</tr>
+						<tr>
 							<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
@@ -3067,13 +3251,6 @@
 							<td class="text-align-center">666</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td class="text-align-right">Column content</td>
-							<td class="text-align-center">0</td>
-						</tr>
-						<tr>
 							<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
@@ -3081,14 +3258,42 @@
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
@@ -3116,6 +3321,13 @@
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">69</td>
+							</tr>
+							<tr>
+								<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+								<td>Column content</td>
+								<td>Column content</td>
+								<td class="text-align-right">Column content</td>
+								<td class="text-align-center">420</td>
 							</tr>
 							<tr>
 								<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
@@ -3154,6 +3366,13 @@
 								<td class="text-align-center">0</td>
 							</tr>
 							<tr>
+								<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+								<td>Column content</td>
+								<td>Column content</td>
+								<td class="text-align-right">Column content</td>
+								<td class="text-align-center">0</td>
+							</tr>
+							<tr>
 								<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
@@ -3169,7 +3388,7 @@
 				<table class="table table-large">
 					<thead>
 					<tr>
-							<th class="table-cell-no-gutter">#</th>
+							
 							<th>Column heading</th>
 							<th>Column heading</th>
 							<th class="text-align-right">Column heading</th>
@@ -3177,112 +3396,103 @@
 						</tr>
 					</thead>
 				<tbody>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-						<td><div class="thumbnail thumbnail-small"><span class="thumbnail-text">YS</span></div></td>
+					
+					
+					
+					
+					<tr class="table-row-primary">
+						
+						<td>Primary</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">69</td>
+						<td class="text-align-center">0</td>
 					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-						<td>Column content</td>
+					<tr class="table-row-secondary">
+						
+						<td>secondary</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
+						<td class="text-align-center">0</td>
 					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
-						<td>Custom label color</td>
+					<tr class="table-row-accent">
+						
+						<td>accent</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
+						<td class="text-align-center">0</td>
 					</tr>
 					
 					<tr class="table-row-success">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+						
 						<td>Success</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">666</td>
 					</tr>
 					<tr class="table-row-error">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+						
 						<td>Error</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-caution">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+						
 						<td>Caution</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
-					<tr class="table-row-primary">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-						<td>Primary</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-accent">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-						<td>accent</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
 					<tr class="table-row-neutral">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
+						
 						<td>neutral</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-1">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 1</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-2">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 2</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-3">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 3</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-4">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 4</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-5">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 5</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-disabled">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+						
 						<td>Disabled</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
+					
 				</tbody>
 			</table>
 
@@ -3340,6 +3550,13 @@
 					<p class="table-cell text-align-center">0</p>
 				</div>
 				<div class="table-row">
+					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-secondary"></span></p>
+					<p class="table-cell">Column content</p>
+					<p class="table-cell">Column content</p>
+					<p class="table-cell text-align-right">Column content</p>
+					<p class="table-cell text-align-center">0</p>
+				</div>
+				<div class="table-row">
 					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
@@ -3355,7 +3572,7 @@
 			<h2>Helper classes: font family</h2>
 
 			<p class="font-family-primary"> Primary</p>
-			<p class="font-family-accent"> Primary</p>
+			<p class="font-family-accent"> Accent</p>
 
 
 			<h2>Helper classes: font size</h2>
@@ -3450,7 +3667,8 @@
 			<p class="color-base">Color Base</p>
 			<p class="color-background">Color Background</p>
 			<p class="color-primary">Color Primary</p>
-			<p class="color-accent">Color Accent</p>
+			<p class="color-secondary">Color secondary</p>
+			<p class="color-accent">Color accent</p>
 			<p class="color-neutral">Color Neutral</p>
 			<p class="color-success">Color Success</p>
 			<p class="color-caution">Color Caution</p>
@@ -3473,7 +3691,8 @@
 			<p class="background-base">background Base</p>
 			<p class="background-background">background Background</p>
 			<p class="background-primary">Background Primary</p>
-			<p class="background-accent">Background Accent</p>
+			<p class="background-secondary">Background secondary</p>
+			<p class="background-accent">Background accent</p>
 			<p class="background-neutral">Background Neutral</p>
 			<p class="background-success">Background Success</p>
 			<p class="background-caution">Background Caution</p>
@@ -3898,16 +4117,16 @@
 					</g>
 					<g>
 						<g>
-							<rect x="360" y="8.5" class="fill-theme fill-accent-hover" width="240" height="76.1"></rect>
+							<rect x="360" y="8.5" class="fill-theme fill-secondary-hover" width="240" height="76.1"></rect>
 						</g>
 						<g>
-							<rect x="420" y="93" class="fill-accent" width="180" height="76.1"></rect>
+							<rect x="420" y="93" class="fill-secondary" width="180" height="76.1"></rect>
 						</g>
 						<g>
 							<rect x="600" y="177.5" class="fill-neutral" width="0" height="76.1"></rect>
 						</g>
 						<g>
-							<rect y="346.5" class="fill-success stroke-error" width="600" height="76.1"></rect>
+							<rect y="346.5" class="fill-accent stroke-error" width="600" height="76.1"></rect>
 						</g>
 						<g>
 							<rect x="300" y="431" class="st6" width="300" height="76.1"></rect>

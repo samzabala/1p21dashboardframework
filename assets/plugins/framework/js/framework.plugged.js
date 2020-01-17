@@ -176,6 +176,7 @@ window.jQuery && jQuery.noConflict();
 	_.br_mobile_max = parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--mobile-br-max') ) || 'sm';
 
 	_.functions_on_load = [];
+	_.functions_on_ready = [];
 	_.functions_on_resize = [];
 
 
@@ -200,6 +201,7 @@ window.jQuery && jQuery.noConflict();
 	_.palette = [
 		'base',
 		'primary',
+		'secondary',
 		'accent',
 		'neutral',
 		'error',
@@ -739,7 +741,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.initGrid($(this));
 		});
 	}
-	_.functions_on_load.push(frameWork.readyGrid);
+	_.functions_on_ready.push(frameWork.readyGrid);
 	_.functions_on_resize.push(frameWork.readyGrid);
 
 	
@@ -775,6 +777,11 @@ window.jQuery && jQuery.noConflict();
 
 	$(document).ready(function(){
 		frameWork.settings.lazyLoad && frameWork.loadImages();
+
+
+		_.functions_on_ready.forEach(function(fn){
+			fn();
+		})
 
 		$('body').on('click','*[data-toggle="accordion"]',function(e){	
 			e.preventDefault();
