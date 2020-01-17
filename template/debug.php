@@ -3251,13 +3251,6 @@
 							<td class="text-align-center">666</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td class="text-align-right">Column content</td>
-							<td class="text-align-center">0</td>
-						</tr>
-						<tr>
 							<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
@@ -3265,21 +3258,42 @@
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
@@ -3374,7 +3388,7 @@
 				<table class="table table-large">
 					<thead>
 					<tr>
-							<th class="table-cell-no-gutter">#</th>
+							
 							<th>Column heading</th>
 							<th>Column heading</th>
 							<th class="text-align-right">Column heading</th>
@@ -3382,133 +3396,103 @@
 						</tr>
 					</thead>
 				<tbody>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-						<td><div class="thumbnail thumbnail-small"><span class="thumbnail-text">YS</span></div></td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">69</td>
-					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
-						<td>Column content</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
-					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-						<td>Column content</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
-					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
-						<td>Custom label color</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
-					</tr>
 					
-					<tr class="table-row-success">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
-						<td>Success</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">666</td>
-					</tr>
-					<tr class="table-row-error">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-						<td>Error</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-caution">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
-						<td>Caution</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
+					
+					
+					
 					<tr class="table-row-primary">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+						
 						<td>Primary</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-secondary">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+						
 						<td>secondary</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-accent">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+						
 						<td>accent</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
+					
+					<tr class="table-row-success">
+						
+						<td>Success</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">666</td>
+					</tr>
+					<tr class="table-row-error">
+						
+						<td>Error</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
+					<tr class="table-row-caution">
+						
+						<td>Caution</td>
+						<td>Column content</td>
+						<td class="text-align-right">Column content</td>
+						<td class="text-align-center">0</td>
+					</tr>
 					<tr class="table-row-neutral">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
+						
 						<td>neutral</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-1">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 1</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-2">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 2</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-3">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 3</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-4">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 4</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-5">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 5</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-disabled">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+						
 						<td>Disabled</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
-					<tr class="table-row-disabled">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-						<td>Disabled</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
+					
 				</tbody>
 			</table>
 

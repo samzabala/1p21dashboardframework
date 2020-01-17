@@ -322,14 +322,14 @@
 								'#000000'
 							);
 						?>
-						<?php for($i=1; $i<=(count($placeholder_colors)); $i++){ ?>
+						<?php for($i=1; $i<=(count($placeholder_colors) - 20); $i++){ ?>
 							
 
-							<p class=" display-inline-block">
+							<p>
 								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-								<!-- <span class="client-name">
+								<span class="client-name">
 									<span class="REPLACE">Client Name</span>
-								</span> -->
+								</span>
 							</p>
 						<?php } ?>
 				
