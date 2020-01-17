@@ -213,7 +213,6 @@ window.jQuery && jQuery.noConflict();
 	_.fns_on_ready = [];
 	_.fns_on_resize = [];
 
-
 	frameWork.validateBr = function(breakpoint,mode) {
 		mode = mode || 'below'; //below,within,above
 		var currIndex = _.br_arr.indexOf(breakpoint);
@@ -897,7 +896,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.initCalendar($(this));
 		});
 	}
-	_.fns_on_ready.push(frameWork.readyCalendar);
+	_.fns_on_load.push(frameWork.readyCalendar);
 
 	
 	_.initTrumbo = function(selector){
@@ -933,10 +932,10 @@ window.jQuery && jQuery.noConflict();
 	$(document).ready(function(){
 		frameWork.settings.lazyLoad && frameWork.loadImages();
 
-		_.fns_on_ready.forEach(function(fn){
-			fn();
+		_.fns_on_ready.forEach(function(fn){	
+			fn();	
 		})
-    
+
 		$('body').on('click','a.input-calendar-ui-date',function(e){	
 			e.preventDefault();
 			var inputCalendar = $(this).closest('.input-calendar-ui').prev('.input-calendar');

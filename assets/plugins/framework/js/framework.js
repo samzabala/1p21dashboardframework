@@ -255,6 +255,7 @@ window.jQuery && jQuery.noConflict();
 
 	_.br_mobile_max = parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--mobile-br-max') ) ||  'sm';
 
+
 	_.fns_on_load = [];
 	_.fns_on_ready = [];
 	_.fns_on_resize = [];
@@ -915,8 +916,8 @@ window.jQuery && jQuery.noConflict();
 	frameWork.docReady(function(){
 		frameWork.settings.lazyLoad && frameWork.loadImages();
 
-		_.functions_on_ready.forEach(function(fn){
-			fn();
+		_.fns_on_ready.forEach(function(fn){	
+			fn();	
 		})
 
 		frameWork.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
