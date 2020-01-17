@@ -125,7 +125,7 @@
 
 				<ul class="text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Unique Links Built
+						<span class="legend legend-secondary"></span> Unique Links Built
 					</li>
 
 					<li>

@@ -187,7 +187,7 @@
 				</div>
 				<ul class="no-margin text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Average Rank
+						<span class="legend legend-secondary"></span> Average Rank
 					</li>
 
 					<li>
