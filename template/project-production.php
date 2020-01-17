@@ -38,7 +38,7 @@
 							<span class="hide-mobile font-size-small color-neutral text-transform-uppercase font-weight-700">Status:</span>
 							
 							<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-							<span class="tag tag-accent">
+							<span class="tag tag-secondary">
 								<span class="task-status"><span class="REPLACE">Task Status<span></span>
 							</span>
 						</li>
@@ -117,7 +117,7 @@
 														<tr>
 															<!-- @NOTE table-label-COLOR will by @DYNAMIC based on projct-task-category of time track or  yeeee -->
 															<td class="table-cell-no-gutter">
-																<span class="table-label table-label-accent"></span>
+																<span class="table-label table-label-secondary"></span>
 															</td>
 
 															<td>
@@ -169,7 +169,7 @@
 												
 											<!-- Progress: Design -->
 											<div
-												class="project-progress-des progress-bar background-accent"
+												class="project-progress-des progress-bar background-secondary"
 												style="width:45%"></div>
 
 													
@@ -202,7 +202,7 @@
 											
 											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
-													<i class="symbol symbol-square color-accent"></i>
+													<i class="symbol symbol-square color-secondary"></i>
 													<span class="project-milestone">Design</span>
 												</div>
 

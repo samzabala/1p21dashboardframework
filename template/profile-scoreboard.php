@@ -125,7 +125,7 @@
 
 				<ul class="text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Unique Links Built
+						<span class="legend legend-secondary"></span> Unique Links Built
 					</li>
 
 					<li>
@@ -322,14 +322,14 @@
 								'#000000'
 							);
 						?>
-						<?php for($i=1; $i<=(count($placeholder_colors)); $i++){ ?>
+						<?php for($i=1; $i<=(count($placeholder_colors) - 20); $i++){ ?>
 							
 
-							<p class=" display-inline-block">
+							<p>
 								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-								<!-- <span class="client-name">
+								<span class="client-name">
 									<span class="REPLACE">Client Name</span>
-								</span> -->
+								</span>
 							</p>
 						<?php } ?>
 				

@@ -42,7 +42,7 @@
 
 				<ul class="no-margin text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Average Design Time
+						<span class="legend legend-secondary"></span> Average Design Time
 					</li>
 
 					<li>
@@ -176,7 +176,7 @@
 					</li>
 
 					<li>
-						<i class="symbol symbol-square color-accent"></i> Completed
+						<i class="symbol symbol-square color-secondary"></i> Completed
 					</li>
 
 					<li>
@@ -222,7 +222,7 @@
 
 								<td>
 									<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-									<span class="tag tag-accent">
+									<span class="tag tag-secondary">
 										<span class="task-status"><span class="REPLACE">Task Status<span></span>
 									</span>
 								</td>
