@@ -210,8 +210,8 @@ window.jQuery && jQuery.noConflict();
 	_.br_mobile_max = parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--mobile-br-max') ) || 'sm';
 
 	_.fns_on_load = [];
+	_.fns_on_ready = [];
 	_.fns_on_resize = [];
-
 
 	frameWork.validateBr = function(breakpoint,mode) {
 		mode = mode || 'below'; //below,within,above
@@ -885,7 +885,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.initGrid($(this));
 		});
 	}
-	_.fns_on_load.push(frameWork.readyGrid);
+	_.fns_on_ready.push(frameWork.readyGrid);
 	_.fns_on_resize.push(frameWork.readyGrid);
 
 
@@ -931,6 +931,10 @@ window.jQuery && jQuery.noConflict();
 
 	$(document).ready(function(){
 		frameWork.settings.lazyLoad && frameWork.loadImages();
+
+		_.fns_on_ready.forEach(function(fn){	
+			fn();	
+		})
 
 		$('body').on('click','a.input-calendar-ui-date',function(e){	
 			e.preventDefault();
