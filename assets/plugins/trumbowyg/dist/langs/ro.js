@@ -25,7 +25,7 @@ jQuery.trumbowyg.langs.ro = {
     underline: 'Subliniat',
 
     strong: 'Puternic',
-    em: 'Accentuat',
+    em: 'secondaryuat',
     del: 'Sterge',
 
     unorderedList: 'Lista dezordonată',

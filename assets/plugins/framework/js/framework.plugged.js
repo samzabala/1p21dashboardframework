@@ -210,6 +210,7 @@ window.jQuery && jQuery.noConflict();
 	_.br_mobile_max = parseFloat( getComputedStyle(document.documentElement).getPropertyValue('--mobile-br-max') ) || 'sm';
 
 	_.fns_on_load = [];
+	_.fns_on_ready = [];
 	_.fns_on_resize = [];
 
 
@@ -234,6 +235,7 @@ window.jQuery && jQuery.noConflict();
 	_.palette = [
 		'base',
 		'primary',
+		'secondary',
 		'accent',
 		'neutral',
 		'error',
@@ -884,7 +886,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.initGrid($(this));
 		});
 	}
-	_.fns_on_load.push(frameWork.readyGrid);
+	_.fns_on_ready.push(frameWork.readyGrid);
 	_.fns_on_resize.push(frameWork.readyGrid);
 
 
@@ -895,7 +897,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.initCalendar($(this));
 		});
 	}
-	_.fns_on_load.push(frameWork.readyCalendar);
+	_.fns_on_ready.push(frameWork.readyCalendar);
 
 	
 	_.initTrumbo = function(selector){
@@ -931,6 +933,10 @@ window.jQuery && jQuery.noConflict();
 	$(document).ready(function(){
 		frameWork.settings.lazyLoad && frameWork.loadImages();
 
+		_.fns_on_ready.forEach(function(fn){
+			fn();
+		})
+    
 		$('body').on('click','a.input-calendar-ui-date',function(e){	
 			e.preventDefault();
 			var inputCalendar = $(this).closest('.input-calendar-ui').prev('.input-calendar');
