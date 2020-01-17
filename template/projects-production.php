@@ -74,7 +74,7 @@
 
 							<td>
 								<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-								<span class="tag tag-accent">
+								<span class="tag tag-secondary">
 									<span class="task-status"><span class="REPLACE">Task Status<span></span>
 								</span>
 							</td>
@@ -96,7 +96,7 @@
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
-								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
@@ -138,7 +138,7 @@
 
 										<td>
 											<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-											<span class="tag tag-accent">
+											<span class="tag tag-secondary">
 												<span class="task-status"><span class="REPLACE">Task Status<span></span>
 																</span>
 										</td>
@@ -160,7 +160,7 @@
 										</td>
 
 										<td class="dashboard-table-cell-action text-align-center">
-											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+											<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 											<!--
 												@NOTE:
