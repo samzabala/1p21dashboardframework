@@ -3774,7 +3774,16 @@ table {
     background-color: rgba(141, 141, 141, 0.1); }
   .alert.alert-primary {
     border-color: transparent;
-    
+    color: #00304f;
+    background-color: #029dff; }
+  .alert.alert-secondary {
+    border-color: transparent;
+    color: #8f0057;
+    background-color: #ff33b0; }
+  .alert.alert-accent {
+    border-color: transparent;
+    color: #b87e0a;
+    background-color: #f8ca6e; }
   .alert.alert-neutral {
     border-color: transparent;
     color: #555555;
@@ -4200,7 +4209,7 @@ input.input-calendar {
   background: rgba(141, 141, 141, 0.5); }
 .input-calendar-ui-date.active, .input-calendar-ui-date.active:hover {
   color: #FFFFFF;
-  background: #235789; }
+  background: #007ece; }
 .input-calendar-ui-grid {
   padding-bottom: 0.75em; }
 .input-calendar-ui-heading {
@@ -4304,6 +4313,8 @@ input.input-calendar {
     height: 4.6875rem; }
     .nav .input-select:not(.focus):not(:focus), .nav .input-single-line:not(.focus):not(:focus), .nav .input-multiple-line:not(.focus):not(:focus), .nav .input-calendar-ui:not(.focus):not(:focus), .nav .input-editor:not(.focus):not(:focus), .nav .fw-trumbowyg-editor:not(.focus):not(:focus), .nav .fw-trumbowyg-textarea:not(.focus):not(:focus), .nav .fw-trumbowyg-modal-box label input:not(.focus):not(:focus):not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .nav input:not(.focus):not(:focus):not([type="checkbox"]):not([type="radio"]) {
       box-shadow: none; }
+  .input-select:focus, .input-single-line:focus, .input-multiple-line:focus, .input-calendar-ui:focus, .input-editor:focus, .fw-trumbowyg-editor:focus, .fw-trumbowyg-textarea:focus, .fw-trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]), .focus.input-select, .focus.input-single-line, .focus.input-multiple-line, .focus.input-calendar-ui, .focus.input-editor, .focus.fw-trumbowyg-editor, .focus.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"]) {
+    box-shadow: 0px 0 5px 0px #007ece;
     border-color: rgba(141, 141, 141, 0.2); }
   .input-large.input-select, .input-large.input-single-line, .input-large.input-multiple-line, .input-large.input-calendar-ui, .input-large.input-editor, .input-large.fw-trumbowyg-editor, .input-large.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-large:not([type="checkbox"]):not([type="radio"]), .input-group.input-large .input-select, .input-group.input-large .input-single-line, .input-group.input-large .input-multiple-line, .input-group.input-large .input-calendar-ui, .input-group.input-large .input-editor, .input-group.input-large .fw-trumbowyg-editor, .input-group.input-large .fw-trumbowyg-textarea, .input-group.input-large .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .input-group.input-large input:not([type="checkbox"]):not([type="radio"]) {
     padding-top: calc(  (  (4.6875rem - (1px * 2)) - (1em * 1.5) ) * .5 );
