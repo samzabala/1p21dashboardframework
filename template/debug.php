@@ -42,25 +42,25 @@
 				<div class="input-calendar-ui-grid">
 					<div class="input-calendar-ui-days">
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Sun</div>
+							<div class="input-calendar-ui-block-content">Su</div>
 						</div>
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Mon</div>
+							<div class="input-calendar-ui-block-content">Mo</div>
 						</div>
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Tue</div>
+							<div class="input-calendar-ui-block-content">Tu</div>
 						</div>
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Wed</div>
+							<div class="input-calendar-ui-block-content">We</div>
 						</div>
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Thu</div>
+							<div class="input-calendar-ui-block-content">Th</div>
 						</div>
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Fri</div>
+							<div class="input-calendar-ui-block-content">Fr</div>
 						</div>
 						<div class="input-calendar-ui-block input-calendar-ui-day">
-							<div class="input-calendar-ui-block-content">Sat</div>
+							<div class="input-calendar-ui-block-content">Sa</div>
 						</div>
 					</div>
 
