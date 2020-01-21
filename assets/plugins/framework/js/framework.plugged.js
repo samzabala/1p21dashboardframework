@@ -812,8 +812,6 @@ window.jQuery && jQuery.noConflict();
 	frameWork.toggleAccordion = function(triggerer) {
 		var selector =  _.getTheToggled(triggerer,'accordion');
 
-		console.log(selector);
-
 		if( selector ){
 			if(
 				!(
