@@ -319,7 +319,7 @@ $prefix: '.input';
 				padding-bottom:$calculated-input-calendar-block-gutter-y;
 			}
 
-			&-prev,&-next{
+			&-button{
 				color:inherit;
 
 				&.input-calendar-ui.disabled{
@@ -327,9 +327,7 @@ $prefix: '.input';
 				}
 			}
 
-			&-prev,
-			&-next,
-			&-dropdown{
+			&-button{
 
 
 				&:hover {
@@ -337,14 +335,34 @@ $prefix: '.input';
 				}
 			}
 
-			&-prev {
-				order: -1;
-				margin-right: 1em;
+			&-prev-year {
+				order: -2;
 			}
 
-			&-next {
+			&-prev-month {
+				order: -1;
+			}
 
-				margin-left: 1em;
+			&-title {
+
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			&-prev-month {
+
+				margin-right: .25em;
+			}
+			&-prev-year {
+				margin-right: .75em;
+			}
+
+			&-next-month {
+
+				margin-left: .25em;
+			}
+			&-next-year {
+				margin-left: .75em;
 			}
 
 			&-days,

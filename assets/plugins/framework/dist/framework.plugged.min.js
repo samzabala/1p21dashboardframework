@@ -618,7 +618,7 @@ window.jQuery && jQuery.noConflict();
 		//update its fake hoes
 
 		//month + year
-			theUi.find('.input-calendar-ui-month-text').text( _.monthFormatNames[ calendarProps.month ] );
+			theUi.find('.input-calendar-ui-month-text').text( _.monthFormatNamesShort[ calendarProps.month ] );
 
 			theUi.find('.input-calendar-ui-month-year').text( calendarProps.year );
 

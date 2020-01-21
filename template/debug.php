@@ -35,26 +35,33 @@
 				<div class="input-calendar-ui-heading position-relative">
 					<div class="input-calendar-ui-title">
 						<div data-toggle="dropdown" class="input-calendar-ui-dropdown">
-							<span class="input-calendar-ui-month-text">January</span>
+							<span class="input-calendar-ui-month-text">Jan</span>
 							<span class="input-calendar-ui-year-text">2020</span>
 
 							<i class="input-calendar-ui-symbol symbol symbol-arrow-down no-margin-x"></i>
 						</div>
 						<ul data-dropdown-width="100%" class="dropdown dropdown-center-x dropdown-top-flush text-align-center">
 							<li>
-								<a href="#" class="input-calendar-ui-month"data-value="2020-01-05">January 2020</a>
+								<a href="#" class="input-calendar-ui-month"data-value="2020-01-05">Jan 2020</a>
 							</li>
 							<li>
-								<a href="#" class="input-calendar-ui-month"data-value="2020-02-05">February 2020</a>
+								<a href="#" class="input-calendar-ui-month"data-value="2020-02-05">Feb 2020</a>
 							</li>
 						</ul>
 					</div>
 
-					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-prev">
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-button input-calendar-ui-prev-month">
 						<i class="input-calendar-ui-symbol symbol symbol-arrow-left"></i>
 					</a>
-					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-next">
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-button input-calendar-ui-next-month">
 						<i class="input-calendar-ui-symbol symbol symbol-arrow-right"></i>
+					</a>
+
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-button input-calendar-ui-prev-year">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-double-left"></i>
+					</a>
+					<a href="#" class="input-calendar-ui-navigation input-calendar-ui-button input-calendar-ui-next-year">
+						<i class="input-calendar-ui-symbol symbol symbol-arrow-double-right"></i>
 					</a>
 				</div>
 
