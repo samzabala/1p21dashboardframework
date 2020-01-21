@@ -583,7 +583,7 @@ window.jQuery && jQuery.noConflict();
 		var calendarProps = {
 			year: _.dateToObj(theValue).getFullYear(),
 			month: _.dateToObj(theValue).getMonth(),
-			getCurrentActive: _.dateToObj(theValue)
+			date: _.dateToObj(theValue).getDate()
 		}
 		
 		var args = _.parseArgs(arr,defaults);
@@ -604,7 +604,8 @@ window.jQuery && jQuery.noConflict();
 			'\n',
 			'the ui',theUi,
 			'\n',
-
+			'properties:',calendarProps,
+			'\n',
 			'raw: '+theValue+'\n',
 			'val: '+_.dateToVal(theValue)+'\n',
 			'obj: '+_.dateToObj(theValue)+'\n',
@@ -615,8 +616,22 @@ window.jQuery && jQuery.noConflict();
 		inputCalendar.val(theValue);
 
 		//update its fake hoes
-		theUi.find('.input-calendar-ui-date').removeClass('active');
-		theUi.find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
+
+		//month + year
+			theUi.find('.input-calendar-ui-month-text').text( _.monthFormatNames[ calendarProps.month ] );
+
+			theUi.find('.input-calendar-ui-month-year').text( calendarProps.year );
+
+			//update nav arrow-grid
+
+			//update dropdown
+
+			//generate grid
+
+		//date
+			theUi.find('.input-calendar-ui-date').removeClass('active');
+			theUi.find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
+
 	}
 
 

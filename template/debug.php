@@ -40,7 +40,7 @@
 
 							<i class="input-calendar-ui-symbol symbol symbol-arrow-down no-margin-x"></i>
 						</div>
-						<ul data-dropdown-width="100%" class="dropdown dropdown-center-x text-align-center">
+						<ul data-dropdown-width="100%" class="dropdown dropdown-center-x dropdown-top-flush text-align-center">
 							<li>
 								<a href="#" class="input-calendar-ui-month"data-value="2020-01-05">January 2020</a>
 							</li>
