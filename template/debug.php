@@ -12,7 +12,7 @@
 		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class="open"></i></h1>
 		<div class="accordion open">
 			The div is somewhere here... suck a dick
-			<input type="text" class="input input-calendar" data-calendar-start-day="mo" data-calendar-disabled-dates="03/04/2020|03/01/2020" value="01-03-2020" />
+			<input type="text" class="input input-calendar" data-calendar-start-day="mo" data-calendar-disabled-dates="03/04/2020|03/01/2020" value="2020-01-20T20:40:05.620" />
 
 
 			<p>This is a static bitch for styles and uinteractiveness but no dynamic shit yet</p>
