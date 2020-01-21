@@ -341,13 +341,13 @@
 												<h2 class="project-note-title no-margin-y">
 													<span class="REPLACE">Note Title goes here</span>
 												</h2>
+												<hr>
 											</div>
 
 											<i class="font-size-large color-primary symbol symbol-caret-down-toggle symbol-caret-right"></i>
 
 										</div>
 
-										<hr>
 										
 
 										<div class="project-note-content accordion text-leading-expanded">
