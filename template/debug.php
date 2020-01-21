@@ -32,11 +32,21 @@
 			value="2020-01-05" />
 			<div class="input input-calendar-ui">
 
-				<div class="input-calendar-ui-heading">
-					<div class="input-calendar-ui-title position-relative">
-						<span class="input-calendar-ui-month">January</span>
-						<span class="input-calendar-ui-year">2020</span>
-						<ul>
+				<div class="input-calendar-ui-heading position-relative">
+					<div class="input-calendar-ui-title">
+						<div data-toggle="dropdown" class="input-calendar-ui-dropdown">
+							<span class="input-calendar-ui-month-text">January</span>
+							<span class="input-calendar-ui-year-text">2020</span>
+
+							<i class="input-calendar-ui-symbol symbol symbol-arrow-down no-margin-x"></i>
+						</div>
+						<ul data-dropdown-width="100%" class="dropdown dropdown-center-x text-align-center">
+							<li>
+								<a href="#" class="input-calendar-ui-month"data-value="2020-01-05">January 2020</a>
+							</li>
+							<li>
+								<a href="#" class="input-calendar-ui-month"data-value="2020-02-05">February 2020</a>
+							</li>
 						</ul>
 					</div>
 

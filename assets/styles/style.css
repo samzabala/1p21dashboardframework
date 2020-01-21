@@ -4961,6 +4961,11 @@ input.input-calendar {
 
 .input-calendar-ui-prev, .input-calendar-ui-next {
   color: inherit; }
+  .input-calendar-ui-prev.input-calendar-ui.disabled, .input-calendar-ui-next.input-calendar-ui.disabled {
+    opacity: .5; }
+
+.input-calendar-ui-prev:hover, .input-calendar-ui-next:hover, .input-calendar-ui-dropdown:hover {
+  color: #0480fe; }
 
 .input-calendar-ui-prev {
   order: -1;
@@ -4979,12 +4984,9 @@ input.input-calendar {
 
 .input-calendar-ui-days {
   margin-bottom: 0.75em;
-  border-bottom: 1px solid #8d8d8d;
-  color: #8d8d8d;
+  border-bottom: 1px solid;
+  opacity: .375;
   font-size: 0.75em; }
-  .theme-inverse .input-calendar-ui-days {
-    border-bottom: 1px solid #8d8d8d;
-    color: #8d8d8d; }
 
 .input-calendar-ui-dates {
   margin-bottom: 0.375em; }

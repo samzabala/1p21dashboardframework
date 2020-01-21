@@ -321,6 +321,20 @@ $prefix: '.input';
 
 			&-prev,&-next{
 				color:inherit;
+
+				&.input-calendar-ui.disabled{
+					opacity: .5;
+				}
+			}
+
+			&-prev,
+			&-next,
+			&-dropdown{
+
+
+				&:hover {
+					color: $input-calendar-date-heading-button-color-hover;
+				}
 			}
 
 			&-prev {
@@ -347,15 +361,9 @@ $prefix: '.input';
 
 			&-days {
 				margin-bottom:$calculated-input-calendar-block-gutter-y;
-				border-bottom:  $input-calendar-days-border-width solid $input-calendar-days-border-color;
-				color: $input-calendar-days-color;
+				border-bottom:  $input-calendar-days-border-width solid;
+				opacity: .375;
 				font-size: $calculated-input-calendar-days-font-size;
-
-				.theme-inverse & {
-
-					border-bottom:  $input-calendar-days-border-width solid $input-calendar-days-border-color-inverse;
-					color: $input-calendar-days-color-inverse;
-				}
 			}
 
 			&-dates {
