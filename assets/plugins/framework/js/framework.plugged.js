@@ -232,38 +232,24 @@ window.jQuery && jQuery.noConflict();
 								
 
 								
-							case "h"://12 hour
-							console.log('ayaw gumana nitong ponyita',formatNumber(
-								"h",
-								(dateTimeFromVal.getHours() >= 12 ? dateTimeFromVal.getHours() - 12 : dateTimeFromVal.getHours()),
-								2
-							));
+							case "H"://12 hour
 								output += formatNumber(
-									"h",
-									(dateTimeFromVal.getHours() >= 12 ? dateTimeFromVal.getHours() - 12 : dateTimeFromVal.getHours()),
+									"H",
+									(dateTimeFromVal.getHours() % 12 || 12),
 									2
 								);
 								break;
-							case "H"://12 hour but 1 digit
-								output += (dateTimeFromVal.getHours() >= 12 ? dateTimeFromVal.getHours() - 12 : dateTimeFromVal.getHours());
+							case "h"://24 hour
+								output += formatNumber(
+									"h",
+									dateTimeFromVal.getHours(),
+									2
+								);
 								break;
-
-
-								
-						case "g"://24 hour
-							output += formatNumber(
-								"g",
-								dateTimeFromVal.getHours(),
-								2
-							);
-							break;
-						case "G"://24 hour but 1 digit
-							output += dateTimeFromVal.getHours();
-							break;
 								
 
 								
-							case "i"://24 hour
+							case "i"://minute
 								output += formatNumber(
 									"i",
 									dateTimeFromVal.getMinutes(),
@@ -562,18 +548,7 @@ window.jQuery && jQuery.noConflict();
 
 		if(inputCalendar) {
 
-			frameWork.createCalendar(inputCalendar);
-		}
-	}
-
-	frameWork.createCalendar = function(inputCalendar){
-		if(inputCalendar){
-			var theValue = inputCalendar.val();
-			
-
-			frameWork.updateCalendar(inputCalendar,theValue);
-
-			// console.log(args,calendarProps,calendarProps.getDisabled());
+			frameWork.updateCalendar(inputCalendar);
 		}
 	}
 
@@ -581,6 +556,17 @@ window.jQuery && jQuery.noConflict();
 	frameWork.updateCalendar = function(inputCalendar,newValue){
 		var theUi,
 		theValue = newValue || inputCalendar.val();
+
+		console.log(newValue);
+
+		var arr =  {
+			class: inputCalendar.attr('class'),
+			startDay: inputCalendar.data('calendar-start-day'), // su,mo,tu,we,th,fr,sa,
+			min: inputCalendar.data('calendar-min') || inputCalendar.attr('min'),
+			max: inputCalendar.data('calendar-max') || inputCalendar.attr('max'),
+			textInput : inputCalendar.data('text-input')
+		};
+
 
 
 		var defaults = {
@@ -602,15 +588,8 @@ window.jQuery && jQuery.noConflict();
 		
 		var args = _.parseArgs(arr,defaults);
 
-		console.log(
-			'debug\n',
-			'raw: '+theValue+'\n',
-			'val: '+_.dateToVal(theValue)+'\n',
-			'obj: '+_.dateToObj(theValue)+'\n',
-			'hooman: '+_.dateToHuman(theValue,'24: hh H; 12r: gg G A a') + '\n'
-		);
-
 		//create ui container
+		console.log('fuck');
 		if(inputCalendar.next('.input-calendar-ui').length > -1){
 			theUi = inputCalendar.next('.input-calendar-ui');
 		}else{
@@ -619,16 +598,18 @@ window.jQuery && jQuery.noConflict();
 		}
 
 
+		console.log(
+			'debug\n',
+			'the Input',inputCalendar,
+			'\n',
+			'the ui',theUi,
+			'\n',
 
-		var arr =  {
-			class: inputCalendar.attr('class'),
-			startDay: inputCalendar.data('calendar-start-day'), // su,mo,tu,we,th,fr,sa,
-			min: inputCalendar.data('calendar-min') || inputCalendar.attr('min'),
-			max: inputCalendar.data('calendar-max') || inputCalendar.attr('max'),
-			textInput : inputCalendar.data('text-input')
-		};
-
-
+			'raw: '+theValue+'\n',
+			'val: '+_.dateToVal(theValue)+'\n',
+			'obj: '+_.dateToObj(theValue)+'\n',
+			'hooman: '+_.dateToHuman(theValue,'24: h hh; 12r: H HH; A a') + '\n'
+		);
 
 		//update the actual butt
 		inputCalendar.val(theValue);
