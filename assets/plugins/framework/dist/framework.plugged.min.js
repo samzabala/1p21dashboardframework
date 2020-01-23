@@ -302,6 +302,22 @@ window.jQuery && jQuery.noConflict();
 		}
 	}
 
+	_.dateGetAdjacent = function(date,offset){
+
+		var d = _.dateToObj(date),
+		currMonth = d.getMonth();
+
+		console.log(d,currMonth,'cuur - offset', currMonth + offset);
+
+		var newMonth = (currMonth + offset) % 12;
+
+		console.log('new guy',newMonth);
+
+		// d.setMonth(newMonth);
+		return d;
+
+	}
+
 	_.reverseArray = function(arr) {
 		var newArray = [];
 		for (var i = arr.length - 1; i >= 0; i--) {
@@ -553,9 +569,10 @@ window.jQuery && jQuery.noConflict();
 	}
 
 		//updates both input field and UI
-	frameWork.updateCalendar = function(inputCalendar,newValue){
-		var theUi,
-		theValue = newValue || inputCalendar.val();
+	frameWork.updateCalendar = function(inputCalendar,newValue,valueForGrid){
+		var theUi;
+		theValue = newValue || inputCalendar.val() || new Date();
+		valueForGrid = valueForGrid || theValue;
 
 		console.log(newValue);
 
@@ -583,19 +600,17 @@ window.jQuery && jQuery.noConflict();
 		var calendarProps = {
 			year: _.dateToObj(theValue).getFullYear(),
 			month: _.dateToObj(theValue).getMonth(),
-			date: _.dateToObj(theValue).getDate()
+			date: _.dateToObj(theValue).getDate(),
+			currYear:_.dateToObj(valueForGrid).getFullYear(),
+			currMonth:_.dateToObj(valueForGrid).getMonth(),
 		}
 		
 		var args = _.parseArgs(arr,defaults);
 
 		//create ui container
 		console.log('fuck');
-		if(inputCalendar.next('.input-calendar-ui').length > -1){
-			theUi = inputCalendar.next('.input-calendar-ui');
-		}else{
-			theUi = $('<div class="input-calendar-ui"></div>');
-			inputCalendar.after(theUi);
-		}
+
+		theUi = inputCalendar.next('.input-calendar-ui');
 
 
 		console.log(
@@ -615,24 +630,44 @@ window.jQuery && jQuery.noConflict();
 		//update the actual butt
 		inputCalendar.val(theValue);
 
-		//update its fake hoes
+
+
+			//update fake hoes
+		if(inputCalendar.next('.input-calendar-ui').length > -1){
+			theUi = inputCalendar.next('.input-calendar-ui');
+		}else{
+			theUi = $('<div class="input-calendar-ui"></div>');
+			inputCalendar.after(theUi);
+		}
 
 		//month + year
-			theUi.find('.input-calendar-ui-month-text').text( _.monthFormatNamesShort[ calendarProps.month ] );
+		theUi.find('.input-calendar-ui-month-text').text( _.monthFormatNamesShort[ calendarProps.currMonth ] );
 
-			theUi.find('.input-calendar-ui-month-year').text( calendarProps.year );
+		theUi.find('.input-calendar-ui-month-year').text( calendarProps.currYear );
 
-			//update nav arrow-grid
+		//update nav arrow-grid
+		console.log('adjacent month');
+		_.dateGetAdjacent(theValue,1);
+		_.dateGetAdjacent(theValue,-1);
 
-			//update dropdown
 
-			//generate grid
+		console.log('adjecent year');
+		_.dateGetAdjacent(theValue,12);
+		_.dateGetAdjacent(theValue,-12);
 
+		//update dropdown
+
+
+		//generate grid
+
+
+		
 		//date
 			theUi.find('.input-calendar-ui-date').removeClass('active');
 			theUi.find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
 
 	}
+
 
 
 

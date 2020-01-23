@@ -13,10 +13,10 @@
 		<div class="accordion open">
 			The div is somewhere here... suck a dick
 			<!-- <input type="text" class="input input-calendar" data-calendar-start-day="mo"
-			data-calendar-disabled-dates="2020-01-01,2020-03-01,weekends,past"
+			data-calendar-disabled-dates="2020-03-01,2020-03-01,weekends,past"
 			min="2019-01-20"
 			data-max="2021-02-20"
-			value="2020-01-05T20:40" /> -->
+			value="2020-03-05T20:40" /> -->
 
 
 			<p>This is a static bitch for styles and uinteractiveness but no dynamic shit yet</p>
@@ -29,7 +29,8 @@
 			data-calendar-start-day="mo"
 			min="2019-01-20"
 			data-max="2021-02-20"
-			value="2020-01-05" />
+			value="2020-03-05" />
+
 			<div class="input input-calendar-ui">
 
 				<div class="input-calendar-ui-heading position-relative">
@@ -42,10 +43,10 @@
 						</div>
 						<ul data-dropdown-width="100%" class="dropdown dropdown-center-x dropdown-top-flush text-align-center">
 							<li>
-								<a href="#" class="input-calendar-ui-month"data-value="2020-01-05">Jan 2020</a>
+								<a href="#" class="input-calendar-ui-month" data-value="2020-01-05">Jan 2020</a>
 							</li>
 							<li>
-								<a href="#" class="input-calendar-ui-month"data-value="2020-02-05">Feb 2020</a>
+								<a href="#" class="input-calendar-ui-month" data-value="2020-02-05">Feb 2020</a>
 							</li>
 						</ul>
 					</div>
@@ -93,104 +94,104 @@
 					<div class="input-calendar-ui-dates">
 
 
-						<a href="#" data-value="2020-01-01" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-01" class="input-calendar-ui-block input-calendar-ui-date">
 							1
 						</a>
 
-						<a href="#" data-value="2020-01-02" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-02" class="input-calendar-ui-block input-calendar-ui-date">
 							2
 						</a>
-						<a href="#" data-value="2020-01-03" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-03" class="input-calendar-ui-block input-calendar-ui-date">
 							3
 						</a>
-						<a href="#" data-value="2020-01-04" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-04" class="input-calendar-ui-block input-calendar-ui-date">
 							4
 						</a>
-						<a href="#" data-value="2020-01-05" class="active input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-05" class="active input-calendar-ui-block input-calendar-ui-date">
 							5
 						</a>
-						<a href="#" data-value="2020-01-06" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-06" class="input-calendar-ui-block input-calendar-ui-date">
 							6
 						</a>
-						<a href="#" data-value="2020-01-07" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-07" class="input-calendar-ui-block input-calendar-ui-date">
 							7
 						</a>
-						<a href="#" data-value="2020-01-08" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-08" class="input-calendar-ui-block input-calendar-ui-date">
 							8
 						</a>
-						<a href="#" data-value="2020-01-09" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-09" class="input-calendar-ui-block input-calendar-ui-date">
 							9
 						</a>
 
 
 
-						<a href="#" data-value="2020-01-10" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-10" class="input-calendar-ui-block input-calendar-ui-date">
 							10
 						</a>
-						<a href="#" data-value="2020-01-11" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-11" class="input-calendar-ui-block input-calendar-ui-date">
 							11
 						</a>
 
-						<a href="#" data-value="2020-01-12" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-12" class="input-calendar-ui-block input-calendar-ui-date">
 							12
 						</a>
-						<a href="#" data-value="2020-01-13" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-13" class="input-calendar-ui-block input-calendar-ui-date">
 							13
 						</a>
-						<a href="#" data-value="2020-01-14" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-14" class="input-calendar-ui-block input-calendar-ui-date">
 							14
 						</a>
-						<a href="#" data-value="2020-01-15" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-15" class="input-calendar-ui-block input-calendar-ui-date">
 							15
 						</a>
-						<a href="#" data-value="2020-01-16" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-16" class="input-calendar-ui-block input-calendar-ui-date">
 							16
 						</a>
-						<a href="#" data-value="2020-01-17" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-17" class="input-calendar-ui-block input-calendar-ui-date">
 							17
 						</a>
-						<a href="#" data-value="2020-01-18" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-18" class="input-calendar-ui-block input-calendar-ui-date">
 							18
 						</a>
-						<a href="#" data-value="2020-01-19" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-19" class="input-calendar-ui-block input-calendar-ui-date">
 							19
 						</a>
 
 
-						<a href="#" data-value="2020-01-20" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-20" class="input-calendar-ui-block input-calendar-ui-date">
 							20
 						</a>
-						<a href="#" data-value="2020-01-21" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-21" class="input-calendar-ui-block input-calendar-ui-date">
 							21
 						</a>
 
-						<a href="#" data-value="2020-01-22" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-22" class="input-calendar-ui-block input-calendar-ui-date">
 							22
 						</a>
-						<a href="#" data-value="2020-01-23" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-23" class="input-calendar-ui-block input-calendar-ui-date">
 							23
 						</a>
-						<a href="#" data-value="2020-01-24" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-24" class="input-calendar-ui-block input-calendar-ui-date">
 							24
 						</a>
-						<a href="#" data-value="2020-01-25" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-25" class="input-calendar-ui-block input-calendar-ui-date">
 							25
 						</a>
-						<a href="#" data-value="2020-01-26" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-26" class="input-calendar-ui-block input-calendar-ui-date">
 							26
 						</a>
-						<a href="#" data-value="2020-01-27" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-27" class="input-calendar-ui-block input-calendar-ui-date">
 							27
 						</a>
-						<a href="#" data-value="2020-01-28" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-28" class="input-calendar-ui-block input-calendar-ui-date">
 							28
 						</a>
-						<a href="#" data-value="2020-01-29" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-29" class="input-calendar-ui-block input-calendar-ui-date">
 							29
 						</a>
 
 
-						<a href="#" data-value="2020-01-30" class="input-calendar-ui-block input-calendar-ui-date">
+						<a href="#" data-value="2020-03-30" class="input-calendar-ui-block input-calendar-ui-date">
 							30
 						</a>
 
@@ -3251,6 +3252,23 @@
 			<p>
 				arrow right <i class="color-primary symbol symbol-arrow-right"></i>
 			</p>
+
+
+<p>
+	arrow down &nbsp;<i class="color-primary symbol symbol-arrow-double-down"></i>
+</p>
+
+<p>
+	arrow up &nbsp;<i class="color-primary symbol symbol-arrow-double-up"></i>
+</p>
+
+<p>
+	arrow left &nbsp;<i class="color-primary symbol symbol-arrow-double-left"></i>
+</p>
+
+<p>
+	arrow right &nbsp;<i class="color-primary symbol symbol-arrow-double-right"></i>
+</p>
 
 			<p>
 				plus <i class="color-primary symbol symbol-plus"></i>
