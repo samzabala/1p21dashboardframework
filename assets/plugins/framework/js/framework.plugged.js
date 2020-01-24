@@ -1381,8 +1381,10 @@ window.jQuery && jQuery.noConflict();
 			$(this).siblings('.btn-toggle-reset').removeClass('active');
 			console.log($(this).closest('.btn-group-toggle-multiple').length);
 
+			console.log($(this).closest('.btn-group-toggle-multiple'));
+
 			if(
-				(!$(this).closest('.btn-group-toggle-multiple').length > -1)
+				(!$(this).closest('.btn-group-toggle-multiple').length)
 				|| ($(this).hasClass('btn-toggle-reset'))
 			){
 				$(this).siblings('.btn').removeClass('active');
