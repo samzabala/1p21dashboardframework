@@ -908,8 +908,8 @@ table {
   .table-cell.table-cell-heading {
     vertical-align: inherit;
     text-align: inherit;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 100%;
     display: table-cell;
     position: relative; }
@@ -933,32 +933,33 @@ table {
       color: inherit; }
   td,
   .table-cell {
-    padding-top: calc((4.375rem - ( 1em * 1.5 )) * .5);
-    padding-bottom: calc((4.375rem - ( 1em * 1.5 )) * .5); }
+    padding-top: calc((2.8125rem - ( 1em * 1.5 )) * .5);
+    padding-bottom: calc((2.8125rem - ( 1em * 1.5 )) * .5); }
   .table.table-small td,
   .table.table-small .table-cell,
   table.table-small td,
   table.table-small .table-cell {
-    padding-top: calc((3.125rem - ( 1em * 1.3125 )) * .5);
-    padding-bottom: calc((3.125rem - ( 1em * 1.3125 )) * .5);
+    padding-top: calc((1.5625rem - ( 1em * 1.3125 )) * .5);
+    padding-bottom: calc((1.5625rem - ( 1em * 1.3125 )) * .5);
     line-height: 1.3125; }
   .table.table-large td,
   .table.table-large .table-cell,
   table.table-large td,
   table.table-large .table-cell {
-    padding-top: calc((6.5625rem - ( 1em * 2.25 )) * .5);
-    padding-bottom: calc((6.5625rem - ( 1em * 2.25 )) * .5);
+    padding-top: calc((4.0625rem - ( 1em * 2.25 )) * .5);
+    padding-bottom: calc((4.0625rem - ( 1em * 2.25 )) * .5);
     line-height: 2.25; }
   .table-label {
     width: 12px;
-    height: calc(4.375rem - (5px * 2));
+    height: calc(2.8125rem - (2px * 2));
     border-radius: 2px;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin: 2px 0; }
     .table-large .table-label {
-      height: calc(6.5625rem - (5px * 2)); }
+      height: calc(4.0625rem - (2px * 2)); }
     .table-small .table-label {
-      height: calc(3.125rem - (5px * 2)); }
+      height: calc(1.5625rem - (2px * 2)); }
   .table-row-primary {
     background-color: rgba(0, 126, 206, 0.2); }
   .table-row-secondary {
@@ -1028,10 +1029,10 @@ table {
   .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after {
     content: "";
     height: 0.1875em;
-    width: .9375em; }
+    width: 1em; }
   .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-minus:before, .active > .symbol-minus-toggle:before, .open > .symbol-minus-toggle:before {
     content: "";
-    height: .9375em; }
+    height: 1em; }
   .symbol-burger:before {
     content: none; }
   .symbol-burger:after {
@@ -1153,7 +1154,7 @@ table {
   height: 4.6875rem;
   background: #FFFFFF;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
   color: inherit;
   font-weight: 400;
   text-transform: none;
@@ -1210,8 +1211,8 @@ table {
 .dropdown li > [data-toggle=dropdown], .nav-item > a,
 .nav-item > [data-toggle=dropdown], .nav-list li > a,
 .nav-list li > [data-toggle=dropdown] {
-  padding-top: calc( ( 2.1875rem - ( 1em * 1.5)) * .5 );
-  padding-bottom: calc( ( 2.1875rem - ( 1em * 1.5)) * .5 );
+  padding-top: calc( ( 2.1875rem - ( 1.5rem)) * .5 );
+  padding-bottom: calc( ( 2.1875rem - ( 1.5rem)) * .5 );
   display: inline-block; }
 .dropdown li:hover > a,
 .dropdown li:hover > [data-toggle=dropdown], .nav-item:hover > a,
@@ -1241,8 +1242,8 @@ table {
   transition: 0.125s all ease-in-out;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: calc( (4.6875rem - ( 1em * 1.5)) * .5 );
-  padding-bottom: calc( (4.6875rem - ( 1em * 1.5)) * .5 ); }
+  padding-top: calc( (4.6875rem - ( 1.5rem)) * .5 );
+  padding-bottom: calc( (4.6875rem - ( 1.5rem)) * .5 ); }
   .nav-list > .nav-item > a:after, .nav-list > .nav-item > [data-toggle=dropdown]:after, .nav-list > li > a:after, .nav-list > li > [data-toggle=dropdown]:after {
     content: "";
     position: absolute;
@@ -3814,8 +3815,8 @@ table {
   padding-top: calc(  (  (2.8125em - (1px * 2)) - (1em * 1.875) ) * .5 );
   padding-bottom: calc(  (  (2.8125em - (1px * 2)) - (1em * 1.875) ) * .5 );
   min-height: 2.8125em;
-  padding-right: 1.5625em;
-  padding-left: 1.5625em;
+  padding-right: 1.25em;
+  padding-left: 1.25em;
   border: 1px solid transparent;
   -webkit-transition: 0.25s all ease-in-out;
   transition: 0.25s all ease-in-out;
