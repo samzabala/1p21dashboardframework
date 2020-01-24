@@ -586,13 +586,15 @@ window.jQuery && jQuery.noConflict();
 		
 		valueForGrid = valueForGrid || inputCalendar.val() || new Date();
 
-		// inputCalendar.next('.input-calendar-ui').remove();
+		inputCalendar.next('.input-calendar-ui').remove();
+
+
+		// theUi = $('<div class="input-calendar-ui"></div>');
+		inputCalendar.after($('<div class="input-calendar-ui"></div>'));
 
 		theUi = {
-			root: inputCalendar.next('.input-calendar-ui')
+			container: inputCalendar.next('.input-calendar-ui')
 		};
-		// theUi = $('<div class="input-calendar-ui"></div>');
-		// inputCalendar.after(theUi);
 
 		
 		var calendarProps = {
@@ -605,48 +607,66 @@ window.jQuery && jQuery.noConflict();
 		//heading
 		theUi.heading = $('<div class="input-calendar-ui-heading position-relative"></div>');
 
-		// theUi.append(theUiHeading);
+		theUi.container.append(theUi.heading);
+		
+			theUi.title = $('<div data-toggle="dropdown" class="input-calendar-ui-dropdown"></div>');
+			theUi.heading.append(theUi.title);
+			
+				theUi.title.html(
+					'<span class="input-calendar-ui-month-text">'+_.monthFormatNamesShort[ calendarProps.currMonth ]+'</span>'
+					+ '<span class="input-calendar-ui-year-text">'+calendarProps.currYear+'</span>'
+					+ '<i class="input-calendar-ui-symbol symbol symbol-arrow-down no-margin-x"></i>'
+				);
+			
+			//dropdown
 
-		// theUiHeading
+			theUi.dropdown = $('<ul data-dropdown-width="100%" class="dropdown dropdown-center-x dropdown-top-flush text-align-center open" style="width: 100%;"></ul>');
+			theUi.dropdown.
 
-		//month + year
-		theUi.root.find('.input-calendar-ui-month-text').text( _.monthFormatNamesShort[ calendarProps.currMonth ] );
-		theUi.root.find('.input-calendar-ui-year-text').text( calendarProps.currYear );
+			theUi.container.append(theUi.heading);
+
+			theUi.listItem = [];
+
+			//update dropdown
+			for(i = -12; i <= 12; i++){
+
+
+			}
+
+
 
 			//month
-				theUi.root.find('.input-calendar-ui-prev-month').attr(
+				theUi.container.find('.input-calendar-ui-prev-month').attr(
 					'data-value',
 					_.dateToVal( _.dateGetAdjacent(valueForGrid,-1) )
 				);
-				theUi.root.find('.input-calendar-ui-next-month').attr(
+				theUi.container.find('.input-calendar-ui-next-month').attr(
 					'data-value',
 					_.dateToVal( _.dateGetAdjacent(valueForGrid,1) )
 				);
-			//month
-				theUi.root.find('.input-calendar-ui-prev-year').attr(
+			//year
+				theUi.container.find('.input-calendar-ui-prev-year').attr(
 					'data-value',
 					_.dateToVal( _.dateGetAdjacent(valueForGrid,-12) )
 				);
-				theUi.root.find('.input-calendar-ui-next-year').attr(
+				theUi.container.find('.input-calendar-ui-next-year').attr(
 					'data-value',
 					_.dateToVal( _.dateGetAdjacent(valueForGrid,12) )
 				);
 
 
-		//update dropdown
-		for(i = -12; i <= 12; i++){
-			
-
-		}
-
-
 		//generate grid
+
+		//heading
+		theUi.grid = $('<div class="input-calendar-ui-grid"></div>');
+
+		theUi.container.append(theUi.grid);
 
 
 		
 		//date
-			theUi.root.find('.input-calendar-ui-date').removeClass('active');
-			theUi.root.find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
+			theUi.container.find('.input-calendar-ui-date').removeClass('active');
+			theUi.container.find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
 	}
 
 		//updates both input field and UI
