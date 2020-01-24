@@ -4307,6 +4307,10 @@ table {
   .dropdown, .dropdown ul, .dropdown li {
     margin-bottom: 0;
     margin-top: 0; }
+  .dropdown > .active {
+    color: #0480fe; }
+  hr.dropdown-separator {
+    margin: .5em 0; }
   .dropdown a,
   .dropdown [data-toggle="dropdown"] {
     color: inherit; }
@@ -4973,7 +4977,8 @@ input.input-calendar {
   display: flex;
   justify-content: space-between;
   padding-top: 0.75em;
-  padding-bottom: 0.75em; }
+  padding-bottom: 0.75em;
+  position: relative; }
 
 .input-calendar-ui-button {
   color: inherit; }
@@ -4983,11 +4988,11 @@ input.input-calendar {
 .input-calendar-ui-button:hover {
   color: #0480fe; }
 
-.input-calendar-ui-prev-year {
+.input-calendar-ui-prev-year, .input-calendar-ui-prev-month {
   order: -2; }
 
-.input-calendar-ui-prev-month {
-  order: -1; }
+.input-calendar-ui-next-year, .input-calendar-ui-next-month {
+  order: 3; }
 
 .input-calendar-ui-title {
   margin-right: auto;

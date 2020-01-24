@@ -317,6 +317,7 @@ $prefix: '.input';
 				justify-content:space-between;
 				padding-top:$calculated-input-calendar-block-gutter-y;
 				padding-bottom:$calculated-input-calendar-block-gutter-y;
+				position:relative;
 			}
 
 			&-button{
@@ -335,12 +336,14 @@ $prefix: '.input';
 				}
 			}
 
-			&-prev-year {
+			&-prev-year,
+			&-prev-month {
 				order: -2;
 			}
 
-			&-prev-month {
-				order: -1;
+			&-next-year,
+			&-next-month {
+				order: 3;
 			}
 
 			&-title {
@@ -364,6 +367,11 @@ $prefix: '.input';
 			&-next-year {
 				margin-left: .75em;
 			}
+
+			// &-dropdown {
+			// 	max-height: 300px;
+			// 	overflow-y: scroll;
+			// }
 
 			&-days,
 			&-dates {

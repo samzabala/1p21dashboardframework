@@ -154,6 +154,14 @@ $prefix: '.dropdown';
 		margin-top:0;
 	}
 
+	> .active {
+		color: $dropdown-active-color;
+	}
+
+	@at-root hr#{&}-separator {
+		margin: .5em 0;
+	}
+
 	a,
 	[data-toggle="dropdown"] {
 		color:inherit;

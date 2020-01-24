@@ -3713,6 +3713,10 @@ table {
   .dropdown, .dropdown ul, .dropdown li {
     margin-bottom: 0;
     margin-top: 0; }
+  .dropdown > .active {
+    color: #007ece; }
+  hr.dropdown-separator {
+    margin: .5em 0; }
   .dropdown a,
   .dropdown [data-toggle="dropdown"] {
     color: inherit; }
@@ -4226,19 +4230,20 @@ input.input-calendar {
   -webkit-box-pack: justify;
           justify-content: space-between;
   padding-top: 0.75em;
-  padding-bottom: 0.75em; }
+  padding-bottom: 0.75em;
+  position: relative; }
 .input-calendar-ui-button {
   color: inherit; }
   .input-calendar-ui-button.input-calendar-ui.disabled {
     opacity: .5; }
 .input-calendar-ui-button:hover {
   color: #007ece; }
-.input-calendar-ui-prev-year {
+.input-calendar-ui-prev-year, .input-calendar-ui-prev-month {
   -webkit-box-ordinal-group: -1;
           order: -2; }
-.input-calendar-ui-prev-month {
-  -webkit-box-ordinal-group: 0;
-          order: -1; }
+.input-calendar-ui-next-year, .input-calendar-ui-next-month {
+  -webkit-box-ordinal-group: 4;
+          order: 3; }
 .input-calendar-ui-title {
   margin-right: auto;
   margin-left: auto; }
