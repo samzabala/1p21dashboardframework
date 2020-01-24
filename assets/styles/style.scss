@@ -1,5 +1,5 @@
 //google font
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
 
 
@@ -12,11 +12,9 @@ $br-xs-max: 767px;
 $br-sm-max: 1279px;
 $br-md-max: 1799px;
 
-$brand-font-primary: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+$brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 $brand-font-accent: $brand-font-primary;
 $brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
-
-$body-font-weight: 500;
 
 $theme-background-inverse: #292440;
 $theme-background-contrast-inverse: #1F1B30;
@@ -24,8 +22,6 @@ $theme-background-contrast-inverse: #1F1B30;
 $brand-color-primary: #0480fe;
 $brand-color-secondary: #d415af;
 $brand-color-accent: #1a38d2;
-
-$brand-color-info: #1939d3;
 
 $brand-color-base-alt: #3d3d3d;
 $brand-color-background-alt: #ecedf0;
@@ -36,6 +32,8 @@ $brand-color-intensity-3: #843ecd;
 $brand-color-intensity-4: $brand-color-secondary;
 $brand-color-intensity-5: #fc01a7;
 
+$body-font-size: 15px;
+
 $module-grid-title-text-transform: uppercase;
 $module-title-text-transform: uppercase;
 
@@ -45,6 +43,7 @@ $nav-top-font-weight: 600;
 $tag-font-weight: 600;
 $input-label-font-weight: 600;
 $input-font-weight: 600;
+
 
 
 $input-height-large: 50px;
