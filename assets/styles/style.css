@@ -1163,7 +1163,7 @@ table {
   .symbol:not([class*="symbol-"]):before, .symbol:not([class*="symbol-"]):after {
     background: none;
     /*s o nothing happends*/ }
-  .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-plus:before, .symbol-plus:after, .symbol-minus:before, .symbol-minus:after, .symbol-close:before, .symbol-close:after, .symbol-search:before, .symbol-search:after {
+  .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .symbol-plus:before, .symbol-plus:after, .symbol-minus:before, .symbol-minus:after, .symbol-close:before, .symbol-close:after, .symbol-search:before, .symbol-search:after {
     border-radius: 0.1em; }
   .symbol-plus:after,
   .active > .symbol-plus-toggle:after,
@@ -1188,26 +1188,26 @@ table {
     left: -.1em;
     right: -.1em;
     border-radius: 0.0666666667em; }
-  .symbol-plus:before, .symbol-minus:before, .symbol-close:before, .symbol-close:after, .symbol-arrow-up:after, .symbol-arrow-down:after, .symbol-arrow-left:after, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-down:before, .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-search:after {
+  .symbol-plus:before, .symbol-minus:before, .symbol-close:before, .symbol-close:after, .symbol-arrow-up:after, .symbol-arrow-down:after, .symbol-arrow-left:after, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-down:before, .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:after, .symbol-arrow-double-left:after, .symbol-arrow-double-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-down:before, .symbol-arrow-double-left:before, .symbol-arrow-double-right:before, .symbol-search:after {
     width: 0.2em; }
   .symbol-minus:before,
   .active > .symbol-minus-toggle:before,
   .open > .symbol-minus-toggle:before {
     content: none; }
-  .symbol-arrow-left, .symbol-arrow-right, .symbol-arrow-up, .symbol-arrow-down {
+  .symbol-arrow-left, .symbol-arrow-right, .symbol-arrow-up, .symbol-arrow-down, .symbol-arrow-double-left, .symbol-arrow-double-right, .symbol-arrow-double-up, .symbol-arrow-double-down {
     height: 0.6666666667em; }
-    .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after {
+    .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after {
       transform-origin: center 0.1em;
       height: 0.7333333333em;
       top: 0.1333333333em; }
-    .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-up:before, .symbol-arrow-down:before {
+    .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-up:before, .symbol-arrow-down:before, .symbol-arrow-double-left:before, .symbol-arrow-double-right:before, .symbol-arrow-double-up:before, .symbol-arrow-double-down:before {
       transform: rotate(-45deg); }
     .symbol-arrow-left:after, .symbol-arrow-right:after, .symbol-arrow-up:after, .symbol-arrow-down:after, .symbol-arrow-double-left:after, .symbol-arrow-double-right:after, .symbol-arrow-double-up:after, .symbol-arrow-double-down:after {
       transform: rotate(45deg); }
   .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after {
-    top: 0.125em; }
+    top: 0.1333333333em; }
   .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after {
-    top: 0.5em; }
+    top: 0.5333333333em; }
   .symbol-arrow-double-left:before, .symbol-arrow-double-right:before, .symbol-arrow-double-up:before, .symbol-arrow-double-down:before {
     box-shadow: 5.25px -5.25px 0 0; }
   .symbol-arrow-double-left:after, .symbol-arrow-double-right:after, .symbol-arrow-double-up:after, .symbol-arrow-double-down:after {
@@ -5010,6 +5010,10 @@ input.input-calendar {
 
 .input-calendar-ui-next-year {
   margin-left: .75em; }
+
+.input-calendar-ui-dropdown {
+  max-height: 300px;
+  overflow-y: scroll; }
 
 .input-calendar-ui-days, .input-calendar-ui-dates {
   display: grid;

@@ -368,10 +368,10 @@ $prefix: '.input';
 				margin-left: .75em;
 			}
 
-			// &-dropdown {
-			// 	max-height: 300px;
-			// 	overflow-y: scroll;
-			// }
+			&-dropdown {
+				max-height: 300px;
+				overflow-y: scroll;
+			}
 
 			&-days,
 			&-dates {

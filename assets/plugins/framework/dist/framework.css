@@ -4256,6 +4256,9 @@ input.input-calendar {
   margin-left: .25em; }
 .input-calendar-ui-next-year {
   margin-left: .75em; }
+.input-calendar-ui-dropdown {
+  max-height: 300px;
+  overflow-y: scroll; }
 .input-calendar-ui-days, .input-calendar-ui-dates {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
