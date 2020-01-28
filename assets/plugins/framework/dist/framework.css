@@ -984,10 +984,6 @@ table {
     background-color: rgba(253, 46, 132, 0.2); }
   .table-row-intensity-5 {
     background-color: rgba(255, 0, 156, 0.2); }
-  .table-row-disabled td,
-  .table-row-disabled .table-cell {
-    opacity: 0.5;
-    cursor: not-allowed; }
 
 /*** SYMBOLS ***/
 .symbol {
@@ -3885,9 +3881,6 @@ table {
     .btn-block-mobile {
       display: block;
       width: 100%; } }
-.btn.btn-disabled, .btn-disabled .btn {
-  cursor: not-allowed !important;
-  opacity: 0.5; }
 .btn.btn-large, .btn-group.btn-large .btn {
   padding-top: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.875) ) * .5 );
   padding-bottom: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.875) ) * .5 );
@@ -4140,9 +4133,6 @@ table {
   -webkit-transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%; }
-  .input-disabled.input, .input-disabled.input-label, .input-disabled.fw-trumbowyg-editor, .input-disabled.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-disabled:not([type="checkbox"]):not([type="radio"]), [disabled].input, [disabled].input-label, [disabled].fw-trumbowyg-editor, [disabled].fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input[disabled]:not([type="checkbox"]):not([type="radio"]) {
-    opacity: 0.5 !important;
-    cursor: not-allowed !important; }
 .input, .fw-trumbowyg-editor, .fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   font: inherit;
   color: inherit;
@@ -4217,6 +4207,9 @@ input.input-calendar {
   position: relative;
   text-align: center;
   color: inherit; }
+  .input-calendar-ui-block-hide {
+    pointer-events: none;
+    color: red; }
 .input-calendar-ui-date:hover, .input-calendar-ui-date:focus, .input-calendar-ui-date.focus {
   color: inherit;
   background: rgba(141, 141, 141, 0.5); }
@@ -4235,10 +4228,11 @@ input.input-calendar {
   position: relative; }
 .input-calendar-ui-button {
   color: inherit; }
-  .input-calendar-ui-button.input-calendar-ui.disabled {
-    opacity: .5; }
-.input-calendar-ui-button:hover {
-  color: #007ece; }
+  .input-calendar-ui-button:hover {
+    color: #007ece; }
+.input-calendar-ui-block.disabled, .input-calendar-ui-block.disabled:hover, .input-calendar-ui-block.disabled:focus, .input-calendar-ui-block.disabled.focus, .input-disabled .input-calendar-ui-block, .input-disabled .input-calendar-ui-block:hover, .input-disabled .input-calendar-ui-block:focus, .input-disabled .input-calendar-ui-block.focus, .input-calendar-ui-button.disabled, .input-calendar-ui-button.disabled:hover, .input-calendar-ui-button.disabled:focus, .input-calendar-ui-button.disabled.focus, .input-disabled .input-calendar-ui-button, .input-disabled .input-calendar-ui-button:hover, .input-disabled .input-calendar-ui-button:focus, .input-disabled .input-calendar-ui-button.focus {
+  background: none !important;
+  color: inherit !important; }
 .input-calendar-ui-prev-year, .input-calendar-ui-prev-month {
   -webkit-box-ordinal-group: -1;
           order: -2; }
@@ -5931,3 +5925,7 @@ input.input-calendar, .display-none, .sr-only {
 
   .hide-nonmobile {
     display: none !important; } }
+.table-row-disabled td,
+.table-row-disabled .table-cell, .btn.btn-disabled, .btn-disabled .btn, .input-disabled.input, .input-disabled.input-label, .input-disabled.fw-trumbowyg-editor, .input-disabled.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-disabled:not([type="checkbox"]):not([type="radio"]), [disabled].input, [disabled].input-label, [disabled].fw-trumbowyg-editor, [disabled].fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input[disabled]:not([type="checkbox"]):not([type="radio"]), .disabled {
+  cursor: not-allowed !important;
+  opacity: 0.5; }

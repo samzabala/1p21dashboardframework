@@ -155,7 +155,13 @@ window.jQuery && jQuery.noConflict();
 
 
 	_.parseArgs = function(arr,defaults) {
-		var args = defaults;
+		
+		var args = {};
+
+		for(var def in defaults){
+			args[def] = defaults[def];
+		}
+
 		for (var prop in arr) {
 			
 			if(arr.hasOwnProperty(prop) && arr[prop] !== undefined && arr[prop] !== null) {

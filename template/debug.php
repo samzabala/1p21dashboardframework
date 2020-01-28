@@ -26,8 +26,9 @@
 			<input
 			type="date"
 			class="input input-calendar override-debug input-primary"
-			data-calendar-start-day="mo"
-			data-calendar-dropdown-year-span="1"
+			data-calendar-start-day="6"
+			data-calendar-disabled-dates="weekends"
+			data-calendar-dropdown-year-span="0"
 			min="2019-01-20"
 			data-calendar-max="2021-02-20"
 			value="2020-03-05" />

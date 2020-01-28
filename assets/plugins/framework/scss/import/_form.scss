@@ -134,13 +134,14 @@ $prefix: '.input';
 		&#{$prefix}-disabled,
 		&[disabled] {
 
-			opacity: $global-disabled-opacity!important;
-			cursor: not-allowed!important;
-			// background-color: $input-background-disabled;
+			// opacity: $global-disabled-opacity!important;
+			// cursor: not-allowed!important;
+			// // background-color: $input-background-disabled;
 
-			// .theme-inverse & {
-			// 	background-color: $input-background-disabled-inverse;
-			// }
+			// // .theme-inverse & {
+			// // 	background-color: $input-background-disabled-inverse;
+			// // }
+			@extend %for-disabled;
 		}
 	}
 
@@ -275,9 +276,14 @@ $prefix: '.input';
 				text-align:center;
 				color:inherit;
 				// flex: 1 1;
-				
 				// &:before{
 				// 	display:block;
+
+				&-hide {
+					pointer-events:none;
+					// opacity:0;
+					color:red;
+				}
 
 				// 	content:"";
 				// 	padding-bottom:100%;
@@ -308,7 +314,6 @@ $prefix: '.input';
 			}
 
 			&-grid {
-
 				padding-bottom:$calculated-input-calendar-block-gutter-y;
 			}
 
@@ -323,17 +328,26 @@ $prefix: '.input';
 			&-button{
 				color:inherit;
 
-				&.input-calendar-ui.disabled{
-					opacity: .5;
-				}
-			}
-
-			&-button{
-
 
 				&:hover {
 					color: $input-calendar-date-heading-button-color-hover;
 				}
+			}
+			&-block,
+			&-button{
+
+
+				&.disabled,
+				.input-disabled & {
+					&,
+					&:hover,
+					&:focus,
+					&.focus {
+						background: none!important;
+						color:inherit!important;
+					}
+				}
+				
 			}
 
 			&-prev-year,
@@ -393,7 +407,7 @@ $prefix: '.input';
 			}
 
 			&-dates {
-
+				// grid-template-rows: repeat(6, 1fr);
 				margin-bottom:$calculated-input-calendar-block-gutter-y * .5;
 			}
 		}
