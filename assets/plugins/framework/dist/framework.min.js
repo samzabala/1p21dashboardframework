@@ -816,7 +816,8 @@ window.jQuery && jQuery.noConflict();
 			
 
 			// @TODO fix this shit
-			for (let sibling of theUi.container.children) {
+			for (let sibling of inputCalendar.parentNode.children) {
+				console.log(sibling)
 				if (sibling !== inputCalendar) {
 					sibling.parentNode.removeChild(sibling)
 				};
