@@ -144,6 +144,309 @@ window.jQuery && jQuery.noConflict();
 		  document.addEventListener('DOMContentLoaded', fn);
 		}
 	  }
+
+	
+
+	//make it objoct
+	_.dateToParse = function(date) {
+
+	
+		var yr,mo,dy,hr,mn;
+
+		var dateArr = [];
+		var timeArr = [];
+
+		if(date){
+
+			if(Object.prototype.toString.call(date) === '[object Date]'){
+
+				//make a new date out of its methods because js will think u are referring to the same date everythere and ur math becomes a hellhole... dont.. hOE
+				yr = date.getFullYear() || null;
+				mo = date.getMonth() || null;
+				dy = date.getDate() || null;
+				hr = date.getHours() || null;
+				mn = date.getMinutes() || null;
+
+			}else{
+
+				var dateTimeArr = date.split('T') || [];
+		
+				//date
+				if(dateTimeArr[0]){
+					dateArr = dateTimeArr[0].split('-');
+				}
+		
+				//time
+				if(dateTimeArr[1]){
+					timeArr = dateTimeArr[1].split(':');
+				}
+		
+				yr = dateArr[0] || null;
+				mo = (dateArr[1] - 1) || null;
+				dy = dateArr[2] || null;
+				hr = timeArr[0] || null;
+				mn = timeArr[1] || null;
+			}
+
+			return new Date(yr,mo,dy,hr,mn);
+		}else{
+			return false;
+		}
+	}
+
+	_.datetimeFormatPresets = {
+		HumanDate: {
+			placeholder:"mm/dd/yyyy",
+			pattern:"",
+			template:"mm/dd/yy"
+		},
+		HumanTime24: {
+			placeholder:"hh:mm",
+			pattern:"",
+			template:"HH:MM"
+		},
+		HumanTime12: {
+			placeholder:"hh:mm",
+			pattern:"",
+			template:"HH:MM"
+		},
+		Value: {
+			placeholder:"yyyy-mm-dd",
+			pattern:"(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))",
+			template:"yy-mm-dd"
+		},
+		// ValueDateTime:{
+		// 	placeholder:"yy-mm-ddThh:gg",
+		// 	pattern:"",
+		// 	template:"yy-mm-ddThh:gg"
+		// },
+	}
+
+
+	_.dayFormatNames = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ], // For formatting
+	_.dayFormatNamesShort = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ], // For formatting
+	_.dayFormatNamesShorter = [ "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" ], // For formatting
+	_.monthFormatNames = [ "January","February","March","April","May","June","July","August","September","October","November","December" ],
+	_.monthFormatNamesShort = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+
+	//make it human readable
+	_.dateToHuman = function( date,format ) {
+		date = _.dateToParse(date);
+		format = format || _.datetimeFormatPresets.Value.template;
+		if ( date ) {
+
+			var iFormat;
+
+				// Check whether a format character is doubled
+				lookAhead = function( match ) {
+					var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+					if ( matches ) {
+						iFormat++;
+					}
+					return matches;
+				},
+
+				// Format a number, with leading zero if necessary
+				formatNumber = function( match, value, len ) {
+					var num = "" + value;
+					if ( lookAhead( match ) ) {
+						while ( num.length < len ) {
+							num = "0" + num;
+						}
+					}
+					return num;
+				},
+
+				// Format a name, short or long as requested
+				formatName = function( match, value, shortNames, longNames ) {
+					return ( lookAhead( match ) ? longNames[ value ] : shortNames[ value ] );
+				},
+				output = "",
+				literal = false;
+
+			if ( date ) {
+				for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+					if ( literal ) {
+						if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+							literal = false;
+						} else {
+							output += format.charAt( iFormat );
+						}
+					} else {
+						switch ( format.charAt( iFormat ) ) {
+
+							case "d": //date number
+								output += formatNumber(
+									"d",
+									date.getDate(),
+									2
+								);
+								break;
+							case "D": //day of the week
+								output += formatName(
+									"D",
+									date.getDay(),
+									_.dayFormatNamesShort,
+									_.dayFormatNames
+								);
+								break;
+
+
+							case "o": //day of year hmm
+								output += formatNumber(
+									"o",
+									Math.round( ( new Date( date.getFullYear(), date.getMonth(), date.getDate() ).getTime() - new Date( date.getFullYear(), 0, 0 ).getTime() ) / 86400000 ),
+									3
+								);
+								break;
+
+
+							case "m": //month
+								output += formatNumber(
+									"m",
+									date.getMonth() + 1,
+									2
+								);
+								break;
+							case "M": //month but name
+								output += formatName(
+									"M", date.getMonth(),
+									_.monthFormatNamesShort,
+									_.monthFormatNames
+								);
+								break;
+
+
+							case "y": //year
+								output += (
+									lookAhead( "y" ) ? date.getFullYear() :
+									( date.getFullYear() % 100 < 10 ? "0" : "" ) + date.getFullYear() % 100
+								);
+								break;
+								
+
+								
+							case "H"://12 hour
+								output += formatNumber(
+									"H",
+									(date.getHours() % 12 || 12),
+									2
+								);
+								break;
+							case "h"://24 hour
+								output += formatNumber(
+									"h",
+									date.getHours(),
+									2
+								);
+								break;
+								
+
+								
+							case "i"://minute
+								output += formatNumber(
+									"i",
+									date.getMinutes(),
+									2
+								);
+								break;
+
+								
+							case "a": //am /pm
+								output += (
+									date.getHours() >= 12 ? 'pm' : 'am'
+								);
+								break;
+
+							case "A": //AM/PM 
+								output += (
+									date.getHours() >= 12 ? 'PM' : 'AM'
+								);
+								break;
+
+							case "'":
+								if ( lookAhead( "'" ) ) {
+									output += "'";
+								} else {
+									literal = true;
+								}
+								break;
+
+							default:
+								output += format.charAt( iFormat );
+						}
+					}
+				}
+			}
+			return output;
+		}else{
+			return false;
+		}
+		
+	}
+
+	//make it ready for input value of datata
+	_.dateToVal = function(date) {
+		var d = _.dateToParse(date);
+
+		if(d){
+			return _.dateToHuman( d,_.datetimeFormatPresets.Value.template );
+		}
+	}
+
+	_.dateGetAdjacent = function(date,offsetByMonth,dateOverride){
+
+
+		var d = _.dateToParse(date),
+		currMonth = d.getMonth();
+		currYear = d.getFullYear();
+
+		dateOverride = dateOverride || null;
+
+
+		var newMonth = (function(){
+			var toReturn;
+			if(
+				((currMonth + offsetByMonth) % 12) > 12
+			){
+				toReturn = (((currMonth + offsetByMonth) % 12) - 12);
+			}else if(
+				((currMonth + offsetByMonth) % 12) < 0
+			){
+				toReturn = (((currMonth + offsetByMonth) % 12) + 12);
+			}else{
+				toReturn = ((currMonth + offsetByMonth) % 12);
+			}
+
+			return toReturn
+		}());
+
+		var newYear = (function(){
+			var defOffset = parseInt(offsetByMonth / 12);
+			var toReturn = currYear + defOffset;
+
+			//offset to adjacent year
+			if(offsetByMonth < 0 && ((currMonth + (offsetByMonth % 12) ) ) < 0){
+				toReturn -= 1;
+			}else if(offsetByMonth > 0 && ((currMonth + (offsetByMonth % 12) ) ) > 11){
+
+				toReturn += 1;
+			}
+			return toReturn;
+		}());
+		
+
+		d.setMonth(newMonth);
+		d.setFullYear(newYear);
+
+		if(dateOverride) {
+			d.setDate(dateOverride);
+		}
+
+
+		return d;
+
+	}
 	
 	_.reverseArray = function(arr) {
 		var newArray = [];
@@ -399,6 +702,459 @@ window.jQuery && jQuery.noConflict();
 		});
 		
 	}
+	
+	
+	_.createCalendarGrid = function(inputCalendar,valueForGrid){
+
+
+		if(inputCalendar){
+		
+			valueForGrid = valueForGrid || inputCalendar.val() || new Date();
+		
+			uiPrefix = function(noDash) {
+				noDash = noDash || false;
+				return noDash ? 'input-calendar-ui' : 'input-calendar-ui-';
+			};
+
+			var arr =  {
+				class: inputCalendar.getAttribute('class'),
+				startDay: inputCalendar.getAttribute('data-calendar-start-day'), // 0,1,2,3,4,5,6
+				min: inputCalendar.getAttribute('data-calendar-min') || inputCalendar.getAttribute('min'),
+				max: inputCalendar.getAttribute('data-calendar-max') || inputCalendar.getAttribute('max'),
+				dropdownYearSpan: inputCalendar.getAttribute('data-calendar-dropdown-year-span'),
+				disabledDates: inputCalendar.getAttribute('data-calendar-disabled-dates'),
+			};
+
+			var defaults = {
+				class: '',
+				startDay: 0, // su,mo,tu,we,th,fr,sa,
+				min: null,
+				max:null,
+				dropdownYearSpan: 1,
+				disabledDates: ''
+				// textInput:false,
+			};
+			
+			var args = _.parseArgs(arr,defaults);
+
+
+			if(parseInt(arr.dropdownYearSpan) <= 0){
+				args.dropdownYearSpan = defaults.dropdownYearSpan;
+			}
+
+			args.startDay = parseInt(args.startDay) % 7;
+
+			//range only is pag kwan di sya isa isang date pangmaramihan
+			function dateIsValid(date,rangeOnly){
+				var d = _.dateToParse(date);
+				var checkAgainst = args.disabledDates.split(',');
+				var toReturn = true;
+
+				rangeOnly = rangeOnly || false; //range,spot
+
+
+				if(!rangeOnly){
+					//if in disabled dates
+					if(
+						checkAgainst.indexOf(_.dateToVal(d)) > -1
+					){
+						// console.warn('value is declared disabled specifically || ',_.dateToVal(d));;
+						toReturn = false;
+					}
+
+					//weekend
+					if(
+						(checkAgainst.indexOf('weekends') > -1)
+						&& (d.getDay() == 0 || d.getDay() == 6)
+					){
+						// console.warn('value was a weekend || ',_.dateToVal(d),_.dateToVal(date));
+						toReturn = false;
+					}
+
+				}
+
+				//in the past
+				var dateNow = new Date();
+
+				dateNow.setHours(0,0,0,0);
+				if(
+					(checkAgainst.indexOf('past') > -1)
+					&& (d < dateNow)
+				){
+					// console.warn('value was in the past || ',_.dateToVal(date),'\nversus ',_.dateToVal(dateNow));
+					toReturn = false;
+				}
+
+
+				//if  in range of min or max
+				if(
+					(args.max && _.dateToParse(args.max) <= d)
+					|| (args.min && d <= _.dateToParse(args.min))
+				) {
+					// console.warn('value not in max and width || ',_.dateToVal(d));;
+					toReturn = false;
+				}
+
+
+				return toReturn;
+			};
+
+			var theUi = {};
+
+			theUi.container = inputCalendar.closest('.'+ uiPrefix(true));
+
+			if( !(theUi.container) ){
+				theUi.container = document.createElement('div');
+
+				inputCalendar.parentNode.insertBefore(theUi.container,inputCalendar)
+				theUi.container.appendChild(inputCalendar);
+				theUi.container.setAttribute(
+					'class',
+					inputCalendar.getAttribute('class').toString().replace('input-calendar',uiPrefix(true) )
+				);
+			}
+			
+
+			// @TODO fix this shit
+			for (let sibling of theUi.container.children) {
+				if (sibling !== inputCalendar) {
+					sibling.parentNode.removeChild(sibling)
+				};
+			}
+
+
+			
+			var currYear = _.dateToParse(valueForGrid).getFullYear();
+			var currMonth = _.dateToParse(valueForGrid).getMonth();
+			var currentCalendarDate = new Date(currYear,currMonth,1); //IT ALSO FIRST DAY MOTHERFUCKER
+
+
+
+			//heading
+			theUi.heading = document.createElement('div');
+			theUi.container.appendChild(theUi.heading);
+			theUi.heading.setAttribute('class',uiPrefix()+'heading');
+			
+
+				//arrowz
+				function generateArrow(buttonClass){
+
+					var symbolClass,arrowDate,validness;
+					//set a new date with no date because fuck that boi
+
+					// console.warn(buttonClass,'hello i fucked up','\n',_.dateToParse(valueForGrid),'\n',currentCalendarDate,'\n', new Date(currYear,currMonth));
+
+					switch(buttonClass){
+						case 'prev-month':
+							symbolClass = 'symbol-arrow-left';
+							arrowDate = _.dateToVal(
+								_.dateGetAdjacent(
+									currentCalendarDate,
+									-1
+								)
+							);
+							validness = dateIsValid(new Date(currYear,currMonth,0),true);
+							break;
+						
+						case 'prev-year':
+							symbolClass = 'symbol-arrow-double-left';
+							arrowDate = _.dateToVal(
+								_.dateGetAdjacent(
+									currentCalendarDate,
+									-12
+								)
+							);
+							validness = dateIsValid(new Date(currYear-1,currMonth,0),true);
+							break;
+
+						case 'next-month':
+							symbolClass = 'symbol-arrow-right';
+							arrowDate = _.dateToVal(
+								_.dateGetAdjacent(
+									currentCalendarDate,
+									1
+								)
+							);
+							validness = dateIsValid(new Date(currYear,currMonth+1,1),true);
+							break;
+
+						case 'next-year':
+							symbolClass = 'symbol-arrow-double-right';
+							arrowDate = _.dateToVal(
+								_.dateGetAdjacent(
+									currentCalendarDate,
+									12
+								)
+							);
+							validness = dateIsValid(new Date(currYear+1,currMonth,1),true);
+							break;
+					}
+
+					//kung yung at least yung last day nang prev or first day ng next man lang ay valid pwidi sya i doot doot
+
+					var htmlString = '<a href=""class="'
+					+ (!validness ? 'disabled ' : '')
+					+uiPrefix()+'navigation '
+					+uiPrefix()+'button '
+					+uiPrefix()+buttonClass+'" data-value="'+arrowDate+'">'
+						+'<i class="'+uiPrefix()+'symbol symbol '+symbolClass+'"></i>'
+					+'</a>';
+
+
+					return htmlString;
+				}
+
+				var butts = ['prev-year','prev-month','next-month','next-year'];
+
+				butts.forEach(function(butt){
+					theUi.heading.innerHTML += generateArrow(butt);
+				});
+
+
+				//title
+				theUi.title = document.createElement('div');
+				theUi.heading.appendChild(theUi.title);
+				theUi.title.setAttribute('class',uiPrefix()+'title ' + uiPrefix()+'dropdown-toggle');
+				
+				
+					theUi.title.innerHTML =  '<span class="'+uiPrefix()+'month-text">'
+							+_.monthFormatNamesShort[ currMonth ]
+						+'</span>'
+						+ ' <span class="'+uiPrefix()+'year-text">'+currYear+'</span>'
+						+ ' <i class="'+uiPrefix()+'symbol symbol symbol-arrow-down no-margin-x"></i>';
+				
+				//dropdown
+
+				theUi.dropdown = document.createElement('ul');
+				theUi.heading.appendChild(theUi.dropdown);
+				theUi.dropdown.setAttribute('data-dropdown-width','100%');
+				theUi.dropdown.setAttribute('class',uiPrefix()+'dropdown dropdown dropdown-center-x dropdown-top-flush text-align-center');
+				
+
+
+				theUi.dropdown.innerHTML += 
+					'<li class="'+uiPrefix()+'current-month-year active">'
+					+ '<a href="#" class="'+uiPrefix()+'month" data-value="'+ _.dateToVal(currentCalendarDate) +'">'
+					+ _.monthFormatNamesShort[ currMonth ]+ ' ' + currYear
+					+ '</a>'
+					+ '</li><li><hr class="dropdown-separator"></li>';
+
+				//update dropdown
+				for(i = parseInt(-12 * parseInt(args.dropdownYearSpan)); i <= parseInt(12 * parseInt(args.dropdownYearSpan)); i++){
+
+
+					
+						var listItemDate = _.dateGetAdjacent(
+							currentCalendarDate,
+							i
+						);
+
+
+						var dateForValidation = (function(){
+							var toReturn;
+
+							if(i >= 0 ){ //first day of month
+								// console.log('kinabukasan sya');
+								toReturn = new Date(listItemDate.getFullYear(),listItemDate.getMonth(),1)
+							}else{ //last day of month
+
+								// console.log('nakaraan sya');
+								toReturn = new Date(listItemDate.getFullYear(),listItemDate.getMonth()+1,0)
+							}
+
+							return toReturn
+						}())
+						// console.warn(i,'\nkwan ano ni\n',listItemDate,dateForValidation);
+
+
+						if(dateIsValid(dateForValidation,true)){
+			
+							var currClass = (i == 0) ? 'active' : '';
+							var listItem = '<li class=" '+currClass+'">'
+									+ '<a href="#" class="'+uiPrefix()+'month" data-value="'+ _.dateToVal(listItemDate) +'">'
+									+ _.monthFormatNamesShort[ listItemDate.getMonth() ]+ ' ' + listItemDate.getFullYear()
+									+ '</a>'
+									+ ((listItemDate.getMonth() == 11 ) ? '</li><li><hr class="dropdown-separator">' : '')
+								+ '</li>';
+			
+							theUi.dropdown.innerHTML += listItem;
+						}
+
+				}
+
+
+
+			//generate grid
+			theUi.grid = document.createElement('div');
+			theUi.container.append(theUi.grid);
+			theUi.grid.setAttribute('class',uiPrefix()+'grid');
+
+
+				function generateBlock(date,customClass){
+					customClass = customClass || '';
+					return '<a href="#" data-value="'+ _.dateToVal(date) +'" class="'
+					+uiPrefix()+ 'block '
+					+uiPrefix()+'date '
+					+customClass
+					+'">'
+						+ date.getDate()
+					+ '</a>';
+
+				}
+
+
+				//days heading
+					theUi.days = document.createElement('div');
+					theUi.grid.append(theUi.days);
+					theUi.days.setAttribute('class',uiPrefix()+'days');
+					
+				
+
+					var daysHTML = '';
+					var dayToRetrieve = parseInt(args.startDay);
+
+					for(i = 0; i < 7; i++){
+
+						if(dayToRetrieve > 6){
+							dayToRetrieve -= 7;
+						}
+
+
+						daysHTML += '<div class="'
+						+uiPrefix()+'block '
+						+uiPrefix()+'day">'
+							+_.dayFormatNamesShorter[dayToRetrieve]
+						+'</div>';
+
+						dayToRetrieve++;
+					}
+
+					theUi.days.innerHTML = daysHTML;
+
+				//days
+
+				theUi.dates = document.createElement('div');
+				theUi.grid.append(theUi.dates);
+				theUi.dates.setAttribute('class',uiPrefix()+'dates');
+
+				//previous month
+					var currPrevLastDate = (function(){
+						return new Date(currYear, currMonth, 0)
+					}());
+
+					
+
+					var currPrevLastDateDay = currPrevLastDate.getDay();
+
+					
+					var freeGridSpacePrev = (currentCalendarDate.getDay() - parseInt(args.startDay) + 7) % 7;
+
+					var currPrevLastDayOnStart = currPrevLastDateDay == 6 ? 0 : (currPrevLastDateDay + 1);
+					
+					if(
+						currPrevLastDayOnStart !== parseInt(args.startDay)
+					){ //if it doenst take its own row of shit
+
+						// i = 0; i <= freeGridSpacePrev; i++
+						// @TODO AAAAAAAAAAAA FIGURE OUT THE MATH
+						// for( dayLoopI = currPrevLastDateDay; dayLoopI >= (parseInt(args.startDay)); dayLoopI--){
+						// for(i = 0; i < 7; i++){
+						for(i = 0; i < freeGridSpacePrev; i++){
+
+							
+								var offset = (currPrevLastDate.getDate() - i);
+
+								var loopDatePrev = new Date(
+									currPrevLastDate.getFullYear(),
+									currPrevLastDate.getMonth(),
+									offset
+								);
+			
+								var dateBlockPrev = generateBlock(
+									loopDatePrev,
+									(uiPrefix()+ 'block-adjacent ') + (!dateIsValid(loopDatePrev) ? 'disabled' : '')
+								);
+			
+			
+			
+								//prepend because we loopped this bitch in reverse
+								theUi.dates.innerHTML += dateBlockPrev;
+		
+						}
+		
+					}
+
+				//curr month
+					var currLastDate = new Date(currYear, currMonth+1, 0);
+
+
+					for(i = 1; i <= currLastDate.getDate(); i++) {
+						var dateBlockCurr = generateBlock(
+							new Date(currYear,currMonth,i),
+							(!dateIsValid(new Date(currYear,currMonth,i))) ? 'disabled' : ''
+						);
+
+
+						theUi.dates.innerHTML += dateBlockCurr;
+					}
+
+				//next month just fill the shit
+
+					
+					var currNextFirstDay = new Date(currYear, currMonth+1, 1).getDay();
+
+					var freeGridSpaceNext = (7 - currNextFirstDay + parseInt(args.startDay)) % 7;
+
+					if(currNextFirstDay !== parseInt(args.startDay)){
+
+						for(i = 1; i <= freeGridSpaceNext; i++){
+
+							var loopDateNext = new Date(currYear, currMonth+1, i);
+
+							var dateBlockNext = generateBlock(
+								loopDateNext,
+								(uiPrefix()+ 'block-adjacent ') + (!dateIsValid(loopDateNext) ? 'disabled' : '')
+							);
+
+							theUi.dates.innerHTML += dateBlockNext;
+						}
+					}
+		}
+	}
+
+		//updates both input field and UI
+	frameWork.updateCalendar = function(inputCalendar,newValue,valueForGrid){
+		
+		theValue = newValue || inputCalendar.getAttribute('value') || new Date();
+		valueForGrid = valueForGrid || theValue;
+
+
+		//update the actual butt
+		inputCalendar.setAttribute('value',theValue);
+		_.createCalendarGrid(inputCalendar,valueForGrid);
+
+
+		
+		//date
+		//update fake hoes
+			var dates = inputCalendar.parentNode.querySelectorAll('.input-calendar-ui-date');
+			
+			dates.forEach(function(date){
+
+				if(date.getAttribute('data-value') == _.dateToVal(theValue)){
+					date.classList.add('active')
+				}else{
+
+					date.classList.remove('active');
+				}
+			})
+			
+
+		
+
+	}
+
+	
 
 	// //will run. right away. boi
 	// //lazyload
@@ -889,6 +1645,17 @@ window.jQuery && jQuery.noConflict();
 	_.fns_on_rightAway.push(frameWork.readyGrid);
 	_.fns_on_resize.push(frameWork.readyGrid);
 
+
+	frameWork.readyCalendar = function(){
+		var calendars = document.querySelectorAll('.input-calendar');
+
+
+		calendars.forEach(function(calendar){
+			frameWork.updateCalendar(calendar);
+		});
+	}
+	_.fns_on_rightAway.push(frameWork.readyCalendar);
+
 	_.initTrumbo = function(selector){
 
 		if($){
@@ -934,6 +1701,32 @@ window.jQuery && jQuery.noConflict();
 
 		_.fns_on_ready.forEach(function(fn){
 			fn();
+		});
+
+		frameWork.addEvent(document.body,'click','a.input-calendar-ui-date',function(e){	
+			e.preventDefault();
+			var clicked = e.target;
+			var inputCalendar = clicked.closest('.input-calendar-ui').querySelector('.input-calendar');
+			
+			if(inputCalendar && !clicked.classList.contains('disabled') && !clicked.closest('input-disabled')){
+				frameWork.updateCalendar(inputCalendar,e.target.getAttribute('data-value'),null)
+			}
+		});
+
+			frameWork.addEvent(document.body,'click','a.input-calendar-ui-navigation,.input-calendar-ui-month',function(e){	
+				e.preventDefault();
+				var inputCalendar = $(this).closest('.input-calendar-ui').find('.input-calendar').first();
+				if(inputCalendar.length > -1 && !$(this).hasClass('disabled') && !$(this).closest('input-disabled').length){
+					frameWork.updateCalendar(inputCalendar,null,$(this).attr('data-value'))
+				}
+			});
+
+
+
+		frameWork.addEvent(document.body,'blur','.input-calendar',function(e){	
+			e.preventDefault();
+			var inputCalendar = $(this);
+			frameWork.updateCalendar(inputCalendar);
 		});
 
 		frameWork.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
