@@ -137,6 +137,14 @@ html.theme-inverse,
   background: #292440;
   color: #FFFFFF; }
 
+::-moz-selection {
+  background: #0480fe;
+  color: #FFFFFF; }
+
+::selection {
+  background: #0480fe;
+  color: #FFFFFF; }
+
 body {
   text-align: left; }
   body.body-nav-sticky-offset {
@@ -337,7 +345,7 @@ em, i {
 a {
   color: #0480fe;
   text-decoration: none;
-  transition: 0.25s all ease-in-out; }
+  transition: 0.25s color ease-in-out; }
   a:hover {
     color: #d415af; }
 
@@ -1125,20 +1133,16 @@ table {
     background-color: rgba(212, 21, 175, 0.2); }
   .table-row-intensity-5 {
     background-color: rgba(252, 1, 167, 0.2); }
-  .table-row-disabled td,
-  .table-row-disabled .table-cell {
-    opacity: 0.5;
-    cursor: not-allowed; }
 
 /*** SYMBOLS ***/
 .symbol {
+  font: inherit;
   position: relative;
   display: inline-block;
   line-height: 1;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  font: inherit;
   flex: 0 0 auto;
   height: 1em;
   width: 1em;
@@ -1163,7 +1167,7 @@ table {
   .symbol:not([class*="symbol-"]):before, .symbol:not([class*="symbol-"]):after {
     background: none;
     /*s o nothing happends*/ }
-  .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-plus:before, .symbol-plus:after, .symbol-minus:before, .symbol-minus:after, .symbol-close:before, .symbol-close:after, .symbol-search:before, .symbol-search:after {
+  .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .symbol-plus:before, .symbol-plus:after, .symbol-minus:before, .symbol-minus:after, .symbol-close:before, .symbol-close:after, .symbol-search:before, .symbol-search:after {
     border-radius: 0.1em; }
   .symbol-plus:after,
   .active > .symbol-plus-toggle:after,
@@ -1188,30 +1192,30 @@ table {
     left: -.1em;
     right: -.1em;
     border-radius: 0.0666666667em; }
-  .symbol-plus:before, .symbol-minus:before, .symbol-close:before, .symbol-close:after, .symbol-arrow-up:after, .symbol-arrow-down:after, .symbol-arrow-left:after, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-down:before, .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-search:after {
+  .symbol-plus:before, .symbol-minus:before, .symbol-close:before, .symbol-close:after, .symbol-arrow-up:after, .symbol-arrow-down:after, .symbol-arrow-left:after, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-down:before, .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:after, .symbol-arrow-double-left:after, .symbol-arrow-double-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-down:before, .symbol-arrow-double-left:before, .symbol-arrow-double-right:before, .symbol-search:after {
     width: 0.2em; }
   .symbol-minus:before,
   .active > .symbol-minus-toggle:before,
   .open > .symbol-minus-toggle:before {
     content: none; }
-  .symbol-arrow-left, .symbol-arrow-right, .symbol-arrow-up, .symbol-arrow-down {
+  .symbol-arrow-left, .symbol-arrow-right, .symbol-arrow-up, .symbol-arrow-down, .symbol-arrow-double-left, .symbol-arrow-double-right, .symbol-arrow-double-up, .symbol-arrow-double-down {
     height: 0.6666666667em; }
-    .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after {
+    .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after {
       transform-origin: center 0.1em;
       height: 0.7333333333em;
       top: 0.1333333333em; }
-    .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-up:before, .symbol-arrow-down:before {
+    .symbol-arrow-left:before, .symbol-arrow-right:before, .symbol-arrow-up:before, .symbol-arrow-down:before, .symbol-arrow-double-left:before, .symbol-arrow-double-right:before, .symbol-arrow-double-up:before, .symbol-arrow-double-down:before {
       transform: rotate(-45deg); }
     .symbol-arrow-left:after, .symbol-arrow-right:after, .symbol-arrow-up:after, .symbol-arrow-down:after, .symbol-arrow-double-left:after, .symbol-arrow-double-right:after, .symbol-arrow-double-up:after, .symbol-arrow-double-down:after {
       transform: rotate(45deg); }
   .symbol-arrow-left:before, .symbol-arrow-left:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .symbol-arrow-down:before, .symbol-arrow-down:after {
-    top: 0.125em; }
+    top: 0.1333333333em; }
   .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after {
-    top: 0.5em; }
+    top: 0.5333333333em; }
   .symbol-arrow-double-left:before, .symbol-arrow-double-right:before, .symbol-arrow-double-up:before, .symbol-arrow-double-down:before {
-    box-shadow: 5.25px -5.25px 0 0; }
+    box-shadow: 0.35em -0.35em 0 0; }
   .symbol-arrow-double-left:after, .symbol-arrow-double-right:after, .symbol-arrow-double-up:after, .symbol-arrow-double-down:after {
-    box-shadow: -5.25px -5.25px 0 0; }
+    box-shadow: -0.35em -0.35em 0 0; }
   .symbol-close:before, .symbol-close:after {
     height: 1.25em; }
   .symbol-close:before {
@@ -1324,12 +1328,13 @@ table {
   background: #FFFFFF;
   font-size: 1rem;
   line-height: 1.6rem;
-  color: inherit;
+  color: #000000;
   font-weight: 400;
   text-transform: none;
   font-style: normal; }
   .theme-inverse .nav {
-    background: #292440; }
+    background: #292440;
+    color: #FFFFFF; }
 
 .nav * {
   margin: 0;
@@ -4301,8 +4306,10 @@ table {
 .dropdown {
   width: 300px;
   display: none;
-  color: inherit;
+  color: #000000;
   display: none; }
+  .theme-inverse .dropdown {
+    color: #FFFFFF; }
   .dropdown.open {
     display: block; }
   .dropdown, .dropdown ul, .dropdown li {
@@ -4479,11 +4486,6 @@ table {
     .btn-block-mobile {
       display: block;
       width: 100%; } }
-
-.btn.btn-disabled,
-.btn-disabled .btn {
-  cursor: not-allowed !important;
-  opacity: 0.5; }
 
 .btn.btn-large,
 .btn-group.btn-large .btn {
@@ -4866,9 +4868,6 @@ table {
 .input, .input-label, .fw-trumbowyg-editor, .fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%; }
-  .input-disabled.input, .input-disabled.input-label, .input-disabled.fw-trumbowyg-editor, .input-disabled.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-disabled:not([type="checkbox"]):not([type="radio"]), .input[disabled], .input-label[disabled], .fw-trumbowyg-editor[disabled], .fw-trumbowyg-textarea[disabled], .fw-trumbowyg-modal-box label input[disabled]:not([type="checkbox"]):not([type="radio"]) {
-    opacity: 0.5 !important;
-    cursor: not-allowed !important; }
 
 .input, .fw-trumbowyg-editor, .fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   font: inherit;
@@ -4879,7 +4878,7 @@ table {
   max-width: 100%; }
   .input:focus, .fw-trumbowyg-editor:focus, .fw-trumbowyg-textarea:focus, .fw-trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"]) {
     outline: none;
-    box-shadow: 0px 0 5px 0px #0480fe; }
+    box-shadow: 0px 0 5px 0px #0480fe !important; }
   .theme-inverse .input, .theme-inverse .fw-trumbowyg-editor, .theme-inverse .fw-trumbowyg-textarea, .theme-inverse .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .theme-inverse input:not([type="checkbox"]):not([type="radio"]) {
     background-color: rgba(141, 141, 141, 0.1); }
   .input-large.input, .input-large.fw-trumbowyg-editor, .input-large.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-large:not([type="checkbox"]):not([type="radio"]),
@@ -4950,88 +4949,6 @@ table {
   display: inline-block;
   margin-right: .5em; }
 
-input.input-calendar {
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  display: inline-block; }
-
-.input-calendar-ui-block {
-  padding: 0.75em 0.5em;
-  border-radius: 10px;
-  position: relative;
-  text-align: center;
-  color: inherit; }
-
-.input-calendar-ui-date:hover, .input-calendar-ui-date:focus, .input-calendar-ui-date.focus {
-  color: inherit;
-  background: rgba(141, 141, 141, 0.5); }
-
-.input-calendar-ui-date.active, .input-calendar-ui-date.active:hover {
-  color: #FFFFFF;
-  background: #0480fe; }
-
-.input-calendar-ui-grid {
-  padding-bottom: 0.75em; }
-
-.input-calendar-ui-heading {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  position: relative; }
-
-.input-calendar-ui-button {
-  color: inherit; }
-  .input-calendar-ui-button.input-calendar-ui.disabled {
-    opacity: .5; }
-
-.input-calendar-ui-button:hover {
-  color: #0480fe; }
-
-.input-calendar-ui-prev-year, .input-calendar-ui-prev-month {
-  order: -2; }
-
-.input-calendar-ui-next-year, .input-calendar-ui-next-month {
-  order: 3; }
-
-.input-calendar-ui-title {
-  margin-right: auto;
-  margin-left: auto; }
-
-.input-calendar-ui-prev-month {
-  margin-right: .25em; }
-
-.input-calendar-ui-prev-year {
-  margin-right: .75em; }
-
-.input-calendar-ui-next-month {
-  margin-left: .25em; }
-
-.input-calendar-ui-next-year {
-  margin-left: .75em; }
-
-.input-calendar-ui-days, .input-calendar-ui-dates {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: 1fr;
-  grid-gap: 2px; }
-  .input-calendar-ui-days:nth-child(n+2), .input-calendar-ui-dates:nth-child(n+2) {
-    margin-top: 2px; }
-
-.input-calendar-ui-days {
-  margin-bottom: 0.75em;
-  border-bottom: 1px solid;
-  opacity: .375;
-  font-size: 0.75em; }
-
-.input-calendar-ui-dates {
-  margin-bottom: 0.375em; }
-
-@media (max-width: 1279px) {
-  .input-calendar-ui-block {
-    padding: 0.5em 0.25em; } }
-
 .input-select, .input-single-line, .input-multiple-line, .input-calendar-ui, .input-editor, .fw-trumbowyg-editor, .fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   -webkit-appearance: none;
   appearance: none;
@@ -5091,6 +5008,18 @@ input.input-calendar {
     padding: 0;
     vertical-align: middle;
     display: flex; }
+  .input-select:focus::-webkit-input-placeholder, .input-single-line:focus::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input-calendar-ui:focus::-webkit-input-placeholder, .input-editor:focus::-webkit-input-placeholder, .fw-trumbowyg-editor:focus::-webkit-input-placeholder, .fw-trumbowyg-textarea:focus::-webkit-input-placeholder, .fw-trumbowyg-modal-box label input:focus:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder {
+    color: transparent !important; }
+  .input-select:focus:-moz-placeholder, .input-single-line:focus:-moz-placeholder, .input-multiple-line:focus:-moz-placeholder, .input-calendar-ui:focus:-moz-placeholder, .input-editor:focus:-moz-placeholder, .fw-trumbowyg-editor:focus:-moz-placeholder, .fw-trumbowyg-textarea:focus:-moz-placeholder, .fw-trumbowyg-modal-box label input:focus:-moz-placeholder:not([type="checkbox"]):not([type="radio"]) {
+    color: transparent !important; }
+  .input-select:focus:-ms-input-placeholder, .input-single-line:focus:-ms-input-placeholder, .input-multiple-line:focus:-ms-input-placeholder, .input-calendar-ui:focus:-ms-input-placeholder, .input-editor:focus:-ms-input-placeholder, .fw-trumbowyg-editor:focus:-ms-input-placeholder, .fw-trumbowyg-textarea:focus:-ms-input-placeholder, .fw-trumbowyg-modal-box label input:focus:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]) {
+    color: transparent !important; }
+  .focus.input-select::-webkit-input-placeholder, .focus.input-single-line::-webkit-input-placeholder, .focus.input-multiple-line::-webkit-input-placeholder, .focus.input-calendar-ui::-webkit-input-placeholder, .focus.input-editor::-webkit-input-placeholder, .focus.fw-trumbowyg-editor::-webkit-input-placeholder, .focus.fw-trumbowyg-textarea::-webkit-input-placeholder, .fw-trumbowyg-modal-box label input.focus:not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder {
+    color: transparent !important; }
+  .focus.input-select:-moz-placeholder, .focus.input-single-line:-moz-placeholder, .focus.input-multiple-line:-moz-placeholder, .focus.input-calendar-ui:-moz-placeholder, .focus.input-editor:-moz-placeholder, .focus.fw-trumbowyg-editor:-moz-placeholder, .focus.fw-trumbowyg-textarea:-moz-placeholder, .fw-trumbowyg-modal-box label input.focus:-moz-placeholder:not([type="checkbox"]):not([type="radio"]) {
+    color: transparent !important; }
+  .focus.input-select:-ms-input-placeholder, .focus.input-single-line:-ms-input-placeholder, .focus.input-multiple-line:-ms-input-placeholder, .focus.input-calendar-ui:-ms-input-placeholder, .focus.input-editor:-ms-input-placeholder, .focus.fw-trumbowyg-editor:-ms-input-placeholder, .focus.fw-trumbowyg-textarea:-ms-input-placeholder, .fw-trumbowyg-modal-box label input.focus:-ms-input-placeholder:not([type="checkbox"]):not([type="radio"]) {
+    color: transparent !important; }
   .nav .input-select, .nav .input-single-line, .nav .input-multiple-line, .nav .input-calendar-ui, .nav .input-editor, .nav .fw-trumbowyg-editor, .nav .fw-trumbowyg-textarea, .nav .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .nav input:not([type="checkbox"]):not([type="radio"]) {
     border-radius: 0 !important;
     padding-top: calc(  (  (5rem - (1px * 2)) - (1em * 2) ) * .5);
@@ -5300,6 +5229,152 @@ input.input-calendar {
         .input-group.input-group-responsive > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
           border-top-color: rgba(0, 0, 0, 0.1); } }
 
+.input-calendar {
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important; }
+  .input-calendar-ui {
+    vertical-align: top;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .input-calendar-ui-block {
+      padding: 0.6666666667em 0.6666666667em;
+      display: block;
+      white-space: nowrap;
+      position: relative;
+      color: inherit; }
+      .input-calendar-ui-block, .input-calendar-ui-block:after {
+        border-radius: 10px; }
+      .input-calendar-ui-block-adjacent {
+        opacity: 0.125 !important;
+        pointer-events: none !important; }
+    .input-calendar-ui-date {
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
+      .input-calendar-ui-date:after, .input-calendar-ui-date span {
+        pointer-events: none; }
+      .input-calendar-ui-date:after {
+        content: "";
+        z-index: -1;
+        background: currentColor;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        max-width: 4em;
+        height: 100%;
+        opacity: 0; }
+      .input-calendar-ui-date.disabled:after {
+        opacity: 0; }
+      .input-calendar-ui-date:hover, .input-calendar-ui-date:focus, .input-calendar-ui-date.focus {
+        color: inherit; }
+        .input-calendar-ui-date:hover:after, .input-calendar-ui-date:focus:after, .input-calendar-ui-date.focus:after {
+          opacity: .2; }
+        .input-calendar-ui-date:hover span, .input-calendar-ui-date:focus span, .input-calendar-ui-date.focus span {
+          color: inherit; }
+      .input-calendar-ui-date.active:after, .input-calendar-ui-date.active:hover:after {
+        opacity: 1; }
+        .input-calendar-ui:not(.input-default):not(.input-primary):not(.input-secondary):not(.input-accent):not(.input-neutral):not(.input-success):not(.input-caution):not(.input-error) .input-calendar-ui-date.active:after, .input-calendar-ui:not(.input-default):not(.input-primary):not(.input-secondary):not(.input-accent):not(.input-neutral):not(.input-success):not(.input-caution):not(.input-error) .input-calendar-ui-date.active:hover:after {
+          background: #0480fe; }
+      .input-calendar-ui-date.active span, .input-calendar-ui-date.active:hover span {
+        color: #FFFFFF; }
+    .input-calendar-ui-grid {
+      padding-bottom: 0.6666666667em; }
+    .input-calendar-ui-days, .input-calendar-ui-dates, .input-calendar-ui-heading {
+      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: repeat(7, minmax(min-content, 1fr));
+      grid-gap: 2px; }
+    .input-calendar-ui-input {
+      margin-bottom: 0.6666666667em;
+      padding-bottom: 0.6666666667em;
+      margin-left: -1.3333333333em;
+      margin-right: -1.3333333333em;
+      margin-top: calc(  (  (3rem - (1em * 1.6) ) * .5) * -1);
+      position: relative; }
+      .input-calendar-ui-input:last-child {
+        margin-bottom: calc(  (  (3rem - (1em * 1.6) ) * .5) * -1); }
+        .input-calendar-ui-input:last-child:after {
+          content: none; }
+      .input-small .input-calendar-ui-input {
+        margin-top: calc(  (  (2rem - (1em * 1.6) ) * .5) * -1);
+        position: relative; }
+        .input-small .input-calendar-ui-input:last-child {
+          margin-bottom: calc(  (  (2rem - (1em * 1.6) ) * .5) * -1); }
+      .input-large .input-calendar-ui-input {
+        margin-top: calc(  (  (3.3333333333rem - (1em * 1.6) ) * .5) * -1);
+        position: relative; }
+        .input-large .input-calendar-ui-input:last-child {
+          margin-bottom: calc(  (  (3.3333333333rem - (1em * 1.6) ) * .5) * -1); }
+      .input-calendar-ui-input:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: currentColor;
+        opacity: .25; }
+      .input-calendar-ui-input input {
+        box-shadow: none !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-width: 0;
+        width: 100%; }
+    .input-calendar-ui-heading {
+      padding-top: 0.6666666667em;
+      padding-bottom: 0.6666666667em;
+      position: relative; }
+    .input-calendar-ui-button {
+      color: inherit; }
+      .input-calendar-ui-button:hover {
+        color: #0480fe; }
+    .input-calendar-ui-block.disabled, .input-calendar-ui-block.disabled:hover, .input-calendar-ui-block.disabled:focus, .input-calendar-ui-block.disabled.focus,
+    .input-disabled .input-calendar-ui-block,
+    .input-disabled .input-calendar-ui-block:hover,
+    .input-disabled .input-calendar-ui-block:focus,
+    .input-disabled .input-calendar-ui-block.focus, .input-calendar-ui-button.disabled, .input-calendar-ui-button.disabled:hover, .input-calendar-ui-button.disabled:focus, .input-calendar-ui-button.disabled.focus,
+    .input-disabled .input-calendar-ui-button,
+    .input-disabled .input-calendar-ui-button:hover,
+    .input-disabled .input-calendar-ui-button:focus,
+    .input-disabled .input-calendar-ui-button.focus {
+      background: none !important;
+      color: inherit !important; }
+    .input-calendar-ui-navigation, .input-calendar-ui-title {
+      grid-row: 1; }
+    .input-calendar-ui-prev-year {
+      grid-column: 1; }
+    .input-calendar-ui-prev-month {
+      grid-column: 2; }
+    .input-calendar-ui-next-year {
+      grid-column: 7; }
+    .input-calendar-ui-next-month {
+      grid-column: 6; }
+    .input-calendar-ui-title {
+      grid-column: 3 / span 3; }
+    .input-calendar-ui-dropdown {
+      max-height: 300px;
+      overflow-y: scroll; }
+    .input-calendar-ui-days, .input-calendar-ui-dates {
+      grid-auto-rows: 1fr; }
+      .input-calendar-ui-days:nth-child(n+2), .input-calendar-ui-dates:nth-child(n+2) {
+        margin-top: 2px; }
+    .input-calendar-ui-days {
+      margin-bottom: 0.6666666667em;
+      border-bottom: 1px solid;
+      opacity: .375;
+      font-size: 0.75em; }
+    .input-calendar-ui-dates {
+      margin-bottom: 0.3333333333em; }
+  @media (max-width: 1279px) {
+    .input-calendar-ui-block {
+      padding: 0.3333333333em 0.3333333333em; } }
+
 .input-label.input-primary,
 .input-primary .input-label {
   color: #0480fe; }
@@ -5411,15 +5486,18 @@ fieldset {
   fieldset .input-wrapper {
     max-width: none;
     display: flex;
+    flex-wrap: wrap;
     padding-right: 0; }
     .special-form .input-wrapper-horizontal .input,
     .special-form .input-wrapper-horizontal .input-single-line,
     .special-form .input-wrapper-horizontal .input-multiple-line,
+    .special-form .input-wrapper-horizontal .input-calendar-ui,
     .special-form .input-wrapper-horizontal .input-select,
     .special-form .input-wrapper-horizontal .input-inline,
     fieldset .input-wrapper-horizontal .input,
     fieldset .input-wrapper-horizontal .input-single-line,
     fieldset .input-wrapper-horizontal .input-multiple-line,
+    fieldset .input-wrapper-horizontal .input-calendar-ui,
     fieldset .input-wrapper-horizontal .input-select,
     fieldset .input-wrapper-horizontal .input-inline {
       margin-left: 0;
@@ -5432,6 +5510,7 @@ fieldset {
   .special-form .input,
   .special-form .input-single-line,
   .special-form .input-multiple-line,
+  .special-form .input-calendar-ui,
   .special-form .input-select,
   .special-form .input-inline,
   .special-form .fw-trumbowyg-editor,
@@ -5439,6 +5518,7 @@ fieldset {
   fieldset .input,
   fieldset .input-single-line,
   fieldset .input-multiple-line,
+  fieldset .input-calendar-ui,
   fieldset .input-select,
   fieldset .input-inline,
   fieldset .fw-trumbowyg-editor,
@@ -5449,12 +5529,14 @@ fieldset {
     box-shadow: none !important; }
   .special-form .input-single-line,
   .special-form .input-multiple-line,
+  .special-form .input-calendar-ui,
   .special-form .input-select,
   .special-form .input-inline,
   .special-form .fw-trumbowyg-editor,
   .special-form .fw-trumbowyg-textarea,
   fieldset .input-single-line,
   fieldset .input-multiple-line,
+  fieldset .input-calendar-ui,
   fieldset .input-select,
   fieldset .input-inline,
   fieldset .fw-trumbowyg-editor,
@@ -5470,6 +5552,9 @@ fieldset {
     top: 100%;
     right: 0;
     margin-top: 30px; }
+  .special-form .input-calendar-ui,
+  fieldset .input-calendar-ui {
+    max-width: 400px; }
 
 /* 
 CUSTOM STYLES FOR TRUMBOWYG
@@ -6441,7 +6526,7 @@ CUSTOM STYLES FOR TRUMBOWYG
 .display-inline {
   display: inline !important; }
 
-input.input-calendar, .display-none, .sr-only {
+.input-calendar, .display-none, .sr-only {
   display: none !important; }
 
 /* TEXT CLASSES */
@@ -6896,6 +6981,12 @@ input.input-calendar, .display-none, .sr-only {
     display: block !important; }
   .hide-nonmobile {
     display: none !important; } }
+
+.table-row-disabled td,
+.table-row-disabled .table-cell, .btn.btn-disabled,
+.btn-disabled .btn, .input-disabled.input, .input-disabled.input-label, .input-disabled.fw-trumbowyg-editor, .input-disabled.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-disabled:not([type="checkbox"]):not([type="radio"]), .input[disabled], .input-label[disabled], .fw-trumbowyg-editor[disabled], .fw-trumbowyg-textarea[disabled], .fw-trumbowyg-modal-box label input[disabled]:not([type="checkbox"]):not([type="radio"]), .disabled {
+  cursor: not-allowed !important;
+  opacity: 0.5; }
 
 /*! 
 DASHBOARD / OUR CUSTOM STYLES

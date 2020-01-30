@@ -5,13 +5,13 @@
 
 $prefix: '.symbol';
 #{$prefix} {
+	font:inherit;
 	position:relative;
 	display:inline-block;
 	line-height:1;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-	font:inherit;
 	flex: 0 0 auto; //retain dimensions
 	height: 1em; //bitch does weird overflow scroll shit on where it shouldnt on things i want to scroll when overflowing and shit so bitchs height is like that now
 	width: 1em;
@@ -212,11 +212,11 @@ $prefix: '.symbol';
 				}
 
 				&:before{
-					box-shadow: (1.5px  * 3.5) (1.5px  * -3.5) 0 0;
+					box-shadow: em((1.5px  * 3.5)/$body-font-size) em((1.5px  * -3.5)/$body-font-size) 0 0;
 				}
 
 				&:after{
-					box-shadow: (1.5px  * -3.5) (1.5px  * -3.5) 0 0;
+					box-shadow: em((1.5px  * -3.5)/$body-font-size) em((1.5px  * -3.5)/$body-font-size) 0 0;
 				}
 			}
 		}
