@@ -1328,12 +1328,13 @@ table {
   background: #FFFFFF;
   font-size: 1rem;
   line-height: 1.6rem;
-  color: inherit;
+  color: #000000;
   font-weight: 400;
   text-transform: none;
   font-style: normal; }
   .theme-inverse .nav {
-    background: #292440; }
+    background: #292440;
+    color: #FFFFFF; }
 
 .nav * {
   margin: 0;
@@ -4305,8 +4306,10 @@ table {
 .dropdown {
   width: 300px;
   display: none;
-  color: inherit;
+  color: #000000;
   display: none; }
+  .theme-inverse .dropdown {
+    color: #FFFFFF; }
   .dropdown.open {
     display: block; }
   .dropdown, .dropdown ul, .dropdown li {
@@ -5239,30 +5242,59 @@ table {
     user-select: none; }
     .input-calendar-ui-block {
       padding: 0.6666666667em 0.6666666667em;
-      border-radius: 10px;
+      display: block;
+      white-space: nowrap;
       position: relative;
-      color: inherit;
-      max-width: 4em;
-      width: 100%;
-      margin: auto; }
+      color: inherit; }
+      .input-calendar-ui-block, .input-calendar-ui-block:after {
+        border-radius: 10px; }
       .input-calendar-ui-block-adjacent {
         opacity: 0.125 !important;
         pointer-events: none !important; }
-    .input-calendar-ui-date:hover, .input-calendar-ui-date:focus, .input-calendar-ui-date.focus {
-      color: inherit;
-      background: rgba(141, 141, 141, 0.5); }
-    .input-calendar-ui-date.active, .input-calendar-ui-date.active:hover {
-      color: #FFFFFF;
-      background: #0480fe; }
+    .input-calendar-ui-date {
+      position: relative;
+      z-index: 1;
+      overflow: hidden; }
+      .input-calendar-ui-date:after, .input-calendar-ui-date span {
+        pointer-events: none; }
+      .input-calendar-ui-date:after {
+        content: "";
+        z-index: -1;
+        background: currentColor;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        max-width: 4em;
+        height: 100%;
+        opacity: 0; }
+      .input-calendar-ui-date.disabled:after {
+        opacity: 0; }
+      .input-calendar-ui-date:hover, .input-calendar-ui-date:focus, .input-calendar-ui-date.focus {
+        color: inherit; }
+        .input-calendar-ui-date:hover:after, .input-calendar-ui-date:focus:after, .input-calendar-ui-date.focus:after {
+          opacity: .2; }
+        .input-calendar-ui-date:hover span, .input-calendar-ui-date:focus span, .input-calendar-ui-date.focus span {
+          color: inherit; }
+      .input-calendar-ui-date.active:after, .input-calendar-ui-date.active:hover:after {
+        opacity: 1; }
+        .input-calendar-ui:not(.input-default):not(.input-primary):not(.input-secondary):not(.input-accent):not(.input-neutral):not(.input-success):not(.input-caution):not(.input-error) .input-calendar-ui-date.active:after, .input-calendar-ui:not(.input-default):not(.input-primary):not(.input-secondary):not(.input-accent):not(.input-neutral):not(.input-success):not(.input-caution):not(.input-error) .input-calendar-ui-date.active:hover:after {
+          background: #0480fe; }
+      .input-calendar-ui-date.active span, .input-calendar-ui-date.active:hover span {
+        color: #FFFFFF; }
     .input-calendar-ui-grid {
       padding-bottom: 0.6666666667em; }
     .input-calendar-ui-days, .input-calendar-ui-dates, .input-calendar-ui-heading {
       justify-content: space-evenly;
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(7, minmax(min-content, 1fr));
       grid-gap: 2px; }
     .input-calendar-ui-input {
       margin-bottom: 0.6666666667em;
+      padding-bottom: 0.6666666667em;
       margin-left: -1.3333333333em;
       margin-right: -1.3333333333em;
       margin-top: calc(  (  (3rem - (1em * 1.6) ) * .5) * -1);
@@ -5271,6 +5303,16 @@ table {
         margin-bottom: calc(  (  (3rem - (1em * 1.6) ) * .5) * -1); }
         .input-calendar-ui-input:last-child:after {
           content: none; }
+      .input-small .input-calendar-ui-input {
+        margin-top: calc(  (  (2rem - (1em * 1.6) ) * .5) * -1);
+        position: relative; }
+        .input-small .input-calendar-ui-input:last-child {
+          margin-bottom: calc(  (  (2rem - (1em * 1.6) ) * .5) * -1); }
+      .input-large .input-calendar-ui-input {
+        margin-top: calc(  (  (3.3333333333rem - (1em * 1.6) ) * .5) * -1);
+        position: relative; }
+        .input-large .input-calendar-ui-input:last-child {
+          margin-bottom: calc(  (  (3.3333333333rem - (1em * 1.6) ) * .5) * -1); }
       .input-calendar-ui-input:after {
         content: "";
         display: block;

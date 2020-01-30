@@ -12,6 +12,50 @@
 		
 		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class="open"></i></h1>
 		<div class="accordion open">
+
+
+		<div class="position-relative">
+			<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
+			<div id="dropcal" class="dropdown" data-dropdown-width="100%">
+				<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
+
+					<div class="flex-col-md-4 flex-col-sm-6">
+
+						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+							<label class="input-label">From</label>
+							<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+						</div>
+					</div>
+
+					
+					<div class="flex-col-md-4 flex-col-sm-6">
+
+						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+							<label class="input-label">To</label>
+							<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+						</div>
+					</div>
+
+					
+					<div class="flex-col-md-4 flex-col-sm-12">
+						<div class="input-label">Or by Month</div>
+						<ul class="no-padding-left">
+
+							<li><a href="#">Jan 2018</a></li>
+							<li><a href="#">Feb 2018</a></li>
+							<li><a href="#">March 2018</a></li>
+							<li><a href="#">April 2018</a></li>
+							<li><hr class="dropdown-separator"></li>
+							<li><a href="#">Today</a></li>
+							<li><a href="#">Last 3 days</a></li>
+							<li><a href="#">Last week</a></li>
+							<li><a href="#">Last Month</a></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
 			The div is somewhere here... suck a dick
 			<input type="text" class="input input-calendar" data-calendar-start-day="0"
 			data-calendar-disabled-dates="2020-03-01,2020-03-02"
@@ -62,6 +106,8 @@
 
 			<h3>color classes</h3>
 
+
+
 			<input type="text" class="input input-calendar input-primary" data-calendar-start-day="0"
 			data-calendar-text-input="true"
 				value="2020-01-05" />
@@ -80,6 +126,10 @@
 			<input type="text" class="input input-calendar input-error" data-calendar-start-day="5"
 			data-calendar-text-input="true"
 			value="2020-06-05" />
+
+			<!-- <input type="text" class="input input-calendar input-primary" 
+				value="2020-01-05" /><input type="text" class="input input-calendar input-secondary" value="2020-02-05" /><input type="text" class="input input-calendar input-accent" value="2020-03-05" /><input type="text" class="input input-calendar input-success"value="2020-04-05" /><input type="text" class="input input-calendar input-caution"value="2020-05-05" /><input type="text" class="input input-calendar input-error"
+			value="2020-06-05" /> -->
 
 			<h3>in input-group-vertical</h3>
 			<div class="input-group input-group-vertical">
@@ -4906,10 +4956,10 @@
 </div>
 
 		<style>
-			.accordion *[class*="background-"]:not(*[class*="clip"]),
-			.accordion .flex-child,
-			.accordion *[class*="flex-col-"],
-			.accordion *[class*="color-"]:not(.symbol) {
+			.accordion.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]),
+			.accordion.accordion:nth-child(n+9) .flex-child,
+			.accordion.accordion:nth-child(n+9) *[class*="flex-col-"],
+			.accordion.accordion:nth-child(n+9) *[class*="color-"]:not(.symbol) {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
 			}
@@ -4943,15 +4993,15 @@
 
 			}
 
-			.accordion .flex-child,
-			.accordion *[class*="flex-col-"] {
+			.accordion:nth-child(n+9) .flex-child,
+			.accordion:nth-child(n+9) *[class*="flex-col-"] {
 				background: var(--theme-background-contrast);
 				min-height: 200px;
 
 			}
 
-			.accordion *[class*="color-"],
-			.accordion *[class*="background-"]:not(*[class*="clip"]){
+			.accordion:nth-child(n+9) *[class*="color-"],
+			.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]){
 
 				text-shadow:
 

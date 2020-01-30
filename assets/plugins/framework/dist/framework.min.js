@@ -128,15 +128,16 @@ window.jQuery && jQuery.noConflict();
 
 	frameWork.docReady = function(fn) {
 		if (document.readyState != 'loading'){
-		  fn();
+			fn();
 		} else {
-		  document.addEventListener('DOMContentLoaded', fn);
+			document.addEventListener('DOMContentLoaded', fn);
 		}
-	  }
+	}
 
 	
 
-	  _.dateToParse = function(date) {
+	//make it objoct
+	_.dateToParse = function(date) {
 
 
 	
@@ -156,6 +157,7 @@ window.jQuery && jQuery.noConflict();
 				hr = date.getHours() || null;
 				mn = date.getMinutes() || null;
 
+
 			}else{
 
 				var dateTimeArr = date.split('T') || [];
@@ -170,15 +172,14 @@ window.jQuery && jQuery.noConflict();
 					timeArr = dateTimeArr[1].split(':');
 				}
 		
-				yr = dateArr[0] || null;
-				mo = (dateArr[1] - 1) || null;
-				dy = dateArr[2] || null;
-				hr = timeArr[0] || null;
-				mn = timeArr[1] || null;
+				yr = parseInt(dateArr[0]) || null;
+				mo = parseInt((dateArr[1]) - 1) || null;
+				dy = parseInt(dateArr[2]) || null;
+				hr = parseInt(timeArr[0]) || null;
+				mn = parseInt(timeArr[1]) || null;
 			}
 
 			var toReturn = false;
-
 			if(Object.prototype.toString.call(new Date(yr,mo,dy,hr,mn)) == '[object Date]'){
 				toReturn = new Date(yr,mo,dy,hr,mn);
 			}
@@ -190,22 +191,22 @@ window.jQuery && jQuery.noConflict();
 	_.datetimeFormatPresets = {
 		HumanDate: {
 			placeholder:"mm/dd/yyyy",
-			pattern:"",
+			pattern:/^\d{2}\/\d{2}\/\d{4}$/,
 			template:"mm/dd/yy"
 		},
-		HumanTime24: {
-			placeholder:"hh:mm",
-			pattern:"",
-			template:"HH:MM"
-		},
-		HumanTime12: {
-			placeholder:"hh:mm",
-			pattern:"",
-			template:"HH:MM"
-		},
+		// HumanTime24: {
+		// 	placeholder:"hh:mm",
+		// 	pattern:"",
+		// 	template:"HH:MM"
+		// },
+		// HumanTime12: {
+		// 	placeholder:"hh:mm",
+		// 	pattern:"",
+		// 	template:"HH:MM"
+		// },
 		Value: {
 			placeholder:"yyyy-mm-dd",
-			pattern:"(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))",
+			pattern:/^\d{4}[-]\d{2}[-]\d{2}$/,
 			template:"yy-mm-dd"
 		},
 		// ValueDateTime:{
@@ -702,8 +703,63 @@ window.jQuery && jQuery.noConflict();
 		
 	}
 	
+	//range only is pag kwan di sya isa isang date pangmaramihan
+	_.dateIsValid = function(date,args,rangeOnly){
+		var d = _.dateToParse(date);
+		var checkAgainst = args.disabledDates.split(',');
+		var toReturn = true;
+
+		rangeOnly = rangeOnly || false; //range,spot
+
+
+		if(!rangeOnly){
+			//if in disabled dates
+			if(
+				checkAgainst.indexOf(_.dateToVal(d)) > -1
+			){
+				// console.warn('value is declared disabled specifically || ',_.dateToVal(d));;
+				toReturn = false;
+			}
+
+			//weekend
+			if(
+				(checkAgainst.indexOf('weekends') > -1)
+				&& (d.getDay() == 0 || d.getDay() == 6)
+			){
+				// console.warn('value was a weekend || ',_.dateToVal(d),_.dateToVal(date));
+				toReturn = false;
+			}
+
+		}
+
+		//in the past
+		var dateNow = new Date();
+
+		dateNow.setHours(0,0,0,0);
+		if(
+			(checkAgainst.indexOf('past') > -1)
+			&& (d < dateNow)
+		){
+			// console.warn('value was in the past || ',_.dateToVal(date),'\nversus ',_.dateToVal(dateNow));
+			toReturn = false;
+		}
+
+
+		//if  in range of min or max
+		if(
+			(args.max && _.dateToParse(args.max) <= d)
+			|| (args.min && d <= _.dateToParse(args.min))
+		) {
+			// console.warn('value not in max and width || ',_.dateToVal(d));;
+			toReturn = false;
+		}
+
+
+		return toReturn;
+	};
 	
-	_.createCalendarUi = function(inputCalendar,valueForGrid){
+	
+	_.createCalendarUi = function(inputCalendar,valueForGrid,args){
 
 
 		if(inputCalendar){
@@ -714,90 +770,6 @@ window.jQuery && jQuery.noConflict();
 			uiPrefix = function(noDash) {
 				noDash = noDash || false;
 				return noDash ? 'input-calendar-ui' : 'input-calendar-ui-';
-			};
-
-			var arr =  {
-				class: inputCalendar.getAttribute('class'),
-				startDay: inputCalendar.getAttribute('data-calendar-start-day'), // 0,1,2,3,4,5,6
-				min: inputCalendar.getAttribute('data-calendar-min') || inputCalendar.getAttribute('min'),
-				max: inputCalendar.getAttribute('data-calendar-max') || inputCalendar.getAttribute('max'),
-				dropdownYearSpan: inputCalendar.getAttribute('data-calendar-dropdown-year-span'),
-				disabledDates: inputCalendar.getAttribute('data-calendar-disabled-dates'),
-				textInput:inputCalendar.getAttribute('data-calendar-text-input'),
-			};
-
-			var defaults = {
-				class: '',
-				startDay: 0, // su,mo,tu,we,th,fr,sa,
-				min: null,
-				max:null,
-				dropdownYearSpan: 1,
-				disabledDates: '',
-				textInput:false,
-			};
-			
-			var args = _.parseArgs(arr,defaults);
-
-
-			if(parseInt(arr.dropdownYearSpan) <= 0){
-				args.dropdownYearSpan = defaults.dropdownYearSpan;
-			}
-
-			args.startDay = parseInt(args.startDay) % 7;
-
-			//range only is pag kwan di sya isa isang date pangmaramihan
-			function dateIsValid(date,rangeOnly){
-				var d = _.dateToParse(date);
-				var checkAgainst = args.disabledDates.split(',');
-				var toReturn = true;
-
-				rangeOnly = rangeOnly || false; //range,spot
-
-
-				if(!rangeOnly){
-					//if in disabled dates
-					if(
-						checkAgainst.indexOf(_.dateToVal(d)) > -1
-					){
-						// console.warn('value is declared disabled specifically || ',_.dateToVal(d));;
-						toReturn = false;
-					}
-
-					//weekend
-					if(
-						(checkAgainst.indexOf('weekends') > -1)
-						&& (d.getDay() == 0 || d.getDay() == 6)
-					){
-						// console.warn('value was a weekend || ',_.dateToVal(d),_.dateToVal(date));
-						toReturn = false;
-					}
-
-				}
-
-				//in the past
-				var dateNow = new Date();
-
-				dateNow.setHours(0,0,0,0);
-				if(
-					(checkAgainst.indexOf('past') > -1)
-					&& (d < dateNow)
-				){
-					// console.warn('value was in the past || ',_.dateToVal(date),'\nversus ',_.dateToVal(dateNow));
-					toReturn = false;
-				}
-
-
-				//if  in range of min or max
-				if(
-					(args.max && _.dateToParse(args.max) <= d)
-					|| (args.min && d <= _.dateToParse(args.min))
-				) {
-					// console.warn('value not in max and width || ',_.dateToVal(d));;
-					toReturn = false;
-				}
-
-
-				return toReturn;
 			};
 
 			var theUi = {};
@@ -834,7 +806,7 @@ window.jQuery && jQuery.noConflict();
 					theUi.container.appendChild(theUi.input);
 					theUi.input.setAttribute('class',uiPrefix()+'input')
 
-					theUi.input.innerHTML = '<input class="input input-single-line" type="text" placeholder="MM/DD/YYYY" />';
+					theUi.input.innerHTML = '<input class="input input-single-line" type="text" maxlength="10" placeholder="MM/DD/YYYY" />';
 				}
 
 			}
@@ -867,7 +839,7 @@ window.jQuery && jQuery.noConflict();
 									-1
 								)
 							);
-							validness = dateIsValid(new Date(currYear,currMonth,0),true);
+							validness = _.dateIsValid(new Date(currYear,currMonth,0),args,true);
 							break;
 						
 						case 'prev-year':
@@ -878,7 +850,7 @@ window.jQuery && jQuery.noConflict();
 									-12
 								)
 							);
-							validness = dateIsValid(new Date(currYear-1,currMonth,0),true);
+							validness = _.dateIsValid(new Date(currYear-1,currMonth,0),args,true);
 							break;
 
 						case 'next-month':
@@ -889,7 +861,7 @@ window.jQuery && jQuery.noConflict();
 									1
 								)
 							);
-							validness = dateIsValid(new Date(currYear,currMonth+1,1),true);
+							validness = _.dateIsValid(new Date(currYear,currMonth+1,1),args,true);
 							break;
 
 						case 'next-year':
@@ -900,19 +872,19 @@ window.jQuery && jQuery.noConflict();
 									12
 								)
 							);
-							validness = dateIsValid(new Date(currYear+1,currMonth,1),true);
+							validness = _.dateIsValid(new Date(currYear+1,currMonth,1),args,true);
 							break;
 					}
 
 					//kung yung at least yung last day nang prev or first day ng next man lang ay valid pwidi sya i doot doot
 
 					var htmlString = '<a href=""class="'
-					+ (!validness ? 'disabled ' : '')
-					+uiPrefix()+'navigation '
-					+uiPrefix()+'button '
-					+uiPrefix()+buttonClass+'" data-value="'+arrowDate+'">'
-						+'<i class="'+uiPrefix()+'symbol symbol '+symbolClass+'"></i>'
-					+'</a>';
+						+ (!validness ? 'disabled ' : '')
+						+uiPrefix()+'navigation '
+						+uiPrefix()+'button '
+						+uiPrefix()+buttonClass+'" data-value="'+arrowDate+'">'
+							+'<i class="'+uiPrefix()+'symbol symbol '+symbolClass+'"></i>'
+						+'</a>';
 
 
 					return htmlString;
@@ -982,7 +954,7 @@ window.jQuery && jQuery.noConflict();
 						// console.warn(i,'\nkwan ano ni\n',listItemDate,dateForValidation);
 
 
-						if(dateIsValid(dateForValidation,true)){
+						if(_.dateIsValid(dateForValidation,args,true)){
 			
 							var currClass = (i == 0) ? 'active' : '';
 							var listItem = '<li class=" '+currClass+'">'
@@ -1011,9 +983,9 @@ window.jQuery && jQuery.noConflict();
 					+uiPrefix()+ 'block '
 					+uiPrefix()+'date '
 					+customClass
-					+'">'
+					+'"><span>'
 						+ date.getDate()
-					+ '</a>';
+					+ '</span></a>';
 
 				}
 
@@ -1087,7 +1059,7 @@ window.jQuery && jQuery.noConflict();
 			
 								var dateBlockPrev = generateBlock(
 									loopDatePrev,
-									(uiPrefix()+ 'block-adjacent ') + (!dateIsValid(loopDatePrev) ? 'disabled' : '')
+									(uiPrefix()+ 'block-adjacent ') + (!_.dateIsValid(loopDatePrev,args) ? 'disabled' : '')
 								);
 			
 			
@@ -1106,7 +1078,7 @@ window.jQuery && jQuery.noConflict();
 					for(i = 1; i <= currLastDate.getDate(); i++) {
 						var dateBlockCurr = generateBlock(
 							new Date(currYear,currMonth,i),
-							(!dateIsValid(new Date(currYear,currMonth,i))) ? 'disabled' : ''
+							(!_.dateIsValid(new Date(currYear,currMonth,i),args)) ? 'disabled' : ''
 						);
 
 
@@ -1128,7 +1100,7 @@ window.jQuery && jQuery.noConflict();
 
 							var dateBlockNext = generateBlock(
 								loopDateNext,
-								(uiPrefix()+ 'block-adjacent ') + (!dateIsValid(loopDateNext) ? 'disabled' : '')
+								(uiPrefix()+ 'block-adjacent ') + (!_.dateIsValid(loopDateNext,args) ? 'disabled' : '')
 							);
 
 							theUi.dates.innerHTML += dateBlockNext;
@@ -1138,18 +1110,47 @@ window.jQuery && jQuery.noConflict();
 	}
 
 		//updates both input field and UI
-	frameWork.updateCalendar = function(inputCalendar,newValue,valueForGrid,updateInput){
+	frameWork.updateCalendar = function(inputCalendar,newValue,valueForGrid){
 		
 		theValue = newValue || _.dateToVal(inputCalendar.value );
 		valueForGrid = valueForGrid || theValue || _.dateToVal(new Date());
-		updateInput = updateInput || true;
 
-		console.log('huy',inputCalendar.value);
+		var arr =  {
+			class: inputCalendar.getAttribute('class'),
+			startDay: inputCalendar.getAttribute('data-calendar-start-day'), // 0,1,2,3,4,5,6
+			min: inputCalendar.getAttribute('data-calendar-min') || inputCalendar.getAttribute('min'),
+			max: inputCalendar.getAttribute('data-calendar-max') || inputCalendar.getAttribute('max'),
+			dropdownYearSpan: inputCalendar.getAttribute('data-calendar-dropdown-year-span'),
+			disabledDates: inputCalendar.getAttribute('data-calendar-disabled-dates'),
+			textInput:inputCalendar.getAttribute('data-calendar-text-input'),
+		};
 
-		//set up calendar
-		_.createCalendarUi(inputCalendar,valueForGrid);
+		var defaults = {
+			class: '',
+			startDay: 0, // su,mo,tu,we,th,fr,sa,
+			min: null,
+			max:null,
+			dropdownYearSpan: 1,
+			disabledDates: '',
+			textInput:false,
+		};
+		
+		var args = _.parseArgs(arr,defaults);
+	
+	
+		if(parseInt(arr.dropdownYearSpan) <= 0){
+			args.dropdownYearSpan = defaults.dropdownYearSpan;
+		}
+
+		args.startDay = parseInt(args.startDay) % 7;
+
+		if(_.dateIsValid(theValue,args) || !theValue){
+			//set up calendar
+			_.createCalendarUi(inputCalendar,valueForGrid,args);
+		}
 
 		if(theValue){
+
 			//update the actual butt
 			inputCalendar.setAttribute('value',theValue);
 		
@@ -1167,16 +1168,11 @@ window.jQuery && jQuery.noConflict();
 					}
 				});
 
-				if(updateInput){
-					var inputField = inputCalendar.parentNode.querySelector('.input-calendar-ui-input input');
+				var inputField = inputCalendar.parentNode.querySelector('.input-calendar-ui-input input');
 
-					console.log(inputCalendar.querySelector('.input-calendar-ui-input input'));
-
-					if(inputField) {
-						inputField.value = _.dateToHuman(theValue)
-					}
+				if(inputField) {
+					inputField.value = _.dateToHuman(theValue)
 				}
-
 		}
 			
 
@@ -1753,6 +1749,42 @@ window.jQuery && jQuery.noConflict();
 			frameWork.updateCalendar(inputCalendar);
 		});
 
+		frameWork.addEvent(document.body,'keyup','.input-calendar-ui-input input',function(e){	
+			var inputCalendar = e.target.closest('.input-calendar-ui').querySelector('.input.input-calendar');
+
+
+			var v = e.target.value;
+			if (v.match(/^\d{2}$/) !== null) {
+				e.target.value = v + '/';
+			} else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+				e.target.value = v + '/';
+			}
+
+			var pattern = new RegExp(_.datetimeFormatPresets.HumanDate.pattern);
+
+			var isValid = pattern.test(v);
+
+
+
+			if(isValid){
+				var theValue = v.split('/');
+
+				var y = theValue[2] ||  '';
+				var m = theValue[0] || '';
+				var d = theValue[1] || '';
+	
+				var preParsedVal = y+'-'+m+'-'+d;
+
+				console.log
+
+				frameWork.updateCalendar(inputCalendar,preParsedVal);
+			}
+
+		
+			
+			
+		});
+
 		frameWork.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 
@@ -1799,6 +1831,8 @@ window.jQuery && jQuery.noConflict();
 				if( selector ){
 
 					var width =  selector.getAttribute('data-dropdown-width') || clicked.getAttribute('data-dropdown-width') || null;
+
+					console.log('what the dick', selector.getAttribute('data-dropdown-width'));
 					
 					if(width) {
 						selector.style.width = width;
@@ -1829,7 +1863,9 @@ window.jQuery && jQuery.noConflict();
 
 						document.querySelectorAll('.dropdown').forEach(function(dropdown){
 							// frameWork.slideUp( dropdown );
-							dropdown.classList.remove('open');
+							if (!dropdown.querySelectorAll('.dropdown')){
+								dropdown.classList.remove('open');
+							}
 						});
 						document.querySelectorAll('*[data-toggle="dropdown"]').forEach(function(toggler){
 							toggler.classList.remove('open');

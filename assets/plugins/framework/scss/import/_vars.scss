@@ -271,7 +271,8 @@
 			$nav-item-height: 35px !default;
 		$nav-font-size: $body-font-size !default;
 		$nav-line-height: $body-line-height !default;
-		$nav-color: inherit !default;
+		$nav-color: $theme-color !default;
+			$nav-color-inverse: $theme-color-inverse !default;
 			$nav-color-hover: $brand-color-primary !default;
 		$nav-font-weight: 400 !default;
 		$nav-font-style: normal !default;
@@ -561,7 +562,7 @@
 				$input-calendar-block-border-radius: $border-radius-base !default;
 
 				$input-calendar-date-hover-color: inherit !default;
-				$input-calendar-date-hover-background: rgba($brand-color-neutral,.5) !default;
+				// $input-calendar-date-hover-background: rgba($brand-color-neutral,.5) !default;
 
 
 				$input-calendar-date-heading-button-color-hover: $brand-color-primary !default;
