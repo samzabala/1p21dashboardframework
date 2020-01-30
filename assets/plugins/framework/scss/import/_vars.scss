@@ -163,6 +163,9 @@
 		$body-mono-background: rgba($brand-color-base,.1)!default;
 			$body-pre-padding: $gutter-micro!default;
 
+		$body-selection-background: $brand-color-primary !default;
+		$body-selection-color: $brand-color-background !default;
+
 		$global-disabled-opacity: .5 !default;
 
 		$body-ellipsis-multiple-factor: 2 !default;
@@ -268,7 +271,8 @@
 			$nav-item-height: 35px !default;
 		$nav-font-size: $body-font-size !default;
 		$nav-line-height: $body-line-height !default;
-		$nav-color: inherit !default;
+		$nav-color: $theme-color !default;
+			$nav-color-inverse: $theme-color-inverse !default;
 			$nav-color-hover: $brand-color-primary !default;
 		$nav-font-weight: 400 !default;
 		$nav-font-style: normal !default;
@@ -391,6 +395,7 @@
 		$popper-background-inverse: $theme-background-inverse !default;
 
 		$dropdown-width: 300px !default;
+		$dropdown-active-color: $brand-color-primary !default;
 
 		$tooltip-max-width: 300px !default;
 
@@ -550,25 +555,23 @@
 			//calendar
 				$input-calendar-gap: 2px;
 
-				$input-calendar-block-gutter-x: .5em !default;
-					$input-calendar-block-gutter-x-mobile: .25em !default;
-					$input-calendar-block-gutter-y: .75em !default;
-						$input-calendar-block-gutter-y-mobile: .5em !default;
+				$input-calendar-block-gutter-x: 10px !default;
+					$input-calendar-block-gutter-x-mobile: 5px !default;
+					$input-calendar-block-gutter-y: 10px !default;
+						$input-calendar-block-gutter-y-mobile: 5px !default;
 				$input-calendar-block-border-radius: $border-radius-base !default;
 
 				$input-calendar-date-hover-color: inherit !default;
-				$input-calendar-date-hover-background: rgba($brand-color-neutral,.5) !default;
+				// $input-calendar-date-hover-background: rgba($brand-color-neutral,.5) !default;
+
+
+				$input-calendar-date-heading-button-color-hover: $brand-color-primary !default;
 
 				$input-calendar-date-active-color: $brand-color-background !default;
 				$input-calendar-date-active-background: $brand-color-primary !default;
 
 				$input-calendar-days-border-width: 1px !default;
 				$input-calendar-days-font-size: .75em !default;
-				$input-calendar-days-border-color: $brand-color-neutral !default;
-				$input-calendar-days-color: $brand-color-neutral !default;
-
-					$input-calendar-days-border-color-inverse:$input-calendar-days-border-color !default;
-					$input-calendar-days-color-inverse: $input-calendar-days-color !default;
 
 		//special-form
 			$special-form-gutter-x: 35px !default;

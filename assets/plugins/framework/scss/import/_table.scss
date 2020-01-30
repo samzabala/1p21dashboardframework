@@ -228,8 +228,7 @@ $prefix: '.table';
 			&-disabled {
 				td,
 				#{$prefix}-cell {
-					opacity: $global-disabled-opacity;
-					cursor: not-allowed;
+					@extend %for-disabled;
 				}
 			}
 		}
