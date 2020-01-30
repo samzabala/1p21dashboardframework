@@ -58,6 +58,7 @@ function app_init_content($slug = ''){
 			case 'debug':
 			case 'profiles':
 			case 'last-activity':
+				case 'last-activity-2':
 			case 'login':
 			case 'unique-links':
 				app_get_template_part('template/'.$template_part);
