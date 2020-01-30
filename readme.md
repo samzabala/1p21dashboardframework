@@ -19,6 +19,59 @@ will separate dashboard and framework one the bois are readeh
 *	[1p21 Dashboard Framework](https://github.com/samzabala/framework/)
 
 
+### ***NEW***
+
+Calendar ui dropdown markup
+
+```html
+<!-- Container/ ancestor with position to validly position dropdown-->
+<div class="position-relative">
+	<!-- toggle for dropdown -->
+	<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
+
+	<!-- dropdown -->
+	<div id="dropcal" class="dropdown" data-dropdown-width="100%">
+		<div class="flex-grid flex-wrap flex-grid-no-gutter-y"">
+
+			<div class="flex-col-md-4 flex-col-sm-6">
+
+				<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+					<label class="input-label">From</label>
+					<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+				</div>
+			</div>
+
+			
+			<div class="flex-col-md-4 flex-col-sm-6">
+
+				<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+					<label class="input-label">To</label>
+					<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+				</div>
+			</div>
+
+			
+			<div class="flex-col-md-4 flex-col-sm-12">
+				<div class="input-label">Or by Month</div>
+				<ul class="no-padding-left">
+
+					<li><a href="#">Jan 2018</a></li>
+					<li><a href="#">Feb 2018</a></li>
+					<li><a href="#">March 2018</a></li>
+					<li><a href="#">April 2018</a></li>
+					<li><hr class="dropdown-separator"></li>
+					<li><a href="#">Today</a></li>
+					<li><a href="#">Last 3 days</a></li>
+					<li><a href="#">Last week</a></li>
+					<li><a href="#">Last Month</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+```
+
 # Assets Flowchart
 [Flowchart](assets-flow-chart.png)
 
