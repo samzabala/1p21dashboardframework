@@ -340,6 +340,39 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/docs/images/input-calendar-color.png": {
+		"ft": 32768,
+		"iS": 400906,
+		"oA": 0,
+		"oAP": "/docs/images/input-calendar-color.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/input-calendar-size.png": {
+		"ft": 32768,
+		"iS": 146040,
+		"oA": 0,
+		"oAP": "/docs/images/input-calendar-size.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/images/input-calendar.png": {
+		"ft": 32768,
+		"iS": 59011,
+		"oA": 0,
+		"oAP": "/docs/images/input-calendar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/docs/images/input-fieldset.png": {
 		"ft": 32768,
 		"iS": 120996,
@@ -1232,10 +1265,10 @@
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "/dist/framework.min.js",
-		"oF": 2,
+		"oAP": "/js/framework.min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1243,10 +1276,10 @@
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
-		"oAP": "/dist/framework.plugged.min.js",
-		"oF": 2,
+		"oAP": "/js/framework.plugged.min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1907,7 +1940,7 @@
 "projectAttributes": {
 	"creationDate": 597863011.85669196,
 	"displayValue": "framework",
-	"displayValueWasSetByUser": 1,
+	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_gray",
 	"iconImageWasSetByUser": 0
 	},
