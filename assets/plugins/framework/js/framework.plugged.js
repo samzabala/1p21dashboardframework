@@ -73,6 +73,7 @@ window.jQuery && jQuery.noConflict();
 	//make it objoct
 	_.dateToParse = function(date) {
 
+
 	
 		var yr,mo,dy,hr,mn;
 
@@ -89,6 +90,7 @@ window.jQuery && jQuery.noConflict();
 				dy = date.getDate() || null;
 				hr = date.getHours() || null;
 				mn = date.getMinutes() || null;
+
 
 			}else{
 
@@ -111,16 +113,20 @@ window.jQuery && jQuery.noConflict();
 				mn = timeArr[1] || null;
 			}
 
-			return new Date(yr,mo,dy,hr,mn);
-		}else{
-			return false;
+			var toReturn = false;
+
+			if(Object.prototype.toString.call(new Date(yr,mo,dy,hr,mn)) == '[object Date]'){
+				toReturn = new Date(yr,mo,dy,hr,mn);
+			}
+
+			return toReturn;
 		}
 	}
 
 	_.datetimeFormatPresets = {
 		HumanDate: {
 			placeholder:"mm/dd/yyyy",
-			pattern:"",
+			pattern:"^((0?[1-9]|1[012])[/](0?[1-9]|[12][0-9]|3[01])[/](19|20)?[0-9]{2})*$",
 			template:"mm/dd/yy"
 		},
 		HumanTime24: {
@@ -155,7 +161,7 @@ window.jQuery && jQuery.noConflict();
 	//make it human readable
 	_.dateToHuman = function( date,format ) {
 		date = _.dateToParse(date);
-		format = format || _.datetimeFormatPresets.Value.template;
+		format = format || _.datetimeFormatPresets.HumanDate.template;
 		if ( date ) {
 
 			var iFormat;
@@ -320,54 +326,60 @@ window.jQuery && jQuery.noConflict();
 	_.dateGetAdjacent = function(date,offsetByMonth,dateOverride){
 
 
-		var d = _.dateToParse(date),
-		currMonth = d.getMonth();
-		currYear = d.getFullYear();
+		var d = _.dateToParse(date);
 
-		dateOverride = dateOverride || null;
+		if(d){
 
-
-		var newMonth = (function(){
-			var toReturn;
-			if(
-				((currMonth + offsetByMonth) % 12) > 12
-			){
-				toReturn = (((currMonth + offsetByMonth) % 12) - 12);
-			}else if(
-				((currMonth + offsetByMonth) % 12) < 0
-			){
-				toReturn = (((currMonth + offsetByMonth) % 12) + 12);
-			}else{
-				toReturn = ((currMonth + offsetByMonth) % 12);
+			var currMonth = d.getMonth();
+			var currYear = d.getFullYear();
+	
+			dateOverride = dateOverride || null;
+	
+	
+			var newMonth = (function(){
+				var toReturn;
+				if(
+					((currMonth + offsetByMonth) % 12) > 12
+				){
+					toReturn = (((currMonth + offsetByMonth) % 12) - 12);
+				}else if(
+					((currMonth + offsetByMonth) % 12) < 0
+				){
+					toReturn = (((currMonth + offsetByMonth) % 12) + 12);
+				}else{
+					toReturn = ((currMonth + offsetByMonth) % 12);
+				}
+	
+				return toReturn
+			}());
+	
+			var newYear = (function(){
+				var defOffset = parseInt(offsetByMonth / 12);
+				var toReturn = currYear + defOffset;
+	
+				//offset to adjacent year
+				if(offsetByMonth < 0 && ((currMonth + (offsetByMonth % 12) ) ) < 0){
+					toReturn -= 1;
+				}else if(offsetByMonth > 0 && ((currMonth + (offsetByMonth % 12) ) ) > 11){
+	
+					toReturn += 1;
+				}
+				return toReturn;
+			}());
+			
+	
+			d.setMonth(newMonth);
+			d.setFullYear(newYear);
+	
+			if(dateOverride) {
+				d.setDate(dateOverride);
 			}
-
-			return toReturn
-		}());
-
-		var newYear = (function(){
-			var defOffset = parseInt(offsetByMonth / 12);
-			var toReturn = currYear + defOffset;
-
-			//offset to adjacent year
-			if(offsetByMonth < 0 && ((currMonth + (offsetByMonth % 12) ) ) < 0){
-				toReturn -= 1;
-			}else if(offsetByMonth > 0 && ((currMonth + (offsetByMonth % 12) ) ) > 11){
-
-				toReturn += 1;
-			}
-			return toReturn;
-		}());
-		
-
-		d.setMonth(newMonth);
-		d.setFullYear(newYear);
-
-		if(dateOverride) {
-			d.setDate(dateOverride);
+	
+	
+			return d;
+		}else{
+			return false;
 		}
-
-
-		return d;
 
 	}
 
@@ -619,11 +631,11 @@ window.jQuery && jQuery.noConflict();
 		
 	}
 
-	_.createCalendarGrid = function(inputCalendar,valueForGrid){
+	_.createCalendarUi = function(inputCalendar,valueForGrid){
 
 		if(inputCalendar){
 		
-			valueForGrid = valueForGrid || inputCalendar.val() || new Date();
+			valueForGrid = valueForGrid || _.dateToVal(inputCalendar.val()) || _.dateToVal(new Date());
 		
 			uiPrefix = function(noDash) {
 				noDash = noDash || false;
@@ -637,6 +649,7 @@ window.jQuery && jQuery.noConflict();
 				max: inputCalendar.attr('data-calendar-max') || inputCalendar.attr('max'),
 				dropdownYearSpan: inputCalendar.attr('data-calendar-dropdown-year-span'),
 				disabledDates: inputCalendar.attr('data-calendar-disabled-dates'),
+				textInput:inputCalendar.attr('data-calendar-text-input'),
 			};
 
 			var defaults = {
@@ -645,8 +658,8 @@ window.jQuery && jQuery.noConflict();
 				min: null,
 				max:null,
 				dropdownYearSpan: 1,
-				disabledDates: ''
-				// textInput:false,
+				disabledDates: '',
+				textInput:false,
 			};
 			
 			var args = _.parseArgs(arr,defaults);
@@ -713,17 +726,31 @@ window.jQuery && jQuery.noConflict();
 				return toReturn;
 			};
 
+			var theUi = {};
 
-			if( !(inputCalendar.closest('.'+ uiPrefix(true) ).length) ){
+			theUi.container = inputCalendar.closest('.'+uiPrefix(true));
+
+
+			if( !theUi.container.length ){
 				inputCalendar.wrap($('<div class="'
 				+inputCalendar.attr('class').replace( 'input-calendar',uiPrefix(true) )
-			+'"></div>'));
+				+'"></div>'));
+				theUi.container = inputCalendar.closest('.'+uiPrefix(true));
 			}
 
-			theUi = {
-				container: inputCalendar.closest('.'+uiPrefix(true))
-			};
-			inputCalendar.siblings().remove();
+			//idk it never exists on initial so we dont have to do weird div wraping catches here
+			theUi.input = theUi.container.children('.'+uiPrefix()+'input');
+			inputCalendar.siblings().not(theUi.input).remove();
+
+
+			//input
+			if(args.textInput) {
+				if(!theUi.input.length){
+
+					theUi.input = $('<div class="'+uiPrefix()+'input"><input class="input input-single-line" type="text" placeholder="MM/DD/YYYY" /></div>');
+					theUi.container.append(theUi.input);
+				}
+			}
 
 
 			
@@ -1027,20 +1054,29 @@ window.jQuery && jQuery.noConflict();
 		//updates both input field and UI
 	frameWork.updateCalendar = function(inputCalendar,newValue,valueForGrid){
 		
-		theValue = newValue || inputCalendar.val() || new Date();
-		valueForGrid = valueForGrid || theValue;
+		theValue = newValue || _.dateToVal(inputCalendar.attr('value'));
+		valueForGrid = valueForGrid || theValue || _.dateToVal(new Date());
+		// ignoreInput = ignoreInput || false;
+
+		//set up calendar
+		_.createCalendarUi(inputCalendar,valueForGrid);
 
 
-		//update the actual butt
-		inputCalendar.attr('value',theValue);
-		_.createCalendarGrid(inputCalendar,valueForGrid);
+		if(theValue){
+			//update the actual butt
+			inputCalendar.attr('value',theValue);
 
+			inputCalendar.parent().find('.input-calendar-ui-date').removeClass('active');
+			inputCalendar.parent().find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
+
+			// if(!ignoreInput){
+				inputCalendar.parent().find('.input-calendar-ui-input input').attr('value',_.dateToHuman(theValue));
+			// }
+		}
 
 		
 		//ATODO UPDATE SETUP HERE
 		//update fake hoes
-			inputCalendar.parent().find('.input-calendar-ui-date').removeClass('active');
-			inputCalendar.parent().find('.input-calendar-ui-date[data-value='+_.dateToVal(theValue)+']').addClass('active');
 
 		
 
@@ -1486,7 +1522,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.updateCalendar($(this));
 		});
 	}
-	_.fns_on_rightAway.push(frameWork.readyCalendar);
+	_.fns_on_ready.push(frameWork.readyCalendar);
 
 	
 	_.initTrumbo = function(selector){
@@ -1554,6 +1590,36 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			var inputCalendar = $(this);
 			frameWork.updateCalendar(inputCalendar);
+		});
+
+
+		$('body').on('keyup','.input-calendar-ui-input input',function(e){	
+			e.preventDefault();
+			var inputCalendar = $(this).closest('.input-calendar-ui').find('.input.input-calendar');
+
+			var pattern = _.datetimeFormatPresets.HumanDate.pattern;
+
+			var isValid = $(this).val();
+
+
+			console.log( _.datetimeFormatPresets.HumanDate.pattern,pattern,$(this).val(),isValid,pattern.test($(this).val()) );
+
+
+			if(isValid){
+				var theValue = $(this).val().split('/');
+
+				var y = theValue[2] ||  '';
+				var m = theValue[0] || '';
+				var d = theValue[1] || '';
+	
+				var preParsedVal = y+'-'+m+'-'+d;
+
+				frameWork.updateCalendar(inputCalendar,preParsedVal,null);
+			}
+
+		
+			
+			
 		});
 
 		$('body').on('click','*[data-toggle="accordion"]',function(e){	

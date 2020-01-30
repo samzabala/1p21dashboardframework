@@ -15,8 +15,15 @@
 			The div is somewhere here... suck a dick
 			<input type="text" class="input input-calendar" data-calendar-start-day="0"
 			data-calendar-disabled-dates="2020-03-01,2020-03-02"
+			data-calendar-text-input="true"
+
 			min="2018-01-20"
 			value="2020-03-05" />
+
+			<p>bitch but no value</p>
+			<input type="text" class="input input-calendar" data-calendar-start-day="0"
+			data-calendar-disabled-dates="2020-03-01,2020-03-02"
+			data-calendar-text-input="true" />
 
 
 			<!-- data-calendar-start-day="0"
@@ -56,16 +63,22 @@
 			<h3>color classes</h3>
 
 			<input type="text" class="input input-calendar input-primary" data-calendar-start-day="0"
+			data-calendar-text-input="true"
 				value="2020-01-05" />
 			<input type="text" class="input input-calendar input-secondary" data-calendar-start-day="1"
+			data-calendar-text-input="true"
 			value="2020-02-05" />
 			<input type="text" class="input input-calendar input-accent" data-calendar-start-day="2"
+			data-calendar-text-input="true"
 			value="2020-03-05" />
 			<input type="text" class="input input-calendar input-success" data-calendar-start-day="3"
+			data-calendar-text-input="true"
 			value="2020-04-05" />
 			<input type="text" class="input input-calendar input-caution" data-calendar-start-day="4"
+			data-calendar-text-input="true"
 			value="2020-05-05" />
 			<input type="text" class="input input-calendar input-error" data-calendar-start-day="5"
+			data-calendar-text-input="true"
 			value="2020-06-05" />
 
 			<h3>in input-group-vertical</h3>
