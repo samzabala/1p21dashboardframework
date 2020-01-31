@@ -556,7 +556,7 @@ window.jQuery && jQuery.noConflict();
 				case 'dropdown':
 				case 'modal':
 				case 'alert-close':
-					if(clicked && toggleMode && clicked.parentNode.closest(toggledClass).length) {
+					if(clicked && toggleMode && clicked.parentNode.closest(toggledClass)) {
 						toReturn = clicked.parentNode.closest(toggledClass);
 					}
 					break;
@@ -760,10 +760,18 @@ window.jQuery && jQuery.noConflict();
 		}
 
 
+		if(
+			(checkAgainst.indexOf('future') > -1)
+			&& (d > dateNow)
+		){
+			// console.warn('value was in the future || ',_.dateToVal(date),'\nversus ',_.dateToVal(dateNow));
+			toReturn = false;
+		}
+
 		//if  in range of min or max
 		if(
-			(args.max && _.dateToParse(args.max) <= d)
-			|| (args.min && d <= _.dateToParse(args.min))
+			(_.dateToParse(args.max) && _.dateToParse(args.max) <= d)
+			|| (_.dateToParse(args.min) && d <= _.dateToParse(args.min))
 		) {
 			// console.warn('value not in max and width || ',_.dateToVal(d));;
 			toReturn = false;
@@ -1837,11 +1845,11 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 			var clicked = e.target;
 				selector = _.getTheToggled(clicked,'dropdown');
-				
-				var selectorAncestor = selector.parentNode;
 
 
 				if( selector ){
+				
+					var selectorAncestor = selector.closest('li,.nav-item');
 
 					var width =  selector.getAttribute('data-dropdown-width') || clicked.getAttribute('data-dropdown-width') || null;
 					
@@ -1851,7 +1859,6 @@ window.jQuery && jQuery.noConflict();
 
 					if(
 						selector.classList.contains('open')
-						&& clicked.classList.contains('open')
 					){
 
 						selectorAncestor && selectorAncestor.classList.remove('open');
@@ -1874,15 +1881,14 @@ window.jQuery && jQuery.noConflict();
 
 						document.querySelectorAll('.dropdown').forEach(function(dropdown){
 							// frameWork.slideUp( dropdown );
-							var descendantdrops = dropdown.querySelectorAll('.dropdown');
 
-							descendantdrops.forEach(function(drop){
+							hasSelector = true;
 
-								if (drop !== selector){
-									dropdown.classList.remove('open');
-								}
-							})
+							if(dropdown !== selector && !dropdown.contains(selector)){
+								dropdown.classList.remove('open');
+							}
 						});
+
 						document.querySelectorAll('*[data-toggle="dropdown"]').forEach(function(toggler){
 							toggler.classList.remove('open');
 						});

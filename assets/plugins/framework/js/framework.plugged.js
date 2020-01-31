@@ -1721,10 +1721,13 @@ window.jQuery && jQuery.noConflict();
 
 					//close all the bois
 					$('.dropdown').closest('li,.nav-item').removeClass('open'); 
+					$('.dropdown').closest('li,.nav-item').find('.dropdown').removeClass('open');
 					// $('.dropdown').slideUp();
 
-					$('.dropdown').each(function(){
-
+					$('.dropdown').not(selector).each(function(){
+						if(!selector.closest($(this)).length) {
+							$(this).removeClass('open')
+						}
 					})
 
 
