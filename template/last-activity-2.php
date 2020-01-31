@@ -1,13 +1,14 @@
 <div
 	id="last-activity"
 	class="module-grid"
-	data-grid-template-columns-lg="1fr 1fr 1fr"
-	data-grid-template-areas-lg="
-	'header header clientkey'
-	'distributionpie onpagepie clientkey'
-	'distributionbubble distributionbubble distributionbubble'
-	'onpagebubble onpagebubble onpagebubble'
-	'lastactivity lastactivity lastactivity'">
+	data-grid-template-columns-md="1fr 1fr"
+	data-grid-template-areas-md="
+	'header header'
+	'distributionpie onpagepie'
+	'clientkey clientkey'
+	'distributionbubble distributionbubble'
+	'onpagebubble onpagebubble'
+	'lastactivity lastactivity'">
 
 
 	<!-- header -->
@@ -15,7 +16,7 @@
 		<div
 			id="last-activity-header"
 			class="module"
-			data-grid-area-lg="header">
+			data-grid-area-md="header">
 
 			<div class="module-header module-header-break">
 
@@ -41,7 +42,7 @@
 		<div class="module"
 			id="last-activity-distribution-pie"
 			class="module"
-			data-grid-area-lg="distributionpie">
+			data-grid-area-md="distributionpie">
 			
 			<div class="module-header">
 				<h3 class="module-title">Link Activity Distribution</h3>
@@ -62,7 +63,7 @@
 		<div class="module"
 			id="last-activity-on-page-pie"
 			class="module"
-			data-grid-area-lg="onpagepie">
+			data-grid-area-md="onpagepie">
 			
 			<div class="module-header">
 				<h3 class="module-title">On-Page Update Distribution</h3>
@@ -76,88 +77,29 @@
 				</div>
 			</div>
 		</div>
-	
-
-	<!-- ditribution bubble -->
-		<div
-			id="last-activity-distribution-bubble"
-			class="module"
-			data-grid-area-lg="distributionbubble">
-
-			<div class="module-header module-header-break">
-
-				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
-
-				<h3 class="module-title">Link Activity Distribution</h3>
-				
-				<div class="module-functions accordion accordion-mobile">
-					<?php app_get_component('components/filter-dropdown-projects'); ?>
-				</div>
-			</div>
-
-			<div class="module-content align-self-center">
-				<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-12.png" alt="" />
-				</div>
-			</div>
-
-		</div>
-
-	
-
-	<!-- on page bubble -->
-		<div
-			id="last-activity-on-page-bubble"
-			class="module"
-			data-grid-area-lg="onpagebubble">
-
-			<div class="module-header module-header-break">
-
-
-				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
-
-				
-				<h3 class="module-title">On-Page Update Distribution</h3>
-				<div class="module-functions accordion accordion-mobile">
-
-				<?php app_get_component('components/filter-dropdown-projects'); ?>
-				</div>
-			</div>
-
-			<div class="module-content align-self-center">
-				<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-12.png" alt="" />
-				</div>
-			</div>
-
-		</div>
 
 	<!-- Client Key -->
 
 	<div
 			id="profile-scoreboard-client-key"
 			class="module"
-			data-grid-area-lg="clientkey">
+			data-grid-area-md="clientkey">
 			
 			<div class="module-header module-header-break">
 				<h3 class="module-title">Client Key</h3>
 			</div>
 			
 			
-			<div>
-				<!-- @if client keys are there -->
-					<!-- @LOOP p 
-						@DYNAMIC
-							attr style background color
+			<div class="module-content">
+
+				<ul class=" no-margin-y average-legend unstyled flex-grid flex-grid-compact flex-grid-fixed">
+					<!--
+						@NOTE background-color on .legend will be replaced dynamically based on color-coded graph item and the profile it represents
 					-->
-					<p>
-						<span class="legend" style="background-color:#ca8a01"></span>
-						<span class="client-name">
-							<span class="REPLACE">Client Name</span>
-						</span>
-					</p>
-
-
+					<li class="flex-col-xs-6 flex-col-md-3 flex-col-lg-2">
+						<span class="legend" style="background-color: #fb1818"></span>
+						<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
+					</li>
 
 
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -196,16 +138,15 @@
 								'#000000'
 							);
 						?>
-						<?php for($i=1; $i<=(count($placeholder_colors) - 20); $i++){ ?>
+						<?php for($i=1; $i<=(count($placeholder_colors)); $i++){ ?>
 							
 
-							<p>
-								<span class="legend" style="background-color:<?=$placeholder_colors[$i] ?>"></span>
-								<span class="client-name">
-									<span class="REPLACE">Client Name</span>
-								</span>
-							</p>
+							<li class="flex-col-xs-6 flex-col-md-3 flex-col-lg-2">
+								<span class="legend" style="background-color: <?=$placeholder_colors[$i]?>"></span>
+								<span class="profile-first-name"><span class="REPLACE">Profile</span></span>
+							</li>
 						<?php } ?>
+				</ul>
 				
 				<!-- @ELSE NO accounts are available -->
 					<p class="color-neutral notification-no-result no-margin-y">Oooh nothing here :/</p>
@@ -214,12 +155,69 @@
 			</div>
 
 		</div>
+	
 
+	<!-- ditribution bubble -->
+		<div
+			id="last-activity-distribution-bubble"
+			class="module"
+			data-grid-area-md="distributionbubble">
+
+			<div class="module-header module-header-break">
+
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
+				<h3 class="module-title">Link Activity Distribution</h3>
+				
+				<div class="module-functions accordion accordion-mobile">
+					<?php app_get_component('components/filter-dropdown-projects'); ?>
+				</div>
+			</div>
+
+			<div class="module-content align-self-center">
+				<div class="p">
+						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-12.png" alt="" />
+				</div>
+			</div>
+
+		</div>
+
+
+	
+
+	<!-- on page bubble -->
+		<div
+			id="last-activity-on-page-bubble"
+			class="module"
+			data-grid-area-md="onpagebubble">
+
+			<div class="module-header module-header-break">
+
+
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+
+				
+				<h3 class="module-title">On-Page Update Distribution</h3>
+				<div class="module-functions accordion accordion-mobile">
+
+				<?php app_get_component('components/filter-dropdown-projects'); ?>
+				</div>
+			</div>
+
+			<div class="module-content align-self-center">
+				<div class="p">
+						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-12.png" alt="" />
+				</div>
+			</div>
+
+		</div>
+
+	
 
 	<!-- last activity table -->
 		<div
 			class="module"
-			data-grid-area-lg="lastactivity">
+			data-grid-area-md="lastactivity">
 
 			<div class="module-content">
 
