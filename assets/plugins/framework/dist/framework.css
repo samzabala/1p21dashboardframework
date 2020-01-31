@@ -3246,36 +3246,38 @@ table {
   margin-top: -20px; }
 .module-header:last-child, .module-content:last-child, .module-footer:last-child {
   margin-bottom: -20px; }
-@media (min-width: 1201px) {
-  .module-header-break, .module-footer-break {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-            align-items: center; }
-    .module-header-break .module-functions:not(:first-child:last-child), .module-footer-break .module-functions:not(:first-child:last-child) {
-      width: 50%; }
-    .module-header-break .module-functions, .module-footer-break .module-functions {
-      margin-top: 0;
-      -webkit-box-flex: 1;
-              flex: 1 1;
-      text-align: right;
-      margin-top: -10px;
-      margin-bottom: -10px; }
-      .module-header-break .module-functions:nth-child(n+2), .module-footer-break .module-functions:nth-child(n+2) {
-        padding-left: 1rem; }
-      .module-header-break .module-functions > .btn,
-      .module-header-break .module-functions > .btn-group,
-      .module-header-break .module-functions > .input-group,
-      .module-header-break .module-functions > .input-wrapper, .module-footer-break .module-functions > .btn,
-      .module-footer-break .module-functions > .btn-group,
-      .module-footer-break .module-functions > .input-group,
-      .module-footer-break .module-functions > .input-wrapper {
+.module-header, .module-footer {
+  position: relative; }
+  @media (min-width: 1201px) {
+    .module-header-break, .module-footer-break {
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+              align-items: center; }
+      .module-header-break .module-functions:not(:first-child:last-child), .module-footer-break .module-functions:not(:first-child:last-child) {
+        width: 50%; }
+      .module-header-break .module-functions, .module-footer-break .module-functions {
         margin-top: 0;
-        display: -webkit-inline-box;
-        display: inline-flex; } }
+        -webkit-box-flex: 1;
+                flex: 1 1;
+        text-align: right;
+        margin-top: -10px;
+        margin-bottom: -10px; }
+        .module-header-break .module-functions:nth-child(n+2), .module-footer-break .module-functions:nth-child(n+2) {
+          padding-left: 1rem; }
+        .module-header-break .module-functions > .btn,
+        .module-header-break .module-functions > .btn-group,
+        .module-header-break .module-functions > .input-group,
+        .module-header-break .module-functions > .input-wrapper, .module-footer-break .module-functions > .btn,
+        .module-footer-break .module-functions > .btn-group,
+        .module-footer-break .module-functions > .input-group,
+        .module-footer-break .module-functions > .input-wrapper {
+          margin-top: 0;
+          display: -webkit-inline-box;
+          display: inline-flex; } }
 .module-header {
   grid-area: header; }
   .module-header:not(:last-child) {
@@ -3401,6 +3403,8 @@ table {
     display: none !important; }
     .modal-wrapper.active {
       display: block !important; }
+  .modal-title {
+    margin-top: 0; }
   .modal-close {
     font-size: 2rem;
     position: absolute;

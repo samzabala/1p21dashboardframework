@@ -440,44 +440,59 @@ window.jQuery && jQuery.noConflict();
 
 
 	_.getTheToggled = function(clicked,toggleMode){
+		clicked = clicked || null;
 
 		toggleMode = toggleMode || null;
 		var selector = '.'+toggleMode || null;
+		var toggledClass = '.'+toggleMode.replace('-open','').replace('-close','') || null;
+		var toReturn = null;
 
 		if(clicked){
 			if( clicked.attr('href') ){
-				return $( clicked.attr('href') );
+				toReturn =  $( clicked.attr('href') );
 
 			}else if( clicked.attr('data-href') ){
-				return $( clicked.attr('data-href') )
+				toReturn =  $( clicked.attr('data-href') )
 				
-			}else if (toggleMode == 'alert-close'){
+			}else if(toggleMode && clicked.parent().closest('[data-toggle="'+toggleMode+'"]').length){
+				toReturn =  _.getTheToggled(clicked.closest('[data-toggle="'+toggleMode+'"]'),toggleMode)
+			}else if( clicked.next(selector).first().length){
+				toReturn =  clicked.next(selector).first();
 
-				if(clicked.parent().closest('.alert').length > -1) {
-					return clicked.closest('.alert');
-				}
+			}else if( clicked.siblings(selector).first().length){
+				toReturn =  clicked.siblings(selector).first();
 
-			}else if( clicked.next(selector).first().length > -1){
-				return clicked.next(selector).first();
-
-			}else if( clicked.siblings(selector).first().length > -1){
-				return clicked.siblings(selector).first();
-
-			}else if(clicked.parent().closest('[data-toggle="'+toggleMode+'"]').length > -1){
-				return _.getTheToggled(clicked.closest('[data-toggle="'+toggleMode+'"]'),toggleMode)
-			}else{
-
-				return false;
 			}
 		}else{
+			
 			if (
 				window.location.hash !== ''
-				&& $(window.location.hash)
-				&& $(window.location.hash).hasClass( toggleMode.replace('-open','').replace('-close','') )
+				&& $(window.location.hash).length > -1
+				&& $(window.location.hash).hasClass( toggledClass )
 			){
-				return $(window.location.hash)
+				toReturn =  $(window.location.hash)
 			}
 		}
+
+
+		if(!toReturn){
+
+			//look if theres an ancestor it can toggle. last prioroty
+			switch(toggleMode){
+				case 'dropdown':
+				case 'modal':
+				case 'alert-close':
+					if(clicked && toggleMode && clicked.parent().closest(toggledClass).length) {
+						toReturn = clicked.parent().closest(toggledClass);
+					}
+					break;
+
+			}
+			
+
+		}
+
+		return toReturn;
 	};
 
 	_.br_vals = {
@@ -1403,9 +1418,9 @@ window.jQuery && jQuery.noConflict();
 
 			var args = _.parseArgs(arr,defaults);
 
-			var id = contentWrap.attr('id') || 'the-modal';
+			var id = contentWrap.attr('id') || 'fw-modal';
 
-			_.changeHash(id);
+			(id !== 'fw-modal') && _.changeHash(id);
 
 			$('body').append(function(){
 				var html = '<div id="'+id+'" class="modal-wrapper">';
@@ -1623,8 +1638,7 @@ window.jQuery && jQuery.noConflict();
 				var d = theValue[1] || '';
 	
 				var preParsedVal = y+'-'+m+'-'+d;
-
-				console.log
+				
 
 				frameWork.updateCalendar(inputCalendar,preParsedVal);
 			}
@@ -1669,7 +1683,7 @@ window.jQuery && jQuery.noConflict();
 
 			var selector =  _.getTheToggled($(this),'dropdown');
 
-			console.log(selector);
+			console.log('bitch drop',selector);
 
 			if( selector ){
 
@@ -1677,25 +1691,36 @@ window.jQuery && jQuery.noConflict();
 				if(width) {
 					selector.css('width',width);
 				}
+
 				
-				if( selector.hasClass('open') && $(this).hasClass('open') ){
+				if( selector.hasClass('open') ){
 					// selector.slideUp(); 
 					$(this).closest('li,.nav-item').removeClass('open'); 
 					$(this).removeClass('open'); 
 					selector.removeClass('open'); 
 				}else{
 
-					if(selector.closest('li , .nav-item').length > -1) {
-						// selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').slideUp(); 
-						$(this).closest('li , .nav-item').siblings('li,.nav-item').find('*[data-toggle="dropdown"]').removeClass('open'); 
-						selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').removeClass('open'); 
-					}
 
 
+
+					//close all the bois
 					$('.dropdown').closest('li,.nav-item').removeClass('open'); 
 					// $('.dropdown').slideUp();
-					$('.dropdown').not($(this).closest('.dropdown')).removeClass('open'); 
+					console.log('this is were i died',$('.dropdown').not( $(this).closest('.dropdown').not(selector) ));
+
+					$('.dropdown').each(function(){
+
+					})
+
+
+
 					$('*[data-toggle="dropdown"]').removeClass('open'); 
+
+					// if(selector.closest('li , .nav-item').length > -1) {
+					// 	// selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').slideUp(); 
+					// 	$(this).closest('li , .nav-item').siblings('li,.nav-item').find('*[data-toggle="dropdown"]').removeClass('open'); 
+					// 	selector.closest('li , .nav-item').siblings('li,.nav-item').find('.dropdown').removeClass('open'); 
+					// }
 
 					// selector.slideDown(); 
 					$(this).closest('li,.nav-item').addClass('open'); 
