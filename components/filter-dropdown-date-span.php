@@ -15,45 +15,55 @@
 			<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 		</button>
 
-		<div class="dropdown dropdown-right" data-dropdown-width="unset">
-			<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
+		<div class="dropdown dropdown-right" data-dropdown-width="100%">
+			<div class="flex-grid flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
 
-				<div class="flex-child flex-0-0">
+				<div class="flex-col-md-8 flex-col-lg-9">
+					<div class="flex-grid flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
 
-					<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-						<label class="input-label">From</label>
-						<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+
+						<div class="flex-col-md-6">
+
+							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+								<label class="input-label">From</label>
+								<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+							</div>
+						</div>
+
+
+						<div class="flex-col-md-6">
+
+							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+								<label class="input-label">To</label>
+								<input type="date" class="input input-calendar" data-calendar-text-input="true" data-calendar-disabled-dates="future" />
+							</div>
+						</div>
 					</div>
+
 				</div>
 
 				
-				<div class="flex-child flex-0-0">
-
-					<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-						<label class="input-label">To</label>
-						<input type="date" class="input input-calendar" data-calendar-text-input="true" />
-					</div>
-				</div>
-
-				
-				<div class="flex-child flex-0-1">
+				<div class="flex-col-md-4 flex-col-lg-3">
 					<div class="input-label">Other</div>
-					<ul class="no-padding-left p">
+					<div class="p">
 
-						<li><a href="#">Jan 2018</a></li>
-						<li><a href="#">Feb 2018</a></li>
-						<li><a href="#">March 2018</a></li>
-						<li><a href="#">April 2018</a></li>
-						<li><hr class="dropdown-separator"></li>
-						<li><a href="#">Today</a></li>
-						<li><a href="#">Last 3 days</a></li>
-						<li><a href="#">Last week</a></li>
-						<li><a href="#">Last Month</a></li>
-					</ul>
+						<ul class="unstyled p">
+							<!-- @PLACEHOLDER: replace as needed -->
+							<li><a href="#">Jan 2018</a></li>
+							<li><a href="#">Feb 2018</a></li>
+							<li><a href="#">March 2018</a></li>
+							<li><a href="#">April 2018</a></li>
+							<li><hr class="dropdown-separator"></li>
+							<li><a href="#">Today</a></li>
+							<li><a href="#">Last 3 days</a></li>
+							<li><a href="#">Last week</a></li>
+							<li><a href="#">Last Month</a></li>
+						</ul>
+					</div>
 					
 					<div>
-						<button data-toggle="dropdown" class="btn btn-default">Reset</button>
-						<button class="btn btn-primary">Apply</button>
+						<button class="btn btn-default">Reset</button>
+						<button data-toggle="dropdown" class="btn btn-primary">Apply</button>
 					</div>
 				</div>
 			</div>

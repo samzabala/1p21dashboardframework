@@ -70,58 +70,6 @@ window.jQuery && jQuery.noConflict();
 
 	}
 
-	//make it objoct
-	_.dateToParse = function(date) {
-
-
-	
-		var yr,mo,dy,hr,mn;
-
-		var dateArr = [];
-		var timeArr = [];
-
-		if(date){
-
-			if(Object.prototype.toString.call(date) === '[object Date]'){
-
-				//make a new date out of its methods because js will think u are referring to the same date everythere and ur math becomes a hellhole... dont.. hOE
-				yr = date.getFullYear() || null;
-				mo = date.getMonth() || null;
-				dy = date.getDate() || null;
-				hr = date.getHours() || null;
-				mn = date.getMinutes() || null;
-
-
-			}else{
-
-				var dateTimeArr = date.split('T') || [];
-		
-				//date
-				if(dateTimeArr[0]){
-					dateArr = dateTimeArr[0].split('-');
-				}
-		
-				//time
-				if(dateTimeArr[1]){
-					timeArr = dateTimeArr[1].split(':');
-				}
-		
-				yr = parseInt(dateArr[0]) || null;
-				mo = parseInt((dateArr[1]) - 1) || null;
-				dy = parseInt(dateArr[2]) || null;
-				hr = parseInt(timeArr[0]) || null;
-				mn = parseInt(timeArr[1]) || null;
-			}
-
-			var toReturn = false;
-			if(Object.prototype.toString.call(new Date(yr,mo,dy,hr,mn)) == '[object Date]'){
-				toReturn = new Date(yr,mo,dy,hr,mn);
-			}
-
-			return toReturn;
-		}
-	}
-
 	_.datetimeFormatPresets = {
 		HumanDate: {
 			placeholder:"mm/dd/yyyy",
@@ -148,6 +96,66 @@ window.jQuery && jQuery.noConflict();
 		// 	pattern:"",
 		// 	template:"yy-mm-ddThh:gg"
 		// },
+	}
+
+	//make it objoct
+	_.dateToParse = function(date) {
+
+
+	
+		var yr,mo,dy,hr,mn;
+
+		var dateArr = [];
+		var timeArr = [];
+
+		if(date){
+
+			if(Object.prototype.toString.call(date) === '[object Date]'){
+
+				//make a new date out of its methods because js will think u are referring to the same date everythere and ur math becomes a hellhole... dont.. hOE
+				yr = date.getFullYear() || null;
+				mo = date.getMonth() || null;
+				dy = date.getDate() || null;
+				hr = date.getHours() || null;
+				mn = date.getMinutes() || null;
+
+
+			}else{
+
+				var pattern = new RegExp(_.datetimeFormatPresets.Value.pattern);
+
+				var isValid = pattern.test(date);
+
+				if(isValid){
+
+
+					var dateTimeArr = date.split('T') || [];
+		
+					//date
+					if(dateTimeArr[0]){
+						dateArr = dateTimeArr[0].split('-');
+					}
+			
+					//time
+					if(dateTimeArr[1]){
+						timeArr = dateTimeArr[1].split(':');
+					}
+			
+					yr = parseInt(dateArr[0]) || null;
+					mo = parseInt((dateArr[1]) - 1) || null;
+					dy = parseInt(dateArr[2]) || null;
+					hr = parseInt(timeArr[0]) || null;
+					mn = parseInt(timeArr[1]) || null;
+				}
+			}
+
+			var toReturn = false;
+			if(Object.prototype.toString.call(new Date(yr,mo,dy,hr,mn)) == '[object Date]'){
+				toReturn = new Date(yr,mo,dy,hr,mn);
+			}
+
+			return toReturn;
+		}
 	}
 
 
@@ -687,10 +695,18 @@ window.jQuery && jQuery.noConflict();
 		}
 
 
+		if(
+			(checkAgainst.indexOf('future') > -1)
+			&& (d > dateNow)
+		){
+			// console.warn('value was in the future || ',_.dateToVal(date),'\nversus ',_.dateToVal(dateNow));
+			toReturn = false;
+		}
+
 		//if  in range of min or max
 		if(
-			(args.max && _.dateToParse(args.max) <= d)
-			|| (args.min && d <= _.dateToParse(args.min))
+			(_.dateToParse(args.max) && _.dateToParse(args.max) <= d)
+			|| (_.dateToParse(args.min) && d <= _.dateToParse(args.min))
 		) {
 			// console.warn('value not in max and width || ',_.dateToVal(d));;
 			toReturn = false;
@@ -1706,7 +1722,6 @@ window.jQuery && jQuery.noConflict();
 					//close all the bois
 					$('.dropdown').closest('li,.nav-item').removeClass('open'); 
 					// $('.dropdown').slideUp();
-					console.log('this is were i died',$('.dropdown').not( $(this).closest('.dropdown').not(selector) ));
 
 					$('.dropdown').each(function(){
 

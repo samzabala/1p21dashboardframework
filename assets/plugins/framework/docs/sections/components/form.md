@@ -757,7 +757,8 @@ Disables specific dates or keywords that must be separated with commas. Dates mu
 There also available keywords too
 
 `weekends` - disables weekends
-`past` - disables dates from the past
+`past` - disables dates from before today's date
+`future` - disables dates from after today's date
 
 
 **`data-calendar-text-input`**
