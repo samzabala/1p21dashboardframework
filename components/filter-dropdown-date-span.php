@@ -19,7 +19,7 @@
 			<div class="flex-grid flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
 
 				<div class="flex-col-md-8 flex-col-lg-9">
-					<div class="flex-grid flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
+					<div class="flex-grid  flex-grid-compact flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
 
 
 						<div class="flex-col-md-6">
@@ -47,7 +47,7 @@
 					<div class="input-label">Other</div>
 					<div class="p">
 
-						<ul class="unstyled p">
+						<ul class="unstyled p font-weight-600">
 							<!-- @PLACEHOLDER: replace as needed -->
 							<li><a href="#">Jan 2018</a></li>
 							<li><a href="#">Feb 2018</a></li>
@@ -58,11 +58,13 @@
 							<li><a href="#">Last 3 days</a></li>
 							<li><a href="#">Last week</a></li>
 							<li><a href="#">Last Month</a></li>
+							<li><a href="#">Last Year</a></li>
 						</ul>
 					</div>
 					
-					<div>
+					<div class="p">
 						<button class="btn btn-default">Reset</button>
+						<br class="only-mobile">
 						<button data-toggle="dropdown" class="btn btn-primary">Apply</button>
 					</div>
 				</div>

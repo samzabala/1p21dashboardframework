@@ -1693,6 +1693,15 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 		});
 
+		$('body').on('click','.dropdown li > a',function(e){
+			var liContainer = $(this).parent();
+
+			if(liContainer.matches('li')) {
+				liContainer.toggleClass('active');
+			}
+
+		});
+
 
 		$('body').on('click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
