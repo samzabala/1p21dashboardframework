@@ -124,7 +124,7 @@ html, body {
   width: 100%;
   min-width: 320px;
   font-size: 14px;
-  line-height: 1.7142857143;
+  line-height: 1.5;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000000;
   font-weight: 400;
@@ -400,7 +400,7 @@ ul > li:before {
   background: currentColor;
   margin-right: 1.3571428571em;
   position: absolute;
-  top: 0.6428571429em;
+  top: 0.5357142857em;
   border-radius: 50%; }
 
 ul.style-circle li:before {
@@ -1055,8 +1055,8 @@ table {
     padding: 0 !important; }
   th,
   .table-cell.table-cell-heading {
-    padding-top: calc((3.2142857143rem - (1em * 1.7142857143 )) * .5);
-    padding-bottom: calc((3.2142857143rem - (1em * 1.7142857143 )) * .5);
+    padding-top: calc((3.2142857143rem - (1em * 1.5 )) * .5);
+    padding-bottom: calc((3.2142857143rem - (1em * 1.5 )) * .5);
     background: #ecedf0;
     color: #3d3d3d;
     font-weight: 700;
@@ -1075,22 +1075,22 @@ table {
       color: inherit; }
   td,
   .table-cell {
-    padding-top: calc((3.2142857143rem - ( 1em * 1.7142857143 )) * .5);
-    padding-bottom: calc((3.2142857143rem - ( 1em * 1.7142857143 )) * .5); }
+    padding-top: calc((3.2142857143rem - ( 1em * 1.5 )) * .5);
+    padding-bottom: calc((3.2142857143rem - ( 1em * 1.5 )) * .5); }
   .table.table-small td,
   .table.table-small .table-cell,
   table.table-small td,
   table.table-small .table-cell {
-    padding-top: calc((1.7857142857rem - ( 1em * 1.5 )) * .5);
-    padding-bottom: calc((1.7857142857rem - ( 1em * 1.5 )) * .5);
-    line-height: 1.5; }
+    padding-top: calc((1.7857142857rem - ( 1em * 1.3125 )) * .5);
+    padding-bottom: calc((1.7857142857rem - ( 1em * 1.3125 )) * .5);
+    line-height: 1.3125; }
   .table.table-large td,
   .table.table-large .table-cell,
   table.table-large td,
   table.table-large .table-cell {
-    padding-top: calc((4.6428571429rem - ( 1em * 2.5714285714 )) * .5);
-    padding-bottom: calc((4.6428571429rem - ( 1em * 2.5714285714 )) * .5);
-    line-height: 2.5714285714; }
+    padding-top: calc((4.6428571429rem - ( 1em * 2.25 )) * .5);
+    padding-bottom: calc((4.6428571429rem - ( 1em * 2.25 )) * .5);
+    line-height: 2.25; }
   .table-label {
     width: 12px;
     height: calc(3.2142857143rem - (2px * 2));
@@ -1320,7 +1320,7 @@ table {
   height: 5.3571428571rem;
   background: #FFFFFF;
   font-size: 1rem;
-  line-height: 1.7142857143rem;
+  line-height: 1.5rem;
   color: #000000;
   font-weight: 400;
   text-transform: none;
@@ -1386,8 +1386,8 @@ table {
 .nav-item > [data-toggle=dropdown],
 .nav-list li > a,
 .nav-list li > [data-toggle=dropdown] {
-  padding-top: calc( ( 2.5rem - ( 1.7142857143rem)) * .5);
-  padding-bottom: calc( ( 2.5rem - ( 1.7142857143rem)) * .5);
+  padding-top: calc( ( 2.5rem - ( 1.5rem)) * .5);
+  padding-bottom: calc( ( 2.5rem - ( 1.5rem)) * .5);
   display: inline-block; }
 
 .dropdown li:hover > a,
@@ -1421,8 +1421,8 @@ table {
   transition: 0.125s all ease-in-out;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: calc( (5.3571428571rem - ( 1.7142857143rem)) * .5);
-  padding-bottom: calc( (5.3571428571rem - ( 1.7142857143rem)) * .5); }
+  padding-top: calc( (5.3571428571rem - ( 1.5rem)) * .5);
+  padding-bottom: calc( (5.3571428571rem - ( 1.5rem)) * .5); }
   .nav-list > .nav-item > a:after,
   .nav-list > .nav-item > [data-toggle=dropdown]:after,
   .nav-list > li > a:after,
@@ -3693,8 +3693,8 @@ table {
     margin-top: -1px;
     border-top: 1px solid #ecedf0;
     border-bottom: 1px solid #ecedf0;
-    padding-top: calc(  (  (3.5714285714rem - 1px) - (1em * 1.7142857143) ) * .5);
-    padding-bottom: calc(  (  (3.5714285714rem - 1px) - (1em * 1.7142857143) ) * .5); }
+    padding-top: calc(  (  (3.5714285714rem - 1px) - (1em * 1.5) ) * .5);
+    padding-bottom: calc(  (  (3.5714285714rem - 1px) - (1em * 1.5) ) * .5); }
     .list-group li:before,
     .list-group .list-group-item:before,
     .list-group ul li:before,
@@ -4879,7 +4879,7 @@ table {
   appearance: none;
   outline: none;
   font-size: 1rem;
-  line-height: 1.7142857143;
+  line-height: 1.5;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: inherit;
   font-weight: 600;
@@ -4892,8 +4892,8 @@ table {
   border: 1px solid transparent;
   padding-right: 1.4285714286em;
   padding-left: 1.4285714286em;
-  padding-top: calc(  (  (3.2142857143rem - (1px * 2)) - (1em * 1.7142857143) ) * .5);
-  padding-bottom: calc(  (  (3.2142857143rem - (1px * 2)) - (1em * 1.7142857143) ) * .5); }
+  padding-top: calc(  (  (3.2142857143rem - (1px * 2)) - (1em * 1.5) ) * .5);
+  padding-bottom: calc(  (  (3.2142857143rem - (1px * 2)) - (1em * 1.5) ) * .5); }
   .theme-inverse .input-select, .theme-inverse .input-single-line, .theme-inverse .input-multiple-line, .theme-inverse .input-calendar-ui, .theme-inverse .input-editor, .theme-inverse .fw-trumbowyg-editor, .theme-inverse .fw-trumbowyg-textarea, .theme-inverse .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]), .fw-trumbowyg-modal-box label .theme-inverse input:not([type="checkbox"]):not([type="radio"]) {
     color: inherit;
     background-color: rgba(141, 141, 141, 0.1); }
@@ -4965,8 +4965,8 @@ table {
   .input-group.input-large .fw-trumbowyg-textarea,
   .input-group.input-large .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]),
   .fw-trumbowyg-modal-box label .input-group.input-large input:not([type="checkbox"]):not([type="radio"]) {
-    padding-top: calc(  (  (3.5714285714rem - (1px * 2)) - (1em * 1.7142857143) ) * .5);
-    padding-bottom: calc(  (  (3.5714285714rem - (1px * 2)) - (1em * 1.7142857143) ) * .5); }
+    padding-top: calc(  (  (3.5714285714rem - (1px * 2)) - (1em * 1.5) ) * .5);
+    padding-bottom: calc(  (  (3.5714285714rem - (1px * 2)) - (1em * 1.5) ) * .5); }
   .input-small.input-select, .input-small.input-single-line, .input-small.input-multiple-line, .input-small.input-calendar-ui, .input-small.input-editor, .input-small.fw-trumbowyg-editor, .input-small.fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input.input-small:not([type="checkbox"]):not([type="radio"]),
   .input-group.input-small .input-select,
   .input-group.input-small .input-single-line,
@@ -4977,8 +4977,8 @@ table {
   .input-group.input-small .fw-trumbowyg-textarea,
   .input-group.input-small .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]),
   .fw-trumbowyg-modal-box label .input-group.input-small input:not([type="checkbox"]):not([type="radio"]) {
-    padding-top: calc(  (  (2.1428571429rem - (1px * 2)) - (1em * 1.7142857143) ) * .5);
-    padding-bottom: calc(  (  (2.1428571429rem - (1px * 2)) - (1em * 1.7142857143) ) * .5); }
+    padding-top: calc(  (  (2.1428571429rem - (1px * 2)) - (1em * 1.5) ) * .5);
+    padding-bottom: calc(  (  (2.1428571429rem - (1px * 2)) - (1em * 1.5) ) * .5); }
 
 .input-select, .input-single-line, .input-multiple-line, .input-editor, .input-calendar-ui, .input-group, .fw-trumbowyg-editor, .fw-trumbowyg-textarea, .fw-trumbowyg-modal-box label input:not([type="checkbox"]):not([type="radio"]) {
   border-radius: 10px;
@@ -5222,22 +5222,22 @@ table {
       padding-bottom: 0.7142857143em;
       margin-left: -1.4285714286em;
       margin-right: -1.4285714286em;
-      margin-top: calc(  (  (3.2142857143rem - (1em * 1.7142857143) ) * .5) * -1);
+      margin-top: calc(  (  (3.2142857143rem - (1em * 1.5) ) * .5) * -1);
       position: relative; }
       .input-calendar-ui-input:last-child {
-        margin-bottom: calc(  (  (3.2142857143rem - (1em * 1.7142857143) ) * .5) * -1); }
+        margin-bottom: calc(  (  (3.2142857143rem - (1em * 1.5) ) * .5) * -1); }
         .input-calendar-ui-input:last-child:after {
           content: none; }
       .input-small .input-calendar-ui-input {
-        margin-top: calc(  (  (2.1428571429rem - (1em * 1.7142857143) ) * .5) * -1);
+        margin-top: calc(  (  (2.1428571429rem - (1em * 1.5) ) * .5) * -1);
         position: relative; }
         .input-small .input-calendar-ui-input:last-child {
-          margin-bottom: calc(  (  (2.1428571429rem - (1em * 1.7142857143) ) * .5) * -1); }
+          margin-bottom: calc(  (  (2.1428571429rem - (1em * 1.5) ) * .5) * -1); }
       .input-large .input-calendar-ui-input {
-        margin-top: calc(  (  (3.5714285714rem - (1em * 1.7142857143) ) * .5) * -1);
+        margin-top: calc(  (  (3.5714285714rem - (1em * 1.5) ) * .5) * -1);
         position: relative; }
         .input-large .input-calendar-ui-input:last-child {
-          margin-bottom: calc(  (  (3.5714285714rem - (1em * 1.7142857143) ) * .5) * -1); }
+          margin-bottom: calc(  (  (3.5714285714rem - (1em * 1.5) ) * .5) * -1); }
       .input-calendar-ui-input:after {
         content: "";
         display: block;
@@ -5532,7 +5532,7 @@ CUSTOM STYLES FOR TRUMBOWYG
   overflow: auto;
   user-select: text;
   font-size: 1rem;
-  line-height: 1.7142857143; }
+  line-height: 1.5; }
   .fw-trumbowyg-editor.fw-trumbowyg-autogrow-on-enter, .fw-trumbowyg-textarea.fw-trumbowyg-autogrow-on-enter {
     transition: height 0.25s ease-out; }
   .fw-trumbowyg-box.fw-trumbowyg-fullscreen .fw-trumbowyg-editor, .fw-trumbowyg-box.fw-trumbowyg-fullscreen .fw-trumbowyg-textarea {
@@ -6456,13 +6456,13 @@ CUSTOM STYLES FOR TRUMBOWYG
 
 /* TEXT CLASSES */
 .text-leading-compact {
-  line-height: 1.5 !important; }
+  line-height: 1.3125 !important; }
 
 .text-leading-expanded {
-  line-height: 2.5714285714 !important; }
+  line-height: 2.25 !important; }
 
 .text-leading-normalize {
-  line-height: 1.7142857143 !important; }
+  line-height: 1.5 !important; }
 
 .text-leading-inherit {
   line-height: inherit !important; }
@@ -6544,11 +6544,11 @@ CUSTOM STYLES FOR TRUMBOWYG
       -webkit-line-clamp: 2 !important;
       -webkit-box-orient: vertical !important;
       overflow: hidden !important;
-      height: calc((1em * 1.7142857143) * 2); }
+      height: calc((1em * 1.5) * 2); }
       .text-leading-compact .text-wrap-ellipsis-multiple, .text-wrap-ellipsis-multiple.text-leading-compact {
-        height: calc((1em * 1.7142857143 * 0.875) * 2); }
+        height: calc((1em * 1.5 * 0.875) * 2); }
       .text-leading-expanded .text-wrap-ellipsis-multiple, .text-wrap-ellipsis-multiple.text-leading-expanded {
-        height: calc((1em * 1.7142857143 * 1.5) * 2); }
+        height: calc((1em * 1.5 * 1.5) * 2); }
 
 @supports not (-webkit-background-clip: text) {
   .text-clip-background {
