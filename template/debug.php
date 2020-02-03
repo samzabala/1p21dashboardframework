@@ -13,49 +13,57 @@
 		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class="open"></i></h1>
 		<div class="accordion open">
 
+			<input type="date" class="input input-calendar" 
+				value="2019-07-01"
+				data-calendar-min="2019-06-31"
+				data-calendar-text-input="true" />
 
-		<div class="position-relative">
-			<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
-			<div id="dropcal" class="dropdown" data-dropdown-width="100%">
-				<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
 
-					<div class="flex-col-md-4 flex-col-sm-6">
+			<!-- <div class="position-relative">
+				<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
+				<div id="dropcal" class="dropdown" data-dropdown-width="100%">
+					<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
 
-						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-							<label class="input-label">From</label>
-							<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+						<div class="flex-col-md-4 flex-col-sm-6">
+
+							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+								<label class="input-label">From</label>
+								<input type="date" class="input input-calendar" 
+								value="2019-07-01"
+								data-calendar-min="2019-06-31"
+								data-calendar-text-input="true" />
+							</div>
 						</div>
-					</div>
 
-					
-					<div class="flex-col-md-4 flex-col-sm-6">
+						
+						<div class="flex-col-md-4 flex-col-sm-6">
 
-						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-							<label class="input-label">To</label>
-							<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+								<label class="input-label">To</label>
+								<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+							</div>
 						</div>
-					</div>
 
-					
-					<div class="flex-col-md-4 flex-col-sm-12">
-						<div class="input-label">Or by Month</div>
-						<ul class="no-padding-left">
+						
+						<div class="flex-col-md-4 flex-col-sm-12">
+							<div class="input-label">Or by Month</div>
+							<ul class="no-padding-left">
 
-							<li><a href="#">Jan 2018</a></li>
-							<li><a href="#">Feb 2018</a></li>
-							<li><a href="#">March 2018</a></li>
-							<li><a href="#">April 2018</a></li>
-							<li><hr class="dropdown-separator"></li>
-							<li><a href="#">Today</a></li>
-							<li><a href="#">Last 3 days</a></li>
-							<li><a href="#">Last week</a></li>
-							<li><a href="#">Last Month</a></li>
-						</ul>
+								<li><a href="#">Jan 2018</a></li>
+								<li><a href="#">Feb 2018</a></li>
+								<li><a href="#">March 2018</a></li>
+								<li><a href="#">April 2018</a></li>
+								<li><hr class="dropdown-separator"></li>
+								<li><a href="#">Today</a></li>
+								<li><a href="#">Last 3 days</a></li>
+								<li><a href="#">Last week</a></li>
+								<li><a href="#">Last Month</a></li>
+							</ul>
 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 			The div is somewhere here... suck a dick
 			<input type="text" class="input input-calendar" data-calendar-start-day="0"
 			data-calendar-disabled-dates="2020-03-01,2020-03-02"
@@ -70,12 +78,12 @@
 			data-calendar-text-input="true" />
 
 
-			<!-- data-calendar-start-day="0"
+			data-calendar-start-day="0"
 				data-calendar-disabled-dates="past"
 				data-calendar-dropdown-year-span="0"
 				min="2019-01-20"
 				data-calendar-max="2021-02-20"
-				value="2020-03-05" -->
+				value="2020-03-05"
 
 			<h2>
 				use cases
@@ -127,9 +135,6 @@
 			data-calendar-text-input="true"
 			value="2020-06-05" />
 
-			<!-- <input type="text" class="input input-calendar input-primary" 
-				value="2020-01-05" /><input type="text" class="input input-calendar input-secondary" value="2020-02-05" /><input type="text" class="input input-calendar input-accent" value="2020-03-05" /><input type="text" class="input input-calendar input-success"value="2020-04-05" /><input type="text" class="input input-calendar input-caution"value="2020-05-05" /><input type="text" class="input input-calendar input-error"
-			value="2020-06-05" /> -->
 
 			<h3>in input-group-vertical</h3>
 			<div class="input-group input-group-vertical">
@@ -182,7 +187,7 @@
 				value="2020-04-05" />
 				<input type="text" class="input input-calendar" data-calendar-start-day="4"
 				value="2020-05-05" />
-			</div>
+			</div> -->
 
 
 

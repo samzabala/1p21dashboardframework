@@ -770,8 +770,8 @@ window.jQuery && jQuery.noConflict();
 
 		//if  in range of min or max
 		if(
-			(_.dateToParse(args.max) && _.dateToParse(args.max) <= d)
-			|| (_.dateToParse(args.min) && d <= _.dateToParse(args.min))
+			(_.dateToParse(args.max) && _.dateToParse(args.max) < d)
+			|| (_.dateToParse(args.min) && d < _.dateToParse(args.min))
 		) {
 			// console.warn('value not in max and width || ',_.dateToVal(d));;
 			toReturn = false;

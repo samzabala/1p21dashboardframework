@@ -655,11 +655,15 @@ To allow the framework to generate a UI for this, add a class of `input-calendar
 The generated UI will wrap the input field and also replicate the classes added to the input tag except `input-calendar` will now be `input-calendar-ui` to avoid clashing outfits and what not
 
 ```html
-<input type="text" class="input input-calendar">
+<input type="text" class="input input-calendar" value="2020-01-23" />
 ```
 ![Calendar](../../images/input-calendar.png)
 
-One a user sets the value, the it will return an ISO8601 or `yyyy-mm-dd` formattted value into the `.input-calendar`
+Once a value is set, the it will return an ISO8601 or `yyyy-mm-dd` formattted value into the `.input-calendar`
+
+It will also render the date active in the calendar ui
+
+This can be use set a default value to the calendar as well
 
 
 ### Support 
