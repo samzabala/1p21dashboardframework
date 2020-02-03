@@ -705,10 +705,10 @@ window.jQuery && jQuery.noConflict();
 
 		//if  in range of min or max
 		if(
-			(_.dateToParse(args.max) && _.dateToParse(args.max) <= d)
-			|| (_.dateToParse(args.min) && d <= _.dateToParse(args.min))
+			(_.dateToParse(args.max) && _.dateToParse(args.max) < d)
+			|| (_.dateToParse(args.min) && d < _.dateToParse(args.min))
 		) {
-			// console.warn('value not in max and width || ',_.dateToVal(d));;
+			// console.warn('value not in max and width || ',_.dateToVal(d));
 			toReturn = false;
 		}
 
@@ -1693,22 +1693,11 @@ window.jQuery && jQuery.noConflict();
 			e.preventDefault();
 		});
 
-		$('body').on('click','.dropdown li > a',function(e){
-			var liContainer = $(this).parent();
-
-			if(liContainer.matches('li')) {
-				liContainer.toggleClass('active');
-			}
-
-		});
-
-
 		$('body').on('click','*[data-toggle="dropdown"]',function(e){
 			e.preventDefault();
 
 			var selector =  _.getTheToggled($(this),'dropdown');
 
-			console.log('bitch drop',selector);
 
 			if( selector ){
 
