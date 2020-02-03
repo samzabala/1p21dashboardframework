@@ -663,7 +663,7 @@ Once a value is set, the it will return an ISO8601 or `yyyy-mm-dd` formattted va
 
 It will also render the date active in the calendar ui
 
-This can be use set a default value to the calendar as well
+This is also how to set a default value to the calendar as well
 
 
 ### Support 
@@ -752,7 +752,7 @@ Defaults to `1`
 
 Number of years the heading dropdown will output
 
-`data-calendar-disabled-dates`
+**`data-calendar-disabled-dates`**
 
 Defaults to ``
 
@@ -760,9 +760,9 @@ Disables specific dates or keywords that must be separated with commas. Dates mu
 
 There also available keywords too
 
-`weekends` - disables weekends
-`past` - disables dates from before today's date
-`future` - disables dates from after today's date
+*	`weekends` - disables weekends
+*	`past` - disables dates from before today's date
+*	`future` - disables dates from after today's date
 
 
 **`data-calendar-text-input`**
