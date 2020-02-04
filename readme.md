@@ -21,7 +21,8 @@ will separate dashboard and framework one the bois are readeh
 
 ### ***NEW***
 
-[Bubble chart demo](template/chart.php)
+[Bubble chart demo code](template/chart.php)
+[Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
 
 Calendar ui dropdown markup

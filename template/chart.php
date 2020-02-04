@@ -19,6 +19,8 @@ Step 1. DATASETUP - JSON format
 	*/
 
 var placeholderData = [
+
+	// data template
 		{
 			"name":"Flanagan Law Firm",
 			"items" : [
@@ -35,6 +37,8 @@ var placeholderData = [
 		}, 
 
 
+
+// this is now placeholders
 		{
 			"name":"Butler Wooten & Peak LLP",
 			"items" : [
@@ -213,17 +217,17 @@ an element with a unique id to render the graph too. add color and background he
 				minBubble = 7,
 					//smallest booble size render
 
-				maxBubble = stripeHeight * .375,
+				maxBubble = stripeHeight * .3,
 					//largest booble size render
 
-				width = 1440,
+				padding = [(stripeHeight/2),(stripeHeight/2),(stripeHeight * 1.5),270],
+					//space for axis text
+
+				width = stripeHeight * date.end.getDate() * .65,
 					//size but will be setup as aspect ratio
 
 				height = incomingJSON.length * stripeHeight,
 					//size but will be setup as aspect ratio
-
-				padding = [(stripeHeight/2),(stripeHeight/2),(stripeHeight * 1.5),270],
-					//space for axis text
 
 				outerWidth = (width + padding[1] + padding[3]),
 					//size including axis labels and things
@@ -253,6 +257,8 @@ an element with a unique id to render the graph too. add color and background he
 					//how long animation takes
 				
 				;
+
+				console.log(width, stripeHeight, date.end.getDate());
 
 
 			//select the dootdoot and set it up for the svg that will bear our bois
@@ -367,7 +373,8 @@ an element with a unique id to render the graph too. add color and background he
 			function wrap(text, width) {
 				text.each(function() {
 					var text = d3.select(this),
-						words = text.text().split(/\s+/).reverse(),
+					txtContent = (text.text().length > 42) ? text.text().substring(0, 42) + '...' : text.text(),
+						words = txtContent.split(/\s+/).reverse(),
 						word,
 						line = [],
 						lineNumber = 0,
@@ -484,13 +491,14 @@ an element with a unique id to render the graph too. add color and background he
 					.on('mouseenter',function(){
 						frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
 					})
-					.attr('class','chart-item')
+					.attr('class','chart-item stroke-theme-polar')
 					.attr('cx',function(dis){
 						return x.scale(dis.date)
 					})
 					.attr('cy',function(dis){
 						return y.scale(dis.date)
 					})
+					.attr('stroke-width',1)
 					.attr('r',0)
 					.transition(transition)
 					.attr('r',function(dis){
