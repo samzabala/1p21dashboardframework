@@ -21,6 +21,9 @@ will separate dashboard and framework one the bois are readeh
 
 ### ***NEW***
 
+[Bubble chart demo](template/chart.php)
+
+
 Calendar ui dropdown markup
 
 ```html
