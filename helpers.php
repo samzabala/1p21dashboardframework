@@ -55,6 +55,7 @@ function app_init_content($slug = ''){
 				app_get_template_part('template/projects-scoreboard');
 				break;
 
+			case 'chart':
 			case 'debug':
 			case 'profiles':
 			case 'last-activity':
