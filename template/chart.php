@@ -731,7 +731,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 <script>
 (function(){
-	var max = 2;
+	var max =6;
 	var month = 0;
 
 /*
