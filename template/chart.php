@@ -244,8 +244,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					// 	.entries(_.rawData);
 					_.data = _.rawData;
 					
-					_.data.forEach(function(client){
-						client.items.forEach(function(item,i){
+					_.data.forEach((client)=>{
+						client.items.forEach((item,i)=>{
 							item.size = +item.size;
 						})
 					});
@@ -424,7 +424,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					//color scale
 					_.getColor = d3.scaleOrdinal()
 						.range(_.args.palette)
-						.domain(_.rawData.map(function(dis){
+						.domain(_.rawData.map((dis)=>{
 							return dis.name;
 						}));
 
@@ -484,9 +484,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 								if(!_.args.dateRange.length){
 									var min = d3.min(_.data.map(
-											function(client){
+											(client)=>{
 												return d3.min(client.items.map(
-													function(item){
+													(item)=>{
 														return item.date;
 													}
 												));
@@ -494,9 +494,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 										));
 
 									var max = d3.max(_.data.map(
-										function(client){
+										(client)=>{
 											return d3.max(client.items.map(
-												function(item){
+												(item)=>{
 													return item.date;
 												}
 											));
@@ -511,7 +511,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 							}() ));
 
 					_.y.scale
-						.domain(_.data.map(function(dis){
+						.domain(_.data.map((dis)=>{
 							return dis.name;
 						}))
 
@@ -526,9 +526,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 							let toReturn = _.args.bubbleDomain;
 							if(!_.args.bubbleDomain.length){
 								var min = d3.min(_.data.map(
-									function(client){
+									(client)=>{
 										return d3.min(client.items.map(
-											function(item){
+											(item)=>{
 												return item.size;
 											}
 										));
@@ -536,9 +536,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 								));
 
 								var max = d3.max(_.data.map(
-									function(client){
+									(client)=>{
 										return d3.max(client.items.map(
-											function(item){
+											(item)=>{
 												return item.size;
 											}
 										));
@@ -598,11 +598,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						let stripe_enter = _.stripe
 							.enter()
 							.append('g')
-							.attr('class',function(dis,i){
+							.attr('class',(dis,i)=>{
 								return 'stripe stripe-'+dis.name.toLowerCase().split(' ')[0]
 							})
 							.style('opacity',0)
-							.attr('transform',function(dis){
+							.attr('transform',(dis)=>{
 								return 'translate(0,'+( _.y.scale(dis.name) +(_.y.scale.bandwidth() / 2) )+')';
 							})
 
@@ -625,10 +625,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						stripe_merge
 							.transition(_.transition)
 							.style('opacity')
-							.attr('transform',function(dis){
+							.attr('transform',(dis)=>{
 								return 'translate(0,'+( _.y.scale(dis.name) +(_.y.scale.bandwidth() / 2) )+')';
 							})
-							.attr('fill',function(dis,i){
+							.attr('fill',(dis,i)=>{
 								return _.getColor(i);
 							})
 							
@@ -682,10 +682,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					//updated bois
 					.attr('r',0)
 
-					.attr('cx',function(dis){
+					.attr('cx',(dis)=>{
 						return 0
 					})
-					.attr('cy',function(dis){
+					.attr('cy',(dis)=>{
 						return _.y.scale(_.date.parser(dis.date))
 					})
 
@@ -693,10 +693,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				let bubble_merge = _.bubble.merge(bubble_enter)
 					.transition(_.transition)
 
-					.attr('cx',function(dis){
+					.attr('cx',(dis)=>{
 						return _.x.scale(_.date.parser(dis.date))
 					})
-					.attr('r',function(dis){
+					.attr('r',(dis)=>{
 						
 						// return _.getBubbleSize(dis.size) < _.stripeHeight ? _.getBubbleSize(dis.size) : _.stripeHeight;
 
@@ -713,11 +713,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 			document.addEventListener("DOMContentLoaded", function() {
-				jQuery(document).ready(function($) {
+				jQuery(document).ready(($) => {
 					if(!window.d3WasLoadedForBubbles){
 						$.when(
 						$.getScript('https://d3js.org/d3.v5.min.js'),
-						$.Deferred(function( deferred ){
+						$.Deferred(( deferred )=>{
 							$( deferred.resolve );
 						})
 						)
