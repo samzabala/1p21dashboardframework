@@ -29,15 +29,15 @@ var placeholderData = [
 		{
 			"name":"Flanagan Law Firm",
 			"items" : [
-				{ "date": "2020-01-01", "size": "100" },
-				{ "date": "2020-01-08", "size": "400" },
-				{ "date": "2020-01-09", "size": "100" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-11", "size": "400" },
-				{ "date": "2020-01-13", "size": "600" },
-				{ "date": "2020-01-16", "size": "400" },
-				{ "date": "2020-01-21", "size": "600" },
-				{ "date": "2020-01-24", "size": "400" }
+				{ "date": "2020-01-01", "size": "1" },
+				{ "date": "2020-01-08", "size": "4" },
+				{ "date": "2020-01-09", "size": "1" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-11", "size": "4" },
+				{ "date": "2020-01-13", "size": "6" },
+				{ "date": "2020-01-16", "size": "4" },
+				{ "date": "2020-01-21", "size": "6" },
+				{ "date": "2020-01-24", "size": "4" }
 			]
 		}, 
 
@@ -47,110 +47,110 @@ var placeholderData = [
 		{
 			"name":"Butler Wooten & Peak LLP",
 			"items" : [
-				{ "date": "2020-01-03", "size": "400" },
-				{ "date": "2020-01-05", "size": "100" },
-				{ "date": "2020-01-06", "size": "400" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-11", "size": "400" },
-				{ "date": "2020-01-13", "size": "600" },
-				{ "date": "2020-01-15", "size": "100" },
-				{ "date": "2020-01-17", "size": "400" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-22", "size": "100" },
-				{ "date": "2020-01-24", "size": "100" },
-				{ "date": "2020-01-26", "size": "600" },
-				{ "date": "2020-01-29", "size": "100" }
+				{ "date": "2020-01-03", "size": "4" },
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-06", "size": "4" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-11", "size": "4" },
+				{ "date": "2020-01-13", "size": "6" },
+				{ "date": "2020-01-15", "size": "1" },
+				{ "date": "2020-01-17", "size": "4" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-22", "size": "1" },
+				{ "date": "2020-01-24", "size": "1" },
+				{ "date": "2020-01-26", "size": "6" },
+				{ "date": "2020-01-29", "size": "1" }
 			]
 		}, {
 			"name":"Sullivan Papain Block McGrath & Cannovo PC",
 			"items" : [
-				{ "date": "2020-01-02", "size": "400" },
-				{ "date": "2020-01-03", "size": "100" },
-				{ "date": "2020-01-05", "size": "400" },
-				{ "date": "2020-01-09", "size": "200" },
-				{ "date": "2020-01-10", "size": "400" },
-				{ "date": "2020-01-15", "size": "400" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-17", "size": "100" },
-				{ "date": "2020-01-20", "size": "600" },
-				{ "date": "2020-01-21", "size": "100" }
+				{ "date": "2020-01-02", "size": "4" },
+				{ "date": "2020-01-03", "size": "1" },
+				{ "date": "2020-01-05", "size": "4" },
+				{ "date": "2020-01-09", "size": "2" },
+				{ "date": "2020-01-10", "size": "4" },
+				{ "date": "2020-01-15", "size": "4" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-17", "size": "1" },
+				{ "date": "2020-01-20", "size": "6" },
+				{ "date": "2020-01-21", "size": "1" }
 			]
 		}, {
 			"name":"Drake Law Firm",
 			"items" : [
-				{ "date": "2020-01-03", "size": "400" },
-				{ "date": "2020-01-05", "size": "100" },
-				{ "date": "2020-01-06", "size": "400" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-14", "size": "600" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-24", "size": "100" },
-				{ "date": "2020-01-26", "size": "400" },
-				{ "date": "2020-01-29", "size": "100" }
+				{ "date": "2020-01-03", "size": "4" },
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-06", "size": "4" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-14", "size": "6" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-24", "size": "1" },
+				{ "date": "2020-01-26", "size": "4" },
+				{ "date": "2020-01-29", "size": "1" }
 			]
 		}, {
 			"name":"Jay Knipsel",
 			"items" : [
-				{ "date": "2020-01-03", "size": "100" },
-				{ "date": "2020-01-04", "size": "100" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-11", "size": "400" },
-				{ "date": "2020-01-14", "size": "100" },
-				{ "date": "2020-01-15", "size": "100" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-17", "size": "400" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-19", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-22", "size": "600" },
-				{ "date": "2020-01-23", "size": "500" }
+				{ "date": "2020-01-03", "size": "1" },
+				{ "date": "2020-01-04", "size": "1" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-11", "size": "4" },
+				{ "date": "2020-01-14", "size": "1" },
+				{ "date": "2020-01-15", "size": "1" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-17", "size": "4" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-19", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-22", "size": "6" },
+				{ "date": "2020-01-23", "size": "5" }
 			]
 		}, {
 			"name":"Another Client",
 			"items" : [
-				{ "date": "2020-01-03", "size": "400" },
-				{ "date": "2020-01-05", "size": "100" },
-				{ "date": "2020-01-06", "size": "400" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-12", "size": "600" },
-				{ "date": "2020-01-14", "size": "400" },
-				{ "date": "2020-01-15", "size": "100" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-22", "size": "100" },
-				{ "date": "2020-01-24", "size": "100" },
-				{ "date": "2020-01-26", "size": "100" }
+				{ "date": "2020-01-03", "size": "4" },
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-06", "size": "4" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-12", "size": "6" },
+				{ "date": "2020-01-14", "size": "4" },
+				{ "date": "2020-01-15", "size": "1" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-22", "size": "1" },
+				{ "date": "2020-01-24", "size": "1" },
+				{ "date": "2020-01-26", "size": "1" }
 			]
 		}, {
 			"name":"Tiano O'Dell",
 			"items" : [
-				{ "date": "2020-01-05", "size": "100" },
-				{ "date": "2020-01-06", "size": "400" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-13", "size": "600" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-17", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-23", "size": "100" },
-				{ "date": "2020-01-25", "size": "400" }
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-06", "size": "4" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-13", "size": "6" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-17", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-23", "size": "1" },
+				{ "date": "2020-01-25", "size": "4" }
 			]
 		}, {
 			"name":"Boyd Law",
 			"items" : [
-				{ "date": "2020-01-02", "size": "100" },
-				{ "date": "2020-01-04", "size": "100" },
-				{ "date": "2020-01-05", "size": "100" },
-				{ "date": "2020-01-08", "size": "200" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-19", "size": "300" },
-				{ "date": "2020-01-20", "size": "600" },
-				{ "date": "2020-01-23", "size": "500" },
-				{ "date": "2020-01-28", "size": "400" }
+				{ "date": "2020-01-02", "size": "1" },
+				{ "date": "2020-01-04", "size": "1" },
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-08", "size": "2" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-19", "size": "3" },
+				{ "date": "2020-01-20", "size": "6" },
+				{ "date": "2020-01-23", "size": "5" },
+				{ "date": "2020-01-28", "size": "4" }
 			]
 		}
 ];
@@ -172,7 +172,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 <script>
 //////////////////////////////START COPY HERE//////////////////////////////
 	"use strict";
-	(function(){
+	(function(window){
 		/*
 		selector - string | selector for where to append graph
 		settings - obj |arguments to pass to render our boi
@@ -183,7 +183,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 
-		const renderD3Bubbles = function(selector,settings,incomingData){
+		const D3BubbleChart = function(selector,incomingData,settings){
 
 			if (!selector || !incomingData ){
 				return false;
@@ -193,7 +193,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			
 				//hELP
 			_.selector = selector;
-			_.rawData = incomingData || false;
+			_.initData = incomingData || null;
+			_.rawData = _.initData || false;
 			_.data = [];
 			//get bitch args
 			_.setArgs = (settings)=>{
@@ -203,7 +204,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					const args = {};
 
 
-					var defaults = {
+					var defaults = _.args || {
 						dateRange: [],
 						bubbleDomain: [],
 						palette: [
@@ -246,8 +247,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 							item.size = +item.size;
 						})
 					});
-
-					// console.log(_.rawData,_.data);
 				}
 			}
 			
@@ -333,7 +332,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				_.minBubble = 7;
 					//smallest booble size render
 
-				_.maxBubble = _.stripeHeight * .3;
+				_.maxBubble = _.stripeHeight * .5;
 					//largest booble size render
 
 				_.padding = [(_.maxBubble),(_.stripeHeight/2),(_.stripeHeight * 1.5) + (_.maxBubble),270];
@@ -403,7 +402,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						
 					_.x.axis = d3.axisBottom(_.x.scale)
 						.tickFormat(_.date.locale.format('%b %d'))
-						.ticks((_.args.dateRange[0] == _.args.dateRange[1]) ? d3.timeDay : 31)
+						.ticks((_.args.dateRange[0].getMonth() == _.args.dateRange[1].getMonth()) ? d3.timeDay : 31)
 						.tickSize(0)
 						;
 
@@ -421,8 +420,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					//color scale
 					_.getColor = d3.scaleOrdinal()
 						.range(_.args.palette)
-						.domain(_.rawData.map((dis)=>{
-							return dis.name;
+						.domain(_.initData.map((dis)=>{
+							return dis.name; //so pallete isnt disloyal 
 						}));
 
 
@@ -447,7 +446,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					_.chart = _.g.append('g')
 						.attr('class','chart-area')
 
-					_.updateBubbles(_.args,_.rawData);
+					_.updateBubbles(_.rawData,_.args);
 
 					
 				}else{
@@ -468,7 +467,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			}
 
 
-			_.updateBubbles = (settings,dat)=>{
+			_.updateBubbles = (dat,settings)=>{
+
 				
 				_.setArgs(settings);
 				_.setData(dat);
@@ -626,7 +626,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 								return 'translate(0,'+( _.y.scale(dis.name) +(_.y.scale.bandwidth() / 2) )+')';
 							})
 							.attr('fill',(dis,i)=>{
-								return _.getColor(i);
+								return _.getColor(dis.name);
 							})
 							
 				_.bubbles = _.stripe.select('g.bubbles');
@@ -661,7 +661,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('data-toggle','tooltip-hover')
 					.attr('data-tooltip-placement','right')
 					.attr('data-tooltip-content',(dis)=>{
-						let percentage = (dis.size/ _.getBubbleSize.domain()[1]).toFixed(1);
+						const percentage = (dis.size/ _.getBubbleSize.domain()[1]).toFixed(1);
 						return `<b> ${ _.date.locale.format('%B %e')(_.date.parser(dis.date)) }</b>
 						<br>
 						${dis.size} (${percentage}) %`
@@ -703,6 +703,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				return _;
 
+
 			}
 
 
@@ -713,8 +714,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			
 		}
 
-		window.renderD3Bubbles = renderD3Bubbles;
-	}());
+		window.D3BubbleChart = D3BubbleChart;
+	}(window));
 
 //////////////////////////////END COPY HERE//////////////////////////////
 </script>
@@ -730,7 +731,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 <script>
 (function(){
-	var max = 200;
+	var max = 2;
 	var month = 0;
 
 /*
@@ -738,64 +739,78 @@ Bubble Step No. 4. Initiating
 this Version loads d3 as well instead of manually embedding script. may cause the graph to fail if d3.js.org is randomly down
 */
 	//store graph in a variable to allow updates
-	var graph = new renderD3Bubbles(
+	var graph = new D3BubbleChart(
 		'#chart-demo',
+		placeholderData,
 		{
 			dateRange: [
 				new Date(2020,month,1),
 				new Date(2020,month+1,0)
 			],
-			bubbleDomain:[0,max]
+			bubbleDomain:[0,max],
+			// palette: ['#e18256', '#313f76', '#547b80', '#8f4139']
 		},
-		placeholderData
 	);
 
 	var usePlaceholder = true;
 	var sideChickData = [{
 			"name":"Sullivan Papain Block McGrath & Cannovo PC",
 			"items" : [
-				{ "date": "2020-01-02", "size": "400" },
-				{ "date": "2020-01-03", "size": "100" },
-				{ "date": "2020-01-05", "size": "400" },
-				{ "date": "2020-01-09", "size": "200" },
-				{ "date": "2020-01-10", "size": "400" },
-				{ "date": "2020-01-15", "size": "400" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-17", "size": "100" },
-				{ "date": "2020-01-20", "size": "600" },
-				{ "date": "2020-01-21", "size": "100" }
+				{ "date": "2020-01-02", "size": "4" },
+				{ "date": "2020-01-03", "size": "1" },
+				{ "date": "2020-01-05", "size": "4" },
+				{ "date": "2020-01-09", "size": "2" },
+				{ "date": "2020-01-10", "size": "4" },
+				{ "date": "2020-01-15", "size": "4" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-17", "size": "1" },
+				{ "date": "2020-01-20", "size": "6" },
+				{ "date": "2020-01-21", "size": "1" }
 			]
-		}, {
+		},{
+			"name":"Tiano O'Dell",
+			"items" : [
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-06", "size": "4" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-13", "size": "6" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-17", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-23", "size": "1" },
+				{ "date": "2020-01-25", "size": "4" }
+			]
+		},  {
 			"name":"Drake Law Firm",
 			"items" : [
-				{ "date": "2020-01-03", "size": "400" },
-				{ "date": "2020-01-05", "size": "100" },
-				{ "date": "2020-01-06", "size": "400" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-14", "size": "600" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-24", "size": "100" },
-				{ "date": "2020-01-26", "size": "400" },
-				{ "date": "2020-01-29", "size": "100" }
+				{ "date": "2020-01-03", "size": "4" },
+				{ "date": "2020-01-05", "size": "1" },
+				{ "date": "2020-01-06", "size": "4" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-14", "size": "6" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-24", "size": "1" },
+				{ "date": "2020-01-26", "size": "4" },
+				{ "date": "2020-01-29", "size": "1" }
 			]
 		}, {
 			"name":"Jay Knipsel",
 			"items" : [
-				{ "date": "2020-01-03", "size": "100" },
-				{ "date": "2020-01-04", "size": "100" },
-				{ "date": "2020-01-10", "size": "100" },
-				{ "date": "2020-01-11", "size": "400" },
-				{ "date": "2020-01-14", "size": "100" },
-				{ "date": "2020-01-15", "size": "100" },
-				{ "date": "2020-01-16", "size": "100" },
-				{ "date": "2020-01-17", "size": "400" },
-				{ "date": "2020-01-18", "size": "100" },
-				{ "date": "2020-01-19", "size": "100" },
-				{ "date": "2020-01-20", "size": "400" },
-				{ "date": "2020-01-22", "size": "600" },
-				{ "date": "2020-01-23", "size": "500" }
+				{ "date": "2020-01-03", "size": "1" },
+				{ "date": "2020-01-04", "size": "1" },
+				{ "date": "2020-01-10", "size": "1" },
+				{ "date": "2020-01-11", "size": "4" },
+				{ "date": "2020-01-14", "size": "1" },
+				{ "date": "2020-01-15", "size": "1" },
+				{ "date": "2020-01-16", "size": "1" },
+				{ "date": "2020-01-17", "size": "4" },
+				{ "date": "2020-01-18", "size": "1" },
+				{ "date": "2020-01-19", "size": "1" },
+				{ "date": "2020-01-20", "size": "4" },
+				{ "date": "2020-01-22", "size": "6" },
+				{ "date": "2020-01-23", "size": "5" }
 			]
 		}];
 
@@ -820,14 +835,11 @@ updateBubbles allows you to modify arguments and render a different variation of
 */
 
 	graph.updateBubbles(
+		newData,
 		{
-			dateRange: [
-				new Date(2020,0,1),
-				new Date(2020,month+1,0)
-			],
-			bubbleDomain:[0,max]
-		},
-		newData
+			// bubbleDomain:[0,max],
+			// palette:['#fff200', '#d7c368', '#e18256', '#313f76', '#547b80', '#8f4139', '#ecc65f', '#d069a9', '#008eb0', '#5f6046', '#c26558', '#4db7ff', '#5a3b00', '#e1e43c', '#6154a4', '#9e005d', '#000000']
+		}
 	)
 	;
 
