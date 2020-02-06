@@ -186,7 +186,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 
-		const renderD3Bubbles = (selector,settings,incomingData)=>{
+		const renderD3Bubbles = function(selector,settings,incomingData){
 
 			if (!selector || !incomingData ){
 				return false;
