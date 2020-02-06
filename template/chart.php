@@ -332,7 +332,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				_.minBubble = 7;
 					//smallest booble size render
 
-				_.maxBubble = _.stripeHeight * .5;
+				_.maxBubble = _.stripeHeight * .625;
 					//largest booble size render
 
 				_.padding = [(_.maxBubble),(_.stripeHeight/2),(_.stripeHeight * 1.5) + (_.maxBubble),270];
