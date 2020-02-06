@@ -181,7 +181,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 			*/
-		window.d3BubbleGraphs = [];
 
 
 
@@ -705,7 +704,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				return _;
 
-				window.d3BubbleGraphs[_.makeSlug(_.selector)] = this;
 			}
 
 
