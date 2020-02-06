@@ -163,13 +163,12 @@ an element with a unique id to render the graph to. add color and background hel
  -->
 
 <div id="chart-demo" class="background-theme color-theme"></div>
-
-
 <!-- 
 Bubble Step No. 3. Script that must be copy pasted
 this is the hellhole. Copy everything in the following script tag and paste where needed
 -->
 
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <script>
 //////////////////////////////START COPY HERE//////////////////////////////
 	"use strict";
@@ -181,8 +180,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 			*/
-		window.d3WasLoadedForBubbles = 0;
-		window.d3BubbleGraphs = [];
 
 
 
@@ -664,10 +661,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('data-toggle','tooltip-hover')
 					.attr('data-tooltip-placement','right')
 					.attr('data-tooltip-content',(dis)=>{
-						let percentage = (dis.size/ _.getBubbleSize.domain()[1]).toFixed(2);
+						let percentage = (dis.size/ _.getBubbleSize.domain()[1]).toFixed(1);
 						return `<b> ${ _.date.locale.format('%B %e')(_.date.parser(dis.date)) }</b>
 						<br>
-						${percentage} %`
+						${dis.size} (${percentage}) %`
 					})
 					
 					.on('mousemove',function(){
@@ -706,29 +703,13 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				return _;
 
-				window.d3BubbleGraphs[_.makeSlug(_.selector)] = this;
 			}
 
 
 
 
-			document.addEventListener("DOMContentLoaded", function() {
-				jQuery(document).ready(($) => {
-					if(!window.d3WasLoadedForBubbles){
-						$.when(
-						$.getScript('https://d3js.org/d3.v5.min.js'),
-						$.Deferred(( deferred )=>{
-							$( deferred.resolve );
-						})
-						)
-						.done(function(){
-							_.initBubbles(selector,settings,incomingData)
-						})
-					}else{						
-						_.initBubbles(selector,settings,incomingData)
-					}
-				});
-			});
+			
+			_.initBubbles()
 			
 		}
 
