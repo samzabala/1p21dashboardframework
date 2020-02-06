@@ -181,7 +181,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 			*/
-		window.d3WasLoadedForBubbles = 0;
 		window.d3BubbleGraphs = [];
 
 
@@ -713,21 +712,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 
 			document.addEventListener("DOMContentLoaded", function() {
-				jQuery(document).ready(($) => {
-					if(!window.d3WasLoadedForBubbles){
-						$.when(
-						$.getScript('https://d3js.org/d3.v5.min.js'),
-						$.Deferred(( deferred )=>{
-							$( deferred.resolve );
-						})
-						)
-						.done(function(){
-							_.initBubbles(selector,settings,incomingData)
-						})
-					}else{						
-						_.initBubbles(selector,settings,incomingData)
-					}
-				});
+				_.initBubbles()
 			});
 			
 		}
