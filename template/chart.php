@@ -473,8 +473,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						.attr('y','0px')
 						.attr("preserveAspectRatio", "xMidYMid meet") //responsive
 						.attr('xml:space','preserve')
-						.attr('width',_.canvasWidth) //so svg has a reference of "actual size" or responsive common sense
-						.attr('height',_.canvasOuterHeight) //so svg has a reference of "actual size" or responsive common sense
+						// .attr('width',_.canvasWidth) //so svg has a reference of "actual size" or responsive common sense
+						// .attr('height',_.canvasOuterHeight) //so svg has a reference of "actual size" or responsive common sense
 						;
 				_.transition = d3.transition(_.duration);
 

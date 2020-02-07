@@ -52,7 +52,7 @@
 
 
 			<div class="p text-align-center">
-					<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/seo/chart-10.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-10.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 
 
 			<div class="p text-align-center">
-					<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/seo/chart-11.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-11.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -219,176 +219,171 @@
 			class="module"
 			data-grid-area-md="lastactivity">
 
+			<div class="module-header module-header-break">
+				<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+				<h3 class="module-title">
+					Last Activity
+				</h3>
+				<div class="module-functions accordion accordion-mobile">
+					<?php app_get_component('components/filter-input-search'); ?>
+					<?php app_get_component('components/modal-export'); ?>
+				</div>
+			</div>
+
 			<div class="module-content">
+				<!-- @IF associated projects  are available -->
+					<div class="table-wrapper">
+						
+						<table class="text-vertical-align-middle">
+							<tr>
+								<th class="dashboard-table-cell-name">Account</th>
+								<th class="text-align-center">
+									<a href="#" class="dashboard-sort-table-toggle color-inherit">AVG HR Rank <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
+								</th>
+								<th class="text-align-center">AVG Rank</th>
+								<th>Last Todo Date</th>
+								<th>Last On-Page Date</th>
+								<th>Last Link Date</th>
+								<th>Last Link</th>
+								<th>Last Activity</th>
+							</tr>
 
-				<div class="module-header module-header-break">
-					
-					<?php app_get_component('components/module-functions-accordion-toggle'); ?>
-					
-					<h3 class="module-title">
-						Last Activity
-					</h3>
+							<!-- @LOOP tr-->
+							<tr>
+								<td class="dashboard-table-cell-name">
+									<?php app_get_component('components/project-link') ?>
+								</td>
+								
+								<td class="text-align-center">
 
-					<div class="module-functions accordion accordion-mobile">
-						<?php app_get_component('components/filter-input-search'); ?>
-						<?php app_get_component('components/modal-export'); ?>
-					</div>
+									<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
+										<span class="REPLACE">12</span>
+									</span>
 
-				</div>
+									<!-- @NOTE value influences whether to use .color-error and .color-success -->
+									<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
+										(<span class="REPLACE">-5.5</span>)
+									</span>
 
-			<!-- @IF associated projects  are available -->
-				<div class="table-wrapper">
-					
-					<table class="text-vertical-align-middle">
-						<tr>
-							<th class="dashboard-table-cell-name">Account</th>
-							<th class="text-align-center">
-								<a href="#" class="dashboard-sort-table-toggle color-inherit">AVG HR Rank <i class="symbol symbol-caret-down symbol-caret-toggle-up"></i></a>
-							</th>
-							<th class="text-align-center">AVG Rank</th>
-							<th>Last Todo Date</th>
-							<th>Last On-Page Date</th>
-							<th>Last Link Date</th>
-							<th>Last Link</th>
-							<th>Last Activity</th>
-						</tr>
+								</td>
 
-						<!-- @LOOP tr-->
-						<tr>
-							<td class="dashboard-table-cell-name">
-								<?php app_get_component('components/project-link') ?>
-							</td>
-							
-							<td class="text-align-center">
+								<td class="text-align-center">
 
-								<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
-									<span class="REPLACE">12</span>
-								</span>
+									<span class="project-avg-rank font-weight-900 text-transform-uppercase">
+										<span class="REPLACE">12</span>
+									</span>
 
-								<!-- @NOTE value influences whether to use .color-error and .color-success -->
-								<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
-									(<span class="REPLACE">-5.5</span>)
-								</span>
+									<!-- @NOTE value influences whether to use .color-error and .color-success -->
+									<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
+										(<span class="REPLACE">+1.2</span>)
+									</span>
+								</td>
 
-							</td>
+								<td>
+									<span class="profile-last-to-do-date">
+										<span class="REPLACE">04-20-69</span>
+									</span>
+								</td>
 
-							<td class="text-align-center">
+								<td>
+									<span class="profile-last-on-page-date">
+										<span class="REPLACE">04-20-69</span>
+									</span>
+								</td>
 
-								<span class="project-avg-rank font-weight-900 text-transform-uppercase">
-									<span class="REPLACE">12</span>
-								</span>
+								<td>
+									<span class="profile-last-link-date">
+										<span class="REPLACE">04-20-69</span>
+									</span>
+								</td>
 
-								<!-- @NOTE value influences whether to use .color-error and .color-success -->
-								<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
-									(<span class="REPLACE">+1.2</span>)
-								</span>
-							</td>
+								<td>
+									<span class="profile-last-link-duration">
+										<span class="REPLACE">69</span> Days
+									</span>
+								</td>
 
-							<td>
-								<span class="profile-last-to-do-date">
-									<span class="REPLACE">04-20-69</span>
-								</span>
-							</td>
+								<td>
+									<span class="profile-last-activity-duration font-weight-700">
+										<span class="REPLACE">69</span> Days
+									</span>
+								</td>
 
-							<td>
-								<span class="profile-last-on-page-date">
-									<span class="REPLACE">04-20-69</span>
-								</span>
-							</td>
-
-							<td>
-								<span class="profile-last-link-date">
-									<span class="REPLACE">04-20-69</span>
-								</span>
-							</td>
-
-							<td>
-								<span class="profile-last-link-duration">
-									<span class="REPLACE">69</span> Days
-								</span>
-							</td>
-
-							<td>
-								<span class="profile-last-activity-duration font-weight-700">
-									<span class="REPLACE">69</span> Days
-								</span>
-							</td>
-
-						</tr>
+							</tr>
 
 
 
-							<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
-								<?php for($i=1; $i<=4; $i++){ ?>
-									
-
-
-									<tr>
-										<td class="dashboard-table-cell-name">
-											<?php app_get_component('components/project-link') ?>
-										</td>
+								<!-- @PLACEHOLDER duplicate of above delete everything below when ready -->
+									<?php for($i=1; $i<=4; $i++){ ?>
 										
-										<td class="text-align-center">
 
-											<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
-												<span class="REPLACE">12</span>
-											</span>
 
-											<!-- @NOTE value influences whether to use .color-error and .color-success -->
-											<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
-												(<span class="REPLACE">-5.5</span>)
-											</span>
-
-										</td>
-
-										<td class="text-align-center">
+										<tr>
+											<td class="dashboard-table-cell-name">
+												<?php app_get_component('components/project-link') ?>
+											</td>
 											
+											<td class="text-align-center">
 
-											<span class="project-avg-rank font-weight-900 text-transform-uppercase">
-												<span class="REPLACE">12</span>
-											</span>
+												<span class="project-avg-hr-rank font-weight-900 text-transform-uppercase">
+													<span class="REPLACE">12</span>
+												</span>
 
-											<!-- @NOTE value influences whether to use .color-error and .color-success -->
-											<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
-												(<span class="REPLACE">+1.2</span>)
-											</span>
-										</td>
+												<!-- @NOTE value influences whether to use .color-error and .color-success -->
+												<span class="project-avg-hr-rank-change color-error font-weight-900 text-transform-uppercase">
+													(<span class="REPLACE">-5.5</span>)
+												</span>
 
+											</td>
 
+											<td class="text-align-center">
+												
 
-										<td>
-											<span class="profile-last-to-do-date">
-												<span class="REPLACE">04-20-69</span>
-											</span>
-										</td>
-										<td>
-											<span class="profile-last-on-page-date">
-												<span class="REPLACE">04-20-69</span>
-											</span>
-										</td>
-										<td>
-											<span class="profile-last-link-date">
-												<span class="REPLACE">04-20-69</span>
-											</span>
-										</td>
-										<td>
-											<span class="profile-last-link-duration">
-												<span class="REPLACE">69</span> Days
-											</span>
-										</td>
-										<td>
-											<span class="profile-last-activity-duration font-weight-700">
-												<span class="REPLACE">69</span> Days
-											</span>
-										</td>
-									</tr>
-								<?php } ?>
+												<span class="project-avg-rank font-weight-900 text-transform-uppercase">
+													<span class="REPLACE">12</span>
+												</span>
+
+												<!-- @NOTE value influences whether to use .color-error and .color-success -->
+												<span class="project-avg-rank-change color-success font-weight-900 text-transform-uppercase">
+													(<span class="REPLACE">+1.2</span>)
+												</span>
+											</td>
 
 
 
-					</table>
-					
-				</div>
+											<td>
+												<span class="profile-last-to-do-date">
+													<span class="REPLACE">04-20-69</span>
+												</span>
+											</td>
+											<td>
+												<span class="profile-last-on-page-date">
+													<span class="REPLACE">04-20-69</span>
+												</span>
+											</td>
+											<td>
+												<span class="profile-last-link-date">
+													<span class="REPLACE">04-20-69</span>
+												</span>
+											</td>
+											<td>
+												<span class="profile-last-link-duration">
+													<span class="REPLACE">69</span> Days
+												</span>
+											</td>
+											<td>
+												<span class="profile-last-activity-duration font-weight-700">
+													<span class="REPLACE">69</span> Days
+												</span>
+											</td>
+										</tr>
+									<?php } ?>
+
+
+
+						</table>
+						
+					</div>
 
 
 			<!-- @ELSE NO assigned tasks are available -->
