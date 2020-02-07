@@ -3748,6 +3748,8 @@ table {
   grid-template-columns: 100%;
   grid-template-rows: minmax(0, auto) minmax(0, 1fr) minmax(0, auto) repeat(auto-fill, minmax(0, min-content));
   grid-template-areas: "header" "content" "footer";
+  min-width: 0;
+  min-height: 0;
   transition: 0.5s box-shadow ease-in-out;
   padding: calc(20px - 1px) calc(40px - 1px); }
   .theme-inverse .module {
