@@ -1455,6 +1455,7 @@
 					data-href="#modal-demo">Modal boi</a>
 				<a
 					data-toggle="modal"
+					data-modal-title="Titties"
 					data-modal-callback="fuckinModalCallback()"
 					data-href="#modal-demo">Modal boi with a callback</a>
 
@@ -1466,7 +1467,7 @@
 	}
 </script>
 
-			<div class="modal" id="modal-demo">
+			<div class="modal" id="modal-demo" data-modal-title="PUNYETA">
 				<h1>Look at this bitchboy going modal and shit</h1>
 
 				<h1>Header one</h1>
