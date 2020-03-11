@@ -60,25 +60,97 @@ Unlike just `[data-toggle=modal]`, these attributes are more specific whether to
 
 Dafaults to `''`
 
-Title to add a modal
+Title to add a modal. Adding this will add a header to ya modal
+
+```html
+<a
+data-modal-title="Look at this bitchboy going modal and shit"
+data-href="#modal-demo">Modal boi with titlet <i class="symbol symbol-search"></i></a>
+
+<div class="modal" id="modal-demo">
+	<!-- content heeeere -->
+</div>
+```
+
 
 ### **`data-modal-close`**
 
-Dafaults to `true`
+Defaults to `true`
 
 Adds a close button to the modal
 
+
+```html
+<a
+data-toggle="modal"
+data-modal-close="true"
+data-href="#modal-demo">Modal boi close butt <i class="symbol symbol-search"></i></a>
+
+<div class="modal" id="modal-demo">
+	<!-- content heeeere -->
+</div>
+```
+
 ### **`data-modal-disable-overlay`**
 
-Dafaults to `true'`
+Dafaults to `true`
 
 Whether or not to allow clicking on the overlay to close the modal
 
+
+```html
+<a
+data-modal-disable-overlay="true"
+data-href="#modal-demo">Modal boi but when you click on the backdrop it dies <i class="symbol symbol-search"></i></a>
+
+<div class="modal" id="modal-demo">
+	<!-- content heeeere -->
+</div>
+```
+
+
 ### **`data-modal-max-width`**
 
-Dafaults to nothing
+Dafaults to `null`
 
-Whether or not to add a max-width to the modal
+Whether or not to add a max-width to the modal. The modal is styled to be responsive. adding a max width can add limit to width
+
+
+
+```html
+<a
+data-modal-max-width="800px"
+data-href="#modal-demo">Modal boi with max width <i class="symbol symbol-search"></i></a>
+
+<div class="modal" id="modal-demo">
+	<!-- content heeeere -->
+</div>
+```
+
+
+
+### **`data-modal-callback`**
+
+Dafaults to `null`
+
+Function to run after the modal is ready but before it's displays
+
+
+```html
+<a
+data-toggle="modal"
+data-modal-close="false"
+data-modal-disable-overlay="false"
+data-modal-max-width="800px"
+data-modal-title="Look at this bitchboy going modal and shit"
+data-href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
+
+<div class="modal" id="modal-demo">
+	<!-- content heeeere -->
+</div>
+```
+
+### All together now
 
 ```html
 <a
