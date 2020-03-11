@@ -10,8 +10,8 @@
 		<div class="accordion">
 		</div>
 		
-		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class="open"></i></h1>
-		<div class="accordion open">
+		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
+		<div class="accordion ">
 
 			<input type="date" class="input input-calendar" 
 				value="2019-07-01"
@@ -1453,8 +1453,21 @@
 					data-toggle="modal"
 					data-modal-title="dumb Bitch juice"
 					data-href="#modal-demo">Modal boi</a>
+				<a
+					data-toggle="modal"
+					data-modal-title="Titties"
+					data-modal-callback="fuckinModalCallback()"
+					data-href="#modal-demo">Modal boi with a callback</a>
 
-			<div class="modal" id="modal-demo">
+
+<script>
+	var fuckinModalCallback =  function() {
+		console.log(this,'fuck shieeeet');
+		jQuery('#fw-modal h1').text('i fucked up all the h1s in your modal now');
+	}
+</script>
+
+			<div class="modal" id="modal-demo" data-modal-title="PUNYETA">
 				<h1>Look at this bitchboy going modal and shit</h1>
 
 				<h1>Header one</h1>
