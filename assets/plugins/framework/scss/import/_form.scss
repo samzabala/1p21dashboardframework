@@ -334,7 +334,6 @@ $calculated-calendar-exception: '';
 			color: inherit;
 			opacity: $input-placeholder-opacity;
 		}
-
 		
 
 		&[type=color] {
@@ -481,8 +480,11 @@ $calculated-calendar-exception: '';
 	@at-root %for-form-input-boxy-multiple{
 
 		vertical-align: top;
-		max-height:100%;
 		overflow-y: auto;
+
+		.input-group & {
+			max-height:100%;
+		}
 
 		option {
 			padding-right: $calculated-input-gutter-x;
@@ -492,6 +494,7 @@ $calculated-calendar-exception: '';
 		}
 
 		&-height {
+			height: auto;
 			min-height: $calculated-input-height * $input-height-multiple-factor;
 
 			&#{$prefix}-large,

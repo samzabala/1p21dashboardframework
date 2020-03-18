@@ -200,10 +200,27 @@ $prefix-raw: str-replace($prefix,'.','');
 		}
 
 		@each $tag in $calculated-br-tags {
-			@include br($tag) {
+			@if($tag != xs){
+				@include br($tag) {
 
+					@include internal-set-grid-col-width(#{&}-col-#{$tag},$grid-gap,false);
+					
+					&-grid-compact {
+						@include internal-set-grid-col-width(#{$prefix}-col-#{$tag},$grid-gap-compact);
+					}
+		
+					&-grid-expanded {
+						@include internal-set-grid-col-width(#{$prefix}-col-#{$tag},$grid-gap-expanded);
+					}
+					
+					&-grid-no-gutter,
+					&-grid-no-gutter-x {
+						@include internal-set-grid-col-width(#{$prefix}-col-#{$tag},null);
+					}
+				}
+			}@else {
 				@include internal-set-grid-col-width(#{&}-col-#{$tag},$grid-gap,false);
-				
+					
 				&-grid-compact {
 					@include internal-set-grid-col-width(#{$prefix}-col-#{$tag},$grid-gap-compact);
 				}
