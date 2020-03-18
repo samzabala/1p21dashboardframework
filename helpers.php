@@ -62,6 +62,7 @@ function app_init_content($slug = ''){
 				case 'last-activity-2':
 			case 'login':
 			case 'unique-links':
+			case 'activity-log':
 				app_get_template_part('template/'.$template_part);
 				break;
 
@@ -88,6 +89,9 @@ function app_init_content($slug = ''){
 // links for debugging our boi
 function app_debug_li() {
 ?>
+<li>
+	<a href="<?=app_create_link(array('template'=>'activity-log')) ?>">Activity Log - NEW TEMPLATE</a>
+</li>
 
 	<li>
 		<?php 

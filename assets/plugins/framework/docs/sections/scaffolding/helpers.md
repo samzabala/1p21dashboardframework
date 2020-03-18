@@ -230,6 +230,7 @@ Set to whatever font weight ya need boi
 *   **`.text-transform-lowercase`**
 *   **`.text-transform-capitalize`**
 *   **`.text-transform-inherit`**
+*   **`.text-transform-none`**
 
 [More info on the css property](https://www.w3schools.com/cssref/pr_text_text-transform.asp)
 
