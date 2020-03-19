@@ -15,7 +15,7 @@
 				</div>
 
 				<div class="module-functions">
-					<?php app_get_component('components/filter-dropdown-date-span'); ?>
+					<?php app_get_component('components/filter-dropdown-date-single'); ?>
 				</div>
 
 			</div>

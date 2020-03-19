@@ -23,49 +23,121 @@
 
 					<div class="flex-col-xs-12 flex-col-md-8">
 						
-							<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-								<label class="input-label">
-									Client <span class="color-error field-required">*</span>
-								</label>
-								<input type="text" name="client-name" class="input input-single-line">
-							</div>
+						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+							<label class="input-label">
+								Client <span class="color-error field-required">*</span>
+							</label>
+							<div class="position-relative flex-xs">
 
-						
-							<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-								<div class="input-label">
-									<span class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact">
+								<input type="text" name="client-name" class="input input-single-line" value="um" data-toggle="dropdown">
+								<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
+									<li >
+										<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `um` client</a>
+									</li>
 
-										<label  class="flex-col-6">
+									<li >
+										<hr class="dropdown-separator">
+									</li>
 
-											Task <span class="color-error field-required">*</span>
-										</label>
-
-										<span class="flex-col-6 text-transform-none text-align-right font-weight-400">
-
-											<a href="#">Choose from unfinished tasks</a>
-										</span>
-
-									</span>
+									<!-- DYNAMIC ITEMS -->
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">Umbridge</a>
+										</li>
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">Umami</a>
+										</li>
 								</div>
-								<input type="text" name="task-name" class="input input-single-line">
 							</div>
-							
+						</div>
+
+					
+						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+							<div class="input-label">
+								<span class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact">
+
+									<label  class="flex-col-6">
+
+										Task <span class="color-error field-required">*</span>
+									</label>
+
+									<span class="flex-col-6 text-transform-none text-align-right font-weight-400">
+
+										<a href="#">Choose from unfinished tasks</a>
+									</span>
+
+								</span>
+							</div>
+							<div class="position-relative flex-xs">
+
+								<input type="text" name="task-name" class="input input-single-line" value="no" data-toggle="dropdown">
+								<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
+									<li >
+										<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `no` client</a>
+									</li>
+
+									<li >
+										<hr class="dropdown-separator">
+									</li>
+
+
+
+
+									<!-- DYNAMIC ITEMS -->
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">Noah's Ark</a>
+										</li>
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">No Doubt</a>
+										</li>
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">Nordstrom Rack</a>
+										</li>
+								</div>
+							</div>
+						</div>
 						
-							<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-								<label class="input-label">
-									Project
-								</label>
-								<input type="text" name="project-name" class="input input-single-line">
-							</div>
+					
+						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+							<label class="input-label">
+								Project
+							</label>
+							<div class="position-relative flex-xs">
+
+								<input type="text" name="project-name" class="input input-single-line" value="r" data-toggle="dropdown">
+								<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
+									<li >
+										<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `r` client</a>
+									</li>
+
+									<li >
+										<hr class="dropdown-separator">
+									</li>
+
+
+
+
+									<!-- DYNAMIC ITEMS -->
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">Ergonomics</a>
+										</li>
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">Urban Outfitters</a>
+										</li>
+										<li class="dashboard-dropdown-dynamic-item">
+											<a href="#">UrCool</a>
+										</li>
+								</div>
+						</div>
+					</div>
 
 
 						
-							<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-								<label class="input-label">
-									Notes
-								</label>
-								<textarea type="text" name="project-name" class="input input-multiple-line"></textarea>
-							</div>
+						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+							<label class="input-label">
+								Notes
+							</label>
+							<textarea type="text" name="project-name" class="input input-multiple-line"></textarea>
+						</div>
 					</div>
 
 
