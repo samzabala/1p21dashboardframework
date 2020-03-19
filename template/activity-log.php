@@ -15,7 +15,7 @@
 				</div>
 
 				<div class="module-functions">
-					<?php app_get_component('components/filter-dropdown-date'); ?>
+					<?php app_get_component('components/filter-dropdown-date-span'); ?>
 				</div>
 
 			</div>
@@ -453,8 +453,13 @@
 
 
 					</table>
+				</div>		
+				<div class="module-footer text-align-right">
+					<div class="module-functions">
+					<!-- NOTE: for best practices, iff the modal function or .modal markup was already declared before, just include the button instead -->
+					<?php app_get_component('components/modal-track-time'); ?>
+					</div>
 				</div>
-
 			</div>
 
 		</div>
