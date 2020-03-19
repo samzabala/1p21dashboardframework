@@ -74,7 +74,7 @@
 					<div class="flex-col-xs-12 flex-col-md-4">
 						
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label for="log-start-date" class="input-label">
+							<label class="input-label">
 								Start Date  <span class="color-error field-required">*</span>
 							</label>
 							<input type="date" name="log-start-date" class="input input-single-line">
@@ -82,7 +82,7 @@
 
 						
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label for="log-start-time" class="input-label">
+							<label class="input-label">
 								Start Time  <span class="color-error field-required">*</span>
 							</label>
 							<input type="time" name="log-start-time" class="input input-single-line">
@@ -92,20 +92,24 @@
 
 
 						
-						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label for="log-end-date" class="input-label">
-								End Date
+						<div class="p">
+							<label class="input-label">
+								Duration <span class="color-error field-required">*</span>
 							</label>
-							<input type="date" name="log-end-date" class="input input-single-line">
+							<div>
+								<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00" name="log-duration-hours" class="input input-single-line input-inline">
+								
+								<span class="input input-inline">
+									:
+								</span>
+								
+								<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00" name="log-duration-minutes" class="input input-single-line input-inline">
+
+							</div>
 						</div>
 
-						
-						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label for="log-end-time" class="input-label">
-								End Time
-							</label>
-							<input type="time" name="log-end-time" class="input input-single-line">
-						</div>
+
+
 
 
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
