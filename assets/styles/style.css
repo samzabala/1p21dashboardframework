@@ -4307,7 +4307,7 @@ table {
   transform-style: preserve-3d; }
   .theme-inverse .dropdown {
     color: #FFFFFF; }
-  .modal .dropdown, .dropdown.open {
+  .dropdown.open {
     display: block; }
   .dropdown, .dropdown ul, .dropdown li {
     margin-bottom: 0;
