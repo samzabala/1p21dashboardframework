@@ -12,9 +12,6 @@
 // 		});
 // 	});
 //   }
-
-
-
 window.jQuery && jQuery.noConflict();
 (function($,fw,window){
 	//1p21 shit
@@ -53,33 +50,4 @@ window.jQuery && jQuery.noConflict();
 	window._1p21 = _1p21;
 
 
-	// $(function(){
-		
-
-		$('body').on('click', 'a', function(e) {
-			e.preventDefault();
-			console.log(e.target);
-		  });
-	// });
-
-	// fw.addEvent(document.body,'click',function(e){
-	// 	console.log('yeet');
-	// })
-	
-
 }(jQuery,frameWork,window));
-
-console.log('yaon si kuya');
-
-
-
-// jQuery('body').on({
-// 	click: function(e){
-// 		// console.log('yeet');
-// 		console.log(e.target)
-// 	},
-// 	mouseenter: function(e){ console.log('mouseenter',e.target) },
-// 	mouseleave: function(e){ console.log('mouseleave',e.target) },
-// }
-// // ,'a.js-client-opt'
-// );
