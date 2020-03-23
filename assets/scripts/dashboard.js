@@ -56,10 +56,9 @@ window.jQuery && jQuery.noConflict();
 	// $(function(){
 		
 
-		$('body').on('click', '*', function(e) {
-			// e.preventDefault();
+		$('body').on('click', 'a', function(e) {
+			e.preventDefault();
 			console.log(e.target);
-			console.log('yeet');
 		  });
 	// });
 

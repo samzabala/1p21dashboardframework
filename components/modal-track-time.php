@@ -62,7 +62,7 @@
 
 									<span class="flex-col-6 text-transform-none text-align-right font-weight-400">
 
-										<a href="#">Choose from unfinished tasks</a>
+										<a href="#" class="js-client-opt">Choose from unfinished tasks</a>
 									</span>
 
 								</span>
