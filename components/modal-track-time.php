@@ -41,10 +41,10 @@
 
 									<!-- DYNAMIC ITEMS -->
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">Umbridge</a>
+											<a href="#" class="js-client-opt">Umbridge</a>
 										</li>
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">Umami</a>
+											<a href="#" class="js-client-opt">Umami</a>
 										</li>
 								</div>
 							</div>
@@ -84,13 +84,13 @@
 
 									<!-- DYNAMIC ITEMS -->
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">Noah's Ark</a>
+											<a href="#" class="js-client-opt">Noah's Ark</a>
 										</li>
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">No Doubt</a>
+											<a href="#" class="js-client-opt">No Doubt</a>
 										</li>
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">Nordstrom Rack</a>
+											<a href="#" class="js-client-opt">Nordstrom Rack</a>
 										</li>
 								</div>
 							</div>
@@ -118,13 +118,13 @@
 
 									<!-- DYNAMIC ITEMS -->
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">Ergonomics</a>
+											<a href="#" class="js-client-opt">Ergonomics</a>
 										</li>
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">Urban Outfitters</a>
+											<a href="#" class="js-client-opt">Urban Outfitters</a>
 										</li>
 										<li class="dashboard-dropdown-dynamic-item">
-											<a href="#">UrCool</a>
+											<a href="#" class="js-client-opt">UrCool</a>
 										</li>
 								</div>
 						</div>
