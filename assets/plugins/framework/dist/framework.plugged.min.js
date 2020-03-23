@@ -1765,10 +1765,12 @@ window.jQuery && jQuery.noConflict();
 		$('body').on('blur','input[data-toggle="dropdown"]',function(e){
 
 			var selector =  _.getTheToggled($(this),'dropdown');
-
-			if( selector ){
-				frameWork.setDropdown(selector,'close');
-			}
+			console.log(e);
+			setTimeout(function(){
+				if( selector ){
+					frameWork.setDropdown(selector,'close');
+				}
+			},200);
 			$(this).removeClass('focus');
 		});
 

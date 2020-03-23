@@ -1558,12 +1558,13 @@ window.jQuery && jQuery.noConflict();
 						modHttml += '<a href="#" class="modal-close" data-toggle="modal-close"><i class="symbol symbol-close"></i></a>';
 					}
 
-					modHttml += '<div class="modal-popup-content">' + contentWrap.innerHTML + '</div>';
+					modHttml += '<div class="modal-popup-content">'+contentWrap.innerHTML+'</div>';
 				
 				modHttml += '</div>';
-			modal.innerHTML += modHttml;
 
 			_.initTrumbo(modal);
+
+			modal.innerHTML = modHttml;
 
 			document.body.classList.add('body-modal-active');
 
@@ -1926,10 +1927,15 @@ window.jQuery && jQuery.noConflict();
 
 			var selector =  _.getTheToggled(e.target,'dropdown');
 
-			if( selector ){
-				frameWork.setDropdown(selector,'close');
-			}
+
+			setTimeout(function(){
+
+				if( selector ){
+					frameWork.setDropdown(selector,'close');
+				}
+			},200);
 			e.target.classList.remove('focus');
+			
 		});
 
 		frameWork.addEvent(document.body,'click','*[data-toggle="dropdown"]:not(input)',function(e){

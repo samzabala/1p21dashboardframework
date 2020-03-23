@@ -4303,7 +4303,8 @@ table {
   width: 300px;
   display: none;
   color: #000000;
-  display: none; }
+  transform-origin: center center;
+  transform-style: preserve-3d; }
   .theme-inverse .dropdown {
     color: #FFFFFF; }
   .dropdown.open {
@@ -4340,8 +4341,6 @@ table {
   .dropdown.dropdown-center-y {
     top: 50%;
     transform: translateY(-50%); }
-  .dropdown.open {
-    display: block; }
   .dropdown li:before {
     content: none; }
 
