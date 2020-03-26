@@ -16,10 +16,10 @@
 	<!-- SCRIPT -->
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script> -->
 
 
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
+		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
 		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
