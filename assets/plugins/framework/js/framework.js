@@ -1147,6 +1147,8 @@ window.jQuery && jQuery.noConflict();
 			dropdownYearSpan: inputCalendar.getAttribute('data-calendar-dropdown-year-span'),
 			disabledDates: inputCalendar.getAttribute('data-calendar-disabled-dates'),
 			textInput:inputCalendar.getAttribute('data-calendar-text-input'),
+			monthSkip:inputCalendar.getAttribute('data-calendar-month-skip'),
+			yearSkip:inputCalendar.getAttribute('data-calendar-year-skip'),
 		};
 
 		var defaults = {
@@ -1157,6 +1159,8 @@ window.jQuery && jQuery.noConflict();
 			dropdownYearSpan: 1,
 			disabledDates: '',
 			textInput:false,
+			monthSkip:true,
+			yearSkip:true,
 		};
 		
 		var args = _.parseArgs(arr,defaults);
