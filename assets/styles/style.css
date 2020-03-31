@@ -7162,6 +7162,12 @@ DASHBOARD / OUR CUSTOM STYLES
   max-width: 350px;
   min-width: 350px; }
 
+.dashboard-table-cell-time-log-task {
+  max-width: 250px; }
+
+.dashboard-table-cell-time-log-client {
+  max-width: 160px; }
+
 #dashboard-svg-styles {
   width: 0;
   height: 0;
