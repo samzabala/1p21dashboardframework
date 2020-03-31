@@ -917,7 +917,24 @@ window.jQuery && jQuery.noConflict();
 				var butts = ['prev-year','prev-month','next-month','next-year'];
 
 				butts.forEach(function(butt){
-					theUi.heading.innerHTML += generateArrow(butt);
+					if(
+						(
+							args.yearSkip
+							&& (
+								butt == 'prev-year'
+								|| butt == 'next-year'
+							)
+						)
+						|| (
+							args.monthSkip
+							&& (
+								butt == 'prev-month'
+								|| butt == 'next-month'
+							)
+						)
+					){
+						theUi.heading.innerHTML += generateArrow(butt);
+					}
 				});
 
 
