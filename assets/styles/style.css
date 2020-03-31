@@ -7162,7 +7162,7 @@ DASHBOARD / OUR CUSTOM STYLES
   max-width: 350px;
   min-width: 350px; }
 
-.dashboard-table-cell-time-log-task {
+.dashboard-table-cell-time-log-project, .dashboard-table-cell-time-log-task {
   max-width: 250px; }
 
 .dashboard-table-cell-time-log-client {
