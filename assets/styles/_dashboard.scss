@@ -122,9 +122,13 @@ $sidebar-mobile: 245px;
 			&-nav {
 				margin: 0 ($container-gutter-wide * -1);
 
-				.nav-list .nav-item > .dropdown {
-					width:calc(100% - #{$nav-gutter-x} - #{$nav-icon-width} - 1.5rem);
-					margin-right: 0;
+				.nav-list .nav-item  {
+					> .droopdown,
+					> ul {
+
+						width:calc(100% - #{$nav-gutter-x} - #{$nav-icon-width} - 1.5rem);
+						margin-right: 0;
+					}
 				}
 			}
 

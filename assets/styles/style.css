@@ -7209,7 +7209,8 @@ DASHBOARD / OUR CUSTOM STYLES
     display: block; }
   #dashboard-block-sidebar-nav {
     margin: 0 -20px; }
-    #dashboard-block-sidebar-nav .nav-list .nav-item > .dropdown {
+    #dashboard-block-sidebar-nav .nav-list .nav-item > .droopdown,
+    #dashboard-block-sidebar-nav .nav-list .nav-item > ul {
       width: calc(100% - 20px - 30px - 1.5rem);
       margin-right: 0; }
   @media (max-width: 1279px) {
