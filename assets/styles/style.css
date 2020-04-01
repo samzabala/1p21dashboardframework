@@ -518,10 +518,10 @@ hr {
   margin-top: 2.1428571429em; }
 
 small {
-  font-size: 1em; }
+  font-size: 0.75em; }
 
 big {
-  font-size: 1.7142857143em; }
+  font-size: 1.25em; }
 
 /*** IMAGES ***/
 /* LAZYLOAD */
@@ -6575,10 +6575,10 @@ CUSTOM STYLES FOR TRUMBOWYG
   font-family: inherit !important; }
 
 .font-size-large {
-  font-size: 1.7142857143em !important; }
+  font-size: 1.25em !important; }
 
 .font-size-small {
-  font-size: 1em !important; }
+  font-size: 0.75em !important; }
 
 .font-size-normalize {
   font-size: 1rem !important; }
