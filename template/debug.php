@@ -1754,7 +1754,12 @@
 						</a>
 						<ul class="dropdown" id="nav-demo-dropdown" >
 							<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
-							<li><a href="#">Drop item</a></li>
+							<li>
+								<a href="#" data-toggle="dropdown">Drop item</a>
+								<div class="dropdown">
+									<span>yea</span>
+								</div>
+							</li>
 							<li><a href="#">Drop item</a></li>
 							<li><a href="#">Drop item</a></li>
 							<li><a href="#">Drop item</a></li>
