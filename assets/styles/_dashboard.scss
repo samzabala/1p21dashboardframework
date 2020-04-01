@@ -41,10 +41,23 @@ $sidebar-mobile: 245px;
 
 			&-log-project,
 			&-log-task {
+				min-width: 250px;
 				max-width: 250px;
 			}
 			&-log-client {
+				min-width: 160px;
 				max-width: 160px;
+			}
+
+			&-log-project,
+			&-log-task,
+			&-log-client {
+				.text-wrap-ellipsis {
+
+					max-width: 75%!important;
+					vertical-align: middle;
+					display: inline-block;
+				}
 			}
 
 
