@@ -53,14 +53,12 @@ $sidebar-mobile: 245px;
 			&-log-task,
 			&-log-client {
 				.text-wrap-ellipsis {
-
 					max-width: 75%!important;
 					vertical-align: middle;
 					display: inline-block;
-					min-width: 290px;
+					min-width: 160px; //wait
 				}
 			}
-
 
 		}
 	}
