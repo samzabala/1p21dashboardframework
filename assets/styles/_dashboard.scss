@@ -57,6 +57,7 @@ $sidebar-mobile: 245px;
 					max-width: 75%!important;
 					vertical-align: middle;
 					display: inline-block;
+					min-width: 290px;
 				}
 			}
 
@@ -123,7 +124,7 @@ $sidebar-mobile: 245px;
 				margin: 0 ($container-gutter-wide * -1);
 
 				.nav-list .nav-item  {
-					> .droopdown,
+					> .dropdown,
 					> ul {
 
 						width:calc(100% - #{$nav-gutter-x} - #{$nav-icon-width} - 1.5rem);
