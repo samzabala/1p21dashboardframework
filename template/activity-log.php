@@ -24,7 +24,7 @@
 
 				<hr class="no-margin-y">
 
-				<div class="flex-grid flex-grid-fixed flex-grid-compact ">
+				<div class="flex-grid flex-grid-fixed flex-grid-compact  ">
 
 					<!-- total -->
 					<div class="log-total flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
@@ -64,10 +64,24 @@
 
 
 					<!-- toggle -->
-					<div class="log-toggle flex-col-xs-12  flex-col-md-5 flex-md flex-wrap align-items-center justify-content-flex-end">
+					<div class="log-toggle flex-col-xs-12  flex-col-md-5 flex-md">
+
+					<div class="flex-grid flex-grid-compact align-items-center justify-content-flex-end flex-grid-no-gutter-y">
+							<div class=" flex-child">
+								<?php app_get_component('components/modal-track-time'); ?>
+							</div>
+
+							<div class=" flex-child">
+								<p class="special-secondary no-margin-y">
+									<span class="hours">00</span>
+									<span class="separator">:</span>
+									<span class="minutes">00</span>
+								</p>
+							</div>
+					</div>
+
+
 					
-						<?php app_get_component('components/modal-track-time'); ?>
-						
 						
 					</div>
 
@@ -215,7 +229,8 @@
 													class='color-inherit color-primary-hover js-edit-time-record'
 													href='#modal-track-time'
 													data-toggle='modal'
-													data-modal-disable-overlay='false' data-modal-callback='toggleDurationReq()'
+													data-modal-disable-overlay='false'
+													data-modal-callback='toggleDurationReq()'
 													data-record-id='TASKID'>
 														Edit
 												</a>
@@ -237,11 +252,6 @@
 										<i class="symbol symbol-kebab-horizontal"></i>
 									</span> 
 									
-									<li>
-                      <a href="#" class="js-del-time-record" data-record-id="559" data-record-idx="1">
-                        Delete
-                      </a>
-                    </li
 								</td>
 
 							</tr>
