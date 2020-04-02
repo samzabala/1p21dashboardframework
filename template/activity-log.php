@@ -24,7 +24,7 @@
 
 				<hr class="no-margin-y">
 
-				<div class="flex-grid flex-grid-fixed flex-grid-compact  ">
+				<div class="flex-grid flex-grid-fixed flex-grid-compact ">
 
 					<!-- total -->
 					<div class="log-total flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
