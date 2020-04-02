@@ -116,7 +116,7 @@
 
 								<td class="dashboard-table-cell-has-notes">
 									<a href="<?=DASHBOARD_ROOT_URL ?>?template=project&env=<?=DASHBOARD_SLUG ?>" class="project-name color-inherit color-primary-hover">
-										<span class="REPLACE">Project Name</span>
+										<span class="REPLACE">Project Name w/tooltip</span>
 									</a>
 
 
@@ -201,20 +201,47 @@
 
 								<td class="dashboard-table-cell-action text-align-center position-relative">
 									
-									<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span> 
-									<!--
-										@NOTE:
-										style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
-									-->
-									<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+									<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol"
+									data-toggle="tooltip-click"
+									data-tooltip-placement="bottom"
+									data-tooltip-center-x="true"
+									data-tooltip-allow-interaction="true"
+									data-tooltip-width="150px"
+									data-tooltip-classes="dashboard-actions-tooltip text-leading-expanded"
+									data-tooltip-content="
+										<ul class='unstyled no-margin-y'>
+											<li>
+												<a
+													class='color-inherit color-primary-hover js-edit-time-record'
+													href='#modal-track-time'
+													data-toggle='modal'
+													data-modal-disable-overlay='false' data-modal-callback='toggleDurationReq()'
+													data-record-id='TASKID'>
+														Edit
+												</a>
+											</li>
+											<li>
+												<a
+													href='#'
+													class='color-inherit color-primary-hover js-edit-time-record'
+													data-record-id='TASKID'
+													data-record-idx='IDX'>
+														Delete
+												</a>
+											</li>
+										</ul>"
 
-										<!-- @PLACEHOLDER: DELETE WHEN READY -->
-										<li class="REPLACE"><a href="#">Edit</a></li>
-										<li class="REPLACE"><a href="#">Delete</a></li>
-										<li class="REPLACE"><a href="#">View Details</a></li>
 
-									</ul>
-
+									
+										>
+										<i class="symbol symbol-kebab-horizontal"></i>
+									</span> 
+									
+									<li>
+                      <a href="#" class="js-del-time-record" data-record-id="559" data-record-idx="1">
+                        Delete
+                      </a>
+                    </li
 								</td>
 
 							</tr>
