@@ -9,6 +9,14 @@
 		<h1 data-toggle="accordion">TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		</div>
+
+
+
+
+		<h1 class="fuck-you-po-pakshet" data-toggle="accordion" data-href="#bitchboio">bititichhc<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion" id="bitchboio">
+			bitchacho
+		</div>
 		
 		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
 		<div class="accordion ">
