@@ -79,6 +79,7 @@
 			(function(){
 				getCookie('_1p21fw_dark') == '1' && (document.documentElement.classList.add('theme-inverse') )
 			}())
+
 		</script>
 
 </html>

@@ -571,6 +571,8 @@ window.jQuery && jQuery.noConflict();
 		var toggledClass = '.'+toggleMode.replace('-open','').replace('-close','') || null;
 		var toReturn = null;
 
+		
+
 				
 		if(clicked) {
 			if( clicked.hasAttribute('href') 
@@ -1751,8 +1753,8 @@ window.jQuery && jQuery.noConflict();
 	}
 
 
-	frameWork.toggleAccordion = function(triggerer) {
-
+	frameWork.toggleAccordion = function(triggerer,changeHash) {
+		changeHash = !changeHash ? false : true;
 
 		var selector = _.getTheToggled(triggerer,'accordion');
 		
@@ -1783,7 +1785,9 @@ window.jQuery && jQuery.noConflict();
 						selector.classList.remove('open'); 
 
 						
-						_.changeHash('');
+						if(changeHash){
+							_.changeHash('');
+						}
 
 					}else{
 						
@@ -1807,8 +1811,9 @@ window.jQuery && jQuery.noConflict();
 						frameWork.slideDown(selector); 
 						triggerer.classList.add('open'); 
 						selector.classList.add('open'); 
-
-						_.changeHash(selector.getAttribute('id'));
+						if(changeHash){
+							_.changeHash(selector.getAttribute('id'));
+						}
 					}
 				}else{
 
