@@ -137,6 +137,7 @@ html, body {
   background: #FFFFFF;
   min-height: 100vh; }
 
+.theme-inverse,
 html.theme-inverse,
 .theme-inverse body {
   background: #292440;
@@ -442,7 +443,7 @@ blockquote {
   font-size: inherit;
   line-height: inherit;
   font-weight: 300;
-  text-transform: normal;
+  text-transform: none;
   font-style: normal;
   padding-left: 1.4285714286em;
   margin-bottom: 2.1428571429em;
@@ -4076,7 +4077,7 @@ table {
       pointer-events: none; }
   .modal-popup, .fw-trumbowyg-modal-box {
     padding: 30px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #FFFFFF;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -5670,11 +5671,6 @@ fieldset {
   .special-form .input-calendar-ui,
   fieldset .input-calendar-ui {
     max-width: 400px; }
-
-.body-modal-active {
-  overflow-y: hidden; }
-  .body-modal-active .tox {
-    z-index: 99999 !important; }
 
 /* 
 CUSTOM STYLES FOR TRUMBOWYG

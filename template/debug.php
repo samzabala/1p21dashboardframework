@@ -65,7 +65,7 @@
 								<li><a href="#">Today</a></li>
 								<li><a href="#">Last 3 days</a></li>
 								<li><a href="#">Last week</a></li>
-								<li><a href="#">Last Month</a></li>
+								<data-toggle="moda><a href="#">Last Month</a></li>
 							</ul>
 
 						</div>
@@ -1454,6 +1454,7 @@
 					data-modal-disable-overlay="false"
 					data-modal-max-width="800px"
 					data-modal-title="Bitch ass"
+					data-modal-classes="theme-inverse font-weight-800"
 					data-href="#modal-demo">Modal boi with max width and no close butt but overlay can close the boi <i class="symbol symbol-search"></i></a>
 					<br>
 				
