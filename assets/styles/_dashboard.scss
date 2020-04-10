@@ -171,13 +171,13 @@ $sidebar-mobile: 245px;
 
 			@keyframes dashboardLoading {
 				0% {
-					content:"Loading Stuff.";
+					content:"Loading.";
 				}
 				50% {
-					content:"Loading Stuff..";
+					content:"Loading..";
 				}
 				100% {
-					content:"Loading Stuff...";
+					content:"Loading...";
 				}
 			}
 
@@ -187,7 +187,7 @@ $sidebar-mobile: 245px;
 					animation-duration: .5s;
 					animation-fill-mode: both;
 					animation-iteration-count: infinite;
-					content:"Loading Stuff...";
+					content:"Loading...";
 					display:block;
 					font-size: 24px;
 					opacity: .2;
