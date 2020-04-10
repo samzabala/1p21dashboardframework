@@ -42,7 +42,6 @@ function app_get_component($filename = '', $slug =''){
 
 //GETS THE TEMPLETE FOR THE BOI WHILE HANDLEBARS IS NOT READY
 function app_init_content($slug = ''){
-	$template_to_use = 'home';
 	
 	if(isset($_GET['template'])):
 
@@ -56,10 +55,14 @@ function app_init_content($slug = ''){
 				app_get_template_part('template/projects-scoreboard');
 				break;
 
-			case 'demos':
+			case 'chart':
+			case 'debug':
 			case 'profiles':
 			case 'last-activity':
+				case 'last-activity-2':
+			case 'login':
 			case 'unique-links':
+			case 'activity-log':
 				app_get_template_part('template/'.$template_part);
 				break;
 
@@ -86,20 +89,23 @@ function app_init_content($slug = ''){
 // links for debugging our boi
 function app_debug_li() {
 ?>
+<li>
+	<a href="<?=app_create_link(array('template'=>'activity-log')) ?>">Activity Log - NEW TEMPLATE</a>
+</li>
 
 	<li>
 		<?php 
 			$env_to_switch = DASHBOARD_SLUG == 'production' ? 'scoreboard' : 'production';
 		?>
-		<a href="<?=app_create_link(array('env'=>$env_to_switch,'template'=>DASHBOARD_TEMPLATE)) ?>">Switch to <?=$env_to_switch ?></a>
+		<a href="<?=app_create_link(array('env'=>$env_to_switch,'template'=>DASHBOARD_TEMPLATE)) ?>">Switch to <?=$env_to_switch ?> environment</a>
 	</li>
 
 	<li>
-		<a href="<?=app_create_link(array('template'=>'demos')) ?>">Framework debug</a>
+		<a href="<?=app_create_link(array('template'=>'debug')) ?>">Debug framework</a>
 	</li>
 
 	<li>
-		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark Mode</a>
+		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark</a>
 	</li>
 <?php
 }

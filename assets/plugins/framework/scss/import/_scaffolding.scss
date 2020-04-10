@@ -16,10 +16,21 @@
 		min-height: 100vh;
 	}
 
+
+	.theme-inverse,
 	html.theme-inverse, 
 	.theme-inverse body {
 		background: $theme-background-inverse;
 		color: $theme-color-inverse;
+	}
+
+	::-moz-selection{
+		background: $body-selection-background;
+		color: $body-selection-color;
+	}
+	::selection{
+		background: $body-selection-background;
+		color: $body-selection-color;
 	}
 
 	body {
@@ -118,10 +129,10 @@
 	}
 	
 	button {
-		margin:0;
-		padding:0;
+		// margin:0;
+		// padding:0;
 		outline:0;
-		border: none;
+		// border: none;
 		cursor: pointer;
 	}
 	

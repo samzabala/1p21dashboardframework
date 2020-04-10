@@ -128,6 +128,8 @@ Note that all descentants of `[data-toggle="accordion"]` has pointer-events none
 
 `.accordion` on the other hand is being styled with just a `display:none;` or `display:block;` depending on its status.
 
+Also the width is full width.. of parent... like always.. because flex be a bitch sometimes
+
 As long as you avoid these properties on each element ya good.
 
 [Symbols toggle classes](../components/symbol.md#toggle-classes) change based on the status of the accordion as well as long as they are a direct children of either `[data-toggle="accordion"]` or `.accordion`
@@ -176,5 +178,17 @@ to disable this write ya script
 }(frameWork));
 ```
 NOTE: this is useless if `frameWork.settings.dynamicHash` is set to `false`
+
+### Functions
+
+#### **`fw.toggleAccordion(triggerer,changeHash)`**
+
+toggles the accordion
+
+`triggerer` is the element that triggers the accordion. if left blank, this triggers the present hash in the url
+
+
+`changeHash` is a boolean that sets if the `window.location.hash` should change when the function fires. NOTE: this will not work if no triggerer is declared
+
 
 [Back to TOC](../../../readme.md)

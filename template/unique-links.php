@@ -21,7 +21,7 @@
 			<div class="module-content align-self-center">
 
 				<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-06.png" alt="" />
+						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-06.png" alt="" />
 				</div>
 
 				<ul class="average-legend unstyled flex-grid flex-grid-compact no-margin-bottom">

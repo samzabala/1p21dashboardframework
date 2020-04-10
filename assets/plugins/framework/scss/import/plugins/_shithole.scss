@@ -95,7 +95,8 @@
     //breakpoints
     $brxs: 600px !default;
     $brsm: 1200px !default;
-    $brmd: 1800px !default;
+    $brmd: 1500px !default;
+    $brlg: 1800px !default;
 
     //extra breakpoints
     $brxxs: 400px !default; //for fixing designs that donnt fit average mobile screens
@@ -109,6 +110,7 @@
     $brsm-mn: $brxs + 1!default;
     $brmd-mn: $brsm + 1!default;
     $brlg-mn: $brmd + 1!default;
+    $brxl-mn: $brlg + 1!default;
 
     //configs
     $autoprefix: true !default; // turn off if ya compiler is gonna do this shit then goooood
@@ -126,12 +128,14 @@
         $screen-xs-max:  #{'max-width: ' + $brxs};
         $screen-sm-max:  #{'max-width: ' + $brsm};
         $screen-md-max:  #{'max-width: ' + $brmd};
+        $screen-lg-max:  #{'max-width: ' + $brlg};
 
         //Min widths
         $screen-xs:  #{'min-width: ' + $brxs-mn}; //mobile
         $screen-sm:  #{'min-width: ' + $brsm-mn}; //tablet
         $screen-md:  #{'min-width: ' + $brmd-mn}; //laptop
         $screen-lg:  #{'min-width: ' + $brlg-mn}; //desktop
+        $screen-xl:  #{'min-width: ' + $brxl-mn}; //desktop
 
         // Breakpoint tags
         $br-tag: (
@@ -139,13 +143,15 @@
             xs-max: $screen-xs-max,
             sm-max: $screen-sm-max,
             md-max: $screen-md-max,
+            lg-max: $screen-lg-max,
             xs: $screen-xs,
             sm: $screen-sm,
             md: $screen-md,
-            lg: $screen-lg
+            lg: $screen-lg,
+            xl: $screen-xl
         );
 
-        $br-tag-list: (xxs-max, xs-max, sm-max, md-max, xs, sm, md, lg);
+        $br-tag-list: (xxs-max, xs-max, sm-max, md-max, lg-max, xs, sm, md, lg, xl);
 
 
 ////////////////////////////////////////////////////////////////////////////// 
@@ -218,15 +224,16 @@
         @mixin media($query){
 
             //spaces are to track only the tags built for this mixin because sass doesnt haVE FUCJKING REGEX
-            $query: #{ ' ' + $query + ' ' };
+            $query-ready: #{ ' ' + $query + ' ' };
+
 
             @each $tag,$breakpoint in $br-tag {
-                $query: str-replace($query,#{' '+ $tag + ' ' }, ' (' + $breakpoint  + ') ');
+                $query-ready: str-replace($query-ready,#{' '+ $tag + ' ' }, ' (' + $breakpoint  + ') ');
             }  
 
             // @error $query;
 
-            @media #{$query}  { 
+            @media #{$query-ready}  { 
                 @content;
             }
             
@@ -252,9 +259,11 @@
         /// basic ass bitchin container that centers ya shiet
         /// @param $padding: gutter(.75) or $gutter * .75 !default | (number) | padding for left and right
         /// @return: container styles
-        @mixin container($padding: gutter(.75)) {
-            padding-left: $padding;
-            padding-right: $padding;
+        @mixin container($padding:'') {
+            @if $padding != '' {
+                padding-left: $padding;
+                padding-right: $padding;
+            }
             margin: 0 auto; 
             width:100%;
             position:relative;
@@ -298,7 +307,7 @@
         /// @param $extend: false !default | (boolean) | extend the extend or nah
         /// @param $br: xs | (string) | set breakpoint where flex starts happening. xs wond generate a media query huhuhu
         /// @param $add-important: false | (boolean) | add important to flex becausE SOME BITCHES FEEL LIKE THERE SHOULD BE AN !IMPORTANT TO SHIT???
-        @mixin flex($extend: false,$br: xs,$add-important: false,$add-wrap:false){
+        @mixin flex($extend: false,$br: false,$add-important: false,$add-wrap:false){
             
             $important: '';
 
@@ -309,7 +318,7 @@
             @if  $extend == true {
                 @extend %flex-#{$br};
             } @else {
-                @if $br != xs {
+                @if $br != xs and $br != false {
                     @include br($br) {
                         display:flex#{$important};
                         @if $add-wrap {
@@ -409,6 +418,7 @@
                 sm,
                 md,
                 lg,
+                xl,
             );
             $breakable-parameters: map-get($opts, col-number), map-get($opts, gap-x),map-get($opts, gap-y),map-get($opts, custom-css),map-get($opts, custom-css-child);
 
@@ -684,7 +694,7 @@
                 $gap-x-opts: map-get($opts,gap-x);//because margin-left doesn need to repeat if its the same shit right??
 
                 @if $declare-method == true and $br == $br-to-grid and $method == flex{
-                    @include flex($extend);
+                    @include flex($extend,false,false,true);
                 }
 
 
@@ -872,74 +882,79 @@
         @mixin type-set($args:()) {
 
             $opts: map-merge((
-                size: '',
-                leading: '',
-                font: '',
-                color: '',
-                weight: '',
-                tracking: '',
-                case: '',
-                decoration: '',
-                variant: '',
-                align:'',
-                indent:'',
-                word-spacing:'',
-                style: '',
+                size: null,
+                leading: null,
+                font: null,
+                color: null,
+                weight: null,
+                tracking: null,
+                case: null,
+                decoration: null,
+                variant: null,
+                align:null,
+                indent:null,
+                word-spacing:null,
+                root-size: null,
+                style: null,
                 //@TODO other fancy shit
             ),$args);
             
-            @if map-get($opts,size) != '' {
-                font-size: map-get($opts,size);
-            }
-            @if map-get($opts,leading) != '' {
-                @if type-of(map-get($opts,size)) == number {
-                    line-height: type-lead(map-get($opts,size),map-get($opts,leading));
+            @if map-get($opts,size) {
+
+                @if map-get($opts,root-size) and (type-of( map-get($opts,root-size) ) == number ) and (type-of( map-get($opts,size) ) == number ) {
+                    font-size: rem(map-get($opts,size)/map-get($opts,root-size));
                 }@else{
-                    line-height: map-get($opts,leading);
+                    font-size: map-get($opts,size);
                 }
+
+
+            }
+            @if map-get($opts,leading) {
+                
+                line-height: type-lead(map-get($opts,size),map-get($opts,leading));
             }
             
-            @if map-get($opts,font) != ''{
+            @if map-get($opts,font){
                 font-family: map-get($opts,font);
             }
             
-            @if map-get($opts,color) != ''{
+            @if map-get($opts,color){
                 color: map-get($opts,color);
             }
             
-            @if map-get($opts,weight) != ''{
+            @if map-get($opts,weight){
                 font-weight: map-get($opts,weight);
             }
             
-            @if map-get($opts,tracking) != ''{
+            @if map-get($opts,tracking){
                 letter-spacing: type-track(map-get($opts,tracking));
             }
             
-            @if map-get($opts,case) != ''{
+            @if map-get($opts,case){
                 text-transform: map-get($opts,case);
             }
             
-            @if map-get($opts,decoration) != ''{
+            @if map-get($opts,decoration){
                 text-decoration: map-get($opts,decoration);
             }
             
-            @if map-get($opts,variant) != ''{
+            @if map-get($opts,variant){
                 font-variant: map-get($opts,variant);
             }
             
-            @if map-get($opts,align) != ''{
+            @if map-get($opts,align){
                 text-align: map-get($opts,align);
             }
             
-            @if map-get($opts,indent) != ''{
+            @if map-get($opts,indent){
                 text-indent: map-get($opts,indent);
             }
             
-            @if map-get($opts,style) != ''{
+            @if map-get($opts,style){
                 font-style: map-get($opts,style);
             }
             
-            @if map-get($opts,word-spacing) != ''{
+            @if map-get($opts,word-spacing){
                 word-spacing: map-get($opts,word-spacing);
             }
             
@@ -950,18 +965,19 @@
             /// @param $font-size: !required | (number) | duh
             /// @param $line-height: !required | (number) | duh
             /// @return stripped font size relative value without unit
-            @mixin type($font-size,$line-height:''){
-                font-size: $font-size;
-                @if $line-height != '' {
-                    line-height: type-lead($font-size,$line-height);
-                }
+            @mixin type($font-size,$line-height:'',$root-size:null){
+                @include type-set((
+                    size: $font-size,
+                    root-size: $root-size,
+                    leading: $line-height
+                ));
             }
 
             //mixins and functions that shit above relies on but u can use to ur butthole's content
                 /// line height generator. values have to be the same and shit
                 /// @param $font-size: !required | (number) | duh
                 /// @param $line-height: !required | (number) | duh
-                /// @return stripped font size relative value without unit
+                /// @return stripped font size relative value wi thout unit
                 @function type-lead($font-size,$line-height) {
                     @if (type-of($font-size) == number and type-of($line-height) == number)
                     and (unit($font-size) == unit($line-height))
@@ -981,7 +997,7 @@
                 /// @param $should-be-the-value-from-photoshop: !required | (number) | duh
                 /// @return font size relative value equivalent
                 @function type-track($should-be-the-value-from-photoshop) {
-                    @if unitless($should-be-the-value-from-photoshop){
+                    @if type-of($should-be-the-value-from-photoshop) == number and unitless($should-be-the-value-from-photoshop){
 
                         @return ($should-be-the-value-from-photoshop / 1000) * 1em;
                     }@else{
@@ -1100,22 +1116,39 @@
         }
 
 
+        
         // xxs-max: $screen-xxs-max,
         // xs-max: $screen-xs-max,
         // sm-max: $screen-sm-max,
         // md-max: $screen-md-max,
+        // lg-max: $screen-lg-max,
         // xs: $screen-xs,
         // sm: $screen-sm,
         // md: $screen-md,
-        // lg: $screen-lg
+        // lg: $screen-lg,
+        // xl: $screen-xl
+        // gets the max of ya boi or the min of ya boi
+
         @function polar-br($breakpoint) {
             $current-index: index($br-tag-list,$breakpoint);
             
-            @if($current-index > 4) {
-                @return  nth($br-tag-list,$current-index - 4);
+            @if($current-index > 5) {
+                @return  nth($br-tag-list,$current-index - 5);
             }@else {
-                @return  nth($br-tag-list,$current-index + 4);
+                @return  nth($br-tag-list,$current-index + 5);
             }
+        }
+
+        
+        @function color_is_light($color: null, $threshold: 136) {
+            @if (
+                type-of($color) == color
+                and ( (red($color) + green($color) + blue($color)) / 3 ) > $threshold
+            ) {
+                @return true; // Lighter backgorund, return dark color
+              } @else {
+                @return false; // Darker background, return light color
+              }
         }
 
 
@@ -1257,8 +1290,8 @@
                 background-position: 
                     #{$stroke} #{( $size * .5 ) + ($stroke * .5)},
                     #{$stroke} #{( $size * .5 ) + ($stroke * .5)},
-                    #{($size * .5) + ($stroke)} #{( $size * -.5 ) + ($stroke * .5)},
-                    #{($size * .5) + ($stroke)} #{( $size * -.5 ) + ($stroke * .5)};
+                    #{($size * .5) + ($stroke)} #{($size * -.5)  + ($stroke * .5)} #{','}
+                    #{($size * .5) + ($stroke)} #{($size * -.5) + ($stroke * .5)};
                 
 
                 @if $autoprefix == true {
@@ -2276,13 +2309,13 @@
     /// @return {String} - Updated string
     @function str-replace($string, $search, $replace: '') {
         $index: str-index($string, $search);
-
+        
         @if $index {
-            @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+          @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
         }
-
+        
         @return $string;
-    }
+      }
 
     /// for maps and shit
     @function map-set($map, $key, $value) {
@@ -2501,5 +2534,9 @@
 
     &-lg {
         @include flex(false,lg,true);
+    }
+
+    &-xl {
+        @include flex(false,xl,true);
     }
 }

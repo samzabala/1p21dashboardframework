@@ -25,7 +25,7 @@
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">SEO</span>
-							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up font-size-small"></i>
 						</span>
 						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
@@ -51,7 +51,7 @@
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-designers.svg">
 							<span class="nav-item-text">Designers</span>
-							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up font-size-small"></i>
 						</span>
 						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
@@ -63,7 +63,7 @@
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-devs.svg">
 							<span class="nav-item-text">Developers</span>
-							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up font-size-small"></i>
 						</span>
 						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
@@ -77,7 +77,7 @@
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-managers.svg">
 							<span class="nav-item-text">Managers</span>
-							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up font-size-small"></i>
 						</span>
 						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>
@@ -91,7 +91,7 @@
 						<span data-toggle="dropdown">
 							<img class="nav-icon" data-src="<?=DASHBOARD_ROOT_URL ?>/assets/images/icon-sales.svg">
 							<span class="nav-item-text">Sales</span>
-							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up"></i>
+							<i class="symbol symbol-arrow-down symbol-arrow-toggle-up font-size-small"></i>
 						</span>
 						<?php app_get_component('components/nav-dropdown-profiles'); ?>
 					</li>

@@ -1,5 +1,5 @@
 				<br>
-				<ul class="inline">
+				<ul class="inline text-align-center">
 				
 					<?=app_debug_li(); ?>
 				</ul>
@@ -16,20 +16,17 @@
 	<!-- SCRIPT -->
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script> -->
 
 
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
+		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
-		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
+		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
+		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
 	
 		<!-- THE BOI -->
 		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.js'); ?>
-
-
-
 
 
 
@@ -46,12 +43,14 @@
 	<!-- @PLACEHOLDER for debugging framework. delete when ready. or repurpose or... idk -->
 		<script>
 
+			// duh
 			function setCookie(cname, cvalue, exdays) {
 				var d = new Date();
 				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 				var expires = "expires="+d.toUTCString();
 				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 			}
+			// duh
 			function getCookie(cname) {
 				var name = cname + "=";
 				var decodedCookie = decodeURIComponent(document.cookie);
@@ -67,6 +66,8 @@
 				}
 				return "";
 			}
+
+			//toggle darkmode. although placeholder, this can be repurposed too :)
 			function placeholderScriptDarkMode(event) {
 				console.log( getCookie('_1p21fw_dark'));
 				event.preventDefault();
@@ -74,15 +75,11 @@
 
 				document.documentElement.classList.toggle('theme-inverse');
 			}
+
 			(function(){
 				getCookie('_1p21fw_dark') == '1' && (document.documentElement.classList.add('theme-inverse') )
 			}())
-		</script>
 
-		<style>
-			img[src*="PLACEHOLDER/profiles"] {
-				opacity:0!important;
-			}
-		</style>
+		</script>
 
 </html>

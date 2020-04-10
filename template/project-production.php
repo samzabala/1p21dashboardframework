@@ -38,7 +38,7 @@
 							<span class="hide-mobile font-size-small color-neutral text-transform-uppercase font-weight-700">Status:</span>
 							
 							<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-							<span class="tag tag-accent">
+							<span class="tag tag-secondary">
 								<span class="task-status"><span class="REPLACE">Task Status<span></span>
 							</span>
 						</li>
@@ -117,7 +117,7 @@
 														<tr>
 															<!-- @NOTE table-label-COLOR will by @DYNAMIC based on projct-task-category of time track or  yeeee -->
 															<td class="table-cell-no-gutter">
-																<span class="table-label table-label-accent"></span>
+																<span class="table-label table-label-secondary"></span>
 															</td>
 
 															<td>
@@ -169,7 +169,7 @@
 												
 											<!-- Progress: Design -->
 											<div
-												class="project-progress-des progress-bar background-accent"
+												class="project-progress-des progress-bar background-secondary"
 												style="width:45%"></div>
 
 													
@@ -202,7 +202,7 @@
 											
 											<div class="list-group-item flex-col-12 flex-col-md-6 flex-xs justify-content-space-between">
 												<div class="project-milestone-time-label">
-													<i class="symbol symbol-square color-accent"></i>
+													<i class="symbol symbol-square color-secondary"></i>
 													<span class="project-milestone">Design</span>
 												</div>
 
@@ -338,16 +338,16 @@
 												<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
 													<span class="REPLACE">04-20-69</span>
 												</p>
-												<h2 class="project-note-title no-margin-top">
+												<h2 class="project-note-title no-margin-y">
 													<span class="REPLACE">Note Title goes here</span>
 												</h2>
+												<hr>
 											</div>
 
 											<i class="font-size-large color-primary symbol symbol-caret-down-toggle symbol-caret-right"></i>
 
 										</div>
 
-										<hr>
 										
 
 										<div class="project-note-content accordion text-leading-expanded">
@@ -416,7 +416,7 @@
 															<p class="project-note-date color-neutral font-weight-700 no-margin-bottom">
 																<span class="REPLACE">04-20-69</span>
 															</p>
-															<h2 class="project-note-title no-margin-top">
+															<h2 class="project-note-title no-margin-y">
 																<span class="REPLACE">Note Title goes here</span>
 															</h2>
 														</div>

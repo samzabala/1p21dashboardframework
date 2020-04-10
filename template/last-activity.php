@@ -47,7 +47,7 @@
 
 			<div class="module-content align-self-center">
 				<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-07.png" alt="" />
+						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-07.png" alt="" />
 				</div>
 			</div>
 
@@ -75,7 +75,7 @@
 
 			<div class="module-content align-self-center">
 				<div class="p">
-						<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-07.png" alt="" />
+						<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-07.png" alt="" />
 				</div>
 			</div>
 

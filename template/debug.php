@@ -1,7 +1,1434 @@
-<div class="module" data-sggrc="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
+<div class="module-grid">
+<div class="module">
 	<div class="module-content">
+		<p>
+			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present. it's kinda laggy now because i shat on it too much
+		</p>
+		
 
-		<h1 data-toggle="accordion" class="color-primary-hover color-error-toggle">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		</div>
+
+
+
+
+		<h1 class="fuck-you-po-pakshet" data-toggle="accordion" data-href="#bitchboio">bititichhc<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion" id="bitchboio">
+			bitchacho
+		</div>
+		
+		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
+		<div class="accordion ">
+
+			<input type="date" class="input input-calendar" 
+				value="2019-07-01"
+				data-calendar-min="2019-06-31"
+				data-calendar-text-input="true" />
+
+
+			<!-- <div class="position-relative">
+				<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
+				<div id="dropcal" class="dropdown" data-dropdown-width="100%">
+					<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
+
+						<div class="flex-col-md-4 flex-col-sm-6">
+
+							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+								<label class="input-label">From</label>
+								<input type="date" class="input input-calendar" 
+								value="2019-07-01"
+								data-calendar-min="2019-06-31"
+								data-calendar-text-input="true" />
+							</div>
+						</div>
+
+						
+						<div class="flex-col-md-4 flex-col-sm-6">
+
+							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
+								<label class="input-label">To</label>
+								<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+							</div>
+						</div>
+
+						
+						<div class="flex-col-md-4 flex-col-sm-12">
+							<div class="input-label">Or by Month</div>
+							<ul class="no-padding-left">
+
+								<li><a href="#">Jan 2018</a></li>
+								<li><a href="#">Feb 2018</a></li>
+								<li><a href="#">March 2018</a></li>
+								<li><a href="#">April 2018</a></li>
+								<li><hr class="dropdown-separator"></li>
+								<li><a href="#">Today</a></li>
+								<li><a href="#">Last 3 days</a></li>
+								<li><a href="#">Last week</a></li>
+								<data-toggle="moda><a href="#">Last Month</a></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			The div is somewhere here... suck a dick
+			<input type="text" class="input input-calendar" data-calendar-start-day="0"
+			data-calendar-disabled-dates="2020-03-01,2020-03-02"
+			data-calendar-text-input="true"
+
+			min="2018-01-20"
+			value="2020-03-05" />
+
+			<p>bitch but no value</p>
+			<input type="text" class="input input-calendar" data-calendar-start-day="0"
+			data-calendar-disabled-dates="2020-03-01,2020-03-02"
+			data-calendar-text-input="true" />
+
+
+			data-calendar-start-day="0"
+				data-calendar-disabled-dates="past"
+				data-calendar-dropdown-year-span="0"
+				min="2019-01-20"
+				data-calendar-max="2021-02-20"
+				value="2020-03-05"
+
+			<h2>
+				use cases
+			</h2>
+
+			<h3>different size</h3>
+
+			<input type="text" class="input input-calendar input-large" data-calendar-start-day="0"
+							value="2020-01-05" />
+
+							<input type="text" class="input input-calendar input-small" data-calendar-start-day="0"
+							value="2020-01-05" />
+
+			<h3>in fieldset</h3>
+			<form>
+
+				<fieldset>
+					<legend>fuck wad</legend>
+					<div class="input-wrapper input-wrapper-vertical">
+						<label for="" class="input-label">eggeggeggeggeggeggeggeggeggeggeggegg</label>
+
+						<input type="text" class="input input-calendar" data-calendar-start-day="0"
+							value="2020-01-05" />
+					</div>
+				</fieldset>
+			</form>
+			<h3>sizes</h3>
+
+			<h3>color classes</h3>
+
+
+
+			<input type="text" class="input input-calendar input-primary" data-calendar-start-day="0"
+			data-calendar-text-input="true"
+				value="2020-01-05" />
+			<input type="text" class="input input-calendar input-secondary" data-calendar-start-day="1"
+			data-calendar-text-input="true"
+			value="2020-02-05" />
+			<input type="text" class="input input-calendar input-accent" data-calendar-start-day="2"
+			data-calendar-text-input="true"
+			value="2020-03-05" />
+			<input type="text" class="input input-calendar input-success" data-calendar-start-day="3"
+			data-calendar-text-input="true"
+			value="2020-04-05" />
+			<input type="text" class="input input-calendar input-caution" data-calendar-start-day="4"
+			data-calendar-text-input="true"
+			value="2020-05-05" />
+			<input type="text" class="input input-calendar input-error" data-calendar-start-day="5"
+			data-calendar-text-input="true"
+			value="2020-06-05" />
+
+
+			<h3>in input-group-vertical</h3>
+			<div class="input-group input-group-vertical">
+				<input type="text" class="input input-calendar" data-calendar-start-day="0"
+				value="2020-01-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="1"
+				value="2020-02-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="2"
+				value="2020-03-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="3"
+				value="2020-04-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="4"
+				value="2020-05-05" />
+			</div>
+
+			<div class="input-group input-group-vertical input-group-responsive">
+				<input type="text" class="input input-calendar" data-calendar-start-day="0"
+				value="2020-01-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="1"
+				value="2020-02-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="2"
+				value="2020-03-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="3"
+				value="2020-04-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="4"
+				value="2020-05-05" />
+			</div>
+
+			<h3>in input-group-horizontal</h3>
+			<div class="input-group input-group-horizontal input-group-responsive">
+				<input type="text" class="input input-calendar" data-calendar-start-day="0"
+				value="2020-01-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="1"
+				value="2020-02-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="2"
+				value="2020-03-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="3"
+				value="2020-04-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="4"
+				value="2020-05-05" />
+			</div>
+			<div class="input-group input-group-horizontal">
+				<input type="text" class="input input-calendar" data-calendar-start-day="0"
+				value="2020-01-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="1"
+				value="2020-02-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="2"
+				value="2020-03-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="3"
+				value="2020-04-05" />
+				<input type="text" class="input input-calendar" data-calendar-start-day="4"
+				value="2020-05-05" />
+			</div> -->
+
+
+
+
+
+
+
+
+			
+		</div>
+
+		<h1 data-toggle="accordion">Kwan Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a data-toggle="alert-close-all">Close em all</a>
+			<div class="alert alert-default p" id="life-alert">
+				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-primary p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-secondary p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-accent p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-accent  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-neutral p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-neutral but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-success p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-success but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-caution p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-caution but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+			<div class="alert alert-error p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				.alert.alert-error but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div class="alert alert-error p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				I have a close button suck my dick
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div class="alert alert-default p" id="life-alert">
+				<a href="#life-alert" class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></a>
+				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+
+			<div class="alert alert-primary p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-secondary p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-accent p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-accent  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-neutral p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-neutral but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-success p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-success but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-caution p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-caution but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+			<div class="alert alert-error p">
+				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<p>.alert.alert-error but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
+
+
+				<h1>Header one</h1>
+				<h2>Header two</h2>
+				<h3>Header three</h3>
+				<h4>Header four</h4>
+				<h5>Header five</h5>
+				<h6>Header six</h6>
+				<h2>Blockquotes</h2>
+				<p>Single line blockquote:</p>
+				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
+				<p>Multi line blockquote with a cite reference:</p>
+				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
+				<h2>Basic Bitch Table</h2>
+				<table>
+				<tbody>
+				<tr>
+				<th>Employee</th>
+				<th class="views">Salary</th>
+				<th></th>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$1</td>
+				<td>Because that’s all Steve Job’ needed for a salary.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com">John</a></td>
+				<td>$100K</td>
+				<td>For all the blogging he does.</td>
+				</tr>
+				<tr class="odd">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100M</td>
+				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
+				</tr>
+				<tr class="even">
+				<td><a href="http://example.com/">Jane</a></td>
+				<td>$100B</td>
+				<td>With hair like that?! Enough said…</td>
+				</tr>
+				</tbody>
+				</table>
+				<h2>Definition Lists</h2>
+				<dl>
+				<dt>Definition List Title</dt>
+				<dd>Definition list division.</dd>
+				<dt>Startup</dt>
+				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
+				<dt>#dowork</dt>
+				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
+				<dt>Do It Live</dt>
+				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
+				</dl>
+				<h2>Unordered Lists (Nested)</h2>
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one
+				<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ul>
+				<h2>Ordered List (Nested)</h2>
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one
+				<ol>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				</li>
+				<li>List item two</li>
+				<li>List item three</li>
+				<li>List item four</li>
+				</ol>
+				<h2>HTML Tags</h2>
+				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
+				<p><strong>Address Tag</strong></p>
+				<address>1 Infinite Loop<br>
+				Cupertino, CA 95014<br>
+				United States</address>
+				<p><strong>Anchor Tag (aka. Link)</strong></p>
+				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+				<p><strong>Abbreviation Tag</strong></p>
+				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
+				<p><strong>Acronym Tag</strong></p>
+				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
+				<p><strong>Big Tag</strong></p>
+				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
+				<p><strong>Cite Tag</strong></p>
+				<p>“Code is poetry.” —<cite>Automattic</cite></p>
+				<p><strong>Code Tag</strong></p>
+				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
+				<p><strong>Delete Tag</strong></p>
+				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
+				<p><strong>Emphasize Tag</strong></p>
+				<p>The emphasize tag should <em>italicize</em> text.</p>
+				<p><strong>Insert Tag</strong></p>
+				<p>This tag should denote <ins>inserted</ins> text.</p>
+				<p><strong>Keyboard Tag</strong></p>
+				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Preformatted Tag</strong></p>
+				<p>This tag styles large blocks of code.</p>
+				<pre>.post-title {
+					margin: 0 0 5px;
+					font-weight: bold;
+					font-size: 38px;
+					line-height: 1.2;
+				}</pre>
+				<p><strong>Quote Tag</strong></p>
+				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
+				<p><strong>Strong Tag</strong></p>
+				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
+				<p><strong>Subscript Tag</strong></p>
+				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
+				<p><strong>Superscript Tag</strong></p>
+				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
+				<p><strong>Teletype Tag</strong></p>
+				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+				<p><strong>Variable Tag</strong></p>
+				<p>This allows you to denote <var>variables</var>.</p>
+			</div>
+		</div>
+		<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<span  class="btn-group btn-group-horizontal" data-toggle="modal">
@@ -19,20 +1446,37 @@
 					data-toggle="modal"
 					data-modal-title="Bitch"
 					href="#modal-demo">Modal boi</a>
+					<br>
 				
 				<a
 					data-toggle="modal"
 					data-modal-close="false"
+					data-modal-disable-overlay="false"
 					data-modal-max-width="800px"
 					data-modal-title="Bitch ass"
-					data-href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
+					data-modal-classes="theme-inverse font-weight-800"
+					data-href="#modal-demo">Modal boi with max width and no close butt but overlay can close the boi <i class="symbol symbol-search"></i></a>
+					<br>
 				
 				<a
 					data-toggle="modal"
 					data-modal-title="dumb Bitch juice"
 					data-href="#modal-demo">Modal boi</a>
+				<a
+					data-toggle="modal"
+					data-modal-title="Titties"
+					data-modal-callback="fuckinModalCallback()"
+					data-href="#modal-demo">Modal boi with a callback</a>
 
-			<div class="modal" id="modal-demo">
+
+<script>
+	var fuckinModalCallback =  function() {
+		console.log(this,'fuck shieeeet');
+		jQuery('#fw-modal h1').text('i fucked up all the h1s in your modal now');
+	}
+</script>
+
+			<div class="modal" id="modal-demo" data-modal-title="PUNYETA">
 				<h1>Look at this bitchboy going modal and shit</h1>
 
 				<h1>Header one</h1>
@@ -192,8 +1636,6 @@
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 					<label for="" class="sr-only">uuugh</label>
-
-					<textarea id="editor-demo" class="input input-trumbowyg input-trumbowyg-custom"></textarea>
 				
 					<textarea id="editor-demo" class="input input-trumbowyg"><p>Make this textarea a wisywig with <code>.input-trumbowyg</code>.</p><p>To make your own custom trumbo boi add the class <code>.input-tyumbowyg-custom</code> </p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6><h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6></textarea>
 				</div>
@@ -240,10 +1682,22 @@
 					data-toggle="tooltip-click"
 					data-tooltip-placement="right"
 					data-tooltip-badge="true"
-					data-tooltip-badge-background="accent"
+					data-tooltip-badge-background="secondary"
 					data-tooltip-badge-size="small"
 					data-tooltip-content="">
 					Bitch boi to the right and badge is small
+				</a>
+				
+				<a href="#" class="btn btn-primary"
+					data-toggle="tooltip-click"
+					data-tooltip-placement="right"
+					data-tooltip-badge="true"
+					data-tooltip-badge-background="accent"
+					data-tooltip-badge-size="small"
+					data-tooltip-x="500"
+					data-tooltip-y="500"
+					data-tooltip-content="custom">
+					Bitch boi custom
 				</a>
 				
 
@@ -309,7 +1763,12 @@
 						</a>
 						<ul class="dropdown" id="nav-demo-dropdown" >
 							<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
-							<li><a href="#">Drop item</a></li>
+							<li>
+								<a href="#" data-toggle="dropdown">Drop item</a>
+								<div class="dropdown">
+									<span>yea</span>
+								</div>
+							</li>
 							<li><a href="#">Drop item</a></li>
 							<li><a href="#">Drop item</a></li>
 							<li><a href="#">Drop item</a></li>
@@ -345,12 +1804,13 @@
 					<div class="progress-bar" style="width: 10%"></div>
 				</div>
 				<br>
-				<div class="progress">
-					<div class="progress-bar progress-bar-base" style="width: 46%"></div>
-				</div>
 				<br>
 				<div class="progress">
 					<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+				</div>
+				<br>
+				<div class="progress">
+					<div class="progress-bar progress-bar-secondary" style="width: 60%;"></div>
 				</div>
 				<br>
 				<div class="progress">
@@ -523,6 +1983,9 @@
 			<h3 id="progress-animated">Animated</h3>
 			<div class="progress active">
 					<div class="progress-bar progress-bar-primary" style="width: 20%"></div>
+				</div>
+				<div class="progress active">
+					<div class="progress-bar progress-bar-secondary" style="width: 60%;"></div>
 				</div>
 				<div class="progress active">
 					<div class="progress-bar progress-bar-accent" style="width: 60%;"></div>
@@ -699,44 +2162,44 @@
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
 						</p>
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label input-label-small" for="Small">Small</label>
+							<label class="input-label input-small" for="Small">Small</label>
 							<input class="input input-single-line input-small" id="Small" placeholder="Small" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label input-label-large" for="Large">Large</label>
+							<label class="input-label input-large" for="Large">Large</label>
 							<input class="input input-single-line input-large" id="Large" placeholder="Large" type="text">
 						</p>
 
 					<h2>colors</h2>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-primary" for="input-primary">Primary: </label>
+							<label class="input-label input-primary" for="input-primary">Primary: </label>
 							<input class="input input-single-line input-primary" id="input-primary" placeholder="Primary" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-accent" for="input-accent">accent: </label>
+							<label class="input-label input-secondary" for="input-secondary">secondary: </label>
+							<input class="input input-single-line input-secondary" id="input-secondary" placeholder="secondary" type="text">
+						</p>
+
+						<p class="input-wrapper input-wrapper-horizontal">
+							<label class="input-label input-accent" for="input-accent">accent: </label>
 							<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-base" for="input-base">base: </label>
-							<input class="input input-single-line input-base" id="input-base" placeholder="base" type="text">
-						</p>
-
-						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-success" for="input-success">success: </label>
+							<label class="input-label input-success" for="input-success">success: </label>
 							<input class="input input-single-line input-success" id="input-success" placeholder="success" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-caution" for="input-caution">caution: </label>
+							<label class="input-label input-caution" for="input-caution">caution: </label>
 							<input class="input input-single-line input-caution" id="input-caution" placeholder="caution" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-label-error" for="input-error">error: </label>
+							<label class="input-label input-error" for="input-error">error: </label>
 							<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
 						</p>
 						
@@ -834,7 +2297,7 @@
 
 						<h3>group horizontal</h3>
 
-							<p class="input-wrapper input-wrapper-horizontal">
+							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
 								<label class="input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal input-group-responsive">
@@ -863,7 +2326,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line input-accent" >
+									<select class="input input-single-line input-secondary" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -876,10 +2339,10 @@
 							</p>
 
 							<h4>small</h4>
-							<p class="input-wrapper input-wrapper-horizontal">
+							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
 								<label class="input-label" >Basic Ass</label>
-								<span class="input-group input-group-horizontal input-group-small input-group-responsive">
+								<span class="input-group input-group-horizontal input-small input-group-responsive">
 
 									<select class="input input-select" >
 										<option>Available option 1</option>
@@ -916,7 +2379,7 @@
 								
 							</p>
 							<h4>large</h4>
-							<span class="input-group input-group-horizontal input-group-large input-group-responsive">
+							<span class="input-group input-group-horizontal input-large input-group-responsive">
 
 								<select class="input input-select" >
 									<option>Available option 1</option>
@@ -998,7 +2461,7 @@
 								<p class="input-wrapper input-wrapper-vertical">
 									
 									<label class="input-label" >Basic Ass</label>
-									<span class="input-group input-group-vertical input-group-vertical input-group-small input-group-responsive">
+									<span class="input-group input-group-vertical input-group-vertical input-small input-group-responsive">
 
 										<select class="input input-select" >
 											<option>Available option 1</option>
@@ -1036,7 +2499,7 @@
 								</p>
 								
 								<h4>large</h4>
-								<span class="input-group input-group-vertical input-group-large input-group-responsive">
+								<span class="input-group input-group-vertical input-large input-group-responsive">
 
 									<select class="input input-select" >
 										<option>Available option 1</option>
@@ -1073,7 +2536,9 @@
 									<a href="#" class="btn btn-primary"> ye</a>
 								</span>
 
-								<span class="input-group input-group-horizontal input-group-large input-group-responsive">
+								DOES NOT WORK ON MULTIPLE LINE JUST ON SELECT AND SINGLE LINE BITCH
+
+								<span class="input-group input-group-horizontal input-large input-group-responsive">
 
 								<select multiple class="input input-select" >
 										<option>Available option 1</option>
@@ -1157,12 +2622,12 @@
 							
 					<h2>Accordion + checking if the framework doesnt fuck with the unstyled nbois too much</h2>
 
-							<div class="accordion-group accordion-group-multiple">
+							<div class="accordion-group">
 
 								<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 								<div class="accordion">
 									<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
-									<input type="button">
+									<input type="button" value="bitch">
 									<input type="checkbox">
 									<input type="color">
 									<input type="date">
@@ -1473,9 +2938,9 @@
 			<h2>Basic</h2>
 			<button type="button" class="btn btn-default">Default</button>
 			<button type="button" class="btn btn-primary">Primary</button>
+			<button type="button" class="btn btn-secondary">secondary</button>
 			<button type="button" class="btn btn-accent">accent</button>
 			<button type="button" class="btn btn-neutral">neutral</button>
-			<button type="button" class="btn btn-base">base</button>
 			<button type="button" class="btn btn-success">Success</button>
 			<button type="button" class="btn btn-caution">caution</button>
 			<button type="button" class="btn btn-error">error</button>
@@ -1484,9 +2949,9 @@
 			<h2>Small</h2>
 			<button type="button" class="btn btn-small btn-default">Default</button>
 			<button type="button" class="btn btn-small btn-primary">Primary</button>
+			<button type="button" class="btn btn-small btn-secondary">secondary</button>
 			<button type="button" class="btn btn-small btn-accent">accent</button>
 			<button type="button" class="btn btn-small btn-neutral">neutral</button>
-			<button type="button" class="btn btn-small btn-base">base</button>
 			<button type="button" class="btn btn-small btn-success">Success</button>
 			<button type="button" class="btn btn-small btn-caution">caution</button>
 			<button type="button" class="btn btn-small btn-error">error</button>
@@ -1495,9 +2960,10 @@
 			<h2>Large</h2>
 			<button type="button" class="btn btn-large btn-default">Default</button>
 			<button type="button" class="btn btn-large btn-primary">Primary</button>
+			<button type="button" class="btn btn-large btn-secondary">secondary</button>
 			<button type="button" class="btn btn-large btn-accent">accent</button>
 			<button type="button" class="btn btn-large btn-neutral">neutral</button>
-			<button type="button" class="btn btn-large btn-base">base</button>
+			
 			<button type="button" class="btn btn-large btn-success">Success</button>
 			<button type="button" class="btn btn-large btn-caution">caution</button>
 			<button type="button" class="btn btn-large btn-error">error</button>
@@ -1505,15 +2971,15 @@
 
 			<h2>Block</h2>
 
-			<button type="button" class="btn btn-large btn-block btn-success font-weight-300"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
+			<button type="button" class="btn btn-large btn-block btn-success"><i class="badge badge-success"></i> button Block for when you want to take over the world</button>
 			<h2>
 				Disabled
 			</h2>
 			<a href="#" class="btn btn-disabled btn-default">Default</a>
 			<a href="#" class="btn btn-disabled btn-primary">Primary</a>
+			<a href="#" class="btn btn-disabled btn-secondary">secondary</a>
 			<a href="#" class="btn btn-disabled btn-accent">accent</a>
 			<a href="#" class="btn btn-disabled btn-neutral">neutral</a>
-			<a href="#" class="btn btn-disabled btn-base">base</a>
 			<a href="#" class="btn btn-disabled btn-success">Success</a>
 			<a href="#" class="btn btn-disabled btn-caution">caution</a>
 			<a href="#" class="btn btn-disabled btn-error">error</a>
@@ -1542,6 +3008,7 @@
 		<button class="btn-group btn-group-horizontal btn-disabled">
 		<span class="btn btn-default">Default</span>
 		<span class="btn btn-primary">Primary</span>
+		<span class="btn btn-secondary">secondary</span>
 		<span class="btn btn-accent">accent</span>
 		</button>
 
@@ -1566,7 +3033,7 @@
 
 			<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
 
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Search</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
 			</a>
@@ -1600,15 +3067,15 @@
 				<span class="btn btn-default">Symbol -</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></span>
 			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab vertical</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
 			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab horizontal</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
 			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-burger"></i></span>
 			</a>
@@ -1628,11 +3095,11 @@
 				<span class="btn btn-default">Symbol caret left</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-right"></i></span>
 			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol close</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
 			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
@@ -1730,6 +3197,10 @@
 				Yo I'm second jumbo. Fight me weewooweewoo. shit shit shit shit shit shit shit shit it stinks
 			</p>
 
+<p class="special-secondary background-gradient text-clip-background">
+	Yo I'm second jumbo. but i have a background-gradient that has been clipped
+</p>
+
 			<p class="lead">
 				I'm lead, how about you shit yourself. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -1769,62 +3240,79 @@
 		<h1 data-toggle="accordion">Symbols repreiiesesse <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
-				Square &nbsp;<i class="color-primary symbol symbol-square"></i>
+				Square <i class="color-primary symbol symbol-square"></i>
 			</p>
 
 			<p>
-				Search &nbsp;<i class="color-primary symbol symbol-search"></i>
+				Search <i class="color-primary symbol symbol-search"></i>
 			</p>
 
 			<p>
-				arrow down &nbsp;<i class="color-primary symbol symbol-arrow-down"></i>
+				arrow down <i class="color-primary symbol symbol-arrow-down"></i>
 			</p>
 
 			<p>
-				arrow up &nbsp;<i class="color-primary symbol symbol-arrow-up"></i>
+				arrow up <i class="color-primary symbol symbol-arrow-up"></i>
 			</p>
 
 			<p>
-				arrow left &nbsp;<i class="color-primary symbol symbol-arrow-left"></i>
+				arrow left <i class="color-primary symbol symbol-arrow-left"></i>
 			</p>
 
 			<p>
-				arrow right &nbsp;<i class="color-primary symbol symbol-arrow-right"></i>
+				arrow right <i class="color-primary symbol symbol-arrow-right"></i>
+			</p>
+
+
+<p>
+	arrow down &nbsp;<i class="color-primary symbol symbol-arrow-double-down"></i>
+</p>
+
+<p>
+	arrow up &nbsp;<i class="color-primary symbol symbol-arrow-double-up"></i>
+</p>
+
+<p>
+	arrow left &nbsp;<i class="color-primary symbol symbol-arrow-double-left"></i>
+</p>
+
+<p>
+	arrow right &nbsp;<i class="color-primary symbol symbol-arrow-double-right"></i>
+</p>
+
+			<p>
+				plus <i class="color-primary symbol symbol-plus"></i>
 			</p>
 
 			<p>
-				plus &nbsp;<i class="color-primary symbol symbol-plus"></i>
-			</p>
-
-			<p>
-				minus &nbsp;<i class="color-primary symbol symbol-minus"></i>
+				minus <i class="color-primary symbol symbol-minus"></i>
 			</p>
 			<p>
-				close &nbsp;<i class="color-primary symbol symbol-close"></i>
+				close <i class="color-primary symbol symbol-close"></i>
 			</p>
 			<p>
-				map &nbsp;<i class="color-primary symbol symbol-map"></i>
+				map <i class="color-primary symbol symbol-map"></i>
 			</p>
 			<p>
-				burger &nbsp;<i class="color-primary symbol symbol-burger"></i>
+				burger <i class="color-primary symbol symbol-burger"></i>
 			</p>
 			<p>
-				kebab vertical &nbsp;<i class="color-primary symbol symbol-kebab-vertical"></i>
+				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
 			</p>
 			<p>
-				kebab horizontal &nbsp;<i class="color-primary symbol symbol-kebab-horizontal"></i>
+				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
 			</p>
 			<p>
-				caret up &nbsp;<i class="color-primary symbol symbol-caret-up"></i>
+				caret up <i class="color-primary symbol symbol-caret-up"></i>
 			</p>
 			<p>
-				caret down &nbsp;<i class="color-primary symbol symbol-caret-down"></i>
+				caret down <i class="color-primary symbol symbol-caret-down"></i>
 			</p>
 			<p>
-				caret left &nbsp;<i class="color-primary symbol symbol-caret-left"></i>
+				caret left <i class="color-primary symbol symbol-caret-left"></i>
 			</p>
 			<p>
-				caret right &nbsp;<i class="color-primary symbol symbol-caret-right"></i>
+				caret right <i class="color-primary symbol symbol-caret-right"></i>
 			</p>
 
 		</div>
@@ -1835,11 +3323,12 @@
 				<span class="badge badge-primary"></span> Primary
 			</p>
 			<p>
-				<span class="badge badge-accent"></span> Accent
+				<span class="badge badge-secondary"></span> secondary
 			</p>
 			<p>
-				<span class="badge badge-base"></span> Base
+				<span class="badge badge-accent"></span> accent
 			</p>
+			
 			<p>
 				<span class="badge badge-neutral"></span> Neutral
 			</p>
@@ -1888,11 +3377,12 @@
 			</p>
 
 			<p>
-				<span class="legend legend-accent"></span> Accent
+				<span class="legend legend-secondary"></span> secondary
 			</p>
 
+
 			<p>
-				<span class="legend legend-base"></span> Base
+				<span class="legend legend-accent"></span> accent
 			</p>
 
 			<p>
@@ -1938,9 +3428,10 @@
 
 		<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<span class="tag tag-default">Default</span>
 			<span class="tag tag-primary">Primary</span>
-			<span class="tag tag-accent">Accent</span>
-			<span class="tag tag-base">Base</span>
+			<span class="tag tag-secondary">secondary</span>
+			<span class="tag tag-accent">accent</span>
 			<span class="tag tag-neutral">Neutral</span>
 			<span class="tag tag-success">Success</span>
 			<span class="tag tag-caution">Caution</span>
@@ -1976,6 +3467,13 @@
 							<td class="text-align-center">69</td>
 						</tr>
 						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">420</td>
+						</tr>
+						<tr>
 							<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
@@ -1991,13 +3489,6 @@
 							<td class="text-align-center">666</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
-							<td>Column content</td>
-							<td>Column content</td>
-							<td class="text-align-right">Column content</td>
-							<td class="text-align-center">0</td>
-						</tr>
-						<tr>
 							<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
@@ -2005,14 +3496,42 @@
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
+							<td>Column content</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr>
+							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
@@ -2040,6 +3559,13 @@
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">69</td>
+							</tr>
+							<tr>
+								<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+								<td>Column content</td>
+								<td>Column content</td>
+								<td class="text-align-right">Column content</td>
+								<td class="text-align-center">420</td>
 							</tr>
 							<tr>
 								<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
@@ -2078,6 +3604,13 @@
 								<td class="text-align-center">0</td>
 							</tr>
 							<tr>
+								<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+								<td>Column content</td>
+								<td>Column content</td>
+								<td class="text-align-right">Column content</td>
+								<td class="text-align-center">0</td>
+							</tr>
+							<tr>
 								<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
@@ -2093,7 +3626,7 @@
 				<table class="table table-large">
 					<thead>
 					<tr>
-							<th class="table-cell-no-gutter">#</th>
+							
 							<th>Column heading</th>
 							<th>Column heading</th>
 							<th class="text-align-right">Column heading</th>
@@ -2101,119 +3634,103 @@
 						</tr>
 					</thead>
 				<tbody>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-						<td><div class="thumbnail thumbnail-small"><span class="thumbnail-text">YS</span></div></td>
+					
+					
+					
+					
+					<tr class="table-row-primary">
+						
+						<td>Primary</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">69</td>
+						<td class="text-align-center">0</td>
 					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-						<td>Column content</td>
+					<tr class="table-row-secondary">
+						
+						<td>secondary</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
+						<td class="text-align-center">0</td>
 					</tr>
-					<tr>
-						<td class="table-cell-no-gutter"><span class="table-label" style="background-color: teal;"></span></td>
-						<td>Custom label color</td>
+					<tr class="table-row-accent">
+						
+						<td>accent</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">420</td>
+						<td class="text-align-center">0</td>
 					</tr>
 					
 					<tr class="table-row-success">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+						
 						<td>Success</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">666</td>
 					</tr>
 					<tr class="table-row-error">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+						
 						<td>Error</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-caution">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+						
 						<td>Caution</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
-					<tr class="table-row-primary">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
-						<td>Primary</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-accent">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
-						<td>accent</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
 					<tr class="table-row-neutral">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-neutral"></span></td>
+						
 						<td>neutral</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
-					<tr class="table-row-base">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-base"></span></td>
-						<td>base</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
 					<tr class="table-row-intensity-1">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 1</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-2">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 2</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-3">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 3</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-4">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 4</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-intensity-5">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
-						<td>Intensity </td>
+						
+						<td>Intensity 5</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
 					<tr class="table-row-disabled">
-						<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+						
 						<td>Disabled</td>
 						<td>Column content</td>
 						<td class="text-align-right">Column content</td>
 						<td class="text-align-center">0</td>
 					</tr>
+					
 				</tbody>
 			</table>
 
@@ -2271,6 +3788,13 @@
 					<p class="table-cell text-align-center">0</p>
 				</div>
 				<div class="table-row">
+					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-secondary"></span></p>
+					<p class="table-cell">Column content</p>
+					<p class="table-cell">Column content</p>
+					<p class="table-cell text-align-right">Column content</p>
+					<p class="table-cell text-align-center">0</p>
+				</div>
+				<div class="table-row">
 					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
@@ -2282,6 +3806,48 @@
 
 		<h1 data-toggle="accordion">Helpers  <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+
+			<h2>Helper classes: font family</h2>
+
+			<p class="font-family-primary"> Primary</p>
+			<p class="font-family-accent"> Accent</p>
+
+
+			<h2>Helper classes: font size</h2>
+			<p class="font-size-normalize">normalize. inherits set body font size</p>
+			<p class="font-size-large">large. is chonky</p>
+			<p class="font-size-small">smal. is smol</p>
+
+
+			<h2>Helper classes: font style</h2>
+
+			<p class="font-style-italic"> italic</p>
+			<p class="font-style-oblique"> oblique</p>
+			<p class="font-style-normal"> normal</p>
+
+
+
+			<h2>Helper classes: disple</h2>
+
+			<p class="display-block"> block</p>
+			<p class="display-inline-block"> inline block</p>
+			<p class="display-inline"> inline</p>
+
+
+
+			<h2>Helper classes: text leading or line-height for u nerds</h2>
+
+			<p class="text-leading-expanded">
+				Expanded  Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
+
+			<p class="text-leading-compact">
+				Compact Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
+
+			<p class="text-leading-normalize">
+				Normalize Compact Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
 
 			<h2>Helper classes: text align</h2>
 
@@ -2311,19 +3877,23 @@
 			<p class="font-weight-800">800: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
 			<p class="font-weight-900">900: go crazy with them font-weights the fuck do i care about performance boohoohoo</p>
 
-
-			<h2>Helper classes: font size</h2>
-			<p class="font-size-normalize">normalize. inherits set body font size</p>
-			<p class="font-size-large">large. is chonky</p>
-			<p class="font-size-small">smal. is smol</p>
-
-
 			<h2>Helper classes: text transform</h2>
 			<p class="text-transform-uppercase">Uppercase</p>
 			<p class="text-transform-lowercase">Lowercase</p>
 			<p class="text-transform-capitalize">Capitalize</p>
 
-			<h2>Helper classes: Colors</h2>
+
+			<h2>Helper classes: vertical-align</h2>
+			<button class="text-vertical-align-middle">middle</button>
+			<button class="text-vertical-align-baseline">baseline</button>
+			<button class="text-vertical-align-top">top</button>
+			<button class="text-vertical-align-bottom">bottom</button>
+			<button class="text-vertical-align-text-top">text-top</button>
+			<button class="text-vertical-align-text-bottom">text-bottom</button>
+			<button class="text-vertical-align-sub">sub</button>
+			<button class="text-vertical-align-super">super</button>
+
+			<h2>Helper classes: Colors... there's a text shadow so you can see it shit itself</h2>
 
 
 
@@ -2335,7 +3905,8 @@
 			<p class="color-base">Color Base</p>
 			<p class="color-background">Color Background</p>
 			<p class="color-primary">Color Primary</p>
-			<p class="color-accent">Color Accent</p>
+			<p class="color-secondary">Color secondary</p>
+			<p class="color-accent">Color accent</p>
 			<p class="color-neutral">Color Neutral</p>
 			<p class="color-success">Color Success</p>
 			<p class="color-caution">Color Caution</p>
@@ -2358,7 +3929,8 @@
 			<p class="background-base">background Base</p>
 			<p class="background-background">background Background</p>
 			<p class="background-primary">Background Primary</p>
-			<p class="background-accent">Background Accent</p>
+			<p class="background-secondary">Background secondary</p>
+			<p class="background-accent">Background accent</p>
 			<p class="background-neutral">Background Neutral</p>
 			<p class="background-success">Background Success</p>
 			<p class="background-caution">Background Caution</p>
@@ -2380,10 +3952,176 @@
 			<p class="background-gradient-270">Background Gradient 270</p>
 			<p class="background-gradient-315">Background Gradient 315</p>
 
+			<h2>Advanced shit: wrap</h2>
 
-			<h1 data-toggle="accordion">Text <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-			<h3 class="true-title">Page Markup And Formatting</h3>						
-											<p><strong>Headings</strong></p>
+			<p class="text-wrap">text-wrap Text wrap... it just wraps break it down yo</p>
+
+			<div class="overflow-hidden">
+
+				<p class="text-nowrap">text-nowrap Text wrap... it never wraps. it's like your friend who doesnt know how to wrap what a piece of shit Justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+			</div>
+
+			<div class="overflow-hidden">
+
+				<p class="text-wrap-ellipsis">text-wrap-ellipsis put an ellipsis on this shit, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+			</div>
+
+
+			<div class="overflow-hidden">
+
+				<p class="text-wrap-ellipsis-multiple">text-wrap-ellipsis put an ellipsis on this shit but allow multiple lines but that depends on how many lines you set up that one sass var, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+			</div>
+
+
+
+			<p class="special-secondary text-clip-background font-weight-900 text-transform-uppercase" data-src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
+				text-clip-background feat ya boi secondary. i have a background-image and other bullshit classes so u see what the fuck is happening to this child. it's on drugs. look how high the child is. don't do drugs kids. i'm trying to gill up more text so you can see shrek's bitch ass face. do you see it yet? layers motherfucker. if shrek was a graphic designer he'd be photoshop. personally i like illustrator myself because di becters are my life. We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you 
+			</p>
+
+			<h2>Advanced shit: no margin</h2>
+
+
+			<div class="margin-me no-margin">no-margin</div>
+			<div class="margin-me no-margin-x">no-margin-x</div>
+			<div class="margin-me no-margin-y">no-margin-y</div>
+			<div class="margin-me no-margin-top">no-margin-top</div>
+			<div class="margin-me no-margin-bottom">no-margin-bottom</div>
+			<div class="margin-me no-margin-left">no-margin-left</div>
+			<div class="margin-me no-margin-right">no-margin-right</div>
+
+
+
+			<h2>Advanced shit: no padding</h2>
+
+
+			<div class="padding-me no-padding">no-padding</div>
+			<div class="padding-me no-padding-x">no-padding-x</div>
+			<div class="padding-me no-padding-y">no-padding-y</div>
+			<div class="padding-me no-padding-top">no-padding-top</div>
+			<div class="padding-me no-padding-bottom">no-padding-bottom</div>
+			<div class="padding-me no-padding-left">no-padding-left</div>
+			<div class="padding-me no-padding-right">no-padding-right</div>
+
+
+
+
+
+			<h2>Advanced shit: overflow all</h2>
+
+			<h3>Overflow visible</h3>
+			<p>fuck no, test it out urself</p>
+
+
+			<h3>Overflow hidden</h3>
+			<div style="height:69px" class="overflow-hidden">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow scroll</h3>
+			<div style="height:69px" class="overflow-scroll">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow overlay</h3>
+			<div style="height:69px" class="overflow-overlay">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow auto</h3>
+			<div style="height:69px" class="overflow-auto">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+
+
+			<h2>Advanced shit: overflow x</h2>
+
+			<h3>Overflow x visible</h3>
+			<p>fuck no, test it out urself</p>
+
+
+			<h3>Overflow x hidden</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-hidden">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow x scroll</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-scroll">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow x overlay</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-overlay">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow x auto</h3>
+			<div style="height:69px" class="overflow-y-hidden overflow-x-auto">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+
+
+
+			<h2>Advanced shit: overflow y</h2>
+
+			<h3>Overflow y visible</h3>
+			<p>fuck no, test it out urself</p>
+
+
+			<h3>Overflow y hidden</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-hidden">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow y scroll</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-scroll">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow y overlay</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-overlay">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+			<h3>Overflow y auto</h3>
+			<div style="height:69px" class="overflow-x-hidden overflow-y-auto">
+				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+			</div>
+
+
+			<h2>Advanced shit: position</h2>
+
+			<div style="position:relative;height: 100vh;" class="background-neutral">
+				<div class="position-me position-relative">position-relative</div>
+				<div class="position-me position-absolute">position-absolute</div>
+				<div class="position-me position-static">position-static</div>
+				<p>Fuck no test out position-sticky and position-fixed yourself</p>
+			</div>
+
+			<h2>Advanced shit: float and clear and clearfix</h2>
+
+			<div class="cf">
+				<div class="float-left">float left</div>
+				<div class="float-right">float right</div>
+				<div class="clear-left">clear left</div>
+				<div class="float-left">float left</div>
+				<div class="float-right">float right</div>
+				<div class="clear-right">clear right</div>
+				<div class="float-left">float left</div>
+				<div class="float-right">float right</div>
+				<div class="clear-both">clear both</div>
+			</div>
+
+			<p>
+				Theres also align classes for flex and grid and display none and block but i won't put it here because you suck jk
+			</p>
+
+		</div>
+
+		<h1  data-toggle="accordion" >Typographeee <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<h3 class="true-title">Page Markup And Formatting</h3>				
 			<h1>Header one</h1>
 			<h2>Header two</h2>
 			<h3>Header three</h3>
@@ -2617,19 +4355,16 @@
 					</g>
 					<g>
 						<g>
-							<rect x="360" y="8.5" class="fill-theme fill-accent-hover" width="240" height="76.1"></rect>
+							<rect x="360" y="8.5" class="fill-theme fill-secondary-hover" width="240" height="76.1"></rect>
 						</g>
 						<g>
-							<rect x="420" y="93" class="fill-accent" width="180" height="76.1"></rect>
+							<rect x="420" y="93" class="fill-secondary" width="180" height="76.1"></rect>
 						</g>
 						<g>
 							<rect x="600" y="177.5" class="fill-neutral" width="0" height="76.1"></rect>
 						</g>
 						<g>
-							<rect x="480" y="262" class="fill-base" width="120" height="76.1"></rect>
-						</g>
-						<g>
-							<rect y="346.5" class="fill-success stroke-error" width="600" height="76.1"></rect>
+							<rect y="346.5" class="fill-accent stroke-error" width="600" height="76.1"></rect>
 						</g>
 						<g>
 							<rect x="300" y="431" class="st6" width="300" height="76.1"></rect>
@@ -2847,7 +4582,7 @@
 				<div class="flex-child">
 					A column boi but not really column
 				</div>
-				<div class="flex-child flex-1-1">
+				<div class="flex-child flex-01-1">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
 				<div class="flex-col-4">
@@ -2863,29 +4598,442 @@
 			
 		</div>
 
+		<h1  data-toggle="accordion" >Would toolt tip work for dynamic shit? Idk let's see <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		<div id="kanoski-chart" style="width: 100%;"></div>
+
+			<script>
+			//<![CDATA[
+			//wrap in cdata so google doesn't think it's renderblocking 
+
+			(function(){
+				const isIE = function(){
+				var ua = navigator.userAgent;
+				return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1
+				}
+				//d3 doesnt support older browsers anyway just die
+				if(isIE()){
+				var error =  document.createElement('div')
+				error.className = prefix+'wrapper fatality';
+				error.innerHTML = 'Sorry, this graphic needs D3 to render the data but your browser does not support it.\n\n Newer versions of Chrome, Edge, Firefox and Safari are recommended. \n\nSee <em><a target="_blank" rel="nofollow" href="https://d3-wiki.readthedocs.io/zh_CN/master/Home/#browser-platform-support">the official wiki</a></em> for more information';
+				document.getElementById('kanoski-chart').appendChild(error);
+				
+				// break;
+				throw new Error('D3 not supported by browser');
+				}
+				//give the src of csv data here
+				const csvUrl = 'https://www.kanoski.com/wp-content/uploads/2019/12/DeadliestCarstop25.csv';
+				// const csvUrl = 'data.csv';
+				//make the chart here
+				function kanoskiChart(data){
+				
+				const width = 900;
+				const radius = [.5,.375,.25];
+				const backgroundColor = '#FFF';
+				const strokeWidth = 1;
+				const fontSize = '10pt';
+				const toolTipWidth = 300;
+				const toolTipHeight = 120;
+				const toolTipTailSize = 40;
+				const toolTipTailPyth = Math.sqrt((toolTipTailSize * toolTipTailSize) * 2);
+				const numFormat = d3.format(",d");
+				//our bois
+				var  _ = {};
+				//filter to makes so no error occurs if it doesnt exist
+				data = data.filter(function(d){
+					return d.Make;
+				});
+				//parse fatalities into numbers
+				data.forEach(function(d){
+					d.Fatalities = parseFloat(d.Fatalities);
+				});
+				//sort by make and alphabetically by make
+				data = data.sort((a, b) => {
+					if( a.Make > b.Make){
+					return 1;
+					}
+					if( a.Make < b.Make){
+					return -1;
+					};
+					return 0;
+				});
+				//create separate database for separate pie boi
+				const dataMake = data.reduce((accumulator, curr)=>{
+					if(
+					!accumulator.find((make)=>{
+						return make.Make === curr.Make	
+					})
+					){
+					accumulator.push({
+						Make: curr.Make,
+						Fatalities: curr.Fatalities
+					})
+					} else {
+					const i  = accumulator.findIndex((make)=>make.Make === curr.Make);
+					accumulator[i].Fatalities += curr.Fatalities
+					}
+					return accumulator;
+				}, []);
+				//container
+					const container = d3.select('#kanoski-chart');
+					const svg = container.append('svg')
+						.attr("viewBox", [0, 0, width, width])
+						.style("font", "inherit")
+						.style("background-color", backgroundColor)
+						.style("max-width", '100%')
+						.style("margin", '0 auto')
+						.style("display", 'block')
+						.attr('version','1.1')
+						.attr('x','0px')
+						.attr('y','0px')
+						.attr("preserveAspectRatio", "xMidYMid meet")
+						.attr('xml:space','preserve')
+						.attr('width',width)
+						.attr('height',width);
+						
+				//color scale
+					const colors = d3.scaleOrdinal()
+					.range(['#f49445','#f16038','#ee2b2a','#832339','#4d1e41','#21255c','#3f4494','#737fb9','#a6b9dd'])
+					.domain(data.reduce(function(acc,d){
+						if(!acc.includes(d.Make)){
+						acc.push(d.Make);
+						}
+						return acc;
+					},[]));
+				//get pi path
+					getArcPath = (piData,outerRadius,innerRadius,subMethod) => {
+					var path = d3.arc()
+						.outerRadius( outerRadius )
+						.innerRadius( innerRadius );
+					return subMethod ? path[subMethod](piData) : path(piData);
+					};
+				//get data but pi it
+					getPiData = (data,index) => {
+					var pie =  d3.pie()
+						.sort(null)
+						.value(function(d,i){
+						return d.Fatalities
+						});
+						return pie(data)[index];
+					}
+				//make em
+					makeADonut = (key,dataToUse,outerRadiusIndex,innerRadiusIndex) => {
+					//group
+						_['g'+key] = svg.append('g')
+						.attr('transform', `translate(${width / 2},${width / 2})`);
+					//graph item
+						_['blob'+key] = _['g'+key].append('g')
+						.selectAll('path')
+						.data(dataToUse,d => d[key])
+						.join('path')
+						.attr('data-make', d=> d.Make)
+						.attr('data-model', d=> d.Model)
+						.attr('data-toggle','tooltip-hover')
+						.attr('data-tooltip-content',d=> d.Make)
+						.attr('fill', d => colors(d.Make))
+						.attr('stroke-width',strokeWidth)
+						.on('mousemove',function(){
+							frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
+						})
+						.on('mouseenter',function(){
+							frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
+						})
+						.attr('stroke',backgroundColor)
+						.attr('d', (d,i) => getArcPath( getPiData(dataToUse,i),( width * radius[outerRadiusIndex]),( width * radius[innerRadiusIndex]) ))
+					//text 
+						_['text'+key] = _['g'+key].append("g")
+						.style("user-select", "none")
+						.style("font", "inherit")
+						.style("pointer-events", "none")
+						.selectAll("text")
+						.data(dataToUse,d => d[key])
+						.join("text")
+						.attr("text-anchor", "middle")
+						.attr('dominant-baseline','middle')
+						.attr('fill',backgroundColor)
+						.attr('font-size',fontSize)
+						.attr('font-weight', key == 'Make' ? '900' : 'inherit' )
+						.attr('transform-origin','0 0')
+						.attr('transform',(d,i)=> {
+							var textOrigin = getArcPath(
+							getPiData(dataToUse,i),
+							( width * radius[outerRadiusIndex]),
+							( width * radius[innerRadiusIndex]),
+							'centroid'
+							);
+							var angle = (getPiData(dataToUse,i).startAngle + getPiData(dataToUse,i).endAngle) * 90 / Math.PI - 90;
+							var transform = '';
+							transform = `translate(${textOrigin[0]},${textOrigin[1]})`;
+							transform += `rotate(${angle > 90 ? angle - 180 : angle})`;
+							return transform;
+						})
+						.html(d => {
+							// return '<tspan dy="1em">'+d[key].split(' ').join('</tspan><tspan>')+'</tspan>'
+							return d[key];
+						});
+					}
+				//yes
+					makeADonut('Make',dataMake,1,2);
+					makeADonut('Model',data,0,1);
+				}
+
+
+				document.addEventListener("DOMContentLoaded", function() {
+					jQuery(document).ready(function($) {
+						$.when(
+						$.getScript('https://d3js.org/d3.v5.min.js'),
+						$.getScript('https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js'),
+						$.Deferred(function( deferred ){
+							$( deferred.resolve );
+						})
+						)
+						.done(function(){
+							kanoskiChart([
+								{
+									"Make": "Chevrolet",
+									"Model": "Silverado",
+									"Fatalities": 1774
+								},
+								{
+									"Make": "Ford",
+									"Model": "F150",
+									"Fatalities": 1539
+								},
+								{
+									"Make": "Honda",
+									"Model": "Accord",
+									"Fatalities": 1085
+								},
+								{
+									"Make": "Toyota",
+									"Model": "Camry",
+									"Fatalities": 965
+								},
+								{
+									"Make": "Honda",
+									"Model": "Civic",
+									"Fatalities": 950
+								},
+								{
+									"Make": "Nissan",
+									"Model": "Altima",
+									"Fatalities": 761
+								},
+								{
+									"Make": "Toyota",
+									"Model": "Corolla",
+									"Fatalities": 739
+								},
+								{
+									"Make": "Ford",
+									"Model": "Explorer",
+									"Fatalities": 622
+								},
+								{
+									"Make": "Ford",
+									"Model": "F250",
+									"Fatalities": 594
+								},
+								{
+									"Make": "Dodge",
+									"Model": "Ram 1500*",
+									"Fatalities": 865
+								},
+								{
+									"Make": "Chevrolet",
+									"Model": "Impala",
+									"Fatalities": 543
+								},
+								{
+									"Make": "Chevrolet",
+									"Model": "Malibu",
+									"Fatalities": 514
+								},
+								{
+									"Make": "Ford",
+									"Model": "Ranger",
+									"Fatalities": 498
+								},
+								{
+									"Make": "Ford",
+									"Model": "Focus",
+									"Fatalities": 487
+								},
+								{
+									"Make": "Gmc",
+									"Model": "Sierra",
+									"Fatalities": 464
+								},
+								{
+									"Make": "Jeep",
+									"Model": "Grand Cherokee",
+									"Fatalities": 463
+								},
+								{
+									"Make": "Chevrolet",
+									"Model": "Tahoe",
+									"Fatalities": 425
+								},
+								{
+									"Make": "Ford",
+									"Model": "Mustang",
+									"Fatalities": 416
+								},
+								{
+									"Make": "Ford",
+									"Model": "Escape",
+									"Fatalities": 404
+								},
+								{
+									"Make": "Ford",
+									"Model": "Fusion",
+									"Fatalities": 399
+								},
+								{
+									"Make": "Toyota",
+									"Model": "Tacoma",
+									"Fatalities": 398
+								},
+								{
+									"Make": "Ford",
+									"Model": "F350",
+									"Fatalities": 388
+								},
+								{
+									"Make": "Hyundai",
+									"Model": "Elantra",
+									"Fatalities": 380
+								},
+								{
+									"Make": "Hyundai",
+									"Model": "Sonata",
+									"Fatalities": 376
+								},
+								{
+									"Make": "Honda",
+									"Model": "CR-V",
+									"Fatalities": 367
+								}
+							])
+						})
+					});
+				});
+			}())
+			//]]>
+			</script>
+		</div>
+
 	</div>
 
 
 
 </div>
+</div>
+
+<div class="modal" id="secret-modal" data-modal-title="YEET">
+	<div class="color-background" data-src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
+		<h1>
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</h1>
+
+
+		<h2>
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</h2>
+
+
+
+		<h3>
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</h3>
+		
+
+
+		<h4>
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</h4>
+
+
+		<h5>
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</h5>
+
+
+		<h6>
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</h6>
+
+
+		<p class="special-primary">
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</p>
+
+
+		<p class="special-secondary">
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</p>
+
+
+
+		<p class="special-lead">
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</p>
+
+
+
+		<p class="font-size-small">
+			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
+		</p>
+	</div>
+</div>
 
 		<style>
-			.accordion *[class*="background-"]:not(*[class*="clip"]),
-			.accordion .flex-child,
-			.accordion *[class*="flex-col-"],
-			.accordion *[class*="color-"]:not(.symbol) {
+			.accordion.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]),
+			.accordion.accordion:nth-child(n+9) .flex-child,
+			.accordion.accordion:nth-child(n+9) *[class*="flex-col-"],
+			.accordion.accordion:nth-child(n+9) *[class*="color-"]:not(.symbol) {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
 			}
 
-			.accordion .flex-child,
-			.accordion *[class*="flex-col-"] {
+			.margin-me {
+				margin: 3em;
+				outline: 1px solid rgba(0,0,0,.2);
+			}
+
+			.padding-me {
+				padding: 3em;
+				outline: 1px solid rgba(0,0,0,.2);
+			}
+
+			.position-me {
+				width: 100px;
+				height:100px;
+				background: pink;
+				outline: 1px solid rgba(0,0,0,.2);
+			}
+
+			.position-me:first-child {
+				top: 25%;
+				left: 25%;
+
+			}
+
+			.position-me:nth-child(2) {
+				top: 50%;
+				left: 50%;
+
+			}
+
+			.accordion:nth-child(n+9) .flex-child,
+			.accordion:nth-child(n+9) *[class*="flex-col-"] {
 				background: var(--theme-background-contrast);
 				min-height: 200px;
 
 			}
 
-			.accordion *[class*="color-"]{
+			.accordion:nth-child(n+9) *[class*="color-"],
+			.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]){
 
 				text-shadow:
 

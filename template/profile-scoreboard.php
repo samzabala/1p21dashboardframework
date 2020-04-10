@@ -49,7 +49,7 @@
 		<a
 			id="profile-scoreboard-links-built"
 			class="color-inherit color-primary-hover module module-no-gutter-x text-align-center text-leading-compact"
-			href="<?= app_create_link(array('template'=>'projects')); ?>"
+			href="<?= app_create_link(array('template'=>'unique-links')); ?>"
 			data-grid-area="linksbuilt">
 				
 				<span class="module-content">
@@ -120,12 +120,12 @@
 			<div class="module-content align-self-center">
 
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-03.png" alt="">
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-03.png" alt="">
 				</div>
 
 				<ul class="text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Unique Links Built
+						<span class="legend legend-secondary"></span> Unique Links Built
 					</li>
 
 					<li>
@@ -153,15 +153,18 @@
 				</div>
 			</div>
 
-			<div class="module-content align-self-center">
+			<div class="module-content flex-xs flex-direction-column justify-content-space-around">
 				
 				<p class="progress-title no-margin-top">Link Activity Distribution</p>
 				
-				<div class="progress p">
+				<!-- @NOTE this wont use high charts, -->
+				<div id ="lnk-act-dist" class="progress p">
 
 					<!--
 						@LOOP progress-bar
 						@DYNAMIC all attrbutes EXCEPT class
+
+
 					-->
 					<div class="progress-bar"
 
@@ -286,9 +289,40 @@
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
 
 						<?php 
-							$placeholder_colors = array(null,'#fec87c','#fb1818','#f7bc00','#006943','#b6e4b6','#0480fe','#a168d9','#fd7f03','#16b900','#01c6ab','#0037b4','#5e01a8','#fe85d6');
+							$placeholder_colors = array(
+								'#fec87c',
+								'#fb1818',
+								'#f7bc00',
+								'#006943',
+								'#b6e4b6',
+								'#0480fe',
+								'#a168d9',
+								'#fd7f03',
+								'#16b900',
+								'#01c6ab',
+								'#0037b4',
+								'#5e01a8',
+								'#fe85d6',
+								'#fff200',
+								'#d7c368',
+								'#e18256',
+								'#313f76',
+								'#547b80',
+								'#8f4139',
+								'#ecc65f',
+								'#d069a9',
+								'#008eb0',
+								'#5f6046',
+								'#c26558',
+								'#4db7ff',
+								'#5a3b00',
+								'#e1e43c',
+								'#6154a4',
+								'#9e005d',
+								'#000000'
+							);
 						?>
-						<?php for($i=1; $i<=(count($placeholder_colors) - 3 - 1); $i++){ ?>
+						<?php for($i=1; $i<=(count($placeholder_colors) - 20); $i++){ ?>
 							
 
 							<p>
@@ -320,7 +354,7 @@
 			</div>
 
 			<div class="module-content align-self-center">
-				<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-05.png" alt="">
+				<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-05.png" alt="">
 			</div>
 
 		</div>
@@ -351,7 +385,7 @@
 
 			<div class="module-content align-self-center">
 				<div>
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
 				</div>
 
 			</div>

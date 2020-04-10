@@ -37,12 +37,12 @@
 
 			<div class="module-content align-self-center">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="margin:0 auto;" src="/PLACEHOLDER/charts/prod/chart-01.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto;" src="/placeholder/charts/prod/chart-01.png" alt="" />
 				</div>
 
 				<ul class="no-margin text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Average Design Time
+						<span class="legend legend-secondary"></span> Average Design Time
 					</li>
 
 					<li>
@@ -78,7 +78,7 @@
 								<span class="REPLACE">40</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Design</span>
 							</div>
 						</div>
@@ -96,7 +96,7 @@
 								<span class="REPLACE">12</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Dev</span>
 							</div>
 						</div>
@@ -114,7 +114,7 @@
 								<span class="REPLACE">12</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Dev</span>
 							</div>
 						</div>
@@ -132,7 +132,7 @@
 								<span class="REPLACE">12</span>
 							</div>
 
-							<div class="font-size-small color-neutral">
+							<div class="color-neutral">
 								<span class="REPLACE">Projects in Dev</span>
 							</div>
 						</div>
@@ -167,7 +167,7 @@
 			<div class="module-content align-self-center">
 
 				<div class="p text-align-center">
-					<img class="REPLACE" style="width:500px;margin:0 auto" src="/PLACEHOLDER/charts/prod/chart-02.png" alt="" />
+					<img class="REPLACE" style="width:500px;margin:0 auto" src="/placeholder/charts/prod/chart-02.png" alt="" />
 				</div>
 
 				<ul class="unstyled no-margin text-align-center flex-sm flex-wrap justify-content-space-evenly">
@@ -176,7 +176,7 @@
 					</li>
 
 					<li>
-						<i class="symbol symbol-square color-accent"></i> Completed
+						<i class="symbol symbol-square color-secondary"></i> Completed
 					</li>
 
 					<li>
@@ -222,7 +222,7 @@
 
 								<td>
 									<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-									<span class="tag tag-accent">
+									<span class="tag tag-secondary">
 										<span class="task-status"><span class="REPLACE">Task Status<span></span>
 									</span>
 								</td>

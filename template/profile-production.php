@@ -21,7 +21,7 @@
 	<!-- Availability -->
 		<div
 			id="profile-production-availability"
-			class=" module module-no-gutter"
+			class=" module module-no-gutter overflow-hidden"
 			data-grid-area-md="availability">
 
 			<div class="flex-xs">
@@ -69,7 +69,7 @@
 			<div class="module-content align-self-center">
 
 				<div class="p text-align-center">
-					<img class="REPLACE" style="width:600px;margin:0 auto" src="/PLACEHOLDER/charts/prod/chart-03.png" alt="">
+					<img class="REPLACE" style="width:600px;margin:0 auto" src="/placeholder/charts/prod/chart-03.png" alt="">
 				</div>
 
 				<ul class="text-align-center inline no-margin-bottom">
@@ -96,7 +96,7 @@
 			</div>
 			
 			<div class="module-content">
-				<table class="table-small text-vertical-align-middle">
+				<table class="table text-vertical-align-middle">
 					<!-- @LOOP tr -->
 					<tr class="updated-project">
 
@@ -195,20 +195,20 @@
 							<td>
 								
 								<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-								<span class="task-status tag tag-accent">
+								<span class="task-status tag tag-secondary">
 									<span class="REPLACE">Task Status</span>
 								</spanpan>
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center position-relative">
 								
-								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
 									style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 								-->
-								<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+								<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
@@ -247,20 +247,20 @@
 										<td>
 											
 											<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-											<span class="task-status tag tag-accent">
+											<span class="task-status tag tag-secondary">
 												<span class="REPLACE">Task Status</span>
 											</spanpan>
 										</td>
 
 										<td class="dashboard-table-cell-action text-align-center position-relative">
 											
-											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+											<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 											<!--
 												@NOTE:
 												style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 											-->
-											<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+											<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 												<!-- @PLACEHOLDER: DELETE WHEN READY -->
 												<li class="REPLACE"><a href="#">Do something</a></li>
@@ -373,7 +373,7 @@
 
 							<td>
 								<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-								<span class="tag tag-accent">
+								<span class="tag tag-secondary">
 									<span class="task-status"><span class="REPLACE">Task Status<span></span>
 								</span>
 							</td>
@@ -391,13 +391,13 @@
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
-								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
 									style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 								-->
-								<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+								<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 									<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
@@ -432,7 +432,7 @@
 
 											<td>
 												<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-												<span class="tag tag-accent">
+												<span class="tag tag-secondary">
 													<span class="task-status"><span class="REPLACE">Task Status<span></span>
 												</span>
 											</td>
@@ -450,13 +450,13 @@
 											</td>
 
 											<td class="dashboard-table-cell-action text-align-center">
-												<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+												<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 												<!--
 													@NOTE:
 													style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 												-->
-												<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+												<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 													<!-- @PLACEHOLDER: DELETE WHEN READY -->
 													<li class="REPLACE"><a href="#">Do something</a></li>
@@ -487,10 +487,3 @@
 	</div>
 
 </div>
-
-
-<style scoped>
-	#profile-production-associated .module-header .filter-dropdown-date {
-		margin-right: auto;
-	}
-</style>

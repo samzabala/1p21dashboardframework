@@ -24,10 +24,14 @@ $prefix: '.tooltip';
 	@extend %for-pop;
 	pointer-events:none;
 	max-width: $tooltip-max-width;
-	display: none!important;
+	display: none;
+
+	&#{&}-allow-interaction {
+		pointer-events: auto;
+	}
 
 	&.active {
-		display: block!important;
+		display: block;
 	}
 
 	&:before,&:after {
@@ -143,15 +147,28 @@ $prefix: '.dropdown';
 	width: $dropdown-width;
 	display:none;
 	color: $nav-color;
-	display: none!important;
+	transform-origin: center center;
+	transform-style: preserve-3d;
 
+	.theme-inverse & {
+		color: $nav-color-inverse;
+	}
+	
 	&.open {
-		display: block!important;
+		display: block;
 	}
 
 	&,ul,li {
 		margin-bottom:0;
 		margin-top:0;
+	}
+
+	li.active {
+		color: $dropdown-active-color;
+	}
+
+	@at-root hr#{&}-separator {
+		margin: .5em 0;
 	}
 
 	a,
@@ -199,10 +216,6 @@ $prefix: '.dropdown';
 			top: 50%;
 			transform: translateY(-50%);
 		}
-	}
-
-	&.open {
-		display:block;
 	}
 
 	li {

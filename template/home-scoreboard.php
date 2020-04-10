@@ -32,7 +32,7 @@
 				align-self-center">
 					
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-01.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-01.png" alt="" />
 				</div>
 
 				<ul class="average-legend unstyled flex-grid flex-grid-compact flex-grid-fixed">
@@ -93,7 +93,7 @@
 				class="module-content align-self-center">
 					
 				<div class="p">
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-02.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-02.png" alt="" />
 				</div>
 
 

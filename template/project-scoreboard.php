@@ -183,11 +183,11 @@
 			</div>
 			<div class="module-content align-self-center">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-08.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-08.png" alt="" />
 				</div>
 				<ul class="no-margin text-align-right inline no-margin-bottom">
 					<li>
-						<span class="legend legend-accent"></span> Average Rank
+						<span class="legend legend-secondary"></span> Average Rank
 					</li>
 
 					<li>
@@ -217,7 +217,7 @@
 
 			<div class="module-content align-self-center">
 				<div class="p text-align-center">
-					<img class="REPLACE" style="margin:0 auto" src="/PLACEHOLDER/charts/seo/chart-09.png" alt="" />
+					<img class="REPLACE" style="margin:0 auto" src="/placeholder/charts/seo/chart-09.png" alt="" />
 				</div>
 				
 				

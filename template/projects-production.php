@@ -74,7 +74,7 @@
 
 							<td>
 								<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-								<span class="tag tag-accent">
+								<span class="tag tag-secondary">
 									<span class="task-status"><span class="REPLACE">Task Status<span></span>
 								</span>
 							</td>
@@ -96,13 +96,13 @@
 							</td>
 
 							<td class="dashboard-table-cell-action text-align-center">
-								<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+								<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 								<!--
 									@NOTE:
 									style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 								-->
-								<ul  data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+								<ul  data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 									<!-- @placeholder -->
 									<li class="REPLACE"><a href="#">Do something</a></li>
@@ -138,7 +138,7 @@
 
 										<td>
 											<!-- @NOTE .tag-COLOR_SCHEME will change to .task-status -->
-											<span class="tag tag-accent">
+											<span class="tag tag-secondary">
 												<span class="task-status"><span class="REPLACE">Task Status<span></span>
 																</span>
 										</td>
@@ -160,13 +160,13 @@
 										</td>
 
 										<td class="dashboard-table-cell-action text-align-center">
-											<span class="btn color-primary color-accent-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
+											<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="dropdown"><i class="symbol symbol-kebab-horizontal"></i></span>
 
 											<!--
 												@NOTE:
 												style issues: on last querry pagination items, change .dropdown-top-flush to .dropdown-bottom-flush to avoid scroll issues
 											-->
-											<ul data-dropdown-width="200" class="dropdown dropdown-top-flush dropdown-right text-align-left">
+											<ul data-dropdown-width="200px" class="dropdown dropdown-top-flush dropdown-right text-align-left">
 
 												<!-- @placeholder -->
 												<li class="REPLACE"><a href="#">Do something</a></li>
@@ -195,11 +195,3 @@
 
 	</div>
 </div>
-
-
-
-<style scoped>
-	.module-header .filter-dropdown-date {
-		margin-right: auto;
-	}
-</style>
