@@ -1267,8 +1267,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/framework.min.js",
-		"oF": 0,
+		"oAP": "/dist/framework.min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1278,8 +1278,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/framework.plugged.min.js",
-		"oF": 0,
+		"oAP": "/dist/framework.plugged.min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
@@ -1301,6 +1301,16 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/scss/framework.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/scss/framework-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/scss/framework.scss": {
 		"aP": 0,
@@ -1623,19 +1633,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/scss/import/_thumbnail.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/scss/import/_tinymce.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/scss/import/_tinymce.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

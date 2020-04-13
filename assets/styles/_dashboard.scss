@@ -287,3 +287,10 @@ $sidebar-mobile: 245px;
 		}
 	}
 }
+
+.body-modal-active {
+	overflow-y: hidden;
+  }
+  .body-modal-active .tox-tinymce-aux {
+	z-index: 99999 !important;
+  }
