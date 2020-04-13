@@ -22,8 +22,7 @@
 		<div class="accordion ">
 
 			<input type="date" class="input input-calendar" 
-				value="2019-07-01"
-				data-calendar-min="2019-06-31"
+				data-calendar-year-span="0"
 				data-calendar-text-input="true" />
 
 
