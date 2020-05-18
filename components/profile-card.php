@@ -1,11 +1,11 @@
-
-<div class="module  <?= (DASHBOARD_TEMPLATE == 'profiles') ? 'module-interactive' : ''; ?>"
-	<?php if(DASHBOARD_SLUG == 'production' && DASHBOARD_TEMPLATE == 'profile'): ?>
+<?=FWAPPS_TEMPLATE.' '.FWAPPS_SLUG.' '.FWAPPS_APP?>
+<div class="module  <?= (FWAPPS_TEMPLATE == 'profiles') ? 'module-interactive' : ''; ?>"
+	<?php if(FWAPPS_SLUG !== 'scoreboard' && FWAPPS_TEMPLATE == 'profile' && FWAPPS_APP == 'dashboard'): ?>
 		data-grid-area-md="profile-card"
 	<?php endif; ?>
 
 
-	<?php if(DASHBOARD_SLUG == 'scoreboard' && DASHBOARD_TEMPLATE == 'profile'): ?>
+	<?php if(FWAPPS_SLUG == 'scoreboard' && FWAPPS_TEMPLATE == 'profile' && FWAPPS_APP == 'dashboard'): ?>
 		data-grid-area="profile-card"
 	<?php endif; ?>
 	>
@@ -15,7 +15,7 @@
 			<?php app_get_component('components/profile-image'); ?>
 			
 			<p class="h2 font-weight-500 no-margin-bottom">
-				<a href="<?=DASHBOARD_ROOT_URL ?>?template=profile&env=<?=DASHBOARD_SLUG ?>" class="profile-name-full  color-inherit">
+				<a href="<?=FWAPPS_ROOT_URL ?>?template=profile&env=<?=FWAPPS_SLUG ?>" class="profile-name-full  color-inherit">
 					<span class="REPLACE">Profile Name</span>
 				</a>
 			</p>

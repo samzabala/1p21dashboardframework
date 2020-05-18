@@ -1,2 +1,2 @@
 
-				<?php app_init_content(DASHBOARD_SLUG); ?>
+				<?php app_init_content(); ?>

@@ -25,6 +25,35 @@ will separate dashboard and framework one the bois are readeh
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
 
+
+
+
+# Timetracker Notes
+
+Leave add entry modal anmd date dropdowns as is for now. still awaiting design updates for those
+
+Links are setup for templates that do not exist yet
+
+
+
+## Matching Templates
+
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[New&nbsp;Templates](https://github.com/samzabala/1p21dashboardframework/app-timetracker)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |  New Template Live Demo | Current Template Live Link |
+| -- | -- | -- | -- |
+| error	 | Internal errors (eg. 404, 503.. ).<br><br>for both envs: production and scoreboard | http://frameworkdashboarddebug.1p21.io/?template=error |
+| home/my-time | Landing page | http://frameworkdashboarddebug.1p21.io/?template=home&env=&app=timetracker | https://time-tracker.1p21.io/ |
+| team | team data  | http://frameworkdashboarddebug.1p21.io/?template=team&env=&app=timetracker | https://time-tracker.1p21.io/views/team<br><br>https://time-tracker.1p21.io/views/week |
+| project | view for a single project/client? | not yet |
+| profile | view for a single user | not yet |
+| tasks | ?? | not yet |
+| analytics | ?? | not yet |
+
+
+
+
+
+
+
 Calendar ui dropdown markup
 
 ```html
@@ -79,7 +108,9 @@ Calendar ui dropdown markup
 # Assets Flowchart
 [Flowchart](assets-flow-chart.png)
 
-#	NOTES
+--
+
+#	Dashboard NOTES
 
 *	Highcharts with tooltips
 
@@ -102,7 +133,9 @@ Files to translate
 	* scripts - duh
 	* styles - duh
 * placeholder - they can alll go awei
-* template - markup for each page. this is the holy grail of bitches
+* app-* - templates built for apps on the framework
+  * includes - contains navigation and header contents for specific app
+* global - templates used by all apps/placehodr
 * components - shared or repeating markup. second holy grail
 * includes - template parts
 * header.php - duh

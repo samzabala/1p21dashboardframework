@@ -1,0 +1,53 @@
+#nav {
+
+	&-notification {
+		margin-right: 3em;
+	}
+
+
+	@include br(#{$mobile-br-max-polar}-max) {
+
+		&-notification {
+			margin-right: 1.5em;
+		}
+	}
+}
+
+
+#timetracker{
+	&-home-overview {
+		.thumbnail {
+			font-size: 5rem;
+		}
+	}
+
+	&-app-trigger {
+		right:1rem;
+		top:1rem;
+	}
+}
+
+
+
+
+.dashboard {
+	
+	&-table {
+		&-cell {
+			//holy grail
+			&-date {
+
+				width: 120px;
+				max-width: 120px!important;
+			}
+		}
+	}
+}
+
+
+.record-notes-modal .modal-popup {
+	padding-left: 50px;
+	padding-right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+}
