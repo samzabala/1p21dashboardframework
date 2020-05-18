@@ -10,7 +10,7 @@ CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 
 $br-xs-max: 767px;
 $br-sm-max: 1279px;
-$br-md-max: 1799px;
+$br-md-max: 1699px;
 
 $brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 $brand-font-accent: $brand-font-primary;
@@ -19,8 +19,8 @@ $brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
 $theme-background-inverse: #292440;
 $theme-background-contrast-inverse: #1F1B30;
 
-$brand-color-primary: #0480fe;
-$brand-color-secondary: #d415af;
+$brand-color-primary: #0480FE;
+$brand-color-secondary: #F204A2;
 $brand-color-accent: #1a38d2;
 
 $brand-color-base-alt: #3d3d3d;
@@ -30,7 +30,7 @@ $brand-color-intensity-1: $brand-color-primary;
 $brand-color-intensity-2: #4b5be3;
 $brand-color-intensity-3: #843ecd;
 $brand-color-intensity-4: $brand-color-secondary;
-$brand-color-intensity-5: #fc01a7;
+$brand-color-intensity-5: #F204A2;
 
 $body-font-size: 14px;
 
@@ -54,10 +54,16 @@ $input-height-large: 50px;
 /*! 
 FRAMEWORK / SCAFFOLDING STYLES
 ****************************************************************************/
-	@import '../plugins/framework/scss/framework';
+	@import '../plugins/framework/scss/framework.scss';
 
 
 /*! 
-DASHBOARD / OUR CUSTOM STYLES
+SHARED HELPERS/CUSTOMIZATIONS
 ****************************************************************************/
-	@import '_dashboard';
+	@import '_apps';
+	
+/*! 
+APPS / OUR CUSTOM STYLES
+****************************************************************************/
+	// @import '_dashboard';
+	@import '_timetracker';

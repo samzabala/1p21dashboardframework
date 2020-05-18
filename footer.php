@@ -1,8 +1,40 @@
-				<br>
-				<ul class="inline text-align-center">
-				
-					<?=app_debug_li(); ?>
-				</ul>
+					
+					
+					<!-- Debug use only dont pootpoot -->
+					<div class="dev-debug-block">
+						<br>
+						
+						<ul class="inline text-align-center">
+						
+							<?=app_debug_li(); ?>
+						</ul>
+
+						<hr>
+
+						<table>
+							<tr>
+								<th>Current App:</th>
+								<th>Templates pulled :</th>
+							</th>
+							<tr>
+								<td><code><?= FWAPPS_APP; ?></code></td>
+
+								<?php
+									$template = FWAPPS_TEMPLATE;
+									$slug = FWAPPS_SLUG;
+								?>
+								<td>
+									
+								<code><?=$GLOBALS['FWAPPS_CURR_TEMPLATE'] ?>.php</code>
+								</td>
+							</tr>
+					</div>
+
+
+
+
+
+
 
 				</div>
 			
@@ -19,14 +51,17 @@
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script> -->
 
 
-		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
+		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
-		<?php //app_inline_script(DASHBOARD_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
+		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
+		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
 	
+
+
+
 		<!-- THE BOI -->
-		<?php app_inline_script(DASHBOARD_ROOT_PATH.'/assets/scripts/dashboard.js'); ?>
+		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/apps.js'); ?>
 
 
 

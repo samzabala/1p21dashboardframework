@@ -5,15 +5,17 @@
 		if inactive, or paused, put back `btn-success`
 	-->
 	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<!-- <span class="btn btn-default btn-no-interaction"><strong class="profile-project-time"><span class="REPLACE">00:00</span> </strong>&nbsp;Hours</span> -->
 	
-		<a class="btn btn-success"  href="#modal-track-time" data-toggle="modal">
-			<span class="text-active">Start new Timer</span>
+		<a class="btn btn-primary" href="#modal-track-time" data-toggle="modal">
+			Add Entry <i class="symbol symbol-plus"></i>
 		</a>
 	</div>
 
 
+<!-- @NOTE:
+modal can change as is for now. waiting on designer to update it
 
+-->
 	<div class="modal" id="modal-track-time" data-modal-max-width="960px" data-modal-title="Add new Entry">
 		<div class="container">
 
@@ -136,7 +138,18 @@
 							<label class="input-label">
 								Notes
 							</label>
-							<textarea type="text" name="project-name" class="input input-multiple-line"></textarea>
+
+							<!-- @NOTE. this has tinymce naw -->
+							<div class="REPLACE">
+
+								<textarea type="text" name="project-name" class="input input-multiple-line">
+								</textarea>
+							</div>
+						</div>
+
+						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+							<label class="input-label" for="attachments">Attachments</label>
+							<input class="input input-single-line" id="attachments" multiple="" name="attachments" type="file">
 						</div>
 					</div>
 

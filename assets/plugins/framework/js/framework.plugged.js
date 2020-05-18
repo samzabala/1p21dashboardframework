@@ -1565,6 +1565,8 @@ window.jQuery && jQuery.noConflict();
 				}
 			})
 		}
+		// } else { //@TODO. wtf jquery
+		// 	$('.dropdown').removeClass('open');
 	}
 
 	frameWork.setDropdown = function(selector,clicked,mode) {
@@ -1608,7 +1610,9 @@ window.jQuery && jQuery.noConflict();
 
 	frameWork.toggleAccordion = function(triggerer,changeHash) {
 		changeHash = !changeHash ? false : true;
+
 		var selector =  _.getTheToggled(triggerer,'accordion');
+
 		
 		if( selector ){
 			if(
@@ -1621,14 +1625,21 @@ window.jQuery && jQuery.noConflict();
 				if(triggerer){
 
 				
-					if( selector.hasClass('open') && triggerer.hasClass('open') ){
+					if(
+						selector.hasClass('open')
+						&& triggerer.hasClass('open')
+					){
 
-						// selector.slideUp(); 
-						triggerer.removeClass('open'); 
-						selector.removeClass('open'); 
-						
-						if(changeHash){
-							_.changeHash('');
+						if( !selector.closest('.accordion-group.accordion-group-no-close').length ){
+
+
+							// selector.slideUp(); 
+							triggerer.removeClass('open'); 
+							selector.removeClass('open'); 
+							
+							if(changeHash){
+								_.changeHash('');
+							}
 						}
 
 					}else{
@@ -1793,7 +1804,7 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on('click','*[data-toggle="accordion"]',function(e){	
 			e.preventDefault();
-			frameWork.toggleAccordion($(this));
+			frameWork.toggleAccordion($(this),true);
 		});
 
 		$('body').on('click','*[data-toggle="alert-close"]',function(e){	
@@ -1887,6 +1898,17 @@ window.jQuery && jQuery.noConflict();
 			}
 		});
 
+		$('body').on('click','.tab, .tab > *',function(e){
+			var theTab  = $(e.target).closest('.tab');
+			if( theTab.length && !theTab.hasClass('tab-disabled') ) {
+				if(!theTab.hasClass('active')){
+					theTab.siblings('.tab,li').removeClass('active');
+					theTab.addClass('active');
+				}
+			}
+			
+		});
+
 
 		$('body').on('click','.btn-group-toggle > .btn',function(e){
 			e.preventDefault();
@@ -1922,7 +1944,6 @@ window.jQuery && jQuery.noConflict();
 			){
 				frameWork.destroyToolTip();
 			}
-
 			//dropdown
 			if(!e.target.matches('[data-toggle="dropdown"]') && !$(e.target).parents('.dropdown').length ){
 				frameWork.closeDropdowns( false );
