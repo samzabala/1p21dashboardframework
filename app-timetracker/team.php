@@ -199,8 +199,14 @@
 						</div>
 			
 					
-					<!-- @else no entries -->
-						<p>Nothing here :| </p>
+					<!-- @else no entries. -->
+						<!-- @if user can add ppl -->
+
+							<a href="#modal-add-member" class="zone zone-primary">
+								It feels so lonely. Add new members <i class="symbol symbol-plus"></i>
+							</a>
+						<!-- @else user cant add ppl -->
+							<p>Nothing here :| </p>
 				</div>
 
 
@@ -210,7 +216,7 @@
 						
 						<div class="table-wrapper">
 
-							<table class="table-col-separation data-log-week text-vertical-align-middle accordion-group">
+							<table class="data-log-week text-vertical-align-middle accordion-group">
 
 								<tr>
 									<th class="text-nowrap dashboard-table-cell-max">
@@ -260,261 +266,27 @@
 								<!-- @NOTE
 								there is a tables within a table because tables are hell
 										-->
-								<tr class="log-week-profile-summary">
-
-									<td colspan="9" class="table-cell-no-gutter">
-
-										<!-- HEADER/CONTAINER OF ACCORDION TOGGLE -->
-										<table class="log-week-profile-summary-header">
-											<tr>
-												<td class="dashboard-table-cell-max color-primary font-weight-700 color-primary text-transform-uppercase">
-													<div class="flex-grid flex-grid-no-gutter">
-														<div class="flex-child">
-															<a href="#log-week-profile-ID" data-toggle="accordion" data-accordion-change-hash="false" class="btn btn-no-shadow btn-symbol">
-															<i class="symbol symbol-caret-down  symbol-caret-up-toggle"></i>
-															</a>
-														</div>
-														<div class="flex-child">	
-															<?php app_get_component('components/table-profile-named') ?>
-														</div>
-													</div>
-												</td>
-
-
-												
-												<!-- @LOOP TD-->
-												<td class="dashboard-table-cell-date text-nowrap text-align-center">
-													<!--
-											
-														@NOTE: these are classes to add
-														.log-week-day-total 
-																if total exceeds 8.5 hours =>.color-primary
-																if time is less 7.5 hours =>.color-error
-														
-														
-														-->
-													<span class="log-week-day-total font-weight-700">
-														<span class="REPLACE">8hr 01m</span>
-													</span>
-												</td>
-												
-
-													<!-- @PLACEHOLDER: DELETE WHEN READY -->
-														<?php for($i=1; $i<=2; $i++){ ?>
-																	
-
-													
-															<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																<span class=" log-week-day-total font-weight-700 color-error">
-																	<span class="REPLACE">6hr 09m</span>
-																</span>
-															</td>
-
-													
-															<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																<span class=" log-week-day-total font-weight-700 color-primary">
-																	<span class="REPLACE">66hr 06m</span>
-																</span>
-															</td>
-
-													
-															<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																<span class="log-week-day-total font-weight-700">
-																	<span class="REPLACE">8hr 15m</span>
-																</span>
-															</td>
-																	
-														<?php } ?>
-
-												<!--
-											
-													@NOTE: these are classes to add
-													.log-week-total 
-															if total exceeds 40.25 hours =>.color-primary
-															if time is less 40 hours =>.color-error
-													
-													
-													-->
-												<td class="dashboard-table-cell-date text-nowrap text-align-center">
-													<span class="log-week-total font-weight-700">
-														<span class="REPLACE">40hr 20m</span>
-													</span>
-												</td>
-											</tr>
-										</table>
-
-										<!-- TABLE OF TASKS -->
-										<div id="log-week-profile-ID" class="log-week-profile-summary-header-accordion accordion" > 
-											<table>
-												<tr>
-													<td  class="dashboard-table-cell-max task-info">
-														<?php app_get_component('components/project-link-timetracker') ?>
-													</td>
-
-
-													<!-- @LOOP TD-->
-													<td class="dashboard-table-cell-date text-nowrap text-align-center">
-														<!--
-
-															@NOTE: these are classes to add
-															.log-week-task-day-total 
-																	if total exceeds 8.5 hours =>.color-primary
-																	if time is less 7.5 hours =>.color-error
-															
-															
-															-->
-														<span class="log-week-task-day-total font-weight-700">
-															<span class="REPLACE">8hr 01m</span>
-														</span>
-													</td>
-
-
-														<!-- @PLACEHOLDER: DELETE WHEN READY -->
-															<?php for($i=1; $i<=2; $i++){ ?>
-																		
-
-														
-																<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																	<span class="log-week-task-day-total font-weight-700 color-error">
-																		<span class="REPLACE">6hr 09m</span>
-																	</span>
-																</td>
-
-
-																		
-
-														
-																<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																	<span class=" log-week-task-day-total font-weight-700 color-primary">
-																		<span class="REPLACE">66hr 06m</span>
-																	</span>
-																</td>
-
-
-
-														
-																<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																	<span class=" log-week-task-day-total font-weight-700">
-																		<span class="REPLACE">8hr 15m</span>
-																	</span>
-																</td>
-																		
-															<?php } ?>
-
-													<!--
-
-														@NOTE: these are classes to add
-														.log-week-total 
-																if total exceeds 40.25 hours =>.color-primary
-																if time is less 40 hours =>.color-error
-														
-														
-														-->
-													<td class="dashboard-table-cell-date text-nowrap text-align-center">
-														<span class="log-week-task-total font-weight-700">
-															<span class="REPLACE">666hr 69m</span>
-														</span>
-													</td>
-
-												</tr>
-
-
-
-												<!-- @PLACEHOLDER: DELETE WHEN READY -->
-													<?php for($j=1; $j<=4; $j++){ ?>
-														<tr>
-
-															<td  class="dashboard-table-cell-max task-info">
-																<?php app_get_component('components/project-link-timetracker') ?>
-															</td>
-
-
-															<!-- @LOOP TD-->
-															<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																<!--
-														
-																	@NOTE: these are classes to add
-																	.log-week-task-day-total 
-																			if total exceeds 8.5 hours =>.color-primary
-																			if time is less 7.5 hours =>.color-error
-																	
-																	
-																	-->
-																<span class="log-week-task-day-total font-weight-700">
-																	<span class="REPLACE">8hr 01m</span>
-																</span>
-															</td>
-															
-
-																<!-- @PLACEHOLDER: DELETE WHEN READY -->
-																	<?php for($i=1; $i<=2; $i++){ ?>
-																				
-
-																
-																		<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																			<span class="log-week-task-day-total font-weight-700 color-error">
-																				<span class="REPLACE">6hr 09m</span>
-																			</span>
-																		</td>
-
-
-																				
-
-																
-																		<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																			<span class=" log-week-task-day-total font-weight-700 color-primary">
-																				<span class="REPLACE">66hr 06m</span>
-																			</span>
-																		</td>
-
-
-
-																
-																		<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																			<span class=" log-week-task-day-total font-weight-700">
-																				<span class="REPLACE">8hr 15m</span>
-																			</span>
-																		</td>
-																				
-																	<?php } ?>
-
-															<!--
-
-															@NOTE: these are classes to add
-															.log-week-total 
-																	if total exceeds 40.25 hours =>.color-primary
-																	if time is less 40 hours =>.color-error
-															
-															
-															-->
-															<td class="dashboard-table-cell-date text-nowrap text-align-center color-error">
-																<span class="log-week-task-total font-weight-700">
-																	<span class="REPLACE">666hr 69m</span>
-																</span>
-															</td>
-
-														</tr>
-														
-													<?php } ?>
-
-											</table>
-										</div>
-											
-									</td>
-								
-									
-								</tr>
+								<?php app_get_component('components/table-weekly-profile-accordion') ?>
 								
 
 
-
+								<!-- @PLACEHOLDER: DELETE WHEN READY -->
+								<?php for($h=1; $h<=9; $h++){ ?>
+									<?php include FWAPPS_ROOT_PATH.'/components/table-weekly-profile-accordion.php'; ?>
+								<?php } ?>
 
 							</table>
 						</div>
 			
 						
-					<!-- @else no entries -->
-						<p>Nothing here :| </p>
+					<!-- @else no entries. -->
+						<!-- @if user can add ppl -->
+
+						<a href="#modal-add-member" class="zone zone-primary">
+								It feels so lonely. Add new members <i class="symbol symbol-plus"></i>
+							</a>
+						<!-- @else user cant add ppl -->
+							<p>Nothing here :| </p>
 				</div>
 			</div>
 		</div>

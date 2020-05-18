@@ -508,9 +508,6 @@
 
 
 												<td class="dashboard-table-cell-action text-align-center position-relative">
-													
-													
-													
 													<?php app_get_component('components/tooltip-action') ?>
 													
 												</td>
@@ -780,13 +777,13 @@
 
 														<td class="dashboard-table-cell-max">
 															<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-project text-wrap-ellipsis">
-																<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
+																<span class="REPLACE">cant restart this particular entry anymore</span>
 															</a>
 														</td>
 
 														<td class="dashboard-table-cell-max">
 															<span href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-client text-wrap-ellipsis">
-																<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
+																<span class="REPLACE">bye bye buttons</span>
 															</span>
 														</td>
 
@@ -954,7 +951,7 @@
 											tr 
 												if timer is paused => `table-row-primary`
 											-->
-									<tr>
+									<tr class="table-large">
 
 										<td  class="dashboard-table-cell-max task-info">
 											<?php app_get_component('components/project-link-timetracker') ?>
@@ -1033,7 +1030,7 @@
 
 										<!-- @PLACEHOLDER: DELETE WHEN READY -->
 											<?php for($j=1; $j<=4; $j++){ ?>
-												<tr>
+												<tr class="table-large">
 
 													<td  class="dashboard-table-cell-max task-info">
 														<?php app_get_component('components/project-link-timetracker') ?>
