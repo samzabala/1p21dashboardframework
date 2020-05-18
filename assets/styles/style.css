@@ -6757,19 +6757,19 @@ SHARED HELPERS/CUSTOMIZATIONS
 
 @-webkit-keyframes dashboardLoading {
   0% {
-    content: "Loading."; }
+    content: "Loading Stuff."; }
   50% {
-    content: "Loading.."; }
+    content: "Loading Stuff.."; }
   100% {
-    content: "Loading..."; } }
+    content: "Loading Stuff..."; } }
 
 @keyframes dashboardLoading {
   0% {
-    content: "Loading."; }
+    content: "Loading Stuff."; }
   50% {
-    content: "Loading.."; }
+    content: "Loading Stuff.."; }
   100% {
-    content: "Loading..."; } }
+    content: "Loading Stuff..."; } }
   .body-loading #content-wrapper:before {
     -webkit-animation-name: dashboardLoading;
             animation-name: dashboardLoading;
@@ -6779,7 +6779,7 @@ SHARED HELPERS/CUSTOMIZATIONS
             animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    content: "Loading...";
+    content: "Loading Stuff...";
     display: block;
     font-size: 24px;
     opacity: .2;
