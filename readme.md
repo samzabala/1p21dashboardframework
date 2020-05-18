@@ -3,7 +3,7 @@ will separate dashboard and framework one the bois are readeh
 
 
 
-# Dashboard Documentation
+# Documentation
 
 ## Dependencies
 ### Javascript
@@ -26,6 +26,32 @@ will separate dashboard and framework one the bois are readeh
 
 
 
+
+# Structure 
+
+I reorganized im sorry :...DDDDDD
+
+Files to translate
+* assets - front end shit boi
+	* images - duh
+	* plugins - third party bitches eg framework, trumbowyg, etc
+	* scripts - duh
+	* styles - duh
+* placeholder - they can alll go awei
+* app-* - templates built for apps on the framework
+  * includes - contains navigation and header contents for specific app
+* global - templates used by all apps/placehodr
+* components - shared or repeating markup. second holy grail
+* includes - template parts
+* header.php - duh
+* footer.php - duh
+
+Files you dont need because it's just to setup the templates for showing off or internal bitches.. or.. whatever pls ignore them they're not needed on the actual dashboardt 
+* config.codekit
+* config.php
+* content.php
+* helpers.php
+* index.php
 
 
 # Timetracker Notes
@@ -124,33 +150,8 @@ Calendar ui dropdown markup
 
 *	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
 
-# Structure 
 
-Files to translate
-* assets - front end shit boi
-	* images - duh
-	* plugins - third party bitches eg framework, trumbowyg, etc
-	* scripts - duh
-	* styles - duh
-* placeholder - they can alll go awei
-* app-* - templates built for apps on the framework
-  * includes - contains navigation and header contents for specific app
-* global - templates used by all apps/placehodr
-* components - shared or repeating markup. second holy grail
-* includes - template parts
-* header.php - duh
-* footer.php - duh
-
-Files you dont need because it's just to setup the templates for showing off or internal bitches.. or.. whatever pls ignore them they're not needed on the actual dashboardt 
-* config.codekit
-* config.php
-* content.php
-* helpers.php
-* index.php
-
-# Templates
-
-## Equivalent Templates
+## Templates
 
 Found in templates directory
 

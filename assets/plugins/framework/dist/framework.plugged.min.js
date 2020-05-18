@@ -1624,6 +1624,18 @@ window.jQuery && jQuery.noConflict();
 
 				if(triggerer){
 
+					var arr =  {
+						changeHash:
+						selector.attr('data-accordion-change-hash')
+							|| (triggerer && (triggerer.attr('data-accordion-change-hash')))
+					};
+		
+					var defaults = {
+						changeHash: changeHash,
+					};
+		
+					var args = _.parseArgs(arr,defaults);
+
 				
 					if(
 						selector.hasClass('open')
@@ -1637,7 +1649,7 @@ window.jQuery && jQuery.noConflict();
 							triggerer.removeClass('open'); 
 							selector.removeClass('open'); 
 							
-							if(changeHash){
+							if(args.changeHash){
 								_.changeHash('');
 							}
 						}
@@ -1654,7 +1666,7 @@ window.jQuery && jQuery.noConflict();
 						triggerer.addClass('open'); 
 						selector.addClass('open'); 
 
-						if(changeHash){
+						if(args.changeHash){
 							_.changeHash(selector.attr('id'));
 						}
 					}
