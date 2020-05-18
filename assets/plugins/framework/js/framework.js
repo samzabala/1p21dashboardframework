@@ -1331,6 +1331,8 @@ window.jQuery && jQuery.noConflict();
 
 						var svg = doc.querySelector('svg');
 
+						if(svg) {
+
 							if (typeof imgID !== null) {
 								svg.setAttribute('id', imgID);
 							}
@@ -1341,7 +1343,7 @@ window.jQuery && jQuery.noConflict();
 							svg.removeAttribute('xmlns:a');
 							img.replaceWith(svg);
 							
-
+						}
 					})
 					
 				}else {
@@ -1775,10 +1777,8 @@ window.jQuery && jQuery.noConflict();
 
 
 		if( selector ){
-
-
-			var selectorAncestor = selector.closest('.accordion-group');
 			
+				var ancGroup = selector.closest('.accordion-group');
 
 			if(
 				!(
@@ -1788,36 +1788,49 @@ window.jQuery && jQuery.noConflict();
 			){
 
 				if(triggerer){
+
+
+					var arr =  {
+						changeHash:
+						selector.getAttribute('data-accordion-change-hash')
+							|| (triggerer && (triggerer.getAttribute('data-accordion-change-hash')))
+					};
+		
+					var defaults = {
+						changeHash: changeHash,
+					};
+		
+					var args = _.parseArgs(arr,defaults);
+
 						
 					if(
 						selector.classList.contains('open')
 						&& triggerer.classList.contains('open')
 					){
 
-						var probablyNoClose = selector.closest('.accordion-group.accordion-group-no-close');
+						if(
+							!ancGroup
+							|| (ancGroup && !ancGroup.matches('.accordion-group-no-close'))
+						){
 
-						if( !probablyNoClose ){
-
-							frameWork.slideUp(selector); 
+							// frameWork.slideUp(selector); 
 							triggerer.classList.remove('open'); 
 							selector.classList.remove('open'); 
 
 							
-							if(changeHash){
+							if(args.changeHash){
 								_.changeHash('');
 							}
 						}
 
 					}else{
 						
-						if(selectorAncestor && !selectorAncestor.matches('.accordion-group-multiple') ) {
-
-							var accordions = selectorAncestor.querySelectorAll('.accordion');
-
-							var toggles = selectorAncestor.querySelectorAll('[data-toggle="accordion"]');
+						if(ancGroup && !ancGroup.matches('.accordion-group-multiple') ) {
+							var accordions = ancGroup.querySelectorAll('.accordion');
+							var toggles = ancGroup.querySelectorAll('[data-toggle="accordion"]');
 							
 							accordions.forEach(function(accordion){
-								frameWork.slideUp(accordion)
+								// frameWork.slideUp(accordion)
 								accordion.classList.remove('open');
 							});
 
@@ -1827,33 +1840,59 @@ window.jQuery && jQuery.noConflict();
 						
 						}; 
 
-						frameWork.slideDown(selector); 
+						// frameWork.slideDown(selector); 
 						triggerer.classList.add('open'); 
 						selector.classList.add('open'); 
-						if(changeHash){
+						if(args.changeHash){
 							_.changeHash(selector.getAttribute('id'));
 						}
 					}
 				}else{
 
-					var allSelector = document.querySelectorAll('.accordion');
-					if(allSelector.length){
-						allSelector.forEach(function(selector){
-							selector.classList.remove('open'); 
-						});
+
+					function closeRelativeAccordions(arr,selector){
+						selector = selector || '';
+						if(arr.length){
+							arr
+								.forEach(function(selected){
+									selected.classList.remove('open'); 
+								});
+						}
 					}
 
-					var allTriggerer = document.querySelectorAll('[data-toggle="accordion"]');
-					if(allTriggerer.length){
-						allTriggerer.forEach(function(triggerer){
-							triggerer.classList.remove('open'); 
-						});
+
+					//siblings
+					var allSiblings = frameWork.getSiblings(selector,'.accordion');
+					closeRelativeAccordions(allSiblings);
+
+					console.log(allSiblings);
+
+					//Lineage
+					if(ancGroup) {
+						allLineage  = Array.prototype.slice.call(ancGroup.querySelectorAll('.accordion'));
+						closeRelativeAccordions(allLineage);
+						
 					}
 
-					selector.classList.add('open'); 
+
 
 					var allToggle = document.querySelectorAll('[data-toggle="accordion"][href="#'+selector.getAttribute('id')+'"], [data-toggle="accordion"][data-href="#'+selector.getAttribute('id')+'"]');
 
+					//siblings
+					allToggle.forEach(function(togg){
+
+						var allSiblingsToggle = frameWork.getSiblings(togg,'[data-toggle="accordion"]');
+						closeRelativeAccordions(allSiblingsToggle);
+	
+						//Lineage
+						if(ancGroup) {
+							allLineageToggle  = Array.prototype.slice.call(ancGroup.querySelectorAll('[data-toggle="accordion"]'));
+							closeRelativeAccordions(allLineage);
+							
+						}
+					})
+
+					selector.classList.add('open'); 
 					allToggle.forEach(function(toggle){
 						toggle.classList.add('open');
 					});
@@ -2002,7 +2041,7 @@ window.jQuery && jQuery.noConflict();
 		frameWork.addEvent(document.body,'click','*[data-toggle="accordion"]',function(e){
 			e.preventDefault();
 
-			frameWork.toggleAccordion(e.target);
+			frameWork.toggleAccordion(e.target,true);
 		});
 
 		frameWork.addEvent(document.body,'click','*[data-toggle="alert-close"]',function(e){

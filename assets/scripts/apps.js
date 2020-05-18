@@ -27,6 +27,19 @@ window.jQuery && jQuery.noConflict();
 		$(this).toggleClass('open')
 		$('#dashboard-block-sidebar').toggleClass('open');	
 	});
+	$('body').on('click','.dashboard-table-row-accordion-header *[data-toggle="accordion"]',function(e){	
+		const clicked  = $(e.target);
+
+		$('.dashboard-table-row-accordion-header tr td:last-child').removeClass('table-cell-primary');
+
+		if(clicked.hasClass('open')){
+			clicked.closest('tr').children('td:last-child').removeClass('table-cell-primary');
+		}else{
+
+			clicked.closest('tr').children('td:last-child').addClass('table-cell-primary');
+		}	
+	});
+
 
 	// @TODO kwan sort table scriptoboi goes here with .dashboard-sort-table-toggle
 

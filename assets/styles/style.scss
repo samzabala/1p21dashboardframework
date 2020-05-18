@@ -58,12 +58,12 @@ FRAMEWORK / SCAFFOLDING STYLES
 
 
 /*! 
-SHARED HELPERS/CUSTOMIZATIONS
+SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 ****************************************************************************/
 	@import '_apps';
 	
 /*! 
 APPS / OUR CUSTOM STYLES
 ****************************************************************************/
-	// @import '_dashboard';
+	@import '_dashboard';
 	@import '_timetracker';

@@ -28,7 +28,7 @@ function app_get_component($filename = '', $slug =''){
 
 		$source = FWAPPS_ROOT_PATH.'/'.$filename;
 		
-		if($slug !== '' && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
+		if(isset($slug) && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
 			$source .= '-'.$slug;
 		}
 		
