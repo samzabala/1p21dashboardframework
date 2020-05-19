@@ -47,15 +47,15 @@
 
 	<!-- SCRIPT -->
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js"></script> -->
 
 
 		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
-		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
-		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
+		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
+		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
 	
 
 
