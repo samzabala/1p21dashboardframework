@@ -4,11 +4,30 @@
 		NOTE: switch out `btn-success` to `btn-secondary` when timer is running,
 		if inactive, or paused, put back `btn-success`
 	-->
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-	
-		<a class="btn btn-primary" href="#modal-track-time" data-toggle="modal">
+	<div class="btn-group btn-group-horizontal">
+
+		<!-- add entry -->
+		<a class="btn btn-default" href="#modal-track-time" data-toggle="modal">
 			Add Entry <i class="symbol symbol-plus"></i>
 		</a>
+
+		<!--
+			start timer
+			NOTE: display only when timer is paused
+		-->
+		<a class="btn btn-primary" href="#modal-track-time" data-toggle="modal">
+			Start Timer <i class="symbol symbol-play"></i>
+		</a>
+
+
+		<!--
+			pause timer
+			NOTE: display only when timer is active
+		-->
+		<a class="btn btn-secondary" href="#modal-track-time" data-toggle="modal">
+			Pause Timer <i class="symbol symbol-pause"></i>
+		</a>
+
 	</div>
 
 

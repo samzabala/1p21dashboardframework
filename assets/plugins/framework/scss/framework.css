@@ -5196,7 +5196,7 @@ table {
         border-top-left-radius: 0 !important; }
         .input-group.input-group-responsive > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
           border-top-color: rgba(0, 0, 0, 0.1); } }
-.input .input-tags, .input .input-calendar {
+.input .input-calendar {
   height: 0 !important;
   width: 0 !important;
   overflow: hidden !important; }
@@ -5335,29 +5335,6 @@ table {
 @media (max-width: 1200px) {
   .input-calendar-ui-block {
     padding: 0.3125em 0.3125em; } }
-
-.input-tags-ui {
-  display: inline-flex;
-  overflow-x: auto;
-  overflow-y: visible; }
-  .input-tags-ui-wrapper {
-    display: flex;
-    margin-top: -.25em;
-    margin-bottom: -.25em; }
-  .input-tags-ui-tag {
-    display: inline-block;
-    padding: .25em 1em;
-    margin-right: .5em;
-    background: rgba(0, 126, 206, 0.2); }
-  .input-tags-ui-input {
-    padding: 0;
-    border: 0;
-    padding: 0;
-    font: inherit;
-    color: inherit;
-    -webkit-appearance: none;
-    appearance: none;
-    outline: none; }
 
 .input-label.input-primary,
 .input-primary .input-label {
@@ -6232,7 +6209,7 @@ fieldset {
 .display-inline {
   display: inline !important; }
 
-.sr-only, .display-none, .input .input-calendar, .input .input-tags {
+.sr-only, .display-none, .input .input-calendar {
   display: none !important; }
 
 /* TEXT CLASSES */
