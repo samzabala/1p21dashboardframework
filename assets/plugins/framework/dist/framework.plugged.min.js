@@ -20,6 +20,7 @@ window.jQuery && jQuery.noConflict();
 	frameWork.settings.initializeModal = frameWork.settings.initializeModal || true;
 	frameWork.settings.initializeAccordion = frameWork.settings.initializeAccordion || true;
 	frameWork.settings.dynamicHash = frameWork.settings.dynamicHash || true;
+	frameWork.settings.uiClass = 'fw-ui';
 
 	if(!$) {
 		throw new Error('jQuery not found bro, what did you do?');
@@ -740,7 +741,7 @@ window.jQuery && jQuery.noConflict();
 
 
 			if( !theUi.container.length ){
-				inputCalendar.wrap($('<div class="'
+				inputCalendar.wrap($('<div class="'+frameWork.settings.uiClass+' '
 				+inputCalendar.attr('class').replace( 'input-calendar',uiPrefix(true) )
 				+'"></div>'));
 				theUi.container = inputCalendar.closest('.'+uiPrefix(true));
@@ -872,13 +873,15 @@ window.jQuery && jQuery.noConflict();
 				);
 				theUi.heading.append(theUi.title);
 				
-					theUi.title.html(
-						'<span class="'+uiPrefix()+'month-text">'
+					theUi.title.append(function(){
+
+						return '<span class="'+uiPrefix()+'month-text">'
 							+_.monthFormatNamesShort[ currMonth ]
 						+'</span>'
 						+ ' <span class="'+uiPrefix()+'year-text">'+currYear+'</span>'
 						+ ' <i class="'+uiPrefix()+'symbol symbol symbol-arrow-down no-margin-x"></i>'
-					);
+					
+					});
 				
 				//dropdown
 
@@ -887,13 +890,15 @@ window.jQuery && jQuery.noConflict();
 
 				theUi.heading.append(theUi.dropdown);
 
-				theUi.dropdown.append(
-					'<li class="'+uiPrefix()+'current-month-year active">'
+				theUi.dropdown.append(function(){
+
+					return '<li class="'+uiPrefix()+'current-month-year active">'
 					+ '<a href="#" class="'+uiPrefix()+'month" data-value="'+ _.dateToVal(currentCalendarDate) +'">'
 					+ _.monthFormatNamesShort[ currMonth ]+ ' ' + currYear
 					+ '</a>'
 					+ '</li><li><hr class="dropdown-separator"></li>'
-				);
+				
+				});
 
 				var dropdownInit;
 				var dropdownLimit;
@@ -908,6 +913,7 @@ window.jQuery && jQuery.noConflict();
 				}
 
 				//update dropdown
+				 theUi.dropList = [];
 				for(i = dropdownInit; i <= dropdownLimit; i++){
 
 					
@@ -937,16 +943,15 @@ window.jQuery && jQuery.noConflict();
 						if(_.dateIsValid(dateForValidation,args,true)){
 			
 							var currClass = (i == 0) ? 'active' : '';
-							var listItem = $(
-								'<li class=" '+currClass+'">'
+			
+							theUi.dropdown.append(function(){
+								return '<li class=" '+currClass+'">'
 									+ '<a href="#" class="'+uiPrefix()+'month" data-value="'+ _.dateToVal(listItemDate) +'">'
 									+ _.monthFormatNamesShort[ listItemDate.getMonth() ]+ ' ' + listItemDate.getFullYear()
 									+ '</a>'
 									+ ((listItemDate.getMonth() == 11 && i !== dropdownLimit) ? '</li><li><hr class="dropdown-separator">' : '')
-								+ '</li>'
-							);
-			
-							theUi.dropdown.append(listItem);
+								+ '</li>';
+							});
 						}
 
 				}
@@ -1559,14 +1564,13 @@ window.jQuery && jQuery.noConflict();
 
 		if(currentDropdown){
 			$('.dropdown').not(currentDropdown).each(function(){
-
 				if(!currentDropdown.closest($(this)).length) {
 					$(this).removeClass('open')
 				}
 			})
+		} else { //@TODO. wtf jquery
+			$('.dropdown').removeClass('open');
 		}
-		// } else { //@TODO. wtf jquery
-		// 	$('.dropdown').removeClass('open');
 	}
 
 	frameWork.setDropdown = function(selector,clicked,mode) {
@@ -1957,17 +1961,45 @@ window.jQuery && jQuery.noConflict();
 		});
 
 		$('html,body').on('click','*',function(e){
+
+
+			// //extra fallback
+			// function targetWithinComp(selector,child) {
+			// 	var toReturn = false;
+			// 	let elms = document.querySelectorAll(selector);
+			// 	if(elms) {
+			// 		elms.forEach(function(el){
+			// 			if(el !== child && el.contains(child)){
+			// 				toReturn = true;
+			// 			}
+			// 		});
+			// 	}
+
+			// 	console.log(toReturn);
+
+			// 	return toReturn;
+			// }
+			var clicked = $(e.target);
+
+			
 			//tooltip
 			if(
-				!e.target.matches('[data-toggle="tooltip-click"]')
-				&& !e.target.matches('[data-toggle="tooltip-click"] *')
-				&& !e.target.matches('[data-toggle="tooltip-hover"]')
-				&& !e.target.matches('[data-toggle="tooltip-hover"] *')
+				!clicked.closest('[data-toggle="tooltip-click"]').length
+				// && !clicked.matches('[data-toggle="tooltip-click"] *')
+				&& !clicked.closest('[data-toggle="tooltip-hover"]').length
+				// && !clicked.matches('[data-toggle="tooltip-hover"] *')
+				&& !clicked.attr('data-value') //temp fix for ui elements not getting ancestry
 			){
 				frameWork.destroyToolTip();
 			}
+
+
 			//dropdown
-			if(!e.target.matches('[data-toggle="dropdown"]') && !$(e.target).parents('.dropdown').length ){
+			if(
+				!clicked.closest('[data-toggle="dropdown"]').length
+				&& !clicked.closest('.dropdown').length
+				&& !clicked.attr('data-value') //temp fix for ui elements not getting ancestry
+			){
 				frameWork.closeDropdowns( false );
 			}
 		});

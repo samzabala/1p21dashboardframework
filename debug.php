@@ -75,7 +75,7 @@
 				data-calendar-text-input="true" />
 
 
-			<!-- <div class="position-relative">
+			<div class="position-relative">
 				<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
 				<div id="dropcal" class="dropdown" data-dropdown-width="100%">
 					<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
@@ -243,7 +243,7 @@
 				value="2020-04-05" />
 				<input type="text" class="input input-calendar" data-calendar-start-day="4"
 				value="2020-05-05" />
-			</div> -->
+			</div>
 
 
 

@@ -19,6 +19,7 @@ window.jQuery && jQuery.noConflict();
 	frameWork.settings.initializeModal = frameWork.settings.initializeModal || true;
 	frameWork.settings.initializeAccordion = frameWork.settings.initializeAccordion || true;
 	frameWork.settings.dynamicHash = frameWork.settings.dynamicHash || true;
+	frameWork.settings.uiClass = 'fw-ui';
 
 	//hacks around trumbo bitch wyg
 	frameWork.trumbowyg = {};
@@ -869,7 +870,7 @@ window.jQuery && jQuery.noConflict();
 				theUi.container.appendChild(inputCalendar);
 				theUi.container.setAttribute(
 					'class',
-					inputCalendar.getAttribute('class').toString().replace('input-calendar',uiPrefix(true) )
+					frameWork.settings.uiClass+' '+inputCalendar.getAttribute('class').toString().replace('input-calendar',uiPrefix(true) )
 				);
 			}
 
@@ -1720,6 +1721,11 @@ window.jQuery && jQuery.noConflict();
 					dropdown.classList.remove('open');
 				}
 			});
+		}else{
+			document.querySelectorAll('.dropdown').forEach(function(dropdown){
+
+				dropdown.classList.remove('open');
+			})
 		}
 	}
 
@@ -1864,8 +1870,6 @@ window.jQuery && jQuery.noConflict();
 					//siblings
 					var allSiblings = frameWork.getSiblings(selector,'.accordion');
 					closeRelativeAccordions(allSiblings);
-
-					console.log(allSiblings);
 
 					//Lineage
 					if(ancGroup) {
@@ -2199,19 +2203,23 @@ window.jQuery && jQuery.noConflict();
 
 		frameWork.addEvent(document.body,'click','*',function(e){
 			
+			var clicked = e.target;
 			//tooltip
 			if(
-				!e.target.matches('[data-toggle="tooltip-click"]')
-				&& !e.target.matches('[data-toggle="tooltip-click"] *')
-				&& !e.target.matches('[data-toggle="tooltip-hover"]')
-				&& !e.target.matches('[data-toggle="tooltip-hover"] *')
+				!clicked.closest('[data-toggle="tooltip-click"]')
+				&& !clicked.closest('[data-toggle="tooltip-hover"]')
+				&& !clicked.hasAttribute('data-value') //temp fix for ui elements not getting ancestry
 			){
 				frameWork.destroyToolTip();
 			}
 
-			var dropdownLineage = frameWork.getAncestors(e.target,'.dropdown') || [];
+			var dropdownLineage = frameWork.getAncestors(clicked,'.dropdown') || [];
 
-			if(!e.target.matches('[data-toggle="dropdown"]') && !dropdownLineage.length ){
+			if(
+				!clicked.closest('[data-toggle="dropdown"]')
+				&& !clicked.closest('.dropdown')
+				&& !clicked.hasAttribute('data-value') //temp fix for ui elements not getting ancestry
+			){
 				frameWork.closeDropdowns( false );
 			}
 			
