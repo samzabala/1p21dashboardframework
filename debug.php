@@ -11,6 +11,35 @@
 		</div>
 
 
+
+
+		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		<h3>static af</h3>
+			<!-- <div style="width:300px"> -->
+				<div class="input input-tags-ui">
+					<div class="input-tags-ui-wrapper">
+
+
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag">hoya</span>
+						<input type="text" class="input input-tags-ui-input" />
+					</div>
+				</div>
+			<!-- </div> -->
+
+
+
+				<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
+		</div>
+
+
 		<h1 data-toggle="accordion">Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 				<span class="btn btn-symbol btn-theme btn-symbol-round">

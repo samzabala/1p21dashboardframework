@@ -714,16 +714,6 @@
 											</td>
 
 
-
-											<!--
-						
-											@NOTE: these are classes to add
-											.log-today-total-time
-													if total exceeds 8.5 hours =>.color-primary
-													if time is less 7.5 hours =>.color-error
-											
-											
-											-->
 											<td>
 												<span class="font-weight-700 log-today-total-time text-nowrap">
 													<span class="REPLACE">6h 09m
@@ -792,7 +782,7 @@
 															<?php app_get_component('components/table-modal-notes'); ?>
 														</td>
 														<td>
-															<span class="font-weight-700 log-today-total-time text-nowrap color-error">
+															<span class="font-weight-700 log-today-total-time text-nowrap">
 																<span class="REPLACE">6h 09m
 															</span>
 														</td>
@@ -938,8 +928,8 @@
 											
 											
 											-->
-										<td class="dashboard-table-cell-date text-nowrap text-align-center">
-											<span class="log-week-total font-weight-700">
+										<td class="dashboard-table-cell-date text-nowrap text-align-center font-weight-700">
+											<span class="log-week-total">
 												<span class="REPLACE">40hr 20m</span>
 											</span>
 										</td>
@@ -960,16 +950,8 @@
 
 										<!-- @LOOP TD-->
 										<td class="dashboard-table-cell-date text-nowrap text-align-center">
-											<!--
-									
-												@NOTE: these are classes to add
-												.log-week-task-day-total 
-														if total exceeds 8.5 hours =>.color-primary
-														if time is less 7.5 hours =>.color-error
-												
-												
-												-->
-											<span class="log-week-task-day-total font-weight-700">
+											
+											<span class="log-week-task-day-total">
 												<span class="REPLACE">8hr 01m</span>
 											</span>
 										</td>
@@ -981,7 +963,7 @@
 
 											
 													<td class="dashboard-table-cell-date text-nowrap text-align-center">
-														<span class="log-week-task-day-total font-weight-700 color-error">
+														<span class="log-week-task-day-total">
 															<span class="REPLACE">6hr 09m</span>
 														</span>
 													</td>
@@ -991,7 +973,7 @@
 
 											
 													<td class="dashboard-table-cell-date text-nowrap text-align-center">
-														<span class=" log-week-task-day-total font-weight-700 color-primary">
+														<span class=" log-week-task-day-total">
 															<span class="REPLACE">66hr 06m</span>
 														</span>
 													</td>
@@ -1000,7 +982,7 @@
 
 											
 													<td class="dashboard-table-cell-date text-nowrap text-align-center">
-														<span class=" log-week-task-day-total font-weight-700">
+														<span class=" log-week-task-day-total">
 															<span class="REPLACE">8hr 15m</span>
 														</span>
 													</td>
@@ -1018,7 +1000,7 @@
 										
 										
 										-->
-										<td class="dashboard-table-cell-date text-nowrap text-align-center">
+										<td class="dashboard-table-cell-date text-nowrap text-align-center table-cell-primary">
 											<span class="log-week-task-total font-weight-700">
 												<span class="REPLACE">666hr 69m</span>
 											</span>
@@ -1048,7 +1030,7 @@
 															
 															
 															-->
-														<span class="log-week-task-day-total font-weight-700">
+														<span class="log-week-task-day-total">
 															<span class="REPLACE">8hr 01m</span>
 														</span>
 													</td>
@@ -1060,7 +1042,7 @@
 
 														
 																<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																	<span class="log-week-task-day-total font-weight-700 color-error">
+																	<span class="log-week-task-day-total">
 																		<span class="REPLACE">6hr 09m</span>
 																	</span>
 																</td>
@@ -1070,7 +1052,7 @@
 
 														
 																<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																	<span class=" log-week-task-day-total font-weight-700 color-primary">
+																	<span class=" log-week-task-day-total">
 																		<span class="REPLACE">66hr 06m</span>
 																	</span>
 																</td>
@@ -1079,7 +1061,7 @@
 
 														
 																<td class="dashboard-table-cell-date text-nowrap text-align-center">
-																	<span class=" log-week-task-day-total font-weight-700">
+																	<span class=" log-week-task-day-total ">
 																		<span class="REPLACE">8hr 15m</span>
 																	</span>
 																</td>
@@ -1087,8 +1069,8 @@
 															<?php } ?>
 
 													
-													<td class="dashboard-table-cell-date text-nowrap text-align-center">
-														<span class="log-week-task-total font-weight-700 color-primary">
+													<td class="dashboard-table-cell-date text-nowrap text-align-center table-cell-primary color-error font-weight-700">
+														<span class="log-week-task-total">
 															<span class="REPLACE">666hr 69m</span>
 														</span>
 													</td>
