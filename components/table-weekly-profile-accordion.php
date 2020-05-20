@@ -96,16 +96,7 @@ look for `-ID`
 
 		<!-- @LOOP TD-->
 		<td class="dashboard-table-cell-date text-nowrap text-align-center">
-			<!--
-
-				@NOTE: these are classes to add
-				.log-week-task-day-total 
-						if total exceeds 8.5 hours =>.color-primary
-						if time is less 7.5 hours =>.color-error
-				
-				
-				-->
-			<span class="log-week-task-day-total font-weight-700">
+			<span class="log-week-task-day-total">
 				<span class="REPLACE">8hr 01m</span>
 			</span>
 		</td>
@@ -117,7 +108,7 @@ look for `-ID`
 
 			
 					<td class="dashboard-table-cell-date text-nowrap text-align-center">
-						<span class="log-week-task-day-total font-weight-700 color-error">
+						<span class="log-week-task-day-total">
 							<span class="REPLACE">6hr 09m</span>
 						</span>
 					</td>
@@ -127,7 +118,7 @@ look for `-ID`
 
 			
 					<td class="dashboard-table-cell-date text-nowrap text-align-center">
-						<span class=" log-week-task-day-total font-weight-700 color-primary">
+						<span class=" log-week-task-day-total">
 							<span class="REPLACE">66hr 06m</span>
 						</span>
 					</td>
@@ -136,7 +127,7 @@ look for `-ID`
 
 			
 					<td class="dashboard-table-cell-date text-nowrap text-align-center">
-						<span class=" log-week-task-day-total font-weight-700">
+						<span class=" log-week-task-day-total">
 							<span class="REPLACE">8hr 15m</span>
 						</span>
 					</td>
@@ -182,7 +173,7 @@ look for `-ID`
 						
 						
 						-->
-					<span class="log-week-task-day-total font-weight-700">
+					<span class="log-week-task-day-total">
 						<span class="REPLACE">8hr 01m</span>
 					</span>
 				</td>
@@ -194,7 +185,7 @@ look for `-ID`
 
 					
 							<td class="dashboard-table-cell-date text-nowrap text-align-center">
-								<span class="log-week-task-day-total font-weight-700 color-error">
+								<span class="log-week-task-day-total">
 									<span class="REPLACE">6hr 09m</span>
 								</span>
 							</td>
@@ -204,7 +195,7 @@ look for `-ID`
 
 					
 							<td class="dashboard-table-cell-date text-nowrap text-align-center">
-								<span class=" log-week-task-day-total font-weight-700 color-primary">
+								<span class=" log-week-task-day-total">
 									<span class="REPLACE">66hr 06m</span>
 								</span>
 							</td>
@@ -213,7 +204,7 @@ look for `-ID`
 
 					
 							<td class="dashboard-table-cell-date text-nowrap text-align-center">
-								<span class=" log-week-task-day-total font-weight-700">
+								<span class=" log-week-task-day-total">
 									<span class="REPLACE">8hr 15m</span>
 								</span>
 							</td>
