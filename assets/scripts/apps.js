@@ -31,12 +31,12 @@ window.jQuery && jQuery.noConflict();
 		const clicked  = $(e.target);
 
 		$('.dashboard-table-row-accordion-header tr td:last-child').removeClass('table-cell-primary');
-
+		// console.log('opeen',clicked.hasClass('open'))
 		if(clicked.hasClass('open')){
-			clicked.closest('tr').children('td:last-child').removeClass('table-cell-primary');
+			clicked.closest('tr').children('td:last-child').addClass('table-cell-primary');
 		}else{
 
-			clicked.closest('tr').children('td:last-child').addClass('table-cell-primary');
+			clicked.closest('tr').children('td:last-child').removeClass('table-cell-primary');
 		}	
 	});
 
