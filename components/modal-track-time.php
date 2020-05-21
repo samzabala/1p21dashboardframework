@@ -1,9 +1,6 @@
 <div class="modal-track-time module-function">
 
-	<!--
-		NOTE: switch out `btn-success` to `btn-secondary` when timer is running,
-		if inactive, or paused, put back `btn-success`
-	-->
+
 	<div class="btn-group btn-group-horizontal">
 
 		<!-- add entry -->
