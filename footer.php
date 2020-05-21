@@ -54,8 +54,8 @@
 		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
-		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
-		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
+		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
+		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
 	
 
 

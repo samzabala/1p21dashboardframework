@@ -1655,7 +1655,7 @@ window.jQuery && jQuery.noConflict();
 
 						if(
 							!ancGroup.length
-							|| (ancGroup.length && !ancGroup.matches('.accordion-group-no-close'))
+							|| (ancGroup.length && !ancGroup.hasClass('accordion-group-no-close'))
 						){
 
 

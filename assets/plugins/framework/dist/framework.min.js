@@ -1816,7 +1816,7 @@ window.jQuery && jQuery.noConflict();
 
 						if(
 							!ancGroup
-							|| (ancGroup && !ancGroup.matches('.accordion-group-no-close'))
+							|| (ancGroup && !ancGroup.classList.contains('accordion-group-no-close'))
 						){
 
 							// frameWork.slideUp(selector); 
