@@ -16,23 +16,32 @@
 		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		<h3>static af</h3>
-			<!-- <div style="width:300px"> -->
+			<div>
 				<div class="input input-tags-ui">
 					<div class="input-tags-ui-wrapper">
 
 
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
-						<span class="input-tags-ui-tag">hoya</span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
+						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
 						<input type="text" class="input input-tags-ui-input" />
 					</div>
 				</div>
-			<!-- </div> -->
+			</div>
+			
+
+			dynamic af
+			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u"class="input input-tags" />
+			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u"class="input input-tags input-small" />
+			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u"class="input input-tags input-large" />
+
+			<h2>ini may dupli</h2>
+			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u,lil"class="input input-tags input-large" />
 
 
 
@@ -3286,6 +3295,38 @@
 
 		<h1 data-toggle="accordion">Thumbnail <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<h4>Thumbnail clooster</h4>
+			<div class="thumbnail-cluster">
+					
+				<div class="thumbnail thumbnail-small">
+					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+				<div class="thumbnail thumbnail-small">
+					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-small">
+					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-small">
+					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-small">
+					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-small">
+					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-small">
+					<span class="thumbnail-text">2+</span>
+				</div>
+
+
+			</div>
 			<div class="thumbnail">
 				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>

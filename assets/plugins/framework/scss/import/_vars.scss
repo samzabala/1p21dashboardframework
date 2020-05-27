@@ -669,8 +669,8 @@
 			// 	$input-background-disabled-inverse: transparent !default;
 
 		$input-font-size: $body-font-size !default;
-			$input-font-size-large: 25px !default;
-			$input-font-size-small: 14px !default;
+			$input-font-size-large: $body-font-size * 1.25 !default;
+			$input-font-size-small: $body-font-size * .875 !default;
 
 		$input-select-dropdown-color: $brand-color-primary !default;
 		
