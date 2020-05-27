@@ -411,5 +411,9 @@
 
 			<!-- PAGINATION -->
 		</div>
+		<!-- @if pagination is needed -->
+		<div class="module-footer text-align-right">
+			<?php app_get_component('components/pagination') ?>
+		</div>
 	</div>
 </div>
