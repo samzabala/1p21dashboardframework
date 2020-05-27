@@ -4052,6 +4052,8 @@ table {
     display: flex;
     align-items: center;
     justify-content: center; }
+  .thumbnail-cluster .thumbnail:nth-last-child(n+2) {
+    margin-right: -.5em; }
 
 /*** PROGRESS BAR ***/
 @keyframes progress-bar-stripes {
@@ -4890,7 +4892,7 @@ table {
   .theme-inverse .input {
     background-color: rgba(141, 141, 141, 0.1); }
   .input-large.input, .input-group.input-large .input {
-    font-size: 1.5625rem; }
+    font-size: 1.25rem; }
   .input-small.input, .input-group.input-small .input {
     font-size: 0.875rem; }
 
@@ -4910,7 +4912,7 @@ table {
   padding-top: calc( (2.8125rem - (1em * 1.25) ) * .5);
   padding-bottom: calc( ( 2.8125rem - (1em * 1.25) ) * .5); }
   .input-large.input-label, .input-large .input-label {
-    font-size: 1.5625rem;
+    font-size: 1.25rem;
     padding-top: calc(  (4.6875rem - (1em * 1.25) ) * .5);
     padding-bottom: calc( (4.6875rem - (1em * 1.25) ) * .5); }
   .input-small.input-label, .input-small .input-label {
@@ -5197,7 +5199,6 @@ table {
         .input-group.input-group-responsive > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
           border-top-color: rgba(0, 0, 0, 0.1); } }
 .input .input-tags, .input .input-calendar {
-  display: none !important;
   height: 0 !important;
   width: 0 !important;
   overflow: hidden !important; }
@@ -5356,6 +5357,7 @@ table {
       vertical-align: middle; }
     .input-tags-ui-tag-close {
       margin-left: .25em;
+      line-height: 1;
       font-size: .75em; }
   .input-tags-ui-input {
     padding: 0;

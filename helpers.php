@@ -84,7 +84,6 @@ function app_init_content(){
 				case 'project':
 				case 'profile':
 				case 'tasks':
-				case 'notes':
 				case 'analytics':
 					?>
 					<div class="module">
@@ -99,9 +98,10 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "template design in progress. temporarily redirected";
 					break;
 
+				case 'notes':
 				case 'team':
-					app_get_template_part("app-{$app}/team");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/team";
+					app_get_template_part("app-{$app}/{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 				break;
 
 
