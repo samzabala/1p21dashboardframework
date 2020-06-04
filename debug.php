@@ -15,37 +15,72 @@
 
 		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-		<h3>static af</h3>
-			<div>
-				<div class="input input-tags-ui">
-					<div class="input-tags-ui-wrapper">
+		
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags" />
+			<br><br>
 
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-small" />
+			<br><br>
 
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<span class="input-tags-ui-tag"><span class="input-tags-ui-tag-text">hoya</span><a class="input-tags-ui-tag-close" href="#"><i class="symbol symbol-close"></i></a></span>
-						<input type="text" class="input input-tags-ui-input" />
-					</div>
-				</div>
-			</div>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-large" />
+			<br><br>
 			
+			<div class="position-relative">
+				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" />
+				<ul class="dropdown">
+					<li>Fuck</li>
+					<li>Fuck</li>
+					<li>Fuck</li>
+					<li>Fuck</li>
+					<li>Fuck</li>
+					<li>Fuck</li>
+					<li>Fuck</li>
+				</ul>
+			</div>
 
-			dynamic af
-			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u"class="input input-tags" />
-			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u"class="input input-tags input-small" />
-			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u"class="input input-tags input-large" />
+		<h2>
+
+
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-primary" />
+		<br><br>
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-secondary" />
+		<br><br>
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-accent" />
+		<br><br>
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-success" />
+		<br><br>
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-error" />
+		<br><br>
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-caution" />
+		<br><br>
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-disabled" />
+		<br>
+
+		</h2>
 
 			<h2>ini may dupli</h2>
-			<input value="lil,stupid,ass,bitch,i,dont,fuck,with,u,lil"class="input input-tags input-large" />
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u,lil"class="input input-tags input-large" />
 
 
 
 				<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
+
+
+				<h2>ini mayo pang nakalaag</h2>
+			<input value="" class="input input-tags input-large" data-width="300px" />
+
+			
+
+			<div class="module-function filter-search">
+				<form
+					action="<? app_create_link( array('template' => 'projects') ); ?>"
+					method="get"
+					class="input-group input-group-horizontal text-align-left">
+					<input type="text" placeholder="Search" name="search" class="input input-tags font-weight-600" />
+					<input type="hidden" name="is_searching" value="1" />
+					<button type="submit" class="btn btn-symbol btn-primary"><i class="symbol symbol-search"></i></button>
+				</form>
+			</div>
 		</div>
 
 
@@ -226,6 +261,10 @@
 			data-calendar-text-input="true"
 			value="2020-05-05" />
 			<input type="text" class="input input-calendar input-error" data-calendar-start-day="5"
+			data-calendar-text-input="true"
+			value="2020-06-05" />
+
+			<input type="text" class="input input-calendar input-disabled" data-calendar-start-day="5"
 			data-calendar-text-input="true"
 			value="2020-06-05" />
 
