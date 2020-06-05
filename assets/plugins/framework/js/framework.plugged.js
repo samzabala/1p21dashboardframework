@@ -33,7 +33,6 @@ window.jQuery && jQuery.noConflict();
 		meta : false,
 	}
 
-	_.inputHadText = false;
 
 	_.modifierIsActive = function(mode){
 		mode = mode || false;
@@ -1332,13 +1331,19 @@ window.jQuery && jQuery.noConflict();
 				theUi.input = theUi.wrapper.children('.'+uiPrefix()+'input');
 			}
 
-
+			//nearest fw-ui parent will actually do tgoggl for bby because baby cant stand up on its own
 			if(inputTags.attr('data-toggle')) {
 				theUi.input.attr('data-toggle',inputTags.attr('data-toggle'));
 			}
 
 			if(frameWork.isDisabled(inputTags)){
 				theUi.input.addClass('disabled');
+			}
+
+			if(args.callbackOnKeyup) {
+				
+				var fOnKeyUp = new Function(args.callbackOnKeyup);
+				theUi.input.on('keyup',fOnKeyUp)
 			}
 
 			
@@ -1414,12 +1419,14 @@ window.jQuery && jQuery.noConflict();
 
 		var arr =  {
 			width: inputTags.attr('data-tags-width'),
-			callback: inputTags.attr('data-tags-callback')
+			callback: inputTags.attr('data-tags-callback'),
+			callbackOnKeyup: inputTags.attr('data-tags-callback-on-keyup')
 		};
 
 		var defaults = {
 			width: 'auto',
-			callback: null
+			callback: null,
+			callbackOnKeyup : null
 		};
 		
 		var args = _.parseArgs(arr,defaults);
@@ -1433,14 +1440,14 @@ window.jQuery && jQuery.noConflict();
 			//update the actual butt
 			inputTags.attr('value',_.tagsToVal(theValue,false));
 			inputTags.val(_.tagsToVal(theValue,false));
-		}
 
 		
-		//ATODO UPDATE SETUP HERE
-		//update fake hoes
-		if(args.callback) {
-			var f = new Function(args.callback);
-			f();
+			//ATODO UPDATE SETUP HERE
+			//update fake hoes
+			if(args.callback) {
+				var f = new Function(args.callback);
+				f();
+			}
 		}
 
 		

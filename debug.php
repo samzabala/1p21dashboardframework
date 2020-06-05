@@ -26,7 +26,7 @@
 			<br><br>
 			
 			<div class="position-relative">
-				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" />
+				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-callback-on-keyup="fooker(event)" />
 				<ul class="dropdown">
 					<li>Fuck</li>
 					<li>Fuck</li>
@@ -37,8 +37,11 @@
 					<li>Fuck</li>
 				</ul>
 			</div>
-
-		<h2>
+	<script>
+		function fooker(e){
+			console.log(e.target.innerHTML);
+		}
+	</script>
 
 
 		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-primary" />
@@ -56,7 +59,6 @@
 		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-disabled" />
 		<br>
 
-		</h2>
 
 			<h2>ini may dupli</h2>
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u,lil"class="input input-tags input-large" />
@@ -81,6 +83,24 @@
 					<button type="submit" class="btn btn-symbol btn-primary"><i class="symbol symbol-search"></i></button>
 				</form>
 			</div>
+
+			<h2>cristian's code</h2>
+			<form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
+			<input type="hidden" name="share_note_with_user_ids"
+				value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+			<label class="input-label">Share note with:</label>
+			<div class="input-group input-group-horizontal input-group-block">
+				<input type="text" name="username" class="input input-single-line"
+					list="usernames" placeholder="First name..">
+				<datalist id="usernames"></datalist>
+				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
+			</div>
+			</div>
+			<input type="text" name="share_note_with_usernames"
+				class="input input-tags"
+				value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}">
+		</form>
 		</div>
 
 
