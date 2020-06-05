@@ -1445,11 +1445,13 @@ window.jQuery && jQuery.noConflict();
 			//ATODO UPDATE SETUP HERE
 			//update fake hoes
 			if(args.callback) {
-				eval(args.callback);
+
 				// var f = new Function(args.callback);
-				// if (typeof(f) === 'function'){
-				// 	f();
-				// }
+				if ( typeof(eval(/^[^(]+/.exec(args.callback)[0])) === 'function' ){
+					$(document).ready(function(){
+						eval(args.callback);
+					});
+				}
 			}
 		}
 
