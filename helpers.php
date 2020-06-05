@@ -72,10 +72,35 @@ function app_init_content(){
 	switch($app):
 			
 		//time tracker shit
+		case 'workflow':
+			$slug = '';
+			switch($template_part):
+
+				case 'edit-project':
+				case 'edit-task':
+				case 'project-details':
+				case 'project-list':
+				case 'task':
+					app_get_template_part("app-{$app}/{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
+					break;
+
+				case 'debug':
+				case 'debug-components':
+					app_get_template_part("{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']="{$template_part}";
+					break;
+
+				default:
+					app_get_template_part('global/error');
+					break;
+	
+			endswitch;
+			break;
 		case 'timetracker':
 			$slug = '';
 			switch($template_part):
-				case '':
+				case null:
 				case 'my-time':
 				case 'home':
 					app_get_template_part("app-{$app}/home");
@@ -106,6 +131,7 @@ function app_init_content(){
 
 
 				case 'debug':
+				case 'debug-components':
 					app_get_template_part("{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']="{$template_part}";
 					break;
@@ -143,6 +169,7 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;
 
+				case null:
 				case 'profile':
 				case 'home':
 				case 'project':
@@ -154,6 +181,7 @@ function app_init_content(){
 					
 				
 				case 'debug':
+				case 'debug-components':
 					app_get_template_part("{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']="{$template_part}";
 					break;
@@ -172,6 +200,13 @@ function app_init_content(){
 // links for debugging our boi
 function app_debug_li() {
 ?>
+	<li>
+		<a href="<?=app_create_link(array(
+			'env'=>FWAPPS_SLUG,
+			'template'=>'home',
+			'app'=>'workflow'));
+		?>">Switch to Workflow App</a>
+	</li>
 	<li>
 		<a href="<?=app_create_link(array(
 			'env'=>FWAPPS_SLUG,
@@ -217,6 +252,9 @@ function app_debug_li() {
 		?>
 	<li>
 		<a href="<?=app_create_link(array('template'=>'debug')) ?>">Debug framework</a>
+	</li>
+	<li>
+		<a href="<?=app_create_link(array('template'=>'debug-components')) ?>">View Available components</a>
 	</li>
 
 	<li>

@@ -8,7 +8,7 @@
 			<option value="task">Task</option>
 		</select>
 
-		<input type="text" class="input input-single-line flex-1-1" name="timetrack-filter-meta-value" placeholder="Type in a keyword...">
+		<input type="text" class="input input-tags flex-1-1" name="timetrack-filter-meta-value" placeholder="Type in a keyword...">
 
 		<button type="submit" class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></button>
 	</form>

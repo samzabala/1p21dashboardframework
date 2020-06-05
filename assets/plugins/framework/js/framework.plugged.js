@@ -1450,8 +1450,7 @@ window.jQuery && jQuery.noConflict();
 
 				try {
 					fn = eval(/^[^(]+/.exec(args.callback)[0])
-				} catch {
-
+				} catch(err) {
 				}
 
 				if ( typeof(fn) === 'function' ){
@@ -1876,8 +1875,7 @@ window.jQuery && jQuery.noConflict();
 
 					try {
 						fn = eval(/^[^(]+/.exec(args.callback)[0])
-					} catch {
-						
+					} catch(err) {
 					}
 
 					if ( typeof(fn) === 'function' ){
@@ -2663,7 +2661,7 @@ window.jQuery && jQuery.noConflict();
 					// && !triggerer.matches('[data-toggle="tooltip-click"] *')
 					&& !triggerer.closest('[data-toggle="tooltip-hover"]').length
 					// && !triggerer.matches('[data-toggle="tooltip-hover"] *')
-					&& !triggerer.closest('[data-value]') //temp fix for ui elements not getting ancestry
+					&& !triggerer.closest('[data-value]').length //temp fix for ui elements not getting ancestry
 				){
 					frameWork.destroyToolTip();
 				}
