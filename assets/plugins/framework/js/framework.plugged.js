@@ -1446,7 +1446,9 @@ window.jQuery && jQuery.noConflict();
 			//update fake hoes
 			if(args.callback) {
 				var f = new Function(args.callback);
-				f();
+				if (typeof(f) === 'function'){
+					f();
+				}
 			}
 		}
 
