@@ -180,6 +180,7 @@ Found in templates directory
 ## New Templates that are can be disregarded for dashy boi 
 
 * debug.php - used to debug the framework build.
+* debug-components.php - reference for componentsd available so we can reuse or improve what already exists and code less
 
 ## Found Features in design that do not exist on current dashboard yet 
 
