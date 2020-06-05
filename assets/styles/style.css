@@ -74,7 +74,7 @@ table {
   --brand-color-intensity-1: #0480FE;
   --brand-color-intensity-2: #4b5be3;
   --brand-color-intensity-3: #843ecd;
-  --brand-color-intensity-4: #F204A2;
+  --brand-color-intensity-4: #b723b9;
   --brand-color-intensity-5: #F204A2;
   --gradient-start: #0480FE;
   --gradient-end: #F204A2;
@@ -613,7 +613,7 @@ big {
 .fill-intensity-4-active.active,
 .fill-intensity-4-toggle.active,
 .fill-intensity-4-toggle.open {
-  fill: #F204A2 !important; }
+  fill: #b723b9 !important; }
 
 .fill-intensity-5,
 .theme-inverse .fill-intensity-5-inverse,
@@ -819,7 +819,7 @@ big {
 .stroke-intensity-4-active.active,
 .stroke-intensity-4-toggle.active,
 .stroke-intensity-4-toggle.open {
-  stroke: #F204A2 !important; }
+  stroke: #b723b9 !important; }
 
 .stroke-intensity-5,
 .theme-inverse .stroke-intensity-5-inverse,
@@ -1089,7 +1089,7 @@ table {
     background-color: rgba(132, 62, 205, 0.1); }
   .table-row-intensity-4,
   .table-cell-intensity-4 {
-    background-color: rgba(242, 4, 162, 0.1); }
+    background-color: rgba(183, 35, 185, 0.1); }
   .table-row-intensity-5,
   .table-cell-intensity-5 {
     background-color: rgba(242, 4, 162, 0.1); }
@@ -5801,7 +5801,7 @@ fieldset {
     background-color: #843ecd !important; }
 
 .table-label-intensity-4, .progress-bar-intensity-4, .badge-intensity-4, .tag-intensity-4, .legend-intensity-4 {
-  background-color: #F204A2; }
+  background-color: #b723b9; }
   .background-intensity-4,
   .theme-inverse .background-intensity-4-inverse,
   .background-intensity-4-hover:hover:not(.open):not(.active),
@@ -5811,7 +5811,7 @@ fieldset {
   .background-intensity-4-active.active,
   .background-intensity-4-toggle.active,
   .background-intensity-4-toggle.open {
-    background-color: #F204A2 !important; }
+    background-color: #b723b9 !important; }
 
 .table-label-intensity-5, .progress-bar-intensity-5, .badge-intensity-5, .tag-intensity-5, .legend-intensity-5 {
   background-color: #F204A2; }
@@ -6072,7 +6072,7 @@ fieldset {
   .color-intensity-4-active.active,
   .color-intensity-4-toggle.active,
   .color-intensity-4-toggle.open {
-    color: #F204A2 !important; }
+    color: #b723b9 !important; }
   .color-intensity-5,
   .theme-inverse .color-intensity-5-inverse,
   .color-intensity-5-hover:hover:not(.open):not(.active),
