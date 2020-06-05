@@ -1446,12 +1446,24 @@ window.jQuery && jQuery.noConflict();
 			//update fake hoes
 			if(args.callback) {
 
-				// var f = new Function(args.callback);
-				if ( typeof(eval(/^[^(]+/.exec(args.callback)[0])) === 'function' ){
-					$(document).ready(function(){
-						eval(args.callback);
-					});
+				let fn;
+
+				try {
+					fn = eval(/^[^(]+/.exec(args.callback)[0])
+				} catch {
+
 				}
+
+				if ( typeof(fn) === 'function' ){
+					eval(args.callback);
+				}
+
+				// var f = new Function(args.callback);
+				// if ( typeof(eval(/^[^(]+/.exec(args.callback)[0])) === 'function' ){
+				// 	$(document).ready(function(){
+				// 		eval(args.callback);
+				// 	});
+				// }
 			}
 		}
 
@@ -1860,8 +1872,17 @@ window.jQuery && jQuery.noConflict();
 				}
 
 				if(args.callback) {
-					var f = new Function(args.callback);
-					f();
+					let fn;
+
+					try {
+						fn = eval(/^[^(]+/.exec(args.callback)[0])
+					} catch {
+						
+					}
+
+					if ( typeof(fn) === 'function' ){
+						eval(args.callback);
+					}
 				}
 
 				modal.fadeIn()
@@ -2614,7 +2635,6 @@ window.jQuery && jQuery.noConflict();
 
 		$('html,body').on('click','*',function(e){
 
-
 			// //extra fallback
 			// function targetWithinComp(selector,child) {
 			// 	var toReturn = false;
@@ -2648,14 +2668,14 @@ window.jQuery && jQuery.noConflict();
 					frameWork.destroyToolTip();
 				}
 
-
 				//dropdown
 				if(
 					!triggerer.closest('[data-toggle="dropdown"]').length
 					&& !triggerer.closest('.dropdown').length
-					&& !triggerer.closest('data-value').length //temp fix for ui elements not getting ancestry
+					&& !triggerer.closest('[data-value]').length //temp fix for ui elements not getting ancestry
 				){
 					
+
 					frameWork.closeDropdowns( false );
 				}
 			}
