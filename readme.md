@@ -42,7 +42,7 @@ Files to translate
   * includes - contains navigation and header contents for specific app
 * global - templates used by all apps/placehodr
 * components - shared or repeating markup. second holy grail
-  For visual reference, see [components documentation](components.md)
+  For visual reference, see YOURLOCALENV.domain?template=debug-components
 * includes - template parts
 * header.php - duh
 * footer.php - duh

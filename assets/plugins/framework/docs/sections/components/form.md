@@ -872,7 +872,7 @@ callback function for after rendering the ui and changing the value
 
 **`data-tags-callback-on-keyup`**
 
-callback function after 
+callback function after keyup on the input field. NOTE. the field is actually a `span[contenteditable]`
 
 
 ```html

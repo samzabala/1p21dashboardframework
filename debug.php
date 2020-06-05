@@ -13,6 +13,8 @@
 
 
 
+
+
 		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		
@@ -4791,12 +4793,6 @@
 				</div>
 			</div>
 			
-		</div>
-
-
-		<h1 data-toggle="accordion">components<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
-			<?php ?>
 		</div>
 
 
