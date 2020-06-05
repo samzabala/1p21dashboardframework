@@ -26,7 +26,7 @@
 			<br><br>
 			
 			<div class="position-relative">
-				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-callback-on-keyup="fooker(event)" />
+				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-callback-on-keyup="fooker(event)" data-tags-callback="paker()" />
 				<ul class="dropdown">
 					<li>Fuck</li>
 					<li>Fuck</li>
@@ -37,70 +37,74 @@
 					<li>Fuck</li>
 				</ul>
 			</div>
-	<script>
-		function fooker(e){
-			console.log(e.target.innerHTML);
-		}
-	</script>
+			<script>
+
+				function paker(e){
+					console.log('suck my dick');
+				}
+				function fooker(e){
+					console.log(e.target.innerHTML);
+				}
+				</script>
 
 
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-primary" />
-		<br><br>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-secondary" />
-		<br><br>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-accent" />
-		<br><br>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-success" />
-		<br><br>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-error" />
-		<br><br>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-caution" />
-		<br><br>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-disabled" />
-		<br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-primary" />
+			<br><br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-secondary" />
+			<br><br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-accent" />
+			<br><br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-success" />
+			<br><br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-error" />
+			<br><br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-caution" />
+			<br><br>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-disabled" />
+			<br>
 
 
-			<h2>ini may dupli</h2>
-			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u,lil"class="input input-tags input-large" />
+				<h2>ini may dupli</h2>
+				<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u,lil"class="input input-tags input-large" />
 
 
 
-				<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
+					<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
 
 
-				<h2>ini mayo pang nakalaag</h2>
-			<input value="" class="input input-tags input-large" data-width="300px" />
+					<h2>ini mayo pang nakalaag</h2>
+				<input value="" class="input input-tags input-large" data-width="300px" />
 
-			
+				
 
-			<div class="module-function filter-search">
-				<form
-					action="<? app_create_link( array('template' => 'projects') ); ?>"
-					method="get"
-					class="input-group input-group-horizontal text-align-left">
-					<input type="text" placeholder="Search" name="search" class="input input-tags font-weight-600" />
-					<input type="hidden" name="is_searching" value="1" />
-					<button type="submit" class="btn btn-symbol btn-primary"><i class="symbol symbol-search"></i></button>
-				</form>
-			</div>
+				<div class="module-function filter-search">
+					<form
+						action="<? app_create_link( array('template' => 'projects') ); ?>"
+						method="get"
+						class="input-group input-group-horizontal text-align-left">
+						<input type="text" placeholder="Search" name="search" class="input input-tags font-weight-600" />
+						<input type="hidden" name="is_searching" value="1" />
+						<button type="submit" class="btn btn-symbol btn-primary"><i class="symbol symbol-search"></i></button>
+					</form>
+				</div>
 
-			<h2>cristian's code</h2>
-			<form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
-			<input type="hidden" name="share_note_with_user_ids"
-				value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
-			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-			<label class="input-label">Share note with:</label>
-			<div class="input-group input-group-horizontal input-group-block">
-				<input type="text" name="username" class="input input-single-line"
-					list="usernames" placeholder="First name..">
-				<datalist id="usernames"></datalist>
-				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
-			</div>
-			</div>
-			<input type="text" name="share_note_with_usernames"
-				class="input input-tags"
-				value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}">
-		</form>
+				<h2>cristian's code</h2>
+				<form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
+				<input type="hidden" name="share_note_with_user_ids"
+					value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
+				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+				<label class="input-label">Share note with:</label>
+				<div class="input-group input-group-horizontal input-group-block">
+					<input type="text" name="username" class="input input-single-line"
+						list="usernames" placeholder="First name..">
+					<datalist id="usernames"></datalist>
+					<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
+				</div>
+				</div>
+				<input type="text" name="share_note_with_usernames"
+					class="input input-tags"
+					value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}">
+			</form>
 		</div>
 
 
@@ -3342,9 +3346,9 @@
 				Yo I'm second jumbo. Fight me weewooweewoo. shit shit shit shit shit shit shit shit it stinks
 			</p>
 
-<p class="special-secondary background-gradient text-clip-background">
-	Yo I'm second jumbo. but i have a background-gradient that has been clipped
-</p>
+			<p class="special-secondary background-gradient text-clip-background">
+				Yo I'm second jumbo. but i have a background-gradient that has been clipped
+			</p>
 
 			<p class="lead">
 				I'm lead, how about you shit yourself. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -3441,21 +3445,21 @@
 			</p>
 
 
-<p>
-	arrow down &nbsp;<i class="color-primary symbol symbol-arrow-double-down"></i>
-</p>
+			<p>
+				arrow down &nbsp;<i class="color-primary symbol symbol-arrow-double-down"></i>
+			</p>
 
-<p>
-	arrow up &nbsp;<i class="color-primary symbol symbol-arrow-double-up"></i>
-</p>
+			<p>
+				arrow up &nbsp;<i class="color-primary symbol symbol-arrow-double-up"></i>
+			</p>
 
-<p>
-	arrow left &nbsp;<i class="color-primary symbol symbol-arrow-double-left"></i>
-</p>
+			<p>
+				arrow left &nbsp;<i class="color-primary symbol symbol-arrow-double-left"></i>
+			</p>
 
-<p>
-	arrow right &nbsp;<i class="color-primary symbol symbol-arrow-double-right"></i>
-</p>
+			<p>
+				arrow right &nbsp;<i class="color-primary symbol symbol-arrow-double-right"></i>
+			</p>
 
 			<p>
 				plus <i class="color-primary symbol symbol-plus"></i>
@@ -4788,6 +4792,13 @@
 			</div>
 			
 		</div>
+
+
+		<h1 data-toggle="accordion">components<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<?php ?>
+		</div>
+
 
 		<h1  data-toggle="accordion" >Would toolt tip work for dynamic shit? Idk let's see <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
