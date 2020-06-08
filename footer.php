@@ -64,7 +64,7 @@
 		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/apps.js'); ?>
 
 
-
+		<script src="/_fortesting.js"></script>
 
 
 
