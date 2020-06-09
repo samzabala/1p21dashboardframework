@@ -178,8 +178,12 @@ function app_init_content(){
 					break;
 
 				case null:
-				case 'profile':
 				case 'home':
+					app_get_template_part("app-{$app}/home",$slug);
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']="app-{$app}/home-{$slug}";
+
+					break;
+				case 'profile':
 				case 'project':
 				case 'projects':
 					app_get_template_part("app-{$app}/{$template_part}",$slug);
