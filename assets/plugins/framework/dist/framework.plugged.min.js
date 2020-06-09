@@ -1484,19 +1484,19 @@ window.jQuery && jQuery.noConflict();
 
 				if ( typeof(fnToFilter) === 'function' ){
 
-					
-					if(theValue === valueForUi) {
-						var inputIndex = valueForUi.indexOf(_.tagsInputString),
-						filteredValForUi =  _.tagsToParse( eval(args.callbackNameFilter+'("'+theValue+'")'),false);
+					function applyFilter(valueToFilter,filterFnName){
+						var inputIndex = _.tagsToParse(valueToFilter).indexOf(_.tagsInputString),
+						toReturn =  _.tagsToParse( eval(filterFnName +'("'+valueToFilter+'")'),false );
 
-						if(inputIndex > -1) {
-							filteredValForUi.splice(valueForUi,0,_.tagsInputString);
-						}
+						toReturn.splice(
+							(inputIndex > -1 && (inputIndex < _.tagsToParse(valueToFilter).length - 1) ) ? inputIndex : toReturn.length,
+							0,
+							_.tagsInputString
+						);
 
-						valueForUi = _.tagsToParse(filteredValForUi);
+						return _.tagsToVal(toReturn);
 					}
-
-					theValue =  _.tagsToVal( eval(args.callbackNameFilter+'("'+theValue+'")') );
+					
 				}
 			}
 
