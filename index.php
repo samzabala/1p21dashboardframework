@@ -8,6 +8,6 @@ Feel free to fuck it up when the boi is ready to be fuckened up
 require_once 'config.php';
 require_once 'helpers.php';
 
-require_once 'header.php';
+app_get_header();
 require_once 'content.php';
-require_once 'footer.php';
+app_get_footer();
