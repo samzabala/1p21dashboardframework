@@ -72,8 +72,8 @@ table {
   --brand-color-caution: #fd7f03;
   --brand-color-error: #fd0303;
   --brand-color-intensity-1: #0480FE;
-  --brand-color-intensity-2: #4b5be3;
-  --brand-color-intensity-3: #843ecd;
+  --brand-color-intensity-2: #4061e7;
+  --brand-color-intensity-3: #7b42d0;
   --brand-color-intensity-4: #b723b9;
   --brand-color-intensity-5: #F204A2;
   --gradient-start: #0480FE;
@@ -591,7 +591,7 @@ big {
 .fill-intensity-2-active.active,
 .fill-intensity-2-toggle.active,
 .fill-intensity-2-toggle.open {
-  fill: #4b5be3 !important; }
+  fill: #4061e7 !important; }
 
 .fill-intensity-3,
 .theme-inverse .fill-intensity-3-inverse,
@@ -602,7 +602,7 @@ big {
 .fill-intensity-3-active.active,
 .fill-intensity-3-toggle.active,
 .fill-intensity-3-toggle.open {
-  fill: #843ecd !important; }
+  fill: #7b42d0 !important; }
 
 .fill-intensity-4,
 .theme-inverse .fill-intensity-4-inverse,
@@ -797,7 +797,7 @@ big {
 .stroke-intensity-2-active.active,
 .stroke-intensity-2-toggle.active,
 .stroke-intensity-2-toggle.open {
-  stroke: #4b5be3 !important; }
+  stroke: #4061e7 !important; }
 
 .stroke-intensity-3,
 .theme-inverse .stroke-intensity-3-inverse,
@@ -808,7 +808,7 @@ big {
 .stroke-intensity-3-active.active,
 .stroke-intensity-3-toggle.active,
 .stroke-intensity-3-toggle.open {
-  stroke: #843ecd !important; }
+  stroke: #7b42d0 !important; }
 
 .stroke-intensity-4,
 .theme-inverse .stroke-intensity-4-inverse,
@@ -1083,10 +1083,10 @@ table {
     background-color: rgba(4, 128, 254, 0.1); }
   .table-row-intensity-2,
   .table-cell-intensity-2 {
-    background-color: rgba(75, 91, 227, 0.1); }
+    background-color: rgba(64, 97, 231, 0.1); }
   .table-row-intensity-3,
   .table-cell-intensity-3 {
-    background-color: rgba(132, 62, 205, 0.1); }
+    background-color: rgba(123, 66, 208, 0.1); }
   .table-row-intensity-4,
   .table-cell-intensity-4 {
     background-color: rgba(183, 35, 185, 0.1); }
@@ -3968,7 +3968,8 @@ table {
     font-size: 2rem;
     position: absolute;
     right: 20px;
-    top: 20px; }
+    top: 20px;
+    z-index: 9; }
   .modal-close-overlay {
     position: fixed;
     top: 0;
@@ -5775,7 +5776,7 @@ fieldset {
     background-color: #0480FE !important; }
 
 .table-label-intensity-2, .progress-bar-intensity-2, .badge-intensity-2, .tag-intensity-2, .legend-intensity-2 {
-  background-color: #4b5be3; }
+  background-color: #4061e7; }
   .background-intensity-2,
   .theme-inverse .background-intensity-2-inverse,
   .background-intensity-2-hover:hover:not(.open):not(.active),
@@ -5785,10 +5786,10 @@ fieldset {
   .background-intensity-2-active.active,
   .background-intensity-2-toggle.active,
   .background-intensity-2-toggle.open {
-    background-color: #4b5be3 !important; }
+    background-color: #4061e7 !important; }
 
 .table-label-intensity-3, .progress-bar-intensity-3, .badge-intensity-3, .tag-intensity-3, .legend-intensity-3 {
-  background-color: #843ecd; }
+  background-color: #7b42d0; }
   .background-intensity-3,
   .theme-inverse .background-intensity-3-inverse,
   .background-intensity-3-hover:hover:not(.open):not(.active),
@@ -5798,7 +5799,7 @@ fieldset {
   .background-intensity-3-active.active,
   .background-intensity-3-toggle.active,
   .background-intensity-3-toggle.open {
-    background-color: #843ecd !important; }
+    background-color: #7b42d0 !important; }
 
 .table-label-intensity-4, .progress-bar-intensity-4, .badge-intensity-4, .tag-intensity-4, .legend-intensity-4 {
   background-color: #b723b9; }
@@ -6052,7 +6053,7 @@ fieldset {
   .color-intensity-2-active.active,
   .color-intensity-2-toggle.active,
   .color-intensity-2-toggle.open {
-    color: #4b5be3 !important; }
+    color: #4061e7 !important; }
   .color-intensity-3,
   .theme-inverse .color-intensity-3-inverse,
   .color-intensity-3-hover:hover:not(.open):not(.active),
@@ -6062,7 +6063,7 @@ fieldset {
   .color-intensity-3-active.active,
   .color-intensity-3-toggle.active,
   .color-intensity-3-toggle.open {
-    color: #843ecd !important; }
+    color: #7b42d0 !important; }
   .color-intensity-4,
   .theme-inverse .color-intensity-4-inverse,
   .color-intensity-4-hover:hover:not(.open):not(.active),

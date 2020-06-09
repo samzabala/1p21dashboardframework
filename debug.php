@@ -13,8 +13,6 @@
 
 
 
-
-
 		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		
@@ -26,6 +24,31 @@
 
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-large" />
 			<br><br>
+
+
+			<h2>cristian's code</h2>
+			<a href="#fuckwad">modddddaaaal</a>
+			<div id="fuckwad" class="modal">
+
+				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+					<label class="input-label">Share note with:</label>
+
+					<div class="input-group input-group-horizontal input-group-block">
+						<input type="text" name="share_note_with_usernames"
+							value="asshit,brah,shiit"
+							class="input input-tags"
+							data-toggle="dropdown"
+							data-tags-callback-name-filter="testCallback">
+
+						<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
+					</div>
+
+
+					<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
+						fuuiuuuck yallll
+					</div>
+				</div>
+			</div>
 			
 			<div class="position-relative">
 				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-callback-on-keyup="fooker(event)" data-tags-callback="paker()" />
@@ -66,47 +89,29 @@
 			<br>
 
 
-				<h2>ini may dupli</h2>
-				<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u,lil"class="input input-tags input-large" />
+			<h2>ini may dupli</h2>
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u,lil"class="input input-tags input-large" />
 
 
 
-					<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
+				<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
 
 
-					<h2>ini mayo pang nakalaag</h2>
-				<input value="" class="input input-tags input-large" data-width="300px" />
+				<h2>ini mayo pang nakalaag</h2>
+			<input value="" class="input input-tags input-large" data-width="300px" />
 
-				
+			
 
-				<div class="module-function filter-search">
-					<form
-						action="<? app_create_link( array('template' => 'projects') ); ?>"
-						method="get"
-						class="input-group input-group-horizontal text-align-left">
-						<input type="text" placeholder="Search" name="search" class="input input-tags font-weight-600" />
-						<input type="hidden" name="is_searching" value="1" />
-						<button type="submit" class="btn btn-symbol btn-primary"><i class="symbol symbol-search"></i></button>
-					</form>
-				</div>
-
-				<h2>cristian's code</h2>
-				<form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
-				<input type="hidden" name="share_note_with_user_ids"
-					value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
-				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label class="input-label">Share note with:</label>
-				<div class="input-group input-group-horizontal input-group-block">
-					<input type="text" name="username" class="input input-single-line"
-						list="usernames" placeholder="First name..">
-					<datalist id="usernames"></datalist>
-					<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
-				</div>
-				</div>
-				<input type="text" name="share_note_with_usernames"
-					class="input input-tags"
-					value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}">
-			</form>
+			<div class="module-function filter-search">
+				<form
+					action="<? app_create_link( array('template' => 'projects') ); ?>"
+					method="get"
+					class="input-group input-group-horizontal text-align-left">
+					<input type="text" placeholder="Search" name="search" class="input input-tags font-weight-600" />
+					<input type="hidden" name="is_searching" value="1" />
+					<button type="submit" class="btn btn-symbol btn-primary"><i class="symbol symbol-search"></i></button>
+				</form>
+			</div>
 		</div>
 
 
