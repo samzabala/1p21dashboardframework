@@ -67,79 +67,79 @@
 				</h3>
 			</div>
 			
-			<div class="module-content flex-sm flex-direction-column">
+			<div class="module-content flex-sm flex-wrap">
 
-				<div class="flex-1-1 text-align-center flex-grid flex-grid-compact flex-grid-fixed align-items-center">
-					
-					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
+					<div class="flex-1-1 text-align-center flex-grid flex-grid-compact flex-grid-fixed align-items-center">
 						
-						<div class="flex-1-1">
-							<div class="special-primary no-margin-y production-count-design">
-								<span class="REPLACE">40</span>
+						<div class="flex-col-6 flex-col-md-12 flex-md align-items-center flex-direction-column">
+							
+							<div class="flex-1-1">
+								<div class="special-primary no-margin-y production-count-design">
+									<span class="REPLACE">40</span>
+								</div>
+
+								<div class="color-neutral">
+									<span class="REPLACE">Projects in Design</span>
+								</div>
 							</div>
 
-							<div class="color-neutral">
-								<span class="REPLACE">Projects in Design</span>
+						</div>
+						
+						<div class="hide-mobile flex-col-md-12">
+							<hr class="no-margin-y">
+						</div>
+						
+						<div class="flex-col-6 flex-col-md-12 flex-md align-items-center flex-direction-column">
+							
+							<div class="flex-1-1">
+								<div class="special-primary no-margin-y production-count-dev">
+									<span class="REPLACE">12</span>
+								</div>
+
+								<div class="color-neutral">
+									<span class="REPLACE">Projects in Dev</span>
+								</div>
 							</div>
+
+						</div>
+						
+						<div class="hide-mobile flex-col-md-12">
+							<hr class="no-margin-y">
+						</div>
+						
+						<div class="flex-col-6 flex-col-md-12 flex-md align-items-center flex-direction-column">
+							
+							<div class="flex-1-1">
+								<div class="special-primary no-margin-y production-count-dev">
+									<span class="REPLACE">12</span>
+								</div>
+
+								<div class="color-neutral">
+									<span class="REPLACE">Projects in Dev</span>
+								</div>
+							</div>
+
+						</div>
+						
+						<div class="hide-mobile flex-col-md-12">
+							<hr class="no-margin-y">
+						</div>
+						
+						<div class="flex-col-6 flex-col-md-12 flex-md align-items-center flex-direction-column">
+							
+							<div class="flex-1-1">
+								<div class="special-primary no-margin-y production-count-dev">
+									<span class="REPLACE">12</span>
+								</div>
+
+								<div class="color-neutral">
+									<span class="REPLACE">Projects in Dev</span>
+								</div>
+							</div>
+
 						</div>
 
 					</div>
-					
-					<div class="hide-mobile flex-col-md-12">
-						<hr class="no-margin-y">
-					</div>
-					
-					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
-						
-						<div class="flex-1-1">
-							<div class="special-primary no-margin-y production-count-dev">
-								<span class="REPLACE">12</span>
-							</div>
-
-							<div class="color-neutral">
-								<span class="REPLACE">Projects in Dev</span>
-							</div>
-						</div>
-
-					</div>
-					
-					<div class="hide-mobile flex-col-md-12">
-						<hr class="no-margin-y">
-					</div>
-					
-					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
-						
-						<div class="flex-1-1">
-							<div class="special-primary no-margin-y production-count-dev">
-								<span class="REPLACE">12</span>
-							</div>
-
-							<div class="color-neutral">
-								<span class="REPLACE">Projects in Dev</span>
-							</div>
-						</div>
-
-					</div>
-					
-					<div class="hide-mobile flex-col-md-12">
-						<hr class="no-margin-y">
-					</div>
-					
-					<div class="flex-col-6 flex-col-md-12 flex-md align-items-center">
-						
-						<div class="flex-1-1">
-							<div class="special-primary no-margin-y production-count-dev">
-								<span class="REPLACE">12</span>
-							</div>
-
-							<div class="color-neutral">
-								<span class="REPLACE">Projects in Dev</span>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
 
 
 			</div>

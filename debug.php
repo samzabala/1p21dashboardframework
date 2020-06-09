@@ -25,6 +25,32 @@
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-large" />
 			<br><br>
 
+			<h2>Cristian's code 06-09 ayyyyy</h2>
+			
+			<a href="#modal-share-note-with" data-toggle="modal">modddddaaaal</a> 
+<div class="modal" id="modal-share-note-with"
+     data-modal-max-width="800px" data-modal-title="Share">
+  <!-- @if user has rights to share this note -->
+  <form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
+    <input type="hidden" name="share_note_with_user_ids"
+           value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
+    <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+      <label class="input-label">Share note with:</label>
+      <div class="input-group input-group-horizontal input-group-block">
+        <input type="text" name="share_note_with_usernames"
+               value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
+               class="input input-tags"
+               data-toggle="dropdown"
+               data-tags-callback-on-keyup="shareNoteWithUsernamesChgCb(event)"
+               data-tags-callback-name-filter="validateUsernameNoteSharedWith">
+        <button type="submit" class="flex-0-0 btn btn-primary">Share</button>
+      </div>
+      <div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
+      </div>
+    </div>
+  </form>
+</div>
+
 
 			<h2>cristian's code</h2>
 			<a href="#fuckwad">modddddaaaal</a>
