@@ -48,6 +48,14 @@ function app_get_sidebar($slug = FWAPPS_APP){
 	app_get_template_part("app-".FWAPPS_APP."/includes/nav-sidebar");
 }
 
+function app_get_header($slug = FWAPPS_APP){
+	app_get_template_part("app-".FWAPPS_APP."/header");
+}
+
+function app_get_footer($slug = FWAPPS_APP){
+	app_get_template_part("app-".FWAPPS_APP."/footer");
+}
+
 //GETS THE TEMPLETE FOR THE BOI WHILE HANDLEBARS IS NOT READY
 function app_init_content(){
 	$app  = 'dashboard';
