@@ -1262,7 +1262,7 @@ window.jQuery && jQuery.noConflict();
 		
 
 
-		returnWithInput = (returnWithInput == false) ? false : true;
+		returnWithInput = (returnWithInput !== true) ? false : true;
 
 		
 
@@ -1306,10 +1306,10 @@ window.jQuery && jQuery.noConflict();
 	//because input field is gonna go in between for backspacing capabilities
 	_.tagsToVal = function(value,returnWithInput){
 		value = value || '';
-		returnWithInput = (returnWithInput == false) ? false : true;
+		returnWithInput = (returnWithInput !== true) ? false : true;
 		var toReturn = _.tagsToParse(value, returnWithInput).join(',');
 
-
+		console.warn(returnWithInput);
 		return toReturn;
 
 	}
@@ -1450,7 +1450,7 @@ window.jQuery && jQuery.noConflict();
 
 		valueForUi = valueForUi || theValue || '';
 
-		allowFilter = (allowFilter == false) ? false : true;
+		allowFilter = (allowFilter != true) ? false : true;
 		
 
 		var arr =  {
@@ -1485,8 +1485,10 @@ window.jQuery && jQuery.noConflict();
 				if ( typeof(fnToFilter) === 'function' ){
 
 					function applyFilter(valueToFilter,filterFnName){
+						console.warn('shit' ,_.tagsToVal(valueToFilter,false) );
 						var inputIndex = _.tagsToParse(valueToFilter).indexOf(_.tagsInputString),
-						toReturn =  _.tagsToParse( eval(filterFnName +'("'+valueToFilter+'")'),false );
+						// turn to array ya bopi without the input tag string
+						toReturn =  _.tagsToParse( eval(filterFnName +'("'+ _.tagsToVal(valueToFilter,false) +'")'), false );
 
 						toReturn.splice(
 							(inputIndex > -1 && (inputIndex < _.tagsToParse(valueToFilter).length - 1) ) ? inputIndex : toReturn.length,
@@ -2024,7 +2026,7 @@ window.jQuery && jQuery.noConflict();
 	}
 
 	frameWork.toggleAccordion = function(triggerer,changeHash) {
-		changeHash = !changeHash ? false : true;
+		changeHash = !(changeHash) ? false : true;
 
 		var selector =  _.getTheToggled(triggerer,'accordion');
 
