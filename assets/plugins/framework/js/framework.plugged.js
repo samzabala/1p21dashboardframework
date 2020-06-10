@@ -1240,10 +1240,8 @@ window.jQuery && jQuery.noConflict();
 
 	//because input field is gonna go in between for backspacing capabilities
 	_.tagsToParse = function(value,returnWithInput){
-		returnWithInput = (returnWithInput !== true) ? false : true;
-		toReturn = Array.isArray(value) ? value : value.split(',');
-
-		var hasInput = false;
+		returnWithInput = (returnWithInput !== false) || (returnWithInput == true);
+		toReturn = Array.isArray(value) ? value : value.split(',') || [];
 
 		
 		//check for ya boi
@@ -1251,15 +1249,12 @@ window.jQuery && jQuery.noConflict();
 			
 			if(!tag || tag == ''){
 				toReturn.splice(i,1);
-			}
-			if(tag == _.tagsInputString){
-				hasInput =  true;
-
-				!returnWithInput && toReturn.splice(i,1);
+			}else if(tag === _.tagsInputString && !returnWithInput){
+				toReturn.splice(i,1);
 			}
 		})
 
-		if(!hasInput && returnWithInput){
+		if(returnWithInput && toReturn.indexOf(_.tagsInputString) < 0){
 			toReturn.push(_.tagsInputString );
 		}
 
@@ -1268,6 +1263,7 @@ window.jQuery && jQuery.noConflict();
 			if(!acc.includes(tag)){
 				acc.push( tag );
 			}
+
 			
 			return acc;
 		},[]);
@@ -1281,10 +1277,7 @@ window.jQuery && jQuery.noConflict();
 	//because input field is gonna go in between for backspacing capabilities
 	_.tagsToVal = function(value,returnWithInput){
 		value = value || '';
-		returnWithInput = (returnWithInput !== true) ? false : true;
-		var toReturn = _.tagsToParse(value, returnWithInput).join(',');
-
-		return toReturn;
+		return  _.tagsToParse(value,returnWithInput).join(',');
 
 	}
 	
@@ -1424,7 +1417,7 @@ window.jQuery && jQuery.noConflict();
 
 		valueForUi = valueForUi || theValue || '';
 
-		allowFilter = (allowFilter !== true) ? false : true;
+		allowFilter = (allowFilter != false);
 		
 
 		var arr =  {
@@ -1459,22 +1452,38 @@ window.jQuery && jQuery.noConflict();
 				if ( typeof(fnToFilter) === 'function' ){
 
 					function applyFilter(valueToFilter,filterFnName){
-						var inputIndex = _.tagsToParse(valueToFilter).indexOf(_.tagsInputString),
-						// turn to array ya bopi without the input tag string
-						toReturn =  _.tagsToParse( eval(filterFnName +'("'+ _.tagsToVal(valueToFilter,false) +'")'), false );
+						const inputIndex = _.tagsToParse(valueToFilter).indexOf(_.tagsInputString);
+						const noInputValueToFilter = (function(){ return _.tagsToVal(valueToFilter,false)}());
 
-						toReturn.splice(
-							(inputIndex > -1 && (inputIndex < _.tagsToParse(valueToFilter).length - 1) ) ? inputIndex : toReturn.length,
-							0,
-							_.tagsInputString
-						);
+						// turn to array ya bopi without the input tag string
+						var toReturn =  _.tagsToParse( eval(filterFnName +'("'+ noInputValueToFilter +'")'), false );
+
+						// console.log(
+						// 	'index of input\n',inputIndex,
+						// 	'\n\n\nfiltered and ready for splice\n',toReturn,
+						// 	'\n\n\npassed to the fil;ter\n',_.tagsToVal(valueToFilter,false),
+						// 	'\n\n\nrar array\n',_.tagsToParse(valueToFilter),
+						// 	'\n\n\n no input field\n',noInputValueToFilter,_.tagsToVal(valueToFilter,false),
+						// 	'\n\n\n no input fieldas array\n',_.tagsToParse(valueToFilter,false),
+						// 	'\n\n\n string for eval\n', ( filterFnName +'("'+ noInputValueToFilter +'")'),
+						// 	'\n\n\neval\n',  eval(filterFnName +'("'+ noInputValueToFilter +'")'),
+						// 	'whAT ETHE FUCK'
+						// );
+
+						if(inputIndex > -1){
+							toReturn.splice(
+								((inputIndex < _.tagsToParse(valueToFilter).length - 1) ) ? inputIndex : toReturn.length,
+								0,
+								_.tagsInputString
+							);
+						}
 
 						return _.tagsToVal(toReturn);
 					}
 
 					
-					valueForUi = applyFilter(valueForUi,args.callbackNameFilter);
 					theValue = applyFilter(theValue,args.callbackNameFilter);
+					valueForUi = applyFilter(valueForUi,args.callbackNameFilter);
 					
 				}
 			}
@@ -2109,7 +2118,7 @@ window.jQuery && jQuery.noConflict();
 	frameWork.readyTags = function(){
 
 		$('.input-tags').each(function(){
-			frameWork.updateTags($(this),true);
+			frameWork.updateTags($(this));
 		});
 	}
 	_.fns_on_load.push(frameWork.readyTags);
