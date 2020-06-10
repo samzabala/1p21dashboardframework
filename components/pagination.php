@@ -1,4 +1,4 @@
-<div class="dashboard-pagination">
+<div class="dashboard-pagination module-function">
 
 	<div class="btn-group btn-group-horizontal">
 		<!-- 

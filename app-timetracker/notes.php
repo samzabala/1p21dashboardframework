@@ -426,7 +426,10 @@
 		</div>
 		<!-- @if pagination is needed -->
 		<div class="module-footer text-align-right">
-			<?php app_get_component('components/pagination') ?>
+			<div class="module-functions">
+				<?php app_get_component('components/pagination') ?>
+				<?php app_get_component('components/pagination-view-per-page') ?>
+			</div>
 		</div>
 	</div>
 </div>

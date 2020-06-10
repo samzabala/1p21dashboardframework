@@ -1387,11 +1387,10 @@ window.jQuery && jQuery.noConflict();
 	_.tagsInputString = '__fw_input__';
 
 	//because input field is gonna go in between for backspacing capabilities
+	//because input field is gonna go in between for backspacing capabilities
 	_.tagsToParse = function(value,returnWithInput){
-		returnWithInput = (returnWithInput !== true) ? false : true;
-		toReturn = Array.isArray(value) ? value : value.split(',');
-
-		var hasInput = false;
+		returnWithInput = (returnWithInput !== false) || (returnWithInput == true);
+		toReturn = Array.isArray(value) ? value : value.split(',') || [];
 
 		
 		//check for ya boi
@@ -1399,15 +1398,12 @@ window.jQuery && jQuery.noConflict();
 			
 			if(!tag || tag == ''){
 				toReturn.splice(i,1);
-			}
-			if(tag == _.tagsInputString){
-				hasInput =  true;
-
-				!returnWithInput && toReturn.splice(i,1);
+			}else if(tag === _.tagsInputString && !returnWithInput){
+				toReturn.splice(i,1);
 			}
 		})
 
-		if(!hasInput && returnWithInput){
+		if(returnWithInput && toReturn.indexOf(_.tagsInputString) < 0){
 			toReturn.push(_.tagsInputString );
 		}
 
@@ -1416,6 +1412,7 @@ window.jQuery && jQuery.noConflict();
 			if(!acc.includes(tag)){
 				acc.push( tag );
 			}
+
 			
 			return acc;
 		},[]);
@@ -1429,11 +1426,7 @@ window.jQuery && jQuery.noConflict();
 	//because input field is gonna go in between for backspacing capabilities
 	_.tagsToVal = function(value,returnWithInput){
 		value = value || '';
-		returnWithInput = (returnWithInput !== true) ? false : true;
-		var toReturn = _.tagsToParse(value, returnWithInput).join(',');
-
-		console.warn(returnWithInput);
-		return toReturn;
+		return  _.tagsToParse(value,returnWithInput).join(',');
 
 	}
 
