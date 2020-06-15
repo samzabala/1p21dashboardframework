@@ -36,6 +36,40 @@
 		</div>
 
 
+	<hr>
+	TODOS
+
+		<h1 data-toggle="accordion">btn-round / input-round classes<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		</div>
+
+
+		<h1 data-toggle="accordion">btn color tag outline version<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+		</div>
+
+
+
+		<h1 data-toggle="accordion">input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			u switch on off tha boo
+		</div>
+
+
+		<h1 data-toggle="accordion">panel<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			will be reminders on the sidebar and shit
+		</div>
+
+
+		<h1 data-toggle="accordion">asset<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			thumbnails for files because i already used thumbnail class when i could have classed it as avatar fuckin dumbass
+		</div>
+
+		END TODOS
+		<hr>
+
 		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		

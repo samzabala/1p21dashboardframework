@@ -4015,8 +4015,6 @@ table {
   .board-close {
     font-size: 1rem;
     position: absolute;
-    left: -1.25em;
-    top: 40px;
     z-index: 9;
     display: flex;
     align-items: center;
@@ -4027,6 +4025,18 @@ table {
     height: 2.5em; }
     .theme-inverse .board-close {
       background: #302a4b; }
+    .board-left .board-close, .board-right .board-close {
+      top: 1.25em; }
+    .board-left .board-close {
+      left: -1.25em; }
+    .board-right .board-close {
+      right: -1.25em; }
+    .board-top .board-close, .board-bottom .board-close {
+      left: 1.25em; }
+    .board-top .board-close {
+      top: -1.25em; }
+    .board-bottom .board-close {
+      bottom: -1.25em; }
   .board-popup {
     min-height: 100%; }
     .board-left .board-popup {

@@ -55,8 +55,6 @@ $prefix: '.board';
 		& {
 			font-size: $board-close-button-font-size;
 			position:absolute;
-			left: $board-close-offset-x;
-			top: $board-close-offset-y;
 			z-index:9;
 			display:flex;
 			align-items: center;
@@ -71,7 +69,34 @@ $prefix: '.board';
 
 			.theme-inverse & {
 				background: $modal-background-inverse;
-				
+			}
+
+			#{$prefix}-left &,
+			#{$prefix}-right & {
+				top: $board-close-offset-y;
+			}
+
+			#{$prefix}-left & {
+				left: $board-close-offset-x * -1;
+			}
+
+
+			#{$prefix}-right & {
+				right: $board-close-offset-x * -1;
+			}
+
+			#{$prefix}-top &,
+			#{$prefix}-bottom & {
+				left: $board-close-offset-x;
+			}
+
+			#{$prefix}-top & {
+				top: $board-close-offset-y * -1;
+			}
+
+
+			#{$prefix}-bottom & {
+				bottom: $board-close-offset-y * -1;
 			}
 		}
 		&-overlay {
