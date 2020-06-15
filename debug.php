@@ -12,6 +12,29 @@
 
 
 
+		<h1 data-toggle="accordion">board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a href="#board-demo" data-toggle="board">Use this for worflow screens that slide from the slide</a>
+			<div id="board-demo" class="board board-left">
+				<div class="flex-grid flex-grid-no-gutter">
+					<div class="flex-col-xs-12 flex-col-md-9">
+						<div class="dashboard-board-partition dashboard-board-main">
+							<div class="container">
+							fuck
+							</div>
+						</div>
+					 </div>
+					<div class="flex-col-xs-12 flex-col-md-3 background-theme-contrast">
+						<div class="dashboard-board-partition dashboard-board-side">
+							<div class="container">
+							yea
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">

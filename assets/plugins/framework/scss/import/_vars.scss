@@ -544,6 +544,17 @@
 		$modal-box-shadow: $box-shadow-spicy $brand-color-base !default !default;
 		$modal-overlay-bg: rgba($brand-color-base,.5) !default;
 		$modal-close-button-font-size: 2rem !default;
+		$modal-gutter: $gutter-base !default;
+			$modal-gutter-mobile: $gutter-small !default;
+
+		//modal board
+			$board-padding-spacer: $gutter-large !default;
+			$board-close-button-font-size: 1rem !default;
+			$board-close-offset-x: -.5em !default;
+			$board-close-offset-y: $gutter-base !default;
+			$board-close-width: 20px !default;
+			$board-close-height: 55px !default;
+			$board-close-box-shadow: $box-shadow-base $brand-color-base !default;
 
 	// POPPER = DROPDOWN || TOOLTIP
 		$popper-gutter-x: $gutter-small !default;

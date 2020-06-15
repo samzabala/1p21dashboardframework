@@ -1,0 +1,92 @@
+
+$calculated-board-close-width: $board-close-width;
+@if internal-is-convertable($board-close-width){
+	$calculated-board-close-width: rem($board-close-width/$body-font-size);
+}
+
+
+$calculated-board-close-height: $board-close-height;
+@if internal-is-convertable($board-close-height){
+	$calculated-board-close-height: rem($board-close-height/$body-font-size);
+}
+
+/*** MODAL BOARD***/
+
+
+$prefix: '.board';
+
+
+//also used by module
+
+.body-board-active {
+	overflow-y:hidden;
+}
+
+#{$prefix} {
+	display:none!important;
+
+
+		&-wrapper {
+			@extend %for-modal-wrapper;
+
+			&#{$prefix}-left {
+				padding-left: $board-padding-spacer;
+			}
+			&#{$prefix}-right {
+				padding-right: $board-padding-spacer;
+			}
+			&#{$prefix}-top {
+				padding-top: $board-padding-spacer;
+			}
+			&#{$prefix}-bottom {
+				padding-bottom: $board-padding-spacer;
+			}
+		}
+		&-title {
+			margin-top:0;
+		}
+
+	&-close {
+		& {
+			font-size: $board-close-button-font-size;
+			position:absolute;
+			left: $board-close-offset-x;
+			top: $board-close-offset-y;
+			z-index:9;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			background: $modal-background;
+			box-shadow: $board-close-box-shadow;
+			width: $calculated-board-close-width;
+
+			.theme-inverse & {
+				background: $modal-background-inverse;
+				
+			}
+		}
+		&-overlay {
+			@extend %for-modal-overlay;
+		}
+	}
+
+
+	&-popup {
+		@extend %for-modal-popup;
+		min-height: 100%;
+		
+
+		#{$prefix}-left & {
+			margin-left: auto;
+		}
+		#{$prefix}-right & {
+			margin-right: auto;
+		}
+		#{$prefix}-top & {
+			margin-top: auto;
+		}
+		#{$prefix}-bottom & {
+			margin-bottom: auto;
+		}
+	}
+}

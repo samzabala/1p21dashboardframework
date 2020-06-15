@@ -3945,55 +3945,97 @@ table {
 
 .modal {
   display: none !important; }
-  .modal-wrapper {
+  .board-wrapper, .modal-wrapper {
     position: fixed;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
     margin: 0;
-    padding: 40px;
     overflow-y: scroll;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 99999; }
-    .modal-wrapper::-webkit-scrollbar {
+    z-index: 99999;
+    display: none !important; }
+    .board-wrapper::-webkit-scrollbar, .modal-wrapper::-webkit-scrollbar {
       display: none; }
+    .active.board-wrapper, .active.modal-wrapper {
+      display: block !important; }
+  .modal-wrapper {
+    padding: 40px; }
     @media (max-width: 1279px) {
       .modal-wrapper {
         padding: 20px; } }
-  .modal-wrapper {
-    display: none !important; }
-    .modal-wrapper.active {
-      display: block !important; }
   .modal-title {
     margin-top: 0; }
+  .board-close-overlay, .modal-close-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .board-close-overlay:not([data-toggle="modal-close"]), .modal-close-overlay:not([data-toggle="modal-close"]) {
+      pointer-events: none; }
   .modal-close {
     font-size: 2rem;
     position: absolute;
     right: 20px;
     top: 20px;
     z-index: 9; }
-  .modal-close-overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; }
-    .modal-close-overlay:not([data-toggle="modal-close"]) {
-      pointer-events: none; }
-  .modal-popup {
-    padding: 30px 20px;
-    border-radius: 5px;
-    background: #FFFFFF;
+  .board-popup, .modal-popup {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     position: relative;
-    margin: auto;
     z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
-    width: 100%; }
-    .theme-inverse .modal-popup {
+    width: 100%;
+    background: #FFFFFF; }
+    .theme-inverse .board-popup, .theme-inverse .modal-popup {
       background: #302a4b; }
+  .modal-popup {
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin: auto; }
+
+/*** MODAL BOARD***/
+.body-board-active {
+  overflow-y: hidden; }
+
+.board {
+  display: none !important; }
+  .board-wrapper.board-left {
+    padding-left: 70px; }
+  .board-wrapper.board-right {
+    padding-right: 70px; }
+  .board-wrapper.board-top {
+    padding-top: 70px; }
+  .board-wrapper.board-bottom {
+    padding-bottom: 70px; }
+  .board-title {
+    margin-top: 0; }
+  .board-close {
+    font-size: 1rem;
+    position: absolute;
+    left: -0.5em;
+    top: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px -6px #000000;
+    width: 1.4285714286rem; }
+    .theme-inverse .board-close {
+      background: #302a4b; }
+  .board-popup {
+    min-height: 100%; }
+    .board-left .board-popup {
+      margin-left: auto; }
+    .board-right .board-popup {
+      margin-right: auto; }
+    .board-top .board-popup {
+      margin-top: auto; }
+    .board-bottom .board-popup {
+      margin-bottom: auto; }
 
 /*** IMAGES ***/
 .thumbnail {
@@ -6921,6 +6963,9 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   box-shadow: inset 0 20px 10px -20px rgba(0, 0, 0, 0.2); }
   .dashboard-table-row-accordion-body td:first-child {
     padding-left: 50.625px; }
+
+.dashboard-board-partition {
+  padding: 50px 0; }
 
 /*! 
 APPS / OUR CUSTOM STYLES
