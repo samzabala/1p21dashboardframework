@@ -4015,7 +4015,7 @@ table {
   .board-close {
     font-size: 1rem;
     position: absolute;
-    left: -0.5em;
+    left: -1.25em;
     top: 40px;
     z-index: 9;
     display: flex;
@@ -4023,7 +4023,8 @@ table {
     justify-content: center;
     background: #FFFFFF;
     box-shadow: 0px 3px 10px -6px #000000;
-    width: 1.4285714286rem; }
+    width: 2.5em;
+    height: 2.5em; }
     .theme-inverse .board-close {
       background: #302a4b; }
   .board-popup {

@@ -10,6 +10,11 @@ $calculated-board-close-height: $board-close-height;
 	$calculated-board-close-height: rem($board-close-height/$body-font-size);
 }
 
+$calculated-board-close-size: $board-close-size;
+@if internal-is-convertable($board-close-size){
+	$calculated-board-close-size: rem($board-close-size/$body-font-size);
+}
+
 /*** MODAL BOARD***/
 
 
@@ -58,7 +63,11 @@ $prefix: '.board';
 			justify-content: center;
 			background: $modal-background;
 			box-shadow: $board-close-box-shadow;
-			width: $calculated-board-close-width;
+			// width: $calculated-board-close-width;
+			// height: $calculated-board-close-height;
+			width: $calculated-board-close-size;
+			height: $calculated-board-close-size;
+
 
 			.theme-inverse & {
 				background: $modal-background-inverse;
