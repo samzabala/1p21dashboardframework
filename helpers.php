@@ -84,11 +84,15 @@ function app_init_content(){
 			$slug = '';
 			switch($template_part):
 
+				case 'DEMO-home':
+				case null:
+					app_get_template_part("app-{$app}/DEMO-home");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/DEMO-home";
+					break;
 				case 'edit-project':
-				case 'edit-task':
-				case 'project-details':
 				case 'project-list':
-				case 'task':
+				case 'DEMO-task':
+				case 'project-details':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;

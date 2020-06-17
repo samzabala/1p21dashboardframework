@@ -260,28 +260,28 @@ ang mga may js baka matagasalan ka kasi tanga ka rin minsan
 js/ js + html
 
 js + css (1 week or more)
-* pull-out - modal... but from the side
+* .board - modal... but from the side. see debug template for basuc demo
 
 css
-* takes more than 1 day / up to a week
-    * zone
+* PRIORITY
+    * OK zone
         * zone-large
         * zone-small // transfer default boi here
     * modal close button
         * add attribute to override classes + change to button
-    * border radius rounding classes  - *
+    * OK border radius rounding classes  - *
         * btn-round
         * input round
         * btn-group-round
         * btn-group-round
-    * btn palettes not fully customizeable (eg btn-theme-outline, btn-theme-polar- outline etc) - *
+    * OK btn palettes not fully customizeable (eg btn-theme-outline, btn-theme-polar- outline etc) - *
         * btn-COLORTAG-outline
     * input-toggle - *
         * requires 3 block elements
         * input-wrapper.input-checkbox-wrapper
             * input.input-checkbox
             * input-label.input-label-checkbox
-    * Panel - * reminders
+    * OK Panel - * reminders USE .alert instead
     * summary - * donloadable assets
         * my dumbass didnt name dem thumbnails as avatar instead so here we are
         * possible files
@@ -302,7 +302,7 @@ css
         *  - use polygon
     * highlight - * task pages
         * tagged names at comments
-    * modal
+    * OK modal
         * adjust paddings for non mobile breakpoint and shit
 
 

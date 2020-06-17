@@ -11,6 +11,40 @@
 		</div>
 
 
+		<h1 data-toggle="accordion">Zone<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="zone zone-default">click me boi</div>
+			<div class="zone zone-primary">click me boi</div>
+			<div class="zone zone-secondary">click me boi</div>
+			<div class="zone zone-accent">click me boi</div>
+			<div class="zone zone-neutral">click me boi</div>
+			<div class="zone zone-success">click me boi</div>
+			<div class="zone zone-caution">click me boi</div>
+			<div class="zone zone-disabled zone-error">click me boi also i cant be fucked with</div>
+
+
+			<div class="zone zone-small zone-default">click me boi</div>
+			<div class="zone zone-small zone-primary">click me boi</div>
+			<div class="zone zone-small zone-secondary">click me boi</div>
+			<div class="zone zone-small zone-accent">click me boi</div>
+			<div class="zone zone-small zone-neutral">click me boi</div>
+			<div class="zone zone-small zone-success">click me boi</div>
+			<div class="zone zone-small zone-caution">click me boi</div>
+			<div class="zone zone-small zone-error">click me boi</div>
+
+
+
+			<div class="zone zone-large zone-default">click me boi</div>
+			<div class="zone zone-large zone-primary">click me boi</div>
+			<div class="zone zone-large zone-secondary">click me boi</div>
+			<div class="zone zone-large zone-accent">click me boi</div>
+			<div class="zone zone-large zone-neutral">click me boi</div>
+			<div class="zone zone-large zone-success">click me boi</div>
+			<div class="zone zone-large zone-caution">click me boi</div>
+			<div class="zone zone-large zone-error">click me boi</div>
+		</div>
+
+
 
 		<h1 data-toggle="accordion">board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -200,19 +234,19 @@
 
 		<h1 data-toggle="accordion">Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-				<span class="btn btn-symbol btn-theme btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme<br>
-				<span class="btn btn-symbol btn-theme-polar btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-polar btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar<br>
-				<span class="btn btn-symbol btn-theme-outline btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-outline btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme outline <br>
-				<span class="btn btn-symbol btn-theme-polar-outline btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-polar-outline btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar outline<br>
@@ -446,16 +480,64 @@
 			
 		</div>
 
-		<h1 data-toggle="accordion">Kwan Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<a data-toggle="alert-close-all">Close em all</a>
 			<div class="alert alert-default p" id="life-alert">
 				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
+
+
+			<div class="alert alert-default p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+			<div class="alert alert-small alert-default p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default.alert-small with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+			<div class="alert alert-large alert-default p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default.alert-large with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
 			<div class="alert alert-primary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
+				
+
+
 			<div class="alert alert-secondary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -3185,6 +3267,28 @@
 			<button type="button" class="btn btn-error">error</button>
 			<button type="button" class="btn btn-link">Link</button>
 
+			<h3>round</h3>
+
+			<button type="button" class="btn btn-round btn-default">Default</button>
+			<button type="button" class="btn btn-round btn-primary">Primary</button>
+			<button type="button" class="btn btn-round btn-secondary">secondary</button>
+			<button type="button" class="btn btn-round btn-accent">accent</button>
+			<button type="button" class="btn btn-round btn-neutral">neutral</button>
+			<button type="button" class="btn btn-round btn-success">Success</button>
+			<button type="button" class="btn btn-round btn-caution">caution</button>
+			<button type="button" class="btn btn-round btn-error">error</button>
+			<button type="button" class="btn btn-round btn-link">Link</button>
+
+			<h3>outline</h3>
+
+			<button type="button" class="btn btn-primary-outline">Primary</button>
+			<button type="button" class="btn btn-secondary-outline">secondary</button>
+			<button type="button" class="btn btn-accent-outline">accent</button>
+			<button type="button" class="btn btn-neutral-outline">neutral</button>
+			<button type="button" class="btn btn-success-outline">Success</button>
+			<button type="button" class="btn btn-caution-outline">caution</button>
+			<button type="button" class="btn btn-error-outline">error</button>
+
 			<h2>Small</h2>
 			<button type="button" class="btn btn-small btn-default">Default</button>
 			<button type="button" class="btn btn-small btn-primary">Primary</button>
@@ -3195,6 +3299,19 @@
 			<button type="button" class="btn btn-small btn-caution">caution</button>
 			<button type="button" class="btn btn-small btn-error">error</button>
 			<button type="button" class="btn btn-small btn-link">Link</button>
+
+
+			<h3>round</h3>
+
+			<button type="button" class="btn btn-round btn-small btn-default">Default</button>
+			<button type="button" class="btn btn-round btn-small btn-primary">Primary</button>
+			<button type="button" class="btn btn-round btn-small btn-secondary">secondary</button>
+			<button type="button" class="btn btn-round btn-small btn-accent">accent</button>
+			<button type="button" class="btn btn-round btn-small btn-neutral">neutral</button>
+			<button type="button" class="btn btn-round btn-small btn-success">Success</button>
+			<button type="button" class="btn btn-round btn-small btn-caution">caution</button>
+			<button type="button" class="btn btn-round btn-small btn-error">error</button>
+			<button type="button" class="btn btn-round btn-small btn-link">Link</button>
 			
 			<h2>Large</h2>
 			<button type="button" class="btn btn-large btn-default">Default</button>
@@ -3202,11 +3319,23 @@
 			<button type="button" class="btn btn-large btn-secondary">secondary</button>
 			<button type="button" class="btn btn-large btn-accent">accent</button>
 			<button type="button" class="btn btn-large btn-neutral">neutral</button>
-			
 			<button type="button" class="btn btn-large btn-success">Success</button>
 			<button type="button" class="btn btn-large btn-caution">caution</button>
 			<button type="button" class="btn btn-large btn-error">error</button>
 			<button type="button" class="btn btn-large btn-link">Link</button>
+
+
+			<h3>round</h3>
+
+			<button type="button" class="btn btn-round btn-large btn-default">Default</button>
+			<button type="button" class="btn btn-round btn-large btn-primary">Primary</button>
+			<button type="button" class="btn btn-round btn-large btn-secondary">secondary</button>
+			<button type="button" class="btn btn-round btn-large btn-accent">accent</button>
+			<button type="button" class="btn btn-round btn-large btn-neutral">neutral</button>
+			<button type="button" class="btn btn-round btn-large btn-success">Success</button>
+			<button type="button" class="btn btn-round btn-large btn-caution">caution</button>
+			<button type="button" class="btn btn-round btn-large btn-error">error</button>
+			<button type="button" class="btn btn-round btn-large btn-link">Link</button>
 
 			<h2>Block</h2>
 
