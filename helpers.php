@@ -86,8 +86,8 @@ function app_init_content(){
 
 				case 'DEMO-home':
 				case null:
-					app_get_template_part("app-{$app}/DEMO-home");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/DEMO-home";
+					app_get_template_part("app-{$app}/_DEMO-home");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/_DEMO-home";
 					break;
 				case 'edit-project':
 				case 'project-list':
