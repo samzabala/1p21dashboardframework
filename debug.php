@@ -11,6 +11,147 @@
 		</div>
 
 
+		<h1 data-toggle="accordion">ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="flex-grid flex-grid-fixed">
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-default"></span>
+						</div>
+						<p class="asset-title">bitch-ass.probablyavirus</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-audio"></span>
+						</div>
+						<p class="asset-title">bitch-ass.mp3</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-code"></span>
+						</div>
+						<p class="asset-title">bitch-ass.json</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-doc"></span>
+						</div>
+						<p class="asset-title">bitch-ass.docx</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-font"></span>
+						</div>
+						<p class="asset-title">bitch-ass.otf</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+				
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="">
+						</div>
+						<p class="asset-title">bitch-ass.jpg</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-img"></span>
+						</div>
+						<p class="asset-title">bitch-ass-obscure-or-nonweb-image-type-or-vector-shit-that-dont-like-fit-cover.tiff</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-pdf"></span>
+						</div>
+						<p class="asset-title">Well Shit.pdf</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-table"></span>
+						</div>
+						<p class="asset-title">bitch-ass.csv</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-text"></span>
+						</div>
+						<p class="asset-title">bitch-ass.txt</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-video"></span>
+						</div>
+						<p class="asset-title">bitch-ass.mp4</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+				
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<a href="#"class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-zip"></span>
+						</div>
+						<p class="asset-title">bitch-ass.zip</p>
+						<p class="asset-caption">69kb</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+
 		<h1 data-toggle="accordion">Zone<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<div class="zone zone-default">click me boi</div>
@@ -2099,6 +2240,12 @@
 			<h2>groups</h2>
 			<h3>Basic</h3>
 			<button class="btn-group btn-group-horizontal">
+			<span class="btn btn-default"><strong>00:00</strong> Hours</span>
+			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
+			</button>
+
+			<h4>Round</h4>
+			<button class="btn-group btn-group-horizontal btn-round">
 			<span class="btn btn-default"><strong>00:00</strong> Hours</span>
 			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
 			</button>

@@ -1,0 +1,511 @@
+/*** ASSET ***/
+
+
+$calculated-asset-image-trail: 5px;
+
+
+/* it */
+$prefix: '.asset';
+#{$prefix} {
+	max-width: $asset-max-width;
+	color:inherit;
+	display:block;
+
+	&-thumbnail,
+	&-title,
+	&-caption {
+		display:block;
+		margin: 0;
+	}
+
+	&-image {
+		position:absolute;
+		top: $asset-thumbnail-image-gutter;
+		bottom: $asset-thumbnail-image-gutter;
+		left: $asset-thumbnail-image-gutter;
+		right: $asset-thumbnail-image-gutter;
+		overflow:hidden;
+		@include type-set((
+			size: $asset-image-glyph-size,
+			align: center
+		));
+
+
+		&:before,&:after {
+			content:"";
+			position:absolute;
+			margin: auto;
+			top:0;
+			bottom:0;
+		}
+
+		&:before {
+			@include type-set((
+				leading: 1,
+				color: $asset-image-glyph-color,
+				case: $asset-image-glyph-text-transform
+			));
+			height: 1em;
+			left:0;
+			right: 67%;
+			width:33%;
+		}
+
+		&:after {
+			left: 33%;
+			right: 33%;
+			opacity: .3;
+		}
+
+		
+
+		/*
+		default
+		audio
+		code
+		doc
+		font
+		img
+		pdf
+		table
+		text
+		vector
+		video
+		zip
+		*/
+
+		@each $type,$palette in $calculated-asset-palettes {
+			&#{&}-#{$type} {
+				color: $palette;
+				@include gradient((
+					angle: 0deg,
+					colors: (
+						(
+							color: $palette,
+							offset:0 
+						),
+						(
+							color: $palette,
+							offset: 33%
+						),
+						(
+							color: rgba($palette,.2),
+							offset: 33%
+						),
+						(
+							color: rgba($palette,.2),
+							offset: 100%
+						)
+					)
+				));
+			}
+		}
+
+
+		//strip based afters 
+		&#{&}-audio,
+		&#{&}-code,
+		&#{&}-doc,
+		&#{&}-pdf,
+		&#{&}-table,
+		&#{&}-text {
+			&:after {
+				position:absolute;
+				display:block;
+				background: currentColor;
+				left: 45%;
+			}
+		}
+
+
+
+		&#{&}-code,
+		&#{&}-doc,
+		&#{&}-pdf,
+		&#{&}-text {
+			&:after {
+				height: em($calculated-asset-image-trail/$asset-image-glyph-size);
+			}
+		}
+
+
+		&#{&}-default {
+			
+
+			&:before {
+				content:"file";
+			}
+
+			&:after {
+				width: 1.5em;
+				height: 1.5em;
+				right: auto;
+				bottom: auto;
+				// left: auto;
+				// right: 0;
+				opacity:.75;
+				@include gradient((
+					angle: 135deg,
+					colors: (
+						(
+							color: $brand-color-background,
+							offset: 0
+						),
+						(
+							color: $brand-color-background,
+							offset: 50%
+						),
+						(
+							color: currentColor,
+							offset: 50%
+						),
+						(
+							color: currentColor,
+							offset: 0
+						),
+					)
+				));
+			}
+		}
+
+		&#{&}-audio {
+			&:before {
+				content: "\266B";
+			}
+
+			&:after {
+				right: auto;
+				height: .5em;
+				width: em($calculated-asset-image-trail/$asset-image-glyph-size);
+
+				box-shadow:
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) 0 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) -.5em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) .5em 0 0,
+
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) 0 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) .125em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) -.125em 0 0,
+
+
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 6) 0 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 6) .25em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 6) -.25em 0 0,
+
+
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 8) 0 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 8) -.875em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 8) .875em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 8) -.5em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 8) .5em 0 0,
+
+
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 10) 0 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 10) -.5em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 10) .5em 0 0,
+
+
+
+
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 12) 0 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 12) -.75em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 12) .75em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 12) -.5em 0 0,
+						em(($calculated-asset-image-trail/$asset-image-glyph-size) * 12) .5em 0 0,
+
+					em(($calculated-asset-image-trail/$asset-image-glyph-size) * 14) 0 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 14) .25em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 14) -.25em 0 0,
+
+					// // em(($calculated-asset-image-trail/$asset-image-glyph-size) * 16) 0 0 0,
+
+					// em(($calculated-asset-image-trail/$asset-image-glyph-size) * 20) 0 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 20) -.75em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 20) .75em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 20) -.5em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 20) .5em 0 0,
+
+					// em(($calculated-asset-image-trail/$asset-image-glyph-size) * 22) 0 0 0,
+
+					// em(($calculated-asset-image-trail/$asset-image-glyph-size) * 24) 0 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 24) -.5em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 24) .5em 0 0,
+
+
+
+					// em(($calculated-asset-image-trail/$asset-image-glyph-size) * 26) 0 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 26) .25em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 26) -.25em 0 0,
+
+
+					// em(($calculated-asset-image-trail/$asset-image-glyph-size) * 28) 0 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 28) -.875em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 28) .875em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 28) -.5em 0 0,
+					// 	em(($calculated-asset-image-trail/$asset-image-glyph-size) * 28) .5em 0 0,
+
+
+					// em(($calculated-asset-image-trail/$asset-image-glyph-size) * 30) 0 0 0,
+					;
+			}
+		}
+
+
+		&#{&}-code {
+			
+
+			&:before {
+				content:"</>";
+			}
+
+			&:after {
+				width: 1.5em;
+
+				box-shadow:
+					.5em em(($calculated-asset-image-trail/$asset-image-glyph-size) * -2) 0 0,
+
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -4) 0 0,
+
+					.5em em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) 0 0,
+
+					1em em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) 0 0,
+					;
+			}
+		}
+		
+		&#{&}-doc {
+
+			&:before {
+				content:"w";
+			}
+		}
+
+		&#{&}-doc,
+		&#{&}-text {
+
+
+			&:after {
+
+				box-shadow:
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -2) 0 0,
+						1.25em em(($calculated-asset-image-trail/$asset-image-glyph-size) * -2) 0 0,
+
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -4) 0 0,
+						1.25em em(($calculated-asset-image-trail/$asset-image-glyph-size) * -4) 0 0,
+
+					1.25em 0 0 0,
+
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) 0 0,
+						1.25em em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) 0 0,
+
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) 0 0,
+					;
+			}
+		}
+		
+		&#{&}-font {
+			
+			&:before {
+				content:"f";
+			}
+
+			&:after {
+
+				@include type-set((
+					size: 2.25em,
+					leading: 1.25,
+					font: serif,
+					style: italic,
+					align: center,
+					weight: 300,
+				));
+				content: "Aa";
+				white-space: nowrap;
+				overflow: hidden;
+				width: 66%;
+				left: 33%;
+				height: 1.25em;
+				margin: auto;
+			}
+		}
+
+		&#{&}-img {
+			&:before {
+				content: "img";
+			}
+		}
+
+		&#{&}-pdf {
+			&:before {
+				content:"pdf";
+			}
+
+			&:after {
+				width: 1.25em;
+				box-shadow:
+					1.5em em(($calculated-asset-image-trail/$asset-image-glyph-size) * -2) 0 0,
+
+					1.5em em(($calculated-asset-image-trail/$asset-image-glyph-size) * -4) 0 0,
+
+					1.5em 0 0 0,
+
+
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) 0 0,
+						1.5em em(($calculated-asset-image-trail/$asset-image-glyph-size) * 2) 0 0,
+
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) 0 0,
+						1.5em em(($calculated-asset-image-trail/$asset-image-glyph-size) * 4) 0 0,
+
+
+
+					// 0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -.5) 0 0,
+					// 0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -1) 0 0,
+					// 0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -1.5) 0 0,
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -2) 0 0,
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -2.5) 0 0,
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -3) 0 0,
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -3.5) 0 0,
+					0 em(($calculated-asset-image-trail/$asset-image-glyph-size) * -4) 0 0,
+					;
+			}
+		}
+		
+		&#{&}-table {
+			&:before {
+				content:"x";
+			}
+
+			&:after {
+				height: .5em;
+				width: 1.25em;
+
+				box-shadow:
+					0 -.75em 0 0,
+					0 .75em 0 0,
+
+					1.5em 0 0 0,
+
+					1.5em -.75em 0 0,
+					1.5em .75em 0 0,
+				;
+			}
+		}
+		
+		&#{&}-text {
+			&:before {
+				content:"tx";
+			}
+		}
+
+
+		
+		&#{&}-video {
+			&:before {
+				width: 1.5em;
+			}
+
+			&:after {
+				width: .5em;
+				height:100%;
+				@include gradient((
+					angle: 90deg,
+					type: repeating-linear,
+					colors: (
+						(
+							color: transparent,
+							offset: 0%
+						),(
+							color: transparent,
+							offset: .25em
+						),(
+							color: currentColor,
+							offset: .25em
+						),(
+							color: currentColor,
+							offset: .75em
+						),
+					)
+				));
+				left: 40%;
+				right: auto;
+			}
+		}
+		
+		&#{&}-zip {
+			&:before {
+				content:"z";
+			}
+			&:after {
+				width: 1em;
+				left: 36%;
+
+				background-image:
+					linear-gradient(45deg, currentColor 25%, transparent 25%),
+					linear-gradient(-45deg, currentColor 25%, transparent 25%),
+					linear-gradient(45deg, transparent 75%, currentColor 75%),
+					linear-gradient(-45deg, transparent 75%, currentColor 75%);
+				background-size: 1em 1em;
+				background-position: 0 0, 0 .5em, .5em -.5em, -.5em 0;
+			}
+		}
+
+
+	}
+
+	&-thumbnail {
+		position:relative;
+		box-shadow: $asset-box-shadow;
+		margin-bottom: $asset-thumbnail-margin-bottom;
+		@include aspect-ratio($asset-thumbnail-width,$asset-thumbnail-height,false,false,true,false,true,false);
+
+		&,
+		&:after,
+		#{$prefix}-image,
+		img {
+			border-radius: $asset-border-radius;
+		}
+
+		&:after {
+			content:"";
+			position:absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			box-shadow: 0 0 0 $asset-thumbnail-border-width $asset-thumbnail-border-color;
+			transition: $asset-transition-duration all $transition-timing;
+		}
+		&:hover {
+			&:after {
+				box-shadow: 0 0 0 $asset-thumbnail-border-width $asset-thumbnail-border-color-hover;
+			}
+		}
+
+		@at-root & > img,
+		img#{&}-image {
+			padding:0;
+			@extend %for-fit-image-img !optional;
+		}
+	}
+
+	&-title {
+
+		@include type-set((
+			color: $asset-title-color,
+			case: $asset-title-text-transform,
+			weight: $asset-title-font-weight,
+			style: $asset-title-font-style
+		));
+	}
+
+	&-caption {
+
+
+		@include type-set((
+			color: $asset-caption-color,
+			case: $asset-caption-text-transform,
+			weight: $asset-caption-font-weight,
+			style: $asset-caption-font-style
+		));
+	}
+}
