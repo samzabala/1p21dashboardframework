@@ -16,15 +16,22 @@
 <body class="body-nav-sticky-offset cf body-loading background-theme-contrast">
 
 	<div id="dashboard">
+
+		<!-- Nav -->
+
+
+			<!-- appp-*/includes/main-nav -->
+
+
+			<div id="dashboard-block-nav" class="nav nav-sticky">
+				<?php app_get_nav(); ?>
+			</div>
 		<!-- Sidebar -->
 		<aside id="dashboard-block-sidebar"
-		class="background-theme">
+		class="background-theme dashboard-block-sidebar-slim">
 
 
 			<div class="container container-wide">
-				<a href="<?=app_create_link(); ?>" class="sidebar-logo">
-					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="Logo">
-				</a>
 
 				<div id="dashboard-block-sidebar-nav" class="nav nav-vertical">
 					<!-- appp-*/includes/sidebar-nav -->
@@ -37,25 +44,6 @@
 		</aside>
 
 			<main id="dashboard-block-main">
-
-			<!-- appp-*/includes/main-nav -->
-
-
-			<div id="dashboard-block-main-nav" class="nav nav-sticky">
-
-				<a href="#"
-					id="dashboard-block-main-nav-toggle"
-					class="btn
-					color-primary-hover 
-					color-primary-active 
-					color-primary-focus
-					background-primary-toggle
-					color-background-toggle btn-symbol 
-					btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large only-xs nav-toggle">
-					<i class="symbol symbol-burger"></i>
-				</a>
-				<?php app_get_nav(); ?>
-			</div>
 
 				<!-- App Content -->
 				<div id="content-wrapper">

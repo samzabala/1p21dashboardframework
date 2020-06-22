@@ -2,6 +2,7 @@
 
 $sidebar-base: 285px;
 $sidebar-mobile: 245px;
+$sidebar-base-slim: 80px;
 // $sidebar-xs: 60px;
 
 
@@ -26,6 +27,19 @@ $sidebar-mobile: 245px;
 	&-block {
 		// &-sidebar,&-main {
 		// }
+
+	&-nav {
+
+
+		.nav-logo {
+			padding: 1rem .25rem;		
+		
+			svg {
+				max-height: 100%;
+			}
+		}
+	}
+
 		&-sidebar {
 			width: $sidebar-base;
 			box-shadow: 0 0 10px -5px color(b);
@@ -39,6 +53,11 @@ $sidebar-mobile: 245px;
 			overflow-y:scroll;
 			overflow-x:hidden;
 			height: 100vh;
+
+			&.dashboard-block-sidebar-slim {
+				width: $sidebar-base-slim;
+				z-index:auto;
+			}
 
 			&::-webkit-scrollbar {
 				display:none!important;
@@ -68,6 +87,10 @@ $sidebar-mobile: 245px;
 			&-nav {
 				margin: 0 ($container-gutter-wide * -1);
 
+				&:first-child {
+					margin-top: 50px;
+				}
+
 				.nav-list .nav-item  {
 					> .dropdown,
 					> ul {
@@ -79,7 +102,9 @@ $sidebar-mobile: 245px;
 			}
 
 			@include br(#{$mobile-br-max}-max) {
-				width:$sidebar-mobile;
+				&:not(.dashboard-block-sidebar-slim) {
+					width:$sidebar-mobile;
+				}
 				&-nav {
 					margin: 0 ($container-gutter-mobile * -1);
 				}
@@ -100,6 +125,10 @@ $sidebar-mobile: 245px;
 			padding-top: $container-gutter;
 			padding-bottom: $container-gutter;
 			margin-left: auto;
+
+			.dashboard-block-sidebar-slim  + & {
+				width:calc(100% - #{$sidebar-base-slim});
+			}
 
 			&-nav {
 				left: $sidebar-base;

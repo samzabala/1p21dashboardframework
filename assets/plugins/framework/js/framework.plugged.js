@@ -794,32 +794,32 @@ window.jQuery && jQuery.noConflict();
 
 		return toReturn;
 	};
+		
+	_.calendarUiPrefix = function(noDash) {
+		noDash = noDash || false;
+		return noDash ? 'input-calendar-ui' : 'input-calendar-ui-';
+	};
 
 	_.createCalendarUi = function(inputCalendar,valueForUi,args){
 
 		if(inputCalendar){
 		
 			valueForUi = valueForUi || _.dateToVal(inputCalendar.val()) || _.dateToVal(new Date());
-		
-			uiPrefix = function(noDash) {
-				noDash = noDash || false;
-				return noDash ? 'input-calendar-ui' : 'input-calendar-ui-';
-			};
 
 			var theUi = {};
 
-			theUi.container = inputCalendar.closest('.'+uiPrefix(true));
+			theUi.container = inputCalendar.closest('.'+_.calendarUiPrefix(true));
 
 
 			if( !theUi.container.length ){
 				inputCalendar.wrap($('<div class="'+frameWork.settings.uiClass+' '
-				+inputCalendar.attr('class').replace( 'input-calendar',uiPrefix(true) )
+				+inputCalendar.attr('class').replace( 'input-calendar',_.calendarUiPrefix(true) )
 				+'"></div>'));
-				theUi.container = inputCalendar.closest('.'+uiPrefix(true));
+				theUi.container = inputCalendar.closest('.'+_.calendarUiPrefix(true));
 			}
 
 			//idk it never exists on initial so we dont have to do weird div wraping catches here
-			theUi.input = theUi.container.children('.'+uiPrefix()+'input');
+			theUi.input = theUi.container.children('.'+_.calendarUiPrefix()+'input');
 			inputCalendar.siblings().not(theUi.input).remove();
 
 
@@ -827,7 +827,7 @@ window.jQuery && jQuery.noConflict();
 			if(args.textInput) {
 				if(!theUi.input.length){
 
-					theUi.input = $('<div class="'+uiPrefix()+'input"><input class="input input-single-line" type="text" maxlength="10"  placeholder="MM/DD/YYYY" /></div>');
+					theUi.input = $('<div class="'+_.calendarUiPrefix()+'input"><input class="input input-single-line" type="text" maxlength="10"  placeholder="MM/DD/YYYY" /></div>');
 					theUi.container.append(theUi.input);
 				}
 			}
@@ -845,7 +845,7 @@ window.jQuery && jQuery.noConflict();
 
 
 			//heading
-			theUi.heading = $('<div class="'+uiPrefix()+'heading"></div>');
+			theUi.heading = $('<div class="'+_.calendarUiPrefix()+'heading"></div>');
 			theUi.container.append(theUi.heading);
 
 				//arrowz
@@ -906,10 +906,10 @@ window.jQuery && jQuery.noConflict();
 
 					var htmlString = '<a href=""class="'
 						+ (!validness ? 'disabled ' : '')
-						+uiPrefix()+'navigation '
-						+uiPrefix()+'button '
-						+uiPrefix()+buttonClass+'" data-value="'+arrowDate+'">'
-							+'<i class="'+uiPrefix()+'symbol symbol '+symbolClass+'"></i>'
+						+_.calendarUiPrefix()+'navigation '
+						+_.calendarUiPrefix()+'button '
+						+_.calendarUiPrefix()+buttonClass+'" data-value="'+arrowDate+'">'
+							+'<i class="'+_.calendarUiPrefix()+'symbol symbol '+symbolClass+'"></i>'
 						+'</a>';
 
 
@@ -943,32 +943,32 @@ window.jQuery && jQuery.noConflict();
 				//title
 				theUi.title = $(
 					'<div data-toggle="dropdown" class="'
-					+ uiPrefix()+'title '
-					+ uiPrefix()+'dropdown-toggle"></div>'
+					+ _.calendarUiPrefix()+'title '
+					+ _.calendarUiPrefix()+'dropdown-toggle"></div>'
 				);
 				theUi.heading.append(theUi.title);
 				
 					theUi.title.append(function(){
 
-						return '<span class="'+uiPrefix()+'month-text">'
+						return '<span class="'+_.calendarUiPrefix()+'month-text">'
 							+_.monthFormatNamesShort[ currMonth ]
 						+'</span>'
-						+ ' <span class="'+uiPrefix()+'year-text">'+currYear+'</span>'
-						+ ' <i class="'+uiPrefix()+'symbol symbol symbol-caret-down no-margin-x"></i>'
+						+ ' <span class="'+_.calendarUiPrefix()+'year-text">'+currYear+'</span>'
+						+ ' <i class="'+_.calendarUiPrefix()+'symbol symbol symbol-caret-down no-margin-x"></i>'
 					
 					});
 				
 				//dropdown
 
-				theUi.dropdown = $('<ul data-dropdown-width="100%" class="'+uiPrefix()+'dropdown dropdown dropdown-center-x dropdown-top-flush text-align-center"></ul>');
+				theUi.dropdown = $('<ul data-dropdown-width="100%" class="'+_.calendarUiPrefix()+'dropdown dropdown dropdown-center-x dropdown-top-flush text-align-center"></ul>');
 				// theUi.dropdown.
 
 				theUi.heading.append(theUi.dropdown);
 
 				theUi.dropdown.append(function(){
 
-					return '<li class="'+uiPrefix()+'current-month-year active">'
-					+ '<a href="#" class="'+uiPrefix()+'month" data-value="'+ _.dateToVal(currentCalendarDate) +'">'
+					return '<li class="'+_.calendarUiPrefix()+'current-month-year active">'
+					+ '<a href="#" class="'+_.calendarUiPrefix()+'month" data-value="'+ _.dateToVal(currentCalendarDate) +'">'
 					+ _.monthFormatNamesShort[ currMonth ]+ ' ' + currYear
 					+ '</a>'
 					+ '</li><li><hr class="dropdown-separator"></li>'
@@ -1021,7 +1021,7 @@ window.jQuery && jQuery.noConflict();
 			
 							theUi.dropdown.append(function(){
 								return '<li class=" '+currClass+'">'
-									+ '<a href="#" class="'+uiPrefix()+'month" data-value="'+ _.dateToVal(listItemDate) +'">'
+									+ '<a href="#" class="'+_.calendarUiPrefix()+'month" data-value="'+ _.dateToVal(listItemDate) +'">'
 									+ _.monthFormatNamesShort[ listItemDate.getMonth() ]+ ' ' + listItemDate.getFullYear()
 									+ '</a>'
 									+ ((listItemDate.getMonth() == 11 && i !== dropdownLimit) ? '</li><li><hr class="dropdown-separator">' : '')
@@ -1035,7 +1035,7 @@ window.jQuery && jQuery.noConflict();
 
 			//generate grid
 
-			theUi.grid = $('<div class="'+uiPrefix()+'grid"></div>');
+			theUi.grid = $('<div class="'+_.calendarUiPrefix()+'grid"></div>');
 
 			theUi.container.append(theUi.grid);
 
@@ -1043,8 +1043,8 @@ window.jQuery && jQuery.noConflict();
 				function generateBlock(date,customClass){
 					customClass = customClass || '';
 					return '<a href="#" data-value="'+ _.dateToVal(date) +'" class="'
-					+uiPrefix()+ 'block '
-					+uiPrefix()+'date '
+					+_.calendarUiPrefix()+ 'block '
+					+_.calendarUiPrefix()+'date '
 					+customClass
 					+'"><span>'
 						+ date.getDate()
@@ -1054,7 +1054,7 @@ window.jQuery && jQuery.noConflict();
 
 
 				//days heading
-					theUi.days = $('<div class="'+uiPrefix()+'days"></div>');
+					theUi.days = $('<div class="'+_.calendarUiPrefix()+'days"></div>');
 
 					theUi.grid.append(theUi.days);
 					var daysHTML = '';
@@ -1068,8 +1068,8 @@ window.jQuery && jQuery.noConflict();
 
 
 						daysHTML += '<div class="'
-						+uiPrefix()+'block '
-						+uiPrefix()+'day">'
+						+_.calendarUiPrefix()+'block '
+						+_.calendarUiPrefix()+'day">'
 							+_.dayFormatNamesShorter[dayToRetrieve]
 						+'</div>';
 
@@ -1080,7 +1080,7 @@ window.jQuery && jQuery.noConflict();
 
 				//days
 
-				theUi.dates = $('<div class="'+uiPrefix()+'dates"></div>');
+				theUi.dates = $('<div class="'+_.calendarUiPrefix()+'dates"></div>');
 				theUi.grid.append(theUi.dates);
 
 				//previous month
@@ -1117,7 +1117,7 @@ window.jQuery && jQuery.noConflict();
 			
 								var dateBlockPrev = generateBlock(
 									loopDatePrev,
-									(uiPrefix()+ 'block-adjacent ') + (!_.dateIsValid(loopDatePrev,args) ? 'disabled' : '')
+									(_.calendarUiPrefix()+ 'block-adjacent ') + (!_.dateIsValid(loopDatePrev,args) ? 'disabled' : '')
 								);
 			
 			
@@ -1158,7 +1158,7 @@ window.jQuery && jQuery.noConflict();
 
 							var dateBlockNext = generateBlock(
 								loopDateNext,
-								(uiPrefix()+ 'block-adjacent ') + (!_.dateIsValid(loopDateNext,args) ? 'disabled' : '')
+								(_.calendarUiPrefix()+ 'block-adjacent ') + (!_.dateIsValid(loopDateNext,args) ? 'disabled' : '')
 							);
 
 							theUi.dates.append(dateBlockNext);
@@ -1283,6 +1283,12 @@ window.jQuery && jQuery.noConflict();
 		return  _.tagsToParse(value,returnWithInput).join(',');
 
 	}
+
+		
+	_.tagsUiPrefix = function(noDash) {
+		noDash = noDash || false;
+		return noDash ? 'input-tags-ui' : 'input-tags-ui-';
+	};
 	
 
 	_.createTagsUi =  function(inputTags,valueForUi,inputText,args){
@@ -1291,23 +1297,17 @@ window.jQuery && jQuery.noConflict();
 			valueForUi = valueForUi || _.tagsToVal(inputTags.val()) || '';
 			inputText = inputText || false;
 
-		
-			uiPrefix = function(noDash) {
-				noDash = noDash || false;
-				return noDash ? 'input-tags-ui' : 'input-tags-ui-';
-			};
-
 			var theUi = {};
 
-			theUi.container = inputTags.closest('.'+uiPrefix(true));
+			theUi.container = inputTags.closest('.'+_.tagsUiPrefix(true));
 			
 
 
 			if( !theUi.container.length ){
 				inputTags.wrap($('<div class="'+frameWork.settings.uiClass+' '
-				+inputTags.attr('class').replace( 'input-tags',uiPrefix(true) )
+				+inputTags.attr('class').replace( 'input-tags',_.tagsUiPrefix(true) )
 				+'"></div>'));
-				theUi.container = inputTags.closest('.'+uiPrefix(true));
+				theUi.container = inputTags.closest('.'+_.tagsUiPrefix(true));
 			}
 
 			if(!theUi.container.hasClass('input')) {
@@ -1319,20 +1319,20 @@ window.jQuery && jQuery.noConflict();
 				theUi.container.css('width',args.width);
 			}
 			//idk it never exists on initial so we dont have to do weird div wraping catches here
-			theUi.input = theUi.container.children('.'+uiPrefix()+'input');
+			theUi.input = theUi.container.children('.'+_.tagsUiPrefix()+'input');
 
-			theUi.wrapper = theUi.container.children('.'+uiPrefix()+'wrapper');
+			theUi.wrapper = theUi.container.children('.'+_.tagsUiPrefix()+'wrapper');
 
 			if(!theUi.wrapper.length) {
-				theUi.container.append('<div class="'+uiPrefix()+'wrapper"></div>');
-				theUi.wrapper = theUi.container.children('.'+uiPrefix()+'wrapper');
+				theUi.container.append('<div class="'+_.tagsUiPrefix()+'wrapper"></div>');
+				theUi.wrapper = theUi.container.children('.'+_.tagsUiPrefix()+'wrapper');
 			}
 
-			theUi.input = theUi.wrapper.children('.'+uiPrefix()+'input');
+			theUi.input = theUi.wrapper.children('.'+_.tagsUiPrefix()+'input');
 
 			if(!theUi.input.length) {
-				theUi.wrapper.append('<span contenteditable="true" type="text" class="input '+uiPrefix()+'input"></span>');
-				theUi.input = theUi.wrapper.children('.'+uiPrefix()+'input');
+				theUi.wrapper.append('<span contenteditable="true" type="text" class="input '+_.tagsUiPrefix()+'input"></span>');
+				theUi.input = theUi.wrapper.children('.'+_.tagsUiPrefix()+'input');
 			}
 
 			//nearest fw-ui parent will actually do tgoggl for bby because baby cant stand up on its own
@@ -1351,7 +1351,7 @@ window.jQuery && jQuery.noConflict();
 			}
 
 			
-			theUi.wrapper.children('.'+uiPrefix()+'tag').remove();
+			theUi.wrapper.children('.'+_.tagsUiPrefix()+'tag').remove();
 			var valArr = _.tagsToParse(valueForUi,true);
 
 			var inputIn = valArr.indexOf(_.tagsInputString);
@@ -1372,7 +1372,7 @@ window.jQuery && jQuery.noConflict();
 				if(tag !== _.tagsInputString){
 
 					var tagHtmlFn = function(){
-						return '<span class="'+uiPrefix()+'tag" ><span data-value="'+i+'"  class="'+uiPrefix()+'tag-text">'+tag+'</span><a data-value="'+i+'" class="'+uiPrefix()+'tag-close" href="#"><i class="symbol symbol-close"></i></a></span>';
+						return '<span class="'+_.tagsUiPrefix()+'tag" ><span data-value="'+i+'"  class="'+_.tagsUiPrefix()+'tag-text">'+tag+'</span><a data-value="'+i+'" class="'+_.tagsUiPrefix()+'tag-close" href="#"><i class="symbol symbol-close"></i></a></span>';
 					};
 
 					if(i < inputIn ){
@@ -1400,15 +1400,14 @@ window.jQuery && jQuery.noConflict();
 			inputTags.attr('data-value-ui',valueForUi);
 
 
+			//keep that shoit to the right
+			theUi.container.scrollTo(theUi.input,'x');
 			
 			//jquery u duuumb
 			if(inputText){
 				theUi.input.text(inputText);
 				theUi.input.focus();
 			}
-
-			
-			theUi.container.scrollTo(theUi.input,'x');
 		}
 	}
 
@@ -1497,6 +1496,7 @@ window.jQuery && jQuery.noConflict();
 			//update the actual butt
 			inputTags.attr('value',_.tagsToVal(theValue,false));
 			inputTags.val(_.tagsToVal(theValue,false));
+
 		
 			//ATODO UPDATE SETUP HERE
 			//update fake hoes
@@ -2165,8 +2165,40 @@ window.jQuery && jQuery.noConflict();
 		});
 	}
 	_.fns_on_load.push(frameWork.readyTags);
+	_.fns_on_resize.push(frameWork.readyTags);
 
 	
+
+	_.toggleGroup = function(triggerer,prefix,resetterClass,siblingSelector){
+		prefix = prefix || 'btn';
+		resetterClass = resetterClass || prefix+'-group-toggle-reset';
+		siblingSelector = siblingSelector || '.'+'btn';
+		if(triggerer){
+
+			triggerer.siblings('.'+resetterClass).removeClass('active');
+
+				console.log(triggerer.siblings('active'));
+
+			if(
+				(!triggerer.closest('.'+prefix+'-group-toggle-multiple').length)
+				|| (triggerer.hasClass(resetterClass))
+			){
+				triggerer.siblings(siblingSelector).removeClass('active');
+			}
+
+			if(
+				triggerer.closest('.'+prefix+'-group-toggle-multiple').length
+				&& triggerer.siblings('.active').length > 0
+			){
+
+				triggerer.toggleClass('active');
+			}else{
+
+				triggerer.addClass('active');
+			}
+
+		}
+	}
 	_.initTrumbo = function(selector){
 
 		if($.trumbowyg){
@@ -2662,22 +2694,24 @@ window.jQuery && jQuery.noConflict();
 
 
 		$('body').on('click','.btn-group-toggle > .btn',function(e){
-			const triggerer = $(e.target);
 
 			e.preventDefault();
-			if( !frameWork.isDisabled(triggerer) ){
-				triggerer.siblings('.btn-toggle-reset').removeClass('active');
-				
+			const triggerer = $(e.target);
 
-				if(
-					(!triggerer.closest('.btn-group-toggle-multiple').length)
-					|| (triggerer.hasClass('btn-toggle-reset'))
-				){
-					triggerer.siblings('.btn').removeClass('active');
-					triggerer.addClass('active');
-				}else{
-					triggerer.toggleClass('active');
-				}
+			if( !frameWork.isDisabled(triggerer) ){
+
+				_.toggleGroup(triggerer,'btn');
+			}
+		});
+
+		$('body').on('click','.list-group-toggle .list-group-item,.list-group-toggle li',function(e){
+
+			e.preventDefault();
+			const triggerer = $(e.target);
+
+			if( !frameWork.isDisabled(triggerer) ){
+				
+				_.toggleGroup(triggerer,'list',null,'li, .list-group-item');
 			}
 		});
 		

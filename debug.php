@@ -11,6 +11,240 @@
 		</div>
 
 
+
+		<h1 data-toggle="accordion">input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion open">
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle input-small">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle input-large">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+					</span>
+				</div>
+			</div>
+
+
+			<h2>colors</h2>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-primary">
+						Test this fucker primary
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-secondary">
+						Test this fucker secondary
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input"> 
+					<span class="input-label input-toggle-label input-accent">
+						Test this fucker accent
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-success"> 
+						Test this fucker success
+					</span>
+				</div>
+			</div>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-caution">
+						Test this fucker caution
+					</span>
+				</div>
+			</div>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-error">
+						Test this fucker error
+					</span>
+				</div>
+			</div>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle input-disabled">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker 
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle  input-toggle-reverse">
+					<input type="checkbox" class="input "> 
+					<span class="input-label input-toggle-label">
+						Test this fucker this one should have toggle on the other side of the text
+					</span>
+				</div>
+			</div>
+
+
+
+		</div>
+
+<h1 data-toggle="accordion">highlight for #hashtags and @tagging profiles and shit<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+<div class="accordion">
+	<p>Oooh… that’s hard.</p>
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-default">#whale</span>. I love whales. I've loved <span class="highlight highlight-default">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-default">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-default"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-default">#black panther</span>.
+	</p>
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-primary">#whale</span>. I love whales. I've loved <span class="highlight highlight-primary">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-primary">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-primary"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-primary">#black panther</span>.
+	</p>
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-secondary">#whale</span>. I love whales. I've loved <span class="highlight highlight-secondary">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-secondary">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-secondary"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-secondary">#black panther</span>.
+	</p>
+
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-accent">#whale</span>. I love whales. I've loved <span class="highlight highlight-accent">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-accent">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-accent"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-accent">#black panther</span>.
+	</p>
+
+
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-neutral">#whale</span>. I love whales. I've loved <span class="highlight highlight-neutral">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-neutral">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-neutral"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-neutral">#black panther</span>.
+	</p>
+
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-success">#whale</span>. I love whales. I've loved <span class="highlight highlight-success">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-success">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-success"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-success">#black panther</span>.
+	</p>
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-caution">#whale</span>. I love whales. I've loved <span class="highlight highlight-caution">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-caution">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-caution"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-caution">#black panther</span>.
+	</p>
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-error">#whale</span>. I love whales. I've loved <span class="highlight highlight-error">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-error">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-error"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-error">#black panther</span>.
+	</p>
+</div>
+
+
 		<h1 data-toggle="accordion">ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<div class="flex-grid flex-grid-fixed">
@@ -137,7 +371,7 @@
 						<p class="asset-caption">69kb</p>
 					</div>
 				</div>
-				
+
 				<div class="flex-col-xs-12 flex-col-md-4">
 					<a href="#"class="asset">
 						<div class="asset-thumbnail">
@@ -211,23 +445,7 @@
 		</div>
 
 
-	<hr>
-	TODOS
-
-		<h1 data-toggle="accordion">input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
-			u switch on off tha boo
-		</div>
-
-		<h1 data-toggle="accordion">asset<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
-			thumbnails for files because i already used thumbnail class when i could have classed it as avatar fuckin dumbass
-		</div>
-
-		END TODOS
-		<hr>
-
-		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags" />
@@ -411,7 +629,7 @@
 			bitchacho
 		</div>
 		
-		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
+		<h1 data-toggle="accordion">form: Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
 		<div class="accordion ">
 
 			<input type="date" class="input input-calendar" 
@@ -1006,6 +1224,14 @@
 			<h3 id="progress-basic">Basic</h3>
 
 				<div class="progress">
+					<div class="progress-bar" style="width: 10%"></div>
+				</div>
+
+				<div class="progress progress-small">
+					<div class="progress-bar" style="width: 10%"></div>
+				</div>
+
+				<div class="progress progress-large">
 					<div class="progress-bar" style="width: 10%"></div>
 				</div>
 				<br>
@@ -1766,12 +1992,12 @@
 					<fieldset>
 						<legend>butt</legend>
 
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 								<label class="input-label" for="inputPassword">Password</label>
 								<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
 						</div>
 
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
 						</div>
 
@@ -1779,21 +2005,21 @@
 							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 						</div>
 						
-						<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-vertical input-wrapper-block">
 							<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
 						
 								<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
 
 						</div>
 
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 							<label class="input-label"><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
 						</div>
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 							<label class="input-label"><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
 						</div>
 
-						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal input-wrapper-block">
 							<label class="input-label" for="select">Selects</label>
 							<select class="input input-select" id="select-demo">
 								<option>Available option 1</option>
@@ -2281,86 +2507,7 @@
 			<a href="#" class="btn btn-default">butt</a>
 			</div>
 
-			<h2>groups and symbols</h2>
-
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol Square</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
-			</a>
-
-			<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
-
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol Search</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol +</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol -</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol kebab vertical</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol kebab horizontal</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol Burger</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-burger"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-up"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-down"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-left"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-right"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol close</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol map</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-map"></i></span>
-			</a>
+			
 
 				<div class="btn-group btn-small btn-group-horizontal btn-group-unite">
 					<a href="#" class="btn btn-default">Small butt</a>
@@ -2399,7 +2546,7 @@
 
 			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
 
-					<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
+					<button type="button" class="active btn btn-default btn-group-toggle-reset"> All</button>
 					<button type="button" class=" btn btn-default"> butt</button>
 					<button type="button" class="btn btn-default">  Butt </button>
 					<button type="button" class="btn btn-default">Butt</button>
@@ -2441,6 +2588,38 @@
 				</li>
 				<li>
 				Morbi leo risus
+				</li>
+			</ul>
+
+			<h2> interactive
+			</h2>
+
+			<h2>toggle feature</h2>
+
+
+			<ul class="list-group list-group-interactive list-group-toggle">
+				<li class="active">
+					<a href="#">Cras justo odio</a> <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Dapibus ac facilisis in</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Morbi leo risus</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+			</ul>
+
+			<h2>allow multiople</h2>
+
+			<ul class="list-group list-group-interactive list-group-toggle list-group-toggle-multiple">
+				<li class="active">
+					<a href="#">Cras justo odio</a> <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Dapibus ac facilisis in</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Morbi leo risus</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
 				</li>
 			</ul>
 		</div>
@@ -2527,14 +2706,249 @@
 
 		</div>
 
-		<h1 data-toggle="accordion">Symbols repreiiesesse <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+
+			<h2>groups and symbols</h2>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol edit</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-edit"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol delete</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-delete"></i></span>
+			</a>
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol play</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-play"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol pause</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-pause"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol stop</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-stop"></i></span>
+			</a>
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol Square</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol Search</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol time</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-time"></i> </span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol timer</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-timer"></i></span>
+			</a>
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol +</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol -</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol check</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-check"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol close</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol map</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-map"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol Burger</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-burger"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol kebab vertical</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol kebab horizontal</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
+			</a>
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double down</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow up</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow left</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow right</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
+			</a>
+
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double down</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-down"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double up</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-up"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double left</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-left"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double right</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-right"></i></span>
+			</a>
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret up</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-up"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret down</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-down"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret right</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-left"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret left</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-right"></i></span>
+			</a>
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text right</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-right"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text center</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-center"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text left</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-left"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text justify</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-justify"></i></span>
+			</a>
+						
+						
+			<p>
+				Edit <i class="color-primary symbol symbol-edit"></i>
+			</p>
+
+			<p>
+				Delete <i class="color-primary symbol symbol-delete"></i>
+			</p>
+						
+						
+			<p>
+				Play <i class="color-primary symbol symbol-play"></i>
+			</p>
+
+			<p>
+				Pause <i class="color-primary symbol symbol-pause"></i>
+			</p>
+
+			<p>
+				Stop <i class="color-primary symbol symbol-stop"></i>
+			</p>
+
 			<p>
 				Square <i class="color-primary symbol symbol-square"></i>
 			</p>
 
 			<p>
 				Search <i class="color-primary symbol symbol-search"></i>
+			</p>
+
+			<p>
+				Time <i class="color-primary symbol symbol-time"></i>
+			</p>
+
+			<p>
+				Timer <i class="color-primary symbol symbol-timer"></i>
+			</p>
+
+			<p>
+				plus <i class="color-primary symbol symbol-plus"></i>
+			</p>
+
+			<p>
+				minus <i class="color-primary symbol symbol-minus"></i>
+			</p>
+
+			<p>
+				check <i class="color-primary symbol symbol-check"></i>
+			</p>
+
+			<p>
+				close <i class="color-primary symbol symbol-close"></i>
+			</p>
+
+			<p>
+				map <i class="color-primary symbol symbol-map"></i>
+			</p>
+
+			<p>
+				burger <i class="color-primary symbol symbol-burger"></i>
+			</p>
+
+			<p>
+				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
+			</p>
+
+			<p>
+				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
 			</p>
 
 			<p>
@@ -2553,70 +2967,52 @@
 				arrow right <i class="color-primary symbol symbol-arrow-right"></i>
 			</p>
 
-
 			<p>
-				arrow down &nbsp;<i class="color-primary symbol symbol-arrow-double-down"></i>
+				arrow double down <i class="color-primary symbol symbol-arrow-double-down"></i>
 			</p>
 
 			<p>
-				arrow up &nbsp;<i class="color-primary symbol symbol-arrow-double-up"></i>
+				arrow double up <i class="color-primary symbol symbol-arrow-double-up"></i>
 			</p>
 
 			<p>
-				arrow left &nbsp;<i class="color-primary symbol symbol-arrow-double-left"></i>
+				arrow double left <i class="color-primary symbol symbol-arrow-double-left"></i>
 			</p>
 
 			<p>
-				arrow right &nbsp;<i class="color-primary symbol symbol-arrow-double-right"></i>
+				arrow double right <i class="color-primary symbol symbol-arrow-double-right"></i>
 			</p>
 
-			<p>
-				plus <i class="color-primary symbol symbol-plus"></i>
-			</p>
-
-			<p>
-				minus <i class="color-primary symbol symbol-minus"></i>
-			</p>
-			<p>
-				check <i class="color-primary symbol symbol-check"></i>
-			</p>
-			<p>
-				close <i class="color-primary symbol symbol-close"></i>
-			</p>
-			<p>
-				map <i class="color-primary symbol symbol-map"></i>
-			</p>
-			<p>
-				burger <i class="color-primary symbol symbol-burger"></i>
-			</p>
-			<p>
-				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
-			</p>
-			<p>
-				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
-			</p>
 			<p>
 				caret up <i class="color-primary symbol symbol-caret-up"></i>
 			</p>
+
 			<p>
 				caret down <i class="color-primary symbol symbol-caret-down"></i>
 			</p>
+
 			<p>
 				caret left <i class="color-primary symbol symbol-caret-left"></i>
 			</p>
+
 			<p>
 				caret right <i class="color-primary symbol symbol-caret-right"></i>
 			</p>
 
-
 			<p>
 				text center <i class="color-primary symbol symbol-text-center"></i>
 			</p>
+
 			<p>
 				text left <i class="color-primary symbol symbol-text-left"></i>
 			</p>
+
 			<p>
 				text right <i class="color-primary symbol symbol-text-right"></i>
+			</p>
+
+			<p>
+				text justify <i class="color-primary symbol symbol-text-justify"></i>
 			</p>
 
 		</div>

@@ -1,4 +1,4 @@
-<div id="board-task" data-board-align="left"class="board">
+<div id="board-task" data-board-align="left" class=" board">
 	<div class="flex-grid flex-grid-no-gutter">
 		<div class="flex-col-xs-12 flex-col-md-9">
 			<div class="dashboard-board-partition dashboard-board-main">

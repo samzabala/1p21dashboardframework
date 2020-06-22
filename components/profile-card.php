@@ -1,4 +1,4 @@
-<?=FWAPPS_TEMPLATE.' '.FWAPPS_SLUG.' '.FWAPPS_APP?>
+
 <div class="module  <?= (FWAPPS_TEMPLATE == 'profiles') ? 'module-interactive' : ''; ?>"
 	<?php if(FWAPPS_SLUG !== 'scoreboard' && FWAPPS_TEMPLATE == 'profile' && FWAPPS_APP == 'dashboard'): ?>
 		data-grid-area-md="profile-card"
@@ -27,7 +27,7 @@
 			<ul class="list-group no-margin-bottom align-self-stretch">
 
 				<!-- @IF profile is man,des,dev -->
-					<li class="flex-xs justify-content-space-between">
+					<li class="flex-xs justify-content-space-between flex-wrap">
 						<span class="status-avg-time-label">
 							Avg Time Days 
 						</span>
@@ -35,7 +35,7 @@
 							<span class="REPLACE">25</span>
 						</strong>
 					</li>
-					<li class="flex-xs justify-content-space-between">
+					<li class="flex-xs justify-content-space-between flex-wrap">
 						<span class="status-current-projects-label">
 							Current Projects 
 						</span>
@@ -43,7 +43,7 @@
 							<span class="REPLACE">25</span>
 						</strong>
 					</li>
-					<li class="flex-xs justify-content-space-between">
+					<li class="flex-xs justify-content-space-between flex-wrap">
 						<span class="status-ytd-label">
 							Projects YTD
 						</span>
@@ -57,7 +57,7 @@
 
 
 				<!-- @IF profil is seo -->
-					<!-- <li class="flex-xs justify-content-space-between">
+					<!-- <li class="flex-xs justify-content-space-between flex-wrap">
 						<span class="status-total-accounts-label">
 							Total Accounts 
 						</span>
@@ -65,7 +65,7 @@
 							<span class="REPLACE">18</span>
 						</strong>
 					</li>
-					<li class="flex-xs justify-content-space-between">
+					<li class="flex-xs justify-content-space-between flex-wrap">
 						<span class="status-avg-hr-rank-label">
 							Avg. HR Rank
 						</span>
@@ -73,7 +73,7 @@
 							<span class="REPLACE">20.6</span>
 						</strong>
 					</li>
-					<li class="flex-xs justify-content-space-between">
+					<li class="flex-xs justify-content-space-between flex-wrap">
 						<span class="status-avg-rank-label">
 							Avg. Rank
 						</span>

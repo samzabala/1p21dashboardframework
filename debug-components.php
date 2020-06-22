@@ -7,7 +7,7 @@
 			<?php
 			$avail_components = scandir(FWAPPS_ROOT_PATH.'/components');
 			foreach($avail_components as $filename) {
-				if (strpos($filename, '.php') !== false) {
+				if (strpos($filename, '.php') !== false && strpos($filename, '_DEMO') === false ) {
 				?>
 					<div class="position-relative">
 

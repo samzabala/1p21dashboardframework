@@ -24,7 +24,9 @@ will separate dashboard and framework one the bois are readeh
 [Bubble chart demo code](template/chart.php)
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
-
+# For Cristian
+These are classes that need to be found and replaced for framework 2.0.0
+* `btn-symbol-round` => `btn-round`
 
 
 # Structure 

@@ -651,6 +651,8 @@
 
 	// progress
 		$progress-height: 20px !default;
+			$progress-height-large: 30px !default;
+			$progress-height-small: 10px !default;
 		$progress-background-color: transparent !default;
 			$progress-background-color-inverse: transparent !default;
 		$progress-border-radius: 20px !default;
@@ -703,6 +705,8 @@
 			$list-group-border-color-inverse: $theme-background-contrast-inverse !default;
 		$list-group-border-width: 1px !default;
 		$list-group-height: 50px !default;
+		$list-group-gutter-x: $gutter-small !default;
+		$list-group-interactive-background-hover: rgba($brand-color-primary,.2);
 		
 	// badge
 		$badge-size: 25px !default;
@@ -720,6 +724,47 @@
 		$badge-border-color: $brand-color-background !default;
 		$badge-border-width: 7px !default;
 		$badge-box-shadow: $box-shadow-mild $brand-color-base !default;
+
+	// highlight
+
+		$highlight-height: $body-font-size * 1.75 !default;
+		$highlight-padding-x: 10px !default;
+		$highlight-margin-x: 0 !default;
+		$highlight-font-size: 13px !default;
+		$highlight-font-weight: inherit !default;
+		$highlight-font-style: normal !default;
+		$highlight-color: $brand-color-background !default;
+		$highlight-text-transform: none !default;
+		$highlight-gutter-x: 20px !default;
+		$highlight-border-radius: $border-radius-base !default;
+
+
+		$highlight-default-color: inherit !default;
+		$highlight-default-background: rgba($brand-color-base,.2) !default;
+
+
+			$highlight-primary-color: $brand-color-primary !default;
+			$highlight-primary-background: $brand-color-primary-lightest !default;
+
+			$highlight-secondary-color: $brand-color-secondary !default;
+			$highlight-secondary-background: $brand-color-secondary-lightest !default;
+
+			$highlight-accent-color: $brand-color-accent !default;
+			$highlight-accent-background: $brand-color-accent-lightest !default;
+
+			$highlight-neutral-color: $brand-color-neutral !default;
+			$highlight-neutral-background: $brand-color-neutral-lightest !default;
+
+			$highlight-success-color: $brand-color-success !default;
+			$highlight-success-background: $brand-color-success-lightest !default;
+
+			$highlight-caution-color: $brand-color-caution !default;
+			$highlight-caution-background: $brand-color-caution-lightest !default;
+
+			$highlight-error-color: $brand-color-error !default;
+			$highlight-error-background: $brand-color-error-lightest !default;
+
+
 	
 	// tag
 		$tag-height: 28px !default;
@@ -812,12 +857,12 @@
 			$asset-image-audio-palette: $brand-color-secondary !default;
 			$asset-image-code-palette: $brand-color-primary !default;
 			$asset-image-doc-palette: $brand-color-primary !default;
-			$asset-image-font-palette: $brand-color-neutral !default;
+			$asset-image-font-palette: $brand-color-accent !default;
 			$asset-image-img-palette: $brand-color-secondary !default;
 			$asset-image-pdf-palette: $brand-color-error !default;
 			$asset-image-table-palette: $brand-color-success !default;
 			$asset-image-text-palette: $brand-color-neutral !default;
-			$asset-image-video-palette: $brand-color-primary !default;
+			$asset-image-video-palette: $brand-color-accent !default;
 			$asset-image-zip-palette: $brand-color-neutral !default;
 
 
@@ -866,7 +911,6 @@
 
 		$input-label-gutter: 20px !default;
 
-		$input-label-line-height: 1.25 !default;
 		$input-label-font-size: 14px !default;
 			$input-label-font-size-large: 20px !default;
 			$input-label-font-size-small: 14px !default;
@@ -922,6 +966,42 @@
 
 				$input-tags-background: $brand-color-primary !default;
 				$input-tags-background-opacity: .2 !default;
+
+			//input toggle
+				$input-toggle-margin-x: 10px !default;
+
+				$input-toggle-width: 30px !default;
+					$input-toggle-width-small: $input-toggle-width !default;
+					$input-toggle-width-large: 40px !default;
+
+
+				$input-toggle-node-height: $input-toggle-width * .5 !default;
+				$input-toggle-node-width: $input-toggle-node-height !default;
+
+					$input-toggle-node-height-large: $input-toggle-width-large * .5 !default;
+					$input-toggle-node-width-large: $input-toggle-node-height-large !default;
+
+					$input-toggle-node-height-small: $input-toggle-width-small * .5 !default;
+					$input-toggle-node-width-small: $input-toggle-node-height-small !default;
+
+				$input-toggle-plate-height: 10px !default;
+					$input-toggle-plate-height-small: $input-toggle-plate-height !default;
+					$input-toggle-plate-height-large: 14px !default;
+
+				$input-toggle-node-border-radius: $input-toggle-node-height * .5 !default;
+				$input-toggle-plate-border-radius: $input-toggle-plate-height *  .5 !default;
+					$input-toggle-node-border-radius-small: $input-toggle-node-height-small * .5 !default;
+					$input-toggle-plate-border-radius-small: $input-toggle-plate-height-small *  .5 !default;
+					$input-toggle-node-border-radius-large: $input-toggle-node-height-large * .5 !default;
+					$input-toggle-plate-border-radius-large: $input-toggle-plate-height-large *  .5 !default;
+
+				$input-toggle-color-default: inherit !default;
+					$input-toggle-color-default-active: $brand-color-primary !default;
+
+				$input-toggle-label-color-default: $input-label-color !default;
+					$input-toggle-label-color-default-active: inherit !default;
+
+				$input-toggle-transition-duration: $transition-duration-short !default;
 				
 
 		//special-form
