@@ -1,5 +1,5 @@
-<div id="board-task" data-board-align="left" class="board" data-modal-class="dashboard-task-view">
-	<div class="flex-grid flex-grid-no-gutter">
+<div id="board-task" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-max-width="1150px">
+	<div class="flex-grid flex-grid-no-gutter dashboard-board-grid">
 		<div class="flex-col-xs-12 flex-col-md-9">
 			<div class="dashboard-board-partition dashboard-board-main">
 				<div class="container">

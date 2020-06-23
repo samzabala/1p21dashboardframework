@@ -32,10 +32,14 @@ $sidebar-base-slim: 80px;
 
 
 		.nav-logo {
-			padding: 1rem .25rem;		
+			padding: 1.25rem 1rem;	
+			margin-right: .5em;
+			display:block;	
 		
 			svg {
 				max-height: 100%;
+				max-width: 100%;
+				width: auto;
 			}
 		}
 	}
@@ -111,11 +115,13 @@ $sidebar-base-slim: 80px;
 			}
 
 			@include br(xs-max) {
-				left: -100%;
-				transition: left $transition-duration-base $transition-timing;
+				&:not(.dashboard-block-sidebar-slim) {
+					left: -100%;
+					transition: left $transition-duration-base $transition-timing;
 
-				&.open {
-					left:0;
+					&.open {
+						left:0;
+					}
 				}
 			}
 		}
@@ -311,6 +317,27 @@ $sidebar-base-slim: 80px;
 						padding-left: $btn-height * 1.125;
 					}
 				}
+			}
+		}
+	}
+
+	&-board {
+		&-column-layout {
+			.board-popup-content {
+				display: flex;
+				flex-direction: column;
+
+				.dashboard-board-grid {
+					flex: 1 1;
+				}
+			}
+
+			&-main {
+				flex: 1 0;
+			}
+
+			&-side {
+				flex: 0 1;
 			}
 		}
 	}

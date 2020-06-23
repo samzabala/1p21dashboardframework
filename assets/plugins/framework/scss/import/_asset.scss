@@ -48,6 +48,22 @@ $prefix: '.asset';
 	max-width: $asset-max-width;
 	color:inherit;
 	display:block;
+	position:relative;
+
+	&-delete {
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(50%,-50%);
+		opacity: 0;
+
+		#{$prefix}:hover &,
+		#{$prefix}:focus &,
+		#{$prefix}.focus & {
+			opacity: 1;
+		}
+	}
 
 	&-thumbnail,
 	&-title,
@@ -745,13 +761,14 @@ $prefix: '.asset';
 		}
 		&:hover {
 			&:after {
-				border: $asset-thumbnail-border-color-hover;
+				border-color: $asset-thumbnail-border-color-hover;
 			}
 		}
 
 		@at-root & > img,
 		img#{&}-image {
 			padding:0;
+			z-index:1;
 			@extend %for-fit-image-img;
 		}
 	}

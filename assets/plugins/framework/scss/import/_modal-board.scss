@@ -108,6 +108,8 @@ $prefix: '.board';
 	&-popup {
 		@extend %for-modal-popup;
 		min-height: 100%;
+		display:flex;
+		flex-direction:column;
 		
 
 		#{$prefix}-left & {
@@ -121,6 +123,10 @@ $prefix: '.board';
 		}
 		#{$prefix}-bottom & {
 			margin-bottom: auto;
+		}
+
+		&-content {
+			flex: 1 1;
 		}
 	}
 }

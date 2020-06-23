@@ -3818,7 +3818,17 @@ table {
 .asset {
   max-width: 190px;
   color: inherit;
-  display: block; }
+  display: block;
+  position: relative; }
+  .asset-delete {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    opacity: 0; }
+    .asset:hover .asset-delete, .asset:focus .asset-delete, .asset.focus .asset-delete {
+      opacity: 1; }
   .asset-thumbnail, .asset-title, .asset-caption {
     display: block;
     margin: 0; }
@@ -4084,10 +4094,11 @@ table {
       border: 3px solid transparent;
       transition: 0.25s all ease-in-out; }
     .asset-thumbnail:hover:after {
-      border: #0480FE; }
+      border-color: #0480FE; }
     .asset-thumbnail > img,
     img.asset-thumbnail-image {
-      padding: 0; }
+      padding: 0;
+      z-index: 1; }
   .asset-title {
     color: #8d8d8d;
     font-weight: 700;
@@ -4423,7 +4434,9 @@ table {
     .board-bottom .board-close {
       bottom: -1.25em; }
   .board-popup {
-    min-height: 100%; }
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; }
     .board-left .board-popup {
       margin-left: auto; }
     .board-right .board-popup {
@@ -4432,6 +4445,8 @@ table {
       margin-top: auto; }
     .board-bottom .board-popup {
       margin-bottom: auto; }
+    .board-popup-content {
+      flex: 1 1; }
 
 /*** IMAGES ***/
 .thumbnail {
@@ -6383,7 +6398,8 @@ fieldset {
   align-self: flex-start;
   position: relative;
   z-index: 9;
-  order: -1; }
+  order: -1;
+  flex: 0 0 auto; }
 
 .input-small .input-toggle .input, .input-small .input-toggle input, .input-toggle.input-small .input, .input-toggle.input-small input {
   width: 2.1428571429rem; }
@@ -7649,9 +7665,13 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   overflow: hidden; }
 
 #dashboard-block-nav .nav-logo {
-  padding: 1rem .25rem; }
+  padding: 1.25rem 1rem;
+  margin-right: .5em;
+  display: block; }
   #dashboard-block-nav .nav-logo svg {
-    max-height: 100%; }
+    max-height: 100%;
+    max-width: 100%;
+    width: auto; }
 
 #dashboard-block-sidebar {
   width: 285px;
@@ -7690,10 +7710,10 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     #dashboard-block-sidebar-nav {
       margin: 0 -10px; } }
   @media (max-width: 767px) {
-    #dashboard-block-sidebar {
+    #dashboard-block-sidebar:not(.dashboard-block-sidebar-slim) {
       left: -100%;
       transition: left 0.25s ease-in-out; }
-      #dashboard-block-sidebar.open {
+      #dashboard-block-sidebar.open:not(.dashboard-block-sidebar-slim) {
         left: 0; } }
 #dashboard-block-main {
   width: calc(100% - 285px);
@@ -7803,6 +7823,18 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   box-shadow: inset 0 20px 10px -20px rgba(0, 0, 0, 0.2); }
   .dashboard-table-row-accordion-body td:first-child {
     padding-left: 50.625px; }
+
+.dashboard-board-column-layout .board-popup-content {
+  display: flex;
+  flex-direction: column; }
+  .dashboard-board-column-layout .board-popup-content .dashboard-board-grid {
+    flex: 1 1; }
+
+.dashboard-board-column-layout-main {
+  flex: 1 0; }
+
+.dashboard-board-column-layout-side {
+  flex: 0 1; }
 
 .dashboard-board-partition {
   padding: 50px 0; }
