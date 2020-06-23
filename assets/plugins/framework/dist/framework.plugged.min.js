@@ -1854,7 +1854,7 @@ window.jQuery && jQuery.noConflict();
 
 		frameWork.destroyModal(null,mode);
 
-		if(triggerer || contentWrap) {
+		if(contentWrap) {
 
 			var arr =  {
 				header:
@@ -1882,6 +1882,8 @@ window.jQuery && jQuery.noConflict();
 					contentWrap.attr('data-'+mode+'-align')
 					|| (triggerer && (triggerer.attr('data-'+mode+'-align'))),
 			};
+
+			_[mode+'ActiveElm'] = contentWrap;
 
 			var defaults = {
 				header: '',
@@ -1935,7 +1937,7 @@ window.jQuery && jQuery.noConflict();
 									html += '<a href="#" class="'+mode+'-close '+args.closeClasses +'" data-toggle="'+mode+'-close"><i class="symbol symbol-close "></i></a>';
 								}
 
-								html += '<div class="'+mode+'-popup-content">' + contentWrap.html() + '</div>';
+								html += '<div class="'+mode+'-popup-content"></div>';
 							
 							
 							
@@ -1952,6 +1954,8 @@ window.jQuery && jQuery.noConflict();
 			var modal = $('body').children('.'+mode+'-wrapper').first();
 
 				_.initTrumbo(modal);
+
+				_[mode+'ActiveElm'].contents().appendTo($('body').children('.'+mode+'-wrapper').find('.'+mode+'-popup-content').first());
 
 				$('body').addClass('body-'+mode+'-active');
 
@@ -1979,6 +1983,10 @@ window.jQuery && jQuery.noConflict();
 
 	frameWork.destroyModal = function(removeHash,mode){
 		mode = mode || 'modal';
+
+		$('body').children('.'+mode+'-wrapper').find('.'+mode+'-popup-content').first().contents().appendTo(_[mode+'ActiveElm']);
+		
+		_[mode+'ActiveElm'] = false;
 		
 		$('body').children('.'+mode+'-wrapper').fadeOut().removeClass('active').remove();
 		$('body').removeClass('body-'+mode+'-active');

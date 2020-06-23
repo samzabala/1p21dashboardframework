@@ -1734,7 +1734,9 @@
 							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
 								<label class="input-label" >Basic Ass</label>
-								<span class="input-group input-group-horizontal input-group-responsive">
+								<span class="input-group input-group-horizontal">
+
+								<input type="text" class="input input-single-line">
 
 									<select class="input input-select" >
 										<option>Available option 1</option>
@@ -1853,7 +1855,7 @@
 								<p class="input-wrapper input-wrapper-vertical">
 									
 									<label class="input-label" >Basic Ass</label>
-									<span class="input-group input-group-vertical input-group-responsive">
+									<span class="input-group input-group-vertical ">
 
 										<select class="input input-select" >
 											<option>Available option 1</option>
@@ -2788,6 +2790,11 @@
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol download</span>
+				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-download"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
 				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-burger"></i></span>
 			</a>
@@ -2940,6 +2947,10 @@
 
 			<p>
 				map <i class="color-primary symbol symbol-map"></i>
+			</p>
+
+			<p>
+				download <i class="color-primary symbol symbol-download"></i>
 			</p>
 
 			<p>

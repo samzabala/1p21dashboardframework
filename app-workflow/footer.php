@@ -1,7 +1,4 @@
-					
-					<?php
-					app_get_component('components/board-task');
-					?>
+
 					
 					<!-- Debug use only dont pootpoot -->
 					<div class="dev-debug-block">

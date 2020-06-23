@@ -254,8 +254,8 @@ $prefix: '.input';
 			case: $input-text-transform,
 		));
 		display:inline-block;
-		background-color: $input-background;
 		border: $input-border-width solid $input-border-color;
+		background-color: $input-background;
 		padding-right: $calculated-input-gutter-x;
 		padding-left: $calculated-input-gutter-x;
 		padding-top: $calculated-value-input-paddiny-y;
@@ -596,7 +596,7 @@ $prefix: '.input';
 			@include br(#{$mobile-br-max}-max) {
 				flex-direction: column;
 
-				%for-form-input-boxy {
+				> %for-form-input-boxy {
 					width:100%;
 				}
 			}
@@ -645,9 +645,9 @@ $prefix: '.input';
 			resize:none;
 			max-width:100%;
 
-			&:not(:focus):not(.focus) {
-				border-color:transparent;
-			}
+			// &:not(:focus):not(.focus) {
+			// 	border-color:transparent;
+			// }
 
 			&:hover,
 			&:active,
@@ -672,7 +672,9 @@ $prefix: '.input';
 				@include br(#{$mobile-br-max}-max) {
 					display:flex;
 					width:100%;
-
+					
+					> #{$prefix},
+					> .trumbowyg,
 					.btn:not(.btn-symbol) {
 						flex: 1 1;
 					}
@@ -705,9 +707,10 @@ $prefix: '.input';
 					&:nth-child(n+2) {
 						border-top-left-radius: 0!important;
 						border-bottom-left-radius: 0!important;
+						// margin-left: $input-border-width * -1;
 
 						&:not(:focus):not(.focus) {
-							border-left-color: $input-group-separator-color;
+							border-left-color: transparent;
 						}
 					}
 				}
@@ -732,9 +735,10 @@ $prefix: '.input';
 				&:nth-child(n+2) {
 					border-top-right-radius: 0!important;
 					border-top-left-radius: 0!important;
+					// margin-top: $input-border-width * -1;
 
 					&:not(:focus):not(.focus) {
-						border-top-color: $input-group-separator-color;
+						border-top-color: transparent;
 					}
 				}
 			}
@@ -760,9 +764,10 @@ $prefix: '.input';
 						&:nth-child(n+2) {
 							border-top-left-radius: 0!important;
 							border-bottom-left-radius: 0!important;
+							// margin-left: $input-border-width * -1;
 
 							&:not(:focus):not(.focus) {
-								border-left-color: $input-group-separator-color;
+								border-left-color:transparent;
 							}
 						}
 					}
@@ -788,9 +793,10 @@ $prefix: '.input';
 					&:nth-child(n+2) {
 						border-top-right-radius: 0!important;
 						border-top-left-radius: 0!important;
+						// margin-top: $input-border-width * -1;
 		
 						&:not(:focus):not(.focus) {
-							border-top-color: $input-group-separator-color;
+							border-top-color: transparent;
 						}
 					}
 				}

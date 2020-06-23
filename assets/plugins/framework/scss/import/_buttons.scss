@@ -402,6 +402,9 @@ $prefix: '.btn';
 	///updates here should match input-group 
 	&-group {
 		display:inline-flex;
+
+		align-content: stretch;
+		align-items: stretch;
 		position:relative;
 		max-width:100%;
 		padding:0;

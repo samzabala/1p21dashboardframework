@@ -154,8 +154,8 @@
 	// PADDING globals
 		$gutter-base: 40px !default;
 			$gutter-large: 70px !default;
-			$gutter-small: 20px !default;
-			$gutter-micro: 10px !default;
+			$gutter-small: 25px !default;
+			$gutter-micro: 15px !default;
 
 	// Border radius globals
 		$border-radius-base: 10px !default;
@@ -263,7 +263,7 @@
 		$table-cell-border-color: $theme-background-contrast !default;
 			$table-cell-border-color-inverse: $theme-background-contrast-inverse !default;
 		$table-cell-border-width: 1px !default;
-		$table-cell-gutter: 10px !default;
+		$table-cell-gutter: $gutter-small !default;
 
 		$table-heading-font-size: 14px !default;
 		$table-heading-height: 45px !default;
@@ -586,6 +586,7 @@
 			$module-gutter-x-mobile: $gutter-small !default;
 		$module-gutter-y: $gutter-small !default;
 			$module-gutter-y-mobile: $gutter-small !default;
+
 		
 		$module-gutter-between: 20px !default;
 
@@ -626,7 +627,7 @@
 			$modal-gutter-mobile: $gutter-small !default;
 
 		//modal board
-			$board-padding-spacer: $gutter-large !default;
+			$board-padding-spacer: $gutter-base !default;
 			$board-close-button-font-size: 1rem !default;
 			$board-close-offset-x: 1.25em !default;
 			$board-close-offset-y: 1.25em !default;
@@ -826,7 +827,7 @@
 		$asset-thumbnail-border-width: 3px !default;
 		$asset-thumbnail-border-color: transparent !default;
 			$asset-thumbnail-border-color-hover: $brand-color-primary !default;
-		$asset-max-width: $asset-thumbnail-width !default;
+		$asset-width: $asset-thumbnail-width !default;
 		$asset-thumbnail-margin-bottom: $gutter-micro !default;
 		$asset-transition-duration: $transition-duration-base!default;
 
@@ -898,15 +899,15 @@
 		
 		$input-gutter-x: 20px !default;
 		$input-border-width: 1px !default;
-		$input-border-color: transparent !default;
-		$input-border-color-focus: rgba($brand-color-neutral,.2) !default;
+		$input-border-color: rgba($brand-color-neutral,.3) !default;
+		$input-border-color-focus: rgba($brand-color-neutral,.3) !default;
 		$input-border-radius: $border-radius-base !default;
 			$input-border-radius-large: $border-radius-base !default;
 			$input-border-radius-small: $border-radius-base !default;
-		$input-box-shadow: $box-shadow-base $brand-color-base !default;
+		$input-box-shadow: $box-shadow-base $brand-color-base !default; // 
 		$input-box-shadow-brand-basis: $box-shadow-base !default;
 			$input-box-shadow-focus: 0px 0 5px 0px $brand-color-primary !default;
-		$input-group-separator-color: rgba($brand-color-base,.1) !default;
+		// $input-group-separator-color: rgba($brand-color-base,.1) !default;
 		$input-color-feedback-opacity: .05 !default;
 
 		$input-label-gutter: 20px !default;
@@ -1050,7 +1051,7 @@
 
 		// SCHEMES
 			$btn-border-default: transparent !default;
-			$btn-background-default: transparent !default;
+			$btn-background-default: var(--theme-background) !default;
 			$btn-color-default: inherit !default;
 
 				$btn-border-default-hover: transparent !default;

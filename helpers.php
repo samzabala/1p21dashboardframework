@@ -97,6 +97,20 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;
 
+				case 'profile':
+					?>
+						<div class="module">
+
+							Not yet brah
+							<br>
+							<br>
+							<br>
+							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
+						</div>
+					<?php
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "template design in progress. temporarily redirected";
+					break;
+
 				case 'debug':
 				case 'debug-components':
 					app_get_template_part("{$template_part}");

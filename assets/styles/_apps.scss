@@ -32,12 +32,14 @@ $sidebar-base-slim: 80px;
 
 
 		.nav-logo {
-			padding: 1.25rem 1rem;	
+			padding: 0 1rem;	
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
 			margin-right: .5em;
-			display:block;	
 		
 			svg {
-				max-height: 100%;
+				max-height: 35px;
 				max-width: 100%;
 				width: auto;
 			}
@@ -323,21 +325,41 @@ $sidebar-base-slim: 80px;
 
 	&-board {
 		&-column-layout {
+			&-container {
+				flex: 1 1;
+				@include br(#{$mobile-br-max}){
+					display: flex;
+					flex-wrap: wrap;
+				}
+			}
 			.board-popup-content {
 				display: flex;
 				flex-direction: column;
-
-				.dashboard-board-grid {
-					flex: 1 1;
-				}
 			}
 
 			&-main {
-				flex: 1 0;
+
+
+				@include br(#{$mobile-br-max}){
+					width: calc(100% - 250px);
+				}
+
+
+				@include br(lg){
+					width: calc(100% - 390px);
+				}
 			}
 
 			&-side {
-				flex: 0 1;
+				flex: 0 0 auto;
+				@include br(#{$mobile-br-max}){
+					width: 250px;
+				}
+
+
+				@include br(lg){
+					width: 390px;
+				}
 			}
 		}
 	}
@@ -346,4 +368,11 @@ $sidebar-base-slim: 80px;
 
 .dashboard-board-partition {
 	padding: 50px 0;
+}
+
+
+//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
+.dashboard-table-wrapper-gutterless {
+	margin : 0 -25px;
+	width: auto;
 }

@@ -45,7 +45,8 @@ $calculated-ass-thumb-table-gutter-3: percentage(
 /* it */
 $prefix: '.asset';
 #{$prefix} {
-	max-width: $asset-max-width;
+	max-width: 100%;
+	width: $asset-width;
 	color:inherit;
 	display:block;
 	position:relative;

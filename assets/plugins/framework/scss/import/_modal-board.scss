@@ -24,7 +24,7 @@ $prefix: '.board';
 //also used by module
 
 .body-board-active {
-	overflow-y:hidden;
+	@extend %for-modal-body !optional;
 }
 
 #{$prefix} {
@@ -33,6 +33,7 @@ $prefix: '.board';
 
 		&-wrapper {
 			@extend %for-modal-wrapper;
+			z-index: 99998;
 
 			&#{$prefix}-left {
 				padding-left: $board-padding-spacer;
@@ -53,18 +54,22 @@ $prefix: '.board';
 
 	&-close {
 		& {
-			font-size: $board-close-button-font-size;
 			position:absolute;
 			z-index:9;
-			display:flex;
-			align-items: center;
-			justify-content: center;
-			background: $modal-background;
-			box-shadow: $board-close-box-shadow;
-			// width: $calculated-board-close-width;
-			// height: $calculated-board-close-height;
-			width: $calculated-board-close-size;
-			height: $calculated-board-close-size;
+
+			&-default {
+
+				font-size: $board-close-button-font-size;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				background: $modal-background;
+				box-shadow: $board-close-box-shadow;
+				// width: $calculated-board-close-width;
+				// height: $calculated-board-close-height;
+				width: $calculated-board-close-size;
+				height: $calculated-board-close-size;
+			}
 
 
 			.theme-inverse & {
@@ -77,12 +82,14 @@ $prefix: '.board';
 			}
 
 			#{$prefix}-left & {
-				left: $board-close-offset-x * -1;
+				left: 0;
+				transform: translateX(-50%);
 			}
 
 
 			#{$prefix}-right & {
-				right: $board-close-offset-x * -1;
+				right: 0;
+				transform: translateX(50%);
 			}
 
 			#{$prefix}-top &,
@@ -91,16 +98,23 @@ $prefix: '.board';
 			}
 
 			#{$prefix}-top & {
-				top: $board-close-offset-y * -1;
+				top: 0;
+				transform: translateY(-50%);
 			}
 
 
 			#{$prefix}-bottom & {
-				bottom: $board-close-offset-y * -1;
+				bottom: 0;
+				transform: translateY(50%);
 			}
 		}
 		&-overlay {
 			@extend %for-modal-overlay;
+
+
+			&:not([data-toggle="board-close"]) {
+				@extend %for-modal-overlay-not-closeable;
+			}
 		}
 	}
 
