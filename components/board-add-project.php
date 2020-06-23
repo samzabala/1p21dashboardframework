@@ -1,4 +1,4 @@
-<div id="board-project" data-board-classes="dashboard-board-partition" class=" board board-left">
+<div id="board-task" data-board-align="left" class="board" data-modal-class="dashboard-view">
 	<div class="flex-grid flex-grid-no-gutter">
 		<div class="flex-col-xs-12 flex-col-md-9">
 			<div class="dashboard-board-partition dashboard-board-main">

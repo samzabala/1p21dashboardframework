@@ -1372,7 +1372,7 @@ table {
   left: 0;
   right: 0;
   box-shadow: 0px 8px 20px -10px #ecedf0;
-  z-index: 999999; }
+  z-index: 9999; }
   .theme-inverse .nav.nav-sticky {
     box-shadow: 0px 8px 20px -10px #1e1931; }
 
