@@ -1314,6 +1314,9 @@ window.jQuery && jQuery.noConflict();
 				theUi.container.addClass('input');
 			}
 
+			
+			theUi.container.addClass(args.multipleLines ? _.tagsUiPrefix()+ 'multiple' : _.tagsUiPrefix()+'single');
+
 
 			if(args.width) {
 				theUi.container.css('width',args.width);
@@ -1389,7 +1392,7 @@ window.jQuery && jQuery.noConflict();
 			inputTags.each(function(){
 				$.each(this.attributes,function(){
 					if(this.specified) {
-						if(this.name.includes('data') && !this.name.includes('data-toggle') && !this.name.includes('data-value-ui')){
+						if(this.name.includes('data') && !this.name.includes('data-tags')  && !this.name.includes('data-toggle') && !this.name.includes('data-value-ui')){
 							theUi.container.attr(this.name,this.value);
 						}
 
@@ -1426,14 +1429,16 @@ window.jQuery && jQuery.noConflict();
 			width: inputTags.attr('data-tags-width'),
 			callback: inputTags.attr('data-tags-callback'),
 			callbackOnKeyup: inputTags.attr('data-tags-callback-on-keyup'),
-			callbackNameFilter: inputTags.attr('data-tags-callback-name-filter')
+			callbackNameFilter: inputTags.attr('data-tags-callback-name-filter'),
+			multipleLines: inputTags.attr('data-tags-multiple-lines')
 		};
 
 		var defaults = {
 			width: 'auto',
 			callback: null,
 			callbackNameFilter: null,
-			callbackOnKeyup : null
+			callbackOnKeyup : null,
+			multipleLines: false
 		};
 		
 		var args = _.parseArgs(arr,defaults);
@@ -1915,6 +1920,38 @@ window.jQuery && jQuery.noConflict();
 				var html;
 				switch(mode){
 					case 'board':
+
+						var html = '<div id="'+actualId+'" class="'+mode+'-wrapper '+ args.classes;
+
+							if(args.align){
+								html+= ' '+mode+'-'+args.align;
+							}
+
+
+							html +='">';
+							//overlay 
+							html += '<a href="#" class="'+mode+'-close-overlay" '+( args.disableOverlay == false ? 'data-toggle="'+mode+'-close"' : '' )+'></a>';
+
+
+							if(args.close !== false) {
+								html += '<div class="'+mode+'-close-wrapper"><a href="#" class="'+mode+'-close '+args.closeClasses +'" data-toggle="'+mode+'-close"><i class="symbol symbol-close "></i></a></div>';
+							}
+
+							html += '<div class="'+mode+'-popup">';
+
+								if(args.header) {
+									html += '<div class="'+mode+'-header"><h1 class="'+mode+'-title">'+ args.header +'</h1></div>';
+								}
+
+								html += '<div class="'+mode+'-popup-content"></div>';
+							
+							
+							
+							html += '</div>';
+					
+						html +='</div>';
+						break;
+						
 					case 'modal':
 						var html = '<div id="'+actualId+'" class="'+mode+'-wrapper '+ args.classes;
 
@@ -1942,9 +1979,9 @@ window.jQuery && jQuery.noConflict();
 							
 							
 							html += '</div>';
-					
-					html +='</div>';
-					break;
+						
+						html +='</div>';
+						break;
 				}
 
 				return html;
@@ -1960,7 +1997,11 @@ window.jQuery && jQuery.noConflict();
 				$('body').addClass('body-'+mode+'-active');
 
 				if(args.maxWidth) {
+					//all
 					modal.find('.'+mode+'-popup').css('max-width',args.maxWidth)
+
+					//bboard
+					modal.find('.'+mode+'-close-wrapper').css('max-width',args.maxWidth)
 				}
 
 				if(args.callback) {
@@ -2790,6 +2831,33 @@ window.jQuery && jQuery.noConflict();
 
 
 
+
+		$('body').on('change','.zone input[type="file"]',function(e){
+			const triggerer = $(e.target);
+			const zone = triggerer.closest('.zone');
+			const files = triggerer[0].files;
+			zone.find('.zone-has-content-text').remove();
+
+
+			if(triggerer.val() && files.length){
+				zone.addClass('zone-has-content');
+
+				console.log(files);
+				zone.append(function(){
+
+					var html  =
+					`<div class="zone-has-content-text">
+						<span>${files.length} files selected.<br> Click or drag and drop to reselect</span>
+					</div>`;
+					
+					
+					return html
+				});
+			}else{
+				zone.removeClass('zone-has-content');
+
+			}
+		});
 
 
 		$('html,body').on('click','*',function(e){

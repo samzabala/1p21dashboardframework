@@ -378,6 +378,7 @@ $prefix: '.input';
 			padding-top: $calculated-value-input-paddiny-y-small;
 			padding-bottom: $calculated-value-input-paddiny-y-small;
 		}
+		
 	}
 
 		&-select,
@@ -629,10 +630,14 @@ $prefix: '.input';
 
 	&-group {
 		display:inline-flex;
+		align-content: stretch;
+		align-items: stretch;
 		position:relative;
 		max-width:100%;
 		padding:0;
 		border:0;
+		background:none;
+		font:inherit;
 		overflow-x:auto;
 		overflow-y:visible;
 
@@ -672,7 +677,7 @@ $prefix: '.input';
 				@include br(#{$mobile-br-max}-max) {
 					display:flex;
 					width:100%;
-					
+
 					> #{$prefix},
 					> .trumbowyg,
 					.btn:not(.btn-symbol) {
@@ -707,11 +712,11 @@ $prefix: '.input';
 					&:nth-child(n+2) {
 						border-top-left-radius: 0!important;
 						border-bottom-left-radius: 0!important;
-						// margin-left: $input-border-width * -1;
+						margin-left: $input-border-width * -1;
 
-						&:not(:focus):not(.focus) {
-							border-left-color: transparent;
-						}
+						// &:not(:focus):not(.focus) {
+						// 	border-left-color: transparent;
+						// }
 					}
 				}
 			}
@@ -735,11 +740,11 @@ $prefix: '.input';
 				&:nth-child(n+2) {
 					border-top-right-radius: 0!important;
 					border-top-left-radius: 0!important;
-					// margin-top: $input-border-width * -1;
+					margin-top: $input-border-width * -1;
 
-					&:not(:focus):not(.focus) {
-						border-top-color: transparent;
-					}
+					// &:not(:focus):not(.focus) {
+					// 	border-top-color: transparent;
+					// }
 				}
 			}
 		}
@@ -764,11 +769,11 @@ $prefix: '.input';
 						&:nth-child(n+2) {
 							border-top-left-radius: 0!important;
 							border-bottom-left-radius: 0!important;
-							// margin-left: $input-border-width * -1;
+							margin-left: $input-border-width * -1;
 
-							&:not(:focus):not(.focus) {
-								border-left-color:transparent;
-							}
+							// &:not(:focus):not(.focus) {
+							// 	border-left-color:transparent;
+							// }
 						}
 					}
 				}
@@ -777,7 +782,6 @@ $prefix: '.input';
 
 			@include br(#{$mobile-br-max}-max) {
 				width:100%;
-				
 				flex-wrap:wrap;
 				display:flex;
 				flex-direction:column;
@@ -793,18 +797,18 @@ $prefix: '.input';
 					&:nth-child(n+2) {
 						border-top-right-radius: 0!important;
 						border-top-left-radius: 0!important;
-						// margin-top: $input-border-width * -1;
+						margin-top: $input-border-width * -1;
 		
-						&:not(:focus):not(.focus) {
-							border-top-color: transparent;
-						}
+						// &:not(:focus):not(.focus) {
+						// 	border-top-color: transparent;
+						// }
 					}
 				}
 			}
 		}
 	}
 
-	%for-form-input-ui-control {
+	@at-root %for-form-input-ui-control {
 
 
 		@extend %for-display-none !optional;

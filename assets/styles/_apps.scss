@@ -293,8 +293,25 @@ $sidebar-base-slim: 80px;
 
 
 .dashboard {
+
+
+
+
+	&-board-partition {
+		padding: 50px 0;
+	}
+
+
+	//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
+	&-table-wrapper-gutterless {
+		margin : 0 -25px;
+		width: auto;
+	}
 	
 	&-table {
+		&-icon-flush-left {
+			//something something
+		}
 		&-cell {
 			//holy grail
 			&-max {
@@ -363,16 +380,4 @@ $sidebar-base-slim: 80px;
 			}
 		}
 	}
-}
-
-
-.dashboard-board-partition {
-	padding: 50px 0;
-}
-
-
-//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
-.dashboard-table-wrapper-gutterless {
-	margin : 0 -25px;
-	width: auto;
 }

@@ -438,10 +438,10 @@ pre, code, kbd, tt {
   background: rgba(0, 0, 0, 0.1); }
 
 code, kbd, tt {
-  padding: 0.1171875em; }
+  padding: 0.078125em; }
 
 pre {
-  padding: 0.9375em; }
+  padding: 0.625em; }
   pre * {
     border: 0;
     margin: 0;
@@ -1109,10 +1109,10 @@ table {
     margin-right: 0; }
   .symbol:first-child {
     margin-left: 0; }
-  .symbol-text-left, .active > .symbol-text-left-toggle, .open > .symbol-text-left-toggle, .symbol-text-right, .active > .symbol-text-right-toggle, .open > .symbol-text-right-toggle, .symbol-text-center, .active > .symbol-text-center-toggle, .open > .symbol-text-center-toggle, .symbol-text-justify, .active > .symbol-text-justify-toggle, .open > .symbol-text-justify-toggle, .symbol-caret-left, .symbol-caret-right, .symbol-caret-up, .symbol-caret-down, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle, .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle, .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle, .symbol-burger, .active > .symbol-burger-toggle, .open > .symbol-burger-toggle, .symbol-map, .active > .symbol-map-toggle, .open > .symbol-map-toggle, .symbol-close, .active > .symbol-close-toggle, .open > .symbol-close-toggle, .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle, .symbol-minus, .active > .symbol-minus-toggle, .open > .symbol-minus-toggle, .symbol-plus, .active > .symbol-plus-toggle, .open > .symbol-plus-toggle, .symbol-time, .active > .symbol-time-toggle, .open > .symbol-time-toggle, .symbol-timer, .active > .symbol-timer-toggle, .open > .symbol-timer-toggle, .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle, .symbol-pause, .active > .symbol-pause-toggle, .open > .symbol-pause-toggle, .symbol-play, .active > .symbol-play-toggle, .open > .symbol-play-toggle, .symbol-stop, .active > .symbol-stop-toggle, .open > .symbol-stop-toggle, .symbol-square, .active > .symbol-square-toggle, .open > .symbol-square-toggle, .symbol-delete, .active > .symbol-delete-toggle, .open > .symbol-delete-toggle, .symbol-edit, .active > .symbol-edit-toggle, .open > .symbol-edit-toggle {
+  .symbol-text-left, .active > .symbol-text-left-toggle, .open > .symbol-text-left-toggle, .symbol-text-right, .active > .symbol-text-right-toggle, .open > .symbol-text-right-toggle, .symbol-text-center, .active > .symbol-text-center-toggle, .open > .symbol-text-center-toggle, .symbol-text-justify, .active > .symbol-text-justify-toggle, .open > .symbol-text-justify-toggle, .symbol-caret-left, .symbol-caret-right, .symbol-caret-up, .symbol-caret-down, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle, .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle, .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle, .symbol-burger, .active > .symbol-burger-toggle, .open > .symbol-burger-toggle, .symbol-download, .active > .symbol-download-toggle, .open > .symbol-download-toggle, .symbol-map, .active > .symbol-map-toggle, .open > .symbol-map-toggle, .symbol-close, .active > .symbol-close-toggle, .open > .symbol-close-toggle, .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle, .symbol-minus, .active > .symbol-minus-toggle, .open > .symbol-minus-toggle, .symbol-plus, .active > .symbol-plus-toggle, .open > .symbol-plus-toggle, .symbol-time, .active > .symbol-time-toggle, .open > .symbol-time-toggle, .symbol-timer, .active > .symbol-timer-toggle, .open > .symbol-timer-toggle, .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle, .symbol-pause, .active > .symbol-pause-toggle, .open > .symbol-pause-toggle, .symbol-play, .active > .symbol-play-toggle, .open > .symbol-play-toggle, .symbol-stop, .active > .symbol-stop-toggle, .open > .symbol-stop-toggle, .symbol-square, .active > .symbol-square-toggle, .open > .symbol-square-toggle, .symbol-delete, .active > .symbol-delete-toggle, .open > .symbol-delete-toggle, .symbol-edit, .active > .symbol-edit-toggle, .open > .symbol-edit-toggle {
     transform: none;
     transition: none; }
-  .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .symbol-search:after, .active > .symbol-search-toggle:before, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:before, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .symbol-delete:after, .active > .symbol-delete-toggle:before, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:after, .symbol-edit:before, .symbol-edit:after, .active > .symbol-edit-toggle:before, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:after {
+  .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:before, .symbol-download:after, .active > .symbol-download-toggle:before, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:before, .open > .symbol-download-toggle:after, .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .symbol-search:after, .active > .symbol-search-toggle:before, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:before, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .symbol-delete:after, .active > .symbol-delete-toggle:before, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:after, .symbol-edit:before, .symbol-edit:after, .active > .symbol-edit-toggle:before, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:after {
     content: "";
     color: inherit;
     position: absolute;
@@ -1126,7 +1126,7 @@ table {
     background: none;
     border: none;
     transition: none; }
-    .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .active > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:before, .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
+    .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:after, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .active > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:before, .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
       background: currentColor; }
     .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
       border-radius: 0.09375em; }
@@ -1136,7 +1136,7 @@ table {
       width: 0.1875em; }
     .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after {
       height: 0.1875em; }
-    .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before {
+    .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before {
       width: 1em; }
     .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
       height: 1em; }
@@ -1147,7 +1147,7 @@ table {
   .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
     border: 0.125em solid;
     width: 0.4375em;
-    border-radius: 0 0 .5em .5em;
+    border-radius: 0 0 50% 50%;
     transform: rotate(45deg);
     bottom: auto;
     left: auto;
@@ -1257,9 +1257,20 @@ table {
     height: 0;
     margin: 0 auto;
     top: calc(1em - 0.1875em); }
+  .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before {
+    height: .375em;
+    border-bottom: 0.125em solid;
+    border-right: 0.125em solid;
+    border-left: 0.125em solid;
+    top: auto; }
+  .symbol-download:after, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:after {
+    clip-path: polygon(calc(50% - 0.125em * .5) 0, calc(50% + 0.125em * .5) 0, calc(50% + 0.125em * .5) 60%, 100% 60%, 50% 100%, 0 60%, calc(50% - 0.125em * .5) 60%);
+    height: .625em;
+    width: .5em;
+    bottom: auto; }
   .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after {
     box-shadow: 0 0.375em 0 0, 0 -0.375em 0 0;
-    height: 0.125em;
+    height: 0.1875em;
     left: -.1em;
     right: -.1em; }
   .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after {
@@ -1615,8 +1626,8 @@ table {
 
 @media (max-width: 1200px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     max-width: 750px; } }
 
 /*** FLEX GRID ***/
@@ -3830,10 +3841,10 @@ table {
     margin: 0; }
   .asset-image {
     position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
     overflow: hidden;
     font-size: 25px;
     text-align: center;
@@ -3860,6 +3871,7 @@ table {
     .asset-image.asset-image-zip:before, .asset-image.asset-image-video:before, .asset-image.asset-image-text:before, .asset-image.asset-image-table:before, .asset-image.asset-image-pdf:before, .asset-image.asset-image-img:before, .asset-image.asset-image-font:before, .asset-image.asset-image-doc:before, .asset-image.asset-image-code:before, .asset-image.asset-image-audio:before, .asset-image.asset-image-default:before {
       line-height: 1;
       color: #FFFFFF;
+      font-weight: 900;
       text-transform: capitalize;
       height: 1em;
       left: 0;
@@ -4093,7 +4105,7 @@ table {
   .asset-thumbnail {
     position: relative;
     box-shadow: 0px 3px 10px -6px #000000;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     overflow: hidden;
     display: block; }
     .asset-thumbnail:before {
@@ -4360,6 +4372,10 @@ table {
 
 .modal {
   display: none !important; }
+  .board-popup, .modal-wrapper {
+    overflow-y: scroll; }
+    .board-popup::-webkit-scrollbar, .modal-wrapper::-webkit-scrollbar {
+      display: none; }
   .board-wrapper, .modal-wrapper {
     position: fixed;
     top: 0 !important;
@@ -4367,11 +4383,8 @@ table {
     right: 0 !important;
     bottom: 0 !important;
     margin: 0;
-    overflow-y: scroll;
     background: rgba(0, 0, 0, 0.5);
     display: none !important; }
-    .board-wrapper::-webkit-scrollbar, .modal-wrapper::-webkit-scrollbar {
-      display: none; }
     .active.board-wrapper, .active.modal-wrapper {
       display: block !important; }
   .modal-wrapper {
@@ -4429,47 +4442,65 @@ table {
   .board-close {
     position: absolute;
     z-index: 9; }
-    .board-close-default {
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #FFFFFF;
-      box-shadow: 0px 3px 10px -6px #000000;
-      width: 2.5em;
-      height: 2.5em; }
-    .theme-inverse .board-close {
-      background: #1a1a1a; }
-    .board-left .board-close, .board-right .board-close {
-      top: 1.25em; }
-    .board-left .board-close {
-      left: 0;
-      transform: translateX(-50%); }
-    .board-right .board-close {
-      right: 0;
-      transform: translateX(50%); }
-    .board-top .board-close, .board-bottom .board-close {
-      left: 1.25em; }
-    .board-top .board-close {
+  .board-close-wrapper {
+    position: fixed;
+    z-index: 3; }
+    .board-left .board-close-wrapper, .board-right .board-close-wrapper {
       top: 0;
-      transform: translateY(-50%); }
-    .board-bottom .board-close {
-      bottom: 0;
-      transform: translateY(50%); }
-  .board-popup {
-    min-height: 100%;
+      width: calc(100% -  40px); }
+    .board-top .board-close-wrapper, .board-bottom .board-close-wrapper, .board-left .board-close-wrapper {
+      right: 0; }
+    .board-top .board-close-wrapper, .board-bottom .board-close-wrapper, .board-right .board-close-wrapper {
+      left: 0; }
+    .board-top .board-close-wrapper, .board-bottom .board-close-wrapper {
+      left: 0;
+      height: calc(100% -  40px); }
+    .board-top .board-close-wrapper {
+      bottom: 0; }
+    .board-bottom .board-close-wrapper {
+      top: 0; }
+  .board-close-default {
+    font-size: 1rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px -6px #000000;
+    width: 2.5em;
+    height: 2.5em; }
+  .theme-inverse .board-close {
+    background: #1a1a1a; }
+  .board-left .board-close, .board-right .board-close {
+    top: 1.25em; }
+  .board-left .board-close {
+    left: 0;
+    transform: translateX(-50%); }
+  .board-right .board-close {
+    right: 0;
+    transform: translateX(50%); }
+  .board-top .board-close, .board-bottom .board-close {
+    right: 1.25em; }
+  .board-top .board-close {
+    top: 0;
+    transform: translateY(-50%); }
+  .board-bottom .board-close {
+    bottom: 0;
+    transform: translateY(50%); }
+  .board-popup {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column; }
-    .board-left .board-popup {
-      margin-left: auto; }
-    .board-right .board-popup {
-      margin-right: auto; }
-    .board-top .board-popup {
-      margin-top: auto; }
-    .board-bottom .board-popup {
-      margin-bottom: auto; }
     .board-popup-content {
       flex: 1 1; }
+  .board-top .board-popup, .board-bottom .board-popup, .board-left .board-popup, .board-top .board-close-wrapper, .board-bottom .board-close-wrapper, .board-left .board-close-wrapper {
+    margin-left: auto; }
+  .board-top .board-popup, .board-bottom .board-popup, .board-right .board-popup, .board-top .board-close-wrapper, .board-bottom .board-close-wrapper, .board-right .board-close-wrapper {
+    margin-right: auto; }
+  .board-top .board-popup, .board-top .board-close-wrapper {
+    margin-top: auto; }
+  .board-bottom .board-popup, .board-bottom .board-close-wrapper {
+    margin-bottom: auto; }
 
 /*** IMAGES ***/
 .thumbnail {
@@ -4923,8 +4954,8 @@ table {
     padding-left: 25px;
     padding-right: 25px; }
   .alert.alert-small, .alert-small .alert-header, .alert-small .alert-content, .alert-small .alert-footer {
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding-left: 10px;
+    padding-right: 10px; }
   .alert.alert-large, .alert-large .alert-header, .alert-large .alert-content, .alert-large .alert-footer {
     padding-left: 40px;
     padding-right: 40px; }
@@ -4935,8 +4966,8 @@ table {
       padding-top: 25px;
       padding-bottom: 25px; }
     .alert.alert-small, .alert-small .alert-content {
-      padding-top: 15px;
-      padding-bottom: 15px; }
+      padding-top: 10px;
+      padding-bottom: 10px; }
     .alert.alert-large, .alert-large .alert-content {
       padding-top: 40px;
       padding-bottom: 40px; }
@@ -4944,8 +4975,8 @@ table {
     padding-bottom: 12.5px;
     padding-top: 12.5px; }
     .alert-small .alert-header, .alert-small .alert-footer {
-      padding-bottom: 7.5px;
-      padding-top: 7.5px; }
+      padding-bottom: 5px;
+      padding-top: 5px; }
     .alert-large .alert-header, .alert-large .alert-footer {
       padding-bottom: 20px;
       padding-top: 20px; }
@@ -4959,21 +4990,21 @@ table {
     margin-left: -25px;
     margin-right: -25px; }
     .alert-small .alert-header, .alert-small .alert-content, .alert-small .alert-footer {
-      margin-left: -15px;
-      margin-right: -15px; }
+      margin-left: -10px;
+      margin-right: -10px; }
     .alert-large .alert-header, .alert-large .alert-content, .alert-large .alert-footer {
       margin-left: -40px;
       margin-right: -40px; }
   .alert-header:first-child, .alert-content:first-child, .alert-footer:first-child {
     margin-top: -25px; }
     .alert-small .alert-header:first-child, .alert-small .alert-content:first-child, .alert-small .alert-footer:first-child {
-      margin-top: -15px; }
+      margin-top: -10px; }
     .alert-large .alert-header:first-child, .alert-large .alert-content:first-child, .alert-large .alert-footer:first-child {
       margin-top: -40px; }
   .alert-header:last-child, .alert-content:last-child, .alert-footer:last-child {
     margin-bottom: -25px; }
     .alert-small .alert-header:last-child, .alert-small .alert-content:last-child, .alert-small .alert-footer:last-child {
-      margin-bottom: -15px; }
+      margin-bottom: -10px; }
     .alert-large .alert-header:last-child, .alert-large .alert-content:last-child, .alert-large .alert-footer:last-child {
       margin-bottom: -40px; }
   .alert-header:not(:last-child) {
@@ -5061,10 +5092,12 @@ table {
   -moz-appearance: none;
   appearance: none;
   outline: none;
+  position: relative;
   font: inherit;
   font-size: 1rem;
   font-weight: 700;
   text-transform: none;
+  text-align: center;
   font-style: normal;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -5077,12 +5110,25 @@ table {
   text-align: center;
   position: relative;
   display: block;
+  width: 100%;
   transition: 0.125s opacity ease-in-out; }
   .zone a {
     color: inherit;
     font-weight: 700; }
     .zone a:hover {
       text-decoration: underline; }
+  .zone > input {
+    opacity: 0 !important;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    width: 100% !important; }
+  .zone-text, .zone-has-content-text {
+    display: block; }
+  .zone.zone-has-content .zone-text {
+    display: none !important; }
   .zone.zone-small {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -5220,17 +5266,17 @@ table {
     .btn-round.btn-large.btn, .btn-round.btn-large.btn-group {
       border-radius: 1.7045454545em; }
     .btn-round.btn-small.btn, .btn-round.btn-small.btn-group {
-      border-radius: 0.9375em; }
+      border-radius: 1.25em; }
 
 .btn-group .btn, .btn-group .btn:hover {
   box-shadow: none; }
 
 .btn-block {
-  display: block;
+  display: flex;
   width: 100%; }
   @media (max-width: 1200px) {
     .btn-block-mobile {
-      display: block;
+      display: flex;
       width: 100%; } }
 .btn.btn-large, .btn-group.btn-large .btn {
   padding-top: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.875) ) * .5);
@@ -5241,11 +5287,11 @@ table {
     .btn.btn-large, .btn-group.btn-large .btn {
       font-size: 1.375rem; } }
 .btn.btn-small, .btn-group.btn-small .btn {
-  font-size: 1rem;
-  padding-top: calc(  (  (1.875em - (1px * 2)) - (1em * 1.875) ) * .5);
-  padding-bottom: calc(  (  (1.875em - (1px * 2)) - (1em * 1.875) ) * .5);
+  font-size: 0.75rem;
+  padding-top: calc(  (  (2.5em - (1px * 2)) - (1em * 1.875) ) * .5);
+  padding-bottom: calc(  (  (2.5em - (1px * 2)) - (1em * 1.875) ) * .5);
   border-radius: 10px;
-  min-height: 1.875em; }
+  min-height: 2.5em; }
 
 .btn-symbol {
   width: 2.8125em;
@@ -5259,7 +5305,7 @@ table {
   width: 3.4090909091em; }
 
 .btn-small .btn-symbol, .btn-symbol.btn-small {
-  width: 1.875em; }
+  width: 2.5em; }
 
 .btn-symbol.btn-symbol-round {
   border-radius: 50% !important; }
@@ -5277,7 +5323,8 @@ table {
   overflow-x: auto;
   overflow-y: visible; }
   .btn-group .btn {
-    position: relative; }
+    position: relative;
+    max-width: 100%; }
     .btn-group .btn:hover, .btn-group .btn:active, .btn-group .btn.active, .btn-group .btn:focus, .btn-group .btn.focus, .btn-group .btn.open {
       z-index: 1; }
   .btn-group-block {
@@ -5285,12 +5332,6 @@ table {
     width: 100%; }
     .btn-group-block > .btn:not(.btn-symbol) {
       flex: 1 1; }
-  @media (max-width: 1200px) {
-    .btn-group {
-      display: flex;
-      width: 100%; }
-      .btn-group .btn {
-        flex: 1 1; } }
   .btn-group.btn-large {
     border-radius: 20px; }
   .btn-group.btn-small {
@@ -5302,9 +5343,8 @@ table {
     border-bottom-right-radius: 0 !important; }
   .btn-group.btn-group-horizontal:not(.btn-group-responsive) > .btn:nth-child(n+2) {
     border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important; }
-    .btn-group.btn-group-horizontal:not(.btn-group-responsive) > .btn:nth-child(n+2), .btn-group.btn-group-horizontal:not(.btn-group-responsive) > .btn:nth-child(n+2):hover {
-      border-left-color: rgba(0, 0, 0, 0.1) !important; }
+    border-bottom-left-radius: 0 !important;
+    margin-left: -1px; }
   .btn-group.btn-group-vertical {
     flex-direction: column; }
     .btn-group.btn-group-vertical > .btn-symbol {
@@ -5314,9 +5354,8 @@ table {
       border-bottom-left-radius: 0 !important; }
     .btn-group.btn-group-vertical > .btn:nth-child(n+2) {
       border-top-right-radius: 0 !important;
-      border-top-left-radius: 0 !important; }
-      .btn-group.btn-group-vertical > .btn:nth-child(n+2), .btn-group.btn-group-vertical > .btn:nth-child(n+2):hover {
-        border-top-color: rgba(0, 0, 0, 0.1) !important; }
+      border-top-left-radius: 0 !important;
+      margin-top: -1px; }
   @media (min-width: 1201px) {
     .btn-group.btn-group-responsive.btn-group-horizontal > .btn-symbol {
       width: auto; }
@@ -5325,9 +5364,8 @@ table {
       border-bottom-right-radius: 0 !important; }
     .btn-group.btn-group-responsive.btn-group-horizontal > .btn:nth-child(n+2) {
       border-top-left-radius: 0 !important;
-      border-bottom-left-radius: 0 !important; }
-      .btn-group.btn-group-responsive.btn-group-horizontal > .btn:nth-child(n+2), .btn-group.btn-group-responsive.btn-group-horizontal > .btn:nth-child(n+2):hover {
-        border-left-color: rgba(0, 0, 0, 0.1) !important; } }
+      border-bottom-left-radius: 0 !important;
+      margin-left: -1px; } }
   @media (max-width: 1200px) {
     .btn-group.btn-group-responsive {
       width: 100%;
@@ -5339,21 +5377,20 @@ table {
         border-bottom-left-radius: 0 !important; }
       .btn-group.btn-group-responsive > .btn:nth-child(n+2) {
         border-top-right-radius: 0 !important;
-        border-top-left-radius: 0 !important; }
-        .btn-group.btn-group-responsive > .btn:nth-child(n+2), .btn-group.btn-group-responsive > .btn:nth-child(n+2):hover {
-          border-top-color: rgba(0, 0, 0, 0.1) !important; } }
+        border-top-left-radius: 0 !important;
+        margin-top: -1px; } }
 .btn-no-interaction.btn.btn-default:hover, .btn-no-interaction.btn.btn-default:focus, .btn-no-interaction.focus.btn.btn-default, .btn-no-interaction.btn.btn-default:active, .btn-no-interaction.active.btn.btn-default, .btn-disabled.btn.btn-default:hover, .btn-disabled.btn.btn-default:focus, .btn-disabled.focus.btn.btn-default, .btn-disabled.btn.btn-default:active, .btn-disabled.active.btn.btn-default, .btn-disabled:hover .btn.btn-default, .btn-disabled:focus .btn.btn-default, .btn-disabled.focus .btn.btn-default, .btn-disabled:active .btn.btn-default, .btn-disabled.active .btn.btn-default, .btn.btn-default {
-  border-color: transparent ;
+  border-color: rgba(141, 141, 141, 0.3) ;
   background-color: var(--theme-background) ;
   color: inherit ; }
 
 .btn.btn-default:hover, .btn-group.btn-group-unite:hover .btn.btn-default, .btn.btn-default:focus, .btn-group.btn-group-unite:focus .btn.btn-default, .focus.btn.btn-default, .btn-group.btn-group-unite.focus .btn.btn-default {
-  border-color: transparent ;
+  border-color: rgba(141, 141, 141, 0.3) ;
   background-color: transparent ;
   color: #007ece ; }
 
 .btn.btn-default:active, .btn-group.btn-group-unite:active .btn.btn-default, .active.btn.btn-default, .btn-group.btn-group-unite.active .btn.btn-default {
-  border-color: transparent ;
+  border-color: rgba(141, 141, 141, 0.3) ;
   background-color: #007ece ;
   color: #FFFFFF ; }
 
@@ -5670,7 +5707,7 @@ table {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #8d8d8d;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
   text-decoration: none;
   text-align: inherit;
   font-style: normal;
@@ -5826,12 +5863,12 @@ table {
   .input-small.input-single-line, .input-small .input-single-line {
     height: 1.875rem; }
 
-.input-select[multiple], .input-multiple-line {
+.input-tags-ui.input-tags-ui-multiple, .input-select[multiple], .input-multiple-line {
   vertical-align: top;
   overflow-y: auto; }
-  .input-group .input-select[multiple], .input-group .input-multiple-line {
+  .input-group .input-tags-ui.input-tags-ui-multiple, .input-group .input-select[multiple], .input-group .input-multiple-line {
     max-height: 100%; }
-  .input-select[multiple] option, .input-multiple-line option {
+  .input-tags-ui.input-tags-ui-multiple option, .input-select[multiple] option, .input-multiple-line option {
     padding-right: 1.25em;
     padding-left: 1.25em;
     margin-right: -1.25em;
@@ -5895,10 +5932,14 @@ table {
         width: 100%; } }
 .input-group {
   display: inline-flex;
+  align-content: stretch;
+  align-items: stretch;
   position: relative;
   max-width: 100%;
   padding: 0;
   border: 0;
+  background: none;
+  font: inherit;
   overflow-x: auto;
   overflow-y: visible; }
   .input-group .btn.btn-symbol {
@@ -5932,9 +5973,8 @@ table {
     border-bottom-right-radius: 0 !important; }
   .input-group.input-group-horizontal:not(.input-group-responsive) > .input:nth-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) .btn:nth-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) .trumbowyg:nth-child(n+2) {
     border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important; }
-    .input-group.input-group-horizontal:not(.input-group-responsive) > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-horizontal:not(.input-group-responsive) .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-horizontal:not(.input-group-responsive) .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
-      border-left-color: transparent; }
+    border-bottom-left-radius: 0 !important;
+    margin-left: -1px; }
   .input-group.input-group-vertical {
     flex-direction: column; }
     .input-group.input-group-vertical > .btn-symbol {
@@ -5944,9 +5984,8 @@ table {
       border-bottom-left-radius: 0 !important; }
     .input-group.input-group-vertical > .input:nth-child(n+2), .input-group.input-group-vertical .btn:nth-child(n+2), .input-group.input-group-vertical .trumbowyg:nth-child(n+2) {
       border-top-right-radius: 0 !important;
-      border-top-left-radius: 0 !important; }
-      .input-group.input-group-vertical > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-vertical .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-vertical .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
-        border-top-color: transparent; }
+      border-top-left-radius: 0 !important;
+      margin-top: -1px; }
   @media (min-width: 1201px) {
     .input-group.input-group-responsive.input-group-horizontal > .btn-symbol {
       width: auto; }
@@ -5955,9 +5994,8 @@ table {
       border-bottom-right-radius: 0 !important; }
     .input-group.input-group-responsive.input-group-horizontal > .input:nth-child(n+2), .input-group.input-group-responsive.input-group-horizontal .btn:nth-child(n+2), .input-group.input-group-responsive.input-group-horizontal .trumbowyg:nth-child(n+2) {
       border-top-left-radius: 0 !important;
-      border-bottom-left-radius: 0 !important; }
-      .input-group.input-group-responsive.input-group-horizontal > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive.input-group-horizontal .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive.input-group-horizontal .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
-        border-left-color: transparent; } }
+      border-bottom-left-radius: 0 !important;
+      margin-left: -1px; } }
   @media (max-width: 1200px) {
     .input-group.input-group-responsive {
       width: 100%;
@@ -5969,10 +6007,9 @@ table {
         border-bottom-left-radius: 0 !important; }
       .input-group.input-group-responsive > .input:nth-child(n+2), .input-group.input-group-responsive .btn:nth-child(n+2), .input-group.input-group-responsive .trumbowyg:nth-child(n+2) {
         border-top-right-radius: 0 !important;
-        border-top-left-radius: 0 !important; }
-        .input-group.input-group-responsive > .input:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .btn:nth-child(n+2):not(:focus):not(.focus), .input-group.input-group-responsive .trumbowyg:nth-child(n+2):not(:focus):not(.focus) {
-          border-top-color: transparent; } }
-.input .input-tags, .input .input-calendar {
+        border-top-left-radius: 0 !important;
+        margin-top: -1px; } }
+.input-tags, .input-calendar {
   height: 0 !important;
   width: 0 !important;
   overflow: hidden !important; }
@@ -6292,35 +6329,47 @@ fieldset {
 /* input clasees */
 .input-tags-ui {
   display: inline-flex;
-  overflow-x: auto;
-  overflow-y: hidden;
   max-width: 100% !important;
   direction: ltr;
   position: relative; }
+  .input-tags-ui.input-tags-ui-single {
+    overflow-x: auto;
+    overflow-y: hidden; }
+  .input-tags-ui.input-tags-ui-multiple {
+    overflow: hidden; }
   .input-tags-ui::-webkit-scrollbar {
     display: none; }
   .input-tags-ui-wrapper {
     flex: 1 1;
     display: flex;
-    max-width: 100%;
-    min-height: 100%; }
+    max-width: 100%; }
+    .input-tags-ui-single .input-tags-ui-wrapper {
+      min-height: 100%;
+      margin-bottom: -0.25em;
+      margin-top: -0.25em; }
+      .input-small.input-tags-ui-single .input-tags-ui-wrapper {
+        margin-bottom: -0.0625em;
+        margin-top: -0.0625em; }
+      .input-large.input-tags-ui-single .input-tags-ui-wrapper {
+        margin-bottom: -0.25em;
+        margin-top: -0.25em; }
+    .input-tags-ui-multiple .input-tags-ui-wrapper {
+      flex-wrap: wrap;
+      align-self: flex-start;
+      margin-top: -0.25em; }
   .input-tags-ui-tag, .input-tags-ui-input {
     display: flex;
     align-items: center;
-    margin-bottom: -0.25em;
-    margin-top: -0.25em;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     padding-left: 1em;
     padding-right: 1em; }
+    .input-tags-ui-multiple .input-tags-ui-tag, .input-tags-ui-multiple .input-tags-ui-input {
+      margin-top: 0.25em; }
     .input-small .input-tags-ui-tag, .input-small .input-tags-ui-input {
-      margin-bottom: -0.0625em;
-      margin-top: -0.0625em;
       padding-top: 0.0625em;
       padding-bottom: 0.0625em; }
     .input-large .input-tags-ui-tag, .input-large .input-tags-ui-input {
-      margin-bottom: -0.25em;
-      margin-top: -0.25em;
       padding-top: 0.25em;
       padding-bottom: 0.25em; }
   .input-tags-ui-tag {
@@ -6377,11 +6426,18 @@ fieldset {
     white-space: nowrap;
     padding-left: 1em; }
     .input-tags-ui-input:last-child {
-      flex: 1 1 auto;
       padding-right: 0;
-      min-width: 4em; }
+      flex: 1 1 auto; }
       .input-tags-ui-input:last-child:first-child {
         width: 12em; }
+    .input-tags-ui-single .input-tags-ui-input:last-child {
+      min-width: 4em; }
+      .input-tags-ui-single .input-tags-ui-input:last-child:first-child {
+        width: 12em; }
+    .input-tags-ui-multiple .input-tags-ui-input:last-child {
+      min-width: 4em; }
+      .input-tags-ui-multiple .input-tags-ui-input:last-child:first-child {
+        width: 100%; }
     .input-tags-ui-input, .input-tags-ui-input:hover, .input-tags-ui-input:focus, .input-tags-ui-input.focus {
       box-shadow: none !important;
       background: transparent;
@@ -7205,7 +7261,7 @@ fieldset {
 .display-inline {
   display: inline !important; }
 
-.sr-only, .display-none, .input .input-calendar, .input .input-tags {
+.sr-only, .display-none, .input-calendar, .input-tags {
   display: none !important; }
 
 /* TEXT CLASSES */

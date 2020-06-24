@@ -21,7 +21,14 @@ $prefix: '.modal';
 
 	@at-root %for-modal {
 
+		&-scroller {
+			overflow-y: scroll;
 
+
+			&::-webkit-scrollbar {
+				display:none;
+			}
+		}
 
 		&-wrapper { 
 			position: fixed;
@@ -30,14 +37,8 @@ $prefix: '.modal';
 			right: 0!important;
 			bottom: 0!important;
 			margin: 0;
-			overflow-y: scroll;
 			background: $modal-overlay-bg;
 			display:none!important;
-
-
-			&::-webkit-scrollbar {
-				display:none;
-			}
 
 			&.active {
 				display:block!important;
@@ -48,6 +49,7 @@ $prefix: '.modal';
 
 		&-wrapper {
 			@extend %for-modal-wrapper;
+			@extend %for-modal-scroller;
 			z-index: 99999;
 
 			padding: $modal-gutter;

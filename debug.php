@@ -11,9 +11,29 @@
 		</div>
 
 
+		
+
+		<h1 data-toggle="accordion">Toolbar<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="toolbar">
+				<span class="toolbar-tile">
+
+				<a href="#" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
+						<i class="symbol symbol-close"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">Eat shit</span>
+				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile"></span>
+			</div>
+		</div>
+
+
 
 		<h1 data-toggle="accordion">input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion open">
+		<div class="accordion">
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
@@ -390,7 +410,25 @@
 
 
 		<h1 data-toggle="accordion">Zone<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
+		<div class="accordion ">
+
+		<h3>with input fiweld</h3>
+			<div class="zone zone-primary">
+
+				<input type="file"  placeholder="Add Attachments">
+				<span class="zone-text">
+					Drag and drop attachments here
+				</span>	
+			</div>
+
+			<div class="zone zone-primary">
+
+				<input type="file" multiple placeholder="Add Attachments">
+				<span class="zone-text">
+					Drag and drop attachments here
+				</span>	
+			</div>
+
 			<div class="zone zone-default">click me boi</div>
 			<div class="zone zone-primary">click me boi</div>
 			<div class="zone zone-secondary">click me boi</div>
@@ -450,6 +488,9 @@
 
 		<h1 data-toggle="accordion">form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+
+
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-multiple-lines="true" />
 		
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags" />
 			<br><br>
@@ -2717,118 +2758,118 @@
 			<h2>groups and symbols</h2>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol edit</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-edit"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-edit"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol delete</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-delete"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-delete"></i></span>
 			</a>
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol play</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-play"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-play"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol pause</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-pause"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-pause"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol stop</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-stop"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-stop"></i></span>
 			</a>
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Square</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-square"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Search</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-search"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol time</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-time"></i> </span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-time"></i> </span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol timer</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-timer"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-timer"></i></span>
 			</a>
 
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol +</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-plus"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol -</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-minus"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol check</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-check"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-check"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol close</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-close"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol map</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-map"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol download</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-download"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-download"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-burger"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-burger"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab vertical</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab horizontal</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
 			</a>
 
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow double down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
 			</a>
 
 
@@ -2836,59 +2877,59 @@
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow double down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-down"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-down"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow double up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-up"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-up"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow double left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-left"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-left"></i></span>
 			</a>
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow double right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-double-right"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-right"></i></span>
 			</a>
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol caret up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-up"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-up"></i></span>
 			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol caret down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-down"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-down"></i></span>
 			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol caret right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-left"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-left"></i></span>
 			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol caret left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-right"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-right"></i></span>
 			</a>
 
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol text right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-right"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-right"></i></span>
 			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol text center</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-center"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-center"></i></span>
 			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol text left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-left"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-left"></i></span>
 			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol text justify</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-text-justify"></i></span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-justify"></i></span>
 			</a>
 						
 						
@@ -3978,22 +4019,22 @@
 
 
 			<div class="flex-grid">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
 			</div>
@@ -4001,22 +4042,22 @@
 			<h3>Compact grid</h3>
 
 			<div class="flex-grid flex-grid-compact">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
 			</div>
@@ -4026,22 +4067,22 @@
 			<h3>Expanded grid</h3>
 
 			<div class="flex-grid flex-grid-expanded">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
 			</div>
@@ -4049,22 +4090,22 @@
 			<h3>no gutter grid</h3>
 
 			<div class="flex-grid flex-grid-no-gutter">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
 			</div>
@@ -4074,22 +4115,22 @@
 			<h3>no gutter x grid</h3>
 
 			<div class="flex-grid flex-grid-no-gutter-x">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
 			</div>
@@ -4097,22 +4138,22 @@
 			<h3>no gutter y grid</h3>
 
 			<div class="flex-grid flex-grid-no-gutter-y">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
 			</div>
@@ -4121,22 +4162,22 @@
 			<h3>fixed grid</h3>
 
 			<div class="flex-grid flex-grid-fixed">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
 			</div>
@@ -4145,28 +4186,28 @@
 			<h3> grid but not necessarily columnized children</h3>
 
 			<div class="flex-grid">
-				<div class="flex-col-6">
+				<div class="background-theme-contrast flex-col-6">
 					A column boi but not really column
 				</div>
-				<div class="flex-col-6">
+				<div class="background-theme-contrast flex-col-6">
 					A column boi but not really column
 				</div>
-				<div class="flex-col-3 flex-0-1">
+				<div class="background-theme-contrast flex-col-3 flex-0-1">
 					A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-child">
+				<div class="background-theme-contrast flex-child">
 					A column boi but not really column
 				</div>
-				<div class="flex-child flex-01-1">
+				<div class="background-theme-contrast flex-child flex-01-1">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-col-4">
+				<div class="background-theme-contrast flex-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-col-4">
+				<div class="background-theme-contrast flex-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-col-4">
+				<div class="background-theme-contrast flex-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
 			</div>
@@ -4564,10 +4605,10 @@
 </div>
 
 		<style>
-			.accordion.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]),
-			.accordion.accordion:nth-child(n+9) .flex-child,
-			.accordion.accordion:nth-child(n+9) *[class*="flex-col-"],
-			.accordion.accordion:nth-child(n+9) *[class*="color-"]:not(.symbol) {
+			.accordion.accordion:nth-child(n+20) *[class*="background-"]:not(*[class*="clip"]),
+			.accordion.accordion:nth-child(n+20) .flex-child,
+			.accordion.accordion:nth-child(n+20) *[class*="flex-col-"],
+			.accordion.accordion:nth-child(n+20) *[class*="color-"]:not(.symbol) {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
 			}
@@ -4603,7 +4644,6 @@
 
 			.accordion:nth-child(n+9) .flex-child,
 			.accordion:nth-child(n+9) *[class*="flex-col-"] {
-				background: var(--theme-background-contrast);
 				min-height: 200px;
 
 			}

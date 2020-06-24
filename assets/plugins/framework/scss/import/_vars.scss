@@ -155,7 +155,7 @@
 		$gutter-base: 40px !default;
 			$gutter-large: 70px !default;
 			$gutter-small: 25px !default;
-			$gutter-micro: 15px !default;
+			$gutter-micro: 10px !default;
 
 	// Border radius globals
 		$border-radius-base: 10px !default;
@@ -834,6 +834,7 @@
 		$asset-image-glyph-size: 25px !default;
 		$asset-image-glyph-color: $brand-color-background !default;
 		$asset-image-glyph-text-transform: capitalize !default;
+		$asset-image-glyph-font-weight: 900 !default;
 
 		$asset-thumbnail-image-gutter: $gutter-micro !default;
 
@@ -922,7 +923,7 @@
 			$input-label-font-family: $brand-font-primary !default;
 			$input-label-font-weight: $body-font-weight-bold !default;
 			$input-label-font-style: normal !default;
-			$input-label-text-transform: uppercase !default;
+			$input-label-text-transform: none !default;
 		
 			$input-label-horizontal-width: 25% !default;
 
@@ -961,6 +962,7 @@
 					$input-tags-padding-y-large: $input-tags-padding-y !default;
 					$input-tags-padding-y-small: .0625em !default;
 				$input-tags-gutter-x: .25em !default;
+				$input-tags-gutter-y: $input-tags-gutter-x!default;
 
 				$input-tags-border-radius: $border-radius-large !default;
 
@@ -1033,7 +1035,7 @@
 
 		$btn-font-size: $body-font-size !default;
 			$btn-font-size-large: 22px !default;
-			$btn-font-size-small: $body-font-size !default;
+			$btn-font-size-small: 12px !default;
 		$btn-line-height: 30px !default;
 		$btn-font-family: $brand-font-primary !default;
 		$btn-font-weight: $body-font-weight-bold !default;
@@ -1046,19 +1048,19 @@
 			$btn-border-radius-small: $border-radius-base !default;
 		$btn-box-shadow: $box-shadow-base $brand-color-base !default;
 			$btn-box-shadow-hover: $box-shadow-base $brand-color-base !default;
-		$btn-group-separator-color: rgba($brand-color-base,.1) !default;
+		// $btn-group-separator-color: rgba($brand-color-base,.1) !default;
 		$btn-transition-duration: $transition-duration-base!default;
 
 		// SCHEMES
-			$btn-border-default: transparent !default;
+			$btn-border-default: rgba($brand-color-neutral,.3) !default;
 			$btn-background-default: var(--theme-background) !default;
 			$btn-color-default: inherit !default;
 
-				$btn-border-default-hover: transparent !default;
+				$btn-border-default-hover: $btn-border-default !default;
 				$btn-background-default-hover: transparent !default;
 				$btn-color-default-hover: $brand-color-primary !default;
 			
-				$btn-border-default-active: transparent !default;
+				$btn-border-default-active: $btn-border-default !default;
 				$btn-background-default-active: $brand-color-primary !default;
 				$btn-color-default-active: $brand-color-background !default;
 

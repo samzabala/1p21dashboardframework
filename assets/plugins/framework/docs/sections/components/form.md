@@ -950,6 +950,15 @@ callback function after keyup on the input field. NOTE. the field is actually a 
 ```
 
 
-#### 
+
+**`data-tags-multiple-lines`**
+
+defaults to false
+
+if enabled, allows floe of tags intoo multiple lines like a textarea
+
+```html
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-multiple-lines="true" />
+```
 
 [Back to TOC](../../../readme.md)

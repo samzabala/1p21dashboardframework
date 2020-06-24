@@ -101,7 +101,8 @@ $prefix: '.asset';
 					@include type-set((
 						leading: 1,
 						color: $asset-image-glyph-color,
-						case: $asset-image-glyph-text-transform
+						case: $asset-image-glyph-text-transform,
+						weight: $asset-image-glyph-font-weight
 					));
 					height: 1em;
 					left:0;

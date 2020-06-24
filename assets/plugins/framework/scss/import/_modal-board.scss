@@ -56,58 +56,97 @@ $prefix: '.board';
 		& {
 			position:absolute;
 			z-index:9;
+		}
 
-			&-default {
-
-				font-size: $board-close-button-font-size;
-				display:flex;
-				align-items: center;
-				justify-content: center;
-				background: $modal-background;
-				box-shadow: $board-close-box-shadow;
-				// width: $calculated-board-close-width;
-				// height: $calculated-board-close-height;
-				width: $calculated-board-close-size;
-				height: $calculated-board-close-size;
-			}
-
-
-			.theme-inverse & {
-				background: $modal-background-inverse;
-			}
+		&-wrapper {
+			position:fixed;
+			z-index:3;
 
 			#{$prefix}-left &,
 			#{$prefix}-right & {
-				top: $board-close-offset-y;
+				top: 0;
+				width: calc(100% -  #{$board-padding-spacer});
 			}
-
+			#{$prefix}-top &,
+			#{$prefix}-bottom &, 
 			#{$prefix}-left & {
-				left: 0;
-				transform: translateX(-50%);
+				right: 0;
 			}
 
 
+			#{$prefix}-top &,
+			#{$prefix}-bottom &,
 			#{$prefix}-right & {
-				right: 0;
-				transform: translateX(50%);
+				left: 0;
 			}
 
 			#{$prefix}-top &,
 			#{$prefix}-bottom & {
-				left: $board-close-offset-x;
+				left: 0;
+				height: calc(100% -  #{$board-padding-spacer});
 			}
 
 			#{$prefix}-top & {
-				top: 0;
-				transform: translateY(-50%);
+				bottom: 0;
 			}
 
 
 			#{$prefix}-bottom & {
-				bottom: 0;
-				transform: translateY(50%);
+				top: 0;
 			}
 		}
+
+		&-default {
+
+			font-size: $board-close-button-font-size;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			background: $modal-background;
+			box-shadow: $board-close-box-shadow;
+			// width: $calculated-board-close-width;
+			// height: $calculated-board-close-height;
+			width: $calculated-board-close-size;
+			height: $calculated-board-close-size;
+		}
+
+
+		.theme-inverse & {
+			background: $modal-background-inverse;
+		}
+
+		#{$prefix}-left &,
+		#{$prefix}-right & {
+			top: $board-close-offset-y;
+		}
+
+		#{$prefix}-left & {
+			left: 0;
+			transform: translateX(-50%);
+		}
+
+
+		#{$prefix}-right & {
+			right: 0;
+			transform: translateX(50%);
+		}
+
+		#{$prefix}-top &,
+		#{$prefix}-bottom & {
+			right: $board-close-offset-x;
+		}
+
+		#{$prefix}-top & {
+			top: 0;
+			transform: translateY(-50%);
+		}
+
+
+		#{$prefix}-bottom & {
+			bottom: 0;
+			transform: translateY(50%);
+		}
+		
 		&-overlay {
 			@extend %for-modal-overlay;
 
@@ -121,14 +160,30 @@ $prefix: '.board';
 
 	&-popup {
 		@extend %for-modal-popup;
-		min-height: 100%;
+		@extend %for-modal-scroller;
+		height: 100%;
 		display:flex;
+		flex-wrap:wrap;
 		flex-direction:column;
-		
 
+		&-content {
+			flex: 1 1;
+		}
+	}
+
+	&-popup,
+	&-close-wrapper {
+
+
+
+		
+		#{$prefix}-top &,
+		#{$prefix}-bottom &,
 		#{$prefix}-left & {
 			margin-left: auto;
 		}
+		#{$prefix}-top &,
+		#{$prefix}-bottom &,
 		#{$prefix}-right & {
 			margin-right: auto;
 		}
@@ -137,10 +192,6 @@ $prefix: '.board';
 		}
 		#{$prefix}-bottom & {
 			margin-bottom: auto;
-		}
-
-		&-content {
-			flex: 1 1;
 		}
 	}
 }
