@@ -2,6 +2,7 @@
 
 $sidebar-base: 285px;
 $sidebar-mobile: 245px;
+$sidebar-base-slim: 80px;
 // $sidebar-xs: 60px;
 
 
@@ -12,8 +13,10 @@ $sidebar-mobile: 245px;
 
 //custom
 
+
+//whole page layout
 #dashboard {
-	
+	//hides svgs that contain defs for styling and not actually ouputting a pichur
 	&-svg-styles {
 		width:0;
 		height:0;
@@ -23,9 +26,29 @@ $sidebar-mobile: 245px;
 		left:0;
 		overflow:hidden;
 	}
+
 	&-block {
 		// &-sidebar,&-main {
 		// }
+
+	&-nav {
+
+
+		.nav-logo {
+			padding: 0 1rem;	
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+			margin-right: .5em;
+		
+			svg {
+				max-height: 35px;
+				max-width: 100%;
+				width: auto;
+			}
+		}
+	}
+
 		&-sidebar {
 			width: $sidebar-base;
 			box-shadow: 0 0 10px -5px color(b);
@@ -39,6 +62,11 @@ $sidebar-mobile: 245px;
 			overflow-y:scroll;
 			overflow-x:hidden;
 			height: 100vh;
+
+			&.dashboard-block-sidebar-slim {
+				width: $sidebar-base-slim;
+				z-index:auto;
+			}
 
 			&::-webkit-scrollbar {
 				display:none!important;
@@ -68,6 +96,10 @@ $sidebar-mobile: 245px;
 			&-nav {
 				margin: 0 ($container-gutter-wide * -1);
 
+				&:first-child {
+					margin-top: 50px;
+				}
+
 				.nav-list .nav-item  {
 					> .dropdown,
 					> ul {
@@ -79,18 +111,22 @@ $sidebar-mobile: 245px;
 			}
 
 			@include br(#{$mobile-br-max}-max) {
-				width:$sidebar-mobile;
+				&:not(.dashboard-block-sidebar-slim) {
+					width:$sidebar-mobile;
+				}
 				&-nav {
 					margin: 0 ($container-gutter-mobile * -1);
 				}
 			}
 
 			@include br(xs-max) {
-				left: -100%;
-				transition: left $transition-duration-base $transition-timing;
+				&:not(.dashboard-block-sidebar-slim) {
+					left: -100%;
+					transition: left $transition-duration-base $transition-timing;
 
-				&.open {
-					left:0;
+					&.open {
+						left:0;
+					}
 				}
 			}
 		}
@@ -100,6 +136,10 @@ $sidebar-mobile: 245px;
 			padding-top: $container-gutter;
 			padding-bottom: $container-gutter;
 			margin-left: auto;
+
+			.dashboard-block-sidebar-slim  + & {
+				width:calc(100% - #{$sidebar-base-slim});
+			}
 
 			&-nav {
 				left: $sidebar-base;
@@ -254,12 +294,33 @@ $sidebar-mobile: 245px;
 }
 
 
-
+//helpers
 .dashboard {
+
+
+
+	//style board column vertical paadding
+	&-board-partition {
+		padding: 50px 0;
+	}
+
+
+	//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
+	&-table-wrapper-gutterless {
+		margin : 0 -25px;
+		width: auto;
+	}
 	
 	&-table {
+
+		//the stars for varoite tasks and shit
+		&-icon-flush-left {
+			//something something
+		}
+
+
 		&-cell {
-			//holy grail
+			//holy grail. that wont let your cells stretvch too much
 			&-max {
 
 				width: 275px;
@@ -269,6 +330,7 @@ $sidebar-mobile: 245px;
 		}
 
 		&-row {
+			
 			//accordion infused table like in timertracker/team.php
 			&-accordion {
 				&-header {
@@ -281,6 +343,48 @@ $sidebar-mobile: 245px;
 					td:first-child {
 						padding-left: $btn-height * 1.125;
 					}
+				}
+			}
+		}
+	}
+
+	//layout styles for 2 column board layouts
+	&-board {
+		&-column-layout {
+			&-container {
+				flex: 1 1;
+				@include br(#{$mobile-br-max}){
+					display: flex;
+					flex-wrap: wrap;
+				}
+			}
+			.board-popup-content {
+				display: flex;
+				flex-direction: column;
+			}
+
+			&-main {
+
+
+				@include br(#{$mobile-br-max}){
+					width: calc(100% - 250px);
+				}
+
+
+				@include br(lg){
+					width: calc(100% - 390px);
+				}
+			}
+
+			&-side {
+				flex: 0 0 auto;
+				@include br(#{$mobile-br-max}){
+					width: 250px;
+				}
+
+
+				@include br(lg){
+					width: 390px;
 				}
 			}
 		}

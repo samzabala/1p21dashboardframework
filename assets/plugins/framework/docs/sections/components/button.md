@@ -91,9 +91,19 @@ Makes a square boi. very nice for [symbols](../components/symbol.md)
 </button>
 ```
 
-NOTE: this btn will always stayr a square boi even in `.btn-group`
+NOTE: this btn will always stay a equilateral boi even in `.btn-group`
 
 ![](../../images/btn-symbol.png)
+
+#### **`.btn-round`**
+
+Makes the edges of your `.btn` half circle round. If used on a `.btn-symbol`, wi make the button a circle :O
+
+```html
+<button type="button" class="btn btn-round btn-default">
+	my edges are round like the fuCKING EARTH
+</button>
+```
 
 
 # Button Groups
@@ -194,11 +204,11 @@ this toggles `.active` styles on butt butts
 
 Allows multiple active butt butts.
 
-If you want one of the butts reset the active class, add **`.btn-toggle-reset`**
+If you want one of the butts reset the active class, add **`.btn-group-toggle-reset`**
 
 ```html
 <div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
-	<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
+	<button type="button" class="active btn btn-default btn-group-toggle-reset"> All</button>
 	<button type="button" class=" btn btn-default"> butt</button>
 	<button type="button" class="btn btn-default">  Butt </button>
 	<button type="button" class="btn btn-default">Butt</button>

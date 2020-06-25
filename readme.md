@@ -24,7 +24,9 @@ will separate dashboard and framework one the bois are readeh
 [Bubble chart demo code](template/chart.php)
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
-
+# For Cristian
+These are classes that need to be found and replaced for framework 2.0.0
+* `btn-symbol-round` => `btn-round`
 
 
 # Structure 
@@ -247,3 +249,77 @@ There are html comments or string instances by markup with dynamic attributes an
 
 # Framework Documentation
 [Here](https://github.com/samzabala/framework/blob/master/readme.md)
+
+
+
+#2.0.0 Rebuilds and additions (for workflow suport)
+
+framework 2.0.0
+---------------------------
+new components / helpers
+ang mga may js baka matagasalan ka kasi tanga ka rin minsan
+
+js/ js + html
+
+js + css (1 week or more)
+* .board - modal... but from the side. see debug template for basuc demo
+
+css
+* PRIORITY
+    * OK zone
+        * zone-large
+        * zone-small // transfer default boi here
+    * modal close button
+        * add attribute to override classes + change to button
+    * OK border radius rounding classes  - *
+        * btn-round
+        * input round
+        * btn-group-round
+        * btn-group-round
+    * OK btn palettes not fully customizeable (eg btn-theme-outline, btn-theme-polar- outline etc) - *
+        * btn-COLORTAG-outline
+    * input-toggle - *
+        * requires 3 block elements
+        * input-wrapper.input-checkbox-wrapper
+            * input.input-checkbox
+            * input-label.input-label-checkbox
+    * OK Panel - * reminders USE .alert instead
+    * summary - * donloadable assets
+        * my dumbass didnt name dem thumbnails as avatar instead so here we are
+        * possible files
+            * default - download button na lang
+            * image
+            * word
+            * excel
+            * text
+            * pdf
+            * powerpoint
+* 1 day or less 
+    * progress bar - view task
+        * sizing
+            * progress-bar-small *
+            * progress-bar-large
+        * change default styles ???
+    * symbol-download - * task pages
+        *  - use polygon
+    * highlight - * task pages
+        * tagged names at comments
+    * OK modal
+        * adjust paddings for non mobile breakpoint and shit
+
+
+redesign/ rebuild 
+* may take more than 1 day
+* 1 day or less 
+    * tags color - edit task
+        * bg changes + dynamic variable setup
+
+
+
+Can't do due to layout/ usability issues
+* tables in modules w/o x-padding
+    * - layout and scroll issues to tables
+* arrow toggle flushed on right side with title on left while having module functions in between
+*  Thumbnail possobility 4 files
+
+

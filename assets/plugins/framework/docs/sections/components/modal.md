@@ -263,3 +263,20 @@ Kills ya boi
 
 
 [Back to TOC](../../../readme.md)
+
+
+
+# Board (jQuery version only)
+
+Same functions as modal except this looks different because the design says so biechhhh
+
+
+```html
+<a
+	data-toggle="board" href="#board-demo">board Toggle</a>
+<div class="board" id="board-demo">
+	<!-- Put ya content here -->
+</div>
+```
+
+halat ta igwa pa akong ilalaag igdi

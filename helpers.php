@@ -84,13 +84,31 @@ function app_init_content(){
 			$slug = '';
 			switch($template_part):
 
-				case 'edit-project':
-				case 'edit-task':
-				case 'project-details':
+				case '_DEMO-home':
+				case 'home':
+				case null:
+					app_get_template_part("app-{$app}/_DEMO-home");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/_DEMO-home";
+					break;
 				case 'project-list':
-				case 'task':
+				case 'project-details':
+				case '_DEMO-task':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
+					break;
+
+				case 'profile':
+					?>
+						<div class="module">
+
+							Not yet brah
+							<br>
+							<br>
+							<br>
+							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
+						</div>
+					<?php
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "template design in progress. temporarily redirected";
 					break;
 
 				case 'debug':
@@ -274,6 +292,45 @@ function app_debug_li() {
 	</li>
 <?php
 }
+
+
+//debug template
+
+function app_debug_block() {
+	?>
+	<!-- Debug use only dont pootpoot -->
+	<div class="dev-debug-block">
+		<br>
+		
+		<ul class="inline text-align-center">
+		
+			<?=app_debug_li(); ?>
+		</ul>
+
+		<hr>
+
+		<table>
+			<tr>
+				<th>Current App:</th>
+				<th>Templates pulled :</th>
+			</th>
+			<tr>
+				<td><code><?= FWAPPS_APP; ?></code></td>
+
+				<?php
+					$template = FWAPPS_TEMPLATE;
+					$slug = FWAPPS_SLUG;
+				?>
+				<td>
+					
+				<code><?=$GLOBALS['FWAPPS_CURR_TEMPLATE'] ?>.php</code>
+				</td>
+			</tr>
+	</div>
+	<?php
+}
+
+
 //DUH
 function app_create_link( $array_of_get_vars = array()) {
 	$url = FWAPPS_ROOT_URL.'/';

@@ -11,10 +11,486 @@
 		</div>
 
 
+		
 
-
-		<h1 data-toggle="accordion">tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Toolbar<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<div class="toolbar">
+				<span class="toolbar-tile">
+
+				<a href="#" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
+						<i class="symbol symbol-close"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">Eat shit</span>
+				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile"></span>
+			</div>
+		</div>
+
+
+
+		<h1 data-toggle="accordion">input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle input-small">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle input-large">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+					</span>
+				</div>
+			</div>
+
+
+			<h2>colors</h2>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-primary">
+						Test this fucker primary
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-secondary">
+						Test this fucker secondary
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input"> 
+					<span class="input-label input-toggle-label input-accent">
+						Test this fucker accent
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-success"> 
+						Test this fucker success
+					</span>
+				</div>
+			</div>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-caution">
+						Test this fucker caution
+					</span>
+				</div>
+			</div>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label input-error">
+						Test this fucker error
+					</span>
+				</div>
+			</div>
+
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle input-disabled">
+					<input type="checkbox" class="input">
+					<span class="input-label input-toggle-label">
+						Test this fucker 
+					</span>
+				</div>
+			</div>
+
+			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+				<div class="input-toggle  input-toggle-reverse">
+					<input type="checkbox" class="input "> 
+					<span class="input-label input-toggle-label">
+						Test this fucker this one should have toggle on the other side of the text
+					</span>
+				</div>
+			</div>
+
+
+
+		</div>
+
+<h1 data-toggle="accordion">highlight for #hashtags and @tagging profiles and shit<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+<div class="accordion">
+	<p>Oooh… that’s hard.</p>
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-default">#whale</span>. I love whales. I've loved <span class="highlight highlight-default">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-default">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-default"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-default">#black panther</span>.
+	</p>
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-primary">#whale</span>. I love whales. I've loved <span class="highlight highlight-primary">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-primary">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-primary"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-primary">#black panther</span>.
+	</p>
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-secondary">#whale</span>. I love whales. I've loved <span class="highlight highlight-secondary">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-secondary">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-secondary"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-secondary">#black panther</span>.
+	</p>
+
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-accent">#whale</span>. I love whales. I've loved <span class="highlight highlight-accent">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-accent">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-accent"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-accent">#black panther</span>.
+	</p>
+
+
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-neutral">#whale</span>. I love whales. I've loved <span class="highlight highlight-neutral">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-neutral">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-neutral"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-neutral">#black panther</span>.
+	</p>
+
+
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-success">#whale</span>. I love whales. I've loved <span class="highlight highlight-success">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-success">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-success"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-success">#black panther</span>.
+	</p>
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-caution">#whale</span>. I love whales. I've loved <span class="highlight highlight-caution">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-caution">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-caution"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-caution">#black panther</span>.
+	</p>
+
+
+
+	<p>
+		I know what I'd be... I'd be a <span class="highlight highlight-error">#whale</span>. I love whales. I've loved <span class="highlight highlight-error">@whales</span> since I was a little girl.
+	</p>
+
+	<p>
+		I think I would be a <span class="highlight highlight-error">#bird</span>, because they can fly. Not only can they fly, but they can travel all over the world. You know what I’m saying?
+	</p>
+
+	<p>
+		I would like to be a <span class="highlight highlight-error"><i class="symbol symbol-time"></i> black panther</span>. So I can creep. Through the wilderness. And I like when they walk, their backs go like... that, and when they step, they step better than I do, they step with a stride. And they’re graceful. So when I walk out of here, I’m going to step like a <span class="highlight highlight-error">#black panther</span>.
+	</p>
+</div>
+
+
+		<h1 data-toggle="accordion">ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="flex-grid flex-grid-fixed">
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-default"></span>
+						</div>
+						<a href="#" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
+							<i class="symbol symbol-close"></i>
+						</a>
+						<p class="asset-title">bitch-ass.probablyavirus</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-audio"></span>
+						</div>
+						<p class="asset-title">bitch-ass.mp3</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-code"></span>
+						</div>
+						<p class="asset-title">bitch-ass.json</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-doc"></span>
+						</div>
+						<p class="asset-title">bitch-ass.docx</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-font"></span>
+						</div>
+						<p class="asset-title">bitch-ass.otf</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+				
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="">
+						</div>
+						<p class="asset-title">bitch-ass.jpg</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-img"></span>
+						</div>
+						<p class="asset-title">bitch-ass-obscure-or-nonweb-image-type-or-vector-shit-that-dont-like-fit-cover.tiff</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-pdf"></span>
+						</div>
+						<p class="asset-title">Well Shit.pdf</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-table"></span>
+						</div>
+						<p class="asset-title">bitch-ass.csv</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-text"></span>
+						</div>
+						<p class="asset-title">bitch-ass.txt</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-video"></span>
+						</div>
+						<p class="asset-title">bitch-ass.mp4</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<a href="#"class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-zip"></span>
+						</div>
+						<p class="asset-title">bitch-ass.zip</p>
+						<p class="asset-caption">69kb</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<h1 data-toggle="accordion">Zone<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion ">
+
+		<h3>with input fiweld</h3>
+			<div class="zone zone-primary">
+
+				<input type="file"  placeholder="Add Attachments">
+				<span class="zone-text">
+					Drag and drop attachments here
+				</span>	
+			</div>
+
+			<div class="zone zone-primary">
+
+				<input type="file" multiple placeholder="Add Attachments">
+				<span class="zone-text">
+					Drag and drop attachments here
+				</span>	
+			</div>
+
+			<div class="zone zone-default">click me boi</div>
+			<div class="zone zone-primary">click me boi</div>
+			<div class="zone zone-secondary">click me boi</div>
+			<div class="zone zone-accent">click me boi</div>
+			<div class="zone zone-neutral">click me boi</div>
+			<div class="zone zone-success">click me boi</div>
+			<div class="zone zone-caution">click me boi</div>
+			<div class="zone zone-disabled zone-error">click me boi also i cant be fucked with</div>
+
+
+			<div class="zone zone-small zone-default">click me boi</div>
+			<div class="zone zone-small zone-primary">click me boi</div>
+			<div class="zone zone-small zone-secondary">click me boi</div>
+			<div class="zone zone-small zone-accent">click me boi</div>
+			<div class="zone zone-small zone-neutral">click me boi</div>
+			<div class="zone zone-small zone-success">click me boi</div>
+			<div class="zone zone-small zone-caution">click me boi</div>
+			<div class="zone zone-small zone-error">click me boi</div>
+
+
+
+			<div class="zone zone-large zone-default">click me boi</div>
+			<div class="zone zone-large zone-primary">click me boi</div>
+			<div class="zone zone-large zone-secondary">click me boi</div>
+			<div class="zone zone-large zone-accent">click me boi</div>
+			<div class="zone zone-large zone-neutral">click me boi</div>
+			<div class="zone zone-large zone-success">click me boi</div>
+			<div class="zone zone-large zone-caution">click me boi</div>
+			<div class="zone zone-large zone-error">click me boi</div>
+		</div>
+
+
+
+		<h1 data-toggle="accordion">board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a href="#board-demo" data-toggle="board">Use this for worflow screens that slide from the slide</a>
+			<div id="board-demo" class="dashboard-board-partition board board-left">
+				<div class="flex-grid flex-grid-no-gutter">
+					<div class="flex-col-xs-12 flex-col-md-9">
+						<div class="dashboard-board-partition dashboard-board-main">
+							<div class="container">
+							fuck
+							</div>
+						</div>
+					 </div>
+					<div class="flex-col-xs-12 flex-col-md-3 background-theme-contrast">
+						<div class="dashboard-board-partition dashboard-board-side">
+							<div class="container">
+							yea
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<h1 data-toggle="accordion">form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+
+
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-multiple-lines="true" />
 		
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags" />
 			<br><br>
@@ -143,19 +619,19 @@
 
 		<h1 data-toggle="accordion">Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-				<span class="btn btn-symbol btn-theme btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme<br>
-				<span class="btn btn-symbol btn-theme-polar btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-polar btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar<br>
-				<span class="btn btn-symbol btn-theme-outline btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-outline btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme outline <br>
-				<span class="btn btn-symbol btn-theme-polar-outline btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-polar-outline btn-symbol-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar outline<br>
@@ -197,7 +673,7 @@
 			bitchacho
 		</div>
 		
-		<h1 data-toggle="accordion">Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
+		<h1 data-toggle="accordion">form: Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
 		<div class="accordion ">
 
 			<input type="date" class="input input-calendar" 
@@ -251,7 +727,9 @@
 				</div>
 			</div>
 			The div is somewhere here... suck a dick
-			<input type="text" class="input input-calendar" data-calendar-start-day="0"
+
+			ALSO FUCK SKIP YEARSSS
+			<input type="text" class="input input-calendar" data-calendar-start-day="0"  data-calendar-year-skip="true"
 			data-calendar-disabled-dates="2020-03-01,2020-03-02"
 			data-calendar-text-input="true"
 
@@ -263,13 +741,14 @@
 			data-calendar-disabled-dates="2020-03-01,2020-03-02"
 			data-calendar-text-input="true" />
 
-
-			data-calendar-start-day="0"
-				data-calendar-disabled-dates="past"
-				data-calendar-dropdown-year-span="0"
-				min="2019-01-20"
-				data-calendar-max="2021-02-20"
-				value="2020-03-05"
+				<pre>
+				data-calendar-start-day="0"
+					data-calendar-disabled-dates="past"
+					data-calendar-dropdown-year-span="0"
+					min="2019-01-20"
+					data-calendar-max="2021-02-20"
+					value="2020-03-05"
+				</pre>
 
 			<h2>
 				use cases
@@ -389,16 +868,64 @@
 			
 		</div>
 
-		<h1 data-toggle="accordion">Kwan Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<a data-toggle="alert-close-all">Close em all</a>
 			<div class="alert alert-default p" id="life-alert">
 				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
+
+
+			<div class="alert alert-default p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+			<div class="alert alert-small alert-default p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default.alert-small with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+			<div class="alert alert-large alert-default p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default.alert-large with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
 			<div class="alert alert-primary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
+				
+
+
 			<div class="alert alert-secondary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -445,146 +972,8 @@
 				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 
 			<div class="alert alert-primary p">
@@ -592,1022 +981,56 @@
 				<p>.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-secondary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-accent p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-accent  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-neutral p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-neutral but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-success p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-success but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-caution p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-caution but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-error p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-error but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 		</div>
 		<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
@@ -1661,146 +1084,8 @@
 			<div class="modal" id="modal-demo" data-modal-title="PUNYETA">
 				<h1>Look at this bitchboy going modal and shit</h1>
 
-				<h1>Header one</h1>
-				<h2>Header two</h2>
-				<h3>Header three</h3>
-				<h4>Header four</h4>
-				<h5>Header five</h5>
-				<h6>Header six</h6>
-				<h2>Blockquotes</h2>
-				<p>Single line blockquote:</p>
-				<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-				<p>Multi line blockquote with a cite reference:</p>
-				<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-				<h2>Basic Bitch Table</h2>
-				<table>
-				<tbody>
-				<tr>
-				<th>Employee</th>
-				<th class="views">Salary</th>
-				<th></th>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$1</td>
-				<td>Because that’s all Steve Job’ needed for a salary.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com">John</a></td>
-				<td>$100K</td>
-				<td>For all the blogging he does.</td>
-				</tr>
-				<tr class="odd">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100M</td>
-				<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-				</tr>
-				<tr class="even">
-				<td><a href="http://example.com/">Jane</a></td>
-				<td>$100B</td>
-				<td>With hair like that?! Enough said…</td>
-				</tr>
-				</tbody>
-				</table>
-				<h2>Definition Lists</h2>
-				<dl>
-				<dt>Definition List Title</dt>
-				<dd>Definition list division.</dd>
-				<dt>Startup</dt>
-				<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-				<dt>#dowork</dt>
-				<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-				<dt>Do It Live</dt>
-				<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-				</dl>
-				<h2>Unordered Lists (Nested)</h2>
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one
-				<ul>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ul>
-				<h2>Ordered List (Nested)</h2>
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one
-				<ol>
-				<li>List item one</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				</li>
-				<li>List item two</li>
-				<li>List item three</li>
-				<li>List item four</li>
-				</ol>
-				<h2>HTML Tags</h2>
-				<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-				<p><strong>Address Tag</strong></p>
-				<address>1 Infinite Loop<br>
-				Cupertino, CA 95014<br>
-				United States</address>
-				<p><strong>Anchor Tag (aka. Link)</strong></p>
-				<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-				<p><strong>Abbreviation Tag</strong></p>
-				<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-				<p><strong>Acronym Tag</strong></p>
-				<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-				<p><strong>Big Tag</strong></p>
-				<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-				<p><strong>Cite Tag</strong></p>
-				<p>“Code is poetry.” —<cite>Automattic</cite></p>
-				<p><strong>Code Tag</strong></p>
-				<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-				<p><strong>Delete Tag</strong></p>
-				<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-				<p><strong>Emphasize Tag</strong></p>
-				<p>The emphasize tag should <em>italicize</em> text.</p>
-				<p><strong>Insert Tag</strong></p>
-				<p>This tag should denote <ins>inserted</ins> text.</p>
-				<p><strong>Keyboard Tag</strong></p>
-				<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Preformatted Tag</strong></p>
-				<p>This tag styles large blocks of code.</p>
-				<pre>.post-title {
-					margin: 0 0 5px;
-					font-weight: bold;
-					font-size: 38px;
-					line-height: 1.2;
-				}</pre>
-				<p><strong>Quote Tag</strong></p>
-				<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-				<p><strong>Strong Tag</strong></p>
-				<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-				<p><strong>Subscript Tag</strong></p>
-				<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-				<p><strong>Superscript Tag</strong></p>
-				<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-				<p><strong>Teletype Tag</strong></p>
-				<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-				<p><strong>Variable Tag</strong></p>
-				<p>This allows you to denote <var>variables</var>.</p>
+				
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 		</div>
 
@@ -1983,6 +1268,14 @@
 			<h3 id="progress-basic">Basic</h3>
 
 				<div class="progress">
+					<div class="progress-bar" style="width: 10%"></div>
+				</div>
+
+				<div class="progress progress-small">
+					<div class="progress-bar" style="width: 10%"></div>
+				</div>
+
+				<div class="progress progress-large">
 					<div class="progress-bar" style="width: 10%"></div>
 				</div>
 				<br>
@@ -2482,7 +1775,9 @@
 							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
 								<label class="input-label" >Basic Ass</label>
-								<span class="input-group input-group-horizontal input-group-responsive">
+								<span class="input-group input-group-horizontal">
+
+								<input type="text" class="input input-single-line">
 
 									<select class="input input-select" >
 										<option>Available option 1</option>
@@ -2601,7 +1896,7 @@
 								<p class="input-wrapper input-wrapper-vertical">
 									
 									<label class="input-label" >Basic Ass</label>
-									<span class="input-group input-group-vertical input-group-responsive">
+									<span class="input-group input-group-vertical ">
 
 										<select class="input input-select" >
 											<option>Available option 1</option>
@@ -2743,12 +2038,12 @@
 					<fieldset>
 						<legend>butt</legend>
 
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 								<label class="input-label" for="inputPassword">Password</label>
 								<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
 						</div>
 
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
 						</div>
 
@@ -2756,21 +2051,21 @@
 							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 						</div>
 						
-						<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-vertical input-wrapper-block">
 							<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
 						
 								<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
 
 						</div>
 
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 							<label class="input-label"><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
 						</div>
-						<div class="input-wrapper p input-wrapper-horizontal">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
 							<label class="input-label"><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
 						</div>
 
-						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal input-wrapper-block">
 							<label class="input-label" for="select">Selects</label>
 							<select class="input input-select" id="select-demo">
 								<option>Available option 1</option>
@@ -3128,6 +2423,28 @@
 			<button type="button" class="btn btn-error">error</button>
 			<button type="button" class="btn btn-link">Link</button>
 
+			<h3>round</h3>
+
+			<button type="button" class="btn btn-round btn-default">Default</button>
+			<button type="button" class="btn btn-round btn-primary">Primary</button>
+			<button type="button" class="btn btn-round btn-secondary">secondary</button>
+			<button type="button" class="btn btn-round btn-accent">accent</button>
+			<button type="button" class="btn btn-round btn-neutral">neutral</button>
+			<button type="button" class="btn btn-round btn-success">Success</button>
+			<button type="button" class="btn btn-round btn-caution">caution</button>
+			<button type="button" class="btn btn-round btn-error">error</button>
+			<button type="button" class="btn btn-round btn-link">Link</button>
+
+			<h3>outline</h3>
+
+			<button type="button" class="btn btn-primary-outline">Primary</button>
+			<button type="button" class="btn btn-secondary-outline">secondary</button>
+			<button type="button" class="btn btn-accent-outline">accent</button>
+			<button type="button" class="btn btn-neutral-outline">neutral</button>
+			<button type="button" class="btn btn-success-outline">Success</button>
+			<button type="button" class="btn btn-caution-outline">caution</button>
+			<button type="button" class="btn btn-error-outline">error</button>
+
 			<h2>Small</h2>
 			<button type="button" class="btn btn-small btn-default">Default</button>
 			<button type="button" class="btn btn-small btn-primary">Primary</button>
@@ -3138,6 +2455,19 @@
 			<button type="button" class="btn btn-small btn-caution">caution</button>
 			<button type="button" class="btn btn-small btn-error">error</button>
 			<button type="button" class="btn btn-small btn-link">Link</button>
+
+
+			<h3>round</h3>
+
+			<button type="button" class="btn btn-round btn-small btn-default">Default</button>
+			<button type="button" class="btn btn-round btn-small btn-primary">Primary</button>
+			<button type="button" class="btn btn-round btn-small btn-secondary">secondary</button>
+			<button type="button" class="btn btn-round btn-small btn-accent">accent</button>
+			<button type="button" class="btn btn-round btn-small btn-neutral">neutral</button>
+			<button type="button" class="btn btn-round btn-small btn-success">Success</button>
+			<button type="button" class="btn btn-round btn-small btn-caution">caution</button>
+			<button type="button" class="btn btn-round btn-small btn-error">error</button>
+			<button type="button" class="btn btn-round btn-small btn-link">Link</button>
 			
 			<h2>Large</h2>
 			<button type="button" class="btn btn-large btn-default">Default</button>
@@ -3145,11 +2475,23 @@
 			<button type="button" class="btn btn-large btn-secondary">secondary</button>
 			<button type="button" class="btn btn-large btn-accent">accent</button>
 			<button type="button" class="btn btn-large btn-neutral">neutral</button>
-			
 			<button type="button" class="btn btn-large btn-success">Success</button>
 			<button type="button" class="btn btn-large btn-caution">caution</button>
 			<button type="button" class="btn btn-large btn-error">error</button>
 			<button type="button" class="btn btn-large btn-link">Link</button>
+
+
+			<h3>round</h3>
+
+			<button type="button" class="btn btn-round btn-large btn-default">Default</button>
+			<button type="button" class="btn btn-round btn-large btn-primary">Primary</button>
+			<button type="button" class="btn btn-round btn-large btn-secondary">secondary</button>
+			<button type="button" class="btn btn-round btn-large btn-accent">accent</button>
+			<button type="button" class="btn btn-round btn-large btn-neutral">neutral</button>
+			<button type="button" class="btn btn-round btn-large btn-success">Success</button>
+			<button type="button" class="btn btn-round btn-large btn-caution">caution</button>
+			<button type="button" class="btn btn-round btn-large btn-error">error</button>
+			<button type="button" class="btn btn-round btn-large btn-link">Link</button>
 
 			<h2>Block</h2>
 
@@ -3170,6 +2512,12 @@
 			<h2>groups</h2>
 			<h3>Basic</h3>
 			<button class="btn-group btn-group-horizontal">
+			<span class="btn btn-default"><strong>00:00</strong> Hours</span>
+			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
+			</button>
+
+			<h4>Round</h4>
+			<button class="btn-group btn-group-horizontal btn-round">
 			<span class="btn btn-default"><strong>00:00</strong> Hours</span>
 			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
 			</button>
@@ -3205,86 +2553,7 @@
 			<a href="#" class="btn btn-default">butt</a>
 			</div>
 
-			<h2>groups and symbols</h2>
-
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol Square</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
-			</a>
-
-			<span class="btn btn-primary btn-symbol"><i class="symbol symbol-square"></i></span>
-
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol Search</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-search"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol +</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-plus"></i></span>
-			</a>
-
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol -</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-minus"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol kebab vertical</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol kebab horizontal</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol Burger</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-burger"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret up</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-up"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret down</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-down"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret right</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-left"></i></span>
-			</a>
-			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol caret left</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-caret-right"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol close</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-close"></i></span>
-			</a>
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol map</span>
-				<span class="btn btn-primary btn-symbol"><i class="symbol symbol-map"></i></span>
-			</a>
+			
 
 				<div class="btn-group btn-small btn-group-horizontal btn-group-unite">
 					<a href="#" class="btn btn-default">Small butt</a>
@@ -3323,7 +2592,7 @@
 
 			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
 
-					<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
+					<button type="button" class="active btn btn-default btn-group-toggle-reset"> All</button>
 					<button type="button" class=" btn btn-default"> butt</button>
 					<button type="button" class="btn btn-default">  Butt </button>
 					<button type="button" class="btn btn-default">Butt</button>
@@ -3365,6 +2634,38 @@
 				</li>
 				<li>
 				Morbi leo risus
+				</li>
+			</ul>
+
+			<h2> interactive
+			</h2>
+
+			<h2>toggle feature</h2>
+
+
+			<ul class="list-group list-group-interactive list-group-toggle">
+				<li class="active">
+					<a href="#">Cras justo odio</a> <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Dapibus ac facilisis in</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Morbi leo risus</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+			</ul>
+
+			<h2>allow multiople</h2>
+
+			<ul class="list-group list-group-interactive list-group-toggle list-group-toggle-multiple">
+				<li class="active">
+					<a href="#">Cras justo odio</a> <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Dapibus ac facilisis in</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
+				</li>
+				<li>
+					<a href="#">Morbi leo risus</a>  <i class="color-primary symbol float-right symbol-check-toggle"></i>
 				</li>
 			</ul>
 		</div>
@@ -3451,14 +2752,258 @@
 
 		</div>
 
-		<h1 data-toggle="accordion">Symbols repreiiesesse <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+
+			<h2>groups and symbols</h2>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol edit</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-edit"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol delete</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-delete"></i></span>
+			</a>
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol play</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-play"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol pause</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-pause"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol stop</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-stop"></i></span>
+			</a>
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol Square</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-square"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol Search</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-search"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol time</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-time"></i> </span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol timer</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-timer"></i></span>
+			</a>
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol +</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-plus"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol -</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-minus"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol check</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-check"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol close</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-close"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol map</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol download</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-download"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol Burger</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-burger"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol kebab vertical</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol kebab horizontal</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
+			</a>
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double down</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow up</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-up"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow left</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-left"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow right</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-right"></i></span>
+			</a>
+
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double down</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-down"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double up</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-up"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double left</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-left"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow double right</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-right"></i></span>
+			</a>
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret up</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-up"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret down</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-down"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret right</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-left"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caret left</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caret-right"></i></span>
+			</a>
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text right</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-right"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text center</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-center"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text left</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-left"></i></span>
+			</a>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol text justify</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-justify"></i></span>
+			</a>
+						
+						
+			<p>
+				Edit <i class="color-primary symbol symbol-edit"></i>
+			</p>
+
+			<p>
+				Delete <i class="color-primary symbol symbol-delete"></i>
+			</p>
+						
+						
+			<p>
+				Play <i class="color-primary symbol symbol-play"></i>
+			</p>
+
+			<p>
+				Pause <i class="color-primary symbol symbol-pause"></i>
+			</p>
+
+			<p>
+				Stop <i class="color-primary symbol symbol-stop"></i>
+			</p>
+
 			<p>
 				Square <i class="color-primary symbol symbol-square"></i>
 			</p>
 
 			<p>
 				Search <i class="color-primary symbol symbol-search"></i>
+			</p>
+
+			<p>
+				Time <i class="color-primary symbol symbol-time"></i>
+			</p>
+
+			<p>
+				Timer <i class="color-primary symbol symbol-timer"></i>
+			</p>
+
+			<p>
+				plus <i class="color-primary symbol symbol-plus"></i>
+			</p>
+
+			<p>
+				minus <i class="color-primary symbol symbol-minus"></i>
+			</p>
+
+			<p>
+				check <i class="color-primary symbol symbol-check"></i>
+			</p>
+
+			<p>
+				close <i class="color-primary symbol symbol-close"></i>
+			</p>
+
+			<p>
+				map <i class="color-primary symbol symbol-map"></i>
+			</p>
+
+			<p>
+				download <i class="color-primary symbol symbol-download"></i>
+			</p>
+
+			<p>
+				burger <i class="color-primary symbol symbol-burger"></i>
+			</p>
+
+			<p>
+				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
+			</p>
+
+			<p>
+				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
 			</p>
 
 			<p>
@@ -3477,70 +3022,52 @@
 				arrow right <i class="color-primary symbol symbol-arrow-right"></i>
 			</p>
 
-
 			<p>
-				arrow down &nbsp;<i class="color-primary symbol symbol-arrow-double-down"></i>
+				arrow double down <i class="color-primary symbol symbol-arrow-double-down"></i>
 			</p>
 
 			<p>
-				arrow up &nbsp;<i class="color-primary symbol symbol-arrow-double-up"></i>
+				arrow double up <i class="color-primary symbol symbol-arrow-double-up"></i>
 			</p>
 
 			<p>
-				arrow left &nbsp;<i class="color-primary symbol symbol-arrow-double-left"></i>
+				arrow double left <i class="color-primary symbol symbol-arrow-double-left"></i>
 			</p>
 
 			<p>
-				arrow right &nbsp;<i class="color-primary symbol symbol-arrow-double-right"></i>
+				arrow double right <i class="color-primary symbol symbol-arrow-double-right"></i>
 			</p>
 
-			<p>
-				plus <i class="color-primary symbol symbol-plus"></i>
-			</p>
-
-			<p>
-				minus <i class="color-primary symbol symbol-minus"></i>
-			</p>
-			<p>
-				check <i class="color-primary symbol symbol-check"></i>
-			</p>
-			<p>
-				close <i class="color-primary symbol symbol-close"></i>
-			</p>
-			<p>
-				map <i class="color-primary symbol symbol-map"></i>
-			</p>
-			<p>
-				burger <i class="color-primary symbol symbol-burger"></i>
-			</p>
-			<p>
-				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
-			</p>
-			<p>
-				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
-			</p>
 			<p>
 				caret up <i class="color-primary symbol symbol-caret-up"></i>
 			</p>
+
 			<p>
 				caret down <i class="color-primary symbol symbol-caret-down"></i>
 			</p>
+
 			<p>
 				caret left <i class="color-primary symbol symbol-caret-left"></i>
 			</p>
+
 			<p>
 				caret right <i class="color-primary symbol symbol-caret-right"></i>
 			</p>
 
-
 			<p>
 				text center <i class="color-primary symbol symbol-text-center"></i>
 			</p>
+
 			<p>
 				text left <i class="color-primary symbol symbol-text-left"></i>
 			</p>
+
 			<p>
 				text right <i class="color-primary symbol symbol-text-right"></i>
+			</p>
+
+			<p>
+				text justify <i class="color-primary symbol symbol-text-justify"></i>
 			</p>
 
 		</div>
@@ -4349,147 +3876,8 @@
 
 		<h1  data-toggle="accordion" >Typographeee <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<h3 class="true-title">Page Markup And Formatting</h3>				
-			<h1>Header one</h1>
-			<h2>Header two</h2>
-			<h3>Header three</h3>
-			<h4>Header four</h4>
-			<h5>Header five</h5>
-			<h6>Header six</h6>
-			<h2>Blockquotes</h2>
-			<p>Single line blockquote:</p>
-			<blockquote><p>Stay hungry. Stay foolish.</p></blockquote>
-			<p>Multi line blockquote with a cite reference:</p>
-			<blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote>
-			<h2>Basic Bitch Table</h2>
-			<table>
-			<tbody>
-			<tr>
-			<th>Employee</th>
-			<th class="views">Salary</th>
-			<th></th>
-			</tr>
-			<tr class="odd">
-			<td><a href="http://example.com/">Jane</a></td>
-			<td>$1</td>
-			<td>Because that’s all Steve Job’ needed for a salary.</td>
-			</tr>
-			<tr class="even">
-			<td><a href="http://example.com">John</a></td>
-			<td>$100K</td>
-			<td>For all the blogging he does.</td>
-			</tr>
-			<tr class="odd">
-			<td><a href="http://example.com/">Jane</a></td>
-			<td>$100M</td>
-			<td>Pictures are worth a thousand words, right? So Tom x 1,000.</td>
-			</tr>
-			<tr class="even">
-			<td><a href="http://example.com/">Jane</a></td>
-			<td>$100B</td>
-			<td>With hair like that?! Enough said…</td>
-			</tr>
-			</tbody>
-			</table>
-			<h2>Definition Lists</h2>
-			<dl>
-			<dt>Definition List Title</dt>
-			<dd>Definition list division.</dd>
-			<dt>Startup</dt>
-			<dd>A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.</dd>
-			<dt>#dowork</dt>
-			<dd>Coined by Rob Dyrdek and his personal body guard Christopher “Big Black” Boykins, “Do Work” works as a self motivator, to motivating your friends.</dd>
-			<dt>Do It Live</dt>
-			<dd>I’ll let Bill O’Reilly will <a title="We'll Do It Live" href="https://www.youtube.com/watch?v=O_HyZ5aW76c">explain</a> this one.</dd>
-			</dl>
-			<h2>Unordered Lists (Nested)</h2>
-			<ul>
-			<li>List item one
-			<ul>
-			<li>List item one
-			<ul>
-			<li>List item one</li>
-			<li>List item two</li>
-			<li>List item three</li>
-			<li>List item four</li>
-			</ul>
-			</li>
-			<li>List item two</li>
-			<li>List item three</li>
-			<li>List item four</li>
-			</ul>
-			</li>
-			<li>List item two</li>
-			<li>List item three</li>
-			<li>List item four</li>
-			</ul>
-			<h2>Ordered List (Nested)</h2>
-			<ol>
-			<li>List item one
-			<ol>
-			<li>List item one
-			<ol>
-			<li>List item one</li>
-			<li>List item two</li>
-			<li>List item three</li>
-			<li>List item four</li>
-			</ol>
-			</li>
-			<li>List item two</li>
-			<li>List item three</li>
-			<li>List item four</li>
-			</ol>
-			</li>
-			<li>List item two</li>
-			<li>List item three</li>
-			<li>List item four</li>
-			</ol>
-			<h2>HTML Tags</h2>
-			<p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p>
-			<p><strong>Address Tag</strong></p>
-			<address>1 Infinite Loop<br>
-			Cupertino, CA 95014<br>
-			United States</address>
-			<p><strong>Anchor Tag (aka. Link)</strong></p>
-			<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-			<p><strong>Abbreviation Tag</strong></p>
-			<p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p>
-			<p><strong>Acronym Tag</strong></p>
-			<p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p>
-			<p><strong>Big Tag</strong></p>
-			<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-			<p><strong>Cite Tag</strong></p>
-			<p>“Code is poetry.” —<cite>Automattic</cite></p>
-			<p><strong>Code Tag</strong></p>
-			<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-			<p><strong>Delete Tag</strong></p>
-			<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-			<p><strong>Emphasize Tag</strong></p>
-			<p>The emphasize tag should <em>italicize</em> text.</p>
-			<p><strong>Insert Tag</strong></p>
-			<p>This tag should denote <ins>inserted</ins> text.</p>
-			<p><strong>Keyboard Tag</strong></p>
-			<p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-			<p><strong>Preformatted Tag</strong></p>
-			<p>This tag styles large blocks of code.</p>
-			<pre>.post-title {
-				margin: 0 0 5px;
-				font-weight: bold;
-				font-size: 38px;
-				line-height: 1.2;
-			}</pre>
-			<p><strong>Quote Tag</strong></p>
-			<p><q>Developers, developers, developers…</q> –Steve Ballmer</p>
-			<p><strong>Strong Tag</strong></p>
-			<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-			<p><strong>Subscript Tag</strong></p>
-			<p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p>
-			<p><strong>Superscript Tag</strong></p>
-			<p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-			<p><strong>Teletype Tag</strong></p>
-			<p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-			<p><strong>Variable Tag</strong></p>
-			<p>This allows you to denote <var>variables</var>.</p>
+		<h3 class="true-title">Page Markup And Formatting</h3>	
+			<?php app_get_component('components/_DEMO-html-markup'); ?>
 		</div>
 
 
@@ -4631,22 +4019,22 @@
 
 
 			<div class="flex-grid">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi
 				</div>
 			</div>
@@ -4654,22 +4042,22 @@
 			<h3>Compact grid</h3>
 
 			<div class="flex-grid flex-grid-compact">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but compact
 				</div>
 			</div>
@@ -4679,22 +4067,22 @@
 			<h3>Expanded grid</h3>
 
 			<div class="flex-grid flex-grid-expanded">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but expanded
 				</div>
 			</div>
@@ -4702,22 +4090,22 @@
 			<h3>no gutter grid</h3>
 
 			<div class="flex-grid flex-grid-no-gutter">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter
 				</div>
 			</div>
@@ -4727,22 +4115,22 @@
 			<h3>no gutter x grid</h3>
 
 			<div class="flex-grid flex-grid-no-gutter-x">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter x
 				</div>
 			</div>
@@ -4750,22 +4138,22 @@
 			<h3>no gutter y grid</h3>
 
 			<div class="flex-grid flex-grid-no-gutter-y">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but no gutter y
 				</div>
 			</div>
@@ -4774,22 +4162,22 @@
 			<h3>fixed grid</h3>
 
 			<div class="flex-grid flex-grid-fixed">
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
 					A column boi but fixed
 				</div>
 			</div>
@@ -4798,28 +4186,28 @@
 			<h3> grid but not necessarily columnized children</h3>
 
 			<div class="flex-grid">
-				<div class="flex-col-6">
+				<div class="background-theme-contrast flex-col-6">
 					A column boi but not really column
 				</div>
-				<div class="flex-col-6">
+				<div class="background-theme-contrast flex-col-6">
 					A column boi but not really column
 				</div>
-				<div class="flex-col-3 flex-0-1">
+				<div class="background-theme-contrast flex-col-3 flex-0-1">
 					A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-child">
+				<div class="background-theme-contrast flex-child">
 					A column boi but not really column
 				</div>
-				<div class="flex-child flex-01-1">
+				<div class="background-theme-contrast flex-child flex-01-1">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-col-4">
+				<div class="background-theme-contrast flex-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-col-4">
+				<div class="background-theme-contrast flex-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="flex-col-4">
+				<div class="background-theme-contrast flex-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
 			</div>
@@ -5217,10 +4605,10 @@
 </div>
 
 		<style>
-			.accordion.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]),
-			.accordion.accordion:nth-child(n+9) .flex-child,
-			.accordion.accordion:nth-child(n+9) *[class*="flex-col-"],
-			.accordion.accordion:nth-child(n+9) *[class*="color-"]:not(.symbol) {
+			.accordion.accordion:nth-child(n+20) *[class*="background-"]:not(*[class*="clip"]),
+			.accordion.accordion:nth-child(n+20) .flex-child,
+			.accordion.accordion:nth-child(n+20) *[class*="flex-col-"],
+			.accordion.accordion:nth-child(n+20) *[class*="color-"]:not(.symbol) {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
 			}
@@ -5256,7 +4644,6 @@
 
 			.accordion:nth-child(n+9) .flex-child,
 			.accordion:nth-child(n+9) *[class*="flex-col-"] {
-				background: var(--theme-background-contrast);
 				min-height: 200px;
 
 			}
