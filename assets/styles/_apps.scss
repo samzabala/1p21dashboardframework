@@ -13,8 +13,10 @@ $sidebar-base-slim: 80px;
 
 //custom
 
+
+//whole page layout
 #dashboard {
-	
+	//hides svgs that contain defs for styling and not actually ouputting a pichur
 	&-svg-styles {
 		width:0;
 		height:0;
@@ -24,6 +26,7 @@ $sidebar-base-slim: 80px;
 		left:0;
 		overflow:hidden;
 	}
+
 	&-block {
 		// &-sidebar,&-main {
 		// }
@@ -291,12 +294,12 @@ $sidebar-base-slim: 80px;
 }
 
 
-
+//helpers
 .dashboard {
 
 
 
-
+	//style board column vertical paadding
 	&-board-partition {
 		padding: 50px 0;
 	}
@@ -309,11 +312,15 @@ $sidebar-base-slim: 80px;
 	}
 	
 	&-table {
+
+		//the stars for varoite tasks and shit
 		&-icon-flush-left {
 			//something something
 		}
+
+
 		&-cell {
-			//holy grail
+			//holy grail. that wont let your cells stretvch too much
 			&-max {
 
 				width: 275px;
@@ -323,6 +330,7 @@ $sidebar-base-slim: 80px;
 		}
 
 		&-row {
+			
 			//accordion infused table like in timertracker/team.php
 			&-accordion {
 				&-header {
@@ -340,6 +348,7 @@ $sidebar-base-slim: 80px;
 		}
 	}
 
+	//layout styles for 2 column board layouts
 	&-board {
 		&-column-layout {
 			&-container {
