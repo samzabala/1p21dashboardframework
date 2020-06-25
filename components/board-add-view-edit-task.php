@@ -63,30 +63,33 @@
 							</div>
 
 							<!-- @if attachments have rows -->
-								<div class="flex-grid justify-content-space-between">
-									
-									<!-- @LOOP component .flex-child  -->
-										<div class="flex-child">
-											<?php app_get_component('components/asset'); ?>
-										</div>
-
-										<!-- @PLACEHOLDER: DELETE WHEN READY -->
-											<?php for($i=1; $i<6; $i++){ ?>
-												
-												<div class="flex-child">
-													<?php app_get_component('components/asset'); ?>
-												</div>
-											<?php } ?>
-
-								</div>
+								<?php app_get_component('components/attachment-grid-view'); ?>
 
 							<!-- @else no attachments -->
 								<p class="color-neutral font-style-italic">No attachments available</p>
+
+
+
+
+							<hr>
 						</div>
 
 					<!-- Comments -->
 						<div class="task-comments">
-								
+							<?php app_get_component('components/comment-form'); ?>
+
+
+							<!-- @LOOP component comment-row  -->
+							<?php app_get_component('components/comment-row'); ?>
+
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+								<?php for($i=1; $i<9; $i++){ ?>
+									
+									<div class="flex-child">
+										<?php app_get_component('components/comment-row'); ?>
+									</div>
+								<?php } ?>
+
 						</div>
 				</div>
 			</div>
@@ -181,66 +184,23 @@
 
 								</div>
 							</div>
+
+
+
+							<hr>
 						</div>
 
 
 					<!-- Attachments -->
 						<div class="task-attachments">
-
-							<!-- temporary fix while figuring out what the fuck -->
-							<div class="flex-grid flex-grid-no-gutter justify-content-space-between align-items-center">
-								<div class="flex-col-xs-6">
-									<h4 class="no-margin-y">
-										Attachments
-									</h4>
-								</div>
-								<div class="flex-col-xs-6 text-align-right">
-								<!--
-									@note
-									
-								-->
-									<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small btn-round">Add Attachment <i class="symbol symbol-plus"></i></a>
-								</div>
 								
-								<div class="flex-col-xs-12">
-									<div class="zone zone-primary">
-
-										<input multiple name="task-attachments-to-add" type="file" class="input input-single-line" placeholder="Add Attachments">
-										<span class="zone-text">
-											Drag and drop attachments here
-										</span>
-									</div>
-								</div>
-
-								<!-- @NOTE not sure if `.zone` setup may work out for attachments, but just in case not, use this alternative. replace its closest `.flex-col-xs-12` -->
-								<!--
-									<div class="flex-col-xs-12">
-										<div class="input-wrapper input-wrapper-block p">
-											<input multiple name="task-attachments-to-add" type="file" class="input input-single-line" placeholder="Add Attachments">
-										</div>
-									</div>
-								-->
-							</div>
-
 							<!-- @if attachments have rows -->
-								<div class="flex-grid justify-content-space-between">
+								<?php app_get_component('components/attachment-grid-modify'); ?>
 
-									<input type="hidden"  name="task-attachments-to-delete" />
 
-									<!-- @LOOP component .flex-child  -->
-										<div class="flex-child">
-											<?php app_get_component('components/asset'); ?>
-										</div>
-
-										<!-- @PLACEHOLDER: DELETE WHEN READY -->
-											<?php for($j=1; $j<6; $j++){ ?>
-												
-												<div class="flex-child">
-													<?php app_get_component('components/asset'); ?>
-												</div>
-											<?php } ?>
-								</div>
+								
 							
+								<?php app_get_component('components/attachment-form'); ?>
 							
 							
 						</div>

@@ -1,4 +1,4 @@
-<div class="asset">
+<div class="asset flex-child">
 	<div class="asset-thumbnail">
 
 		<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
@@ -40,7 +40,7 @@
 		editing projects, editing task
 
 	-->
-		<a href="#" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
+		<a href="#" data-toggle="asset-close" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
 			<i class="symbol symbol-close"></i>
 		</a>
 		
