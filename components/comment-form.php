@@ -8,7 +8,7 @@
 		<input type="file" name="comment-attachments"  id="comment-attachments" class="innput input-single-line" />
 	</div>
 	<div class="text-align-right">
-		<button  class="btn btn-primary" type="submit">Add Comment</button>
+		<button  class="btn btn-primary btn-round" type="submit">Add Comment</button>
 	</div>
 	
 </form>
