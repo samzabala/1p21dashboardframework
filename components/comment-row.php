@@ -5,8 +5,8 @@
 		<div class="no-margin-top flex-child">
 			<?php app_get_component('components/profile-image-small'); ?>
 		</div>
-		<div class="no-margin-top flex-child text-wrap-ellipsis h4 font-weight-400 no-margin-y color-primary-hover">
-			<a class="color-inherit" href="<?=app_create_link(array('template'=>'profile')) ?>">
+		<div class="no-margin-top flex-child text-wrap-ellipsis font-weight-400 no-margin-y color-primary-hover">
+			<a class="color-inherit font-weight-700" href="<?=app_create_link(array('template'=>'profile')) ?>">
 				<span class="REPLACE">Profile name</span>
 			</a>
 			<p class="no-margin comment-row-meta color-neutral">
@@ -40,7 +40,7 @@
 		<div class="no-margin-top flex-child">
 			<?php app_get_component('components/profile-image-small'); ?>
 		</div>
-		<div class="no-margin-top flex-child text-wrap-ellipsis h4 font-weight-400 no-margin-y color-primary-hover">
+		<div class="no-margin-top flex-child text-wrap-ellipsis font-weight-400 no-margin-y color-primary-hover">
 			<a class="color-inherit" href="<?=app_create_link(array('template'=>'profile')) ?>">
 				<span class="REPLACE">Profile name</span>
 			</a>

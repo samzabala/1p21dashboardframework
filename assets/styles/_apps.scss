@@ -154,6 +154,15 @@ $sidebar-base-slim: 80px;
 				}
 			}
 
+			#content-wrapper {
+				.body-loading & {
+					opacity:0;
+				}
+				.body-loaded & {
+					opacity:1;
+				}
+			}
+
 			@keyframes dashboardLoading {
 				0% {
 					content:"Loading Stuff.";
@@ -307,8 +316,11 @@ $sidebar-base-slim: 80px;
 
 	//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
 	&-table-wrapper-gutterless {
-		margin : 0 -25px;
+		margin: 0 -25px;
 		width: auto;
+		@include br(#{$mobile-br-max}-max){
+			margin: 0 -15px;
+		}
 	}
 	
 	&-table {
@@ -323,9 +335,9 @@ $sidebar-base-slim: 80px;
 			//holy grail. that wont let your cells stretvch too much
 			&-max {
 
-				width: 275px;
-				max-width: 275px!important;
-				min-width: 275px!important;
+				width: 200px;
+				max-width: 200px!important;
+				min-width: 200px!important;
 			}
 		}
 

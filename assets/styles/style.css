@@ -55,9 +55,9 @@ table {
 
 :root {
   --br-xxs: 400px;
-  --br-xs: 767px;
-  --br-sm: 1279px;
-  --br-md: 1699px;
+  --br-xs: 600px;
+  --br-sm: 1200px;
+  --br-md: 1700px;
   --br-lg: 1800px;
   --mobile-br-max: sm;
   --brand-color-base: #000000;
@@ -68,7 +68,7 @@ table {
   --brand-color-primary: #0480FE;
   --brand-color-secondary: #F204A2;
   --brand-color-accent: #894EC7;
-  --brand-color-success: #15b800;
+  --brand-color-success: #64B4AE;
   --brand-color-caution: #fd7f03;
   --brand-color-error: #fd0303;
   --brand-color-intensity-1: #0480FE;
@@ -104,15 +104,15 @@ table {
 .flex-xs {
   display: flex!important; }
 
-@media (min-width: 768px) {
+@media (min-width: 601px) {
   .flex-sm {
     display: flex!important; } }
 
-@media (min-width: 1280px) {
+@media (min-width: 1201px) {
   .flex-md {
     display: flex!important; } }
 
-@media (min-width: 1700px) {
+@media (min-width: 1701px) {
   .flex-lg {
     display: flex!important; } }
 
@@ -230,20 +230,20 @@ a {
 /*** TYPOGRAPHY ***/
 /* special */
 .special-primary {
-  font-size: 4.6428571429em !important;
+  font-size: 3.9285714286em !important;
   line-height: 1 !important;
   color: inherit !important;
   font-weight: 300 !important;
   text-transform: none !important;
   font-style: normal !important;
-  margin-bottom: 0.3076923077em;
-  margin-top: 0.3076923077em;
+  margin-bottom: 0.3636363636em;
+  margin-top: 0.3636363636em;
   display: block; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .special-primary {
       font-size: 3.8571428571em !important; } }
 .special-secondary {
-  font-size: 2.7142857143em !important;
+  font-size: 2.8571428571em !important;
   line-height: 1.25 !important;
   color: inherit !important;
   font-weight: 300 !important;
@@ -252,20 +252,20 @@ a {
   margin-bottom: 0.75em;
   margin-top: 0.75em;
   display: block; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .special-secondary {
       font-size: 2.2857142857em !important; } }
 .lead {
-  font-size: 1.7142857143em !important;
+  font-size: 1.7857142857em !important;
   line-height: 1.25 !important;
   color: inherit !important;
   font-weight: 300 !important;
   text-transform: none !important;
   font-style: normal !important;
-  margin-bottom: 1.6666666667em;
-  margin-top: 1.6666666667em;
+  margin-bottom: 1.6em;
+  margin-top: 1.6em;
   display: block; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .lead {
       font-size: 1.4285714286em !important; } }
 /* heading */
@@ -293,16 +293,16 @@ h6, .h6 {
     color: inherit; }
 
 h1, .h1 {
-  font-size: 2.125em; }
+  font-size: 2em; }
 
 h2, .h2 {
-  font-size: 1.875em; }
+  font-size: 1.75em; }
 
 h3, .h3 {
-  font-size: 1.625em; }
+  font-size: 1.5em; }
 
 h4, .h4 {
-  font-size: 1.125em; }
+  font-size: 1.25em; }
 
 h5, .h5 {
   font-size: 1em; }
@@ -703,7 +703,7 @@ big {
 .fill-success-active.active,
 .fill-success-toggle.active,
 .fill-success-toggle.open {
-  fill: #15b800 !important; }
+  fill: #64B4AE !important; }
 
 .fill-caution,
 .theme-inverse .fill-caution-inverse,
@@ -909,7 +909,7 @@ big {
 .stroke-success-active.active,
 .stroke-success-toggle.active,
 .stroke-success-toggle.open {
-  stroke: #15b800 !important; }
+  stroke: #64B4AE !important; }
 
 .stroke-caution,
 .theme-inverse .stroke-caution-inverse,
@@ -1007,8 +1007,8 @@ table {
   .table-cell.table-cell-heading {
     vertical-align: inherit;
     text-align: inherit;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 100%;
     display: table-cell;
     position: relative; }
@@ -1074,7 +1074,7 @@ table {
     background-color: rgba(141, 141, 141, 0.1); }
   .table-row-success,
   .table-cell-success {
-    background-color: rgba(21, 184, 0, 0.1); }
+    background-color: rgba(100, 180, 174, 0.1); }
   .table-row-caution,
   .table-cell-caution {
     background-color: rgba(253, 127, 3, 0.1); }
@@ -1117,10 +1117,10 @@ table {
     margin-right: 0; }
   .symbol:first-child {
     margin-left: 0; }
-  .symbol-text-left, .active > .symbol-text-left-toggle, .open > .symbol-text-left-toggle, .symbol-text-right, .active > .symbol-text-right-toggle, .open > .symbol-text-right-toggle, .symbol-text-center, .active > .symbol-text-center-toggle, .open > .symbol-text-center-toggle, .symbol-text-justify, .active > .symbol-text-justify-toggle, .open > .symbol-text-justify-toggle, .symbol-caret-left, .symbol-caret-right, .symbol-caret-up, .symbol-caret-down, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle, .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle, .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle, .symbol-burger, .active > .symbol-burger-toggle, .open > .symbol-burger-toggle, .symbol-download, .active > .symbol-download-toggle, .open > .symbol-download-toggle, .symbol-map, .active > .symbol-map-toggle, .open > .symbol-map-toggle, .symbol-close, .active > .symbol-close-toggle, .open > .symbol-close-toggle, .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle, .symbol-minus, .active > .symbol-minus-toggle, .open > .symbol-minus-toggle, .symbol-plus, .active > .symbol-plus-toggle, .open > .symbol-plus-toggle, .symbol-time, .active > .symbol-time-toggle, .open > .symbol-time-toggle, .symbol-timer, .active > .symbol-timer-toggle, .open > .symbol-timer-toggle, .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle, .symbol-pause, .active > .symbol-pause-toggle, .open > .symbol-pause-toggle, .symbol-play, .active > .symbol-play-toggle, .open > .symbol-play-toggle, .symbol-stop, .active > .symbol-stop-toggle, .open > .symbol-stop-toggle, .symbol-square, .active > .symbol-square-toggle, .open > .symbol-square-toggle, .symbol-delete, .active > .symbol-delete-toggle, .open > .symbol-delete-toggle, .symbol-edit, .active > .symbol-edit-toggle, .open > .symbol-edit-toggle {
+  .symbol-text-left, .active > .symbol-text-left-toggle, .open > .symbol-text-left-toggle, .symbol-text-right, .active > .symbol-text-right-toggle, .open > .symbol-text-right-toggle, .symbol-text-center, .active > .symbol-text-center-toggle, .open > .symbol-text-center-toggle, .symbol-text-justify, .active > .symbol-text-justify-toggle, .open > .symbol-text-justify-toggle, .symbol-caret-left, .symbol-caret-right, .symbol-caret-up, .symbol-caret-down, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle, .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle, .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle, .symbol-burger, .active > .symbol-burger-toggle, .open > .symbol-burger-toggle, .symbol-download, .active > .symbol-download-toggle, .open > .symbol-download-toggle, .symbol-star, .active > .symbol-star-toggle, .open > .symbol-star-toggle, .symbol-star-stroke, .active > .symbol-star-stroke-toggle, .open > .symbol-star-stroke-toggle, .symbol-map, .active > .symbol-map-toggle, .open > .symbol-map-toggle, .symbol-close, .active > .symbol-close-toggle, .open > .symbol-close-toggle, .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle, .symbol-minus, .active > .symbol-minus-toggle, .open > .symbol-minus-toggle, .symbol-plus, .active > .symbol-plus-toggle, .open > .symbol-plus-toggle, .symbol-time, .active > .symbol-time-toggle, .open > .symbol-time-toggle, .symbol-timer, .active > .symbol-timer-toggle, .open > .symbol-timer-toggle, .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle, .symbol-pause, .active > .symbol-pause-toggle, .open > .symbol-pause-toggle, .symbol-play, .active > .symbol-play-toggle, .open > .symbol-play-toggle, .symbol-stop, .active > .symbol-stop-toggle, .open > .symbol-stop-toggle, .symbol-square, .active > .symbol-square-toggle, .open > .symbol-square-toggle, .symbol-delete, .active > .symbol-delete-toggle, .open > .symbol-delete-toggle, .symbol-edit, .active > .symbol-edit-toggle, .open > .symbol-edit-toggle {
     transform: none;
     transition: none; }
-  .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:before, .symbol-download:after, .active > .symbol-download-toggle:before, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:before, .open > .symbol-download-toggle:after, .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .symbol-search:after, .active > .symbol-search-toggle:before, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:before, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .symbol-delete:after, .active > .symbol-delete-toggle:before, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:after, .symbol-edit:before, .symbol-edit:after, .active > .symbol-edit-toggle:before, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:after {
+  .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:before, .symbol-download:after, .active > .symbol-download-toggle:before, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:before, .open > .symbol-download-toggle:after, .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after, .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .symbol-search:after, .active > .symbol-search-toggle:before, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:before, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .symbol-delete:after, .active > .symbol-delete-toggle:before, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:after, .symbol-edit:before, .symbol-edit:after, .active > .symbol-edit-toggle:before, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:after {
     content: "";
     color: inherit;
     position: absolute;
@@ -1134,7 +1134,7 @@ table {
     background: none;
     border: none;
     transition: none; }
-    .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:after, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .active > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:before, .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
+    .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:after, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:after, .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .active > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:before, .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
       background: currentColor; }
     .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
       border-radius: 0.09375em; }
@@ -1148,7 +1148,7 @@ table {
       width: 1em; }
     .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
       height: 1em; }
-  .symbol-text-left:before, .active > .symbol-text-left-toggle:before, .open > .symbol-text-left-toggle:before, .symbol-text-right:before, .active > .symbol-text-right-toggle:before, .open > .symbol-text-right-toggle:before, .symbol-text-center:before, .active > .symbol-text-center-toggle:before, .open > .symbol-text-center-toggle:before, .symbol-text-justify:before, .active > .symbol-text-justify-toggle:before, .open > .symbol-text-justify-toggle:before, .symbol-caret-left:before, .symbol-caret-right:before, .symbol-caret-up:before, .symbol-caret-down:before, .symbol-kebab-vertical:before, .active > .symbol-kebab-vertical-toggle:before, .open > .symbol-kebab-vertical-toggle:before, .symbol-kebab-horizontal:before, .active > .symbol-kebab-horizontal-toggle:before, .open > .symbol-kebab-horizontal-toggle:before, .symbol-minus:before, .active > .symbol-minus-toggle:before, .open > .symbol-minus-toggle:before, .symbol-time:before, .symbol-play:before, .active > .symbol-play-toggle:before, .open > .symbol-play-toggle:before, .symbol-stop:before, .active > .symbol-stop-toggle:before, .open > .symbol-stop-toggle:before, .symbol-square:before, .active > .symbol-square-toggle:before, .open > .symbol-square-toggle:before {
+  .symbol-text-left:before, .active > .symbol-text-left-toggle:before, .open > .symbol-text-left-toggle:before, .symbol-text-right:before, .active > .symbol-text-right-toggle:before, .open > .symbol-text-right-toggle:before, .symbol-text-center:before, .active > .symbol-text-center-toggle:before, .open > .symbol-text-center-toggle:before, .symbol-text-justify:before, .active > .symbol-text-justify-toggle:before, .open > .symbol-text-justify-toggle:before, .symbol-caret-left:before, .symbol-caret-right:before, .symbol-caret-up:before, .symbol-caret-down:before, .symbol-kebab-vertical:before, .active > .symbol-kebab-vertical-toggle:before, .open > .symbol-kebab-vertical-toggle:before, .symbol-kebab-horizontal:before, .active > .symbol-kebab-horizontal-toggle:before, .open > .symbol-kebab-horizontal-toggle:before, .symbol-star:before, .active > .symbol-star-toggle:before, .open > .symbol-star-toggle:before, .symbol-star-stroke:before, .active > .symbol-star-stroke-toggle:before, .open > .symbol-star-stroke-toggle:before, .symbol-minus:before, .active > .symbol-minus-toggle:before, .open > .symbol-minus-toggle:before, .symbol-time:before, .symbol-play:before, .active > .symbol-play-toggle:before, .open > .symbol-play-toggle:before, .symbol-stop:before, .active > .symbol-stop-toggle:before, .open > .symbol-stop-toggle:before, .symbol-square:before, .active > .symbol-square-toggle:before, .open > .symbol-square-toggle:before {
     content: none; }
   .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
     -webkit-clip-path: polygon(0 0, 50% 0, 50% 0.125em, 0.125em 0.125em, 0.125em calc(100% - 0.125em), calc(100% - 0.125em) calc(100% - 0.125em), calc(100% - 0.125em) 50%, 100% 50%, 100% 100%, 0 100%);
@@ -1215,7 +1215,6 @@ table {
     height: 1.125em;
     left: -.5em;
     right: -.5em;
-    bottom: -.125em;
     top: auto;
     background-image: repeating-linear-gradient(90deg, currentColor 0, currentColor 0.125em, transparent 0.125em, transparent 100%), linear-gradient(0deg, currentColor 0, currentColor 0.125em, transparent 0.125em, transparent 100%);
     background-position: 0.35em 0.125em;
@@ -1227,6 +1226,7 @@ table {
     right: -.1875em;
     left: auto;
     bottom: auto;
+    top: -.125em;
     transform: rotate(45deg); }
   .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before {
     height: 1em; }
@@ -1266,6 +1266,19 @@ table {
     height: 0;
     margin: 0 auto;
     top: calc(1em - 0.1875em); }
+  .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after {
+    width: 1.25em;
+    height: 1.25em;
+    top: -.5em;
+    bottom: -.5em;
+    left: -.5em;
+    right: -.5em; }
+  .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after {
+    -webkit-clip-path: polygon(50% 5%, 64% 38%, 100% 41%, 73% 65%, 80% 100%, 50% 82%, 20% 100%, 27% 65%, 0% 41%, 36% 38%);
+            clip-path: polygon(50% 5%, 64% 38%, 100% 41%, 73% 65%, 80% 100%, 50% 82%, 20% 100%, 27% 65%, 0% 41%, 36% 38%); }
+  .symbol-star-stroke:after, .active > .symbol-star-toggle-stroke:after, .open > .symbol-star-toggle-stroke:after {
+    -webkit-clip-path: polygon(50% 5%, 64% 38%, 100% 41%, 73% 65%, 80% 100%, 50% 82%, 20% 100%, 27% 65%, 0% 41%, 36% 38%, 50% 5%, 50% 26%, 41% 46%, 20% 48%, 36% 62%, 32% 83%, 50% 72%, 68% 83%, 64% 62%, 80% 48%, 59% 46%, 50% 26%);
+            clip-path: polygon(50% 5%, 64% 38%, 100% 41%, 73% 65%, 80% 100%, 50% 82%, 20% 100%, 27% 65%, 0% 41%, 36% 38%, 50% 5%, 50% 26%, 41% 46%, 20% 48%, 36% 62%, 32% 83%, 50% 72%, 68% 83%, 64% 62%, 80% 48%, 59% 46%, 50% 26%); }
   .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before {
     height: .375em;
     border-bottom: 0.125em solid;
@@ -1491,7 +1504,7 @@ table {
   background: #FFFFFF;
   margin: auto; }
 
-@media (max-width: 1279px) {
+@media (max-width: 1200px) {
   .nav {
     height: auto; }
     .nav-list {
@@ -1533,7 +1546,7 @@ table {
   .theme-inverse .tabs {
     color: rgba(141, 141, 141, 0.75);
     border-color: currentColor; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .tabs {
       font-size: 1rem; }
       .tabs.tabs-responsive {
@@ -1622,7 +1635,7 @@ table {
 .container.container-fluid {
   max-width: none; }
 
-@media (min-width: 1280px) {
+@media (min-width: 1201px) {
   .container.container-wide {
     padding-left: 20px;
     padding-right: 20px; }
@@ -1630,7 +1643,7 @@ table {
     padding-left: 60px;
     padding-right: 60px; } }
 
-@media (max-width: 1279px) {
+@media (max-width: 1200px) {
   .container {
     padding-left: 10px;
     padding-right: 10px;
@@ -2773,7 +2786,7 @@ table {
   .flex-grid-no-gutter-x.flex-grid-fixed.flex-grid-no-gutter > .flex-col-xs-12, .flex-grid-no-gutter-x > .flex-col-xs-12 {
     width: 100%; }
 
-@media (min-width: 768px) {
+@media (min-width: 601px) {
   .flex-col-sm-1 {
     flex-basis: calc( 8.3333333333% - 40px); }
     .flex-grid-fixed > .flex-col-sm-1 {
@@ -3099,7 +3112,7 @@ table {
     .flex-grid-no-gutter-x.flex-grid-fixed.flex-grid-no-gutter > .flex-col-sm-12, .flex-grid-no-gutter-x > .flex-col-sm-12 {
       width: 100%; } }
 
-@media (min-width: 1280px) {
+@media (min-width: 1201px) {
   .flex-col-md-1 {
     flex-basis: calc( 8.3333333333% - 40px); }
     .flex-grid-fixed > .flex-col-md-1 {
@@ -3425,7 +3438,7 @@ table {
     .flex-grid-no-gutter-x.flex-grid-fixed.flex-grid-no-gutter > .flex-col-md-12, .flex-grid-no-gutter-x > .flex-col-md-12 {
       width: 100%; } }
 
-@media (min-width: 1700px) {
+@media (min-width: 1701px) {
   .flex-col-lg-1 {
     flex-basis: calc( 8.3333333333% - 40px); }
     .flex-grid-fixed > .flex-col-lg-1 {
@@ -3953,12 +3966,12 @@ table {
       background: linear-gradient(90deg ,  #fd0303 0,  #fd0303 33%,  rgba(253, 3, 3, 0.2) 33%,  rgba(253, 3, 3, 0.2) 100%) ;
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
     .asset-image.asset-image-table {
-      color: #15b800;
-      background: #15b800 ;
+      color: #64B4AE;
+      background: #64B4AE ;
       /* Old browsers */
       /* FF3.6-15 */
       /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(90deg ,  #15b800 0,  #15b800 33%,  rgba(21, 184, 0, 0.2) 33%,  rgba(21, 184, 0, 0.2) 100%) ;
+      background: linear-gradient(90deg ,  #64B4AE 0,  #64B4AE 33%,  rgba(100, 180, 174, 0.2) 33%,  rgba(100, 180, 174, 0.2) 100%) ;
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
     .asset-image.asset-image-text {
       color: #8d8d8d;
@@ -4213,7 +4226,7 @@ table {
 
 .module-header, .module-footer {
   position: relative; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     .module-header-break, .module-footer-break {
       display: flex;
       flex-wrap: wrap;
@@ -4267,10 +4280,10 @@ table {
   .module-functions .module-function {
     margin-top: 10px;
     margin-bottom: 10px; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     .module-functions .module-function:nth-child(n+2) {
       margin-left: .75rem; } }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .module-functions .module-function {
       display: block; } }
   .module-functions .btn-group, .module-functions .input-group {
@@ -4288,7 +4301,7 @@ table {
   .module-footer:not(:first-child) {
     margin-top: 20px; }
 
-@media (max-width: 1279px) {
+@media (max-width: 1200px) {
   .module {
     padding: calc(20px - 1px) calc(20px - 1px); }
   .module-header, .module-content, .module-footer {
@@ -4372,7 +4385,7 @@ table {
   .modal-wrapper {
     z-index: 99999;
     padding: 40px; }
-    @media (max-width: 1279px) {
+    @media (max-width: 1200px) {
       .modal-wrapper {
         padding: 20px; } }
   .modal-title {
@@ -4571,16 +4584,9 @@ table {
 .progress {
   width: 100%;
   display: block;
-  background-color: transparent;
+  background-color: #ecedf0;
   border-radius: 20px;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.2) ;
-  /* Old browsers */
-  /* FF3.6-15 */
-  background: -webkit-repeating-linear-gradient(-45deg ,  rgba(0, 0, 0, 0.2) 0%,  rgba(0, 0, 0, 0.2) 1px,  transparent 1px,  transparent 4px) ;
-  /* Chrome10-25,Safari5.1-6 */
-  background: repeating-linear-gradient(135deg ,  rgba(0, 0, 0, 0.2) 0%,  rgba(0, 0, 0, 0.2) 1px,  transparent 1px,  transparent 4px) ;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  overflow: hidden; }
   .active.progress {
     -webkit-animation-name: progress-bar-stripes;
             animation-name: progress-bar-stripes;
@@ -4591,14 +4597,7 @@ table {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; }
   .theme-inverse .progress {
-    background-color: transparent;
-    background: rgba(0, 0, 0, 0.4) ;
-    /* Old browsers */
-    /* FF3.6-15 */
-    background: -webkit-repeating-linear-gradient(-45deg ,  rgba(0, 0, 0, 0.4) 0%,  rgba(0, 0, 0, 0.4) 1px,  transparent 1px,  transparent 4px) ;
-    /* Chrome10-25,Safari5.1-6 */
-    background: repeating-linear-gradient(135deg ,  rgba(0, 0, 0, 0.4) 0%,  rgba(0, 0, 0, 0.4) 1px,  transparent 1px,  transparent 4px) ;
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+    background-color: #1e1931; }
 
 .progress, .progress-bar {
   height: 1.4285714286rem;
@@ -4701,9 +4700,9 @@ table {
     .tag-neutral, .tag-neutral:hover, .tag-neutral:focus, .tag-neutral:active, .tag-neutral.focus, .tag-neutral.active {
       color: #8d8d8d; }
   .tag-success {
-    background: #7cff6c; }
+    background: #dceeed; }
     .tag-success, .tag-success:hover, .tag-success:focus, .tag-success:active, .tag-success.focus, .tag-success.active {
-      color: #15b800; }
+      color: #64B4AE; }
   .tag-caution {
     background: #fed9b4; }
     .tag-caution, .tag-caution:hover, .tag-caution:focus, .tag-caution:active, .tag-caution.focus, .tag-caution.active {
@@ -4732,6 +4731,36 @@ table {
     background: #feabe2; }
     .tag-intensity-5, .tag-intensity-5:hover, .tag-intensity-5:focus, .tag-intensity-5:active, .tag-intensity-5.focus, .tag-intensity-5.active {
       color: #F204A2; }
+
+/*** Toolbar ***/
+.toolbar {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: none;
+  background-color: #FFFFFF;
+  border: 1px solid #ecedf0; }
+  .theme-inverse .toolbar {
+    background-color: #302a4b;
+    border: 1px solid #1e1931; }
+  .toolbar.toolbar-horizontal {
+    flex-direction: row;
+    min-height: 50px;
+    padding: 10px 10px; }
+  .toolbar.toolbar-vertical {
+    flex-direction: column;
+    min-width: 50px;
+    padding: 10px 10px; }
+  .toolbar-horizontal .toolbar-tile:nth-child(n+2) {
+    margin-left: 10px; }
+  .toolbar-vertical .toolbar-tile {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    -webkit-text-orientation: mixed;
+            text-orientation: mixed; }
+    .toolbar-vertical .toolbar-tile:nth-child(n+2) {
+      margin-top: 10px; }
 
 /*** highlights ***/
 .highlight {
@@ -4772,9 +4801,9 @@ table {
     .highlight-neutral, .highlight-neutral:hover, .highlight-neutral:focus, .highlight-neutral:active, .highlight-neutral.focus, .highlight-neutral.active {
       color: #8d8d8d; }
   .highlight-success {
-    background: #7cff6c; }
+    background: #dceeed; }
     .highlight-success, .highlight-success:hover, .highlight-success:focus, .highlight-success:active, .highlight-success.focus, .highlight-success.active {
-      color: #15b800; }
+      color: #64B4AE; }
   .highlight-caution {
     background: #fed9b4; }
     .highlight-caution, .highlight-caution:hover, .highlight-caution:focus, .highlight-caution:active, .highlight-caution.focus, .highlight-caution.active {
@@ -4879,6 +4908,9 @@ table {
     color: #FFFFFF; }
   .dropdown.open {
     display: block; }
+  .dropdown .list-group {
+    border-radius: 10px;
+    overflow: hidden; }
   .dropdown, .dropdown ul, .dropdown li {
     margin-bottom: 0;
     margin-top: 0; }
@@ -5051,13 +5083,13 @@ table {
     .alert.alert-neutral .alert-footer:not(:first-child) {
       border-color: rgba(116, 116, 116, 0.1); }
   .alert.alert-success {
-    border-color: rgba(15, 133, 0, 0.1);
-    color: #063900;
-    background-color: #1beb00; }
+    border-color: rgba(75, 154, 148, 0.1);
+    color: #326763;
+    background-color: #86c5c0; }
     .alert.alert-success .alert-header:not(:last-child) {
-      border-color: rgba(15, 133, 0, 0.1); }
+      border-color: rgba(75, 154, 148, 0.1); }
     .alert.alert-success .alert-footer:not(:first-child) {
-      border-color: rgba(15, 133, 0, 0.1); }
+      border-color: rgba(75, 154, 148, 0.1); }
   .alert.alert-caution {
     border-color: rgba(203, 102, 2, 0.1);
     color: #7f4001;
@@ -5170,13 +5202,13 @@ table {
     color: #747474;
     background-color: rgba(141, 141, 141, 0.2); }
   .zone.zone-success, .zone.zone-success.zone-disabled, .zone.zone-success.zone:hover, .zone.zone-success.zone:focus, .zone.zone-success.zone.focus, .zone.zone-success.zone:active, .zone.zone-success.zone.active {
-    border-color: #15b800;
-    color: #15b800;
-    background-color: rgba(21, 184, 0, 0.1); }
+    border-color: #64B4AE;
+    color: #64B4AE;
+    background-color: rgba(100, 180, 174, 0.1); }
   .zone.zone-success:hover, .zone.zone-success:focus, .zone.zone-success.focus, .zone.zone-success:active, .zone.zone-success.active {
-    border-color: #0f8500;
-    color: #0f8500;
-    background-color: rgba(21, 184, 0, 0.2); }
+    border-color: #4b9a94;
+    color: #4b9a94;
+    background-color: rgba(100, 180, 174, 0.2); }
   .zone.zone-caution, .zone.zone-caution.zone-disabled, .zone.zone-caution.zone:hover, .zone.zone-caution.zone:focus, .zone.zone-caution.zone.focus, .zone.zone-caution.zone:active, .zone.zone-caution.zone.active {
     border-color: #fd7f03;
     color: #fd7f03;
@@ -5235,11 +5267,13 @@ table {
   padding-bottom: calc(  (  (5.3571428571rem - (1px * 2)) - (1em * 2.1428571429) ) * .5);
   height: 5.3571428571rem; }
 
-.btn.btn-theme-polar-outline, .btn.btn-theme-outline, .btn.btn-error-outline, .btn.btn-caution-outline, .btn.btn-success-outline, .btn.btn-neutral-outline, .btn.btn-accent-outline, .btn.btn-secondary-outline, .btn.btn-primary-outline, .btn.btn-link, .btn-no-shadow.btn, .btn-no-shadow.btn-group {
-  box-shadow: none !important; }
+.btn.btn-theme-polar-outline, .btn.btn-theme-outline, .btn.btn-error-outline, .btn.btn-caution-outline, .btn.btn-success-outline, .btn.btn-neutral-outline, .btn.btn-accent-outline, .btn.btn-secondary-outline, .btn.btn-primary-outline, .btn.btn-link {
+  box-shadow: none; }
+  .btn-no-shadow.btn, .btn-no-shadow.btn-group {
+    box-shadow: none !important; }
 
 .btn, .btn-group {
-  border-radius: 10px;
+  border-radius: 22.5px;
   box-shadow: 0px 3px 10px -6px #000000;
   background-color: transparent;
   color: inherit;
@@ -5252,12 +5286,6 @@ table {
     text-decoration: none; }
   .btn-no-radius.btn, .btn-no-radius.btn-group {
     border-radius: 0 !important; }
-  .btn-round.btn, .btn-round.btn-group {
-    border-radius: 1.6071428571em; }
-    .btn-round.btn-large.btn, .btn-round.btn-large.btn-group {
-      border-radius: 1.7045454545em; }
-    .btn-round.btn-small.btn, .btn-round.btn-small.btn-group {
-      border-radius: 1.25em; }
 
 .btn-group .btn, .btn-group .btn:hover {
   box-shadow: none; }
@@ -5265,14 +5293,14 @@ table {
 .btn-block {
   display: flex;
   width: 100%; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .btn-block-mobile {
       display: flex;
       width: 100%; } }
 .btn.btn-large, .btn-group.btn-large .btn {
   padding-top: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 2.1428571429) ) * .5);
   padding-bottom: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 2.1428571429) ) * .5);
-  border-radius: 20px;
+  border-radius: 37.5px;
   min-height: 3.4090909091em; }
   @media (min-width: 401px) {
     .btn.btn-large, .btn-group.btn-large .btn {
@@ -5281,25 +5309,19 @@ table {
   font-size: 0.8571428571rem;
   padding-top: calc(  (  (2.5em - (1px * 2)) - (1em * 2.1428571429) ) * .5);
   padding-bottom: calc(  (  (2.5em - (1px * 2)) - (1em * 2.1428571429) ) * .5);
-  border-radius: 10px;
+  border-radius: 15px;
   min-height: 2.5em; }
 
 .btn-symbol {
   width: 3.2142857143em;
   padding-left: 0;
   padding-right: 0; }
-  .btn-symbol > .symbol {
-    margin-left: auto;
-    margin-right: auto; }
 
 .btn-large .btn-symbol, .btn-symbol.btn-large {
   width: 3.4090909091em; }
 
 .btn-small .btn-symbol, .btn-symbol.btn-small {
   width: 2.5em; }
-
-.btn-symbol.btn-symbol-round {
-  border-radius: 50% !important; }
 
 .btn-group {
   display: inline-flex;
@@ -5324,9 +5346,9 @@ table {
     .btn-group-block > .btn:not(.btn-symbol) {
       flex: 1 1; }
   .btn-group.btn-large {
-    border-radius: 20px; }
+    border-radius: 37.5px; }
   .btn-group.btn-small {
-    border-radius: 10px; }
+    border-radius: 15px; }
   .btn-group.btn-group-horizontal .btn-symbol {
     flex: 0 0 auto; }
   .btn-group.btn-group-horizontal:not(.btn-group-responsive) > .btn:nth-last-child(n+2) {
@@ -5347,7 +5369,7 @@ table {
       border-top-right-radius: 0 !important;
       border-top-left-radius: 0 !important;
       margin-top: -1px; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     .btn-group.btn-group-responsive.btn-group-horizontal > .btn-symbol {
       width: auto; }
     .btn-group.btn-group-responsive.btn-group-horizontal > .btn:nth-last-child(n+2) {
@@ -5357,7 +5379,7 @@ table {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
       margin-left: -1px; } }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .btn-group.btn-group-responsive {
       width: 100%;
       flex-wrap: wrap;
@@ -5447,17 +5469,17 @@ table {
 
 .btn-no-interaction.btn.btn-success:hover, .btn-no-interaction.btn.btn-success:focus, .btn-no-interaction.focus.btn.btn-success, .btn-no-interaction.btn.btn-success:active, .btn-no-interaction.active.btn.btn-success, .btn-disabled.btn.btn-success:hover, .btn-disabled.btn.btn-success:focus, .btn-disabled.focus.btn.btn-success, .btn-disabled.btn.btn-success:active, .btn-disabled.active.btn.btn-success, .btn-disabled:hover .btn.btn-success, .btn-disabled:focus .btn.btn-success, .btn-disabled.focus .btn.btn-success, .btn-disabled:active .btn.btn-success, .btn-disabled.active .btn.btn-success, .btn.btn-success {
   border-color: transparent ;
-  background-color: #15b800 ;
+  background-color: #64B4AE ;
   color: #FFFFFF ; }
 
 .btn.btn-success:hover, .btn-group.btn-group-unite:hover .btn.btn-success, .btn.btn-success:focus, .btn-group.btn-group-unite:focus .btn.btn-success, .focus.btn.btn-success, .btn-group.btn-group-unite.focus .btn.btn-success {
   border-color: transparent ;
-  background-color: #1beb00 ;
+  background-color: #86c5c0 ;
   color: #FFFFFF ; }
 
 .btn.btn-success:active, .btn-group.btn-group-unite:active .btn.btn-success, .active.btn.btn-success, .btn-group.btn-group-unite.active .btn.btn-success {
   border-color: transparent ;
-  background-color: #0f8500 ;
+  background-color: #4b9a94 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-caution:hover, .btn-no-interaction.btn.btn-caution:focus, .btn-no-interaction.focus.btn.btn-caution, .btn-no-interaction.btn.btn-caution:active, .btn-no-interaction.active.btn.btn-caution, .btn-disabled.btn.btn-caution:hover, .btn-disabled.btn.btn-caution:focus, .btn-disabled.focus.btn.btn-caution, .btn-disabled.btn.btn-caution:active, .btn-disabled.active.btn.btn-caution, .btn-disabled:hover .btn.btn-caution, .btn-disabled:focus .btn.btn-caution, .btn-disabled.focus .btn.btn-caution, .btn-disabled:active .btn.btn-caution, .btn-disabled.active .btn.btn-caution, .btn.btn-caution {
@@ -5566,18 +5588,18 @@ table {
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-success-outline:hover, .btn-no-interaction.btn.btn-success-outline:focus, .btn-no-interaction.focus.btn.btn-success-outline, .btn-no-interaction.btn.btn-success-outline:active, .btn-no-interaction.active.btn.btn-success-outline, .btn-disabled.btn.btn-success-outline:hover, .btn-disabled.btn.btn-success-outline:focus, .btn-disabled.focus.btn.btn-success-outline, .btn-disabled.btn.btn-success-outline:active, .btn-disabled.active.btn.btn-success-outline, .btn-disabled:hover .btn.btn-success-outline, .btn-disabled:focus .btn.btn-success-outline, .btn-disabled.focus .btn.btn-success-outline, .btn-disabled:active .btn.btn-success-outline, .btn-disabled.active .btn.btn-success-outline, .btn.btn-success-outline {
-  border-color: #15b800 ;
+  border-color: #64B4AE ;
   background-color: transparent ;
-  color: #15b800 ; }
+  color: #64B4AE ; }
 
 .btn.btn-success-outline:hover, .btn-group.btn-group-unite:hover .btn.btn-success-outline, .btn.btn-success-outline:focus, .btn-group.btn-group-unite:focus .btn.btn-success-outline, .focus.btn.btn-success-outline, .btn-group.btn-group-unite.focus .btn.btn-success-outline {
   border-color: transparent ;
-  background-color: #1beb00 ;
+  background-color: #86c5c0 ;
   color: #FFFFFF ; }
 
 .btn.btn-success-outline:active, .btn-group.btn-group-unite:active .btn.btn-success-outline, .active.btn.btn-success-outline, .btn-group.btn-group-unite.active .btn.btn-success-outline {
   border-color: transparent ;
-  background-color: #0f8500 ;
+  background-color: #4b9a94 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-caution-outline:hover, .btn-no-interaction.btn.btn-caution-outline:focus, .btn-no-interaction.focus.btn.btn-caution-outline, .btn-no-interaction.btn.btn-caution-outline:active, .btn-no-interaction.active.btn.btn-caution-outline, .btn-disabled.btn.btn-caution-outline:hover, .btn-disabled.btn.btn-caution-outline:focus, .btn-disabled.focus.btn.btn-caution-outline, .btn-disabled.btn.btn-caution-outline:active, .btn-disabled.active.btn.btn-caution-outline, .btn-disabled:hover .btn.btn-caution-outline, .btn-disabled:focus .btn.btn-caution-outline, .btn-disabled.focus .btn.btn-caution-outline, .btn-disabled:active .btn.btn-caution-outline, .btn-disabled.active .btn.btn-caution-outline, .btn.btn-caution-outline {
@@ -5833,7 +5855,7 @@ table {
   box-shadow: none !important; }
 
 .input-tags-ui, .input-calendar-ui, .input-select, .input-single-line, .input-multiple-line, .input-editor, .input-group {
-  border-radius: 10px;
+  border-radius: 22.5px;
   box-shadow: 0px 3px 10px -6px #000000; }
   .nav .input-tags-ui, .nav .input-calendar-ui, .nav .input-select, .nav .input-single-line, .nav .input-multiple-line, .nav .input-editor, .nav .input-group {
     border-radius: 0 !important; }
@@ -5841,12 +5863,6 @@ table {
       box-shadow: none; }
   .input-no-radius.input-tags-ui, .input-no-radius.input-calendar-ui, .input-no-radius.input-select, .input-no-radius.input-single-line, .input-no-radius.input-multiple-line, .input-no-radius.input-editor, .input-no-radius.input-group {
     border-radius: 0 !important; }
-  .input-round.input-tags-ui, .input-round.input-calendar-ui, .input-round.input-select, .input-round.input-single-line, .input-round.input-multiple-line, .input-round.input-editor, .input-round.input-group {
-    border-radius: 1.6071428571rem; }
-    .input-round.input-large.input-tags-ui, .input-round.input-large.input-calendar-ui, .input-round.input-large.input-select, .input-round.input-large.input-single-line, .input-round.input-large.input-multiple-line, .input-round.input-large.input-editor, .input-round.input-large.input-group {
-      border-radius: 1.7857142857rem; }
-    .input-round.input-small.input-tags-ui, .input-round.input-small.input-calendar-ui, .input-round.input-small.input-select, .input-round.input-small.input-single-line, .input-round.input-small.input-multiple-line, .input-round.input-small.input-editor, .input-round.input-small.input-group {
-      border-radius: 1.0714285714rem; }
 
 .input-single-line {
   height: 3.2142857143rem;
@@ -5890,11 +5906,11 @@ table {
 .input-wrapper {
   max-width: 100%;
   position: relative; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     .input-wrapper {
       display: inline-flex;
       padding-right: 2rem; } }
-@media (min-width: 1280px) {
+@media (min-width: 1201px) {
   .input-wrapper.input-wrapper-horizontal {
     flex-direction: row;
     align-items: flex-start; }
@@ -5911,14 +5927,14 @@ table {
       .input-wrapper-block.input-wrapper.input-wrapper-horizontal > .input-label {
         flex-basis: 25%; } }
 
-@media (min-width: 1280px) {
+@media (min-width: 1201px) {
   .input-wrapper.input-wrapper-vertical {
     flex-direction: column; } }
 
 .input-wrapper.input-wrapper-block {
   display: flex;
   padding-right: 0; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .input-wrapper.input-wrapper-block {
       flex-direction: column; }
       .input-wrapper.input-wrapper-block > .input-tags-ui, .input-wrapper.input-wrapper-block > .input-calendar-ui, .input-wrapper.input-wrapper-block > .input-select, .input-wrapper.input-wrapper-block > .input-single-line, .input-wrapper.input-wrapper-block > .input-multiple-line, .input-wrapper.input-wrapper-block > .input-editor {
@@ -5949,7 +5965,7 @@ table {
     .input-group-block > .input,
     .input-group-block > .trumbowyg {
       flex: 1 1; }
-    @media (max-width: 1279px) {
+    @media (max-width: 1200px) {
       .input-group-block-mobile {
         display: flex;
         width: 100%; }
@@ -5958,9 +5974,9 @@ table {
         .input-group-block-mobile .btn:not(.btn-symbol) {
           flex: 1 1; } }
   .input-group.input-group-large {
-    border-radius: 10px; }
+    border-radius: 25px; }
   .input-group.input-group-small {
-    border-radius: 10px; }
+    border-radius: 15px; }
   .input-group.input-group-horizontal:not(.input-group-responsive) > .input:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) .btn:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) .trumbowyg:nth-last-child(n+2) {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important; }
@@ -5979,7 +5995,7 @@ table {
       border-top-right-radius: 0 !important;
       border-top-left-radius: 0 !important;
       margin-top: -1px; }
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     .input-group.input-group-responsive.input-group-horizontal > .btn-symbol {
       width: auto; }
     .input-group.input-group-responsive.input-group-horizontal > .input:nth-last-child(n+2), .input-group.input-group-responsive.input-group-horizontal .btn:nth-last-child(n+2), .input-group.input-group-responsive.input-group-horizontal .trumbowyg:nth-last-child(n+2) {
@@ -5989,7 +6005,7 @@ table {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
       margin-left: -1px; } }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     .input-group.input-group-responsive {
       width: 100%;
       flex-wrap: wrap;
@@ -6049,13 +6065,13 @@ table {
 
 .input-label.input-success,
 .input-success .input-label {
-  color: #15b800; }
+  color: #64B4AE; }
 
 .input.input-success, .input-success .input {
-  color: #15b800;
-  box-shadow: 0px 3px 10px -6px #15b800;
-  border-color: #15b800;
-  background-color: rgba(21, 184, 0, 0.05); }
+  color: #64B4AE;
+  box-shadow: 0px 3px 10px -6px #64B4AE;
+  border-color: #64B4AE;
+  background-color: rgba(100, 180, 174, 0.05); }
 
 .input-label.input-caution,
 .input-caution .input-label {
@@ -6314,7 +6330,7 @@ fieldset {
   .input-calendar-ui-dates {
     margin-bottom: 0.3571428571em; }
 
-@media (max-width: 1279px) {
+@media (max-width: 1200px) {
   .input-calendar-ui-block {
     padding: 0.3571428571em 0.3571428571em; } }
 
@@ -6392,7 +6408,7 @@ fieldset {
       .input-neutral .input-tags-ui-tag-close {
         color: #8d8d8d; }
       .input-success .input-tags-ui-tag-close {
-        color: #15b800; }
+        color: #64B4AE; }
       .input-caution .input-tags-ui-tag-close {
         color: #fd7f03; }
       .input-error .input-tags-ui-tag-close {
@@ -6406,7 +6422,7 @@ fieldset {
     .input-neutral .input-tags-ui-tag {
       background: rgba(141, 141, 141, 0.2); }
     .input-success .input-tags-ui-tag {
-      background: rgba(21, 184, 0, 0.2); }
+      background: rgba(100, 180, 174, 0.2); }
     .input-caution .input-tags-ui-tag {
       background: rgba(253, 127, 3, 0.2); }
     .input-error .input-tags-ui-tag {
@@ -6564,13 +6580,162 @@ fieldset {
   min-width: 100%;
   display: none !important; }
 
-@media (max-width: 1279px) {
+@media (max-width: 1200px) {
   .accordion.accordion-mobile:not(.open) {
     min-width: 100%;
     display: none !important; } }
 
 /*** HELPERS ***/
 /* BACKGROUND CLASSES */
+.border-color-base,
+.theme-inverse .border-color-base-inverse,
+.border-color-base-hover:hover:not(.open):not(.active),
+.border-color-base-focus:focus:not(.open):not(.active),
+.border-color-base-active:active:not(.open):not(.active),
+.border-color-base-focus.focus,
+.border-color-base-active.active,
+.border-color-base-toggle.active,
+.border-color-base-toggle.open {
+  border-color: #000000 !important; }
+
+.border-color-background,
+.theme-inverse .border-color-background-inverse,
+.border-color-background-hover:hover:not(.open):not(.active),
+.border-color-background-focus:focus:not(.open):not(.active),
+.border-color-background-active:active:not(.open):not(.active),
+.border-color-background-focus.focus,
+.border-color-background-active.active,
+.border-color-background-toggle.active,
+.border-color-background-toggle.open {
+  border-color: #FFFFFF !important; }
+
+.border-color-primary,
+.theme-inverse .border-color-primary-inverse,
+.border-color-primary-hover:hover:not(.open):not(.active),
+.border-color-primary-focus:focus:not(.open):not(.active),
+.border-color-primary-active:active:not(.open):not(.active),
+.border-color-primary-focus.focus,
+.border-color-primary-active.active,
+.border-color-primary-toggle.active,
+.border-color-primary-toggle.open {
+  border-color: #0480FE !important; }
+
+.border-color-secondary,
+.theme-inverse .border-color-secondary-inverse,
+.border-color-secondary-hover:hover:not(.open):not(.active),
+.border-color-secondary-focus:focus:not(.open):not(.active),
+.border-color-secondary-active:active:not(.open):not(.active),
+.border-color-secondary-focus.focus,
+.border-color-secondary-active.active,
+.border-color-secondary-toggle.active,
+.border-color-secondary-toggle.open {
+  border-color: #F204A2 !important; }
+
+.border-color-accent,
+.theme-inverse .border-color-accent-inverse,
+.border-color-accent-hover:hover:not(.open):not(.active),
+.border-color-accent-focus:focus:not(.open):not(.active),
+.border-color-accent-active:active:not(.open):not(.active),
+.border-color-accent-focus.focus,
+.border-color-accent-active.active,
+.border-color-accent-toggle.active,
+.border-color-accent-toggle.open {
+  border-color: #894EC7 !important; }
+
+.border-color-neutral,
+.theme-inverse .border-color-neutral-inverse,
+.border-color-neutral-hover:hover:not(.open):not(.active),
+.border-color-neutral-focus:focus:not(.open):not(.active),
+.border-color-neutral-active:active:not(.open):not(.active),
+.border-color-neutral-focus.focus,
+.border-color-neutral-active.active,
+.border-color-neutral-toggle.active,
+.border-color-neutral-toggle.open {
+  border-color: #8d8d8d !important; }
+
+.border-color-success,
+.theme-inverse .border-color-success-inverse,
+.border-color-success-hover:hover:not(.open):not(.active),
+.border-color-success-focus:focus:not(.open):not(.active),
+.border-color-success-active:active:not(.open):not(.active),
+.border-color-success-focus.focus,
+.border-color-success-active.active,
+.border-color-success-toggle.active,
+.border-color-success-toggle.open {
+  border-color: #64B4AE !important; }
+
+.border-color-caution,
+.theme-inverse .border-color-caution-inverse,
+.border-color-caution-hover:hover:not(.open):not(.active),
+.border-color-caution-focus:focus:not(.open):not(.active),
+.border-color-caution-active:active:not(.open):not(.active),
+.border-color-caution-focus.focus,
+.border-color-caution-active.active,
+.border-color-caution-toggle.active,
+.border-color-caution-toggle.open {
+  border-color: #fd7f03 !important; }
+
+.border-color-error,
+.theme-inverse .border-color-error-inverse,
+.border-color-error-hover:hover:not(.open):not(.active),
+.border-color-error-focus:focus:not(.open):not(.active),
+.border-color-error-active:active:not(.open):not(.active),
+.border-color-error-focus.focus,
+.border-color-error-active.active,
+.border-color-error-toggle.active,
+.border-color-error-toggle.open {
+  border-color: #fd0303 !important; }
+  .border-color-intensity-1,
+  .theme-inverse .border-color-intensity-1-inverse,
+  .border-color-intensity-1-hover:hover:not(.open):not(.active),
+  .border-color-intensity-1-focus:focus:not(.open):not(.active),
+  .border-color-intensity-1-active:active:not(.open):not(.active),
+  .border-color-intensity-1-focus.focus,
+  .border-color-intensity-1-active.active,
+  .border-color-intensity-1-toggle.active,
+  .border-color-intensity-1-toggle.open {
+    border-color: #0480FE !important; }
+  .border-color-intensity-2,
+  .theme-inverse .border-color-intensity-2-inverse,
+  .border-color-intensity-2-hover:hover:not(.open):not(.active),
+  .border-color-intensity-2-focus:focus:not(.open):not(.active),
+  .border-color-intensity-2-active:active:not(.open):not(.active),
+  .border-color-intensity-2-focus.focus,
+  .border-color-intensity-2-active.active,
+  .border-color-intensity-2-toggle.active,
+  .border-color-intensity-2-toggle.open {
+    border-color: #4061e7 !important; }
+  .border-color-intensity-3,
+  .theme-inverse .border-color-intensity-3-inverse,
+  .border-color-intensity-3-hover:hover:not(.open):not(.active),
+  .border-color-intensity-3-focus:focus:not(.open):not(.active),
+  .border-color-intensity-3-active:active:not(.open):not(.active),
+  .border-color-intensity-3-focus.focus,
+  .border-color-intensity-3-active.active,
+  .border-color-intensity-3-toggle.active,
+  .border-color-intensity-3-toggle.open {
+    border-color: #7b42d0 !important; }
+  .border-color-intensity-4,
+  .theme-inverse .border-color-intensity-4-inverse,
+  .border-color-intensity-4-hover:hover:not(.open):not(.active),
+  .border-color-intensity-4-focus:focus:not(.open):not(.active),
+  .border-color-intensity-4-active:active:not(.open):not(.active),
+  .border-color-intensity-4-focus.focus,
+  .border-color-intensity-4-active.active,
+  .border-color-intensity-4-toggle.active,
+  .border-color-intensity-4-toggle.open {
+    border-color: #b723b9 !important; }
+  .border-color-intensity-5,
+  .theme-inverse .border-color-intensity-5-inverse,
+  .border-color-intensity-5-hover:hover:not(.open):not(.active),
+  .border-color-intensity-5-focus:focus:not(.open):not(.active),
+  .border-color-intensity-5-active:active:not(.open):not(.active),
+  .border-color-intensity-5-focus.focus,
+  .border-color-intensity-5-active.active,
+  .border-color-intensity-5-toggle.active,
+  .border-color-intensity-5-toggle.open {
+    border-color: #F204A2 !important; }
+
 .background-base,
 .theme-inverse .background-base-inverse,
 .background-base-hover:hover:not(.open):not(.active),
@@ -6650,7 +6815,7 @@ fieldset {
   background-color: #8d8d8d !important; }
 
 .table-label-success, .progress-bar-success, .badge-success, .legend-success {
-  background-color: #15b800; }
+  background-color: #64B4AE; }
 
 .background-success,
 .theme-inverse .background-success-inverse,
@@ -6661,7 +6826,7 @@ fieldset {
 .background-success-active.active,
 .background-success-toggle.active,
 .background-success-toggle.open {
-  background-color: #15b800 !important; }
+  background-color: #64B4AE !important; }
 
 .table-label-caution, .progress-bar-caution, .badge-caution, .legend-caution {
   background-color: #fd7f03; }
@@ -6885,6 +7050,80 @@ fieldset {
   background-image: linear-gradient(-225deg , #0480FE 0%, #F204A2 100%)  !important;
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
+.border-color-theme,
+.theme-inverse .border-color-theme-inverse,
+.border-color-theme-hover:hover:not(.open):not(.active),
+.border-color-theme-focus:focus:not(.open):not(.active),
+.border-color-theme-active:active:not(.open):not(.active),
+.border-color-theme-focus.focus,
+.border-color-theme-active.active,
+.border-color-theme-toggle.active,
+.border-color-theme-toggle.open {
+  border-color: #FFFFFF !important; }
+  .theme-inverse .border-color-theme, .theme-inverse .theme-inverse .border-color-theme-inverse, .theme-inverse .border-color-theme-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-focus.focus, .theme-inverse .border-color-theme-active.active, .theme-inverse .border-color-theme-toggle.active, .theme-inverse .border-color-theme-toggle.open {
+    border-color: #302a4b !important; }
+
+.border-color-theme-contrast,
+.theme-inverse .border-color-theme-contrast-inverse,
+.border-color-theme-contrast-hover:hover:not(.open):not(.active),
+.border-color-theme-contrast-focus:focus:not(.open):not(.active),
+.border-color-theme-contrast-active:active:not(.open):not(.active),
+.border-color-theme-contrast-focus.focus,
+.border-color-theme-contrast-active.active,
+.border-color-theme-contrast-toggle.active,
+.border-color-theme-contrast-toggle.open {
+  border-color: #ecedf0 !important; }
+  .theme-inverse .border-color-theme-contrast, .theme-inverse .theme-inverse .border-color-theme-contrast-inverse, .theme-inverse .border-color-theme-contrast-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-contrast-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-contrast-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-contrast-focus.focus, .theme-inverse .border-color-theme-contrast-active.active, .theme-inverse .border-color-theme-contrast-toggle.active, .theme-inverse .border-color-theme-contrast-toggle.open {
+    border-color: #1e1931 !important; }
+
+.border-color-theme-polar,
+.theme-inverse .border-color-theme-polar-inverse,
+.border-color-theme-polar-hover:hover:not(.open):not(.active),
+.border-color-theme-polar-focus:focus:not(.open):not(.active),
+.border-color-theme-polar-active:active:not(.open):not(.active),
+.border-color-theme-polar-focus.focus,
+.border-color-theme-polar-active.active,
+.border-color-theme-polar-toggle.active,
+.border-color-theme-polar-toggle.open {
+  border-color: #000000 !important; }
+  .theme-inverse .border-color-theme-polar, .theme-inverse .theme-inverse .border-color-theme-polar-inverse, .theme-inverse .border-color-theme-polar-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-polar-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-polar-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-polar-focus.focus, .theme-inverse .border-color-theme-polar-active.active, .theme-inverse .border-color-theme-polar-toggle.active, .theme-inverse .border-color-theme-polar-toggle.open {
+    border-color: #FFFFFF !important; }
+
+.border-color-theme-polar-contrast,
+.theme-inverse .border-color-theme-polar-contrast-inverse,
+.border-color-theme-polar-contrast-hover:hover:not(.open):not(.active),
+.border-color-theme-polar-contrast-focus:focus:not(.open):not(.active),
+.border-color-theme-polar-contrast-active:active:not(.open):not(.active),
+.border-color-theme-polar-contrast-focus.focus,
+.border-color-theme-polar-contrast-active.active,
+.border-color-theme-polar-contrast-toggle.active,
+.border-color-theme-polar-contrast-toggle.open {
+  border-color: #3d3d3d !important; }
+  .theme-inverse .border-color-theme-polar-contrast, .theme-inverse .theme-inverse .border-color-theme-polar-contrast-inverse, .theme-inverse .border-color-theme-polar-contrast-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-polar-contrast-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-polar-contrast-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-polar-contrast-focus.focus, .theme-inverse .border-color-theme-polar-contrast-active.active, .theme-inverse .border-color-theme-polar-contrast-toggle.active, .theme-inverse .border-color-theme-polar-contrast-toggle.open {
+    border-color: #ecedf0 !important; }
+
+.border-color-inherit,
+.theme-inverse .border-color-inherit-inverse,
+.border-color-inherit-hover:hover:not(.open):not(.active),
+.border-color-inherit-focus:focus:not(.open):not(.active),
+.border-color-inherit-active:active:not(.open):not(.active),
+.border-color-inherit-focus.focus,
+.border-color-inherit-active.active,
+.border-color-inherit-toggle.active,
+.border-color-inherit-toggle.open {
+  border-color: inherit !important; }
+
+.border-color-transparent,
+.theme-inverse .border-color-transparent-inverse,
+.border-color-transparent-hover:hover:not(.open):not(.active),
+.border-color-transparent-focus:focus:not(.open):not(.active),
+.border-color-transparent-active:active:not(.open):not(.active),
+.border-color-transparent-focus.focus,
+.border-color-transparent-active.active,
+.border-color-transparent-toggle.active,
+.border-color-transparent-toggle.open {
+  border-color: transparent !important; }
+
 .background-theme,
 .theme-inverse .background-theme-inverse,
 .background-theme-hover:hover:not(.open):not(.active),
@@ -7082,7 +7321,7 @@ fieldset {
   .color-success-active.active,
   .color-success-toggle.active,
   .color-success-toggle.open {
-    color: #15b800 !important; }
+    color: #64B4AE !important; }
   .color-caution,
   .theme-inverse .color-caution-inverse,
   .color-caution-hover:hover:not(.open):not(.active),
@@ -7608,13 +7847,13 @@ fieldset {
   @media (min-width: 401px) {
     .inline-flex-xs {
       display: inline-flex !important; } }
-  @media (min-width: 768px) {
+  @media (min-width: 601px) {
     .inline-flex-sm {
       display: inline-flex !important; } }
-  @media (min-width: 1280px) {
+  @media (min-width: 1201px) {
     .inline-flex-md {
       display: inline-flex !important; } }
-  @media (min-width: 1700px) {
+  @media (min-width: 1701px) {
     .inline-flex-lg {
       display: inline-flex !important; } }
 .flex {
@@ -7637,13 +7876,17 @@ fieldset {
     flex-wrap: wrap-reverse !important; }
   .flex-wrap-inherit {
     flex-wrap: inherit !important; }
-  -1.flex-1, -0.flex-1 {
+  .flex-1-1,
+  .flex-1-0 {
     flex-grow: 1 !important; }
-  -1.flex-1, -1.flex-0 {
+  .flex-1-1,
+  .flex-0-1 {
     flex-shrink: 1 !important; }
-  -1.flex-0, -0.flex-0 {
+  .flex-0-1,
+  .flex-0-0 {
     flex-grow: 0 !important; }
-  -0.flex-1, -0.flex-1 {
+  .flex-1-0,
+  .flex-1-0 {
     flex-shrink: 0 !important; }
 
 /* HIDEY CLASSES */
@@ -7659,25 +7902,25 @@ fieldset {
 .only-xs {
   display: none !important; }
 
-@media (min-width: 1700px) {
+@media (min-width: 1701px) {
   .only-lg {
     display: block !important; }
   .hide-lg {
     display: none !important; } }
 
-@media (min-width: 1280px) and (max-width: 1699px) {
+@media (min-width: 1201px) and (max-width: 1700px) {
   .only-md {
     display: block !important; }
   .hide-md {
     display: none !important; } }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   .only-sm {
     display: block !important; }
   .hide-sm {
     display: none !important; } }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .only-xs {
     display: block !important; }
   .hide-xs {
@@ -7689,13 +7932,13 @@ fieldset {
 .only-nonmobile {
   display: none !important; }
 
-@media (max-width: 1279px) {
+@media (max-width: 1200px) {
   .only-mobile {
     display: block !important; }
   .hide-mobile {
     display: none !important; } }
 
-@media (min-width: 1280px) {
+@media (min-width: 1201px) {
   .only-nonmobile {
     display: block !important; }
   .hide-nonmobile {
@@ -7770,12 +8013,12 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     #dashboard-block-sidebar-nav .nav-list .nav-item > ul {
       width: calc(100% - 20px - 30px - 1.5rem);
       margin-right: 0; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     #dashboard-block-sidebar:not(.dashboard-block-sidebar-slim) {
       width: 245px; }
     #dashboard-block-sidebar-nav {
       margin: 0 -10px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 600px) {
     #dashboard-block-sidebar:not(.dashboard-block-sidebar-slim) {
       left: -100%;
       transition: left 0.25s ease-in-out; }
@@ -7797,6 +8040,10 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
       position: relative;
       z-index: 99999;
       left: 0; }
+  .body-loading #dashboard-block-main #content-wrapper {
+    opacity: 0; }
+  .body-loaded #dashboard-block-main #content-wrapper {
+    opacity: 1; }
 
 @-webkit-keyframes dashboardLoading {
   0% {
@@ -7855,14 +8102,14 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     display: flex;
     align-items: center;
     position: relative; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1200px) {
     #dashboard-block-main {
       width: calc(100% - 245px);
       padding-top: 10px;
       padding-bottom: 10px; }
       #dashboard-block-main-nav {
         left: 245px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 600px) {
     #dashboard-block-main {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -7886,11 +8133,13 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 .dashboard-table-wrapper-gutterless {
   margin: 0 -25px;
   width: auto; }
-
+  @media (max-width: 1200px) {
+    .dashboard-table-wrapper-gutterless {
+      margin: 0 -15px; } }
 .dashboard-table-cell-max {
-  width: 275px;
-  max-width: 275px !important;
-  min-width: 275px !important; }
+  width: 200px;
+  max-width: 200px !important;
+  min-width: 200px !important; }
 
 .dashboard-table-row-accordion-body {
   box-shadow: inset 0 20px 10px -20px rgba(0, 0, 0, 0.2); }
@@ -7899,7 +8148,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 
 .dashboard-board-column-layout-container {
   flex: 1 1; }
-  @media (min-width: 768px) {
+  @media (min-width: 601px) {
     .dashboard-board-column-layout-container {
       display: flex;
       flex-wrap: wrap; } }
@@ -7907,20 +8156,20 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   display: flex;
   flex-direction: column; }
 
-@media (min-width: 768px) {
+@media (min-width: 601px) {
   .dashboard-board-column-layout-main {
     width: calc(100% - 250px); } }
 
-@media (min-width: 1700px) {
+@media (min-width: 1701px) {
   .dashboard-board-column-layout-main {
     width: calc(100% - 390px); } }
 
 .dashboard-board-column-layout-side {
   flex: 0 0 auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 601px) {
     .dashboard-board-column-layout-side {
       width: 250px; } }
-  @media (min-width: 1700px) {
+  @media (min-width: 1701px) {
     .dashboard-board-column-layout-side {
       width: 390px; } }
 /*! 
@@ -7961,7 +8210,7 @@ APPS / OUR CUSTOM STYLES
 #nav-notification {
   margin-right: 3em; }
 
-@media (max-width: 1699px) {
+@media (max-width: 1700px) {
   #nav-notification {
     margin-right: 1.5em; } }
 

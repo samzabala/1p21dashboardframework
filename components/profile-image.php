@@ -15,6 +15,8 @@
 			@IF user is online 
 				
 		-->
-		<span class="badge badge-success badge-large"></span>
+		<?php if(FWAPPS_APP == 'dashboard'): ?>
+			<span class="badge badge-success badge-large"></span>
+		<?php endif; ?>
 
 	</a>

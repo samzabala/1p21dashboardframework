@@ -14,13 +14,28 @@
 		
 
 		<h1 data-toggle="accordion">Toolbar<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
-			<div class="toolbar">
+		<div class="accordion open">
+			<div class="toolbar toolbar-horizontal">
 				<span class="toolbar-tile">
 
-				<a href="#" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
-						<i class="symbol symbol-close"></i>
-					</a>
+				<a href="#" class="btn btn-symbol btn-round btn-small btn-secondary">
+					<i class="symbol symbol-close"></i>
+				</a>
+				</span>
+				<span class="toolbar-tile">Eat shit</span>
+				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile"></span>
+			</div>
+
+			in case the design is dESIGN
+			<div class="toolbar toolbar-vertical">
+				<span class="toolbar-tile">
+
+				<a href="#" class="btn btn-symbol btn-round btn-small btn-secondary">
+					<i class="symbol symbol-close"></i>
+				</a>
 				</span>
 				<span class="toolbar-tile">Eat shit</span>
 				<span class="toolbar-tile"></span>
@@ -619,19 +634,19 @@
 
 		<h1 data-toggle="accordion">Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-				<span class="btn btn-symbol well btn-theme btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme btn-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme<br>
-				<span class="btn btn-symbol well btn-theme-polar btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-polar btn-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar<br>
-				<span class="btn btn-symbol well btn-theme-outline btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-outline btn-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme outline <br>
-				<span class="btn btn-symbol well btn-theme-polar-outline btn-symbol-round">
+				<span class="btn btn-symbol well btn-theme-polar-outline btn-round">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar outline<br>
@@ -2831,6 +2846,16 @@
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol star</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol star-stroke</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-stroke"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol download</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-download"></i></span>
 			</a>
@@ -2988,6 +3013,14 @@
 
 			<p>
 				map <i class="color-primary symbol symbol-map"></i>
+			</p>
+
+			<p>
+				star <i class="color-primary symbol symbol-star"></i>
+			</p>
+
+			<p>
+				star-stroke <i class="color-primary symbol symbol-star-stroke"></i>
 			</p>
 
 			<p>

@@ -12,7 +12,7 @@
 							<span class="replace">Project Title</span>
 						</h1>
 
-						<p class="color-neutral">
+						<p class="color-neutral no-margin-bottom">
 							<span class="task-id">
 								Task #<span class="REPLACE">69</span>
 							</span>
@@ -96,23 +96,27 @@
 		</div>
 		<div class="dashboard-board-partition dashboard-board-column-layout-side">
 			<div class="container">
-				<!-- Toolbar  -->
+				<div class="module-grid">
+
+					<!-- Toolbar  -->
+					<?php app_get_component('components/toolbar-task') ?>
 
 
 
-				<!-- Team Info -->
+					<!-- Team Info -->
 
 
 
-				<!-- Time Tracker -->
+					<!-- Time Tracker -->
 
 
 
-				<!-- Categries Boards/Tags -->
+					<!-- Categries Boards/Tags -->
 
 
 
-				<!-- Followers/Wiki/Reminders -->
+					<!-- Followers/Wiki/Reminders -->
+				</div>
 
 			</div>
 		</div>

@@ -7,7 +7,7 @@ classes to add:
 		when timer is in default state  => ``
 		when timer is in default stopped  => `display-none` OR not render this element at all
 -->
-<a href="#" class="row-timer-btn timetracker-toggle-play btn btn-symbol btn-small btn-symbol-round well well-compact btn-primary background-gradient-45 background-image-none-hover
+<a href="#" class="row-timer-btn timetracker-toggle-play btn btn-symbol btn-small  well well-compact btn-primary background-gradient-45 background-image-none-hover
 	">
 	<i class="symbol symbol-play"></i>
 </a>
@@ -25,7 +25,7 @@ classes to add:
 		when timer is in default state => `display-none`
 		when timer is in default stopped  => `display-none` OR not render this element at all
 -->
-<a href="#"class="row-timer-btn timetracker-toggle-pause btn btn-symbol btn-small btn-symbol-round well well-compact btn-secondary">
+<a href="#"class="row-timer-btn timetracker-toggle-pause btn btn-symbol btn-small  well well-compact btn-secondary">
 	<i class="symbol symbol-pause"></i>
 </a>
 
@@ -45,7 +45,7 @@ classes to add:
 		when timer is in default stopped  => `display-none` OR not render this element at all
 
 -->
-<a href="#"class="row-timer-btn timetracker-toggle-stop btn btn-symbol btn-small btn-symbol-round well well-compact
+<a href="#"class="row-timer-btn timetracker-toggle-stop btn btn-symbol btn-small  well well-compact
 btn-neutral background-success-hover
 ">
 	<i class="symbol symbol-check"></i>
