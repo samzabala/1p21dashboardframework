@@ -368,6 +368,9 @@ $sidebar-base-slim: 80px;
 					flex-wrap: wrap;
 				}
 			}
+			.board-popup {
+				padding:0;
+			}
 			.board-popup-content {
 				display: flex;
 				flex-direction: column;

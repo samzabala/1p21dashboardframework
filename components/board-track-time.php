@@ -26,33 +26,33 @@
 
 	</div>
 
-	<div class="board" id="board-track-time" data-modal-max-width="800px" data-modal-title="Add new Entry">
+	<div class="board" id="board-track-time" data-board-max-width="800px" data-board-title="Add new Entry">
 		<form action="" class="add-new-timer">
-		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label class="input-label">
-				Client <span class="color-error field-required">*</span>
-			</label>
-			<div class="position-relative flex-xs">
+			<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+				<label class="input-label">
+					Client <span class="color-error field-required">*</span>
+				</label>
+				<div class="position-relative flex-xs">
 
-				<input type="text" id="client-name" name="client-name" class="input input-single-line" value="um" data-toggle="dropdown">
-				<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
-					<li >
-						<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `um` client</a>
-					</li>
-
-					<li >
-						<hr class="dropdown-separator">
-					</li>
-
-					<!-- DYNAMIC ITEMS -->
-						<li class="dashboard-dropdown-dynamic-item">
-							<a href="#" class="js-client-opt">Umbridge</a>
+					<input type="text" id="client-name" name="client-name" class="input input-single-line" value="um" data-toggle="dropdown">
+					<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
+						<li >
+							<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `um` client</a>
 						</li>
-						<li class="dashboard-dropdown-dynamic-item">
-							<a href="#" class="js-client-opt">Umami</a>
+
+						<li >
+							<hr class="dropdown-separator">
 						</li>
+
+						<!-- DYNAMIC ITEMS -->
+							<li class="dashboard-dropdown-dynamic-item">
+								<a href="#" class="js-client-opt">Umbridge</a>
+							</li>
+							<li class="dashboard-dropdown-dynamic-item">
+								<a href="#" class="js-client-opt">Umami</a>
+							</li>
+					</div>
 				</div>
 			</div>
-		</div>
 		</form>
 	</div>
