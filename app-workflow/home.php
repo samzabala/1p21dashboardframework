@@ -325,7 +325,7 @@
 					<h3 class="module-title">Time Tracker</h3>
 				</div>
 				<div class="flex-col-5 text-align-right">
-					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
 						<i class="symbol symbol-kebab-horizontal"></i>
 					</a> 
 
@@ -383,7 +383,7 @@
 							)
 
 							when no previous entry OR previous entry was stopped =>  (
-								href = `#modal-track-time`
+								href = `#board-track-time`
 								onclick	=> NULL
 								)
 
@@ -465,7 +465,7 @@
 				
 
 					<div class="flex-col-12">
-						<a href="#modal-track-time" data-toggle="modal" class="display-block">
+						<a href="#board-track-time" data-toggle="board" class="display-block">
 							<h4 class="watch-project color-neutral no-margin-y">
 								Add Project +
 							</h4>
@@ -514,7 +514,7 @@
 							<th class="text-align-center text-nowrap">Notes</th>
 							<th class="text-nowrap">Start Date</th>
 							<th class="text-nowrap">Days Open</th>
-							<th colspan="2"><span class="sr-only">Actions</span></th>
+							<th colspan="2"><span class="sr-only">Actions</span>&nbsp;</th>
 						</tr>
 						
 						<!-- @LOOP TR-->
@@ -821,7 +821,7 @@
 							<th class="text-align-center text-nowrap">Notes</th>
 							<th class="text-nowrap">Start Date</th>
 							<th class="text-nowrap">Days Open</th>
-							<th colspan="2"><span class="sr-only">Actions</span></th>
+							<th colspan="2"><span class="sr-only">Actions</span>&nbsp;</th>
 						</tr>
 						
 						<!-- @LOOP TR-->
@@ -1095,7 +1095,7 @@
 					</table>
 				</div>
 			<!-- @else no entries -->
-				<a href="#modal-track-time" class="zone zone-primary">
+				<a href="#board-track-time" class="zone zone-primary">
 					Awesome! You have no open tasks. Click here to start a task <i class="symbol symbol-plus"></i>
 				</a>
 		</div>
@@ -1116,7 +1116,7 @@
 				Activity Log
 			</h3>
 			<div class="module-functions no-margin-top accordion accordion-mobile">
-				<?php app_get_component('components/modal-track-time'); ?>
+				<?php app_get_component('components/board-track-time'); ?>
 			</div>
 		</div>
 		<div class="module-content">
@@ -1151,7 +1151,7 @@
 									<th class="text-nowrap text-align-center">Notes</th>
 									<th class="text-nowrap">Total Time</th>
 									<th class="text-nowrap text-align-center">Status</th>
-									<th class="text-nowrap"><div class="sr-only">Actions</div></th>
+									<th class="text-nowrap"><span class="sr-only">Actions</span>&nbsp;</th>
 								</tr>
 								
 								<!-- @LOOP TR-->
@@ -1385,7 +1385,7 @@
 			
 					
 					<!-- @else no entries -->
-						<a href="#modal-track-time" class="zone zone-primary">
+						<a href="#board-track-time" class="zone zone-primary">
 							Start Your First Project of the Day <i class="symbol symbol-plus"></i>
 						</a>
 				</div>
@@ -1661,7 +1661,7 @@
 			
 						
 					<!-- @else no entries -->
-					<a href="#modal-track-time" class="zone zone-primary">
+					<a href="#board-track-time" class="zone zone-primary">
 							Start Your First Project of the week <i class="symbol symbol-plus"></i>
 						</a>
 				</div>
@@ -1687,7 +1687,7 @@
 <p>
 	Notes:<br><br>
 
-	Play button and zone will trigger the same modal
+	Play button and placeholder will trigger the same board
 </p>
 <div class="p">
 
@@ -1709,7 +1709,7 @@
 					<h3 class="module-title">Time Tracker</h3>
 				</div>
 				<div class="flex-col-5 text-align-right">
-					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
 						<i class="symbol symbol-kebab-horizontal"></i>
 					</a> 
 
@@ -1767,12 +1767,12 @@
 							)
 
 							when no previous entry OR previous entry was stopped =>  (
-								href = `#modal-track-time`
+								href = `#board-track-time`
 								onclick	=> NULL
 								)
 
 					-->
-					<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
+					<a href="#board-track-time"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
 						">
 						<i class="symbol symbol-play"></i>
 					</a>
@@ -1832,7 +1832,7 @@
 				
 
 					<div class="flex-col-12">
-						<a href="#modal-track-time" data-toggle="modal" class="display-block">
+						<a href="#board-track-time" data-toggle="board" class="display-block">
 							<h4 class="watch-project color-neutral no-margin-y">
 								Add Project +
 							</h4>
@@ -1865,9 +1865,7 @@
 
 	pause button will stop timer and chang ewatch  state to state 3<br><br>
 
-	STANDBY kebab stays and is still accessible allowing user to switch to a new entry/ timer and the timer automatically stopping if needed for ux<br>
-
-	STANDBY FOR ZONE<br></br>
+	kebab stays and is still accessible allowing user to add new entry on top of the page<br>
 </p>
 
 
@@ -1892,7 +1890,7 @@
 					<h3 class="module-title">Time Tracker</h3>
 				</div>
 				<div class="flex-col-5 text-align-right">
-					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
 						<i class="symbol symbol-kebab-horizontal"></i>
 					</a> 
 
@@ -1950,7 +1948,7 @@
 							)
 
 							when no previous entry OR previous entry was stopped =>  (
-								href = `#modal-track-time`
+								href = `#board-track-time`
 								onclick	=> NULL
 								)
 
@@ -2038,8 +2036,8 @@
 <p>
 	Notes:<br><br>
 
-	Play button will automatically resume the previous entry NOT the modal, changing state to state 2<br><br>
-	STANDBY Clicking the kebab will open the modal to start a new entry/ timer<br>
+	Play button will automatically resume the previous entry NOT the board, changing state back to state 2<br><br>
+	Clicking the kebab will open the board to start a new entry/ timer<br>
 </p>
 
 
@@ -2062,7 +2060,7 @@
 					<h3 class="module-title">Time Tracker</h3>
 				</div>
 				<div class="flex-col-5 text-align-right">
-					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
 						<i class="symbol symbol-kebab-horizontal"></i>
 					</a> 
 
@@ -2120,7 +2118,7 @@
 							)
 
 							when no previous entry OR previous entry was stopped =>  (
-								href = `#modal-track-time`
+								href = `#board-track-time`
 								onclick	=> NULL
 								)
 

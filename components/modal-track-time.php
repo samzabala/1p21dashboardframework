@@ -1,25 +1,16 @@
 <div class="modal-track-time module-function">
 
 
-
-<!-- @NOTE:
-
-please update the btn-group only. actual is modal is on hold and will be updated later
-
--->
-
 	<div class="btn-group btn-group-horizontal">
 
-		<!--
-			add entry 
-	-->
+		<!-- add entry -->
 		<a class="btn btn-primary-outline" href="#modal-track-time" data-toggle="modal">
 			Add Entry <i class="symbol symbol-plus"></i>
 		</a>
 
 		<!--
 			start timer
-			NOTE: render only when timer is paused
+			NOTE: display only when timer is paused
 		-->
 		<a class="btn btn-primary" href="#modal-track-time" data-toggle="modal">
 			Start Timer <i class="symbol symbol-play"></i>
@@ -28,7 +19,7 @@ please update the btn-group only. actual is modal is on hold and will be updated
 
 		<!--
 			pause timer
-			NOTE: render only when timer is active
+			NOTE: display only when timer is active
 		-->
 		<a class="btn btn-secondary" href="#modal-track-time" data-toggle="modal">
 			Pause Timer <i class="symbol symbol-pause"></i>
@@ -37,7 +28,10 @@ please update the btn-group only. actual is modal is on hold and will be updated
 	</div>
 
 
+<!-- @NOTE:
+ON STANDBY FOR DESIGNER'S UPDATES
 
+-->
 	<div class="modal" id="modal-track-time" data-modal-max-width="960px" data-modal-title="Add new Entry">
 		<div class="container">
 
