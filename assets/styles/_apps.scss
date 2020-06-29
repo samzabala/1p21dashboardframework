@@ -370,6 +370,8 @@ $sidebar-base-slim: 80px;
 			}
 			.board-popup {
 				padding:0;
+				display:flex;
+				flex-wrap:wrap;
 			}
 			.board-popup-content {
 				display: flex;
