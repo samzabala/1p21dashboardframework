@@ -3,14 +3,14 @@
 	<div class="flex-grid flex-grid-compact flex-grid-no-gutter-x flex-wrap justify-content-space-between flex-1-1">
 		<div class="flex-child">
 
-			<button class="weekly-previous btn btn-default btn-no-shadow btn-symbol weekly-previous ">
+			<button class="weekly-previous btn btn-default  btn-symbol weekly-previous ">
 				<i class="symbol symbol-arrow-left"></i>
 			</button>
 		</div>
 
 		<div class="flex-child flex-1-1 text-align-center">
 
-			<button data-toggle="dropdown" class="weekly-range btn btn-default btn-no-shadow  weekly-previous  ">
+			<button data-toggle="dropdown" class="weekly-range btn btn-default   weekly-previous  ">
 				<!-- @PLACEHOLDER . on change of dathe, the range will update -->
 				<span class="REPLACE">
 					Apr 20 - Apr 27
@@ -28,7 +28,7 @@
 
 		<div class="flex-child">
 
-			<button class="weekly-next btn btn-default btn-no-shadow btn-symbol weekly-previous ">
+			<button class="weekly-next btn btn-default btn-symbol weekly-previous ">
 				<i class="symbol symbol-arrow-right"></i>
 			</button>
 		</div>

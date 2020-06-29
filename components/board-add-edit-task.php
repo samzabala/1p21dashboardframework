@@ -52,7 +52,7 @@
 							<div class="flex-col-xs-12  flex-col-md-8">
 								
 								<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
-									<button class="btn btn-no-shadow btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
+									<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
 
 									<!-- @NOTE @DYNAMIC : update text to the value set to tthe input field -->
 										<span class="task-delay-date-value">

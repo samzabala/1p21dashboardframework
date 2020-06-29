@@ -15,21 +15,21 @@
 			<input type="hidden" name="app" value="<?=FWAPPS_APP; ?>">
 
 
-			<label for="search" class="btn btn-no-radius btn-no-shadow" title="Search"><i class="color-primary symbol symbol-search"></i></i></label>
 			<input
 				id="search"
-				class="input input-single-line input-no-radius input-no-shadow font-weight-500 flex-1-1"
+				class="input input-single-line input-no-radius input-no-shadow font-weight-500 flex-1-1 no-padding-right"
 				type="text"
 				name="search"
 				placeholder="Search projects..."
 				value="<?php echo ( isset($_GET['search'] )) ? $_GET['search'] : ''; ?>" />
+			<label for="search" class="btn btn-no-radius " title="Search"><i class="color-primary symbol symbol-search"></i></i></label>
 			<input type="hidden" value="1" name="is_searching">
 			
 	</form>
 
 	<!-- @UPDATED/NEW -->
 	<div id="nav-notification">
-		<a href="#" class="btn btn-symbol btn-no-shadow position-relative" data-toggle="dropdown">
+		<a href="#" class="btn btn-symbol  position-relative" data-toggle="dropdown">
 
 			<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/header-notification.svg">
 
@@ -78,7 +78,7 @@
 		
 			<?php app_get_component('components/profile-image-small');?>
 
-			<a href="<?=app_create_link( array('template'=>'home') ); ?>" id="nav-account-name" class="btn btn-no-shadow btn-small color-inherit font-weight-500 hide-xs profile-name hide-sm no-padding-x">
+			<a href="<?=app_create_link( array('template'=>'home') ); ?>" id="nav-account-name" class="btn  btn-small color-inherit font-weight-500 hide-xs profile-name hide-sm no-padding-x">
 				<span class="REPLACE">Place Name</span>
 			</a>
 			

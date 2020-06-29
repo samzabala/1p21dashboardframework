@@ -320,22 +320,26 @@
 		class="module position-relative"
 		data-grid-area-md="watch">
 		<div class="module-header module-header-break no-margin-bottom position-relative">
-			<h3 class="module-title">Time Tracker</h3>
+			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+				<div class="flex-col-7">
+					<h3 class="module-title">Time Tracker</h3>
+				</div>
+				<div class="flex-col-5 text-align-right">
+					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+						<i class="symbol symbol-kebab-horizontal"></i>
+					</a> 
 
-			<div class="module-functions">
-
-				<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
-					<i class="symbol symbol-kebab-horizontal"></i>
-				</a> 
 
 				
 				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
-				<!-- <a href="#" class=" btn btn-symbol btn-no-shadow" id="workflow-app-trigger">
+				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
 					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
-				</a> -->
+				</a>
+				</div>
 			</div>
+			
 		</div>
-		<div class="flex-wrap flex-xs justify-content-space-around module-content">
+		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
 			
 			
 			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
@@ -433,7 +437,7 @@
 				</div>
 			</div>
 
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-no-gutter align-items-center">
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
 
 
 
@@ -1686,7 +1690,168 @@
 	Play button and zone will trigger the same modal
 </p>
 <div class="p">
+
+	<!-- timetracker -->
+
+		<!-- @NOTE:
 	
+		classes to add:
+			#timetracker-home-watch
+				when timer is running => ` theme-inverse background-gradient-225`
+				when timer is in default state/stopped => ``
+	
+		-->
+		<div
+		class="module position-relative">
+		<div class="module-header module-header-break no-margin-bottom position-relative">
+			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+				<div class="flex-col-7">
+					<h3 class="module-title">Time Tracker</h3>
+				</div>
+				<div class="flex-col-5 text-align-right">
+					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+						<i class="symbol symbol-kebab-horizontal"></i>
+					</a> 
+
+
+				
+				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
+				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
+					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
+				</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
+			
+			
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
+				<div class="flex-child">
+					<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
+
+						<span class="watch-time-hours">
+							<span class="REPLACE">00</span>
+						</span>
+
+						<span>:</span>
+
+						<span class="watch-time-minutes">
+							<span class="REPLACE">00</span>
+						</span>
+
+
+						<span>:</span>
+
+						<span class="watch-time-minutes">
+							<span class="REPLACE">00</span>
+						</span>
+					</div>
+				</div>
+
+				<div class="flex-child">
+
+					<!-- play butt..on -->
+					<!-- @NOTE:
+						classes to add:
+							.watch-btn.workflow-toggle-play 
+								when timer is running => `display-none`
+								when timer is in default state/stopped => ``
+
+
+						other attributes
+
+							when there is a previous entry => (
+								href => `#` 
+								onclick	=> `somethingthatstartsthetimerforpreviousentry()`
+							)
+
+							when no previous entry OR previous entry was stopped =>  (
+								href = `#modal-track-time`
+								onclick	=> NULL
+								)
+
+					-->
+					<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
+						">
+						<i class="symbol symbol-play"></i>
+					</a>
+
+					
+
+
+					<!-- pause butt..on -->
+					<!-- @NOTE:
+
+					button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
+
+					classes to add:
+						.watch-btn.workflow-toggle-pause
+							when timer is running => ``
+							when timer is in default state/stopped  => `display-none`
+					-->
+					
+					<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary
+					display-none">
+						<i class="symbol symbol-pause"></i>
+					</a>
+
+
+					<!-- spacer -->
+					<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
+
+
+
+					<!-- stop butt..on -->
+					<!-- @NOTE:
+					classes to add:
+						.watch-btn.workflow-toggle-stop
+							when timer is running => `btn-theme-outline`
+							when timer is in default state  => `btn-neutral`
+							when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
+			
+					-->
+					<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
+					btn-neutral btn-disabled
+					">
+						<i class="symbol symbol-stop"></i>
+					</a>
+
+
+
+				</div>
+			</div>
+
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
+
+
+				<!--
+					
+					@else there was no previous entry 
+				-->
+				
+
+					<div class="flex-col-12">
+						<a href="#modal-track-time" data-toggle="modal" class="display-block">
+							<h4 class="watch-project color-neutral no-margin-y">
+								Add Project +
+							</h4>
+
+
+							<p class="watch-client color-neutral no-margin-bottom">
+								Add Client +
+							</p>
+							
+							<p class="watch-task color-neutral h5 no-margin-y text-leading-expanded font-weight-400">
+								Add Task +
+							</p>
+						</a>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
 </div>
 
 
@@ -1708,6 +1873,162 @@
 
 <div class="p">
 	
+	<!-- timetracker -->
+
+		<!-- @NOTE:
+	
+		classes to add:
+			#timetracker-home-watch
+				when timer is running => ` theme-inverse background-gradient-225`
+				when timer is in default state/stopped => ``
+	
+		-->
+		<div
+		id="workflow-dash-watch"
+		class="module position-relative theme-inverse background-gradient-225">
+		<div class="module-header module-header-break no-margin-bottom position-relative">
+			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+				<div class="flex-col-7">
+					<h3 class="module-title">Time Tracker</h3>
+				</div>
+				<div class="flex-col-5 text-align-right">
+					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+						<i class="symbol symbol-kebab-horizontal"></i>
+					</a> 
+
+
+				
+				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
+				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
+					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
+				</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
+			
+			
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
+				<div class="flex-child">
+					<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
+
+						<span class="watch-time-hours">
+							<span class="REPLACE">00</span>
+						</span>
+
+						<span>:</span>
+
+						<span class="watch-time-minutes">
+							<span class="REPLACE">00</span>
+						</span>
+
+
+						<span>:</span>
+
+						<span class="watch-time-minutes">
+							<span class="REPLACE">00</span>
+						</span>
+					</div>
+				</div>
+
+				<div class="flex-child">
+
+					<!-- play butt..on -->
+					<!-- @NOTE:
+						classes to add:
+							.watch-btn.workflow-toggle-play 
+								when timer is running => `display-none`
+								when timer is in default state/stopped => ``
+
+
+						other attributes
+
+							when there is a previous entry => (
+								href => `#` 
+								onclick	=> `somethingthatstartsthetimerforpreviousentry()`
+							)
+
+							when no previous entry OR previous entry was stopped =>  (
+								href = `#modal-track-time`
+								onclick	=> NULL
+								)
+
+					-->
+					<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover display-none
+						">
+						<i class="symbol symbol-play"></i>
+					</a>
+
+					
+
+
+					<!-- pause butt..on -->
+					<!-- @NOTE:
+
+					button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
+
+					classes to add:
+						.watch-btn.workflow-toggle-pause
+							when timer is running => ``
+							when timer is in default state/stopped  => `display-none`
+					-->
+					
+					<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+
+
+					<!-- spacer -->
+					<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
+
+
+
+					<!-- stop butt..on -->
+					<!-- @NOTE:
+					classes to add:
+						.watch-btn.workflow-toggle-stop
+							when timer is running => `btn-theme-outline`
+							when timer is in default state  => `btn-neutral`
+							when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
+			
+					-->
+					<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
+					btn-theme-outline
+					">
+						<i class="symbol symbol-stop"></i>
+					</a>
+
+
+
+				</div>
+			</div>
+
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
+
+
+
+			<!-- @if there was a previous entry OR previous entry was stopped -->
+				<div class="watch-last-entry flex-col-12">
+
+					<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
+						<span class="REPLACE">Project with a really long name Project with a really long name </span>
+					</h4>
+
+
+					<p class="watch-client text-wrap-ellipsis no-margin-bottom">
+						<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
+					</p>
+					
+					<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
+						<span class="REPLACE">Task with a really long name Task with a really long name </span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </div>
 
 
@@ -1723,7 +2044,159 @@
 
 
 <div class="p">
+		<!-- timetracker -->
+
+		<!-- @NOTE:
 	
+		classes to add:
+			#timetracker-home-watch
+				when timer is running => ` theme-inverse background-gradient-225`
+				when timer is in default state/stopped => ``
+	
+		-->
+		<div
+		class="module position-relative">
+		<div class="module-header module-header-break no-margin-bottom position-relative">
+			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+				<div class="flex-col-7">
+					<h3 class="module-title">Time Tracker</h3>
+				</div>
+				<div class="flex-col-5 text-align-right">
+					<a href="#modal-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="modal">
+						<i class="symbol symbol-kebab-horizontal"></i>
+					</a> 
+
+
+				
+				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
+				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
+					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
+				</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
+			
+			
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
+				<div class="flex-child">
+					<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
+
+						<span class="watch-time-hours">
+							<span class="REPLACE">00</span>
+						</span>
+
+						<span>:</span>
+
+						<span class="watch-time-minutes">
+							<span class="REPLACE">00</span>
+						</span>
+
+
+						<span>:</span>
+
+						<span class="watch-time-minutes">
+							<span class="REPLACE">00</span>
+						</span>
+					</div>
+				</div>
+
+				<div class="flex-child">
+
+					<!-- play butt..on -->
+					<!-- @NOTE:
+						classes to add:
+							.watch-btn.workflow-toggle-play 
+								when timer is running => `display-none`
+								when timer is in default state/stopped => ``
+
+
+						other attributes
+
+							when there is a previous entry => (
+								href => `#` 
+								onclick	=> `somethingthatstartsthetimerforpreviousentry()`
+							)
+
+							when no previous entry OR previous entry was stopped =>  (
+								href = `#modal-track-time`
+								onclick	=> NULL
+								)
+
+					-->
+					<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
+						">
+						<i class="symbol symbol-play"></i>
+					</a>
+
+					
+
+
+					<!-- pause butt..on -->
+					<!-- @NOTE:
+
+					button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
+
+					classes to add:
+						.watch-btn.workflow-toggle-pause
+							when timer is running => ``
+							when timer is in default state/stopped  => `display-none`
+					-->
+					
+					<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary
+					display-none">
+						<i class="symbol symbol-pause"></i>
+					</a>
+
+
+					<!-- spacer -->
+					<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
+
+
+
+					<!-- stop butt..on -->
+					<!-- @NOTE:
+					classes to add:
+						.watch-btn.workflow-toggle-stop
+							when timer is running => `btn-theme-outline`
+							when timer is in default state  => `btn-neutral`
+							when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
+			
+					-->
+					<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
+					btn-neutral
+					">
+						<i class="symbol symbol-stop"></i>
+					</a>
+
+
+
+				</div>
+			</div>
+
+			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
+
+
+				<!-- @if there was a previous entry OR previous entry was stopped -->
+				<div class="watch-last-entry flex-col-12">
+
+					<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
+						<span class="REPLACE">Project with a really long name Project with a really long name </span>
+					</h4>
+
+
+					<p class="watch-client text-wrap-ellipsis no-margin-bottom">
+						<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
+					</p>
+					
+					<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
+						<span class="REPLACE">Task with a really long name Task with a really long name </span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <p>

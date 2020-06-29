@@ -3740,6 +3740,25 @@
 			<p class="background-gradient-270">Background Gradient 270</p>
 			<p class="background-gradient-315">Background Gradient 315</p>
 
+
+			<h2>borders</h2>
+
+			<p class="border-style-none border-width-thin border-color-base">background Base</p>
+			<p class="border-style-hidden border-width-thick border-color-background">background Background</p>
+			<p class="border-style-dotted border-width-medium border-color-primary">Background Primary</p>
+			<p class="border-style-dashed border-width-thin border-color-secondary">Background secondary</p>
+			<p class="border-style-solid border-width-thick border-color-accent">Background accent</p>
+			<p class="border-style-double border-width-thick border-color-neutral">Background Neutral</p>
+			<p class="border-style-groove border-width-thick border-color-success">Background Success</p>
+			<p class="border-style-ridge border-width-thick border-color-caution">Background Caution</p>
+			<p class="border-style-inset border-width-thick  no-border-y border-color-error">Background Error</p>
+
+			<p class="border-style-outset border-width-thick no-border-top border-color-intensity-1">Background Intensity 1</p>
+			<p class="border-style-solid border-width-thick no-border-left border-color-intensity-2">Background Intensity 2</p>
+			<p class="border-style-solid border-width-thick no-border-bottom border-color-intensity-3">Background Intensity 3</p>
+			<p class="border-style-solid border-width-thick no-border-right border-color-intensity-4">Background Intensity 4</p>
+			<p class="border-style-solid border-width-thick no-border-x border-color-intensity-5">Background Intensity 5</p>
+
 			<h2>Advanced shit: wrap</h2>
 
 			<p class="text-wrap">text-wrap Text wrap... it just wraps break it down yo</p>

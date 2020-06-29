@@ -61,7 +61,7 @@ $sidebar-base-slim: 80px;
 			z-index:99999;
 			overflow-y:scroll;
 			overflow-x:hidden;
-			height: 100vh;
+			height: 100%;
 
 			&.dashboard-block-sidebar-slim {
 				width: $sidebar-base-slim;
@@ -206,16 +206,14 @@ $sidebar-base-slim: 80px;
 
 					.btn {
 						width:auto;
-						padding-right:0;
-						padding-left: 30px;
-						order:-1;
+						// order:-1;
 					}
 
 					.input {
-						padding-left: 10px;
 						border-color: transparent;
 						background-color: transparent;
 						font-size: rem(16px/ $body-font-size);
+						text-align: right;
 					}
 
 					.symbol-search {

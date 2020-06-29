@@ -312,23 +312,29 @@ function app_debug_block() {
 
 		<hr>
 
-		<table>
-			<tr>
-				<th>Current App:</th>
-				<th>Templates pulled :</th>
-			</th>
-			<tr>
-				<td><code><?= FWAPPS_APP; ?></code></td>
+		<div class="table-wrapper">
+		
 
-				<?php
-					$template = FWAPPS_TEMPLATE;
-					$slug = FWAPPS_SLUG;
-				?>
-				<td>
-					
-				<code><?=$GLOBALS['FWAPPS_CURR_TEMPLATE'] ?>.php</code>
-				</td>
-			</tr>
+			<table>
+				<tr>
+					<th>Current App:</th>
+					<th>Templates pulled :</th>
+				</th>
+				<tr>
+					<td><code><?= FWAPPS_APP; ?></code></td>
+
+					<?php
+						$template = FWAPPS_TEMPLATE;
+						$slug = FWAPPS_SLUG;
+					?>
+					<td>
+						
+					<code><?=$GLOBALS['FWAPPS_CURR_TEMPLATE'] ?>.php</code>
+					</td>
+				</tr>
+			</table>
+		
+		</div>
 	</div>
 	<?php
 }
