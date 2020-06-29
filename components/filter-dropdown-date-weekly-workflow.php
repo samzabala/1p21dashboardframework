@@ -17,12 +17,12 @@
 				</span>
 			</button>
 
-			<div class="dropdown dropdown-center-x dropdown-top-flush">
+			<div class="dropdown dropdown-center-x dropdown-top-flush no-padding overflow-hidden">
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 					<label class="input-label text-align-center no-padding-x">Week starting from:</label>
-					<input type="text" class="input-calendar input input-no-radius no-padding  border-color-transparent input-no-shadow no-paddinhg-y" />
+					<input type="text" class="input-calendar input input-no-radius  border-color-transparent input-no-shadow no-paddinhg-y" />
 				</div>
-				<button class="btn btn-block  btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
+				<button class="btn btn-block btn-no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
 			</div>
 		</div>
 

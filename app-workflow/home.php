@@ -21,7 +21,7 @@
 				My Analytics
 			</a>
 
-			<?php app_get_component('components/filter-dropdown-date-span-fancy') ?>
+			<?php app_get_component('components/filter-dropdown-date-span-workflow') ?>
 		</div>
 	</div>
 
@@ -53,10 +53,12 @@
 		>
 			<div class="module-content text-align-center justify-content-center flex-direction-column flex-xs align-items-center">
 
-
-				<?php app_get_component('components/profile-image'); ?>
+				<div class="p">
 				
-				<p class="no-margin-bottom lead">
+					<?php app_get_component('components/profile-image'); ?>
+				</div>
+				
+				<p class="no-margin-y lead">
 					<a href="<?=FWAPPS_ROOT_URL ?>?template=profile&env=<?=FWAPPS_SLUG ?>" class="profile-name-full  color-inherit">
 						<span class="REPLACE">Profile Name</span>
 					</a>
@@ -105,156 +107,160 @@
 			<h5 class="no-margin">Weekly Hours</h5>
 			<div class="p">
 
-				<?php app_get_component('components/filter-dropdown-date-weekly-fancy') ?>
+				<?php app_get_component('components/filter-dropdown-date-weekly-workflow') ?>
 			</div>
 
 
 
-			<!-- @loop .weekly-hours-row -->
-				<div class="flex-grid flex-grid-compact align-items-center weekly-hours-row no-margin-top">
+			<div class="text-leading-expanded">
 
 
-					<!-- @DYNAMIC change day to single letter -->
-					<!-- 
-						@NOTE
-
-						classes to add 
-
-							.weekly-hours-row-day
-								`color-neutral` => if the day is not equal to today
-
-					 -->
-					<div class="no-margin-y flex-child flex-0-0 weekly-hours-row-day font-weight-700 color-neutral">
-						<span class="REPLACE">D</span>
-					</div>
-					
-					<!-- 
-
-						@NOTE dynamic
+				<!-- @loop .weekly-hours-row -->
+					<div class=" flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center weekly-hours-row">
 
 
-							.progress-bar	
-								classes to switch
-									progress-bar-primary 	=> if time is 8.5 hrs or less
-									progress-bar-secondary 	=> if time is more than 8.5 hours
+						<!-- @DYNAMIC change day to single letter -->
+						<!-- 
+							@NOTE
 
-								style
-									width		=> calculate based on total time out of 8 hrs
-					-->
-					<div class="no-margin-y flex-child flex-1-1">
-						<div class="progress progress-small">
-							<div class="progress-bar progress-bar-primary" style="width:69%;"></div>
+							classes to add 
+
+								.weekly-hours-row-day
+									`color-neutral` => if the day is not equal to today
+
+						-->
+						<div class="flex-child flex-0-0 weekly-hours-row-day font-weight-700 color-neutral">
+							<span class="REPLACE">D</span>
 						</div>
-					</div>
+						
+						<!-- 
 
-					<!-- @DYNAMIC change day to single letter -->
-					<!-- @NOTE
-					
-						.weekly-hours-row-total
-							classes to add:
-								color-primary 	=> if time is 8.5 hrs or less
-								color-secondary 	=> if time is more than 8.5 hours
-					-->
-					<div class="no-margin-y flex-child flex-0-0 weekly-hours-row-total">
-						<span class="REPLACE">
-							6h 9m
-						</span>
-					</div>
-
-				</div>
-
-					
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
-					<?php for($i=1; $i<=3; $i++){ ?>
-						<div class="flex-grid flex-grid-compact align-items-center weekly-hours-row no-margin-top">
+							@NOTE dynamic
 
 
-							
-							<!-- @DYNAMIC change day to single letter -->
-							<div class="no-margin-y flex-child flex-0-0 weekly-hours-row-day font-weight-700 color-neutral">
-								<span class="REPLACE">D</span>
+								.progress-bar	
+									classes to switch
+										progress-bar-primary 	=> if time is 8.5 hrs or less
+										progress-bar-secondary 	=> if time is more than 8.5 hours
+
+									style
+										width		=> calculate based on total time out of 8 hrs
+						-->
+						<div class="flex-child flex-1-1">
+							<div class="progress progress-small">
+								<div class="progress-bar progress-bar-primary" style="width:69%;"></div>
 							</div>
-							
-							<!-- 
+						</div>
 
-								@NOTE dynamic
+						<!-- @DYNAMIC change day to single letter -->
+						<!-- @NOTE
+						
+							.weekly-hours-row-total
+								classes to add:
+									color-primary 	=> if time is 8.5 hrs or less
+									color-secondary 	=> if time is more than 8.5 hours
+						-->
+						<div class="flex-child flex-0-0 weekly-hours-row-total">
+							<span class="REPLACE">
+								6h 9m
+							</span>
+						</div>
+
+					</div>
+
+						
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+						<?php for($i=1; $i<=3; $i++){ ?>
+							<div class=" flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center weekly-hours-row">
 
 
-									.progress-bar	
-										classes to switch
-											progress-bar-primary 	=> if time is 8.5 hrs or less
-											progress-bar-secondary 	=> if time is more than 8.5 hours
-
-										style
-											width		=> calculate based on total time out of 8 hrs
-							-->
-							<div class="no-margin-y flex-child flex-1-1">
-								<div class="progress progress-small">
-									<div class="progress-bar progress-bar-primary" style="width:69%;"></div>
+								
+								<!-- @DYNAMIC change day to single letter -->
+								<div class="flex-child flex-0-0 weekly-hours-row-day font-weight-700 <?= ($i == 2 )? ' color-neutral' : '' ?>">
+									<span class="REPLACE">D</span>
 								</div>
-							</div>
+								
+								<!-- 
 
-							<!-- @DYNAMIC change day to single letter -->
-							<!-- @NOTE
-							
-								.weekly-hours-row-total
-									classes to add:
-										color-primary 	=> if time is 8.5 hrs or less
-										color-secondary 	=> if time is more than 8.5 hours
-							-->
-							<div class="no-margin-y flex-child flex-0-0 weekly-hours-row-total">
-								<span class="REPLACE">
-									6h 9m
-								</span>
-							</div>
-
-						</div>
+									@NOTE dynamic
 
 
-						<div class="flex-grid flex-grid-compact align-items-center weekly-hours-row no-margin-top">
+										.progress-bar	
+											classes to switch
+												progress-bar-primary 	=> if time is 8.5 hrs or less
+												progress-bar-secondary 	=> if time is more than 8.5 hours
 
-
-							
-							<!-- @DYNAMIC change day to single letter -->
-							<div class="no-margin-y flex-child flex-0-0 weekly-hours-row-day font-weight-700">
-								<span class="REPLACE">D</span>
-							</div>
-							
-							<!-- 
-
-								@NOTE dynamic
-
-
-									.progress-bar	
-										classes to switch
-											progress-bar-primary 	=> if time is 8.5 hrs or less
-											progress-bar-secondary 	=> if time is more than 8.5 hours
-
-										style
-											width		=> calculate based on total time out of 8 hrs
-							-->
-							<div class="no-margin-y flex-child flex-1-1">
-								<div class="progress progress-small">
-									<div class="progress-bar progress-bar-secondary" style="width:100%;"></div>
+											style
+												width		=> calculate based on total time out of 8 hrs
+								-->
+								<div class="flex-child flex-1-1">
+									<div class="progress progress-small">
+										<div class="progress-bar progress-bar-primary" style="width:69%;"></div>
+									</div>
 								</div>
+
+								<!-- @DYNAMIC change day to single letter -->
+								<!-- @NOTE
+								
+									.weekly-hours-row-total
+										classes to add:
+											color-primary 	=> if time is 8.5 hrs or less
+											color-secondary 	=> if time is more than 8.5 hours
+								-->
+								<div class="flex-child flex-0-0 weekly-hours-row-total">
+									<span class="REPLACE">
+										6h 9m
+									</span>
+								</div>
+
 							</div>
 
-							<!-- @DYNAMIC change day to single letter -->
-							<!-- @NOTE
-							
-								.weekly-hours-row-total
-									classes to add:
-										color-neutral 	=> if day is not equal to today
-										color-secondary 	=> if time is more than 8.5 hours
-							-->
-							<div class="no-margin-y color-secondary flex-child flex-0-0 weekly-hours-row-total">
-								<span class="REPLACE">
-									9h 9m
-								</span>
-							</div>
 
-						</div>
-					<?php } ?>
+							<div class=" flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center weekly-hours-row">
+
+
+								
+								<!-- @DYNAMIC change day to single letter -->
+								<div class="flex-child flex-0-0 weekly-hours-row-day font-weight-700 color-neutral">
+									<span class="REPLACE">D</span>
+								</div>
+								
+								<!-- 
+
+									@NOTE dynamic
+
+
+										.progress-bar	
+											classes to switch
+												progress-bar-primary 	=> if time is 8.5 hrs or less
+												progress-bar-secondary 	=> if time is more than 8.5 hours
+
+											style
+												width		=> calculate based on total time out of 8 hrs
+								-->
+								<div class="flex-child flex-1-1">
+									<div class="progress progress-small">
+										<div class="progress-bar progress-bar-secondary" style="width:100%;"></div>
+									</div>
+								</div>
+
+								<!-- @DYNAMIC change day to single letter -->
+								<!-- @NOTE
+								
+									.weekly-hours-row-total
+										classes to add:
+											color-neutral 	=> if day is not equal to today
+											color-secondary 	=> if time is more than 8.5 hours
+								-->
+								<div class="color-secondary flex-child flex-0-0 weekly-hours-row-total">
+									<span class="REPLACE">
+										9h 9m
+									</span>
+								</div>
+
+							</div>
+						<?php } ?>
+			</div>
 		</div>
 	</div>
 
@@ -434,13 +440,13 @@
 			<!-- @if there was a previous entry OR previous entry was stopped -->
 				<div class="watch-last-entry flex-col-12">
 
-					<h4 class="watch-client color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
-						<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
+					<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
+						<span class="REPLACE">Project with a really long name Project with a really long name </span>
 					</h4>
 
 
-					<p class="watch-project text-wrap-ellipsis no-margin-bottom">
-						<span class="REPLACE">Project with a really long name Project with a really long name </span>
+					<p class="watch-client text-wrap-ellipsis no-margin-bottom">
+						<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
 					</p>
 					
 					<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
@@ -452,17 +458,24 @@
 					
 					@else there was no previous entry 
 				-->
-					<!-- 
-
+				
 
 					<div class="flex-col-12">
-						<a href="#modal-track-time" data-toggle="modal" class="no-margin-y zone-primary zone">
-							Awesome! You have no previous time logs yet.<br> You can start tracking your time here. <i class="symbol symbol-plus"></i>
+						<a href="#modal-track-time" data-toggle="modal" class="display-block">
+							<h4 class="watch-project color-neutral no-margin-y">
+								Add Project +
+							</h4>
+
+
+							<p class="watch-client color-neutral no-margin-bottom">
+								Add Client +
+							</p>
+							
+							<p class="watch-task color-neutral h5 no-margin-y text-leading-expanded font-weight-400">
+								Add Task +
+							</p>
 						</a>
 					</div>
-
-
-					-->
 			</div>
 		</div>
 	</div>
@@ -1089,7 +1102,7 @@
 	<div
 		id="timetracker-home-activity-log"
 		class="module"
-		data-grid-area-lg="activitylog"
+		data-grid-area-md="activitylog"
 		>
 		<div class="module-header module-header-break no-margin-bottom">
 
@@ -1099,8 +1112,6 @@
 				Activity Log
 			</h3>
 			<div class="module-functions no-margin-top accordion accordion-mobile">
-				<?php app_get_component('components/filter-input-group-timetracked'); ?>
-				<?php app_get_component('components/filter-dropdown-date-single'); ?>
 				<?php app_get_component('components/modal-track-time'); ?>
 			</div>
 		</div>
@@ -1124,7 +1135,7 @@
 				<div class="accordion open" id="activity-log-today">
 
 					<!-- @if there are entries -->
-						<div class="table-wrapper">
+						<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
 							<table class="table-small data-log-today">
 								<tr>
@@ -1264,7 +1275,90 @@
 
 
 													<td class="text-align-center text-nowrap">
+														&nbsp;
+													</td>
+
+
+													<td class="dashboard-table-cell-action text-align-center position-relative">
 														
+														<?php app_get_component('components/tooltip-action') ?>
+														
+													</td>
+
+												</tr>
+
+												<tr class="table-row-primary">
+
+													<td>
+														<span class="log-today-start-time">
+															<span class="REPLACE">
+																6:00am
+															</span>
+														</span>
+													</td>
+													<td>
+														<span class="log-today-end-time">
+															<span class="REPLACE">
+																9:00pm
+															</span>
+														</span>
+													</td>
+
+
+													<td class="dashboard-table-cell-max">
+														<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+															<span class="REPLACE">ya boi is still running </span>
+														</a>
+													</td>
+													
+
+
+													<td class="dashboard-table-cell-max">
+														<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-project text-wrap-ellipsis">
+															<span class="REPLACE">cant restart this particular entry anymore</span>
+														</a>
+													</td>
+
+													<td class="dashboard-table-cell-max">
+														<span href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-client text-wrap-ellipsis">
+															<span class="REPLACE">hi butts</span>
+														</span>
+													</td>
+
+													<td class="text-align-center">
+														
+														<?php app_get_component('components/table-modal-notes'); ?>
+													</td>
+													<td>
+														<span class="font-weight-700 log-today-total-time text-nowrap">
+															<span class="REPLACE">6h 09m
+														</span>
+													</td>
+
+
+													<td class="text-align-center text-nowrap">
+														
+												
+														<a href="#" class="open-task-timer-btn workflow-toggle-play btn btn-symbol btn-small  well well-compact
+														btn-primary background-gradient-45 background-image-none-hover 
+														display-none
+															">
+															<i class="symbol symbol-play"></i>
+														</a>
+
+														<a href="#"class="open-task-timer-btn workflow-toggle-pause btn btn-symbol btn-small  well well-compact btn-secondary">
+															<i class="symbol symbol-pause"></i>
+														</a>
+
+
+														<!-- spacer -->
+														<span class="font-size-large">&nbsp;</span>
+
+														<a href="#"class="open-task-timer-btn workflow-toggle-stop btn btn-symbol btn-small  well well-compact
+														btn-neutral background-success-hover
+														">
+															<i class="symbol symbol-check"></i>
+														</a>
 													</td>
 
 

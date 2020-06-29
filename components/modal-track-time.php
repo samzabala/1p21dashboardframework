@@ -4,7 +4,7 @@
 	<div class="btn-group btn-group-horizontal">
 
 		<!-- add entry -->
-		<a class="btn btn-default" href="#modal-track-time" data-toggle="modal">
+		<a class="btn btn-primary-outline" href="#modal-track-time" data-toggle="modal">
 			Add Entry <i class="symbol symbol-plus"></i>
 		</a>
 
@@ -29,7 +29,7 @@
 
 
 <!-- @NOTE:
-modal can change as is for now. waiting on designer to update it
+ON STANDBY FOR DESIGNER'S UPDATES
 
 -->
 	<div class="modal" id="modal-track-time" data-modal-max-width="960px" data-modal-title="Add new Entry">

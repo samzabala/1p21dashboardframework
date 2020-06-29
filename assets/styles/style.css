@@ -57,7 +57,7 @@ table {
   --br-xxs: 400px;
   --br-xs: 600px;
   --br-sm: 1200px;
-  --br-md: 1700px;
+  --br-md: 1500px;
   --br-lg: 1800px;
   --mobile-br-max: sm;
   --brand-color-base: #000000;
@@ -112,7 +112,7 @@ table {
   .flex-md {
     display: flex!important; } }
 
-@media (min-width: 1701px) {
+@media (min-width: 1501px) {
   .flex-lg {
     display: flex!important; } }
 
@@ -3438,7 +3438,7 @@ table {
     .flex-grid-no-gutter-x.flex-grid-fixed.flex-grid-no-gutter > .flex-col-md-12, .flex-grid-no-gutter-x > .flex-col-md-12 {
       width: 100%; } }
 
-@media (min-width: 1701px) {
+@media (min-width: 1501px) {
   .flex-col-lg-1 {
     flex-basis: calc( 8.3333333333% - 40px); }
     .flex-grid-fixed > .flex-col-lg-1 {
@@ -4507,7 +4507,7 @@ table {
   vertical-align: middle;
   line-height: inherit;
   position: relative;
-  font-size: 14.2857142857rem; }
+  font-size: 10.3571428571rem; }
   .thumbnail:before {
     content: "";
     display: block;
@@ -4521,7 +4521,7 @@ table {
     justify-content: center;
     align-content: center;
     align-items: center;
-    font-size: 0.325em;
+    font-size: 0.4482758621em;
     line-height: 1.25;
     color: #FFFFFF !important;
     font-weight: 700;
@@ -7853,7 +7853,7 @@ fieldset {
   @media (min-width: 1201px) {
     .inline-flex-md {
       display: inline-flex !important; } }
-  @media (min-width: 1701px) {
+  @media (min-width: 1501px) {
     .inline-flex-lg {
       display: inline-flex !important; } }
 .flex {
@@ -7902,13 +7902,13 @@ fieldset {
 .only-xs {
   display: none !important; }
 
-@media (min-width: 1701px) {
+@media (min-width: 1501px) {
   .only-lg {
     display: block !important; }
   .hide-lg {
     display: none !important; } }
 
-@media (min-width: 1201px) and (max-width: 1700px) {
+@media (min-width: 1201px) and (max-width: 1500px) {
   .only-md {
     display: block !important; }
   .hide-md {
@@ -8160,7 +8160,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   .dashboard-board-column-layout-main {
     width: calc(100% - 250px); } }
 
-@media (min-width: 1701px) {
+@media (min-width: 1501px) {
   .dashboard-board-column-layout-main {
     width: calc(100% - 390px); } }
 
@@ -8169,7 +8169,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   @media (min-width: 601px) {
     .dashboard-board-column-layout-side {
       width: 250px; } }
-  @media (min-width: 1701px) {
+  @media (min-width: 1501px) {
     .dashboard-board-column-layout-side {
       width: 390px; } }
 /*! 
@@ -8210,7 +8210,7 @@ APPS / OUR CUSTOM STYLES
 #nav-notification {
   margin-right: 3em; }
 
-@media (max-width: 1700px) {
+@media (max-width: 1500px) {
   #nav-notification {
     margin-right: 1.5em; } }
 

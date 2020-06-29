@@ -32,7 +32,7 @@
 
 						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
 							<label class="input-label">From</label>
-							<input type="date" class="input input-calendar" data-calendar-text-input="true" />
+							<input type="date" class="input input-calendar input-no-shadow " data-calendar-text-input="false" />
 						</div>
 					</div>
 
@@ -41,7 +41,7 @@
 
 						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
 							<label class="input-label">To</label>
-							<input type="date" class="input input-calendar" data-calendar-text-input="true" data-calendar-disabled-dates="future" />
+							<input type="date" class="input input-calendar input-no-shadow " data-calendar-text-input="false" data-calendar-disabled-dates="future" />
 						</div>
 					</div>
 				</div>
