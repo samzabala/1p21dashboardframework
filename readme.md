@@ -26,7 +26,7 @@ will separate dashboard and framework one the bois are readeh
 
 # For Cristian
 These are classes that need to be found and replaced for framework 2.0.0
-* `btn-symbol-round` => `btn-round`
+* `btn-round` => `btn-round`
 
 
 # Structure 

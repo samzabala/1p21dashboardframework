@@ -83,7 +83,7 @@
 									)
 
 						-->
-						<a href="#"  class="watch-btn timetracker-toggle-play btn btn-symbol btn-symbol-round well
+						<a href="#"  class="watch-btn timetracker-toggle-play btn btn-symbol  well
 						btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
 							">
 							<i class="symbol symbol-play"></i>
@@ -106,7 +106,7 @@
 						
 						<!--
 
-						<a href="#"class="watch-btn timetracker-toggle-pause btn btn-symbol btn-symbol-round well
+						<a href="#"class="watch-btn timetracker-toggle-pause btn btn-symbol  well
 						btn-theme-outline background-secondary-hover color-background-hover">
 							<i class="symbol symbol-pause"></i>
 						</a>
@@ -129,7 +129,7 @@
 								when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
 				
 						-->
-						<a href="#"class="watch-btn timetracker-toggle-stop btn btn-symbol btn-symbol-round well
+						<a href="#"class="watch-btn timetracker-toggle-stop btn btn-symbol  well
 						btn-neutral
 						">
 							<i class="symbol symbol-stop"></i>
@@ -485,13 +485,13 @@
 
 												<td class="text-align-center text-nowrap">
 													
-													<a href="#" class="open-timer-btn timetracker-toggle-play btn btn-symbol btn-small btn-symbol-round well well-compact
+													<a href="#" class="open-timer-btn timetracker-toggle-play btn btn-symbol btn-small  well well-compact
 													btn-primary background-gradient-45 background-image-none-hover display-none
 														">
 														<i class="symbol symbol-play"></i>
 													</a>
 													
-													<a href="#"class="open-timer-btn timetracker-toggle-pause btn btn-symbol btn-small btn-symbol-round well well-compact btn-secondary">
+													<a href="#"class="open-timer-btn timetracker-toggle-pause btn btn-symbol btn-small  well well-compact btn-secondary">
 														<i class="symbol symbol-pause"></i>
 													</a>
 
@@ -499,7 +499,7 @@
 													<!-- spacer -->
 													<span class="font-size-large">&nbsp;</span>
 
-													<a href="#"class="open-timer-btn timetracker-toggle-stop btn btn-symbol btn-small btn-symbol-round well well-compact
+													<a href="#"class="open-timer-btn timetracker-toggle-stop btn btn-symbol btn-small  well well-compact
 													btn-neutral background-success-hover
 													">
 														<i class="symbol symbol-check"></i>
@@ -560,13 +560,13 @@
 
 												<td class="text-align-center text-nowrap">
 													
-													<a href="#" class="open-task-timer-btn timetracker-toggle-play btn btn-symbol btn-small btn-symbol-round well well-compact
+													<a href="#" class="open-task-timer-btn timetracker-toggle-play btn btn-symbol btn-small  well well-compact
 													btn-primary background-gradient-45 background-image-none-hover
 														">
 														<i class="symbol symbol-play"></i>
 													</a>
 
-													<a href="#"class="open-task-timer-btn timetracker-toggle-pause btn btn-symbol btn-small btn-symbol-round well well-compact btn-secondary 
+													<a href="#"class="open-task-timer-btn timetracker-toggle-pause btn btn-symbol btn-small  well well-compact btn-secondary 
 													display-none">
 														<i class="symbol symbol-pause"></i>
 													</a>
@@ -575,7 +575,7 @@
 													<!-- spacer -->
 													<span class="font-size-large">&nbsp;</span>
 
-													<a href="#"class="open-task-timer-btn timetracker-toggle-stop btn btn-symbol btn-small btn-symbol-round well well-compact
+													<a href="#"class="open-task-timer-btn timetracker-toggle-stop btn btn-symbol btn-small  well well-compact
 													btn-neutral background-success-hover
 													">
 														<i class="symbol symbol-check"></i>

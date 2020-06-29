@@ -1,4 +1,4 @@
-<a href="#task-notes-ID" class="btn btn-symbol btn-symbol-round btn-small btn-primary task-notes">
+<a href="#task-notes-ID" class="btn btn-symbol  btn-small btn-primary task-notes">
 	<i class="symbol symbol-text-left"></i>
 </a>
 <div

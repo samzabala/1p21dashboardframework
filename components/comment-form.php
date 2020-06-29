@@ -3,12 +3,11 @@
 		<textarea name="comment" id="" cols="30" rows="10" class="input input-multiple-line">Body comment. will be replaced by tinymce</textarea>
 	</div>
 
-	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-		<label for="comment-attachments" class="input-label">Add Attachments</label>
-		<input type="file" name="comment-attachments"  id="comment-attachments" class="innput input-single-line" />
-	</div>
+	<input type="file" name="comment-attachments"  id="comment-attachments" class="display-none" />
+
 	<div class="text-align-right">
-		<button  class="btn btn-primary btn-round" type="submit">Add Comment</button>
+		<button  class="btn btn-neutral-outline " onclick="REPLACEfnToTriggercommentsAttachmentsToAdd(event)" type="submit">Attach Files</button>
+		<button  class="btn btn-primary " type="submit">Add Comment</button>
 	</div>
 	
 </form>

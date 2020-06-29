@@ -20,7 +20,7 @@ $prefix: '.symbol';
 	transform-origin: center center;
 	pointer-events:none;
 	margin: 0 .5em;
-	// font-size: 32px; //debug only
+	// font-size: 160px; //debug only
 	// top:-.25em;
 
 	&:last-child {
@@ -311,7 +311,7 @@ $prefix: '.symbol';
 				height: 1.125em;
 				left: -.5em;
 				right: -.5em;
-				bottom: -.125em;
+				// bottom: -.125em;
 				top: auto;
 				background-image: 
 					//long
@@ -358,6 +358,7 @@ $prefix: '.symbol';
 			right: -.1875em;
 			left: auto;
 			bottom: auto;
+			top: -.125em;
 			transform: rotate(45deg);
 		}
 	}
@@ -422,28 +423,38 @@ $prefix: '.symbol';
 		.active > &-toggle,
 		.open > &-toggle  {
 			@extend %for-valid-symbol;
+			width: .5em;
+			transform: rotate(45deg);
+
+			// @extend %for-valid-symbol-no-before;
+			// &:after {
+			// 	@extend %for-valid-symbol-pseudo;
+			// 	@extend %for-valid-symbol-pseudo-vertical;
+			// 	width: .5em;
+			// 	border-right: em((3px)/$calculated-symbol-basis) solid;
+			// 	border-bottom: em((3px)/$calculated-symbol-basis) solid;
+			// }
 
 			&:before,&:after {
 				@extend %for-valid-symbol-pseudo;
 				@extend %for-valid-symbol-pseudo-border-radius;
-				@extend %for-valid-symbol-pseudo-vertical;
 				@extend %for-valid-symbol-pseudo-filled;
-				right: auto;
+				left: auto;
 				top: auto;
-				left: .1875em;
-				bottom: .0625em;
-				transform-origin: center bottom;
+				bottom: 0em;
+				transform-origin: 50% 96%;
 			}
 
 			&:before {
-				height: .5em;
-				transform: rotate(-45deg);
-				margin-left: em((3px * .5)/$calculated-symbol-basis);
+				@extend %for-valid-symbol-pseudo-horizontal;
+				width: .5em;
+				// transform: rotate(-45deg);
 			}
 
 			&:after {
+				@extend %for-valid-symbol-pseudo-vertical;
 				height: 1em;
-				transform: rotate(45deg);
+				// transform: rotate(45deg);
 			}
 		}
 	}
@@ -486,21 +497,102 @@ $prefix: '.symbol';
 			}
 
 			&:before {
+				@extend %for-valid-symbol-pseudo-full-height;
+				@extend %for-valid-symbol-pseudo-full-width;
 				border-radius: 50%;
-				height:1em;
-				width:1em;
 				border: #{em(4px / $calculated-symbol-basis)} solid;
 				
 			}
 
 			&:after {
-				border: #{em(6px / $calculated-symbol-basis)} solid transparent;
+				border: #{em(6.25px / $calculated-symbol-basis)} solid transparent;
 				border-top: #{em(12px / $calculated-symbol-basis)} solid;
 				border-bottom:0;
 				width: 0;
 				height: 0;
 				margin: 0 auto;
 				top:calc(1em - #{em(3px / $calculated-symbol-basis)});
+			}
+		}
+	}
+
+	&-star {
+		&,&-stroke {
+
+			&,
+			.active > &-toggle,
+			.open > &-toggle  {
+				@extend %for-valid-symbol;
+				@extend %for-valid-symbol-no-before;
+
+				&:after {
+					@extend %for-valid-symbol-pseudo;
+					@extend %for-valid-symbol-pseudo-filled;
+					width: 1.25em;
+					height: 1.25em;
+					top: -.5em;
+					bottom: -.5em;
+					left: -.5em;
+					right: -.5em;
+
+				}
+			}
+		}
+	}
+
+
+	&-star {
+		&,
+		.active > &-toggle,
+		.open > &-toggle  {
+
+			&:after {
+				clip-path: polygon(
+					50% 5%,
+					64% 38%,
+					100% 41%,
+					73% 65%,
+					80% 100%,
+					50% 82%,
+					20% 100%,
+					27% 65%,
+					0% 41%,
+					36% 38%,
+				);
+
+			}
+
+			&-stroke {
+				&:after {
+
+					clip-path: polygon(
+						50% 5%,
+						64% 38%,
+						100% 41%,
+						73% 65%,
+						80% 100%,
+						50% 82%,
+						20% 100%,
+						27% 65%,
+						0% 41%,
+						36% 38%,
+
+						50% 5%,
+
+						50% 26%,
+						41% 46%,
+						20% 48%,
+						36% 62%,
+						32% 83%,
+						50% 72%,
+						68% 83%,
+						64% 62%,
+						80% 48%,
+						59% 46%,
+						50% 26%,
+						
+					);
+				}
 			}
 		}
 	}

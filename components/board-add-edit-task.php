@@ -16,7 +16,7 @@
 					<div class="task-heading">
 						<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
 							<label for="task-title" class="input-label sr-only">Title</label>
-							<input type="text" placeholder="Enter title" id="task-title" name="task-title" class="input-no-shadow input-round input input-single-line input-large task-title">
+							<input type="text" placeholder="Enter title" id="task-title" name="task-title" class="input-no-shadow  input input-single-line input-large task-title">
 						</div>
 						
 
@@ -52,7 +52,7 @@
 							<div class="flex-col-xs-12  flex-col-md-8">
 								
 								<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
-									<button class="btn btn-no-shadow btn-default btn-round btn-block justify-content-space-between" data-toggle="dropdown">
+									<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
 
 									<!-- @NOTE @DYNAMIC : update text to the value set to tthe input field -->
 										<span class="task-delay-date-value">
@@ -96,7 +96,7 @@
 
 
 						<div class="flex-col-xs-6 text-align-right">
-							<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small btn-round">Add Attachment <i class="symbol symbol-plus"></i></a>
+							<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
 						</div>
 					</div>
 

@@ -526,7 +526,7 @@ window.jQuery && jQuery.noConflict();
 		triggerer = triggerer || null;
 
 		toggleMode = toggleMode || null;
-		var selector = '.'+toggleMode || null;
+		var selector = '.'+toggleMode || false;
 		var toggledClass = '.'+toggleMode.replace('-open','').replace('-close','') || null;
 		var toReturn = false;
 
@@ -1898,8 +1898,7 @@ window.jQuery && jQuery.noConflict();
 				maxWidth: null,
 				callback: null,
 				classes: '',
-
-				closeClasses: mode+'-close-default',
+				closeClasses: '',
 				align: 'left'
 			};
 
@@ -1935,7 +1934,7 @@ window.jQuery && jQuery.noConflict();
 
 
 							if(args.close !== false) {
-								html += '<div class="'+mode+'-close-wrapper"><a href="#" class="'+mode+'-close '+args.closeClasses +'" data-toggle="'+mode+'-close"><i class="symbol symbol-close "></i></a></div>';
+								html += '<div class="'+mode+'-close-wrapper"><a href="#" class="'+mode+'-close '+( args.closeClasses ? args.closeClasses : mode+'-close-default'  ) +'" data-toggle="'+mode+'-close"><i class="symbol symbol-close "></i></a></div>';
 							}
 
 							html += '<div class="'+mode+'-popup">';
@@ -2649,6 +2648,7 @@ window.jQuery && jQuery.noConflict();
 				var selector =  _.getTheToggled(triggerer,'dropdown');
 
 				if( selector ){
+					console.log(selector);
 					frameWork.setDropdown(selector,triggerer,'open');
 				}
 

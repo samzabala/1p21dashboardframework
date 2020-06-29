@@ -87,8 +87,8 @@ function app_init_content(){
 				case '_DEMO-home':
 				case 'home':
 				case null:
-					app_get_template_part("app-{$app}/_DEMO-home");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/_DEMO-home";
+					app_get_template_part("app-{$app}/home");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/home";
 					break;
 				case 'project-list':
 				case 'project-details':
@@ -97,7 +97,10 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;
 
-				case 'profile':
+				case 'workflux':
+				case 'projects':
+				case 'clients':
+				case 'analytics':
 					?>
 						<div class="module">
 
@@ -309,23 +312,29 @@ function app_debug_block() {
 
 		<hr>
 
-		<table>
-			<tr>
-				<th>Current App:</th>
-				<th>Templates pulled :</th>
-			</th>
-			<tr>
-				<td><code><?= FWAPPS_APP; ?></code></td>
+		<div class="table-wrapper">
+		
 
-				<?php
-					$template = FWAPPS_TEMPLATE;
-					$slug = FWAPPS_SLUG;
-				?>
-				<td>
-					
-				<code><?=$GLOBALS['FWAPPS_CURR_TEMPLATE'] ?>.php</code>
-				</td>
-			</tr>
+			<table>
+				<tr>
+					<th>Current App:</th>
+					<th>Templates pulled :</th>
+				</th>
+				<tr>
+					<td><code><?= FWAPPS_APP; ?></code></td>
+
+					<?php
+						$template = FWAPPS_TEMPLATE;
+						$slug = FWAPPS_SLUG;
+					?>
+					<td>
+						
+					<code><?=$GLOBALS['FWAPPS_CURR_TEMPLATE'] ?>.php</code>
+					</td>
+				</tr>
+			</table>
+		
+		</div>
 	</div>
 	<?php
 }
