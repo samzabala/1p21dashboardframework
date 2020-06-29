@@ -1395,7 +1395,7 @@
 
 					<!-- @if there are entries -->
 						
-						<div class="table-wrapper">
+						<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
 							<table class="table-col-separation data-log-week text-vertical-align-middle">
 
