@@ -2066,8 +2066,8 @@
 							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 						</div>
 						
-						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-vertical input-wrapper-block">
-							<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
+						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
+							<label class="input-label" for="textArea">Textarea + horizontal wrapper</label>
 						
 								<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
 

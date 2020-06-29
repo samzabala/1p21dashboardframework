@@ -4481,9 +4481,6 @@ table {
     transform: translateY(50%); }
   .board-popup {
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     padding: 60px 60px; }
     .board-popup-content {
       flex: 1 1; }
@@ -5716,7 +5713,7 @@ table {
 .input-label {
   font-size: 1rem;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #8d8d8d;
+  color: inherit;
   font-weight: 600;
   text-transform: none;
   text-decoration: none;
@@ -5753,6 +5750,10 @@ table {
     width: calc(100% - 25%);
     align-self: flex-end;
     margin-left: auto; }
+  .input-wrapper-vertical .input-info {
+    width: 100%;
+    align-self: flex-start;
+    margin-left: 0; }
 
 .input-inline {
   vertical-align: middle;
@@ -5894,7 +5895,7 @@ table {
 .input-select {
   background-image: linear-gradient(-130deg, #0480FE 0%, #0480FE 50%, transparent 51%, transparent 100%), linear-gradient(130deg, #0480FE 0%, #0480FE 50%, transparent 51%, transparent 100%);
   background-size: 0.2857142857em 0.3571428571em, 0.2857142857em 0.3571428571em;
-  background-position: calc(100% - (1em + 0.2428571429em )) 50%, calc(100% - 1em) 50%;
+  background-position: calc(100% - (1.5em + 0.2428571429em )) 50%, calc(100% - 1.5em) 50%;
   background-repeat: no-repeat,no-repeat; }
   .input-select:not([multiple]) {
     padding-right: 2.8571428571em; }
@@ -8488,7 +8489,9 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
       display: flex;
       flex-wrap: wrap; } }
 .dashboard-board-column-layout .board-popup {
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; }
 
 .dashboard-board-column-layout .board-popup-content {
   display: flex;
