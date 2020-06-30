@@ -14,6 +14,19 @@
 
 		<h1 data-toggle="accordion">Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+
+			<div class="ratio ratio-4-by-3 bidju-me background-theme-contrast">
+				<iframe src="https://www.youtube.com/embed/kwEZRPkAAu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		
+			<div class="ratio ratio-16-by-9 bidju-me background-theme-contrast">
+				<iframe src="https://www.youtube.com/embed/qlOTNtUvhe8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="ratio ratio-1-by-1 bidju-me background-theme-contrast">
+				<iframe src="https://www.youtube.com/embed/zHhg5hDs6Q8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+
 			<div class="ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-fit">1 by 1</span>
 
@@ -4941,6 +4954,12 @@
 
 			.ratio-me {
 				width: 100px;
+			}
+			.bidju-me {
+				width: 400px;
+			}
+			.bidju-me,
+			.ratio-me {
 				margin: 1em;
 			}
 		
