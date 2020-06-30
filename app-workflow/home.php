@@ -272,13 +272,41 @@
 		data-grid-area-md="today">
 		<div class="module-content">
 
-			<!-- @PLACEHOLDER -->
-				<div class="p text-align-center">
-					<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/charts/workflow/chart-01.png" alt="" />
+			<div class="chart-today-time p">
+				<!-- @NOTE
+
+					.today-total-halo
+						`border-color-primary`	=> if time is equal or less than 8.5 hrs
+						`border-color-secondary`	=> if time exceeds 8.5 hrs
+					.today-total-text
+						clases to add:
+						`color-primary`	=> if time is equal or less than 8.5 hrs
+						`color-secondary`	=> if time exceeds 8.5 hrs
+					
+
+				-->
+
+				<div
+					class="today-total-halo margin-auto-x text-align-center ratio-1-by-1 radius-ellipse border-width-thick border-style-solid
+					border-color-primary
+					">
+					<div class="ratio-child-contain text-nowrap">
+						<h5 class="no-margin-top">Today's Time</h5>
+
+
+						<span
+						class="today-total-text special-secondary no-margin
+						color-primary">
+							<span class="REPLACE">
+								6h 9m
+							</span>
+						</span>
+					</div>
 				</div>
+			</div>
 
 
-				<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y  text-align-center">
+				<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center no-margin-bottom  text-align-center">
 
 					<div class="flex-col-6">
 						<h5 class="no-margin">Start Time</h5>

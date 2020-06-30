@@ -11,10 +11,236 @@
 		</div>
 
 
+
+		<h1 data-toggle="accordion">Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-fit">1 by 1</span>
+
+				<img  class="ratio-child-fit" src="/placeholder/files/shrek.jpg" alt="">
+			</div>
+			<div class="ratio-16-by-9 ratio-me background-theme-contrast">
+				<span  class="ratio-child-fill">16 by 9</span>
+			</div>
+			<div class="ratio-4-by-3 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">4 by 3</span>
+			</div>
+		</div>
+
 		
 
+		<h1 data-toggle="accordion">Border Radius<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+
+			<div class="radius-ellipse ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">ellipse</span>
+			</div>
+
+
+			<div class="round-corner ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">oHOHO</span>
+			</div>
+
+
+
+
+			<div class="radius-top ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top</span>
+			</div>
+
+
+
+			<div class="radius-bottom ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom</span>
+			</div>
+
+
+			<div class="radius-left ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">left</span>
+			</div>
+
+
+
+			<div class="radius-right ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">right</span>
+			</div>
+
+
+			<div class="radius-top-left ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-left</span>
+			</div>
+
+
+
+			<div class="radius-top-right ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-right</span>
+			</div>
+
+			<div class="radius-bottom-left ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-left</span>
+			</div>
+
+
+			<h2>smol</h2>
+
+
+
+			<div class="radius-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">oHOHO</span>
+			</div>
+
+
+
+
+			<div class="radius-top-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top</span>
+			</div>
+
+
+
+			<div class="radius-bottom-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom</span>
+			</div>
+
+
+			<div class="radius-left-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">left</span>
+			</div>
+
+
+
+			<div class="radius-right-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">right</span>
+			</div>
+
+
+			<div class="radius-top-left-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-left</span>
+			</div>
+
+
+
+			<div class="radius-top-right-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-right</span>
+			</div>
+
+			<div class="radius-bottom-left-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-left</span>
+			</div>
+
+
+			<div class="radius-bottom-right-small ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-right</span>
+			</div>
+
+			<h2>lorg</h2>
+
+
+
+			<div class="radius-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">oHOHO</span>
+			</div>
+
+
+
+
+			<div class="radius-top-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top</span>
+			</div>
+
+
+
+			<div class="radius-bottom-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom</span>
+			</div>
+
+
+			<div class="radius-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">left</span>
+			</div>
+
+
+
+			<div class="radius-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">right</span>
+			</div>
+
+
+			<div class="radius-top-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-left</span>
+			</div>
+
+
+
+			<div class="radius-top-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-right</span>
+			</div>
+
+			<div class="radius-bottom-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-left</span>
+			</div>
+
+
+			<div class="radius-bottom-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-right</span>
+			</div>
+			
+			<h3>reset</h3>
+
+
+
+			<div class="no-radius thumbnail ratio-me">
+				<span class="font-size-normalize">oHOHO</span>
+			</div>
+
+
+
+
+			<div class="no-radius-top thumbnail ratio-me">
+				<span class="font-size-normalize">top</span>
+			</div>
+
+
+
+			<div class="no-radius-bottom thumbnail ratio-me">
+				<span class="font-size-normalize">bottom</span>
+			</div>
+
+
+			<div class="no-radius-left thumbnail ratio-me">
+				<span class="font-size-normalize">left</span>
+			</div>
+
+
+
+			<div class="no-radius-right thumbnail ratio-me">
+				<span class="font-size-normalize">right</span>
+			</div>
+
+
+			<div class="no-radius-top-left thumbnail ratio-me">
+				<span class="font-size-normalize">top-left</span>
+			</div>
+
+
+
+			<div class="no-radius-top-right thumbnail ratio-me">
+				<span class="font-size-normalize">top-right</span>
+			</div>
+
+			<div class="no-radius-bottom-left thumbnail ratio-me">
+				<span class="font-size-normalize">bottom-left</span>
+			</div>
+
+
+			<div class="no-radius-bottom-right thumbnail1 ratio-me">
+				<span class="font-size-normalize">bottom-right</span>
+			</div>
+			
+		</div>
+
 		<h1 data-toggle="accordion">Toolbar<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion open">
+		<div class="accordion">
 			<div class="toolbar toolbar-horizontal">
 				<span class="toolbar-tile">
 
@@ -346,7 +572,7 @@
 				<div class="flex-col-xs-12 flex-col-md-4">
 					<div class="asset">
 						<div class="asset-thumbnail">
-							<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="">
+							<img src="/placeholder/files/shrek.jpg" alt="">
 						</div>
 						<p class="asset-title">bitch-ass.jpg</p>
 						<p class="asset-caption">69kb</p>
@@ -2762,7 +2988,7 @@
 
 			<h2>Ugly image size</h2>
 			<div class="thumbnail">
-				<img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 		</div>
@@ -3781,7 +4007,7 @@
 
 
 
-			<p class="special-secondary text-clip-background font-weight-900 text-transform-uppercase" data-src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
+			<p class="special-secondary text-clip-background font-weight-900 text-transform-uppercase" data-src="/placeholder/files/shrek.jpg">
 				text-clip-background feat ya boi secondary. i have a background-image and other bullshit classes so u see what the fuck is happening to this child. it's on drugs. look how high the child is. don't do drugs kids. i'm trying to gill up more text so you can see shrek's bitch ass face. do you see it yet? layers motherfucker. if shrek was a graphic designer he'd be photoshop. personally i like illustrator myself because di becters are my life. We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you 
 			</p>
 
@@ -3821,22 +4047,22 @@
 
 			<h3>Overflow hidden</h3>
 			<div style="height:69px" class="overflow-hidden">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow scroll</h3>
 			<div style="height:69px" class="overflow-scroll">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow overlay</h3>
 			<div style="height:69px" class="overflow-overlay">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow auto</h3>
 			<div style="height:69px" class="overflow-auto">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 
@@ -3849,22 +4075,22 @@
 
 			<h3>Overflow x hidden</h3>
 			<div style="height:69px" class="overflow-y-hidden overflow-x-hidden">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow x scroll</h3>
 			<div style="height:69px" class="overflow-y-hidden overflow-x-scroll">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow x overlay</h3>
 			<div style="height:69px" class="overflow-y-hidden overflow-x-overlay">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow x auto</h3>
 			<div style="height:69px" class="overflow-y-hidden overflow-x-auto">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 
@@ -3878,22 +4104,22 @@
 
 			<h3>Overflow y hidden</h3>
 			<div style="height:69px" class="overflow-x-hidden overflow-y-hidden">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow y scroll</h3>
 			<div style="height:69px" class="overflow-x-hidden overflow-y-scroll">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow y overlay</h3>
 			<div style="height:69px" class="overflow-x-hidden overflow-y-overlay">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 			<h3>Overflow y auto</h3>
 			<div style="height:69px" class="overflow-x-hidden overflow-y-auto">
-				<img style="max-width:none;width:1920px;" src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg" alt="Shronk">
+				<img style="max-width:none;width:1920px;" src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
 
@@ -4600,7 +4826,7 @@
 </div>
 
 <div class="modal" id="secret-modal" data-modal-title="YEET">
-	<div class="color-background" data-src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/shrek-swamp-perplexed.jpg">
+	<div class="color-background" data-src="/placeholder/files/shrek.jpg">
 		<h1>
 			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry
 		</h1>
@@ -4660,7 +4886,8 @@
 			.accordion.accordion:nth-child(n+20) *[class*="background-"]:not(*[class*="clip"]),
 			.accordion.accordion:nth-child(n+20) .flex-child,
 			.accordion.accordion:nth-child(n+20) *[class*="flex-col-"],
-			.accordion.accordion:nth-child(n+20) *[class*="color-"]:not(.symbol) {
+			.accordion.accordion:nth-child(n+20) *[class*="color-"]:not(.symbol)
+			.ratio-me {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
 			}
@@ -4710,6 +4937,11 @@
 				-1px 0 0 pink,
 				0 1px 0 pink,
 				0 -1px 0 pink;
+			}
+
+			.ratio-me {
+				width: 100px;
+				margin: 1em;
 			}
 		
 		</style>
