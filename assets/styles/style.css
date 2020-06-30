@@ -230,14 +230,14 @@ a {
 /*** TYPOGRAPHY ***/
 /* special */
 .special-primary {
-  font-size: 3.9285714286em !important;
+  font-size: 4em !important;
   line-height: 1 !important;
   color: inherit !important;
   font-weight: 300 !important;
   text-transform: none !important;
   font-style: normal !important;
-  margin-bottom: 0.3636363636em;
-  margin-top: 0.3636363636em;
+  margin-bottom: 0.3571428571em;
+  margin-top: 0.3571428571em;
   display: block; }
   @media (max-width: 1200px) {
     .special-primary {

@@ -306,7 +306,7 @@
 			</div>
 
 
-				<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center no-margin-bottom  text-align-center">
+				<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center no-margin-y  text-align-center">
 
 					<div class="flex-col-6">
 						<h5 class="no-margin">Start Time</h5>
