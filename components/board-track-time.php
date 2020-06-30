@@ -26,7 +26,7 @@
 		</a>
 
 	</div>
-	<div class="board" id="board-track-time" data-board-max-width="960px" data-board-title="Add new Entry">
+	<div class="board" id="board-track-time" data-board-max-width="880px" data-board-title="Add new Entry">
 		<form action="" class="add-new-timer">
 			
 			<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">

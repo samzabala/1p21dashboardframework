@@ -5874,7 +5874,7 @@ table {
     .nav .input-tags-ui:not(.focus):not(:focus):not(:hover), .nav .input-calendar-ui:not(.focus):not(:focus):not(:hover), .nav .input-select:not(.focus):not(:focus):not(:hover), .nav .input-single-line:not(.focus):not(:focus):not(:hover), .nav .input-multiple-line:not(.focus):not(:focus):not(:hover), .nav .input-editor:not(.focus):not(:focus):not(:hover) {
       box-shadow: none; }
   .input-tags-ui:focus, .input-calendar-ui:focus, .input-select:focus, .input-single-line:focus, .input-multiple-line:focus, .input-editor:focus, .focus.input-tags-ui, .focus.input-calendar-ui, .focus.input-select, .focus.input-single-line, .focus.input-multiple-line, .focus.input-editor, .input-tags-ui:hover, .input-calendar-ui:hover, .input-select:hover, .input-single-line:hover, .input-multiple-line:hover, .input-editor:hover {
-    border-color: rgba(141, 141, 141, 0.3); }
+    border-color: rgba(141, 141, 141, 0.6); }
   .input-large.input-tags-ui, .input-large.input-calendar-ui, .input-large.input-select, .input-large.input-single-line, .input-large.input-multiple-line, .input-large.input-editor, .input-group.input-large .input-tags-ui, .input-group.input-large .input-calendar-ui, .input-group.input-large .input-select, .input-group.input-large .input-single-line, .input-group.input-large .input-multiple-line, .input-group.input-large .input-editor {
     padding-top: calc( ( (4.6875rem - (1px * 2)) - (1em * 1.5) ) * .5);
     padding-bottom: calc( ( (4.6875rem - (1px * 2)) - (1em * 1.5) ) * .5); }
