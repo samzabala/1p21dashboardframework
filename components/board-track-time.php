@@ -172,7 +172,7 @@
 				</div>
 			</div>
 
-			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
+			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact">
 				<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
 					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 						<label for="log-start-date" class="input-label">
