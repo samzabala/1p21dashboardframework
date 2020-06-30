@@ -3,13 +3,12 @@ $prefix: '.ratio';
 
 #{$prefix} {
 
-	@at-root #{&+'-1-by-1'},
-	#{&+'-16-by-9'},
-	#{&+'-4-by-3'} {
+	& {
 		max-width:100%!important;
 		overflow: hidden;
 		position: relative;
 		display: block;
+		background: var(--theme-background-contrast);
 
 		&:before {
 
@@ -27,38 +26,38 @@ $prefix: '.ratio';
 		}
 	}
 
-	@at-root #{&+'-1-by-1'} {
+	&#{&+'-1-by-1'} {
 		&:before {
 			padding-bottom: 100% !important;
 		}
 	}
 
-	@at-root #{&+'-16-by-9'} {
+	&#{&+'-16-by-9'} {
 		&:before {
 			padding-bottom: percentage(9/16) !important;
 		}
 	}
 
-	@at-root #{&+'-4-by-3'} {
+	&#{&+'-4-by-3'} {
 		&:before {
 			padding-bottom: percentage(3/4) !important;
 		}
 	}
 
 	&-child  {
-		
-		@at-root *#{&}-fit {
-			@extend %for-fit-image-img !optional;
-		}
 
-		@at-root *#{&}-fill {
+		@at-root #{$prefix} *#{&}-stretch {
 			top:0!important;
 			left:0!important;
 			width:100%!important;
 			height: 100%!important;
 		}
+		
+		@at-root #{$prefix} *#{&}-cover {
+			@extend %for-fit-image-img !optional;
+		}
 
-		@at-root *#{&}-contain {
+		@at-root  #{$prefix} #{&}-contain {
 
 			top:50%!important;
 			left:50%!important;
