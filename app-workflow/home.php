@@ -1116,6 +1116,7 @@
 				Activity Log
 			</h3>
 			<div class="module-functions no-margin-top accordion accordion-mobile">
+				<?php app_get_component('components/filter-input-group-timetracked'); ?>
 				<?php app_get_component('components/board-track-time'); ?>
 			</div>
 		</div>
