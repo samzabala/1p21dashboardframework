@@ -100,6 +100,7 @@ function app_init_content(){
 				case 'workflux':
 				case 'projects':
 				case 'clients':
+				case 'notes':
 				case 'analytics':
 					?>
 						<div class="module">

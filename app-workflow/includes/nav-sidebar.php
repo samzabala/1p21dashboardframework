@@ -31,6 +31,16 @@
 		</a>
 	</li>
 
+	
+	<li class="flex-col-xs-12">
+		<a href="<?=app_create_link(array('template'=> 'notes')); ?>" class="color-primary-hover">
+			<span class="p">
+				<img class="nav-notes" data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-notes.svg">
+			</span>
+			<span class="display-block">Notes</span>
+		</a>
+	</li>
+
 	<!-- @NOTE : templates these link to are not finalized yet. we may comment these out for now while their not sent yet -->
 	<li class="flex-col-xs-12">
 		<a href="<?=app_create_link(array('template'=> 'clients')); ?>" class="color-primary-hover">
@@ -62,5 +72,37 @@
 			</span>
 			<span class="display-block">Analytics</span>
 		</a>
+	</li>
+
+
+
+
+
+	<!-- @NOTE : templates these link to are not finalized yet. we may comment these out for now while their not sent yet -->
+	<li class="flex-col-xs-12 position-relative">
+		<a href="#" data-toggle="dropdown">
+			<span class="p">
+				<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-users.svg">
+			</span>
+			<span class="display-block">Users +</span>
+		</a>
+		<ul class="dropdown">
+				<li>
+					<a href="#">User Name</a>
+				</li>
+				<li>
+					<a href="#">User Name</a>
+				</li>
+				<li>
+					<a href="#">User Name</a>
+				</li>
+				<li>
+					<a href="#">User Name</a>
+				</li>
+				<li>
+					<a href="#">User Name</a>
+				</li>
+
+		</ul>
 	</li>
 </ul>
