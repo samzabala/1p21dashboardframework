@@ -1494,20 +1494,18 @@ table {
   margin: auto; }
 
 @media (max-width: 1200px) {
-  .nav {
-    height: auto; }
-    .nav-list {
-      display: block;
-      min-width: 100%; }
-      .nav-list .dropdown {
-        border-radius: 0;
-        width: auto;
-        position: static;
-        box-shadow: none; }
-    .nav-list > .nav-item > a,
-    .nav-list > .nav-item > [data-toggle=dropdown], .nav-list > li > a,
-    .nav-list > li > [data-toggle=dropdown] {
-      display: block; } }
+  .nav-list {
+    display: block;
+    min-width: 100%; }
+    .nav-list .dropdown {
+      border-radius: 0;
+      width: auto;
+      position: static;
+      box-shadow: none; }
+  .nav-list > .nav-item > a,
+  .nav-list > .nav-item > [data-toggle=dropdown], .nav-list > li > a,
+  .nav-list > li > [data-toggle=dropdown] {
+    display: block; } }
 
 .tab > a,
 .tab .tab-text, .tabs > li > a,
@@ -5298,7 +5296,7 @@ table {
   line-height: 1.875;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  text-transform: capitalize;
+  text-transform: none;
   text-decoration: none;
   text-align: center;
   font-style: normal;
