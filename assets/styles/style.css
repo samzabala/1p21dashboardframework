@@ -5293,7 +5293,7 @@ table {
   line-height: 2.1428571429;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  text-transform: capitalize;
+  text-transform: none;
   text-decoration: none;
   text-align: center;
   font-style: normal;

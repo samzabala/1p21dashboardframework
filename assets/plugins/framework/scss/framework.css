@@ -5296,7 +5296,7 @@ table {
   line-height: 1.875;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  text-transform: capitalize;
+  text-transform: none;
   text-decoration: none;
   text-align: center;
   font-style: normal;
