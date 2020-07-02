@@ -25,14 +25,15 @@
 
 
 			classes to add:
-				if current page =>   `color-primary`
-				default state  =>   `btn-default background-primary-hover color-background-hover background-primary-focus color-background-focus`
+				if current page =>   `color-primary btn-no-interaction`
+				default state  =>   `page-number background-primary-hover color-background-hover background-primary-focus color-background-focus`
 
 
 				
 				
 		 -->
-		<a href="#" class="btn btn-default background-primary-hover color-background-hover background-primary-focus color-background-focus page-number">
+		<a href="#" class="btn
+		btn-default page-number background-primary-hover color-background-hover background-primary-focus color-background-focus">
 			<span class="REPLACE">01</span>
 		</a>
 
@@ -45,7 +46,7 @@
 					...
 				</span>
 			<?php $no_ellipsis_yet = false; endif; else: ?>
-				<a href="#" class="btn <?= ($j == 2 ? 'color-primary' : 'btn-default background-primary-hover color-background-hover background-primary-focus color-background-focus') ?> page-number">
+				<a href="#" class="btn btn-default <?= ($j == 2 ? 'color-primary btn-no-interaction' : 'page-number background-primary-hover color-background-hover background-primary-focus color-background-focus') ?>">
 					<span class="REPLACE"><?= $j <= 9 ? '0'.$j : $j ?></span>
 				</a>
 			<?php endif; ?>

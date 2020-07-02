@@ -287,7 +287,7 @@
 				-->
 
 				<div
-					class="today-total-halo margin-auto-x text-align-center ratio ratio-1-by-1 radius-ellipse border-width-thick border-style-solid
+					class="today-total-halo background-transparent margin-auto-x text-align-center ratio ratio-1-by-1 radius-ellipse border-width-thick border-style-solid
 					border-color-primary
 					">
 					<div class="ratio-child-contain text-nowrap">

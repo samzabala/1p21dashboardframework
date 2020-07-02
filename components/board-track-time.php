@@ -26,7 +26,7 @@
 		</a>
 
 	</div>
-	<div class="board" id="board-track-time" data-board-max-width="880px" data-board-title="Add new Entry">
+	<div class="board" id="board-track-time" data-board-max-width="700px" data-board-title="Add new Entry">
 		<form action="" class="add-new-timer">
 			
 			<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
@@ -172,56 +172,81 @@
 				</div>
 			</div>
 
-			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact">
-				<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+			<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+				<label class="input-label" for="attachments">Attachments</label>
+				<input class="input input-single-line" id="attachments" multiple="" name="attachments" type="file">
+			</div>
+
+			<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact">
+				<div class="flex-col-xs-12 flex-col-sm-6">
 					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-						<label for="log-start-date" class="input-label">
-							Start Date  <span class="color-error field-required">*</span>
+						<label for="sdate" class="input-label">
+							Start Date <span class="color-error field-required">*</span>
 						</label>
-						<input type="date" placeholder="mm/dd/yyyy" id="log-start-date" name="log-start-date" class="input input-single-line">
+
+						<input type="date" id="sdate" name="sdate" class="input input-single-line" value="2020-07-01" min="2020-06-24" disabled="" required="">
+						<input id="start_date" name="start_date" required="" type="hidden" value="2020-07-01">
 					</div>
 				</div>
-				<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+
+				<div class="flex-col-xs-12 flex-col-sm-6">
 					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-						<label for="log-start-time" class="input-label">
-							Start Time  <span class="color-error field-required">*</span>
+						<label for="start_time" class="input-label">
+							Start Time <span class="color-error field-required">*</span>
 						</label>
-						<input type="time" placeholder="--:-- --" id="log-start-time" name="log-start-time" class="input input-single-line">
+
+						<input class="input input-single-line" id="start_time" name="start_time" required="" type="time" value="">
 					</div>
 				</div>
-				<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
-					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					
-						
-						<label for="log-start-time" class="input-label">
-							Duration  <span class="color-error field-required">*</span>
+
+				<div class="flex-col-xs-12 flex-col-sm-6 display-none">
+					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p ">
+						<label for="duration" class="input-label">
+						Duration <span class="color-error field-required">*</span>
 						</label>
-						<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00:00" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" id="log-duration-time" name="log-duration-time" class="input input-single-line input-inline">
+
+						<input class="input input-single-line input-inline" id="duration" name="duration" pattern="(?:[0-1]?\d:[0-5]\d|\d+)" placeholder="00:00" size="2" title="m or hh:mm" type="text" value="" witdth="70px"> 
 					</div>
 				</div>
-				<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+				
+				<div class="flex-col-xs-12 flex-col-sm-6">
 					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-						<span class="input-label">
-							Status
-						</span>
-						
-						<label for="log-billable">
-							<input type="checkbox" class="input input-inline" id="log-billable"  name="log-billable" /> Billable
+						<span class="input-label">Status</span>
+
+						<label for="billable">
+						<input class="input input-inline" id="billable" name="billable" type="checkbox" value="y">
+							&nbsp;
+							Billable?
 						</label>
-						
-						<label for="log-completed">
-							<input type="checkbox" class="input input-inline" id="log-completed"  name="log-completed" /> Completed
+
+						<label for="completed" class="display-none">
+						<input class="input input-inline" id="completed" name="completed" type="checkbox" value="y">
+							&nbsp;
+							Completed?
 						</label>
 					</div>
 				</div>
-				<div class="flex-col-12">
-					
-				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-						<label for="log-due-date" class="input-label">
-							Due Date  <span class="color-error field-required">*</span>
+				
+
+				<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-8">
+					<div id="billable-time-wrap" class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+
+						<label for="billable_time" class="input-label">
+							Billable Time <span class="color-error field-required">*</span>
 						</label>
-						<input type="date" placeholder="mm/dd/yyyy" id="log-due-date" name="log-due-date" class="input input-single-line">
+
+						<input class="input input-single-line input-inline" id="billable_time" name="billable_time" pattern="(?:[0-1]?\d:[0-5]\d|\d+)" placeholder="00:00" size="2" title="m or h:mm" type="text" value="" witdth="70px">
 					</div>
+				
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-sm-6">
+				
+					<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+						<label class="input-label" for="due_date">Due Date</label>
+						<input class="input input-single-line" id="due_date" min="2020-07-01" name="due_date" type="date" value="">
+					</div>
+				
 				</div>
 			</div>
 
