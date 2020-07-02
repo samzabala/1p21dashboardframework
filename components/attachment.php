@@ -13,12 +13,16 @@
 				classes that match most common file types uploaded (at least in the production team):
 
 				`.asset-image-code`		=>		json,xml,rss,css,html .etc
+				`.asset-image-text`		=>		txt, rtf,odf .etc
 				`.asset-image-doc`		=>		doc,docx, docm, .etc
 				`.asset-image-font`		=>		otf,ttf eot, woff, woff2
-				`.asset-image-img`		=>		tiff,webp,eps,svg,psd,psb,ai,xd,indd .etc
-				`.asset-image-pdf`		=>		pdf,pdf/x
+				`.asset-image-img`		=>		tiff,webp,eps,svg .etc
+				`.asset-image-psd`		=>		psd,psb,raw,pxr
+				`.asset-image-ai`		=>		ai
+				`.asset-image-xd`		=>		xd
+				`.asset-image-pdf`		=>		pdf
+				`.asset-image-id`		=>		indd,indb,idml,indl,indt,xqx,pmd,inx
 				`.asset-image-table`	=>		xlsx,xls,xlsm,slxb, csv,tsv, dsv
-				`.asset-image-text`		=>		txt, rtf,odf .etc
 				`.asset-image-video`	=>		mp4,mov,wmv,flv,avi,avchd, .etc
 				`.asset-image-zip`		=>		zip, rar, .etc
 

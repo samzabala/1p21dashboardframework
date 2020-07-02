@@ -15,7 +15,7 @@
 		<h1 data-toggle="accordion">Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<div class="ratio ratio-4-by-3 bidju-me">
+			<!-- <div class="ratio ratio-4-by-3 bidju-me">
 				<iframe class="ratio-child-stretch" src="https://www.youtube.com/embed/kwEZRPkAAu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		
@@ -24,7 +24,7 @@
 			</div>
 			<div class="ratio ratio-1-by-1 bidju-me">
 				<iframe class="ratio-child-stretch" src="https://www.youtube.com/embed/zHhg5hDs6Q8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
+			</div> -->
 
 
 			<div class="ratio ratio-1-by-1 ratio-me background-theme-contrast">
@@ -45,51 +45,51 @@
 		<h1 data-toggle="accordion">Border Radius<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<div class="radius-ellipse ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-ellipse ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">ellipse</span>
 			</div>
 
 
-			<div class="round-corner ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="round-corner ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">oHOHO</span>
 			</div>
 
 
 
 
-			<div class="radius-top ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-top ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top</span>
 			</div>
 
 
 
-			<div class="radius-bottom ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-bottom ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom</span>
 			</div>
 
 
-			<div class="radius-left ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-left ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">left</span>
 			</div>
 
 
 
-			<div class="radius-right ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-right ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">right</span>
 			</div>
 
 
-			<div class="radius-top-left ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-top-left ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top-left</span>
 			</div>
 
 
 
-			<div class="radius-top-right ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-top-right ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top-right</span>
 			</div>
 
-			<div class="radius-bottom-left ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-bottom-left ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom-left</span>
 			</div>
 
@@ -98,51 +98,51 @@
 
 
 
-			<div class="radius-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">oHOHO</span>
 			</div>
 
 
 
 
-			<div class="radius-top-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-top-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top</span>
 			</div>
 
 
 
-			<div class="radius-bottom-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-bottom-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom</span>
 			</div>
 
 
-			<div class="radius-left-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-left-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">left</span>
 			</div>
 
 
 
-			<div class="radius-right-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-right-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">right</span>
 			</div>
 
 
-			<div class="radius-top-left-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-top-left-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top-left</span>
 			</div>
 
 
 
-			<div class="radius-top-right-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-top-right-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top-right</span>
 			</div>
 
-			<div class="radius-bottom-left-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-bottom-left-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom-left</span>
 			</div>
 
 
-			<div class="radius-bottom-right-small ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="radius-bottom-right-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom-right</span>
 			</div>
 
@@ -257,7 +257,7 @@
 			<div class="toolbar toolbar-horizontal">
 				<span class="toolbar-tile">
 
-				<a href="#" class="btn btn-symbol btn-round btn-small btn-secondary">
+				<a href="#" class="btn btn-symbol btn-small btn-secondary">
 					<i class="symbol symbol-close"></i>
 				</a>
 				</span>
@@ -272,7 +272,7 @@
 			<div class="toolbar toolbar-vertical">
 				<span class="toolbar-tile">
 
-				<a href="#" class="btn btn-symbol btn-round btn-small btn-secondary">
+				<a href="#" class="btn btn-symbol btn-small btn-secondary">
 					<i class="symbol symbol-close"></i>
 				</a>
 				</span>
@@ -528,7 +528,7 @@
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-default"></span>
 						</div>
-						<a href="#" class="asset-delete btn btn-symbol btn-round btn-small btn-secondary">
+						<a href="#" class="asset-delete btn btn-symbol btn-small btn-secondary">
 							<i class="symbol symbol-close"></i>
 						</a>
 						<p class="asset-title">bitch-ass.probablyavirus</p>
@@ -569,6 +569,18 @@
 					</div>
 				</div>
 
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-text"></span>
+						</div>
+						<p class="asset-title">bitch-ass.txt</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
 				<div class="flex-col-xs-12 flex-col-md-4">
 
 					<div class="asset">
@@ -605,6 +617,39 @@
 				</div>
 
 
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-ps"></span>
+						</div>
+						<p class="asset-title">bitch-ass-obscure-or-nonweb-image-type-or-vector-shit-that-dont-like-fit-cover.ps</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-ai"></span>
+						</div>
+						<p class="asset-title">bitch-ass-obscure-or-nonweb-image-type-or-vector-shit-that-dont-like-fit-cover.ai</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-xd"></span>
+						</div>
+						<p class="asset-title">bitch-ass-obscure-or-nonweb-image-type-or-vector-shit-that-dont-like-fit-cover.xd</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+
 
 				<div class="flex-col-xs-12 flex-col-md-4">
 					<div class="asset">
@@ -617,6 +662,17 @@
 				</div>
 
 
+
+				<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="asset">
+						<div class="asset-thumbnail">
+							<span class="asset-image asset-image-id"></span>
+						</div>
+						<p class="asset-title">Well Shit.indb</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
 				<div class="flex-col-xs-12 flex-col-md-4">
 
 					<div class="asset">
@@ -628,16 +684,6 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
-
-					<div class="asset">
-						<div class="asset-thumbnail">
-							<span class="asset-image asset-image-text"></span>
-						</div>
-						<p class="asset-title">bitch-ass.txt</p>
-						<p class="asset-caption">69kb</p>
-					</div>
-				</div>
 				<div class="flex-col-xs-12 flex-col-md-4">
 
 					<div class="asset">
@@ -873,19 +919,19 @@
 
 		<h1 data-toggle="accordion">Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-				<span class="btn btn-symbol well btn-theme btn-round">
+				<span class="btn btn-symbol well btn-theme ">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme<br>
-				<span class="btn btn-symbol well btn-theme-polar btn-round">
+				<span class="btn btn-symbol well btn-theme-polar ">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar<br>
-				<span class="btn btn-symbol well btn-theme-outline btn-round">
+				<span class="btn btn-symbol well btn-theme-outline ">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme outline <br>
-				<span class="btn btn-symbol well btn-theme-polar-outline btn-round">
+				<span class="btn btn-symbol well btn-theme-polar-outline ">
 					<i class="symbol symbol-plus"></i>
 				</span>
 				theme polar outline<br>
@@ -1881,6 +1927,8 @@
 
 		<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			
+
 
 			<form class="form-horizontal">
 			
@@ -2031,6 +2079,7 @@
 								<label class="input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal">
 
+								<label class="input-label" >Basic Ass</label>
 								<input type="text" class="input input-single-line">
 
 									<select class="input input-select" >
@@ -2351,317 +2400,939 @@
 						</div>
 					</fieldset>
 							
-					<h2>Accordion + checking if the framework doesnt fuck with the unstyled nbois too much</h2>
-
-							<div class="accordion-group">
-
-								<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-								<div class="accordion">
-									<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
-									<input type="button" value="bitch">
-									<input type="checkbox">
-									<input type="color">
-									<input type="date">
-									<input type="datetime-local">
-									<input type="email">
-									<input type="file">
-									<input type="hidden">
-									<input type="image">
-									<input type="month">
-									<input type="number">
-									<input type="password">
-									<input type="radio">
-									<input type="range">
-									<input type="reset">
-									<input type="search">
-									<input type="submit">
-									<input type="tel">
-									<input type="text">
-									<input type="time">
-									<input type="url">
-									<input type="week">
-									<input list="browsers">
-									<datalist id="browsers">
-										<option value="Internet Explorer">
-										<option value="Firefox">
-										<option value="Chrome">
-										<option value="Opera">
-										<option value="Safari">
-									</datalist>
-
-									<select name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-									<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-								</div>
-
-								<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-								<div id="bitch-accordion" class="accordion">
-									<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
-									<input class="input" type="button" value="Bitch">
-									<input class="input" type="checkbox">
-									<input class="input" type="color">
-									<input class="input" type="date">
-									<input class="input" type="datetime-local">
-									<input class="input" type="email">
-									<input class="input" type="file">
-									<input class="input" type="hidden">
-									<input class="input" type="image">
-									<input class="input" type="month">
-									<input class="input" type="number">
-									<input class="input" type="password">
-									<input class="input" type="radio">
-									<input class="input" type="range">
-									<input class="input" type="reset">
-									<input class="input" type="search">
-									<input class="input" type="submit" value="Bitch">
-									<input class="input" type="tel">
-									<input class="input" type="text">
-									<input class="input" type="time">
-									<input class="input" type="url">
-									<input class="input" type="week">
-									<input class="input" list="browsers">
-									<datalist class="input" id="browsers">
-										<option value="Internet Explorer">
-										</option><option value="Firefox">
-										</option><option value="Chrome">
-										</option><option value="Opera">
-										</option><option value="Safari">
-									</option></datalist>
-
-									<select class="input" name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-
-									<select class="input" name="cars" multiple>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-									<textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-								</div>
-
-								<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
-								<div id="other-bitch-accordion" class="accordion">
-									<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
-									<input class="input input-inline" type="button" value="Bitch">
-									<input class="input input-inline" type="checkbox">
-									<input class="input input-single-line" type="color">
-									<input class="input input-single-line" type="date">
-									<input class="input input-single-line" type="datetime-local">
-									<input class="input input-single-line" type="email">
-									<input class="input input-single-line" type="file">
-									<input class="input input-single-line" type="hidden">
-									<input class="input input-single-line" type="image">
-									<input class="input input-single-line" type="month">
-									<input class="input input-single-line" type="number">
-									<input class="input input-single-line" type="password">
-									<input class="input input-inline" type="radio">
-									<input class="input input-inline" type="range">
-									<input class="input input-inline" type="reset">
-									<input class="input input-single-line" type="search">
-									<input class="input input-inline" type="submit">
-									<input class="input input-single-line" type="tel">
-									<input class="input input-single-line" type="text">
-									<input class="input input-single-line" type="time">
-									<input class="input input-single-line" type="url">
-									<input class="input input-single-line" type="week">
-									<input class="input input-single-line" list="browsers">
-									<datalist class="input" id="browsers">
-										<option value="Internet Explorer">
-										</option><option value="Firefox">
-										</option><option value="Chrome">
-										</option><option value="Opera">
-										</option><option value="Safari">
-									</option></datalist>
-
-									<select class="input input-select" name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-
-									<select class="input input-select" name="cars" multiple>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-									<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-
-
-									color
-
-									<hr>
-
-									<input class="input input-error input-inline" type="button" value="Bitch">
-									<input class="input input-error input-inline" type="checkbox">
-									<input class="input input-error input-inline" type="color">
-									<input class="input input-error input-single-line" type="date">
-									<input class="input input-error input-single-line" type="datetime-local">
-									<input class="input input-error input-single-line" type="email">
-									<input class="input input-error input-single-line" type="file">
-									<input class="input input-error input-single-line" type="hidden">
-									<input class="input input-error input-single-line" type="image">
-									<input class="input input-error input-single-line" type="month">
-									<input class="input input-error input-single-line" type="number">
-									<input class="input input-error input-single-line" type="password">
-									<input class="input input-error input-inline" type="radio">
-									<input class="input input-error input-inline" type="range">
-									<input class="input input-error input-inline" type="reset">
-									<input class="input input-error input-single-line" type="search">
-									<input class="input input-error input-inline" type="submit">
-									<input class="input input-error input-single-line" type="tel">
-									<input class="input input-error input-single-line" type="text">
-									<input class="input input-error input-single-line" type="time">
-									<input class="input input-error input-single-line" type="url">
-									<input class="input input-error input-single-line" type="week">
-									<input class="input input-error input-single-line" list="browsers">
-									<datalist class="input input-error" id="browsers">
-										<option value="Internet Explorer">
-										</option><option value="Firefox">
-										</option><option value="Chrome">
-										</option><option value="Opera">
-										</option><option value="Safari">
-									</option></datalist>
-
-									<select class="input input-error input-select" name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-
-									<select class="input input-error input-select" name="cars" multiple>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-									<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-
-									<hr>
-
-									<input class="input input-large input-inline" type="button" value="Bitch">
-									<input class="input input-large input-inline" type="checkbox">
-									<input class="input input-large input-inline" type="color">
-									<input class="input input-large input-single-line" type="date">
-									<input class="input input-large input-single-line" type="datetime-local">
-									<input class="input input-large input-single-line" type="email">
-									<input class="input input-large input-single-line" type="file">
-									<input class="input input-large input-single-line" type="hidden">
-									<input class="input input-large input-single-line" type="image">
-									<input class="input input-large input-single-line" type="month">
-									<input class="input input-large input-single-line" type="number">
-									<input class="input input-large input-single-line" type="password">
-									<input class="input input-large input-inline" type="radio">
-									<input class="input input-large input-inline" type="range">
-									<input class="input input-large input-inline" type="reset">
-									<input class="input input-large input-single-line" type="search">
-									<input class="input input-large input-inline" type="submit">
-									<input class="input input-large input-single-line" type="tel">
-									<input class="input input-large input-single-line" type="text">
-									<input class="input input-large input-single-line" type="time">
-									<input class="input input-large input-single-line" type="url">
-									<input class="input input-large input-single-line" type="week">
-									<input class="input input-large input-single-line" list="browsers">
-									<datalist class="input input-large" id="browsers">
-										<option value="Internet Explorer">
-										</option><option value="Firefox">
-										</option><option value="Chrome">
-										</option><option value="Opera">
-										</option><option value="Safari">
-									</option></datalist>
-
-									<select class="input input-large input-select" name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-
-									<select class="input input-large input-select" name="cars" multiple>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-									<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-
-									<hr>
-
-									<input class="input-large" type="button" value="Bitch">
-									<input class="input-large" type="checkbox">
-									<input class="input-large" type="color">
-									<input class="input-large" type="date">
-									<input class="input-large" type="datetime-local">
-									<input class="input-large" type="email">
-									<input class="input-large" type="file">
-									<input class="input-large" type="hidden">
-									<input class="input-large" type="image">
-									<input class="input-large" type="month">
-									<input class="input-large" type="number">
-									<input class="input-large" type="password">
-									<input class="input-large" type="radio">
-									<input class="input-large" type="range">
-									<input class="input-large" type="reset">
-									<input class="input-large" type="search">
-									<input class="input-large" type="submit">
-									<input class="input-large" type="tel">
-									<input class="input-large" type="text">
-									<input class="input-large" type="time">
-									<input class="input-large" type="url">
-									<input class="input-large" type="week">
-									<input class="input-large" list="browsers">
-									<datalist class="input-large" id="browsers">
-										<option value="Internet Explorer">
-										</option><option value="Firefox">
-										</option><option value="Chrome">
-										</option><option value="Opera">
-										</option><option value="Safari">
-									</option></datalist>
-
-									<select class="input-large" name="cars">
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-
-									<select class=" input-large" name="cars" multiple>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Fiat</option>
-									<option value="audi">Audi</option>
-									</select>
-
-									<textarea class=" input-large" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-								</div>
-							</div>
+					
 
 					<button class="btn btn-default">Cancel</button> <button class="btn btn-primary">Submit</button>
 
 					<input class="btn btn-primary" value="sumbnititit">
 					
 			</form>
+		</div>
+
+		<h1 data-toggle="accordion">Form: Accordion + extreme testing for input fields because fuck input fields <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		
+		<div class="accordion">
+			<div class="accordion-group">
+
+				<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<div class="accordion">
+					<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
+					<input type="button" value="bitch">
+					<input type="checkbox">
+					<input type="color">
+					<input type="date">
+					<input type="datetime-local">
+					<input type="email">
+					<input type="file">
+					<input type="hidden">
+					<input type="image">
+					<input type="month">
+					<input type="number">
+					<input type="password">
+					<input type="radio">
+					<input type="range">
+					<input type="reset">
+					<input type="search">
+					<input type="submit">
+					<input type="tel">
+					<input type="text">
+					<input type="time">
+					<input type="url">
+					<input type="week">
+					<input list="browsers">
+					<datalist id="browsers">
+						<option value="Internet Explorer">
+						<option value="Firefox">
+						<option value="Chrome">
+						<option value="Opera">
+						<option value="Safari">
+					</datalist>
+
+					<select name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+				</div>
+
+				<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<div id="bitch-accordion" class="accordion">
+					<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
+					<input class="input" type="button" value="Bitch">
+					<input class="input" type="checkbox">
+					<input class="input" type="color">
+					<input class="input" type="date">
+					<input class="input" type="datetime-local">
+					<input class="input" type="email">
+					<input class="input" type="file">
+					<input class="input" type="hidden">
+					<input class="input" type="image">
+					<input class="input" type="month">
+					<input class="input" type="number">
+					<input class="input" type="password">
+					<input class="input" type="radio">
+					<input class="input" type="range">
+					<input class="input" type="reset">
+					<input class="input" type="search">
+					<input class="input" type="submit" value="Bitch">
+					<input class="input" type="tel">
+					<input class="input" type="text">
+					<input class="input" type="time">
+					<input class="input" type="url">
+					<input class="input" type="week">
+					<input class="input" list="browsers">
+					<datalist class="input" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+				</div>
+
+				<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+				<div id="other-bitch-accordion" class="accordion">
+					<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
+					<input class="input input-inline" type="button" value="Bitch">
+					<input class="input input-inline" type="checkbox">
+					<input class="input input-single-line" type="color">
+					<input class="input input-single-line" type="date">
+					<input class="input input-single-line" type="datetime-local">
+					<input class="input input-single-line" type="email">
+					<input class="input input-single-line" type="file">
+					<input class="input input-single-line" type="hidden">
+					<input class="input input-single-line" type="image">
+					<input class="input input-single-line" type="month">
+					<input class="input input-single-line" type="number">
+					<input class="input input-single-line" type="password">
+					<input class="input input-inline" type="radio">
+					<input class="input input-inline" type="range">
+					<input class="input input-inline" type="reset">
+					<input class="input input-single-line" type="search">
+					<input class="input input-inline" type="submit">
+					<input class="input input-single-line" type="tel">
+					<input class="input input-single-line" type="text">
+					<input class="input input-single-line" type="time">
+					<input class="input input-single-line" type="url">
+					<input class="input input-single-line" type="week">
+					<input class="input input-single-line" list="browsers">
+					<datalist class="input" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input input-select" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input input-select" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+
+					color
+
+					<hr>
+
+					<input class="input input-error input-inline" type="button" value="Bitch">
+					<input class="input input-error input-inline" type="checkbox">
+					<input class="input input-error input-inline" type="color">
+					<input class="input input-error input-single-line" type="date">
+					<input class="input input-error input-single-line" type="datetime-local">
+					<input class="input input-error input-single-line" type="email">
+					<input class="input input-error input-single-line" type="file">
+					<input class="input input-error input-single-line" type="hidden">
+					<input class="input input-error input-single-line" type="image">
+					<input class="input input-error input-single-line" type="month">
+					<input class="input input-error input-single-line" type="number">
+					<input class="input input-error input-single-line" type="password">
+					<input class="input input-error input-inline" type="radio">
+					<input class="input input-error input-inline" type="range">
+					<input class="input input-error input-inline" type="reset">
+					<input class="input input-error input-single-line" type="search">
+					<input class="input input-error input-inline" type="submit">
+					<input class="input input-error input-single-line" type="tel">
+					<input class="input input-error input-single-line" type="text">
+					<input class="input input-error input-single-line" type="time">
+					<input class="input input-error input-single-line" type="url">
+					<input class="input input-error input-single-line" type="week">
+					<input class="input input-error input-single-line" list="browsers">
+					<datalist class="input input-error" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input input-error input-select" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input input-error input-select" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+					<hr>
+
+					<input class="input input-large input-inline" type="button" value="Bitch">
+					<input class="input input-large input-inline" type="checkbox">
+					<input class="input input-large input-inline" type="color">
+					<input class="input input-large input-single-line" type="date">
+					<input class="input input-large input-single-line" type="datetime-local">
+					<input class="input input-large input-single-line" type="email">
+					<input class="input input-large input-single-line" type="file">
+					<input class="input input-large input-single-line" type="hidden">
+					<input class="input input-large input-single-line" type="image">
+					<input class="input input-large input-single-line" type="month">
+					<input class="input input-large input-single-line" type="number">
+					<input class="input input-large input-single-line" type="password">
+					<input class="input input-large input-inline" type="radio">
+					<input class="input input-large input-inline" type="range">
+					<input class="input input-large input-inline" type="reset">
+					<input class="input input-large input-single-line" type="search">
+					<input class="input input-large input-inline" type="submit">
+					<input class="input input-large input-single-line" type="tel">
+					<input class="input input-large input-single-line" type="text">
+					<input class="input input-large input-single-line" type="time">
+					<input class="input input-large input-single-line" type="url">
+					<input class="input input-large input-single-line" type="week">
+					<input class="input input-large input-single-line" list="browsers">
+					<datalist class="input input-large" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input input-large input-select" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input input-large input-select" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+					<hr>
+
+					<input class="input-large" type="button" value="Bitch">
+					<input class="input-large" type="checkbox">
+					<input class="input-large" type="color">
+					<input class="input-large" type="date">
+					<input class="input-large" type="datetime-local">
+					<input class="input-large" type="email">
+					<input class="input-large" type="file">
+					<input class="input-large" type="hidden">
+					<input class="input-large" type="image">
+					<input class="input-large" type="month">
+					<input class="input-large" type="number">
+					<input class="input-large" type="password">
+					<input class="input-large" type="radio">
+					<input class="input-large" type="range">
+					<input class="input-large" type="reset">
+					<input class="input-large" type="search">
+					<input class="input-large" type="submit">
+					<input class="input-large" type="tel">
+					<input class="input-large" type="text">
+					<input class="input-large" type="time">
+					<input class="input-large" type="url">
+					<input class="input-large" type="week">
+					<input class="input-large" list="browsers">
+					<datalist class="input-large" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input-large" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class=" input-large" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class=" input-large" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+				</div>
+
+
+				<a class="h3" href="#other-other-bitch-accordion" data-toggle="accordion">bitch in a nav<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+				<div id="other-other-bitch-accordion" class="accordion">
+						<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
+					<div class="nav nav-vertical">
+						<input class="input input-inline" type="button" value="Bitch">
+						<input class="input input-inline" type="checkbox">
+						<input class="input input-single-line" type="color">
+						<input class="input input-single-line" type="date">
+						<input class="input input-single-line" type="datetime-local">
+						<input class="input input-single-line" type="email">
+						<input class="input input-single-line" type="file">
+						<input class="input input-single-line" type="hidden">
+						<input class="input input-single-line" type="image">
+						<input class="input input-single-line" type="month">
+						<input class="input input-single-line" type="number">
+						<input class="input input-single-line" type="password">
+						<input class="input input-inline" type="radio">
+						<input class="input input-inline" type="range">
+						<input class="input input-inline" type="reset">
+						<input class="input input-single-line" type="search">
+						<input class="input input-inline" type="submit">
+						<input class="input input-single-line" type="tel">
+						<input class="input input-single-line" type="text">
+						<input class="input input-single-line" type="time">
+						<input class="input input-single-line" type="url">
+						<input class="input input-single-line" type="week">
+						<input class="input input-single-line" list="browsers">
+						<datalist class="input" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+
+						color
+
+						<hr>
+
+						<input class="input input-error input-inline" type="button" value="Bitch">
+						<input class="input input-error input-inline" type="checkbox">
+						<input class="input input-error input-inline" type="color">
+						<input class="input input-error input-single-line" type="date">
+						<input class="input input-error input-single-line" type="datetime-local">
+						<input class="input input-error input-single-line" type="email">
+						<input class="input input-error input-single-line" type="file">
+						<input class="input input-error input-single-line" type="hidden">
+						<input class="input input-error input-single-line" type="image">
+						<input class="input input-error input-single-line" type="month">
+						<input class="input input-error input-single-line" type="number">
+						<input class="input input-error input-single-line" type="password">
+						<input class="input input-error input-inline" type="radio">
+						<input class="input input-error input-inline" type="range">
+						<input class="input input-error input-inline" type="reset">
+						<input class="input input-error input-single-line" type="search">
+						<input class="input input-error input-inline" type="submit">
+						<input class="input input-error input-single-line" type="tel">
+						<input class="input input-error input-single-line" type="text">
+						<input class="input input-error input-single-line" type="time">
+						<input class="input input-error input-single-line" type="url">
+						<input class="input input-error input-single-line" type="week">
+						<input class="input input-error input-single-line" list="browsers">
+						<datalist class="input input-error" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-error input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-error input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input input-large input-inline" type="button" value="Bitch">
+						<input class="input input-large input-inline" type="checkbox">
+						<input class="input input-large input-inline" type="color">
+						<input class="input input-large input-single-line" type="date">
+						<input class="input input-large input-single-line" type="datetime-local">
+						<input class="input input-large input-single-line" type="email">
+						<input class="input input-large input-single-line" type="file">
+						<input class="input input-large input-single-line" type="hidden">
+						<input class="input input-large input-single-line" type="image">
+						<input class="input input-large input-single-line" type="month">
+						<input class="input input-large input-single-line" type="number">
+						<input class="input input-large input-single-line" type="password">
+						<input class="input input-large input-inline" type="radio">
+						<input class="input input-large input-inline" type="range">
+						<input class="input input-large input-inline" type="reset">
+						<input class="input input-large input-single-line" type="search">
+						<input class="input input-large input-inline" type="submit">
+						<input class="input input-large input-single-line" type="tel">
+						<input class="input input-large input-single-line" type="text">
+						<input class="input input-large input-single-line" type="time">
+						<input class="input input-large input-single-line" type="url">
+						<input class="input input-large input-single-line" type="week">
+						<input class="input input-large input-single-line" list="browsers">
+						<datalist class="input input-large" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-large input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-large input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input input-disabled input-inline" type="button" value="Bitch">
+						<input class="input input-disabled input-inline" type="checkbox">
+						<input class="input input-disabled input-inline" type="color">
+						<input class="input input-disabled input-single-line" type="date">
+						<input class="input input-disabled input-single-line" type="datetime-local">
+						<input class="input input-disabled input-single-line" type="email">
+						<input class="input input-disabled input-single-line" type="file">
+						<input class="input input-disabled input-single-line" type="hidden">
+						<input class="input input-disabled input-single-line" type="image">
+						<input class="input input-disabled input-single-line" type="month">
+						<input class="input input-disabled input-single-line" type="number">
+						<input class="input input-disabled input-single-line" type="password">
+						<input class="input input-disabled input-inline" type="radio">
+						<input class="input input-disabled input-inline" type="range">
+						<input class="input input-disabled input-inline" type="reset">
+						<input class="input input-disabled input-single-line" type="search">
+						<input class="input input-disabled input-inline" type="submit">
+						<input class="input input-disabled input-single-line" type="tel">
+						<input class="input input-disabled input-single-line" type="text">
+						<input class="input input-disabled input-single-line" type="time">
+						<input class="input input-disabled input-single-line" type="url">
+						<input class="input input-disabled input-single-line" type="week">
+						<input class="input input-disabled input-single-line" list="browsers">
+						<datalist class="input input-disabled" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-disabled input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-disabled input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-disabled input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input-input" type="button" value="Bitch">
+						<input class="input-small" type="checkbox">
+						<input class="input-small" type="color">
+						<input class="input-small" type="date">
+						<input class="input-small" type="datetime-local">
+						<input class="input-small" type="email">
+						<input class="input-small" type="file">
+						<input class="input-small" type="hidden">
+						<input class="input-small" type="image">
+						<input class="input-small" type="month">
+						<input class="input-small" type="number">
+						<input class="input-small" type="password">
+						<input class="input-small" type="radio">
+						<input class="input-small" type="range">
+						<input class="input-small" type="reset">
+						<input class="input-small" type="search">
+						<input class="input-small" type="submit">
+						<input class="input-small" type="tel">
+						<input class="input-small" type="text">
+						<input class="input-small" type="time">
+						<input class="input-small" type="url">
+						<input class="input-small" type="week">
+						<input class="input-small" list="browsers">
+						<datalist class="input-small" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input-small" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class=" input-small" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class=" input-small" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input-small" type="button" value="Bitch">
+						<input class="input-small" type="checkbox">
+						<input class="input-small" type="color">
+						<input class="input-small" type="date">
+						<input class="input-small" type="datetime-local">
+						<input class="input-small" type="email">
+						<input class="input-small" type="file">
+						<input class="input-small" type="hidden">
+						<input class="input-small" type="image">
+						<input class="input-small" type="month">
+						<input class="input-small" type="number">
+						<input class="input-small" type="password">
+						<input class="input-small" type="radio">
+						<input class="input-small" type="range">
+						<input class="input-small" type="reset">
+						<input class="input-small" type="search">
+						<input class="input-small" type="submit">
+						<input class="input-small" type="tel">
+						<input class="input-small" type="text">
+						<input class="input-small" type="time">
+						<input class="input-small" type="url">
+						<input class="input-small" type="week">
+						<input class="input-small" list="browsers">
+						<datalist class="input-small" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input-small" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class=" input-small" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class=" input-small" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+					</div>
+
+					<h3>dumbfuck in an input-group</h3>
+
+
+					<div class="input-group input-group-vertical">
+						<input class="input input-inline" type="button" value="Bitch">
+						<input class="input input-inline" type="checkbox">
+						<input class="input input-single-line" type="color">
+						<input class="input input-single-line" type="date">
+						<input class="input input-single-line" type="datetime-local">
+						<input class="input input-single-line" type="email">
+						<input class="input input-single-line" type="file">
+						<input class="input input-single-line" type="hidden">
+						<input class="input input-single-line" type="image">
+						<input class="input input-single-line" type="month">
+						<input class="input input-single-line" type="number">
+						<input class="input input-single-line" type="password">
+						<input class="input input-inline" type="radio">
+						<input class="input input-inline" type="range">
+						<input class="input input-inline" type="reset">
+						<input class="input input-single-line" type="search">
+						<input class="input input-inline" type="submit">
+						<input class="input input-single-line" type="tel">
+						<input class="input input-single-line" type="text">
+						<input class="input input-single-line" type="time">
+						<input class="input input-single-line" type="url">
+						<input class="input input-single-line" type="week">
+						<input class="input input-single-line" list="browsers">
+						<datalist class="input" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+
+						color
+
+						<hr>
+
+						<input class="input input-error input-inline" type="button" value="Bitch">
+						<input class="input input-error input-inline" type="checkbox">
+						<input class="input input-error input-inline" type="color">
+						<input class="input input-error input-single-line" type="date">
+						<input class="input input-error input-single-line" type="datetime-local">
+						<input class="input input-error input-single-line" type="email">
+						<input class="input input-error input-single-line" type="file">
+						<input class="input input-error input-single-line" type="hidden">
+						<input class="input input-error input-single-line" type="image">
+						<input class="input input-error input-single-line" type="month">
+						<input class="input input-error input-single-line" type="number">
+						<input class="input input-error input-single-line" type="password">
+						<input class="input input-error input-inline" type="radio">
+						<input class="input input-error input-inline" type="range">
+						<input class="input input-error input-inline" type="reset">
+						<input class="input input-error input-single-line" type="search">
+						<input class="input input-error input-inline" type="submit">
+						<input class="input input-error input-single-line" type="tel">
+						<input class="input input-error input-single-line" type="text">
+						<input class="input input-error input-single-line" type="time">
+						<input class="input input-error input-single-line" type="url">
+						<input class="input input-error input-single-line" type="week">
+						<input class="input input-error input-single-line" list="browsers">
+						<datalist class="input input-error" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-error input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-error input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input input-large input-inline" type="button" value="Bitch">
+						<input class="input input-large input-inline" type="checkbox">
+						<input class="input input-large input-inline" type="color">
+						<input class="input input-large input-single-line" type="date">
+						<input class="input input-large input-single-line" type="datetime-local">
+						<input class="input input-large input-single-line" type="email">
+						<input class="input input-large input-single-line" type="file">
+						<input class="input input-large input-single-line" type="hidden">
+						<input class="input input-large input-single-line" type="image">
+						<input class="input input-large input-single-line" type="month">
+						<input class="input input-large input-single-line" type="number">
+						<input class="input input-large input-single-line" type="password">
+						<input class="input input-large input-inline" type="radio">
+						<input class="input input-large input-inline" type="range">
+						<input class="input input-large input-inline" type="reset">
+						<input class="input input-large input-single-line" type="search">
+						<input class="input input-large input-inline" type="submit">
+						<input class="input input-large input-single-line" type="tel">
+						<input class="input input-large input-single-line" type="text">
+						<input class="input input-large input-single-line" type="time">
+						<input class="input input-large input-single-line" type="url">
+						<input class="input input-large input-single-line" type="week">
+						<input class="input input-large input-single-line" list="browsers">
+						<datalist class="input input-large" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-large input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-large input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input input-disabled input-inline" type="button" value="Bitch">
+						<input class="input input-disabled input-inline" type="checkbox">
+						<input class="input input-disabled input-inline" type="color">
+						<input class="input input-disabled input-single-line" type="date">
+						<input class="input input-disabled input-single-line" type="datetime-local">
+						<input class="input input-disabled input-single-line" type="email">
+						<input class="input input-disabled input-single-line" type="file">
+						<input class="input input-disabled input-single-line" type="hidden">
+						<input class="input input-disabled input-single-line" type="image">
+						<input class="input input-disabled input-single-line" type="month">
+						<input class="input input-disabled input-single-line" type="number">
+						<input class="input input-disabled input-single-line" type="password">
+						<input class="input input-disabled input-inline" type="radio">
+						<input class="input input-disabled input-inline" type="range">
+						<input class="input input-disabled input-inline" type="reset">
+						<input class="input input-disabled input-single-line" type="search">
+						<input class="input input-disabled input-inline" type="submit">
+						<input class="input input-disabled input-single-line" type="tel">
+						<input class="input input-disabled input-single-line" type="text">
+						<input class="input input-disabled input-single-line" type="time">
+						<input class="input input-disabled input-single-line" type="url">
+						<input class="input input-disabled input-single-line" type="week">
+						<input class="input input-disabled input-single-line" list="browsers">
+						<datalist class="input input-disabled" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input input-disabled input-select" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class="input input-disabled input-select" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class="input input-disabled input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input-input" type="button" value="Bitch">
+						<input class="input-small" type="checkbox">
+						<input class="input-small" type="color">
+						<input class="input-small" type="date">
+						<input class="input-small" type="datetime-local">
+						<input class="input-small" type="email">
+						<input class="input-small" type="file">
+						<input class="input-small" type="hidden">
+						<input class="input-small" type="image">
+						<input class="input-small" type="month">
+						<input class="input-small" type="number">
+						<input class="input-small" type="password">
+						<input class="input-small" type="radio">
+						<input class="input-small" type="range">
+						<input class="input-small" type="reset">
+						<input class="input-small" type="search">
+						<input class="input-small" type="submit">
+						<input class="input-small" type="tel">
+						<input class="input-small" type="text">
+						<input class="input-small" type="time">
+						<input class="input-small" type="url">
+						<input class="input-small" type="week">
+						<input class="input-small" list="browsers">
+						<datalist class="input-small" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input-small" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class=" input-small" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class=" input-small" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+						<hr>
+
+						<input class="input-small" type="button" value="Bitch">
+						<input class="input-small" type="checkbox">
+						<input class="input-small" type="color">
+						<input class="input-small" type="date">
+						<input class="input-small" type="datetime-local">
+						<input class="input-small" type="email">
+						<input class="input-small" type="file">
+						<input class="input-small" type="hidden">
+						<input class="input-small" type="image">
+						<input class="input-small" type="month">
+						<input class="input-small" type="number">
+						<input class="input-small" type="password">
+						<input class="input-small" type="radio">
+						<input class="input-small" type="range">
+						<input class="input-small" type="reset">
+						<input class="input-small" type="search">
+						<input class="input-small" type="submit">
+						<input class="input-small" type="tel">
+						<input class="input-small" type="text">
+						<input class="input-small" type="time">
+						<input class="input-small" type="url">
+						<input class="input-small" type="week">
+						<input class="input-small" list="browsers">
+						<datalist class="input-small" id="browsers">
+							<option value="Internet Explorer">
+							</option><option value="Firefox">
+							</option><option value="Chrome">
+							</option><option value="Opera">
+							</option><option value="Safari">
+						</option></datalist>
+
+						<select class="input-small" name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+
+						<select class=" input-small" name="cars" multiple>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+
+						<textarea class=" input-small" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+					</div>
+
+
+				</div>
+			</div>
 		</div>
 
 		<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
@@ -2676,18 +3347,7 @@
 			<button type="button" class="btn btn-caution">caution</button>
 			<button type="button" class="btn btn-error">error</button>
 			<button type="button" class="btn btn-link">Link</button>
-
-			<h3>round</h3>
-
-			<button type="button" class="btn btn-round btn-default">Default</button>
-			<button type="button" class="btn btn-round btn-primary">Primary</button>
-			<button type="button" class="btn btn-round btn-secondary">secondary</button>
-			<button type="button" class="btn btn-round btn-accent">accent</button>
-			<button type="button" class="btn btn-round btn-neutral">neutral</button>
-			<button type="button" class="btn btn-round btn-success">Success</button>
-			<button type="button" class="btn btn-round btn-caution">caution</button>
-			<button type="button" class="btn btn-round btn-error">error</button>
-			<button type="button" class="btn btn-round btn-link">Link</button>
+			
 
 			<h3>outline</h3>
 
@@ -2710,18 +3370,6 @@
 			<button type="button" class="btn btn-small btn-error">error</button>
 			<button type="button" class="btn btn-small btn-link">Link</button>
 
-
-			<h3>round</h3>
-
-			<button type="button" class="btn btn-round btn-small btn-default">Default</button>
-			<button type="button" class="btn btn-round btn-small btn-primary">Primary</button>
-			<button type="button" class="btn btn-round btn-small btn-secondary">secondary</button>
-			<button type="button" class="btn btn-round btn-small btn-accent">accent</button>
-			<button type="button" class="btn btn-round btn-small btn-neutral">neutral</button>
-			<button type="button" class="btn btn-round btn-small btn-success">Success</button>
-			<button type="button" class="btn btn-round btn-small btn-caution">caution</button>
-			<button type="button" class="btn btn-round btn-small btn-error">error</button>
-			<button type="button" class="btn btn-round btn-small btn-link">Link</button>
 			
 			<h2>Large</h2>
 			<button type="button" class="btn btn-large btn-default">Default</button>
@@ -2735,17 +3383,6 @@
 			<button type="button" class="btn btn-large btn-link">Link</button>
 
 
-			<h3>round</h3>
-
-			<button type="button" class="btn btn-round btn-large btn-default">Default</button>
-			<button type="button" class="btn btn-round btn-large btn-primary">Primary</button>
-			<button type="button" class="btn btn-round btn-large btn-secondary">secondary</button>
-			<button type="button" class="btn btn-round btn-large btn-accent">accent</button>
-			<button type="button" class="btn btn-round btn-large btn-neutral">neutral</button>
-			<button type="button" class="btn btn-round btn-large btn-success">Success</button>
-			<button type="button" class="btn btn-round btn-large btn-caution">caution</button>
-			<button type="button" class="btn btn-round btn-large btn-error">error</button>
-			<button type="button" class="btn btn-round btn-large btn-link">Link</button>
 
 			<h2>Block</h2>
 
@@ -2762,6 +3399,44 @@
 			<a href="#" class="btn btn-disabled btn-caution">caution</a>
 			<a href="#" class="btn btn-disabled btn-error">error</a>
 			<a href="#" class="btn btn-disabled btn-link">Link</a>
+
+			<h2>
+				In nav
+			</h2>
+			<div class="nav nav-vertical">
+
+				<a href="#" class="btn btn-block btn-default">Default</a>
+				<a href="#" class="btn btn-small btn-primary">Primary</a>
+				<a href="#" class="btn btn-large btn-secondary">secondary</a>
+
+				<div class="btn-group">
+
+					<a href="#" class="btn btn-accent">accent</a>
+					<a href="#" class="btn btn-neutral">neutral</a>
+					<a href="#" class="btn btn-success">Success</a>
+					<a href="#" class="btn btn-caution">caution</a>
+					<a href="#" class="btn btn-error">error</a>
+					<a href="#" class="btn btn-link">Link</a>
+				</div>
+				<div class="btn-group btn-small">
+
+					<a href="#" class="btn btn-accent">accent</a>
+					<a href="#" class="btn btn-neutral">neutral</a>
+					<a href="#" class="btn btn-success">Success</a>
+					<a href="#" class="btn btn-caution">caution</a>
+					<a href="#" class="btn btn-error">error</a>
+					<a href="#" class="btn btn-link">Link</a>
+				</div>
+				<div class="btn-group btn-large">
+
+					<a href="#" class="btn btn-accent">accent</a>
+					<a href="#" class="btn btn-neutral">neutral</a>
+					<a href="#" class="btn btn-success">Success</a>
+					<a href="#" class="btn btn-caution">caution</a>
+					<a href="#" class="btn btn-error">error</a>
+					<a href="#" class="btn btn-link">Link</a>
+				</div>
+			</div>
 			
 			<h2>groups</h2>
 			<h3>Basic</h3>
@@ -2770,8 +3445,13 @@
 			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
 			</button>
 
-			<h4>Round</h4>
-			<button class="btn-group btn-group-horizontal btn-round">
+			<h3>Block</h3>
+			
+			<button class="btn-group btn-group-horizontal btn-block">
+			<span class="btn btn-default"><strong>00:00</strong> Hours</span>
+			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
+			</button>
+			<button class="btn-group btn-group-horizontal btn-block-mobile">
 			<span class="btn btn-default"><strong>00:00</strong> Hours</span>
 			<span class="btn btn-primary">Add Time to Project <i class="symbol symbol-plus"></i></span>
 			</button>
