@@ -361,15 +361,20 @@ $prefix: '.input';
 
 		}
 
-		&-ui-control {
+		&-ui {
 
 
-			@extend %for-display-none;
-			//fallback
-			height:0!important;
-			width:0!important;
-			overflow:hidden!important;
-	
+
+			&-control {
+
+
+				@extend %for-display-none;
+				//fallback
+				height:0!important;
+				width:0!important;
+				overflow:hidden!important;
+		
+			}
 		}
 	}
 
@@ -561,6 +566,7 @@ $prefix: '.input';
 
 				vertical-align: top;
 				overflow-y: auto;
+				flex: 1;
 		
 				.input-group & {
 					max-height:100%;
@@ -1143,7 +1149,13 @@ $prefix: '.input';
 	}
 }
 
+//ui generated shit
 
+.fw-ui {
+	a {
+		@extend %for-anchor-reset-hover !optional;
+	}
+}
 
 
 .special-form,

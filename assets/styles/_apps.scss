@@ -333,6 +333,9 @@ $sidebar-base-slim-mobile: 60px;
 	//style board column vertical paadding
 	&-board-partition {
 		padding: 50px 0;
+		@include br(#{$mobile-br-max}-max){
+			padding: 30px 0;
+		}
 	}
 
 
@@ -400,30 +403,31 @@ $sidebar-base-slim-mobile: 60px;
 			.board-popup-content {
 				display: flex;
 				flex-direction: column;
+				max-width: 100%;
 			}
 
 			&-main {
 
 
 				@include br(#{$mobile-br-max}){
-					width: calc(100% - 250px);
+					width: calc(100% - 300px);
 				}
 
 
-				@include br(lg){
-					width: calc(100% - 390px);
+				@include br(md){
+					width: calc(100% - 400px);
 				}
 			}
 
 			&-side {
 				flex: 0 0 auto;
 				@include br(#{$mobile-br-max}){
-					width: 250px;
+					width: 300px;
 				}
 
 
-				@include br(lg){
-					width: 390px;
+				@include br(md){
+					width: 400px;
 				}
 			}
 		}
@@ -439,6 +443,21 @@ $sidebar-base-slim-mobile: 60px;
 			.today-total-halo {
 				width: rem(180px/$body-font-size);
 			}
+		}
+
+		&-weekly {
+
+			// .weekly-hours-row-day,.weekly-hours-row-total {
+			// 	text-align: right;
+			// }
+			// .weekly-hours-row-day {
+			// 	min-width: 1.5em;
+			// }
+
+			// .weekly-hours-row-total {
+			// 	width: 4em;
+			// 	overflow:hidden;
+			// }
 		}
 	}
 }

@@ -2114,7 +2114,6 @@ window.jQuery && jQuery.noConflict();
 		changeHash = (changeHash != false);
 
 		var selector =  _.getTheToggled(triggerer,'accordion');
-
 		
 		if( selector ){
 			
