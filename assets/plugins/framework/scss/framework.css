@@ -4789,17 +4789,17 @@ table {
 
 .well {
   z-index: 1;
-  box-shadow: 0 0 0 0.4375rem rgba(0, 0, 0, 0.1) !important; }
+  box-shadow: 0 0 0 0.4375rem rgba(0, 0, 0, 0.2) !important; }
   .theme-inverse .well {
-    box-shadow: 0 0 0 0.4375rem rgba(0, 0, 0, 0.1) !important; }
+    box-shadow: 0 0 0 0.4375rem rgba(0, 0, 0, 0.2) !important; }
   .well.well-expanded {
-    box-shadow: 0 0 0 0.875rem rgba(0, 0, 0, 0.1) !important; }
+    box-shadow: 0 0 0 0.875rem rgba(0, 0, 0, 0.2) !important; }
     .theme-inverse .well.well-expanded {
-      box-shadow: 0 0 0 0.875rem rgba(0, 0, 0, 0.1) !important; }
+      box-shadow: 0 0 0 0.875rem rgba(0, 0, 0, 0.2) !important; }
   .well.well-compact {
-    box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.1) !important; }
+    box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.2) !important; }
     .theme-inverse .well.well-compact {
-      box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.1) !important; }
+      box-shadow: 0 0 0 0.1875rem rgba(0, 0, 0, 0.2) !important; }
 
 /*** Tags ***/
 .tag {
@@ -4892,8 +4892,8 @@ table {
   .toolbar.toolbar-horizontal {
     flex-direction: row;
     min-height: 75px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     padding-right: 20px;
     padding-left: 20px; }
     .toolbar.toolbar-horizontal.toolbar-small {
@@ -4909,8 +4909,8 @@ table {
     min-width: 75px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 10px;
-    padding-left: 10px; }
+    padding-right: 2px;
+    padding-left: 2px; }
     .toolbar.toolbar-vertical.toolbar-small {
       min-width: 50px;
       padding-top: 10px;
@@ -5932,7 +5932,6 @@ table {
 .input {
   font: inherit;
   color: inherit;
-  vertical-align: middle;
   background-color: #FFFFFF;
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%; }
@@ -8422,5 +8421,5 @@ fieldset {
 
 .btn.btn-link, .btn.btn-primary-outline, .btn.btn-secondary-outline, .btn.btn-accent-outline, .btn.btn-neutral-outline, .btn.btn-success-outline, .btn.btn-caution-outline, .btn.btn-error-outline, .btn.btn-theme-outline, .btn.btn-theme-polar-outline, .input-group .input-single-line:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-select:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-multiple-line:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-calendar-ui:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-tags-ui:not(.focus):not(:focus):not(.active):not(:active) {
   box-shadow: none; }
-  .btn-group .btn, .btn-disabled, .btn-disabled .btn, .nav .btn, .nav .btn-group, .btn.btn-no-shadow, .btn-group.btn-no-shadow, .input-disabled, .input[disabled], .input-disabled .input, .input-disabled .input-single-line, .input-disabled .input-select, .input-disabled .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-shadow.input-single-line, .input-no-shadow.input-select, .input-no-shadow.input-multiple-line, .input-group.input-no-shadow, .input-disabled .input-calendar-ui, .input-no-shadow.input-calendar-ui, .input-disabled .input-tags-ui, .input-no-shadow.input-tags-ui {
+  .btn-group .btn, .btn-disabled, .btn-disabled .btn, .nav .btn, .nav .btn-group, .btn.btn-no-shadow, .btn-group.btn-no-shadow, .input-disabled, .input[disabled], .input-disabled .input, .input-disabled .input-single-line, .input-disabled .input-select, .input-disabled .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-shadow.input-single-line, .input-no-shadow.input-select, .input-no-shadow.input-multiple-line, .input-group.input-no-shadow, .input-disabled .input-calendar-ui, .input-no-shadow.input-calendar-ui, .input-calendar-ui-input input:not(.focus):not(:focus):not(.active):not(:active), .input-disabled .input-tags-ui, .input-no-shadow.input-tags-ui {
     box-shadow: none !important; }

@@ -13,7 +13,7 @@
 
 		
 
-		<h1 data-toggle="accordion">TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle="accordion">sidebar module template<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			sidebar module template
 
@@ -281,31 +281,130 @@
 		<div class="accordion">
 			<div class="toolbar toolbar-horizontal">
 				<span class="toolbar-tile">
-
-				<a href="#" class="btn btn-symbol btn-small btn-secondary">
-					<i class="symbol symbol-close"></i>
-				</a>
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
 				</span>
-				<span class="toolbar-tile">Eat shit</span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
 				<span class="toolbar-tile">|</span>
-				<span class="toolbar-tile"></span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
 			</div>
 
-			in case the design is dESIGN
+			<br>
+			<br>
+			<br>
+
 			<div class="toolbar toolbar-vertical">
 				<span class="toolbar-tile">
-
-				<a href="#" class="btn btn-symbol btn-small btn-secondary">
-					<i class="symbol symbol-close"></i>
-				</a>
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
 				</span>
-				<span class="toolbar-tile">Eat shit</span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
 				<span class="toolbar-tile">|</span>
-				<span class="toolbar-tile"></span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
+			</div>
+
+
+
+			<br>
+			<br>
+			<br>
+			
+
+
+			<div class="toolbar toolbar-horizontal toolbar-large">
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
+			</div>
+
+
+
+			<br>
+			<br>
+			<br>
+			
+
+
+			<div class="toolbar toolbar-horizontal toolbar-small">
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
 			</div>
 		</div>
 
@@ -546,8 +645,8 @@
 
 		<h1 data-toggle="accordion">ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<div class="flex-grid flex-grid-fixed">
-				<div class="flex-col-xs-12 flex-col-md-4">
+			<div class="flex-grid flex-grid-fixed flex-frid-compact">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -562,7 +661,7 @@
 
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-audio"></span>
@@ -572,7 +671,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -584,7 +683,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-doc"></span>
@@ -595,7 +694,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -606,7 +705,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -619,7 +718,7 @@
 				
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<img src="/placeholder/files/shrek.jpg" alt="">
@@ -631,7 +730,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-img"></span>
@@ -642,7 +741,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-ps"></span>
@@ -653,7 +752,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-ai"></span>
@@ -664,7 +763,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-xd"></span>
@@ -676,7 +775,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-pdf"></span>
@@ -688,7 +787,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-id"></span>
@@ -698,7 +797,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -709,7 +808,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -720,7 +819,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<a href="#"class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-zip"></span>

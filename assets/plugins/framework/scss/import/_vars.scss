@@ -690,8 +690,8 @@
 			$well-spread-expanded: 14px !default;
 			$well-spread-compact: 3px !default;
 
-		$well-color: rgba($brand-color-base,.1) !default;
-			$well-color-inverse: rgba($brand-color-base,.1) !default;
+		$well-color: rgba($brand-color-base,.2) !default;
+			$well-color-inverse: rgba($brand-color-base,.2) !default;
 	
 
 	// THUMBNAIL
@@ -886,7 +886,7 @@
 		$toolbar-cross-min-size: 75px !default;
 			$toolbar-cross-min-size-small: 50px !default;
 			$toolbar-cross-min-size-large: 100px !default;
-		$toolbar-cross-gutter: $gutter-micro !default;
+		$toolbar-cross-gutter: 2px !default;
 		$toolbar-main-gutter: $gutter-small !default;
 			$toolbar-main-gutter-small: $gutter-micro !default;
 			$toolbar-main-gutter-large: $gutter-base !default;

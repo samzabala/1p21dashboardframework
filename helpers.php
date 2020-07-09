@@ -299,6 +299,12 @@ function app_debug_li() {
 	<li>
 		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark</a>
 	</li>
+	<li>
+		<?php 
+			$js_to_switch = FWAPPS_JS == 'vanilla' ? '' : 'vanilla';
+		?>
+		<a href="<?=app_create_link(array('js'=>$js_to_switch)); ?>">Switch to <?= $js_to_switch == 'vanilla' ? 'indie' : 'plugged' ?> js</a>
+	</li>
 <?php
 }
 
@@ -354,7 +360,8 @@ function app_create_link( $array_of_get_vars = array()) {
 	$fallback = array(
 		'env' => FWAPPS_SLUG,
 		'app' => FWAPPS_APP,
-		'template' => 'home',
+		'template' => FWAPPS_TEMPLATE,
+		'js' => FWAPPS_JS,
 	);
 
 	$for_append = $array_of_get_vars;
