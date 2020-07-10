@@ -5,7 +5,7 @@
 				<h5 class="no-margin-y">Project</h5>
 			</div>
 			<div class="flex-child">
-				<a href="#task-side-team" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+				<a href="#task-side-team-view" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
 			</div>
 		</div>
 
@@ -15,7 +15,7 @@
 				<span class="REPLACE">flux.1p21.io/project-name</span>
 			</a>
 		</p>
-		<div id="task-side-team" class="accordion" data-accordion-change-hash="false">
+		<div id="task-side-team-view" class="accordion" data-accordion-change-hash="false">
 
 			<h5 class="no-margin-y">Client</h5>
 			<p class="task-client">

@@ -5,13 +5,13 @@
 				<h5 class="no-margin-y">TITLE</h5>
 			</div>
 			<div class="flex-child">
-				<a href="#task-side-team-edit" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+				<a href="#task-side-flux-view" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
 			</div>
 		</div>
 
 	
 		
-		<div id="task-side-team-edit" class="accordion" data-accordion-change-hash="false">
+		<div id="task-side-flux-view" class="accordion" data-accordion-change-hash="false">
 		atin cu pung singsing
 		</div>
 	</div>

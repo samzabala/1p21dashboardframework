@@ -116,12 +116,12 @@
 
 
 						<!-- Categries Boards/Tags -->
-						<?php app_get_component('components/module-side-flux-tags-view') ?>
+						<?php app_get_component('components/module-side-flux-view') ?>
 
 
 
 						<!-- Followers/Wiki/Reminders -->
-						<?php app_get_component('components/module-side-followers-wiki-reminders-view') ?>
+						<?php app_get_component('components/module-side-followers-view') ?>
 					</div>
 
 				</div>
@@ -266,24 +266,31 @@
 					</div>
 				</div>
 
+				<div class="module-grid">
 
-				<!-- Team Info -->
-				<?php app_get_component('components/module-side-team-edit') ?>
-
-
-
-				<!-- Time Tracker -->
-				<?php app_get_component('components/module-side-time-edit') ?>
+					<!-- Toolbar  -->
+					<?php app_get_component('components/toolbar-side') ?>
 
 
 
-				<!-- Categries Boards/Tags -->
-				<?php app_get_component('components/module-side-flux-tags-edit') ?>
+					<!-- Team Info -->
+					<?php app_get_component('components/module-side-team-edit') ?>
 
 
 
-				<!-- Followers/Wiki/Reminders -->
-				<?php app_get_component('components/module-side-followers-wiki-reminders-edit') ?>
+					<!-- Time Tracker -->
+					<?php app_get_component('components/module-side-time-edit') ?>
+
+
+
+					<!-- Categries Boards/Tags -->
+					<?php app_get_component('components/module-side-flux-edit') ?>
+
+
+
+					<!-- Followers/Wiki/Reminders -->
+					<?php app_get_component('components/module-side-followers-edit') ?>
+				</div>
 
 			</div>
 		</div>

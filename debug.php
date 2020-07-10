@@ -31,7 +31,7 @@
 				
 					
 					<div id="task-side-MODULE" class="accordion" data-accordion-change-hash="false">
-					bittch
+					atin cu pung singsing
 					</div>
 				</div>
 			</div>
