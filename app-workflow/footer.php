@@ -21,9 +21,6 @@
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/jquery.js'); ?>
-
-
-		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/trumbowyg.upload.1p21.js'); ?>
 	
 		<!-- DEPENDENCIES -->
 		<?php 
