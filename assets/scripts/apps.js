@@ -2,24 +2,6 @@
 
 window.jQuery && jQuery.noConflict();
 (function($,fw,window){
-	//1p21 shit
-
-	// fw.trumbowyg.defaults = {
-	// 	btns: [
-	// 		['viewHTML'],
-	// 		['strong', 'em',],
-	// 		['insertImage'],
-	// 		['link'],
-	// 		['unorderedList', 'orderedList'],
-	// 		['upload'],
-	// 		['fullscreen']
-	// 	],
-	// 	// svgPath:false,
-	// 	// hideButtonTexts:true,
-	// 	removeformatPasted: true,
-	// 	tbwresize: true,
-	// 	tagsToRemove: ['script']
-	// }
 
 	//toggle our boi
 	$('body').on('click','.dashboard-sidenav-toggle',function(e){	

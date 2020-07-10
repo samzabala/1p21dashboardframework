@@ -16,7 +16,7 @@
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 					<label for="task-description" class="sr-only">Content</label>
 
-					<textarea id="task-description" class="input input-trumbowyg">
+					<textarea id="task-description" class="input input-multiple-line">
 					</textarea>
 				</div>
 			</div>

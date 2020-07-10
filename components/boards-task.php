@@ -254,13 +254,17 @@
 		</div>
 		<div class="dashboard-board-partition dashboard-board-column-layout-side">
 			<div class="container container-wide">
-				<!-- Toolbar  -->
-				<button type="submit" class="btn btn-primary btn-block-mobile">Create Task</button>
-				
-				
-				<button data-toggle="board" href="#task-view-REPLACEwithTaskId" class="btn btn-neutral-outline btn-block-mobile">Cancel</button>
 
-				<button data-toggle="board" href="#" class="btn btn-theme-polar btn-symbol"><i class="symbol symbol-delete"></i></button>
+				<!-- Toolbar  -->
+				<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
+					<div class="flex-child">
+						<button type="submit" class="btn btn-primary btn-block-mobile">Create Task</button>
+						<button data-toggle="board" href="#task-view-REPLACEwithTaskId" class="btn btn-neutral-outline btn-block-mobile">Cancel</button>
+					</div>
+					<div class="flex-child">
+						<button data-toggle="board" href="#" class="btn btn-theme-polar btn-symbol"><i class="symbol symbol-delete"></i></button>
+					</div>
+				</div>
 
 
 				<!-- Team Info -->
