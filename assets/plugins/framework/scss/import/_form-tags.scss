@@ -206,6 +206,11 @@ $prefix: '.input';
 					white-space: nowrap;
 					padding-left:  $calculated-input-tags-padding-x;
 
+					&:empty::before {
+						opacity: .5;
+						content: attr(placeholder);
+					}
+
 					&:last-child {
 						padding-right:0;
 						flex: 1 1 auto;

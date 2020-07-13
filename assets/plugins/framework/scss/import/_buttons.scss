@@ -230,7 +230,6 @@ $prefix: '.btn';
 		
 
 		& {
-			@extend %for-anchor-reset-hover !optional;
 			@extend %for-btn-global-radius;
 			box-shadow: $btn-box-shadow;
 			max-width:100%;
@@ -239,6 +238,11 @@ $prefix: '.btn';
 			-webkit-appearance:none;
 			appearance:none;
 			vertical-align: middle;
+			
+			&,
+			& a {
+				@extend %for-anchor-reset-hover !optional;
+			}
 	
 			&:hover,
 			&:focus,

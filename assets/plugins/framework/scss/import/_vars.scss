@@ -192,7 +192,7 @@
 //////////////////////////////// THIS SOME ADVANCED SHIT
 
 		$body-heading-gutter-top: 1.5em !default;
-		$body-heading-gutter-bottom: .75em !default;
+		$body-heading-gutter-bottom: .25em !default;
 		$body-heading-line-height: calc(1em + 10px) !default;
 		$body-heading-font-weight: $body-font-weight-bold !default;
 		$body-heading-font-style: inherit !default;
@@ -591,8 +591,8 @@
 		
 		$module-gutter-between: 20px !default;
 
-		$module-gutter-grid-gap: 15px !default;
-		$module-grid-gutter: 30px !default;
+		$module-gutter-grid-gap: $gutter-small !default;
+		$module-grid-gutter: $gutter-small * 2 !default;
 		
 		$module-border-radius: $border-radius-base !default;
 
@@ -886,7 +886,6 @@
 		$toolbar-cross-min-size: 75px !default;
 			$toolbar-cross-min-size-small: 50px !default;
 			$toolbar-cross-min-size-large: 100px !default;
-		$toolbar-cross-gutter: 2px !default;
 		$toolbar-main-gutter: $gutter-small !default;
 			$toolbar-main-gutter-small: $gutter-micro !default;
 			$toolbar-main-gutter-large: $gutter-base !default;
@@ -1052,7 +1051,7 @@
 			$special-form-border-radius: $border-radius-base !default;
 
 	// BTN
-		$btn-height: 45px !default;
+		$btn-height: 50px !default;
 			$btn-height-large: 75px !default;
 			$btn-height-small: 30px !default;
 

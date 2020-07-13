@@ -1868,7 +1868,7 @@
 		};
 
 		const defaults = {
-			width: 'auto',
+			width: null,
 			callback: null,
 			callbackNameFilter: null,
 			callbackOnKeyup: null,
@@ -2305,9 +2305,9 @@
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
 
-		frameWork.destroyModal(null, subcom);
-
 		if (contentWrap && subcom) {
+			frameWork.destroyModal(null, subcom);
+
 			const arr = {
 				header:
 					(triggerer && triggerer.getAttribute(`data-${subcom}-title`))
@@ -2360,7 +2360,7 @@
 
 			const id = contentWrap.getAttribute('id') || actualId;
 
-			id !== `#${actualId}` && _.changeHash(id);
+			id !== `${actualId}` && _.changeHash(id);
 
 			const modal = document.createElement('div');
 			document.querySelector('body').appendChild(modal);
@@ -2470,7 +2470,14 @@
 	};
 
 	frameWork.destroyModal = (removeHash, subcom) => {
+		removeHash = removeHash || false;
 		subcom = subcom || 'modal';
+
+		let canRemoveHash = false;
+
+		if (removeHash && frameWork[subcom].current.hasAttribute('id')) {
+			canRemoveHash = true;
+		}
 
 		const modal = document.querySelector(`.${subcom}-wrapper`);
 		if (modal) {
@@ -2487,10 +2494,8 @@
 		frameWork[subcom].args = false;
 
 		document.body.classList.remove('body-no-scroll');
-
-		if (removeHash) {
-			_.changeHash('');
-		}
+	
+		canRemoveHash && _.changeHash('');
 	};
 
 	frameWork.createBoard = (triggerer) => {
@@ -2531,9 +2536,18 @@
 				selector.getAttribute('data-dropdown-width')
 				|| triggerer.getAttribute('data-dropdown-width')
 				|| null;
+			
+			const maxHeight =
+				selector.getAttribute('data-dropdown-max-height')
+				|| triggerer.getAttribute('data-dropdown-max-height')
+				|| null;
 
 			if (width) {
 				selector.style.width = width;
+			}
+
+			if (maxHeight) {
+				selector.style.maxHeight = maxHeight;
 			}
 
 			if (mode == 'toggle' || mode == 'open') {
@@ -2609,7 +2623,7 @@
 							triggerer.classList.remove('open');
 							selector.classList.remove('open');
 
-							if (args.changeHash) {
+							if (args.changeHash && selector.hasAttribute('id')) {
 								_.changeHash('');
 							}
 						}
@@ -2635,7 +2649,7 @@
 						triggerer.classList.add('open');
 						selector.classList.add('open');
 
-						if (args.changeHash) {
+						if (args.changeHash && selector.hasAttribute('id')) {
 							_.changeHash(selector.getAttribute('id'));
 						}
 					}

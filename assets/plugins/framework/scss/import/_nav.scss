@@ -166,8 +166,7 @@ $prefix: '.nav';
 	&-list > #{$prefix}-item,
 	&-list > li {
 
-		> a,
-		> [data-toggle=dropdown] {
+		> a {
 			@extend %for-anchor-reset-hover !optional;
 			@include type-set((
 				color:inherit,

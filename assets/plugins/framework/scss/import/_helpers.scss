@@ -569,6 +569,38 @@
 				text-align: inherit!important;
 			}
 		}
+		
+
+		&-decoration {
+			&-none {
+				text-decoration: none!important;
+			}
+			&-line {
+				&-underline {
+					text-decoration-line: underline!important;
+				}
+				&-line-through {
+					text-decoration-line: line-through!important;
+				}
+				&-overline {
+					text-decoration-line: overline!important;
+				}
+			}
+			&-style {
+				&-solid {
+					text-decoration-style: solid!important;
+				}
+				&-wavy {
+					text-decoration-style: wavy!important;
+				}
+				&-double {
+					text-decoration-style: double!important;
+				}
+				&-wavy {
+					text-decoration-style: wavy!important;
+				}
+			}
+		}
 
 		&-transform {
 			&-uppercase {

@@ -80,10 +80,10 @@ $prefix: '.modal';
 				}
 
 				
-			@include br(#{$mobile-br-max}-max) {
-				right: $modal-close-offset-mobile;
-				top: $modal-close-offset-mobile;
-			}
+				@include br(#{$mobile-br-max}-max) {
+					right: $modal-close-offset-mobile;
+					top: $modal-close-offset-mobile;
+				}
 			}
 			&-overlay {
 				@extend %for-modal-overlay;

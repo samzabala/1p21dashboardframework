@@ -1,6 +1,6 @@
 
 <!-- VIEW  -->
-	<div id="task-view-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-max-width="1240px">
+	<div id="task-view-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-close="false" data-board-max-width="1240px">
 
 		<div class="dashboard-board-column-layout-container  background-theme-contrast">
 			<div class="dashboard-board-partition dashboard-board-column-layout-main  background-theme">
@@ -99,26 +99,17 @@
 			<div class="dashboard-board-partition dashboard-board-column-layout-side">
 				<div class="container container-wide">
 					<div class="module-grid">
-
-						<!-- Toolbar  -->
-						<?php app_get_component('components/toolbar-side') ?>
-
-
+						<!-- Time Tracker -->
+						<?php app_get_component('components/toolbar-side-view') ?>
 
 						<!-- Team Info -->
 						<?php app_get_component('components/module-side-team-view') ?>
 
-
-
 						<!-- Time Tracker -->
 						<?php app_get_component('components/module-side-time-view') ?>
 
-
-
 						<!-- Categries Boards/Tags -->
 						<?php app_get_component('components/module-side-flux-view') ?>
-
-
 
 						<!-- Followers/Wiki/Reminders -->
 						<?php app_get_component('components/module-side-followers-view') ?>
@@ -134,11 +125,11 @@
 
 <!-- 
 
-@NOTE change task-editor-REPLACEwithTaskId to task-new if task to edit is new/
+@NOTE change `task-editor-REPLACEwithTaskId` to `task-editor` if task to edit is new/
 
  -->
 
-<div id="task-editor-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-max-width="1240px">
+<div id="task-editor-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-close="false"  data-board-max-width="1240px">
 
 
 	<form method="get" class="dashboard-board-column-layout-container  background-theme-contrast">
@@ -150,7 +141,7 @@
 					<div class="task-heading">
 						<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
 							<label for="task-title" class="input-label sr-only">Title</label>
-							<input type="text" placeholder="Enter title" id="task-title" name="task-title" class="input-no-shadow  input input-single-line input-large task-title">
+							<input type="text" placeholder="Enter title" id="task-title" name="task-title" class=" input input-single-line input-large task-title">
 						</div>
 						
 
@@ -166,10 +157,11 @@
 
 
 							<label for="task-description" class="input-label sr-only">Description</label>
-							<textarea name="task-description" id="task-description" cols="30" rows="10" class="input-no-shadow input input-multiple-line">use tinymce in place</textarea>
+							<textarea name="task-description" id="task-description" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
 						</div>
 					</div>
 
+					<!-- @NOTE .task-time-meta is not needed for now if not possible to program yet. ok to comment out for now -->
 					<div class="task-time-meta">
 						<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
 							<div class="input-toggle">
@@ -202,7 +194,7 @@
 										<i class="symbol symbol-arrow-down color-primary"></i>
 									</button>
 									<div class="dropdown dropdown-top-flush dropdown-left no-padding">
-										<input type="text" class="input-calendar" name="task-delay-date" id="task-delay-date">
+										<input type="text" class="input-calendar border-color-transparent" name="task-delay-date" id="task-delay-date">
 									</div>
 								</div>
 							</div>
@@ -210,7 +202,7 @@
 
 								<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
 									<label for="task-title" class="input-label sr-only">Title</label>
-									<input type="time" placeholder="Enter title" id="task-title" name="task-title" class="input-no-shadow input-round input input-single-line task-title">
+									<input type="time" placeholder="Enter title" id="task-title" name="task-title" class="input-round input input-single-line task-title">
 								</div>
 							</div>
 						</div>
@@ -255,38 +247,18 @@
 		<div class="dashboard-board-partition dashboard-board-column-layout-side">
 			<div class="container container-wide">
 
-				<!-- Toolbar  -->
-				<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
-					<div class="flex-child">
-						<button type="submit" class="btn btn-primary btn-block-mobile">Create Task</button>
-						<button data-toggle="board" href="#task-view-REPLACEwithTaskId" class="btn btn-neutral-outline btn-block-mobile">Cancel</button>
-					</div>
-					<div class="flex-child">
-						<button data-toggle="board" href="#" class="btn btn-theme-polar btn-symbol"><i class="symbol symbol-delete"></i></button>
-					</div>
-				</div>
-
 				<div class="module-grid">
-
 					<!-- Toolbar  -->
-					<?php app_get_component('components/toolbar-side') ?>
-
-
+					<?php app_get_component('components/toolbar-side-edit') ?>
 
 					<!-- Team Info -->
 					<?php app_get_component('components/module-side-team-edit') ?>
 
-
-
 					<!-- Time Tracker -->
 					<?php app_get_component('components/module-side-time-edit') ?>
 
-
-
 					<!-- Categries Boards/Tags -->
 					<?php app_get_component('components/module-side-flux-edit') ?>
-
-
 
 					<!-- Followers/Wiki/Reminders -->
 					<?php app_get_component('components/module-side-followers-edit') ?>

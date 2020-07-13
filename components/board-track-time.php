@@ -3,7 +3,7 @@
 
 		<!--
 			add entry 
-	-->
+		-->
 		<a class="btn btn-primary-outline" href="#board-track-time" data-toggle="board" data-board-title="Add new Entry">
 			Add Entry <i class="symbol symbol-plus"></i>
 		</a>

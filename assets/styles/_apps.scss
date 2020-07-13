@@ -328,6 +328,20 @@ $sidebar-base-slim-mobile: 60px;
 //helpers
 .dashboard {
 
+	&-modal-gutterless {
+		.modal-popup {
+			padding:0;
+		}
+	}
+
+	&-comment-replies-wrapper {
+		padding-left: 2em;
+	}
+
+	&-list-group-users {
+		overflow-y:auto;
+		max-height: em(564px/($body-font-size * 1.5));
+	}
 
 
 	//style board column vertical paadding
@@ -390,7 +404,7 @@ $sidebar-base-slim-mobile: 60px;
 		&-column-layout {
 			&-container {
 				flex: 1 1;
-				@include br(#{$mobile-br-max}){
+				@include br(#{$mobile-br-max-polar}){
 					display: flex;
 					flex-wrap: wrap;
 				}
@@ -403,30 +417,20 @@ $sidebar-base-slim-mobile: 60px;
 			.board-popup-content {
 				display: flex;
 				flex-direction: column;
-				max-width: 100%;
+				width: 100%;
 			}
 
 			&-main {
 
 
-				@include br(#{$mobile-br-max}){
-					width: calc(100% - 300px);
-				}
-
-
-				@include br(md){
+				@include br(#{$mobile-br-max-polar}){
 					width: calc(100% - 400px);
 				}
 			}
 
 			&-side {
 				flex: 0 0 auto;
-				@include br(#{$mobile-br-max}){
-					width: 300px;
-				}
-
-
-				@include br(md){
+				@include br(#{$mobile-br-max-polar}){
 					width: 400px;
 				}
 			}

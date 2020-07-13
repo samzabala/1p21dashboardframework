@@ -25,6 +25,7 @@ $prefix: '.tooltip';
 	pointer-events:none;
 	max-width: $tooltip-max-width;
 	display: none;
+	z-index:99999;
 
 	&#{&}-allow-interaction {
 		pointer-events: auto;
@@ -149,6 +150,7 @@ $prefix: '.dropdown';
 	color: $nav-color;
 	transform-origin: center center;
 	transform-style: preserve-3d;
+	overflow-y:auto;
 
 	.theme-inverse & {
 		color: $nav-color-inverse;

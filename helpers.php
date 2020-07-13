@@ -22,7 +22,7 @@ function app_get_template_part($filename = '', $slug = ''){
 
 
 //include a file
-function app_get_component($filename = '', $slug =''){
+function app_get_component($filename = '', $slug ='',$once = false){
 
 	if($filename !== ''){
 
@@ -35,7 +35,11 @@ function app_get_component($filename = '', $slug =''){
 		$source .='.php';
 
 		if( file_exists( $source ) ){
-			include $source;
+			if ($once == true) {
+				include_once $source;
+			} else {
+				include $source;
+			}
 		}
 	}
 }

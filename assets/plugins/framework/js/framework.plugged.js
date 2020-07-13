@@ -760,7 +760,10 @@ window.jQuery && jQuery.noConflict();
 				}
 			}
 
-			return toReturn;
+			if(toReturn && toReturn.length) {
+				return toReturn;
+			}
+
 		}
 	};
 
@@ -1713,7 +1716,7 @@ window.jQuery && jQuery.noConflict();
 		};
 
 		const defaults = {
-			width: 'auto',
+			width: null,
 			callback: null,
 			callbackNameFilter: null,
 			callbackOnKeyup: null,
@@ -2151,9 +2154,10 @@ window.jQuery && jQuery.noConflict();
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
 
-		frameWork.destroyModal(null, subcom);
-
 		if (contentWrap && subcom) {
+
+			frameWork.destroyModal(null, subcom);
+
 			const arr = {
 				header:
 					(triggerer && triggerer.attr(`data-${subcom}-title`))
@@ -2196,8 +2200,6 @@ window.jQuery && jQuery.noConflict();
 
 			const args = _.parseArgs(arr, defaults);
 
-			// console.log(contentWrap,arr,defaults,args);
-
 			switch (subcom) {
 				case 'modal':
 					args.align = false;
@@ -2206,7 +2208,7 @@ window.jQuery && jQuery.noConflict();
 
 			const id = contentWrap.attr('id') || actualId;
 
-			id !== `#${actualId}` && _.changeHash(id);
+			id !== `${actualId}` && _.changeHash(id);
 
 			$('body').append(() => {
 				let html = '';
@@ -2326,7 +2328,14 @@ window.jQuery && jQuery.noConflict();
 	};
 
 	frameWork.destroyModal = (removeHash, subcom) => {
+		removeHash = removeHash || false;
 		subcom = subcom || 'modal';
+
+		let canRemoveHash = false;
+
+		if (removeHash && frameWork[subcom].current.attr('id')) {
+			canRemoveHash = true;
+		}
 
 		$('body')
 			.children(`.${subcom}-wrapper`)
@@ -2345,10 +2354,8 @@ window.jQuery && jQuery.noConflict();
 		frameWork[subcom].args = false;
 
 		$('body').removeClass('body-no-scroll');
-
-		if (removeHash) {
-			_.changeHash('');
-		}
+	
+		canRemoveHash && _.changeHash('');
 	};
 
 	frameWork.createBoard = (triggerer) => {
@@ -2386,8 +2393,18 @@ window.jQuery && jQuery.noConflict();
 				|| triggerer.attr('data-dropdown-width')
 				|| null;
 
+			
+			const maxHeight =
+				selector.attr('data-dropdown-max-height')
+				|| triggerer.attr('data-dropdown-max-height')
+				|| null;
+
 			if (width) {
 				selector.css('width', width);
+			}
+
+			if (maxHeight) {
+				selector.css('max-height', maxHeight);
 			}
 
 			if (mode == 'toggle' || mode == 'open') {
@@ -2459,7 +2476,7 @@ window.jQuery && jQuery.noConflict();
 							triggerer.removeClass('open');
 							selector.removeClass('open');
 
-							if (args.changeHash) {
+							if (args.changeHash && selector.attr('id')) {
 								_.changeHash('');
 							}
 						}
@@ -2481,7 +2498,7 @@ window.jQuery && jQuery.noConflict();
 						triggerer.addClass('open');
 						selector.addClass('open');
 
-						if (args.changeHash) {
+						if (args.changeHash && selector.attr('id')) {
 							_.changeHash(selector.attr('id'));
 						}
 					}

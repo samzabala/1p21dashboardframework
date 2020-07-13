@@ -35,14 +35,17 @@ $prefix: '.list-group';
 		margin-bottom:0;
 		display: block;
 		margin-top: $list-group-border-width * -1;
-		border-top: $list-group-border-width solid $list-group-border-color;
-		border-bottom: $list-group-border-width solid $list-group-border-color;
-
-
+		border-color:  $list-group-border-color;
+		border-style: solid;
+		border-bottom-width: $list-group-border-width;
         padding-top: calc(  (  (#{$calculated-list-group-height} - #{$list-group-border-width}) - (#{$calculated-body-single-line}) ) * .5 );
 		padding-bottom: calc(  (  (#{$calculated-list-group-height} - #{$list-group-border-width}) - (#{$calculated-body-single-line}) ) * .5 );
 		padding-left: $calculated-list-group-gutter-x;
 		padding-right: $calculated-list-group-gutter-x;
+
+		&:first-child {
+			border-top-width: $list-group-border-width;
+		}
 
 		&:before {
 			content: none;
@@ -53,11 +56,15 @@ $prefix: '.list-group';
 	&-toggle {
 		li, 
 		#{$prefix}-item {
+			&,
+			& a {
+				@extend %for-anchor-reset-hover !optional;
+			}
+
 			> * {
 				pointer-events: none;
 			}
 			a {
-				@extend %for-anchor-reset-hover !optional;
 				color: inherit;
 			}
 

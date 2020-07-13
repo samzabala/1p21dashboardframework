@@ -158,6 +158,8 @@ $prefix: '.input';
 			display:inline-block;
 			padding-top: calc( (#{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
 			padding-bottom: calc( ( #{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
+			display: inline-flex;
+			align-items:center;
 	
 			.theme-inverse & {
 				color:$input-label-color-inverse;
@@ -1152,11 +1154,11 @@ $prefix: '.input';
 //ui generated shit
 
 .fw-ui {
-	a {
+	&,
+	& a {
 		@extend %for-anchor-reset-hover !optional;
 	}
 }
-
 
 .special-form,
 fieldset {
