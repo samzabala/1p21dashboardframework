@@ -2304,9 +2304,10 @@
 		frameWork[subcom] = frameWork[subcom] || {};
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
+		
+		frameWork.destroyModal(null, subcom);
 
 		if (contentWrap && subcom) {
-			frameWork.destroyModal(null, subcom);
 
 			const arr = {
 				header:

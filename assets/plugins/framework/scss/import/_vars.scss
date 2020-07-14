@@ -192,7 +192,7 @@
 //////////////////////////////// THIS SOME ADVANCED SHIT
 
 		$body-heading-gutter-top: 1.5em !default;
-		$body-heading-gutter-bottom: .25em !default;
+		$body-heading-gutter-bottom: $body-text-gutter-y * .5 !default;
 		$body-heading-line-height: calc(1em + 10px) !default;
 		$body-heading-font-weight: $body-font-weight-bold !default;
 		$body-heading-font-style: inherit !default;
@@ -634,7 +634,7 @@
 			$board-padding-spacer: $gutter-base !default;
 				$board-padding-spacer-mobile: $gutter-small !default;
 			$board-padding-x: $gutter-base !default;
-			$board-padding-y: $gutter-large !default;
+			$board-padding-y: $gutter-base !default;
 				$board-padding-x-mobile: $gutter-small !default;
 				$board-padding-y-mobile: $gutter-small !default;
 			$board-close-button-font-size: 1rem !default;
@@ -642,9 +642,9 @@
 			$board-close-offset-y: $board-padding-y !default;
 				$board-close-offset-x-mobile: $board-padding-x-mobile !default;
 				$board-close-offset-y-mobile: $board-padding-y-mobile !default;
-			$board-close-width: 20px !default; //not yet
-			$board-close-height: 55px !default; //not yet
-			$board-close-size: 2.5em !default;
+			$board-resize-width: 20px !default; //not yet
+			$board-resize-height: 55px !default; //not yet
+			$board-close-size: 38px !default;
 			$board-close-box-shadow: $box-shadow-base $brand-color-base !default;
 
 	// POPPER = DROPDOWN || TOOLTIP
@@ -716,8 +716,11 @@
 			$list-group-border-color-inverse: $theme-background-contrast-inverse !default;
 		$list-group-border-width: 1px !default;
 		$list-group-height: 50px !default;
+			$list-group-height-compact: 30px !default;
+			$list-group-height-expanded: 75px !default;
 		$list-group-gutter-x: $gutter-small !default;
-		$list-group-interactive-background-hover: rgba($brand-color-primary,.2);
+		$list-group-interactive-background-hover: rgba($brand-color-primary,.1);
+		$list-group-interactive-background-active: rgba($brand-color-primary,.2);
 		
 	// badge
 		$badge-size: 25px !default;
@@ -1075,7 +1078,7 @@
 
 		// SCHEMES
 			$btn-border-default: rgba($brand-color-neutral,.3) !default;
-			$btn-background-default: var(--theme-background) !default;
+			$btn-background-default: transparent !default;
 			$btn-color-default: inherit !default;
 
 				$btn-border-default-hover: rgba($brand-color-neutral,.6)!default;

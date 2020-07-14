@@ -62,10 +62,6 @@
 						</li>
 					</ul>
 		</div>
-
-		<div class="flex-child flex-0-0">
-			<button data-toggle="board-close" href="#" class="btn btn-link background-theme btn-symbol"><i class="symbol symbol-close"></i></button>
-		</div>
 	</div>
 		
 </div>

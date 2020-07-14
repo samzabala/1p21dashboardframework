@@ -177,6 +177,10 @@ $prefix: '.btn';
 				@extend %for-btn-in-nav;
 			}
 
+			#{$prefix}-no-radius & {
+				@extend %for-no-radius !optional;
+			}
+
 			#{$prefix}-group & {
 				@extend %for-btn-in-group;
 			}

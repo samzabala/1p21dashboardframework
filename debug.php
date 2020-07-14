@@ -3674,6 +3674,32 @@
 				</li>
 			</ul>
 
+			<ul class="list-group list-group-compact">
+				<li>
+				<span class="badge badge-primary"></span>
+				Cras justo odio
+				</li>
+				<li>
+				Dapibus ac facilisis in
+				</li>
+				<li>
+				Morbi leo risus
+				</li>
+			</ul>
+
+			<ul class="list-group list-group-expanded">
+				<li>
+				<span class="badge badge-primary"></span>
+				Cras justo odio
+				</li>
+				<li>
+				Dapibus ac facilisis in
+				</li>
+				<li>
+				Morbi leo risus
+				</li>
+			</ul>
+
 			<h2> interactive
 			</h2>
 

@@ -1,6 +1,7 @@
 
 <!-- VIEW  -->
-	<div id="task-view-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-close="false" data-board-max-width="1240px">
+<!-- @NOTE data-board-resize feature will be built after for building ya boi faster -->
+	<div id="task-view-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true" data-board-max-width="1240px">
 
 		<div class="dashboard-board-column-layout-container  background-theme-contrast">
 			<div class="dashboard-board-partition dashboard-board-column-layout-main  background-theme">
@@ -129,7 +130,7 @@
 
  -->
 
-<div id="task-editor-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-close="false"  data-board-max-width="1240px">
+<div id="task-editor-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-max-width="1240px">
 
 
 	<form method="get" class="dashboard-board-column-layout-container  background-theme-contrast">
@@ -140,8 +141,8 @@
 				<!-- Title -->
 					<div class="task-heading">
 						<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-							<label for="task-title" class="input-label sr-only">Title</label>
-							<input type="text" placeholder="Enter title" id="task-title" name="task-title" class=" input input-single-line input-large task-title">
+							<label for="task-title-REPLACEwithTaskId" class="input-label sr-only">Title</label>
+							<input type="text" placeholder="Enter title" id="task-title-REPLACEwithTaskId" name="task-title-REPLACEwithTaskId" class=" input input-single-line input-large">
 						</div>
 						
 
@@ -156,8 +157,8 @@
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
 
-							<label for="task-description" class="input-label sr-only">Description</label>
-							<textarea name="task-description" id="task-description" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
+							<label for="task-body-REPLACEwithTaskId" class="input-label sr-only">Description</label>
+							<textarea name="task-body-REPLACEwithTaskId" id="task-body-REPLACEwithTaskId" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
 						</div>
 					</div>
 
@@ -165,8 +166,8 @@
 					<div class="task-time-meta">
 						<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
 							<div class="input-toggle">
-								<input type="checkbox" class="input" name="task-enable-delay" id="task-enable-delay">
-								<label for="task-enable-delay" class="input-label input-toggle-label">
+								<input type="checkbox" class="input" name="task-enable-delay-REPLACEwithTaskId" id="task-enable-delay-REPLACEwithTaskId">
+								<label for="task-enable-delay-REPLACEwithTaskId" class="input-label input-toggle-label">
 									Delay task requests
 								</label>
 							</div>
@@ -194,15 +195,15 @@
 										<i class="symbol symbol-arrow-down color-primary"></i>
 									</button>
 									<div class="dropdown dropdown-top-flush dropdown-left no-padding">
-										<input type="text" class="input-calendar border-color-transparent" name="task-delay-date" id="task-delay-date">
+										<input type="text" class="input-calendar border-color-transparent" name="task-delay-date-REPLACEwithTaskId" id="task-delay-date-REPLACEwithTaskId">
 									</div>
 								</div>
 							</div>
 							<div class="flex-col-xs-12  flex-col-md-4">
 
 								<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-									<label for="task-title" class="input-label sr-only">Title</label>
-									<input type="time" placeholder="Enter title" id="task-title" name="task-title" class="input-round input input-single-line task-title">
+									<label for="task-delay-time-REPLACEwithTaskId" class="input-label sr-only">Time</label>
+									<input type="time" placeholder="Enter title" id="task-delay-time-REPLACEwithTaskId" name="task-delay-time-REPLACEwithTaskId" class="input-round input input-single-line">
 								</div>
 							</div>
 						</div>
@@ -233,10 +234,6 @@
 					
 						<!-- @if attachments have rows -->
 							<?php app_get_component('components/attachment-grid-modify'); ?>
-
-
-							
-						
 							<?php app_get_component('components/attachment-field'); ?>
 						
 						

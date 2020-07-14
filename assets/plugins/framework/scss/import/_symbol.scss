@@ -260,8 +260,8 @@ $prefix: '.symbol';
 			&:before,&:after {
 				@extend %for-valid-symbol-pseudo;
 				@extend %for-valid-symbol-pseudo-filled;
+				@extend %for-valid-symbol-pseudo-full-height;
 				width: .3125em;
-				height: .875em
 			}
 
 			&:before {

@@ -288,7 +288,7 @@ h6, .h6 {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.7142857143rem;
   margin-top: 1.5em; }
   .theme-inverse h1, .theme-inverse .h1, .theme-inverse h2, .theme-inverse .h2, .theme-inverse h3, .theme-inverse .h3, .theme-inverse h4, .theme-inverse .h4, .theme-inverse h5, .theme-inverse .h5, .theme-inverse h6, .theme-inverse .h6 {
     color: #ecedf0; }
@@ -1200,7 +1200,7 @@ table {
       height: 0.1875em; }
     .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before, .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before {
       width: 1em; }
-    .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
+    .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
       height: 1em; }
   .symbol-text-left:before, .active > .symbol-text-left-toggle:before, .open > .symbol-text-left-toggle:before, .symbol-text-right:before, .active > .symbol-text-right-toggle:before, .open > .symbol-text-right-toggle:before, .symbol-text-center:before, .active > .symbol-text-center-toggle:before, .open > .symbol-text-center-toggle:before, .symbol-text-justify:before, .active > .symbol-text-justify-toggle:before, .open > .symbol-text-justify-toggle:before, .symbol-caret-left:before, .symbol-caret-right:before, .symbol-caret-up:before, .symbol-caret-down:before, .symbol-kebab-vertical:before, .active > .symbol-kebab-vertical-toggle:before, .open > .symbol-kebab-vertical-toggle:before, .symbol-kebab-horizontal:before, .active > .symbol-kebab-horizontal-toggle:before, .open > .symbol-kebab-horizontal-toggle:before, .symbol-star:before, .active > .symbol-star-toggle:before, .open > .symbol-star-toggle:before, .symbol-star-stroke:before, .active > .symbol-star-stroke-toggle:before, .open > .symbol-star-stroke-toggle:before, .symbol-minus:before, .active > .symbol-minus-toggle:before, .open > .symbol-minus-toggle:before, .symbol-time:before, .symbol-play:before, .active > .symbol-play-toggle:before, .open > .symbol-play-toggle:before, .symbol-stop:before, .active > .symbol-stop-toggle:before, .open > .symbol-stop-toggle:before, .symbol-square:before, .active > .symbol-square-toggle:before, .open > .symbol-square-toggle:before {
     content: none; }
@@ -1247,8 +1247,7 @@ table {
     border-left: .875em solid;
     left: .1875em; }
   .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after {
-    width: .3125em;
-    height: .875em; }
+    width: .3125em; }
   .symbol-pause:before, .active > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:before {
     right: .5em; }
   .symbol-pause:after, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:after {
@@ -3816,11 +3815,7 @@ table {
 /*** LIST GROUPS ***/
 .list-group,
 .list-group ul {
-  padding: 1px 0 0; }
-  .theme-inverse .list-group li,
-  .theme-inverse .list-group .list-group-item, .theme-inverse .list-group ul li,
-  .theme-inverse .list-group ul .list-group-item {
-    border-color: #1e1931; }
+  padding: 0; }
   .list-group li, .list-group-item,
   .list-group ul li,
   .list-group ul-item {
@@ -3835,6 +3830,16 @@ table {
     padding-bottom: calc(  (  (3.5714285714rem - 1px) - (1em * 1.5) ) * .5);
     padding-left: 1.4285714286rem;
     padding-right: 1.4285714286rem; }
+    .theme-inverse .list-group li, .theme-inverse .list-group-item, .theme-inverse .list-group ul li, .theme-inverse .list-group ul-item {
+      border-color: #1e1931; }
+    .list-group-compact li,
+    .list-group-compact .list-group-item {
+      padding-top: calc(  (  (2.1428571429rem - 1px) - (1em * 1.5) ) * .5);
+      padding-bottom: calc(  (  (2.1428571429rem - 1px) - (1em * 1.5) ) * .5); }
+    .list-group-expanded li,
+    .list-group-expanded .list-group-item {
+      padding-top: calc(  (  (5.3571428571rem - 1px) - (1em * 1.5) ) * .5);
+      padding-bottom: calc(  (  (5.3571428571rem - 1px) - (1em * 1.5) ) * .5); }
     .list-group li:first-child, .list-group-item:first-child,
     .list-group ul li:first-child,
     .list-group ul-item:first-child {
@@ -3843,6 +3848,20 @@ table {
     .list-group ul li:before,
     .list-group ul-item:before {
       content: none; }
+  .list-group-interactive li, .list-group-interactive li a,
+  .list-group-interactive .list-group-item,
+  .list-group-interactive .list-group-item a, .list-group-toggle li, .list-group-toggle li a,
+  .list-group-toggle .list-group-item,
+  .list-group-toggle .list-group-item a,
+  .list-group ul-interactive li,
+  .list-group ul-interactive li a,
+  .list-group ul-interactive .list-group-item,
+  .list-group ul-interactive .list-group-item a,
+  .list-group ul-toggle li,
+  .list-group ul-toggle li a,
+  .list-group ul-toggle .list-group-item,
+  .list-group ul-toggle .list-group-item a {
+    color: inherit; }
   .list-group-interactive li > *,
   .list-group-interactive .list-group-item > *, .list-group-toggle li > *,
   .list-group-toggle .list-group-item > *,
@@ -3851,46 +3870,43 @@ table {
   .list-group ul-toggle li > *,
   .list-group ul-toggle .list-group-item > * {
     pointer-events: none; }
-  .list-group-interactive li a,
-  .list-group-interactive .list-group-item a, .list-group-toggle li a,
-  .list-group-toggle .list-group-item a,
-  .list-group ul-interactive li a,
-  .list-group ul-interactive .list-group-item a,
-  .list-group ul-toggle li a,
-  .list-group ul-toggle .list-group-item a {
-    color: inherit; }
-  .list-group-interactive li:hover, .list-group-interactive li:focus, .list-group-interactive li.focus, .list-group-interactive li:active, .list-group-interactive li.active,
+  .list-group-interactive li:hover, .list-group-interactive li:focus, .list-group-interactive li.focus,
   .list-group-interactive .list-group-item:hover,
   .list-group-interactive .list-group-item:focus,
-  .list-group-interactive .list-group-item.focus,
-  .list-group-interactive .list-group-item:active,
-  .list-group-interactive .list-group-item.active, .list-group-toggle li:hover, .list-group-toggle li:focus, .list-group-toggle li.focus, .list-group-toggle li:active, .list-group-toggle li.active,
+  .list-group-interactive .list-group-item.focus, .list-group-toggle li:hover, .list-group-toggle li:focus, .list-group-toggle li.focus,
   .list-group-toggle .list-group-item:hover,
   .list-group-toggle .list-group-item:focus,
   .list-group-toggle .list-group-item.focus,
-  .list-group-toggle .list-group-item:active,
-  .list-group-toggle .list-group-item.active,
   .list-group ul-interactive li:hover,
   .list-group ul-interactive li:focus,
   .list-group ul-interactive li.focus,
-  .list-group ul-interactive li:active,
-  .list-group ul-interactive li.active,
   .list-group ul-interactive .list-group-item:hover,
   .list-group ul-interactive .list-group-item:focus,
   .list-group ul-interactive .list-group-item.focus,
-  .list-group ul-interactive .list-group-item:active,
-  .list-group ul-interactive .list-group-item.active,
   .list-group ul-toggle li:hover,
   .list-group ul-toggle li:focus,
   .list-group ul-toggle li.focus,
-  .list-group ul-toggle li:active,
-  .list-group ul-toggle li.active,
   .list-group ul-toggle .list-group-item:hover,
   .list-group ul-toggle .list-group-item:focus,
-  .list-group ul-toggle .list-group-item.focus,
+  .list-group ul-toggle .list-group-item.focus {
+    background: rgba(4, 128, 254, 0.1); }
+  .list-group-interactive li:active, .list-group-interactive li.active,
+  .list-group-interactive .list-group-item:active,
+  .list-group-interactive .list-group-item.active, .list-group-toggle li:active, .list-group-toggle li.active,
+  .list-group-toggle .list-group-item:active,
+  .list-group-toggle .list-group-item.active,
+  .list-group ul-interactive li:active,
+  .list-group ul-interactive li.active,
+  .list-group ul-interactive .list-group-item:active,
+  .list-group ul-interactive .list-group-item.active,
+  .list-group ul-toggle li:active,
+  .list-group ul-toggle li.active,
   .list-group ul-toggle .list-group-item:active,
   .list-group ul-toggle .list-group-item.active {
     background: rgba(4, 128, 254, 0.2); }
+  .dropdown .list-group:first-child:last-child, .dropdown .list-group ul:first-child:last-child {
+    border-radius: 10px;
+    overflow: hidden; }
 
 /*** ASSET ***/
 /* it */
@@ -4577,12 +4593,12 @@ table {
     justify-content: center;
     background: #FFFFFF;
     box-shadow: 0px 3px 10px -6px #000000;
-    width: 2.5em;
-    height: 2.5em; }
+    width: 2.7142857143rem;
+    height: 2.7142857143rem; }
   .theme-inverse .board-close {
     background: #302a4b; }
   .board-left .board-close, .board-right .board-close {
-    top: 60px; }
+    top: 40px; }
     @media (max-width: 1200px) {
       .board-left .board-close, .board-right .board-close {
         top: 20px; } }
@@ -4605,7 +4621,7 @@ table {
     transform: translateY(50%); }
   .board-popup {
     height: 100%;
-    padding: 60px 40px; }
+    padding: 40px 40px; }
     @media (max-width: 1200px) {
       .board-popup {
         padding: 20px 20px; } }
@@ -5112,9 +5128,6 @@ table {
     color: #FFFFFF; }
   .dropdown.open {
     display: block; }
-  .dropdown .list-group {
-    border-radius: 10px;
-    overflow: hidden; }
   .dropdown, .dropdown ul, .dropdown li {
     margin-bottom: 0;
     margin-top: 0; }
@@ -5147,6 +5160,10 @@ table {
   .dropdown.dropdown-center-y {
     top: 50%;
     transform: translateY(-50%); }
+  .dropdown.dropdown-static {
+    position: static;
+    box-shadow: none;
+    transform: none; }
   .dropdown li:before {
     content: none; }
 
@@ -5593,7 +5610,7 @@ table {
         margin-top: -1px; } }
 .btn-no-interaction.btn.btn-default:hover, .btn-no-interaction.btn.btn-default:focus, .btn-no-interaction.focus.btn.btn-default, .btn-no-interaction.btn.btn-default:active, .btn-no-interaction.active.btn.btn-default, .btn-disabled.btn.btn-default:hover, .btn-disabled.btn.btn-default:focus, .btn-disabled.focus.btn.btn-default, .btn-disabled.btn.btn-default:active, .btn-disabled.active.btn.btn-default, .btn-disabled:hover .btn.btn-default, .btn-disabled:focus .btn.btn-default, .btn-disabled.focus .btn.btn-default, .btn-disabled:active .btn.btn-default, .btn-disabled.active .btn.btn-default, .btn.btn-default {
   border-color: rgba(141, 141, 141, 0.3) ;
-  background-color: var(--theme-background) ;
+  background-color: transparent ;
   color: inherit ; }
 
 .btn.btn-default:hover, .btn-group.btn-group-unite:hover .btn.btn-default, .btn.btn-default:focus, .btn-group.btn-group-unite:focus .btn.btn-default, .focus.btn.btn-default, .btn-group.btn-group-unite.focus .btn.btn-default {
@@ -5916,7 +5933,8 @@ table {
   text-align: inherit;
   font-style: normal;
   padding-right: 1rem;
-  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-top: calc( (3.2142857143rem - (1em * 1.5) ) * .5);
   padding-bottom: calc( ( 3.2142857143rem - (1em * 1.5) ) * .5);
   display: inline-flex;
@@ -8469,16 +8487,16 @@ fieldset {
 .radius-ellipse {
   border-radius: 50% !important; }
 
-.no-radius, .no-radius-top, .no-radius-left, .no-radius-top-left, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius.input-calendar-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-top, .no-radius-left, .no-radius-top-left, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-top-left-radius: 0 !important; }
 
-.no-radius, .no-radius-top, .no-radius-right, .no-radius-top-right, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius.input-calendar-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-top, .no-radius-right, .no-radius-top-right, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-top-right-radius: 0 !important; }
 
-.no-radius, .no-radius-bottom, .no-radius-left, .no-radius-bottom-left, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius.input-calendar-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-bottom, .no-radius-left, .no-radius-bottom-left, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-bottom-left-radius: 0 !important; }
 
-.no-radius, .no-radius-bottom, .no-radius-right, .no-radius-bottom-right, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius.input-calendar-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-bottom, .no-radius-right, .no-radius-bottom-right, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-bottom-right-radius: 0 !important; }
 
 .btn.btn-link, .btn.btn-primary-outline, .btn.btn-secondary-outline, .btn.btn-accent-outline, .btn.btn-neutral-outline, .btn.btn-success-outline, .btn.btn-caution-outline, .btn.btn-error-outline, .btn.btn-theme-outline, .btn.btn-theme-polar-outline, .input-group .input-single-line:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-select:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-multiple-line:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-calendar-ui:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-tags-ui:not(.focus):not(:focus):not(.active):not(:active) {

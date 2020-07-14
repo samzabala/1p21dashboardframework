@@ -155,7 +155,8 @@ $prefix: '.input';
 				case: $input-label-text-transform,
 			));
 			padding-right: 1rem;
-			display:inline-block;
+			margin-top:0;
+			margin-bottom:0;
 			padding-top: calc( (#{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
 			padding-bottom: calc( ( #{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
 			display: inline-flex;
@@ -691,6 +692,10 @@ $prefix: '.input';
 				@extend %for-form-global-in-nav-custom;
 				padding-top: $calculated-value-input-paddiny-y-nav !important;
 				padding-bottom: $calculated-value-input-paddiny-y-nav !important;
+			}
+
+			#{$prefix}-no-radius & {
+				@extend %for-no-radius !optional;
 			}
 	
 			#{$prefix}-group & {

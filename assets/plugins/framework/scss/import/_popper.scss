@@ -160,11 +160,6 @@ $prefix: '.dropdown';
 		display: block;
 	}
 
-	.list-group {
-		border-radius: $popper-border-radius;
-		overflow:hidden;
-	}
-
 	&,ul,li {
 		margin-bottom:0;
 		margin-top:0;
@@ -223,6 +218,12 @@ $prefix: '.dropdown';
 			top: 50%;
 			transform: translateY(-50%);
 		}
+	}
+
+	&#{$prefix}-static {
+		position:static;
+		box-shadow:none;
+		transform: none;
 	}
 
 	li {

@@ -5,7 +5,7 @@
 
 			<div class="zone zone-primary">
 
-				<input multiple id="task-attachments-to-add" name="task-attachments-to-add" type="file" />
+				<input multiple id="task-attachments-to-add" name="task-attachments-to-add-REPLACEwithTaskId" type="file" />
 				<span class="zone-text">
 					Drag and drop attachments here
 				</span>

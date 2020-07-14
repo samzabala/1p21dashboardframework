@@ -2154,9 +2154,9 @@ window.jQuery && jQuery.noConflict();
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
 
-		if (contentWrap && subcom) {
+		frameWork.destroyModal(null, subcom);
 
-			frameWork.destroyModal(null, subcom);
+		if (contentWrap && subcom) {
 
 			const arr = {
 				header:
