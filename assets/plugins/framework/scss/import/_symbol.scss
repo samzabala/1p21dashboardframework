@@ -226,8 +226,8 @@ $prefix: '.symbol';
 			&:after {
 				@extend %for-valid-symbol-pseudo;
 				@extend %for-valid-symbol-pseudo-filled;
-				width: .875em;
-				height: .875em;
+				@extend %for-valid-symbol-pseudo-full-width;
+				@extend %for-valid-symbol-pseudo-full-height;
 			}
 		}
 	}
@@ -850,7 +850,6 @@ $prefix: '.symbol';
 		&-down {
 			@extend %for-valid-symbol;
 			@extend %for-valid-symbol-no-before;
-			height:.625em;
 
 			&:after {
 
@@ -867,6 +866,7 @@ $prefix: '.symbol';
 				)){
 					display:inline-block;
 					vertical-align:middle;
+					height:.625em;
 				};
 			}
 		}

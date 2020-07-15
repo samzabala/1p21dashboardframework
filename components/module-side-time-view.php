@@ -11,7 +11,7 @@
 				<div class="flex-child">
 					<a href="#board-track-time"  data-toggle="board" data-board-title="Add Time Entry" class="btn btn-primary-outline btn-small">Time <i class="symbol symbol-plus"></i></a>
 					&nbsp;
-					<a href="#task-side-time-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+					<a href="#task-side-time-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
@@ -109,8 +109,8 @@
 
 			<!-- @if timer is currently running and does not match currently viewed task -->
 				<p class="color-secondary">
-					Timer is currently running for another task.
-					<a href="#" class="font-weight-700 color-inherit">Pause current task timer <i class="symbol symbol-pause"></i></a>.
+					Timer is tracking time for <a href="#task-view-REPLACEwithTaskIdOfActiveTimer" data-toggle="board" class="color-inherit">another task</a>.
+					<br><a href="#" class="font-weight-700 color-inherit">Pause active task timer <i class="symbol symbol-pause"></i></a>.
 				</p>
 
 			<div class="flex-grid flex-grid-compact flex-grid-fixed">
@@ -422,8 +422,8 @@
 
 													<!-- @if timer is currently running and does not match currently viewed task -->
 													<p class="color-secondary">
-														Timer is currently running for another task.
-														<a href="#" class="font-weight-700 color-inherit">Pause current task timer <i class="symbol symbol-pause"></i></a>.
+														Timer is tracking time for <a href="#task-view-REPLACEwithTaskIdOfActiveTimer" data-toggle="board" class="color-inherit">another task</a>.
+														<br><a href="#" class="font-weight-700 color-inherit">Pause active task timer <i class="symbol symbol-pause"></i></a>.
 													</p>
 
 													

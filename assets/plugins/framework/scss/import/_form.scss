@@ -159,8 +159,9 @@ $prefix: '.input';
 			margin-bottom:0;
 			padding-top: calc( (#{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
 			padding-bottom: calc( ( #{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
-			display: inline-flex;
-			align-items:center;
+			// display: inline-flex;
+			// align-items:center;
+			display:inline-block;
 	
 			.theme-inverse & {
 				color:$input-label-color-inverse;
@@ -586,6 +587,7 @@ $prefix: '.input';
 			}
 			&-height {
 				height: auto;
+				resize: both;
 				min-height: $calculated-input-height * $input-height-multiple-factor;
 	
 				&-large {
@@ -902,8 +904,10 @@ $prefix: '.input';
 			display:flex;
 			width:100%;
 
-			> #{$prefix},
-			> .btn:not(.btn-symbol) {
+			> #{$prefix}
+			// ,
+			// > .btn:not(.btn-symbol)
+			{
 				flex: 1 1;
 			}
 

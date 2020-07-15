@@ -7,14 +7,14 @@
 					<h5 class="no-margin-y">Workflux Boards</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-flux-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+					<a href="#task-side-flux-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
 
 	
 		
-		<div id="task-side-flux-view-REPLACEwithTaskId" class="accordion" data-accordion-change-hash="false">
+		<div id="task-side-flux-view-REPLACEwithTaskId" class="accordion open" data-accordion-change-hash="false">
 	
 			<!-- @if hasteam leads -->
 			<div class="task-fluxboards">
@@ -32,7 +32,8 @@
 				No associated workflux boards.
 
 				<!-- @if user can edit task -->
-				<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add to workflux boards.</a>
+					<br>
+					<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add to boards.</a>
 			</p>
 		</div>
 
@@ -46,15 +47,86 @@
 					<h5 class="no-margin-y">Label &amp; Tags</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-tags-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+					<a href="#task-side-tags-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
 
 	
 		
-		<div id="task-side-tags-view-REPLACEwithTaskId" class="accordion" data-accordion-change-hash="false">
-		atin cu pung singsing
+		<div id="task-side-tags-view-REPLACEwithTaskId" class="accordion open" data-accordion-change-hash="false">
+			<!-- @if has tags -->
+				<br>
+				<div class="task-tags">
+					<!--
+						AVAILABLE TAG SCHEMES:
+						tag-default
+						tag-primary
+						tag-secondary
+						tag-accent
+						tag-neutral
+						tag-success
+						tag-caution
+						tag-error
+						tag-intensity-1
+						tag-intensity-2
+						tag-intensity-3
+						tag-intensity-4
+						tag-intensity-5
+					-->
+						<!--
+							@NOTE @dynamic class => tag-COLORSCHEME
+							we may need to coordinate to have colors associated with certain tags.
+							I would not recommend creating new classes by adding colors to the ui's color scheme so we can reduce the need of increasing the stylesheet's file size further.
+							We can have an array of random colors much like the setup for the scoreboard charts and set them as inline background-color for `tag-default`
+							If it gets too tedious, we can always just use `tag-primary` for all tags as fallback
+						-->
+
+
+					<span class="p tag tag-primary">
+						<span class="tag-text">
+							<span class="REPLACE">Tag Text</span>
+						</span>
+					</span>
+
+					
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php 
+							$abilabol_tag = array(
+								'tag-default',
+								'tag-primary',
+								'tag-secondary',
+								'tag-accent',
+								'tag-neutral',
+								'tag-success',
+								'tag-caution',
+								'tag-error',
+								'tag-intensity-1',
+								'tag-intensity-2',
+								'tag-intensity-3',
+								'tag-intensity-4',
+								'tag-intensity-5',
+							);
+							?>
+							<?php for($i=1; $i<count($abilabol_tag); $i++){ ?>
+								<?php $j = 1;?>
+								<span class="p tag <?=$abilabol_tag[$i];?>">
+									<span class="tag-text">
+										<span class="REPLACE">Tag Te<?php while($j <= $i): echo 'e'; $j++; endwhile; ?>xt</span>
+									</span>
+								</span>
+							<?php } ?>
+				</div>
+
+					
+			<!-- @else -->
+				<p class="color-neutral font-style-italic">
+					No set tags.
+
+					<!-- @if user can edit task -->
+						<br>
+						<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add to add tags.</a>
+				</p>
 		</div>
 
 

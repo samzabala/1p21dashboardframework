@@ -337,7 +337,7 @@
 
 	//symbol 
 		$symbol-caret-width: 8px !default;
-		$symbol-caret-height: 5px !default;
+		$symbol-caret-height: 6px !default;
 
 	// NAV
 		$nav-height: 75px !default;
@@ -785,12 +785,13 @@
 		$tag-gutter-x: 8px !default;
 		$tag-font-size: 13px !default;
 		$tag-font-weight: $body-font-weight-bold !default;
-		$tag-line-height: 1.25 !default;
+		$tag-line-height: 1 !default;
 		$tag-font-style: normal !default;
 		$tag-color: $brand-color-background !default;
 		$tag-text-transform: uppercase !default;
 		$tag-gutter-x: 20px !default;
 		$tag-border-radius: $tag-height * .5 !default;
+		$tag-margin-y: .125em !default;
 
 		$tag-default-color: inherit !default;
 		$tag-default-background: rgba($brand-color-base,.2) !default;
@@ -912,7 +913,7 @@
 		$input-height-multiple-factor: 3 !default;
 		$input-placeholder-opacity: .5 !default;
 		$input-background: $theme-background !default;
-			$input-background-inverse: rgba($brand-color-neutral,.1) !default;
+			$input-background-inverse: $theme-background-inverse !default;
 			// $input-background-disabled: rgba($brand-color-neutral,.2) !default;
 			// 	$input-background-disabled-inverse: transparent !default;
 

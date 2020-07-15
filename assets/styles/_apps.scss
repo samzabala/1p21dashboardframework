@@ -338,18 +338,14 @@ $sidebar-base-slim-mobile: 60px;
 		padding-left: 2em;
 	}
 
-	&-list-group-users {
+	&-list-group-thumbed {
 		overflow-y:auto;
 		max-height: em(564px/($body-font-size * 1.5));
 	}
 
-
-	//style board column vertical paadding
-	&-board-partition {
-		padding: 50px 0;
-		@include br(#{$mobile-br-max}-max){
-			padding: 30px 0;
-		}
+	&-list-group-text {
+		overflow-y:auto;
+		max-height: em(491px/($body-font-size));
 	}
 
 
@@ -401,23 +397,45 @@ $sidebar-base-slim-mobile: 60px;
 
 	//layout styles for 2 column board layouts
 	&-board {
-		&-column-layout {
-			&-container {
-				flex: 1 1;
-				@include br(#{$mobile-br-max-polar}){
-					display: flex;
-					flex-wrap: wrap;
-				}
+
+
+		//style board column vertical paadding
+		&-partition {
+			padding: 50px 0;
+			
+			@include br(#{$mobile-br-max}-max){
+				padding: 30px 0;
 			}
+			
+			@include br(#{$mobile-br-max-polar}){
+				max-height:100%;
+				overflow-y:auto;
+		
+				// &::-webkit-scrollbar {
+				// 	display:none!important;
+				// }
+			}
+		}
+		&-column-layout {
 			.board-popup {
 				padding:0;
-				display:flex;
-				flex-wrap:wrap;
+				// display:flex;
+				// flex-wrap:wrap;
 			}
 			.board-popup-content {
 				display: flex;
 				flex-direction: column;
 				width: 100%;
+				flex: 1 1;
+				height:100%;
+			}
+			&-container {
+				flex: 1 1;
+				@include br(#{$mobile-br-max-polar}){
+					display: flex;
+					flex-wrap: wrap;
+					max-height:100%;
+				}
 			}
 
 			&-main {

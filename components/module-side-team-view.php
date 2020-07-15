@@ -6,7 +6,7 @@
 					<h5 class="no-margin-y">Project</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-team-view-REPLACEwithTaskId" data-toggle="accordion" class="float-right color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+					<a href="#task-side-team-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
@@ -33,23 +33,24 @@
 
 			<h5>Team Leads</h5>
 				<!-- @if hasteam leads -->
-				<div class="project-leads">
+					<div class="project-leads">
 
-					<!-- @LOOP component -->
-					<?php app_get_component('components/profile-titled') ?>
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-						<?php for($i=1; $i<9; $i++){ ?>
-							<?php app_get_component('components/profile-titled'); ?>
-						<?php } ?>
-				</div>
+						<!-- @LOOP component -->
+						<?php app_get_component('components/profile-titled') ?>
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php for($i=1; $i<9; $i++){ ?>
+								<?php app_get_component('components/profile-titled'); ?>
+							<?php } ?>
+					</div>
 						
 				<!-- @else -->
-				<p class="color-neutral font-style-italic">
-					No team leads.
+					<p class="color-neutral font-style-italic">
+						No team leads.
 
-					<!-- @if user can edit task -->
-					<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add team leads.</a>
-				</p>
+						<!-- @if user can edit task -->
+						<br>
+						<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add team leads.</a>
+					</p>
 
 
 			<hr>
@@ -70,12 +71,18 @@
 									<?php } ?>
 									
 						<!-- @else unassigned -->
-							<span class="color-neutral font-style-italic">Unassigned. <a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to assign to members.</a></span>
+							<span class="color-neutral font-style-italic">
+								Unassigned.
+
+								<!-- @if user can edit task -->
+								<br>
+								<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to assign</a>
+							</span>
 					</p>
 
 				</div>
 
-				<div class="flex-col-xs-6 flex-col-md-8">
+				<div class="flex-col-xs-6 flex-col-md-7">
 					<h5>Due on</h5>
 					<p class="color-neutral task-due-date no-margin-bottom">
 						<!-- @if has due date -->
@@ -87,7 +94,7 @@
 					</p>
 				</div>
 
-				<div class="flex-col-xs-6 flex-col-md-4">
+				<div class="flex-col-xs-6 flex-col-md-5">
 					
 					<h5>Priority</h5>
 					<p class="color-neutral task-priority no-margin-bottom">

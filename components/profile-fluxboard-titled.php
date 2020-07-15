@@ -3,7 +3,7 @@
 	<div
 	class="align-items-center flex-grid flex-grid-compact flex-grid-no-gutter-y flex-grid-fixed justify-content-flex-start">
 		<div class="flex-0-0 flex-child hide-mobile">
-			<?php app_get_component('components/profile-image-small'); ?>
+			<?php app_get_component('components/profile-fluxboard-image-small'); ?>
 		</div>
 		<a href="<?=app_create_link(array('template'=>'workflux')) ?>"  class="color-inherit flex-0-1 flex-col-9">
 			

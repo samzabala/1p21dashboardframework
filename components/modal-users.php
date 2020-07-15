@@ -1,7 +1,7 @@
 
 
 <!-- NOTE this field is only for searching valid users -->
-<div class="modal" data-modal-max-width="600px" data-modal-close="false">
+<div class="modal" data-modal-max-width="600px">
 
 	<!-- @NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of user filter components -->
 	<input name="filter-ids-to-add-REPLACEwithCorrespondingInputFieldName" type="hidden">
@@ -14,7 +14,7 @@
 		<input id="filter-user-REPLACEwithCorrespondingInputFieldName" name="filter-user-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for PLACEHOLDER" />
 	</div>
 
-	<div class="dashboard-list-group-users list-group list-group-toggle font-size-large">
+	<div class="dashboard-list-group-thumbed list-group list-group-toggle font-size-large">
 		<!--
 			@NOTE
 			@dynamic @loop li 

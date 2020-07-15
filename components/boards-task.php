@@ -230,10 +230,10 @@
 							<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
 						</div>
 					</div>
-
 					
 						<!-- @if attachments have rows -->
 							<?php app_get_component('components/attachment-grid-modify'); ?>
+							
 							<?php app_get_component('components/attachment-field'); ?>
 						
 						

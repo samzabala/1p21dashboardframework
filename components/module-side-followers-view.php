@@ -6,7 +6,7 @@
 					<h5 class="no-margin-y">TITLE</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-flux-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+					<a href="#task-side-flux-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>

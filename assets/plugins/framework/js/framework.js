@@ -696,15 +696,16 @@
 			const idToGoTo = id !== '' ? `#${id}` : null;
 
 			if (idToGoTo) {
-				if (history.pushState) {
-					history.pushState(null, null, idToGoTo);
-				} else {
+				// if (history.pushState) {
+				// 	history.pushState(null, null, idToGoTo);
+				// } else {
 					location.hash = idToGoTo;
-				}
+				// }
 
 			} else {
 				const noHashURL = window.location.href.replace(/#.*$/, '');
-				window.history.pushState('', document.title, noHashURL);
+				// window.history.pushState('', document.title, noHashURL);
+				location.hash = '';
 			}
 		}
 	};
@@ -1753,6 +1754,14 @@
 				theUi.input = theUi.container.querySelector(`.${_.uiPrefix('tags')}input`);
 			}
 
+
+			if(inputTags.hasAttribute('placeholder')){
+				theUi.input.setAttribute(
+					'data-placeholder',
+					inputTags.getAttribute('placeholder')
+				);
+			}
+
 			//nearest fw-ui parent will actually do tgoggl for bby because baby cant stand up on its own
 			if (inputTags.hasAttribute('data-toggle')) {
 				theUi.input.setAttribute(
@@ -2304,8 +2313,10 @@
 		frameWork[subcom] = frameWork[subcom] || {};
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
-		
-		frameWork.destroyModal(null, subcom);
+
+		if(contentWrap || !window.location.hash){
+			frameWork.destroyModal(null, subcom);
+		}
 
 		if (contentWrap && subcom) {
 
