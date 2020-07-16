@@ -1,7 +1,8 @@
 
+
 <!-- VIEW  -->
 <!-- @NOTE data-board-resize feature will be built after for building ya boi faster -->
-	<div id="task-view-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true" data-board-max-width="1240px">
+	<div id="task-REPLACEwithPostTypeID-view" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true" data-board-max-width="1240px">
 
 		<div class="dashboard-board-column-layout-container  background-theme-contrast">
 			<div class="dashboard-board-partition dashboard-board-column-layout-main  background-theme">
@@ -16,9 +17,7 @@
 							</h1>
 
 							<p class="color-neutral no-margin-bottom">
-								<span class="task-id">
-									Task #<span class="REPLACE">69</span>
-								</span>
+								Task #<span class="task-id"><span class="REPLACE">69</span></span>
 								|
 								<span class="task-meta">
 									Created by
@@ -122,147 +121,32 @@
 
 	</div>
 
-<!-- EDIT ADD -->
+<!-- EDIT -->
 
 <!-- 
 
-@NOTE change `task-editor-REPLACEwithTaskId` to `task-editor` if task to edit is new/
+@NOTE change `task-REPLACEwithPostTypeID-edit` to `task-new` if task to edit is new/
 
+For board to render for new tasks, feel free to copy paste if needed. This board will have the exact markup structure but attributes will change, particularly these on the `.board` block:
+		id => `task-new-edit` // feel free to change as fit
+
+		There will be comments along the way as well
  -->
 
-<div id="task-editor-REPLACEwithTaskId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-max-width="1240px">
-
-
-	<form method="get" class="dashboard-board-column-layout-container  background-theme-contrast">
-		<div class="dashboard-board-partition dashboard-board-column-layout-main  background-theme">
-			<div class="container">
-
-
-				<!-- Title -->
-					<div class="task-heading">
-						<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-							<label for="task-title-REPLACEwithTaskId" class="input-label sr-only">Title</label>
-							<input type="text" placeholder="Enter title" id="task-title-REPLACEwithTaskId" name="task-title-REPLACEwithTaskId" class=" input input-single-line input-large">
-						</div>
-						
+<div id="task-REPLACEwithPostTypeID-edit" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-max-width="1240px">
+	<?php app_get_component('components/boards-task-form') ?>
+</div>
 
 
 
+<!-- ADD -->
+<div id="task-new" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-max-width="1240px">
 
-					</div>
-					
-				<!-- Description -->
-					<div class="task-description">
-						<!-- @NOTE use tinymce here -->
-						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+	<!-- Shares the same markup structure almost with edit. commented out so front end demo can work but you get the picture -->
+	<?php //app_get_component('components/boards-task-form') ?>
 
 
-							<label for="task-body-REPLACEwithTaskId" class="input-label sr-only">Description</label>
-							<textarea name="task-body-REPLACEwithTaskId" id="task-body-REPLACEwithTaskId" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
-						</div>
-					</div>
-
-					<!-- @NOTE .task-time-meta is not needed for now if not possible to program yet. ok to comment out for now -->
-					<div class="task-time-meta">
-						<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
-							<div class="input-toggle">
-								<input type="checkbox" class="input" name="task-enable-delay-REPLACEwithTaskId" id="task-enable-delay-REPLACEwithTaskId">
-								<label for="task-enable-delay-REPLACEwithTaskId" class="input-label input-toggle-label">
-									Delay task requests
-								</label>
-							</div>
-						</div>
-
-						<!-- 
-
-						@NOTE
-							.flex-grid
-								classes to add
-									`input-disabled` => when input[name=task-enable-delay] is checked
-						-->
-						<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-							<div class="flex-col-xs-12  flex-col-md-8">
-								<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
-									<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
-
-									<!-- @NOTE @DYNAMIC : update text to the value set to tthe input field -->
-										<span class="task-delay-date-value">
-											<span class="REPLACE">
-												Saturday, April 20, 2069
-											</span>
-										</span>
-
-										<i class="symbol symbol-arrow-down color-primary"></i>
-									</button>
-									<div class="dropdown dropdown-top-flush dropdown-left no-padding">
-										<input type="text" class="input-calendar border-color-transparent" name="task-delay-date-REPLACEwithTaskId" id="task-delay-date-REPLACEwithTaskId">
-									</div>
-								</div>
-							</div>
-							<div class="flex-col-xs-12  flex-col-md-4">
-
-								<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-									<label for="task-delay-time-REPLACEwithTaskId" class="input-label sr-only">Time</label>
-									<input type="time" placeholder="Enter title" id="task-delay-time-REPLACEwithTaskId" name="task-delay-time-REPLACEwithTaskId" class="input-round input input-single-line">
-								</div>
-							</div>
-						</div>
-
-
-
-						<hr>
-					</div>
-
-
-				<!-- Attachments -->
-					<div class="task-attachments">
-					<div class="flex-grid flex-grid-no-gutter justify-content-space-between align-items-center">
-
-
-						<div class="flex-col-xs-6">
-							<h4 class="no-margin-y">
-								Attachments
-							</h4>
-						</div>
-
-
-						<div class="flex-col-xs-6 text-align-right">
-							<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
-						</div>
-					</div>
-					
-						<!-- @if attachments have rows -->
-							<?php app_get_component('components/attachment-grid-modify'); ?>
-							
-							<?php app_get_component('components/attachment-field'); ?>
-						
-						
-					</div>
-					
-			</div>
-		</div>
-		<div class="dashboard-board-partition dashboard-board-column-layout-side">
-			<div class="container container-wide">
-
-				<div class="module-grid">
-					<!-- Toolbar  -->
-					<?php app_get_component('components/toolbar-side-edit') ?>
-
-					<!-- Team Info -->
-					<?php app_get_component('components/module-side-team-edit') ?>
-
-					<!-- Time Tracker -->
-					<?php app_get_component('components/module-side-time-edit') ?>
-
-					<!-- Categries Boards/Tags -->
-					<?php app_get_component('components/module-side-flux-edit') ?>
-
-					<!-- Followers/Wiki/Reminders -->
-					<?php app_get_component('components/module-side-followers-edit') ?>
-				</div>
-
-			</div>
-		</div>
-	</form>
+				<!-- @PLACEHOLDER -->
+					<pre>DO NOT COPY THIS SECTION<br><br><br>View <a href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Form render on edit board</a></pre>
 
 </div>

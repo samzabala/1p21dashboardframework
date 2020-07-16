@@ -3607,7 +3607,7 @@
 			<p>note: all have btn-group-responsive on them because the buttons are a LOT and in context should wrap into a column on mobile</p>
 
 
-			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
+			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive btn-group-toggle-allow-no-active">
 
 					<button type="button" class="active btn btn-default"> butt</button>
 					<button type="button" class="btn btn-default">  Butt </button>

@@ -7,23 +7,23 @@
 					<h5 class="no-margin-y">Workflux Boards</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-flux-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+					<a href="#task-side-flux-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
 
 	
 		
-		<div id="task-side-flux-view-REPLACEwithTaskId" class="accordion open" data-accordion-change-hash="false">
+		<div id="task-side-flux-view" class="accordion open" data-accordion-change-hash="false">
 	
 			<!-- @if hasteam leads -->
-			<div class="task-fluxboards">
+			<div class="task-workflux">
 
 				<!-- @LOOP component -->
-				<?php app_get_component('components/profile-fluxboard-titled') ?>
+				<?php app_get_component('components/profile-workflux-titled') ?>
 					<!-- @PLACEHOLDER: DELETE WHEN READY -->
 					<?php for($i=1; $i<2; $i++){ ?>
-						<?php app_get_component('components/profile-fluxboard-titled'); ?>
+						<?php app_get_component('components/profile-workflux-titled'); ?>
 					<?php } ?>
 			</div>
 					
@@ -33,7 +33,7 @@
 
 				<!-- @if user can edit task -->
 					<br>
-					<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add to boards.</a>
+					<a class="color-inherit" href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add to boards.</a>
 			</p>
 		</div>
 
@@ -47,14 +47,14 @@
 					<h5 class="no-margin-y">Label &amp; Tags</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-tags-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+					<a href="#task-side-tags-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
 
 	
 		
-		<div id="task-side-tags-view-REPLACEwithTaskId" class="accordion open" data-accordion-change-hash="false">
+		<div id="task-side-tags-view" class="accordion open" data-accordion-change-hash="false">
 			<!-- @if has tags -->
 				<br>
 				<div class="task-tags">
@@ -125,7 +125,7 @@
 
 					<!-- @if user can edit task -->
 						<br>
-						<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add to add tags.</a>
+						<a class="color-inherit" href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add tags.</a>
 				</p>
 		</div>
 

@@ -4,7 +4,7 @@
 >
 
 	<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y">
-		<div class="flex-child flex-1-1 flex-xs align-items-center">
+		<div class="flex-child flex-xs align-items-center">
 			<!-- @if task is not marked as complete yet -->
 				<a href="#" class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit color-success-hover">
 					<div class="toolbar-tile">
@@ -13,8 +13,9 @@
 						</span>
 					</div>
 					<div class="toolbar-tile flex-1-1 ">
+						<!-- REPLACEpt => either project or task depending on which template it is included to -->
 						<span class="btn-no-shadow btn btn-small">
-								Mark task complete
+								Mark REPLACEpt as complete
 						</span>
 					</div>
 				</a>
@@ -28,7 +29,7 @@
 						</div>
 						<div class="toolbar-tile">
 							<span class="flex-1-1 btn-no-shadow btn">
-								Task marked complete
+								Marked REPLACEpt complete
 							</span>
 						</div>
 					</span>
@@ -45,9 +46,9 @@
 						<li>
 							<a
 								class="color-inherit color-primary-hover js-edit-time-record"
-								href="#task-editor-REPLACEwithTaskId"
+								href="#task-REPLACEwithPostTypeID-edit"
 								data-toggle="board"
-								data-record-id="REPLACEwithTaskId">
+								data-record-id="REPLACEwithPostTypeID">
 									Edit
 							</a>
 						</li>
@@ -55,8 +56,8 @@
 							<a
 								href="#"
 								class="color-inherit color-primary-hover js-edit-time-record"
-								data-record-id="REPLACEwithTaskId"
-								data-record-idx="REPLACEwithTaskIdX">
+								data-record-id="REPLACEwithPostTypeID"
+								data-record-idx="REPLACEwithPostTypeIDX">
 									Delete
 							</a>
 						</li>

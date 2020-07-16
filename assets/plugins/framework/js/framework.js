@@ -742,13 +742,17 @@
 			}
 
 			if (
-				triggerer
-					.closest(`.${prefix}-group-toggle-multiple`)
-				&& selectorSiblings
-					.filter((butt) => {
-						return butt.classList.contains('active');
-					})
-						.length > 0
+				(
+					triggerer
+						.closest(`.${prefix}-group-toggle-multiple`)
+					&& selectorSiblings
+						.filter((butt) => {
+							return butt.classList.contains('active');
+						})
+							.length > 0
+				)
+				|| triggerer
+					.closest(`.${prefix}-group-toggle-allow-no-active`)
 			) {
 				triggerer.classList.toggle('active');
 
@@ -792,8 +796,8 @@
 			const selector = `.${toggleMode}`,
 				toggledClass = `.${toggleMode}`
 					.replace('-open', '')
-					.replace('-close', '')
-					|| null;
+					.replace('-close', ''),
+				classToSearch = toggledClass ? toggledClass.replace('.', '') : null;
 
 			let toReturn = null;
 
@@ -802,13 +806,21 @@
 					triggerer.hasAttribute('href')
 					&& triggerer.getAttribute('href') !== ''
 					&& triggerer.getAttribute('href') !== '#'
+					&& document.querySelector(
+						triggerer.getAttribute('href')
+					).classList.contains(classToSearch)
 				) {
+					// console.warn('toggle found by href');
 					toReturn = document.querySelector(triggerer.getAttribute('href'));
 
 				} else if (
 					triggerer.hasAttribute('data-href')
 					&& triggerer.getAttribute('data-href') !== ''
+					&& document.querySelector(
+						triggerer.getAttribute('data-href')
+					).classList.contains(classToSearch)
 				) {
+					// console.warn('toggle found by data-href');
 					toReturn = document.querySelector(triggerer.getAttribute('data-href'));
 
 				} else if (
@@ -817,6 +829,7 @@
 						.parentNode
 						.closest(`[data-toggle="${toggleMode}"]`)
 				) {
+					// console.warn('toggle searching closest data-toggle');
 					toReturn = _.getTheToggled(
 						triggerer.parentNode.closest(`[data-toggle="${toggleMode}"]`),
 						toggleMode
@@ -826,6 +839,7 @@
 					toggleMode
 					&& triggerer.parentNode.classList.contains('input-group')
 				) {
+					// console.warn('toggle trigger was in input group');
 					toReturn = _.getTheToggled(
 						triggerer.parentNode,
 						toggleMode
@@ -835,6 +849,7 @@
 					toggleMode
 					&& triggerer.parentNode.classList.contains('btn-group')
 				) {
+					// console.warn('toggle trigger was in btn group');
 					toReturn = _.getTheToggled(
 						triggerer.parentNode,
 						toggleMode
@@ -844,6 +859,7 @@
 					let possibleSiblings = triggerer.nextElementSibling;
 					while (possibleSiblings) {
 						if (possibleSiblings.matches(selector)) {
+							// console.warn('toggle trigger anybody whos a sibling');
 							return possibleSiblings;
 						}
 						possibleSiblings =
@@ -857,14 +873,16 @@
 					&& document.querySelector(window.location.hash)
 					&& document
 						.querySelector(window.location.hash)
-						.classList.contains(toggledClass.replace('.', ''))
+						.classList.contains(classToSearch)
 				) {
+					// console.warn('no trigger but found the hash is a matching toggle');
 					toReturn = document.querySelector(window.location.hash);
 				}
 			}
 
 			if (!toReturn) {
 				//look if theres an ancestor it can toggle. last prioroty
+				// console.warn('no trigger so looking for an ancestor');
 				switch (toggleMode) {
 					case 'dropdown':
 					case 'modal':
@@ -876,6 +894,7 @@
 							&& toggleMode
 							&& triggerer.parentNode.closest(toggledClass)
 						) {
+							// console.log('found ancestor');
 							toReturn = triggerer.parentNode.closest(
 								toggledClass
 							);

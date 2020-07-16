@@ -624,12 +624,18 @@ window.jQuery && jQuery.noConflict();
 			}
 
 			if (
-				triggerer
-					.closest(`.${prefix}-group-toggle-multiple`)
-						.length
-				&& triggerer
-					.siblings('.active')
-						.length > 0
+				(
+					triggerer
+						.closest(`.${prefix}-group-toggle-multiple`)
+							.length
+					&& triggerer
+						.siblings('.active')
+							.length > 0
+				)
+				|| triggerer
+				.closest(`.${prefix}-group-toggle-allow-no-active`)
+					.length
+					
 			) {
 				triggerer.toggleClass('active');
 
@@ -677,8 +683,8 @@ window.jQuery && jQuery.noConflict();
 			const selector = `.${toggleMode}`,
 				toggledClass = `.${toggleMode}`
 						.replace('-open', '')
-						.replace('-close', '')
-						|| null;
+						.replace('-close', ''),
+			classToSearch = toggledClass ? toggledClass.replace('.', '') : null;
 
 			let toReturn = null;
 
@@ -687,10 +693,18 @@ window.jQuery && jQuery.noConflict();
 					triggerer.attr('href')
 					&& triggerer.attr('href') !== ''
 					&& triggerer.attr('href') !== '#'
+					&& $(triggerer.attr('href'))
+						.hasClass(classToSearch)
 				) {
+					// console.warn('toggle found by href');
 					toReturn = $(triggerer.attr('href'));
 
-				} else if (triggerer.attr('data-href')) {
+				} else if (
+					triggerer.attr('data-href')
+					&& $(triggerer.attr('data-href'))
+						.hasClass(classToSearch)
+				) {
+					// console.warn('toggle found by data-href');
 					toReturn = $(triggerer.attr('data-href'));
 
 				} else if (
@@ -699,6 +713,7 @@ window.jQuery && jQuery.noConflict();
 						.parent()
 						.closest(`[data-toggle="${toggleMode}"]`).length
 				) {
+					// console.warn('toggle searching closest data-toggle');
 					toReturn = _.getTheToggled(
 						triggerer.closest(`[data-toggle="${toggleMode}"]`),
 						toggleMode
@@ -708,6 +723,7 @@ window.jQuery && jQuery.noConflict();
 					toggleMode
 					&& triggerer.parent('.input-group').length
 				) {
+					// console.warn('toggle trigger was in input group');
 					toReturn = _.getTheToggled(
 						triggerer.parent('.input-group'),
 						toggleMode
@@ -717,31 +733,36 @@ window.jQuery && jQuery.noConflict();
 					toggleMode
 					&& triggerer.parent('.btn-group').length
 				) {
+					// console.warn('toggle trigger was in btn group');
 					toReturn = _.getTheToggled(
 						triggerer.parent('.btn-group'),
 						toggleMode
 					);
 
 				} else if (triggerer.next(selector).first().length) {
+					// console.warn('toggle trigger is prev sibling');
 					toReturn = triggerer.next(selector).first();
 
 				} else if (triggerer.siblings(selector).first().length) {
+					// console.warn('toggle trigger anybody whos a sibling');
 					toReturn = triggerer.siblings(selector).first();
 				}
 			} else {
 				if (
 					window.location.hash !== ''
-					&& $(window.location.hash).length > -1
+					&& $(window.location.hash).length
 					&& $(window.location.hash).hasClass(
-						toggledClass.replace('.', '')
+						classToSearch
 					)
 				) {
+					// console.warn('no trigger but found the hash is a matching toggle');
 					toReturn = $(window.location.hash);
 				}
 			}
 
-			if (!toReturn) {
+			if (!toReturn || !toReturn.length) {
 				//look if theres an ancestor it can toggle. last prioroty
+				// console.warn('no trigger so looking for an ancestor');
 				switch (toggleMode) {
 					case 'dropdown':
 					case 'modal':
@@ -753,6 +774,8 @@ window.jQuery && jQuery.noConflict();
 							&& toggleMode
 							&& triggerer.parent().closest(toggledClass).length
 						) {
+							
+							// console.warn('found ancestor');
 							toReturn = triggerer
 								.parent()
 								.closest(toggledClass);
@@ -760,6 +783,7 @@ window.jQuery && jQuery.noConflict();
 						break;
 				}
 			}
+
 
 			if(toReturn && toReturn.length) {
 				return toReturn;
@@ -2161,8 +2185,6 @@ window.jQuery && jQuery.noConflict();
 		frameWork[subcom] = frameWork[subcom] || {};
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
-
-		console.log('hash fuck',window.location.hash);
 
 		if(contentWrap || !window.location.hash){
 			frameWork.destroyModal(null, subcom);

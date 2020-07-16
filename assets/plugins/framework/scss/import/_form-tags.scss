@@ -171,11 +171,9 @@ $prefix: '.input';
 					}
 
 					&-text {
+						@extend %for-text-ellipsis;
 						max-width: 10em;
 						cursor:pointer;
-						white-space: nowrap!important;
-						overflow: hidden!important;
-						text-overflow: ellipsis!important;
 					}
 
 					&-close {

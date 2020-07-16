@@ -665,22 +665,25 @@
 				overflow-wrap: break-word!important;
 			}
 
-			&-ellipsis {
+			@at-root %for-text-ellipsis  {
+
 				/* cut overflowing single line to ellipsis */
 				white-space: nowrap!important;
 				overflow: hidden!important;
 				text-overflow: ellipsis!important;
 				/* gotta be block otherwise shit wont happen */
+			}
+
+			&-ellipsis {
+				@extend %for-text-ellipsis;
 				display:block;
 				max-width:100%!important;
 
 				&-multiple {
-					white-space: normal!important;
-					text-overflow: ellipsis!important;
+					@extend %for-text-ellipsis;
 					display: -webkit-box!important;
 					-webkit-line-clamp: $body-ellipsis-multiple-factor!important;
 					-webkit-box-orient: vertical!important;
-					overflow: hidden!important;
 					height: calc((#{$calculated-body-single-line}) * #{$body-ellipsis-multiple-factor});
 
 					#{$prefix}-leading-compact &,

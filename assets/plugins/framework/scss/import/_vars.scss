@@ -379,7 +379,7 @@
 		$tabs-text-transform: none !default;
 		$tabs-transition-duration: $transition-duration-base !default;
 		
-		$tabs-color: rgba($brand-color-neutral,.75) !default;
+		$tabs-color: $brand-color-neutral !default;
 			$tabs-color-inverse: $tabs-color !default;
 
 		$tabs-border-width: 1px !default;
@@ -742,7 +742,7 @@
 	// highlight
 
 		$highlight-height: $body-font-size * 1.75 !default;
-		$highlight-padding-x: 10px !default;
+		$highlight-padding-x: 5px !default;
 		$highlight-margin-x: 0 !default;
 		$highlight-font-size: 13px !default;
 		$highlight-font-weight: inherit !default;

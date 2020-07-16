@@ -4,7 +4,6 @@
 <div class="modal" data-modal-max-width="600px">
 
 	<!-- @NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of tags filter components -->
-	<input name="filter-tags-to-add-REPLACEwithCorrespondingInputFieldName" type="hidden">
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input-label sr-only">Search Tags</label>
@@ -31,7 +30,7 @@
 					3: currwently active member
 
 			-->
-			<a href=#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+			<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 				<span class="flex-1-1">
 					<span class="REPLACE">Tag Text</span>
 				</span>
@@ -42,7 +41,7 @@
 				<!-- placeholder -->
 				<?php for($i=1; $i<20; $i++){ $j = 1; ?>
 							
-					<a href=#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+					<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 						<span class="flex-1-1">
 							<span class="REPLACE">Tag Te<?php while($j <= $i): echo 'e'; $j++; endwhile; ?>xt</span>
 						</span>
@@ -68,10 +67,10 @@
 			<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tag</label>
 			<div class="input-group input-group-block input-group-horizontal p">
 
-				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="ffilter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Type a new tag" />
+				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Type a new tag" />
 				<button class="btn btn-primary">Create tag</button>
 			</div>
 		</div>
 
-	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block">Done</div>
+		<button data-toggle="modal-close" class="btn btn-primary-outline btn-block" onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Done</button>
 </div>

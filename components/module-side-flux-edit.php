@@ -7,19 +7,19 @@
 				<h5 class="input-label">Workflux Boards</h5>
 			</div>
 			<div class="flex-child">
-				<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
-				<?php app_get_component('components/modal-fluxboards-multiple'); ?>
+
+				<input id="REPLACEMODE-task-workflux-id" name="REPLACEMODE-task-workflux-id" type="hidden" />
+				<a href="#" data-toggle="modal" data-modal-title="Workflux settings" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
+				<?php app_get_component('components/modal-workflux-repeater'); ?>
 			</div>
 		</div>
 
-		<input id="task-fluxboard-REPLACEwithTaskId" name="task-fluxboard-REPLACEwithTaskId" type="hidden" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type or select project..." />
-
-		<div class="task-fluxboards">
+		<div class="task-workflux">
 			<!-- @LOOP component -->
-				<?php app_get_component('components/profile-fluxboard-titled-for-edit') ?>
+				<?php app_get_component('components/profile-workflux-titled-for-edit') ?>
 					<!-- @PLACEHOLDER: DELETE WHEN READY -->
 					<?php for($i=1; $i<2; $i++){ ?>
-						<?php app_get_component('components/profile-fluxboard-titled-for-edit'); ?>
+						<?php app_get_component('components/profile-workflux-titled-for-edit'); ?>
 					<?php } ?>
 		</div>
 
@@ -31,11 +31,11 @@
 				<h5 class="input-label">Labels &amp; Tags</h5>
 			</div>
 			<div class="flex-child">
-				<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
+				<input id="REPLACEMODE-task-tags" name="REPLACEMODE-task-tags" type="hidden" />
+				<a href="#" data-toggle="modal" data-modal-title="Choose Tags"  class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
 				<?php app_get_component('components/modal-tags'); ?>
 			</div>
 		</div>
-		<input id="task-tags-REPLACEwithTaskId" name="task-tags-REPLACEwithTaskId" type="hidden" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type or select project..." />
 
 		<div class="task-tags">
 			<!--

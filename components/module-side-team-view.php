@@ -6,7 +6,7 @@
 					<h5 class="no-margin-y">Project</h5>
 				</div>
 				<div class="flex-child">
-					<a href="#task-side-team-view-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral open display-inline-block"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+					<a href="#task-side-team-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				</div>
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 				<span class="REPLACE">flux.1p21.io/project-name</span>
 			</a>
 		</p>
-		<div id="task-side-team-view-REPLACEwithTaskId" class="accordion open" data-accordion-change-hash="false">
+		<div id="task-side-team-view" class="accordion open" data-accordion-change-hash="false">
 
 
 
@@ -49,11 +49,11 @@
 
 						<!-- @if user can edit task -->
 						<br>
-						<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to add team leads.</a>
+						<a class="color-inherit" href="#task-editor" data-toggle="board">Edit task to add team leads.</a>
 					</p>
 
 
-			<hr>
+			<hr class="no-margin-bottom">
 
 
 			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
@@ -76,7 +76,7 @@
 
 								<!-- @if user can edit task -->
 								<br>
-								<a class="color-inherit" href="#task-editor-REPLACEwithTaskId" data-toggle="board">Edit task to assign</a>
+								<a class="color-inherit" href="#task-editor" data-toggle="board">Edit task to assign</a>
 							</span>
 					</p>
 

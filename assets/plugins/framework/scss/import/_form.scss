@@ -325,6 +325,7 @@ $prefix: '.input';
 	@at-root %for-form-input {
 
 		& {
+			@extend %for-anchor-reset-hover;
 			font: inherit;
 			color:inherit;
 			// vertical-align: middle;
@@ -439,7 +440,6 @@ $prefix: '.input';
 			max-width:100%;
 			@include type-set((
 				size: #{$calculated-input-font-size},
-				color:$input-color,
 				leading: #{ $calculated-input-line-height } ,
 				weight: $input-font-weight,
 				style: $input-font-style,
@@ -457,9 +457,26 @@ $prefix: '.input';
 			padding-bottom: $calculated-value-input-paddiny-y;
 			box-shadow: $input-box-shadow;
 
+			&,
+			&:hover,
+			&:focus,
+			&.focus,
+			&:active,
+			&.active {
+				color:$input-color;
+			}
+
 			.theme-inverse & {
-				color:$input-color-inverse;
 				background-color: $input-background-inverse;
+
+				&,
+				&:hover,
+				&:focus,
+				&.focus,
+				&:active,
+				&.active {
+						color:$input-color-inverse;
+				}
 			}
 
 
@@ -1139,7 +1156,14 @@ $prefix: '.input';
 		@at-root %for-form-input-color-#{$tag} {
 			& {
 		
-				color: $color;
+				&,
+				&:hover,
+				&:focus,
+				&.focus,
+				&:active,
+				&.active {
+					color:$color;
+				}
 				border-color: $color;
 				
 				@if type-of($color) == color && $color != transparent {

@@ -5,13 +5,13 @@
 				<h5 class="no-margin-y">TITLE</h5>
 			</div>
 			<div class="flex-child">
-				<a href="#task-side-followers-edit-REPLACEwithTaskId" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+				<a href="#task-side-followers-edit-REPLACEwithPostTypeID" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
 			</div>
 		</div>
 
 	
 		
-		<div id="task-side-followers-edit-REPLACEwithTaskId" class="accordion" data-accordion-change-hash="false">
+		<div id="REPLACEMODE-task-side-followers-edit-REPLACEwithPostTypeID" class="accordion" data-accordion-change-hash="false">
 		atin cu pung singsing
 		</div>
 	</div>
