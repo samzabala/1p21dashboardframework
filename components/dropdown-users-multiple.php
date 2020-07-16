@@ -1,20 +1,20 @@
 
 
 <!-- NOTE this field is only for searching valid users -->
-<div class="modal" data-modal-max-width="600px">
+<div class="dropdown dropdown-center-x no-padding" data-dropdown-width="100%">
 
 	<!-- @NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of user filter components -->
 	<input name="filter-ids-to-add-REPLACEwithCorrespondingInputFieldName" type="hidden">
 
-	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block input-no-radius">
 		<label for="filter-user-REPLACEwithCorrespondingInputFieldName" class="input-label sr-only">Search</label>
 		<!-- @NOTE
 			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="filter-user-REPLACEwithCorrespondingInputFieldName" name="filter-user-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for PLACEHOLDER" />
+		<input id="filter-user-REPLACEwithCorrespondingInputFieldName" name="filter-user-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line border-color-transparent" placeholder="Search for PLACEHOLDER" />
 	</div>
 
-	<div class="dashboard-list-group-thumbed list-group list-group-toggle-multiple list-group-toggle font-size-large">
+	<div class="dashboard-list-group-thumbed list-group list-group-toggle  list-group-toggle-multiple list-group-compact">
 		<!--
 			@NOTE
 			@dynamic @loop li 
@@ -52,5 +52,5 @@
 			<?php } ?>
 
 	</div>
-	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block">Done</div>
+	<button data-toggle="dropdown" class="btn btn-primary-outline btn-block border-color-transparent btn-no-radius">Done</button>
 </div>

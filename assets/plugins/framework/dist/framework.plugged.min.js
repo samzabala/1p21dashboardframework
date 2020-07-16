@@ -588,15 +588,16 @@ window.jQuery && jQuery.noConflict();
 			const idToGoTo = id !== '' ? `#${id}` : null;
 
 			if (idToGoTo) {
-				if (history.pushState) {
-					history.pushState(null, null, idToGoTo);
-				} else {
+				// if (history.pushState) {
+				// 	history.pushState(null, null, idToGoTo);
+				// } else {
 					location.hash = idToGoTo;
-				}
+				// }
 
 			} else {
 				const noHashURL = window.location.href.replace(/#.*$/, '');
-				window.history.pushState('', document.title, noHashURL);
+				// window.history.pushState('', document.title, noHashURL);
+				location.hash = '';
 			}
 		}
 	};
@@ -1610,6 +1611,13 @@ window.jQuery && jQuery.noConflict();
 				theUi.input = theUi.wrapper.children(`.${_.uiPrefix('tags')}input`);
 			}
 
+			if(inputTags.attr('placeholder')){
+				theUi.input.attr(
+					'data-placeholder',
+					inputTags.attr('placeholder')
+				);
+			}
+
 			//nearest fw-ui parent will actually do tgoggl for bby because baby cant stand up on its own
 			if (inputTags.attr('data-toggle')) {
 				theUi.input.attr(
@@ -2154,9 +2162,13 @@ window.jQuery && jQuery.noConflict();
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
 
-		if (contentWrap && subcom) {
+		console.log('hash fuck',window.location.hash);
 
+		if(contentWrap || !window.location.hash){
 			frameWork.destroyModal(null, subcom);
+		}
+
+		if (contentWrap && subcom) {
 
 			const arr = {
 				header:

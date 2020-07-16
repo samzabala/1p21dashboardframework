@@ -25,6 +25,17 @@ will separate dashboard and framework one the bois are readeh
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
 # For Cristian
+
+## As of 07-13-2020
+
+Workflow board components will now have their toggles and board bllock elements separated to allow more modularity
+eg:
+
+`board-track-time` => `board-track-time` and `board-track-time-toggle`
+
+`board-track-time` will contain only the board element while `board-track-time-toggle` will contain the toggle we see on `my-dash`
+
+
 These are classes that need to be found and replaced for framework 2.0.0
 * `btn-symbol-round` => `btn-round`
 * `btn-group-block` => `btn-block`

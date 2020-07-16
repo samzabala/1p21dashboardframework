@@ -1,5 +1,6 @@
 
 
+
 <!-- NOTE this field is only for searching valid users -->
 <div class="modal" data-modal-max-width="600px">
 
@@ -8,10 +9,7 @@
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<label for="filter-user-REPLACEwithCorrespondingInputFieldName" class="input-label sr-only">Search</label>
-		<!-- @NOTE
-			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
-		-->
-		<input id="filter-user-REPLACEwithCorrespondingInputFieldName" name="filter-user-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for PLACEHOLDER" />
+		<input id="filter-user-REPLACEwithCorrespondingInputFieldName" name="filter-user-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for workflux board" />
 	</div>
 
 	<div class="dashboard-list-group-thumbed list-group list-group-toggle-multiple list-group-toggle font-size-large">
@@ -31,8 +29,8 @@
 		
 		<a href=#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 			<span class="flex-1-1">
-				<?php app_get_component('components/profile-image-small-span') ?>
-				<span class="REPLACE">Profile Name</span>
+				<?php app_get_component('components/profile-fluxboard-image-small-span') ?>
+				<span class="REPLACE">Workflux Board Name</span>
 			</span>
 
 			<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
@@ -43,8 +41,8 @@
 						
 				<a href=#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 					<span class="flex-1-1">
-						<?php app_get_component('components/profile-image-small-span') ?>
-						<span class="REPLACE">Profile Name</span>
+						<?php app_get_component('components/profile-fluxboard-image-small-span') ?>
+						<span class="REPLACE">Workflux Board Name</span>
 					</span>
 
 					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>

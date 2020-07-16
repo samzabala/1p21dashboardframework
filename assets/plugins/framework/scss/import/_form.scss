@@ -155,11 +155,13 @@ $prefix: '.input';
 				case: $input-label-text-transform,
 			));
 			padding-right: 1rem;
-			display:inline-block;
+			margin-top:0;
+			margin-bottom:0;
 			padding-top: calc( (#{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
 			padding-bottom: calc( ( #{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
-			display: inline-flex;
-			align-items:center;
+			// display: inline-flex;
+			// align-items:center;
+			display:inline-block;
 	
 			.theme-inverse & {
 				color:$input-label-color-inverse;
@@ -585,6 +587,7 @@ $prefix: '.input';
 			}
 			&-height {
 				height: auto;
+				resize: both;
 				min-height: $calculated-input-height * $input-height-multiple-factor;
 	
 				&-large {
@@ -691,6 +694,10 @@ $prefix: '.input';
 				@extend %for-form-global-in-nav-custom;
 				padding-top: $calculated-value-input-paddiny-y-nav !important;
 				padding-bottom: $calculated-value-input-paddiny-y-nav !important;
+			}
+
+			#{$prefix}-no-radius & {
+				@extend %for-no-radius !optional;
 			}
 	
 			#{$prefix}-group & {
@@ -897,8 +904,10 @@ $prefix: '.input';
 			display:flex;
 			width:100%;
 
-			> #{$prefix},
-			> .btn:not(.btn-symbol) {
+			> #{$prefix}
+			// ,
+			// > .btn:not(.btn-symbol)
+			{
 				flex: 1 1;
 			}
 

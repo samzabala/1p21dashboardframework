@@ -91,7 +91,7 @@ $prefix: '.input';
 
 				&#{&}-multiple {
 					@extend %for-form-input-boxy-multiple !optional;
-					// @extend %for-form-input-boxy-multiple-height !optional;
+					@extend %for-form-input-boxy-multiple-height !optional;
 					overflow:hidden;
 
 				}
@@ -207,12 +207,15 @@ $prefix: '.input';
 					padding-left:  $calculated-input-tags-padding-x;
 
 					&:empty::before {
-						opacity: .5;
-						content: attr(placeholder);
+						opacity:  $input-placeholder-opacity;
+						content: attr(data-placeholder);
+					}
+
+					&:first-child {
+						padding-left:0;
 					}
 
 					&:last-child {
-						padding-right:0;
 						flex: 1 1 auto;
 
 						&:first-child {

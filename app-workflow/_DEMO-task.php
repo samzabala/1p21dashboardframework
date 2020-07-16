@@ -13,4 +13,5 @@
 <?php
 app_get_component('components/boards-project');
 app_get_component('components/boards-task');
+app_get_component('components/board-track-time');
 ?>
