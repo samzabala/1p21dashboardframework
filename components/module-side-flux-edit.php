@@ -7,10 +7,10 @@
 				<h5 class="input-label">Workflux Boards</h5>
 			</div>
 			<div class="flex-child">
-
-				<input id="REPLACEMODE-task-workflux-id" name="REPLACEMODE-task-workflux-id" type="hidden" />
-				<a href="#" data-toggle="modal" data-modal-title="Workflux settings" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
-				<?php app_get_component('components/modal-workflux-repeater'); ?>
+				<input id="REPLACEMODE-task-workfluxs-id" name="REPLACEMODE-task-workfluxs-id" type="hidden" />
+				<input id="REPLACEMODE-task-workfluxs-list" name="REPLACEMODE-task-workfluxs-list" type="hidden" />
+				<a href="#" data-toggle="modal" data-modal-title="Add to Workflux" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
+				<?php app_get_component('components/modal-workflux'); ?>
 			</div>
 		</div>
 

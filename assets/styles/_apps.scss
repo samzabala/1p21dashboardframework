@@ -340,11 +340,16 @@ $sidebar-base-slim-mobile: 60px;
 
 	&-list-group-thumbed {
 		overflow-y:auto;
-		max-height: em(564px/($body-font-size * 1.5));
+		max-height: rem(564px/($body-font-size * 1.5));
 
+		&#{&}-shorter {
+			max-height: rem((564px/2)/($body-font-size * 1.5));
+		}
+		
+		&#{&}-normal,
 		.dropdown & {
 			
-		max-height: em(250px/($body-font-size * 1.5));
+			max-height: rem(250px/($body-font-size * 1.5));
 		}
 	}
 

@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="flex-col-xs-3 text-align-right">
-			<a href="#" class="btn btn-symbol btn-small btn-link"><i class="symbol symbol-close"></i></a>
+			<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 		</div>
 	</div>
 </div>

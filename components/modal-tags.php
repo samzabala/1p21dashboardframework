@@ -60,17 +60,17 @@
 		<!-- @if add tag successful and could be done async-->
 			<div class="alert alert-success p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
-				The tag `<span class="REPLACE">New Tag Text</span>` has been added
+				The tag/s `<span class="REPLACE">New Tags Text</span>` has been added
 			</div>
 
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 			<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tag</label>
 			<div class="input-group input-group-block input-group-horizontal p">
 
-				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Type a new tag" />
-				<button class="btn btn-primary">Create tag</button>
+				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-tags" placeholder="Type a new tag" />
+				<button class="btn btn-primary">Create tags</button>
 			</div>
 		</div>
 
-		<button data-toggle="modal-close" class="btn btn-primary-outline btn-block" onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Done</button>
+		<button data-toggle="modal-close" class="btn btn-primary-outline btn-block" onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Set Tags</button>
 </div>

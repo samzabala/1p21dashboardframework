@@ -91,6 +91,11 @@
 
 			<h5 class="input-label">Team Leads</h5>
 			<div class="task-leads">
+
+			<!-- @NOTE if using the design based layout, add hidden fields here -->
+				<input id="REPLACEMODE-task-leads-id" name="REPLACEMODE-task-leads-id" type="hidden" value="" />
+				<input id="REPLACEMODE-task-leads-title" name="REPLACEMODE-task-leads-title" type="hidden" value="" />
+			
 				<!-- @LOOP component -->
 					<?php app_get_component('components/profile-titled-for-edit') ?>
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -98,9 +103,22 @@
 							<?php app_get_component('components/profile-titled-for-edit'); ?>
 						<?php } ?>
 			</div>
+
+			<!--
+				NOTE: there's a layout based on the design with minor tweaks and one that full-proofs the profile and its related title. Feel free to use which one is fit for the back-end setup
+			-->
+			<!-- design based layout -->
+			<div>
+				<a href="#" data-toggle="modal" data-modal-title="Add Team Lead" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
+				<?php app_get_component('components/modal-team-leads'); ?>
+			</div>
+
+
+
+			<!-- db consideration layout -->
 			<div>
 				<a href="#" data-toggle="modal" data-modal-title="Choose Team Leads"  class="btn btn-primary-outline btn-small">Team Members <i class="symbol symbol-edit"></i></a>
-				<?php app_get_component('components/modal-team-leads'); ?>
+				<?php app_get_component('components/modal-team-leads-alt'); ?>
 			</div>
 		</div>
 

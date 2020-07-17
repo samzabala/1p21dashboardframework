@@ -3951,7 +3951,7 @@ table {
 /* it */
 .asset {
   max-width: 100%;
-  width: 190px;
+  width: 220px;
   color: inherit;
   display: inline-block;
   position: relative; }
@@ -8751,9 +8751,11 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 
 .dashboard-list-group-thumbed {
   overflow-y: auto;
-  max-height: 26.8571428571em; }
-  .dropdown .dashboard-list-group-thumbed {
-    max-height: 11.9047619048em; }
+  max-height: 26.8571428571rem; }
+  .dashboard-list-group-thumbed.dashboard-list-group-thumbed-shorter {
+    max-height: 13.4285714286rem; }
+  .dashboard-list-group-thumbed.dashboard-list-group-thumbed-normal, .dropdown .dashboard-list-group-thumbed {
+    max-height: 11.9047619048rem; }
 
 .dashboard-list-group-text {
   overflow-y: auto;

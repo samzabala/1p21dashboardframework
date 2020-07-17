@@ -1,5 +1,5 @@
 
-<div class="flex-grid justify-content-space-around">
+<div class="flex-grid justify-content-flex-start">
 	
 	<!-- @LOOP component .flex-child  -->
 		<!-- <div class="flex-child"> -->
