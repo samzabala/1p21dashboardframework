@@ -1,134 +1,138 @@
 <div class="module">
 	<div class="module-content">
 
-		<div class="h5 no-margin-top">
-			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-				<div class="flex-child">
-					<h5 class="no-margin-y">Workflux Boards</h5>
-				</div>
-				<div class="flex-child">
-					<a href="#task-side-flux-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+		<!-- WORKFLUX BOARDS -->
+			<div class="h5 no-margin-top">
+				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+					<div class="flex-child">
+						<h5 class="no-margin-y">Workflux Boards</h5>
+					</div>
+					<div class="flex-child">
+						<a href="#task-side-flux-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+					</div>
 				</div>
 			</div>
-		</div>
 
-	
 		
-		<div id="task-side-flux-view" class="accordion open" data-accordion-change-hash="false">
-	
-			<!-- @if hasteam leads -->
-			<div class="task-workflux">
+			
+			<div id="task-side-flux-view" class="accordion open" data-accordion-change-hash="false">
+		
+				<!-- @if hasteam leads -->
+				<div class="task-workflux">
 
-				<!-- @LOOP component -->
-				<?php app_get_component('components/profile-workflux-titled') ?>
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
-					<?php for($i=1; $i<2; $i++){ ?>
-						<?php app_get_component('components/profile-workflux-titled'); ?>
-					<?php } ?>
+					<!-- @LOOP component -->
+					<?php app_get_component('components/profile-workflux-titled') ?>
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+						<?php for($i=1; $i<2; $i++){ ?>
+							<?php app_get_component('components/profile-workflux-titled'); ?>
+						<?php } ?>
+				</div>
+						
+				<!-- @else -->
+					<p>
+						<span class="color-neutral font-style-italic">
+							No associated workflux boards.
+						</span>
+
+						<!-- @if user can edit task -->
+							<br>
+							<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add to boards.</a>
+					</p>
 			</div>
-					
-			<!-- @else -->
-			<p class="color-neutral font-style-italic">
-				No associated workflux boards.
-
-				<!-- @if user can edit task -->
-					<br>
-					<a class="color-inherit" href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add to boards.</a>
-			</p>
-		</div>
 
 		<hr>
 
 
-
-		<div class="h5 no-margin-y">
-			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-				<div class="flex-child">
-					<h5 class="no-margin-y">Label &amp; Tags</h5>
-				</div>
-				<div class="flex-child">
-					<a href="#task-side-tags-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+		<!-- TAGS -->
+			<div class="h5 no-margin-y">
+				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+					<div class="flex-child">
+						<h5 class="no-margin-y">Label &amp; Tags</h5>
+					</div>
+					<div class="flex-child">
+						<a href="#task-side-tags-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+					</div>
 				</div>
 			</div>
-		</div>
 
-	
 		
-		<div id="task-side-tags-view" class="accordion open" data-accordion-change-hash="false">
-			<!-- @if has tags -->
-				<br>
-				<div class="task-tags">
-					<!--
-						AVAILABLE TAG SCHEMES:
-						tag-default
-						tag-primary
-						tag-secondary
-						tag-accent
-						tag-neutral
-						tag-success
-						tag-caution
-						tag-error
-						tag-intensity-1
-						tag-intensity-2
-						tag-intensity-3
-						tag-intensity-4
-						tag-intensity-5
-					-->
+			
+			<div id="task-side-tags-view" class="accordion open" data-accordion-change-hash="false">
+				<!-- @if has tags -->
+					<br>
+					<div class="task-tags">
 						<!--
-							@NOTE @dynamic class => tag-COLORSCHEME
-							we may need to coordinate to have colors associated with certain tags.
-							I would not recommend creating new classes by adding colors to the ui's color scheme so we can reduce the need of increasing the stylesheet's file size further.
-							We can have an array of random colors much like the setup for the scoreboard charts and set them as inline background-color for `tag-default`
-							If it gets too tedious, we can always just use `tag-primary` for all tags as fallback
+							AVAILABLE TAG SCHEMES:
+							tag-default
+							tag-primary
+							tag-secondary
+							tag-accent
+							tag-neutral
+							tag-success
+							tag-caution
+							tag-error
+							tag-intensity-1
+							tag-intensity-2
+							tag-intensity-3
+							tag-intensity-4
+							tag-intensity-5
 						-->
+							<!--
+								@NOTE @dynamic class => tag-COLORSCHEME
+								we may need to coordinate to have colors associated with certain tags.
+								I would not recommend creating new classes by adding colors to the ui's color scheme so we can reduce the need of increasing the stylesheet's file size further.
+								We can have an array of random colors much like the setup for the scoreboard charts and set them as inline background-color for `tag-default`
+								If it gets too tedious, we can always just use `tag-primary` for all tags as fallback
+							-->
 
 
-					<span class="p tag tag-primary">
-						<span class="tag-text">
-							<span class="REPLACE">Tag Text</span>
+						<span class="p tag tag-primary">
+							<span class="tag-text">
+								<span class="REPLACE">Tag Text</span>
+							</span>
 						</span>
-					</span>
 
-					
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-							<?php 
-							$abilabol_tag = array(
-								'tag-default',
-								'tag-primary',
-								'tag-secondary',
-								'tag-accent',
-								'tag-neutral',
-								'tag-success',
-								'tag-caution',
-								'tag-error',
-								'tag-intensity-1',
-								'tag-intensity-2',
-								'tag-intensity-3',
-								'tag-intensity-4',
-								'tag-intensity-5',
-							);
-							?>
-							<?php for($i=1; $i<count($abilabol_tag); $i++){ ?>
-								<?php $j = 1;?>
-								<span class="p tag <?=$abilabol_tag[$i];?>">
-									<span class="tag-text">
-										<span class="REPLACE">Tag Te<?php while($j <= $i): echo 'e'; $j++; endwhile; ?>xt</span>
+						
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+								<?php 
+								$abilabol_tag = array(
+									'tag-default',
+									'tag-primary',
+									'tag-secondary',
+									'tag-accent',
+									'tag-neutral',
+									'tag-success',
+									'tag-caution',
+									'tag-error',
+									'tag-intensity-1',
+									'tag-intensity-2',
+									'tag-intensity-3',
+									'tag-intensity-4',
+									'tag-intensity-5',
+								);
+								?>
+								<?php for($i=0; $i<count($abilabol_tag); $i++){ ?>
+									<?php $j = 1;?>
+									<span class="p tag <?=$abilabol_tag[$i];?>">
+										<span class="tag-text">
+											<span class="REPLACE">Tag Te<?php while($j <= $i): echo 'e'; $j++; endwhile; ?>xt</span>
+										</span>
 									</span>
-								</span>
-							<?php } ?>
-				</div>
+								<?php } ?>
+					</div>
 
-					
-			<!-- @else -->
-				<p class="color-neutral font-style-italic">
-					No set tags.
+						
+				<!-- @else -->
+					<p>
+						<span class="color-neutral font-style-italic">
+							No set tags.
+						</span>
 
-					<!-- @if user can edit task -->
-						<br>
-						<a class="color-inherit" href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add tags.</a>
-				</p>
-		</div>
-
-
+						<!-- @if user can edit task -->
+							<br>
+							<a href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add tags.</a>
+					</p>
+			</div>
+			
 	</div>
 </div>

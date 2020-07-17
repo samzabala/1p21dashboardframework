@@ -17,7 +17,7 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
 		<h5 class="input-label">Sales Rep</h5>
 		<!-- @NOTE
-			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
+			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
 		<input id="REPLACEMODE-REPLACEwithPostType-lead-sales-rep-id" name="REPLACEMODE-REPLACEwithPostType-lead-sales-rep-id" type="hidden" />
 		
@@ -42,7 +42,7 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
 		<h5 class="input-label">Account Manager</h5>
 		<!-- @NOTE
-			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
+			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
 		<input id="REPLACEMODE-REPLACEwithPostType-lead-account-manager-id" name="REPLACEMODE-REPLACEwithPostType-lead-account-manager-id" type="hidden" />
 		
@@ -68,7 +68,7 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
 		<h5 class="input-label">Project Manager</h5>
 		<!-- @NOTE
-			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
+			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
 		<input id="REPLACEMODE-REPLACEwithPostType-lead-project-manager-id" name="REPLACEMODE-REPLACEwithPostType-lead-project-manager-id" type="hidden" />
 		
@@ -94,7 +94,7 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
 		<h5 class="input-label">Lead Designer</h5>
 		<!-- @NOTE
-			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
+			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
 		<input id="REPLACEMODE-REPLACEwithPostType-lead-designer-id" name="REPLACEMODE-REPLACEwithPostType-lead-designer-id" type="hidden" />
 		
@@ -121,7 +121,7 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
 		<h5 class="input-label">Lead Developer</h5>
 		<!-- @NOTE
-			replace placeholder with appropriate verbage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
+			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
 		<input id="REPLACEMODE-REPLACEwithPostType-lead-developer-id" name="REPLACEMODE-REPLACEwithPostType-lead-developer-id" type="hidden" />
 		

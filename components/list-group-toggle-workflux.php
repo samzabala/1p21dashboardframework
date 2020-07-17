@@ -1,37 +1,29 @@
-<ul class="dashboard-list-group-thumbed list-group list-group-toggle list-group-toggle-allow-no-active font-size-large">
-	<!--
-		@NOTE
-		@dynamic @loop li 
-			cclasses to add:
-				`display-none` => if doesnt contain input value string
+<div class="list-group list-group-toggle list-group-toggle-allow-no-active font-size-large">
+	<!-- @if workflux has rows or matchs -->
+		<a href="#" class="list-group-item flex-wrap align-items-center justify-content-space-between">
+			<span class="flex-1-1">
+				<?php app_get_component('components/profile-workflux-image-small-span') ?>
+				<span class="REPLACE">Workflux Board Name</span>
+			</span>
 
-
-			order by priority meta
-			1: alphabetical
-			2: string match to searchbar
-			3: currwently active member
-
-	-->
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			<?php app_get_component('components/profile-workflux-image-small-span') ?>
-			<span class="REPLACE">Workflux Board Name</span>
+			<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
 		</a>
 
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+			<!-- placeholder -->
+			<?php for($i=1; $i<10; $i++){ ?>
+				
+				<a href="#" class="list-group-item flex-wrap align-items-center justify-content-space-between">
+					<span class="flex-1-1">
+						<?php app_get_component('components/profile-workflux-image-small-span') ?>
+						<span class="REPLACE">Workflux Board Name</span>
+					</span>
 
-		<!-- placeholder -->
-		<?php for($i=1; $i<10; $i++){ ?>
-			
-			<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-				<a href="#" class="flex-1-1">
-					<?php app_get_component('components/profile-workflux-image-small-span') ?>
-					<span class="REPLACE">Workflux Board Name</span>
+					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
 				</a>
-
-				<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-			</li>
-		<?php } ?>
-
-</ul>
+			<?php } ?>
+			
+	<!-- @else -->
+		<span href="#" class="list-group-item list-group-item-no-interaction color-neutral font-style-italic">
+			No matching workflux boards available
+		</span>
+</div>

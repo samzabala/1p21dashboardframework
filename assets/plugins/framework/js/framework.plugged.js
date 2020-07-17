@@ -607,7 +607,15 @@ window.jQuery && jQuery.noConflict();
 		resetterClass = resetterClass || `${prefix}-group-toggle-reset`;
 		siblingSelector = siblingSelector || `.${prefix}`;
 
+		if(
+			triggerer.closest(prefix).length
+			&& !triggerer.hasClass(prefix)
+		){
+			triggerer = triggerer.closest(prefix);
+		}
+
 		if (triggerer) {
+			// fix the children bullshit shit
 			
 			triggerer
 				.siblings(`.${resetterClass}`)
@@ -2792,6 +2800,22 @@ window.jQuery && jQuery.noConflict();
 			}
 		);
 
+		$('body').on(
+			'click',
+			'.input-tags-ui .input-tags-ui-input',
+			(e) => {
+				const triggerer = $(e.target);
+
+				e.preventDefault();
+
+				if (!frameWork.isDisabled(triggerer)) {
+					setTimeout(function() {
+						triggerer.focus();
+					}, 0);
+				}
+			}
+		);
+
 		//blur bitch blurr
 		$('body').on(
 			'blur',
@@ -3069,6 +3093,7 @@ window.jQuery && jQuery.noConflict();
 			'focus',
 			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
 			(e) => {
+				console.log('pocus');
 				const uiTrigger = $(e.target);
 
 				if (frameWork.isDisabled(uiTrigger)) {
@@ -3098,6 +3123,7 @@ window.jQuery && jQuery.noConflict();
 			'blur',
 			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
 			(e) => {
+				console.log('blor');
 				const uiTrigger = $(e.target);
 
 				if (!frameWork.isDisabled(uiTrigger)) {

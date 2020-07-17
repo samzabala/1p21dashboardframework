@@ -304,12 +304,9 @@ $sidebar-base-slim-mobile: 60px;
 	}
 }
 
-// .body-modal-active {
-// 	overflow-y: hidden;
-//   }
-//   .body-modal-active .tox-tinymce-aux {
-// 	z-index: 99999 !important;
-//   }
+  .body-no-scroll .tox-tinymce-aux {
+	z-index: 99999 !important;
+  }
 
 
 #nav {
@@ -329,8 +326,22 @@ $sidebar-base-slim-mobile: 60px;
 .dashboard {
 
 	&-modal-gutterless {
-		.modal-popup {
-			padding:0;
+
+		&,
+		&-x {
+
+			.modal-popup {
+				padding-left:0;
+				padding-right:0;
+			}
+		}
+		
+		&,
+		&-y {
+			.modal-popup {
+				padding-top:0;
+				padding-bottom:0;
+			}
 		}
 	}
 
@@ -338,7 +349,7 @@ $sidebar-base-slim-mobile: 60px;
 		padding-left: 2em;
 	}
 
-	&-list-group-thumbed {
+	&-list-group-clip-thumbed {
 		overflow-y:auto;
 		max-height: rem(564px/($body-font-size * 1.5));
 
@@ -346,14 +357,13 @@ $sidebar-base-slim-mobile: 60px;
 			max-height: rem((564px/2)/($body-font-size * 1.5));
 		}
 		
-		&#{&}-normal,
-		.dropdown & {
+		&#{&}-normal {
 			
 			max-height: rem(250px/($body-font-size * 1.5));
 		}
 	}
 
-	&-list-group-text {
+	&-list-group-clip-text {
 		overflow-y:auto;
 		max-height: em(491px/($body-font-size));
 	}
@@ -487,17 +497,17 @@ $sidebar-base-slim-mobile: 60px;
 
 		&-weekly {
 
-			// .weekly-hours-row-day,.weekly-hours-row-total {
-			// 	text-align: right;
-			// }
-			// .weekly-hours-row-day {
-			// 	min-width: 1.5em;
-			// }
+			.weekly-hours-row-day,.weekly-hours-row-total {
+				text-align: right;
+			}
+			.weekly-hours-row-day {
+				width: 1.5em;
+			}
 
-			// .weekly-hours-row-total {
-			// 	width: 4em;
-			// 	overflow:hidden;
-			// }
+			.weekly-hours-row-total {
+				width: 4em;
+				overflow:hidden;
+			}
 		}
 	}
 }

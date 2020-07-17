@@ -1199,6 +1199,58 @@
 	display: none !important;
 }
 
+*:hover > .only-not-hover,
+*:hover > .hide-hover,
+*:not(:hover) > .only-hover,
+*:not(:hover) > .hide-not-hover,
+
+*:focus > .only-not-focus,
+*:focus > .hide-focus,
+*:not(:focus):not(.focus) > .only-focus,
+*:not(:focus):not(.focus) > .hide-not-focus,
+
+*.active > .only-not-active,
+	*:active > .only-not-active,
+*.active > .hide-active,
+	*:active > .hide-active,
+*:not(:active):not(.active) > .only-active,
+*:not(:active):not(.active) > .hide-not-active,
+
+
+*.active > .only-not-toggle,
+	*.open > .only-not-toggle,
+*.active > .hide-toggle,
+	*.open > .hide-toggle,
+*:not(.active):not(.open) > .only-toggle,
+*:not(.active):not(.open) > .hide-not-toggle
+{
+	display: none !important;
+}
+
+.only-not-hover,
+.hide-hover,
+.only-hover,
+.hide-not-hover,
+
+
+.only-not-focus,
+.hide-focus,
+.only-focus,
+.hide-not-focus,
+
+.only-not-active,
+.hide-active,
+.only-active,
+.hide-not-active,
+
+.only-not-toggle,
+.hide-toggle,
+.only-toggle,
+.hide-not-toggle {
+
+	pointer-events:none!important;
+}
+
 
 @include breakpoint(#{$mobile-br-max}-max) {
 

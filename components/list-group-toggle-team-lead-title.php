@@ -1,44 +1,44 @@
-<ul class="dashboard-list-group-thumbed list-group list-group-toggle  font-size-large">
+<div class="dashboard-list-group-clip-thumbed list-group list-group-toggle  font-size-large">
 			
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between active">
-		<a href="#" class="flex-1-1">
+	<a class="team-lead-title-default list-group-item flex-xs flex-wrap align-items-center justify-content-space-between active">
+		<span>
 			Team Member
-		</a>
+		</span>
 		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+	</a>
 	
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
+	<a class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+		<span>
 			Sales Rep
-		</a>
+		</span>
 		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+	</a>
 	
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
+	<a class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+		<span>
 			Account Manager
-		</a>
+		</span>
 		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+	</a>
 	
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
+	<a class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+		<span>
 			Project Manager
-		</a>
+		</span>
 		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+	</a>
 	
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
+	<a class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+		<span>
 			Lead Designer
-		</a>
+		</span>
 		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+	</a>
 	
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
+	<a class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+		<span>
 			Lead Developer
-		</a>
+		</span>
 		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-</ul>
+	</a>
+</div>

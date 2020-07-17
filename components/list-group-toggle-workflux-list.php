@@ -1,50 +1,46 @@
 
 <!-- @NOTE I realized this means the list column where the task is set, much like trello. -->
-<ul class="dashboard-list-group-thumbed list-group list-group-toggle list-group-toggle-allow-no-active font-size-large">
-			
-	<!-- PLACEHOLDER. this should be dynamically populated -->
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between active">
-		<a href="#" class="flex-1-1">
-			To Do
-		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
+<div class="list-group list-group-toggle list-group-toggle-allow-no-active">
 
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			In Progress
+	<!-- @if workflux board has lists -->
+		<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between active">
+			<span class="flex-1-1">
+				<span class="REPLACE">Workflux board list name</span>
+			</span>
+			<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
 		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-	
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			To Review
-		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			Completed
-		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			Icebox
-		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			Documentation
-		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-	<li class="flex-xs flex-wrap align-items-center justify-content-space-between">
-		<a href="#" class="flex-1-1">
-			Ideas
-		</a>
-		<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-	</li>
-</ul>
+
+		<?php for($i=1; $i<10; $i++){ ?>
+			<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+				<span class="flex-1-1">
+					<span class="REPLACE">Backlog</span>
+				</span>
+				<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+			</a>
+			<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+				<span class="flex-1-1">
+					<span class="REPLACE">In Progress</span>
+				</span>
+				<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+			</a>
+			<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+				<span class="flex-1-1">
+					<span class="REPLACE">Review</span>
+				</span>
+				<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+			</a>
+			<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+				<span class="flex-1-1">
+					<span class="REPLACE">Done</span>
+				</span>
+				<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+			</a>
+
+
+		<?php } ?>
+
+	<!-- else -->
+		<span href="#" class="list-group-item list-group-item-no-interaction color-neutral font-style-italic">
+			No lists Available
+		</span>
+</div>

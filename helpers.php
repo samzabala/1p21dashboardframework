@@ -291,6 +291,17 @@ function app_debug_li() {
 			?>
 			<?php
 		break;
+
+		case 'workflow':
+			?>
+
+			<!-- MY TIME -->
+			<li>
+				<a href="<?=app_create_link(array('template'=> '_DEMO-task')); ?>">
+					DEMO TEMPLATE: Task boards
+				</a>
+			</li>
+			<?php
 	endswitch;
 		?>
 	<li>

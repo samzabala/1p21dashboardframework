@@ -439,8 +439,7 @@ $prefix: '.symbol';
 		.active > &-toggle,
 		.open > &-toggle  {
 			@extend %for-valid-symbol;
-			width: .5em;
-			transform: rotate(45deg);
+			// transform: rotate(45deg);
 
 			// @extend %for-valid-symbol-no-before;
 			// &:after {
@@ -455,22 +454,23 @@ $prefix: '.symbol';
 				@extend %for-valid-symbol-pseudo;
 				@extend %for-valid-symbol-pseudo-border-radius;
 				@extend %for-valid-symbol-pseudo-filled;
-				left: auto;
 				top: auto;
-				bottom: 0em;
-				transform-origin: 50% 96%;
+				left: .25em;
+				right: auto;
+				bottom: .125em;
+				transform-origin: 42% 88%;
 			}
 
 			&:before {
-				@extend %for-valid-symbol-pseudo-horizontal;
-				width: .5em;
-				// transform: rotate(-45deg);
+				@extend %for-valid-symbol-pseudo-vertical;
+				height: .5em;
+				transform: rotate(-45deg);
 			}
 
 			&:after {
 				@extend %for-valid-symbol-pseudo-vertical;
 				height: 1em;
-				// transform: rotate(45deg);
+				transform: rotate(45deg);
 			}
 		}
 	}

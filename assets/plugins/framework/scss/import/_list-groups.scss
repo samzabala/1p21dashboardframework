@@ -60,6 +60,10 @@ $prefix: '.list-group';
 			border-color:  $list-group-border-color-inverse;
 		}
 
+		&#{$prefix}-item-no-interaction {
+			pointer-events:none!important;
+		}
+
 		@at-root #{$prefix}-compact {
 			li,
 			#{$prefix}-item  {

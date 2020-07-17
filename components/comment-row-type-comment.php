@@ -23,9 +23,8 @@ class="comment-header flex-grid flex-grid-compact align-items-center flex-grid-f
 		</div>
 	</div>
 
-	<!-- @if user can edit comment -->
 	<div class="flex-child flex-0-0 no-margin-top">
-		<?php app_get_component('components/tooltip-action'); ?>
+		<?php app_get_component('components/tooltip-action-with-reply'); ?>
 	</div>
 </div>
 

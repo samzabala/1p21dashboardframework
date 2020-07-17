@@ -13,33 +13,34 @@
 			so if it's in the task-id-edit board, the a field REPLACEMODE-REPLACEwithPostType-team-lead-to-add-id the field's name is `edit-task-lead-sales-rep-id`
 	-->
 
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+		<input id="REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" name="REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" type="hidden" />
 
-	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
-		<input id="REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" name="REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" type="hidden" />
+		<label for="filter-REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" class="input-label">Choose team member title</label>
 
-		<label for="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" class="input-label">Choose Team Lead</label>
-
-		<input id="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" name="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" type="text" class="input input-block input-large input-single-line p" placeholder="Search for team member" />
-		<?php app_get_component('components/list-group-toggle-users') ?>
+		<select id="filter-REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" name="filter-REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" type="text" class="input input-block input-large input-select" />
+		<?php app_get_component('components/options-team-lead-title') ?>
+		</select>
 	</div>
+
 
 <!-- @NOTE
 
 	.input-wrapper
 		classes to add
-			if no workflux board is selected => `display-none`
+			if no member tyoppe is selected selected => `display-none`
  -->
 
-	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-		<input id="REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" name="REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" type="hidden" />
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
+		<input id="REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" name="REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" type="hidden" />
 
-		<label for="filter-REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" class="input-label">Choose Team Lead Title</label>
+		<label for="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" class="input-label">Choose team lead</label>
 
-		<input id="filter-REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" name="filter-REPLACEMODE-REPLACEwithPostType-team-lead-title-to-add" type="text" class="input input-block input-large input-single-line p" placeholder="Search for team member" />
-		<?php app_get_component('components/list-group-toggle-team-lead-title') ?>
+		<input id="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" name="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" type="text" class="input input-block input-large input-single-line p" placeholder="Search for user" />
+		<?php app_get_component('components/list-group-toggle-users') ?>
 	</div>
 
-	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block" onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Add Team Member</div>
+	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block" onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Set team member</div>
 
 
 </div>

@@ -715,6 +715,13 @@
 		resetterClass = resetterClass || `${prefix}-group-toggle-reset`;
 		siblingSelector = siblingSelector || `.${prefix}`;
 
+		if(
+			triggerer.closest(prefix)
+			&& !triggerer.classList.contains(prefix)
+		){
+			triggerer = triggerer.closest(prefix);
+		}
+
 		if (triggerer) {
 
 			const resetter = frameWork
@@ -806,9 +813,14 @@
 					triggerer.hasAttribute('href')
 					&& triggerer.getAttribute('href') !== ''
 					&& triggerer.getAttribute('href') !== '#'
-					&& document.querySelector(
-						triggerer.getAttribute('href')
-					).classList.contains(classToSearch)
+					&& (
+						document.querySelector(
+							triggerer.getAttribute('href')
+						)
+						&& document.querySelector(
+							triggerer.getAttribute('href')
+						).classList.contains(classToSearch)
+					)
 				) {
 					// console.warn('toggle found by href');
 					toReturn = document.querySelector(triggerer.getAttribute('href'));
@@ -816,9 +828,14 @@
 				} else if (
 					triggerer.hasAttribute('data-href')
 					&& triggerer.getAttribute('data-href') !== ''
-					&& document.querySelector(
-						triggerer.getAttribute('data-href')
-					).classList.contains(classToSearch)
+					&& (
+						document.querySelector(
+							triggerer.getAttribute('data-href')
+						)
+						&& document.querySelector(
+							triggerer.getAttribute('data-href')
+						).classList.contains(classToSearch)
+					)
 				) {
 					// console.warn('toggle found by data-href');
 					toReturn = document.querySelector(triggerer.getAttribute('data-href'));
@@ -2978,6 +2995,24 @@
 					triggerer.innerHTML += pasted.getData('text');
 
 					triggerer.blur();
+				}
+			}
+		);
+
+
+		frameWork.addEvent(
+			document.body,
+			'click',
+			'.input-tags-ui .input-tags-ui-input',
+			(e) => {
+				const triggerer = e.target;
+
+				e.preventDefault();
+
+				if (!frameWork.isDisabled(triggerer)) {
+					setTimeout(function() {
+						triggerer.focus();
+					}, 0);
 				}
 			}
 		);

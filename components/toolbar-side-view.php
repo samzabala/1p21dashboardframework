@@ -4,23 +4,22 @@
 >
 
 	<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y">
-		<div class="flex-child flex-xs align-items-center">
+		<div class="flex-child">
 			<!-- @if task is not marked as complete yet -->
-				<a href="#" class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit color-success-hover">
+				<a href="#" class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit">
 					<div class="toolbar-tile">
 						<span class="well well-compact btn btn-symbol btn-small btn-neutral background-success-hover">
 							<i class="symbol symbol-check"></i>
 						</span>
 					</div>
 					<div class="toolbar-tile flex-1-1 ">
-						<!-- REPLACEpt => either project or task depending on which template it is included to -->
-						<span class="btn-no-shadow btn btn-small">
-								Mark REPLACEpt as complete
+						<span class="flex-1-1 btn-no-shadow btn">
+								Mark task as complete
 						</span>
 					</div>
 				</a>
 			<!-- @else task marked as complete -->
-				<!--
+				
 					<span class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit ">
 						<div class="toolbar-tile flex-1-1">
 							<span class="well well-compact btn btn-symbol btn-small btn-success btn-no-interaction">
@@ -29,11 +28,11 @@
 						</div>
 						<div class="toolbar-tile">
 							<span class="flex-1-1 btn-no-shadow btn">
-								Marked REPLACEpt complete
+								Marked task complete
 							</span>
 						</div>
 					</span>
-				-->
+				
 		</div>
 
 		<div class="flex-child flex-0-0">
