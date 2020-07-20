@@ -10,7 +10,7 @@
 					<input id="REPLACEMODE-task-workfluxs-id" name="REPLACEMODE-task-workfluxs-id" type="hidden" />
 					<input id="REPLACEMODE-task-workfluxs-list" name="REPLACEMODE-task-workfluxs-list" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
-					<?php app_get_component('components/modal-workflux'); ?>
+					<?php app_get_component('components/modal-workflow-edit-workflux'); ?>
 				</div>
 			</div>
 
@@ -35,7 +35,7 @@
 				<div class="flex-child">
 					<input id="REPLACEMODE-task-tags" name="REPLACEMODE-task-tags" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
-					<?php app_get_component('components/modal-tags'); ?>
+					<?php app_get_component('components/modal-workflow-edit-tags'); ?>
 				</div>
 			</div>
 

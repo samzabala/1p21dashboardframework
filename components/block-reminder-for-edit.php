@@ -11,6 +11,9 @@
 		</p>
 		<a href="#" class="alert-close color-primary" onclick="REPLACEfnToDeleteReminderAndTriggerDataToggleAlertClose"><i class="symbol symbol-close"></i></a>
 		<button class="display-none" data-toggle="alert-close">Remove Reminder from UI</button>
+
+		<a href="#" class="alert-close color-primary" data-modal-title="Edit reminder" data-toggle="modal"><i class="symbol symbol-edit"></i></a>
+		<?php app_get_component('components/modal-workflow-edit-reminder'); ?>
 	</div>
 	<div class="task-reminder-body alert-content">
 		<div class="REPLACE">

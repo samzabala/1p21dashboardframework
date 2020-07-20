@@ -34,9 +34,9 @@
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 		<input id="REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" name="REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" type="hidden" />
 
-		<label for="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" class="input-label">Choose team lead</label>
+		<label for="filter-REPLACEMODE-REPLACEwithPostType-team-lead-to-add" class="input-label">Choose team lead</label>
 
-		<input id="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" name="filter-REPLACEMODE-REPLACEwithPostType-team-lead-id-to-add" type="text" class="input input-block input-large input-single-line p" placeholder="Search for user" />
+		<input id="filter-REPLACEMODE-REPLACEwithPostType-team-lead-to-add" name="filter-REPLACEMODE-REPLACEwithPostType-team-lead-to-add" type="text" class="input input-block input-large input-single-line p" placeholder="Search for user" />
 		<?php app_get_component('components/list-group-toggle-users') ?>
 	</div>
 

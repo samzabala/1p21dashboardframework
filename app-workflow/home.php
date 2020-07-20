@@ -569,7 +569,7 @@
 								</td>
 
 								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="fave-task text-wrap-ellipsis">
+									<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="fave-task text-wrap-ellipsis">
 										<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 									</a>
 								</td>
@@ -644,7 +644,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="fave-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="fave-task text-wrap-ellipsis">
 													<span class="REPLACE">active boi</span>
 												</a>
 											</td>
@@ -735,7 +735,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="fave-task-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="fave-task-task text-wrap-ellipsis">
 													<span class="REPLACE">inactyive boi </span>
 												</a>
 											</td>
@@ -876,7 +876,7 @@
 								</td>
 
 								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task text-wrap-ellipsis">
+									<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="open-task text-wrap-ellipsis">
 										<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 									</a>
 								</td>
@@ -951,7 +951,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="open-task text-wrap-ellipsis">
 													<span class="REPLACE">active boi</span>
 												</a>
 											</td>
@@ -1042,7 +1042,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="open-task-task text-wrap-ellipsis">
 													<span class="REPLACE">inactyive boi </span>
 												</a>
 											</td>
@@ -1208,7 +1208,7 @@
 
 
 										<td class="dashboard-table-cell-max">
-											<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+											<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="log-today-task text-wrap-ellipsis">
 												<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 											</a>
 										</td>
@@ -1277,7 +1277,7 @@
 
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+														<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="log-today-task text-wrap-ellipsis">
 															<span class="REPLACE">ya boi is done now no take backs </span>
 														</a>
 													</td>
@@ -1339,7 +1339,7 @@
 
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+														<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="log-today-task text-wrap-ellipsis">
 															<span class="REPLACE">ya boi is still running </span>
 														</a>
 													</td>

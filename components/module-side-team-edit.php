@@ -1,44 +1,46 @@
 <div class="module position-relative">
 	<div class="module-content">
 
-		<!-- PROJECT -->
-			<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-				<label class="input-label" for="REPLACEMODE-task-project">Project</label>
+		<!-- @if module is not in project edit board -->
+			<!-- PROJECT -->
+				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-				<input id="REPLACEMODE-task-project-id" name="REPLACEMODE-task-project-id" type="hidden" value="" />
-				<input id="REPLACEMODE-task-project" name="REPLACEMODE-task-project" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type and select project..." />
-				<div class="dropdown dropdown-top-flush dashboard-dropdown-maxed no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
-					<div class="list-group list-group-interactive list-group-toggle list-group-toggle-allow-no-active">
+					<label class="input-label" for="REPLACEMODE-task-project">Project</label>
 
-						<!--
-							@NOTE Jenna took note of the ability to create new clients as well but the design includes redundant buttons if built out. This is a stable front end variation of the ui 
+					<input id="REPLACEMODE-task-project-id" name="REPLACEMODE-task-project-id" type="hidden" value="" />
+					<input id="REPLACEMODE-task-project" name="REPLACEMODE-task-project" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type and select project..." />
+					<div class="dropdown dropdown-top-flush dashboard-dropdown-maxed no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
+						<div class="list-group list-group-interactive list-group-toggle list-group-toggle-allow-no-active">
 
-							How it functions:
+							<!--
+								@NOTE Jenna took note of the ability to create new clients as well but the design includes redundant buttons if built out. This is a stable front end variation of the ui 
 
-							User clicks and the custom input is ni place
-						-->
-						<a href="#" class="list-group-item font-weight-700 color-primary task-project-new">
-							Create new project
-							`<span class="current-value"><span class="REPLACE">current input value</span></span>`
-						</a>
+								How it functions:
 
-						<!-- @PLACEHOLDER -->
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-							<a href="#" class="list-group-item">Project Name</a>
-		
+								User clicks and the custom input is ni place
+							-->
+							<a href="#" class="list-group-item font-weight-700 color-primary task-project-new">
+								Create new project
+								`<span class="current-value"><span class="REPLACE">current input value</span></span>`
+							</a>
+
+							<!-- @PLACEHOLDER -->
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+								<a href="#" class="list-group-item">Project Name</a>
+			
+						</div>
+						
 					</div>
-					
 				</div>
-			</div>
 
 
 		<!-- CLIENT -->
@@ -110,15 +112,15 @@
 				<!-- design based layout -->
 				<div>
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
-					<?php app_get_component('components/modal-team-leads'); ?>
+					<?php app_get_component('components/modal-workflow-edit-team-leads'); ?>
 				</div>
 
 
 
-				<!-- db consideration layout -->
+				<!-- db alt layout -->
 				<div>
 					<a href="#" data-toggle="modal"  class="btn btn-primary-outline btn-small">Team Members <i class="symbol symbol-edit"></i></a>
-					<?php app_get_component('components/modal-team-leads-alt'); ?>
+					<?php app_get_component('components/modal-workflow-edit-team-leads-alt'); ?>
 				</div>
 			</div>
 
@@ -145,7 +147,7 @@
 
 					<input type="hidden" name="REPLACEMODE-task-assignees-id" id="REPLACEMODE-task-assignees-id">
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit assignees <i class="symbol symbol-edit"></i></a>
-					<?php app_get_component('components/modal-users-multiple'); ?>
+					<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
 
 				</div>
 

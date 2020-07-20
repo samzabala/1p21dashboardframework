@@ -119,28 +119,18 @@ REPLACEMODE depending on which board editor contains the form
 
 			<!-- Attachments -->
 				<div class="task-attachments">
-					<!-- Stable version -->
-					<h4 class="no-margin-y">
-						Attachments
-					</h4>
-
-					<!-- Design Version -->
-					<!--
-					<div class="flex-grid flex-grid-no-gutter justify-content-space-between align-items-center">
-
-
-						<div class="flex-col-xs-6">
+					<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
+						<div class="flex-col-xs-12">
 							<h4 class="no-margin-y">
 								Attachments
 							</h4>
 						</div>
 
-
-						<div class="flex-col-xs-6 text-align-right">
+						<!-- <div class="flex-col-xs-6 text-align-right">
 							<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
 						</div>
+						 -->
 					</div>
-					-->
 				
 					<!-- @if attachments have rows -->
 						<?php app_get_component('components/attachment-grid-for-edit'); ?>

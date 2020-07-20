@@ -1204,6 +1204,12 @@
 *:not(:hover) > .only-hover,
 *:not(:hover) > .hide-not-hover,
 
+
+.pointer-reference:hover .only-not-hover,
+.pointer-reference:hover .hide-hover,
+.pointer-reference:not(:hover) .only-hover,
+.pointer-reference:not(:hover) .hide-not-hover,
+
 *:focus > .only-not-focus,
 *:focus > .hide-focus,
 *:not(:focus):not(.focus) > .only-focus,
@@ -1223,33 +1229,34 @@
 	*.open > .hide-toggle,
 *:not(.active):not(.open) > .only-toggle,
 *:not(.active):not(.open) > .hide-not-toggle
+
 {
 	display: none !important;
 }
 
-.only-not-hover,
-.hide-hover,
-.only-hover,
-.hide-not-hover,
+// .only-not-hover,
+// .hide-hover,
+// .only-hover,
+// .hide-not-hover,
 
 
-.only-not-focus,
-.hide-focus,
-.only-focus,
-.hide-not-focus,
+// .only-not-focus,
+// .hide-focus,
+// .only-focus,
+// .hide-not-focus,
 
-.only-not-active,
-.hide-active,
-.only-active,
-.hide-not-active,
+// .only-not-active,
+// .hide-active,
+// .only-active,
+// .hide-not-active,
 
-.only-not-toggle,
-.hide-toggle,
-.only-toggle,
-.hide-not-toggle {
+// .only-not-toggle,
+// .hide-toggle,
+// .only-toggle,
+// .hide-not-toggle {
 
-	pointer-events:none!important;
-}
+// 	pointer-events:none!important;
+// }
 
 
 @include breakpoint(#{$mobile-br-max}-max) {

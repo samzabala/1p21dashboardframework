@@ -10,7 +10,7 @@
 					</div>
 					<div class="flex-child">
 						<a href="#"  data-toggle="modal" data-modal-title="REPLACwithTaskTitle" class="btn btn-primary-outline btn-small">Time <i class="symbol symbol-plus"></i></a>
-						<?php app_get_component('components/modal-task-time') ?>
+						<?php app_get_component('components/modal-workflow-edit-task-time') ?>
 						&nbsp;
 						<a href="#task-side-time-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 					</div>
@@ -22,7 +22,7 @@
 			<div id="task-side-time-view" class="accordion open" data-accordion-change-hash="false">
 				<br>
 
-				<!-- @if mtime from modal-task-time was added-->
+				<!-- @if mtime from modal-workflow-edit-task-time was added-->
 					<div class="alert alert-success alert-small p">
 						<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 						Time entry for task has been added

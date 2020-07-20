@@ -101,13 +101,22 @@ function app_init_content(){
 
 					break;
 				case 'project-details':
+				case 'project':
+					app_get_template_part("app-{$app}/project-details");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details";
+					break;
 				case '_DEMO-task':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;
 
+				// pages im not sure of but good to have fallbacks for or at least a basic page to render
+				case 'doc':
+					app_get_template_part("app-{$app}/page");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/page";
+					break;
+
 				case 'workflux':
-				case 'projects':
 				case 'clients':
 				case 'notes':
 				case 'analytics':

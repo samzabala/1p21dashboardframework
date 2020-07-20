@@ -608,10 +608,10 @@ window.jQuery && jQuery.noConflict();
 		siblingSelector = siblingSelector || `.${prefix}`;
 
 		if(
-			triggerer.closest(prefix).length
+			triggerer.closest(siblingSelector).length
 			&& !triggerer.hasClass(prefix)
 		){
-			triggerer = triggerer.closest(prefix);
+			triggerer = triggerer.closest(siblingSelector);
 		}
 
 		if (triggerer) {
@@ -2549,8 +2549,8 @@ window.jQuery && jQuery.noConflict();
 					ancGroup.children('.accordion').removeClass('open');
 
 					const probablyToggle = $(
-						`[data-toggle="accordion"][href="#${selector.getAttribute('id')}"],
-						[data-toggle="accordion"][data-href="#${selector.getAttribute('id')}"]`
+						`[data-toggle="accordion"][href="#${selector.attr('id')}"],
+						[data-toggle="accordion"][data-href="#${selector.attr('id')}"]`
 					);
 					probablyToggle
 						.siblings('[data-toggle="accordion"]')

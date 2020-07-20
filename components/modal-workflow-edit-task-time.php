@@ -9,8 +9,96 @@
 		</div>
 	<form class="flex-grid flex-grid-compact no-margin-bottom">
 			
+		<!-- @if modal is triggered from task board -->
+			<input type="hidden" name="entry-task-id" />
+			<input type="hidden" name="entry-project-id" />
+			<input type="hidden" name="entry-client-id" />
+			
+			<div class="flex-col-xs-12 position-relative">
+			<input type="hidden" name="eentry-time-category-id" />
+				<div class="input-group input-group-block input-group-horizontal">
+					<label class="input-label" for="entry-time-category" >Task Category</label>
+					<input name="entry-time-category" id="entry-time-category" type="text" class="input input-single-line" placeholder="Start time" data-toggle="dropdown">
 
-		<input type="hidden" name="entry-task-id" />
+				</div>
+
+
+				<div data-dropdown-width="100%" class="dropdown dropdown-top-flush" style="width: 100%;">
+
+						<!-- @PLACEHOLDER$. replace as needed -->
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="11">
+									AC Tasks Management
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="13">
+									Bugherds
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="7">
+
+									Client Website Development
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="40">
+
+									Email Inbox Management
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="46">
+
+									Internal Project Development
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="26">
+
+									Maintenance Tasks
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="15">
+
+									Meetings
+								</a>
+							</li>
+
+							<li>
+								<a href="#" class="js-task-cat-opt" data-task-cat-id="24">
+
+									Research, Education &amp; Training
+								</a>
+							</li>
+
+							<li>
+							<a href="#" class="js-task-cat-opt" data-task-cat-id="51">
+
+								Server Configuration
+							</a>
+							</li>
+
+							<li>
+							<a href="#" class="js-task-cat-opt" data-task-cat-id="37">
+
+								Software Development
+							</a>
+							</li>
+				</div>
+
+			</div>
+
+		<hr>
+		
 
 		<div class="flex-col-xs-12 flex-col-md-4">
 			<div class="input-group input-group-block input-group-horizontal">
@@ -37,7 +125,7 @@
 				</label>
 		</div>
 		<div class="flex-col-xs-12 flex-col-md-8">
-			<div class="input-group input-group-block input-group-horizontal">
+			<div class="input-group input-group-block input-group-horizontal flex-0-0">
 				<label class="input-label" for="entry-time-date">Entry Date</label>
 				<input name="entry-time-date" id="entry-time-date" type="date" class="input input-single-line">
 			</div>

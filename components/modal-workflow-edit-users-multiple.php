@@ -10,7 +10,7 @@
 		<!-- @NOTE
 			replace REPLACEUserVerbiage with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Type and select profile" />
+		<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Type and select profiles" />
 	</div>
 
 	<?php app_get_component('components/list-group-toggle-users-multiple') ?>

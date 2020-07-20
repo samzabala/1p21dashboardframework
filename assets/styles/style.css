@@ -5283,7 +5283,7 @@ table {
     float: right;
     color: inherit;
     opacity: .8;
-    margin-left: .5em;
+    margin-left: 1em;
     transition: 0.125s opacity ease-in-out; }
     .alert-close:hover {
       opacity: 1; }
@@ -5301,7 +5301,13 @@ table {
     padding-right: 40px; }
   .alert-content {
     padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    resize: none;
+    max-width: calc(100% + 20px);
+    width: auto;
+    -webkit-appearance: none;
+    display: block;
+    outline: none; }
     .alert, .alert-content {
       padding-top: 20px;
       padding-bottom: 20px; }
@@ -5359,7 +5365,8 @@ table {
     text-transform: uppercase;
     font-style: normal;
     margin: 0;
-    float: left; }
+    float: left;
+    max-width: 80%; }
   .alert.alert-default {
     border-color: #8d8d8d;
     color: inherit;
@@ -6198,7 +6205,7 @@ table {
     margin-right: -1.4285714286em;
     margin-left: -1.4285714286em; }
 
-.input-tags-ui.input-tags-ui-multiple, .input-multiple-line {
+.input-multiple-line {
   height: auto;
   resize: both;
   min-height: 9.6428571429rem; }
@@ -6756,12 +6763,18 @@ fieldset {
       min-width: 4em; }
       .input-tags-ui-single .input-tags-ui-input:last-child:first-child {
         width: 12em; }
-    .input-tags-ui-multiple .input-tags-ui-input {
-      flex: 0 0; }
-      .input-tags-ui-multiple .input-tags-ui-input:last-child {
-        width: 100%; }
-        .input-tags-ui-multiple .input-tags-ui-input:last-child:first-child {
-          width: 100%; }
+    .input-tags-ui-multiple .input-tags-ui-input:not(:focus):not(.focus):before {
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      display: block;
+      position: absolute; }
+    .input-tags-ui-multiple .input-tags-ui-input:last-child {
+      width: 100%; }
+      .input-tags-ui-multiple .input-tags-ui-input:last-child, .input-tags-ui-multiple .input-tags-ui-input:last-child:first-child {
+        min-width: 100%; }
     .input-tags-ui-input, .input-tags-ui-input:hover, .input-tags-ui-input:focus, .input-tags-ui-input.focus {
       box-shadow: none !important;
       background: transparent;
@@ -8531,6 +8544,10 @@ fieldset {
 *:hover > .hide-hover,
 *:not(:hover) > .only-hover,
 *:not(:hover) > .hide-not-hover,
+.pointer-reference:hover .only-not-hover,
+.pointer-reference:hover .hide-hover,
+.pointer-reference:not(:hover) .only-hover,
+.pointer-reference:not(:hover) .hide-not-hover,
 *:focus > .only-not-focus,
 *:focus > .hide-focus,
 *:not(:focus):not(.focus) > .only-focus,
@@ -8548,24 +8565,6 @@ fieldset {
 *:not(.active):not(.open) > .only-toggle,
 *:not(.active):not(.open) > .hide-not-toggle {
   display: none !important; }
-
-.only-not-hover,
-.hide-hover,
-.only-hover,
-.hide-not-hover,
-.only-not-focus,
-.hide-focus,
-.only-focus,
-.hide-not-focus,
-.only-not-active,
-.hide-active,
-.only-active,
-.hide-not-active,
-.only-not-toggle,
-.hide-toggle,
-.only-toggle,
-.hide-not-toggle {
-  pointer-events: none !important; }
 
 @media (max-width: 1200px) {
   .only-mobile {

@@ -716,10 +716,10 @@
 		siblingSelector = siblingSelector || `.${prefix}`;
 
 		if(
-			triggerer.closest(prefix)
+			triggerer.closest(siblingSelector)
 			&& !triggerer.classList.contains(prefix)
 		){
-			triggerer = triggerer.closest(prefix);
+			triggerer = triggerer.closest(siblingSelector);
 		}
 
 		if (triggerer) {

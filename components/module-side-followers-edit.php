@@ -4,16 +4,19 @@
 
 		<!-- FOLLOWERS ?? -->
 
-			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-				<div class="flex-child">
-					<h5 class="input-label">Followers</h5>
-				</div>
-				<div class="flex-child">
-					<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
-					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Followers <i class="symbol symbol-edit"></i></a>
-					<?php app_get_component('components/modal-users-multiple'); ?>
+			<div class="h5 no-margin-y">
+				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+					<div class="flex-child">
+						<h5 class="input-label">Followers</h5>
+					</div>
+					<div class="flex-child">
+						<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
+						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Followers <i class="symbol symbol-edit"></i></a>
+						<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
+					</div>
 				</div>
 			</div>
+			
 			<div class="task-followers">
 						
 					<?php app_get_component('components/profile-named-for-edit') ?>
@@ -33,47 +36,47 @@
 			<div class="h5 no-margin-y">
 				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 					<div class="flex-child">
-						<h5 class="no-margin-y">Wiki/How-Tos</h5>
+						<h5 class="input-label">Wiki/How-Tos</h5>
 					</div>
 					<div class="flex-child">
-						<a href="#task-side-wiki-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+						<input id="REPLACEMODE-task-wiki-id" name="REPLACEMODE-task-wiki-id" type="hidden" />
+						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit <i class="symbol symbol-edit"></i></a>
+						<?php app_get_component('components/modal-workflow-edit-wiki-multiple'); ?>
 					</div>
 				</div>
 			</div>
-
 		
-			
-			<div id="task-side-wiki-view" class="accordion open" data-accordion-change-hash="false">
 
 				<!-- if has docs -->
 					<ul class="task-wiki unstyled">
 						<li>
-						<!-- @NOTE not sure where this link goes to yet -->
-							<a data-toggle="modal" href="#">Documentation title</a>
-							<?php app_get_component('components/_DEMO-modal-placeholder') ?>
+							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
+								<div class="flex-col-xs-10">
+									<span class="wiki-title">Documentation title</span>
+								</div>
+
+								<div class="flex-col-xs-2 text-align-right">
+									<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
+								</div>
+							</div>
 						</li>
 						
 						
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
 							<?php for($i=1; $i<=3; $i++){ ?>
 								<li>
-								<!-- @NOTE where this link goes to yet -->
-									<a data-toggle="modal" href="#">Documentation title</a>
-									<?php app_get_component('components/_DEMO-modal-placeholder') ?>
+									<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
+										<div class="flex-col-xs-10">
+											<span class="wiki-title">Documentation title</span>
+										</div>
+
+										<div class="flex-col-xs-2 text-align-right">
+											<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
+										</div>
+									</div>
 								</li>
 							<?php } ?>
 					</ul>
-				<!-- @else -->
-					<p>
-						<span class="color-neutral font-style-italic">
-							No documentations available.
-						</span>
-
-						<!-- @if user can edit task -->
-							<br>
-							<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add documentation.</a>
-					</p>
-			</div>
 
 
 
@@ -85,37 +88,25 @@
 				<div class="h5 no-margin-y">
 					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 						<div class="flex-child">
-							<h5 class="no-margin-y">Reminders</h5>
+							<h5 class="input-label">Reminders</h5>
 						</div>
 						<div class="flex-child">
-							<a href="#task-side-reminders-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+							<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
+							<a href="#" data-toggle="modal" data-modal-title="Add reminder" class="btn btn-primary-outline btn-small">Reminder <i class="symbol symbol-plus"></i></a>
+							<?php app_get_component('components/modal-workflow-edit-reminder'); ?>
 						</div>
 					</div>
 				</div>
 
 
-				
-				<div id="task-side-reminders-view" class="accordion open" data-accordion-change-hash="false">
-
-					<!-- if has reminders -->
-						<div class="task-reminders">
-							<?php app_get_component('components/block-reminder-for-edit'); ?>
-						
-							<!-- @PLACEHOLDER: DELETE WHEN READY -->
-								<?php for($i=1; $i<=3; $i++){ ?>
-									<?php app_get_component('components/block-reminder-for-edit'); ?>
-								<?php } ?>
-						</div>
-					<!-- @else -->
-						<p>
-							<span class="color-neutral font-style-italic">
-								No reminders set.
-							</span>
-
-							<!-- @if user can edit task -->
-								<br>
-								<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add reminders.</a>
-						</p>
-				</div>
+				<!-- if has reminders -->
+					<div class="task-reminders">
+						<?php app_get_component('components/block-reminder-for-edit'); ?>
+					
+						<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php for($i=1; $i<=3; $i++){ ?>
+								<?php app_get_component('components/block-reminder-for-edit'); ?>
+							<?php } ?>
+					</div>
 	</div>
 </div>

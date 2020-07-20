@@ -67,7 +67,7 @@
 			<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tags</label>
 			<div class="input-group input-group-block input-group-horizontal p">
 
-				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-tags" placeholder="Type a new tag" />
+				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-tags" placeholder="Type new tag/s" />
 				<button class="btn btn-primary">Create tags</button>
 			</div>
 		</div>

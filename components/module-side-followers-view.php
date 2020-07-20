@@ -81,8 +81,7 @@
 					<ul class="task-wiki unstyled">
 						<li>
 						<!-- @NOTE not sure where this link goes to yet -->
-							<a data-toggle="modal" href="#">Documentation title</a>
-							<?php app_get_component('components/_DEMO-modal-placeholder') ?>
+							<a class="wiki-title" href="<?= app_create_link(array('template'=>'doc')) ?>"><span class="REPLACE">Documentation title</span></a>
 						</li>
 						
 						
@@ -90,8 +89,7 @@
 							<?php for($i=1; $i<=3; $i++){ ?>
 								<li>
 								<!-- @NOTE where this link goes to yet -->
-									<a data-toggle="modal" href="#">Documentation title</a>
-									<?php app_get_component('components/_DEMO-modal-placeholder') ?>
+									<a class="wiki-title" href="<?= app_create_link(array('template'=>'doc')) ?>"><span class="REPLACE">Documentation title</span></a>
 								</li>
 							<?php } ?>
 					</ul>
