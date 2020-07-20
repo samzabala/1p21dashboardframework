@@ -51,11 +51,11 @@
 					<ul class="task-wiki unstyled">
 						<li>
 							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-								<div class="flex-col-xs-10">
+								<div class="flex-col-xs-9">
 									<span class="wiki-title">Documentation title</span>
 								</div>
 
-								<div class="flex-col-xs-2 text-align-right">
+								<div class="flex-col-xs-3 text-align-right">
 									<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 								</div>
 							</div>
@@ -66,11 +66,11 @@
 							<?php for($i=1; $i<=3; $i++){ ?>
 								<li>
 									<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-										<div class="flex-col-xs-10">
+										<div class="flex-col-xs-9">
 											<span class="wiki-title">Documentation title</span>
 										</div>
 
-										<div class="flex-col-xs-2 text-align-right">
+										<div class="flex-col-xs-3 text-align-right">
 											<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 										</div>
 									</div>

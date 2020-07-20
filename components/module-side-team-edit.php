@@ -2,7 +2,7 @@
 	<div class="module-content">
 
 
-		<!-- @if module is not in project edit board -->
+		<!-- @if module is not in project edit board and in the task board -->
 			<!-- PROJECT -->
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
@@ -100,7 +100,7 @@
 			</div>
 
 
-		<!-- @if module is included in project board and not in task board (STANDBY ??????) -->
+		<!-- @if module is included in project board and not in task board -->
 			<!-- TEAM LEADS -->
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
@@ -147,7 +147,7 @@
 				<div class="flex-col-xs-12">
 
 					<h5 class="input-label">Assigned To</h5>
-					<p class="task-assignees">
+					<p class="task-assignee">
 						<!-- @if assigned to anyone -->
 							<!-- @LOOP a w/ conditional comma -->
 							<span class="profile"><span class="REPLACE">Profile Name</span></span>,
@@ -157,13 +157,12 @@
 									<?php } ?>
 						<!-- else -->
 							Unassigned
-									
 					</p>
 
 
 					<input type="hidden" name="REPLACEMODE-task-assignees-id" id="REPLACEMODE-task-assignees-id">
-					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit assignees <i class="symbol symbol-edit"></i></a>
-					<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
+					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit assignee <i class="symbol symbol-edit"></i></a>
+					<?php app_get_component('components/modal-workflow-edit-users'); ?>
 
 				</div>
 
