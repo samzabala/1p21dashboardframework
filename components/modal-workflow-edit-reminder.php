@@ -12,7 +12,7 @@
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 		<label for="REPLACEMODE-REPLACEwithPostType-reminder-due-row[REPLACEWithRowIndex]" class="input-label">Due Date</label>
-		<input id="REPLACEMODE-REPLACEwithPostType-reminder-due-row[REPLACEWithRowIndex]" name="REPLACEMODE-REPLACEwithPostType-reminder-due-row[REPLACEWithRowIndex]" type="date" class="input input-block input-single-line" placeholder="mm/dd/yyyy" />
+		<input id="REPLACEMODE-REPLACEwithPostType-reminder-due-row[REPLACEWithRowIndex]" name="REPLACEMODE-REPLACEwithPostType-reminder-due-row[REPLACEWithRowIndex]" type="datetime" class="input input-block input-single-line" placeholder="mm/dd/yyyy" />
 	</div>
 
 	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block"  onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Set Reminder</div>

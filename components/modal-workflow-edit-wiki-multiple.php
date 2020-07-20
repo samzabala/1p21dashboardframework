@@ -14,5 +14,5 @@
 		
 	<?php app_get_component('components/list-group-toggle-wiki') ?>
 
-	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block"  onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Set as task wiki/how-tos</div>
+	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block"  onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Set selected documentations as relevant task wiki/how tos</div>
 </div>

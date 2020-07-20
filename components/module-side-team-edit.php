@@ -100,7 +100,7 @@
 			</div>
 
 
-		<!-- @if module is in project board (???) -->
+		<!-- @if module is included in project board and not in task board (STANDBY ??????) -->
 			<!-- TEAM LEADS -->
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
@@ -120,7 +120,10 @@
 					</div>
 
 					<!--
-						NOTE: there's a layout based on the design with minor tweaks and one that full-proofs the profile and its related title. Feel free to use which one is fit for the back-end setup
+						NOTE:
+						there's a layout based on the design with minor tweaks
+						and one that full-proofs the profile and its related title.
+						Not sure how team member titles will map out if each title will be a required data row or if it's an optional one
 					-->
 					<!-- design based layout -->
 					<div>
