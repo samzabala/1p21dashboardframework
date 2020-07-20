@@ -24,7 +24,13 @@
 								Create new project
 								`<span class="current-value"><span class="REPLACE">current input value</span></span>`
 							</a>
+							<!-- 
+							@NOTE
+								.list-group-item/li
+									classes to add
+										if project id is in the corresponding project id field => `active`
 
+							-->
 							<!-- @PLACEHOLDER -->
 								<a href="#" class="list-group-item">Project Name</a>
 								<a href="#" class="list-group-item">Project Name</a>
@@ -70,6 +76,13 @@
 						</a>
 
 						<!-- @PLACEHOLDER -->
+							<!-- 
+							@NOTE
+								.list-group-item/li
+									classes to add
+										if project id is in the corresponding project id field => `active`
+
+							-->
 							<a href="#" class="list-group-item">Client Name</a>
 							<a href="#" class="list-group-item">Client Name</a>
 							<a href="#" class="list-group-item">Client Name</a>
@@ -87,42 +100,42 @@
 			</div>
 
 
+		<!-- @if module is in project board (???) -->
+			<!-- TEAM LEADS -->
+				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-		<!-- TEAM LEADS -->
-			<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+					<h5 class="input-label">Team Leads</h5>
+					<div class="task-leads">
 
-				<h5 class="input-label">Team Leads</h5>
-				<div class="task-leads">
+					<!-- @NOTE if using the design based layout, add hidden fields here -->
+						<input id="REPLACEMODE-task-leads-id" name="REPLACEMODE-task-leads-id" type="hidden" value="" />
+						<input id="REPLACEMODE-task-leads-title" name="REPLACEMODE-task-leads-title" type="hidden" value="" />
+					
+						<!-- @LOOP component -->
+							<?php app_get_component('components/profile-titled-for-edit') ?>
+								<!-- @PLACEHOLDER: DELETE WHEN READY -->
+								<?php for($i=1; $i<9; $i++){ ?>
+									<?php app_get_component('components/profile-titled-for-edit'); ?>
+								<?php } ?>
+					</div>
 
-				<!-- @NOTE if using the design based layout, add hidden fields here -->
-					<input id="REPLACEMODE-task-leads-id" name="REPLACEMODE-task-leads-id" type="hidden" value="" />
-					<input id="REPLACEMODE-task-leads-title" name="REPLACEMODE-task-leads-title" type="hidden" value="" />
-				
-					<!-- @LOOP component -->
-						<?php app_get_component('components/profile-titled-for-edit') ?>
-							<!-- @PLACEHOLDER: DELETE WHEN READY -->
-							<?php for($i=1; $i<9; $i++){ ?>
-								<?php app_get_component('components/profile-titled-for-edit'); ?>
-							<?php } ?>
+					<!--
+						NOTE: there's a layout based on the design with minor tweaks and one that full-proofs the profile and its related title. Feel free to use which one is fit for the back-end setup
+					-->
+					<!-- design based layout -->
+					<div>
+						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
+						<?php app_get_component('components/modal-workflow-edit-team-leads'); ?>
+					</div>
+
+
+
+					<!-- db alt layout -->
+					<div>
+						<a href="#" data-toggle="modal"  class="btn btn-primary-outline btn-small">Team Members <i class="symbol symbol-edit"></i></a>
+						<?php app_get_component('components/modal-workflow-edit-team-leads-alt'); ?>
+					</div>
 				</div>
-
-				<!--
-					NOTE: there's a layout based on the design with minor tweaks and one that full-proofs the profile and its related title. Feel free to use which one is fit for the back-end setup
-				-->
-				<!-- design based layout -->
-				<div>
-					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
-					<?php app_get_component('components/modal-workflow-edit-team-leads'); ?>
-				</div>
-
-
-
-				<!-- db alt layout -->
-				<div>
-					<a href="#" data-toggle="modal"  class="btn btn-primary-outline btn-small">Team Members <i class="symbol symbol-edit"></i></a>
-					<?php app_get_component('components/modal-workflow-edit-team-leads-alt'); ?>
-				</div>
-			</div>
 
 
 
