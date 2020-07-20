@@ -1,5 +1,12 @@
 <div class="list-group list-group-toggle list-group-toggle-allow-no-active list-group-compact">
 	<!-- @if workflux has rows or matchs -->
+		<!-- 
+		@NOTE
+			.list-group-item/li
+				classes to add
+					if workflux id is in the corresponding workflux id field => `active`
+
+		-->
 		<a href="#" class="list-group-item flex-wrap align-items-center justify-content-space-between">
 			<span class="flex-1-1">
 				<?php app_get_component('components/profile-workflux-image-small-span') ?>

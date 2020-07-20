@@ -1,5 +1,12 @@
 <div class="list-group list-group-toggle list-group-toggle-allow-no-active">
 	<!-- @if profile matches or has rows -->
+		<!-- 
+		@NOTE
+			.list-group-item/li
+				classes to add
+					if user id is in the corresponding user id field => `active`
+
+		-->
 		<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 			<span class="flex-1-1">
 				<?php app_get_component('components/profile-image-small-span') ?>

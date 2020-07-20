@@ -2,6 +2,13 @@
 <div class="dashboard-list-group-clip-thumbed list-group list-group-toggle-multiple list-group-toggle list-group-toggle-allow-no-active">
 
 	<!-- @if workflux board has lists -->
+		<!-- 
+		@NOTE
+			.list-group-item/li
+				classes to add
+					if wiki id is in the corresponding wiki id field => `active`
+
+		-->
 		<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between active">
 			<span class="flex-1-1">
 				<span class="REPLACE">Documentation Title</span>

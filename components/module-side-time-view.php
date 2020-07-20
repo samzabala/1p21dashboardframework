@@ -125,7 +125,7 @@
 
 						
 				<!-- TIME LOGGED + ESTIMATE -->
-					<div class="flex-grid flex-grid-compact flex-grid-fixed">
+					<div class="flex-grid flex-grid-compact flex-grid-fixed flex-grid-no-gutter">
 						<div class="flex-col-xs-6">
 							<p class="task-time-logged no-margin">
 								<span class="REPLACE">6h 9m</span>
