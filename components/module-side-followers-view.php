@@ -112,7 +112,7 @@
 
 
 			<!-- REMINDERS -->
-				<div class="h5 no-margin-y">
+				<div class="h5 no-margin-top">
 					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 						<div class="flex-child">
 							<h5 class="no-margin-y">Reminders</h5>

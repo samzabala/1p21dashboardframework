@@ -7,8 +7,8 @@
 					<h5 class="input-label">Workflux Boards</h5>
 				</div>
 				<div class="flex-child">
-					<input id="REPLACEMODE-task-workfluxs-id" name="REPLACEMODE-task-workfluxs-id" type="hidden" />
-					<input id="REPLACEMODE-task-workfluxs-list" name="REPLACEMODE-task-workfluxs-list" type="hidden" />
+					<input id="REPLACEMODE-REPLACEwithPostType-workfluxs-id" name="REPLACEMODE-REPLACEwithPostType-workfluxs-id" type="hidden" />
+					<input id="REPLACEMODE-REPLACEwithPostType-workfluxs-list" name="REPLACEMODE-REPLACEwithPostType-workfluxs-list" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
 					<?php app_get_component('components/modal-workflow-edit-workflux'); ?>
 				</div>
@@ -33,7 +33,7 @@
 					<h5 class="input-label">Labels &amp; Tags</h5>
 				</div>
 				<div class="flex-child">
-					<input id="REPLACEMODE-task-tags" name="REPLACEMODE-task-tags" type="hidden" />
+					<input id="REPLACEMODE-REPLACEwithPostType-tags" name="REPLACEMODE-REPLACEwithPostType-tags" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
 					<?php app_get_component('components/modal-workflow-edit-tags'); ?>
 				</div>

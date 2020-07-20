@@ -5,8 +5,13 @@
 <div class="modal" data-modal-max-width="600px">
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
+		<label for="REPLACEMODE-REPLACEwithPostType-reminder-title-row[REPLACEWithRowIndex]" class="input-label">Title</label>
+		<input id="REPLACEMODE-REPLACEwithPostType-reminder-title-row[REPLACEWithRowIndex]" name="REPLACEMODE-REPLACEwithPostType-reminder-title-row[REPLACEWithRowIndex]" type="text" class="input input-block input-single-line" placeholder="Add reminder title/descriptior" />
+	</div>
+
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 		<label for="REPLACEMODE-REPLACEwithPostType-reminder-description-row[REPLACEWithRowIndex]" class="input-label">Description</label>
-		<textarea id="REPLACEMODE-REPLACEwithPostType-reminder-description-row[REPLACEWithRowIndex]" name="REPLACEMODE-REPLACEwithPostType-reminder-description-row[REPLACEWithRowIndex]" type="text" class="input input-block input-multiple-line" placeholder="Add reminder title/descriptior"></textarea>
+		<textarea id="REPLACEMODE-REPLACEwithPostType-reminder-description-row[REPLACEWithRowIndex]" name="REPLACEMODE-REPLACEwithPostType-reminder-description-row[REPLACEWithRowIndex]"  class="input input-block input-multiple-line" placeholder="Add reminder title/descriptior"></textarea>
 	</div>
 
 	<div class="flex-grid flex-grid-no-gutter-y flex-grid-fixed">

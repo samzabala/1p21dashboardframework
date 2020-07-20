@@ -10,7 +10,7 @@
 						<h5 class="input-label">Followers</h5>
 					</div>
 					<div class="flex-child">
-						<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
+						<input id="REPLACEMODE-REPLACEwithPostType-followers-id" name="REPLACEMODE-REPLACEwithPostType-followers-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Followers <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
 					</div>
@@ -39,7 +39,7 @@
 						<h5 class="input-label">Wiki/How-Tos</h5>
 					</div>
 					<div class="flex-child">
-						<input id="REPLACEMODE-task-wiki-id" name="REPLACEMODE-task-wiki-id" type="hidden" />
+						<input id="REPLACEMODE-REPLACEwithPostType-wiki-id" name="REPLACEMODE-REPLACEwithPostType-wiki-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-wiki-multiple'); ?>
 					</div>
@@ -51,11 +51,11 @@
 					<ul class="task-wiki unstyled">
 						<li>
 							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-								<div class="flex-col-xs-10">
+								<div class="flex-col-xs-9">
 									<span class="wiki-title">Documentation title</span>
 								</div>
 
-								<div class="flex-col-xs-2 text-align-right">
+								<div class="flex-col-xs-3 text-align-right">
 									<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 								</div>
 							</div>
@@ -66,11 +66,11 @@
 							<?php for($i=1; $i<=3; $i++){ ?>
 								<li>
 									<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-										<div class="flex-col-xs-10">
+										<div class="flex-col-xs-9">
 											<span class="wiki-title">Documentation title</span>
 										</div>
 
-										<div class="flex-col-xs-2 text-align-right">
+										<div class="flex-col-xs-3 text-align-right">
 											<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 										</div>
 									</div>
@@ -91,7 +91,7 @@
 							<h5 class="input-label">Reminders</h5>
 						</div>
 						<div class="flex-child">
-							<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
+							<input id="REPLACEMODE-REPLACEwithPostType-followers-id" name="REPLACEMODE-REPLACEwithPostType-followers-id" type="hidden" />
 							<a href="#" data-toggle="modal" data-modal-title="Add reminder" class="btn btn-primary-outline btn-small">Reminder <i class="symbol symbol-plus"></i></a>
 							<?php app_get_component('components/modal-workflow-edit-reminder'); ?>
 						</div>
