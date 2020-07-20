@@ -75,6 +75,18 @@ define('FWAPPS_APP',$___app);
 
 
 
+if(isset($_GET['js'])):
+	$_GET['js'] = filter_var($_GET['js'], FILTER_SANITIZE_STRING);
+endif;
+
+$___js = '';
+
+if(isset($_GET['js'])):
+	$___js = $_GET['js'];
+endif;
+
+define('FWAPPS_JS',$___js);
+
 
 
 

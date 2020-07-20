@@ -22,7 +22,7 @@ function app_get_template_part($filename = '', $slug = ''){
 
 
 //include a file
-function app_get_component($filename = '', $slug =''){
+function app_get_component($filename = '', $slug ='',$once = false){
 
 	if($filename !== ''){
 
@@ -35,7 +35,11 @@ function app_get_component($filename = '', $slug =''){
 		$source .='.php';
 
 		if( file_exists( $source ) ){
-			include $source;
+			if ($once == true) {
+				include_once $source;
+			} else {
+				include $source;
+			}
 		}
 	}
 }
@@ -91,14 +95,28 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/home";
 					break;
 				case 'project-list':
+				case 'projects':
+					app_get_template_part("app-{$app}/project-list");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-list";
+
+					break;
 				case 'project-details':
+				case 'project':
+					app_get_template_part("app-{$app}/project-details");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details";
+					break;
 				case '_DEMO-task':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;
 
+				// pages im not sure of but good to have fallbacks for or at least a basic page to render
+				case 'doc':
+					app_get_template_part("app-{$app}/page");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/page";
+					break;
+
 				case 'workflux':
-				case 'projects':
 				case 'clients':
 				case 'notes':
 				case 'analytics':
@@ -282,6 +300,17 @@ function app_debug_li() {
 			?>
 			<?php
 		break;
+
+		case 'workflow':
+			?>
+
+			<!-- MY TIME -->
+			<li>
+				<a href="<?=app_create_link(array('template'=> '_DEMO-task')); ?>">
+					DEMO TEMPLATE: Task boards
+				</a>
+			</li>
+			<?php
 	endswitch;
 		?>
 	<li>
@@ -293,6 +322,12 @@ function app_debug_li() {
 
 	<li>
 		<a href="#" onclick="placeholderScriptDarkMode(event)">Toggle Dark</a>
+	</li>
+	<li>
+		<?php 
+			$js_to_switch = FWAPPS_JS == 'vanilla' ? '' : 'vanilla';
+		?>
+		<a href="<?=app_create_link(array('js'=>$js_to_switch)); ?>">Switch to <?= $js_to_switch == 'vanilla' ? 'indie' : 'plugged' ?> js</a>
 	</li>
 <?php
 }
@@ -349,7 +384,8 @@ function app_create_link( $array_of_get_vars = array()) {
 	$fallback = array(
 		'env' => FWAPPS_SLUG,
 		'app' => FWAPPS_APP,
-		'template' => 'home',
+		'template' => FWAPPS_TEMPLATE,
+		'js' => FWAPPS_JS,
 	);
 
 	$for_append = $array_of_get_vars;

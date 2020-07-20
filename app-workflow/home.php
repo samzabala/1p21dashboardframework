@@ -569,7 +569,7 @@
 								</td>
 
 								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="fave-task text-wrap-ellipsis">
+									<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="fave-task text-wrap-ellipsis">
 										<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 									</a>
 								</td>
@@ -644,7 +644,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="fave-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="fave-task text-wrap-ellipsis">
 													<span class="REPLACE">active boi</span>
 												</a>
 											</td>
@@ -735,7 +735,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="fave-task-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="fave-task-task text-wrap-ellipsis">
 													<span class="REPLACE">inactyive boi </span>
 												</a>
 											</td>
@@ -876,7 +876,7 @@
 								</td>
 
 								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task text-wrap-ellipsis">
+									<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="open-task text-wrap-ellipsis">
 										<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 									</a>
 								</td>
@@ -951,7 +951,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="open-task text-wrap-ellipsis">
 													<span class="REPLACE">active boi</span>
 												</a>
 											</td>
@@ -1042,7 +1042,7 @@
 
 
 											<td class="dashboard-table-cell-max">
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task-task text-wrap-ellipsis">
+												<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="open-task-task text-wrap-ellipsis">
 													<span class="REPLACE">inactyive boi </span>
 												</a>
 											</td>
@@ -1145,7 +1145,7 @@
 			</h3>
 			<div class="module-functions no-margin-top accordion accordion-mobile">
 				<?php app_get_component('components/filter-input-group-timetracked'); ?>
-				<?php app_get_component('components/board-track-time'); ?>
+				<?php app_get_component('components/board-track-time-toggle'); ?>
 			</div>
 		</div>
 		<div class="module-content">
@@ -1208,7 +1208,7 @@
 
 
 										<td class="dashboard-table-cell-max">
-											<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+											<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="log-today-task text-wrap-ellipsis">
 												<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 											</a>
 										</td>
@@ -1277,7 +1277,7 @@
 
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+														<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="log-today-task text-wrap-ellipsis">
 															<span class="REPLACE">ya boi is done now no take backs </span>
 														</a>
 													</td>
@@ -1339,7 +1339,7 @@
 
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'project')) ?>" class="log-today-task text-wrap-ellipsis">
+														<a href="#task-REPLACEwithPostTypeID-view" data-toggle="board" class="log-today-task text-wrap-ellipsis">
 															<span class="REPLACE">ya boi is still running </span>
 														</a>
 													</td>
@@ -1701,548 +1701,567 @@
 
 </div>
 
+<!-- @UPDATE 07-16 week build: boards for tasks and trackinng time will now have to be on the footer of every page -->
+<?php
+app_get_component('components/boards-project');
+app_get_component('components/boards-task');
+app_get_component('components/board-track-time');
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 <!-- DO NOT COPY EVERYTHING BELOW -->
 
-<div class="module-grid" style="width: 500px;">
 
-<h1>DO NOT COPY THIS SECTION</h1>
+<!-- DO NOT -->
+<div class="display-none">
+	<div class="module-grid" style="width: 500px;">
 
-<h2>STATE 1: Stopped timer + no entry</h2>
+		<h1>DO NOT COPY THIS SECTION</h1>
 
-<p>
-	Notes:<br><br>
+		<h2>STATE 1: Stopped timer + no entry</h2>
 
-	Play button and placeholder will trigger the same board
-</p>
-<div class="p">
+		<p>
+			Notes:<br><br>
 
-	<!-- timetracker -->
+			Play button and placeholder will trigger the same board
+		</p>
+		<div class="p">
 
-		<!-- @NOTE:
-	
-		classes to add:
-			#timetracker-home-watch
-				when timer is running => ` theme-inverse background-gradient-225`
-				when timer is in default state/stopped => ``
-	
-		-->
-		<div
-		class="module position-relative">
-		<div class="module-header module-header-break no-margin-bottom position-relative">
-			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
-				<div class="flex-col-7">
-					<h3 class="module-title">Time Tracker</h3>
+		<!-- timetracker -->
+
+			<!-- @NOTE:
+		
+			classes to add:
+				#timetracker-home-watch
+					when timer is running => ` theme-inverse background-gradient-225`
+					when timer is in default state/stopped => ``
+		
+			-->
+			<div
+			class="module position-relative">
+			<div class="module-header module-header-break no-margin-bottom position-relative">
+				<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+					<div class="flex-col-7">
+						<h3 class="module-title">Time Tracker</h3>
+					</div>
+					<div class="flex-col-5 text-align-right">
+						<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
+							<i class="symbol symbol-kebab-horizontal"></i>
+						</a> 
+
+
+					
+					<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
+					<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
+						<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
+					</a>
+					</div>
 				</div>
-				<div class="flex-col-5 text-align-right">
-					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
-						<i class="symbol symbol-kebab-horizontal"></i>
-					</a> 
-
-
 				
-				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
-				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
-					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
-				</a>
-				</div>
 			</div>
-			
-		</div>
-		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
-			
-			
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
-				<div class="flex-child">
-					<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
+			<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
+				
+				
+				<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
+					<div class="flex-child">
+						<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
 
-						<span class="watch-time-hours">
-							<span class="REPLACE">00</span>
-						</span>
+							<span class="watch-time-hours">
+								<span class="REPLACE">00</span>
+							</span>
 
-						<span>:</span>
+							<span>:</span>
 
-						<span class="watch-time-minutes">
-							<span class="REPLACE">00</span>
-						</span>
+							<span class="watch-time-minutes">
+								<span class="REPLACE">00</span>
+							</span>
 
 
-						<span>:</span>
+							<span>:</span>
 
-						<span class="watch-time-minutes">
-							<span class="REPLACE">00</span>
-						</span>
+							<span class="watch-time-minutes">
+								<span class="REPLACE">00</span>
+							</span>
+						</div>
+					</div>
+
+					<div class="flex-child">
+
+						<!-- play butt..on -->
+						<!-- @NOTE:
+							classes to add:
+								.watch-btn.workflow-toggle-play 
+									when timer is running => `display-none`
+									when timer is in default state/stopped => ``
+
+
+							other attributes
+
+								when there is a previous entry => (
+									href => `#` 
+									onclick	=> `somethingthatstartsthetimerforpreviousentry()`
+								)
+
+								when no previous entry OR previous entry was stopped =>  (
+									href = `#board-track-time`
+									onclick	=> NULL
+									)
+
+						-->
+						<a href="#board-track-time"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
+							">
+							<i class="symbol symbol-play"></i>
+						</a>
+
+						
+
+
+						<!-- pause butt..on -->
+						<!-- @NOTE:
+
+						button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
+
+						classes to add:
+							.watch-btn.workflow-toggle-pause
+								when timer is running => ``
+								when timer is in default state/stopped  => `display-none`
+						-->
+						
+						<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary
+						display-none">
+							<i class="symbol symbol-pause"></i>
+						</a>
+
+
+						<!-- spacer -->
+						<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
+
+
+
+						<!-- stop butt..on -->
+						<!-- @NOTE:
+						classes to add:
+							.watch-btn.workflow-toggle-stop
+								when timer is running => `btn-theme-outline`
+								when timer is in default state  => `btn-neutral`
+								when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
+				
+						-->
+						<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
+						btn-neutral btn-disabled
+						">
+							<i class="symbol symbol-stop"></i>
+						</a>
+
+
+
 					</div>
 				</div>
 
-				<div class="flex-child">
-
-					<!-- play butt..on -->
-					<!-- @NOTE:
-						classes to add:
-							.watch-btn.workflow-toggle-play 
-								when timer is running => `display-none`
-								when timer is in default state/stopped => ``
+				<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
 
 
-						other attributes
-
-							when there is a previous entry => (
-								href => `#` 
-								onclick	=> `somethingthatstartsthetimerforpreviousentry()`
-							)
-
-							when no previous entry OR previous entry was stopped =>  (
-								href = `#board-track-time`
-								onclick	=> NULL
-								)
-
-					-->
-					<a href="#board-track-time"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
-						">
-						<i class="symbol symbol-play"></i>
-					</a>
-
-					
-
-
-					<!-- pause butt..on -->
-					<!-- @NOTE:
-
-					button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
-
-					classes to add:
-						.watch-btn.workflow-toggle-pause
-							when timer is running => ``
-							when timer is in default state/stopped  => `display-none`
+					<!--
+						
+						@else there was no previous entry 
 					-->
 					
-					<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary
-					display-none">
-						<i class="symbol symbol-pause"></i>
-					</a>
+
+						<div class="flex-col-12">
+							<a href="#board-track-time" data-toggle="board" class="display-block">
+								<h4 class="watch-project color-neutral no-margin-y">
+									Add Project +
+								</h4>
 
 
-					<!-- spacer -->
-					<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
-
-
-
-					<!-- stop butt..on -->
-					<!-- @NOTE:
-					classes to add:
-						.watch-btn.workflow-toggle-stop
-							when timer is running => `btn-theme-outline`
-							when timer is in default state  => `btn-neutral`
-							when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
-			
-					-->
-					<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
-					btn-neutral btn-disabled
-					">
-						<i class="symbol symbol-stop"></i>
-					</a>
-
-
-
+								<p class="watch-client color-neutral no-margin-bottom">
+									Add Client +
+								</p>
+								
+								<p class="watch-task color-neutral h5 no-margin-y text-leading-expanded font-weight-400">
+									Add Task +
+								</p>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
+
+		</div>
 
 
-				<!--
+		<h2>STATE 1.5: board toggled. if the user successfuly inputs a timer log, watch goes to state 2</h2>
+
+
+		<h2>STATE 2:Active timer w previous entry</h2>
+
+		<p>
+			Notes:<br><br>
+
+			pause button will stop timer and chang ewatch  state to state 3<br><br>
+
+			kebab stays and is still accessible allowing user to add new entry on top of the page<br>
+		</p>
+
+
+		<div class="p">
+		
+		<!-- timetracker -->
+
+			<!-- @NOTE:
+		
+			classes to add:
+				#timetracker-home-watch
+					when timer is running => ` theme-inverse background-gradient-225`
+					when timer is in default state/stopped => ``
+		
+			-->
+			<div
+			id="workflow-dash-watch"
+			class="module position-relative theme-inverse background-gradient-225">
+				<div class="module-header module-header-break no-margin-bottom position-relative">
+					<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+						<div class="flex-col-7">
+							<h3 class="module-title">Time Tracker</h3>
+						</div>
+						<div class="flex-col-5 text-align-right">
+							<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
+								<i class="symbol symbol-kebab-horizontal"></i>
+							</a> 
+
+
+						
+						<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
+						<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
+							<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
+						</a>
+						</div>
+					</div>
 					
-					@else there was no previous entry 
-				-->
-				
+				</div>
+				<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
+					
+					
+					<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
+						<div class="flex-child">
+							<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
 
-					<div class="flex-col-12">
-						<a href="#board-track-time" data-toggle="board" class="display-block">
-							<h4 class="watch-project color-neutral no-margin-y">
-								Add Project +
+								<span class="watch-time-hours">
+									<span class="REPLACE">00</span>
+								</span>
+
+								<span>:</span>
+
+								<span class="watch-time-minutes">
+									<span class="REPLACE">00</span>
+								</span>
+
+
+								<span>:</span>
+
+								<span class="watch-time-minutes">
+									<span class="REPLACE">00</span>
+								</span>
+							</div>
+						</div>
+
+						<div class="flex-child">
+
+							<!-- play butt..on -->
+							<!-- @NOTE:
+								classes to add:
+									.watch-btn.workflow-toggle-play 
+										when timer is running => `display-none`
+										when timer is in default state/stopped => ``
+
+
+								other attributes
+
+									when there is a previous entry => (
+										href => `#` 
+										onclick	=> `somethingthatstartsthetimerforpreviousentry()`
+									)
+
+									when no previous entry OR previous entry was stopped =>  (
+										href = `#board-track-time`
+										onclick	=> NULL
+										)
+
+							-->
+							<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover display-none
+								">
+								<i class="symbol symbol-play"></i>
+							</a>
+
+							
+
+
+							<!-- pause butt..on -->
+							<!-- @NOTE:
+
+							button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
+
+							classes to add:
+								.watch-btn.workflow-toggle-pause
+									when timer is running => ``
+									when timer is in default state/stopped  => `display-none`
+							-->
+							
+							<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary">
+								<i class="symbol symbol-pause"></i>
+							</a>
+
+
+							<!-- spacer -->
+							<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
+
+
+
+							<!-- stop butt..on -->
+							<!-- @NOTE:
+							classes to add:
+								.watch-btn.workflow-toggle-stop
+									when timer is running => `btn-theme-outline`
+									when timer is in default state  => `btn-neutral`
+									when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
+					
+							-->
+							<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
+							btn-theme-outline
+							">
+								<i class="symbol symbol-stop"></i>
+							</a>
+
+
+
+						</div>
+					</div>
+
+					<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
+
+
+
+					<!-- @if there was a previous entry OR previous entry was stopped -->
+						<div class="watch-last-entry flex-col-12">
+
+							<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
+								<span class="REPLACE">Project with a really long name Project with a really long name </span>
 							</h4>
 
 
-							<p class="watch-client color-neutral no-margin-bottom">
-								Add Client +
+							<p class="watch-client text-wrap-ellipsis no-margin-bottom">
+								<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
 							</p>
 							
-							<p class="watch-task color-neutral h5 no-margin-y text-leading-expanded font-weight-400">
-								Add Task +
+							<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
+								<span class="REPLACE">Task with a really long name Task with a really long name </span>
 							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<h2>STATE 3:Stopped timer w/ previous entry</h2>
+
+		<p>
+			Notes:<br><br>
+
+			Play button will automatically resume the previous entry NOT the board, changing state back to state 2<br><br>
+			Clicking the kebab will open the board to start a new entry/ timer<br>
+		</p>
+
+
+		<div class="p">
+			<!-- timetracker -->
+
+			<!-- @NOTE:
+		
+			classes to add:
+				#timetracker-home-watch
+					when timer is running => ` theme-inverse background-gradient-225`
+					when timer is in default state/stopped => ``
+		
+			-->
+			<div
+			class="module position-relative">
+				<div class="module-header module-header-break no-margin-bottom position-relative">
+					<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
+						<div class="flex-col-7">
+							<h3 class="module-title">Time Tracker</h3>
+						</div>
+						<div class="flex-col-5 text-align-right">
+							<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
+								<i class="symbol symbol-kebab-horizontal"></i>
+							</a> 
+
+
+						
+						<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
+						<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
+							<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
 						</a>
+						</div>
 					</div>
-			</div>
-		</div>
-	</div>
-
-
-</div>
-
-
-<h2>STATE 1.5: board toggled. if the user successfuly inputs a timer log, watch goes to state 2</h2>
-
-
-<h2>STATE 2:Active timer w previous entry</h2>
-
-<p>
-	Notes:<br><br>
-
-	pause button will stop timer and chang ewatch  state to state 3<br><br>
-
-	kebab stays and is still accessible allowing user to add new entry on top of the page<br>
-</p>
-
-
-<div class="p">
-	
-	<!-- timetracker -->
-
-		<!-- @NOTE:
-	
-		classes to add:
-			#timetracker-home-watch
-				when timer is running => ` theme-inverse background-gradient-225`
-				when timer is in default state/stopped => ``
-	
-		-->
-		<div
-		id="workflow-dash-watch"
-		class="module position-relative theme-inverse background-gradient-225">
-		<div class="module-header module-header-break no-margin-bottom position-relative">
-			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
-				<div class="flex-col-7">
-					<h3 class="module-title">Time Tracker</h3>
+					
 				</div>
-				<div class="flex-col-5 text-align-right">
-					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
-						<i class="symbol symbol-kebab-horizontal"></i>
-					</a> 
+				<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
+					
+					
+					<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
+						<div class="flex-child">
+							<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
+
+								<span class="watch-time-hours">
+									<span class="REPLACE">00</span>
+								</span>
+
+								<span>:</span>
+
+								<span class="watch-time-minutes">
+									<span class="REPLACE">00</span>
+								</span>
 
 
-				
-				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
-				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
-					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
-				</a>
-				</div>
-			</div>
-			
-		</div>
-		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
-			
-			
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
-				<div class="flex-child">
-					<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
+								<span>:</span>
 
-						<span class="watch-time-hours">
-							<span class="REPLACE">00</span>
-						</span>
+								<span class="watch-time-minutes">
+									<span class="REPLACE">00</span>
+								</span>
+							</div>
+						</div>
 
-						<span>:</span>
+						<div class="flex-child">
 
-						<span class="watch-time-minutes">
-							<span class="REPLACE">00</span>
-						</span>
+							<!-- play butt..on -->
+							<!-- @NOTE:
+								classes to add:
+									.watch-btn.workflow-toggle-play 
+										when timer is running => `display-none`
+										when timer is in default state/stopped => ``
 
 
-						<span>:</span>
+								other attributes
 
-						<span class="watch-time-minutes">
-							<span class="REPLACE">00</span>
-						</span>
+									when there is a previous entry => (
+										href => `#` 
+										onclick	=> `somethingthatstartsthetimerforpreviousentry()`
+									)
+
+									when no previous entry OR previous entry was stopped =>  (
+										href = `#board-track-time`
+										onclick	=> NULL
+										)
+
+							-->
+							<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
+								">
+								<i class="symbol symbol-play"></i>
+							</a>
+
+							
+
+
+							<!-- pause butt..on -->
+							<!-- @NOTE:
+
+							button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
+
+							classes to add:
+								.watch-btn.workflow-toggle-pause
+									when timer is running => ``
+									when timer is in default state/stopped  => `display-none`
+							-->
+							
+							<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary
+							display-none">
+								<i class="symbol symbol-pause"></i>
+							</a>
+
+
+							<!-- spacer -->
+							<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
+
+
+
+							<!-- stop butt..on -->
+							<!-- @NOTE:
+							classes to add:
+								.watch-btn.workflow-toggle-stop
+									when timer is running => `btn-theme-outline`
+									when timer is in default state  => `btn-neutral`
+									when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
+					
+							-->
+							<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
+							btn-neutral
+							">
+								<i class="symbol symbol-stop"></i>
+							</a>
+
+
+
+						</div>
 					</div>
-				</div>
 
-				<div class="flex-child">
-
-					<!-- play butt..on -->
-					<!-- @NOTE:
-						classes to add:
-							.watch-btn.workflow-toggle-play 
-								when timer is running => `display-none`
-								when timer is in default state/stopped => ``
+					<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
 
 
-						other attributes
+						<!-- @if there was a previous entry OR previous entry was stopped -->
+						<div class="watch-last-entry flex-col-12">
 
-							when there is a previous entry => (
-								href => `#` 
-								onclick	=> `somethingthatstartsthetimerforpreviousentry()`
-							)
-
-							when no previous entry OR previous entry was stopped =>  (
-								href = `#board-track-time`
-								onclick	=> NULL
-								)
-
-					-->
-					<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover display-none
-						">
-						<i class="symbol symbol-play"></i>
-					</a>
-
-					
+							<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
+								<span class="REPLACE">Project with a really long name Project with a really long name </span>
+							</h4>
 
 
-					<!-- pause butt..on -->
-					<!-- @NOTE:
-
-					button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
-
-					classes to add:
-						.watch-btn.workflow-toggle-pause
-							when timer is running => ``
-							when timer is in default state/stopped  => `display-none`
-					-->
-					
-					<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary">
-						<i class="symbol symbol-pause"></i>
-					</a>
-
-
-					<!-- spacer -->
-					<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
-
-
-
-					<!-- stop butt..on -->
-					<!-- @NOTE:
-					classes to add:
-						.watch-btn.workflow-toggle-stop
-							when timer is running => `btn-theme-outline`
-							when timer is in default state  => `btn-neutral`
-							when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
-			
-					-->
-					<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
-					btn-theme-outline
-					">
-						<i class="symbol symbol-stop"></i>
-					</a>
-
-
-
-				</div>
-			</div>
-
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
-
-
-
-			<!-- @if there was a previous entry OR previous entry was stopped -->
-				<div class="watch-last-entry flex-col-12">
-
-					<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
-						<span class="REPLACE">Project with a really long name Project with a really long name </span>
-					</h4>
-
-
-					<p class="watch-client text-wrap-ellipsis no-margin-bottom">
-						<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
-					</p>
-					
-					<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
-						<span class="REPLACE">Task with a really long name Task with a really long name </span>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-</div>
-
-
-
-<h2>STATE 3:Stopped timer w/ previous entry</h2>
-
-<p>
-	Notes:<br><br>
-
-	Play button will automatically resume the previous entry NOT the board, changing state back to state 2<br><br>
-	Clicking the kebab will open the board to start a new entry/ timer<br>
-</p>
-
-
-<div class="p">
-		<!-- timetracker -->
-
-		<!-- @NOTE:
-	
-		classes to add:
-			#timetracker-home-watch
-				when timer is running => ` theme-inverse background-gradient-225`
-				when timer is in default state/stopped => ``
-	
-		-->
-		<div
-		class="module position-relative">
-		<div class="module-header module-header-break no-margin-bottom position-relative">
-			<div class="align-items-center flex-grid flex-grid-no-gutter flex-grid-fixed justify-content-space-between">
-				<div class="flex-col-7">
-					<h3 class="module-title">Time Tracker</h3>
-				</div>
-				<div class="flex-col-5 text-align-right">
-					<a href="#board-track-time" class="btn color-primary color-secondary-hover color-inherit-inverse btn-no-shadow btn-symbol" data-toggle="board">
-						<i class="symbol symbol-kebab-horizontal"></i>
-					</a> 
-
-
-				
-				<!-- @NOTE: this triggers the browser extension/app. while thaty's in progreess we can comment this out for now -->
-				<a href="#" class=" btn btn-symbol btn-no-shadow color-neutral color-inherit-inverse color-secondary-hover" id="workflow-app-trigger">
-					<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-popper.svg" alt="Trigger App/ Browser Extension">
-				</a>
-				</div>
-			</div>
-			
-		</div>
-		<div class="flex-wrap flex-xs justify-content-space-around module-content no-margin-top">
-			
-			
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact align-items-center justify-content-space-between ">
-				<div class="flex-child">
-					<div class="watch-time special-primary text-leading-whole inline-flex no-margin-y">
-
-						<span class="watch-time-hours">
-							<span class="REPLACE">00</span>
-						</span>
-
-						<span>:</span>
-
-						<span class="watch-time-minutes">
-							<span class="REPLACE">00</span>
-						</span>
-
-
-						<span>:</span>
-
-						<span class="watch-time-minutes">
-							<span class="REPLACE">00</span>
-						</span>
+							<p class="watch-client text-wrap-ellipsis no-margin-bottom">
+								<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
+							</p>
+							
+							<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
+								<span class="REPLACE">Task with a really long name Task with a really long name </span>
+							</p>
+						</div>
 					</div>
 				</div>
-
-				<div class="flex-child">
-
-					<!-- play butt..on -->
-					<!-- @NOTE:
-						classes to add:
-							.watch-btn.workflow-toggle-play 
-								when timer is running => `display-none`
-								when timer is in default state/stopped => ``
-
-
-						other attributes
-
-							when there is a previous entry => (
-								href => `#` 
-								onclick	=> `somethingthatstartsthetimerforpreviousentry()`
-							)
-
-							when no previous entry OR previous entry was stopped =>  (
-								href = `#board-track-time`
-								onclick	=> NULL
-								)
-
-					-->
-					<a href="#"  class="watch-btn workflow-toggle-play btn btn-symbol  well btn-secondary background-gradient-45 background-image-none-hover background-primary-hover
-						">
-						<i class="symbol symbol-play"></i>
-					</a>
-
-					
-
-
-					<!-- pause butt..on -->
-					<!-- @NOTE:
-
-					button commented out so it doesn't scare ppl. make sure to comment back in and modify when ready :)
-
-					classes to add:
-						.watch-btn.workflow-toggle-pause
-							when timer is running => ``
-							when timer is in default state/stopped  => `display-none`
-					-->
-					
-					<a href="#"class="watch-btn workflow-toggle-pause btn btn-symbol  well btn-secondary
-					display-none">
-						<i class="symbol symbol-pause"></i>
-					</a>
-
-
-					<!-- spacer -->
-					<span class="font-size-large">&nbsp;&nbsp;&nbsp;</span>
-
-
-
-					<!-- stop butt..on -->
-					<!-- @NOTE:
-					classes to add:
-						.watch-btn.workflow-toggle-stop
-							when timer is running => `btn-theme-outline`
-							when timer is in default state  => `btn-neutral`
-							when timer is in default stopped AND  there was no previous entry OR previous entry was stopped => `btn-neutral btn-disabled`
-			
-					-->
-					<a href="#"class="watch-btn workflow-toggle-stop btn btn-symbol  well
-					btn-neutral
-					">
-						<i class="symbol symbol-stop"></i>
-					</a>
-
-
-
-				</div>
-			</div>
-
-			<div class="flex-1-1 flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
-
-
-				<!-- @if there was a previous entry OR previous entry was stopped -->
-				<div class="watch-last-entry flex-col-12">
-
-					<h4 class="watch-project color-primary color-inherit-inverse text-wrap-ellipsis no-margin-y">
-						<span class="REPLACE">Project with a really long name Project with a really long name </span>
-					</h4>
-
-
-					<p class="watch-client text-wrap-ellipsis no-margin-bottom">
-						<span class="REPLACE">Client Name but really long Client Name but really long Client Name but really long Client Name but really long Client Name but really long </span>
-					</p>
-					
-					<p class="watch-task color-neutral color-inherit-inverse h5 text-wrap-ellipsis no-margin-y text-leading-expanded font-weight-400">
-						<span class="REPLACE">Task with a really long name Task with a really long name </span>
-					</p>
-				</div>
 			</div>
 		</div>
+
+		<p>
+			Task Panil
+		</p>
+
+
+
 	</div>
 </div>
-
-<p>
-	Task Panil
-</p>
-
-
-
-
-<ul class="nav-list">
-	<!-- MY TIME -->
-	<li class="nav-item">
-		<a href="<?=app_create_link(array('template'=> '_DEMO-task')); ?>">
-			
-			<span class="nav-item-text">DEMO - Task</span>
-		</a>
-	</li>
-
-	
-</ul>
-
-								</div>

@@ -177,6 +177,10 @@ $prefix: '.btn';
 				@extend %for-btn-in-nav;
 			}
 
+			#{$prefix}-no-radius & {
+				@extend %for-no-radius !optional;
+			}
+
 			#{$prefix}-group & {
 				@extend %for-btn-in-group;
 			}
@@ -238,6 +242,7 @@ $prefix: '.btn';
 			-webkit-appearance:none;
 			appearance:none;
 			vertical-align: middle;
+			@extend %for-anchor-reset-hover !optional;
 	
 			&:hover,
 			&:focus,
@@ -246,7 +251,6 @@ $prefix: '.btn';
 			&.active {
 				box-shadow: $btn-box-shadow-hover;
 				color:inherit;
-				text-decoration:none;
 			}
 
 			&-small {
@@ -325,11 +329,18 @@ $prefix: '.btn';
 			display:flex;
 			width:100%;
 
-			&,
-			&-mobile {
+			& > .btn:not(.btn-symbol) {
+				flex: 1 1;
+			}
 
-				& > .btn:not(.btn-symbol) {
-					flex: 1 1;
+			@include br(#{$mobile-br-max}-max) {
+				&-mobile {
+					display:flex;
+					width:100%;
+
+					& > .btn:not(.btn-symbol) {
+						flex: 1 1;
+					}
 				}
 			}
 		}

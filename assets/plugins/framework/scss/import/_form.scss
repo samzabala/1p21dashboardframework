@@ -155,9 +155,13 @@ $prefix: '.input';
 				case: $input-label-text-transform,
 			));
 			padding-right: 1rem;
-			display:inline-block;
+			margin-top:0;
+			margin-bottom:0;
 			padding-top: calc( (#{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
 			padding-bottom: calc( ( #{ $calculated-input-height } - (#{$calculated-input-label-single-line}) ) * .5 );
+			// display: inline-flex;
+			// align-items:center;
+			display:inline-block;
 	
 			.theme-inverse & {
 				color:$input-label-color-inverse;
@@ -321,9 +325,10 @@ $prefix: '.input';
 	@at-root %for-form-input {
 
 		& {
+			@extend %for-anchor-reset-hover;
 			font: inherit;
 			color:inherit;
-			vertical-align: middle;
+			// vertical-align: middle;
 			background-color: $input-background;
 			transition: $transition-duration-short color $transition-timing, $transition-duration-short border $transition-timing, $transition-duration-short box-shadow $transition-timing;
 			max-width:100%;
@@ -361,15 +366,20 @@ $prefix: '.input';
 
 		}
 
-		&-ui-control {
+		&-ui {
 
 
-			@extend %for-display-none;
-			//fallback
-			height:0!important;
-			width:0!important;
-			overflow:hidden!important;
-	
+
+			&-control {
+
+
+				@extend %for-display-none;
+				//fallback
+				height:0!important;
+				width:0!important;
+				overflow:hidden!important;
+		
+			}
 		}
 	}
 
@@ -430,7 +440,6 @@ $prefix: '.input';
 			max-width:100%;
 			@include type-set((
 				size: #{$calculated-input-font-size},
-				color:$input-color,
 				leading: #{ $calculated-input-line-height } ,
 				weight: $input-font-weight,
 				style: $input-font-style,
@@ -448,9 +457,26 @@ $prefix: '.input';
 			padding-bottom: $calculated-value-input-paddiny-y;
 			box-shadow: $input-box-shadow;
 
+			&,
+			&:hover,
+			&:focus,
+			&.focus,
+			&:active,
+			&.active {
+				color:$input-color;
+			}
+
 			.theme-inverse & {
-				color:$input-color-inverse;
 				background-color: $input-background-inverse;
+
+				&,
+				&:hover,
+				&:focus,
+				&.focus,
+				&:active,
+				&.active {
+						color:$input-color-inverse;
+				}
 			}
 
 
@@ -561,6 +587,7 @@ $prefix: '.input';
 
 				vertical-align: top;
 				overflow-y: auto;
+				flex: 1;
 		
 				.input-group & {
 					max-height:100%;
@@ -577,6 +604,7 @@ $prefix: '.input';
 			}
 			&-height {
 				height: auto;
+				resize: both;
 				min-height: $calculated-input-height * $input-height-multiple-factor;
 	
 				&-large {
@@ -683,6 +711,10 @@ $prefix: '.input';
 				@extend %for-form-global-in-nav-custom;
 				padding-top: $calculated-value-input-paddiny-y-nav !important;
 				padding-bottom: $calculated-value-input-paddiny-y-nav !important;
+			}
+
+			#{$prefix}-no-radius & {
+				@extend %for-no-radius !optional;
 			}
 	
 			#{$prefix}-group & {
@@ -889,8 +921,10 @@ $prefix: '.input';
 			display:flex;
 			width:100%;
 
-			> #{$prefix},
-			> .trumbowyg {
+			> #{$prefix}
+			// ,
+			// > .btn:not(.btn-symbol)
+			{
 				flex: 1 1;
 			}
 
@@ -900,8 +934,7 @@ $prefix: '.input';
 					width:100%;
 
 					> #{$prefix},
-					> .trumbowyg,
-					.btn:not(.btn-symbol) {
+					> .btn:not(.btn-symbol) {
 						flex: 1 1;
 					}
 				}
@@ -922,14 +955,14 @@ $prefix: '.input';
 
 			&:not(#{$prefix}-group-responsive) {
 
-				> %for-form-input-boxy,.btn, .trumbowyg {
+				> %for-form-input-boxy,.btn {
 					&:nth-last-child(n+2) {
 						border-top-right-radius: 0!important;
 						border-bottom-right-radius: 0!important;
 					}
 				}
 
-				> %for-form-input-boxy,.btn, .trumbowyg {
+				> %for-form-input-boxy,.btn {
 					&:nth-child(n+2) {
 						border-top-left-radius: 0!important;
 						border-bottom-left-radius: 0!important;
@@ -950,14 +983,14 @@ $prefix: '.input';
 				width:auto;
 			}
 
-			> %for-form-input-boxy,.btn, .trumbowyg {
+			> %for-form-input-boxy,.btn {
 				&:nth-last-child(n+2) {
 					border-bottom-right-radius: 0!important;
 					border-bottom-left-radius: 0!important;
 				}
 			}
 
-			> %for-form-input-boxy,.btn, .trumbowyg {
+			> %for-form-input-boxy,.btn {
 				&:nth-child(n+2) {
 					border-top-right-radius: 0!important;
 					border-top-left-radius: 0!important;
@@ -975,18 +1008,15 @@ $prefix: '.input';
 			@include br($mobile-br-max-polar){
 				
 				&#{$prefix}-group-horizontal {
-					> .btn-symbol {
-						width:auto;
-					}
 
-					> %for-form-input-boxy,.btn, .trumbowyg {
+					> %for-form-input-boxy,.btn {
 						&:nth-last-child(n+2) {
 							border-top-right-radius: 0!important;
 							border-bottom-right-radius: 0!important;
 						}
 					}
 
-					> %for-form-input-boxy,.btn, .trumbowyg {
+					> %for-form-input-boxy,.btn {
 						&:nth-child(n+2) {
 							border-top-left-radius: 0!important;
 							border-bottom-left-radius: 0!important;
@@ -1007,14 +1037,18 @@ $prefix: '.input';
 				display:flex;
 				flex-direction:column;
 
-				> %for-form-input-boxy,.btn, .trumbowyg {
+				> .btn-symbol {
+					width:auto;
+				}
+
+				> %for-form-input-boxy,.btn {
 					&:nth-last-child(n+2) {
 						border-bottom-right-radius: 0!important;
 						border-bottom-left-radius: 0!important;
 					}
 				}
 	
-				> %for-form-input-boxy,.btn, .trumbowyg {
+				> %for-form-input-boxy,.btn {
 					&:nth-child(n+2) {
 						border-top-right-radius: 0!important;
 						border-top-left-radius: 0!important;
@@ -1122,7 +1156,14 @@ $prefix: '.input';
 		@at-root %for-form-input-color-#{$tag} {
 			& {
 		
-				color: $color;
+				&,
+				&:hover,
+				&:focus,
+				&.focus,
+				&:active,
+				&.active {
+					color:$color;
+				}
 				border-color: $color;
 				
 				@if type-of($color) == color && $color != transparent {
@@ -1143,8 +1184,14 @@ $prefix: '.input';
 	}
 }
 
+//ui generated shit
 
-
+.fw-ui {
+	&,
+	& a {
+		@extend %for-anchor-reset-hover !optional;
+	}
+}
 
 .special-form,
 fieldset {
@@ -1195,19 +1242,18 @@ fieldset {
 		}
 	}
 
-	#{$prefix},
-	.fw-trumbowyg-editor,
-	.fw-trumbowyg-textarea {
+	#{$prefix} {
 		background-color:transparent!important;
-		outline: none!important;
 		border-color: transparent!important;
+	}
+
+	#{$prefix} {
+		outline: none!important;
 		box-shadow: none !important;
 	}
 
 	%for-form-input-boxy,
-	#{$prefix}-inline,
-	.fw-trumbowyg-editor,
-	.fw-trumbowyg-textarea {
+	#{$prefix}-inline {
 		background-color:transparent;
 		// width:calc(100% + (#{$special-form-gutter-x} * 2));
 		max-width:none;

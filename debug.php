@@ -11,6 +11,31 @@
 		</div>
 
 
+		
+
+		<h1 data-toggle="accordion">sidebar module template<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			sidebar module template
+
+			<div class="module">
+				<div class="module-content">
+					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+						<div class="flex-child">
+							<h5 class="no-margin-y">TITLE</h5>
+						</div>
+						<div class="flex-child">
+							<a href="#task-side-MODULE" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+						</div>
+					</div>
+
+				
+					
+					<div id="task-side-MODULE" class="accordion" data-accordion-change-hash="false">
+					atin cu pung singsing
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<h1 data-toggle="accordion">Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -150,52 +175,52 @@
 
 
 
-			<div class="radius-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">oHOHO</span>
+			<div class="ratio radius-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">oHOHO</span>
 			</div>
 
 
 
 
-			<div class="radius-top-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">top</span>
+			<div class="ratio radius-top-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top</span>
 			</div>
 
 
 
-			<div class="radius-bottom-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">bottom</span>
+			<div class="ratio radius-bottom-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom</span>
 			</div>
 
 
-			<div class="radius-left-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">left</span>
-			</div>
-
-
-
-			<div class="radius-right-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">right</span>
-			</div>
-
-
-			<div class="radius-top-left-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">top-left</span>
+			<div class="ratio radius-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">left</span>
 			</div>
 
 
 
-			<div class="radius-top-right-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">top-right</span>
-			</div>
-
-			<div class="radius-bottom-left-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">bottom-left</span>
+			<div class="ratio radius-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">right</span>
 			</div>
 
 
-			<div class="radius-bottom-right-large ratio-1-by-1 ratio-me background-theme-contrast">
-				<span class="ratio ratio-child-contain">bottom-right</span>
+			<div class="ratio radius-top-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-left</span>
+			</div>
+
+
+
+			<div class="ratio radius-top-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">top-right</span>
+			</div>
+
+			<div class="ratio radius-bottom-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-left</span>
+			</div>
+
+
+			<div class="ratio radius-bottom-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+				<span class="ratio-child-contain">bottom-right</span>
 			</div>
 			
 			<h3>reset</h3>
@@ -256,31 +281,130 @@
 		<div class="accordion">
 			<div class="toolbar toolbar-horizontal">
 				<span class="toolbar-tile">
-
-				<a href="#" class="btn btn-symbol btn-small btn-secondary">
-					<i class="symbol symbol-close"></i>
-				</a>
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
 				</span>
-				<span class="toolbar-tile">Eat shit</span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
 				<span class="toolbar-tile">|</span>
-				<span class="toolbar-tile"></span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
 			</div>
 
-			in case the design is dESIGN
+			<br>
+			<br>
+			<br>
+
 			<div class="toolbar toolbar-vertical">
 				<span class="toolbar-tile">
-
-				<a href="#" class="btn btn-symbol btn-small btn-secondary">
-					<i class="symbol symbol-close"></i>
-				</a>
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
 				</span>
-				<span class="toolbar-tile">Eat shit</span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
 				<span class="toolbar-tile">|</span>
-				<span class="toolbar-tile"></span>
-				<span class="toolbar-tile"></span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
+			</div>
+
+
+
+			<br>
+			<br>
+			<br>
+			
+
+
+			<div class="toolbar toolbar-horizontal toolbar-large">
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
+			</div>
+
+
+
+			<br>
+			<br>
+			<br>
+			
+
+
+			<div class="toolbar toolbar-horizontal toolbar-small">
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-primary">
+						<i class="symbol symbol-play"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-secondary">
+						<i class="symbol symbol-pause"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-default">
+						<i class="symbol symbol-stop"></i>
+					</a>
+				</span>
+				<span class="toolbar-tile">|</span>
+				<span class="toolbar-tile">
+					<div class="btn">Eat Shit</div>
+				</span>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
 			</div>
 		</div>
 
@@ -521,8 +645,8 @@
 
 		<h1 data-toggle="accordion">ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<div class="flex-grid flex-grid-fixed">
-				<div class="flex-col-xs-12 flex-col-md-4">
+			<div class="flex-grid flex-grid-fixed flex-frid-compact">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -537,7 +661,7 @@
 
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-audio"></span>
@@ -547,7 +671,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -559,7 +683,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-doc"></span>
@@ -570,7 +694,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -581,7 +705,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -594,7 +718,7 @@
 				
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<img src="/placeholder/files/shrek.jpg" alt="">
@@ -606,7 +730,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-img"></span>
@@ -617,7 +741,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-ps"></span>
@@ -628,7 +752,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-ai"></span>
@@ -639,7 +763,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-xd"></span>
@@ -651,7 +775,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-pdf"></span>
@@ -663,7 +787,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-id"></span>
@@ -673,7 +797,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -684,7 +808,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -695,7 +819,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-4">
+				<div class="flex-col-xs-12 flex-col-md-3">
 					<a href="#"class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-zip"></span>
@@ -1389,27 +1513,6 @@
 			</div>
 		</div>
 
-
-
-		<h1 data-toggle="accordion">Editor <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
-			<form class="special-form" action="" method="get">
-				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-
-					<label for="" class="sr-only">uuugh</label>
-					<input type="text" class="input input-large input-single-line font-weight-600" placeholder="Enter title here">
-				</div>
-
-
-				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-					<label for="" class="sr-only">uuugh</label>
-				
-					<textarea id="editor-demo" class="input input-trumbowyg"><p>Make this textarea a wisywig with <code>.input-trumbowyg</code>.</p><p>To make your own custom trumbo boi add the class <code>.input-tyumbowyg-custom</code> </p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6><h2>Blockquotes</h2><p>Single line blockquote:</p><blockquote><p>Stay hungry. Stay foolish.</p></blockquote><p>Multi line blockquote with a cite reference:</p><blockquote><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p><p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.<cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite></p></blockquote><h2>Unordered Lists (Nested)</h2><ul><li>List item one<ul><li>List item one<ul><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul></li><li>List item two</li><li>List item three</li><li>List item four</li></ul><h2>Ordered List (Nested)</h2><ol><li>List item one<ol><li>List item one<ol><li>List item one</li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol></li><li>List item two</li><li>List item three</li><li>List item four</li></ol><h2>HTML Tags</h2><p>These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.</p><p><strong>Address Tag</strong></p> <address>1 Infinite Loop<br> Cupertino, CA 95014<br> United States</address><p><strong>Anchor Tag (aka. Link)</strong></p><p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p><p><strong>Abbreviation Tag</strong></p><p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for “seriously”.</p><p><strong>Acronym Tag</strong></p><p>The acronym <acronym title="For The Win">ftw</acronym> stands for “for the win”.</p><p><strong>Big Tag</strong></p><p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p><p><strong>Cite Tag</strong></p><p>“Code is poetry.” —<cite>Automattic</cite></p><p><strong>Code Tag</strong></p><p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p><p><strong>Delete Tag</strong></p><p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>strike</code> instead).</p><p><strong>Emphasize Tag</strong></p><p>The emphasize tag should <em>italicize</em> text.</p><p><strong>Insert Tag</strong></p><p>This tag should denote <ins>inserted</ins> text.</p><p><strong>Keyboard Tag</strong></p><p>This <a href="#thefuckintop">scarcely</a> known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>code</code> tag.</p><p><strong>Preformatted Tag</strong></p><p>This tag styles large blocks of code.</p><pre>//im a block of code motherfucker</pre><p><strong>Quote Tag</strong></p><p><q>Developers, developers, developers…</q> –Steve Ballmer</p><p><strong>Strong Tag</strong></p><p>This tag shows <strong>bold<strong> text.</strong></strong></p><p><strong>Subscript Tag</strong></p><p>Getting our science styling on with H<sub>2</sub>O, which should push the “2” down.</p><p><strong>Superscript Tag</strong></p><p>Still sticking with science and Isaac Newton’s E = MC<sup>2</sup>, which should lift the 2 up.</p><p><strong>Teletype Tag</strong></p><p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>code</code> tag.</p><p><strong>Variable Tag</strong></p><p>This allows you to denote <var>variables</var>.</p><h1 id="thefuckintop">Header one <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1><h2>Header two</h2><h3>Header three</h3><h4>Header four</h4><h5>Header five</h5><h6>Header six</h6></textarea>
-				</div>
-				<a href="#" class="btn btn-primary">Submet et</a>
-			</form>
-		</div>
-				
 
 		<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -3504,7 +3607,7 @@
 			<p>note: all have btn-group-responsive on them because the buttons are a LOT and in context should wrap into a column on mobile</p>
 
 
-			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive">
+			<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-responsive btn-group-toggle-allow-no-active">
 
 					<button type="button" class="active btn btn-default"> butt</button>
 					<button type="button" class="btn btn-default">  Butt </button>
@@ -3559,6 +3662,32 @@
 		<div class="accordion">
 
 			<ul class="list-group">
+				<li>
+				<span class="badge badge-primary"></span>
+				Cras justo odio
+				</li>
+				<li>
+				Dapibus ac facilisis in
+				</li>
+				<li>
+				Morbi leo risus
+				</li>
+			</ul>
+
+			<ul class="list-group list-group-compact">
+				<li>
+				<span class="badge badge-primary"></span>
+				Cras justo odio
+				</li>
+				<li>
+				Dapibus ac facilisis in
+				</li>
+				<li>
+				Morbi leo risus
+				</li>
+			</ul>
+
+			<ul class="list-group list-group-expanded">
 				<li>
 				<span class="badge badge-primary"></span>
 				Cras justo odio

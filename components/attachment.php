@@ -1,4 +1,4 @@
-<div class="asset flex-child">
+<div class="asset flex-child p">
 	<div class="asset-thumbnail">
 
 		<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->

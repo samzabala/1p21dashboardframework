@@ -1,13 +1,13 @@
 
-$calculated-board-close-width: $board-close-width;
-@if internal-is-convertable($board-close-width){
-	$calculated-board-close-width: rem($board-close-width/$body-font-size);
+$calculated-board-close-width: $board-resize-width;
+@if internal-is-convertable($board-resize-width){
+	$calculated-board-resize-width: rem($board-resize-width/$body-font-size);
 }
 
 
-$calculated-board-close-height: $board-close-height;
-@if internal-is-convertable($board-close-height){
-	$calculated-board-close-height: rem($board-close-height/$body-font-size);
+$calculated-board-resize-height: $board-resize-height;
+@if internal-is-convertable($board-resize-height){
+	$calculated-board-resize-height: rem($board-resize-height/$body-font-size);
 }
 
 $calculated-board-close-size: $board-close-size;
@@ -203,7 +203,8 @@ $prefix: '.board';
 		}
 
 		&-content {
-			flex: 1 1;
+			// flex: 1 1;
+			position:relative;
 		}
 	}
 
