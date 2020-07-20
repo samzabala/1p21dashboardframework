@@ -10,7 +10,7 @@
 						<h5 class="input-label">Followers</h5>
 					</div>
 					<div class="flex-child">
-						<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
+						<input id="REPLACEMODE-REPLACEwithPostType-followers-id" name="REPLACEMODE-REPLACEwithPostType-followers-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Followers <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
 					</div>
@@ -39,7 +39,7 @@
 						<h5 class="input-label">Wiki/How-Tos</h5>
 					</div>
 					<div class="flex-child">
-						<input id="REPLACEMODE-task-wiki-id" name="REPLACEMODE-task-wiki-id" type="hidden" />
+						<input id="REPLACEMODE-REPLACEwithPostType-wiki-id" name="REPLACEMODE-REPLACEwithPostType-wiki-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-wiki-multiple'); ?>
 					</div>
@@ -91,7 +91,7 @@
 							<h5 class="input-label">Reminders</h5>
 						</div>
 						<div class="flex-child">
-							<input id="REPLACEMODE-task-followers-id" name="REPLACEMODE-task-followers-id" type="hidden" />
+							<input id="REPLACEMODE-REPLACEwithPostType-followers-id" name="REPLACEMODE-REPLACEwithPostType-followers-id" type="hidden" />
 							<a href="#" data-toggle="modal" data-modal-title="Add reminder" class="btn btn-primary-outline btn-small">Reminder <i class="symbol symbol-plus"></i></a>
 							<?php app_get_component('components/modal-workflow-edit-reminder'); ?>
 						</div>

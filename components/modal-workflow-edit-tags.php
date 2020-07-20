@@ -1,9 +1,5 @@
-
-
-<!-- NOTE this field is only for searching valid tagss -->
+<!-- NOTE this field is only for extending field capabilities -->
 <div class="modal" data-modal-max-width="600px">
-
-	<!-- @NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of tags filter components -->
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input-label">Search Existing Tags</label>
