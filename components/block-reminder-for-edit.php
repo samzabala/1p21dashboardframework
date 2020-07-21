@@ -16,7 +16,7 @@
 	</div>
 	<div class="task-reminder-body alert-content">
 
-		<p class="no-margin-bottom reminder-title">
+		<p class="no-margin-bottom reminder-title font-size-normalize">
 			<span class="REPLACE">Reminder title</span>
 		</p>
 	</div>
