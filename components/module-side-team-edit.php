@@ -163,6 +163,8 @@
 					<input type="hidden" name="REPLACEMODE-REPLACEwithPostType-assignees-id" id="REPLACEMODE-REPLACEwithPostType-assignees-id">
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit assignee <i class="symbol symbol-edit"></i></a>
 					<?php app_get_component('components/modal-workflow-edit-users'); ?>
+					<!-- Should we able to use multiple assignees in the future, use this component instead -->
+					<?php // app_get_component('components/modal-workflow-edit-users-multiple'); ?>
 
 				</div>
 
