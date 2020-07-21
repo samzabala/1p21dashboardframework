@@ -46,17 +46,18 @@ app_get_component('components/board-add-edit-task');
 				Favorite Projects <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</h3>
 		</div>
-		<div class="module-content accordion open" id="open-tasks">
-				<div class="table-wrapper dashboard-table-wrapper-gutterless">
+		<div class="module-content accordion open no-padding" id="open-tasks">
+				<div class="table-wrapper dashboard-table-wrapper-gutterless no-margin">
 					<table class="table-small data-open-tasks">
 						<tr>
 							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
-							<th class="text-nowrap">Task</th>
 							<th class="text-nowrap">Project</th>
 							<th class="text-nowrap">Client</th>
-							<th class="text-nowrap">Days Open</th>
+							<th class="text-nowrap">Type</th>
+							<th class="text-nowrap">Tags</th>
 							<th class="text-nowrap text-align-center">PM</th>
 							<th class="text-nowrap text-align-center">AM</th>
+							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
 						</tr>
 						<?php for($i=1; $i<=2; $i++){ ?>
 							<tr>
@@ -65,24 +66,31 @@ app_get_component('components/board-add-edit-task');
 										<i class="symbol symbol-star-stroke symbol-star-toggle"></i>
 									</a>
 								</td>
-								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task text-wrap-ellipsis">
-										<span class="REPLACE">active boi</span>
+								<td>
+									<a href="<?=app_create_link(array('template'=>'project-details')) ?>" class="open-task text-wrap-ellipsis">
+										<span class="REPLACE">jensenphelanlawfrim.com</span>
 									</a>
-								</td>
-								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-project text-wrap-ellipsis">
-										<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
-									</a>
-								</td>
-								<td class="dashboard-table-cell-max">
-									<span href="<?=app_create_link(array('template'=>'project')) ?>" class="open-client text-wrap-ellipsis">
-										<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
-									</span>
 								</td>
 								<td>
-									<span class="open-days-open text-nowrap">
-										<span class="REPLACE">69</span> days
+									<a href="<?=app_create_link(array('template'=>'project-details')) ?>" class="open-project text-wrap-ellipsis">
+										<span class="REPLACE">Jensen Phelan Law Firm PC (JEN) </span>
+									</a>
+								</td>
+								<td class="dashboard-table-cell-max">
+									<span href="<?=app_create_link(array('template'=>'project-details')) ?>" class="open-client text-wrap-ellipsis">
+										<span class="REPLACE">LS360 SEO</span>
+									</span>
+								</td>
+								<td class="dashboard-table-cell-max">
+									<span class="p tag tag-secondary">
+										<span class="tag-text">
+											<span class="REPLACE">Design</span>
+										</span>
+									</span>
+									<span class="p tag tag-accent">
+										<span class="tag-text">
+											<span class="REPLACE">Seo</span>
+										</span>
 									</span>
 								</td>
 								<td class="dashboard-table-cell-action text-align-center position-relative">
@@ -105,6 +113,7 @@ app_get_component('components/board-add-edit-task');
 										</span>
 									</a>
 								</td>
+								<td class="dashboard-table-cell-fave table-cell-no-gutter">&nbsp;</td>
 							</tr>
 						<?php } ?>
 				</table>
@@ -120,43 +129,51 @@ app_get_component('components/board-add-edit-task');
 				Projects <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</h3>
 		</div>
-		<div class="module-content accordion open" id="open-tasks">
-				<div class="table-wrapper dashboard-table-wrapper-gutterless">
+		<div class="module-content accordion open no-padding" id="open-tasks">
+				<div class="table-wrapper dashboard-table-wrapper-gutterless no-margin">
 					<table class="table-small data-open-tasks">
 						<tr>
-							<th class="text-nowrap" >&nbsp;</th>
-							<th class="text-nowrap">Task</th>
+							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
 							<th class="text-nowrap">Project</th>
 							<th class="text-nowrap">Client</th>
-							<th class="text-nowrap">Days Open</th>
+							<th class="text-nowrap">Type</th>
+							<th class="text-nowrap">Tags</th>
 							<th class="text-nowrap text-align-center">PM</th>
 							<th class="text-nowrap text-align-center">AM</th>
+							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
 						</tr>
 						<?php for($i=1; $i<=15; $i++){ ?>
 							<tr>
-								<td class="dashboard-table-cell-fave">
+								<td class="dashboard-table-cell-fave table-cell-no-gutter">
 									<a href="#" class=" task-favorite color-primary-hover color-neutral color-primary-active" >
 										<i class="symbol symbol-star-stroke symbol-star-toggle"></i>
 									</a>
 								</td>
-								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-task text-wrap-ellipsis">
-										<span class="REPLACE">active boi</span>
+								<td>
+									<a href="<?=app_create_link(array('template'=>'project-details')) ?>" class="open-task text-wrap-ellipsis">
+										<span class="REPLACE">jensenphelanlawfrim.com</span>
 									</a>
-								</td>
-								<td class="dashboard-table-cell-max">
-									<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-project text-wrap-ellipsis">
-										<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
-									</a>
-								</td>
-								<td class="dashboard-table-cell-max">
-									<span href="<?=app_create_link(array('template'=>'project')) ?>" class="open-client text-wrap-ellipsis">
-										<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
-									</span>
 								</td>
 								<td>
-									<span class="open-days-open text-nowrap">
-										<span class="REPLACE">69</span> days
+									<a href="<?=app_create_link(array('template'=>'project-details')) ?>" class="open-project text-wrap-ellipsis">
+										<span class="REPLACE">Jensen Phelan Law Firm PC (JEN) </span>
+									</a>
+								</td>
+								<td class="dashboard-table-cell-max">
+									<span href="<?=app_create_link(array('template'=>'project-details')) ?>" class="open-client text-wrap-ellipsis">
+										<span class="REPLACE">LS360 SEO</span>
+									</span>
+								</td>
+								<td class="dashboard-table-cell-max">
+									<span class="p tag tag-secondary">
+										<span class="tag-text">
+											<span class="REPLACE">Design</span>
+										</span>
+									</span>
+									<span class="p tag tag-accent">
+										<span class="tag-text">
+											<span class="REPLACE">Seo</span>
+										</span>
 									</span>
 								</td>
 								<td class="dashboard-table-cell-action text-align-center position-relative">
@@ -179,6 +196,7 @@ app_get_component('components/board-add-edit-task');
 										</span>
 									</a>
 								</td>
+								<td class="dashboard-table-cell-fave table-cell-no-gutter">&nbsp;</td>
 							</tr>
 						<?php } ?>
 				</table>

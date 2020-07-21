@@ -8887,3 +8887,71 @@ APPS / OUR CUSTOM STYLES
 #workflow-projects .fw-ui {
   border-left: none;
   border-right: none; }
+
+#workflow-projects .dashboard-table-cell-max {
+  width: 230px;
+  max-width: 230px !important;
+  min-width: 230px !important; }
+
+#workflow-projects th, #workflow-projects td, #workflow-projects .table-cell, #workflow-projects .table-cell.table-cell-heading {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+#workflow-projects .table-small td, #workflow-projects .table-small .table-cell {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+#workflow-projects .dashboard-table-cell-fave .task-favorite {
+  display: block;
+  text-align: center; }
+
+#workflow-projects .dashboard-table-cell-action {
+  max-width: 60px;
+  width: 60px; }
+  #workflow-projects .dashboard-table-cell-action .thumbnail.thumbnail-small {
+    font-size: 2.5rem; }
+
+#workflow-projects .dashboard-block-sidebar-slim + #dashboard-block-main {
+  background: #F6F6F6; }
+
+#workflow-projects th, #workflow-projects .table-cell.table-cell-heading {
+  background: #EFF4F8; }
+
+#workflow-projects .module {
+  border: none;
+  margin-bottom: 25px;
+  box-shadow: 0px 3px 6px #bfcbd8; }
+
+#workflow-projects tr, #workflow-projects .table-row {
+  border-bottom: none; }
+
+#workflow-projects tr:not(:last-child), #workflow-projects .table-row:not(:last-child) {
+  border-bottom: 1px solid #DDDEE1; }
+
+#workflow-projects .table-small tr th:first-of-type {
+  width: 45px;
+  max-width: 45px;
+  min-width: 45px; }
+
+#workflow-projects .table-small tr th:last-of-type {
+  width: 25px;
+  max-width: 25px;
+  min-width: 25px; }
+
+#workflow-projects .flex-grid-compact {
+  margin-bottom: 35px; }
+
+#workflow-project-detail .container {
+  max-width: 1580px; }
+
+#workflow-project-detail .split-column {
+  display: flex; }
+
+#workflow-project-detail .split-column .left {
+  max-width: 1050px;
+  width: 100%;
+  margin-right: 20px; }
+
+#workflow-project-detail .split-column .right {
+  max-width: 350px;
+  width: 100%; }
