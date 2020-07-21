@@ -55,9 +55,7 @@ $prefix: '.tag';
 	}
 	&-text  {
 		max-width: 10em;
-		white-space: nowrap!important;
-		overflow: hidden!important;
-		text-overflow: ellipsis!important;
+		@extend %for-text-ellipsis;
 
 	}
 

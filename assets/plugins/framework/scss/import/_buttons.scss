@@ -242,11 +242,7 @@ $prefix: '.btn';
 			-webkit-appearance:none;
 			appearance:none;
 			vertical-align: middle;
-			
-			&,
-			& a {
-				@extend %for-anchor-reset-hover !optional;
-			}
+			@extend %for-anchor-reset-hover !optional;
 	
 			&:hover,
 			&:focus,

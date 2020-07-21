@@ -1,13 +1,8 @@
-
-
-<!-- NOTE this field is only for searching valid tagss -->
+<!-- NOTE this field is only for extending field capabilities -->
 <div class="modal" data-modal-max-width="600px">
 
-	<!-- @NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of tags filter components -->
-	<input name="filter-tags-to-add-REPLACEwithCorrespondingInputFieldName" type="hidden">
-
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-		<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input-label sr-only">Search Tags</label>
+		<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input-label">Search Existing Tags</label>
 
 		<input id="filter-tags-REPLACEwithCorrespondingInputFieldName" name="filter-tags-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
 		
@@ -15,7 +10,7 @@
 		</div>
 	</div>
 
-	<div class="dashboard-list-group-text list-group list-group-toggle list-group-toggle-multiple">
+	<div class="dashboard-list-group-clip-text list-group list-group-toggle list-group-toggle-multiple">
 
 		<!-- If value matches a string in existing tags -->
 			<!--
@@ -31,7 +26,7 @@
 					3: currwently active member
 
 			-->
-			<a href=#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+			<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 				<span class="flex-1-1">
 					<span class="REPLACE">Tag Text</span>
 				</span>
@@ -42,7 +37,7 @@
 				<!-- placeholder -->
 				<?php for($i=1; $i<20; $i++){ $j = 1; ?>
 							
-					<a href=#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
+					<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 						<span class="flex-1-1">
 							<span class="REPLACE">Tag Te<?php while($j <= $i): echo 'e'; $j++; endwhile; ?>xt</span>
 						</span>
@@ -58,20 +53,20 @@
 
 	<!-- Ability to create new tags -->
 
-		<!-- @if add tag successful and could be done async-->
+		<!-- @if add tag successful and could be done async, render and add new tags in `list-group` and set as active-->
 			<div class="alert alert-success p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
-				The tag `<span class="REPLACE">New Tag Text</span>` has been added
+				The tag/s `<span class="REPLACE">New Tags Text</span>` has been added
 			</div>
 
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-			<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tag</label>
+			<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tags</label>
 			<div class="input-group input-group-block input-group-horizontal p">
 
-				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="ffilter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Type a new tag" />
-				<button class="btn btn-primary">Create tag</button>
+				<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-tags" placeholder="Type new tag/s" />
+				<button class="btn btn-primary">Create tags</button>
 			</div>
 		</div>
 
-	<div data-toggle="modal-close" class="btn btn-primary-outline btn-block">Done</div>
+		<button data-toggle="modal-close" class="btn btn-primary-outline btn-block" onclick="REPLACEWithFnThatMakesChangesToCorrespondingInputFieldName">Set tags</button>
 </div>

@@ -23,14 +23,13 @@ class="comment-header flex-grid flex-grid-compact align-items-center flex-grid-f
 		</div>
 	</div>
 
-	<!-- @if user can edit comment -->
 	<div class="flex-child flex-0-0 no-margin-top">
-		<?php app_get_component('components/tooltip-action'); ?>
+		<?php app_get_component('components/tooltip-action-with-reply'); ?>
 	</div>
 </div>
 
 <div class="comment-body p">
-			
+	
 	<div class="REPLACE">
 		<p>
 			Tagged users like <a class="highlight highlight-primary" href="<?=app_create_link(array('template'=>'profile'))?>">@Beyonce Knowles</a> will be links to profiles with the classes <code>highlight highlight-primary</code> 
@@ -39,4 +38,5 @@ class="comment-header flex-grid flex-grid-compact align-items-center flex-grid-f
 			Listen, Morty, I hate to break it to you, but what people call love is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it
 		</p>
 	</div>
+
 </div>

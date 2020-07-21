@@ -607,7 +607,15 @@ window.jQuery && jQuery.noConflict();
 		resetterClass = resetterClass || `${prefix}-group-toggle-reset`;
 		siblingSelector = siblingSelector || `.${prefix}`;
 
+		if(
+			triggerer.closest(siblingSelector).length
+			&& !triggerer.hasClass(prefix)
+		){
+			triggerer = triggerer.closest(siblingSelector);
+		}
+
 		if (triggerer) {
+			// fix the children bullshit shit
 			
 			triggerer
 				.siblings(`.${resetterClass}`)
@@ -624,12 +632,18 @@ window.jQuery && jQuery.noConflict();
 			}
 
 			if (
-				triggerer
-					.closest(`.${prefix}-group-toggle-multiple`)
-						.length
-				&& triggerer
-					.siblings('.active')
-						.length > 0
+				(
+					triggerer
+						.closest(`.${prefix}-group-toggle-multiple`)
+							.length
+					&& triggerer
+						.siblings('.active')
+							.length > 0
+				)
+				|| triggerer
+				.closest(`.${prefix}-group-toggle-allow-no-active`)
+					.length
+					
 			) {
 				triggerer.toggleClass('active');
 
@@ -677,8 +691,8 @@ window.jQuery && jQuery.noConflict();
 			const selector = `.${toggleMode}`,
 				toggledClass = `.${toggleMode}`
 						.replace('-open', '')
-						.replace('-close', '')
-						|| null;
+						.replace('-close', ''),
+			classToSearch = toggledClass ? toggledClass.replace('.', '') : null;
 
 			let toReturn = null;
 
@@ -687,10 +701,18 @@ window.jQuery && jQuery.noConflict();
 					triggerer.attr('href')
 					&& triggerer.attr('href') !== ''
 					&& triggerer.attr('href') !== '#'
+					&& $(triggerer.attr('href'))
+						.hasClass(classToSearch)
 				) {
+					// console.warn('toggle found by href');
 					toReturn = $(triggerer.attr('href'));
 
-				} else if (triggerer.attr('data-href')) {
+				} else if (
+					triggerer.attr('data-href')
+					&& $(triggerer.attr('data-href'))
+						.hasClass(classToSearch)
+				) {
+					// console.warn('toggle found by data-href');
 					toReturn = $(triggerer.attr('data-href'));
 
 				} else if (
@@ -699,6 +721,7 @@ window.jQuery && jQuery.noConflict();
 						.parent()
 						.closest(`[data-toggle="${toggleMode}"]`).length
 				) {
+					// console.warn('toggle searching closest data-toggle');
 					toReturn = _.getTheToggled(
 						triggerer.closest(`[data-toggle="${toggleMode}"]`),
 						toggleMode
@@ -708,6 +731,7 @@ window.jQuery && jQuery.noConflict();
 					toggleMode
 					&& triggerer.parent('.input-group').length
 				) {
+					// console.warn('toggle trigger was in input group');
 					toReturn = _.getTheToggled(
 						triggerer.parent('.input-group'),
 						toggleMode
@@ -717,31 +741,36 @@ window.jQuery && jQuery.noConflict();
 					toggleMode
 					&& triggerer.parent('.btn-group').length
 				) {
+					// console.warn('toggle trigger was in btn group');
 					toReturn = _.getTheToggled(
 						triggerer.parent('.btn-group'),
 						toggleMode
 					);
 
 				} else if (triggerer.next(selector).first().length) {
+					// console.warn('toggle trigger is prev sibling');
 					toReturn = triggerer.next(selector).first();
 
 				} else if (triggerer.siblings(selector).first().length) {
+					// console.warn('toggle trigger anybody whos a sibling');
 					toReturn = triggerer.siblings(selector).first();
 				}
 			} else {
 				if (
 					window.location.hash !== ''
-					&& $(window.location.hash).length > -1
+					&& $(window.location.hash).length
 					&& $(window.location.hash).hasClass(
-						toggledClass.replace('.', '')
+						classToSearch
 					)
 				) {
+					// console.warn('no trigger but found the hash is a matching toggle');
 					toReturn = $(window.location.hash);
 				}
 			}
 
-			if (!toReturn) {
+			if (!toReturn || !toReturn.length) {
 				//look if theres an ancestor it can toggle. last prioroty
+				// console.warn('no trigger so looking for an ancestor');
 				switch (toggleMode) {
 					case 'dropdown':
 					case 'modal':
@@ -753,6 +782,8 @@ window.jQuery && jQuery.noConflict();
 							&& toggleMode
 							&& triggerer.parent().closest(toggledClass).length
 						) {
+							
+							// console.warn('found ancestor');
 							toReturn = triggerer
 								.parent()
 								.closest(toggledClass);
@@ -760,6 +791,7 @@ window.jQuery && jQuery.noConflict();
 						break;
 				}
 			}
+
 
 			if(toReturn && toReturn.length) {
 				return toReturn;
@@ -808,6 +840,7 @@ window.jQuery && jQuery.noConflict();
 	_.fns_on_load = [];
 	_.fns_on_ready = [];
 	_.fns_on_resize = [];
+	_.fns_on_scroll = [];
 	_.fns_on_rightAway = [];
 
 	frameWork.validateBr = (breakpoint, mode) => {
@@ -2059,6 +2092,7 @@ window.jQuery && jQuery.noConflict();
 		}
 	};
 	_.fns_on_resize.push(frameWork.destroyToolTip);
+	_.fns_on_scroll.push(frameWork.destroyToolTip);
 
 	//only use when the tooltip is finally active
 	frameWork.positionToolTip = (posX, posY) => {
@@ -2162,8 +2196,6 @@ window.jQuery && jQuery.noConflict();
 
 		const contentWrap = _.getTheToggled(triggerer, subcom);
 
-		console.log('hash fuck',window.location.hash);
-
 		if(contentWrap || !window.location.hash){
 			frameWork.destroyModal(null, subcom);
 		}
@@ -2171,6 +2203,9 @@ window.jQuery && jQuery.noConflict();
 		if (contentWrap && subcom) {
 
 			const arr = {
+				changeHash:
+					(triggerer && triggerer.attr(`data-${subcom}-change-hash`))
+					|| contentWrap.attr(`data-${subcom}-change-hash`),
 				header:
 					(triggerer && triggerer.attr(`data-${subcom}-title`))
 					|| contentWrap.attr(`data-${subcom}-title`),
@@ -2198,6 +2233,7 @@ window.jQuery && jQuery.noConflict();
 			};
 
 			const defaults = {
+				changeHash: true,
 				header: '',
 				close: true,
 				disableOverlay: true,
@@ -2208,9 +2244,10 @@ window.jQuery && jQuery.noConflict();
 				align: 'left',
 			};
 
+			const args = _.parseArgs(arr, defaults);
+			
 			const actualId = `${frameWork.settings.prefix}-${subcom}`;
 
-			const args = _.parseArgs(arr, defaults);
 
 			switch (subcom) {
 				case 'modal':
@@ -2220,7 +2257,7 @@ window.jQuery && jQuery.noConflict();
 
 			const id = contentWrap.attr('id') || actualId;
 
-			id !== `${actualId}` && _.changeHash(id);
+			id !== `${actualId}` && args.changeHash && _.changeHash(id);
 
 			$('body').append(() => {
 				let html = '';
@@ -2313,8 +2350,6 @@ window.jQuery && jQuery.noConflict();
 						.first()
 				);
 
-			$('body').addClass('body-no-scroll');
-
 			if (args.maxWidth) {
 				//all
 				modal
@@ -2333,6 +2368,7 @@ window.jQuery && jQuery.noConflict();
 
 			modal.fadeIn();
 			modal.addClass('active');
+			$('body').addClass('body-no-scroll');
 
 			frameWork[subcom].current = contentWrap;
 			frameWork[subcom].args = args;
@@ -2343,9 +2379,14 @@ window.jQuery && jQuery.noConflict();
 		removeHash = removeHash || false;
 		subcom = subcom || 'modal';
 
+		
+
 		let canRemoveHash = false;
 
-		if (removeHash && frameWork[subcom].current.attr('id')) {
+		if (removeHash
+			&& frameWork[subcom].current.attr('id')
+			&& frameWork[subcom].current.attr('id') == window.location.hash.replace('#','')
+		) {
 			canRemoveHash = true;
 		}
 
@@ -2365,7 +2406,15 @@ window.jQuery && jQuery.noConflict();
 		frameWork[subcom].current = false;
 		frameWork[subcom].args = false;
 
-		$('body').removeClass('body-no-scroll');
+		const validSubcoms = ['modal','board']; 
+		let removeBodClass = true;
+
+		validSubcoms.forEach((sc)=> {
+			if( $(`#${frameWork.settings.prefix}-${sc}`).length && removeBodClass == true ){
+				removeBodClass = false;
+			}
+		})
+		removeBodClass && $('body').removeClass('body-no-scroll');
 	
 		canRemoveHash && _.changeHash('');
 	};
@@ -2519,8 +2568,8 @@ window.jQuery && jQuery.noConflict();
 					ancGroup.children('.accordion').removeClass('open');
 
 					const probablyToggle = $(
-						`[data-toggle="accordion"][href="#${selector.getAttribute('id')}"],
-						[data-toggle="accordion"][data-href="#${selector.getAttribute('id')}"]`
+						`[data-toggle="accordion"][href="#${selector.attr('id')}"],
+						[data-toggle="accordion"][data-href="#${selector.attr('id')}"]`
 					);
 					probablyToggle
 						.siblings('[data-toggle="accordion"]')
@@ -2766,6 +2815,22 @@ window.jQuery && jQuery.noConflict();
 					);
 
 					triggerer.blur();
+				}
+			}
+		);
+
+		$('body').on(
+			'click',
+			'.input-tags-ui .input-tags-ui-input',
+			(e) => {
+				const triggerer = $(e.target);
+
+				e.preventDefault();
+
+				if (!frameWork.isDisabled(triggerer)) {
+					setTimeout(function() {
+						triggerer.focus();
+					}, 0);
 				}
 			}
 		);
@@ -3047,6 +3112,7 @@ window.jQuery && jQuery.noConflict();
 			'focus',
 			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
 			(e) => {
+				console.log('pocus');
 				const uiTrigger = $(e.target);
 
 				if (frameWork.isDisabled(uiTrigger)) {
@@ -3076,6 +3142,7 @@ window.jQuery && jQuery.noConflict();
 			'blur',
 			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
 			(e) => {
+				console.log('blor');
 				const uiTrigger = $(e.target);
 
 				if (!frameWork.isDisabled(uiTrigger)) {
@@ -3385,6 +3452,17 @@ window.jQuery && jQuery.noConflict();
 
 			resizeTimerInternal = setTimeout(() => {
 				_.fns_on_resize.forEach((fn) => {
+					fn();
+				});
+			}, 100);
+		});
+
+		let scrollTimerInternal;
+		$(window).on('resize', () => {
+			clearTimeout(scrollTimerInternal);
+
+			scrollTimerInternal = setTimeout(() => {
+				_.fns_on_scroll.forEach((fn) => {
 					fn();
 				});
 			}, 100);

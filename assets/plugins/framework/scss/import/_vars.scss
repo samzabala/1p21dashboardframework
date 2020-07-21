@@ -379,7 +379,7 @@
 		$tabs-text-transform: none !default;
 		$tabs-transition-duration: $transition-duration-base !default;
 		
-		$tabs-color: rgba($brand-color-neutral,.75) !default;
+		$tabs-color: $brand-color-neutral !default;
 			$tabs-color-inverse: $tabs-color !default;
 
 		$tabs-border-width: 1px !default;
@@ -531,7 +531,7 @@
 			$alert-gutter-y-large: $gutter-base !default;
 			$alert-gutter-y-ends-large: $alert-gutter-y-large * .5 !default;
 
-		$alert-box-shadow: $box-shadow-base $brand-color-base !default;
+		$alert-box-shadow: none !default; //$box-shadow-base $brand-color-base
 		$alert-border-radius: $border-radius-small !default;
 
 			$alert-title-font-weight: $body-font-weight-bold !default;
@@ -545,31 +545,31 @@
 			$alert-color-default: inherit !default;
 
 			$alert-border-primary: rgba($brand-color-primary-dark,.1) !default;
-			$alert-background-primary: $brand-color-primary-light !default;
+			$alert-background-primary: $brand-color-primary-lighter !default;
 			$alert-color-primary: $brand-color-primary-darker !default;
 
 			$alert-border-secondary: rgba($brand-color-secondary-dark,.1) !default;
-			$alert-background-secondary: $brand-color-secondary-light !default;
+			$alert-background-secondary: $brand-color-secondary-lighter !default;
 			$alert-color-secondary: $brand-color-secondary-darker !default;
 
 			$alert-border-accent: rgba($brand-color-accent-dark,.1) !default;
-			$alert-background-accent: $brand-color-accent-light !default;
+			$alert-background-accent: $brand-color-accent-lighter !default;
 			$alert-color-accent: $brand-color-accent-darker !default;
 
 			$alert-border-neutral: rgba($brand-color-neutral-dark,.1) !default;
-			$alert-background-neutral: $brand-color-neutral-light !default;
+			$alert-background-neutral: $brand-color-neutral-lighter !default;
 			$alert-color-neutral: $brand-color-neutral-darker !default;
 
 			$alert-border-success: rgba($brand-color-success-dark,.1) !default;
-			$alert-background-success: $brand-color-success-light !default;
+			$alert-background-success: $brand-color-success-lighter !default;
 			$alert-color-success: $brand-color-success-darker !default;
 
 			$alert-border-caution: rgba($brand-color-caution-dark,.1) !default;
-			$alert-background-caution: $brand-color-caution-light !default;
+			$alert-background-caution: $brand-color-caution-lighter !default;
 			$alert-color-caution: $brand-color-caution-darker !default;
 
 			$alert-border-error: rgba($brand-color-error-dark,.1) !default;
-			$alert-background-error: $brand-color-error-light !default;
+			$alert-background-error: $brand-color-error-lighter !default;
 			$alert-color-error: $brand-color-error-darker !default;
 
 	
@@ -742,7 +742,7 @@
 	// highlight
 
 		$highlight-height: $body-font-size * 1.75 !default;
-		$highlight-padding-x: 10px !default;
+		$highlight-padding-x: 5px !default;
 		$highlight-margin-x: 0 !default;
 		$highlight-font-size: 13px !default;
 		$highlight-font-weight: inherit !default;
@@ -841,7 +841,7 @@
 		$asset-thumbnail-border-width: 3px !default;
 		$asset-thumbnail-border-color: transparent !default;
 			$asset-thumbnail-border-color-hover: $brand-color-primary !default;
-		$asset-width: $asset-thumbnail-width !default;
+		$asset-width: 220px !default;
 		$asset-thumbnail-margin-bottom: $gutter-micro !default;
 		$asset-transition-duration: $transition-duration-base!default;
 
@@ -1055,9 +1055,9 @@
 			$special-form-border-radius: $border-radius-base !default;
 
 	// BTN
-		$btn-height: 50px !default;
-			$btn-height-large: 75px !default;
-			$btn-height-small: 30px !default;
+		$btn-height: $input-height !default;
+			$btn-height-large: $input-height-large !default;
+			$btn-height-small: $input-height-small !default;
 
 		$btn-font-size: $body-font-size !default;
 			$btn-font-size-large: 22px !default;
@@ -1099,7 +1099,7 @@
 				$btn-color-primary-hover: $brand-color-background !default;
 				
 				$btn-border-primary-active: transparent !default;
-				$btn-background-primary-active: $brand-color-primary-dark !default;
+				$btn-background-primary-active: $brand-color-primary !default;
 				$btn-color-primary-active: $brand-color-background !default;
 
 			$btn-border-secondary: transparent !default;
@@ -1111,7 +1111,7 @@
 				$btn-color-secondary-hover: $brand-color-background !default;
 				
 				$btn-border-secondary-active: transparent !default;
-				$btn-background-secondary-active: $brand-color-secondary-dark !default;
+				$btn-background-secondary-active: $brand-color-secondary !default;
 				$btn-color-secondary-active: $brand-color-background !default;
 
 			$btn-border-accent: transparent !default;
@@ -1123,7 +1123,7 @@
 				$btn-color-accent-hover: $brand-color-background !default;
 				
 				$btn-border-accent-active: transparent !default;
-				$btn-background-accent-active: $brand-color-accent-dark !default;
+				$btn-background-accent-active: $brand-color-accent !default;
 				$btn-color-accent-active: $brand-color-background !default;
 
 			$btn-border-neutral: transparent !default;
@@ -1135,7 +1135,7 @@
 				$btn-color-neutral-hover: $brand-color-background !default;
 				
 				$btn-border-neutral-active: transparent !default;
-				$btn-background-neutral-active: $brand-color-neutral-dark !default;
+				$btn-background-neutral-active: $brand-color-neutral !default;
 				$btn-color-neutral-active: $brand-color-background !default;
 
 			$btn-border-success: transparent !default;
@@ -1147,7 +1147,7 @@
 				$btn-color-success-hover: $brand-color-background !default;
 			
 				$btn-border-success-active: transparent !default;
-				$btn-background-success-active: $brand-color-success-dark !default;
+				$btn-background-success-active: $brand-color-success !default;
 				$btn-color-success-active: $brand-color-background !default;
 				
 			$btn-border-caution: transparent !default;
@@ -1159,7 +1159,7 @@
 				$btn-color-caution-hover: $brand-color-background !default;
 				
 				$btn-border-caution-active: transparent !default;
-				$btn-background-caution-active: $brand-color-caution-dark !default;
+				$btn-background-caution-active: $brand-color-caution !default;
 				$btn-color-caution-active: $brand-color-background !default;
 
 			$btn-border-error: transparent !default;
@@ -1171,7 +1171,7 @@
 				$btn-color-error-hover: $brand-color-background !default;
 				
 				$btn-border-error-active: transparent !default;
-				$btn-background-error-active: $brand-color-error-dark !default;
+				$btn-background-error-active: $brand-color-error !default;
 				$btn-color-error-active: $brand-color-background !default;
 
 			$btn-border-link: transparent !default;

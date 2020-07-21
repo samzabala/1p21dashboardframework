@@ -133,6 +133,33 @@ html {
   color: var(--theme-color);
   background-color: var(--theme-background); }
 
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #8d8d8d transparent; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8d8d8d;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8d8d8d;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 8px; }
+
 *.theme-inverse,
 .module.theme-inverse,
 html.theme-inverse,
@@ -222,23 +249,6 @@ button {
 
 a {
   text-decoration: none; }
-
-/* width */
-::-webkit-scrollbar {
-  width: .5em; }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent; }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(141, 141, 141, 0.5);
-  border-radius: .25em; }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #007ece; }
 
 /*** TYPOGRAPHY ***/
 /* special */
@@ -343,7 +353,7 @@ a {
       -webkit-text-decoration-color: currentColor;
               text-decoration-color: currentColor; }
 
-.fw-ui:hover, .fw-ui a:hover, .btn:hover, .btn-group:hover, .btn a:hover, .btn-group a:hover, .highlight:hover, .toolbar:hover, .toolbar a:hover, .tag a:hover, .tag:hover, .thumbnail:hover, .list-group-interactive li:hover, .list-group-interactive li a:hover,
+.fw-ui:hover, .fw-ui a:hover, .input:hover, .btn:hover, .btn-group:hover, .toolbar:hover, .toolbar a:hover, .tag a:hover, .tag:hover, .thumbnail:hover, .list-group-interactive li:hover, .list-group-interactive li a:hover,
 .list-group-interactive .list-group-item:hover,
 .list-group-interactive .list-group-item a:hover, .list-group-toggle li:hover, .list-group-toggle li a:hover,
 .list-group-toggle .list-group-item:hover,
@@ -359,7 +369,7 @@ a {
 .tab .tab-text:hover, .tabs > li > a:hover,
 .tabs > li .tab-text:hover, .nav-list > .nav-item > a:hover,
 .nav-list > .nav-item > [data-toggle]:hover, .nav-list > li > a:hover,
-.nav-list > li > [data-toggle]:hover, .fw-ui:focus, .fw-ui a:focus, .btn:focus, .btn-group:focus, .btn a:focus, .btn-group a:focus, .highlight:focus, .toolbar:focus, .toolbar a:focus, .tag a:focus, .tag:focus, .thumbnail:focus, .list-group-interactive li:focus, .list-group-interactive li a:focus,
+.nav-list > li > [data-toggle]:hover, .fw-ui:focus, .fw-ui a:focus, .input:focus, .btn:focus, .btn-group:focus, .toolbar:focus, .toolbar a:focus, .tag a:focus, .tag:focus, .thumbnail:focus, .list-group-interactive li:focus, .list-group-interactive li a:focus,
 .list-group-interactive .list-group-item:focus,
 .list-group-interactive .list-group-item a:focus, .list-group-toggle li:focus, .list-group-toggle li a:focus,
 .list-group-toggle .list-group-item:focus,
@@ -375,7 +385,7 @@ a {
 .tab .tab-text:focus, .tabs > li > a:focus,
 .tabs > li .tab-text:focus, .nav-list > .nav-item > a:focus,
 .nav-list > .nav-item > [data-toggle]:focus, .nav-list > li > a:focus,
-.nav-list > li > [data-toggle]:focus, .focus.fw-ui, .fw-ui a.focus, .focus.btn, .focus.btn-group, .btn a.focus, .btn-group a.focus, .focus.highlight, .focus.toolbar, .toolbar a.focus, .tag a.focus, .focus.tag, .focus.thumbnail, .list-group-interactive li.focus, .list-group-interactive li a.focus,
+.nav-list > li > [data-toggle]:focus, .focus.fw-ui, .fw-ui a.focus, .focus.input, .focus.btn, .focus.btn-group, .focus.toolbar, .toolbar a.focus, .tag a.focus, .focus.tag, .focus.thumbnail, .list-group-interactive li.focus, .list-group-interactive li a.focus,
 .list-group-interactive .focus.list-group-item,
 .list-group-interactive .list-group-item a.focus, .list-group-toggle li.focus, .list-group-toggle li a.focus,
 .list-group-toggle .focus.list-group-item,
@@ -594,61 +604,61 @@ big {
 
 .fill-theme,
 .theme-inverse .fill-theme-inverse,
-.fill-theme-hover:hover:not(.open):not(.active),
-.fill-theme-focus:focus:not(.open):not(.active),
-.fill-theme-active:active:not(.open):not(.active),
+.fill-theme-hover:hover,
+.fill-theme-focus:focus,
+.fill-theme-active:active,
 .fill-theme-focus.focus,
 .fill-theme-active.active,
 .fill-theme-toggle.active,
 .fill-theme-toggle.open {
   fill: #000000 !important; }
-  .theme-inverse .fill-theme, .theme-inverse .theme-inverse .fill-theme-inverse, .theme-inverse .fill-theme-hover:hover:not(.open):not(.active), .theme-inverse .fill-theme-focus:focus:not(.open):not(.active), .theme-inverse .fill-theme-active:active:not(.open):not(.active), .theme-inverse .fill-theme-focus.focus, .theme-inverse .fill-theme-active.active, .theme-inverse .fill-theme-toggle.active, .theme-inverse .fill-theme-toggle.open {
+  .theme-inverse .fill-theme, .theme-inverse .theme-inverse .fill-theme-inverse, .theme-inverse .fill-theme-hover:hover, .theme-inverse .fill-theme-focus:focus, .theme-inverse .fill-theme-active:active, .theme-inverse .fill-theme-focus.focus, .theme-inverse .fill-theme-active.active, .theme-inverse .fill-theme-toggle.active, .theme-inverse .fill-theme-toggle.open {
     fill: #FFFFFF !important; }
 
 .fill-theme-contrast,
 .theme-inverse .fill-theme-contrast-inverse,
-.fill-theme-contrast-hover:hover:not(.open):not(.active),
-.fill-theme-contrast-focus:focus:not(.open):not(.active),
-.fill-theme-contrast-active:active:not(.open):not(.active),
+.fill-theme-contrast-hover:hover,
+.fill-theme-contrast-focus:focus,
+.fill-theme-contrast-active:active,
 .fill-theme-contrast-focus.focus,
 .fill-theme-contrast-active.active,
 .fill-theme-contrast-toggle.active,
 .fill-theme-contrast-toggle.open {
   fill: #1a1a1a !important; }
-  .theme-inverse .fill-theme-contrast, .theme-inverse .theme-inverse .fill-theme-contrast-inverse, .theme-inverse .fill-theme-contrast-hover:hover:not(.open):not(.active), .theme-inverse .fill-theme-contrast-focus:focus:not(.open):not(.active), .theme-inverse .fill-theme-contrast-active:active:not(.open):not(.active), .theme-inverse .fill-theme-contrast-focus.focus, .theme-inverse .fill-theme-contrast-active.active, .theme-inverse .fill-theme-contrast-toggle.active, .theme-inverse .fill-theme-contrast-toggle.open {
+  .theme-inverse .fill-theme-contrast, .theme-inverse .theme-inverse .fill-theme-contrast-inverse, .theme-inverse .fill-theme-contrast-hover:hover, .theme-inverse .fill-theme-contrast-focus:focus, .theme-inverse .fill-theme-contrast-active:active, .theme-inverse .fill-theme-contrast-focus.focus, .theme-inverse .fill-theme-contrast-active.active, .theme-inverse .fill-theme-contrast-toggle.active, .theme-inverse .fill-theme-contrast-toggle.open {
     fill: #e6e6e6 !important; }
 
 .fill-theme-polar,
 .theme-inverse .fill-theme-polar-inverse,
-.fill-theme-polar-hover:hover:not(.open):not(.active),
-.fill-theme-polar-focus:focus:not(.open):not(.active),
-.fill-theme-polar-active:active:not(.open):not(.active),
+.fill-theme-polar-hover:hover,
+.fill-theme-polar-focus:focus,
+.fill-theme-polar-active:active,
 .fill-theme-polar-focus.focus,
 .fill-theme-polar-active.active,
 .fill-theme-polar-toggle.active,
 .fill-theme-polar-toggle.open {
   fill: #FFFFFF !important; }
-  .theme-inverse .fill-theme-polar, .theme-inverse .theme-inverse .fill-theme-polar-inverse, .theme-inverse .fill-theme-polar-hover:hover:not(.open):not(.active), .theme-inverse .fill-theme-polar-focus:focus:not(.open):not(.active), .theme-inverse .fill-theme-polar-active:active:not(.open):not(.active), .theme-inverse .fill-theme-polar-focus.focus, .theme-inverse .fill-theme-polar-active.active, .theme-inverse .fill-theme-polar-toggle.active, .theme-inverse .fill-theme-polar-toggle.open {
+  .theme-inverse .fill-theme-polar, .theme-inverse .theme-inverse .fill-theme-polar-inverse, .theme-inverse .fill-theme-polar-hover:hover, .theme-inverse .fill-theme-polar-focus:focus, .theme-inverse .fill-theme-polar-active:active, .theme-inverse .fill-theme-polar-focus.focus, .theme-inverse .fill-theme-polar-active.active, .theme-inverse .fill-theme-polar-toggle.active, .theme-inverse .fill-theme-polar-toggle.open {
     fill: #1a1a1a !important; }
 
 .fill-theme-polar-contrast,
 .theme-inverse .fill-theme-polar-contrast-inverse,
-.fill-theme-polar-contrast-hover:hover:not(.open):not(.active),
-.fill-theme-polar-contrast-focus:focus:not(.open):not(.active),
-.fill-theme-polar-contrast-active:active:not(.open):not(.active),
+.fill-theme-polar-contrast-hover:hover,
+.fill-theme-polar-contrast-focus:focus,
+.fill-theme-polar-contrast-active:active,
 .fill-theme-polar-contrast-focus.focus,
 .fill-theme-polar-contrast-active.active,
 .fill-theme-polar-contrast-toggle.active,
 .fill-theme-polar-contrast-toggle.open {
   fill: #e6e6e6 !important; }
-  .theme-inverse .fill-theme-polar-contrast, .theme-inverse .theme-inverse .fill-theme-polar-contrast-inverse, .theme-inverse .fill-theme-polar-contrast-hover:hover:not(.open):not(.active), .theme-inverse .fill-theme-polar-contrast-focus:focus:not(.open):not(.active), .theme-inverse .fill-theme-polar-contrast-active:active:not(.open):not(.active), .theme-inverse .fill-theme-polar-contrast-focus.focus, .theme-inverse .fill-theme-polar-contrast-active.active, .theme-inverse .fill-theme-polar-contrast-toggle.active, .theme-inverse .fill-theme-polar-contrast-toggle.open {
+  .theme-inverse .fill-theme-polar-contrast, .theme-inverse .theme-inverse .fill-theme-polar-contrast-inverse, .theme-inverse .fill-theme-polar-contrast-hover:hover, .theme-inverse .fill-theme-polar-contrast-focus:focus, .theme-inverse .fill-theme-polar-contrast-active:active, .theme-inverse .fill-theme-polar-contrast-focus.focus, .theme-inverse .fill-theme-polar-contrast-active.active, .theme-inverse .fill-theme-polar-contrast-toggle.active, .theme-inverse .fill-theme-polar-contrast-toggle.open {
     fill: #000000 !important; }
 
 .fill-intensity-1,
 .theme-inverse .fill-intensity-1-inverse,
-.fill-intensity-1-hover:hover:not(.open):not(.active),
-.fill-intensity-1-focus:focus:not(.open):not(.active),
-.fill-intensity-1-active:active:not(.open):not(.active),
+.fill-intensity-1-hover:hover,
+.fill-intensity-1-focus:focus,
+.fill-intensity-1-active:active,
 .fill-intensity-1-focus.focus,
 .fill-intensity-1-active.active,
 .fill-intensity-1-toggle.active,
@@ -657,9 +667,9 @@ big {
 
 .fill-intensity-2,
 .theme-inverse .fill-intensity-2-inverse,
-.fill-intensity-2-hover:hover:not(.open):not(.active),
-.fill-intensity-2-focus:focus:not(.open):not(.active),
-.fill-intensity-2-active:active:not(.open):not(.active),
+.fill-intensity-2-hover:hover,
+.fill-intensity-2-focus:focus,
+.fill-intensity-2-active:active,
 .fill-intensity-2-focus.focus,
 .fill-intensity-2-active.active,
 .fill-intensity-2-toggle.active,
@@ -668,9 +678,9 @@ big {
 
 .fill-intensity-3,
 .theme-inverse .fill-intensity-3-inverse,
-.fill-intensity-3-hover:hover:not(.open):not(.active),
-.fill-intensity-3-focus:focus:not(.open):not(.active),
-.fill-intensity-3-active:active:not(.open):not(.active),
+.fill-intensity-3-hover:hover,
+.fill-intensity-3-focus:focus,
+.fill-intensity-3-active:active,
 .fill-intensity-3-focus.focus,
 .fill-intensity-3-active.active,
 .fill-intensity-3-toggle.active,
@@ -679,9 +689,9 @@ big {
 
 .fill-intensity-4,
 .theme-inverse .fill-intensity-4-inverse,
-.fill-intensity-4-hover:hover:not(.open):not(.active),
-.fill-intensity-4-focus:focus:not(.open):not(.active),
-.fill-intensity-4-active:active:not(.open):not(.active),
+.fill-intensity-4-hover:hover,
+.fill-intensity-4-focus:focus,
+.fill-intensity-4-active:active,
 .fill-intensity-4-focus.focus,
 .fill-intensity-4-active.active,
 .fill-intensity-4-toggle.active,
@@ -690,9 +700,9 @@ big {
 
 .fill-intensity-5,
 .theme-inverse .fill-intensity-5-inverse,
-.fill-intensity-5-hover:hover:not(.open):not(.active),
-.fill-intensity-5-focus:focus:not(.open):not(.active),
-.fill-intensity-5-active:active:not(.open):not(.active),
+.fill-intensity-5-hover:hover,
+.fill-intensity-5-focus:focus,
+.fill-intensity-5-active:active,
 .fill-intensity-5-focus.focus,
 .fill-intensity-5-active.active,
 .fill-intensity-5-toggle.active,
@@ -701,9 +711,9 @@ big {
 
 .fill-currentColor,
 .theme-inverse .fill-currentColor-inverse,
-.fill-currentColor-hover:hover:not(.open):not(.active),
-.fill-currentColor-focus:focus:not(.open):not(.active),
-.fill-currentColor-active:active:not(.open):not(.active),
+.fill-currentColor-hover:hover,
+.fill-currentColor-focus:focus,
+.fill-currentColor-active:active,
 .fill-currentColor-focus.focus,
 .fill-currentColor-active.active,
 .fill-currentColor-toggle.active,
@@ -712,9 +722,9 @@ big {
 
 .fill-none,
 .theme-inverse .fill-none-inverse,
-.fill-none-hover:hover:not(.open):not(.active),
-.fill-none-focus:focus:not(.open):not(.active),
-.fill-none-active:active:not(.open):not(.active),
+.fill-none-hover:hover,
+.fill-none-focus:focus,
+.fill-none-active:active,
 .fill-none-focus.focus,
 .fill-none-active.active,
 .fill-none-toggle.active,
@@ -723,9 +733,9 @@ big {
 
 .fill-primary,
 .theme-inverse .fill-primary-inverse,
-.fill-primary-hover:hover:not(.open):not(.active),
-.fill-primary-focus:focus:not(.open):not(.active),
-.fill-primary-active:active:not(.open):not(.active),
+.fill-primary-hover:hover,
+.fill-primary-focus:focus,
+.fill-primary-active:active,
 .fill-primary-focus.focus,
 .fill-primary-active.active,
 .fill-primary-toggle.active,
@@ -734,9 +744,9 @@ big {
 
 .fill-secondary,
 .theme-inverse .fill-secondary-inverse,
-.fill-secondary-hover:hover:not(.open):not(.active),
-.fill-secondary-focus:focus:not(.open):not(.active),
-.fill-secondary-active:active:not(.open):not(.active),
+.fill-secondary-hover:hover,
+.fill-secondary-focus:focus,
+.fill-secondary-active:active,
 .fill-secondary-focus.focus,
 .fill-secondary-active.active,
 .fill-secondary-toggle.active,
@@ -745,9 +755,9 @@ big {
 
 .fill-accent,
 .theme-inverse .fill-accent-inverse,
-.fill-accent-hover:hover:not(.open):not(.active),
-.fill-accent-focus:focus:not(.open):not(.active),
-.fill-accent-active:active:not(.open):not(.active),
+.fill-accent-hover:hover,
+.fill-accent-focus:focus,
+.fill-accent-active:active,
 .fill-accent-focus.focus,
 .fill-accent-active.active,
 .fill-accent-toggle.active,
@@ -756,9 +766,9 @@ big {
 
 .fill-neutral,
 .theme-inverse .fill-neutral-inverse,
-.fill-neutral-hover:hover:not(.open):not(.active),
-.fill-neutral-focus:focus:not(.open):not(.active),
-.fill-neutral-active:active:not(.open):not(.active),
+.fill-neutral-hover:hover,
+.fill-neutral-focus:focus,
+.fill-neutral-active:active,
 .fill-neutral-focus.focus,
 .fill-neutral-active.active,
 .fill-neutral-toggle.active,
@@ -767,9 +777,9 @@ big {
 
 .fill-success,
 .theme-inverse .fill-success-inverse,
-.fill-success-hover:hover:not(.open):not(.active),
-.fill-success-focus:focus:not(.open):not(.active),
-.fill-success-active:active:not(.open):not(.active),
+.fill-success-hover:hover,
+.fill-success-focus:focus,
+.fill-success-active:active,
 .fill-success-focus.focus,
 .fill-success-active.active,
 .fill-success-toggle.active,
@@ -778,9 +788,9 @@ big {
 
 .fill-caution,
 .theme-inverse .fill-caution-inverse,
-.fill-caution-hover:hover:not(.open):not(.active),
-.fill-caution-focus:focus:not(.open):not(.active),
-.fill-caution-active:active:not(.open):not(.active),
+.fill-caution-hover:hover,
+.fill-caution-focus:focus,
+.fill-caution-active:active,
 .fill-caution-focus.focus,
 .fill-caution-active.active,
 .fill-caution-toggle.active,
@@ -789,9 +799,9 @@ big {
 
 .fill-error,
 .theme-inverse .fill-error-inverse,
-.fill-error-hover:hover:not(.open):not(.active),
-.fill-error-focus:focus:not(.open):not(.active),
-.fill-error-active:active:not(.open):not(.active),
+.fill-error-hover:hover,
+.fill-error-focus:focus,
+.fill-error-active:active,
 .fill-error-focus.focus,
 .fill-error-active.active,
 .fill-error-toggle.active,
@@ -800,61 +810,61 @@ big {
 
 .stroke-theme,
 .theme-inverse .stroke-theme-inverse,
-.stroke-theme-hover:hover:not(.open):not(.active),
-.stroke-theme-focus:focus:not(.open):not(.active),
-.stroke-theme-active:active:not(.open):not(.active),
+.stroke-theme-hover:hover,
+.stroke-theme-focus:focus,
+.stroke-theme-active:active,
 .stroke-theme-focus.focus,
 .stroke-theme-active.active,
 .stroke-theme-toggle.active,
 .stroke-theme-toggle.open {
   stroke: #000000 !important; }
-  .theme-inverse .stroke-theme, .theme-inverse .theme-inverse .stroke-theme-inverse, .theme-inverse .stroke-theme-hover:hover:not(.open):not(.active), .theme-inverse .stroke-theme-focus:focus:not(.open):not(.active), .theme-inverse .stroke-theme-active:active:not(.open):not(.active), .theme-inverse .stroke-theme-focus.focus, .theme-inverse .stroke-theme-active.active, .theme-inverse .stroke-theme-toggle.active, .theme-inverse .stroke-theme-toggle.open {
+  .theme-inverse .stroke-theme, .theme-inverse .theme-inverse .stroke-theme-inverse, .theme-inverse .stroke-theme-hover:hover, .theme-inverse .stroke-theme-focus:focus, .theme-inverse .stroke-theme-active:active, .theme-inverse .stroke-theme-focus.focus, .theme-inverse .stroke-theme-active.active, .theme-inverse .stroke-theme-toggle.active, .theme-inverse .stroke-theme-toggle.open {
     stroke: #FFFFFF !important; }
 
 .stroke-theme-contrast,
 .theme-inverse .stroke-theme-contrast-inverse,
-.stroke-theme-contrast-hover:hover:not(.open):not(.active),
-.stroke-theme-contrast-focus:focus:not(.open):not(.active),
-.stroke-theme-contrast-active:active:not(.open):not(.active),
+.stroke-theme-contrast-hover:hover,
+.stroke-theme-contrast-focus:focus,
+.stroke-theme-contrast-active:active,
 .stroke-theme-contrast-focus.focus,
 .stroke-theme-contrast-active.active,
 .stroke-theme-contrast-toggle.active,
 .stroke-theme-contrast-toggle.open {
   stroke: #1a1a1a !important; }
-  .theme-inverse .stroke-theme-contrast, .theme-inverse .theme-inverse .stroke-theme-contrast-inverse, .theme-inverse .stroke-theme-contrast-hover:hover:not(.open):not(.active), .theme-inverse .stroke-theme-contrast-focus:focus:not(.open):not(.active), .theme-inverse .stroke-theme-contrast-active:active:not(.open):not(.active), .theme-inverse .stroke-theme-contrast-focus.focus, .theme-inverse .stroke-theme-contrast-active.active, .theme-inverse .stroke-theme-contrast-toggle.active, .theme-inverse .stroke-theme-contrast-toggle.open {
+  .theme-inverse .stroke-theme-contrast, .theme-inverse .theme-inverse .stroke-theme-contrast-inverse, .theme-inverse .stroke-theme-contrast-hover:hover, .theme-inverse .stroke-theme-contrast-focus:focus, .theme-inverse .stroke-theme-contrast-active:active, .theme-inverse .stroke-theme-contrast-focus.focus, .theme-inverse .stroke-theme-contrast-active.active, .theme-inverse .stroke-theme-contrast-toggle.active, .theme-inverse .stroke-theme-contrast-toggle.open {
     stroke: #e6e6e6 !important; }
 
 .stroke-theme-polar,
 .theme-inverse .stroke-theme-polar-inverse,
-.stroke-theme-polar-hover:hover:not(.open):not(.active),
-.stroke-theme-polar-focus:focus:not(.open):not(.active),
-.stroke-theme-polar-active:active:not(.open):not(.active),
+.stroke-theme-polar-hover:hover,
+.stroke-theme-polar-focus:focus,
+.stroke-theme-polar-active:active,
 .stroke-theme-polar-focus.focus,
 .stroke-theme-polar-active.active,
 .stroke-theme-polar-toggle.active,
 .stroke-theme-polar-toggle.open {
   stroke: #FFFFFF !important; }
-  .theme-inverse .stroke-theme-polar, .theme-inverse .theme-inverse .stroke-theme-polar-inverse, .theme-inverse .stroke-theme-polar-hover:hover:not(.open):not(.active), .theme-inverse .stroke-theme-polar-focus:focus:not(.open):not(.active), .theme-inverse .stroke-theme-polar-active:active:not(.open):not(.active), .theme-inverse .stroke-theme-polar-focus.focus, .theme-inverse .stroke-theme-polar-active.active, .theme-inverse .stroke-theme-polar-toggle.active, .theme-inverse .stroke-theme-polar-toggle.open {
+  .theme-inverse .stroke-theme-polar, .theme-inverse .theme-inverse .stroke-theme-polar-inverse, .theme-inverse .stroke-theme-polar-hover:hover, .theme-inverse .stroke-theme-polar-focus:focus, .theme-inverse .stroke-theme-polar-active:active, .theme-inverse .stroke-theme-polar-focus.focus, .theme-inverse .stroke-theme-polar-active.active, .theme-inverse .stroke-theme-polar-toggle.active, .theme-inverse .stroke-theme-polar-toggle.open {
     stroke: #1a1a1a !important; }
 
 .stroke-theme-polar-contrast,
 .theme-inverse .stroke-theme-polar-contrast-inverse,
-.stroke-theme-polar-contrast-hover:hover:not(.open):not(.active),
-.stroke-theme-polar-contrast-focus:focus:not(.open):not(.active),
-.stroke-theme-polar-contrast-active:active:not(.open):not(.active),
+.stroke-theme-polar-contrast-hover:hover,
+.stroke-theme-polar-contrast-focus:focus,
+.stroke-theme-polar-contrast-active:active,
 .stroke-theme-polar-contrast-focus.focus,
 .stroke-theme-polar-contrast-active.active,
 .stroke-theme-polar-contrast-toggle.active,
 .stroke-theme-polar-contrast-toggle.open {
   stroke: #e6e6e6 !important; }
-  .theme-inverse .stroke-theme-polar-contrast, .theme-inverse .theme-inverse .stroke-theme-polar-contrast-inverse, .theme-inverse .stroke-theme-polar-contrast-hover:hover:not(.open):not(.active), .theme-inverse .stroke-theme-polar-contrast-focus:focus:not(.open):not(.active), .theme-inverse .stroke-theme-polar-contrast-active:active:not(.open):not(.active), .theme-inverse .stroke-theme-polar-contrast-focus.focus, .theme-inverse .stroke-theme-polar-contrast-active.active, .theme-inverse .stroke-theme-polar-contrast-toggle.active, .theme-inverse .stroke-theme-polar-contrast-toggle.open {
+  .theme-inverse .stroke-theme-polar-contrast, .theme-inverse .theme-inverse .stroke-theme-polar-contrast-inverse, .theme-inverse .stroke-theme-polar-contrast-hover:hover, .theme-inverse .stroke-theme-polar-contrast-focus:focus, .theme-inverse .stroke-theme-polar-contrast-active:active, .theme-inverse .stroke-theme-polar-contrast-focus.focus, .theme-inverse .stroke-theme-polar-contrast-active.active, .theme-inverse .stroke-theme-polar-contrast-toggle.active, .theme-inverse .stroke-theme-polar-contrast-toggle.open {
     stroke: #000000 !important; }
 
 .stroke-intensity-1,
 .theme-inverse .stroke-intensity-1-inverse,
-.stroke-intensity-1-hover:hover:not(.open):not(.active),
-.stroke-intensity-1-focus:focus:not(.open):not(.active),
-.stroke-intensity-1-active:active:not(.open):not(.active),
+.stroke-intensity-1-hover:hover,
+.stroke-intensity-1-focus:focus,
+.stroke-intensity-1-active:active,
 .stroke-intensity-1-focus.focus,
 .stroke-intensity-1-active.active,
 .stroke-intensity-1-toggle.active,
@@ -863,9 +873,9 @@ big {
 
 .stroke-intensity-2,
 .theme-inverse .stroke-intensity-2-inverse,
-.stroke-intensity-2-hover:hover:not(.open):not(.active),
-.stroke-intensity-2-focus:focus:not(.open):not(.active),
-.stroke-intensity-2-active:active:not(.open):not(.active),
+.stroke-intensity-2-hover:hover,
+.stroke-intensity-2-focus:focus,
+.stroke-intensity-2-active:active,
 .stroke-intensity-2-focus.focus,
 .stroke-intensity-2-active.active,
 .stroke-intensity-2-toggle.active,
@@ -874,9 +884,9 @@ big {
 
 .stroke-intensity-3,
 .theme-inverse .stroke-intensity-3-inverse,
-.stroke-intensity-3-hover:hover:not(.open):not(.active),
-.stroke-intensity-3-focus:focus:not(.open):not(.active),
-.stroke-intensity-3-active:active:not(.open):not(.active),
+.stroke-intensity-3-hover:hover,
+.stroke-intensity-3-focus:focus,
+.stroke-intensity-3-active:active,
 .stroke-intensity-3-focus.focus,
 .stroke-intensity-3-active.active,
 .stroke-intensity-3-toggle.active,
@@ -885,9 +895,9 @@ big {
 
 .stroke-intensity-4,
 .theme-inverse .stroke-intensity-4-inverse,
-.stroke-intensity-4-hover:hover:not(.open):not(.active),
-.stroke-intensity-4-focus:focus:not(.open):not(.active),
-.stroke-intensity-4-active:active:not(.open):not(.active),
+.stroke-intensity-4-hover:hover,
+.stroke-intensity-4-focus:focus,
+.stroke-intensity-4-active:active,
 .stroke-intensity-4-focus.focus,
 .stroke-intensity-4-active.active,
 .stroke-intensity-4-toggle.active,
@@ -896,9 +906,9 @@ big {
 
 .stroke-intensity-5,
 .theme-inverse .stroke-intensity-5-inverse,
-.stroke-intensity-5-hover:hover:not(.open):not(.active),
-.stroke-intensity-5-focus:focus:not(.open):not(.active),
-.stroke-intensity-5-active:active:not(.open):not(.active),
+.stroke-intensity-5-hover:hover,
+.stroke-intensity-5-focus:focus,
+.stroke-intensity-5-active:active,
 .stroke-intensity-5-focus.focus,
 .stroke-intensity-5-active.active,
 .stroke-intensity-5-toggle.active,
@@ -907,9 +917,9 @@ big {
 
 .stroke-currentColor,
 .theme-inverse .stroke-currentColor-inverse,
-.stroke-currentColor-hover:hover:not(.open):not(.active),
-.stroke-currentColor-focus:focus:not(.open):not(.active),
-.stroke-currentColor-active:active:not(.open):not(.active),
+.stroke-currentColor-hover:hover,
+.stroke-currentColor-focus:focus,
+.stroke-currentColor-active:active,
 .stroke-currentColor-focus.focus,
 .stroke-currentColor-active.active,
 .stroke-currentColor-toggle.active,
@@ -918,9 +928,9 @@ big {
 
 .stroke-none,
 .theme-inverse .stroke-none-inverse,
-.stroke-none-hover:hover:not(.open):not(.active),
-.stroke-none-focus:focus:not(.open):not(.active),
-.stroke-none-active:active:not(.open):not(.active),
+.stroke-none-hover:hover,
+.stroke-none-focus:focus,
+.stroke-none-active:active,
 .stroke-none-focus.focus,
 .stroke-none-active.active,
 .stroke-none-toggle.active,
@@ -929,9 +939,9 @@ big {
 
 .stroke-primary,
 .theme-inverse .stroke-primary-inverse,
-.stroke-primary-hover:hover:not(.open):not(.active),
-.stroke-primary-focus:focus:not(.open):not(.active),
-.stroke-primary-active:active:not(.open):not(.active),
+.stroke-primary-hover:hover,
+.stroke-primary-focus:focus,
+.stroke-primary-active:active,
 .stroke-primary-focus.focus,
 .stroke-primary-active.active,
 .stroke-primary-toggle.active,
@@ -940,9 +950,9 @@ big {
 
 .stroke-secondary,
 .theme-inverse .stroke-secondary-inverse,
-.stroke-secondary-hover:hover:not(.open):not(.active),
-.stroke-secondary-focus:focus:not(.open):not(.active),
-.stroke-secondary-active:active:not(.open):not(.active),
+.stroke-secondary-hover:hover,
+.stroke-secondary-focus:focus,
+.stroke-secondary-active:active,
 .stroke-secondary-focus.focus,
 .stroke-secondary-active.active,
 .stroke-secondary-toggle.active,
@@ -951,9 +961,9 @@ big {
 
 .stroke-accent,
 .theme-inverse .stroke-accent-inverse,
-.stroke-accent-hover:hover:not(.open):not(.active),
-.stroke-accent-focus:focus:not(.open):not(.active),
-.stroke-accent-active:active:not(.open):not(.active),
+.stroke-accent-hover:hover,
+.stroke-accent-focus:focus,
+.stroke-accent-active:active,
 .stroke-accent-focus.focus,
 .stroke-accent-active.active,
 .stroke-accent-toggle.active,
@@ -962,9 +972,9 @@ big {
 
 .stroke-neutral,
 .theme-inverse .stroke-neutral-inverse,
-.stroke-neutral-hover:hover:not(.open):not(.active),
-.stroke-neutral-focus:focus:not(.open):not(.active),
-.stroke-neutral-active:active:not(.open):not(.active),
+.stroke-neutral-hover:hover,
+.stroke-neutral-focus:focus,
+.stroke-neutral-active:active,
 .stroke-neutral-focus.focus,
 .stroke-neutral-active.active,
 .stroke-neutral-toggle.active,
@@ -973,9 +983,9 @@ big {
 
 .stroke-success,
 .theme-inverse .stroke-success-inverse,
-.stroke-success-hover:hover:not(.open):not(.active),
-.stroke-success-focus:focus:not(.open):not(.active),
-.stroke-success-active:active:not(.open):not(.active),
+.stroke-success-hover:hover,
+.stroke-success-focus:focus,
+.stroke-success-active:active,
 .stroke-success-focus.focus,
 .stroke-success-active.active,
 .stroke-success-toggle.active,
@@ -984,9 +994,9 @@ big {
 
 .stroke-caution,
 .theme-inverse .stroke-caution-inverse,
-.stroke-caution-hover:hover:not(.open):not(.active),
-.stroke-caution-focus:focus:not(.open):not(.active),
-.stroke-caution-active:active:not(.open):not(.active),
+.stroke-caution-hover:hover,
+.stroke-caution-focus:focus,
+.stroke-caution-active:active,
 .stroke-caution-focus.focus,
 .stroke-caution-active.active,
 .stroke-caution-toggle.active,
@@ -995,9 +1005,9 @@ big {
 
 .stroke-error,
 .theme-inverse .stroke-error-inverse,
-.stroke-error-hover:hover:not(.open):not(.active),
-.stroke-error-focus:focus:not(.open):not(.active),
-.stroke-error-active:active:not(.open):not(.active),
+.stroke-error-hover:hover,
+.stroke-error-focus:focus,
+.stroke-error-active:active,
 .stroke-error-focus.focus,
 .stroke-error-active.active,
 .stroke-error-toggle.active,
@@ -1211,9 +1221,9 @@ table {
       border-radius: 0.09375em; }
     .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before {
       border-radius: 50%; }
-    .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:after, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
+    .symbol-caret-left:after, .symbol-caret-right:after, .symbol-caret-up:after, .symbol-caret-down:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:after, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:after, .symbol-check:before, .active > .symbol-check-toggle:before, .open > .symbol-check-toggle:before, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
       width: 0.1875em; }
-    .symbol-check:before, .active > .symbol-check-toggle:before, .open > .symbol-check-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after {
+    .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after {
       height: 0.1875em; }
     .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before, .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after {
       width: 1em; }
@@ -1298,18 +1308,18 @@ table {
     transform: rotate(45deg); }
   .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before {
     height: 1em; }
-  .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle {
-    width: .5em;
+  .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after {
+    top: auto;
+    left: .25em;
+    right: auto;
+    bottom: .125em;
+    transform-origin: 42% 88%; }
+  .symbol-check:before, .active > .symbol-check-toggle:before, .open > .symbol-check-toggle:before {
+    height: .5em;
+    transform: rotate(-45deg); }
+  .symbol-check:after, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:after {
+    height: 1em;
     transform: rotate(45deg); }
-    .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after {
-      left: auto;
-      top: auto;
-      bottom: 0em;
-      transform-origin: 50% 96%; }
-    .symbol-check:before, .active > .symbol-check-toggle:before, .open > .symbol-check-toggle:before {
-      width: .5em; }
-    .symbol-check:after, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:after {
-      height: 1em; }
   .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after {
     height: 1.25em; }
   .symbol-close:before, .active > .symbol-close-toggle:before, .open > .symbol-close-toggle:before {
@@ -1602,13 +1612,13 @@ table {
 
 .tabs {
   font-size: 1rem;
-  color: rgba(141, 141, 141, 0.75);
+  color: #8d8d8d;
   font-weight: 700;
   text-transform: none;
   font-style: normal;
   border-bottom: 1px solid currentColor; }
   .theme-inverse .tabs {
-    color: rgba(141, 141, 141, 0.75);
+    color: #8d8d8d;
     border-color: currentColor; }
   @media (max-width: 1200px) {
     .tabs {
@@ -1758,16 +1768,16 @@ table {
     .flex-grid-no-gutter-y > .flex-child {
       margin-top: 0; }
 
-[class*=flex-col-],
+*[class*=flex-col-],
 .flex-child {
   margin-top: 40px;
   margin-left: 40px;
   max-width: calc(100% - 40px); }
-  .flex-grid-fixed > [class*=flex-col-], .flex-grid-fixed > .flex-child {
+  .flex-grid-fixed > *[class*=flex-col-], .flex-grid-fixed > .flex-child {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: auto; }
-  .flex-grid-no-gutter > [class*=flex-col-], .flex-grid-no-gutter-x > [class*=flex-col-], .flex-grid-no-gutter > .flex-child, .flex-grid-no-gutter-x > .flex-child {
+    flex-basis: auto !important; }
+  .flex-grid-no-gutter > *[class*=flex-col-], .flex-grid-no-gutter-x > *[class*=flex-col-], .flex-grid-no-gutter > .flex-child, .flex-grid-no-gutter-x > .flex-child {
     max-width: 100%; }
 
 [class*=flex-col-] {
@@ -3849,6 +3859,10 @@ table {
     padding-right: 1.25rem; }
     .theme-inverse .list-group li, .theme-inverse .list-group-item, .theme-inverse .list-group ul li, .theme-inverse .list-group ul-item {
       border-color: #000000; }
+    .list-group li.list-group-item-no-interaction, .list-group-item.list-group-item-no-interaction,
+    .list-group ul li.list-group-item-no-interaction,
+    .list-group ul-item.list-group-item-no-interaction {
+      pointer-events: none !important; }
     .list-group-compact li,
     .list-group-compact .list-group-item {
       padding-top: calc(  (  (1.875rem - 1px) - (1em * 1.5) ) * .5);
@@ -3921,17 +3935,20 @@ table {
   .list-group ul-toggle .list-group-item:active,
   .list-group ul-toggle .list-group-item.active {
     background: rgba(0, 126, 206, 0.2); }
-  .dropdown .list-group, .dropdown .list-group ul {
+  .dropdown .list-group {
     margin-bottom: 0; }
-    .dropdown .list-group:first-child:last-child, .dropdown .list-group ul:first-child:last-child {
-      border-radius: 10px;
-      overflow: hidden; }
+    .dropdown .list-group:first-child:last-child {
+      border-radius: 10px; }
+    .dropdown .list-group li > a,
+    .dropdown .list-group .list-group-item > a {
+      padding-top: 0;
+      padding-bottom: 0; }
 
 /*** ASSET ***/
 /* it */
 .asset {
   max-width: 100%;
-  width: 190px;
+  width: 220px;
   color: inherit;
   display: inline-block;
   position: relative; }
@@ -4498,8 +4515,10 @@ table {
   display: none !important; }
   .board-popup, .modal-wrapper {
     overflow-y: scroll; }
-    .board-popup::-webkit-scrollbar, .modal-wrapper::-webkit-scrollbar {
-      display: none; }
+    .modal-wrapper {
+      scrollbar-width: none; }
+      .modal-wrapper::-webkit-scrollbar {
+        display: none; }
   .board-wrapper, .modal-wrapper {
     position: fixed;
     top: 0 !important;
@@ -4879,10 +4898,7 @@ table {
   .tag a {
     color: inherit; }
   .tag-text {
-    max-width: 10em;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important; }
+    max-width: 10em; }
   .tag, .tag:hover, .tag:focus, .tag:active, .tag.focus, .tag.active {
     color: #FFFFFF; }
   .tag-default {
@@ -5013,13 +5029,14 @@ table {
 .highlight {
   font-size: inherit;
   line-height: inherit;
+  color: inherit;
   font-weight: inherit;
   text-transform: none;
   font-style: normal;
   padding-top: calc(  (  (2.1538461538em - (1em * 1.5) ) * .5 ));
   padding-bottom: calc(  (  (2.1538461538em - (1em * 1.5) ) * .5 ));
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 10px;
@@ -5200,7 +5217,7 @@ table {
 /* it */
 .alert {
   border: 1px solid transparent;
-  box-shadow: 0px 3px 10px -6px #000000;
+  box-shadow: none;
   position: relative; }
   .alert-small {
     font-size: 14px; }
@@ -5215,7 +5232,7 @@ table {
     float: right;
     color: inherit;
     opacity: .8;
-    margin-left: .5em;
+    margin-left: 1em;
     transition: 0.125s opacity ease-in-out; }
     .alert-close:hover {
       opacity: 1; }
@@ -5233,7 +5250,13 @@ table {
     padding-right: 40px; }
   .alert-content {
     padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    resize: none;
+    max-width: calc(100% + 20px);
+    width: auto;
+    -webkit-appearance: none;
+    display: block;
+    outline: none; }
     .alert, .alert-content {
       padding-top: 20px;
       padding-bottom: 20px; }
@@ -5291,7 +5314,8 @@ table {
     text-transform: uppercase;
     font-style: normal;
     margin: 0;
-    float: left; }
+    float: left;
+    max-width: 80%; }
   .alert.alert-default {
     border-color: #8d8d8d;
     color: inherit;
@@ -5303,7 +5327,7 @@ table {
   .alert.alert-primary {
     border-color: rgba(0, 95, 155, 0.1);
     color: #00304f;
-    background-color: #029dff; }
+    background-color: #35b1ff; }
     .alert.alert-primary .alert-header:not(:last-child) {
       border-color: rgba(0, 95, 155, 0.1); }
     .alert.alert-primary .alert-footer:not(:first-child) {
@@ -5311,7 +5335,7 @@ table {
   .alert.alert-secondary {
     border-color: rgba(204, 0, 125, 0.1);
     color: #80004e;
-    background-color: #ff33b0; }
+    background-color: #ff66c4; }
     .alert.alert-secondary .alert-header:not(:last-child) {
       border-color: rgba(204, 0, 125, 0.1); }
     .alert.alert-secondary .alert-footer:not(:first-child) {
@@ -5319,7 +5343,7 @@ table {
   .alert.alert-accent {
     border-color: rgba(243, 166, 13, 0.1);
     color: #aa7409;
-    background-color: #f8ca6e; }
+    background-color: #fadc9e; }
     .alert.alert-accent .alert-header:not(:last-child) {
       border-color: rgba(243, 166, 13, 0.1); }
     .alert.alert-accent .alert-footer:not(:first-child) {
@@ -5327,7 +5351,7 @@ table {
   .alert.alert-neutral {
     border-color: rgba(116, 116, 116, 0.1);
     color: #4d4d4d;
-    background-color: #a7a7a7; }
+    background-color: silver; }
     .alert.alert-neutral .alert-header:not(:last-child) {
       border-color: rgba(116, 116, 116, 0.1); }
     .alert.alert-neutral .alert-footer:not(:first-child) {
@@ -5335,7 +5359,7 @@ table {
   .alert.alert-success {
     border-color: rgba(15, 133, 0, 0.1);
     color: #063900;
-    background-color: #1beb00; }
+    background-color: #39ff1f; }
     .alert.alert-success .alert-header:not(:last-child) {
       border-color: rgba(15, 133, 0, 0.1); }
     .alert.alert-success .alert-footer:not(:first-child) {
@@ -5343,7 +5367,7 @@ table {
   .alert.alert-caution {
     border-color: rgba(203, 102, 2, 0.1);
     color: #7f4001;
-    background-color: #fd9936; }
+    background-color: #feb268; }
     .alert.alert-caution .alert-header:not(:last-child) {
       border-color: rgba(203, 102, 2, 0.1); }
     .alert.alert-caution .alert-footer:not(:first-child) {
@@ -5351,7 +5375,7 @@ table {
   .alert.alert-error {
     border-color: rgba(203, 2, 2, 0.1);
     color: #7f0101;
-    background-color: #fd3636; }
+    background-color: #fe6868; }
     .alert.alert-error .alert-header:not(:last-child) {
       border-color: rgba(203, 2, 2, 0.1); }
     .alert.alert-error .alert-footer:not(:first-child) {
@@ -5476,11 +5500,11 @@ table {
 
 /*  BUTTONS ***/
 .btn, .btn-group {
-  border-radius: 25px; }
+  border-radius: 22.5px; }
   .btn.btn-small, .btn-group.btn-small, .btn-small .btn {
     border-radius: 15px; }
   .btn.btn-large, .btn-group.btn-large, .btn-large .btn {
-    border-radius: 37.5px; }
+    border-radius: 30px; }
 
 .btn {
   font-size: 1rem;
@@ -5491,9 +5515,9 @@ table {
   text-decoration: none;
   text-align: center;
   font-style: normal;
-  padding-top: calc(  (  (3.125em - (1px * 2)) - (1em * 1.25) ) * .5);
-  padding-bottom: calc(  (  (3.125em - (1px * 2)) - (1em * 1.25) ) * .5);
-  min-height: 3.125em;
+  padding-top: calc(  (  (2.8125em - (1px * 2)) - (1em * 1.25) ) * .5);
+  padding-bottom: calc(  (  (2.8125em - (1px * 2)) - (1em * 1.25) ) * .5);
+  min-height: 2.8125em;
   padding-right: 1.25em;
   padding-left: 1.25em;
   border: 1px solid transparent;
@@ -5516,9 +5540,9 @@ table {
     margin-right: .25em; }
 
 .btn-large .btn, .btn.btn-large {
-  padding-top: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.25) ) * .5);
-  padding-bottom: calc(  (  (3.4090909091em - (1px * 2)) - (1em * 1.25) ) * .5);
-  min-height: 3.4090909091em; }
+  padding-top: calc(  (  (2.7272727273em - (1px * 2)) - (1em * 1.25) ) * .5);
+  padding-bottom: calc(  (  (2.7272727273em - (1px * 2)) - (1em * 1.25) ) * .5);
+  min-height: 2.7272727273em; }
   @media (min-width: 401px) {
     .btn-large .btn, .btn.btn-large {
       font-size: 1.375rem; } }
@@ -5539,12 +5563,12 @@ table {
     z-index: 1; }
 
 .btn-symbol {
-  width: 3.125em;
+  width: 2.8125em;
   padding-left: 0;
   padding-right: 0; }
 
 .btn-large .btn-symbol, .btn-symbol.btn-large {
-  width: 3.4090909091em; }
+  width: 2.7272727273em; }
 
 .btn-small .btn-symbol, .btn-symbol.btn-small {
   width: 2.5em; }
@@ -5664,7 +5688,7 @@ table {
 
 .btn.btn-primary:active, .btn-group.btn-group-unite:active .btn.btn-primary, .active.btn.btn-primary, .btn-group.btn-group-unite.active .btn.btn-primary {
   border-color: transparent ;
-  background-color: #005f9b ;
+  background-color: #007ece ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-secondary:hover, .btn-no-interaction.btn.btn-secondary:focus, .btn-no-interaction.focus.btn.btn-secondary, .btn-no-interaction.btn.btn-secondary:active, .btn-no-interaction.active.btn.btn-secondary, .btn-disabled.btn.btn-secondary:hover, .btn-disabled.btn.btn-secondary:focus, .btn-disabled.focus.btn.btn-secondary, .btn-disabled.btn.btn-secondary:active, .btn-disabled.active.btn.btn-secondary, .btn-disabled:hover .btn.btn-secondary, .btn-disabled:focus .btn.btn-secondary, .btn-disabled.focus .btn.btn-secondary, .btn-disabled:active .btn.btn-secondary, .btn-disabled.active .btn.btn-secondary, .btn.btn-secondary {
@@ -5679,7 +5703,7 @@ table {
 
 .btn.btn-secondary:active, .btn-group.btn-group-unite:active .btn.btn-secondary, .active.btn.btn-secondary, .btn-group.btn-group-unite.active .btn.btn-secondary {
   border-color: transparent ;
-  background-color: #cc007d ;
+  background-color: #ff009c ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-accent:hover, .btn-no-interaction.btn.btn-accent:focus, .btn-no-interaction.focus.btn.btn-accent, .btn-no-interaction.btn.btn-accent:active, .btn-no-interaction.active.btn.btn-accent, .btn-disabled.btn.btn-accent:hover, .btn-disabled.btn.btn-accent:focus, .btn-disabled.focus.btn.btn-accent, .btn-disabled.btn.btn-accent:active, .btn-disabled.active.btn.btn-accent, .btn-disabled:hover .btn.btn-accent, .btn-disabled:focus .btn.btn-accent, .btn-disabled.focus .btn.btn-accent, .btn-disabled:active .btn.btn-accent, .btn-disabled.active .btn.btn-accent, .btn.btn-accent {
@@ -5694,7 +5718,7 @@ table {
 
 .btn.btn-accent:active, .btn-group.btn-group-unite:active .btn.btn-accent, .active.btn.btn-accent, .btn-group.btn-group-unite.active .btn.btn-accent {
   border-color: transparent ;
-  background-color: #f3a60d ;
+  background-color: #f5b83d ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-neutral:hover, .btn-no-interaction.btn.btn-neutral:focus, .btn-no-interaction.focus.btn.btn-neutral, .btn-no-interaction.btn.btn-neutral:active, .btn-no-interaction.active.btn.btn-neutral, .btn-disabled.btn.btn-neutral:hover, .btn-disabled.btn.btn-neutral:focus, .btn-disabled.focus.btn.btn-neutral, .btn-disabled.btn.btn-neutral:active, .btn-disabled.active.btn.btn-neutral, .btn-disabled:hover .btn.btn-neutral, .btn-disabled:focus .btn.btn-neutral, .btn-disabled.focus .btn.btn-neutral, .btn-disabled:active .btn.btn-neutral, .btn-disabled.active .btn.btn-neutral, .btn.btn-neutral {
@@ -5709,7 +5733,7 @@ table {
 
 .btn.btn-neutral:active, .btn-group.btn-group-unite:active .btn.btn-neutral, .active.btn.btn-neutral, .btn-group.btn-group-unite.active .btn.btn-neutral {
   border-color: transparent ;
-  background-color: #747474 ;
+  background-color: #8d8d8d ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-success:hover, .btn-no-interaction.btn.btn-success:focus, .btn-no-interaction.focus.btn.btn-success, .btn-no-interaction.btn.btn-success:active, .btn-no-interaction.active.btn.btn-success, .btn-disabled.btn.btn-success:hover, .btn-disabled.btn.btn-success:focus, .btn-disabled.focus.btn.btn-success, .btn-disabled.btn.btn-success:active, .btn-disabled.active.btn.btn-success, .btn-disabled:hover .btn.btn-success, .btn-disabled:focus .btn.btn-success, .btn-disabled.focus .btn.btn-success, .btn-disabled:active .btn.btn-success, .btn-disabled.active .btn.btn-success, .btn.btn-success {
@@ -5724,7 +5748,7 @@ table {
 
 .btn.btn-success:active, .btn-group.btn-group-unite:active .btn.btn-success, .active.btn.btn-success, .btn-group.btn-group-unite.active .btn.btn-success {
   border-color: transparent ;
-  background-color: #0f8500 ;
+  background-color: #15b800 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-caution:hover, .btn-no-interaction.btn.btn-caution:focus, .btn-no-interaction.focus.btn.btn-caution, .btn-no-interaction.btn.btn-caution:active, .btn-no-interaction.active.btn.btn-caution, .btn-disabled.btn.btn-caution:hover, .btn-disabled.btn.btn-caution:focus, .btn-disabled.focus.btn.btn-caution, .btn-disabled.btn.btn-caution:active, .btn-disabled.active.btn.btn-caution, .btn-disabled:hover .btn.btn-caution, .btn-disabled:focus .btn.btn-caution, .btn-disabled.focus .btn.btn-caution, .btn-disabled:active .btn.btn-caution, .btn-disabled.active .btn.btn-caution, .btn.btn-caution {
@@ -5739,7 +5763,7 @@ table {
 
 .btn.btn-caution:active, .btn-group.btn-group-unite:active .btn.btn-caution, .active.btn.btn-caution, .btn-group.btn-group-unite.active .btn.btn-caution {
   border-color: transparent ;
-  background-color: #cb6602 ;
+  background-color: #fd7f03 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-error:hover, .btn-no-interaction.btn.btn-error:focus, .btn-no-interaction.focus.btn.btn-error, .btn-no-interaction.btn.btn-error:active, .btn-no-interaction.active.btn.btn-error, .btn-disabled.btn.btn-error:hover, .btn-disabled.btn.btn-error:focus, .btn-disabled.focus.btn.btn-error, .btn-disabled.btn.btn-error:active, .btn-disabled.active.btn.btn-error, .btn-disabled:hover .btn.btn-error, .btn-disabled:focus .btn.btn-error, .btn-disabled.focus .btn.btn-error, .btn-disabled:active .btn.btn-error, .btn-disabled.active .btn.btn-error, .btn.btn-error {
@@ -5754,7 +5778,7 @@ table {
 
 .btn.btn-error:active, .btn-group.btn-group-unite:active .btn.btn-error, .active.btn.btn-error, .btn-group.btn-group-unite.active .btn.btn-error {
   border-color: transparent ;
-  background-color: #cb0202 ;
+  background-color: #fd0303 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-link:hover, .btn-no-interaction.btn.btn-link:focus, .btn-no-interaction.focus.btn.btn-link, .btn-no-interaction.btn.btn-link:active, .btn-no-interaction.active.btn.btn-link, .btn-disabled.btn.btn-link:hover, .btn-disabled.btn.btn-link:focus, .btn-disabled.focus.btn.btn-link, .btn-disabled.btn.btn-link:active, .btn-disabled.active.btn.btn-link, .btn-disabled:hover .btn.btn-link, .btn-disabled:focus .btn.btn-link, .btn-disabled.focus .btn.btn-link, .btn-disabled:active .btn.btn-link, .btn-disabled.active .btn.btn-link, .btn.btn-link {
@@ -5784,7 +5808,7 @@ table {
 
 .btn.btn-primary-outline:active, .btn-group.btn-group-unite:active .btn.btn-primary-outline, .active.btn.btn-primary-outline, .btn-group.btn-group-unite.active .btn.btn-primary-outline {
   border-color: transparent ;
-  background-color: #005f9b ;
+  background-color: #007ece ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-secondary-outline:hover, .btn-no-interaction.btn.btn-secondary-outline:focus, .btn-no-interaction.focus.btn.btn-secondary-outline, .btn-no-interaction.btn.btn-secondary-outline:active, .btn-no-interaction.active.btn.btn-secondary-outline, .btn-disabled.btn.btn-secondary-outline:hover, .btn-disabled.btn.btn-secondary-outline:focus, .btn-disabled.focus.btn.btn-secondary-outline, .btn-disabled.btn.btn-secondary-outline:active, .btn-disabled.active.btn.btn-secondary-outline, .btn-disabled:hover .btn.btn-secondary-outline, .btn-disabled:focus .btn.btn-secondary-outline, .btn-disabled.focus .btn.btn-secondary-outline, .btn-disabled:active .btn.btn-secondary-outline, .btn-disabled.active .btn.btn-secondary-outline, .btn.btn-secondary-outline {
@@ -5799,7 +5823,7 @@ table {
 
 .btn.btn-secondary-outline:active, .btn-group.btn-group-unite:active .btn.btn-secondary-outline, .active.btn.btn-secondary-outline, .btn-group.btn-group-unite.active .btn.btn-secondary-outline {
   border-color: transparent ;
-  background-color: #cc007d ;
+  background-color: #ff009c ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-accent-outline:hover, .btn-no-interaction.btn.btn-accent-outline:focus, .btn-no-interaction.focus.btn.btn-accent-outline, .btn-no-interaction.btn.btn-accent-outline:active, .btn-no-interaction.active.btn.btn-accent-outline, .btn-disabled.btn.btn-accent-outline:hover, .btn-disabled.btn.btn-accent-outline:focus, .btn-disabled.focus.btn.btn-accent-outline, .btn-disabled.btn.btn-accent-outline:active, .btn-disabled.active.btn.btn-accent-outline, .btn-disabled:hover .btn.btn-accent-outline, .btn-disabled:focus .btn.btn-accent-outline, .btn-disabled.focus .btn.btn-accent-outline, .btn-disabled:active .btn.btn-accent-outline, .btn-disabled.active .btn.btn-accent-outline, .btn.btn-accent-outline {
@@ -5814,7 +5838,7 @@ table {
 
 .btn.btn-accent-outline:active, .btn-group.btn-group-unite:active .btn.btn-accent-outline, .active.btn.btn-accent-outline, .btn-group.btn-group-unite.active .btn.btn-accent-outline {
   border-color: transparent ;
-  background-color: #f3a60d ;
+  background-color: #f5b83d ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-neutral-outline:hover, .btn-no-interaction.btn.btn-neutral-outline:focus, .btn-no-interaction.focus.btn.btn-neutral-outline, .btn-no-interaction.btn.btn-neutral-outline:active, .btn-no-interaction.active.btn.btn-neutral-outline, .btn-disabled.btn.btn-neutral-outline:hover, .btn-disabled.btn.btn-neutral-outline:focus, .btn-disabled.focus.btn.btn-neutral-outline, .btn-disabled.btn.btn-neutral-outline:active, .btn-disabled.active.btn.btn-neutral-outline, .btn-disabled:hover .btn.btn-neutral-outline, .btn-disabled:focus .btn.btn-neutral-outline, .btn-disabled.focus .btn.btn-neutral-outline, .btn-disabled:active .btn.btn-neutral-outline, .btn-disabled.active .btn.btn-neutral-outline, .btn.btn-neutral-outline {
@@ -5829,7 +5853,7 @@ table {
 
 .btn.btn-neutral-outline:active, .btn-group.btn-group-unite:active .btn.btn-neutral-outline, .active.btn.btn-neutral-outline, .btn-group.btn-group-unite.active .btn.btn-neutral-outline {
   border-color: transparent ;
-  background-color: #747474 ;
+  background-color: #8d8d8d ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-success-outline:hover, .btn-no-interaction.btn.btn-success-outline:focus, .btn-no-interaction.focus.btn.btn-success-outline, .btn-no-interaction.btn.btn-success-outline:active, .btn-no-interaction.active.btn.btn-success-outline, .btn-disabled.btn.btn-success-outline:hover, .btn-disabled.btn.btn-success-outline:focus, .btn-disabled.focus.btn.btn-success-outline, .btn-disabled.btn.btn-success-outline:active, .btn-disabled.active.btn.btn-success-outline, .btn-disabled:hover .btn.btn-success-outline, .btn-disabled:focus .btn.btn-success-outline, .btn-disabled.focus .btn.btn-success-outline, .btn-disabled:active .btn.btn-success-outline, .btn-disabled.active .btn.btn-success-outline, .btn.btn-success-outline {
@@ -5844,7 +5868,7 @@ table {
 
 .btn.btn-success-outline:active, .btn-group.btn-group-unite:active .btn.btn-success-outline, .active.btn.btn-success-outline, .btn-group.btn-group-unite.active .btn.btn-success-outline {
   border-color: transparent ;
-  background-color: #0f8500 ;
+  background-color: #15b800 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-caution-outline:hover, .btn-no-interaction.btn.btn-caution-outline:focus, .btn-no-interaction.focus.btn.btn-caution-outline, .btn-no-interaction.btn.btn-caution-outline:active, .btn-no-interaction.active.btn.btn-caution-outline, .btn-disabled.btn.btn-caution-outline:hover, .btn-disabled.btn.btn-caution-outline:focus, .btn-disabled.focus.btn.btn-caution-outline, .btn-disabled.btn.btn-caution-outline:active, .btn-disabled.active.btn.btn-caution-outline, .btn-disabled:hover .btn.btn-caution-outline, .btn-disabled:focus .btn.btn-caution-outline, .btn-disabled.focus .btn.btn-caution-outline, .btn-disabled:active .btn.btn-caution-outline, .btn-disabled.active .btn.btn-caution-outline, .btn.btn-caution-outline {
@@ -5859,7 +5883,7 @@ table {
 
 .btn.btn-caution-outline:active, .btn-group.btn-group-unite:active .btn.btn-caution-outline, .active.btn.btn-caution-outline, .btn-group.btn-group-unite.active .btn.btn-caution-outline {
   border-color: transparent ;
-  background-color: #cb6602 ;
+  background-color: #fd7f03 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-error-outline:hover, .btn-no-interaction.btn.btn-error-outline:focus, .btn-no-interaction.focus.btn.btn-error-outline, .btn-no-interaction.btn.btn-error-outline:active, .btn-no-interaction.active.btn.btn-error-outline, .btn-disabled.btn.btn-error-outline:hover, .btn-disabled.btn.btn-error-outline:focus, .btn-disabled.focus.btn.btn-error-outline, .btn-disabled.btn.btn-error-outline:active, .btn-disabled.active.btn.btn-error-outline, .btn-disabled:hover .btn.btn-error-outline, .btn-disabled:focus .btn.btn-error-outline, .btn-disabled.focus .btn.btn-error-outline, .btn-disabled:active .btn.btn-error-outline, .btn-disabled.active .btn.btn-error-outline, .btn.btn-error-outline {
@@ -5874,7 +5898,7 @@ table {
 
 .btn.btn-error-outline:active, .btn-group.btn-group-unite:active .btn.btn-error-outline, .active.btn.btn-error-outline, .btn-group.btn-group-unite.active .btn.btn-error-outline {
   border-color: transparent ;
-  background-color: #cb0202 ;
+  background-color: #fd0303 ;
   color: #FFFFFF ; }
 
 .btn-no-interaction.btn.btn-theme:hover, .btn-no-interaction.btn.btn-theme:focus, .btn-no-interaction.focus.btn.btn-theme, .btn-no-interaction.btn.btn-theme:active, .btn-no-interaction.active.btn.btn-theme, .btn-disabled.btn.btn-theme:hover, .btn-disabled.btn.btn-theme:focus, .btn-disabled.focus.btn.btn-theme, .btn-disabled.btn.btn-theme:active, .btn-disabled.active.btn.btn-theme, .btn-disabled:hover .btn.btn-theme, .btn-disabled:focus .btn.btn-theme, .btn-disabled.focus .btn.btn-theme, .btn-disabled:active .btn.btn-theme, .btn-disabled.active .btn.btn-theme, .btn.btn-theme {
@@ -6050,7 +6074,6 @@ table {
   font-size: 1rem;
   line-height: 1.5;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  color: inherit;
   font-weight: 400;
   text-transform: none;
   text-decoration: none;
@@ -6064,9 +6087,12 @@ table {
   padding-top: calc( ( (2.8125rem - (1px * 2)) - (1em * 1.5) ) * .5);
   padding-bottom: calc( ( (2.8125rem - (1px * 2)) - (1em * 1.5) ) * .5);
   box-shadow: none; }
+  .input-tags-ui, .input-calendar-ui, .input-multiple-line, .input-select, .input-single-line {
+    color: inherit; }
   .theme-inverse .input-tags-ui, .theme-inverse .input-calendar-ui, .theme-inverse .input-multiple-line, .theme-inverse .input-select, .theme-inverse .input-single-line {
-    color: inherit;
     background-color: #1a1a1a; }
+    .theme-inverse .input-tags-ui, .theme-inverse .input-calendar-ui, .theme-inverse .input-multiple-line, .theme-inverse .input-select, .theme-inverse .input-single-line {
+      color: inherit; }
   .input-tags-ui:focus, .input-calendar-ui:focus, .input-multiple-line:focus, .input-select:focus, .input-single-line:focus, .focus.input-tags-ui, .focus.input-calendar-ui, .focus.input-multiple-line, .focus.input-select, .focus.input-single-line, .input-tags-ui:active, .input-calendar-ui:active, .input-multiple-line:active, .input-select:active, .input-single-line:active, .active.input-tags-ui, .active.input-calendar-ui, .active.input-multiple-line, .active.input-select, .active.input-single-line {
     border-color: rgba(141, 141, 141, 0.6); }
   .input-tags-ui option, .input-calendar-ui option, .input-multiple-line option, .input-select option, .input-single-line option {
@@ -6128,7 +6154,7 @@ table {
     margin-right: -1.25em;
     margin-left: -1.25em; }
 
-.input-tags-ui.input-tags-ui-multiple, .input-multiple-line {
+.input-multiple-line {
   height: auto;
   resize: both;
   min-height: 8.4375rem; }
@@ -6278,9 +6304,10 @@ table {
   color: #007ece; }
 
 .input.input-primary, .input-primary .input {
-  color: #007ece;
   border-color: #007ece;
   background-color: rgba(0, 126, 206, 0.05); }
+  .input.input-primary, .input-primary .input {
+    color: #007ece; }
   .input.input-primary:not(.focus):not(:focus):not(.active):not(:active), .input-primary .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #007ece;
     z-index: 1; }
@@ -6290,9 +6317,10 @@ table {
   color: #ff009c; }
 
 .input.input-secondary, .input-secondary .input {
-  color: #ff009c;
   border-color: #ff009c;
   background-color: rgba(255, 0, 156, 0.05); }
+  .input.input-secondary, .input-secondary .input {
+    color: #ff009c; }
   .input.input-secondary:not(.focus):not(:focus):not(.active):not(:active), .input-secondary .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #ff009c;
     z-index: 1; }
@@ -6302,9 +6330,10 @@ table {
   color: #f5b83d; }
 
 .input.input-accent, .input-accent .input {
-  color: #f5b83d;
   border-color: #f5b83d;
   background-color: rgba(245, 184, 61, 0.05); }
+  .input.input-accent, .input-accent .input {
+    color: #f5b83d; }
   .input.input-accent:not(.focus):not(:focus):not(.active):not(:active), .input-accent .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #f5b83d;
     z-index: 1; }
@@ -6314,9 +6343,10 @@ table {
   color: #8d8d8d; }
 
 .input.input-neutral, .input-neutral .input {
-  color: #8d8d8d;
   border-color: #8d8d8d;
   background-color: rgba(141, 141, 141, 0.05); }
+  .input.input-neutral, .input-neutral .input {
+    color: #8d8d8d; }
   .input.input-neutral:not(.focus):not(:focus):not(.active):not(:active), .input-neutral .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #8d8d8d;
     z-index: 1; }
@@ -6326,9 +6356,10 @@ table {
   color: #15b800; }
 
 .input.input-success, .input-success .input {
-  color: #15b800;
   border-color: #15b800;
   background-color: rgba(21, 184, 0, 0.05); }
+  .input.input-success, .input-success .input {
+    color: #15b800; }
   .input.input-success:not(.focus):not(:focus):not(.active):not(:active), .input-success .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #15b800;
     z-index: 1; }
@@ -6338,9 +6369,10 @@ table {
   color: #fd7f03; }
 
 .input.input-caution, .input-caution .input {
-  color: #fd7f03;
   border-color: #fd7f03;
   background-color: rgba(253, 127, 3, 0.05); }
+  .input.input-caution, .input-caution .input {
+    color: #fd7f03; }
   .input.input-caution:not(.focus):not(:focus):not(.active):not(:active), .input-caution .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #fd7f03;
     z-index: 1; }
@@ -6350,9 +6382,10 @@ table {
   color: #fd0303; }
 
 .input.input-error, .input-error .input {
-  color: #fd0303;
   border-color: #fd0303;
   background-color: rgba(253, 3, 3, 0.05); }
+  .input.input-error, .input-error .input {
+    color: #fd0303; }
   .input.input-error:not(.focus):not(:focus):not(.active):not(:active), .input-error .input:not(.focus):not(:focus):not(.active):not(:active) {
     box-shadow: 0px 3px 10px -6px #fd0303;
     z-index: 1; }
@@ -6591,26 +6624,24 @@ fieldset {
     .input-tags-ui-single .input-tags-ui-wrapper {
       min-height: 100%;
       margin-bottom: -0.25em;
-      margin-top: -0.25em; }
+      margin-top: -0.5em; }
       .input-small.input-tags-ui-single .input-tags-ui-wrapper {
         margin-bottom: -0.0625em;
-        margin-top: -0.0625em; }
+        margin-top: -0.3125em; }
       .input-large.input-tags-ui-single .input-tags-ui-wrapper {
         margin-bottom: -0.25em;
-        margin-top: -0.25em; }
+        margin-top: -0.5em; }
     .input-tags-ui-multiple .input-tags-ui-wrapper {
       flex-wrap: wrap;
-      align-self: flex-start;
-      margin-top: -0.5em; }
+      align-self: flex-start; }
   .input-tags-ui-tag, .input-tags-ui-input {
     display: flex;
     align-items: center;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     padding-left: 1em;
-    padding-right: 1em; }
-    .input-tags-ui-multiple .input-tags-ui-tag, .input-tags-ui-multiple .input-tags-ui-input {
-      margin-top: 0.25em; }
+    padding-right: 1em;
+    margin-top: 0.25em; }
     .input-small .input-tags-ui-tag, .input-small .input-tags-ui-input {
       padding-top: 0.0625em;
       padding-bottom: 0.0625em; }
@@ -6626,10 +6657,7 @@ fieldset {
       vertical-align: middle; }
     .input-tags-ui-tag-text {
       max-width: 10em;
-      cursor: pointer;
-      white-space: nowrap !important;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important; }
+      cursor: pointer; }
     .input-tags-ui-tag-close {
       margin-left: .25em;
       line-height: 1;
@@ -6671,7 +6699,7 @@ fieldset {
     outline: none;
     white-space: nowrap;
     padding-left: 1em; }
-    .input-tags-ui-input:empty::before {
+    .input-tags-ui-input:empty:not(:focus):not(.focus):before {
       opacity: 0.5;
       content: attr(data-placeholder); }
     .input-tags-ui-input:first-child {
@@ -6684,10 +6712,18 @@ fieldset {
       min-width: 4em; }
       .input-tags-ui-single .input-tags-ui-input:last-child:first-child {
         width: 12em; }
+    .input-tags-ui-multiple .input-tags-ui-input:not(:focus):not(.focus):before {
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      display: block;
+      position: absolute; }
     .input-tags-ui-multiple .input-tags-ui-input:last-child {
-      min-width: 4em; }
-      .input-tags-ui-multiple .input-tags-ui-input:last-child:first-child {
-        width: 100%; }
+      width: 100%; }
+      .input-tags-ui-multiple .input-tags-ui-input:last-child, .input-tags-ui-multiple .input-tags-ui-input:last-child:first-child {
+        min-width: 100%; }
     .input-tags-ui-input, .input-tags-ui-input:hover, .input-tags-ui-input:focus, .input-tags-ui-input.focus {
       box-shadow: none !important;
       background: transparent;
@@ -6699,6 +6735,8 @@ fieldset {
   align-items: flex-start;
   display: inline-flex;
   justify-content: flex-start; }
+  .input-toggle.input-label {
+    flex-basis: auto; }
   .input-toggle-reverse {
     flex-direction: row-reverse; }
 
@@ -6842,9 +6880,9 @@ fieldset {
 /* BACKGROUND CLASSES */
 .border-color-base,
 .theme-inverse .border-color-base-inverse,
-.border-color-base-hover:hover:not(.open):not(.active),
-.border-color-base-focus:focus:not(.open):not(.active),
-.border-color-base-active:active:not(.open):not(.active),
+.border-color-base-hover:hover,
+.border-color-base-focus:focus,
+.border-color-base-active:active,
 .border-color-base-focus.focus,
 .border-color-base-active.active,
 .border-color-base-toggle.active,
@@ -6853,9 +6891,9 @@ fieldset {
 
 .border-color-background,
 .theme-inverse .border-color-background-inverse,
-.border-color-background-hover:hover:not(.open):not(.active),
-.border-color-background-focus:focus:not(.open):not(.active),
-.border-color-background-active:active:not(.open):not(.active),
+.border-color-background-hover:hover,
+.border-color-background-focus:focus,
+.border-color-background-active:active,
 .border-color-background-focus.focus,
 .border-color-background-active.active,
 .border-color-background-toggle.active,
@@ -6864,9 +6902,9 @@ fieldset {
 
 .border-color-primary,
 .theme-inverse .border-color-primary-inverse,
-.border-color-primary-hover:hover:not(.open):not(.active),
-.border-color-primary-focus:focus:not(.open):not(.active),
-.border-color-primary-active:active:not(.open):not(.active),
+.border-color-primary-hover:hover,
+.border-color-primary-focus:focus,
+.border-color-primary-active:active,
 .border-color-primary-focus.focus,
 .border-color-primary-active.active,
 .border-color-primary-toggle.active,
@@ -6875,9 +6913,9 @@ fieldset {
 
 .border-color-secondary,
 .theme-inverse .border-color-secondary-inverse,
-.border-color-secondary-hover:hover:not(.open):not(.active),
-.border-color-secondary-focus:focus:not(.open):not(.active),
-.border-color-secondary-active:active:not(.open):not(.active),
+.border-color-secondary-hover:hover,
+.border-color-secondary-focus:focus,
+.border-color-secondary-active:active,
 .border-color-secondary-focus.focus,
 .border-color-secondary-active.active,
 .border-color-secondary-toggle.active,
@@ -6886,9 +6924,9 @@ fieldset {
 
 .border-color-accent,
 .theme-inverse .border-color-accent-inverse,
-.border-color-accent-hover:hover:not(.open):not(.active),
-.border-color-accent-focus:focus:not(.open):not(.active),
-.border-color-accent-active:active:not(.open):not(.active),
+.border-color-accent-hover:hover,
+.border-color-accent-focus:focus,
+.border-color-accent-active:active,
 .border-color-accent-focus.focus,
 .border-color-accent-active.active,
 .border-color-accent-toggle.active,
@@ -6897,9 +6935,9 @@ fieldset {
 
 .border-color-neutral,
 .theme-inverse .border-color-neutral-inverse,
-.border-color-neutral-hover:hover:not(.open):not(.active),
-.border-color-neutral-focus:focus:not(.open):not(.active),
-.border-color-neutral-active:active:not(.open):not(.active),
+.border-color-neutral-hover:hover,
+.border-color-neutral-focus:focus,
+.border-color-neutral-active:active,
 .border-color-neutral-focus.focus,
 .border-color-neutral-active.active,
 .border-color-neutral-toggle.active,
@@ -6908,9 +6946,9 @@ fieldset {
 
 .border-color-success,
 .theme-inverse .border-color-success-inverse,
-.border-color-success-hover:hover:not(.open):not(.active),
-.border-color-success-focus:focus:not(.open):not(.active),
-.border-color-success-active:active:not(.open):not(.active),
+.border-color-success-hover:hover,
+.border-color-success-focus:focus,
+.border-color-success-active:active,
 .border-color-success-focus.focus,
 .border-color-success-active.active,
 .border-color-success-toggle.active,
@@ -6919,9 +6957,9 @@ fieldset {
 
 .border-color-caution,
 .theme-inverse .border-color-caution-inverse,
-.border-color-caution-hover:hover:not(.open):not(.active),
-.border-color-caution-focus:focus:not(.open):not(.active),
-.border-color-caution-active:active:not(.open):not(.active),
+.border-color-caution-hover:hover,
+.border-color-caution-focus:focus,
+.border-color-caution-active:active,
 .border-color-caution-focus.focus,
 .border-color-caution-active.active,
 .border-color-caution-toggle.active,
@@ -6930,9 +6968,9 @@ fieldset {
 
 .border-color-error,
 .theme-inverse .border-color-error-inverse,
-.border-color-error-hover:hover:not(.open):not(.active),
-.border-color-error-focus:focus:not(.open):not(.active),
-.border-color-error-active:active:not(.open):not(.active),
+.border-color-error-hover:hover,
+.border-color-error-focus:focus,
+.border-color-error-active:active,
 .border-color-error-focus.focus,
 .border-color-error-active.active,
 .border-color-error-toggle.active,
@@ -6940,9 +6978,9 @@ fieldset {
   border-color: #fd0303 !important; }
   .border-color-intensity-1,
   .theme-inverse .border-color-intensity-1-inverse,
-  .border-color-intensity-1-hover:hover:not(.open):not(.active),
-  .border-color-intensity-1-focus:focus:not(.open):not(.active),
-  .border-color-intensity-1-active:active:not(.open):not(.active),
+  .border-color-intensity-1-hover:hover,
+  .border-color-intensity-1-focus:focus,
+  .border-color-intensity-1-active:active,
   .border-color-intensity-1-focus.focus,
   .border-color-intensity-1-active.active,
   .border-color-intensity-1-toggle.active,
@@ -6950,9 +6988,9 @@ fieldset {
     border-color: #f5b83d !important; }
   .border-color-intensity-2,
   .theme-inverse .border-color-intensity-2-inverse,
-  .border-color-intensity-2-hover:hover:not(.open):not(.active),
-  .border-color-intensity-2-focus:focus:not(.open):not(.active),
-  .border-color-intensity-2-active:active:not(.open):not(.active),
+  .border-color-intensity-2-hover:hover,
+  .border-color-intensity-2-focus:focus,
+  .border-color-intensity-2-active:active,
   .border-color-intensity-2-focus.focus,
   .border-color-intensity-2-active.active,
   .border-color-intensity-2-toggle.active,
@@ -6960,9 +6998,9 @@ fieldset {
     border-color: #f88a55 !important; }
   .border-color-intensity-3,
   .theme-inverse .border-color-intensity-3-inverse,
-  .border-color-intensity-3-hover:hover:not(.open):not(.active),
-  .border-color-intensity-3-focus:focus:not(.open):not(.active),
-  .border-color-intensity-3-active:active:not(.open):not(.active),
+  .border-color-intensity-3-hover:hover,
+  .border-color-intensity-3-focus:focus,
+  .border-color-intensity-3-active:active,
   .border-color-intensity-3-focus.focus,
   .border-color-intensity-3-active.active,
   .border-color-intensity-3-toggle.active,
@@ -6970,9 +7008,9 @@ fieldset {
     border-color: #fa5c6d !important; }
   .border-color-intensity-4,
   .theme-inverse .border-color-intensity-4-inverse,
-  .border-color-intensity-4-hover:hover:not(.open):not(.active),
-  .border-color-intensity-4-focus:focus:not(.open):not(.active),
-  .border-color-intensity-4-active:active:not(.open):not(.active),
+  .border-color-intensity-4-hover:hover,
+  .border-color-intensity-4-focus:focus,
+  .border-color-intensity-4-active:active,
   .border-color-intensity-4-focus.focus,
   .border-color-intensity-4-active.active,
   .border-color-intensity-4-toggle.active,
@@ -6980,9 +7018,9 @@ fieldset {
     border-color: #fd2e84 !important; }
   .border-color-intensity-5,
   .theme-inverse .border-color-intensity-5-inverse,
-  .border-color-intensity-5-hover:hover:not(.open):not(.active),
-  .border-color-intensity-5-focus:focus:not(.open):not(.active),
-  .border-color-intensity-5-active:active:not(.open):not(.active),
+  .border-color-intensity-5-hover:hover,
+  .border-color-intensity-5-focus:focus,
+  .border-color-intensity-5-active:active,
   .border-color-intensity-5-focus.focus,
   .border-color-intensity-5-active.active,
   .border-color-intensity-5-toggle.active,
@@ -6991,9 +7029,9 @@ fieldset {
 
 .background-base,
 .theme-inverse .background-base-inverse,
-.background-base-hover:hover:not(.open):not(.active),
-.background-base-focus:focus:not(.open):not(.active),
-.background-base-active:active:not(.open):not(.active),
+.background-base-hover:hover,
+.background-base-focus:focus,
+.background-base-active:active,
 .background-base-focus.focus,
 .background-base-active.active,
 .background-base-toggle.active,
@@ -7002,9 +7040,9 @@ fieldset {
 
 .background-background,
 .theme-inverse .background-background-inverse,
-.background-background-hover:hover:not(.open):not(.active),
-.background-background-focus:focus:not(.open):not(.active),
-.background-background-active:active:not(.open):not(.active),
+.background-background-hover:hover,
+.background-background-focus:focus,
+.background-background-active:active,
 .background-background-focus.focus,
 .background-background-active.active,
 .background-background-toggle.active,
@@ -7016,9 +7054,9 @@ fieldset {
 
 .background-primary,
 .theme-inverse .background-primary-inverse,
-.background-primary-hover:hover:not(.open):not(.active),
-.background-primary-focus:focus:not(.open):not(.active),
-.background-primary-active:active:not(.open):not(.active),
+.background-primary-hover:hover,
+.background-primary-focus:focus,
+.background-primary-active:active,
 .background-primary-focus.focus,
 .background-primary-active.active,
 .background-primary-toggle.active,
@@ -7030,9 +7068,9 @@ fieldset {
 
 .background-secondary,
 .theme-inverse .background-secondary-inverse,
-.background-secondary-hover:hover:not(.open):not(.active),
-.background-secondary-focus:focus:not(.open):not(.active),
-.background-secondary-active:active:not(.open):not(.active),
+.background-secondary-hover:hover,
+.background-secondary-focus:focus,
+.background-secondary-active:active,
 .background-secondary-focus.focus,
 .background-secondary-active.active,
 .background-secondary-toggle.active,
@@ -7044,9 +7082,9 @@ fieldset {
 
 .background-accent,
 .theme-inverse .background-accent-inverse,
-.background-accent-hover:hover:not(.open):not(.active),
-.background-accent-focus:focus:not(.open):not(.active),
-.background-accent-active:active:not(.open):not(.active),
+.background-accent-hover:hover,
+.background-accent-focus:focus,
+.background-accent-active:active,
 .background-accent-focus.focus,
 .background-accent-active.active,
 .background-accent-toggle.active,
@@ -7058,9 +7096,9 @@ fieldset {
 
 .background-neutral,
 .theme-inverse .background-neutral-inverse,
-.background-neutral-hover:hover:not(.open):not(.active),
-.background-neutral-focus:focus:not(.open):not(.active),
-.background-neutral-active:active:not(.open):not(.active),
+.background-neutral-hover:hover,
+.background-neutral-focus:focus,
+.background-neutral-active:active,
 .background-neutral-focus.focus,
 .background-neutral-active.active,
 .background-neutral-toggle.active,
@@ -7072,9 +7110,9 @@ fieldset {
 
 .background-success,
 .theme-inverse .background-success-inverse,
-.background-success-hover:hover:not(.open):not(.active),
-.background-success-focus:focus:not(.open):not(.active),
-.background-success-active:active:not(.open):not(.active),
+.background-success-hover:hover,
+.background-success-focus:focus,
+.background-success-active:active,
 .background-success-focus.focus,
 .background-success-active.active,
 .background-success-toggle.active,
@@ -7086,9 +7124,9 @@ fieldset {
 
 .background-caution,
 .theme-inverse .background-caution-inverse,
-.background-caution-hover:hover:not(.open):not(.active),
-.background-caution-focus:focus:not(.open):not(.active),
-.background-caution-active:active:not(.open):not(.active),
+.background-caution-hover:hover,
+.background-caution-focus:focus,
+.background-caution-active:active,
 .background-caution-focus.focus,
 .background-caution-active.active,
 .background-caution-toggle.active,
@@ -7100,9 +7138,9 @@ fieldset {
 
 .background-error,
 .theme-inverse .background-error-inverse,
-.background-error-hover:hover:not(.open):not(.active),
-.background-error-focus:focus:not(.open):not(.active),
-.background-error-active:active:not(.open):not(.active),
+.background-error-hover:hover,
+.background-error-focus:focus,
+.background-error-active:active,
 .background-error-focus.focus,
 .background-error-active.active,
 .background-error-toggle.active,
@@ -7113,9 +7151,9 @@ fieldset {
   background-color: #f5b83d; }
   .background-intensity-1,
   .theme-inverse .background-intensity-1-inverse,
-  .background-intensity-1-hover:hover:not(.open):not(.active),
-  .background-intensity-1-focus:focus:not(.open):not(.active),
-  .background-intensity-1-active:active:not(.open):not(.active),
+  .background-intensity-1-hover:hover,
+  .background-intensity-1-focus:focus,
+  .background-intensity-1-active:active,
   .background-intensity-1-focus.focus,
   .background-intensity-1-active.active,
   .background-intensity-1-toggle.active,
@@ -7126,9 +7164,9 @@ fieldset {
   background-color: #f88a55; }
   .background-intensity-2,
   .theme-inverse .background-intensity-2-inverse,
-  .background-intensity-2-hover:hover:not(.open):not(.active),
-  .background-intensity-2-focus:focus:not(.open):not(.active),
-  .background-intensity-2-active:active:not(.open):not(.active),
+  .background-intensity-2-hover:hover,
+  .background-intensity-2-focus:focus,
+  .background-intensity-2-active:active,
   .background-intensity-2-focus.focus,
   .background-intensity-2-active.active,
   .background-intensity-2-toggle.active,
@@ -7139,9 +7177,9 @@ fieldset {
   background-color: #fa5c6d; }
   .background-intensity-3,
   .theme-inverse .background-intensity-3-inverse,
-  .background-intensity-3-hover:hover:not(.open):not(.active),
-  .background-intensity-3-focus:focus:not(.open):not(.active),
-  .background-intensity-3-active:active:not(.open):not(.active),
+  .background-intensity-3-hover:hover,
+  .background-intensity-3-focus:focus,
+  .background-intensity-3-active:active,
   .background-intensity-3-focus.focus,
   .background-intensity-3-active.active,
   .background-intensity-3-toggle.active,
@@ -7152,9 +7190,9 @@ fieldset {
   background-color: #fd2e84; }
   .background-intensity-4,
   .theme-inverse .background-intensity-4-inverse,
-  .background-intensity-4-hover:hover:not(.open):not(.active),
-  .background-intensity-4-focus:focus:not(.open):not(.active),
-  .background-intensity-4-active:active:not(.open):not(.active),
+  .background-intensity-4-hover:hover,
+  .background-intensity-4-focus:focus,
+  .background-intensity-4-active:active,
   .background-intensity-4-focus.focus,
   .background-intensity-4-active.active,
   .background-intensity-4-toggle.active,
@@ -7165,9 +7203,9 @@ fieldset {
   background-color: #ff009c; }
   .background-intensity-5,
   .theme-inverse .background-intensity-5-inverse,
-  .background-intensity-5-hover:hover:not(.open):not(.active),
-  .background-intensity-5-focus:focus:not(.open):not(.active),
-  .background-intensity-5-active:active:not(.open):not(.active),
+  .background-intensity-5-hover:hover,
+  .background-intensity-5-focus:focus,
+  .background-intensity-5-active:active,
   .background-intensity-5-focus.focus,
   .background-intensity-5-active.active,
   .background-intensity-5-toggle.active,
@@ -7176,9 +7214,9 @@ fieldset {
 
 .background-image-none,
 .theme-inverse .background-image-none-inverse,
-.background-image-none-hover:hover:not(.open):not(.active),
-.background-image-none-focus:focus:not(.open):not(.active),
-.background-image-none-active:active:not(.open):not(.active),
+.background-image-none-hover:hover,
+.background-image-none-focus:focus,
+.background-image-none-active:active,
 .background-image-none-focus.focus,
 .background-image-none-active.active,
 .background-image-none-toggle.active,
@@ -7193,9 +7231,9 @@ fieldset {
 
 .background-gradient-45,
 .theme-inverse .background-gradient-45-inverse,
-.background-gradient-45-hover:hover:not(.open):not(.active),
-.background-gradient-45-focus:focus:not(.open):not(.active),
-.background-gradient-45-active:active:not(.open):not(.active),
+.background-gradient-45-hover:hover,
+.background-gradient-45-focus:focus,
+.background-gradient-45-active:active,
 .background-gradient-45-focus.focus,
 .background-gradient-45-active.active,
 .background-gradient-45-toggle.active,
@@ -7208,9 +7246,9 @@ fieldset {
 
 .background-gradient-90,
 .theme-inverse .background-gradient-90-inverse,
-.background-gradient-90-hover:hover:not(.open):not(.active),
-.background-gradient-90-focus:focus:not(.open):not(.active),
-.background-gradient-90-active:active:not(.open):not(.active),
+.background-gradient-90-hover:hover,
+.background-gradient-90-focus:focus,
+.background-gradient-90-active:active,
 .background-gradient-90-focus.focus,
 .background-gradient-90-active.active,
 .background-gradient-90-toggle.active,
@@ -7230,9 +7268,9 @@ fieldset {
 
 .background-gradient-135,
 .theme-inverse .background-gradient-135-inverse,
-.background-gradient-135-hover:hover:not(.open):not(.active),
-.background-gradient-135-focus:focus:not(.open):not(.active),
-.background-gradient-135-active:active:not(.open):not(.active),
+.background-gradient-135-hover:hover,
+.background-gradient-135-focus:focus,
+.background-gradient-135-active:active,
 .background-gradient-135-focus.focus,
 .background-gradient-135-active.active,
 .background-gradient-135-toggle.active,
@@ -7245,9 +7283,9 @@ fieldset {
 
 .background-gradient-180,
 .theme-inverse .background-gradient-180-inverse,
-.background-gradient-180-hover:hover:not(.open):not(.active),
-.background-gradient-180-focus:focus:not(.open):not(.active),
-.background-gradient-180-active:active:not(.open):not(.active),
+.background-gradient-180-hover:hover,
+.background-gradient-180-focus:focus,
+.background-gradient-180-active:active,
 .background-gradient-180-focus.focus,
 .background-gradient-180-active.active,
 .background-gradient-180-toggle.active,
@@ -7260,9 +7298,9 @@ fieldset {
 
 .background-gradient-225,
 .theme-inverse .background-gradient-225-inverse,
-.background-gradient-225-hover:hover:not(.open):not(.active),
-.background-gradient-225-focus:focus:not(.open):not(.active),
-.background-gradient-225-active:active:not(.open):not(.active),
+.background-gradient-225-hover:hover,
+.background-gradient-225-focus:focus,
+.background-gradient-225-active:active,
 .background-gradient-225-focus.focus,
 .background-gradient-225-active.active,
 .background-gradient-225-toggle.active,
@@ -7275,9 +7313,9 @@ fieldset {
 
 .background-gradient-270,
 .theme-inverse .background-gradient-270-inverse,
-.background-gradient-270-hover:hover:not(.open):not(.active),
-.background-gradient-270-focus:focus:not(.open):not(.active),
-.background-gradient-270-active:active:not(.open):not(.active),
+.background-gradient-270-hover:hover,
+.background-gradient-270-focus:focus,
+.background-gradient-270-active:active,
 .background-gradient-270-focus.focus,
 .background-gradient-270-active.active,
 .background-gradient-270-toggle.active,
@@ -7290,9 +7328,9 @@ fieldset {
 
 .background-gradient-315,
 .theme-inverse .background-gradient-315-inverse,
-.background-gradient-315-hover:hover:not(.open):not(.active),
-.background-gradient-315-focus:focus:not(.open):not(.active),
-.background-gradient-315-active:active:not(.open):not(.active),
+.background-gradient-315-hover:hover,
+.background-gradient-315-focus:focus,
+.background-gradient-315-active:active,
 .background-gradient-315-focus.focus,
 .background-gradient-315-active.active,
 .background-gradient-315-toggle.active,
@@ -7305,61 +7343,61 @@ fieldset {
 
 .border-color-theme,
 .theme-inverse .border-color-theme-inverse,
-.border-color-theme-hover:hover:not(.open):not(.active),
-.border-color-theme-focus:focus:not(.open):not(.active),
-.border-color-theme-active:active:not(.open):not(.active),
+.border-color-theme-hover:hover,
+.border-color-theme-focus:focus,
+.border-color-theme-active:active,
 .border-color-theme-focus.focus,
 .border-color-theme-active.active,
 .border-color-theme-toggle.active,
 .border-color-theme-toggle.open {
   border-color: #000000 !important; }
-  .theme-inverse .border-color-theme, .theme-inverse .theme-inverse .border-color-theme-inverse, .theme-inverse .border-color-theme-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-focus.focus, .theme-inverse .border-color-theme-active.active, .theme-inverse .border-color-theme-toggle.active, .theme-inverse .border-color-theme-toggle.open {
+  .theme-inverse .border-color-theme, .theme-inverse .theme-inverse .border-color-theme-inverse, .theme-inverse .border-color-theme-hover:hover, .theme-inverse .border-color-theme-focus:focus, .theme-inverse .border-color-theme-active:active, .theme-inverse .border-color-theme-focus.focus, .theme-inverse .border-color-theme-active.active, .theme-inverse .border-color-theme-toggle.active, .theme-inverse .border-color-theme-toggle.open {
     border-color: #FFFFFF !important; }
 
 .border-color-theme-contrast,
 .theme-inverse .border-color-theme-contrast-inverse,
-.border-color-theme-contrast-hover:hover:not(.open):not(.active),
-.border-color-theme-contrast-focus:focus:not(.open):not(.active),
-.border-color-theme-contrast-active:active:not(.open):not(.active),
+.border-color-theme-contrast-hover:hover,
+.border-color-theme-contrast-focus:focus,
+.border-color-theme-contrast-active:active,
 .border-color-theme-contrast-focus.focus,
 .border-color-theme-contrast-active.active,
 .border-color-theme-contrast-toggle.active,
 .border-color-theme-contrast-toggle.open {
   border-color: #1a1a1a !important; }
-  .theme-inverse .border-color-theme-contrast, .theme-inverse .theme-inverse .border-color-theme-contrast-inverse, .theme-inverse .border-color-theme-contrast-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-contrast-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-contrast-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-contrast-focus.focus, .theme-inverse .border-color-theme-contrast-active.active, .theme-inverse .border-color-theme-contrast-toggle.active, .theme-inverse .border-color-theme-contrast-toggle.open {
+  .theme-inverse .border-color-theme-contrast, .theme-inverse .theme-inverse .border-color-theme-contrast-inverse, .theme-inverse .border-color-theme-contrast-hover:hover, .theme-inverse .border-color-theme-contrast-focus:focus, .theme-inverse .border-color-theme-contrast-active:active, .theme-inverse .border-color-theme-contrast-focus.focus, .theme-inverse .border-color-theme-contrast-active.active, .theme-inverse .border-color-theme-contrast-toggle.active, .theme-inverse .border-color-theme-contrast-toggle.open {
     border-color: #e6e6e6 !important; }
 
 .border-color-theme-polar,
 .theme-inverse .border-color-theme-polar-inverse,
-.border-color-theme-polar-hover:hover:not(.open):not(.active),
-.border-color-theme-polar-focus:focus:not(.open):not(.active),
-.border-color-theme-polar-active:active:not(.open):not(.active),
+.border-color-theme-polar-hover:hover,
+.border-color-theme-polar-focus:focus,
+.border-color-theme-polar-active:active,
 .border-color-theme-polar-focus.focus,
 .border-color-theme-polar-active.active,
 .border-color-theme-polar-toggle.active,
 .border-color-theme-polar-toggle.open {
   border-color: #FFFFFF !important; }
-  .theme-inverse .border-color-theme-polar, .theme-inverse .theme-inverse .border-color-theme-polar-inverse, .theme-inverse .border-color-theme-polar-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-polar-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-polar-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-polar-focus.focus, .theme-inverse .border-color-theme-polar-active.active, .theme-inverse .border-color-theme-polar-toggle.active, .theme-inverse .border-color-theme-polar-toggle.open {
+  .theme-inverse .border-color-theme-polar, .theme-inverse .theme-inverse .border-color-theme-polar-inverse, .theme-inverse .border-color-theme-polar-hover:hover, .theme-inverse .border-color-theme-polar-focus:focus, .theme-inverse .border-color-theme-polar-active:active, .theme-inverse .border-color-theme-polar-focus.focus, .theme-inverse .border-color-theme-polar-active.active, .theme-inverse .border-color-theme-polar-toggle.active, .theme-inverse .border-color-theme-polar-toggle.open {
     border-color: #1a1a1a !important; }
 
 .border-color-theme-polar-contrast,
 .theme-inverse .border-color-theme-polar-contrast-inverse,
-.border-color-theme-polar-contrast-hover:hover:not(.open):not(.active),
-.border-color-theme-polar-contrast-focus:focus:not(.open):not(.active),
-.border-color-theme-polar-contrast-active:active:not(.open):not(.active),
+.border-color-theme-polar-contrast-hover:hover,
+.border-color-theme-polar-contrast-focus:focus,
+.border-color-theme-polar-contrast-active:active,
 .border-color-theme-polar-contrast-focus.focus,
 .border-color-theme-polar-contrast-active.active,
 .border-color-theme-polar-contrast-toggle.active,
 .border-color-theme-polar-contrast-toggle.open {
   border-color: #e6e6e6 !important; }
-  .theme-inverse .border-color-theme-polar-contrast, .theme-inverse .theme-inverse .border-color-theme-polar-contrast-inverse, .theme-inverse .border-color-theme-polar-contrast-hover:hover:not(.open):not(.active), .theme-inverse .border-color-theme-polar-contrast-focus:focus:not(.open):not(.active), .theme-inverse .border-color-theme-polar-contrast-active:active:not(.open):not(.active), .theme-inverse .border-color-theme-polar-contrast-focus.focus, .theme-inverse .border-color-theme-polar-contrast-active.active, .theme-inverse .border-color-theme-polar-contrast-toggle.active, .theme-inverse .border-color-theme-polar-contrast-toggle.open {
+  .theme-inverse .border-color-theme-polar-contrast, .theme-inverse .theme-inverse .border-color-theme-polar-contrast-inverse, .theme-inverse .border-color-theme-polar-contrast-hover:hover, .theme-inverse .border-color-theme-polar-contrast-focus:focus, .theme-inverse .border-color-theme-polar-contrast-active:active, .theme-inverse .border-color-theme-polar-contrast-focus.focus, .theme-inverse .border-color-theme-polar-contrast-active.active, .theme-inverse .border-color-theme-polar-contrast-toggle.active, .theme-inverse .border-color-theme-polar-contrast-toggle.open {
     border-color: #000000 !important; }
 
 .border-color-inherit,
 .theme-inverse .border-color-inherit-inverse,
-.border-color-inherit-hover:hover:not(.open):not(.active),
-.border-color-inherit-focus:focus:not(.open):not(.active),
-.border-color-inherit-active:active:not(.open):not(.active),
+.border-color-inherit-hover:hover,
+.border-color-inherit-focus:focus,
+.border-color-inherit-active:active,
 .border-color-inherit-focus.focus,
 .border-color-inherit-active.active,
 .border-color-inherit-toggle.active,
@@ -7368,9 +7406,9 @@ fieldset {
 
 .border-color-transparent,
 .theme-inverse .border-color-transparent-inverse,
-.border-color-transparent-hover:hover:not(.open):not(.active),
-.border-color-transparent-focus:focus:not(.open):not(.active),
-.border-color-transparent-active:active:not(.open):not(.active),
+.border-color-transparent-hover:hover,
+.border-color-transparent-focus:focus,
+.border-color-transparent-active:active,
 .border-color-transparent-focus.focus,
 .border-color-transparent-active.active,
 .border-color-transparent-toggle.active,
@@ -7588,54 +7626,54 @@ fieldset {
 
 .background-theme,
 .theme-inverse .background-theme-inverse,
-.background-theme-hover:hover:not(.open):not(.active),
-.background-theme-focus:focus:not(.open):not(.active),
-.background-theme-active:active:not(.open):not(.active),
+.background-theme-hover:hover,
+.background-theme-focus:focus,
+.background-theme-active:active,
 .background-theme-focus.focus,
 .background-theme-active.active,
 .background-theme-toggle.active,
 .background-theme-toggle.open {
   background-color: #FFFFFF !important; }
-  .theme-inverse .background-theme, .theme-inverse .theme-inverse .background-theme-inverse, .theme-inverse .background-theme-hover:hover:not(.open):not(.active), .theme-inverse .background-theme-focus:focus:not(.open):not(.active), .theme-inverse .background-theme-active:active:not(.open):not(.active), .theme-inverse .background-theme-focus.focus, .theme-inverse .background-theme-active.active, .theme-inverse .background-theme-toggle.active, .theme-inverse .background-theme-toggle.open {
+  .theme-inverse .background-theme, .theme-inverse .theme-inverse .background-theme-inverse, .theme-inverse .background-theme-hover:hover, .theme-inverse .background-theme-focus:focus, .theme-inverse .background-theme-active:active, .theme-inverse .background-theme-focus.focus, .theme-inverse .background-theme-active.active, .theme-inverse .background-theme-toggle.active, .theme-inverse .background-theme-toggle.open {
     background-color: #1a1a1a !important; }
 
 .background-theme-contrast,
 .theme-inverse .background-theme-contrast-inverse,
-.background-theme-contrast-hover:hover:not(.open):not(.active),
-.background-theme-contrast-focus:focus:not(.open):not(.active),
-.background-theme-contrast-active:active:not(.open):not(.active),
+.background-theme-contrast-hover:hover,
+.background-theme-contrast-focus:focus,
+.background-theme-contrast-active:active,
 .background-theme-contrast-focus.focus,
 .background-theme-contrast-active.active,
 .background-theme-contrast-toggle.active,
 .background-theme-contrast-toggle.open {
   background-color: #e6e6e6 !important; }
-  .theme-inverse .background-theme-contrast, .theme-inverse .theme-inverse .background-theme-contrast-inverse, .theme-inverse .background-theme-contrast-hover:hover:not(.open):not(.active), .theme-inverse .background-theme-contrast-focus:focus:not(.open):not(.active), .theme-inverse .background-theme-contrast-active:active:not(.open):not(.active), .theme-inverse .background-theme-contrast-focus.focus, .theme-inverse .background-theme-contrast-active.active, .theme-inverse .background-theme-contrast-toggle.active, .theme-inverse .background-theme-contrast-toggle.open {
+  .theme-inverse .background-theme-contrast, .theme-inverse .theme-inverse .background-theme-contrast-inverse, .theme-inverse .background-theme-contrast-hover:hover, .theme-inverse .background-theme-contrast-focus:focus, .theme-inverse .background-theme-contrast-active:active, .theme-inverse .background-theme-contrast-focus.focus, .theme-inverse .background-theme-contrast-active.active, .theme-inverse .background-theme-contrast-toggle.active, .theme-inverse .background-theme-contrast-toggle.open {
     background-color: #000000 !important; }
 
 .background-theme-polar,
 .theme-inverse .background-theme-polar-inverse,
-.background-theme-polar-hover:hover:not(.open):not(.active),
-.background-theme-polar-focus:focus:not(.open):not(.active),
-.background-theme-polar-active:active:not(.open):not(.active),
+.background-theme-polar-hover:hover,
+.background-theme-polar-focus:focus,
+.background-theme-polar-active:active,
 .background-theme-polar-focus.focus,
 .background-theme-polar-active.active,
 .background-theme-polar-toggle.active,
 .background-theme-polar-toggle.open {
   background-color: #000000 !important; }
-  .theme-inverse .background-theme-polar, .theme-inverse .theme-inverse .background-theme-polar-inverse, .theme-inverse .background-theme-polar-hover:hover:not(.open):not(.active), .theme-inverse .background-theme-polar-focus:focus:not(.open):not(.active), .theme-inverse .background-theme-polar-active:active:not(.open):not(.active), .theme-inverse .background-theme-polar-focus.focus, .theme-inverse .background-theme-polar-active.active, .theme-inverse .background-theme-polar-toggle.active, .theme-inverse .background-theme-polar-toggle.open {
+  .theme-inverse .background-theme-polar, .theme-inverse .theme-inverse .background-theme-polar-inverse, .theme-inverse .background-theme-polar-hover:hover, .theme-inverse .background-theme-polar-focus:focus, .theme-inverse .background-theme-polar-active:active, .theme-inverse .background-theme-polar-focus.focus, .theme-inverse .background-theme-polar-active.active, .theme-inverse .background-theme-polar-toggle.active, .theme-inverse .background-theme-polar-toggle.open {
     background-color: #FFFFFF !important; }
 
 .background-theme-polar-contrast,
 .theme-inverse .background-theme-polar-contrast-inverse,
-.background-theme-polar-contrast-hover:hover:not(.open):not(.active),
-.background-theme-polar-contrast-focus:focus:not(.open):not(.active),
-.background-theme-polar-contrast-active:active:not(.open):not(.active),
+.background-theme-polar-contrast-hover:hover,
+.background-theme-polar-contrast-focus:focus,
+.background-theme-polar-contrast-active:active,
 .background-theme-polar-contrast-focus.focus,
 .background-theme-polar-contrast-active.active,
 .background-theme-polar-contrast-toggle.active,
 .background-theme-polar-contrast-toggle.open {
   background-color: #1a1a1a !important; }
-  .theme-inverse .background-theme-polar-contrast, .theme-inverse .theme-inverse .background-theme-polar-contrast-inverse, .theme-inverse .background-theme-polar-contrast-hover:hover:not(.open):not(.active), .theme-inverse .background-theme-polar-contrast-focus:focus:not(.open):not(.active), .theme-inverse .background-theme-polar-contrast-active:active:not(.open):not(.active), .theme-inverse .background-theme-polar-contrast-focus.focus, .theme-inverse .background-theme-polar-contrast-active.active, .theme-inverse .background-theme-polar-contrast-toggle.active, .theme-inverse .background-theme-polar-contrast-toggle.open {
+  .theme-inverse .background-theme-polar-contrast, .theme-inverse .theme-inverse .background-theme-polar-contrast-inverse, .theme-inverse .background-theme-polar-contrast-hover:hover, .theme-inverse .background-theme-polar-contrast-focus:focus, .theme-inverse .background-theme-polar-contrast-active:active, .theme-inverse .background-theme-polar-contrast-focus.focus, .theme-inverse .background-theme-polar-contrast-active.active, .theme-inverse .background-theme-polar-contrast-toggle.active, .theme-inverse .background-theme-polar-contrast-toggle.open {
     background-color: #e6e6e6 !important; }
 
 .background-gradient, .background-gradient-45, .background-gradient-90, .background-gradient-135, .background-gradient-180, .background-gradient-225, .background-gradient-270, .background-gradient-315 {
@@ -7643,9 +7681,9 @@ fieldset {
 
 .background-inherit,
 .theme-inverse .background-inherit-inverse,
-.background-inherit-hover:hover:not(.open):not(.active),
-.background-inherit-focus:focus:not(.open):not(.active),
-.background-inherit-active:active:not(.open):not(.active),
+.background-inherit-hover:hover,
+.background-inherit-focus:focus,
+.background-inherit-active:active,
 .background-inherit-focus.focus,
 .background-inherit-active.active,
 .background-inherit-toggle.active,
@@ -7654,9 +7692,9 @@ fieldset {
 
 .background-transparent,
 .theme-inverse .background-transparent-inverse,
-.background-transparent-hover:hover:not(.open):not(.active),
-.background-transparent-focus:focus:not(.open):not(.active),
-.background-transparent-active:active:not(.open):not(.active),
+.background-transparent-hover:hover,
+.background-transparent-focus:focus,
+.background-transparent-active:active,
 .background-transparent-focus.focus,
 .background-transparent-active.active,
 .background-transparent-toggle.active,
@@ -7666,9 +7704,9 @@ fieldset {
 /* COLOR CLASSES */
   .color-intensity-1,
   .theme-inverse .color-intensity-1-inverse,
-  .color-intensity-1-hover:hover:not(.open):not(.active),
-  .color-intensity-1-focus:focus:not(.open):not(.active),
-  .color-intensity-1-active:active:not(.open):not(.active),
+  .color-intensity-1-hover:hover,
+  .color-intensity-1-focus:focus,
+  .color-intensity-1-active:active,
   .color-intensity-1-focus.focus,
   .color-intensity-1-active.active,
   .color-intensity-1-toggle.active,
@@ -7676,9 +7714,9 @@ fieldset {
     color: #f5b83d !important; }
   .color-intensity-2,
   .theme-inverse .color-intensity-2-inverse,
-  .color-intensity-2-hover:hover:not(.open):not(.active),
-  .color-intensity-2-focus:focus:not(.open):not(.active),
-  .color-intensity-2-active:active:not(.open):not(.active),
+  .color-intensity-2-hover:hover,
+  .color-intensity-2-focus:focus,
+  .color-intensity-2-active:active,
   .color-intensity-2-focus.focus,
   .color-intensity-2-active.active,
   .color-intensity-2-toggle.active,
@@ -7686,9 +7724,9 @@ fieldset {
     color: #f88a55 !important; }
   .color-intensity-3,
   .theme-inverse .color-intensity-3-inverse,
-  .color-intensity-3-hover:hover:not(.open):not(.active),
-  .color-intensity-3-focus:focus:not(.open):not(.active),
-  .color-intensity-3-active:active:not(.open):not(.active),
+  .color-intensity-3-hover:hover,
+  .color-intensity-3-focus:focus,
+  .color-intensity-3-active:active,
   .color-intensity-3-focus.focus,
   .color-intensity-3-active.active,
   .color-intensity-3-toggle.active,
@@ -7696,9 +7734,9 @@ fieldset {
     color: #fa5c6d !important; }
   .color-intensity-4,
   .theme-inverse .color-intensity-4-inverse,
-  .color-intensity-4-hover:hover:not(.open):not(.active),
-  .color-intensity-4-focus:focus:not(.open):not(.active),
-  .color-intensity-4-active:active:not(.open):not(.active),
+  .color-intensity-4-hover:hover,
+  .color-intensity-4-focus:focus,
+  .color-intensity-4-active:active,
   .color-intensity-4-focus.focus,
   .color-intensity-4-active.active,
   .color-intensity-4-toggle.active,
@@ -7706,9 +7744,9 @@ fieldset {
     color: #fd2e84 !important; }
   .color-intensity-5,
   .theme-inverse .color-intensity-5-inverse,
-  .color-intensity-5-hover:hover:not(.open):not(.active),
-  .color-intensity-5-focus:focus:not(.open):not(.active),
-  .color-intensity-5-active:active:not(.open):not(.active),
+  .color-intensity-5-hover:hover,
+  .color-intensity-5-focus:focus,
+  .color-intensity-5-active:active,
   .color-intensity-5-focus.focus,
   .color-intensity-5-active.active,
   .color-intensity-5-toggle.active,
@@ -7716,9 +7754,9 @@ fieldset {
     color: #ff009c !important; }
   .color-base,
   .theme-inverse .color-base-inverse,
-  .color-base-hover:hover:not(.open):not(.active),
-  .color-base-focus:focus:not(.open):not(.active),
-  .color-base-active:active:not(.open):not(.active),
+  .color-base-hover:hover,
+  .color-base-focus:focus,
+  .color-base-active:active,
   .color-base-focus.focus,
   .color-base-active.active,
   .color-base-toggle.active,
@@ -7726,9 +7764,9 @@ fieldset {
     color: #000000 !important; }
   .color-background,
   .theme-inverse .color-background-inverse,
-  .color-background-hover:hover:not(.open):not(.active),
-  .color-background-focus:focus:not(.open):not(.active),
-  .color-background-active:active:not(.open):not(.active),
+  .color-background-hover:hover,
+  .color-background-focus:focus,
+  .color-background-active:active,
   .color-background-focus.focus,
   .color-background-active.active,
   .color-background-toggle.active,
@@ -7736,9 +7774,9 @@ fieldset {
     color: #FFFFFF !important; }
   .color-primary,
   .theme-inverse .color-primary-inverse,
-  .color-primary-hover:hover:not(.open):not(.active),
-  .color-primary-focus:focus:not(.open):not(.active),
-  .color-primary-active:active:not(.open):not(.active),
+  .color-primary-hover:hover,
+  .color-primary-focus:focus,
+  .color-primary-active:active,
   .color-primary-focus.focus,
   .color-primary-active.active,
   .color-primary-toggle.active,
@@ -7746,9 +7784,9 @@ fieldset {
     color: #007ece !important; }
   .color-secondary,
   .theme-inverse .color-secondary-inverse,
-  .color-secondary-hover:hover:not(.open):not(.active),
-  .color-secondary-focus:focus:not(.open):not(.active),
-  .color-secondary-active:active:not(.open):not(.active),
+  .color-secondary-hover:hover,
+  .color-secondary-focus:focus,
+  .color-secondary-active:active,
   .color-secondary-focus.focus,
   .color-secondary-active.active,
   .color-secondary-toggle.active,
@@ -7756,9 +7794,9 @@ fieldset {
     color: #ff009c !important; }
   .color-accent,
   .theme-inverse .color-accent-inverse,
-  .color-accent-hover:hover:not(.open):not(.active),
-  .color-accent-focus:focus:not(.open):not(.active),
-  .color-accent-active:active:not(.open):not(.active),
+  .color-accent-hover:hover,
+  .color-accent-focus:focus,
+  .color-accent-active:active,
   .color-accent-focus.focus,
   .color-accent-active.active,
   .color-accent-toggle.active,
@@ -7766,9 +7804,9 @@ fieldset {
     color: #f5b83d !important; }
   .color-neutral,
   .theme-inverse .color-neutral-inverse,
-  .color-neutral-hover:hover:not(.open):not(.active),
-  .color-neutral-focus:focus:not(.open):not(.active),
-  .color-neutral-active:active:not(.open):not(.active),
+  .color-neutral-hover:hover,
+  .color-neutral-focus:focus,
+  .color-neutral-active:active,
   .color-neutral-focus.focus,
   .color-neutral-active.active,
   .color-neutral-toggle.active,
@@ -7776,9 +7814,9 @@ fieldset {
     color: #8d8d8d !important; }
   .color-success,
   .theme-inverse .color-success-inverse,
-  .color-success-hover:hover:not(.open):not(.active),
-  .color-success-focus:focus:not(.open):not(.active),
-  .color-success-active:active:not(.open):not(.active),
+  .color-success-hover:hover,
+  .color-success-focus:focus,
+  .color-success-active:active,
   .color-success-focus.focus,
   .color-success-active.active,
   .color-success-toggle.active,
@@ -7786,9 +7824,9 @@ fieldset {
     color: #15b800 !important; }
   .color-caution,
   .theme-inverse .color-caution-inverse,
-  .color-caution-hover:hover:not(.open):not(.active),
-  .color-caution-focus:focus:not(.open):not(.active),
-  .color-caution-active:active:not(.open):not(.active),
+  .color-caution-hover:hover,
+  .color-caution-focus:focus,
+  .color-caution-active:active,
   .color-caution-focus.focus,
   .color-caution-active.active,
   .color-caution-toggle.active,
@@ -7796,9 +7834,9 @@ fieldset {
     color: #fd7f03 !important; }
   .color-error,
   .theme-inverse .color-error-inverse,
-  .color-error-hover:hover:not(.open):not(.active),
-  .color-error-focus:focus:not(.open):not(.active),
-  .color-error-active:active:not(.open):not(.active),
+  .color-error-hover:hover,
+  .color-error-focus:focus,
+  .color-error-active:active,
   .color-error-focus.focus,
   .color-error-active.active,
   .color-error-toggle.active,
@@ -7807,61 +7845,61 @@ fieldset {
 
 .color-theme,
 .theme-inverse .color-theme-inverse,
-.color-theme-hover:hover:not(.open):not(.active),
-.color-theme-focus:focus:not(.open):not(.active),
-.color-theme-active:active:not(.open):not(.active),
+.color-theme-hover:hover,
+.color-theme-focus:focus,
+.color-theme-active:active,
 .color-theme-focus.focus,
 .color-theme-active.active,
 .color-theme-toggle.active,
 .color-theme-toggle.open {
   color: #000000 !important; }
-  .theme-inverse .color-theme, .theme-inverse .theme-inverse .color-theme-inverse, .theme-inverse .color-theme-hover:hover:not(.open):not(.active), .theme-inverse .color-theme-focus:focus:not(.open):not(.active), .theme-inverse .color-theme-active:active:not(.open):not(.active), .theme-inverse .color-theme-focus.focus, .theme-inverse .color-theme-active.active, .theme-inverse .color-theme-toggle.active, .theme-inverse .color-theme-toggle.open {
+  .theme-inverse .color-theme, .theme-inverse .theme-inverse .color-theme-inverse, .theme-inverse .color-theme-hover:hover, .theme-inverse .color-theme-focus:focus, .theme-inverse .color-theme-active:active, .theme-inverse .color-theme-focus.focus, .theme-inverse .color-theme-active.active, .theme-inverse .color-theme-toggle.active, .theme-inverse .color-theme-toggle.open {
     color: #FFFFFF !important; }
 
 .color-theme-contrast,
 .theme-inverse .color-theme-contrast-inverse,
-.color-theme-contrast-hover:hover:not(.open):not(.active),
-.color-theme-contrast-focus:focus:not(.open):not(.active),
-.color-theme-contrast-active:active:not(.open):not(.active),
+.color-theme-contrast-hover:hover,
+.color-theme-contrast-focus:focus,
+.color-theme-contrast-active:active,
 .color-theme-contrast-focus.focus,
 .color-theme-contrast-active.active,
 .color-theme-contrast-toggle.active,
 .color-theme-contrast-toggle.open {
   color: #1a1a1a !important; }
-  .theme-inverse .color-theme-contrast, .theme-inverse .theme-inverse .color-theme-contrast-inverse, .theme-inverse .color-theme-contrast-hover:hover:not(.open):not(.active), .theme-inverse .color-theme-contrast-focus:focus:not(.open):not(.active), .theme-inverse .color-theme-contrast-active:active:not(.open):not(.active), .theme-inverse .color-theme-contrast-focus.focus, .theme-inverse .color-theme-contrast-active.active, .theme-inverse .color-theme-contrast-toggle.active, .theme-inverse .color-theme-contrast-toggle.open {
+  .theme-inverse .color-theme-contrast, .theme-inverse .theme-inverse .color-theme-contrast-inverse, .theme-inverse .color-theme-contrast-hover:hover, .theme-inverse .color-theme-contrast-focus:focus, .theme-inverse .color-theme-contrast-active:active, .theme-inverse .color-theme-contrast-focus.focus, .theme-inverse .color-theme-contrast-active.active, .theme-inverse .color-theme-contrast-toggle.active, .theme-inverse .color-theme-contrast-toggle.open {
     color: #e6e6e6 !important; }
 
 .color-theme-polar,
 .theme-inverse .color-theme-polar-inverse,
-.color-theme-polar-hover:hover:not(.open):not(.active),
-.color-theme-polar-focus:focus:not(.open):not(.active),
-.color-theme-polar-active:active:not(.open):not(.active),
+.color-theme-polar-hover:hover,
+.color-theme-polar-focus:focus,
+.color-theme-polar-active:active,
 .color-theme-polar-focus.focus,
 .color-theme-polar-active.active,
 .color-theme-polar-toggle.active,
 .color-theme-polar-toggle.open {
   color: #FFFFFF !important; }
-  .theme-inverse .color-theme-polar, .theme-inverse .theme-inverse .color-theme-polar-inverse, .theme-inverse .color-theme-polar-hover:hover:not(.open):not(.active), .theme-inverse .color-theme-polar-focus:focus:not(.open):not(.active), .theme-inverse .color-theme-polar-active:active:not(.open):not(.active), .theme-inverse .color-theme-polar-focus.focus, .theme-inverse .color-theme-polar-active.active, .theme-inverse .color-theme-polar-toggle.active, .theme-inverse .color-theme-polar-toggle.open {
+  .theme-inverse .color-theme-polar, .theme-inverse .theme-inverse .color-theme-polar-inverse, .theme-inverse .color-theme-polar-hover:hover, .theme-inverse .color-theme-polar-focus:focus, .theme-inverse .color-theme-polar-active:active, .theme-inverse .color-theme-polar-focus.focus, .theme-inverse .color-theme-polar-active.active, .theme-inverse .color-theme-polar-toggle.active, .theme-inverse .color-theme-polar-toggle.open {
     color: #1a1a1a !important; }
 
 .color-theme-polar-contrast,
 .theme-inverse .color-theme-polar-contrast-inverse,
-.color-theme-polar-contrast-hover:hover:not(.open):not(.active),
-.color-theme-polar-contrast-focus:focus:not(.open):not(.active),
-.color-theme-polar-contrast-active:active:not(.open):not(.active),
+.color-theme-polar-contrast-hover:hover,
+.color-theme-polar-contrast-focus:focus,
+.color-theme-polar-contrast-active:active,
 .color-theme-polar-contrast-focus.focus,
 .color-theme-polar-contrast-active.active,
 .color-theme-polar-contrast-toggle.active,
 .color-theme-polar-contrast-toggle.open {
   color: #e6e6e6 !important; }
-  .theme-inverse .color-theme-polar-contrast, .theme-inverse .theme-inverse .color-theme-polar-contrast-inverse, .theme-inverse .color-theme-polar-contrast-hover:hover:not(.open):not(.active), .theme-inverse .color-theme-polar-contrast-focus:focus:not(.open):not(.active), .theme-inverse .color-theme-polar-contrast-active:active:not(.open):not(.active), .theme-inverse .color-theme-polar-contrast-focus.focus, .theme-inverse .color-theme-polar-contrast-active.active, .theme-inverse .color-theme-polar-contrast-toggle.active, .theme-inverse .color-theme-polar-contrast-toggle.open {
+  .theme-inverse .color-theme-polar-contrast, .theme-inverse .theme-inverse .color-theme-polar-contrast-inverse, .theme-inverse .color-theme-polar-contrast-hover:hover, .theme-inverse .color-theme-polar-contrast-focus:focus, .theme-inverse .color-theme-polar-contrast-active:active, .theme-inverse .color-theme-polar-contrast-focus.focus, .theme-inverse .color-theme-polar-contrast-active.active, .theme-inverse .color-theme-polar-contrast-toggle.active, .theme-inverse .color-theme-polar-contrast-toggle.open {
     color: #000000 !important; }
 
 .color-inherit,
 .theme-inverse .color-inherit-inverse,
-.color-inherit-hover:hover:not(.open):not(.active),
-.color-inherit-focus:focus:not(.open):not(.active),
-.color-inherit-active:active:not(.open):not(.active),
+.color-inherit-hover:hover,
+.color-inherit-focus:focus,
+.color-inherit-active:active,
 .color-inherit-focus.focus,
 .color-inherit-active.active,
 .color-inherit-toggle.active,
@@ -8055,21 +8093,19 @@ fieldset {
   .text-wrap-break {
     word-break: break-word !important;
     overflow-wrap: break-word !important; }
-  .text-wrap-ellipsis {
+  .text-wrap-ellipsis-multiple, .text-wrap-ellipsis, .tag-text, .input-tags-ui-tag-text {
     /* cut overflowing single line to ellipsis */
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-    /* gotta be block otherwise shit wont happen */
+    /* gotta be block otherwise shit wont happen */ }
+  .text-wrap-ellipsis {
     display: block;
     max-width: 100% !important; }
     .text-wrap-ellipsis-multiple {
-      white-space: normal !important;
-      text-overflow: ellipsis !important;
       display: -webkit-box !important;
       -webkit-line-clamp: 2 !important;
       -webkit-box-orient: vertical !important;
-      overflow: hidden !important;
       height: calc((1em * 1.5) * 2); }
       .text-leading-compact .text-wrap-ellipsis-multiple, .text-wrap-ellipsis-multiple.text-leading-compact {
         height: calc((1em * 1.5 * 0.875) * 2); }
@@ -8451,6 +8487,32 @@ fieldset {
   display: none !important; }
 
 .only-nonmobile {
+  display: none !important; }
+
+*:hover > .only-not-hover,
+*:hover > .hide-hover,
+*:not(:hover) > .only-hover,
+*:not(:hover) > .hide-not-hover,
+.pointer-reference:hover .only-not-hover,
+.pointer-reference:hover .hide-hover,
+.pointer-reference:not(:hover) .only-hover,
+.pointer-reference:not(:hover) .hide-not-hover,
+*:focus > .only-not-focus,
+*:focus > .hide-focus,
+*:not(:focus):not(.focus) > .only-focus,
+*:not(:focus):not(.focus) > .hide-not-focus,
+*.active > .only-not-active,
+*:active > .only-not-active,
+*.active > .hide-active,
+*:active > .hide-active,
+*:not(:active):not(.active) > .only-active,
+*:not(:active):not(.active) > .hide-not-active,
+*.active > .only-not-toggle,
+*.open > .only-not-toggle,
+*.active > .hide-toggle,
+*.open > .hide-toggle,
+*:not(.active):not(.open) > .only-toggle,
+*:not(.active):not(.open) > .hide-not-toggle {
   display: none !important; }
 
 @media (max-width: 1200px) {

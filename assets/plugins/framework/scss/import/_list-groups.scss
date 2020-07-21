@@ -60,6 +60,10 @@ $prefix: '.list-group';
 			border-color:  $list-group-border-color-inverse;
 		}
 
+		&#{$prefix}-item-no-interaction {
+			pointer-events:none!important;
+		}
+
 		@at-root #{$prefix}-compact {
 			li,
 			#{$prefix}-item  {
@@ -114,12 +118,19 @@ $prefix: '.list-group';
 		}
 	}
 
-	.dropdown & {
+	@at-root .dropdown #{$prefix} {
 		margin-bottom:0; 
 
 		&:first-child:last-child {
 			border-radius: $popper-border-radius;
-			overflow:hidden;
+		}
+
+		li, 
+		#{$prefix}-item {
+			> a {
+				padding-top:0;
+				padding-bottom: 0;
+			}
 		}
 	}
 }

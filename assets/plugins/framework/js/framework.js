@@ -715,6 +715,13 @@
 		resetterClass = resetterClass || `${prefix}-group-toggle-reset`;
 		siblingSelector = siblingSelector || `.${prefix}`;
 
+		if(
+			triggerer.closest(siblingSelector)
+			&& !triggerer.classList.contains(prefix)
+		){
+			triggerer = triggerer.closest(siblingSelector);
+		}
+
 		if (triggerer) {
 
 			const resetter = frameWork
@@ -742,13 +749,17 @@
 			}
 
 			if (
-				triggerer
-					.closest(`.${prefix}-group-toggle-multiple`)
-				&& selectorSiblings
-					.filter((butt) => {
-						return butt.classList.contains('active');
-					})
-						.length > 0
+				(
+					triggerer
+						.closest(`.${prefix}-group-toggle-multiple`)
+					&& selectorSiblings
+						.filter((butt) => {
+							return butt.classList.contains('active');
+						})
+							.length > 0
+				)
+				|| triggerer
+					.closest(`.${prefix}-group-toggle-allow-no-active`)
 			) {
 				triggerer.classList.toggle('active');
 
@@ -792,8 +803,8 @@
 			const selector = `.${toggleMode}`,
 				toggledClass = `.${toggleMode}`
 					.replace('-open', '')
-					.replace('-close', '')
-					|| null;
+					.replace('-close', ''),
+				classToSearch = toggledClass ? toggledClass.replace('.', '') : null;
 
 			let toReturn = null;
 
@@ -802,13 +813,31 @@
 					triggerer.hasAttribute('href')
 					&& triggerer.getAttribute('href') !== ''
 					&& triggerer.getAttribute('href') !== '#'
+					&& (
+						document.querySelector(
+							triggerer.getAttribute('href')
+						)
+						&& document.querySelector(
+							triggerer.getAttribute('href')
+						).classList.contains(classToSearch)
+					)
 				) {
+					// console.warn('toggle found by href');
 					toReturn = document.querySelector(triggerer.getAttribute('href'));
 
 				} else if (
 					triggerer.hasAttribute('data-href')
 					&& triggerer.getAttribute('data-href') !== ''
+					&& (
+						document.querySelector(
+							triggerer.getAttribute('data-href')
+						)
+						&& document.querySelector(
+							triggerer.getAttribute('data-href')
+						).classList.contains(classToSearch)
+					)
 				) {
+					// console.warn('toggle found by data-href');
 					toReturn = document.querySelector(triggerer.getAttribute('data-href'));
 
 				} else if (
@@ -817,6 +846,7 @@
 						.parentNode
 						.closest(`[data-toggle="${toggleMode}"]`)
 				) {
+					// console.warn('toggle searching closest data-toggle');
 					toReturn = _.getTheToggled(
 						triggerer.parentNode.closest(`[data-toggle="${toggleMode}"]`),
 						toggleMode
@@ -826,6 +856,7 @@
 					toggleMode
 					&& triggerer.parentNode.classList.contains('input-group')
 				) {
+					// console.warn('toggle trigger was in input group');
 					toReturn = _.getTheToggled(
 						triggerer.parentNode,
 						toggleMode
@@ -835,6 +866,7 @@
 					toggleMode
 					&& triggerer.parentNode.classList.contains('btn-group')
 				) {
+					// console.warn('toggle trigger was in btn group');
 					toReturn = _.getTheToggled(
 						triggerer.parentNode,
 						toggleMode
@@ -844,6 +876,7 @@
 					let possibleSiblings = triggerer.nextElementSibling;
 					while (possibleSiblings) {
 						if (possibleSiblings.matches(selector)) {
+							// console.warn('toggle trigger anybody whos a sibling');
 							return possibleSiblings;
 						}
 						possibleSiblings =
@@ -857,14 +890,16 @@
 					&& document.querySelector(window.location.hash)
 					&& document
 						.querySelector(window.location.hash)
-						.classList.contains(toggledClass.replace('.', ''))
+						.classList.contains(classToSearch)
 				) {
+					// console.warn('no trigger but found the hash is a matching toggle');
 					toReturn = document.querySelector(window.location.hash);
 				}
 			}
 
 			if (!toReturn) {
 				//look if theres an ancestor it can toggle. last prioroty
+				// console.warn('no trigger so looking for an ancestor');
 				switch (toggleMode) {
 					case 'dropdown':
 					case 'modal':
@@ -876,6 +911,7 @@
 							&& toggleMode
 							&& triggerer.parentNode.closest(toggledClass)
 						) {
+							// console.log('found ancestor');
 							toReturn = triggerer.parentNode.closest(
 								toggledClass
 							);
@@ -928,6 +964,7 @@
 	_.fns_on_load = [];
 	_.fns_on_ready = [];
 	_.fns_on_resize = [];
+	_.fns_on_scroll = [];
 	_.fns_on_rightAway = [];
 
 	frameWork.validateBr = (breakpoint, mode) => {
@@ -2209,6 +2246,7 @@
 		}
 	};
 	_.fns_on_resize.push(frameWork.destroyToolTip);
+	_.fns_on_scroll.push(frameWork.destroyToolTip);
 
 	//only use when the tooltip is finally active
 	frameWork.positionToolTip = (posX, posY) => {
@@ -2321,6 +2359,9 @@
 		if (contentWrap && subcom) {
 
 			const arr = {
+				changeHash:
+					(triggerer && triggerer.attr(`data-${subcom}-change-hash`))
+					|| contentWrap.attr(`data-${subcom}-change-hash`),
 				header:
 					(triggerer && triggerer.getAttribute(`data-${subcom}-title`))
 					|| contentWrap.getAttribute(`data-${subcom}-title`),
@@ -2348,6 +2389,7 @@
 			};
 
 			const defaults = {
+				changeHash: true,
 				header: '',
 				close: true,
 				disableOverlay: true,
@@ -2357,10 +2399,10 @@
 				closeClasses: '',
 				align: 'left',
 			};
+			const args = _.parseArgs(arr, defaults);
 
 			const actualId = `${frameWork.settings.prefix}-${subcom}`;
 
-			const args = _.parseArgs(arr, defaults);
 
 			// console.log(contentWrap,arr,defaults,args);
 
@@ -2372,7 +2414,7 @@
 
 			const id = contentWrap.getAttribute('id') || actualId;
 
-			id !== `${actualId}` && _.changeHash(id);
+			id !== `${actualId}` && args.changeHash && _.changeHash(id);
 
 			const modal = document.createElement('div');
 			document.querySelector('body').appendChild(modal);
@@ -2456,8 +2498,6 @@
 				modal.querySelector(`.${subcom}-popup-content`)
 			);
 
-			document.body.classList.add('body-no-scroll');
-
 			if (args.maxWidth) {
 				//all
 				modal.querySelector(`.${subcom}-popup`).style.maxWidth =
@@ -2475,6 +2515,7 @@
 			}
 
 			modal.classList.add('active');
+			document.body.classList.add('body-no-scroll');
 
 			frameWork[subcom].current = contentWrap;
 			frameWork[subcom].args = args;
@@ -2485,9 +2526,14 @@
 		removeHash = removeHash || false;
 		subcom = subcom || 'modal';
 
+
 		let canRemoveHash = false;
 
-		if (removeHash && frameWork[subcom].current.hasAttribute('id')) {
+		if (
+			removeHash
+			&& frameWork[subcom].current.hasAttribute('id')
+			&& frameWork[subcom].current.attr('id') == window.location.hash.replace('#','')
+		) {
 			canRemoveHash = true;
 		}
 
@@ -2505,7 +2551,19 @@
 		frameWork[subcom].current = false;
 		frameWork[subcom].args = false;
 
-		document.body.classList.remove('body-no-scroll');
+
+		const validSubcoms = ['modal','board']; 
+		let removeBodClass = true;
+		validSubcoms.forEach((sc)=> {
+			if(
+				document.getElementById(`${frameWork.settings.prefix}-${sc}`)
+				&& removeBodClass == true
+			){
+				removeBodClass = false;
+			}
+		})
+
+		removeBodClass && document.body.classList.remove('body-no-scroll');
 	
 		canRemoveHash && _.changeHash('');
 	};
@@ -2959,6 +3017,24 @@
 					triggerer.innerHTML += pasted.getData('text');
 
 					triggerer.blur();
+				}
+			}
+		);
+
+
+		frameWork.addEvent(
+			document.body,
+			'click',
+			'.input-tags-ui .input-tags-ui-input',
+			(e) => {
+				const triggerer = e.target;
+
+				e.preventDefault();
+
+				if (!frameWork.isDisabled(triggerer)) {
+					setTimeout(function() {
+						triggerer.focus();
+					}, 0);
 				}
 			}
 		);
@@ -3620,6 +3696,18 @@
 
 			resizeTimerInternal = setTimeout(() => {
 				_.fns_on_resize.forEach((fn) => {
+					fn();
+				});
+			}, 100);
+		});
+
+
+		let scrollTimerInternal;
+		window.addEventListener('scroll', () => {
+			clearTimeout(scrollTimerInternal);
+
+			scrollTimerInternal = setTimeout(() => {
+				_.fns_on_scroll.forEach((fn) => {
 					fn();
 				});
 			}, 100);
