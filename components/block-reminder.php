@@ -9,15 +9,15 @@ modal na lang
 
 
  -->
-	<h6 class="task-reminder-due h6 color-neutral text-transform-uppercase no-margin-top">
-		<span class="REPLACE">Reminder title</span>
+	<h6 class="task-reminder-due h6 color-neutral text-transform-uppercase no-margin-y">
+		<!-- @if due within week -->
+			Due within <span class="task-reminder-due-day-count">3</span> days
+		<!-- @else -->
+			<span class="task-reminder-due-date"><span class="REPLACE">06/09/69</span> Note</span>
 	</h6>
-	<div class="task-reminder-body">
+	<div class="task-reminder-body task-reminder-title">
 			<p class="no-margin-bottom">
-				<!-- @if due within week -->
-					Due within <span class="task-reminder-due-day-count">3</span> days
-				<!-- @else -->
-					<span class="task-reminder-due-date"><span class="REPLACE">06/09/69</span> Note</span>
+				<span class="REPLACE">Reminder title</span>
 			</p>
 			<div class="task-reminder-description">
 
