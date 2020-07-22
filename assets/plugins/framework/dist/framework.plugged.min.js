@@ -1839,7 +1839,7 @@ window.jQuery && jQuery.noConflict();
 			//ATODO UPDATE SETUP HERE
 			//update fake hoes
 			if (args.callback) {
-				_.runFn = args.callback;
+				_.runFn(args.callback);
 			}
 		}
 	};
@@ -2380,7 +2380,7 @@ window.jQuery && jQuery.noConflict();
 			}
 
 			if (args.callback) {
-				_.runFn = args.callback;
+				_.runFn(args.callback);
 			}
 
 			frameWork[subcom].current = contentWrap;
