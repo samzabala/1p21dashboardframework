@@ -99,10 +99,10 @@
 
  -->
 
- 
+
 <!-- VIEW  -->
 	<!-- @NOTE data-board-resize feature will be built after for building ya boi faster -->
-		<div id="task-REPLACEwithPostTypeID-view" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true" data-board-max-width="1240px">
+		<div id="task-REPLACEwithPostTypeID-view" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true" data-board-width="1240px">
 
 			<div class="dashboard-board-column-layout-container  background-theme-contrast">
 				<div class="dashboard-board-partition dashboard-board-column-layout-main  background-theme">
@@ -235,14 +235,14 @@
 			There will be comments along the way as well
 	-->
 
-	<div id="task-REPLACEwithPostTypeID-edit" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-max-width="1240px">
+	<div id="task-REPLACEwithPostTypeID-edit" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-width="1240px">
 		<?php app_get_component('components/boards-task-form') ?>
 	</div>
 
 
 
 <!-- ADD -->
-	<div id="task-new" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-max-width="1240px">
+	<div id="task-new" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-resize="true"  data-board-width="1240px">
 
 		<!-- Shares the same markup structure almost with edit. commented out so front end demo can work but you get the picture -->
 		<?php //app_get_component('components/boards-task-form') ?>

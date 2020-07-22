@@ -2,7 +2,7 @@
 
 
 <!-- NOTE this field is an extension of the editor's fields -->
-<div class="modal" data-modal-max-width="600px">
+<div class="modal" data-modal-width="600px">
 
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">

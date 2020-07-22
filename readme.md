@@ -124,6 +124,11 @@ REPLACEwithCorrespondingInputFieldName
 
 # For Cristian
 
+## As of 07-21-2020
+
+instances of data atrtributes `data-modal-max-width` and `data-board-max-width` will now be  `data-modal-width` and `data-board-width`
+
+
 ## As of 07-13-2020
 
 Workflow board components will now have their toggles and board bllock elements separated to allow more modularity

@@ -1,4 +1,4 @@
-<div id="project-REPLACEwithProjectId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-max-width="1150px">
+<div id="project-REPLACEwithProjectId" data-board-align="left" class="board" data-board-classes="dashboard-board-column-layout" data-board-width="1150px">
 
 	<!-- @IF state is view -->
 		<div class="dashboard-board-column-layout-container  background-theme-contrast">

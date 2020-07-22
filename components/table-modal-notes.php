@@ -4,7 +4,7 @@
 <div
 class="modal"
 id="task-notes-ID"
-data-modal-max-width="800px"
+data-modal-width="800px"
 data-modal-title="Task notes"
 data-modal-classes="record-notes-modal" data-modal-disable-overlay="false">
 

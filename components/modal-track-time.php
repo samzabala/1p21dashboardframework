@@ -32,7 +32,7 @@
 ON STANDBY FOR DESIGNER'S UPDATES
 
 -->
-	<div class="modal" id="modal-track-time" data-modal-max-width="960px" data-modal-title="Add new Entry">
+	<div class="modal" id="modal-track-time" data-modal-width="960px" data-modal-title="Add new Entry">
 		<div class="container">
 
 			<form action="" class="add-new-timer">

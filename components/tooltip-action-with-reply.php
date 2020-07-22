@@ -38,7 +38,7 @@
 		<i class="symbol symbol-kebab-horizontal"></i>
 	</span> 
 
-	<div class="modal" id="comment-form" data-modal-max-width="600px" data-modal-change-hash="false">
+	<div class="modal" id="comment-form" data-modal-width="600px" data-modal-change-hash="false">
 		<?php app_get_component('components/comment-form') ?>
 	</div>
 	

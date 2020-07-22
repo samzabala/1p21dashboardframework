@@ -1,4 +1,4 @@
-<div class="modal" data-modal-max-width="880px">
+<div class="modal" data-modal-width="880px">
 	<!-- @if error occured -->
 
 		<div class="alert alert-caution p">
