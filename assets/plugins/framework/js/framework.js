@@ -698,15 +698,17 @@
 			const idToGoTo = id !== '' ? `#${id}` : null;
 
 			if (idToGoTo) {
-				// if (history.pushState) {
-				// 	history.pushState(null, null, idToGoTo);
-				// } else {
+				if (history.pushState) {
+					history.pushState(null, null, idToGoTo);
+				} else {
 					location.hash = idToGoTo;
-				// }
+				}
 
 			} else {
 				const noHashURL = window.location.href.replace(/#.*$/, '');
-				// window.history.pushState('', document.title, noHashURL);
+				if (history.pushState) {
+					window.history.pushState('', document.title, noHashURL);
+				}
 				location.hash = '';
 			}
 		}
@@ -2403,7 +2405,7 @@
 				width: null,
 				callback: null,
 				classes: '',
-				closeClasses: null,
+				closeClasses: '',
 				align: 'left',
 			};
 
