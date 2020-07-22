@@ -49,7 +49,7 @@
 	</a>
 
 	<!-- @note this should be reusable. replace title appropriately -->
-	<div class="modal" id="modal-more-members" data-modal-max-width="400px" data-modal-title="Shared with...">
+	<div class="modal" id="modal-more-members" data-modal-width="400px" data-modal-title="Shared with...">
 		<ul class="list-group">
 			<li>
 				<?php app_get_component('components/table-profile-named') ?>

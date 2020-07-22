@@ -17,6 +17,17 @@
 		overflow:hidden !important;
 	}
 
+	#{$prefix}-on-drag {
+
+		&, * {
+			cursor:grabbing!important;
+			-webkit-user-select: none!important; /* Safari 3.1+ */
+			-moz-user-select: none!important; /* Firefox 2+ */
+			-ms-user-select: none!important; /* IE 10+ */
+			user-select: none!important; /* Standard syntax */
+		}
+	}
+
 	html {
 
 		word-wrap: break-word;
