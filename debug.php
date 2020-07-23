@@ -3892,7 +3892,6 @@
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
-
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
@@ -3911,6 +3910,11 @@
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-burger"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol fries</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-fries"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
@@ -4085,7 +4089,6 @@
 			<p>
 				map <i class="color-primary symbol symbol-map"></i>
 			</p>
-
 			<p>
 				star <i class="color-primary symbol symbol-star"></i>
 			</p>
@@ -4100,6 +4103,10 @@
 
 			<p>
 				burger <i class="color-primary symbol symbol-burger"></i>
+			</p>
+
+			<p>
+				fries <i class="color-primary symbol symbol-fries"></i>
 			</p>
 
 			<p>
