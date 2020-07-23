@@ -12,7 +12,7 @@
 	<div
 		class="module align-self-start"
 		data-grid-column-md="main"
-		data-grid-row-md="1 / span 5">
+		data-grid-row-md="1 / span 210">
 		<?php app_get_component('components/task-main-view'); ?>
 	</div>
 
@@ -26,5 +26,5 @@
 	<?php app_get_component('components/module-side-flux-view') ?>
 
 	<!-- Followers/Wiki/Reminders -->
-	<?php app_get_component('components/module-side-reminders-view') ?>
+	<?php app_get_component('components/module-side-followers-view') ?>
 </div>
