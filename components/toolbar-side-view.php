@@ -1,6 +1,7 @@
 <div class="module no-padding background-transparent position-relative"
-	grid-area-xs="toolbar"
-	grid-area-md="none"
+	<?php  if(FWAPPS_TEMPLATE == 'task-view'):?>
+		data-grid-area-md="auto / side"
+	<?php endif; ?>
 >
 
 	<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y">

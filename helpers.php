@@ -98,7 +98,6 @@ function app_init_content(){
 				case 'projects':
 					app_get_template_part("app-{$app}/project-list");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-list";
-
 					break;
 				case 'project-details':
 				case 'project':
@@ -108,6 +107,18 @@ function app_init_content(){
 				case '_DEMO-task':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
+					break;
+
+				case 'task':
+				case 'task-view':
+					app_get_template_part("app-{$app}/task-view");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/task-view";
+					break;
+
+				case 'task-new':
+				case 'task-edit':
+					app_get_template_part("app-{$app}/task-edit");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/task-edit";
 					break;
 
 				// pages im not sure of but good to have fallbacks for or at least a basic page to render
