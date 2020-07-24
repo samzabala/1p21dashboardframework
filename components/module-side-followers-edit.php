@@ -1,4 +1,8 @@
-<div class="module">
+<div class="module" 
+	<?php if(FWAPPS_TEMPLATE == 'task-edit'): //only when in its own basic page ?>
+		data-grid-area-md="auto / side"
+	<?php endif; ?>
+>
 	<div class="module-content">
 
 
