@@ -6083,7 +6083,7 @@ table {
   .theme-inverse .input-group .input-label, .input-group .theme-inverse .input-label {
     background: rgba(141, 141, 141, 0.3); }
 
-.input-wrapper-block > .input-label, .input-wrapper > .input-label {
+.input-wrapper-block.input-wrapper-horizontal > .input-label {
   flex-basis: 25%; }
 
 .input-info {
