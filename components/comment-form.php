@@ -13,11 +13,13 @@ REPLACESUFFIX => something to make the form specific to what the comment form wo
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<textarea name="comment-REPLACESUFFIX" id="comment-REPLACESUFFIX" cols="30" rows="10" class="input input-multiple-line">Body comment. will be replaced by tinymce</textarea>
 	</div>
+	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+		<label for="comment-attachments-REPLACESUFFIX" class="input-label">Add Attachments</label>
+		<input type="file" name="comment-attachments-REPLACESUFFIX"  id="comment-attachments-REPLACESUFFIX" class="input input-single-line" />
+	</div>
 
-	<input type="file" name="comment-attachments-REPLACESUFFIX"  id="comment-attachments-REPLACESUFFIX" class="display-none" />
 
 	<div class="text-align-right">
-		<button  class="btn btn-neutral-outline " onclick="REPLACEfnToTriggercommentsAttachmentsToAdd(event)" type="submit">Attach Files</button>
 		<button  class="btn btn-primary " type="submit">Add Comment</button>
 	</div>
 </form>
