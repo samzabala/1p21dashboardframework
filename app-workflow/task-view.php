@@ -1,8 +1,7 @@
 <div id="workflow-task-view"
 	class="module-grid"
 	data-grid-template-columns-md="[main] 1fr [side] 350px"
-	data-grid-auto-flow-md="column"
-	data-grid-rows-md="rmin-content"
+	data-grid-template-rows-md="repeat(auto-fill,minmax(0,min-content))"
 	>
 
 	<!-- Toolbar -->
@@ -12,8 +11,10 @@
 	<div
 		class="module align-self-start"
 		data-grid-column-md="main"
-		data-grid-row-md="1 / span 210">
-		<?php app_get_component('components/task-main-view'); ?>
+		data-grid-row-md="1 / span 6">
+		<div class="module-content">
+			<?php app_get_component('components/task-main-view'); ?>
+		</div>
 	</div>
 
 	<!-- Team Info -->

@@ -1,5 +1,5 @@
 <div class="module" 
-	<?php  if(FWAPPS_TEMPLATE == 'task-view'):?>
+<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
 		data-grid-area-md="auto / side"
 	<?php endif; ?>
 >
@@ -59,7 +59,14 @@
 
 							<!-- @if user can edit task -->
 								<br>
-								<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add team leads.</a>
+								<a
+									<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+										href="<?=app_create_link(array('template'=>'task-edit')) ?>"
+									<?php else: ?>
+										href="#task-REPLACEwithPostTypeID-edit"
+										data-toggle="board"
+									<?php endif; ?>
+								>Edit task to add team leads.</a>
 						</p>
 
 
@@ -87,7 +94,14 @@
 
 										<!-- @if user can edit task -->
 										<br>
-										<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to assign</a>
+										<a
+											<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+												href="<?=app_create_link(array('template'=>'task-edit')) ?>"
+											<?php else: ?>
+												href="#task-REPLACEwithPostTypeID-edit"
+												data-toggle="board"
+											<?php endif; ?>
+										>Edit task to assign</a>
 									</span>
 							</p>
 
