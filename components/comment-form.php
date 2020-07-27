@@ -19,6 +19,13 @@ REPLACESUFFIX => something to make the form specific to what the comment form wo
 	</div>
 
 
+<!-- @if attachemtns were added -->
+	<!-- @if this markup is used for the reply/edit modal -->
+		<?php app_get_component('components/attachment-grid-simple'); ?>
+	<!-- @if this markup is used for the add comment section in task page/board -->
+		<?php app_get_component('components/attachment-grid-for-edit'); ?>
+
+
 	<div class="text-align-right">
 		<button  class="btn btn-primary " type="submit">Add Comment</button>
 	</div>
