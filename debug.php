@@ -369,6 +369,11 @@
 					<a href="#" class="btn btn-symbol btn-success">
 						<i class="symbol symbol-download"></i>
 					</a>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-small btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
 				</span>
 			</div>
 
