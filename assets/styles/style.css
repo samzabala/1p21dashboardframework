@@ -316,25 +316,25 @@ a {
 /*** TYPOGRAPHY ***/
 /* special */
 .special-primary {
-  font-size: 4em !important;
-  line-height: 1 !important;
-  color: inherit !important;
-  font-weight: 300 !important;
-  text-transform: none !important;
-  font-style: normal !important;
+  font-size: 4em;
+  line-height: 1;
+  color: inherit;
+  font-weight: 300;
+  text-transform: none;
+  font-style: normal;
   margin-bottom: 0.3571428571em;
   margin-top: 0.3571428571em;
   display: block; }
   @media (max-width: 1200px) {
     .special-primary {
-      font-size: 3.4285714286em !important; } }
+      font-size: 3.4285714286em; } }
 .special-secondary {
-  font-size: 2.8571428571em !important;
-  line-height: 1.25 !important;
-  color: inherit !important;
-  font-weight: 300 !important;
-  text-transform: none !important;
-  font-style: normal !important;
+  font-size: 2.8571428571em;
+  line-height: 1.25;
+  color: inherit;
+  font-weight: 300;
+  text-transform: none;
+  font-style: normal;
   margin-bottom: 0.75em;
   margin-top: 0.75em;
   display: block; }
@@ -342,18 +342,18 @@ a {
     .special-secondary {
       font-size: 2.2857142857em !important; } }
 .lead {
-  font-size: 1.7857142857em !important;
-  line-height: 1.25 !important;
-  color: inherit !important;
-  font-weight: 300 !important;
-  text-transform: none !important;
-  font-style: normal !important;
+  font-size: 1.7857142857em;
+  line-height: 1.25;
+  color: inherit;
+  font-weight: 300;
+  text-transform: none;
+  font-style: normal;
   margin-bottom: 1.6em;
   margin-top: 1.6em;
   display: block; }
   @media (max-width: 1200px) {
     .lead {
-      font-size: 1.4285714286em !important; } }
+      font-size: 1.4285714286em; } }
 /* heading */
 h1, .h1,
 h2, .h2,
@@ -403,11 +403,11 @@ strong, b {
 em, i {
   font-style: italic; }
 
-a:hover, a:focus, a.focus {
+a:hover, .a:hover, a:focus, .a:focus, a.focus, .focus.a {
   text-decoration: underline; }
-  a:hover, a:hover *, a:focus, a:focus *, a.focus, a.focus * {
+  a:hover, .a:hover, a:hover *, .a:hover *, a:focus, .a:focus, a:focus *, .a:focus *, a.focus, .focus.a, a.focus *, .focus.a * {
     cursor: pointer; }
-  a:hover *, a:focus *, a.focus * {
+  a:hover *, .a:hover *, a:focus *, .a:focus *, a.focus *, .focus.a * {
     text-decoration: inherit;
     -webkit-text-decoration-color: currentColor;
             text-decoration-color: currentColor; }
@@ -463,11 +463,11 @@ a:hover, a:focus, a.focus {
 .nav-list > li > .focus[data-toggle] {
   text-decoration: none; }
 
-a {
+a, .a {
   transition: 0.25s color ease-in-out; }
-  a:hover, a:focus, a.focus {
+  a:hover, .a:hover, a:focus, .a:focus, a.focus, .focus.a {
     color: #F204A2; }
-  a, a.disabled {
+  a, .a {
     color: #0480FE; }
 
 .list-group,
@@ -1492,9 +1492,9 @@ table {
   .symbol-caret-down, .active > .symbol-caret-down-toggle, .open > .symbol-caret-down-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-tail-down, .active > .symbol-arrow-tail-down-toggle, .open > .symbol-arrow-tail-down-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle {
     transform: rotate(180deg); }
   .symbol-caret-left, .active > .symbol-caret-left-toggle, .open > .symbol-caret-left-toggle, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-tail-left, .active > .symbol-arrow-tail-left-toggle, .open > .symbol-arrow-tail-left-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle {
-    transform: rotate(90deg); }
-  .symbol-caret-right, .active > .symbol-caret-right-toggle, .open > .symbol-caret-right-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-tail-right, .active > .symbol-arrow-tail-right-toggle, .open > .symbol-arrow-tail-right-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle {
     transform: rotate(-90deg); }
+  .symbol-caret-right, .active > .symbol-caret-right-toggle, .open > .symbol-caret-right-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-tail-right, .active > .symbol-arrow-tail-right-toggle, .open > .symbol-arrow-tail-right-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle {
+    transform: rotate(90deg); }
   .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after {
     height: 0.125em;
     width: .5em; }

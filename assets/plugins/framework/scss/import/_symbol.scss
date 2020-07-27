@@ -965,13 +965,13 @@ $prefix: '.symbol';
 		&-left,
 		.active > &-left-toggle,
 		.open > &-left-toggle {
-			transform: rotate(90deg);
+			transform: rotate(-90deg);
 		}
 
 		&-right,
 		.active > &-right-toggle,
 		.open > &-right-toggle {
-			transform: rotate(-90deg);
+			transform: rotate(90deg);
 		}
 	}
 
