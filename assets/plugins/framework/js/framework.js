@@ -128,7 +128,9 @@
 			evt,
 			(event) => {
 				if (event.target.matches(selector + ', ' + selector + ' *')) {
-					handler(event);
+					// try {
+						handler(event);
+					// } catch(e) {}
 				}
 			},
 			true
@@ -696,15 +698,17 @@
 			const idToGoTo = id !== '' ? `#${id}` : null;
 
 			if (idToGoTo) {
-				// if (history.pushState) {
-				// 	history.pushState(null, null, idToGoTo);
-				// } else {
+				if (history.pushState) {
+					history.pushState(null, null, idToGoTo);
+				} else {
 					location.hash = idToGoTo;
-				// }
+				}
 
 			} else {
 				const noHashURL = window.location.href.replace(/#.*$/, '');
-				// window.history.pushState('', document.title, noHashURL);
+				if (history.pushState) {
+					window.history.pushState('', document.title, noHashURL);
+				}
 				location.hash = '';
 			}
 		}
@@ -1996,7 +2000,7 @@
 			//ATODO UPDATE SETUP HERE
 			//update fake hoes
 			if (args.callback) {
-				_.runFn = args.callback;
+				_.runFn(args.callback);
 			}
 		}
 	};
@@ -2165,73 +2169,90 @@
 			frameWork.toolTip.activeTriggerer = triggerer;
 			frameWork.toolTip.args = args;
 
-			let triggererProps = {
-				top:
-					triggerer.getBoundingClientRect().top + window.pageYOffset,
-				left:
-					triggerer.getBoundingClientRect().left + window.pageXOffset,
-				height:
-					triggerer.getBoundingClientRect().height,
-				width:
-					triggerer.getBoundingClientRect().width,
-			};
-
-			let origin = {
-				x: () => {
-					let toReturn =
-						triggererProps.left + triggererProps.width * 0.5; //top and bottom
-
-					if (!args.x) {
-						if (!args.centerX) {
-							switch (args.placement) {
-								case 'right':
-									toReturn =
-										triggererProps.left +
-										triggererProps.width;
-									break;
-								case 'left':
-									toReturn = triggererProps.left;
-									break;
-							}
-						}
-
-					} else {
-						toReturn = parseFloat(args.x);
-					}
-
-					return toReturn;
-				},
-
-				y: () => {
-					let toReturn =
-						triggererProps.top + triggererProps.height * 0.5; // left and right
-					if (!args.y) {
-						if (!args.centerY) {
-							switch (args.placement) {
-								case 'bottom':
-									toReturn =
-										triggererProps.top +
-										triggererProps.height;
-									break;
-								case 'top':
-									toReturn = triggererProps.top;
-									break;
-							}
-						}
-
-					} else {
-						toReturn = parseFloat(args.y);
-					}
-
-					return toReturn;
-				},
-			};
-
 			toolTip.classList.add('active');
 
-			frameWork.positionToolTip(origin.x(), origin.y());
+			frameWork.positionToolTip();
 		}
 	};
+
+	//return origitit
+	frameWork.getDefCoordsToolTip = (triggerer) => {
+
+		if(frameWork.toolTip){
+
+			triggerer  = triggerer || frameWork.toolTip.activeTriggerer;
+			const args = frameWork.toolTip.args;
+
+			let triggererOrigin;
+
+			if(triggerer){
+
+				let triggererProps = {
+					top:
+						triggerer.getBoundingClientRect().top + window.pageYOffset,
+					left:
+						triggerer.getBoundingClientRect().left + window.pageXOffset,
+					height:
+						triggerer.getBoundingClientRect().height,
+					width:
+						triggerer.getBoundingClientRect().width,
+				};
+	
+				triggererOrigin = {
+					x: () => {
+						let toReturn =
+							triggererProps.left + triggererProps.width * 0.5; //top and bottom
+	
+						if (!args.x) {
+							if (!args.centerX) {
+								switch (args.placement) {
+									case 'right':
+										toReturn =
+											triggererProps.left +
+											triggererProps.width;
+										break;
+									case 'left':
+										toReturn = triggererProps.left;
+										break;
+								}
+							}
+	
+						} else {
+							toReturn = parseFloat(args.x);
+						}
+	
+						return toReturn;
+					},
+	
+					y: () => {
+						let toReturn =
+							triggererProps.top + triggererProps.height * 0.5; // left and right
+						if (!args.y) {
+							if (!args.centerY) {
+								switch (args.placement) {
+									case 'bottom':
+										toReturn =
+											triggererProps.top +
+											triggererProps.height;
+										break;
+									case 'top':
+										toReturn = triggererProps.top;
+										break;
+								}
+							}
+	
+						} else {
+							toReturn = parseFloat(args.y);
+						}
+	
+						return toReturn;
+					},
+				};
+			}
+
+			return triggererOrigin;
+		}
+	}
 
 	frameWork.destroyToolTip = () => {
 		if (frameWork.toolTip) {
@@ -2245,14 +2266,24 @@
 			frameWork.toolTip.args = null;
 		}
 	};
-	_.fns_on_resize.push(frameWork.destroyToolTip);
-	_.fns_on_scroll.push(frameWork.destroyToolTip);
 
 	//only use when the tooltip is finally active
 	frameWork.positionToolTip = (posX, posY) => {
-		if (frameWork.toolTip.current && frameWork.toolTip.args) {
+		
+		if (frameWork.toolTip) {
+
 			const toolTip = frameWork.toolTip.current;
 			const args = frameWork.toolTip.args;
+			const triggerer = frameWork.toolTip.activeTriggerer;
+
+			let triggererOrigin;
+
+			if(!posX || !posY) {
+				triggererOrigin = frameWork.getDefCoordsToolTip(triggerer);
+			}
+
+			posX = posX || triggererOrigin && triggererOrigin.x();
+			posY = posY || triggererOrigin && triggererOrigin.y();
 
 			let toolPoint = parseFloat(
 				window
@@ -2345,6 +2376,8 @@
 			// toolTip.style.top = (posY) +'px';
 		}
 	};
+	_.fns_on_scroll.push(frameWork.positionToolTip);
+	_.fns_on_resize.push(frameWork.positionToolTip);
 
 	frameWork.createModal = (triggerer, subcom) => {
 		subcom = subcom || 'modal';
@@ -2359,9 +2392,12 @@
 		if (contentWrap && subcom) {
 
 			const arr = {
+				resize:
+					(triggerer && triggerer.getAttribute(`data-${subcom}-resize`))
+					|| contentWrap.getAttribute(`data-${subcom}-resize`),
 				changeHash:
-					(triggerer && triggerer.attr(`data-${subcom}-change-hash`))
-					|| contentWrap.attr(`data-${subcom}-change-hash`),
+					(triggerer && triggerer.getAttribute(`data-${subcom}-change-hash`))
+					|| contentWrap.getAttribute(`data-${subcom}-change-hash`),
 				header:
 					(triggerer && triggerer.getAttribute(`data-${subcom}-title`))
 					|| contentWrap.getAttribute(`data-${subcom}-title`),
@@ -2371,9 +2407,9 @@
 				disableOverlay:
 					(triggerer && triggerer.getAttribute(`data-${subcom}-disable-overlay`))
 					|| contentWrap.getAttribute(`data-${subcom}-disable-overlay`),
-				maxWidth:
-					contentWrap.getAttribute(`data-${subcom}-max-width`)
-					|| (triggerer && triggerer.getAttribute(`data-${subcom}-max-width`)),
+				width:
+					contentWrap.getAttribute(`data-${subcom}-width`)
+					|| (triggerer && triggerer.getAttribute(`data-${subcom}-width`)),
 				callback:
 					(triggerer && triggerer.getAttribute(`data-${subcom}-callback`))
 					|| contentWrap.getAttribute(`data-${subcom}-callback`),
@@ -2389,16 +2425,19 @@
 			};
 
 			const defaults = {
+				resize: false,
+				resizeClasses: null,
 				changeHash: true,
 				header: '',
 				close: true,
 				disableOverlay: true,
-				maxWidth: null,
+				width: null,
 				callback: null,
 				classes: '',
 				closeClasses: '',
 				align: 'left',
 			};
+
 			const args = _.parseArgs(arr, defaults);
 
 			const actualId = `${frameWork.settings.prefix}-${subcom}`;
@@ -2409,6 +2448,8 @@
 			switch (subcom) {
 				case 'modal':
 					args.align = false;
+					args.resize = false;
+					args.resizeClasses = null;
 					break;
 			}
 
@@ -2418,7 +2459,8 @@
 
 			const modal = document.createElement('div');
 			document.querySelector('body').appendChild(modal);
-			modal.className = `${subcom}-wrapper
+			modal.className = `${frameWork.settings.prefix}-modal-component
+				${subcom}-wrapper
 				${args.classes}
 				${args.align ? `${subcom}-${args.align}` : ''}`;
 			modal.setAttribute('id', actualId);
@@ -2438,19 +2480,36 @@
 
 					switch (subcom) {
 						case 'board':
-							if (args.close !== false) {
-								html += `<div class="${subcom}-close-wrapper">
-									<a href="#"
+							html += `<div class="${subcom}-button-wrapper">`;
+								if (args.close !== false) {
+									html += `<a href="#"
 										class="
-											${subcom}-close
+											${subcom}-close ${subcom}-button
 											${
 												args.closeClasses
 												? args.closeClasses
-												: `${subcom}-close-default`}"
+												: `${subcom}-button-default`}"
 										data-toggle="${subcom}-close"
 									>
-									<i class="symbol symbol-close "></i></a></div>`;
-							}
+										<i class="symbol symbol-close "></i>
+									</a>`;
+								}
+
+								if (args.resize !== false && args.width) {
+									html += `<a
+										class="
+											${subcom}-resize ${subcom}-button
+											${
+												args.resizeClasses
+												? args.resizeClasses
+												: `${subcom}-button-default`}"
+										data-toggle="${subcom}-resize"
+									>
+										<i class="symbol symbol-arrow-tail-left "></i>
+										<i class="symbol symbol-arrow-tail-right "></i>
+									</a>`;
+								}
+							html += `</div>`;
 
 							html += `<div class="${subcom}-popup">`;
 
@@ -2498,29 +2557,77 @@
 				modal.querySelector(`.${subcom}-popup-content`)
 			);
 
-			if (args.maxWidth) {
-				//all
-				modal.querySelector(`.${subcom}-popup`).style.maxWidth =
-					args.maxWidth;
-
-				//bboard
-				if (modal.querySelector(`.${subcom}-close-wrapper`)) {
-					modal.querySelector(`.${subcom}-close-wrapper`)
-						.style.maxWidth = args.maxWidth;
-				}
+			if (args.width) {
+				frameWork.resizeModal(subcom,args.width,modal,args);
 			}
-
+			
 			if (args.callback) {
-				_.runFn = args.callback;
+				_.runFn(args.callback);
 			}
+
+			frameWork[subcom].current = contentWrap;
+			frameWork[subcom].args = args;
 
 			modal.classList.add('active');
 			document.body.classList.add('body-no-scroll');
 
-			frameWork[subcom].current = contentWrap;
-			frameWork[subcom].args = args;
+			frameWork.checkOnModal(subcom);
 		}
 	};
+
+
+	frameWork.checkOnModal = (subcom)=>{
+
+		subcom = subcom || 'modal';
+
+		const args = frameWork[subcom].args || {};
+		const modal = document.getElementById(`${frameWork.settings.prefix}-${subcom}`);
+
+		if(modal) {
+
+			// buttons
+				// resize
+					const currentWidth = modal
+						.querySelector(`.${subcom}-popup`).clientWidth;
+						
+					const resizeBtn = modal
+						.querySelectorAll(`*[data-toggle="${subcom}-resize"]`);
+
+					if(resizeBtn && currentWidth < parseInt(args.width)){
+						resizeBtn.forEach((butt) => {
+							butt.classList.add('disabled');
+						});
+					}else{
+						resizeBtn.forEach((butt) => {
+							butt.classList.remove('disabled');
+						});
+					}
+		}
+	}
+	_.fns_on_resize.push(frameWork.checkOnModal);
+
+	frameWork.resizeModal = (subcom,width,modal,args) => {
+		subcom = subcom || 'modal';
+		modal = modal ||  document.getElementById(`${frameWork.settings.prefix}-${subcom}`);
+		args = args || frameWork[subcom].args || {};
+		width = width || args.width || null;
+
+		if(modal && parseInt(width) >= parseInt(args.width)){
+			//all
+			if(modal.querySelector(`.${subcom}-popup`)){
+				modal.
+					querySelector(`.${subcom}-popup`)
+						.style.width = width;
+			}
+
+			//bboard
+			if(modal.querySelector(`.${subcom}-button-wrapper`)){
+				modal.
+					querySelector(`.${subcom}-button-wrapper`)
+						.style.width = width;
+			}
+		}
+	}
 
 	frameWork.destroyModal = (removeHash, subcom) => {
 		removeHash = removeHash || false;
@@ -2532,7 +2639,7 @@
 		if (
 			removeHash
 			&& frameWork[subcom].current.hasAttribute('id')
-			&& frameWork[subcom].current.attr('id') == window.location.hash.replace('#','')
+			&& frameWork[subcom].current.getAttribute('id') == window.location.hash.replace('#','')
 		) {
 			canRemoveHash = true;
 		}
@@ -2571,6 +2678,15 @@
 	frameWork.createBoard = (triggerer) => {
 		frameWork.createModal(triggerer, 'board');
 	};
+	
+	frameWork.resizeBoard = (width,modal,args) => {
+		frameWork.resizeModal('board',width,modal,args);
+	};
+	
+	frameWork.checkOnBoard = () => {
+		frameWork.checkOnModal('board');
+	};
+	_.fns_on_resize.push(frameWork.checkOnBoard);
 
 	frameWork.destroyBoard = (removeHash) => {
 		frameWork.destroyModal(removeHash, 'board');
@@ -2657,7 +2773,19 @@
 		const selector = _.getTheToggled(triggerer, 'accordion');
 
 		if (selector) {
-			const ancGroup = selector.closest('.accordion-group');
+			let ancGroup = selector.parentNode.closest('.accordion,.accordion-group');
+
+
+			//has to actually be accordion-group closest before accordion
+			if(
+				!ancGroup
+				|| (
+					ancGroup
+					&& !ancGroup.classList.contains('accordion-group')
+				)
+			) {
+				ancGroup = false;
+			}
 
 			if (
 				!(
@@ -3607,6 +3735,102 @@
 				}
 			}
 		);
+
+		frameWork.addEvent(
+			document.body,
+			'click',
+			'*[data-toggle="board-resize"]',
+			(e) => {
+				e.preventDefault();
+			}
+		);
+
+					
+			const startBoardResize = (e)=>{
+
+
+				document.body.classList.add('body-on-drag');
+
+				const widthBasis = 
+					e.clientX
+					|| (e.touches && e.touches[0].clientX )
+					|| (
+						e.originalEvent.touches
+						&& e.originalEvent.touches[0].clientX
+					);
+				let newWidth;
+
+				if(frameWork.board.args.align == 'right'){
+					newWidth = widthBasis
+				}else if(frameWork.board.args.align == 'left'){
+					newWidth = window.innerWidth - widthBasis;
+				}
+				
+				frameWork.resizeModal('board',`${newWidth}px`);
+			}
+
+			const removeBoardResize = (e)=>{
+
+				document.body.classList.remove('body-on-drag');
+				window.removeEventListener(
+					'mousemove',
+					startBoardResize
+				)
+					window.removeEventListener(
+						'touchmove',
+						startBoardResize
+					)
+			}
+
+			const initBoardResize = (e) => {
+					
+				const triggerer = e.target;
+
+				if (
+					!frameWork.isDisabled(triggerer)
+					&& frameWork.board.current
+				) {
+
+					window.addEventListener(
+						'mousemove',
+						startBoardResize
+					);
+
+						window.addEventListener(
+							'touchmove',
+							startBoardResize
+						);
+
+					window.addEventListener(
+						'mouseup',
+						removeBoardResize
+					);
+
+						window.addEventListener(
+							'touchend',
+							removeBoardResize
+						);
+
+				}
+					
+			};
+
+			frameWork.addEvent(
+				document.body,
+				'mousedown',
+				'*[data-toggle="board-resize"]',
+				(e) => {
+					e.preventDefault();
+					initBoardResize(e);
+				}
+			);
+
+				frameWork.addEvent(
+					document.body,
+					'touchstart',
+					'*[data-toggle="board-resize"]',
+					initBoardResize
+				);
 
 		frameWork.addEvent(
 			document.body,

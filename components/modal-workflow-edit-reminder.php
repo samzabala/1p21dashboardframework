@@ -2,7 +2,7 @@
 
 
 <!-- NOTE this field is an extension of the editor's fields. Adding a new reminder also shares this modal's markup -->
-<div class="modal" data-modal-max-width="600px">
+<div class="modal" data-modal-width="600px">
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 		<label for="REPLACEMODE-REPLACEwithPostType-reminder-title-row[REPLACEWithRowIndex]" class="input-label">Title</label>

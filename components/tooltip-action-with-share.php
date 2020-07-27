@@ -42,7 +42,7 @@
 		<i class="symbol symbol-kebab-horizontal"></i>
 	</span> 
 
-<div class="modal" id="modal-share-with" data-modal-max-width="400px" data-modal-title="Share">
+<div class="modal" id="modal-share-with" data-modal-width="400px" data-modal-title="Share">
 
 
 

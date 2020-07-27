@@ -1,5 +1,5 @@
 <!-- NOTE this field is only for extending field capabilities -->
-<div class="modal" data-modal-max-width="600px">
+<div class="modal" data-modal-width="600px">
 
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input-label">Search Existing Tags</label>

@@ -1,4 +1,8 @@
-<div class="module">
+<div class="module" 
+	<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+		data-grid-area-md="auto / side"
+	<?php endif; ?>
+>
 	<div class="module-content">
 
 
@@ -101,7 +105,14 @@
 
 						<!-- @if user can edit task -->
 							<br>
-							<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add documentation.</a>
+							<a
+								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
+								<?php else: ?>
+									href="#task-REPLACEwithPostTypeID-edit"
+									data-toggle="board"
+								<?php endif; ?>
+							>Edit task to add documentation.</a>
 					</p>
 			</div>
 
@@ -144,7 +155,14 @@
 
 							<!-- @if user can edit task -->
 								<br>
-								<a  href="#task-REPLACEwithPostTypeID-edit" data-toggle="board">Edit task to add reminders.</a>
+								<a
+								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
+								<?php else: ?>
+									href="#task-REPLACEwithPostTypeID-edit"
+									data-toggle="board"
+								<?php endif; ?>
+							>Edit task to add reminders.</a>
 						</p>
 				</div>
 	</div>

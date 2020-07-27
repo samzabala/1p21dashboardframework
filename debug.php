@@ -369,6 +369,11 @@
 					<a href="#" class="btn btn-symbol btn-success">
 						<i class="symbol symbol-download"></i>
 					</a>
+				<span class="toolbar-tile">
+					<a href="#" class="btn btn-small btn-symbol btn-success">
+						<i class="symbol symbol-download"></i>
+					</a>
+				</span>
 				</span>
 			</div>
 
@@ -929,7 +934,7 @@
 			
 			<a href="#modal-share-note-with" data-toggle="modal">modddddaaaal</a> 
 <div class="modal" id="modal-share-note-with"
-     data-modal-max-width="800px" data-modal-title="Share">
+     data-modal-width="800px" data-modal-title="Share">
   <!-- @if user has rights to share this note -->
   <form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
     <input type="hidden" name="share_note_with_user_ids"
@@ -1481,7 +1486,7 @@
 					data-toggle="modal"
 					data-modal-close="false"
 					data-modal-disable-overlay="false"
-					data-modal-max-width="800px"
+					data-modal-width="800px"
 					data-modal-title="Bitch ass"
 					data-modal-classes="theme-inverse font-weight-800"
 					data-href="#modal-demo">Modal boi with max width and no close butt but overlay can close the boi <i class="symbol symbol-search"></i></a>
@@ -3892,7 +3897,6 @@
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
-
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
@@ -3914,6 +3918,11 @@
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol fries</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-fries"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab vertical</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
 			</a>
@@ -3926,7 +3935,7 @@
 
 
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
-				<span class="btn btn-default">Symbol arrow double down</span>
+				<span class="btn btn-default">Symbol arrow down</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-down"></i></span>
 			</a>
 
@@ -3966,6 +3975,29 @@
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol arrow double right</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-double-right"></i></span>
+			</a>
+
+
+
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow tail down</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-tail-down"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow tail up</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-tail-up"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow tail left</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-tail-left"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol arrow tail right</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-arrow-tail-right"></i></span>
 			</a>
 
 
@@ -4062,7 +4094,6 @@
 			<p>
 				map <i class="color-primary symbol symbol-map"></i>
 			</p>
-
 			<p>
 				star <i class="color-primary symbol symbol-star"></i>
 			</p>
@@ -4077,6 +4108,10 @@
 
 			<p>
 				burger <i class="color-primary symbol symbol-burger"></i>
+			</p>
+
+			<p>
+				fries <i class="color-primary symbol symbol-fries"></i>
 			</p>
 
 			<p>
@@ -4119,6 +4154,22 @@
 				arrow double right <i class="color-primary symbol symbol-arrow-double-right"></i>
 			</p>
 
+			<p>
+				arrow tail down <i class="color-primary symbol symbol-arrow-tail-down"></i>
+			</p>
+
+			<p>
+				arrow tail up <i class="color-primary symbol symbol-arrow-tail-up"></i>
+			</p>
+
+			<p>
+				arrow tail left <i class="color-primary symbol symbol-arrow-tail-left"></i>
+			</p>
+
+			<p>
+				arrow tail right <i class="color-primary symbol symbol-arrow-tail-right"></i>
+			</p>
+			
 			<p>
 				caret up <i class="color-primary symbol symbol-caret-up"></i>
 			</p>

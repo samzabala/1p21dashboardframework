@@ -588,15 +588,17 @@ window.jQuery && jQuery.noConflict();
 			const idToGoTo = id !== '' ? `#${id}` : null;
 
 			if (idToGoTo) {
-				// if (history.pushState) {
-				// 	history.pushState(null, null, idToGoTo);
-				// } else {
+				if (history.pushState) {
+					history.pushState(null, null, idToGoTo);
+				} else {
 					location.hash = idToGoTo;
-				// }
+				}
 
 			} else {
 				const noHashURL = window.location.href.replace(/#.*$/, '');
-				// window.history.pushState('', document.title, noHashURL);
+				if (history.pushState) {
+					window.history.pushState('', document.title, noHashURL);
+				}
 				location.hash = '';
 			}
 		}
@@ -1839,7 +1841,7 @@ window.jQuery && jQuery.noConflict();
 			//ATODO UPDATE SETUP HERE
 			//update fake hoes
 			if (args.callback) {
-				_.runFn = args.callback;
+				_.runFn(args.callback);
 			}
 		}
 	};
@@ -2011,72 +2013,10 @@ window.jQuery && jQuery.noConflict();
 			frameWork.toolTip.activeTriggerer = triggerer;
 			frameWork.toolTip.args = args;
 
-			let triggererProps = {
-				top:
-					triggerer.offset().top,
-				left:
-					triggerer.offset().left,
-				height:
-					triggerer.outerHeight(),
-				width:
-					triggerer.outerWidth(),
-			};
-
-			let origin = {
-				x: () => {
-					let toReturn =
-						triggererProps.left + triggererProps.width * 0.5; //top and bottom
-
-					if (!args.x) {
-						if (!args.centerX) {
-							switch (args.placement) {
-								case 'right':
-									toReturn =
-										triggererProps.left +
-										triggererProps.width;
-									break;
-								case 'left':
-									toReturn = triggererProps.left;
-									break;
-							}
-						}
-
-					} else {
-						toReturn = parseFloat(args.x);
-					}
-
-					return toReturn;
-				},
-
-				y: () => {
-					let toReturn =
-						triggererProps.top + triggererProps.height * 0.5; // left and right
-					if (!args.y) {
-						if (!args.centerY) {
-							switch (args.placement) {
-								case 'bottom':
-									toReturn =
-										triggererProps.top +
-										triggererProps.height;
-									break;
-								case 'top':
-									toReturn = triggererProps.top;
-									break;
-							}
-						}
-
-					} else {
-						toReturn = parseFloat(args.y);
-					}
-
-					return toReturn;
-				},
-			};
-
 			toolTip.show();
 			toolTip.addClass('active');
 
-			frameWork.positionToolTip(origin.x(), origin.y());
+			frameWork.positionToolTip();
 		}
 	};
 
@@ -2091,14 +2031,104 @@ window.jQuery && jQuery.noConflict();
 			frameWork.toolTip.args = null;
 		}
 	};
-	_.fns_on_resize.push(frameWork.destroyToolTip);
-	_.fns_on_scroll.push(frameWork.destroyToolTip);
+
+	//return origitit
+	frameWork.getDefCoordsToolTip = (triggerer) => {
+
+		if(frameWork.toolTip){
+
+			triggerer  = triggerer || frameWork.toolTip.activeTriggerer;
+			const args = frameWork.toolTip.args;
+
+			let triggererOrigin;
+
+			if(triggerer){
+
+				let triggererProps = {
+					top:
+						triggerer.offset().top,
+					left:
+						triggerer.offset().left,
+					height:
+						triggerer.outerHeight(),
+					width:
+						triggerer.outerWidth(),
+				};
+
+				triggererOrigin = {
+					x: () => {
+						let toReturn =
+							triggererProps.left + triggererProps.width * 0.5; //top and bottom
+
+						if (!args.x) {
+							if (!args.centerX) {
+								switch (args.placement) {
+									case 'right':
+										toReturn =
+											triggererProps.left +
+											triggererProps.width;
+										break;
+									case 'left':
+										toReturn = triggererProps.left;
+										break;
+								}
+							}
+
+						} else {
+							toReturn = parseFloat(args.x);
+						}
+
+						return toReturn;
+					},
+
+					y: () => {
+						let toReturn =
+							triggererProps.top + triggererProps.height * 0.5; // left and right
+						if (!args.y) {
+							if (!args.centerY) {
+								switch (args.placement) {
+									case 'bottom':
+										toReturn =
+											triggererProps.top +
+											triggererProps.height;
+										break;
+									case 'top':
+										toReturn = triggererProps.top;
+										break;
+								}
+							}
+
+						} else {
+							toReturn = parseFloat(args.y);
+						}
+
+						return toReturn;
+					},
+				};
+			}
+
+			return triggererOrigin;
+		}
+	}
 
 	//only use when the tooltip is finally active
 	frameWork.positionToolTip = (posX, posY) => {
-		if (frameWork.toolTip.current && frameWork.toolTip.args) {
+
+		if (frameWork.toolTip) {
+
 			const toolTip = frameWork.toolTip.current;
 			const args = frameWork.toolTip.args;
+			const triggerer = frameWork.toolTip.activeTriggerer;
+
+			let triggererOrigin;
+
+			if(!posX || !posY) {
+				triggererOrigin = frameWork.getDefCoordsToolTip(triggerer);
+			}
+
+			posX = posX || triggererOrigin && triggererOrigin.x();
+			posY = posY || triggererOrigin && triggererOrigin.y();
+
 
 			let toolPoint = parseFloat(
 				window
@@ -2189,6 +2219,8 @@ window.jQuery && jQuery.noConflict();
 			});
 		}
 	};
+	_.fns_on_scroll.push(frameWork.positionToolTip);
+	_.fns_on_resize.push(frameWork.positionToolTip);
 
 	frameWork.createModal = (triggerer, subcom) => {
 		subcom = subcom || 'modal';
@@ -2203,6 +2235,9 @@ window.jQuery && jQuery.noConflict();
 		if (contentWrap && subcom) {
 
 			const arr = {
+				resize:
+					(triggerer && triggerer.attr(`data-${subcom}-resize`))
+					|| contentWrap.attr(`data-${subcom}-resize`),
 				changeHash:
 					(triggerer && triggerer.attr(`data-${subcom}-change-hash`))
 					|| contentWrap.attr(`data-${subcom}-change-hash`),
@@ -2215,9 +2250,9 @@ window.jQuery && jQuery.noConflict();
 				disableOverlay:
 					(triggerer && triggerer.attr(`data-${subcom}-disable-overlay`))
 					|| 	contentWrap.attr(`data-${subcom}-disable-overlay`),
-				maxWidth:
-					(triggerer && triggerer.attr(`data-${subcom}-max-width`))
-					|| contentWrap.attr(`data-${subcom}-max-width`),
+				width:
+					(triggerer && triggerer.attr(`data-${subcom}-width`))
+					|| contentWrap.attr(`data-${subcom}-width`),
 				callback:
 					(triggerer && triggerer.attr(`data-${subcom}-callback`))
 					|| contentWrap.attr(`data-${subcom}-callback`),
@@ -2233,11 +2268,13 @@ window.jQuery && jQuery.noConflict();
 			};
 
 			const defaults = {
+				resize: false,
+				resizeClasses: null,
 				changeHash: true,
 				header: '',
 				close: true,
 				disableOverlay: true,
-				maxWidth: null,
+				width: null,
 				callback: null,
 				classes: '',
 				closeClasses: '',
@@ -2252,6 +2289,8 @@ window.jQuery && jQuery.noConflict();
 			switch (subcom) {
 				case 'modal':
 					args.align = false;
+					args.resize = false;
+					args.resizeClasses = null;
 					break;
 			}
 
@@ -2263,7 +2302,8 @@ window.jQuery && jQuery.noConflict();
 				let html = '';
 
 				html += `<div id="${actualId}"
-						class="${subcom}-wrapper
+						class="${frameWork.settings.prefix}-modal-component
+						${subcom}-wrapper
 						${args.classes}
 						${args.align ? `${subcom}-${args.align}` : ''}
 					">`;
@@ -2281,19 +2321,37 @@ window.jQuery && jQuery.noConflict();
 
 					switch (subcom) {
 						case 'board':
-							if (args.close !== false) {
-								html += `<div class="${subcom}-close-wrapper">
-									<a href="#"
+							html += `<div class="${subcom}-button-wrapper">`;
+								if (args.close !== false) {
+									html += `<a href="#"
 										class="
-											${subcom}-close
+											${subcom}-close ${subcom}-button
 											${
 												args.closeClasses
 												? args.closeClasses
-												: `${subcom}-close-default`}"
+												: `${subcom}-button-default`}"
 										data-toggle="${subcom}-close"
 									>
-									<i class="symbol symbol-close "></i></a></div>`;
-							}
+										<i class="symbol symbol-close "></i>
+									</a>`;
+								}
+
+								if (args.resize !== false && args.width) {
+									html += `<a
+										class="
+											${subcom}-resize ${subcom}-button
+											${
+												args.resizeClasses
+												? args.resizeClasses
+												: `${subcom}-button-default`}"
+										data-toggle="${subcom}-resize"
+									>
+										<i class="symbol symbol-arrow-tail-left "></i>
+										<i class="symbol symbol-arrow-tail-right "></i>
+									</a>`;
+								}
+							html += `</div>`;
+								
 
 							html += `<div class="${subcom}-popup">`;
 
@@ -2350,36 +2408,75 @@ window.jQuery && jQuery.noConflict();
 						.first()
 				);
 
-			if (args.maxWidth) {
-				//all
-				modal
-					.find(`.${subcom}-popup`)
-					.css('max-width', args.maxWidth);
-
-				//bboard
-				modal
-					.find(`.${subcom}-close-wrapper`)
-					.css('max-width', args.maxWidth);
+			if (args.width) {
+				frameWork.resizeModal(subcom,args.width,modal,args);
 			}
 
 			if (args.callback) {
-				_.runFn = args.callback;
+				_.runFn(args.callback);
 			}
+
+			frameWork[subcom].current = contentWrap;
+			frameWork[subcom].args = args;
 
 			modal.fadeIn();
 			modal.addClass('active');
 			$('body').addClass('body-no-scroll');
 
-			frameWork[subcom].current = contentWrap;
-			frameWork[subcom].args = args;
+			frameWork.checkOnModal(subcom);
 		}
 	};
+
+
+	frameWork.checkOnModal = (subcom)=>{
+
+		subcom = subcom || 'modal';
+
+
+		const args = frameWork[subcom].args || {};
+		const modal = $(`#${frameWork.settings.prefix}-${subcom}`);
+
+		if(modal.length) {
+
+			// buttons
+				// resize
+					const currentWidth = modal
+						.find(`.${subcom}-popup`)[0].clientWidth;
+
+					const resizeBtn = modal
+						.find(`*[data-toggle="${subcom}-resize"]`);
+
+					if(resizeBtn.length && currentWidth < parseInt(args.width)){
+						resizeBtn.addClass('disabled');
+					}else{
+						resizeBtn.removeClass('disabled');
+					}
+		}
+	}
+	_.fns_on_resize.push(frameWork.checkOnModal);
+
+	frameWork.resizeModal = (subcom,width,modal,args) => {
+		subcom = subcom || 'modal';
+		modal = modal || $(`#${frameWork.settings.prefix}-${subcom}`);
+		args = args || frameWork[subcom].args || {};
+		width = width || args.width || null;
+
+		if(modal.length && parseInt(width) >= parseInt(args.width)){
+			//all
+			modal
+				.find(`.${subcom}-popup`)
+				.css('width', width);
+
+			//bboard
+			modal
+				.find(`.${subcom}-button-wrapper`)
+				.css('width', width);
+		}
+	}
 
 	frameWork.destroyModal = (removeHash, subcom) => {
 		removeHash = removeHash || false;
 		subcom = subcom || 'modal';
-
-		
 
 		let canRemoveHash = false;
 
@@ -2422,6 +2519,15 @@ window.jQuery && jQuery.noConflict();
 	frameWork.createBoard = (triggerer) => {
 		frameWork.createModal(triggerer, 'board');
 	};
+	
+	frameWork.resizeBoard = (width,modal,args) => {
+		frameWork.resizeModal('board',width,modal,args);
+	};
+	
+	frameWork.checkOnBoard = () => {
+		frameWork.checkOnModal('board');
+	};
+	_.fns_on_resize.push(frameWork.checkOnBoard);
 
 	frameWork.destroyBoard = (removeHash) => {
 		frameWork.destroyModal(removeHash, 'board');
@@ -2501,7 +2607,18 @@ window.jQuery && jQuery.noConflict();
 		const selector = _.getTheToggled(triggerer, 'accordion');
 
 		if (selector) {
-			const ancGroup = selector.closest('.accordion-group');
+			let ancGroup = selector.parent().closest('.accordion-group,.accordion');
+
+			//has to actually be accordion-group closest before accordion
+			if(
+				!ancGroup.length
+				|| (
+					ancGroup.length
+					&& !ancGroup.hasClass('accordion-group')
+				)
+			) {
+				ancGroup = false;
+			}
 
 			if (
 				!(
@@ -2527,7 +2644,7 @@ window.jQuery && jQuery.noConflict();
 						&& triggerer.hasClass('open')
 					) {
 						if (
-							!ancGroup.length
+							!ancGroup
 							|| (
 								ancGroup.length
 								&& !ancGroup.hasClass('accordion-group-no-close')
@@ -2543,7 +2660,7 @@ window.jQuery && jQuery.noConflict();
 						}
 					} else {
 						if (
-							ancGroup.length
+							ancGroup
 							&& !ancGroup.is('.accordion-group-multiple')
 						) {
 							// selector.closest('.accordion-group').find('.accordion').slideUp();
@@ -2565,7 +2682,7 @@ window.jQuery && jQuery.noConflict();
 					}
 				} else {
 					selector.siblings('.accordion').removeClass('open');
-					ancGroup.children('.accordion').removeClass('open');
+					ancGroup.length && ancGroup.children('.accordion').removeClass('open');
 
 					const probablyToggle = $(
 						`[data-toggle="accordion"][href="#${selector.attr('id')}"],
@@ -3112,7 +3229,6 @@ window.jQuery && jQuery.noConflict();
 			'focus',
 			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
 			(e) => {
-				console.log('pocus');
 				const uiTrigger = $(e.target);
 
 				if (frameWork.isDisabled(uiTrigger)) {
@@ -3142,7 +3258,6 @@ window.jQuery && jQuery.noConflict();
 			'blur',
 			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
 			(e) => {
-				console.log('blor');
 				const uiTrigger = $(e.target);
 
 				if (!frameWork.isDisabled(uiTrigger)) {
@@ -3325,7 +3440,8 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on(
 			'click',
-			'*[data-toggle="modal-close"]', (e) => {
+			'*[data-toggle="modal-close"]',
+			(e) => {
 
 			const triggerer = $(e.target);
 
@@ -3364,6 +3480,98 @@ window.jQuery && jQuery.noConflict();
 				}
 			}
 		);
+
+		$('body').on(
+			'click',
+			'*[data-toggle="board-resize"]',
+			(e) => {
+				e.preventDefault();
+			}
+		);
+
+					
+			const startBoardResize = (e)=>{
+
+				$('body').addClass('body-on-drag');
+
+				const widthBasis = 
+					e.clientX
+					|| (e.touches && e.touches[0].clientX )
+					|| (
+						e.originalEvent.touches
+						&& e.originalEvent.touches[0].clientX
+					);
+				let newWidth;
+
+				if(frameWork.board.args.align == 'right'){
+					newWidth = widthBasis
+				}else if(frameWork.board.args.align == 'left'){
+					newWidth = window.innerWidth - widthBasis;
+				}
+
+				frameWork.resizeModal('board',`${newWidth}px`);
+			}
+
+			const removeBoardResize = (e)=>{
+
+				$('body').removeClass('body-on-drag');
+				$(window).off(
+					'mousemove',
+					startBoardResize
+				)
+					$(window).off(
+						'touchmove',
+						startBoardResize
+					)
+			}
+
+			const initBoardResize = (e) => {
+					
+				const triggerer = $(e.target);
+
+				if (
+					!frameWork.isDisabled(triggerer)
+					&& frameWork.board.current.length
+				) {
+
+					$(window).on(
+						'mousemove',
+						startBoardResize
+					);
+
+						$(window).on(
+							'touchmove',
+							startBoardResize
+						);
+
+					$(window).on(
+						'mouseup',
+						removeBoardResize
+					);
+
+						$(window).on(
+							'touchend',
+							removeBoardResize
+						);
+
+				}
+					
+			};
+
+			$('body').on(
+				'mousedown',
+				'*[data-toggle="board-resize"]',
+				(e) => {
+					e.preventDefault();
+					initBoardResize(e);
+				}
+			);
+
+				$('body').on(
+					'touchstart',
+					'*[data-toggle="board-resize"]',
+					initBoardResize
+				);
 
 		$('body').on('change', '.zone input[type="file"]', (e) => {
 			const triggerer = $(e.target);
@@ -3447,7 +3655,7 @@ window.jQuery && jQuery.noConflict();
 			frameWork.toggleAccordion();
 
 		let resizeTimerInternal;
-		$(window).on('resize', () => {
+		$(window).on('resize', (e) => {
 			clearTimeout(resizeTimerInternal);
 
 			resizeTimerInternal = setTimeout(() => {
@@ -3458,7 +3666,8 @@ window.jQuery && jQuery.noConflict();
 		});
 
 		let scrollTimerInternal;
-		$(window).on('resize', () => {
+		$(window).on('scroll','*',(e) => {
+			console.log(e.target);
 			clearTimeout(scrollTimerInternal);
 
 			scrollTimerInternal = setTimeout(() => {
@@ -3477,5 +3686,5 @@ window.jQuery && jQuery.noConflict();
 
 	window.fw = frameWork;
 	window.frameWork = frameWork;
-	// window.frameWork.DEBUG = _;
+	window.frameWork.DEBUG = _;
 })(jQuery, window);

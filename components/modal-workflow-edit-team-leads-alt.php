@@ -2,7 +2,7 @@
 
 
 <!-- NOTE this field is an extension of the editor's fields -->
-<div class="modal" data-modal-max-width="600px">
+<div class="modal" data-modal-width="600px">
 
 	<!--
 		@NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of user filter components

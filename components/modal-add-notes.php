@@ -1,7 +1,7 @@
 <div class="module-function modal-add-task">
 	<a href="#modal-add-notes" data-toggle="modal" class=" btn btn-primary"><span>Add Notes</span> <i class="symbol symbol-plus"></i></a>
 
-	<div class="modal" id="modal-add-notes" data-modal-max-width="800px" data-modal-disable-overlay="true" data-modal-title="It's actually a placeholder but feel free to use">
+	<div class="modal" id="modal-add-notes" data-modal-width="800px" data-modal-disable-overlay="true" data-modal-title="It's actually a placeholder but feel free to use">
 							
 		<form method="get">
 

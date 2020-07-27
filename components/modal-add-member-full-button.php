@@ -3,7 +3,7 @@
 		New member&nbsp;<i class="symbol symbol-plus"></i>
 	</a>
 
-	<div class="modal" id="modal-add-member" data-modal-max-width="550px" data-modal-title="New Member">
+	<div class="modal" id="modal-add-member" data-modal-width="550px" data-modal-title="New Member">
 						
 		<form action="">
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-responsive input-wrapper-block">

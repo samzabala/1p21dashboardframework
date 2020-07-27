@@ -1,6 +1,7 @@
 <div class="module no-padding background-transparent position-relative"
-	grid-area-xs="toolbar"
-	grid-area-md="none"
+	<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+		data-grid-area-md="auto / side"
+	<?php endif; ?>
 >
 
 	<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y">
@@ -45,8 +46,12 @@
 						<li>
 							<a
 								class="color-inherit color-primary-hover js-edit-time-record"
-								href="#task-REPLACEwithPostTypeID-edit"
-								data-toggle="board"
+								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
+									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
+								<?php else: ?>
+									href="#task-REPLACEwithPostTypeID-edit"
+									data-toggle="board"
+								<?php endif; ?>
 								data-record-id="REPLACEwithPostTypeID">
 									Edit
 							</a>
