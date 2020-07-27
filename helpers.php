@@ -98,12 +98,15 @@ function app_init_content(){
 				case 'projects':
 					app_get_template_part("app-{$app}/project-list");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-list";
-
 					break;
 				case 'project-details':
 				case 'project':
 					app_get_template_part("app-{$app}/project-details");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details";
+					break;
+				case 'project-new':
+					app_get_template_part("app-{$app}/project-new");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-new";
 					break;
 				case '_DEMO-task':
 					app_get_template_part("app-{$app}/{$template_part}");

@@ -596,6 +596,14 @@
 		"oAP": "/app-workflow/project-list.php",
 		"oF": 0
 		},
+	"/app-workflow/project-new.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app-workflow/project-new.php",
+		"oF": 0
+		},
 	"/assets-flow-chart.png": {
 		"ft": 32768,
 		"iS": 287437,
