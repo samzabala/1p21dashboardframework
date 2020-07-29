@@ -8682,18 +8682,34 @@ fieldset {
 *:focus > .hide-focus,
 *:not(:focus):not(.focus) > .only-focus,
 *:not(:focus):not(.focus) > .hide-not-focus,
+.pointer-reference:focus .only-not-focus,
+.pointer-reference:focus .hide-focus,
+.pointer-reference:not(:focus):not(.focus) .only-focus,
+.pointer-reference:not(:focus):not(.focus) .hide-not-focus,
 *.active > .only-not-active,
 *:active > .only-not-active,
 *.active > .hide-active,
 *:active > .hide-active,
 *:not(:active):not(.active) > .only-active,
 *:not(:active):not(.active) > .hide-not-active,
+.pointer-reference.active .only-not-active,
+.pointer-reference:active .only-not-active,
+.pointer-reference.active .hide-active,
+.pointer-reference:active .hide-active,
+.pointer-reference:not(:active):not(.active) .only-active,
+.pointer-reference:not(:active):not(.active) .hide-not-active,
 *.active > .only-not-toggle,
 *.open > .only-not-toggle,
 *.active > .hide-toggle,
 *.open > .hide-toggle,
 *:not(.active):not(.open) > .only-toggle,
-*:not(.active):not(.open) > .hide-not-toggle {
+*:not(.active):not(.open) > .hide-not-toggle,
+.pointer-reference.active .only-not-toggle,
+.pointer-reference.open .only-not-toggle,
+.pointer-reference.active .hide-toggle,
+.pointer-reference.open .hide-toggle,
+.pointer-reference:not(.active):not(.open) .only-toggle,
+.pointer-reference:not(.active):not(.open) .hide-not-toggle {
   display: none !important; }
 
 @media (max-width: 1200px) {
@@ -8957,9 +8973,6 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
         left: 2em; }
       #nav-search .btn {
         padding-left: .125em; } }
-.body-no-scroll .tox-tinymce-aux {
-  z-index: 99999 !important; }
-
 #nav-notification .tag {
   position: absolute;
   top: 1em;
