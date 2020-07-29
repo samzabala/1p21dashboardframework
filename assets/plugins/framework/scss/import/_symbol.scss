@@ -19,6 +19,7 @@ $prefix: '.symbol';
 	vertical-align:inherit;
 	transform-origin: center center;
 	pointer-events:none;
+    align-self: center;
 	margin: 0 .5em;
 	cursor:inherit;
 	// font-size: 64px; //debug only
@@ -523,26 +524,39 @@ $prefix: '.symbol';
 		}
 	}
 
-	&-star {
-		&,&-stroke {
+	&-file {
 
-			&,
-			.active > &-toggle,
-			.open > &-toggle  {
-				@extend %for-valid-symbol;
-				@extend %for-valid-symbol-no-before;
+		&,
+		.active > &-toggle,
+		.open > &-toggle  {
+			@extend %for-valid-symbol;
+			@extend %for-valid-symbol-no-before;
 
-				&:after {
-					@extend %for-valid-symbol-pseudo;
-					@extend %for-valid-symbol-pseudo-filled;
-					width: 1.25em;
-					height: 1.25em;
-					top: -.5em;
-					bottom: -.5em;
-					left: -.5em;
-					right: -.5em;
+			&:after {
+				@extend %for-valid-symbol-pseudo;
+				@extend %for-valid-symbol-pseudo-filled;
+				width: .875em;
+				clip-path: polygon(
+					0% 0%,
+					0% 100%,
+					100% 100%,
+					100% 30%,
+					calc(50% + #{em(2px / $calculated-symbol-basis)}) 0,
+					50% 0,
+					50% calc(30% + #{em(2px / $calculated-symbol-basis)}),
+					calc(100% - #{em(2px / $calculated-symbol-basis)}) calc(30% + #{em(2px / $calculated-symbol-basis)}),
+					calc(100% - #{em(2px / $calculated-symbol-basis)}) 30%,
+					calc(50% + #{em(2px / $calculated-symbol-basis)}) 30%,
+					calc(50% + #{em(2px / $calculated-symbol-basis)}) em(2px / $calculated-symbol-basis),
+					calc(100% - #{em(2px / $calculated-symbol-basis)}) 30%,
+					calc(100% - #{em(2px / $calculated-symbol-basis)}) calc(100% - #{em(2px / $calculated-symbol-basis)}),
+					em(2px / $calculated-symbol-basis) calc(100% - #{em(2px / $calculated-symbol-basis)}),
+					em(2px / $calculated-symbol-basis) em(2px / $calculated-symbol-basis),
+					50% em(2px / $calculated-symbol-basis),
+					50% 0,
 
-				}
+				);
+
 			}
 		}
 	}

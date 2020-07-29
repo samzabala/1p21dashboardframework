@@ -3897,6 +3897,12 @@
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol file</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-file"></i></span>
+			</a>
+
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
@@ -4094,6 +4100,11 @@
 			<p>
 				map <i class="color-primary symbol symbol-map"></i>
 			</p>
+
+			<p>
+				file <i class="color-primary symbol symbol-file"></i>
+			</p>
+
 			<p>
 				star <i class="color-primary symbol symbol-star"></i>
 			</p>

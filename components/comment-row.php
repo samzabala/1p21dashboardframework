@@ -2,6 +2,8 @@
 <div class="comment-row p">
 	<?php app_get_component('components/comment-row-type-comment'); ?>
 
+	<!-- @if has attached files -->
+		<?php app_get_component('components/attachment-inline'); ?>
 	
 
 	<!-- 
