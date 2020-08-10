@@ -1,6 +1,6 @@
 <div
 class="comment-header flex-grid flex-grid-compact align-items-center flex-grid-fixed flex-nowrap align-items-center">
-	<div class="flex-child flex-1-1 no-margin-top">
+	<div class="flex-child flex-1-1">
 		<div
 		class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap align-items-space-around flex-grid-no-gutter-y">
 			<div class="no-margin-top flex-child">

@@ -1,3 +1,14 @@
+$soft-shadow: 0px 3px 6px rgba(#BFCBD8, .80);
+
+.soft-shadow {
+    box-shadow: $soft-shadow !important;
+}
+
+.white-bg {
+    background: #fff !important;
+    background-color: #fff !important;
+}
+
 #workflow-projects {
     .btn {
         font-size: 14px;
@@ -102,4 +113,50 @@
         max-width: 350px;
         width: 100%;
     }
+    .module-header {
+        .btn {
+            padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+            padding-bottom: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+            min-height: 3em;
+        }
+    }
+    .module-content {
+        th, .table-cell.table-cell-heading {
+            background: #EFF4F8;
+        }
+    }
+    #wiki-how-tos,
+    #documents-files {
+        margin-bottom: 50px;
+    }
+    .tab, .tabs > li {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    table {
+        .thumbnail.thumbnail-small {
+            font-size: 2.15rem;
+        }
+    }
+    .comments-editor {
+        margin-bottom: 40px;
+    }
+    .split-column .right .task-complete-toggle .flex-child:first-child {
+        width: calc(100% - 78px);
+    }
+    .split-column .right .task-complete-toggle .flex-child:last-child {
+        margin-left: 10px;
+    }
+    #project-actions {
+        display: flex;
+        grid-gap: 10px;
+        .btn-symbol {
+            min-width: 50px;
+            width: 50px;
+            background: #fff;
+        }
+    }
+}
+#dashboard-block-main {
+    background-color: #F7F7F7;
 }

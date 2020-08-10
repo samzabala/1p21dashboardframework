@@ -9121,6 +9121,13 @@ APPS / OUR CUSTOM STYLES
   top: 50%;
   transform: translateY(-50%); }
 
+.soft-shadow {
+  box-shadow: 0px 3px 6px rgba(191, 203, 216, 0.8) !important; }
+
+.white-bg {
+  background: #fff !important;
+  background-color: #fff !important; }
+
 #workflow-projects .btn {
   font-size: 14px;
   padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
@@ -9214,3 +9221,42 @@ APPS / OUR CUSTOM STYLES
 #workflow-project-detail .split-column .right {
   max-width: 350px;
   width: 100%; }
+
+#workflow-project-detail .module-header .btn {
+  padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+  padding-bottom: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+  min-height: 3em; }
+
+#workflow-project-detail .module-content th, #workflow-project-detail .module-content .table-cell.table-cell-heading {
+  background: #EFF4F8; }
+
+#workflow-project-detail #wiki-how-tos,
+#workflow-project-detail #documents-files {
+  margin-bottom: 50px; }
+
+#workflow-project-detail .tab, #workflow-project-detail .tabs > li {
+  font-weight: 400;
+  font-size: 18px; }
+
+#workflow-project-detail table .thumbnail.thumbnail-small {
+  font-size: 2.15rem; }
+
+#workflow-project-detail .comments-editor {
+  margin-bottom: 40px; }
+
+#workflow-project-detail .split-column .right .task-complete-toggle .flex-child:first-child {
+  width: calc(100% - 78px); }
+
+#workflow-project-detail .split-column .right .task-complete-toggle .flex-child:last-child {
+  margin-left: 10px; }
+
+#workflow-project-detail #project-actions {
+  display: flex;
+  grid-gap: 10px; }
+  #workflow-project-detail #project-actions .btn-symbol {
+    min-width: 50px;
+    width: 50px;
+    background: #fff; }
+
+#dashboard-block-main {
+  background-color: #F7F7F7; }

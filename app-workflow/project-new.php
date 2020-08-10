@@ -71,7 +71,7 @@ app_get_component('components/board-add-edit-task');
                                     <!-- Attachments -->
                                     <div class="task-attachments">
                                         <div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
-                                            <div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+                                            <div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center no-margin-left">
                                                 <div class="flex-child">
                                                     <h4 class="no-margin-y">
                                                         Attachments
@@ -106,23 +106,26 @@ app_get_component('components/board-add-edit-task');
             </div>
             <div class="right">
                 <div class="module-grid">
-                    <div class="module no-padding background-transparent position-relative">
+                    <div class="module no-padding background-transparent position-relative no-border">
                         <div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
-                            <div class="flex-col-xs-12 flex-col-sm-7">
+                            <div class="flex-col-xs-12 flex-col-sm-7" id="project-actions">
                                 <!--
                                     @NOTE
                                     change `Create Task` if task alrerady exists and is just being edited
                                 -->
-                                <button type="submit" class="btn btn-primary btn-block">
+                                <button type="submit" class="btn btn-primary btn-block soft-shadow">
                                     <!-- @if task is new -->
                                         Add Project
                                     <!-- @else if task already exists and is just being edited -->
                                         <!-- Save edits <i class="symbol symbol-edit"></i></button> -->
                                 </button>
-                            </div>
-                            <div class="flex-col-xs-12 flex-col-sm-5">
                                 <!-- @NOTE onclick event should revert to previous history state or previously viewed page. feel free modify as needed -->
-                                <button data-toggle="board" href="#" onclick="event.preventDefault(); console.log('work u sonofabitch'); history.back(); " class="btn btn-neutral-outline btn-block">Cancel</button>
+                                <button data-toggle="board" href="#" class="btn btn-neutral-outline btn-block soft-shadow no-border white-bg">
+                                    Save Draft
+                                </button>
+                                <button class="btn btn-symbol btn-link soft-shadow" onclick="event.preventDefault(); console.log('work u sonofabitch'); history.back();">
+                                    <i class="symbol symbol-close"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -195,7 +198,7 @@ app_get_component('components/board-add-edit-task');
                                 <hr>
                                 <!-- ASSIGNEES + DUE + PRIORITOOT-->
                                 <div class="flex-grid flex-grid-fixed flex-grid-compact">
-                                    <div class="flex-col-xs-6 flex-col-md-8">
+                                    <div class="flex-col-xs-6 flex-col-md-8 no-margin-top">
                                         <h5 class="input-label">Due on</h5>
                                         <div class="p color-neutral no-margin-bottom">
                                             <a href="#" data-toggle="dropdown">
@@ -236,7 +239,7 @@ app_get_component('components/board-add-edit-task');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex-col-xs-6 flex-col-md-4">
+                                    <div class="flex-col-xs-6 flex-col-md-4 no-margin-top">
                                         <h5 class="input-label">Priority</h5>
                                         <div class="color-neutral no-margin-bottom">
                                             <input type="hidden" name="REPLACEMODE-REPLACEwithPostType-priority" id="REPLACEMODE-REPLACEwithPostType-priority">

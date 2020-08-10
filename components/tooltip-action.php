@@ -26,9 +26,6 @@
 				</a>
 			</li>
 		</ul>"
-
-
-	
 		>
-		<i class="symbol symbol-kebab-horizontal"></i>
-	</span> 
+	<i class="symbol symbol-kebab-horizontal"></i>
+</span> 

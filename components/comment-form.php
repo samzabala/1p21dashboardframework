@@ -9,7 +9,7 @@ REPLACESUFFIX => something to make the form specific to what the comment form wo
 
 
 -->
-<form action="" class="commentes-editor">
+<form action="" class="comments-editor">
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<textarea name="comment-REPLACESUFFIX" id="comment-REPLACESUFFIX" cols="30" rows="10" class="input input-multiple-line">Body comment. will be replaced by tinymce</textarea>
 	</div>
@@ -20,6 +20,7 @@ REPLACESUFFIX => something to make the form specific to what the comment form wo
 
 
 	<div class="text-align-right">
+		<button class="btn btn-small btn-neutral-outline">Attach File</button>
 		<button  class="btn btn-primary " type="submit">Add Comment</button>
 	</div>
 </form>
