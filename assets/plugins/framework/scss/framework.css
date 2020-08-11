@@ -579,7 +579,7 @@ sub {
 
 var {
   font-style: italic;
-  font-family: Times, serif; }
+  font-family: "Georgia", Times, serif; }
 
 hr {
   display: block;
@@ -7943,6 +7943,9 @@ fieldset {
 
 .font-family-primary {
   font-family: "Roboto", Helvetica, Arial, sans-serif !important; }
+
+.font-family-secondary {
+  font-family: "Georgia", Times, serif !important; }
 
 .font-family-accent {
   font-family: "Georgia", Times, serif !important; }

@@ -630,7 +630,7 @@ sub {
 
 var {
   font-style: italic;
-  font-family: Times, serif; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 hr {
   display: block;
@@ -7993,6 +7993,9 @@ fieldset {
   color: inherit !important; }
 
 .font-family-primary {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+
+.font-family-secondary {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
 .font-family-accent {

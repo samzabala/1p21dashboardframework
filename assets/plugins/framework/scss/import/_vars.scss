@@ -134,7 +134,8 @@
 
 	// FONT
 		$brand-font-primary: "Roboto",Helvetica,Arial,sans-serif !default;
-		$brand-font-accent: "Georgia",Times,serif !default;
+		$brand-font-secondary: "Georgia",Times,serif !default;
+		$brand-font-accent: $brand-font-secondary !default;
 		$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace !default;
 		
 	// GLOBAL html + body coloring..
@@ -197,7 +198,7 @@
 		$body-heading-font-weight: $body-font-weight-bold !default;
 		$body-heading-font-style: inherit !default;
 		$body-heading-text-transform: none !default;
-		$body-heading-font-family: $brand-font-accent !default;
+		$body-heading-font-family: $brand-font-secondary !default;
 		$body-heading-color: $theme-color-contrast !default;
 			$body-heading-color-inverse: $theme-color-contrast-inverse !default;
 
@@ -1214,6 +1215,8 @@
 		$error: $brand-color-error;
 
 		$font-base: $brand-font-primary;
+		$font-secondary: $brand-font-secondary;
+		$font-accent: $brand-font-secondary;
 		$font-monospace: $brand-font-monospace;
 
 
@@ -1281,7 +1284,7 @@
 
 	// FONT
 		--brand-font-primary: #{$brand-font-primary};
-		--brand-font-accent: #{$brand-font-accent};
+		--brand-font-accent: #{$brand-font-secondary};
 		--brand-font-monospace: #{$brand-font-monospace};
 		
 	// GLOBAL html + body coloring
