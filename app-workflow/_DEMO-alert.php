@@ -41,7 +41,7 @@
 <h3> <code>`large`</code>: we don't have an instance like this yet, but maybe someday</h3>
 <!-- @if mtime from modal-workflow-edit-task-time was added-->
 <?php app_get_component('components/alert','function',false,array(
-	'type'		=> 'info',
+	'type'		=> 'error',
 	'size'		=> 'large',
 	'content'	=> '"I think you’ve got several options. They’re all terrible…but you have them." - Chris Traeger'
 )); ?>
