@@ -1,5 +1,3 @@
-
-
 <div id="workflow-dash-heading" class="position-relative">
 	<div class="flex-grid flex-grid-compact justify-content-space-between">
 		<div class="flex-child">

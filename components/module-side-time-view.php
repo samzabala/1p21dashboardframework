@@ -27,10 +27,11 @@
 				<br>
 
 				<!-- @if mtime from modal-workflow-edit-task-time was added-->
-					<div class="alert alert-success alert-small p">
-						<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
-						Time entry for task has been added
-					</div>
+					<?php app_get_component('components/alert','function',false,array(
+						'type'		=> 'success',
+						'size'		=> 'small',
+						'content'	=> 'Time entry for task has been added'
+					)); ?>
 				
 
 				<!-- WATCH -->
@@ -446,10 +447,12 @@
 
 														<h3>State c: timer entry was added from the modal successfully</h3>
 
-														<div class="alert alert-success alert-small p">
-															<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
-															Time entry for task has been added
-														</div>
+														<!-- @if mtime from modal-workflow-edit-task-time was added-->
+														<?php app_get_component('components/alert','function',false,array(
+															'type'		=> 'success',
+															'size'		=> 'small',
+															'content'	=> 'Time entry for task has been added'
+														)); ?>
 														
 														<!-- @NOTE
 

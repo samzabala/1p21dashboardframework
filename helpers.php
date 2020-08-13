@@ -1,7 +1,7 @@
 <?php
 
 //require once a file
-function app_get_template_part($filename = '', $slug = ''){
+function app_get_template_part($filename = '', $slug = '',$data = array() ){
 
 	if($filename !== ''){
 
@@ -15,6 +15,11 @@ function app_get_template_part($filename = '', $slug = ''){
 
 		
 		if( file_exists( $source ) ){
+
+			if ($data) {
+				extract($data);
+			}
+
 			require $source;
 		}
 	}
@@ -22,7 +27,7 @@ function app_get_template_part($filename = '', $slug = ''){
 
 
 //include a file
-function app_get_component($filename = '', $slug ='',$once = false){
+function app_get_component($filename = '', $slug ='',$once = false,$data = array()){
 
 	if($filename !== ''){
 
@@ -35,6 +40,11 @@ function app_get_component($filename = '', $slug ='',$once = false){
 		$source .='.php';
 
 		if( file_exists( $source ) ){
+
+			if ($data) {
+				extract($data);
+			}
+
 			if ($once == true) {
 				include_once $source;
 			} else {
@@ -101,10 +111,11 @@ function app_init_content(){
 					break;
 				case 'project-details':
 				case 'project':
-					app_get_template_part("app-{$app}/project-details");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details";
+					app_get_template_part("app-{$app}/project-details-parser");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details-parser";
 					break;
 				case '_DEMO-task':
+				case '_DEMO-alert':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
 					break;
@@ -314,11 +325,17 @@ function app_debug_li() {
 
 		case 'workflow':
 			?>
-
-			<!-- MY TIME -->
+			
 			<li>
 				<a href="<?=app_create_link(array('template'=> '_DEMO-task')); ?>">
 					DEMO TEMPLATE: Task boards
+				</a>
+			</li>
+
+			
+			<li>
+				<a href="<?=app_create_link(array('template'=> '_DEMO-alert')); ?>">
+					DEMO TEMPLATE: Alert function-ish
 				</a>
 			</li>
 			<?php
@@ -455,3 +472,19 @@ function app_get_file_content_as_string($filepath = '') {
 		}
 	}
 
+
+
+function app_parse_args( $args, $defaults = array() ) {
+	if ( is_object( $args ) ) {
+		$parsed_args = get_object_vars( $args );
+	} elseif ( is_array( $args ) ) {
+		$parsed_args =& $args;
+	} else {
+		parse_str( $args, $parsed_args );
+	}
+	
+	if ( is_array( $defaults ) && $defaults ) {
+		return array_merge( $defaults, $parsed_args );
+	}
+	return $parsed_args;
+}

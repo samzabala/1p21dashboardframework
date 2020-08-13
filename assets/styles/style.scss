@@ -15,8 +15,9 @@ $br-lg-max: 1800px;
 
 
 $brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-$brand-font-accent: $brand-font-primary;
-$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
+$brand-font-secondary: $brand-font-primary;
+
+// $theme-background-contrast: #F7f7f7;
 
 $theme-background-inverse: #302a4b;
 $theme-background-contrast-inverse: #1e1931;
@@ -25,7 +26,7 @@ $brand-color-primary: #0480FE;
 $brand-color-secondary: #F204A2;
 $brand-color-accent: #894EC7;
 
-$brand-color-success: #64B4AE !default;
+// $brand-color-success: #64B4AE !default;
 
 $brand-color-base-alt: #3d3d3d;
 $brand-color-background-alt: #ecedf0;
@@ -40,7 +41,7 @@ $module-title-text-transform: uppercase;
 
 
 $btn-font-weight: 600;
-$nav-top-font-weight: 600;
+// $nav-top-font-weight: 600;
 $tag-font-weight: 600;
 $input-label-font-weight: 600;
 $input-font-weight: 600;
@@ -113,3 +114,4 @@ APPS / OUR CUSTOM STYLES
 ****************************************************************************/
 	@import '_dashboard';
 	@import '_timetracker';
+	//@import '_workflow_projects';
