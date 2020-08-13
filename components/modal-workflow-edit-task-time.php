@@ -1,12 +1,10 @@
 <div class="modal" data-modal-width="880px">
 	<!-- @if error occured -->
+		<?php app_get_component('components/alert','function',false,array(
+			'type'		=> 'caution',
+			'content'	=> '<span class="REPLACE">Error message here</span>'
+		)); ?>
 
-		<div class="alert alert-caution p">
-			<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
-			<span class="REPLACE">
-				Error message here
-			</span>
-		</div>
 	<form class="flex-grid flex-grid-compact no-margin-bottom">
 			
 		<!-- @if modal is triggered from task board -->

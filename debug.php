@@ -1355,6 +1355,96 @@
 				
 
 
+
+			<div class="alert alert-primary p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-secondary p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-neutral p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-success p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-caution p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-error p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
 			<div class="alert alert-secondary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -4094,7 +4184,6 @@
 			</p>
 
 			<p>
-				close <i class="color-primary symbol symbol-close"></i>
 			</p>
 
 			<p>
