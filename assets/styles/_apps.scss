@@ -407,6 +407,48 @@ $sidebar-base-slim-mobile: 60px;
 				max-width: 230px!important;
 				min-width: 230px!important;
 			}
+
+
+			&-thumbnail {
+				min-width: 90px; 
+				text-align:center;
+			}
+			&-name {
+				min-width: 260px;
+			}
+
+
+			&-action {
+				width: 100px;
+			}
+
+			&-watch-btns {
+				width: 140px;
+				right:100px;
+				box-shadow: -2px 0 0 -1px rgba($brand-color-neutral,.2);
+			}
+
+			&-action,
+			&-watch-btns {
+				position:sticky;
+
+				&:not(th)  {
+					background-color:inherit;
+					@at-root tr:not([class*=table-row]) & {
+						background-color: var(--theme-background);
+					}
+				}
+			
+
+				&:last-child {
+					right:0;
+				}
+			}
+
+			&-url {
+				max-width: 350px;
+				min-width: 350px;
+			}
 		}
 
 		&-row {
