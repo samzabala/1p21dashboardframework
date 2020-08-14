@@ -279,7 +279,81 @@
 		$table-label-width: 12px !default;
 		$table-label-offset: 2px !default;
 		$table-label-border-radius: 2px !default;
-		$table-row-background-opacity: .1 !default;
+
+		$table-row-primary-background: mix($brand-color-primary,$theme-background,10%) !default;
+			$table-row-primary-background-inverse: mix($brand-color-primary,$theme-background-inverse,10%) !default;
+
+		$table-row-secondary-background: mix($brand-color-secondary,$theme-background,10%) !default;
+			$table-row-secondary-background-inverse: mix($brand-color-secondary,$theme-background-inverse,10%) !default;
+
+		$table-row-accent-background: mix($brand-color-accent,$theme-background,10%) !default;
+			$table-row-accent-background-inverse: mix($brand-color-accent,$theme-background-inverse,10%) !default;
+
+		$table-row-neutral-background: mix($brand-color-neutral,$theme-background,10%) !default;
+			$table-row-neutral-background-inverse: mix($brand-color-neutral,$theme-background-inverse,10%) !default;
+
+		$table-row-success-background: mix($brand-color-success,$theme-background,10%) !default;
+			$table-row-success-background-inverse: mix($brand-color-success,$theme-background-inverse,10%) !default;
+
+		$table-row-caution-background: mix($brand-color-caution,$theme-background,10%) !default;
+			$table-row-caution-background-inverse: mix($brand-color-caution,$theme-background-inverse,10%) !default;
+
+		$table-row-error-background: mix($brand-color-error,$theme-background,10%) !default;
+			$table-row-error-background-inverse: mix($brand-color-error,$theme-background-inverse,10%) !default;
+
+		$table-row-intensity-1-background: mix($brand-color-intensity-1,$theme-background,10%) !default;
+			$table-row-intensity-1-background-inverse: mix($brand-color-intensity-1,$theme-background-inverse,10%) !default;
+
+		$table-row-intensity-2-background: mix($brand-color-intensity-2,$theme-background,10%) !default;
+			$table-row-intensity-2-background-inverse: mix($brand-color-intensity-2,$theme-background-inverse,10%) !default;
+
+		$table-row-intensity-3-background: mix($brand-color-intensity-3,$theme-background,10%) !default;
+			$table-row-intensity-3-background-inverse: mix($brand-color-intensity-3,$theme-background-inverse,10%) !default;
+
+		$table-row-intensity-4-background: mix($brand-color-intensity-4,$theme-background,10%) !default;
+			$table-row-intensity-4-background-inverse: mix($brand-color-intensity-4,$theme-background-inverse,10%) !default;
+
+		$table-row-intensity-5-background: mix($brand-color-intensity-5,$theme-background,10%) !default;
+			$table-row-intensity-5-background-inverse: mix($brand-color-intensity-5,$theme-background-inverse,10%) !default;
+
+
+		
+
+		$table-cell-primary-background: rgba($brand-color-primary,.1) !default;
+			$table-cell-primary-background-inverse: $table-cell-primary-background !default;
+
+		$table-cell-secondary-background: rgba($brand-color-secondary,.1) !default;
+			$table-cell-secondary-background-inverse: $table-cell-secondary-background !default;
+
+		$table-cell-accent-background: rgba($brand-color-accent,.1) !default;
+			$table-cell-accent-background-inverse: $table-cell-accent-background !default;
+
+		$table-cell-neutral-background: rgba($brand-color-neutral,.1) !default;
+			$table-cell-neutral-background-inverse: $table-cell-neutral-background !default;
+
+		$table-cell-success-background: rgba($brand-color-success,.1) !default;
+			$table-cell-success-background-inverse: $table-cell-success-background !default;
+
+		$table-cell-caution-background: rgba($brand-color-caution,.1) !default;
+			$table-cell-caution-background-inverse: $table-cell-caution-background !default;
+
+		$table-cell-error-background: rgba($brand-color-error,.1) !default;
+			$table-cell-error-background-inverse: $table-cell-error-background !default;
+
+		$table-cell-intensity-1-background: rgba($brand-color-intensity-1,.1) !default;
+			$table-cell-intensity-1-background-inverse: $table-cell-intensity-1-background !default;
+
+		$table-cell-intensity-2-background: rgba($brand-color-intensity-2,.1) !default;
+			$table-cell-intensity-2-background-inverse: $table-cell-intensity-2-background !default;
+
+		$table-cell-intensity-3-background: rgba($brand-color-intensity-3,.1) !default;
+			$table-cell-intensity-3-background-inverse: $table-cell-intensity-3-background !default;
+
+		$table-cell-intensity-4-background: rgba($brand-color-intensity-4,.1) !default;
+			$table-cell-intensity-4-background-inverse: $table-cell-intensity-4-background !default;
+
+		$table-cell-intensity-5-background: rgba($brand-color-intensity-5,.1) !default;
+			$table-cell-intensity-5-background-inverse: $table-cell-intensity-5-background !default;
 
 
 // LAYOUT

@@ -1088,14 +1088,14 @@ table {
     display: table-row;
     vertical-align: inherit;
     text-align: inherit;
-    border-bottom: 1px solid #e6e6e6; }
-    tr:first-child,
-    .table-row:first-child {
-      border-top: 1px solid #e6e6e6; }
-      .theme-inverse tr:first-child, .theme-inverse .table-row:first-child {
-        border-top: 1px solid #000000; }
+    border-color: #e6e6e6;
+    border-style: solid;
+    border-top-width: 1px; }
     .theme-inverse tr, .theme-inverse .table-row {
-      border-bottom: 1px solid #000000; }
+      border-color: #000000; }
+    tr:last-child,
+    .table-row:last-child {
+      border-bottom-width: 1px; }
     .alert tr, .theme-inverse .alert tr, .alert .table-row, .theme-inverse .alert .table-row {
       border-color: currentColor; }
   th, td,
@@ -1108,6 +1108,18 @@ table {
     height: 100%;
     display: table-cell;
     position: relative; }
+    th.table-bordered, .table-bordered th, td.table-bordered, .table-bordered td,
+    .table-cell.table-bordered, .table-bordered .table-cell,
+    .table-cell.table-cell-heading.table-bordered, .table-bordered .table-cell.table-cell-heading {
+      border-color: #e6e6e6;
+      border-style: solid;
+      border-left-width: 1px; }
+      .theme-inverse th.table-bordered, .theme-inverse .table-bordered th, .theme-inverse td.table-bordered, .theme-inverse .table-bordered td, .theme-inverse .table-cell.table-bordered, .theme-inverse .table-bordered .table-cell, .theme-inverse .table-cell.table-cell-heading.table-bordered, .theme-inverse .table-bordered .table-cell.table-cell-heading {
+        border-color: #000000; }
+      th.table-bordered:last-child, .table-bordered th:last-child, td.table-bordered:last-child, .table-bordered td:last-child,
+      .table-cell.table-bordered:last-child, .table-bordered .table-cell:last-child,
+      .table-cell.table-cell-heading.table-bordered:last-child, .table-bordered .table-cell.table-cell-heading:last-child {
+        border-right-width: 1px; }
   .table .table-cell-no-gutter,
   table .table-cell-no-gutter {
     padding: 0 !important; }
@@ -1156,42 +1168,102 @@ table {
       height: calc(4.6875rem - (2px * 2)); }
     .table-small .table-label {
       height: calc(1.5625rem - (2px * 2)); }
-  .table-row-primary,
-  .table-cell-primary {
+  .table-row-primary {
+    background-color: #e6f2fa; }
+    .theme-inverse .table-row-primary {
+      background-color: #17242c; }
+  .table-row-secondary {
+    background-color: #ffe6f5; }
+    .theme-inverse .table-row-secondary {
+      background-color: #301727; }
+  .table-row-accent {
+    background-color: #fef8ec; }
+    .theme-inverse .table-row-accent {
+      background-color: #2f291d; }
+  .table-row-neutral {
+    background-color: #f4f4f4; }
+    .theme-inverse .table-row-neutral {
+      background-color: #252525; }
+  .table-row-success {
+    background-color: #e6f8ee; }
+    .theme-inverse .table-row-success {
+      background-color: #17291f; }
+  .table-row-caution {
+    background-color: #fff2e6; }
+    .theme-inverse .table-row-caution {
+      background-color: #302417; }
+  .table-row-error {
+    background-color: #ffe6e6; }
+    .theme-inverse .table-row-error {
+      background-color: #301717; }
+  .table-row-intensity-1 {
+    background-color: #fef8ec; }
+    .theme-inverse .table-row-intensity-1 {
+      background-color: #2f291d; }
+  .table-row-intensity-2 {
+    background-color: #fef3ee; }
+    .theme-inverse .table-row-intensity-2 {
+      background-color: #30251f; }
+  .table-row-intensity-3 {
+    background-color: #ffeff0; }
+    .theme-inverse .table-row-intensity-3 {
+      background-color: #302022; }
+  .table-row-intensity-4 {
+    background-color: #ffeaf3; }
+    .theme-inverse .table-row-intensity-4 {
+      background-color: #301c24; }
+  .table-row-intensity-5 {
+    background-color: #ffe6f5; }
+    .theme-inverse .table-row-intensity-5 {
+      background-color: #301727; }
+  td.table-cell-primary, .table-cell.table-cell-primary {
     background-color: rgba(0, 126, 206, 0.1); }
-  .table-row-secondary,
-  .table-cell-secondary {
+    .theme-inverse td.table-cell-primary, .theme-inverse .table-cell.table-cell-primary {
+      background-color: rgba(0, 126, 206, 0.1); }
+  td.table-cell-secondary, .table-cell.table-cell-secondary {
     background-color: rgba(255, 0, 156, 0.1); }
-  .table-row-accent,
-  .table-cell-accent {
+    .theme-inverse td.table-cell-secondary, .theme-inverse .table-cell.table-cell-secondary {
+      background-color: rgba(255, 0, 156, 0.1); }
+  td.table-cell-accent, .table-cell.table-cell-accent {
     background-color: rgba(245, 184, 61, 0.1); }
-  .table-row-neutral,
-  .table-cell-neutral {
+    .theme-inverse td.table-cell-accent, .theme-inverse .table-cell.table-cell-accent {
+      background-color: rgba(245, 184, 61, 0.1); }
+  td.table-cell-neutral, .table-cell.table-cell-neutral {
     background-color: rgba(141, 141, 141, 0.1); }
-  .table-row-success,
-  .table-cell-success {
+    .theme-inverse td.table-cell-neutral, .theme-inverse .table-cell.table-cell-neutral {
+      background-color: rgba(141, 141, 141, 0.1); }
+  td.table-cell-success, .table-cell.table-cell-success {
     background-color: rgba(0, 183, 84, 0.1); }
-  .table-row-caution,
-  .table-cell-caution {
+    .theme-inverse td.table-cell-success, .theme-inverse .table-cell.table-cell-success {
+      background-color: rgba(0, 183, 84, 0.1); }
+  td.table-cell-caution, .table-cell.table-cell-caution {
     background-color: rgba(253, 127, 3, 0.1); }
-  .table-row-error,
-  .table-cell-error {
+    .theme-inverse td.table-cell-caution, .theme-inverse .table-cell.table-cell-caution {
+      background-color: rgba(253, 127, 3, 0.1); }
+  td.table-cell-error, .table-cell.table-cell-error {
     background-color: rgba(253, 3, 3, 0.1); }
-  .table-row-intensity-1,
-  .table-cell-intensity-1 {
+    .theme-inverse td.table-cell-error, .theme-inverse .table-cell.table-cell-error {
+      background-color: rgba(253, 3, 3, 0.1); }
+  td.table-cell-intensity-1, .table-cell.table-cell-intensity-1 {
     background-color: rgba(245, 184, 61, 0.1); }
-  .table-row-intensity-2,
-  .table-cell-intensity-2 {
+    .theme-inverse td.table-cell-intensity-1, .theme-inverse .table-cell.table-cell-intensity-1 {
+      background-color: rgba(245, 184, 61, 0.1); }
+  td.table-cell-intensity-2, .table-cell.table-cell-intensity-2 {
     background-color: rgba(248, 138, 85, 0.1); }
-  .table-row-intensity-3,
-  .table-cell-intensity-3 {
+    .theme-inverse td.table-cell-intensity-2, .theme-inverse .table-cell.table-cell-intensity-2 {
+      background-color: rgba(248, 138, 85, 0.1); }
+  td.table-cell-intensity-3, .table-cell.table-cell-intensity-3 {
     background-color: rgba(250, 92, 109, 0.1); }
-  .table-row-intensity-4,
-  .table-cell-intensity-4 {
+    .theme-inverse td.table-cell-intensity-3, .theme-inverse .table-cell.table-cell-intensity-3 {
+      background-color: rgba(250, 92, 109, 0.1); }
+  td.table-cell-intensity-4, .table-cell.table-cell-intensity-4 {
     background-color: rgba(253, 46, 132, 0.1); }
-  .table-row-intensity-5,
-  .table-cell-intensity-5 {
+    .theme-inverse td.table-cell-intensity-4, .theme-inverse .table-cell.table-cell-intensity-4 {
+      background-color: rgba(253, 46, 132, 0.1); }
+  td.table-cell-intensity-5, .table-cell.table-cell-intensity-5 {
     background-color: rgba(255, 0, 156, 0.1); }
+    .theme-inverse td.table-cell-intensity-5, .theme-inverse .table-cell.table-cell-intensity-5 {
+      background-color: rgba(255, 0, 156, 0.1); }
 
 /*** SYMBOLS ***/
 .symbol {
