@@ -247,7 +247,7 @@ class="module-grid">
 													`` => if it is top 10
 													`display-none`	=> if NOT in top 10
 										-->
-										<span class="row-is-top10 btn-small btn btn-symbol btn-success btn-no-interaction">
+										<span class="row-is-top10 color-sucess">
 											<i class="symbol symbol-check"></i>
 										</span>
 									</span>
@@ -397,7 +397,7 @@ class="module-grid">
 					Sorry. no entries available :/
 				</p>
 		</div>
-		
+
 		<div class="module-footer text-align-right">
 			<?php app_get_component('components/pagination') ?>
 			<?php app_get_component('components/pagination-view-per-page') ?>
