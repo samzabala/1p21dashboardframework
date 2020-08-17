@@ -21,6 +21,7 @@ class="module-grid">
 			</div>
 
 			<div class="module-content">
+				<hr>
 				<div class="flex-grid flex-grid-compact flex-grid-fixed justify-content space-between">
 
 					<!-- Total -->
@@ -52,7 +53,7 @@ class="module-grid">
 
 					
 					<!-- homerun -->
-						<div class="keywords-homerun flex-col-sm-6 flex-col-md-3 flex-col-lg-2">
+						<div class="keywords-homerun flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 							<h5 class="no-margin-top">
 								Home Run
 								<span class="REPLACE">
@@ -80,7 +81,7 @@ class="module-grid">
 
 					
 					<!-- top10 -->
-						<div class="keywords-top10 flex-col-sm-6 flex-col-md-3 flex-col-lg-2">
+						<div class="keywords-top10 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 							<h5 class="no-margin-top">
 								<span class="REPLACE">
 									<?=FWAPPS_TEMPLATE == 'keywords-lost' ? 'Lost' : 'New'; ?>
@@ -107,7 +108,7 @@ class="module-grid">
 
 
 					<!-- hrtop10 -->
-						<div class="keywords-hrtop10 flex-col-sm-6 flex-col-md-3 flex-col-lg-2">
+						<div class="keywords-hrtop10 flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 							<h5 class="no-margin-top">
 								<span class="REPLACE">
 									<?=FWAPPS_TEMPLATE == 'keywords-lost' ? 'Lost' : 'New'; ?>
@@ -136,7 +137,7 @@ class="module-grid">
 
 
 					<!-- featuredsnippets -->
-						<div class="keywords-featuredsnippets flex-col-sm-6 flex-col-md-3 flex-col-lg-2">
+						<div class="keywords-featuredsnippets flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 							<h5 class="no-margin-top">
 								Featured Snippets
 							</h5>
@@ -161,7 +162,7 @@ class="module-grid">
 
 
 					<!-- local -->
-						<div class="keywords-local flex-col-sm-6 flex-col-md-3 flex-col-lg-2">
+						<div class="keywords-local flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 							<h5 class="no-margin-top">
 								Local
 							</h5>
