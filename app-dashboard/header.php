@@ -47,11 +47,14 @@
 					id="dashboard-block-main-nav-toggle"
 					class="btn
 					color-primary-hover 
-					color-primary-active 
-					color-primary-focus
+					color-background-active 
+					color-background-focus
+					background-theme-hover
 					background-primary-toggle
 					color-background-toggle btn-symbol 
-					btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large only-xs nav-toggle">
+					btn-no-radius dashboard-sidenav-toggle btn-no-shadow btn-large 
+					hide-sm hide-md hide-lg
+					nav-toggle">
 					<i class="symbol symbol-burger"></i>
 				</a>
 				<?php app_get_nav(); ?>

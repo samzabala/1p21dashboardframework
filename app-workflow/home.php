@@ -541,7 +541,6 @@
 							<th class="text-nowrap">Start Date</th>
 							<th class="text-nowrap">Days Open</th>
 							<th class="dashboard-table-cell-watch-btns text-align-center">&nbsp;<span class="sr-only">Status</span></th>
-							<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
 						</tr>
 						
 						<!-- @LOOP TR-->
@@ -605,16 +604,10 @@
 								</td>
 
 
-								<td class="text-align-center dashboard-table-cell-watch-btns  text-nowrap">
+								<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 									<?php app_get_component('components/table-timer-toggle') ?>
 								</td>
 
-
-								<td class="dashboard-table-cell-action text-align-center">
-									
-									<?php app_get_component('components/tooltip-action') ?>
-									
-								</td>
 
 							</tr>
 
@@ -704,12 +697,6 @@
 												</a>
 											</td>
 
-
-											<td class="dashboard-table-cell-action text-align-center">
-												<?php app_get_component('components/tooltip-action') ?>
-												
-											</td>
-
 										</tr>
 
 										
@@ -796,13 +783,6 @@
 												</a>
 											</td>
 
-
-											<td class="dashboard-table-cell-action text-align-center">
-												
-												
-												<?php app_get_component('components/tooltip-action') ?>
-												
-											</td>
 
 										</tr>
 										

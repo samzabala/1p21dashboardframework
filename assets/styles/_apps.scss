@@ -425,12 +425,13 @@ $sidebar-base-slim-mobile: 60px;
 			&-watch-btns {
 				width: 140px;
 				right:100px;
-				box-shadow: -2px 0 0 -1px rgba($brand-color-neutral,.2);
+				z-index:2;
 			}
 
 			&-action,
 			&-watch-btns {
 				position:sticky;
+				box-shadow: -2px 0 0 -1px rgba($brand-color-neutral,.2);
 
 				&:not(th)  {
 					background-color:inherit;
