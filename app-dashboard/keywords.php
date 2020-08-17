@@ -24,7 +24,7 @@ class="module-grid">
 				<div class="flex-grid flex-grid-compact flex-grid-fixed justify-content space-between">
 
 					<!-- Total -->
-						<div class="keywords-total flex-col-sm-6 flex-col-md-3 flex-col-lg-2">
+						<div class="keywords-total flex-col-sm-6 flex-col-md-4 flex-col-lg-2">
 							<h5 class="no-margin-top">
 								Total
 								<span class="REPLACE">
