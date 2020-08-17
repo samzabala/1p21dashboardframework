@@ -194,9 +194,10 @@ class="module-grid">
 	<!-- keyword tables -->
 	<div class="module">
 		<div class="module-header">
-			<div class="module-functions">
-
-			<?php app_get_component('components/filter-keywords') ?>
+		<?php app_get_component('components/module-functions-accordion-toggle'); ?>
+		
+			<div class="flex-1-0 module-functions accordion accordion-mobile">
+				<?php app_get_component('components/filter-keywords') ?>
 			</div>
 		</div>
 		<div class="module-content">
