@@ -227,6 +227,13 @@ function app_init_content(){
 					app_get_template_part("app-{$app}/projects-scoreboard");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']='projects-scoreboard';
 					break;
+				
+				case 'keywords':
+				case 'keywords-improved':
+				case 'keywords-lost':
+					app_get_template_part("app-{$app}/keywords");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']='keywords';
+					break;
 
 				case 'chart':
 				case 'profiles':

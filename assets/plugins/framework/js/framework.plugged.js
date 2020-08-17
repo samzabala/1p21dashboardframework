@@ -687,6 +687,7 @@ window.jQuery && jQuery.noConflict();
 	};
 
 	_.getTheToggled = (triggerer, toggleMode) => {
+		console.warn('sup');
 		toggleMode = toggleMode || null;
 
 		if (toggleMode) {
@@ -698,10 +699,13 @@ window.jQuery && jQuery.noConflict();
 
 			let toReturn = null;
 
+
 			if (triggerer) {
+				console.log( 'index of', triggerer.attr('href') );
 				if (
 					triggerer.attr('href')
 					&& triggerer.attr('href') !== ''
+					&& triggerer.attr('href').startsWith('#')
 					&& triggerer.attr('href') !== '#'
 					&& $(triggerer.attr('href'))
 						.hasClass(classToSearch)
