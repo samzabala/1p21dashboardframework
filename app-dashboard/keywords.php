@@ -248,7 +248,7 @@ class="module-grid">
 													`` => if it is top 10
 													`display-none`	=> if NOT in top 10
 										-->
-										<span class="row-is-top10 color-sucess">
+										<span class="row-is-top10 color-success">
 											<i class="symbol symbol-check"></i>
 										</span>
 									</span>
@@ -335,7 +335,8 @@ class="module-grid">
 																`` => if it is top 10
 																`display-none`	=> if NOT in top 10
 													-->
-													<span class="row-is-top10 btn-small btn btn-symbol btn-success btn-no-interaction display-none">
+													<span class="row-is-top10 color-success
+													display-none">
 														<i class="symbol symbol-check"></i>
 													</span>
 												</span>
