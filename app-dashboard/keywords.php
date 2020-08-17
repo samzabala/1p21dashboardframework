@@ -194,7 +194,7 @@ class="module-grid">
 	<!-- keyword tables -->
 	<div class="module">
 		<div class="module-header">
-			<div class="module-functions text-align-right">
+			<div class="module-functions">
 
 			<?php app_get_component('components/filter-keywords') ?>
 			</div>
