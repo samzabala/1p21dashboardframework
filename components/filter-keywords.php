@@ -23,13 +23,15 @@
 		</div>
 
 
-		<div class="dropdown dropdown-right dropdown-top-flush"  name="filter-type" data-dropdown-width="275px">
-			<option value="" selected>Result type</option>
-			<!-- @PLACEHOLDER. replace as needed -->
-			<option value="organic">Organic</option>
-			<option value="featuredsnippets">Featured Snippets</option>
-			<option value="mappack">Map Pack</option>
-			<option value="eh">Something else</option>
+		<div class="dropdown dropdown-right dropdown-top-flush no-padding"  name="filter-type" data-dropdown-width="275px">
+			<!-- @NOTE: remove `list-group-toggle-allow-no-active` if at least one selected item is desired -->
+			<ul class="list-group list-group-interactive list-group-compact list-group-toggle-allow-no-active list-group-toggle list-group-toggle-multiple">
+				<!-- @PLACEHOLDER. replace as needed -->
+				<li class="active"><a href="#" data-value="organic">Organic</a></li>
+				<li><a href="#" data-value="featuredsnippets">Featured Snippets</a></li>
+				<li><a href="#" data-value="mappack">Map Pack</a></li>
+				<li><a href="#" data-value="eh">Something else</a></li>
+			</ul>
 		</div>
 	</form>
 </div>
