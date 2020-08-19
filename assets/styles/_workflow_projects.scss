@@ -97,66 +97,66 @@
 
 // }
 
-#workflow-project-detail {
-    .container {
-        max-width: 1580px;
-    }
-    .split-column {
-        display: flex;
-    }
-    .split-column .left {
-        max-width: 1050px;
-        width: 100%;
-        margin-right: 20px;
-    }
-    .split-column .right {
-        max-width: 350px;
-        width: 100%;
-    }
-    .module-header {
-        .btn {
-            padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
-            padding-bottom: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
-            min-height: 3em;
-        }
-    }
-    .module-content {
-        th, .table-cell.table-cell-heading {
-            background: #EFF4F8;
-        }
-    }
-    #wiki-how-tos,
-    #documents-files {
-        margin-bottom: 50px;
-    }
+// #workflow-project-detail {
+    // .container {
+    //     max-width: 1580px;
+    // }
+    // .split-column {
+    //     display: flex;
+    // }
+    // .split-column .left {
+    //     max-width: 1050px;
+    //     width: 100%;
+    //     margin-right: 20px;
+    // }
+    // .split-column .right {
+    //     max-width: 350px;
+    //     width: 100%;
+    // }
+    // .module-header {
+    //     .btn {
+    //         padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+    //         padding-bottom: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+    //         min-height: 3em;
+    //     }
+    // }
+    // .module-content {
+    //     th, .table-cell.table-cell-heading {
+    //         background: #EFF4F8;
+    //     }
+    // }
+    // #wiki-how-tos,
+    // #documents-files {
+    //     margin-bottom: 50px; //add p
+    // }
     // .tab, .tabs > li {
     //     font-weight: 400;
     //     font-size: 18px;
     // }
-    table {
-        .thumbnail.thumbnail-small {
-            font-size: 2.15rem;
-        }
-    }
-    .comments-editor {
-        margin-bottom: 40px;
-    }
-    .split-column .right .task-complete-toggle .flex-child:first-child {
-        width: calc(100% - 78px);
-    }
-    .split-column .right .task-complete-toggle .flex-child:last-child {
-        margin-left: 10px;
-    }
-    #project-actions {
-        display: flex;
-        grid-gap: 10px;
-        .btn-symbol {
-            min-width: 50px;
-            width: 50px;
-            background: #fff;
-        }
-    }
+    // table {
+    //     .thumbnail.thumbnail-small {
+    //         font-size: 2.15rem;
+    //     }
+    // }
+    // .comments-editor { ///ad p
+    //     margin-bottom: 40px;
+    // }
+    // .split-column .right .task-complete-toggle .flex-child:first-child {
+    //     width: calc(100% - 78px);
+    // }
+    // .split-column .right .task-complete-toggle .flex-child:last-child {
+    //     margin-left: 10px;
+    // }
+    // #project-actions {
+    //     display: flex;
+    //     grid-gap: 10px;
+    //     .btn-symbol {
+    //         min-width: 50px;
+    //         width: 50px;
+    //         background: #fff;
+    //     }
+    // }
 }
-#dashboard-block-main {
-    background-color: #F7F7F7;
-}
+// #dashboard-block-main {
+//     background-color: #F7F7F7;
+// }
