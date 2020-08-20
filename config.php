@@ -17,6 +17,21 @@ define('FWAPPS_ROOT_URL', ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 
 
 
 
+
+if(isset($_GET['app'])):
+	$_GET['app'] = filter_var($_GET['app'], FILTER_SANITIZE_STRING);
+endif;
+
+$___app = 'dashboard';
+
+if(isset($_GET['app'])):
+	$___app = $_GET['app'];
+endif;
+
+define('FWAPPS_APP',$___app);
+
+
+
 // modify preview content
 // whether user is on scoreboard or production board
 if(isset($_GET['env'])):
@@ -24,6 +39,10 @@ if(isset($_GET['env'])):
 endif;
 
 $___slug = '';
+
+if(FWAPPS_APP == 'dashboard'):
+	$___slug = 'production';
+endif;
 
 if(isset($_GET['env']) && $_GET['env'] !== ''):
 	$___slug = $_GET['env'];
@@ -57,21 +76,6 @@ define('FWAPPS_TEMPLATE',$___template);
 
 
 
-
-
-
-
-if(isset($_GET['app'])):
-	$_GET['app'] = filter_var($_GET['app'], FILTER_SANITIZE_STRING);
-endif;
-
-$___app = 'dashboard';
-
-if(isset($_GET['app'])):
-	$___app = $_GET['app'];
-endif;
-
-define('FWAPPS_APP',$___app);
 
 
 

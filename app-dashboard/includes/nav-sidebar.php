@@ -2,7 +2,7 @@
 <ul class="nav-list">
 	<!-- HOME -->
 	<li class="nav-item">
-		<a href="<?=app_create_link(); ?>">
+		<a href="<?=app_create_link(array('template'=>'home')); ?>">
 			<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-home.svg">
 			<span class="nav-item-text">Home</span>
 		</a>

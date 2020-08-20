@@ -1,5 +1,3 @@
-
-
 <div id="workflow-dash-heading" class="position-relative">
 	<div class="flex-grid flex-grid-compact justify-content-space-between">
 		<div class="flex-child">
@@ -542,7 +540,7 @@
 							<th class="text-align-center text-nowrap">Notes</th>
 							<th class="text-nowrap">Start Date</th>
 							<th class="text-nowrap">Days Open</th>
-							<th colspan="2"><span class="sr-only">Actions</span>&nbsp;</th>
+							<th class="dashboard-table-cell-watch-btns text-align-center">&nbsp;<span class="sr-only">Status</span></th>
 						</tr>
 						
 						<!-- @LOOP TR-->
@@ -606,16 +604,10 @@
 								</td>
 
 
-								<td class="text-align-center text-nowrap">
+								<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 									<?php app_get_component('components/table-timer-toggle') ?>
 								</td>
 
-
-								<td class="dashboard-table-cell-action text-align-center position-relative">
-									
-									<?php app_get_component('components/tooltip-action') ?>
-									
-								</td>
 
 							</tr>
 
@@ -682,7 +674,7 @@
 											</td>
 
 
-											<td class="text-align-center text-nowrap">
+											<td class="text-align-center text-nowrap  dashboard-table-cell-watch-btns">
 												
 												<a href="#" class="open-timer-btn workflow-toggle-play btn btn-symbol btn-small  well well-compact
 												btn-primary background-gradient-45 background-image-none-hover display-none
@@ -703,12 +695,6 @@
 												">
 													<i class="symbol symbol-check"></i>
 												</a>
-											</td>
-
-
-											<td class="dashboard-table-cell-action text-align-center position-relative">
-												<?php app_get_component('components/tooltip-action') ?>
-												
 											</td>
 
 										</tr>
@@ -773,7 +759,7 @@
 											</td>
 
 
-											<td class="text-align-center text-nowrap">
+											<td class="text-align-center text-nowrap  dashboard-table-cell-watch-btns">
 												
 												<a href="#" class="fave-task-timer-btn workflow-toggle-play btn btn-symbol btn-small  well well-compact
 												btn-primary background-gradient-45 background-image-none-hover
@@ -797,13 +783,6 @@
 												</a>
 											</td>
 
-
-											<td class="dashboard-table-cell-action text-align-center position-relative">
-												
-												
-												<?php app_get_component('components/tooltip-action') ?>
-												
-											</td>
 
 										</tr>
 										
@@ -849,7 +828,8 @@
 							<th class="text-align-center text-nowrap">Notes</th>
 							<th class="text-nowrap">Start Date</th>
 							<th class="text-nowrap">Days Open</th>
-							<th colspan="2"><span class="sr-only">Actions</span>&nbsp;</th>
+							<th class="dashboard-table-cell-watch-btns text-align-center">&nbsp;<span class="sr-only">Status</span></th>
+							<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
 						</tr>
 						
 						<!-- @LOOP TR-->
@@ -913,12 +893,12 @@
 								</td>
 
 
-								<td class="text-align-center text-nowrap">
+								<td class="text-align-center text-nowrap  dashboard-table-cell-watch-btns">
 									<?php app_get_component('components/table-timer-toggle') ?>
 								</td>
 
 
-								<td class="dashboard-table-cell-action text-align-center position-relative">
+								<td class="dashboard-table-cell-action text-align-center">
 									
 									<?php app_get_component('components/tooltip-action') ?>
 									
@@ -989,7 +969,7 @@
 											</td>
 
 
-											<td class="text-align-center text-nowrap">
+											<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 												
 												<a href="#" class="open-timer-btn workflow-toggle-play btn btn-symbol btn-small  well well-compact
 												btn-primary background-gradient-45 background-image-none-hover display-none
@@ -1013,7 +993,7 @@
 											</td>
 
 
-											<td class="dashboard-table-cell-action text-align-center position-relative">
+											<td class="dashboard-table-cell-action text-align-center">
 												<?php app_get_component('components/tooltip-action') ?>
 												
 											</td>
@@ -1080,7 +1060,7 @@
 											</td>
 
 
-											<td class="text-align-center text-nowrap">
+											<td class="text-align-center text-nowrap dashboard-table-cell-watch-btns">
 												
 												<a href="#" class="open-task-timer-btn workflow-toggle-play btn btn-symbol btn-small  well well-compact
 												btn-primary background-gradient-45 background-image-none-hover
@@ -1105,7 +1085,7 @@
 											</td>
 
 
-											<td class="dashboard-table-cell-action text-align-center position-relative">
+											<td class="dashboard-table-cell-action text-align-center">
 												
 												
 												<?php app_get_component('components/tooltip-action') ?>
@@ -1179,8 +1159,8 @@
 									<th class="text-nowrap">Client</th>
 									<th class="text-nowrap text-align-center">Notes</th>
 									<th class="text-nowrap">Total Time</th>
-									<th class="text-nowrap text-align-center">Status</th>
-									<th class="text-nowrap"><span class="sr-only">Actions</span>&nbsp;</th>
+									<th class="dashboard-table-cell-watch-btns text-align-center">Status</th>
+									<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
 								</tr>
 								
 								<!-- @LOOP TR-->
@@ -1240,12 +1220,12 @@
 										</td>
 
 
-										<td class="text-align-center text-nowrap">
+										<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 											<?php app_get_component('components/table-timer-toggle') ?>
 										</td>
 
 
-										<td class="dashboard-table-cell-action text-align-center position-relative">
+										<td class="dashboard-table-cell-action text-align-center">
 											
 											<?php app_get_component('components/tooltip-action') ?>
 											
@@ -1307,12 +1287,12 @@
 													</td>
 
 
-													<td class="text-align-center text-nowrap">
+													<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 														&nbsp;
 													</td>
 
 
-													<td class="dashboard-table-cell-action text-align-center position-relative">
+													<td class="dashboard-table-cell-action text-align-center">
 														
 														<?php app_get_component('components/tooltip-action') ?>
 														
@@ -1369,7 +1349,7 @@
 													</td>
 
 
-													<td class="text-align-center text-nowrap">
+													<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 														
 												
 														<a href="#" class="open-task-timer-btn workflow-toggle-play btn btn-symbol btn-small  well well-compact
@@ -1394,8 +1374,7 @@
 														</a>
 													</td>
 
-
-													<td class="dashboard-table-cell-action text-align-center position-relative">
+													<td class="dashboard-table-cell-action text-align-center">
 														
 														<?php app_get_component('components/tooltip-action') ?>
 														

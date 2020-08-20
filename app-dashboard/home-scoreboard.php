@@ -85,6 +85,8 @@
 					<?php app_get_component('components/filter-toggle-my'); ?>
 
 					<?php app_get_component('components/linkto-unique-links'); ?>
+
+					<?php app_get_component('components/linkto-keywords-stats'); ?>
 				</div>
 
 			</div>

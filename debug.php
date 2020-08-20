@@ -1355,6 +1355,96 @@
 				
 
 
+
+			<div class="alert alert-primary p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-secondary p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-neutral p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-success p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-caution p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
+
+			<div class="alert alert-error p" id="life-alert">
+				<div class="alert-header">
+					<h3 class="alert-title">Alert titty</h3>	
+					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+				</div>
+				<div class="alert-content">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+
+				<div class="alert-footer">
+				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
+				</div>
+			</div>
+
 			<div class="alert alert-secondary p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -3897,6 +3987,12 @@
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol file</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-file"></i></span>
+			</a>
+
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
@@ -4088,12 +4184,16 @@
 			</p>
 
 			<p>
-				close <i class="color-primary symbol symbol-close"></i>
 			</p>
 
 			<p>
 				map <i class="color-primary symbol symbol-map"></i>
 			</p>
+
+			<p>
+				file <i class="color-primary symbol symbol-file"></i>
+			</p>
+
 			<p>
 				star <i class="color-primary symbol symbol-star"></i>
 			</p>
@@ -4842,21 +4942,27 @@
 
 			<h2>borders</h2>
 
-			<p class="border-style-none border-width-thin border-color-base">background Base</p>
-			<p class="border-style-hidden border-width-thick border-color-background">background Background</p>
-			<p class="border-style-dotted border-width-medium border-color-primary">Background Primary</p>
-			<p class="border-style-dashed border-width-thin border-color-secondary">Background secondary</p>
-			<p class="border-style-solid border-width-thick border-color-accent">Background accent</p>
-			<p class="border-style-double border-width-thick border-color-neutral">Background Neutral</p>
-			<p class="border-style-groove border-width-thick border-color-success">Background Success</p>
-			<p class="border-style-ridge border-width-thick border-color-caution">Background Caution</p>
-			<p class="border-style-inset border-width-thick  no-border-y border-color-error">Background Error</p>
 
-			<p class="border-style-outset border-width-thick no-border-top border-color-intensity-1">Background Intensity 1</p>
-			<p class="border-style-solid border-width-thick no-border-left border-color-intensity-2">Background Intensity 2</p>
-			<p class="border-style-solid border-width-thick no-border-bottom border-color-intensity-3">Background Intensity 3</p>
-			<p class="border-style-solid border-width-thick no-border-right border-color-intensity-4">Background Intensity 4</p>
-			<p class="border-style-solid border-width-thick no-border-x border-color-intensity-5">Background Intensity 5</p>
+			<p class="border-style-solid border-width-thin border-color-theme">border theme</p>
+			<p class="border-style-solid border-width-thin border-color-theme-polar">border theme polar</p>
+			<p class="border-style-solid border-width-thin border-color-theme-contrast">border theme contrast</p>
+			<p class="border-style-solid border-width-thin border-color-theme-polar-contrast">border theme polar contrast</p>
+
+			<p class="border-style-solid border-width-thin border-color-base">Border Base</p>
+			<p class="border-style-solid border-width-thick border-color-background">Border Background</p>
+			<p class="border-style-dotted border-width-medium border-color-primary">Border Primary</p>
+			<p class="border-style-dashed border-width-thin border-color-secondary">Border secondary</p>
+			<p class="border-style-solid border-width-thick border-color-accent">Border accent</p>
+			<p class="border-style-double border-width-thick border-color-neutral">Border Neutral</p>
+			<p class="border-style-groove border-width-thick border-color-success">Border Success</p>
+			<p class="border-style-ridge border-width-thick border-color-caution">Border Caution</p>
+			<p class="border-style-inset border-width-thick  no-border-y border-color-error">Border Error</p>
+
+			<p class="border-style-outset border-width-thick no-border-top border-color-intensity-1">Border Intensity 1</p>
+			<p class="border-style-solid border-width-thick no-border-left border-color-intensity-2">Border Intensity 2</p>
+			<p class="border-style-solid border-width-thick no-border-bottom border-color-intensity-3">Border Intensity 3</p>
+			<p class="border-style-solid border-width-thick no-border-right border-color-intensity-4">Border Intensity 4</p>
+			<p class="border-style-solid border-width-thick no-border-x border-color-intensity-5">Border Intensity 5</p>
 
 			<h2>Advanced shit: wrap</h2>
 

@@ -54,10 +54,10 @@
 	<!-- Ability to create new tags -->
 
 		<!-- @if add tag successful and could be done async, render and add new tags in `list-group` and set as active-->
-			<div class="alert alert-success p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
-				The tag/s `<span class="REPLACE">New Tags Text</span>` has been added
-			</div>
+			<?php app_get_component('components/alert','function',false,array(
+				'type'		=> 'success',
+				'content'	=> 'The tag/s `<span class="REPLACE">New Tags Text</span>` has been added'
+			)); ?>
 
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 			<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tags</label>

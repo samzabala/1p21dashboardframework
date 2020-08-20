@@ -304,11 +304,6 @@ $sidebar-base-slim-mobile: 60px;
 	}
 }
 
-.body-no-scroll .tox-tinymce-aux {
-	z-index: 99999 !important;
-}
-
-
 #nav {
 
 	&-notification {
@@ -324,6 +319,24 @@ $sidebar-base-slim-mobile: 60px;
 
 //helpers
 .dashboard {
+
+	&-alert {
+		&-icon {
+			font-size: em(21px/$body-font-size);
+			float: left;
+			height: 1em;
+			width: 1.08em;
+			// margin-top: em((($body-font-size - 21px) * .5)/$body-font-size);
+			margin-right: .25em;
+			// display: inline-block;
+			line-height: 1;
+
+			svg,img,* {
+				max-width:100%;
+				max-height:100%;
+			}
+		}
+	}
 
 	&-modal-gutterless {
 
@@ -390,9 +403,52 @@ $sidebar-base-slim-mobile: 60px;
 			//holy grail. that wont let your cells stretvch too much
 			&-max {
 
-				width: 200px;
-				max-width: 200px!important;
-				min-width: 200px!important;
+				width: 230px;
+				max-width: 230px!important;
+				min-width: 230px!important;
+			}
+
+
+			&-thumbnail {
+				min-width: 90px; 
+				text-align:center;
+			}
+			&-name {
+				min-width: 260px;
+			}
+
+
+			&-action {
+				width: 100px;
+			}
+
+			&-watch-btns {
+				width: 140px;
+				right:100px;
+				z-index:2;
+			}
+
+			&-action,
+			&-watch-btns {
+				position:sticky;
+				box-shadow: -2px 0 0 -1px rgba($brand-color-neutral,.2);
+
+				&:not(th)  {
+					background-color:inherit;
+					@at-root tr:not([class*=table-row]) & {
+						background-color: var(--theme-background);
+					}
+				}
+			
+
+				&:last-child {
+					right:0;
+				}
+			}
+
+			&-url {
+				max-width: 350px;
+				min-width: 350px;
 			}
 		}
 
