@@ -9260,3 +9260,58 @@ APPS / OUR CUSTOM STYLES
 
 #dashboard-block-main {
   background-color: #F7F7F7; }
+
+.flex-child.align-items-center {
+  align-items: center;
+  display: flex; }
+
+.flex-child.position-relative {
+  position: relative; }
+
+.module-function.filter-dropdown-project {
+  margin-right: 10px;
+  position: unset; }
+  .module-function.filter-dropdown-project .input-group {
+    width: 585px; }
+    .module-function.filter-dropdown-project .input-group input[name="workflow-filter-projects"] {
+      flex-grow: 1; }
+  .module-function.filter-dropdown-project .dropdown {
+    width: 100%;
+    padding: 40px 45px; }
+    .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal {
+      align-items: center; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal > .input-label {
+        flex-basis: 22%;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 18px;
+        color: #4c4e4f; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-single-line {
+        height: 40px;
+        padding: 5px !important;
+        border-left: 1px solid rgba(141, 141, 141, 0.3) !important;
+        border-right: 1px solid rgba(141, 141, 141, 0.3) !important;
+        border-radius: 25px; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-c {
+        padding: 5px 17px !important; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-input,
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal input {
+        padding: 5px 12px;
+        margin: 0px 5px 1px 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-tag {
+        padding: 5px 12px;
+        margin: 4px 5px 1px 0;
+        background: #EFF4F8; }
+        .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-tag .input-tags-ui-tag-text {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          margin-right: 5px;
+          color: #000; }
+        .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-tag .input-tags-ui-tag-close {
+          color: #0480fe; }

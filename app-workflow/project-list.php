@@ -12,20 +12,8 @@ app_get_component('components/board-add-edit-task');
 					Projects
 				</p>
 			</div>
-			<div class="flex-child">
-				<div class="module-function filter-input-group-timetracked">
-					<form action="" class=" filter-profile input-group input-group-horizontal input-group-block-mobile text-align-left">
-						<select name="timeetrack-filter-meta-key" id="" class="input input-single-line input-select">
-							<option value="">Filter by</option>
-							<option value="author">Author</option>
-							<option value="client">Client</option>
-							<option value="project">Project</option>
-							<option value="task">Task</option>
-						</select>
-						<input type="text" class="input input-tags flex-1-1" name="timetrack-filter-meta-value" placeholder="Type in a keyword...">
-						<button type="submit" class="btn btn-default btn-symbol"><i class="symbol symbol-search"></i></button>
-					</form>
-				</div>
+			<div class="flex-child align-items-center position-relative">
+				<?= app_get_component('components/filter-dropdown-project'); ?>
 				<div class="module-function modal-add-member">
 					<a href="<?=app_create_link(array('template'=>'project-new')) ?>" class="btn btn-primary" title="Add Project">
 						Add Project&nbsp;<i class="symbol symbol-plus"></i>
