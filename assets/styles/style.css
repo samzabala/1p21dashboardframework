@@ -9228,3 +9228,231 @@ APPS / OUR CUSTOM STYLES
   padding-right: 50px;
   top: 50%;
   transform: translateY(-50%); }
+
+.soft-shadow {
+  box-shadow: 0px 3px 6px rgba(191, 203, 216, 0.8) !important; }
+
+.white-bg {
+  background: #fff !important;
+  background-color: #fff !important; }
+
+#workflow-projects .input-select:not([multiple]) {
+  padding-right: 2.25em; }
+
+#workflow-projects .input-tags-ui, #workflow-projects .input-calendar-ui, #workflow-projects .input-multiple-line, #workflow-projects .input-select, #workflow-projects .input-single-line {
+  padding-top: calc( ( (3rem - (1px * 2)) - (1em * 1.5) ) * .5);
+  padding-bottom: calc( ( (3rem - (1px * 2)) - (1em * 1.5) ) * .5); }
+
+#workflow-projects .btn-symbol {
+  width: 3.25em;
+  border-left: none; }
+  #workflow-projects .btn-symbol i {
+    font-size: 12px; }
+
+#workflow-projects .symbol-plus {
+  font-size: 10px; }
+
+#workflow-projects .fw-ui {
+  border-left: none;
+  border-right: none; }
+
+#workflow-projects .dashboard-table-cell-max {
+  width: 230px;
+  max-width: 230px !important;
+  min-width: 230px !important; }
+
+#workflow-projects th, #workflow-projects td, #workflow-projects .table-cell, #workflow-projects .table-cell.table-cell-heading {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+#workflow-projects .table-small td, #workflow-projects .table-small .table-cell {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+#workflow-projects .dashboard-table-cell-fave .task-favorite {
+  display: block;
+  text-align: center; }
+
+#workflow-projects .dashboard-table-cell-action {
+  max-width: 60px;
+  width: 60px; }
+  #workflow-projects .dashboard-table-cell-action .thumbnail.thumbnail-small {
+    font-size: 2.5rem; }
+
+#workflow-projects .dashboard-block-sidebar-slim + #dashboard-block-main {
+  background: #F6F6F6; }
+
+#workflow-projects th, #workflow-projects .table-cell.table-cell-heading {
+  background: #EFF4F8; }
+
+#workflow-projects .module {
+  border: none;
+  margin-bottom: 25px;
+  box-shadow: 0px 3px 6px #bfcbd8; }
+
+#workflow-projects tr, #workflow-projects .table-row {
+  border-bottom: none; }
+
+#workflow-projects tr:not(:last-child), #workflow-projects .table-row:not(:last-child) {
+  border-bottom: 1px solid #DDDEE1; }
+
+#workflow-projects .table-small tr th:first-of-type {
+  width: 45px;
+  max-width: 45px;
+  min-width: 45px; }
+
+#workflow-projects .table-small tr th:last-of-type {
+  width: 25px;
+  max-width: 25px;
+  min-width: 25px; }
+
+#workflow-projects .flex-grid-compact {
+  margin-bottom: 35px; }
+
+#workflow-project-detail .container {
+  max-width: 1580px; }
+
+#workflow-project-detail .split-column {
+  display: flex; }
+
+#workflow-project-detail .split-column .left {
+  max-width: 1050px;
+  width: 100%;
+  margin-right: 20px; }
+
+#workflow-project-detail .split-column .right {
+  max-width: 350px;
+  width: 100%; }
+
+#workflow-project-detail .module-header .btn {
+  padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+  padding-bottom: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
+  min-height: 3em; }
+
+#workflow-project-detail .module-content th, #workflow-project-detail .module-content .table-cell.table-cell-heading {
+  background: #EFF4F8; }
+
+#workflow-project-detail #wiki-how-tos,
+#workflow-project-detail #documents-files {
+  margin-bottom: 50px; }
+
+#workflow-project-detail .tab, #workflow-project-detail .tabs > li {
+  font-weight: 400;
+  font-size: 18px; }
+
+#workflow-project-detail table .thumbnail.thumbnail-small {
+  font-size: 2.15rem; }
+
+#workflow-project-detail .comments-editor {
+  margin-bottom: 40px; }
+
+#workflow-project-detail .split-column .right .task-complete-toggle .flex-child:first-child {
+  width: calc(100% - 78px); }
+
+#workflow-project-detail .split-column .right .task-complete-toggle .flex-child:last-child {
+  margin-left: 10px; }
+
+#workflow-project-detail #project-actions {
+  display: flex;
+  grid-gap: 10px; }
+  #workflow-project-detail #project-actions .btn-symbol {
+    min-width: 50px;
+    width: 50px;
+    background: #fff; }
+
+#dashboard-block-main {
+  background-color: #F7F7F7; }
+
+.flex-child.align-items-center {
+  align-items: center;
+  display: flex; }
+
+.flex-child.position-relative {
+  position: relative; }
+
+.module-function.filter-dropdown-project {
+  margin-right: 10px;
+  position: unset; }
+  .module-function.filter-dropdown-project .input-group {
+    width: 585px; }
+    .module-function.filter-dropdown-project .input-group input[name="workflow-filter-projects"] {
+      flex-grow: 1; }
+  .module-function.filter-dropdown-project .filter-dropdown {
+    overflow-y: visible; }
+  .module-function.filter-dropdown-project .input-wrapper .flex-grid {
+    flex-basis: 78%;
+    min-width: 78%; }
+    .module-function.filter-dropdown-project .input-wrapper .flex-grid .flex-col-6 {
+      width: calc(50% - 5px) !important;
+      flex-basis: calc(50% - 5px) !important; }
+      .module-function.filter-dropdown-project .input-wrapper .flex-grid .flex-col-6:first-child {
+        margin-right: 10px !important; }
+      .module-function.filter-dropdown-project .input-wrapper .flex-grid .flex-col-6 > input {
+        width: 100%; }
+  .module-function.filter-dropdown-project .dropdown {
+    width: 100%;
+    padding: 40px 45px; }
+    .module-function.filter-dropdown-project .dropdown .dropdown-done {
+      padding: 15px 20px;
+      display: block;
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      color: #0480FE !important;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 20px; }
+    .module-function.filter-dropdown-project .dropdown.calendar-dropdown {
+      padding: 0;
+      top: 50px; }
+      .module-function.filter-dropdown-project .dropdown.calendar-dropdown > .input.fw-ui {
+        border: none; }
+    .module-function.filter-dropdown-project .dropdown.am-dropdown {
+      padding: 0;
+      width: 78%;
+      right: 0;
+      top: 50px; }
+      .module-function.filter-dropdown-project .dropdown.am-dropdown .list-group-item {
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        .module-function.filter-dropdown-project .dropdown.am-dropdown .list-group-item .thumbnail.thumbnail-small {
+          font-size: 2.85rem;
+          margin-right: 10px; }
+        .module-function.filter-dropdown-project .dropdown.am-dropdown .list-group-item:first-child {
+          border-top-width: 0; }
+    .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal {
+      align-items: center; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal > .input-label {
+        flex-basis: 22%;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 18px;
+        color: #4c4e4f; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-single-line {
+        height: 40px;
+        padding: 5px !important;
+        border-left: 1px solid rgba(141, 141, 141, 0.3) !important;
+        border-right: 1px solid rgba(141, 141, 141, 0.3) !important;
+        border-radius: 25px; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-c {
+        padding: 5px 17px !important; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-input,
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal input {
+        padding: 5px 12px;
+        margin: 0px 5px 1px 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px; }
+      .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-tag {
+        padding: 5px 12px;
+        margin: 4px 5px 4px 0;
+        background: #EFF4F8; }
+        .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-tag .input-tags-ui-tag-text {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          margin-right: 5px;
+          color: #000; }
+        .module-function.filter-dropdown-project .dropdown .input-wrapper.input-wrapper-horizontal .input-tags-ui-tag .input-tags-ui-tag-close {
+          color: #0480fe; }
