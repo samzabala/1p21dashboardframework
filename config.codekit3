@@ -25,7 +25,7 @@
 		"oA": 1,
 		"oAP": "/_fortesting.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/app-dashboard/activity-log.php": {
@@ -739,7 +739,7 @@
 		"oA": 1,
 		"oAP": "/assets/plugins/framework/dist/framework.min.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/assets/plugins/framework/dist/framework.plugged.min.js": {
@@ -750,7 +750,7 @@
 		"oA": 1,
 		"oAP": "/assets/plugins/framework/dist/framework.plugged.min.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/assets/plugins/framework/docs/images/alert-close.png": {
@@ -759,8 +759,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/alert-close.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -770,8 +770,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/alert-colors.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -781,8 +781,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/alert.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -792,8 +792,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/assets.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -803,8 +803,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/badge.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -814,8 +814,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-block.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -825,8 +825,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-disabled.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -836,8 +836,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group-disabled.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -847,7 +847,7 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group-multiple-resetter.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"/assets/plugins/framework/docs/images/btn-group-size.png": {
 		"ft": 32768,
@@ -855,8 +855,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group-size.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -866,7 +866,7 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group-toggle.gif",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"/assets/plugins/framework/docs/images/btn-group-vertical.png": {
 		"ft": 32768,
@@ -874,8 +874,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group-vertical.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -885,8 +885,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-group.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -896,8 +896,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -907,8 +907,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-small.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -918,8 +918,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn-symbol.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -929,8 +929,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/btn.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -940,8 +940,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/dropdown-center.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -951,8 +951,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/dropdown-flush.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -962,8 +962,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/dropdown.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -973,8 +973,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/flex-grid-compact.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -984,8 +984,8 @@
 		"oA": 0,
 		"oAP": "/assets/plugins/framework/docs/images/flex-grid-expanded.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -2165,7 +2165,7 @@
 		"oA": 1,
 		"oAP": "/assets/plugins/framework/js/framework.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/assets/plugins/framework/js/framework.plugged.js": {
@@ -2176,7 +2176,7 @@
 		"oA": 1,
 		"oAP": "/assets/plugins/framework/js/framework.plugged.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/assets/plugins/framework/readme.md": {
@@ -2736,7 +2736,7 @@
 		"oA": 1,
 		"oAP": "/assets/plugins/jquery.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/assets/scripts/apps.js": {
@@ -2747,7 +2747,7 @@
 		"oA": 1,
 		"oAP": "/assets/scripts/apps.min.js",
 		"oF": 0,
-		"sC": 3,
+		"sC": 0,
 		"tS": 0
 		},
 	"/assets/styles/_apps.scss": {
@@ -6285,7 +6285,7 @@
 		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
-		"syntaxCheckerStyle": 3,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {

@@ -111,8 +111,8 @@ function app_init_content(){
 					break;
 				case 'project-details':
 				case 'project':
-					app_get_template_part("app-{$app}/project-details-parser");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details-parser";
+					app_get_template_part("app-{$app}/project-details");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details";
 					break;
 				case 'project-new':
 					app_get_template_part("app-{$app}/project-new");

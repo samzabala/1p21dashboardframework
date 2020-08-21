@@ -11,8 +11,12 @@ app_get_component('components/board-add-edit-task');
                 <div class="module-grid">
                     <div class="module">
                         <div class="module-content">
-                            <h1 class="no-margin">sedationdentistryphoenix.com (Quicklaunch SEO)</h1>
-                            <p class="text-wrap-ellipsis color-neutral">Dental on Central (DEC)  |  Project #0000  |  Created by Derrick Tran on 05/29/20</p>
+                            <h1 class="no-margin REPLACE">sedationdentistryphoenix.com (Quicklaunch SEO)</h1>
+                            <p class="text-wrap-ellipsis color-neutral">
+                                <span class="REPLACE">Dental on Central (DEC)</span> | 
+                                <span class="REPLACE">Project #0000</span> | 
+                                Created by <span class="REPLACE">Derrick Tran</span> on <span class="REPLACE">05/29/20</span>
+                            </p>
                             <div class="accordion-group accordion-group-no-close">
                                 <!-- @NOTE: on of the .tabs li  along with paired `.accordion` must be `.open`. in this case today is default. modify if needed -->
                                 <ul class="tabs	tabs-responsive no-border">
@@ -139,12 +143,12 @@ app_get_component('components/board-add-edit-task');
                                                 </tr>
                                                 <?php for($i=1; $i<=2; $i++){ ?>
                                                     <tr>
-                                                        <td class="text-align-center dashboard-table-cell-action">
+                                                        <td class="text-align-center">
                                                             <a href="<?=app_create_link(array('template'=>'project')); ?>" class="open-task text-wrap-ellipsis">
                                                                 <span class="REPLACE">5/12/20</span>
                                                             </a>
                                                         </td>
-                                                        <td class="text-align-center dashboard-table-cell-action">
+                                                        <td class="text-align-center dashboard-table-cell-thumbnail">
                                                             <a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
                                                                 <div class="thumbnail-image">
                                                                     <img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
@@ -164,7 +168,7 @@ app_get_component('components/board-add-edit-task');
                                                                 <span class="REPLACE">Duis aute irure dolor in reprehendert </span>
                                                             </span>
                                                         </td>
-                                                        <td class="dashboard-table-cell-action">
+                                                        <td>
                                                             <?php app_get_component('components/tooltip-action'); ?>
                                                         </td>
                                                     </tr>
@@ -216,7 +220,7 @@ app_get_component('components/board-add-edit-task');
                                                             <span class="REPLACE">Backlog</span>
                                                         </a>
                                                     </td>
-                                                    <td class="dashboard-table-cell-action text-align-center position-relative">
+                                                    <td class="dashboard-table-cell-thumbnail text-align-center position-relative">
                                                         <a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
                                                             <div class="thumbnail-image">
                                                                 <img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
@@ -231,7 +235,7 @@ app_get_component('components/board-add-edit-task');
                                                             <span class="REPLACE">5/29/20</span>
                                                         </span>
                                                     </td>
-                                                    <td class="dashboard-table-cell-action text-align-center position-relative">
+                                                    <td class="dashboard-table-cell-thumbnail text-align-center position-relative">
                                                         <a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
                                                             <div class="thumbnail-image">
                                                                 <img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
@@ -268,7 +272,7 @@ app_get_component('components/board-add-edit-task');
                                                             <span class="REPLACE">Backlog</span>
                                                         </a>
                                                     </td>
-                                                    <td class="dashboard-table-cell-action text-align-center position-relative">
+                                                    <td class="dashboard-table-cell-thumbnail text-align-center position-relative">
                                                         <a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
                                                             <div class="thumbnail-image">
                                                                 <img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
@@ -283,7 +287,7 @@ app_get_component('components/board-add-edit-task');
                                                             <span class="REPLACE">5/29/20</span>
                                                         </span>
                                                     </td>
-                                                    <td class="dashboard-table-cell-action text-align-center position-relative">
+                                                    <td class="dashboard-table-cell-thumbnail text-align-center position-relative">
                                                         <a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
                                                             <div class="thumbnail-image">
                                                                 <img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">

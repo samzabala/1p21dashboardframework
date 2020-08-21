@@ -25,14 +25,14 @@ app_get_component('components/board-add-edit-task');
 	<div
 		id="workflow-dash-fav-projects"
 		class="module"
-		data-grid-area-md="opentasks">
+		data-grid-area-md="favoriteprojects">
 		<div class="module-header">
-			<h3 class="module-title open" data-toggle="accordion" data-href="#open-tasks">
+			<h3 class="module-title open" data-toggle="accordion" data-href="#favorite-projects">
 				Favorite Projects <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</h3>
 		</div>
-		<div class="module-content accordion open no-padding" id="open-tasks">
-			<div class="table-wrapper dashboard-table-wrapper-gutterless no-margin">
+		<div class="module-content accordion open" id="favorite-projects">
+			<div class="table-wrapper dashboard-table-wrapper-gutterless">
 				<table class="table-small data-open-tasks">
 					<tr>
 						<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
@@ -78,20 +78,20 @@ app_get_component('components/board-add-edit-task');
 									</span>
 								</span>
 							</td>
-							<td class="dashboard-table-cell-action text-align-center position-relative">
+							<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
 								<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
 									<div class="thumbnail-image">
-										<img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+										<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
 									</div>
 									<span class="thumbnail-text profile-name-initial">
 										<span class="REPLACE">PN</span>
 									</span>
 								</a>
 							</td>
-							<td class="dashboard-table-cell-action text-align-center position-relative">
+							<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
 								<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
 									<div class="thumbnail-image">
-										<img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+										<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
 									</div>
 									<span class="thumbnail-text profile-name-initial">
 										<span class="REPLACE">PN</span>
@@ -108,14 +108,14 @@ app_get_component('components/board-add-edit-task');
 	<div
 		id="workflow-dash-projects"
 		class="module"
-		data-grid-area-md="opentasks">
+		data-grid-area-md="projects">
 		<div class="module-header">
-			<h3 class="module-title open" data-toggle="accordion" data-href="#open-tasks">
+			<h3 class="module-title open" data-toggle="accordion" data-href="#projects">
 				Projects <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</h3>
 		</div>
-		<div class="module-content accordion open no-padding" id="open-tasks">
-				<div class="table-wrapper dashboard-table-wrapper-gutterless no-margin">
+		<div class="module-content accordion open" id="projects">
+				<div class="table-wrapper dashboard-table-wrapper-gutterless">
 					<table class="table-small data-open-tasks">
 						<tr>
 							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
@@ -161,7 +161,7 @@ app_get_component('components/board-add-edit-task');
 										</span>
 									</span>
 								</td>
-								<td class="dashboard-table-cell-action text-align-center position-relative">
+								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
 									<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
 										<div class="thumbnail-image">
 											<img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
@@ -171,7 +171,7 @@ app_get_component('components/board-add-edit-task');
 										</span>
 									</a>
 								</td>
-								<td class="dashboard-table-cell-action text-align-center position-relative">
+								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
 									<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
 										<div class="thumbnail-image">
 											<img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">

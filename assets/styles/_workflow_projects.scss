@@ -10,12 +10,6 @@ $soft-shadow: 0px 3px 6px rgba(#BFCBD8, .80);
 }
 
 #workflow-projects {
-    .btn {
-        font-size: 14px;
-        padding-top: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
-        padding-bottom: calc( ( (3em - (1px * 2)) - (1em * 1.25) ) * .5);
-        min-height: 3em;
-    }
     .input-select:not([multiple]) {
         padding-right: 2.25em;
     }
@@ -181,9 +175,62 @@ $soft-shadow: 0px 3px 6px rgba(#BFCBD8, .80);
                 flex-grow: 1;
             }
         }
+        .filter-dropdown {
+            overflow-y: visible;
+        }
+        .input-wrapper {
+            .flex-grid {
+                flex-basis: 78%;
+                min-width: 78%;
+                .flex-col-6 {
+                    width: calc(50% - 5px) !important;
+                    flex-basis: calc(50% - 5px) !important;
+                    &:first-child {
+                        margin-right: 10px !important;
+                    }
+                    > input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
         .dropdown {
             width: 100%;
             padding: 40px 45px;
+            .dropdown-done {
+                padding: 15px 20px;
+                display: block;
+                text-align: center;
+                font-family: "Open Sans", sans-serif;
+                color: #0480FE !important;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 20px;
+            }
+            &.calendar-dropdown {
+                padding: 0;
+                top: 50px;
+                > .input.fw-ui {
+                    border: none;
+                }
+            }
+            &.am-dropdown {
+                padding: 0;
+                width: 78%;
+                right: 0;
+                top: 50px;
+                .list-group-item {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    .thumbnail.thumbnail-small {
+                        font-size: 2.85rem;
+                        margin-right: 10px;
+                    }
+                    &:first-child {
+                        border-top-width: 0;
+                    }
+                }
+            }
             .input-wrapper.input-wrapper-horizontal {
                 align-items: center;
                 > .input-label {
@@ -214,7 +261,7 @@ $soft-shadow: 0px 3px 6px rgba(#BFCBD8, .80);
                 }
                 .input-tags-ui-tag {
                     padding: 5px 12px;
-                    margin: 4px 5px 1px 0;
+                    margin: 4px 5px 4px 0;
                     background: #EFF4F8;
                     .input-tags-ui-tag-text {
                         font-family: "Open Sans", sans-serif;
