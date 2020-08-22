@@ -139,24 +139,10 @@
 											<span class="color-neutral font-style-italic">Untagged</span>
 								</td>
 								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-									<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-										<div class="thumbnail-image">
-											<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-										</div>
-										<span class="thumbnail-text profile-name-initial">
-											<span class="REPLACE">PN</span>
-										</span>
-									</a>
+									<?php app_get_component('components/profile-image-small') ?>
 								</td>
 								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-									<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-										<div class="thumbnail-image">
-											<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-										</div>
-										<span class="thumbnail-text profile-name-initial">
-											<span class="REPLACE">PN</span>
-										</span>
-									</a>
+									<?php app_get_component('components/profile-image-small') ?>
 								</td>
 							</tr>
 
@@ -262,24 +248,10 @@
 														<span class="color-neutral font-style-italic">Untagged</span>
 											</td>
 											<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-												<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-													<div class="thumbnail-image">
-														<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-													</div>
-													<span class="thumbnail-text profile-name-initial">
-														<span class="REPLACE">PN</span>
-													</span>
-												</a>
+												<?php app_get_component('components/profile-image-small') ?>
 											</td>
 											<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-												<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-													<div class="thumbnail-image">
-														<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-													</div>
-													<span class="thumbnail-text profile-name-initial">
-														<span class="REPLACE">PN</span>
-													</span>
-												</a>
+												<?php app_get_component('components/profile-image-small') ?>
 											</td>
 										</tr>
 									<?php } ?>
@@ -410,24 +382,10 @@
 											<span class="color-neutral font-style-italic">Untagged</span>
 								</td>
 								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-									<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-										<div class="thumbnail-image">
-											<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-										</div>
-										<span class="thumbnail-text profile-name-initial">
-											<span class="REPLACE">PN</span>
-										</span>
-									</a>
+									<?php app_get_component('components/profile-image-small') ?>
 								</td>
 								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-									<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-										<div class="thumbnail-image">
-											<img class="profile-image REPLACE" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-										</div>
-										<span class="thumbnail-text profile-name-initial">
-											<span class="REPLACE">PN</span>
-										</span>
-									</a>
+									<?php app_get_component('components/profile-image-small') ?>
 								</td>
 							</tr>
 

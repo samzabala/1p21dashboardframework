@@ -77,7 +77,7 @@
 											<!-- @LOOP tr -->
 												<tr>
 													<td class="dashboard-table-cell-max-larger">
-														<a href="<?=app_create_link(array('template'=>'page')); ?>" class="project-wiki-name text-wrap-ellipsis">
+														<a href="<?=app_create_link(array('template'=>'wiki')); ?>" class="project-wiki-name text-wrap-ellipsis">
 															<span class="REPLACE">Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name </span>
 														</a>
 													</td>
@@ -111,7 +111,7 @@
 							</div>
 
 
-						<!-- project Docs -->
+						<!-- project Docs/files -->
 							<div class="p project-library-header">
 								<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 									<div class="flex-col-xs-12 flex-col-md-6">
@@ -139,8 +139,15 @@
 											<!-- @LOOP tr -->
 												<tr>
 													<td class="dashboard-table-cell-max-larger">
-														<a href="<?=app_create_link(array('template'=>'page')); ?>" class="project-doc-name text-wrap-ellipsis">
-															<span class="REPLACE">Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name </span>
+														<!-- @note
+															.project-doc-name
+																attributes to modify
+																	href
+																		
+
+														-->
+														<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
+															<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name </span>
 														</a>
 													</td>
 													<td class="text-align-center project-doc-date-created">
@@ -154,8 +161,8 @@
 													<?php for($i=1; $i<=5; $i++){ ?>
 														<tr>
 															<td class="dashboard-table-cell-max-larger">
-																<a href="<?=app_create_link(array('template'=>'wiki')); ?>" class="project-doc-name text-wrap-ellipsis">
-																	<span class="REPLACE">Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name Wiki with a really long name </span>
+																<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
+																	<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name </span>
 																</a>
 															</td>
 															<td class="text-align-center project-doc-date-created">
@@ -172,31 +179,84 @@
 									<p class="p color-neutral font-style-italic">No projects wikis yet.</p>
 							</div>
 
+						<!-- project Docs/files -->
+							<div class="p project-library-header">
+								<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+									<div class="flex-col-xs-12 flex-col-md-6">
+										<h3 class="module-title open" data-toggle="accordion" data-href="#project-notes">
+											Project Notes <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+										</h3>
+									</div>
+									<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
+										<?php app_get_component('components/linkto-add-notes') ?>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion open project-library-section p" id="project-notes" data-accordion-change-hash="false">
+								<!-- @if there are entries -->
+									<div class="table-wrapper dashboard-table-wrapper-gutterless">
+
+										<table class="">
+											<tr>
+												<th class="dashboard-table-cell-max text-nowrap text-align-center">Created</th>
+												<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
+												<th class="dashboard-table-cell-max text-nowrap">Task</th>
+												<th class="dashboard-table-cell-max text-nowrap">Note Title</th>
+												<th class="dashboard-table-cell-action text-nowrap table-cell-no-gutter">&nbsp;<span class="sr-only">Actions</span></th>
+											</tr>
+
+											<!-- @LOOP tr -->
+												<tr>
+													<td class="dashboard-table-cell-max-larger">
+														<!-- @note
+															.project-doc-name
+																attributes to modify
+																	href
+																		
+
+														-->
+														<a href="REPLACELinkToActualFile" class="project-note-name text-wrap-ellipsis">
+															<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name </span>
+														</a>
+													</td>
+													<td class="text-align-center project-note-date-created">
+														<span class="REPLACE">5/29/20</span>
+													</td>
+													<td class="text-align-center project-note-date-updated">
+														<span class="REPLACE">5/29/20</span>
+													</td>
+												</tr>
+													<!-- @PLACEHOLDER: DELETE WHEN READY -->
+													<?php for($i=1; $i<=5; $i++){ ?>
+														<tr>
+															<td class="dashboard-table-cell-max-larger">
+																<a href="REPLACELinkToActualFile" class="project-note-name text-wrap-ellipsis">
+																	<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name </span>
+																</a>
+															</td>
+															<td class="text-align-center project-note-date-created">
+																<span class="REPLACE">5/29/20</span>
+															</td>
+															<td class="text-align-center project-note-date-updated">
+																<span class="REPLACE">5/29/20</span>
+															</td>
+														</tr>
+													<?php } ?>
+										</table>
+									</div>
+								<!-- @else no entries -->
+									<p class="p color-neutral font-style-italic">No projects wikis yet.</p>
+							</div>
+
 
 
 
 
 <h2>DEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATE</h2>
 
-						<div class="module-header">
-							<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-								<div class="flex-child">
-									<h3 class="module-title open" data-toggle="accordion" data-href="#documents-files">
-										Documents & Files <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
-									</h3>
-								</div>
-								<div class="flex-child">
-									<a href="#" data-toggle="modal" class="btn btn-primary-outline">
-										Add Documents
-										<i class="symbol symbol-plus"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="module-content accordion open no-padding" id="documents-files">
-							<div class="table-wrapper dashboard-table-wrapper-gutterless">
-							</div>
-						</div>
+						
+
 						<div class="module-header">
 							<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 								<div class="flex-child">
