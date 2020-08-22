@@ -111,6 +111,7 @@
 							</div>
 
 
+							
 						<!-- project Docs/files -->
 							<div class="p project-library-header">
 								<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
@@ -179,6 +180,8 @@
 									<p class="p color-neutral font-style-italic">No projects wikis yet.</p>
 							</div>
 
+
+
 						<!-- project Docs/files -->
 							<div class="p project-library-header">
 								<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
@@ -199,7 +202,7 @@
 
 										<table class="">
 											<tr>
-												<th class="dashboard-table-cell-max text-nowrap text-align-center">Created</th>
+												<th class="text-nowrap">Created</th>
 												<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
 												<th class="dashboard-table-cell-max text-nowrap">Task</th>
 												<th class="dashboard-table-cell-max text-nowrap">Note Title</th>
@@ -208,140 +211,87 @@
 
 											<!-- @LOOP tr -->
 												<tr>
-													<td class="dashboard-table-cell-max-larger">
-														<!-- @note
-															.project-doc-name
-																attributes to modify
-																	href
-																		
-
-														-->
-														<a href="REPLACELinkToActualFile" class="project-note-name text-wrap-ellipsis">
-															<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name </span>
+													<td>
+														<span class="project-note-date-created">
+															<span class="REPLACE">5/12/20</span>
+														</span>
+													</td>
+													<td class="text-align-center dashboard-table-cell-thumbnail">
+														<?php app_get_component('components/profile-image-small') ?>
+													</td>
+													<td>
+														<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
+															<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
 														</a>
 													</td>
-													<td class="text-align-center project-note-date-created">
-														<span class="REPLACE">5/29/20</span>
+													<td>
+														<span href="<?=app_create_link(array('template'=>'project')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+															<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
+														</span>
 													</td>
-													<td class="text-align-center project-note-date-updated">
-														<span class="REPLACE">5/29/20</span>
+													<td class="dashboard-table-cell-action ">
+														<?php app_get_component('components/tooltip-action-with-share'); ?>
 													</td>
 												</tr>
 													<!-- @PLACEHOLDER: DELETE WHEN READY -->
 													<?php for($i=1; $i<=5; $i++){ ?>
 														<tr>
-															<td class="dashboard-table-cell-max-larger">
-																<a href="REPLACELinkToActualFile" class="project-note-name text-wrap-ellipsis">
-																	<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name </span>
+															<td>
+																<span class="project-note-date-created">
+																	<span class="REPLACE">5/12/20</span>
+																</span>
+															</td>
+															<td class="text-align-center dashboard-table-cell-thumbnail">
+																<?php app_get_component('components/profile-image-small') ?>
+															</td>
+															<td>
+																<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
+																	<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
 																</a>
 															</td>
-															<td class="text-align-center project-note-date-created">
-																<span class="REPLACE">5/29/20</span>
+															<td>
+																<span href="<?=app_create_link(array('template'=>'project')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+																	<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
+																</span>
 															</td>
-															<td class="text-align-center project-note-date-updated">
-																<span class="REPLACE">5/29/20</span>
+															<td class="dashboard-table-cell-action ">
+																<?php app_get_component('components/tooltip-action-with-share'); ?>
 															</td>
 														</tr>
 													<?php } ?>
 										</table>
 									</div>
 								<!-- @else no entries -->
-									<p class="p color-neutral font-style-italic">No projects wikis yet.</p>
+									<p class="p color-neutral font-style-italic">No notes yet.</p>
 							</div>
 
-
-
-
-
-<h2>DEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATEDEPRECATE</h2>
-
-						
-
-						<div class="module-header">
-							<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-								<div class="flex-child">
-									<h3 class="module-title open" data-toggle="accordion" data-href="#project-notes">
-										Project Notes <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
-									</h3>
-								</div>
-								<div class="flex-child">
-									<a href="#" data-toggle="modal" class="btn btn-primary-outline">
-										Add Note
-										<i class="symbol symbol-plus"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="module-content accordion open no-padding" id="project-notes">
-							<div class="table-wrapper dashboard-table-wrapper-gutterless">
-								<table class="data-open-tasks">
-									<tr>
-										<th class="text-nowrap text-align-center">Created</th>
-										<th class="text-nowrap text-align-center">Author</th>
-										<th class="text-nowrap">Task</th>
-										<th class="text-nowrap">Note Title</th>
-										<th class="text-nowrap table-cell-no-gutter">&nbsp;</th>
-									</tr>
-									<?php for($i=1; $i<=2; $i++){ ?>
-										<tr>
-											<td class="text-align-center">
-												<a href="<?=app_create_link(array('template'=>'project')); ?>" class="open-task text-wrap-ellipsis">
-													<span class="REPLACE">5/12/20</span>
-												</a>
-											</td>
-											<td class="text-align-center dashboard-table-cell-thumbnail">
-												<a class="thumbnail thumbnail-small" href="<?=app_create_link(array('template'=>'profile')) ?>">
-													<div class="thumbnail-image">
-														<img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
-													</div>
-													<span class="thumbnail-text profile-name-initial">
-														<span class="REPLACE">PN</span>
-													</span>
-												</a>
-											</td>
-											<td>
-												<a href="<?=app_create_link(array('template'=>'project')) ?>" class="open-project text-wrap-ellipsis">
-													<span class="REPLACE">Transfer Content</span>
-												</a>
-											</td>
-											<td>
-												<span href="<?=app_create_link(array('template'=>'project')) ?>" class="open-client text-wrap-ellipsis">
-													<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
-												</span>
-											</td>
-											<td>
-												<?php app_get_component('components/tooltip-action'); ?>
-											</td>
-										</tr>
-									<?php } ?>
-								</table>
-							</div>
-						</div>
-					</div>
+					
 				</div>
+			</div>
 		</div>
 	</div>
+
 	<div class="module">
 		<div class="module-header no-margin-bottom">
-			<h3 class="module-title open" data-toggle="accordion" data-href="#open-tasks">
-				Favorite Projects <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+			<h3 class="module-title open" data-toggle="accordion" data-href="#project-tasks">
+				Tasks <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</h3>
 		</div>
-		<div class="module-content">
+		<div class="accordion open" id="project-tasks">
 			<div class="accordion-group accordion-group-no-close">
 				<!-- @NOTE: on of the .tabs li  along with paired `.accordion` must be `.open`. in this case today is default. modify if needed -->
 				<ul class="tabs	tabs-responsive no-border">
-					<li class="tab open" data-toggle="accordion" data-href="#open-tasks"> 
-						<a href="#open-tasks" >Open Tasks</a>
+					<li class="tab open" data-toggle="accordion" data-href="#project-open-tasks"> 
+						<a href="#project-open-tasks" >Open Tasks</a>
 					</li>
-					<li class="tab" data-toggle="accordion" data-href="#closed-tasks">
-						<a href="#closed-tasks">Closed & Archived Tasks</a>
+					<li class="tab" data-toggle="accordion" data-href="#project-closed-tasks">
+						<a href="#project-closed-tasks">Closed & Archived Tasks</a>
 					</li>
 				</ul>
 				<br>
-				<div class="accordion open" id="open-tasks">
+				<div class="accordion open" id="project-open-tasks">
 					<div class="table-wrapper dashboard-table-wrapper-gutterless">
-						<table class="data-open-tasks">
+						<table>
 							<tr>
 								<th class="text-nowrap">Name</th>
 								<th class="text-nowrap">Status</th>
@@ -391,9 +341,9 @@
 						</table>
 					</div>
 				</div>
-				<div class="accordion" id="closed-tasks">
+				<div class="accordion" id="project-closed-tasks">
 					<div class="table-wrapper dashboard-table-wrapper-gutterless">
-						<table class="data-closed-tasks">
+						<table>
 							<tr>
 								<th class="text-nowrap">Name</th>
 								<th class="text-nowrap">Status</th>

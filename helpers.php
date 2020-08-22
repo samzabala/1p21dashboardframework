@@ -149,8 +149,12 @@ function app_init_content(){
 
 				case 'workflux':
 				case 'clients':
+				case 'client-view':
+				case 'client':
 				case 'notes':
+				case 'profile':
 				case 'analytics':
+				case 'workflow':
 					?>
 						<div class="module">
 

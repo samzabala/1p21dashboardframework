@@ -62,7 +62,7 @@
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @NOTE nbote sure where too link yet -->
-									<a href="#" class="text-wrap-ellipsis project-client">
+									<a href="<?=app_create_link(array('template'=>'client-view')) ?>" class="text-wrap-ellipsis project-client">
 										<span class="REPLACE">Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name  </span>
 									</a>
 								</td>
@@ -171,7 +171,7 @@
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @NOTE nbote sure where too link yet -->
-												<a href="#" class="text-wrap-ellipsis project-client">
+												<a href="<?=app_create_link(array('template'=>'client-view')) ?>" class="text-wrap-ellipsis project-client">
 													<span class="REPLACE">Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name  </span>
 												</a>
 											</td>
@@ -305,7 +305,7 @@
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @NOTE nbote sure where too link yet -->
-									<a href="#" class="text-wrap-ellipsis project-client">
+									<a href="<?=app_create_link(array('template'=>'client-view')) ?>" class="text-wrap-ellipsis project-client">
 										<span class="REPLACE">Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name  </span>
 									</a>
 								</td>
@@ -414,7 +414,7 @@
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @NOTE nbote sure where too link yet -->
-												<a href="#" class="text-wrap-ellipsis project-client">
+												<a href="<?=app_create_link(array('template'=>'client-view')) ?>" class="text-wrap-ellipsis project-client">
 													<span class="REPLACE">Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name Client with a really long name  </span>
 												</a>
 											</td>
