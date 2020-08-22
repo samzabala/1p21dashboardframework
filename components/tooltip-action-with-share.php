@@ -53,7 +53,7 @@
 				<label for="task-title" class="input-label">Share with:</label>
 
 				
-				<div class="input-group input-group-horizontal input-group-block">
+				<div class="input-group input-group-horizontal input-block">
 					<input type="email" class="input input-single-line" />
 					<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
 				</div>

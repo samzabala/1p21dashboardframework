@@ -142,10 +142,10 @@ eg:
 These are classes that need to be found and replaced for framework 2.0.0
 ```
 btn-symbol-round => btn-round
-btn-group-block => btn-block
-btn-group-block-mobile => btn-block-mobile
-input-group-block => input-block
-input-group-block-mobile => input-block-mobile
+btn-block => btn-block
+btn-block-mobile => btn-block-mobile
+input-block => input-block
+input-block-mobile => input-block-mobile
 ```
 
 

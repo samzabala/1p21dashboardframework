@@ -1,7 +1,7 @@
 <div class="module-grid" id="workflow-page">
 	<div id="worflow-page-content" class="module">
 		<div class="module-content">
-			<h1 class="page-title">Page Title</h1>
+			<h1 class="page-title no-margin-top">Page Title</h1>
 			<div class="page-content">
 
 

@@ -19,10 +19,7 @@ app_get_component('components/board-add-edit-task');
 		data-grid-column-md="main"
 		data-grid-row-md="1 / span 6">
 
-		<div class="module-grid">
-
-		<!-- @TODO UPDATE WITH UPDATED MAIN MODULES -->
-		</div>
+		<?php app_get_component('components/project-main-view'); ?>
 	</div>
 
 	<!-- Team Info -->

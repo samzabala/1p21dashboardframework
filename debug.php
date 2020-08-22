@@ -941,7 +941,7 @@
            value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
     <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
       <label class="input-label">Share note with:</label>
-      <div class="input-group input-group-horizontal input-group-block">
+      <div class="input-group input-group-horizontal input-block">
         <input type="text" name="share_note_with_usernames"
                value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
                class="input input-tags"
@@ -961,7 +961,7 @@
 	<div class="module-function filter-dropdown-project">
     <!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
     <!-- @IF label the filter -->
-		<div class="input-group input-group-horizontal input-group-block-mobile text-align-left">
+		<div class="input-group input-group-horizontal input-block-mobile text-align-left">
 			<button class="btn btn-default" data-toggle="dropdown">
 				<span>Filter (3)</span>
 				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
@@ -992,7 +992,7 @@
 	<div class="module-function filter-dropdown-project">
 		<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
 		<!-- @IF label the filter -->
-		<div class="input-group input-group-horizontal input-group-block-mobile text-align-left">
+		<div class="input-group input-group-horizontal input-block-mobile text-align-left">
 			<button class="btn btn-default" data-toggle="dropdown">
 				<span>Filter (3)</span>
 				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
@@ -1053,7 +1053,7 @@
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 					<label class="input-label">Share note with:</label>
 
-					<div class="input-group input-group-horizontal input-group-block">
+					<div class="input-group input-group-horizontal input-block">
 						<input type="text" name="share_note_with_usernames"
 							value="asshit,brah,shiit"
 							class="input input-tags"

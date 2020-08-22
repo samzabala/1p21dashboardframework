@@ -109,7 +109,13 @@ function app_init_content(){
 					app_get_template_part("app-{$app}/project-list");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-list";
 					break;
+				case 'project-edit':
+				case 'project-new':
+					app_get_template_part("app-{$app}/project-edit");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-edit";
+					break;
 				case 'project-details':
+				case 'project-view':
 				case 'project':
 					app_get_template_part("app-{$app}/project-details-parser");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details-parser";
@@ -134,6 +140,9 @@ function app_init_content(){
 
 				// pages im not sure of but good to have fallbacks for or at least a basic page to render
 				case 'doc':
+				case 'wiki':
+				case 'note':
+				case 'page':
 					app_get_template_part("app-{$app}/page");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/page";
 					break;
