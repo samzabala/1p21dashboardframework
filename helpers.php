@@ -27,7 +27,7 @@ function app_get_template_part($filename = '', $slug = '',$data = array() ){
 
 
 //include a file
-function app_get_component($filename = '', $slug ='',$once = false,$data = array()){
+function app_get_component($filename = '', $slug ='',$once = false, $data = array()){
 
 	if($filename !== ''){
 
@@ -39,11 +39,11 @@ function app_get_component($filename = '', $slug ='',$once = false,$data = array
 		
 		$source .='.php';
 
-		if( file_exists( $source ) ){
+		if ($data) {
+			extract($data);
+		}
 
-			if ($data) {
-				extract($data);
-			}
+		if( file_exists( $source ) ){
 
 			if ($once == true) {
 				include_once $source;
@@ -102,46 +102,58 @@ function app_init_content(){
 				case 'home':
 				case null:
 					app_get_template_part("app-{$app}/home");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/home";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
 					break;
-				case 'project-list':
 				case 'projects':
-					app_get_template_part("app-{$app}/project-list");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-list";
+					app_get_template_part("app-{$app}/projects");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/projects";
+					break;
+				case 'project-edit':
+				case 'project-new':
+					app_get_template_part("app-{$app}/project-edit");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-edit";
 					break;
 				case 'project-details':
+				case 'project-view':
 				case 'project':
-					app_get_template_part("app-{$app}/project-details-parser");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/project-details-parser";
+					app_get_template_part("app-{$app}/project-view");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-view";
 					break;
 				case '_DEMO-task':
 				case '_DEMO-alert':
 					app_get_template_part("app-{$app}/{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					break;
 
 				case 'task':
 				case 'task-view':
 					app_get_template_part("app-{$app}/task-view");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/task-view";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-view";
 					break;
 
 				case 'task-new':
 				case 'task-edit':
 					app_get_template_part("app-{$app}/task-edit");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/task-edit";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-edit";
 					break;
 
 				// pages im not sure of but good to have fallbacks for or at least a basic page to render
 				case 'doc':
+				case 'wiki':
+				case 'note':
+				case 'page':
 					app_get_template_part("app-{$app}/page");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/page";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/page";
 					break;
 
 				case 'workflux':
 				case 'clients':
+				case 'client-view':
+				case 'client':
 				case 'notes':
+				case 'profile':
 				case 'analytics':
+				case 'workflow':
 					?>
 						<div class="module">
 
@@ -152,17 +164,18 @@ function app_init_content(){
 							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
 						</div>
 					<?php
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "template design in progress. temporarily redirected";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
 					break;
 
 				case 'debug':
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']="{$template_part}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
 					break;
 
 				default:
 					app_get_template_part('global/error');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
 					break;
 	
 			endswitch;
@@ -174,7 +187,7 @@ function app_init_content(){
 				case 'my-time':
 				case 'home':
 					app_get_template_part("app-{$app}/home");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/home";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
 				break;
 				case 'project':
 				case 'profile':
@@ -190,23 +203,24 @@ function app_init_content(){
 						<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
 					</div>
 					<?php
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "template design in progress. temporarily redirected";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
 					break;
 
 				case 'notes':
 				case 'team':
 					app_get_template_part("app-{$app}/{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 				break;
 
 
 				case 'debug':
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']="{$template_part}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
 					break;
 				default:
 					app_get_template_part('global/error');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
 					break;
 
 			endswitch;
@@ -214,6 +228,7 @@ function app_init_content(){
 
 
 		//dashboard shit
+		case 'dashboard':
 		default:
 
 			if($slug == ''){
@@ -225,14 +240,14 @@ function app_init_content(){
 				case 'on-page':
 				case 'social-media':
 					app_get_template_part("app-{$app}/projects-scoreboard");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']='projects-scoreboard';
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ='projects-scoreboard';
 					break;
 				
 				case 'keywords':
 				case 'keywords-improved':
 				case 'keywords-lost':
 					app_get_template_part("app-{$app}/keywords");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']='keywords';
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ='keywords';
 					break;
 
 				case 'chart':
@@ -243,20 +258,20 @@ function app_init_content(){
 				case 'unique-links':
 				case 'activity-log':
 					app_get_template_part("app-{$app}/{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']= "app-{$app}/{$template_part}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					break;
 
 				case null:
 				case 'home':
 					app_get_template_part("app-{$app}/home",$slug);
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']="app-{$app}/home-{$slug}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="app-{$app}/home-{$slug}";
 
 					break;
 				case 'profile':
 				case 'project':
 				case 'projects':
 					app_get_template_part("app-{$app}/{$template_part}",$slug);
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']="app-{$app}/{$template_part}-{$slug}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="app-{$app}/{$template_part}-{$slug}";
 					break;
 
 					
@@ -264,17 +279,18 @@ function app_init_content(){
 				case 'debug':
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE']="{$template_part}";
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
 					break;
 				default:
 					app_get_template_part('global/error');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
 					break;
 	
 			endswitch;
-
 			break;
 
 	endswitch;
+
 
 }
 

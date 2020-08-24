@@ -1,5 +1,15 @@
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
+
+$args = app_parse_args($data,$defs);
+
+
+?>
 <div class="module" 
-	<?php if(FWAPPS_TEMPLATE == 'task-edit'): //only when in its own basic page ?>
+	<?php if(FWAPPS_TEMPLATE == 'post-edit'): //only when in its own basic page ?>
 		data-grid-area-md="auto / side"
 	<?php endif; ?>
 >
@@ -14,14 +24,14 @@
 						<h5 class="input-label">Followers</h5>
 					</div>
 					<div class="flex-child">
-						<input id="REPLACEMODE-REPLACEwithPostType-followers-id" name="REPLACEMODE-REPLACEwithPostType-followers-id" type="hidden" />
+						<input id="<?=$args['post']?>-followers-id" name="<?=$args['post']?>-followers-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Followers <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
 					</div>
 				</div>
 			</div>
 			
-			<div class="task-followers">
+			<div class="post-followers">
 						
 					<?php app_get_component('components/profile-named-for-edit') ?>
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -43,7 +53,7 @@
 						<h5 class="input-label">Wiki/How-Tos</h5>
 					</div>
 					<div class="flex-child">
-						<input id="REPLACEMODE-REPLACEwithPostType-wiki-id" name="REPLACEMODE-REPLACEwithPostType-wiki-id" type="hidden" />
+						<input id="<?=$args['post']?>-wiki-id" name="<?=$args['post']?>-wiki-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-wiki-multiple'); ?>
 					</div>
@@ -52,7 +62,7 @@
 		
 
 				<!-- if has docs -->
-					<ul class="task-wiki unstyled">
+					<ul class="post-wiki unstyled">
 						<li>
 							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
 								<div class="flex-col-xs-9">
@@ -87,7 +97,8 @@
 			<hr>
 
 
-
+		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
+		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-y">
 					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
@@ -95,7 +106,7 @@
 							<h5 class="input-label">Reminders</h5>
 						</div>
 						<div class="flex-child">
-							<input id="REPLACEMODE-REPLACEwithPostType-followers-id" name="REPLACEMODE-REPLACEwithPostType-followers-id" type="hidden" />
+							<input id="<?=$args['post']?>-followers-id" name="<?=$args['post']?>-followers-id" type="hidden" />
 							<a href="#" data-toggle="modal" data-modal-title="Add reminder" class="btn btn-primary-outline btn-small">Reminder <i class="symbol symbol-plus"></i></a>
 							<?php app_get_component('components/modal-workflow-edit-reminder'); ?>
 						</div>
@@ -104,7 +115,7 @@
 
 
 				<!-- if has reminders -->
-					<div class="task-reminders">
+					<div class="post-reminders">
 						<?php app_get_component('components/block-reminder-for-edit'); ?>
 					
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -112,5 +123,6 @@
 								<?php app_get_component('components/block-reminder-for-edit'); ?>
 							<?php } ?>
 					</div>
+		<?php endif; ?>
 	</div>
 </div>

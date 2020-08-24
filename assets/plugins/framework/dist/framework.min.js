@@ -35,7 +35,11 @@
 		frameWork.settings.dynamicHash
 		|| true;
 	frameWork.settings.uiClass =
-		`${frameWork.settings.prefix}-ui`;
+		frameWork.settings.uiClass
+		|| `${frameWork.settings.prefix}-ui`; //for styles
+	frameWork.settings.uiJsClass =
+		frameWork.settings.uiJsClass
+		|| frameWork.settings.uiClass.replace('-','_'); // for scripting events and shit
 
 	_.modifierKeys = {
 		ctrl: false,
@@ -780,17 +784,18 @@
 		let toReturn;
 
 		if (triggerer) {
-			if (
+			if ( //idk what the fuck this was for but it stays for now
 				triggerer
-					.closest(`.input-group${frameWork.settings.uiClass}`)
-			) {
-			} else if (
+					.closest(`.input-group${frameWork.settings.uiJsClass}`)
+			){
+			} else if ( //calendar fix
 				triggerer
-					.closest(`.${frameWork.settings.uiClass}`)
-				&& !_.getTheToggled(triggerer, 'dropdown')
+					.closest(`.${frameWork.settings.uiJsClass}`)
+				&& !triggerer
+					.closest(`.${frameWork.settings.uiJsClass}_internal_toggle`)
 			) {
 				toReturn = triggerer
-					.closest(`.${frameWork.settings.uiClass}`);
+					.closest(`.${frameWork.settings.uiJsClass}`);
 
 			} else {
 				toReturn = triggerer;
@@ -814,7 +819,7 @@
 
 			if (triggerer) {
 				if (
-					&& triggerer.getAttribute('href') !== ''
+					triggerer.getAttribute('href') !== ''
 					&& triggerer.getAttribute('href').startsWith('#')
 					&& triggerer.getAttribute('href') !== '#'
 					&& (
@@ -1197,6 +1202,7 @@
 				theUi.container.setAttribute(
 					'class',
 					`${frameWork.settings.uiClass}
+					${frameWork.settings.uiJsClass}
 					${inputCalendar.getAttribute('class')
 						.toString().replace('input-calendar', _.uiPrefix('calendar', true))
 					}`
@@ -1341,7 +1347,8 @@
 			theUi.heading.appendChild(theUi.title);
 			theUi.title.setAttribute(
 				'class',
-				`${_.uiPrefix('calendar')}title ${_.uiPrefix('calendar')}dropdown-toggle`
+				`${_.uiPrefix('calendar')}title ${_.uiPrefix('calendar')}dropdown-toggle
+				${frameWork.settings.uiJsClass}_internal_toggle`
 			);
 			theUi.title.setAttribute('data-toggle', 'dropdown');
 			theUi.title.innerHTML = `<span
@@ -1752,6 +1759,7 @@
 				theUi.container.setAttribute(
 					'class',
 					`${frameWork.settings.uiClass}
+					${frameWork.settings.uiJsClass}
 					${
 						inputTags
 						.getAttribute('class').replace('input-tags', _.uiPrefix('tags', true))
@@ -3459,7 +3467,7 @@
 		frameWork.addEvent(
 			document.body,
 			'focus',
-			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
+			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiJsClass} [contenteditable]`,
 			(e) => {
 				const uiTrigger = e.target;
 
@@ -3489,7 +3497,7 @@
 		frameWork.addEvent(
 			document.body,
 			'blur',
-			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
+			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiJsClass} [contenteditable]`,
 			(e) => {
 				const uiTrigger = e.target;
 
@@ -3515,7 +3523,7 @@
 		frameWork.addEvent(
 			document.body,
 			'click',
-			`*[data-toggle="dropdown"]:not(input):not([contenteditable]):not(.${frameWork.settings.uiClass})`,
+			`*[data-toggle="dropdown"]:not(input):not([contenteditable]):not(.${frameWork.settings.uiJsClass})`,
 			(e) => {
 				const uiTrigger = e.target;
 

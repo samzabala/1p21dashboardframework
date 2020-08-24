@@ -1,30 +1,44 @@
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
 
-<div class="module">
+$args = app_parse_args($data,$defs);
+
+?>
+<div class="module"
+	data-grid-area-md="auto / side"
+>
 	<div class="module-content">
-		<!-- WORKFLUX BOARDS -->
-			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-				<div class="flex-child">
-					<h5 class="input-label">Workflux Boards</h5>
+	
+		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
+		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
+			<!-- WORKFLUX BOARDS -->
+				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+					<div class="flex-child">
+						<h5 class="input-label">Workflux Boards</h5>
+					</div>
+					<div class="flex-child">
+						<input id="<?=$args['post']?>-workfluxs-id" name="<?=$args['post']?>-workfluxs-id" type="hidden" />
+						<input id="<?=$args['post']?>-workfluxs-list" name="<?=$args['post']?>-workfluxs-list" type="hidden" />
+						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
+						<?php app_get_component('components/modal-workflow-edit-workflux'); ?>
+					</div>
 				</div>
-				<div class="flex-child">
-					<input id="REPLACEMODE-REPLACEwithPostType-workfluxs-id" name="REPLACEMODE-REPLACEwithPostType-workfluxs-id" type="hidden" />
-					<input id="REPLACEMODE-REPLACEwithPostType-workfluxs-list" name="REPLACEMODE-REPLACEwithPostType-workfluxs-list" type="hidden" />
-					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
-					<?php app_get_component('components/modal-workflow-edit-workflux'); ?>
+
+				<div class="post-workflux">
+					<!-- @LOOP component -->
+						<?php app_get_component('components/profile-workflux-titled-for-edit') ?>
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php for($i=1; $i<2; $i++){ ?>
+								<?php app_get_component('components/profile-workflux-titled-for-edit'); ?>
+							<?php } ?>
 				</div>
-			</div>
 
-			<div class="task-workflux">
-				<!-- @LOOP component -->
-					<?php app_get_component('components/profile-workflux-titled-for-edit') ?>
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-						<?php for($i=1; $i<2; $i++){ ?>
-							<?php app_get_component('components/profile-workflux-titled-for-edit'); ?>
-						<?php } ?>
-			</div>
-
-			
-		<hr>
+				
+			<hr>
+		<?php endif; ?>
 
 
 		<!-- TAGS -->
@@ -33,13 +47,13 @@
 					<h5 class="input-label">Labels &amp; Tags</h5>
 				</div>
 				<div class="flex-child">
-					<input id="REPLACEMODE-REPLACEwithPostType-tags" name="REPLACEMODE-REPLACEwithPostType-tags" type="hidden" />
+					<input id="<?=$args['post']?>-tags" name="<?=$args['post']?>-tags" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
 					<?php app_get_component('components/modal-workflow-edit-tags'); ?>
 				</div>
 			</div>
 
-			<div class="task-tags">
+			<div class="post-tags">
 				<!--
 					AVAILABLE TAG SCHEMES:
 					tag-default

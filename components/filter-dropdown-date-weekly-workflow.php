@@ -1,5 +1,5 @@
 <div class="weekly-hours-control position-relative">
-	<!-- <div class="btn-group btn-group-horizontal btn-group-block   btn-small"> -->
+	<!-- <div class="btn-group btn-group-horizontal btn-block   btn-small"> -->
 	<div class="flex-grid flex-grid-compact flex-grid-no-gutter-x flex-wrap justify-content-space-between flex-1-1">
 		<div class="flex-child">
 

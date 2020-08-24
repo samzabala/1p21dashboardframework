@@ -49,19 +49,19 @@
 		<div class="dropdown dropdown-right" data-dropdown-width="500px">
 			<div class="list-group">
 
-					<a href="<?=app_create_link(array('template' => 'project')) ?>" class="list-group-item color-primary-hover">
+					<a href="<?=app_create_link(array('template' => 'project-view')) ?>" class="list-group-item color-primary-hover">
 						Task had an update
 					</a>
 
-					<a href="<?=app_create_link(array('template' => 'project')) ?>" class="list-group-item color-primary-hover">
+					<a href="<?=app_create_link(array('template' => 'project-view')) ?>" class="list-group-item color-primary-hover">
 						Other Task had an update
 					</a>
 
-					<a href="<?=app_create_link(array('template' => 'project')) ?>" class="list-group-item color-primary-hover">
+					<a href="<?=app_create_link(array('template' => 'project-view')) ?>" class="list-group-item color-primary-hover">
 						Another Task had an update
 					</a>
 
-					<a href="<?=app_create_link(array('template' => 'project')) ?>" class="list-group-item color-primary-hover">
+					<a href="<?=app_create_link(array('template' => 'project-view')) ?>" class="list-group-item color-primary-hover">
 						Task had an update
 					</a>
 			</div>

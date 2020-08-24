@@ -35,7 +35,11 @@ window.jQuery && jQuery.noConflict();
 		frameWork.settings.dynamicHash
 		|| true;
 	frameWork.settings.uiClass =
-		`${frameWork.settings.prefix}-ui`;
+		frameWork.settings.uiClass
+		|| `${frameWork.settings.prefix}-ui`; //for styles
+	frameWork.settings.uiJsClass =
+		frameWork.settings.uiJsClass
+		|| frameWork.settings.uiClass.replace('-','_'); // for scripting events and shit
 
 	if (!$) {
 		throw new Error('jQuery not found bro, what did you do?');
@@ -663,20 +667,22 @@ window.jQuery && jQuery.noConflict();
 
 		if (triggerer) {
 
-			if (
+			if ( //idk what the fuck this was for but it stays for now
 				triggerer
-					.closest(`.input-group${frameWork.settings.uiClass}`)
+					.closest(`.input-group${frameWork.settings.uiJsClass}`)
 						.length
 			) {
 
-			} else if (
+			} else if ( //calendar fix
 				triggerer
-					.closest(`.${frameWork.settings.uiClass}`)
+					.closest(`.${frameWork.settings.uiJsClass}`)
 						.length
-				&& !_.getTheToggled(triggerer, 'dropdown')
+				&& !triggerer
+					.closest(`.${frameWork.settings.uiJsClass}_internal_toggle`)
+					.length
 			) {
 				toReturn = triggerer
-					.closest(`.${frameWork.settings.uiClass}`);
+					.closest(`.${frameWork.settings.uiJsClass}`);
 
 			} else {
 				toReturn = triggerer;
@@ -698,13 +704,10 @@ window.jQuery && jQuery.noConflict();
 
 			let toReturn = null;
 
-
 			if (triggerer) {
-				
 				if (
 					triggerer.attr('href')
 					&& triggerer.attr('href') !== ''
-					&& triggerer.attr('href').startsWith('#')
 					&& triggerer.attr('href') !== '#'
 					&& $(triggerer.attr('href'))
 						.hasClass(classToSearch)
@@ -1062,6 +1065,7 @@ window.jQuery && jQuery.noConflict();
 				inputCalendar.wrap($(`<div
 					class="
 						${frameWork.settings.uiClass}
+						${frameWork.settings.uiJsClass}
 						${inputCalendar.attr('class')
 							.replace('input-calendar', _.uiPrefix('calendar', true))
 						}"
@@ -1202,7 +1206,8 @@ window.jQuery && jQuery.noConflict();
 				data-toggle="dropdown"
 				class="
 					${_.uiPrefix('calendar')}title
-					${_.uiPrefix('calendar')}dropdown-toggle"
+					${_.uiPrefix('calendar')}dropdown-toggle
+					${frameWork.settings.uiJsClass}_internal_toggle"
 			></div>`);
 			theUi.heading.append(theUi.title);
 			theUi.title.append(() => {
@@ -1609,7 +1614,9 @@ window.jQuery && jQuery.noConflict();
 
 			if (!theUi.container.length) {
 				inputTags.wrap($(`<div
-					class="${frameWork.settings.uiClass}
+					class="
+					${frameWork.settings.uiClass}
+					${frameWork.settings.uiJsClass}
 					${inputTags
 						.attr('class').replace('input-tags', _.uiPrefix('tags', true))
 					}">
@@ -3234,7 +3241,7 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on(
 			'focus',
-			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
+			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiJsClass} [contenteditable]`,
 			(e) => {
 				const uiTrigger = $(e.target);
 
@@ -3263,7 +3270,7 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on(
 			'blur',
-			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiClass} [contenteditable]`,
+			`input[data-toggle="dropdown"], *[contenteditable][data-toggle="dropdown"], .${frameWork.settings.uiJsClass} [contenteditable]`,
 			(e) => {
 				const uiTrigger = $(e.target);
 
@@ -3288,7 +3295,7 @@ window.jQuery && jQuery.noConflict();
 
 		$('body').on(
 			'click',
-			`*[data-toggle="dropdown"]:not(input):not([contenteditable]):not(.${frameWork.settings.uiClass})`,
+			`*[data-toggle="dropdown"]:not(input):not([contenteditable]):not(.${frameWork.settings.uiJsClass})`,
 			(e) => {
 				const uiTrigger = $(e.target);
 

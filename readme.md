@@ -124,6 +124,45 @@ REPLACEwithCorrespondingInputFieldName
 
 # For Cristian
 
+## As of 08-22-20
+
+Conditional statements for which post (eg task vs project) renders a certain sidebar section that still need verification will have `@TODO finalize apporpriate or remove uneeded conditional statement here` as the the html comment
+
+Find and replace the following:
+*	`[data-toggle="accordion"]` with hrefs/data-hrefs to "#task-side-*"
+
+	attribute/s to replace: `hrefs/data-hrefs `
+
+	old: `"#task-side-*"`
+
+	new: `"#post-side-*"`
+
+*	`.accordion` with id to "task-side-*"
+
+	attribute/s to replace: `id`
+
+	old: `"task-side-*"`
+
+	new: `"post-side-*"`
+
+### only on markup within `/components/module-side-*` and `/components/toolbar-side-*` files. These classes may not apply depending on how much the markup has changed on back end dev setup, but please keep an eye out for them
+
+
+| Selector | attribute to change | old | new |
+| --       | --                  | --  |  -- |
+| `.module .task-workflux` | class | `task-workflux"` | `post-workflux` |
+| `.module .task-tags` | class | `task-tags"` | `post-tags` |
+| `.module .task-followers` | class | `task-followers"` | `post-followers` |
+| `.module .task-wiki` | class | `task-wiki"` | `post-wiki` |
+| `.module .task-reminders` | class | `task-reminders"` | `post-reminders` |
+| `.module .task-project-new` | class | `task-project-new"` | `post-new` |
+| `.module .task-leads` | class | `task-leads"` | `project-leads` |
+
+
+--------------------------
+
+# Older Notes
+
 ## As of 07-21-2020
 
 instances of data atrtributes `data-modal-max-width` and `data-board-max-width` will now be  `data-modal-width` and `data-board-width`
@@ -142,10 +181,10 @@ eg:
 These are classes that need to be found and replaced for framework 2.0.0
 ```
 btn-symbol-round => btn-round
-btn-group-block => btn-block
-btn-group-block-mobile => btn-block-mobile
-input-group-block => input-block
-input-group-block-mobile => input-block-mobile
+btn-block => btn-block
+btn-block-mobile => btn-block-mobile
+input-block => input-block
+input-block-mobile => input-block-mobile
 ```
 
 

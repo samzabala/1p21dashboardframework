@@ -2,7 +2,7 @@
 <div class="module-function filter-dropdown-date-compare ">
 	<span class="text-align-left">
 
-		<button class="btn-group btn-block-mobile btn-group-horizontal  btn-group-block-mobile btn-group-unite" data-toggle="dropdown">
+		<button class="btn-group btn-block-mobile btn-group-horizontal  btn-block-mobile btn-group-unite" data-toggle="dropdown">
 			<span class="btn btn-default">
 				<span class="current-a">
 				<!-- 

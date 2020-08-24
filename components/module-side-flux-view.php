@@ -1,57 +1,63 @@
-<div class="module" 
-	<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-		data-grid-area-md="auto / side"
-	<?php endif; ?>
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
+
+$args = app_parse_args($data,$defs);
+
+
+?>
+<div class="module"
+	data-grid-area-md="auto / side"
 >
 	<div class="module-content">
-
-		<!-- WORKFLUX BOARDS -->
-			<div class="h5 no-margin-top">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="no-margin-y">Workflux Boards</h5>
-					</div>
-					<div class="flex-child">
-						<a href="#task-side-flux-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+	
+		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
+		<?php if($args['post'] == 'task'): ?>
+			<!-- WORKFLUX BOARDS -->
+				<div class="h5 no-margin-top">
+					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+						<div class="flex-child">
+							<h5 class="no-margin-y">Workflux Boards</h5>
+						</div>
+						<div class="flex-child">
+							<a href="#post-side-flux-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+						</div>
 					</div>
 				</div>
-			</div>
 
-		
 			
-			<div id="task-side-flux-view" class="accordion open" data-accordion-change-hash="false">
-		
-				<!-- @if hasteam leads -->
-				<div class="task-workflux">
+				
+				<div id="post-side-flux-view" class="accordion open" data-accordion-change-hash="false">
+			
+					<!-- @if hasteam leads -->
+					<div class="single-workflux">
 
-					<!-- @LOOP component -->
-					<?php app_get_component('components/profile-workflux-titled') ?>
-						<!-- @PLACEHOLDER: DELETE WHEN READY -->
-						<?php for($i=1; $i<2; $i++){ ?>
-							<?php app_get_component('components/profile-workflux-titled'); ?>
-						<?php } ?>
+						<!-- @LOOP component -->
+						<?php app_get_component('components/profile-workflux-titled') ?>
+							<!-- @PLACEHOLDER: DELETE WHEN READY -->
+							<?php for($i=1; $i<2; $i++){ ?>
+								<?php app_get_component('components/profile-workflux-titled'); ?>
+							<?php } ?>
+					</div>
+							
+					<!-- @else -->
+						<p>
+							<span class="color-neutral font-style-italic">
+								No associated workflux boards.
+							</span>
+
+							<!-- @if user can edit task -->
+								<br>
+								<a
+								href="<?=app_create_link(array('template'=>$args['post'].'-edit')) ?>"
+								>Edit <?=$args['post']?> to add to boards.</a>
+						</p>
 				</div>
-						
-				<!-- @else -->
-					<p>
-						<span class="color-neutral font-style-italic">
-							No associated workflux boards.
-						</span>
 
-						<!-- @if user can edit task -->
-							<br>
-							<a
-								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
-								<?php else: ?>
-									href="#task-REPLACEwithPostTypeID-edit"
-									data-toggle="board"
-								<?php endif; ?>
-							>Edit task to add to boards.</a>
-					</p>
-			</div>
-
-		<hr>
+			<hr>
+		<?php endif; ?>
 
 
 		<!-- TAGS -->
@@ -61,17 +67,17 @@
 						<h5 class="no-margin-y">Label &amp; Tags</h5>
 					</div>
 					<div class="flex-child">
-						<a href="#task-side-tags-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+						<a href="#post-side-tags-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 					</div>
 				</div>
 			</div>
 
 		
 			
-			<div id="task-side-tags-view" class="accordion open" data-accordion-change-hash="false">
+			<div id="post-side-tags-view" class="accordion open" data-accordion-change-hash="false">
 				<!-- @if has tags -->
 					<br>
-					<div class="task-tags">
+					<div class="single-tags">
 						<!--
 							AVAILABLE TAG SCHEMES:
 							tag-default
@@ -142,13 +148,8 @@
 						<!-- @if user can edit task -->
 							<br>
 							<a
-								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
-								<?php else: ?>
-									href="#task-REPLACEwithPostTypeID-edit"
-									data-toggle="board"
-								<?php endif; ?>
-							>Edit task to add tags.</a>
+								href="<?=app_create_link(array('template'=>$args['post'].'-edit')) ?>"
+							>Edit <?=$args['post']?> to add tags.</a>
 					</p>
 			</div>
 			

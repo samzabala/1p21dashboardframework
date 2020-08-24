@@ -100,4 +100,4 @@ if(isset($_GET['is_searching'])):
 endif;
 
 
-$GLOBALS['FWAPPS_CURR_TEMPLATE'] = 'global/error';
+$GLOBALS['FWAPPS_CURR_TEMPLATE'] = 'NOTEMPLATE';

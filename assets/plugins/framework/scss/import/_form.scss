@@ -908,20 +908,6 @@ $prefix: '.input';
 
 		&#{$prefix}-block {
 			display:flex;
-
-			&-mobile {
-				@include br(#{$mobile-br-max}-max) {
-					display:flex;
-				}
-			}
-		}
-		
-		#{$prefix} {
-			@extend %for-form-input-in-group;
-		}
-		
-		&-block {
-			display:flex;
 			width:100%;
 
 			> #{$prefix}
@@ -944,6 +930,10 @@ $prefix: '.input';
 			}
 		}
 		
+		#{$prefix} {
+			@extend %for-form-input-in-group;
+		}
+				
 
 		&#{&}-large {
 			@extend %for-form-input-boxy-and-group-large;

@@ -14,7 +14,7 @@
 			
 			<div class="flex-col-xs-12 position-relative">
 			<input type="hidden" name="eentry-time-category-id" />
-				<div class="input-group input-group-block input-group-horizontal">
+				<div class="input-group input-block input-group-horizontal">
 					<label class="input-label" for="entry-time-category" >Task Category</label>
 					<input name="entry-time-category" id="entry-time-category" type="text" class="input input-single-line" placeholder="Start time" data-toggle="dropdown">
 
@@ -99,13 +99,13 @@
 		
 
 		<div class="flex-col-xs-12 flex-col-md-4">
-			<div class="input-group input-group-block input-group-horizontal">
+			<div class="input-group input-block input-group-horizontal">
 				<label class="input-label" for="entry-time-start" >Start Time</label>
 				<input name="entry-time-start" id="entry-time-start" type="time" class="input input-single-line" placeholder="Start time">
 			</div>
 		</div>
 		<div class="flex-col-xs-12 flex-col-md-4">
-			<div class="input-group input-group-block input-group-horizontal">
+			<div class="input-group input-block input-group-horizontal">
 				<label class="input-label" for="entry-time-duration" >Duration</label>
 				<input name="entry-time-duration" id="entry-time-duration" type="text" class="input input-single-line" size="5" placeholder="00:00">
 			</div>
@@ -123,7 +123,7 @@
 				</label>
 		</div>
 		<div class="flex-col-xs-12 flex-col-md-8">
-			<div class="input-group input-group-block input-group-horizontal flex-0-0">
+			<div class="input-group input-block input-group-horizontal flex-0-0">
 				<label class="input-label" for="entry-time-date">Entry Date</label>
 				<input name="entry-time-date" id="entry-time-date" type="date" class="input input-single-line">
 			</div>
@@ -138,7 +138,7 @@
 		-->
 		<div class="flex-col-xs-12 flex-col-md-4">
 			<div class="input-wrapper input-wrapper-block input-wrapper-horizontal">
-				<div class="input-group input-group-block input-group-horizontal">
+				<div class="input-group input-block input-group-horizontal">
 					<label class="input-label"  for="entry-time-billable-duration">Billable Time</label>
 					<input name="entry-time-billable-duration" id="entry-time-billable-duration" type="text" class="input input-single-line" size="5" placeholder="00:00">
 				</div>
@@ -148,7 +148,7 @@
 
 		<div class="flex-col-xs-12 flex-1-0">
 			<div class="input-wrapper input-wrapper-block input-wrapper-horizontal">
-				<div class="input-group input-group-block input-group-horizontal">
+				<div class="input-group input-block input-group-horizontal">
 					<textarea  name="entry-time-comment" id="entry-time-comment" type="text" class="input input-multiple-line" >replace with tinymce</textarea>
 				</div>
 			</div>

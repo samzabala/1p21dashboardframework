@@ -22,7 +22,6 @@ window.jQuery && jQuery.noConflict();
 		}	
 	});
 
-
 	// @TODO kwan sort table scriptoboi goes here with .dashboard-sort-table-toggle
 
 

@@ -941,7 +941,7 @@
            value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
     <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
       <label class="input-label">Share note with:</label>
-      <div class="input-group input-group-horizontal input-group-block">
+      <div class="input-group input-group-horizontal input-block">
         <input type="text" name="share_note_with_usernames"
                value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
                class="input input-tags"
@@ -956,6 +956,95 @@
   </form>
 </div>
 
+	<h3>Nadia's code but fucked up by me</h3>
+
+	<div class="module-function filter-dropdown-project">
+    <!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
+    <!-- @IF label the filter -->
+		<div class="input-group input-group-horizontal input-block-mobile text-align-left">
+			<button class="btn btn-default" data-toggle="dropdown">
+				<span>Filter (3)</span>
+				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+			</button>
+			<input type="text" class="input input-single-line" name="workflow-filter-projects" placeholder="Search projects...">
+			<button type="submit" class="btn btn-default btn-symbol"><i class="symbol symbol-search"></i></button>
+		</div>
+		<!-- @REPLACE  #profile-assigned-date > li -->
+		<div data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
+			
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+				<label class="input-label">Account Manager:</label>
+
+				<input type="text" name="share_note_with_usernames"
+					value="asshit,brah,shiit"
+					class="input input-small input-tags"
+					data-toggle="dropdown">
+
+				<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
+					fuuiuuuck yallll
+				</div>
+			</div>
+		</div>
+	</div>
+
+<h3>Nadia's code</h3>
+
+	<div class="module-function filter-dropdown-project">
+		<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
+		<!-- @IF label the filter -->
+		<div class="input-group input-group-horizontal input-block-mobile text-align-left">
+			<button class="btn btn-default" data-toggle="dropdown">
+				<span>Filter (3)</span>
+				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+			</button>
+			<input type="text" class="input input-single-line" name="workflow-filter-projects" placeholder="Search projects...">
+			<button type="submit" class="btn btn-default btn-symbol"><i class="symbol symbol-search"></i></button>
+		</div>
+		<!-- @REPLACE  #profile-assigned-date > li -->
+		<ul data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
+			<div class="flex-grid flex-grid-fixed flex-grid-compact">
+				<div class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3 ">
+					<label class="input-label" >Client</label>
+				</div>
+				<div class="flex-col-sm-6 flex-col-md-8 flex-col-lg-9 ">
+					<input class="input input-single-line input-small input-tags input-select" type="text" value="Hasson Law Offices">
+				</div>
+			</div>
+
+
+			<div class="flex-grid flex-grid-fixed flex-grid-compact input-small">
+				<div class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3 ">
+					<label class="input-label" >Client</label>
+				</div>
+				<div class="flex-col-sm-6 flex-col-md-8 flex-col-lg-9 ">
+					<input class="input input-single-line input-small input-tags input-select" type="text" value="Hasson Law Offices">
+				</div>
+			</div>
+			
+			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block position-relative">
+				<label class="input-label" >Account Manager</label>
+				<input class="input input-single-line input-small input-tags input-select" type="text" placeholder="Type and select manager..." data-toggle="dropdown">
+				<div class="dropdown am-dropdown">
+					<?= app_get_component('components/list-group-toggle-users-small-multiple'); ?>
+				</div>
+			</div>
+			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
+				<label class="input-label" >Project Manager</label>
+				<input class="input input-single-line input-small input-tags input-select" type="text" value="Megan B.,Derrick T.">
+			</div>
+			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
+				<label class="input-label" >Project Name</label>
+				<input class="input input-single-line input-small input-tags input-select" type="text" placeholder="Type and select project...">
+			</div>
+			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
+				<label class="input-label" >Date Range</label>
+				<input class="input input-single-line input-small input-c input-select" type="text" placeholder="From">
+				<input class="input input-single-line input-small input-c input-select" type="text" placeholder="To">
+			</div>
+		</ul>
+	</div>
+
+	
 
 			<h2>cristian's code</h2>
 			<a href="#fuckwad">modddddaaaal</a>
@@ -964,7 +1053,7 @@
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 					<label class="input-label">Share note with:</label>
 
-					<div class="input-group input-group-horizontal input-group-block">
+					<div class="input-group input-group-horizontal input-block">
 						<input type="text" name="share_note_with_usernames"
 							value="asshit,brah,shiit"
 							class="input input-tags"
@@ -4942,21 +5031,27 @@
 
 			<h2>borders</h2>
 
-			<p class="border-style-none border-width-thin border-color-base">background Base</p>
-			<p class="border-style-hidden border-width-thick border-color-background">background Background</p>
-			<p class="border-style-dotted border-width-medium border-color-primary">Background Primary</p>
-			<p class="border-style-dashed border-width-thin border-color-secondary">Background secondary</p>
-			<p class="border-style-solid border-width-thick border-color-accent">Background accent</p>
-			<p class="border-style-double border-width-thick border-color-neutral">Background Neutral</p>
-			<p class="border-style-groove border-width-thick border-color-success">Background Success</p>
-			<p class="border-style-ridge border-width-thick border-color-caution">Background Caution</p>
-			<p class="border-style-inset border-width-thick  no-border-y border-color-error">Background Error</p>
 
-			<p class="border-style-outset border-width-thick no-border-top border-color-intensity-1">Background Intensity 1</p>
-			<p class="border-style-solid border-width-thick no-border-left border-color-intensity-2">Background Intensity 2</p>
-			<p class="border-style-solid border-width-thick no-border-bottom border-color-intensity-3">Background Intensity 3</p>
-			<p class="border-style-solid border-width-thick no-border-right border-color-intensity-4">Background Intensity 4</p>
-			<p class="border-style-solid border-width-thick no-border-x border-color-intensity-5">Background Intensity 5</p>
+			<p class="border-style-solid border-width-thin border-color-theme">border theme</p>
+			<p class="border-style-solid border-width-thin border-color-theme-polar">border theme polar</p>
+			<p class="border-style-solid border-width-thin border-color-theme-contrast">border theme contrast</p>
+			<p class="border-style-solid border-width-thin border-color-theme-polar-contrast">border theme polar contrast</p>
+
+			<p class="border-style-solid border-width-thin border-color-base">Border Base</p>
+			<p class="border-style-solid border-width-thick border-color-background">Border Background</p>
+			<p class="border-style-dotted border-width-medium border-color-primary">Border Primary</p>
+			<p class="border-style-dashed border-width-thin border-color-secondary">Border secondary</p>
+			<p class="border-style-solid border-width-thick border-color-accent">Border accent</p>
+			<p class="border-style-double border-width-thick border-color-neutral">Border Neutral</p>
+			<p class="border-style-groove border-width-thick border-color-success">Border Success</p>
+			<p class="border-style-ridge border-width-thick border-color-caution">Border Caution</p>
+			<p class="border-style-inset border-width-thick  no-border-y border-color-error">Border Error</p>
+
+			<p class="border-style-outset border-width-thick no-border-top border-color-intensity-1">Border Intensity 1</p>
+			<p class="border-style-solid border-width-thick no-border-left border-color-intensity-2">Border Intensity 2</p>
+			<p class="border-style-solid border-width-thick no-border-bottom border-color-intensity-3">Border Intensity 3</p>
+			<p class="border-style-solid border-width-thick no-border-right border-color-intensity-4">Border Intensity 4</p>
+			<p class="border-style-solid border-width-thick no-border-x border-color-intensity-5">Border Intensity 5</p>
 
 			<h2>Advanced shit: wrap</h2>
 

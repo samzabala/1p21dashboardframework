@@ -1,12 +1,20 @@
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
+
+$args = app_parse_args($data,$defs);
+
+
+?>
 <div class="module no-padding background-transparent position-relative"
-	<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-		data-grid-area-md="auto / side"
-	<?php endif; ?>
+	data-grid-area-md="auto / side"
 >
 
 	<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y">
 		<div class="flex-child">
-			<!-- @if task is not marked as complete yet -->
+			<!-- @if <?=$args['post']?> is not marked as complete yet -->
 				<a href="#" class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit">
 					<div class="toolbar-tile">
 						<span class="well well-compact btn btn-symbol btn-small btn-neutral background-success-hover">
@@ -15,11 +23,11 @@
 					</div>
 					<div class="toolbar-tile flex-1-1 ">
 						<span class="flex-1-1 btn-no-shadow btn">
-								Mark task as complete
+								Mark <?=$args['post']?> as complete
 						</span>
 					</div>
 				</a>
-			<!-- @else task marked as complete -->
+			<!-- @else <?=$args['post']?> marked as complete -->
 				
 					<span class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit ">
 						<div class="toolbar-tile flex-1-1">
@@ -29,7 +37,7 @@
 						</div>
 						<div class="toolbar-tile">
 							<span class="flex-1-1 btn-no-shadow btn">
-								Marked task complete
+								Marked <?=$args['post']?> complete
 							</span>
 						</div>
 					</span>
@@ -46,12 +54,7 @@
 						<li>
 							<a
 								class="color-inherit color-primary-hover js-edit-time-record"
-								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
-								<?php else: ?>
-									href="#task-REPLACEwithPostTypeID-edit"
-									data-toggle="board"
-								<?php endif; ?>
+								href="<?=app_create_link(array('template'=>$args['post'].'-edit')) ?>"
 								data-record-id="REPLACEwithPostTypeID">
 									Edit
 							</a>

@@ -1562,8 +1562,7 @@ table {
       border-bottom: 0.4285714286em solid;
       border-top: 0 solid;
       display: inline-block;
-      vertical-align: middle;
-      height: .625em; }
+      vertical-align: middle; }
   .symbol-caret-up, .active > .symbol-caret-up-toggle, .open > .symbol-caret-up-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-tail-up, .active > .symbol-arrow-tail-up-toggle, .open > .symbol-arrow-tail-up-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle {
     transform: rotate(0deg); }
   .symbol-caret-down, .active > .symbol-caret-down-toggle, .open > .symbol-caret-down-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-tail-down, .active > .symbol-arrow-tail-down-toggle, .open > .symbol-arrow-tail-down-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle {
@@ -4570,7 +4569,10 @@ table {
 .module-function {
   position: relative;
   display: inline-flex; }
-
+  @media (max-width: 1200px) {
+    .module-function {
+      display: flex;
+      max-width: 100%; } }
 .module-function, .module-functions {
   max-width: 100%; }
 
@@ -4751,6 +4753,7 @@ table {
     flex-wrap: nowrap;
     overflow: visible;
     top: 0;
+    width: 100%;
     max-width: calc(100% -  40px);
     flex-direction: column; }
     .board-button-wrapper:before {
@@ -5308,8 +5311,9 @@ table {
   display: none;
   color: #000000;
   transform-origin: center center;
-  transform-style: preserve-3d;
-  overflow-y: auto; }
+  transform-style: preserve-3d; }
+  .dropdown[data-dropdown-max-height] {
+    overflow-y: auto; }
   .theme-inverse .dropdown {
     color: #FFFFFF; }
   .dropdown.open {
@@ -5352,9 +5356,7 @@ table {
     transform: none; }
   .dropdown li:before {
     content: none; }
-  @media (max-width: 1200px) {
-    .dropdown {
-      max-width: 100%; } }
+
 /*** ALERT ***/
 /* it */
 .alert {
@@ -6368,21 +6370,16 @@ table {
   .input-group .btn.btn-symbol {
     flex: 0 0 auto; }
   .input-group.input-block {
-    display: flex; }
-    @media (max-width: 1200px) {
-      .input-group.input-block-mobile {
-        display: flex; } }
-  .input-group-block {
     display: flex;
     width: 100%; }
-    .input-group-block > .input {
+    .input-group.input-block > .input {
       flex: 1 1; }
     @media (max-width: 1200px) {
-      .input-group-block-mobile {
+      .input-group.input-block-mobile {
         display: flex;
         width: 100%; }
-        .input-group-block-mobile > .input,
-        .input-group-block-mobile > .btn:not(.btn-symbol) {
+        .input-group.input-block-mobile > .input,
+        .input-group.input-block-mobile > .btn:not(.btn-symbol) {
           flex: 1 1; } }
   .input-group.input-group-horizontal:not(.input-group-responsive) > .input-tags-ui:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) > .input-calendar-ui:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) > .input-single-line:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) > .input-select:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) > .input-multiple-line:nth-last-child(n+2), .input-group.input-group-horizontal:not(.input-group-responsive) .btn:nth-last-child(n+2) {
     border-top-right-radius: 0 !important;
@@ -9108,9 +9105,14 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   width: 230px;
   max-width: 230px !important;
   min-width: 230px !important; }
+  .dashboard-table-cell-max-larger {
+    width: 70%;
+    max-width: 230px !important;
+    min-width: 70% !important; }
 
 .dashboard-table-cell-thumbnail {
   min-width: 90px;
+  max-width: 120px;
   text-align: center; }
 
 .dashboard-table-cell-name {

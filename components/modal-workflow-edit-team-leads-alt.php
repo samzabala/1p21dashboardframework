@@ -11,7 +11,7 @@
 
 		REPLACEwithPostType definition:
 			=> either `project` ot `task`, depending which editing board the modal is placed.
-			so if it's in the task-id-edit board, the a field REPLACEMODE-REPLACEwithPostType-team-lead-to-add-id the field's name is `edit-task-lead-sales-rep-id`
+			so if it's in the task-id-edit board, the a field <?=$args['post']?>-team-lead-to-add-id the field's name is `edit-task-lead-sales-rep-id`
 	-->
 	
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
@@ -19,7 +19,7 @@
 		<!-- @NOTE
 			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="REPLACEMODE-REPLACEwithPostType-lead-sales-rep-id" name="REPLACEMODE-REPLACEwithPostType-lead-sales-rep-id" type="hidden" />
+		<input id="<?=$args['post']?>-lead-sales-rep-id" name="<?=$args['post']?>-lead-sales-rep-id" type="hidden" />
 		
 		<a href="#" data-toggle="dropdown" class="input input-single-line input-select flex-xs align-items-center justify-content-space-between">
 			<!-- if has user -->
@@ -44,7 +44,7 @@
 		<!-- @NOTE
 			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="REPLACEMODE-REPLACEwithPostType-lead-account-manager-id" name="REPLACEMODE-REPLACEwithPostType-lead-account-manager-id" type="hidden" />
+		<input id="<?=$args['post']?>-lead-account-manager-id" name="<?=$args['post']?>-lead-account-manager-id" type="hidden" />
 		
 		<a href="#" data-toggle="dropdown" class="input input-single-line input-select flex-xs align-items-center justify-content-space-between">
 			<!-- if has user -->
@@ -70,7 +70,7 @@
 		<!-- @NOTE
 			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="REPLACEMODE-REPLACEwithPostType-lead-project-manager-id" name="REPLACEMODE-REPLACEwithPostType-lead-project-manager-id" type="hidden" />
+		<input id="<?=$args['post']?>-lead-project-manager-id" name="<?=$args['post']?>-lead-project-manager-id" type="hidden" />
 		
 		<a href="#" data-toggle="dropdown" class="input input-single-line input-select flex-xs align-items-center justify-content-space-between">
 			<!-- if has user -->
@@ -96,7 +96,7 @@
 		<!-- @NOTE
 			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="REPLACEMODE-REPLACEwithPostType-lead-designer-id" name="REPLACEMODE-REPLACEwithPostType-lead-designer-id" type="hidden" />
+		<input id="<?=$args['post']?>-lead-designer-id" name="<?=$args['post']?>-lead-designer-id" type="hidden" />
 		
 		<a href="#" data-toggle="dropdown" class="input input-single-line input-select flex-xs align-items-center justify-content-space-between">
 			<!-- if has user -->
@@ -123,7 +123,7 @@
 		<!-- @NOTE
 			replace placeholder with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 		-->
-		<input id="REPLACEMODE-REPLACEwithPostType-lead-developer-id" name="REPLACEMODE-REPLACEwithPostType-lead-developer-id" type="hidden" />
+		<input id="<?=$args['post']?>-lead-developer-id" name="<?=$args['post']?>-lead-developer-id" type="hidden" />
 		
 		<a href="#" data-toggle="dropdown" class="input input-single-line input-select flex-xs align-items-center justify-content-space-between">
 			<!-- if has user -->
@@ -152,11 +152,11 @@
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block position-relative p">
 			<h5 class="input-label">Select other team members</h5>
 			
-			<input id="REPLACEMODE-REPLACEwithPostType-lead-others-id" name="REPLACEMODE-REPLACEwithPostType-lead-others-id" type="hidden" />
+			<input id="<?=$args['post']?>-lead-others-id" name="<?=$args['post']?>-lead-others-id" type="hidden" />
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="filter-REPLACEMODE-REPLACEwithPostType-lead-others-id" class="input-label sr-only">Search</label>
-				<input id="filter-REPLACEMODE-REPLACEwithPostType-lead-others-id" name="filter-REPLACEMODE-REPLACEwithPostType-lead-others-id" type="text" class="input input-block input-single-line" placeholder="Search for team member" />
+				<label for="filter-<?=$args['post']?>-lead-others-id" class="input-label sr-only">Search</label>
+				<input id="filter-<?=$args['post']?>-lead-others-id" name="filter-<?=$args['post']?>-lead-others-id" type="text" class="input input-block input-single-line" placeholder="Search for team member" />
 			</div>
 			<?php app_get_component('components/list-group-toggle-users-small-multiple') ?>
 		</div>
