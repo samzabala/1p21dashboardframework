@@ -21,19 +21,19 @@
 	<!-- Description -->
 		<div class="task-description">
 
-	<!-- @IF there is a description -->
+			<!-- @IF there is a description -->
 
-		<!-- @PLACEHOLDER delete when ready -->
-			<div class="REPLACE">
-				<div>
+				<!-- @PLACEHOLDER delete when ready -->
+					<div class="REPLACE">
+						<div>
 
-					<?php app_get_component('components/_DEMO-html-markup'); ?>
-				</div>
+							<?php app_get_component('components/_DEMO-html-markup'); ?>
+						</div>
 
-			</div>
+					</div>
 
-		<!--@ELSE no description  -->
-			<p class="color-neutral font-style-italic">No description available</p>
+			<!--@ELSE no description  -->
+				<p class="color-neutral font-style-italic">No description available</p>
 
 	</div>
 

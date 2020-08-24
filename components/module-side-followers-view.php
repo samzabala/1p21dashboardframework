@@ -1,7 +1,15 @@
-<div class="module" 
-	<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-		data-grid-area-md="auto / side"
-	<?php endif; ?>
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
+
+$args = app_parse_args($data,$defs);
+
+
+?>
+<div class="module"
+	data-grid-area-md="auto / side"
 >
 	<div class="module-content">
 
@@ -18,8 +26,8 @@
 						<!-- @NOTE
 							.btn
 								classes to add
-									if user follows task => `active`
-									if user doesnt follow task => ``
+									if user follows <?=$args['post']?> => `active`
+									if user doesnt follow <?=$args['post']?> => ``
 					-->
 							<a href="#" data-board-title="Add Time Entry" class="btn btn-primary-outline btn-small">
 								<span class="hide-toggle">Follow</span>
@@ -33,7 +41,7 @@
 							</a>
 						</div>
 						&nbsp;
-						<a href="#task-side-followers-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+						<a href="#post-side-followers-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 					</div>
 				</div>
 			</div>
@@ -41,9 +49,9 @@
 
 		
 			
-			<div id="task-side-followers-view" class="accordion open" data-accordion-change-hash="false">
+			<div id="post-side-followers-view" class="accordion open" data-accordion-change-hash="false">
 				<!-- if has followers -->
-					<div class="task-followers">
+					<div class="<?=$args['post']?>-followers">
 						
 						<?php app_get_component('components/profile-named') ?>
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -72,17 +80,17 @@
 						<h5 class="no-margin-y">Wiki/How-Tos</h5>
 					</div>
 					<div class="flex-child">
-						<a href="#task-side-wiki-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+						<a href="#post-side-wiki-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 					</div>
 				</div>
 			</div>
 
 		
 			
-			<div id="task-side-wiki-view" class="accordion open" data-accordion-change-hash="false">
+			<div id="post-side-wiki-view" class="accordion open" data-accordion-change-hash="false">
 
 				<!-- if has docs -->
-					<ul class="task-wiki unstyled">
+					<ul class="<?=$args['post']?>-wiki unstyled">
 						<li>
 						<!-- @NOTE not sure where this link goes to yet -->
 							<a class="wiki-title" href="<?= app_create_link(array('template'=>'doc')) ?>"><span class="REPLACE">Documentation title</span></a>
@@ -103,24 +111,17 @@
 							No documentations available.
 						</span>
 
-						<!-- @if user can edit task -->
+						<!-- @if user can edit <?=$args['post']?> -->
 							<br>
 							<a
-								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
-								<?php else: ?>
-									href="#task-REPLACEwithPostTypeID-edit"
-									data-toggle="board"
-								<?php endif; ?>
-							>Edit task to add documentation.</a>
+								href="<?=app_create_link(array('template'=>$args['post'].'-edit')) ?>"
+							>Edit <?=$args['post']?> to add documentation.</a>
 					</p>
 			</div>
 
 
 
 			<hr>
-
-
 
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-top">
@@ -129,17 +130,17 @@
 							<h5 class="no-margin-y">Reminders</h5>
 						</div>
 						<div class="flex-child">
-							<a href="#task-side-reminders-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+							<a href="#post-side-reminders-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 						</div>
 					</div>
 				</div>
 
 
 				
-				<div id="task-side-reminders-view" class="accordion open" data-accordion-change-hash="false">
+				<div id="post-side-reminders-view" class="accordion open" data-accordion-change-hash="false">
 
 					<!-- if has reminders -->
-						<div class="task-reminders">
+						<div class="<?=$args['post'] ?>-reminders">
 							<?php app_get_component('components/block-reminder'); ?>
 						
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -153,16 +154,16 @@
 								No reminders set.
 							</span>
 
-							<!-- @if user can edit task -->
-								<br>
-								<a
-								<?php if(FWAPPS_TEMPLATE == 'task-view'): //only when in its own basic page ?>
-									href="<?=app_create_link(array('template'=>'task-edit')) ?>"
-								<?php else: ?>
-									href="#task-REPLACEwithPostTypeID-edit"
-									data-toggle="board"
-								<?php endif; ?>
-							>Edit task to add reminders.</a>
+
+							<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
+							<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
+								<!-- @if user can edit <?=$args['post'] ?> -->
+									<br>
+									<a
+										href="<?=app_create_link(array('template'=>$args['post'].'-edit')) ?>"
+									>Edit <?=$args['post'] ?> to add reminders.</a>
+							<?php endif; ?>
+							
 						</p>
 				</div>
 	</div>

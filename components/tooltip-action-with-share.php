@@ -50,7 +50,7 @@
 		<form method="get">
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-				<label for="task-title" class="input-label">Share with:</label>
+				<label for="email" class="input-label">Share with:</label>
 
 				
 				<div class="input-group input-group-horizontal input-block">

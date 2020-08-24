@@ -20,7 +20,7 @@
 
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="task-title" class="input-label">Share with:</label>
+				<label for="share-title" class="input-label">Share with:</label>
 
 				<input id="share-with" class="input input-single-line" />
 			</div>

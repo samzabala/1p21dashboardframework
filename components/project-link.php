@@ -1,4 +1,4 @@
-<a href="<?=app_create_link( array('template'=>'project') ); ?>" class="text-leading-compact color-inherit color-primary-hover">
+<a href="<?=app_create_link( array('template'=>'project-view') ); ?>" class="text-leading-compact color-inherit color-primary-hover">
 	<span class="project-site display-block no-margin">
 		<span class="REPLACE">sitedomainurlintheweb.com</span>
 	</span>

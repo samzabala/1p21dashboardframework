@@ -15,7 +15,7 @@
 
 		definition:
 			=> either `project` ot `task`, depending which editing board the module is placed.
-			so if it's in the task-id-edit board, the a field REPLACEMODE-REPLACEwithPostType-team-lead-to-add-id the field's name is `edit-task-lead-sales-rep-id`
+			so if it's in the task-id-edit board, the a field <?=$args['post']?>-team-lead-to-add-id the field's name is `edit-task-lead-sales-rep-id`
 
 		
 		logic:
