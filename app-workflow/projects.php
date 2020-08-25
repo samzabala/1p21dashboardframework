@@ -68,9 +68,9 @@
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @if project has type -->
-										<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-											<span class="REPLACE">LS360 SEO</span>
-										</span>
+									<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+										<span class="REPLACE">LS360 SEO</span>
+									</span>
 									<!-- @else -->
 										<span class="color-neutral font-style-italic">Not set</span>
 								</td>
@@ -183,9 +183,9 @@
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @if project has type -->
-													<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-														<span class="REPLACE">LS360 SEO</span>
-													</span>
+												<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+													<span class="REPLACE">LS360 SEO</span>
+												</span>
 												<!-- @else -->
 													<span class="color-neutral font-style-italic">Not set</span>
 											</td>
@@ -324,9 +324,9 @@
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @if project has type -->
-										<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-											<span class="REPLACE">LS360 SEO</span>
-										</span>
+									<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+										<span class="REPLACE">LS360 SEO</span>
+									</span>
 									<!-- @else -->
 										<span class="color-neutral font-style-italic">Not set</span>
 								</td>
@@ -439,9 +439,9 @@
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @if project has type -->
-													<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-														<span class="REPLACE">LS360 SEO</span>
-													</span>
+												<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+													<span class="REPLACE">LS360 SEO</span>
+												</span>
 												<!-- @else -->
 													<span class="color-neutral font-style-italic">Not set</span>
 											</td>
