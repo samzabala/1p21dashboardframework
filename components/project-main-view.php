@@ -140,7 +140,7 @@
 
 								<div class="accordion open project-library-section p" id="project-docs" data-accordion-change-hash="false">
 									<!-- @if there are entries -->
-										<div class="table-wrapper dashboard-table-wrapper-gutterless dashboard-table-cells-match-height">
+										<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
 											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 												<tr>
@@ -210,7 +210,7 @@
 
 								<div class="accordion open project-library-section p" id="project-notes" data-accordion-change-hash="false">
 									<!-- @if there are entries -->
-										<div class="table-wrapper dashboard-table-wrapper-gutterless dashboard-table-cells-match-height">
+										<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
 											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 												<tr>
