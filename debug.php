@@ -2357,6 +2357,32 @@
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
 						</p>
 
+						<h3>Responsive</h3>
+
+
+						<h4>inline horizontal</h4>
+						<p class="input-wrapper input-wrapper-horizontal input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+
+						<h4>block horizontal</h4>
+						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+
+						<h4>inline vertical</h4>
+						<p class="input-wrapper input-wrapper-vertical input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+						<h4>block vertical</h4>
+						<p class="input-wrapper input-wrapper-vertical input-wrapper-block input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+
 					<h2>group (all have a .input-group-responsive so they kwan... break to a column layout for mobile and tablet devices)</h2>
 
 						<h3>group horizontal</h3>
@@ -2802,7 +2828,7 @@
 					<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
 					<input class="input input-inline" type="button" value="Bitch">
 					<input class="input input-inline" type="checkbox">
-					<input class="input input-single-line" type="color">
+					<input class="input input-inline" type="color">
 					<input class="input input-single-line" type="date">
 					<input class="input input-single-line" type="datetime-local">
 					<input class="input input-single-line" type="email">

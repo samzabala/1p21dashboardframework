@@ -167,7 +167,7 @@ $prefix: '.input';
 					}
 
 					&-text {
-						@extend %for-text-ellipsis;
+						@extend %for-text-ellipsis-single;
 						max-width: 10em;
 						cursor:pointer;
 					}
