@@ -29,7 +29,7 @@
 		<div class="module-content accordion open" id="favorite-projects">
 			<!-- @if there are entries -->
 				<div class="table-wrapper dashboard-table-wrapper-gutterless">
-					<table class="table-small data-fave-projects text-vertical-align-middle">
+					<table class="table-small data-fave-projects text-vertical-align-middle dashboard-table-cells-match-height">
 						<tr>
 							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
 							<th class="dashboard-table-cell-max text-nowrap">Project</th>
@@ -68,11 +68,11 @@
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @if project has type -->
-									<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-										<span class="REPLACE">LS360 SEO</span>
-									</span>
+										<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+											<span class="REPLACE">LS360 SEO</span>
+										</span>
 									<!-- @else -->
-									&nbsp;
+										<span class="color-neutral font-style-italic">Not set</span>
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @if project has tags -->
@@ -183,11 +183,11 @@
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @if project has type -->
-												<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-													<span class="REPLACE">LS360 SEO</span>
-												</span>
+													<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+														<span class="REPLACE">LS360 SEO</span>
+													</span>
 												<!-- @else -->
-												&nbsp;
+													<span class="color-neutral font-style-italic">Not set</span>
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @if project has tags -->
@@ -285,7 +285,7 @@
 		<div class="module-content accordion open" id="projects">
 			<!-- @if there are entries -->
 				<div class="table-wrapper dashboard-table-wrapper-gutterless">
-					<table class="table-small data-fave-projects text-vertical-align-middle">
+					<table class="table-small data-fave-projects text-vertical-align-middle dashboard-table-cells-match-height">
 						<tr>
 							<th class="text-nowrap table-cell-no-gutter" >&nbsp;</th>
 							<th class="dashboard-table-cell-max text-nowrap">Project</th>
@@ -324,11 +324,11 @@
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @if project has type -->
-									<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-										<span class="REPLACE">LS360 SEO</span>
-									</span>
+										<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+											<span class="REPLACE">LS360 SEO</span>
+										</span>
 									<!-- @else -->
-									&nbsp;
+										<span class="color-neutral font-style-italic">Not set</span>
 								</td>
 								<td class="dashboard-table-cell-max">
 									<!-- @if project has tags -->
@@ -439,11 +439,11 @@
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @if project has type -->
-												<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
-													<span class="REPLACE">LS360 SEO</span>
-												</span>
+													<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-type text-wrap-ellipsis">
+														<span class="REPLACE">LS360 SEO</span>
+													</span>
 												<!-- @else -->
-												&nbsp;
+													<span class="color-neutral font-style-italic">Not set</span>
 											</td>
 											<td class="dashboard-table-cell-max">
 												<!-- @if project has tags -->
