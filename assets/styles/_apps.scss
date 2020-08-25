@@ -393,6 +393,10 @@ $sidebar-base-slim-mobile: 60px;
 	
 	&-table {
 
+		&-cells-match-height td {
+			height: rem(56px/$body-font-size);
+		}
+
 		//the stars for varoite tasks and shit
 		&-icon-flush-left {
 			//something something

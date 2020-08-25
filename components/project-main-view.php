@@ -79,7 +79,7 @@
 									<!-- @if there are entries -->
 										<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
-											<table class="">
+											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 												<tr>
 													<th class="dashboard-table-cell-max-larger text-nowrap">Name</th>
 													<th class="text-nowrap text-align-center">Created</th>
@@ -142,7 +142,7 @@
 									<!-- @if there are entries -->
 										<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
-											<table class="">
+											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 												<tr>
 													<th class="dashboard-table-cell-max-larger text-nowrap">Name</th>
 													<th class="text-nowrap text-align-center">Created</th>
@@ -212,7 +212,7 @@
 									<!-- @if there are entries -->
 										<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
-											<table class="">
+											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 												<tr>
 													<th class="text-nowrap">Created</th>
 													<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
@@ -305,7 +305,7 @@
 					<div class="accordion open" id="project-open-tasks">
 						<!-- @if there are entries -->
 							<div class="table-wrapper dashboard-table-wrapper-gutterless">
-								<table>
+								<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 									<tr>
 										<th class="dashboard-table-cell-max text-nowrap">Name</th>
 										<th class="text-nowrap">Status</th>
@@ -326,8 +326,10 @@
 											</span>
 										</td>
 										<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-											
-											<?php app_get_component('components/profile-image-small'); ?>
+											<!-- @if assigned to somebody -->
+												<?php app_get_component('components/profile-image-small'); ?>
+											<!-- @else not assigned -->
+												<span class="color-neutral font-style-italic">Unassigned</span>
 										</td>
 										<td class="text-align-center">
 											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
@@ -353,8 +355,10 @@
 														</span>
 													</td>
 													<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-														
-														<?php app_get_component('components/profile-image-small'); ?>
+														<!-- @if assigned to somebody -->
+															<?php app_get_component('components/profile-image-small'); ?>
+														<!-- @else not assigned -->
+															<span class="color-neutral font-style-italic">Unassigned</span>
 													</td>
 													<td class="text-align-center">
 														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
@@ -375,7 +379,7 @@
 					<div class="accordion" id="project-closed-tasks">
 						<!-- @if there are entries -->
 							<div class="table-wrapper dashboard-table-wrapper-gutterless">
-								<table>
+								<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 									<tr>
 										<th class="dashboard-table-cell-max text-nowrap">Name</th>
 										<th class="text-nowrap">Status</th>
@@ -396,8 +400,10 @@
 											</span>
 										</td>
 										<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-											
-											<?php app_get_component('components/profile-image-small'); ?>
+											<!-- @if assigned to somebody -->
+												<?php app_get_component('components/profile-image-small'); ?>
+											<!-- @else not assigned -->
+												<span class="color-neutral font-style-italic">Unassigned</span>
 										</td>
 										<td class="text-align-center">
 											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
@@ -423,8 +429,10 @@
 														</span>
 													</td>
 													<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
-														
-														<?php app_get_component('components/profile-image-small'); ?>
+														<!-- @if assigned to somebody -->
+															<?php app_get_component('components/profile-image-small'); ?>
+														<!-- @else not assigned -->
+															<span class="color-neutral font-style-italic">Unassigned</span>
 													</td>
 													<td class="text-align-center">
 														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
