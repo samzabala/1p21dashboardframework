@@ -919,7 +919,7 @@
 		<div class="accordion">
 
 
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-multiple-lines="true" />
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" placeholder="suck ma diiick" data-tags-multiple-lines="true" />
 		
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags" />
 			<br><br>
@@ -933,28 +933,28 @@
 			<h2>Cristian's code 06-09 ayyyyy</h2>
 			
 			<a href="#modal-share-note-with" data-toggle="modal">modddddaaaal</a> 
-<div class="modal" id="modal-share-note-with"
-     data-modal-width="800px" data-modal-title="Share">
-  <!-- @if user has rights to share this note -->
-  <form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
-    <input type="hidden" name="share_note_with_user_ids"
-           value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
-    <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-      <label class="input-label">Share note with:</label>
-      <div class="input-group input-group-horizontal input-block">
-        <input type="text" name="share_note_with_usernames"
-               value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
-               class="input input-tags"
-               data-toggle="dropdown"
-               data-tags-callback-on-keyup="shareNoteWithUsernamesChgCb(event)"
-               data-tags-callback-name-filter="validateUsernameNoteSharedWith">
-        <button type="submit" class="flex-0-0 btn btn-primary">Share</button>
-      </div>
-      <div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
-      </div>
-    </div>
-  </form>
-</div>
+		<div class="modal" id="modal-share-note-with"
+			data-modal-width="800px" data-modal-title="Share">
+		<!-- @if user has rights to share this note -->
+		<form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
+			<input type="hidden" name="share_note_with_user_ids"
+				value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+			<label class="input-label">Share note with:</label>
+			<div class="input-group input-group-horizontal input-block">
+				<input type="text" name="share_note_with_usernames"
+					value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
+					class="input input-tags"
+					data-toggle="dropdown"
+					data-tags-callback-on-keyup="shareNoteWithUsernamesChgCb(event)"
+					data-tags-callback-name-filter="validateUsernameNoteSharedWith">
+				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
+			</div>
+			<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
+			</div>
+			</div>
+		</form>
+		</div>
 
 	<h3>Nadia's code but fucked up by me</h3>
 
@@ -2357,6 +2357,32 @@
 							<input class="input input-single-line" placeholder="Basic Ass" type="text">
 						</p>
 
+						<h3>Responsive</h3>
+
+
+						<h4>inline horizontal</h4>
+						<p class="input-wrapper input-wrapper-horizontal input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+
+						<h4>block horizontal</h4>
+						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+
+						<h4>inline vertical</h4>
+						<p class="input-wrapper input-wrapper-vertical input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+						<h4>block vertical</h4>
+						<p class="input-wrapper input-wrapper-vertical input-wrapper-block input-wrapper-responsive">
+							<label class="input-label" >Basic Ass</label>
+							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+						</p>
+
 					<h2>group (all have a .input-group-responsive so they kwan... break to a column layout for mobile and tablet devices)</h2>
 
 						<h3>group horizontal</h3>
@@ -2802,7 +2828,7 @@
 					<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
 					<input class="input input-inline" type="button" value="Bitch">
 					<input class="input input-inline" type="checkbox">
-					<input class="input input-single-line" type="color">
+					<input class="input input-inline" type="color">
 					<input class="input input-single-line" type="date">
 					<input class="input input-single-line" type="datetime-local">
 					<input class="input input-single-line" type="email">
