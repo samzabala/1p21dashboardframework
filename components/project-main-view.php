@@ -285,10 +285,13 @@
 
 	<!-- Tasks -->
 		<div class="module">
-			<div class="module-header no-margin-bottom">
+			<div class="module-header no-margin-bottom module-header-break">
 				<h3 class="module-title open" data-toggle="accordion" data-href="#project-tasks">
 					Tasks <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 				</h3>
+				<div class="module-functions">
+					<?php app_get_component('components/linkto-add-task') ?>
+				</div>
 			</div>
 			<div class="accordion open" id="project-tasks">
 				<div class="accordion-group accordion-group-no-close">
