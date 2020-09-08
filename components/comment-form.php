@@ -1,14 +1,17 @@
-<!-- @note
-REPLACESUFFIX => something to make the form specific to what the comment form would be for eg:
-@if replying
-	`COMMENTID-reply`
-@if editing
-	`COMMENTID-edit
-@if new
-	`new`
+<?php
 
 
--->
+
+
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
+
+$args = app_parse_args($data,$defs);
+
+?>
+
 <form action="" class="commentes-editor">
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 		<textarea name="comment-REPLACESUFFIX" id="comment-REPLACESUFFIX" cols="30" rows="10" class="input input-multiple-line">Body comment. will be replaced by tinymce</textarea>
@@ -18,12 +21,16 @@ REPLACESUFFIX => something to make the form specific to what the comment form wo
 		<input type="file" name="comment-attachments-REPLACESUFFIX"  id="comment-attachments-REPLACESUFFIX" class="input input-single-line" />
 	</div>
 
+	<?php if($args['post'] == 'task'): ?>
 
-<!-- @if attachemtns were added -->
-	<!-- @if this markup is used for the reply/edit modal -->
-		<?php app_get_component('components/attachment-grid-simple'); ?>
-	<!-- @if this markup is used for the add comment section in task page/board -->
-		<?php app_get_component('components/attachment-grid-for-edit'); ?>
+
+	<!-- @if attachemtns were added -->
+		<!-- @if this markup is used for the reply/edit modal -->
+			<?php //app_get_component('components/attachment-grid-simple'); ?>
+		<!-- @if this markup is used for the add comment section in task page/board -->
+			<?php //app_get_component('components/attachment-grid-for-edit'); ?>
+
+	<?php endif; ?>
 
 
 	<div class="text-align-right">

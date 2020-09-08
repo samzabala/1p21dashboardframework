@@ -13,8 +13,6 @@ $args = app_parse_args($data,$defs);
 >
 	<div class="module-content">
 	
-		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
-		<?php if($args['post'] == 'task'): ?>
 			<!-- WORKFLUX BOARDS -->
 				<div class="h5 no-margin-top">
 					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
@@ -57,7 +55,6 @@ $args = app_parse_args($data,$defs);
 				</div>
 
 			<hr>
-		<?php endif; ?>
 
 
 		<!-- TAGS -->

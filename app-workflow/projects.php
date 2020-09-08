@@ -12,7 +12,7 @@
 				Add Project&nbsp;<i class="symbol symbol-plus"></i>
 			</a>
 			<span class="hide-mobile spacer">&nbsp;&nbsp;</span>
-			<?= app_get_component('components/filter-dropdown-projects-workflow'); ?>
+			<?php app_get_component('components/filter-dropdown-projects-workflow'); ?>
 		</div>
 	</div>
 </div>
@@ -38,6 +38,7 @@
 							<th class="text-nowrap">Tags</th>
 							<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">PM</th>
 							<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">AM</th>
+							<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
 						</tr>
 
 						<!-- @loop TR -->
@@ -150,6 +151,9 @@
 										<?php app_get_component('components/profile-image-small') ?>
 									<!-- @else -->
 										<span class="color-neutral font-style-italic">Not set</span>
+								</td>
+								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
+									<?php app_get_component('components/profile-image-small') ?>
 								</td>
 							</tr>
 
@@ -265,6 +269,9 @@
 													<?php app_get_component('components/profile-image-small') ?>
 												<!-- @else -->
 													<span class="color-neutral font-style-italic">Not set</span>
+											</td>
+											<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
+												<?php app_get_component('components/profile-image-small') ?>
 											</td>
 										</tr>
 									<?php } ?>
@@ -294,6 +301,7 @@
 							<th class="text-nowrap">Tags</th>
 							<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">PM</th>
 							<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">AM</th>
+							<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
 						</tr>
 
 						<!-- @loop TR -->
@@ -406,6 +414,9 @@
 										<?php app_get_component('components/profile-image-small') ?>
 									<!-- @else -->
 										<span class="color-neutral font-style-italic">Not set</span>
+								</td>
+								<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
+									<?php app_get_component('components/profile-image-small') ?>
 								</td>
 							</tr>
 
@@ -521,6 +532,9 @@
 													<?php app_get_component('components/profile-image-small') ?>
 												<!-- @else -->
 													<span class="color-neutral font-style-italic">Not set</span>
+											</td>
+											<td class="dashboard-table-cell-thumbnail text-align-center position-relative">
+												<?php app_get_component('components/profile-image-small') ?>
 											</td>
 										</tr>
 									<?php } ?>

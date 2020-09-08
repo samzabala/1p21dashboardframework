@@ -23,8 +23,7 @@ $args = app_parse_args($data,$defs);
 					</div>
 					<div class="flex-child">
 					
-						<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
-						<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
+						<?php if($args['post'] == 'task'): ?>
 							<a href="#"  data-toggle="modal" data-modal-title="REPLACwith<?=$args['post'];?>Title" class="btn btn-primary-outline btn-small">Time <i class="symbol symbol-plus"></i></a>
 							<?php app_get_component('components/modal-workflow-edit-task-time') ?>
 							&nbsp;

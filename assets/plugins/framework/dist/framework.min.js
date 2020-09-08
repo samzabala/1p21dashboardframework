@@ -819,7 +819,7 @@
 
 			if (triggerer) {
 				if (
-					triggerer.getAttribute('href') !== ''
+					triggerer.hasAttribute('href')
 					&& triggerer.getAttribute('href').startsWith('#')
 					&& triggerer.getAttribute('href') !== '#'
 					&& (
@@ -836,7 +836,8 @@
 
 				} else if (
 					triggerer.hasAttribute('data-href')
-					&& triggerer.getAttribute('data-href') !== ''
+					&& triggerer.getAttribute('data-href').startsWith('#')
+					&& triggerer.getAttribute('data-href') !== '#'
 					&& (
 						document.querySelector(
 							triggerer.getAttribute('data-href')
@@ -2880,9 +2881,11 @@
 						);
 					closeRelativeAccordions(allSiblings);
 
+					let allLineage = [];
+
 					//Lineage
 					if (ancGroup) {
-						const allLineage = Array.prototype.slice.call(
+						allLineage = Array.prototype.slice.call(
 							ancGroup.querySelectorAll('.accordion')
 						);
 						closeRelativeAccordions(allLineage);

@@ -4023,6 +4023,62 @@
 				<img src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
+
+			<h2>bedge</h2>
+
+			<div class="thumbnail thumbnail">
+				<span class="badge badge-primary"></span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail">
+				<span class="badge badge-primary"></span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="badge badge-primary"></span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="badge badge-primary"></span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
+
+
+
+			<h2>tags</h2>
+
+			<div class="thumbnail thumbnail">
+				<span class="tag tag-primary">69</span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail">
+				<span class="tag tag-primary">1242334534512</span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="tag tag-primary">69</span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="tag tag-primary">pucha</span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
 		</div>
 
 		<h1 data-toggle="accordion">Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>

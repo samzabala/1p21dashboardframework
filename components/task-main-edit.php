@@ -76,7 +76,7 @@
 
 				<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
 					<label for="task-delay-time" class="input-label sr-only">Time</label>
-					<input type="time" placeholder="Enter title" id="task-delay-time" name="task-delay-time" class="input-round input input-single-line">
+					<input type="time" placeholder="Enter title" id="task-delay-time" name="task-delay-time" class=" input input-single-line">
 				</div>
 			</div>
 		</div>

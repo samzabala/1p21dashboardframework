@@ -28,6 +28,14 @@ function app_get_template_part($filename = '', $slug = '',$data = array() ){
 
 //include a file
 function app_get_component($filename = '', $slug ='',$once = false, $data = array()){
+	// echo '<pre>';
+	// var_dump(array(
+	// 	'filename' => $filename,
+	// 	'slug' => $slug,
+	// 	'once' => $once,
+	// 	'data' => $data,
+	// ));
+	// echo '</pre>';
 
 	if($filename !== ''){
 
@@ -38,12 +46,8 @@ function app_get_component($filename = '', $slug ='',$once = false, $data = arra
 		}
 		
 		$source .='.php';
-
-		if ($data) {
-			extract($data);
-		}
-
 		if( file_exists( $source ) ){
+
 
 			if ($once == true) {
 				include_once $source;
@@ -149,11 +153,14 @@ function app_init_content(){
 				case 'workflux':
 				case 'clients':
 				case 'client-view':
-				case 'client':
+				case 'client-edit':
 				case 'notes':
 				case 'profile':
 				case 'analytics':
 				case 'workflow':
+				case 'note-view':
+				case 'note-edit':
+				case 'notes':
 					?>
 						<div class="module">
 

@@ -1,5 +1,5 @@
 <!-- New project vs edit project may look identical depending on how little input may have been made -->
-	<h1 class="no-margin-top">
+<h1 class="no-margin-top">
 		<!-- @if a new project -->
 			Add New Project
 		<!-- if editing existing project -->
@@ -73,9 +73,8 @@
 	<hr>
 </div>
 
-
 <!-- Attachments -->
-<div class="project-attachments">
+<div class="project-attachments" id="attachments">
 	<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
 		<div class="flex-col-xs-12">
 			<h4 class="no-margin-y">

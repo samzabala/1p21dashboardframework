@@ -221,7 +221,12 @@ $sidebar-base-slim-mobile: 60px;
 			}
 
 			@at-root #nav {
-				&-search {
+				/* pre-workflow */
+				.nav > &-logo {
+					min-width: $nav-height;
+					margin-right: auto;
+				}
+				.nav > &-search {
 					margin-right: auto;
 					flex: 1 1;
 					overflow-x:hidden;
@@ -251,10 +256,19 @@ $sidebar-base-slim-mobile: 60px;
 						}
 					}
 				}
-				&-account {
+				.nav > &-account {
 					display: flex;
 					align-items: center;
 					position: relative;
+				}
+
+				/* workflow onward and some pre ones */
+				&-functions {
+					max-width: 600px;
+
+					@include br(#{$mobile-br-max}-max) {
+						max-width: 200px;
+					}
 				}
 			}
 
@@ -435,14 +449,16 @@ $sidebar-base-slim-mobile: 60px;
 				width: 100px;
 			}
 
-			&-watch-btns {
+			&-watch-btns,
+			&-edit-btns {
 				width: 140px;
 				right:100px;
 				z-index:2;
 			}
 
 			&-action,
-			&-watch-btns {
+			&-watch-btns,
+			&-edit-btns {
 				position:sticky;
 				box-shadow: -2px 0 0 -1px rgba($brand-color-neutral,.2);
 

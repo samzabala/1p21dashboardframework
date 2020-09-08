@@ -1,15 +1,19 @@
 <?php
 $defs = array(
 	//@param post - type of single achuchuchu
+	//is_in_board_modal -> attributes to add/remove whther or not the boi is within a modal
+		//@NOTE this attribute is specifically [data-grid-area-md="auto / side"]. should only be present if the markup is within a static page. this attroibute should not be present when being used in a board modal
 	'post' => 'task', //project,client,note,whatever
+	'is_in_board_modal' => false,
 );
 
 $args = app_parse_args($data,$defs);
 
-
 ?>
-<div class="module position-relative" 
-	data-grid-area-md="auto / side"
+<div class="module position-relative"
+	<?php if($args['is_in_board_modal'] == false): //only when in its own basic page ?>
+		data-grid-area-md="auto / side"
+	<?php endif; ?>
 >
 	<div class="module-content">
 
@@ -184,8 +188,7 @@ $args = app_parse_args($data,$defs);
 						</div>
 					<?php endif; ?>
 
-					<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
-					<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
+
 						<div class="flex-col-xs-6 flex-col-md-8">
 							<h5 class="input-label">Due on</h5>
 							<div class="p color-neutral no-margin-bottom">
@@ -235,58 +238,63 @@ $args = app_parse_args($data,$defs);
 								</div>
 							</div>
 						</div>
-					<?php endif; ?>
 
-					<div class="flex-col-xs-6 flex-col-md-4">
+					<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
+					<?php if($args['post'] == 'task' ): ?>
 
-						<h5 class="input-label">Priority</h5>
-						<div class="color-neutral no-margin-bottom">
+						<div class="flex-col-xs-6 flex-col-md-4">
 
-							<input type="hidden" name="<?=$args['post']?>-priority" id="<?=$args['post']?>-priority">
-							<a href="#" data-toggle="dropdown">
-								<!-- @NOTE
-									.task-priority
-										if no priority => `display-none`
-										if task has priority set => ``
-								-->
-								<span class="task-priority">
-									<!-- @NOTE dynamic. text will change based on selected settngs -->
-									<span class="REPLACE">Low</span>
-								</span>
+							<h5 class="input-label">Priority</h5>
+							<div class="color-neutral no-margin-bottom">
+
+								<input type="hidden" name="<?=$args['post']?>-priority" id="<?=$args['post']?>-priority">
+								<a href="#" data-toggle="dropdown">
+									<!-- @NOTE
+										.task-priority
+											if no priority => `display-none`
+											if task has priority set => ``
+									-->
+									<span class="task-priority">
+										<!-- @NOTE dynamic. text will change based on selected settngs -->
+										<span class="REPLACE">Low</span>
+									</span>
 
 
-								<!-- @NOTE
-									.task-priority-unset
-										if no priority => ``
-										if task has priority set => `display-none`
-								-->
-								<span class="task-priority-unset">
-									Set
-								</span>
-							</a>
-							<div class="dropdown dropdown-top-flush dropdown-center-x no-padding" data-dropdown-width="100%">
-								<div class="list-group list-group-interactive list-group-toggle">
-									<a class="list-group-item active">
-										<span>Low</span>
-										<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-									</a>
-									<a class="list-group-item">
-										<span>Medium</span>
-										<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-									</a>
-									<a class="list-group-item">
-										<span>High</span>
-										<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-									</a>
-									<a class="list-group-item">
-										<span>Urgent</span>
-										<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
-									</a>
+									<!-- @NOTE
+										.task-priority-unset
+											if no priority => ``
+											if task has priority set => `display-none`
+									-->
+									<span class="task-priority-unset">
+										Set
+									</span>
+								</a>
+								<div class="dropdown dropdown-top-flush dropdown-center-x no-padding" data-dropdown-width="100%">
+									<div class="list-group list-group-interactive list-group-toggle">
+										<a class="list-group-item active">
+											<span>Low</span>
+											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+										</a>
+										<a class="list-group-item">
+											<span>Medium</span>
+											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+										</a>
+										<a class="list-group-item">
+											<span>High</span>
+											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+										</a>
+										<a class="list-group-item">
+											<span>Urgent</span>
+											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+										</a>
+									</div>
+									<button data-toggle="dropdown" class="btn btn-primary-outline btn-block btn-no-radius border-color-transparent">Done</button>
 								</div>
-								<button data-toggle="dropdown" class="btn btn-primary-outline btn-block btn-no-radius border-color-transparent">Done</button>
 							</div>
 						</div>
-					</div>
+
+					
+					<?php endif; ?>
 				
 				</div>
 	</div>

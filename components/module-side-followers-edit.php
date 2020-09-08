@@ -1,15 +1,17 @@
 <?php
 $defs = array(
 	//@param post - type of single achuchuchu
+	//is_in_board_modal -> attributes to add/remove whther or not the boi is within a modal
+		//@NOTE this attribute is specifically [data-grid-area-md="auto / side"]. should only be present if the markup is within a static page. this attroibute should not be present when being used in a board modal
 	'post' => 'task', //project,client,note,whatever
+	'is_in_board_modal' => false,
 );
 
 $args = app_parse_args($data,$defs);
 
-
 ?>
-<div class="module" 
-	<?php if(FWAPPS_TEMPLATE == 'post-edit'): //only when in its own basic page ?>
+<div class="module"
+	<?php if($args['is_in_board_modal'] == false): //only when in its own basic page ?>
 		data-grid-area-md="auto / side"
 	<?php endif; ?>
 >
@@ -44,13 +46,13 @@ $args = app_parse_args($data,$defs);
 
 		<hr>
 
+	<?php if($args['post'] == 'task' ): ?>
 
-
-		<!-- WIKIS N HOW TOS -->
+		<!-- Notes -->
 			<div class="h5 no-margin-y">
 				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 					<div class="flex-child">
-						<h5 class="input-label">Wiki/How-Tos</h5>
+						<h5 class="input-label">Notes</h5>
 					</div>
 					<div class="flex-child">
 						<input id="<?=$args['post']?>-wiki-id" name="<?=$args['post']?>-wiki-id" type="hidden" />
@@ -62,11 +64,11 @@ $args = app_parse_args($data,$defs);
 		
 
 				<!-- if has docs -->
-					<ul class="post-wiki unstyled">
+					<ul class="post-note unstyled">
 						<li>
 							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
 								<div class="flex-col-xs-9">
-									<span class="wiki-title">Documentation title</span>
+									<span class="note-title">Documentation title</span>
 								</div>
 
 								<div class="flex-col-xs-3 text-align-right">
@@ -81,7 +83,7 @@ $args = app_parse_args($data,$defs);
 								<li>
 									<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
 										<div class="flex-col-xs-9">
-											<span class="wiki-title">Documentation title</span>
+											<span class="note-title">Documentation title</span>
 										</div>
 
 										<div class="flex-col-xs-3 text-align-right">
@@ -96,8 +98,9 @@ $args = app_parse_args($data,$defs);
 
 			<hr>
 
+		<?php endif; ?>
 
-		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
+
 		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-y">
