@@ -1,12 +1,13 @@
 /*** SYMBOLS ***/
 
-$calculated-symbol-basis: 16px; //so it doesnt look icky whatever custom size is set
+$calculated-symbol-basis: $body-font-size; //so it doesnt look icky whatever custom size is set
 
 
 
 $prefix: '.symbol';
 #{$prefix} {
 	font:inherit;
+	font-size: 100%;
 	position:relative;
 	display:inline-block;
 	line-height:1;
@@ -42,6 +43,7 @@ $prefix: '.symbol';
 		
 		&-pseudo {
 			content: "";
+			display:block;
 			color: inherit;
 			position:absolute;
 			top:0;
@@ -151,12 +153,10 @@ $prefix: '.symbol';
 
 		&:before {
 			@extend %for-valid-symbol-pseudo-filled;
-			height: em(2px/$calculated-symbol-basis);
-			width: .5em;
+			height: em(3px/$calculated-symbol-basis);
+			width: .5625em;
 			bottom:1em;
 			top: auto;
-			border-top-right-radius: .125em;
-			border-top-left-radius: .125em;
 
 		}
 
@@ -855,10 +855,7 @@ $prefix: '.symbol';
 						size-base: inherit,
 						main-size: $calculated-symbol-caret-height,//orientation of direction
 						cross-size: $calculated-symbol-caret-width,// perpendicular orientation of direction
-					)){
-						display:inline-block;
-						vertical-align:middle;
-					};
+					));
 				}
 			}
 		}

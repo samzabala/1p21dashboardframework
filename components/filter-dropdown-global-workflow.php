@@ -1,4 +1,4 @@
-<div data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-right filter-dropdown">
+<div data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-right filter-dropdown-global">
 
 		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
 			<div class="flex-col-xs-12 flex-col-md-4">

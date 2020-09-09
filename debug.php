@@ -1,6 +1,7 @@
 <div class="module-grid">
 <div class="module">
 	<div class="module-content">
+		<h1>Sam's Debug Paradise/Hell</h1>
 		<p>
 			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present. it's kinda laggy now because i shat on it too much
 		</p>

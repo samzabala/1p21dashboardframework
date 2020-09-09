@@ -4,7 +4,7 @@
 	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="Logo">
 </a>
 
-<div id="nav-functions" class="nav-block flex-wrap flex-1-1 justify-content-flex-end">
+<div id="nav-functions" class="nav-block flex-wrap flex-1-1 justify-content-flex-end position-static hide-xs">
 	<form id="nav-search"
 		action="<? app_create_link( array('template' => 'projects') ); ?>"
 		class="flex-1-1 flex-xs flex-wrap "

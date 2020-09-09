@@ -264,11 +264,21 @@ $sidebar-base-slim-mobile: 60px;
 
 				/* workflow onward and some pre ones */
 				&-functions {
-					max-width: 600px;
+					.filter-dropdown-global {
+						max-width:rem(730px/$body-font-size);
+					}
+
+					max-width: 500px;
 
 					@include br(#{$mobile-br-max}-max) {
+						width:50%;
 						max-width: 200px;
 					}
+				}
+
+
+				&-quick-functions {
+					margin-right: 1rem;
 				}
 			}
 
@@ -302,15 +312,6 @@ $sidebar-base-slim-mobile: 60px;
 				@at-root #content-wrapper {
 					&:before {
 						left: 2em;
-					}
-				}
-
-				@at-root #nav {
-					&-search {
-	
-						.btn {
-							padding-left:.125em;
-						}
 					}
 				}
 			}

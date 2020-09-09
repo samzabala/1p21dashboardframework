@@ -123,8 +123,11 @@ function app_init_content(){
 					app_get_template_part("app-{$app}/project-view");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-view";
 					break;
-				case '_DEMO-task':
-				case '_DEMO-alert':
+				case 'note-edit':
+				//debug only
+					case '_DEMO-task':
+					case '_DEMO-alert':
+				//end ebug only
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					break;
@@ -159,7 +162,6 @@ function app_init_content(){
 				case 'analytics':
 				case 'workflow':
 				case 'note-view':
-				case 'note-edit':
 				case 'notes':
 					?>
 						<div class="module">
