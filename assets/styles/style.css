@@ -170,7 +170,7 @@ DO NOT EDIT IF U DONT KNOW WHAT IS GOING ON OR THE FRAMEWORK WILL DIE
 html, body {
   width: 100%;
   min-width: 320px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -245,7 +245,7 @@ html.theme-inverse,
 body {
   text-align: left; }
   body.body-nav-sticky-offset {
-    padding-top: 5.3571428571rem; }
+    padding-top: 5rem; }
   body:not(.body-loaded) *, body:not(.body-loaded) *:before, body:not(.body-loaded) *:after {
     transition: none !important; }
 
@@ -316,7 +316,7 @@ a {
 /*** TYPOGRAPHY ***/
 /* special */
 .special-primary {
-  font-size: 4em;
+  font-size: 3.7333333333em;
   line-height: 1;
   color: inherit;
   font-weight: 300;
@@ -327,9 +327,9 @@ a {
   display: block; }
   @media (max-width: 1200px) {
     .special-primary {
-      font-size: 3.4285714286em; } }
+      font-size: 3.2em; } }
 .special-secondary {
-  font-size: 2.8571428571em;
+  font-size: 2.6666666667em;
   line-height: 1.25;
   color: inherit;
   font-weight: 300;
@@ -340,9 +340,9 @@ a {
   display: block; }
   @media (max-width: 1200px) {
     .special-secondary {
-      font-size: 2.2857142857em !important; } }
+      font-size: 2.1333333333em !important; } }
 .lead {
-  font-size: 1.7857142857em;
+  font-size: 1.6666666667em;
   line-height: 1.25;
   color: inherit;
   font-weight: 300;
@@ -353,7 +353,7 @@ a {
   display: block; }
   @media (max-width: 1200px) {
     .lead {
-      font-size: 1.4285714286em; } }
+      font-size: 1.3333333333em; } }
 /* heading */
 h1, .h1,
 h2, .h2,
@@ -371,7 +371,7 @@ h6, .h6 {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
-  margin-bottom: 0.7142857143rem;
+  margin-bottom: 0.6666666667rem;
   margin-top: 1.5em; }
   .theme-inverse h1, .theme-inverse .h1, .theme-inverse h2, .theme-inverse .h2, .theme-inverse h3, .theme-inverse .h3, .theme-inverse h4, .theme-inverse .h4, .theme-inverse h5, .theme-inverse .h5, .theme-inverse h6, .theme-inverse .h6 {
     color: #ecedf0; }
@@ -478,7 +478,7 @@ ol,
 address,
 pre,
 dl {
-  margin-bottom: 1.4285714286em; }
+  margin-bottom: 1.3333333333em; }
 
 p,
 .p,
@@ -494,10 +494,10 @@ li ul,
 li ol,
 dl,
 dt {
-  margin-top: 0.7142857143em; }
+  margin-top: 0.6666666667em; }
 
 ol, ul, dd {
-  padding-left: 1.7857142857em; }
+  padding-left: 1.6666666667em; }
 
 ol.unstyled, ol.unstyled li, ol.inline, ol.inline li, ul.unstyled, ul.unstyled li, ul.inline, ul.inline li {
   padding-left: 0; }
@@ -527,13 +527,13 @@ ul.style-disc li:before, ul > li:before {
   display: inline-block;
   vertical-align: middle;
   line-height: inherit;
-  width: 0.4285714286em;
-  height: 0.4285714286em;
+  width: 0.4em;
+  height: 0.4em;
   color: #0480FE;
   background: currentColor;
-  margin-right: 1.3571428571em;
+  margin-right: 1.2666666667em;
   position: absolute;
-  top: 0.5357142857em;
+  top: 0.55em;
   border-radius: 50%; }
 
 ul.style-circle li:before {
@@ -571,11 +571,11 @@ blockquote {
   font-weight: 300;
   text-transform: none;
   font-style: normal;
-  padding-left: 1.4285714286em;
-  margin-bottom: 1.4285714286em;
-  margin-top: 1.4285714286em;
-  padding-bottom: 0.7142857143em;
-  padding-top: 0.7142857143em;
+  padding-left: 1.3333333333em;
+  margin-bottom: 1.3333333333em;
+  margin-top: 1.3333333333em;
+  padding-bottom: 0.6666666667em;
+  padding-top: 0.6666666667em;
   border-left: 4px solid #0480FE; }
   blockquote > * {
     font-size: inherit;
@@ -592,10 +592,10 @@ pre, code, kbd, tt {
   background: rgba(0, 0, 0, 0.1); }
 
 code, kbd, tt {
-  padding: 0.0892857143em; }
+  padding: 0.0833333333em; }
 
 pre {
-  padding: 0.7142857143em; }
+  padding: 0.6666666667em; }
   pre * {
     border: 0;
     margin: 0;
@@ -607,7 +607,7 @@ cite {
   font-style: italic; }
   blockquote cite {
     display: block;
-    margin-top: 1.4285714286em; }
+    margin-top: 1.3333333333em; }
 
 /* obscure fucks I can fuck with myself */
 q {
@@ -635,13 +635,13 @@ var {
 hr {
   display: block;
   border: 0;
-  height: 0.0714285714rem;
+  height: 0.0666666667rem;
   background: #8d8d8d;
   opacity: .2;
   width: 100%;
   flex: 1 1 auto;
-  margin-top: 1.4285714286rem;
-  margin-bottom: 1.4285714286rem;
+  margin-top: 1.3333333333rem;
+  margin-bottom: 1.3333333333rem;
   margin-left: auto;
   margin-right: auto; }
 
@@ -1071,27 +1071,31 @@ img.asset-thumbnail-image, .thumbnail img, .thumbnail-image img, .fit-image img 
   .table-wrapper .table, .table-wrapper table {
     width: auto;
     min-width: 100%;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    table-layout: auto !important; }
     .table-wrapper .table .tag, .table-wrapper .table .btn, .table-wrapper table .tag, .table-wrapper table .btn {
       white-space: nowrap; }
 
 .table,
 table {
-  white-space: normal;
-  display: table;
   width: 100%;
   max-width: 100%;
+  display: table;
   border-collapse: collapse;
-  border-spacing: 0;
   text-align: inherit;
-  background: transparent;
-  text-align: inherit; }
+  background: transparent; }
+  .table.table-fixed,
+  table.table-fixed {
+    table-layout: fixed !important; }
+  .table .text-wrap-ellipsis,
+  table .text-wrap-ellipsis {
+    width: 32em; }
   thead,
   tbody,
   tfoot,
   tr,
   .table-row {
-    min-width: 100%; }
+    width: 100%; }
   thead,
   tbody,
   tfoot {
@@ -1140,8 +1144,8 @@ table {
     padding: 0 !important; }
   th,
   .table-cell.table-cell-heading {
-    padding-top: calc((3.2142857143rem - (1em * 1.5 )) * .5);
-    padding-bottom: calc((3.2142857143rem - (1em * 1.5 )) * .5);
+    padding-top: calc((3rem - (1em * 1.5 )) * .5);
+    padding-bottom: calc((3rem - (1em * 1.5 )) * .5);
     background: #ecedf0;
     color: #3d3d3d;
     font-weight: 700;
@@ -1155,8 +1159,8 @@ table {
       color: inherit; }
   td,
   .table-cell {
-    padding-top: calc((2.8571428571rem - ( 1em * 1.5 )) * .5);
-    padding-bottom: calc((2.8571428571rem - ( 1em * 1.5 )) * .5); }
+    padding-top: calc((2.6666666667rem - ( 1em * 1.5 )) * .5);
+    padding-bottom: calc((2.6666666667rem - ( 1em * 1.5 )) * .5); }
   .table-col-separation td:nth-child(n+2),
   .table-col-separation .table-cell:nth-child(n+2) {
     border-left: 1px solid #ecedf0; }
@@ -1164,25 +1168,25 @@ table {
       border-left: 1px solid #1e1931; }
   .table-small td,
   .table-small .table-cell {
-    padding-top: calc((1.7857142857rem - ( 1em * 1.3125 )) * .5);
-    padding-bottom: calc((1.7857142857rem - ( 1em * 1.3125 )) * .5);
+    padding-top: calc((1.6666666667rem - ( 1em * 1.3125 )) * .5);
+    padding-bottom: calc((1.6666666667rem - ( 1em * 1.3125 )) * .5);
     line-height: 1.3125; }
   .table-large td,
   .table-large .table-cell {
-    padding-top: calc((5.3571428571rem - ( 1em * 2.25 )) * .5);
-    padding-bottom: calc((5.3571428571rem - ( 1em * 2.25 )) * .5);
+    padding-top: calc((5rem - ( 1em * 2.25 )) * .5);
+    padding-bottom: calc((5rem - ( 1em * 2.25 )) * .5);
     line-height: 2.25; }
   .table-label {
     width: 12px;
-    height: calc(2.8571428571rem - (2px * 2));
+    height: calc(2.6666666667rem - (2px * 2));
     border-radius: 2px;
     display: inline-block;
     vertical-align: middle;
     margin: 2px 0; }
     .table-large .table-label {
-      height: calc(5.3571428571rem - (2px * 2)); }
+      height: calc(5rem - (2px * 2)); }
     .table-small .table-label {
-      height: calc(1.7857142857rem - (2px * 2)); }
+      height: calc(1.6666666667rem - (2px * 2)); }
   .table-row-primary {
     background-color: #e6f2ff; }
     .theme-inverse .table-row-primary {
@@ -1283,6 +1287,7 @@ table {
 /*** SYMBOLS ***/
 .symbol {
   font: inherit;
+  font-size: 100%;
   position: relative;
   display: inline-block;
   line-height: 1;
@@ -1302,11 +1307,12 @@ table {
     margin-right: 0; }
   .symbol:first-child {
     margin-left: 0; }
-  .symbol-text-left, .active > .symbol-text-left-toggle, .open > .symbol-text-left-toggle, .symbol-text-right, .active > .symbol-text-right-toggle, .open > .symbol-text-right-toggle, .symbol-text-center, .active > .symbol-text-center-toggle, .open > .symbol-text-center-toggle, .symbol-text-justify, .active > .symbol-text-justify-toggle, .open > .symbol-text-justify-toggle, .symbol-caret-left, .active > .symbol-caret-left-toggle, .open > .symbol-caret-left-toggle, .symbol-caret-right, .active > .symbol-caret-right-toggle, .open > .symbol-caret-right-toggle, .symbol-caret-up, .active > .symbol-caret-up-toggle, .open > .symbol-caret-up-toggle, .symbol-caret-down, .active > .symbol-caret-down-toggle, .open > .symbol-caret-down-toggle, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle, .symbol-arrow-tail-left, .active > .symbol-arrow-tail-left-toggle, .open > .symbol-arrow-tail-left-toggle, .symbol-arrow-tail-right, .active > .symbol-arrow-tail-right-toggle, .open > .symbol-arrow-tail-right-toggle, .symbol-arrow-tail-up, .active > .symbol-arrow-tail-up-toggle, .open > .symbol-arrow-tail-up-toggle, .symbol-arrow-tail-down, .active > .symbol-arrow-tail-down-toggle, .open > .symbol-arrow-tail-down-toggle, .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle, .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle, .symbol-fries, .active > .symbol-fries-toggle, .open > .symbol-fries-toggle, .symbol-burger, .active > .symbol-burger-toggle, .open > .symbol-burger-toggle, .symbol-download, .active > .symbol-download-toggle, .open > .symbol-download-toggle, .symbol-star, .active > .symbol-star-toggle, .open > .symbol-star-toggle, .symbol-star-stroke, .active > .symbol-star-stroke-toggle, .open > .symbol-star-stroke-toggle, .symbol-file, .active > .symbol-file-toggle, .open > .symbol-file-toggle, .symbol-map, .active > .symbol-map-toggle, .open > .symbol-map-toggle, .symbol-close, .active > .symbol-close-toggle, .open > .symbol-close-toggle, .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle, .symbol-minus, .active > .symbol-minus-toggle, .open > .symbol-minus-toggle, .symbol-plus, .active > .symbol-plus-toggle, .open > .symbol-plus-toggle, .symbol-time, .active > .symbol-time-toggle, .open > .symbol-time-toggle, .symbol-timer, .active > .symbol-timer-toggle, .open > .symbol-timer-toggle, .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle, .symbol-pause, .active > .symbol-pause-toggle, .open > .symbol-pause-toggle, .symbol-play, .active > .symbol-play-toggle, .open > .symbol-play-toggle, .symbol-stop, .active > .symbol-stop-toggle, .open > .symbol-stop-toggle, .symbol-square, .active > .symbol-square-toggle, .open > .symbol-square-toggle, .symbol-delete, .active > .symbol-delete-toggle, .open > .symbol-delete-toggle, .symbol-edit, .active > .symbol-edit-toggle, .open > .symbol-edit-toggle {
+  .symbol-text-left, .active > .symbol-text-left-toggle, .open > .symbol-text-left-toggle, .symbol-text-right, .active > .symbol-text-right-toggle, .open > .symbol-text-right-toggle, .symbol-text-center, .active > .symbol-text-center-toggle, .open > .symbol-text-center-toggle, .symbol-text-justify, .active > .symbol-text-justify-toggle, .open > .symbol-text-justify-toggle, .symbol-caret-left, .active > .symbol-caret-left-toggle, .open > .symbol-caret-left-toggle, .symbol-caret-right, .active > .symbol-caret-right-toggle, .open > .symbol-caret-right-toggle, .symbol-caret-up, .active > .symbol-caret-up-toggle, .open > .symbol-caret-up-toggle, .symbol-caret-down, .active > .symbol-caret-down-toggle, .open > .symbol-caret-down-toggle, .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-double-left, .active > .symbol-arrow-double-left-toggle, .open > .symbol-arrow-double-left-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle, .symbol-arrow-tail-left, .active > .symbol-arrow-tail-left-toggle, .open > .symbol-arrow-tail-left-toggle, .symbol-arrow-tail-right, .active > .symbol-arrow-tail-right-toggle, .open > .symbol-arrow-tail-right-toggle, .symbol-arrow-tail-up, .active > .symbol-arrow-tail-up-toggle, .open > .symbol-arrow-tail-up-toggle, .symbol-arrow-tail-down, .active > .symbol-arrow-tail-down-toggle, .open > .symbol-arrow-tail-down-toggle, .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle, .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle, .symbol-fries, .active > .symbol-fries-toggle, .open > .symbol-fries-toggle, .symbol-burger, .active > .symbol-burger-toggle, .open > .symbol-burger-toggle, .symbol-hyperlink, .active > .symbol-hyperlink-toggle, .open > .symbol-hyperlink-toggle, .symbol-download, .active > .symbol-download-toggle, .open > .symbol-download-toggle, .symbol-star, .active > .symbol-star-toggle, .open > .symbol-star-toggle, .symbol-star-stroke, .active > .symbol-star-stroke-toggle, .open > .symbol-star-stroke-toggle, .symbol-file, .active > .symbol-file-toggle, .open > .symbol-file-toggle, .symbol-map, .active > .symbol-map-toggle, .open > .symbol-map-toggle, .symbol-close, .active > .symbol-close-toggle, .open > .symbol-close-toggle, .symbol-check, .active > .symbol-check-toggle, .open > .symbol-check-toggle, .symbol-minus, .active > .symbol-minus-toggle, .open > .symbol-minus-toggle, .symbol-plus, .active > .symbol-plus-toggle, .open > .symbol-plus-toggle, .symbol-time, .active > .symbol-time-toggle, .open > .symbol-time-toggle, .symbol-timer, .active > .symbol-timer-toggle, .open > .symbol-timer-toggle, .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle, .symbol-pause, .active > .symbol-pause-toggle, .open > .symbol-pause-toggle, .symbol-play, .active > .symbol-play-toggle, .open > .symbol-play-toggle, .symbol-stop, .active > .symbol-stop-toggle, .open > .symbol-stop-toggle, .symbol-square, .active > .symbol-square-toggle, .open > .symbol-square-toggle, .symbol-delete, .active > .symbol-delete-toggle, .open > .symbol-delete-toggle, .symbol-edit, .active > .symbol-edit-toggle, .open > .symbol-edit-toggle {
     transform: none;
     transition: none; }
-  .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .active > .symbol-caret-left-toggle:after, .open > .symbol-caret-left-toggle:after, .symbol-caret-right:after, .active > .symbol-caret-right-toggle:after, .open > .symbol-caret-right-toggle:after, .symbol-caret-up:after, .active > .symbol-caret-up-toggle:after, .open > .symbol-caret-up-toggle:after, .symbol-caret-down:after, .active > .symbol-caret-down-toggle:after, .open > .symbol-caret-down-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-arrow-tail-left:before, .symbol-arrow-tail-left:after, .active > .symbol-arrow-tail-left-toggle:before, .active > .symbol-arrow-tail-left-toggle:after, .open > .symbol-arrow-tail-left-toggle:before, .open > .symbol-arrow-tail-left-toggle:after, .symbol-arrow-tail-right:before, .symbol-arrow-tail-right:after, .active > .symbol-arrow-tail-right-toggle:before, .active > .symbol-arrow-tail-right-toggle:after, .open > .symbol-arrow-tail-right-toggle:before, .open > .symbol-arrow-tail-right-toggle:after, .symbol-arrow-tail-up:before, .symbol-arrow-tail-up:after, .active > .symbol-arrow-tail-up-toggle:before, .active > .symbol-arrow-tail-up-toggle:after, .open > .symbol-arrow-tail-up-toggle:before, .open > .symbol-arrow-tail-up-toggle:after, .symbol-arrow-tail-down:before, .symbol-arrow-tail-down:after, .active > .symbol-arrow-tail-down-toggle:before, .active > .symbol-arrow-tail-down-toggle:after, .open > .symbol-arrow-tail-down-toggle:before, .open > .symbol-arrow-tail-down-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-fries:after, .active > .symbol-fries-toggle:after, .open > .symbol-fries-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:before, .symbol-download:after, .active > .symbol-download-toggle:before, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:before, .open > .symbol-download-toggle:after, .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after, .symbol-file:after, .active > .symbol-file-toggle:after, .open > .symbol-file-toggle:after, .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .active > .symbol-timer-toggle:before, .open > .symbol-timer-toggle:before, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .symbol-search:after, .active > .symbol-search-toggle:before, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:before, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .symbol-delete:after, .active > .symbol-delete-toggle:before, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:after, .symbol-edit:before, .symbol-edit:after, .active > .symbol-edit-toggle:before, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:after {
+  .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .active > .symbol-caret-left-toggle:after, .open > .symbol-caret-left-toggle:after, .symbol-caret-right:after, .active > .symbol-caret-right-toggle:after, .open > .symbol-caret-right-toggle:after, .symbol-caret-up:after, .active > .symbol-caret-up-toggle:after, .open > .symbol-caret-up-toggle:after, .symbol-caret-down:after, .active > .symbol-caret-down-toggle:after, .open > .symbol-caret-down-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-arrow-tail-left:before, .symbol-arrow-tail-left:after, .active > .symbol-arrow-tail-left-toggle:before, .active > .symbol-arrow-tail-left-toggle:after, .open > .symbol-arrow-tail-left-toggle:before, .open > .symbol-arrow-tail-left-toggle:after, .symbol-arrow-tail-right:before, .symbol-arrow-tail-right:after, .active > .symbol-arrow-tail-right-toggle:before, .active > .symbol-arrow-tail-right-toggle:after, .open > .symbol-arrow-tail-right-toggle:before, .open > .symbol-arrow-tail-right-toggle:after, .symbol-arrow-tail-up:before, .symbol-arrow-tail-up:after, .active > .symbol-arrow-tail-up-toggle:before, .active > .symbol-arrow-tail-up-toggle:after, .open > .symbol-arrow-tail-up-toggle:before, .open > .symbol-arrow-tail-up-toggle:after, .symbol-arrow-tail-down:before, .symbol-arrow-tail-down:after, .active > .symbol-arrow-tail-down-toggle:before, .active > .symbol-arrow-tail-down-toggle:after, .open > .symbol-arrow-tail-down-toggle:before, .open > .symbol-arrow-tail-down-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-fries:after, .active > .symbol-fries-toggle:after, .open > .symbol-fries-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-hyperlink:before, .symbol-hyperlink:after, .active > .symbol-hyperlink-toggle:before, .active > .symbol-hyperlink-toggle:after, .open > .symbol-hyperlink-toggle:before, .open > .symbol-hyperlink-toggle:after, .symbol-download:before, .symbol-download:after, .active > .symbol-download-toggle:before, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:before, .open > .symbol-download-toggle:after, .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after, .symbol-file:after, .active > .symbol-file-toggle:after, .open > .symbol-file-toggle:after, .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .active > .symbol-timer-toggle:before, .open > .symbol-timer-toggle:before, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .symbol-search:after, .active > .symbol-search-toggle:before, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:before, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .symbol-delete:after, .active > .symbol-delete-toggle:before, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:after, .symbol-edit:before, .symbol-edit:after, .active > .symbol-edit-toggle:before, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:after {
     content: "";
+    display: block;
     color: inherit;
     position: absolute;
     top: 0;
@@ -1322,13 +1328,13 @@ table {
     .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-arrow-tail-left:after, .active > .symbol-arrow-tail-left-toggle:after, .open > .symbol-arrow-tail-left-toggle:after, .symbol-arrow-tail-right:after, .active > .symbol-arrow-tail-right-toggle:after, .open > .symbol-arrow-tail-right-toggle:after, .symbol-arrow-tail-up:after, .active > .symbol-arrow-tail-up-toggle:after, .open > .symbol-arrow-tail-up-toggle:after, .symbol-arrow-tail-down:after, .active > .symbol-arrow-tail-down-toggle:after, .open > .symbol-arrow-tail-down-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-fries:after, .active > .symbol-fries-toggle:after, .open > .symbol-fries-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-download:after, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:after, .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after, .symbol-file:after, .active > .symbol-file-toggle:after, .open > .symbol-file-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .active > .symbol-timer-toggle:before, .open > .symbol-timer-toggle:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-delete:before, .active > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:before, .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
       background: currentColor; }
     .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after, .symbol-caret-left:after, .active > .symbol-caret-left-toggle:after, .open > .symbol-caret-left-toggle:after, .symbol-caret-right:after, .active > .symbol-caret-right-toggle:after, .open > .symbol-caret-right-toggle:after, .symbol-caret-up:after, .active > .symbol-caret-up-toggle:after, .open > .symbol-caret-up-toggle:after, .symbol-caret-down:after, .active > .symbol-caret-down-toggle:after, .open > .symbol-caret-down-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-fries:after, .active > .symbol-fries-toggle:after, .open > .symbol-fries-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:before, .symbol-check:after, .active > .symbol-check-toggle:before, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:before, .open > .symbol-check-toggle:after, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-timer:before, .active > .symbol-timer-toggle:before, .open > .symbol-timer-toggle:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
-      border-radius: 0.09375em; }
+      border-radius: 0.1em; }
     .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after, .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before {
       border-radius: 50%; }
     .symbol-caret-left:after, .active > .symbol-caret-left-toggle:after, .open > .symbol-caret-left-toggle:after, .symbol-caret-right:after, .active > .symbol-caret-right-toggle:after, .open > .symbol-caret-right-toggle:after, .symbol-caret-up:after, .active > .symbol-caret-up-toggle:after, .open > .symbol-caret-up-toggle:after, .symbol-caret-down:after, .active > .symbol-caret-down-toggle:after, .open > .symbol-caret-down-toggle:after, .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after, .symbol-close:before, .symbol-close:after, .active > .symbol-close-toggle:before, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:before, .open > .symbol-close-toggle:after, .symbol-check:after, .active > .symbol-check-toggle:after, .open > .symbol-check-toggle:after, .symbol-check:before, .active > .symbol-check-toggle:before, .open > .symbol-check-toggle:before, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
-      width: 0.1875em; }
+      width: 0.2em; }
     .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after {
-      height: 0.1875em; }
+      height: 0.2em; }
     .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before, .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before, .symbol-plus:after, .active > .symbol-plus-toggle:after, .open > .symbol-plus-toggle:after, .symbol-minus:after, .active > .symbol-minus-toggle:after, .open > .symbol-minus-toggle:after, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after {
       width: 1em; }
     .symbol-arrow-tail-left:after, .active > .symbol-arrow-tail-left-toggle:after, .open > .symbol-arrow-tail-left-toggle:after, .symbol-arrow-tail-right:after, .active > .symbol-arrow-tail-right-toggle:after, .open > .symbol-arrow-tail-right-toggle:after, .symbol-arrow-tail-up:after, .active > .symbol-arrow-tail-up-toggle:after, .open > .symbol-arrow-tail-up-toggle:after, .symbol-arrow-tail-down:after, .active > .symbol-arrow-tail-down-toggle:after, .open > .symbol-arrow-tail-down-toggle:after, .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before, .symbol-plus:before, .active > .symbol-plus-toggle:before, .open > .symbol-plus-toggle:before, .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before, .symbol-pause:before, .symbol-pause:after, .active > .symbol-pause-toggle:before, .active > .symbol-pause-toggle:after, .open > .symbol-pause-toggle:before, .open > .symbol-pause-toggle:after, .symbol-stop:after, .active > .symbol-stop-toggle:after, .open > .symbol-stop-toggle:after, .symbol-square:after, .active > .symbol-square-toggle:after, .open > .symbol-square-toggle:after, .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
@@ -1336,37 +1342,35 @@ table {
   .symbol-text-left:before, .active > .symbol-text-left-toggle:before, .open > .symbol-text-left-toggle:before, .symbol-text-right:before, .active > .symbol-text-right-toggle:before, .open > .symbol-text-right-toggle:before, .symbol-text-center:before, .active > .symbol-text-center-toggle:before, .open > .symbol-text-center-toggle:before, .symbol-text-justify:before, .active > .symbol-text-justify-toggle:before, .open > .symbol-text-justify-toggle:before, .symbol-caret-left:before, .active > .symbol-caret-left-toggle:before, .open > .symbol-caret-left-toggle:before, .symbol-caret-right:before, .active > .symbol-caret-right-toggle:before, .open > .symbol-caret-right-toggle:before, .symbol-caret-up:before, .active > .symbol-caret-up-toggle:before, .open > .symbol-caret-up-toggle:before, .symbol-caret-down:before, .active > .symbol-caret-down-toggle:before, .open > .symbol-caret-down-toggle:before, .symbol-kebab-horizontal:before, .active > .symbol-kebab-horizontal-toggle:before, .open > .symbol-kebab-horizontal-toggle:before, .symbol-kebab-vertical:before, .active > .symbol-kebab-vertical-toggle:before, .open > .symbol-kebab-vertical-toggle:before, .symbol-star:before, .active > .symbol-star-toggle:before, .open > .symbol-star-toggle:before, .symbol-star-stroke:before, .active > .symbol-star-stroke-toggle:before, .open > .symbol-star-stroke-toggle:before, .symbol-file:before, .active > .symbol-file-toggle:before, .open > .symbol-file-toggle:before, .symbol-minus:before, .active > .symbol-minus-toggle:before, .open > .symbol-minus-toggle:before, .symbol-time:before, .active > .symbol-time-toggle:before, .open > .symbol-time-toggle:before, .symbol-play:before, .active > .symbol-play-toggle:before, .open > .symbol-play-toggle:before, .symbol-stop:before, .active > .symbol-stop-toggle:before, .open > .symbol-stop-toggle:before, .symbol-square:before, .active > .symbol-square-toggle:before, .open > .symbol-square-toggle:before {
     content: none; }
   .symbol-edit:before, .active > .symbol-edit-toggle:before, .open > .symbol-edit-toggle:before {
-    -webkit-clip-path: polygon(0 0, 50% 0, 50% 0.125em, 0.125em 0.125em, 0.125em calc(100% - 0.125em), calc(100% - 0.125em) calc(100% - 0.125em), calc(100% - 0.125em) 50%, 100% 50%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 50% 0, 50% 0.125em, 0.125em 0.125em, 0.125em calc(100% - 0.125em), calc(100% - 0.125em) calc(100% - 0.125em), calc(100% - 0.125em) 50%, 100% 50%, 100% 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, 50% 0, 50% 0.1333333333em, 0.1333333333em 0.1333333333em, 0.1333333333em calc(100% - 0.1333333333em), calc(100% - 0.1333333333em) calc(100% - 0.1333333333em), calc(100% - 0.1333333333em) 50%, 100% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 50% 0, 50% 0.1333333333em, 0.1333333333em 0.1333333333em, 0.1333333333em calc(100% - 0.1333333333em), calc(100% - 0.1333333333em) calc(100% - 0.1333333333em), calc(100% - 0.1333333333em) 50%, 100% 50%, 100% 100%, 0 100%); }
   .symbol-edit:after, .active > .symbol-edit-toggle:after, .open > .symbol-edit-toggle:after {
-    border: 0.125em solid;
-    width: 0.4375em;
+    border: 0.1333333333em solid;
+    width: 0.4666666667em;
     border-radius: 0 0 50% 50%;
     transform: rotate(45deg);
     bottom: auto;
     left: auto;
     top: -.25em;
-    background-image: repeating-linear-gradient(180deg, currentColor 0, currentColor 0.125em, transparent 0.125em, transparent 100%);
+    background-image: repeating-linear-gradient(180deg, currentColor 0, currentColor 0.1333333333em, transparent 0.1333333333em, transparent 100%);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% .625em; }
   .symbol-delete:before, .active > .symbol-delete-toggle:before, .open > .symbol-delete-toggle:before {
-    height: 0.125em;
-    width: .5em;
+    height: 0.2em;
+    width: .5625em;
     bottom: 1em;
-    top: auto;
-    border-top-right-radius: .125em;
-    border-top-left-radius: .125em; }
+    top: auto; }
   .symbol-delete:after, .active > .symbol-delete-toggle:after, .open > .symbol-delete-toggle:after {
-    border: 0.125em solid;
+    border: 0.1333333333em solid;
     border-bottom-right-radius: .2em;
     border-bottom-left-radius: .2em;
     width: 1em;
     height: 1.125em;
     bottom: -.125em;
     top: auto;
-    background-image: repeating-linear-gradient(90deg, currentColor 0, currentColor 0.0625em, transparent 0.0625em, transparent 0.1875em, currentColor 0.1875em, currentColor 0.25em, transparent 0.25em, transparent 0.375em, currentColor 0.375em, currentColor 0.4375em);
-    background-size: 0.4375em 0.5em;
+    background-image: repeating-linear-gradient(90deg, currentColor 0, currentColor 0.0666666667em, transparent 0.0666666667em, transparent 0.2em, currentColor 0.2em, currentColor 0.2666666667em, transparent 0.2666666667em, transparent 0.4em, currentColor 0.4em, currentColor 0.4666666667em);
+    background-size: 0.4666666667em 0.5em;
     background-position: center center;
     background-repeat: no-repeat; }
   .symbol-play:after, .active > .symbol-play-toggle:after, .open > .symbol-play-toggle:after {
@@ -1383,28 +1387,28 @@ table {
   .symbol-search, .active > .symbol-search-toggle, .open > .symbol-search-toggle {
     transform: rotate(-45deg); }
     .symbol-search:before, .active > .symbol-search-toggle:before, .open > .symbol-search-toggle:before {
-      border: 0.1875em solid;
+      border: 0.2em solid;
       bottom: auto;
       top: -.25em; }
     .symbol-search:after, .active > .symbol-search-toggle:after, .open > .symbol-search-toggle:after {
       height: .625em;
-      top: calc(.75em - (0.1875em * .5));
+      top: calc(.75em - (0.2em * .5));
       bottom: auto; }
   .symbol-time:after, .active > .symbol-time-toggle:after, .open > .symbol-time-toggle:after, .symbol-timer:after, .active > .symbol-timer-toggle:after, .open > .symbol-timer-toggle:after {
-    border: 0.125em solid;
+    border: 0.1333333333em solid;
     width: 1.125em;
     height: 1.125em;
     left: -.5em;
     right: -.5em;
     bottom: -.125em;
     top: auto;
-    background-image: repeating-linear-gradient(90deg, currentColor 0, currentColor 0.125em, transparent 0.125em, transparent 100%), linear-gradient(0deg, currentColor 0, currentColor 0.125em, transparent 0.125em, transparent 100%);
-    background-position: 0.35em 0.125em;
+    background-image: repeating-linear-gradient(90deg, currentColor 0, currentColor 0.1333333333em, transparent 0.1333333333em, transparent 100%), linear-gradient(0deg, currentColor 0, currentColor 0.1333333333em, transparent 0.1333333333em, transparent 100%);
+    background-position: 0.3416666667em 0.1333333333em;
     background-size: 0.3em 0.4em;
     background-repeat: no-repeat; }
   .symbol-timer:before, .active > .symbol-timer-toggle:before, .open > .symbol-timer-toggle:before {
     width: .5em;
-    height: 0.125em;
+    height: 0.1333333333em;
     right: -.1875em;
     left: auto;
     bottom: auto;
@@ -1431,24 +1435,24 @@ table {
   .symbol-close:after, .active > .symbol-close-toggle:after, .open > .symbol-close-toggle:after {
     transform: rotate(-45deg); }
   .symbol-map:before, .symbol-map:after, .active > .symbol-map-toggle:before, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:before, .open > .symbol-map-toggle:after {
-    transform: translateY(-0.3125em);
+    transform: translateY(-0.3333333333em);
     transform-origin: top center;
     bottom: auto; }
   .symbol-map:before, .active > .symbol-map-toggle:before, .open > .symbol-map-toggle:before {
     border-radius: 50%;
-    border: 0.25em solid; }
+    border: 0.2666666667em solid; }
   .symbol-map:after, .active > .symbol-map-toggle:after, .open > .symbol-map-toggle:after {
-    border: 0.390625em solid transparent;
-    border-top: 0.75em solid;
+    border: 0.4166666667em solid transparent;
+    border-top: 0.8em solid;
     border-bottom: 0;
     width: 0;
     height: 0;
     margin: 0 auto;
-    top: calc(1em - 0.1875em); }
+    top: calc(1em - 0.2em); }
   .symbol-file:after, .active > .symbol-file-toggle:after, .open > .symbol-file-toggle:after {
     width: .875em;
-    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, calc(50% + 0.125em) 0, 50% 0, 50% calc(30% + 0.125em), calc(100% - 0.125em) calc(30% + 0.125em), calc(100% - 0.125em) 30%, calc(50% + 0.125em) 30%, calc(50% + 0.125em) 0.125em, calc(100% - 0.125em) 30%, calc(100% - 0.125em) calc(100% - 0.125em), 0.125em calc(100% - 0.125em), 0.125em 0.125em, 50% 0.125em, 50% 0);
-            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, calc(50% + 0.125em) 0, 50% 0, 50% calc(30% + 0.125em), calc(100% - 0.125em) calc(30% + 0.125em), calc(100% - 0.125em) 30%, calc(50% + 0.125em) 30%, calc(50% + 0.125em) 0.125em, calc(100% - 0.125em) 30%, calc(100% - 0.125em) calc(100% - 0.125em), 0.125em calc(100% - 0.125em), 0.125em 0.125em, 50% 0.125em, 50% 0); }
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, calc(50% + 0.1333333333em) 0, 50% 0, 50% calc(30% + 0.1333333333em), calc(100% - 0.1333333333em) calc(30% + 0.1333333333em), calc(100% - 0.1333333333em) 30%, calc(50% + 0.1333333333em) 30%, calc(50% + 0.1333333333em) 0.1333333333em, calc(100% - 0.1333333333em) 30%, calc(100% - 0.1333333333em) calc(100% - 0.1333333333em), 0.1333333333em calc(100% - 0.1333333333em), 0.1333333333em 0.1333333333em, 50% 0.1333333333em, 50% 0);
+            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 30%, calc(50% + 0.1333333333em) 0, 50% 0, 50% calc(30% + 0.1333333333em), calc(100% - 0.1333333333em) calc(30% + 0.1333333333em), calc(100% - 0.1333333333em) 30%, calc(50% + 0.1333333333em) 30%, calc(50% + 0.1333333333em) 0.1333333333em, calc(100% - 0.1333333333em) 30%, calc(100% - 0.1333333333em) calc(100% - 0.1333333333em), 0.1333333333em calc(100% - 0.1333333333em), 0.1333333333em 0.1333333333em, 50% 0.1333333333em, 50% 0); }
   .symbol-star:after, .active > .symbol-star-toggle:after, .open > .symbol-star-toggle:after, .symbol-star-stroke:after, .active > .symbol-star-stroke-toggle:after, .open > .symbol-star-stroke-toggle:after {
     width: 1.25em;
     height: 1.25em;
@@ -1464,35 +1468,53 @@ table {
             clip-path: polygon(50% 5%, 64% 38%, 100% 41%, 73% 65%, 80% 100%, 50% 82%, 20% 100%, 27% 65%, 0% 41%, 36% 38%, 50% 5%, 50% 26%, 41% 46%, 20% 48%, 36% 62%, 32% 83%, 50% 72%, 68% 83%, 64% 62%, 80% 48%, 59% 46%, 50% 26%); }
   .symbol-download:before, .active > .symbol-download-toggle:before, .open > .symbol-download-toggle:before {
     height: .375em;
-    border-bottom: 0.125em solid;
-    border-right: 0.125em solid;
-    border-left: 0.125em solid;
+    border-bottom: 0.1333333333em solid;
+    border-right: 0.1333333333em solid;
+    border-left: 0.1333333333em solid;
     top: auto; }
   .symbol-download:after, .active > .symbol-download-toggle:after, .open > .symbol-download-toggle:after {
-    -webkit-clip-path: polygon(calc(50% - 0.125em * .5) 0, calc(50% + 0.125em * .5) 0, calc(50% + 0.125em * .5) 60%, 100% 60%, 50% 100%, 0 60%, calc(50% - 0.125em * .5) 60%);
-            clip-path: polygon(calc(50% - 0.125em * .5) 0, calc(50% + 0.125em * .5) 0, calc(50% + 0.125em * .5) 60%, 100% 60%, 50% 100%, 0 60%, calc(50% - 0.125em * .5) 60%);
+    -webkit-clip-path: polygon(calc(50% - 0.1333333333em * .5) 0, calc(50% + 0.1333333333em * .5) 0, calc(50% + 0.1333333333em * .5) 60%, 100% 60%, 50% 100%, 0 60%, calc(50% - 0.1333333333em * .5) 60%);
+            clip-path: polygon(calc(50% - 0.1333333333em * .5) 0, calc(50% + 0.1333333333em * .5) 0, calc(50% + 0.1333333333em * .5) 60%, 100% 60%, 50% 100%, 0 60%, calc(50% - 0.1333333333em * .5) 60%);
     height: .625em;
     width: .5em;
     bottom: auto; }
+  .symbol-hyperlink:before, .symbol-hyperlink:after, .active > .symbol-hyperlink-toggle:before, .active > .symbol-hyperlink-toggle:after, .open > .symbol-hyperlink-toggle:before, .open > .symbol-hyperlink-toggle:after {
+    width: .6875em;
+    height: .5em;
+    border-radius: .25em;
+    border: 0.1333333333em solid;
+    transform: rotate(-45deg); }
+  .symbol-hyperlink:before, .active > .symbol-hyperlink-toggle:before, .open > .symbol-hyperlink-toggle:before {
+    top: auto;
+    right: auto;
+    bottom: -.125em;
+    left: .25em;
+    transform-origin: bottom left; }
+  .symbol-hyperlink:after, .active > .symbol-hyperlink-toggle:after, .open > .symbol-hyperlink-toggle:after {
+    bottom: auto;
+    left: auto;
+    top: -.125em;
+    right: .25em;
+    transform-origin: top right; }
   .symbol-fries:after, .active > .symbol-fries-toggle:after, .open > .symbol-fries-toggle:after, .symbol-burger:after, .active > .symbol-burger-toggle:after, .open > .symbol-burger-toggle:after {
-    box-shadow: 0 0.375em 0 0, 0 -0.375em 0 0;
-    height: 0.1875em; }
+    box-shadow: 0 0.4em 0 0, 0 -0.4em 0 0;
+    height: 0.2em; }
   .symbol-fries:after, .active > .symbol-fries-toggle:after, .open > .symbol-fries-toggle:after {
     transform: rotate(90deg); }
   .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after, .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after {
-    width: 0.25em;
-    height: 0.25em; }
+    width: 0.2666666667em;
+    height: 0.2666666667em; }
   .symbol-kebab-vertical, .active > .symbol-kebab-vertical-toggle, .open > .symbol-kebab-vertical-toggle {
-    width: 0.25em; }
+    width: 0.2666666667em; }
     .symbol-kebab-vertical:after, .active > .symbol-kebab-vertical-toggle:after, .open > .symbol-kebab-vertical-toggle:after {
-      box-shadow: 0 -0.5em 0 0, 0 0.5em 0 0; }
+      box-shadow: 0 -0.5333333333em 0 0, 0 0.5333333333em 0 0; }
   .symbol-kebab-horizontal, .active > .symbol-kebab-horizontal-toggle, .open > .symbol-kebab-horizontal-toggle {
-    width: 1.25em; }
+    width: 1.3333333333em; }
     .symbol-kebab-horizontal:after, .active > .symbol-kebab-horizontal-toggle:after, .open > .symbol-kebab-horizontal-toggle:after {
-      box-shadow: -0.5em 0 0 0, 0.5em 0 0 0; }
+      box-shadow: -0.5333333333em 0 0 0, 0.5333333333em 0 0 0; }
   .symbol-arrow-left:before, .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:before, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:before, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:before, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:before, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:before, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:before, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:before, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:before, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:before, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:before, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:before, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:before, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:before, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:before, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:before, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:after {
     height: .6875em;
-    transform-origin: center 0.09375em; }
+    transform-origin: center 0.1em; }
   .symbol-arrow-left:before, .active > .symbol-arrow-left-toggle:before, .open > .symbol-arrow-left-toggle:before, .symbol-arrow-right:before, .active > .symbol-arrow-right-toggle:before, .open > .symbol-arrow-right-toggle:before, .symbol-arrow-up:before, .active > .symbol-arrow-up-toggle:before, .open > .symbol-arrow-up-toggle:before, .symbol-arrow-down:before, .active > .symbol-arrow-down-toggle:before, .open > .symbol-arrow-down-toggle:before, .symbol-arrow-double-left:before, .active > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:before, .symbol-arrow-double-right:before, .active > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:before, .symbol-arrow-double-up:before, .active > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:before, .symbol-arrow-double-down:before, .active > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:before {
     transform: rotate(-45deg); }
   .symbol-arrow-left:after, .active > .symbol-arrow-left-toggle:after, .open > .symbol-arrow-left-toggle:after, .symbol-arrow-right:after, .active > .symbol-arrow-right-toggle:after, .open > .symbol-arrow-right-toggle:after, .symbol-arrow-up:after, .active > .symbol-arrow-up-toggle:after, .open > .symbol-arrow-up-toggle:after, .symbol-arrow-down:after, .active > .symbol-arrow-down-toggle:after, .open > .symbol-arrow-down-toggle:after, .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:after {
@@ -1503,17 +1525,17 @@ table {
   .symbol-arrow-left, .active > .symbol-arrow-left-toggle, .open > .symbol-arrow-left-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle {
     height: .75em; }
   .symbol-arrow-double-left:before, .active > .symbol-arrow-double-left-toggle:before, .open > .symbol-arrow-double-left-toggle:before, .symbol-arrow-double-right:before, .active > .symbol-arrow-double-right-toggle:before, .open > .symbol-arrow-double-right-toggle:before, .symbol-arrow-double-up:before, .active > .symbol-arrow-double-up-toggle:before, .open > .symbol-arrow-double-up-toggle:before, .symbol-arrow-double-down:before, .active > .symbol-arrow-double-down-toggle:before, .open > .symbol-arrow-double-down-toggle:before {
-    box-shadow: -0.328125em 0.328125em 0 0; }
+    box-shadow: -0.35em 0.35em 0 0; }
   .symbol-arrow-double-left:after, .active > .symbol-arrow-double-left-toggle:after, .open > .symbol-arrow-double-left-toggle:after, .symbol-arrow-double-right:after, .active > .symbol-arrow-double-right-toggle:after, .open > .symbol-arrow-double-right-toggle:after, .symbol-arrow-double-up:after, .active > .symbol-arrow-double-up-toggle:after, .open > .symbol-arrow-double-up-toggle:after, .symbol-arrow-double-down:after, .active > .symbol-arrow-double-down-toggle:after, .open > .symbol-arrow-double-down-toggle:after {
-    box-shadow: 0.328125em 0.328125em 0 0; }
+    box-shadow: 0.35em 0.35em 0 0; }
   .symbol-arrow-tail-left:before, .active > .symbol-arrow-tail-left-toggle:before, .open > .symbol-arrow-tail-left-toggle:before, .symbol-arrow-tail-right:before, .active > .symbol-arrow-tail-right-toggle:before, .open > .symbol-arrow-tail-right-toggle:before, .symbol-arrow-tail-up:before, .active > .symbol-arrow-tail-up-toggle:before, .open > .symbol-arrow-tail-up-toggle:before, .symbol-arrow-tail-down:before, .active > .symbol-arrow-tail-down-toggle:before, .open > .symbol-arrow-tail-down-toggle:before {
     height: .625em;
     width: .625em;
-    border-top: 0.125em solid;
-    border-right: 0.125em solid;
+    border-top: 0.1333333333em solid;
+    border-right: 0.1333333333em solid;
     transform: rotate(-45deg); }
   .symbol-arrow-tail-left:after, .active > .symbol-arrow-tail-left-toggle:after, .open > .symbol-arrow-tail-left-toggle:after, .symbol-arrow-tail-right:after, .active > .symbol-arrow-tail-right-toggle:after, .open > .symbol-arrow-tail-right-toggle:after, .symbol-arrow-tail-up:after, .active > .symbol-arrow-tail-up-toggle:after, .open > .symbol-arrow-tail-up-toggle:after, .symbol-arrow-tail-down:after, .active > .symbol-arrow-tail-down-toggle:after, .open > .symbol-arrow-tail-down-toggle:after {
-    width: 0.125em; }
+    width: 0.1333333333em; }
   .symbol-caret-left, .active > .symbol-caret-left-toggle, .open > .symbol-caret-left-toggle, .symbol-caret-right, .active > .symbol-caret-right-toggle, .open > .symbol-caret-right-toggle, .symbol-caret-up, .active > .symbol-caret-up-toggle, .open > .symbol-caret-up-toggle, .symbol-caret-down, .active > .symbol-caret-down-toggle, .open > .symbol-caret-down-toggle {
     width: .625em;
     height: .75em; }
@@ -1522,12 +1544,10 @@ table {
       width: 0;
       height: 0;
       font-size: inherit;
-      border-right: 0.2857142857em solid transparent;
-      border-left: 0.2857142857em solid transparent;
-      border-bottom: 0.4285714286em solid;
-      border-top: 0 solid;
-      display: inline-block;
-      vertical-align: middle; }
+      border-right: 0.2666666667em solid transparent;
+      border-left: 0.2666666667em solid transparent;
+      border-bottom: 0.4em solid;
+      border-top: 0 solid; }
   .symbol-caret-up, .active > .symbol-caret-up-toggle, .open > .symbol-caret-up-toggle, .symbol-arrow-up, .active > .symbol-arrow-up-toggle, .open > .symbol-arrow-up-toggle, .symbol-arrow-tail-up, .active > .symbol-arrow-tail-up-toggle, .open > .symbol-arrow-tail-up-toggle, .symbol-arrow-double-up, .active > .symbol-arrow-double-up-toggle, .open > .symbol-arrow-double-up-toggle {
     transform: rotate(0deg); }
   .symbol-caret-down, .active > .symbol-caret-down-toggle, .open > .symbol-caret-down-toggle, .symbol-arrow-down, .active > .symbol-arrow-down-toggle, .open > .symbol-arrow-down-toggle, .symbol-arrow-tail-down, .active > .symbol-arrow-tail-down-toggle, .open > .symbol-arrow-tail-down-toggle, .symbol-arrow-double-down, .active > .symbol-arrow-double-down-toggle, .open > .symbol-arrow-double-down-toggle {
@@ -1537,20 +1557,20 @@ table {
   .symbol-caret-right, .active > .symbol-caret-right-toggle, .open > .symbol-caret-right-toggle, .symbol-arrow-right, .active > .symbol-arrow-right-toggle, .open > .symbol-arrow-right-toggle, .symbol-arrow-tail-right, .active > .symbol-arrow-tail-right-toggle, .open > .symbol-arrow-tail-right-toggle, .symbol-arrow-double-right, .active > .symbol-arrow-double-right-toggle, .open > .symbol-arrow-double-right-toggle {
     transform: rotate(90deg); }
   .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after, .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after, .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after, .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after {
-    height: 0.125em;
+    height: 0.1333333333em;
     width: .5em; }
   .symbol-text-left:after, .active > .symbol-text-left-toggle:after, .open > .symbol-text-left-toggle:after {
-    box-shadow: -0.25em -0.3125em 0 0, 0.25em -0.3125em 0 0, 0 -0.3125em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, -0.25em 0.3125em 0 0, 0em 0.3125em 0 0; }
+    box-shadow: -0.25em -0.3333333333em 0 0, 0.25em -0.3333333333em 0 0, 0 -0.3333333333em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, -0.25em 0.3333333333em 0 0, 0em 0.3333333333em 0 0; }
   .symbol-text-right:after, .active > .symbol-text-right-toggle:after, .open > .symbol-text-right-toggle:after {
-    box-shadow: -0.25em -0.3125em 0 0, 0.25em -0.3125em 0 0, 0 -0.3125em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, 0.25em 0.3125em 0 0, 0 0.3125em 0 0; }
+    box-shadow: -0.25em -0.3333333333em 0 0, 0.25em -0.3333333333em 0 0, 0 -0.3333333333em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, 0.25em 0.3333333333em 0 0, 0 0.3333333333em 0 0; }
   .symbol-text-center:after, .active > .symbol-text-center-toggle:after, .open > .symbol-text-center-toggle:after {
-    box-shadow: -0.25em -0.3125em 0 0, 0.25em -0.3125em 0 0, 0 -0.3125em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, -0.125em 0.3125em 0 0, 0.125em 0.3125em 0 0; }
+    box-shadow: -0.25em -0.3333333333em 0 0, 0.25em -0.3333333333em 0 0, 0 -0.3333333333em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, -0.125em 0.3333333333em 0 0, 0.125em 0.3333333333em 0 0; }
   .symbol-text-justify:after, .active > .symbol-text-justify-toggle:after, .open > .symbol-text-justify-toggle:after {
-    box-shadow: -0.25em -0.3125em 0 0, 0.25em -0.3125em 0 0, 0 -0.3125em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, -0.25em 0.3125em 0 0, 0.25em 0.3125em 0 0, 0 0.3125em 0 0; }
+    box-shadow: -0.25em -0.3333333333em 0 0, 0.25em -0.3333333333em 0 0, 0 -0.3333333333em 0 0, -0.25em 0 0 0, 0.25em 0 0 0, -0.25em 0.3333333333em 0 0, 0.25em 0.3333333333em 0 0, 0 0.3333333333em 0 0; }
 
 /*** NAVIGATION ***/
 .nav {
-  height: 5.3571428571rem;
+  height: 5rem;
   background: #FFFFFF;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1618,8 +1638,8 @@ table {
 .dropdown li > [data-toggle], .nav-item > a,
 .nav-item > [data-toggle], .nav-list li > a,
 .nav-list li > [data-toggle] {
-  padding-top: calc( ( 2.5rem - ( 1.5rem)) * .5);
-  padding-bottom: calc( ( 2.5rem - ( 1.5rem)) * .5);
+  padding-top: calc( ( 2.3333333333rem - ( 1.5rem)) * .5);
+  padding-bottom: calc( ( 2.3333333333rem - ( 1.5rem)) * .5);
   display: inline-block; }
 
 .dropdown li:hover > a,
@@ -1628,9 +1648,21 @@ table {
 .nav-list li:hover > [data-toggle] {
   color: #0480FE; }
 
+.nav-block {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  align-content: center;
+  position: relative; }
+  .nav-block:nth-child(n+2) {
+    margin-left: .5em; }
+  .nav-block.nav-block-stretch {
+    align-items: stretch;
+    align-content: stretch; }
+
 .nav-icon {
-  width: 2.1428571429em;
-  height: 2.1428571429em;
+  width: 2em;
+  height: 2em;
   max-width: none;
   display: inline-block;
   vertical-align: middle;
@@ -1653,8 +1685,8 @@ table {
   transition: 0.125s all ease-in-out;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: calc( (5.3571428571rem - ( 1.5rem)) * .5);
-  padding-bottom: calc( (5.3571428571rem - ( 1.5rem)) * .5); }
+  padding-top: calc( (5rem - ( 1.5rem)) * .5);
+  padding-bottom: calc( (5rem - ( 1.5rem)) * .5); }
   .nav-list > .nav-item > a:after,
   .nav-list > .nav-item > [data-toggle]:after, .nav-list > li > a:after,
   .nav-list > li > [data-toggle]:after {
@@ -1719,9 +1751,9 @@ table {
 .tab > a,
 .tab .tab-text, .tabs > li > a,
 .tabs > li .tab-text, .tab, .tabs > li {
-  padding-top: calc(  (  (3.2142857143em - (1px * 2)) - (1.5rem) ) * .5);
-  padding-bottom: calc(  (  (3.2142857143em - (1px * 2)) - (1.5rem) ) * .5);
-  min-height: 3.2142857143em;
+  padding-top: calc(  (  (3em - (1px * 2)) - (1.5rem) ) * .5);
+  padding-bottom: calc(  (  (3em - (1px * 2)) - (1.5rem) ) * .5);
+  min-height: 3em;
   padding-right: 0;
   padding-left: 0;
   align-items: center; }
@@ -1801,8 +1833,8 @@ table {
   .tabs > li .tab-text {
     color: inherit;
     text-decoration: none;
-    margin-top: calc(  (  (3.2142857143em - (1px * 2)) - (1.5rem) ) * -.5);
-    margin-bottom: calc(  (  (3.2142857143em - (1px * 2)) - (1.5rem) ) * -.5);
+    margin-top: calc(  (  (3em - (1px * 2)) - (1.5rem) ) * -.5);
+    margin-bottom: calc(  (  (3em - (1px * 2)) - (1.5rem) ) * -.5);
     margin-right: 0;
     margin-left: 0;
     flex: 1 1;
@@ -3969,10 +4001,10 @@ table {
     border-color: #ecedf0;
     border-style: solid;
     border-bottom-width: 1px;
-    padding-top: calc(  (  (3.5714285714rem - 1px) - (1em * 1.5) ) * .5);
-    padding-bottom: calc(  (  (3.5714285714rem - 1px) - (1em * 1.5) ) * .5);
-    padding-left: 1.4285714286rem;
-    padding-right: 1.4285714286rem; }
+    padding-top: calc(  (  (3.3333333333rem - 1px) - (1em * 1.5) ) * .5);
+    padding-bottom: calc(  (  (3.3333333333rem - 1px) - (1em * 1.5) ) * .5);
+    padding-left: 1.3333333333rem;
+    padding-right: 1.3333333333rem; }
     .theme-inverse .list-group li, .theme-inverse .list-group-item, .theme-inverse .list-group ul li, .theme-inverse .list-group ul-item {
       border-color: #1e1931; }
     .list-group li.list-group-item-no-interaction, .list-group-item.list-group-item-no-interaction,
@@ -3981,12 +4013,12 @@ table {
       pointer-events: none !important; }
     .list-group-compact li,
     .list-group-compact .list-group-item {
-      padding-top: calc(  (  (2.1428571429rem - 1px) - (1em * 1.5) ) * .5);
-      padding-bottom: calc(  (  (2.1428571429rem - 1px) - (1em * 1.5) ) * .5); }
+      padding-top: calc(  (  (2rem - 1px) - (1em * 1.5) ) * .5);
+      padding-bottom: calc(  (  (2rem - 1px) - (1em * 1.5) ) * .5); }
     .list-group-expanded li,
     .list-group-expanded .list-group-item {
-      padding-top: calc(  (  (5.3571428571rem - 1px) - (1em * 1.5) ) * .5);
-      padding-bottom: calc(  (  (5.3571428571rem - 1px) - (1em * 1.5) ) * .5); }
+      padding-top: calc(  (  (5rem - 1px) - (1em * 1.5) ) * .5);
+      padding-bottom: calc(  (  (5rem - 1px) - (1em * 1.5) ) * .5); }
     .list-group li:first-child, .list-group-item:first-child,
     .list-group ul li:first-child,
     .list-group ul-item:first-child {
@@ -4417,7 +4449,7 @@ table {
     opacity: 1; }
 
 .module-grid-title {
-  font-size: 1.3571428571rem;
+  font-size: 1.2666666667rem;
   color: #0480FE;
   font-weight: 700;
   text-transform: uppercase;
@@ -4634,10 +4666,6 @@ table {
   display: none !important; }
   .board-popup, .modal-wrapper {
     overflow-y: scroll; }
-    .modal-wrapper {
-      scrollbar-width: none; }
-      .modal-wrapper::-webkit-scrollbar {
-        display: none; }
   .board-wrapper, .modal-wrapper {
     position: fixed;
     top: 0 !important;
@@ -4753,7 +4781,7 @@ table {
       flex-direction: column;
       background: #FFFFFF;
       box-shadow: 0px 3px 10px -6px #000000;
-      padding: calc((2.7142857143rem - 1em) * .5);
+      padding: calc((2.5333333333rem - 1em) * .5);
       flex: 0 0 auto;
       margin-bottom: .5em; }
       .board-button-default .symbol {
@@ -4791,7 +4819,7 @@ table {
   vertical-align: middle;
   line-height: inherit;
   position: relative;
-  font-size: 10.3571428571rem; }
+  font-size: 9.6666666667rem; }
   .thumbnail:before {
     content: "";
     display: block;
@@ -4832,17 +4860,20 @@ table {
     max-width: none;
     border-radius: inherit;
     overflow: hidden; }
-  .thumbnail .badge {
+  .thumbnail .badge,
+  .thumbnail .tag {
     bottom: auto;
     right: auto;
-    top: 8%;
-    left: 8%; }
+    z-index: 2;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%); }
   .thumbnail.thumbnail-medium {
-    font-size: 5rem; }
+    font-size: 4.6666666667rem; }
     .thumbnail.thumbnail-medium .thumbnail-text {
       font-size: 0.4571428571em; }
   .thumbnail.thumbnail-small {
-    font-size: 3.2142857143rem; }
+    font-size: 3rem; }
     .thumbnail.thumbnail-small .thumbnail-text {
       font-size: 0.4em; }
   .thumbnail-content {
@@ -4934,14 +4965,14 @@ table {
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
 .progress, .progress-bar {
-  height: 1.4285714286rem;
+  height: 1.3333333333rem;
   transition: 2s width ease-in-out; }
   .progress.progress-small,
   .progress.progress-small .progress-bar {
-    height: 0.7142857143rem; }
+    height: 0.6666666667rem; }
   .progress.progress-large,
   .progress.progress-large .progress-bar {
-    height: 2.1428571429rem; }
+    height: 2rem; }
 
 .progress-bar {
   float: left; }
@@ -4949,7 +4980,7 @@ table {
     background-color: rgba(141, 141, 141, 0.75); }
 
 .progress-title {
-  font-size: 1em;
+  font-size: 0.9333333333em;
   line-height: 1.4285714286;
   color: #3d3d3d;
   font-weight: 700;
@@ -4967,39 +4998,39 @@ table {
   vertical-align: middle;
   flex: 0 0 auto;
   line-height: inherit;
-  width: 1.7857142857rem;
-  height: 1.7857142857rem;
-  border-radius: calc(1.7857142857rem * .5);
-  border: 0.5rem solid #FFFFFF;
+  width: 1.6666666667rem;
+  height: 1.6666666667rem;
+  border-radius: calc(1.6666666667rem * .5);
+  border: 0.4666666667rem solid #FFFFFF;
   box-shadow: 0px 3px 10px -5px #000000; }
   .theme-inverse .badge {
     border-color: #FFFFFF; }
   .badge.badge-large {
-    width: 2.1428571429rem;
-    height: 2.1428571429rem;
-    border-radius: calc(2.1428571429rem * .5); }
+    width: 2rem;
+    height: 2rem;
+    border-radius: calc(2rem * .5); }
   .badge.badge-small {
-    width: 1.4285714286rem;
-    height: 1.4285714286rem;
-    border-radius: calc(1.4285714286rem * .5); }
+    width: 1.3333333333rem;
+    height: 1.3333333333rem;
+    border-radius: calc(1.3333333333rem * .5); }
 
 .well {
   z-index: 1;
-  box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.2) !important; }
+  box-shadow: 0 0 0 0.4666666667rem rgba(0, 0, 0, 0.2) !important; }
   .theme-inverse .well {
-    box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.2) !important; }
+    box-shadow: 0 0 0 0.4666666667rem rgba(0, 0, 0, 0.2) !important; }
   .well.well-expanded {
-    box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.2) !important; }
+    box-shadow: 0 0 0 0.9333333333rem rgba(0, 0, 0, 0.2) !important; }
     .theme-inverse .well.well-expanded {
-      box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.2) !important; }
+      box-shadow: 0 0 0 0.9333333333rem rgba(0, 0, 0, 0.2) !important; }
   .well.well-compact {
-    box-shadow: 0 0 0 0.2142857143rem rgba(0, 0, 0, 0.2) !important; }
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2) !important; }
     .theme-inverse .well.well-compact {
-      box-shadow: 0 0 0 0.2142857143rem rgba(0, 0, 0, 0.2) !important; }
+      box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2) !important; }
 
 /*** Tags ***/
 .tag {
-  font-size: 0.9285714286em;
+  font-size: 0.8666666667rem;
   line-height: 1;
   font-weight: 600;
   text-transform: uppercase;
@@ -5007,14 +5038,22 @@ table {
   font-style: normal;
   padding-top: calc(  (  (2.1538461538em - (1em * 1) ) * .5 ));
   padding-bottom: calc(  (  (2.1538461538em - (1em * 1) ) * .5 ));
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.4615384615em;
+  padding-right: 0.4615384615em;
   border-radius: 14px;
   margin-top: 0.125em;
   margin-bottom: 0.125em;
   display: inline-flex;
   align-items: center;
   vertical-align: middle; }
+  .tag.tag-large {
+    padding-top: calc(  (  (2.6923076923em - (1em * 1) ) * .5 ));
+    padding-bottom: calc(  (  (2.6923076923em - (1em * 1) ) * .5 ));
+    border-radius: 17.5px; }
+  .tag.tag-small {
+    padding-top: calc(  (  (1.6153846154em - (1em * 1) ) * .5 ));
+    padding-bottom: calc(  (  (1.6153846154em - (1em * 1) ) * .5 ));
+    border-radius: 5.25px; }
   .tag a {
     color: inherit; }
   .tag-text {
@@ -5153,8 +5192,8 @@ table {
   font-weight: inherit;
   text-transform: none;
   font-style: normal;
-  padding-top: calc(  (  (1.8846153846em - (1em * 1.5) ) * .5 ));
-  padding-bottom: calc(  (  (1.8846153846em - (1em * 1.5) ) * .5 ));
+  padding-top: calc(  (  (2.0192307692em - (1em * 1.5) ) * .5 ));
+  padding-bottom: calc(  (  (2.0192307692em - (1em * 1.5) ) * .5 ));
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 0;
@@ -5202,8 +5241,8 @@ table {
   display: inline-block;
   vertical-align: middle;
   line-height: inherit;
-  width: 2.1428571429rem;
-  height: 0.5714285714rem;
+  width: 2rem;
+  height: 0.5333333333rem;
   border-radius: 0;
   margin-right: .5rem; }
 
@@ -5341,9 +5380,9 @@ table {
   box-shadow: none;
   position: relative; }
   .alert-small {
-    font-size: 12.25px; }
+    font-size: 13.125px; }
   .alert-large {
-    font-size: 21px; }
+    font-size: 22.5px; }
   .alert a {
     color: inherit;
     font-weight: 700; }
@@ -5636,11 +5675,11 @@ table {
   text-decoration: none;
   text-align: center;
   font-style: normal;
-  padding-top: calc(  (  (3.4285714286em - (1px * 2)) - (1em * 1.25) ) * .5);
-  padding-bottom: calc(  (  (3.4285714286em - (1px * 2)) - (1em * 1.25) ) * .5);
-  min-height: 3.4285714286em;
-  padding-right: 1.4285714286em;
-  padding-left: 1.4285714286em;
+  padding-top: calc(  (  (3.2em - (1px * 2)) - (1em * 1.25) ) * .5);
+  padding-bottom: calc(  (  (3.2em - (1px * 2)) - (1em * 1.25) ) * .5);
+  min-height: 3.2em;
+  padding-right: 1.3333333333em;
+  padding-left: 1.3333333333em;
   border: 1px solid transparent;
   transition: 0.25s all ease-in-out;
   width: auto;
@@ -5666,16 +5705,17 @@ table {
   min-height: 2.2727272727em; }
   @media (min-width: 401px) {
     .btn-large .btn, .btn.btn-large {
-      font-size: 1.5714285714rem; } }
+      font-size: 1.4666666667rem; } }
 .btn-small .btn, .btn.btn-small {
-  font-size: 0.8571428571rem;
+  font-size: 0.8rem;
   padding-top: calc(  (  (2.5em - (1px * 2)) - (1em * 1.25) ) * .5);
   padding-bottom: calc(  (  (2.5em - (1px * 2)) - (1em * 1.25) ) * .5);
   min-height: 2.5em; }
 
-.nav .btn {
+.nav-block.nav-block-stretch > .btn, .nav > .btn {
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  align-self: stretch; }
 
 .btn-group .btn {
   position: relative;
@@ -5685,7 +5725,7 @@ table {
     z-index: 1; }
 
 .btn-symbol {
-  width: 3.4285714286em;
+  width: 3.2em;
   padding-left: 0;
   padding-right: 0; }
 
@@ -5708,8 +5748,8 @@ table {
     color: inherit; }
     .btn:hover:not(.btn-no-interaction), .btn-group:hover:not(.btn-no-interaction), .btn:focus:not(.btn-no-interaction), .btn-group:focus:not(.btn-no-interaction), .focus.btn:not(.btn-no-interaction), .focus.btn-group:not(.btn-no-interaction), .btn:active:not(.btn-no-interaction), .btn-group:active:not(.btn-no-interaction), .active.btn:not(.btn-no-interaction), .active.btn-group:not(.btn-no-interaction) {
       box-shadow: 0px 3px 10px -6px #000000; }
-  .nav .btn, .nav .btn-group {
-    height: 5.3571428571rem !important; }
+  .nav > .btn, .nav > .btn-group {
+    height: 5rem !important; }
 
 .btn.btn-block, .btn-group.btn-block {
   display: flex;
@@ -6100,15 +6140,16 @@ table {
     border-radius: 15px; }
   .input-group.input-group-large, .input-large.input-tags-ui, .input-large.input-calendar-ui, .input-large.input-single-line, .input-large.input-select, .input-large.input-multiple-line, .input-group.input-large, .input-large .input-tags-ui, .input-large .input-calendar-ui, .input-large .input-multiple-line, .input-large .input-select, .input-large .input-single-line {
     border-radius: 25px; }
-  .nav .input-tags-ui, .nav .input-calendar-ui, .nav .input-multiple-line, .nav .input-select, .nav .input-single-line, .nav .input, .nav .input-label {
-    height: 5.3571428571rem !important; }
+  .nav-block.nav-block-stretch > .input-tags-ui, .nav-block.nav-block-stretch > .input-calendar-ui, .nav-block.nav-block-stretch > .input-multiple-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-single-line, .nav > .input-tags-ui, .nav > .input-calendar-ui, .nav > .input-multiple-line, .nav > .input-select, .nav > .input-single-line, .nav-block.nav-block-stretch > .input, .nav > .input, .nav-block.nav-block-stretch > .input-label, .nav > .input-label {
+    height: 5rem !important;
+    align-self: stretch; }
 
 .input-tags-ui, .input-calendar-ui, .input-multiple-line, .input-select, .input-single-line, .input-label {
   transition: 0.125s color ease-in-out, 0.125s border ease-in-out, 0.125s box-shadow ease-in-out;
   max-width: 100%; }
 
 .input-label {
-  font-size: 1rem;
+  font-size: 0.9333333333rem;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: inherit;
   font-weight: 600;
@@ -6119,21 +6160,21 @@ table {
   padding-right: 1rem;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: calc( (3.4285714286rem - (1em * 1.5) ) * .5);
-  padding-bottom: calc( ( 3.4285714286rem - (1em * 1.5) ) * .5);
+  padding-top: calc( (3.2rem - (1em * 1.5) ) * .5);
+  padding-bottom: calc( ( 3.2rem - (1em * 1.5) ) * .5);
   display: inline-block; }
   .theme-inverse .input-label {
     color: inherit; }
 
 .input-label.input-large, .input-large .input-label {
-  font-size: 1.4285714286rem;
-  padding-top: calc(  (3.5714285714rem - (1em * 1.5) ) * .5);
-  padding-bottom: calc( (3.5714285714rem - (1em * 1.5) ) * .5); }
+  font-size: 1.3333333333rem;
+  padding-top: calc(  (3.3333333333rem - (1em * 1.5) ) * .5);
+  padding-bottom: calc( (3.3333333333rem - (1em * 1.5) ) * .5); }
 
 .input-label.input-small, .input-small .input-label {
-  font-size: 1rem;
-  padding-top: calc( (2.1428571429rem - (1em * 1.5) ) * .5);
-  padding-bottom: calc( (2.1428571429rem - (1em * 1.5) ) * .5); }
+  font-size: 0.9333333333rem;
+  padding-top: calc( (2rem - (1em * 1.5) ) * .5);
+  padding-bottom: calc( (2rem - (1em * 1.5) ) * .5); }
 
 .input-group .input-label {
   padding-left: 1em;
@@ -6213,10 +6254,10 @@ table {
   display: inline-block;
   border: 1px solid rgba(141, 141, 141, 0.3);
   background-color: #FFFFFF;
-  padding-right: 1.4285714286em;
-  padding-left: 1.4285714286em;
-  padding-top: calc( ( (3.4285714286rem - (1px * 2)) - (1em * 1.5) ) * .5);
-  padding-bottom: calc( ( (3.4285714286rem - (1px * 2)) - (1em * 1.5) ) * .5);
+  padding-right: 1.3333333333em;
+  padding-left: 1.3333333333em;
+  padding-top: calc( ( (3.2rem - (1px * 2)) - (1em * 1.5) ) * .5);
+  padding-bottom: calc( ( (3.2rem - (1px * 2)) - (1em * 1.5) ) * .5);
   box-shadow: none; }
   .input-tags-ui, .input-calendar-ui, .input-multiple-line, .input-select, .input-single-line {
     color: inherit; }
@@ -6280,41 +6321,44 @@ table {
   .input-group .input-tags-ui.input-tags-ui-multiple, .input-group .input-select[multiple], .input-group .input-multiple-line {
     max-height: 100%; }
   .input-tags-ui.input-tags-ui-multiple option, .input-select[multiple] option, .input-multiple-line option {
-    padding-right: 1.4285714286em;
-    padding-left: 1.4285714286em;
-    margin-right: -1.4285714286em;
-    margin-left: -1.4285714286em; }
+    padding-right: 1.3333333333em;
+    padding-left: 1.3333333333em;
+    margin-right: -1.3333333333em;
+    margin-left: -1.3333333333em; }
 
 .input-multiple-line {
   height: auto;
   resize: both;
-  min-height: 10.2857142857rem; }
+  min-height: 9.6rem; }
   .input-multiple-line.input-large, .input-large .input-multiple-line {
-    min-height: 10.7142857143rem; }
+    min-height: 10rem; }
   .input-multiple-line.input-small, .input-small .input-multiple-line {
-    min-height: 6.4285714286rem; }
+    min-height: 6rem; }
 
 .input-select {
   background-image: linear-gradient(-130deg, #0480FE 0%, #0480FE 50%, transparent 51%, transparent 100%), linear-gradient(130deg, #0480FE 0%, #0480FE 50%, transparent 51%, transparent 100%);
-  background-size: 0.2857142857em 0.4285714286em, 0.2857142857em 0.4285714286em;
-  background-position: calc(100% - (1.5em + 0.2428571429em )) 50%, calc(100% - 1.5em) 50%;
+  background-size: 0.2666666667em 0.4em, 0.2666666667em 0.4em;
+  background-position: calc(100% - (1.5em + 0.2266666667em )) 50%, calc(100% - 1.5em) 50%;
   background-repeat: no-repeat,no-repeat; }
   .input-select:not([multiple]) {
-    padding-right: 2.8571428571em; }
+    padding-right: 2.6666666667em; }
   select.input-select[multiple] {
     background-image: none; }
 
+.input-wrapper-block .input-tags-ui, .input-wrapper-block .input-calendar-ui, .input-wrapper-block .input-multiple-line, .input-wrapper-block .input-select, .input-wrapper-block .input-single-line {
+  width: 100%; }
+
 .input-large.input-tags-ui, .input-large.input-calendar-ui, .input-large.input-multiple-line, .input-large.input-select, .input-large.input-single-line, .input-large .input-tags-ui, .input-large .input-calendar-ui, .input-large .input-multiple-line, .input-large .input-select, .input-large .input-single-line {
-  padding-top: calc( ( (3.5714285714rem - (1px * 2)) - (1em * 1.5) ) * .5);
-  padding-bottom: calc( ( (3.5714285714rem - (1px * 2)) - (1em * 1.5) ) * .5); }
+  padding-top: calc( ( (3.3333333333rem - (1px * 2)) - (1em * 1.5) ) * .5);
+  padding-bottom: calc( ( (3.3333333333rem - (1px * 2)) - (1em * 1.5) ) * .5); }
 
 .input-small.input-tags-ui, .input-small.input-calendar-ui, .input-small.input-multiple-line, .input-small.input-select, .input-small.input-single-line, .input-small .input-tags-ui, .input-small .input-calendar-ui, .input-small .input-multiple-line, .input-small .input-select, .input-small .input-single-line {
-  padding-top: calc( ( (2.1428571429rem - (1px * 2)) - (1em * 1.5) ) * .5);
-  padding-bottom: calc( ( (2.1428571429rem - (1px * 2)) - (1em * 1.5) ) * .5); }
+  padding-top: calc( ( (2rem - (1px * 2)) - (1em * 1.5) ) * .5);
+  padding-bottom: calc( ( (2rem - (1px * 2)) - (1em * 1.5) ) * .5); }
 
-.nav .input-tags-ui, .nav .input-calendar-ui, .nav .input-multiple-line, .nav .input-select, .nav .input-single-line {
-  padding-top: calc( ( (5.3571428571rem - (1px * 2)) - (1em * 1.5) ) * .5) !important;
-  padding-bottom: calc( ( (5.3571428571rem - (1px * 2)) - (1em * 1.5) ) * .5) !important; }
+.nav-block.nav-block-stretch > .input-tags-ui, .nav-block.nav-block-stretch > .input-calendar-ui, .nav-block.nav-block-stretch > .input-multiple-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-single-line, .nav > .input-tags-ui, .nav > .input-calendar-ui, .nav > .input-multiple-line, .nav > .input-select, .nav > .input-single-line {
+  padding-top: calc( ( (5rem - (1px * 2)) - (1em * 1.5) ) * .5) !important;
+  padding-bottom: calc( ( (5rem - (1px * 2)) - (1em * 1.5) ) * .5) !important; }
 
 .input-wrapper .input-tags-ui, .input-wrapper .input-calendar-ui, .input-wrapper .input-multiple-line, .input-wrapper .input-select, .input-wrapper .input-single-line {
   display: block;
@@ -6608,7 +6652,7 @@ fieldset {
   -ms-user-select: none;
   user-select: none; }
   .input-calendar-ui-block {
-    padding: 0.7142857143em 0.7142857143em;
+    padding: 0.6666666667em 0.6666666667em;
     display: block;
     white-space: nowrap;
     position: relative;
@@ -6653,7 +6697,7 @@ fieldset {
     .input-calendar-ui-date.active span, .input-calendar-ui-date.active:hover span {
       color: #FFFFFF; }
   .input-calendar-ui-grid {
-    padding-bottom: 0.7142857143em; }
+    padding-bottom: 0.6666666667em; }
   .input-calendar-ui-days, .input-calendar-ui-dates, .input-calendar-ui-heading {
     justify-content: space-evenly;
     display: grid;
@@ -6661,26 +6705,26 @@ fieldset {
     grid-template-columns: repeat(7, minmax(min-content, 1fr));
     grid-gap: 2px; }
   .input-calendar-ui-input {
-    margin-bottom: 0.7142857143em;
-    padding-bottom: 0.7142857143em;
-    margin-left: -1.4285714286em;
-    margin-right: -1.4285714286em;
-    margin-top: calc( ( (3.4285714286rem - (1px * 2)) - (1em * 1.5) ) * -.5);
+    margin-bottom: 0.6666666667em;
+    padding-bottom: 0.6666666667em;
+    margin-left: -1.3333333333em;
+    margin-right: -1.3333333333em;
+    margin-top: calc( ( (3.2rem - (1px * 2)) - (1em * 1.5) ) * -.5);
     position: relative; }
     .input-calendar-ui-input:last-child {
-      margin-bottom: calc( ( (3.4285714286rem - (1em * 1.5) ) * .5) * -1); }
+      margin-bottom: calc( ( (3.2rem - (1em * 1.5) ) * .5) * -1); }
       .input-calendar-ui-input:last-child:after {
         content: none; }
     .input-small .input-calendar-ui-input {
-      margin-top: calc( ( (2.1428571429rem - (1px * 2)) - (1em * 1.5) ) * -.5);
+      margin-top: calc( ( (2rem - (1px * 2)) - (1em * 1.5) ) * -.5);
       position: relative; }
       .input-small .input-calendar-ui-input:last-child {
-        margin-bottom: calc( ( (2.1428571429rem - (1em * 1.5) ) * .5) * -1); }
+        margin-bottom: calc( ( (2rem - (1em * 1.5) ) * .5) * -1); }
     .input-large .input-calendar-ui-input {
-      margin-top: calc( ( (3.5714285714rem - (1px * 2)) - (1em * 1.5) ) * -.5);
+      margin-top: calc( ( (3.3333333333rem - (1px * 2)) - (1em * 1.5) ) * -.5);
       position: relative; }
       .input-large .input-calendar-ui-input:last-child {
-        margin-bottom: calc( ( (3.5714285714rem - (1em * 1.5) ) * .5) * -1); }
+        margin-bottom: calc( ( (3.3333333333rem - (1em * 1.5) ) * .5) * -1); }
     .input-calendar-ui-input:after {
       content: "";
       display: block;
@@ -6694,8 +6738,8 @@ fieldset {
       border-width: 0;
       width: 100%; }
   .input-calendar-ui-heading {
-    padding-top: 0.7142857143em;
-    padding-bottom: 0.7142857143em;
+    padding-top: 0.6666666667em;
+    padding-bottom: 0.6666666667em;
     position: relative; }
   .input-calendar-ui-button {
     color: inherit; }
@@ -6720,23 +6764,21 @@ fieldset {
     max-height: 300px;
     overflow-x: auto;
     overflow-y: scroll; }
-    .input-calendar-ui-dropdown::-webkit-scrollbar {
-      display: none; }
   .input-calendar-ui-days, .input-calendar-ui-dates {
     grid-auto-rows: 1fr; }
     .input-calendar-ui-days:nth-child(n+2), .input-calendar-ui-dates:nth-child(n+2) {
       margin-top: 2px; }
   .input-calendar-ui-days {
-    margin-bottom: 0.7142857143em;
+    margin-bottom: 0.6666666667em;
     border-bottom: 1px solid;
     opacity: .375;
     font-size: 0.75em; }
   .input-calendar-ui-dates {
-    margin-bottom: 0.3571428571em; }
+    margin-bottom: 0.3333333333em; }
 
 @media (max-width: 1200px) {
   .input-calendar-ui-block {
-    padding: 0.3571428571em 0.3571428571em; } }
+    padding: 0.3333333333em 0.3333333333em; } }
 
 /*** input tags ***/
 /*** input ***/
@@ -6745,15 +6787,12 @@ fieldset {
   display: inline-flex;
   max-width: 100% !important;
   direction: ltr;
-  position: relative;
-  scrollbar-width: none; }
+  position: relative; }
   .input-tags-ui.input-tags-ui-single {
     overflow-x: hidden;
     overflow-y: hidden; }
   .input-tags-ui.input-tags-ui-multiple {
     overflow: hidden; }
-  .input-tags-ui::-webkit-scrollbar {
-    display: none; }
   .input-tags-ui-wrapper {
     flex: 1 1;
     display: flex;
@@ -6887,7 +6926,7 @@ fieldset {
   outline: none;
   font: inherit;
   display: inline-block;
-  width: 2.1428571429rem;
+  width: 2rem;
   height: 1.5em;
   vertical-align: middle;
   align-self: flex-start;
@@ -6897,14 +6936,14 @@ fieldset {
   flex: 0 0 auto; }
 
 .input-small .input-toggle .input, .input-small .input-toggle input, .input-toggle.input-small .input, .input-toggle.input-small input {
-  width: 2.1428571429rem; }
+  width: 2rem; }
 
 .input-large .input-toggle .input, .input-large .input-toggle input, .input-toggle.input-large .input, .input-toggle.input-large input {
-  width: 2.8571428571rem; }
+  width: 2.6666666667rem; }
 
 .input-toggle .input-toggle-label {
   position: relative;
-  width: calc(100% - 2.1428571429rem);
+  width: calc(100% - 2rem);
   padding-top: 0;
   padding-bottom: 0;
   flex: 1 0 auto; }
@@ -6947,56 +6986,56 @@ fieldset {
     color: #fd0303; }
 
 .input-toggle-label:before {
-  height: 0.7142857143rem;
-  width: 2.1428571429rem;
-  margin-top: calc( ( 1.5em - 0.7142857143rem ) / 2);
+  height: 0.6666666667rem;
+  width: 2rem;
+  margin-top: calc( ( 1.5em - 0.6666666667rem ) / 2);
   opacity: .3;
   border-radius: 5px;
   margin-right: 0; }
 
 .input-small.input-toggle-label:before, .input-small .input-toggle-label:before {
-  height: 0.7142857143rem;
-  width: 2.1428571429rem;
-  margin-top: calc( ( 1.5em - 0.7142857143rem ) / 2);
+  height: 0.6666666667rem;
+  width: 2rem;
+  margin-top: calc( ( 1.5em - 0.6666666667rem ) / 2);
   border-radius: 5px; }
 
 .input-large.input-toggle-label:before, .input-large .input-toggle-label:before {
-  height: 1rem;
-  width: 2.8571428571rem;
-  margin-top: calc( ( 1.5em - 1rem ) / 2);
+  height: 0.9333333333rem;
+  width: 2.6666666667rem;
+  margin-top: calc( ( 1.5em - 0.9333333333rem ) / 2);
   border-radius: 7px; }
 
 .input-toggle-label:after {
-  height: 1.0714285714rem;
-  width: 1.0714285714rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 7.5px;
-  margin-right: calc( (2.1428571429rem - 1.0714285714rem));
+  margin-right: calc( (2rem - 1rem));
   margin-left: 0;
-  margin-top: calc( (1.5em - 1.0714285714rem) / 2); }
+  margin-top: calc( (1.5em - 1rem) / 2); }
   .input-toggle:not(.input-toggle-reverse) input[type=checkbox]:checked + .input-toggle-label:after, .input-toggle:not(.input-toggle-reverse) .input[type=checkbox]:checked + .input-toggle-label:after, .input-toggle:not(.input-toggle-reverse) input[type=radio]:checked + .input-toggle-label:after, .input-toggle:not(.input-toggle-reverse) .input[type=radio]:checked + .input-toggle-label:after {
     margin-right: 0; }
   .input-toggle.input-toggle-reverse input[type=checkbox]:checked + .input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=checkbox]:checked + .input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=radio]:checked + .input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=radio]:checked + .input-toggle-label:after {
-    margin-left: calc( (2.1428571429rem - 1.0714285714rem)); }
+    margin-left: calc( (2rem - 1rem)); }
 
 .input-small.input-toggle-label:after, .input-small .input-toggle-label:after {
-  height: 1.0714285714rem;
-  width: 1.0714285714rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 7.5px;
-  margin-right: calc( (2.1428571429rem - 1.0714285714rem));
+  margin-right: calc( (2rem - 1rem));
   margin-left: 0;
-  margin-top: calc( (1.5em - 1.0714285714rem) / 2); }
+  margin-top: calc( (1.5em - 1rem) / 2); }
   .input-toggle.input-toggle-reverse input[type=checkbox]:checked + .input-small.input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=checkbox]:checked + .input-small.input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=radio]:checked + .input-small.input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=radio]:checked + .input-small.input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=checkbox]:checked + .input-small .input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=checkbox]:checked + .input-small .input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=radio]:checked + .input-small .input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=radio]:checked + .input-small .input-toggle-label:after {
-    margin-left: calc( (2.1428571429rem - 1.0714285714rem)); }
+    margin-left: calc( (2rem - 1rem)); }
 
 .input-large.input-toggle-label:after, .input-large .input-toggle-label:after {
-  height: 1.4285714286rem;
-  width: 1.4285714286rem;
+  height: 1.3333333333rem;
+  width: 1.3333333333rem;
   border-radius: 10px;
-  margin-right: calc( (2.8571428571rem - 1.4285714286rem));
+  margin-right: calc( (2.6666666667rem - 1.3333333333rem));
   margin-left: 0;
-  margin-top: calc( (1.5em - 1.4285714286rem) / 2); }
+  margin-top: calc( (1.5em - 1.3333333333rem) / 2); }
   .input-toggle.input-toggle-reverse input[type=checkbox]:checked + .input-large.input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=checkbox]:checked + .input-large.input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=radio]:checked + .input-large.input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=radio]:checked + .input-large.input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=checkbox]:checked + .input-large .input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=checkbox]:checked + .input-large .input-toggle-label:after, .input-toggle.input-toggle-reverse input[type=radio]:checked + .input-large .input-toggle-label:after, .input-toggle.input-toggle-reverse .input[type=radio]:checked + .input-large .input-toggle-label:after {
-    margin-left: calc( (2.8571428571rem - 1.4285714286rem)); }
+    margin-left: calc( (2.6666666667rem - 1.3333333333rem)); }
 
 /*** TOGGLES ***/
 /* to fix children that dont like their parents events. kinda like neutering them idk */
@@ -8268,6 +8307,11 @@ fieldset {
 .no-padding {
   padding: 0 !important; }
 
+.no-scrollbar, .modal-wrapper, .input-calendar-ui-dropdown, .input-tags-ui {
+  scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar, .modal-wrapper::-webkit-scrollbar, .input-calendar-ui-dropdown::-webkit-scrollbar, .input-tags-ui::-webkit-scrollbar {
+    display: none; }
+
 .overflow-visible {
   overflow: visible !important; }
 
@@ -8771,27 +8815,27 @@ fieldset {
 .radius-ellipse {
   border-radius: 50% !important; }
 
-.no-radius, .no-radius-top, .no-radius-left, .no-radius-top-left, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-top, .no-radius-left, .no-radius-top-left, .btn-no-radius .btn, .nav > .btn, .nav > .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav-block.nav-block-stretch > .input-single-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-multiple-line, .nav > .input-single-line, .nav > .input-select, .nav > .input-multiple-line, .nav-block.nav-block-stretch > .input-group, .nav > .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-top-left-radius: 0 !important; }
 
-.no-radius, .no-radius-top, .no-radius-right, .no-radius-top-right, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-top, .no-radius-right, .no-radius-top-right, .btn-no-radius .btn, .nav > .btn, .nav > .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav-block.nav-block-stretch > .input-single-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-multiple-line, .nav > .input-single-line, .nav > .input-select, .nav > .input-multiple-line, .nav-block.nav-block-stretch > .input-group, .nav > .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-top-right-radius: 0 !important; }
 
-.no-radius, .no-radius-bottom, .no-radius-left, .no-radius-bottom-left, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-bottom, .no-radius-left, .no-radius-bottom-left, .btn-no-radius .btn, .nav > .btn, .nav > .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav-block.nav-block-stretch > .input-single-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-multiple-line, .nav > .input-single-line, .nav > .input-select, .nav > .input-multiple-line, .nav-block.nav-block-stretch > .input-group, .nav > .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-bottom-left-radius: 0 !important; }
 
-.no-radius, .no-radius-bottom, .no-radius-right, .no-radius-bottom-right, .btn-no-radius .btn, .nav .btn, .nav .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
+.no-radius, .no-radius-bottom, .no-radius-right, .no-radius-bottom-right, .btn-no-radius .btn, .nav > .btn, .nav > .btn-group, .btn.btn-no-radius, .btn-group.btn-no-radius, .input-no-radius .input-single-line, .input-no-radius .input-select, .input-no-radius .input-multiple-line, .nav-block.nav-block-stretch > .input-single-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-multiple-line, .nav > .input-single-line, .nav > .input-select, .nav > .input-multiple-line, .nav-block.nav-block-stretch > .input-group, .nav > .input-group, .input-no-radius.input-single-line, .input-no-radius.input-select, .input-no-radius.input-multiple-line, .input-group.input-no-radius, .input-no-radius .input-calendar-ui, .input-no-radius.input-calendar-ui, .input-no-radius .input-tags-ui, .input-no-radius.input-tags-ui {
   border-bottom-right-radius: 0 !important; }
 
 .btn-disabled, .btn-disabled .btn, .btn.btn-link, .btn.btn-primary-outline, .btn.btn-secondary-outline, .btn.btn-accent-outline, .btn.btn-neutral-outline, .btn.btn-success-outline, .btn.btn-caution-outline, .btn.btn-error-outline, .btn.btn-theme-outline, .btn.btn-theme-polar-outline, .input-group .input-single-line:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-select:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-multiple-line:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-calendar-ui:not(.focus):not(:focus):not(.active):not(:active), .input-group .input-tags-ui:not(.focus):not(:focus):not(.active):not(:active) {
   box-shadow: none; }
-  .btn-group .btn, .nav .btn, .nav .btn-group, .btn.btn-no-shadow, .btn-group.btn-no-shadow, .input-disabled, .input[disabled], .input-disabled .input, .input-disabled .input-single-line, .input-disabled .input-select, .input-disabled .input-multiple-line, .nav .input-single-line, .nav .input-select, .nav .input-multiple-line, .nav .input-group, .input-no-shadow.input-single-line, .input-no-shadow.input-select, .input-no-shadow.input-multiple-line, .input-group.input-no-shadow, .input-disabled .input-calendar-ui, .input-no-shadow.input-calendar-ui, .input-calendar-ui-input input:not(.focus):not(:focus):not(.active):not(:active), .input-disabled .input-tags-ui, .input-no-shadow.input-tags-ui {
+  .btn-group .btn, .nav > .btn, .nav > .btn-group, .btn.btn-no-shadow, .btn-group.btn-no-shadow, .input-disabled, .input[disabled], .input-disabled .input, .input-disabled .input-single-line, .input-disabled .input-select, .input-disabled .input-multiple-line, .nav-block.nav-block-stretch > .input-single-line, .nav-block.nav-block-stretch > .input-select, .nav-block.nav-block-stretch > .input-multiple-line, .nav > .input-single-line, .nav > .input-select, .nav > .input-multiple-line, .nav-block.nav-block-stretch > .input-group, .nav > .input-group, .input-no-shadow.input-single-line, .input-no-shadow.input-select, .input-no-shadow.input-multiple-line, .input-group.input-no-shadow, .input-disabled .input-calendar-ui, .input-no-shadow.input-calendar-ui, .input-calendar-ui-input input:not(.focus):not(:focus):not(.active):not(:active), .input-disabled .input-tags-ui, .input-no-shadow.input-tags-ui {
     box-shadow: none !important; }
 
 /*! 
 SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 ****************************************************************************/
-.module-content td {
+td {
   max-width: 300px; }
 
 #dashboard-svg-styles {
@@ -8929,26 +8973,42 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     transition: opacity 0.25s ease-in-out; }
     .body-loaded .body-loading #content-wrapper:before {
       opacity: 0; }
-  #nav-search {
-    margin-right: auto;
-    flex: 1 1;
-    overflow-x: hidden;
-    position: relative; }
-    #nav-search .btn {
-      width: auto; }
-    #nav-search .input {
-      border-color: transparent;
-      background-color: transparent;
-      font-size: 1.1428571429rem;
-      text-align: right; }
-    #nav-search .symbol-search:before {
-      border-width: 0.125em; }
-    #nav-search .symbol-search:after {
-      width: 0.125em; }
-  #nav-account {
-    display: flex;
-    align-items: center;
-    position: relative; }
+  #nav {
+    /* pre-workflow */
+    /* workflow onward and some pre ones */ }
+    .nav > #nav-logo {
+      min-width: 75px;
+      margin-right: auto; }
+    .nav > #nav-search {
+      margin-right: auto;
+      flex: 1 1;
+      overflow-x: hidden;
+      position: relative; }
+      .nav > #nav-search .btn {
+        width: auto; }
+      .nav > #nav-search .input {
+        border-color: transparent;
+        background-color: transparent;
+        font-size: 1.0666666667rem;
+        text-align: right; }
+      .nav > #nav-search .symbol-search:before {
+        border-width: 0.125em; }
+      .nav > #nav-search .symbol-search:after {
+        width: 0.125em; }
+    .nav > #nav-account {
+      display: flex;
+      align-items: center;
+      position: relative; }
+    #nav-functions {
+      max-width: 500px; }
+      #nav-functions .filter-dropdown-global {
+        max-width: 48.6666666667rem; }
+      @media (max-width: 1200px) {
+        #nav-functions {
+          width: 50%;
+          max-width: 200px; } }
+    #nav-quick-functions {
+      margin-right: 1rem; }
   @media (max-width: 1200px) {
     #dashboard-block-main {
       width: calc(100% - 245px);
@@ -8966,16 +9026,14 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
         #dashboard-block-main-nav-toggle.open {
           left: 245px; }
       #content-wrapper:before {
-        left: 2em; }
-      #nav-search .btn {
-        padding-left: .125em; } }
+        left: 2em; } }
 #nav-notification .tag {
   position: absolute;
   top: 1em;
   right: -.5em; }
 
 .dashboard-alert-icon {
-  font-size: 1.5em;
+  font-size: 1.4em;
   float: left;
   height: 1em;
   width: 1.08em;
@@ -8998,15 +9056,15 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 
 .dashboard-list-group-clip-thumbed {
   overflow-y: auto;
-  max-height: 26.8571428571rem; }
+  max-height: 25.0666666667rem; }
   .dashboard-list-group-clip-thumbed.dashboard-list-group-clip-thumbed-shorter {
-    max-height: 13.4285714286rem; }
+    max-height: 12.5333333333rem; }
   .dashboard-list-group-clip-thumbed.dashboard-list-group-clip-thumbed-normal {
-    max-height: 11.9047619048rem; }
+    max-height: 11.1111111111rem; }
 
 .dashboard-list-group-clip-text {
   overflow-y: auto;
-  max-height: 35.0714285714em; }
+  max-height: 32.7333333333em; }
 
 .dashboard-table-wrapper-gutterless {
   margin: 0 -25px;
@@ -9015,7 +9073,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     .dashboard-table-wrapper-gutterless {
       margin: 0 -15px; } }
 .dashboard-table-cells-match-height td {
-  height: 4rem; }
+  height: 3.7333333333rem; }
 
 .dashboard-table-cell-max {
   width: 230px;
@@ -9037,20 +9095,20 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 .dashboard-table-cell-action {
   width: 100px; }
 
-.dashboard-table-cell-watch-btns {
+.dashboard-table-cell-watch-btns, .dashboard-table-cell-edit-btns {
   width: 140px;
   right: 100px;
   z-index: 2; }
 
-.dashboard-table-cell-action, .dashboard-table-cell-watch-btns {
+.dashboard-table-cell-action, .dashboard-table-cell-watch-btns, .dashboard-table-cell-edit-btns {
   position: -webkit-sticky;
   position: sticky;
   box-shadow: -2px 0 0 -1px rgba(141, 141, 141, 0.2); }
-  .dashboard-table-cell-action:not(th), .dashboard-table-cell-watch-btns:not(th) {
+  .dashboard-table-cell-action:not(th), .dashboard-table-cell-watch-btns:not(th), .dashboard-table-cell-edit-btns:not(th) {
     background-color: inherit; }
-    tr:not([class*=table-row]) .dashboard-table-cell-action:not(th), tr:not([class*=table-row]) .dashboard-table-cell-watch-btns:not(th) {
+    tr:not([class*=table-row]) .dashboard-table-cell-action:not(th), tr:not([class*=table-row]) .dashboard-table-cell-watch-btns:not(th), tr:not([class*=table-row]) .dashboard-table-cell-edit-btns:not(th) {
       background-color: var(--theme-background); }
-  .dashboard-table-cell-action:last-child, .dashboard-table-cell-watch-btns:last-child {
+  .dashboard-table-cell-action:last-child, .dashboard-table-cell-watch-btns:last-child, .dashboard-table-cell-edit-btns:last-child {
     right: 0; }
 
 .dashboard-table-cell-url {
@@ -9101,7 +9159,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     .dashboard-board-column-layout-side {
       width: 400px; } }
 #workflow-dash-today .today-total-halo {
-  width: 12.8571428571rem; }
+  width: 12rem; }
 
 #workflow-dash-weekly .weekly-hours-row-day, #workflow-dash-weekly .weekly-hours-row-total {
   text-align: right; }

@@ -111,31 +111,29 @@ $args = app_parse_args($data,$defs);
 									</p>
 								</div>
 							<?php endif; ?>
-
-								<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
-								<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
-									<div class="flex-col-xs-6 flex-col-md-7">
-										<h5>Due on</h5>
-										<p class="color-neutral task-due-date no-margin-bottom">
-											<!-- @if has due date -->
-												<span class="REPLACE">
-													4/20/69 at 6:09pm
-												</span>
-											<!-- @else -->
-												Unspecified
+							
+								<div class="flex-col-xs-6 flex-col-md-7">
+									<h5>Due on</h5>
+									<p class="color-neutral task-due-date no-margin-bottom">
+										<!-- @if has due date -->
+											<span class="REPLACE">
+												4/20/69 at 6:09pm
+											</span>
+										<!-- @else -->
+											Unspecified
+									</p>
+								</div>
+								<?php if($args['post'] == 'task' ): ?>
+									<div class="flex-col-xs-6 flex-col-md-5">
+										
+										<h5>Priority</h5>
+										<p class="color-neutral task-priority no-margin-bottom">
+											<span class="REPLACE">
+												Low
+											</span>
 										</p>
 									</div>
 								<?php endif; ?>
-
-								<div class="flex-col-xs-6 flex-col-md-5">
-									
-									<h5>Priority</h5>
-									<p class="color-neutral task-priority no-margin-bottom">
-										<span class="REPLACE">
-											Low
-										</span>
-									</p>
-								</div>
 							</div>
 
 		</div>

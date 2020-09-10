@@ -1,6 +1,7 @@
 <div class="module-grid">
 <div class="module">
 	<div class="module-content">
+		<h1>Sam's Debug Paradise/Hell</h1>
 		<p>
 			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present. it's kinda laggy now because i shat on it too much
 		</p>
@@ -12,6 +13,82 @@
 
 
 		
+
+		<h1 data-toggle="accordion">Modal with a bitch ass table<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a href="#table-modal" data-toggle="modal">test</a>
+			<table class="rank-hist-task-items">
+				<thead>
+					<tr>
+						<th>Rank Absolute</th>
+						<th>Rank Group</th>
+						<th>Result Type</th>
+						<th class="search-result">Search Result</th>
+						<th>Note</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="ranking">31</td>
+						<td class="ranking">31</td>
+						<td><span class="tag tag-intensity-3">organic</span></td>
+						<td><div>
+									<a href="https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/" class="color-caution font-weight-700">
+
+									<span class="text-wrap-ellipsis">
+										https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/
+									</span>
+									</a>
+								</div><div class="color-primary font-weight-700 item-title">
+									Richard Schulte, A Product Liability Attorney With Wright ...
+								</div><div class="item-desc">Richard Schulte, founding partner of Wright &amp; Schulte LLC and a product liability attorney, will appear on Cincinnati, Ohio Fox 19, “Moore Law” show to answer&nbsp;...</div></td>
+						<td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="modal" id="table-modal">
+				
+				<div class="table-wrapper">
+				<table class="rank-hist-task-items">
+					<thead>
+						<tr>
+							<th>Rank Absolute</th>
+							<th>Rank Group</th>
+							<th>Result Type</th>
+							<th class="search-result">Search Result</th>
+							<th>Note</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td class="ranking">31</td>
+							<td class="ranking">31</td>
+							<td><span class="tag tag-intensity-3">organic</span></td>
+							<td>
+								<div>
+									<a href="https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/" class="color-caution font-weight-700 text-wrap-ellipsis display-block">
+										https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/
+									</a>
+								</div>
+								<div class="color-primary font-weight-700 item-title">
+									Richard Schulte, A Product Liability Attorney With Wright ...
+								</div>
+								<div class="item-desc">
+									Richard Schulte, founding partner of Wright &amp; Schulte LLC and a product liability attorney, will appear on Cincinnati, Ohio Fox 19, “Moore Law” show to answer&nbsp;...
+								</div>
+							</td>
+							<td>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+
 
 		<h1 data-toggle="accordion">sidebar module template<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
@@ -4023,6 +4100,62 @@
 				<img src="/placeholder/files/shrek.jpg" alt="Shronk">
 			</div>
 
+
+			<h2>bedge</h2>
+
+			<div class="thumbnail thumbnail">
+				<span class="badge badge-primary"></span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail">
+				<span class="badge badge-primary"></span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="badge badge-primary"></span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="badge badge-primary"></span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
+
+
+
+			<h2>tags</h2>
+
+			<div class="thumbnail thumbnail">
+				<span class="tag tag-primary">69</span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail">
+				<span class="tag tag-primary">1242334534512</span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="tag tag-primary">69</span>
+				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+			</div>
+
+			<div class="thumbnail thumbnail-small">
+				<span class="tag tag-primary">pucha</span>
+				<span class="thumbnail-text">
+					MF
+				</span>
+			</div>
+
 		</div>
 
 		<h1 data-toggle="accordion">Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
@@ -4121,6 +4254,11 @@
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol download</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-download"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol hyperlink</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-hyperlink"></i></span>
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
@@ -4319,6 +4457,10 @@
 
 			<p>
 				download <i class="color-primary symbol symbol-download"></i>
+			</p>
+
+			<p>
+				hyperlink <i class="color-primary symbol symbol-hyperlink"></i>
 			</p>
 
 			<p>

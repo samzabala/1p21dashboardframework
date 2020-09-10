@@ -16,12 +16,11 @@
 			<?php app_get_component('components/project-main-edit'); ?>
 		</div>
 	</div>
-
 	<!-- Team Info -->
 	<?php app_get_component('components/module-side-team-edit', null, false, array('post'=>'project')) ?>
 
 	<!-- Time Tracker -->
-	<?php app_get_component('components/module-side-time-edit', null, false, array('post'=>'project')) ?>
+	<?php //app_get_component('components/module-side-time-edit', null, false, array('post'=>'project')) ?>
 
 	<!-- Categries Boards/Tags -->
 	<?php app_get_component('components/module-side-flux-edit', null, false, array('post'=>'project')) ?>

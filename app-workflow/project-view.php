@@ -29,4 +29,5 @@
 	<?php app_get_component('components/module-side-followers-view', null, false, array('post'=>'project')) ?>
 
 
+
 </div>
