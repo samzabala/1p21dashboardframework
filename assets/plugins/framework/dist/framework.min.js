@@ -3902,6 +3902,7 @@
 					if (
 						!triggerer.closest('[data-toggle="tooltip-click"]')
 						&& !triggerer.closest('[data-toggle="tooltip-hover"]')
+						&& !triggerer.closest('.tooltip.tooltip-allow-interaction')
 						&& !triggerer.hasAttribute('data-value') //temp fix for ui elements not getting ancestry
 					) {
 						frameWork.destroyToolTip();

@@ -14,6 +14,82 @@
 
 		
 
+		<h1 data-toggle="accordion">Modal with a bitch ass table<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a href="#table-modal" data-toggle="modal">test</a>
+			<table class="rank-hist-task-items">
+				<thead>
+					<tr>
+						<th>Rank Absolute</th>
+						<th>Rank Group</th>
+						<th>Result Type</th>
+						<th class="search-result">Search Result</th>
+						<th>Note</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="ranking">31</td>
+						<td class="ranking">31</td>
+						<td><span class="tag tag-intensity-3">organic</span></td>
+						<td><div>
+									<a href="https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/" class="color-caution font-weight-700">
+
+									<span class="text-wrap-ellipsis">
+										https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/
+									</span>
+									</a>
+								</div><div class="color-primary font-weight-700 item-title">
+									Richard Schulte, A Product Liability Attorney With Wright ...
+								</div><div class="item-desc">Richard Schulte, founding partner of Wright &amp; Schulte LLC and a product liability attorney, will appear on Cincinnati, Ohio Fox 19, “Moore Law” show to answer&nbsp;...</div></td>
+						<td>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="modal" id="table-modal">
+				
+				<div class="table-wrapper">
+				<table class="rank-hist-task-items">
+					<thead>
+						<tr>
+							<th>Rank Absolute</th>
+							<th>Rank Group</th>
+							<th>Result Type</th>
+							<th class="search-result">Search Result</th>
+							<th>Note</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td class="ranking">31</td>
+							<td class="ranking">31</td>
+							<td><span class="tag tag-intensity-3">organic</span></td>
+							<td>
+								<div>
+									<a href="https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/" class="color-caution font-weight-700 text-wrap-ellipsis display-block">
+										https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/
+									</a>
+								</div>
+								<div class="color-primary font-weight-700 item-title">
+									Richard Schulte, A Product Liability Attorney With Wright ...
+								</div>
+								<div class="item-desc">
+									Richard Schulte, founding partner of Wright &amp; Schulte LLC and a product liability attorney, will appear on Cincinnati, Ohio Fox 19, “Moore Law” show to answer&nbsp;...
+								</div>
+							</td>
+							<td>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+
+
 		<h1 data-toggle="accordion">sidebar module template<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			sidebar module template
@@ -4181,6 +4257,11 @@
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol hyperlink</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-hyperlink"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-burger"></i></span>
 			</a>
@@ -4376,6 +4457,10 @@
 
 			<p>
 				download <i class="color-primary symbol symbol-download"></i>
+			</p>
+
+			<p>
+				hyperlink <i class="color-primary symbol symbol-hyperlink"></i>
 			</p>
 
 			<p>

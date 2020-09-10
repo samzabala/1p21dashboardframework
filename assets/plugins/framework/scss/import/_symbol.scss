@@ -627,6 +627,36 @@ $prefix: '.symbol';
 		}
 	}
 
+	@include create-symbol-styles(#{&}-hyperlink) {
+		@extend %for-valid-symbol;
+
+		&:before,&:after {
+			@extend %for-valid-symbol-pseudo;
+			width: .6875em;
+			height: .5em;
+			border-radius: .25em;
+			border: em(2px / $calculated-symbol-basis) solid;
+			// transform-origin: center center;
+			transform: rotate(-45deg)
+		}
+
+		&:before {
+			top: auto;
+			right: auto;
+			bottom: -.125em;
+			left: .25em;
+			transform-origin: bottom left;
+		}
+
+		&:after {
+			bottom: auto;
+			left: auto;
+			top: -.125em;
+			right: .25em;
+			transform-origin: top right;
+		}
+	}
+
 	@include create-symbol-styles((#{&}-fries,#{&}-burger)) {
 		@extend %for-valid-symbol;
 

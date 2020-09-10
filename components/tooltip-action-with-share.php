@@ -19,9 +19,15 @@
 			<li>
 				<a
 					class='color-inherit color-primary-hover js-edit-time-record'
-					href='#modal-track-time'
-					data-toggle='modal'
-					data-record-id='TASKID'>
+					<?php if(FWAPPS_TEMPLATE == 'project-view'): ?>
+						href='#note-REPLACEwithPostTypeID-edit'
+						data-toggle='board'
+						data-record-id='TASKID'
+					<?php else: ?>
+						href='#modal-track-time'
+						data-toggle='modal'
+						data-record-id='TASKID'
+					<?php endif; ?>>
 						Edit
 				</a>
 			</li>

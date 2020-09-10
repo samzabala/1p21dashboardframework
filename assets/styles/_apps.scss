@@ -7,13 +7,11 @@ $sidebar-base-slim-mobile: 60px;
 // $sidebar-xs: 60px;
 
 
-//fixy bois
-.module-content td {
-	max-width: 300px;
-}
-
 //custom
-
+#dashboard,.fw-modal-component {
+	td {
+		max-width: 300px;
+	}
 
 //whole page layout
 #dashboard {
