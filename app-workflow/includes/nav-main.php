@@ -4,7 +4,7 @@
 	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="Logo">
 </a>
 
-<div id="nav-functions" class="nav-block flex-wrap flex-1-1 justify-content-flex-end position-static hide-xs">
+<div id="nav-functions" class="nav-block flex-wrap flex-1-1 justify-content-flex-end position-static">
 	<form id="nav-search"
 		action="<? app_create_link( array('template' => 'projects') ); ?>"
 		class="flex-1-1 flex-xs flex-wrap "
@@ -22,7 +22,7 @@
 				class="input input-single-line no-padding-left no-border-left flex-1-1"
 				type="text"
 				name="search"
-				size="15"
+				size="12"
 				placeholder="Search Projects..."
 				value="<?php echo ( isset($_GET['search'] )) ? $_GET['search'] : ''; ?>" />
 
@@ -41,7 +41,7 @@
 
 	
 
-<div id="nav-quick-functions" class="nav-block">
+<div id="nav-quick-functions" class="nav-block hide-xs">
 	<a href="#nav-quick-functions-dropdown" data-toggle="dropdown" class="btn btn-link btn-large btn-symbol">
 		<i class="symbol symbol-plus"></i>
 	</a>

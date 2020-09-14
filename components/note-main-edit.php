@@ -43,9 +43,9 @@
 		</div>
 
 		<!-- @if attachments have rows -->
-			<?php app_get_component('components/attachment-grid-for-edit'); ?>
+			<?php app_get_component('components/attachment-grid-for-edit', null, false, array('post'=>'task')); ?>
 			
-			<?php app_get_component('components/attachment-field'); ?>
+			<?php app_get_component('components/attachment-field', null, false, array('post'=>'note')); ?>
 		
 		
 	</div>

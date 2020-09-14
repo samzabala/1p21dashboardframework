@@ -646,7 +646,7 @@ hr {
   margin-right: auto; }
 
 small {
-  font-size: 0.875em; }
+  font-size: 0.75em; }
 
 big {
   font-size: 1.5em; }
@@ -5380,7 +5380,7 @@ table {
   box-shadow: none;
   position: relative; }
   .alert-small {
-    font-size: 13.125px; }
+    font-size: 11.25px; }
   .alert-large {
     font-size: 22.5px; }
   .alert a {
@@ -6652,13 +6652,17 @@ fieldset {
   -ms-user-select: none;
   user-select: none; }
   .input-calendar-ui-block {
-    padding: 0.6666666667em 0.6666666667em;
+    padding: 0.5333333333em 0em;
+    text-align: center;
     display: block;
     white-space: nowrap;
     position: relative;
     color: inherit; }
     .input-calendar-ui-block, .input-calendar-ui-block:after {
       border-radius: 10px; }
+    .input-calendar-ui-block > span {
+      display: block;
+      margin: 0 0em; }
     .input-calendar-ui-block-adjacent {
       opacity: 0.125 !important;
       pointer-events: none !important; }
@@ -6697,16 +6701,15 @@ fieldset {
     .input-calendar-ui-date.active span, .input-calendar-ui-date.active:hover span {
       color: #FFFFFF; }
   .input-calendar-ui-grid {
-    padding-bottom: 0.6666666667em; }
+    padding-bottom: 0.5333333333em; }
   .input-calendar-ui-days, .input-calendar-ui-dates, .input-calendar-ui-heading {
     justify-content: space-evenly;
     display: grid;
-    grid-template-columns: repeat(7, minmax(-webkit-min-content, 1fr));
-    grid-template-columns: repeat(7, minmax(min-content, 1fr));
+    grid-template-columns: repeat(7, 1fr);
     grid-gap: 2px; }
   .input-calendar-ui-input {
-    margin-bottom: 0.6666666667em;
-    padding-bottom: 0.6666666667em;
+    margin-bottom: 0.5333333333em;
+    padding-bottom: 0.5333333333em;
     margin-left: -1.3333333333em;
     margin-right: -1.3333333333em;
     margin-top: calc( ( (3.2rem - (1px * 2)) - (1em * 1.5) ) * -.5);
@@ -6738,8 +6741,8 @@ fieldset {
       border-width: 0;
       width: 100%; }
   .input-calendar-ui-heading {
-    padding-top: 0.6666666667em;
-    padding-bottom: 0.6666666667em;
+    padding-top: 0.5333333333em;
+    padding-bottom: 0.5333333333em;
     position: relative; }
   .input-calendar-ui-button {
     color: inherit; }
@@ -6769,16 +6772,16 @@ fieldset {
     .input-calendar-ui-days:nth-child(n+2), .input-calendar-ui-dates:nth-child(n+2) {
       margin-top: 2px; }
   .input-calendar-ui-days {
-    margin-bottom: 0.6666666667em;
+    margin-bottom: 0.5333333333em;
     border-bottom: 1px solid;
     opacity: .375;
     font-size: 0.75em; }
   .input-calendar-ui-dates {
-    margin-bottom: 0.3333333333em; }
+    margin-bottom: 0.2666666667em; }
 
 @media (max-width: 1200px) {
   .input-calendar-ui-block {
-    padding: 0.3333333333em 0.3333333333em; } }
+    padding: 0.5333333333em 0em; } }
 
 /*** input tags ***/
 /*** input ***/
@@ -8040,7 +8043,7 @@ fieldset {
   font-size: 1.5em !important; }
 
 .font-size-small {
-  font-size: 0.875em !important; }
+  font-size: 0.75em !important; }
 
 .font-size-normalize {
   font-size: 1rem !important; }
@@ -8835,7 +8838,7 @@ fieldset {
 /*! 
 SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 ****************************************************************************/
-td {
+#dashboard td, .fw-modal-component td {
   max-width: 300px; }
 
 #dashboard-svg-styles {
@@ -9002,13 +9005,15 @@ td {
     #nav-functions {
       max-width: 500px; }
       #nav-functions .filter-dropdown-global {
-        max-width: 48.6666666667rem; }
+        max-width: 50.6666666667rem; }
+      #nav-functions > form {
+        max-width: 100%; }
       @media (max-width: 1200px) {
         #nav-functions {
           width: 50%;
-          max-width: 200px; } }
+          max-width: 250px; } }
     #nav-quick-functions {
-      margin-right: 1rem; }
+      margin-right: 2rem; }
   @media (max-width: 1200px) {
     #dashboard-block-main {
       width: calc(100% - 245px);
@@ -9086,7 +9091,7 @@ td {
 
 .dashboard-table-cell-thumbnail {
   min-width: 90px;
-  max-width: 120px;
+  max-width: 150px;
   text-align: center; }
 
 .dashboard-table-cell-name {
@@ -9207,8 +9212,8 @@ APPS / OUR CUSTOM STYLES
   top: 1rem; }
 
 .dashboard-table-cell-date {
-  width: 120px;
-  max-width: 120px !important; }
+  width: 150px;
+  max-width: 170px !important; }
 
 .record-notes-modal .modal-popup {
   padding-left: 50px;

@@ -68,30 +68,4 @@
 		</div>
 	</div>
 
-
-
-	<hr>
-</div>
-
-<!-- Attachments -->
-<div class="project-attachments" id="attachments">
-	<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
-		<div class="flex-col-xs-12">
-			<h4 class="no-margin-y">
-				Attachments
-			</h4>
-		</div>
-
-		<!-- <div class="flex-col-xs-6 text-align-right">
-			<a href="#" onClick="REPLACEfnToTriggerprojectAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
-		</div>
-			-->
-	</div>
-
-	<!-- @if attachments have rows -->
-		<?php app_get_component('components/attachment-grid-for-edit'); ?>
-		
-		<?php app_get_component('components/attachment-field'); ?>
-	
-	
 </div>

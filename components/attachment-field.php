@@ -1,4 +1,12 @@
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	'post' => 'task', //project,client,note,whatever
+);
 
+$args = app_parse_args($data,$defs);
+
+?>
 
 	<!-- original design layout -->
 		

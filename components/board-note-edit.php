@@ -2,10 +2,10 @@
 
 	<!-- 
 
-	@NOTE change `task-REPLACEwithPostTypeID-edit` to `task-new` if task to edit is new/
+	@NOTE change `note-REPLACEwithPostTypeID-edit` to `note-new` if note to edit is new/
 
-	For board to render for new tasks, feel free to copy paste if needed. This board will have the exact markup structure but attributes will change, particularly these on the `.board` block:
-			id => `task-new-edit` // feel free to change as fit
+	For board to render for new notes, feel free to copy paste if needed. This board will have the exact markup structure but attributes will change, particularly these on the `.board` block:
+			id => `note-new-edit` // feel free to change as fit
 
 			There will be comments along the way as well
 	-->
@@ -15,7 +15,7 @@
 			<div class="no-scrollbar dashboard-board-partition dashboard-board-column-layout-main  background-theme">
 				<div class="container">
 
-					<?php app_get_component('components/task-main-edit')?>
+					<?php app_get_component('components/note-main-edit')?>
 						
 				</div>
 			</div>
@@ -23,30 +23,14 @@
 				<div class="container container-wide">
 
 					<div class="module-grid">
-						<!-- Toolbar  -->
-						<?php app_get_component('components/toolbar-side-edit','',false,array(
-							'is_in_board_modal' => true
-						)) ?>
-
-						<!-- Team Info -->
-						<?php app_get_component('components/module-side-team-edit','',false,array(
-							'is_in_board_modal' => true
-						)) ?>
-
-						<!-- Time Tracker -->
-						<?php app_get_component('components/module-side-time-edit','',false,array(
-							'is_in_board_modal' => true
-						)) ?>
-
-						<!-- Categries Boards/Tags -->
-						<?php app_get_component('components/module-side-flux-edit','',false,array(
-							'is_in_board_modal' => true
-						)) ?>
-
-						<!-- Followers/Wiki/Reminders -->
-						<?php app_get_component('components/module-side-followers-edit','',false,array(
-							'is_in_board_modal' => true
-						)) ?>
+						<!-- Toolbar -->
+						<?php app_get_component('components/toolbar-side-note-edit','',false,array(
+								'is_in_board_modal' => true
+							)); ?>
+						<!-- Side stuff -->
+							<?php app_get_component('components/module-side-note-overview-edit','',false,array(
+								'is_in_board_modal' => true
+							)); ?>
 					</div>
 
 				</div>

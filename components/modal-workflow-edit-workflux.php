@@ -1,4 +1,13 @@
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	//is_in_board_modal -> attributes to add/remove whther or not the boi is within a modal
+		//@NOTE this attribute is specifically [data-grid-area-md="auto / side"]. should only be present if the markup is within a static page. this attroibute should not be present when being used in a board modal
+	'post' => 'task', //project,client,note,whatever
+);
 
+$args = app_parse_args($data,$defs);
+?>
 
 
 <!-- NOTE this field is an extension of the editor's fields -->

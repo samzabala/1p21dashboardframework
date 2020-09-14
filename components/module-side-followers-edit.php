@@ -44,9 +44,10 @@ $args = app_parse_args($data,$defs);
 
 
 
-		<hr>
 
-	<?php if($args['post'] == 'task' ): ?>
+
+		<?php if( $args['post'] == 'task' ): ?>
+		<hr>
 
 		<!-- Notes -->
 			<div class="h5 no-margin-y">
@@ -57,7 +58,7 @@ $args = app_parse_args($data,$defs);
 					<div class="flex-child">
 						<input id="<?=$args['post']?>-wiki-id" name="<?=$args['post']?>-wiki-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit <i class="symbol symbol-edit"></i></a>
-						<?php app_get_component('components/modal-workflow-edit-wiki-multiple'); ?>
+						<?php app_get_component('components/modal-workflow-edit-wiki-multiple',null,false,array('post'=>$args['post'])); ?>
 					</div>
 				</div>
 			</div>
@@ -93,15 +94,14 @@ $args = app_parse_args($data,$defs);
 								</li>
 							<?php } ?>
 					</ul>
+		<?php endif; ?>
+
+
+		<?php if( $args['post'] == 'task' ): ?>
 
 
 
 			<hr>
-
-		<?php endif; ?>
-
-
-		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-y">
 					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
@@ -119,11 +119,11 @@ $args = app_parse_args($data,$defs);
 
 				<!-- if has reminders -->
 					<div class="post-reminders">
-						<?php app_get_component('components/block-reminder-for-edit'); ?>
+						<?php app_get_component('components/block-reminder-for-edit',null,false,array('post'=>$args['post'])); ?>
 					
 						<!-- @PLACEHOLDER: DELETE WHEN READY -->
 							<?php for($i=1; $i<=3; $i++){ ?>
-								<?php app_get_component('components/block-reminder-for-edit'); ?>
+								<?php app_get_component('components/block-reminder-for-edit',null,false,array('post'=>$args['post'])); ?>
 							<?php } ?>
 					</div>
 		<?php endif; ?>

@@ -95,7 +95,7 @@ $args = app_parse_args($data,$defs);
 						<ul class="<?=$args['post']?>-note unstyled">
 							<li>
 							<!-- @NOTE not sure where this link goes to yet -->
-								<a class="note-title" href="<?= app_create_link(array('template'=>'doc')) ?>"><span class="REPLACE">Documentation title</span></a>
+								<a class="note-title" href="<?= app_create_link(array('template'=>'note-view')) ?>"><span class="REPLACE">Documentation title</span></a>
 							</li>
 							
 							
@@ -103,7 +103,7 @@ $args = app_parse_args($data,$defs);
 								<?php for($i=1; $i<=3; $i++){ ?>
 									<li>
 									<!-- @NOTE where this link goes to yet -->
-										<a class="note-title" href="<?= app_create_link(array('template'=>'doc')) ?>"><span class="REPLACE">Documentation title</span></a>
+										<a class="note-title" href="<?= app_create_link(array('template'=>'note-view')) ?>"><span class="REPLACE">Documentation title</span></a>
 									</li>
 								<?php } ?>
 						</ul>

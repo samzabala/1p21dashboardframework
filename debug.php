@@ -51,40 +51,40 @@
 			<div class="modal" id="table-modal">
 				
 				<div class="table-wrapper">
-				<table class="rank-hist-task-items">
-					<thead>
-						<tr>
-							<th>Rank Absolute</th>
-							<th>Rank Group</th>
-							<th>Result Type</th>
-							<th class="search-result">Search Result</th>
-							<th>Note</th>
-						</tr>
-					</thead>
+					<table class="rank-hist-task-items">
+						<thead>
+							<tr>
+								<th>Rank Absolute</th>
+								<th>Rank Group</th>
+								<th>Result Type</th>
+								<th class="search-result">Search Result</th>
+								<th>Note</th>
+							</tr>
+						</thead>
 
-					<tbody>
-						<tr>
-							<td class="ranking">31</td>
-							<td class="ranking">31</td>
-							<td><span class="tag tag-intensity-3">organic</span></td>
-							<td>
-								<div>
-									<a href="https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/" class="color-caution font-weight-700 text-wrap-ellipsis display-block">
-										https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/
-									</a>
-								</div>
-								<div class="color-primary font-weight-700 item-title">
-									Richard Schulte, A Product Liability Attorney With Wright ...
-								</div>
-								<div class="item-desc">
-									Richard Schulte, founding partner of Wright &amp; Schulte LLC and a product liability attorney, will appear on Cincinnati, Ohio Fox 19, “Moore Law” show to answer&nbsp;...
-								</div>
-							</td>
-							<td>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+						<tbody>
+							<tr>
+								<td class="ranking">31</td>
+								<td class="ranking">31</td>
+								<td><span class="tag tag-intensity-3">organic</span></td>
+								<td>
+									<div>
+										<a href="https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/" class="color-caution font-weight-700 text-wrap-ellipsis display-block">
+											https://www.yourohiolegalhelp.com/richard-schulte-product-liability-attorney-wright-schulte-llc-appear-moore-law-fox-tv-show/
+										</a>
+									</div>
+									<div class="color-primary font-weight-700 item-title">
+										Richard Schulte, A Product Liability Attorney With Wright ...
+									</div>
+									<div class="item-desc">
+										Richard Schulte, founding partner of Wright &amp; Schulte LLC and a product liability attorney, will appear on Cincinnati, Ohio Fox 19, “Moore Law” show to answer&nbsp;...
+									</div>
+								</td>
+								<td>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
