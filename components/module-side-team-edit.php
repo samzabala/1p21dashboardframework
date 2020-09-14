@@ -149,12 +149,6 @@ $args = app_parse_args($data,$defs);
 					</div>
 
 
-
-					<!-- db alt layout -->
-					<div>
-						<a href="#" data-toggle="modal"  class="btn btn-primary-outline btn-small">Team Members <i class="symbol symbol-edit"></i></a>
-						<?php app_get_component('components/modal-workflow-edit-team-leads-alt'); ?>
-					</div>
 				</div>
 			<?php endif; ?>
 

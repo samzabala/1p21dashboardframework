@@ -61,158 +61,160 @@
 
 						<div class="accordion" id="project-library">
 
-							<!-- notes -->
-								<div class="p project-library-header">
-									<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-										<div class="flex-col-xs-12 flex-col-md-6">
-											<h3 class="module-title open" data-toggle="accordion" data-href="#project-notes">
-												Notes <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
-											</h3>
-										</div>
-										<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
-											<?php app_get_component('components/linkto-add-notes') ?>
-										</div>
-									</div>
-								</div>
+							<div class="accordion-group">
 
-								<div class="accordion open project-library-section p" id="project-notes" data-accordion-change-hash="false">
-									<!-- @if there are entries -->
-										<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
-											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
-												<tr>
-													<th class="text-nowrap dashboard-table-cell-date">Created</th>
-													<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
-													<th class="dashboard-table-cell-max text-nowrap">Task</th>
-													<th class="dashboard-table-cell-max text-nowrap">Note Title</th>
-													<th class="dashboard-table-cell-action text-nowrap table-cell-no-gutter">&nbsp;<span class="sr-only">Actions</span></th>
-												</tr>
-
-												<!-- @LOOP tr -->
-													<tr>
-														<td class="dashboard-table-cell-date">
-															<span class="project-note-date-created">
-																<span class="REPLACE">5/12/20</span>
-															</span>
-														</td>
-														<td class="text-align-center dashboard-table-cell-thumbnail">
-															<?php app_get_component('components/profile-image-small') ?>
-														</td>
-														<td>
-															<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
-																<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
-															</a>
-														</td>
-														<td>
-															<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
-																<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
-															</span>
-														</td>
-														<td class="dashboard-table-cell-action ">
-															<?php app_get_component('components/tooltip-action-with-share'); ?>
-														</td>
-													</tr>
-														<!-- @PLACEHOLDER: DELETE WHEN READY -->
-														<?php for($i=1; $i<=5; $i++){ ?>
-															<tr class=" dashboard-table-cell-date">
-																<td>
-																	<span class="project-note-date-created">
-																		<span class="REPLACE">5/12/20</span>
-																	</span>
-																</td>
-																<td class="text-align-center dashboard-table-cell-thumbnail">
-																	<?php app_get_component('components/profile-image-small') ?>
-																</td>
-																<td>
-																	<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
-																		<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
-																	</a>
-																</td>
-																<td>
-																	<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
-																		<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
-																	</span>
-																</td>
-																<td class="dashboard-table-cell-action ">
-																	<?php app_get_component('components/tooltip-action-with-share'); ?>
-																</td>
-															</tr>
-														<?php } ?>
-											</table>
-										</div>
-									<!-- @else no entries -->
-										<p class="p color-neutral font-style-italic">No notes yet.</p>
-								</div>
-
-							<!-- project Docs/files -->
-								<div class="p project-library-header">
-									<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-										<div class="flex-col-xs-12 flex-col-md-6">
-											<h3 class="module-title open" data-toggle="accordion" data-href="#project-docs">
-												Documents & Files <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
-											</h3>
-										</div>
-										<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
-											<?php app_get_component('components/linkto-add-files') ?>
+								<!-- notes -->
+									<div class="p project-library-header">
+										<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+											<div class="flex-col-xs-12 flex-col-md-6">
+												<h3 class="module-title open" data-toggle="accordion" data-href="#project-notes">
+													Notes <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+												</h3>
+											</div>
+											<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
+												<?php app_get_component('components/linkto-add-notes') ?>
+											</div>
 										</div>
 									</div>
-								</div>
 
-								<div class="accordion open project-library-section p" id="project-docs" data-accordion-change-hash="false">
-									<!-- @if there are entries -->
-										<div class="table-wrapper dashboard-table-wrapper-gutterless">
+									<div class="accordion open project-library-section p" id="project-notes" data-accordion-change-hash="false">
+										<!-- @if there are entries -->
+											<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
-											<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
-												<tr>
-													<th class="dashboard-table-cell-max-larger text-nowrap">Name</th>
-													<th class="text-nowrap text-align-center">Created</th>
-													<th class="text-nowrap text-align-center">Updated</th>
-												</tr>
-
-												<!-- @LOOP tr -->
+												<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 													<tr>
-														<td class="dashboard-table-cell-max-larger">
-															<!-- @note
-																.project-doc-name
-																	attributes to modify
-																		href
-																			
-
-															-->
-															<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
-																<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name </span>
-															</a>
-														</td>
-														<td class="text-align-center project-doc-date-created">
-															<span class="REPLACE">5/29/20</span>
-														</td>
-														<td class="text-align-center project-doc-date-updated">
-															<span class="REPLACE">5/29/20</span>
-														</td>
+														<th class="text-nowrap dashboard-table-cell-date">Created</th>
+														<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
+														<th class="text-nowrap">Note Title</th>
+														<th class="text-nowrap">Task</th>
+														<th class="dashboard-table-cell-action text-nowrap table-cell-no-gutter">&nbsp;<span class="sr-only">Actions</span></th>
 													</tr>
-														<!-- @PLACEHOLDER: DELETE WHEN READY -->
-														<?php for($i=1; $i<=5; $i++){ ?>
-															<tr>
-																<td class="dashboard-table-cell-max-larger">
-																	<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
-																		<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name </span>
-																	</a>
-																</td>
-																<td class="text-align-center project-doc-date-created">
-																	<span class="REPLACE">5/29/20</span>
-																</td>
-																<td class="text-align-center project-doc-date-updated">
-																	<span class="REPLACE">5/29/20</span>
-																</td>
-															</tr>
-														<?php } ?>
-											</table>
+
+													<!-- @LOOP tr -->
+														<tr>
+															<td class="dashboard-table-cell-date">
+																<span class="project-note-date-created">
+																	<span class="REPLACE">5/12/20</span>
+																</span>
+															</td>
+															<td class="text-align-center dashboard-table-cell-thumbnail">
+																<?php app_get_component('components/profile-image-small') ?>
+															</td>
+															<td>
+																<a href="<?=app_create_link(array('template'=>'note-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+																	<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
+																</a>
+															</td>
+															<td>
+																<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
+																	<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
+																</a>
+															</td>
+															<td class="dashboard-table-cell-action ">
+																<?php app_get_component('components/tooltip-action-with-share'); ?>
+															</td>
+														</tr>
+															<!-- @PLACEHOLDER: DELETE WHEN READY -->
+															<?php for($i=1; $i<=5; $i++){ ?>
+																<tr class=" dashboard-table-cell-date">
+																	<td>
+																		<span class="project-note-date-created">
+																			<span class="REPLACE">5/12/20</span>
+																		</span>
+																	</td>
+																	<td class="text-align-center dashboard-table-cell-thumbnail">
+																		<?php app_get_component('components/profile-image-small') ?>
+																	</td>
+																	<td>
+																		<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+																			<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
+																		</span>
+																	</td>
+																	<td>
+																		<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
+																			<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
+																		</a>
+																	</td>
+																	<td class="dashboard-table-cell-action ">
+																		<?php app_get_component('components/tooltip-action-with-share'); ?>
+																	</td>
+																</tr>
+															<?php } ?>
+												</table>
+											</div>
+										<!-- @else no entries -->
+											<p class="p color-neutral font-style-italic">No notes yet.</p>
+									</div>
+
+								<!-- project Docs/files -->
+									<div class="p project-library-header">
+										<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+											<div class="flex-col-xs-12 flex-col-md-6">
+												<h3 class="module-title open" data-toggle="accordion" data-href="#project-docs">
+													Documents & Files <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+												</h3>
+											</div>
+											<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
+												<?php app_get_component('components/linkto-add-files') ?>
+											</div>
 										</div>
-									<!-- @else no entries -->
-										<p class="p color-neutral font-style-italic">No attachments yet.</p>
-								</div>
+									</div>
 
+									<div class="accordion open project-library-section p" id="project-docs" data-accordion-change-hash="false">
+										<!-- @if there are entries -->
+											<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
+												<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
+													<tr>
+														<th class="dashboard-table-cell-max-larger text-nowrap">Name</th>
+														<th class="text-nowrap text-align-center">Created</th>
+														<th class="text-nowrap text-align-center">Updated</th>
+													</tr>
+
+													<!-- @LOOP tr -->
+														<tr>
+															<td class="dashboard-table-cell-max-larger">
+																<!-- @note
+																	.project-doc-name
+																		attributes to modify
+																			href
+																				
+
+																-->
+																<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
+																	<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name </span>
+																</a>
+															</td>
+															<td class="text-align-center project-doc-date-created">
+																<span class="REPLACE">5/29/20</span>
+															</td>
+															<td class="text-align-center project-doc-date-updated">
+																<span class="REPLACE">5/29/20</span>
+															</td>
+														</tr>
+															<!-- @PLACEHOLDER: DELETE WHEN READY -->
+															<?php for($i=1; $i<=5; $i++){ ?>
+																<tr>
+																	<td class="dashboard-table-cell-max-larger">
+																		<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
+																			<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name </span>
+																		</a>
+																	</td>
+																	<td class="text-align-center project-doc-date-created">
+																		<span class="REPLACE">5/29/20</span>
+																	</td>
+																	<td class="text-align-center project-doc-date-updated">
+																		<span class="REPLACE">5/29/20</span>
+																	</td>
+																</tr>
+															<?php } ?>
+												</table>
+											</div>
+										<!-- @else no entries -->
+											<p class="p color-neutral font-style-italic">No attachments yet.</p>
+									</div>
+							</div>
 
 							
 					</div>
@@ -236,7 +238,6 @@
 					</div>
 
 					
-					<?php app_get_component('components/board-task-edit') ?>
 					
 				</div>
 			</div>
@@ -260,7 +261,7 @@
 										<th class="dashboard-table-cell-max text-nowrap">Name</th>
 										<th class="text-nowrap">Status</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap">Assignee</th>
-										<th class="text-nowrap text-align-center">Assigned On</th>
+										<th class="text-nowrap text-align-center dashboard-table-cell-date">Assigned On</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Created By</th>
 									</tr>
 
@@ -281,7 +282,7 @@
 											<!-- @else not assigned -->
 												<span class="color-neutral font-style-italic">Unassigned</span>
 										</td>
-										<td class="text-align-center">
+										<td class="dashboard-table-cell-date text-align-center">
 											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
 												<span class="REPLACE">5/29/20</span>
 											</span>
@@ -310,7 +311,7 @@
 														<!-- @else not assigned -->
 															<span class="color-neutral font-style-italic">Unassigned</span>
 													</td>
-													<td class="text-align-center">
+													<td class="dashboard-table-cell-date text-align-center">
 														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
 															<span class="REPLACE">5/29/20</span>
 														</span>
@@ -334,7 +335,7 @@
 										<th class="dashboard-table-cell-max text-nowrap">Name</th>
 										<th class="text-nowrap">Status</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap">Assignee</th>
-										<th class="text-nowrap text-align-center">Assigned On</th>
+										<th class="text-nowrap text-align-center dashboard-table-cell-date ">Assigned On</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Created By</th>
 									</tr>
 
@@ -355,7 +356,7 @@
 											<!-- @else not assigned -->
 												<span class="color-neutral font-style-italic">Unassigned</span>
 										</td>
-										<td class="text-align-center">
+										<td class="dashboard-table-cell-date text-align-center">
 											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
 												<span class="REPLACE">5/29/20</span>
 											</span>
@@ -384,7 +385,7 @@
 														<!-- @else not assigned -->
 															<span class="color-neutral font-style-italic">Unassigned</span>
 													</td>
-													<td class="text-align-center">
+													<td class="dashboard-table-cell-date text-align-center">
 														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="text-wrap-ellipsis">
 															<span class="REPLACE">5/29/20</span>
 														</span>
@@ -413,3 +414,7 @@
 			</div>
 		</div>
 </div>
+
+
+<?php app_get_component('components/board-task-edit') ?>
+<?php app_get_component('components/board-note-edit') ?>

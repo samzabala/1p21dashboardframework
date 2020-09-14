@@ -1,4 +1,4 @@
-<div data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-right filter-dropdown-global">
+<div data-dropdown-width="100%" class="text-align-left dropdown no-padding-top dropdown-top-flush dropdown-right filter-dropdown-global">
 
 		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
 			<div class="flex-col-xs-12 flex-col-md-4">
@@ -121,7 +121,7 @@
 					<!-- @else -->
 						<!-- <span class="color-neutral">From</span> -->
 				</button>
-				<div class="dropdown no-padding dropdown-center-x dropdown-top-flush overflow-hidden">
+				<div class="dropdown no-padding dropdown-left dropdown-top-flush overflow-hidden">
 					<input
 						id="filter-date-a"
 						name="filter-date-a"
@@ -142,7 +142,7 @@
 					<!-- @else -->
 						<!-- <span class="color-neutral">To</span> -->
 				</button>
-				<div class="dropdown no-padding dropdown-center-x dropdown-top-flush overflow-hidden">
+				<div class="dropdown no-padding dropdown-right dropdown-top-flush overflow-hidden">
 
 					<input
 						id="filter-date-a"
@@ -155,7 +155,6 @@
 			</div>
 		</div>
 		<div class="p text-align-right">
-			<br>
 			<button class="btn btn-neutral-outline" type="reset">Clear Filters</button>
 			<button  class="btn btn-primary" type="submit">Search</button>
 		</div>

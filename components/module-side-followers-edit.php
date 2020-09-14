@@ -46,7 +46,6 @@ $args = app_parse_args($data,$defs);
 
 		<hr>
 
-	<?php if($args['post'] == 'task' ): ?>
 
 		<!-- Notes -->
 			<div class="h5 no-margin-y">
@@ -98,10 +97,8 @@ $args = app_parse_args($data,$defs);
 
 			<hr>
 
-		<?php endif; ?>
 
-
-		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
+		<?php if( $args['post'] == 'task' ): ?>
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-y">
 					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">

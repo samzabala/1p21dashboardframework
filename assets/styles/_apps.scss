@@ -12,6 +12,7 @@ $sidebar-base-slim-mobile: 60px;
 	td {
 		max-width: 300px;
 	}
+}
 
 //whole page layout
 #dashboard {
@@ -262,21 +263,25 @@ $sidebar-base-slim-mobile: 60px;
 
 				/* workflow onward and some pre ones */
 				&-functions {
-					.filter-dropdown-global {
-						max-width:rem(730px/$body-font-size);
-					}
 
 					max-width: 500px;
+					.filter-dropdown-global {
+						max-width:rem(760px/$body-font-size);
+					}
+
+					> form {
+						max-width: 100%;
+					}
 
 					@include br(#{$mobile-br-max}-max) {
 						width:50%;
-						max-width: 200px;
+						max-width: 250px;
 					}
 				}
 
 
 				&-quick-functions {
-					margin-right: 1rem;
+					margin-right: 2rem;
 				}
 			}
 
@@ -436,7 +441,7 @@ $sidebar-base-slim-mobile: 60px;
 
 			&-thumbnail {
 				min-width: 90px; 
-				max-width: 120px; 
+				max-width: 150px; 
 				text-align:center;
 			}
 			&-name {

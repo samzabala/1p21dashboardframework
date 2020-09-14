@@ -16,6 +16,6 @@
 			<?php app_get_component('components/note-main-edit'); ?>
 		</div>
 	</div>
-	<!-- Team Info -->
-	<?php app_get_component('components/module-side-note-overview-edit') ?>
+	<!-- Side stuff -->
+		<?php app_get_component('components/module-side-note-overview-edit') ?>
 </div>

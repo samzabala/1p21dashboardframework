@@ -144,11 +144,9 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-edit";
 					break;
 
-				// pages im not sure of but good to have fallbacks for or at least a basic page to render
-				case 'doc':
-				case 'wiki':
-				case 'note':
+				// content pages im not sure of but good to have fallbacks for or at least a basic page to render
 				case 'page':
+				case 'note-view':
 					app_get_template_part("app-{$app}/page");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/page";
 					break;
@@ -157,11 +155,9 @@ function app_init_content(){
 				case 'clients':
 				case 'client-view':
 				case 'client-edit':
-				case 'notes':
 				case 'profile':
 				case 'analytics':
 				case 'workflow':
-				case 'note-view':
 				case 'notes':
 					?>
 						<div class="module">
