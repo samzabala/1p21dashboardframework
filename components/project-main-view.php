@@ -61,7 +61,7 @@
 
 						<div class="accordion" id="project-library">
 
-							<div class="accordion-group">
+							<div class="accordion-group accordion-group-multiple">
 
 
 								<!-- notes -->
@@ -127,9 +127,9 @@
 																		<?php app_get_component('components/profile-image-small') ?>
 																	</td>
 																	<td>
-																		<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+																		<a href="<?=app_create_link(array('template'=>'note-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
 																			<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
-																		</span>
+																		</a>
 																	</td>
 																	<td>
 																		<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
@@ -151,8 +151,8 @@
 									<div class="p project-library-header">
 										<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 											<div class="flex-col-xs-12 flex-col-md-6">
-												<h3 class="module-title open" data-toggle="accordion" data-href="#project-docs">
-													Documents & Files <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+												<h3 class="module-title open" data-toggle="accordion" data-href="#project-files">
+													Documents &amp; Files <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 												</h3>
 											</div>
 											<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
@@ -161,14 +161,14 @@
 										</div>
 									</div>
 
-									<div class="accordion open project-library-section p" id="project-docs" data-accordion-change-hash="false">
+									<div class="accordion open project-library-section p" id="project-files" data-accordion-change-hash="false">
 										<!-- @if there are entries -->
 											<div class="table-wrapper dashboard-table-wrapper-gutterless">
 
 												<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 													<tr>
 														<th class="dashboard-table-cell-max-larger text-nowrap">Name</th>
-														<th class="text-nowrap text-align-center">Created</th>
+														<th class="text-nowrap text-align-center">Origin</th>
 														<th class="text-nowrap text-align-center">Updated</th>
 													</tr>
 
@@ -176,20 +176,22 @@
 														<tr>
 															<td class="dashboard-table-cell-max-larger">
 																<!-- @note
-																	.project-doc-name
+																	.project-file-name
 																		attributes to modify
 																			href
 																				
 
 																-->
-																<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
+																<a href="REPLACELinkToActualFile" class="project-file-name text-wrap-ellipsis">
 																	<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name </span>
 																</a>
 															</td>
-															<td class="text-align-center project-doc-date-created">
-																<span class="REPLACE">5/29/20</span>
+															<td class="text-align-center project-file-task-origin">
+																<a href="<?=app_create_link(array('template'=>'task-view')); ?>" title="REPLACEWithTaskTitle">
+																	Task #<span class="REPLACE">6669420</span>
+																</a>
 															</td>
-															<td class="text-align-center project-doc-date-updated">
+															<td class="text-align-center project-file-date-updated">
 																<span class="REPLACE">5/29/20</span>
 															</td>
 														</tr>
@@ -197,14 +199,16 @@
 															<?php for($i=1; $i<=5; $i++){ ?>
 																<tr>
 																	<td class="dashboard-table-cell-max-larger">
-																		<a href="REPLACELinkToActualFile" class="project-doc-name text-wrap-ellipsis">
+																		<a href="REPLACELinkToActualFile" class="project-file-name text-wrap-ellipsis">
 																			<span class="REPLACE">Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long nameDoc or file probablyi with a really long name Doc or file probably with a really long name Doc or file probably with a really long name </span>
 																		</a>
 																	</td>
-																	<td class="text-align-center project-doc-date-created">
-																		<span class="REPLACE">5/29/20</span>
+																	<td class="text-align-center project-file-task-origin">
+																		<a href="<?=app_create_link(array('template'=>'task-view')); ?>" title="REPLACEWithTaskTitle">
+																			Task #<span class="REPLACE">6669420</span>
+																		</a>
 																	</td>
-																	<td class="text-align-center project-doc-date-updated">
+																	<td class="text-align-center project-file-date-updated">
 																		<span class="REPLACE">5/29/20</span>
 																	</td>
 																</tr>
@@ -409,7 +413,7 @@
 		<div class="module">
 			<div class="module-content">
 				<h3>Activity & Comments</h3>
-				<?php app_get_component('components/comment-form','',false,array('post'=>'project')); ?>
+				<?php app_get_component('components/comment-form',null,false,array('post'=>'project')); ?>
 				<?php app_get_component('components/comment-row'); ?>
 			</div>
 		</div>

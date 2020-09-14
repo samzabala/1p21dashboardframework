@@ -1,3 +1,13 @@
+<?php
+$defs = array(
+	//@param post - type of single achuchuchu
+	//is_in_board_modal -> attributes to add/remove whther or not the boi is within a modal
+		//@NOTE this attribute is specifically [data-grid-area-md="auto / side"]. should only be present if the markup is within a static page. this attroibute should not be present when being used in a board modal
+	'post' => 'task', //project,client,note,whatever
+);
+
+$args = app_parse_args($data,$defs);
+?>
 
 <div class="task-reminder-row alert alert-small alert-default p">
 
@@ -12,7 +22,7 @@
 		<button class="display-none" data-toggle="alert-close">Remove Reminder from UI</button>
 
 		<a href="#" class="alert-close color-primary" data-modal-title="Edit reminder" data-toggle="modal"><i class="symbol symbol-edit"></i></a>
-		<?php app_get_component('components/modal-workflow-edit-reminder'); ?>
+		<?php app_get_component('components/modal-workflow-edit-reminder',null,false,array('post'=>$args['post'])); ?>
 	</div>
 	<div class="task-reminder-body alert-content">
 

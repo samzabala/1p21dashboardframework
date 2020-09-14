@@ -54,7 +54,7 @@ $args = app_parse_args($data,$defs);
 				<div class="flex-child">
 					<input id="<?=$args['post']?>-tags" name="<?=$args['post']?>-tags" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
-					<?php app_get_component('components/modal-workflow-edit-tags'); ?>
+					<?php app_get_component('components/modal-workflow-edit-tags',null,false,array('post'=>$args['post'])); ?>
 				</div>
 			</div>
 

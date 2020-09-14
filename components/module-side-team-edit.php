@@ -145,7 +145,7 @@ $args = app_parse_args($data,$defs);
 					<!-- design based layout -->
 					<div>
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
-						<?php app_get_component('components/modal-workflow-edit-team-leads'); ?>
+						<?php app_get_component('components/modal-workflow-edit-team-leads',null,false,array('post'=>$args['post'])); ?>
 					</div>
 
 
