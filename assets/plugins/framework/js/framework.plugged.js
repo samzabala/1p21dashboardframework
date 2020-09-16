@@ -2141,10 +2141,10 @@ window.jQuery && jQuery.noConflict();
 			posX = posX || triggererOrigin && triggererOrigin.x();
 			posY = posY || triggererOrigin && triggererOrigin.y();
 
-
+			// console.log('yuy dipokal',toolTip[0]);
 			let toolPoint = parseFloat(
 				window
-					.getComputedStyle(toolTip[0], ':before')
+					.getComputedStyle(toolTip.current[0], ':before')
 					.getPropertyValue('width')
 			);
 
