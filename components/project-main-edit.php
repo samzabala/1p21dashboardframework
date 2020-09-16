@@ -27,45 +27,47 @@
 		</div>
 	</div>
 
+<?php /*
 <!-- @NOTE .project-time-meta is not needed for now if not possible to program yet. ok to comment out for now -->
-<div class="project-time-meta">
-	<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
-		<div class="input-toggle">
-			<input type="checkbox" class="input" name="project-apply-template" id="project-apply-template">
-			<label for="project-apply-template" class="input-label input-toggle-label">
-				Apply Project Template
-			</label>
+	<div class="project-time-meta">
+		<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
+			<div class="input-toggle">
+				<input type="checkbox" class="input" name="project-apply-template" id="project-apply-template">
+				<label for="project-apply-template" class="input-label input-toggle-label">
+					Apply Project Template
+				</label>
+			</div>
 		</div>
-	</div>
 
-	<!-- 
+		<!-- 
 
-	@NOTE
-		.flex-grid
-			classes to add
-				`input-disabled` => when input[name=project-apply-template] is checked
-	-->
-	<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
-		<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
+		@NOTE
+			.flex-grid
+				classes to add
+					`input-disabled` => when input[name=project-apply-template] is checked
+		-->
+		<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
+			<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
 
-		<!-- @NOTE @DYNAMIC : update text to the value set to tthe input field -->
-			<span class="project-template-value">
-				<span class="REPLACE">
-					Template name
+			<!-- @NOTE @DYNAMIC : update text to the value set to tthe input field -->
+				<span class="project-template-value">
+					<span class="REPLACE">
+						Template name
+					</span>
 				</span>
-			</span>
 
-			<i class="symbol symbol-arrow-down color-primary"></i>
-		</button>
-		<div class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="100%">
-			<!-- @PLACEHOLDER. delete qwhen ready -->
-			<ul>
-				<li><a href="#">360 Site</a></li>
-				<li><a href="#">QL Site</a></li>
-				<li><a href="#">Some kind of project</a></li>
-				<li><a href="#">Another type or project</a></li>
-			</ul>
+				<i class="symbol symbol-arrow-down color-primary"></i>
+			</button>
+			<div class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="100%">
+				<!-- @PLACEHOLDER. delete qwhen ready -->
+				<ul>
+					<li><a href="#">360 Site</a></li>
+					<li><a href="#">QL Site</a></li>
+					<li><a href="#">Some kind of project</a></li>
+					<li><a href="#">Another type or project</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
 
-</div>
+	</div>
+*/ ?>
