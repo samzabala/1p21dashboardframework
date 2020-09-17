@@ -6881,7 +6881,8 @@ fieldset {
     display: block; }
     .input-tags-ui-input:empty:not(:focus):not(.focus):before {
       opacity: 0.5;
-      content: attr(data-placeholder); }
+      content: attr(data-placeholder);
+      display: block; }
     .input-tags-ui-input:first-child {
       padding-left: 0; }
     .input-tags-ui-input:last-child {
