@@ -1944,7 +1944,7 @@ window.jQuery && jQuery.noConflict();
 
 		if (triggerer) {
 			frameWork.destroyToolTip();
-			frameWork.toolTip = frameWork.toolTip || {};
+			frameWork.toolTip = {};
 
 			const arr = {
 				placement:
@@ -2039,9 +2039,9 @@ window.jQuery && jQuery.noConflict();
 			if (frameWork.toolTip.current) {
 				frameWork.toolTip.current.remove();
 			}
-
-			delete frameWork.toolTip;
 		}
+
+		delete frameWork.toolTip;
 	};
 
 	//return origitit
@@ -2126,6 +2126,8 @@ window.jQuery && jQuery.noConflict();
 	//only use when the tooltip is finally active
 	frameWork.positionToolTip = (posX, posY) => {
 
+		console.log('yuy yodipota',frameWork.toolTip);
+
 		if (frameWork.toolTip) {
 
 			const toolTip = frameWork.toolTip.current;
@@ -2141,10 +2143,12 @@ window.jQuery && jQuery.noConflict();
 			posX = posX || triggererOrigin && triggererOrigin.x();
 			posY = posY || triggererOrigin && triggererOrigin.y();
 
-			// console.log('yuy dipokal',toolTip[0]);
+			console.log('yuy dipokal',toolTip[0]);
+			console.warn(window.getComputedStyle(toolTip[0], ':before'));
+
 			let toolPoint = parseFloat(
 				window
-					.getComputedStyle(toolTip.current[0], ':before')
+					.getComputedStyle(toolTip[0], ':before')
 					.getPropertyValue('width')
 			);
 
