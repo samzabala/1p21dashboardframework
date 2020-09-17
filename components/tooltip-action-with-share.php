@@ -55,31 +55,31 @@
 		<!-- @if user has rights to share this notes -->
 		<form method="get">
 
-			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 				<label for="email" class="input-label">Share with:</label>
-
-				
-				<div class="input-group input-group-horizontal input-block">
-					<input type="email" class="input input-single-line" />
-					<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
-				</div>
+				<input type="text" class="input input-tags" placeholder="Type and search team members..." />
 			</div>
 
 
 
-			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 			
-				<label for="share-note-access" class="input-label">Share Access Level:</label>
+				<p class="input-label">Share Access Level:</p>
 				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-					<span class="flex-child">
+					<label class="flex-child">
 						<input name="share-note-access" type="radio" class="input input-inline" value="read">
 						Read only
-					</span>
-					<span class="flex-child">
+					</label>
+					<label class="flex-child">
 						<input name="share-note-access" type="radio" class="input input-inline" value="readwrite">
 						Read-Write
-					</span>
+					</label>
 				</div>
+			</div>
+
+			<div class="text-align-right">
+				<button class="flex-0-0 btn btn-neutral-outline" data-toggle="modal-close">Cancel</button>
+				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
 			</div>
 		</form>
 </div>
