@@ -8872,7 +8872,8 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   padding-bottom: 45px;
   z-index: 99999;
   overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scrollbar-width: none; }
   #dashboard-block-sidebar.dashboard-block-sidebar-slim {
     width: 80px;
     top: 75px;

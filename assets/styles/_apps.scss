@@ -61,6 +61,7 @@ $sidebar-base-slim-mobile: 60px;
 			z-index:99999;
 			overflow-y:scroll;
 			overflow-x:hidden;
+			scrollbar-width: none;
 
 			&.dashboard-block-sidebar-slim {
 				width: $sidebar-base-slim;
