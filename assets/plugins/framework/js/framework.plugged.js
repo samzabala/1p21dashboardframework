@@ -2126,8 +2126,6 @@ window.jQuery && jQuery.noConflict();
 	//only use when the tooltip is finally active
 	frameWork.positionToolTip = (posX, posY) => {
 
-		console.log('yuy yodipota',frameWork.toolTip);
-
 		if (frameWork.toolTip) {
 
 			const toolTip = frameWork.toolTip.current;
