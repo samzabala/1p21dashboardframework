@@ -48,7 +48,7 @@
 		<i class="symbol symbol-kebab-horizontal"></i>
 	</span> 
 
-<div class="modal" id="modal-share-with" data-modal-width="400px" data-modal-title="Share">
+<div class="modal" id="modal-share-with" data-modal-width="600px" data-modal-title="Share">
 
 
 
@@ -62,6 +62,23 @@
 				<div class="input-group input-group-horizontal input-block">
 					<input type="email" class="input input-single-line" />
 					<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
+				</div>
+			</div>
+
+
+
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+			
+				<label for="share-note-access" class="input-label">Share Access Level:</label>
+				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
+					<span class="flex-child">
+						<input name="share-note-access" type="radio" class="input input-inline" value="read">
+						Read only
+					</span>
+					<span class="flex-child">
+						<input name="share-note-access" type="radio" class="input input-inline" value="readwrite">
+						Read-Write
+					</span>
 				</div>
 			</div>
 		</form>
