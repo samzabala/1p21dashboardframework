@@ -2143,9 +2143,6 @@ window.jQuery && jQuery.noConflict();
 			posX = posX || triggererOrigin && triggererOrigin.x();
 			posY = posY || triggererOrigin && triggererOrigin.y();
 
-			console.log('yuy dipokal',toolTip[0]);
-			console.warn(window.getComputedStyle(toolTip[0], ':before'));
-
 			let toolPoint = parseFloat(
 				window
 					.getComputedStyle(toolTip[0], ':before')
@@ -3713,7 +3710,6 @@ window.jQuery && jQuery.noConflict();
 
 		let scrollTimerInternal;
 		$(window).on('scroll','*',(e) => {
-			console.log(e.target);
 			clearTimeout(scrollTimerInternal);
 
 			scrollTimerInternal = setTimeout(() => {
