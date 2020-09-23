@@ -339,6 +339,29 @@ $sidebar-base-slim-mobile: 60px;
 //helpers
 .dashboard {
 
+	&-btn {
+		&-serp {
+			margin: .25em .125em;
+		}
+	}
+
+	&-tooltip {
+		&-serp {
+			&-rows{
+				max-height: 360px;
+			}
+		}
+
+		&-row {
+			padding-right: 1em;
+
+			> hr {
+				margin-right: -1em;
+				width: calc(100% + 1em);
+			}
+		}
+	}
+
 	&-alert {
 		&-icon {
 			font-size: em(21px/$body-font-size);

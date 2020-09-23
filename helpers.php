@@ -272,6 +272,10 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="app-{$app}/home-{$slug}";
 
 					break;
+				case 'project-view':
+					app_get_template_part("app-{$app}/project",$slug);
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="app-{$app}/project-{$slug}";
+					break;
 				case 'profile':
 				case 'project':
 				case 'projects':

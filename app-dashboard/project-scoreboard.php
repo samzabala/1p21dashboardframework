@@ -271,14 +271,14 @@
 				<div class="table-wrapper">
 					<table class="text-vertical-align-middle">
 						<tr>
-							<th>Keyword</th>
-							<th class="dashboard-table-cell-url">Ranking Page</th>
-							<th class="text-align-center">Map Result</th>
-							<th class="text-align-center">Prev 90</th>
-							<th class="text-align-center">Prev 60</th>
-							<th class="text-align-center">Prev 30</th>
-							<th>Last Checked</th>
-							<th>Change (30 Days)</th>
+							<th>Keyword/Ranking Page</th>
+							<th class="text-align-center">Location</th>
+							<th class="text-align-center">Rank</th>
+							<th class="text-align-center">3 MTH Trend</th>
+							<th class="text-align-center">Rank Absolute</th>
+							<th class="text-align-center">Result Type</th>
+							<th class="text-align-center">SERP Features</th>
+							<th class="text-align-center">Snapshot</th>
 
 							<th class="dashboard-table-cell-thumbnail">Rank</th>
 						</tr>
@@ -286,59 +286,76 @@
 
 						<tr>
 							<td>
-								<div class="project-query">
-									<span class="REPLACE">Keyword</span>
+								<div class="text-wrap-ellipsis">
+									<span data-toggle="tooltip-hover" data-tooltip-placement="top" data-tooltip-content="Vancouver pedestrian accident lawyer">
+										Vancouver pedestrian accident lawyer
+									</span>
+								</div>
+
+								<div class="text-wrap-ellipsis">
+									<a class="text-wrap-break" target="_blank" href="https://www.nwinjurylawcenter.com/?utm_source=gmb&amp;utm_medium=organic&amp;utm_campaign=gmblisting">https://www.nwinjurylawcenter.com/?utm_source=gmb&amp;utm_medium=organic&amp;utm_campaign=gmblisting</a>
+
 								</div>
 							</td>
-							<td class="dashboard-table-cell-url">
-								
-								<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
-									<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
-								</a>
-							</td>
+
 							<td class="text-align-center">
-								<a class="font-size-large color-neutral project-map-result" href="#REPLACE-project-map-result-url" target="_blank" >
-									<i class="symbol symbol-map"></i>
-								</a>
+								<div class="text-wrap-ellipsis">
+									Vancouver, Washington
+								</div>
 							</td>
+
 							<td class="text-align-center">
-								<span class="project-count-prev-90">
-									<span class="REPLACE">11</span>
-								</span>
+								<div>
+									<a href="#" class="cur-rank color-primary lead font-weight-700 no-margin" data-toggle="modal">
+										<span class="REPLACE">69</span>
+									</a>
+									<div class="modal">
+										Placeholder
+									</div>
+								</div>
+
+							<div class="color-neutral">
+								[0]
+							</div>
 							</td>
+
 							<td class="text-align-center">
-								<span class="project-count-prev-90">
-									<span class="REPLACE">15</span>
-								</span>
+								<div class="REPLACE">
+									smol chart boi here
+								</div>
 							</td>
+
 							<td class="text-align-center">
-								<span class="project-count-prev-90">
-									<span class="REPLACE">69</span>
-								</span>
-							</td>
-							<td>
-								<span class="project-last-checked-date">
-									<span class="REPLACE">04-20-69</span>
-								</span>
-							</td>
-							<td>
-								<!--
-									@DYNAMIC
-										classes
-											color-error | color-success
-											- changes based on .project-count-change value
-								-->
-								<span class="project-count-change color-error font-weight-700">
-									<span class="REPLACE">-1</span>
+								<span class="rank-absolute font-weight-700">
+									<span class="REPLACE">
+										1
+									</span>
 								</span>
 							</td>
 
-							<td class="dashboard-table-cell-thumbnail">
-								<span class="thumbnail thumbnail-small background-intensity-5">
-								<span class="project-rank thumbnail-text">
-									<span class="REPLACE">69</span>
+							<td class="result-type text-align-center">
+								<span class="REPLACE">
+									<span class="tag tag-success">
+										local pack
+									</span>
 								</span>
-								</span>
+							</td>
+
+							<td class="serp-features text-align-center">
+								<?php app_get_component('components/tooltip-add-scoreboard') ?>
+							</td>
+
+							<td class="text-align-center">
+								<button class="btn btn-symbol btn-primary" data-toggle="modal">
+									<i class="symbol symbol-search"></i>
+								</button>
+								<div class="modal">
+									Placeholder
+								</div>
+							</td>
+
+							<td class="text-align-center">
+								<span class="REPLACE">9/21/2020</span>
 							</td>
 						</tr>
 
@@ -348,59 +365,77 @@
 								<?php for($i=1; $i<=4; $i++){ ?>
 									<tr>
 										<td>
-											<div class="project-query">
-												<span class="REPLACE">Keyword</span>
+											<div class="text-wrap-ellipsis">
+												<span data-toggle="tooltip-hover" data-tooltip-placement="top" data-tooltip-content="Vancouver pedestrian accident lawyer">
+													Vancouver pedestrian accident lawyer
+												</span>
+											</div>
+
+											<div class="text-wrap-ellipsis">
+												<a class="text-wrap-break" target="_blank" href="https://www.nwinjurylawcenter.com/?utm_source=gmb&amp;utm_medium=organic&amp;utm_campaign=gmblisting">https://www.nwinjurylawcenter.com/?utm_source=gmb&amp;utm_medium=organic&amp;utm_campaign=gmblisting</a>
+
 											</div>
 										</td>
-										<td class="dashboard-table-cell-url">
-											
-											<a class="text-wrap-break project-page-link text-wrap-ellipsis-multiple" href="#REPLACE-project-page-url" target="_blank" >
-												<span class="REPLACE">#REPLACE-project-page-url-project-page-url-project-page-url-project-page-url-project-page-url-page-urg-page-url-page-url-page-url</span>
-											</a>
-										</td>
+
 										<td class="text-align-center">
-											<a class="font-size-large color-neutral project-map-result" href="#REPLACE-project-map-result-url" target="_blank" >
-												<i class="symbol symbol-map"></i>
-											</a>
+											<div class="text-wrap-ellipsis">
+												Vancouver, Washington
+											</div>
 										</td>
+
 										<td class="text-align-center">
-											<span class="project-count-prev-90">
-												<span class="REPLACE">11</span>
-											</span>
+											<div>
+												<a href="#" class="cur-rank color-primary lead font-weight-700 no-margin" data-toggle="modal">
+													<span class="REPLACE">69</span>
+												</a>
+												<div class="modal">
+													Placeholder
+												</div>
+											</div>
+
+										<div class="color-neutral">
+											[0]
+										</div>
 										</td>
+
 										<td class="text-align-center">
-											<span class="project-count-prev-90">
-												<span class="REPLACE">15</span>
-											</span>
+											<div class="REPLACE">
+												smol chart boi here
+											</div>
 										</td>
+
 										<td class="text-align-center">
-											<span class="project-count-prev-90">
-												<span class="REPLACE">69</span>
-											</span>
-										</td>
-										<td>
-											<span class="project-last-checked-date">
-												<span class="REPLACE">04-20-69</span>
-											</span>
-										</td>
-										<td>
-											<!--
-												@DYNAMIC
-													classes
-														color-error | color-success
-														- changes based on .project-count-change value
-											-->
-											<span class="project-count-change color-success font-weight-700">
-												<span class="REPLACE">+<?=$i ?></span>
+											<span class="rank-absolute font-weight-700">
+												<span class="REPLACE">
+													1
+												</span>
 											</span>
 										</td>
 
-										<td class="dashboard-table-cell-thumbnail">
-											<span class="thumbnail thumbnail-small background-intensity-<?=$i ?>">
-											<span class="project-rank thumbnail-text">
-												<span class="REPLACE"><?= $i * 10 ?></span>
+										<td class="result-type text-align-center">
+											<span class="REPLACE">
+												<span class="tag tag-success">
+													local pack
+												</span>
 											</span>
-											</span>
+										</td>
+
+										<td class="serp-features text-align-center">
+											<?php app_get_component('components/tooltip-add-scoreboard') ?>
+											
+										</td>
+
+										<td class="text-align-center">
+											<button class="btn btn-symbol btn-primary" data-toggle="modal">
+												<i class="symbol symbol-search"></i>
+											</button>
+											<div class="modal">
+												Placeholder
+											</div>
+										</td>
+
+										<td class="text-align-center">
+											<span class="REPLACE">9/21/2020</span>
 										</td>
 									</tr>
 								<?php } ?>

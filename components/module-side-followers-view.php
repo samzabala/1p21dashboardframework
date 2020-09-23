@@ -6,9 +6,6 @@ $defs = array(
 
 $args = app_parse_args($data,$defs);
 
-
-
-
 ?>
 <div class="module"
 	data-grid-area-md="auto / side"
