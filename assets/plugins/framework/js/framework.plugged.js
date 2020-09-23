@@ -1992,6 +1992,7 @@ window.jQuery && jQuery.noConflict();
 				let html = `<div
 					class="tooltip
 						tooltip-${args.placement}
+						${args.width ? 'tooltip-has-custom-width' : ''}
 						${args.allowInteraction ? `tooltip-allow-interaction` : ''}"
 					${args.width ? ` style="width:${args.width};"` : ''}
 					>`;

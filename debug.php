@@ -4247,6 +4247,11 @@
 			</a>
 
 			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol star-half</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-half"></i></span>
+			</a>
+
+			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star-stroke</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-stroke"></i></span>
 			</a>
@@ -4449,6 +4454,10 @@
 
 			<p>
 				star <i class="color-primary symbol symbol-star"></i>
+			</p>
+
+			<p>
+				star-half <i class="color-primary symbol symbol-star-half"></i>
 			</p>
 
 			<p>
