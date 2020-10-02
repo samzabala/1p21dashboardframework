@@ -10,7 +10,7 @@
 		
 			<li>
 				<a
-					href='#share-note-with'
+					href='#share-note-REPLACEWithNoteId'
 					data-toggle='modal'
 					class='color-inherit color-primary-hover'>
 						Share
