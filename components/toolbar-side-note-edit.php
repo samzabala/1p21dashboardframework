@@ -25,6 +25,12 @@ $args = app_parse_args($data,$defs);
 					<!-- Save edits <i class="symbol symbol-edit"></i></button> -->
 			</button>
 		</div>
+
+		<div class="flex-child flex-1-1">
+
+			<!-- @NOTE onclick event should revert to previous history state or previously viewed page. feel free modify as needed -->
+			<button data-toggle="board" href="#" onclick="event.preventDefault(); console.log('work u sonofabitch'); history.back(); " class="btn btn-neutral-outline btn-block">Cancel</button>
+		</div>
 		<!-- @NOTE: future feature comment out for now -->
 		<!-- @NOTE onclick event should revert to previous history state or previously viewed page. feel free modify as needed -->
 		<!-- <div class="flex-child flex-1-1">
