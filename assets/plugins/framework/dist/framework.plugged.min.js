@@ -1676,8 +1676,12 @@ window.jQuery && jQuery.noConflict();
 			}
 
 			if (args.callbackOnKeyup) {
-				const fOnKeyUp = new Function(args.callbackOnKeyup);
-				theUi.input.on('keyup', fOnKeyUp);
+				theUi.input.on('keyup', (event)=>{
+					const keyUpScript = eval(args.callbackOnKeyup);
+					if(keyUpScript) keyUpScript();
+				});
+
+
 			}
 
 			theUi.wrapper.children(`.${_.uiPrefix('tags')}tag`).remove();
@@ -3727,5 +3731,5 @@ window.jQuery && jQuery.noConflict();
 
 	window.fw = frameWork;
 	window.frameWork = frameWork;
-	window.frameWork.DEBUG = _;
+	// window.frameWork.DEBUG = _;
 })(jQuery, window);
