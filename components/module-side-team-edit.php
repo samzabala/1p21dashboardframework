@@ -117,6 +117,55 @@ $args = app_parse_args($data,$defs);
 					</div>
 				</div>
 
+		
+
+		<!-- PROJECT TYPE -->
+			<?php if($args['post'] == 'project'): ?>
+				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+
+					<label class="input-label" for="<?=$args['post']?>-project-type">Project Type</label>
+
+					<input id="<?=$args['post']?>-project-type-id" name="<?=$args['post']?>-project-type-id" type="hidden" value="" />
+					<input id="<?=$args['post']?>-project-type" name="<?=$args['post']?>-project-type" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type and select project type..." />
+					<div class="dropdown dropdown-top-flush dashboard-dropdown-maxed no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
+						<div class="list-group list-group-interactive list-group-toggle list-group-toggle-allow-no-active">
+
+							<!--
+								@NOTE Jenna took note of the ability to create new clients as well but the design includes redundant buttons if built out. This is a stable front end variation of the ui 
+
+								How it functions:
+
+								User clicks and the custom input is ni place
+							-->
+							<a href="#" class="list-group-item font-weight-700 color-primary post-new">
+								Create new project type
+								`<span class="current-value"><span class="REPLACE">current input value</span></span>`
+							</a>
+							<!-- 
+							@NOTE
+								.list-group-item/li
+									classes to add
+										if project id is in the corresponding project id field => `active`
+
+							-->
+							<!-- @PLACEHOLDER -->
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+								<a href="#" class="list-group-item">Project Type</a>
+			
+						</div>
+						
+					</div>
+				</div>
+			<?php endif; ?>
+
 		<!-- TEAM LEADS -->
 			<?php if($args['post'] == 'project'): ?>
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">

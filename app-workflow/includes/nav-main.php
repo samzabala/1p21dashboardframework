@@ -13,7 +13,7 @@
 
 			<label for="search" class="btn btn-default btn-symbol
 			color-primary btn-no-interaction">
-				<i class="symbol symbol-search"></i></i>
+				<i class="symbol symbol-search"></i>
 				<div class="sr-only">Search</div>
 			</label>
 

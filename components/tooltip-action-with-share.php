@@ -10,7 +10,7 @@
 		
 			<li>
 				<a
-					href='#modal-share-with'
+					href='#share-note-REPLACEWithNoteId'
 					data-toggle='modal'
 					class='color-inherit color-primary-hover'>
 						Share
@@ -47,39 +47,6 @@
 		>
 		<i class="symbol symbol-kebab-horizontal"></i>
 	</span> 
-
-<div class="modal" id="modal-share-with" data-modal-width="600px" data-modal-title="Share">
-
-
-
-		<!-- @if user has rights to share this notes -->
-		<form method="get">
-
-			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="email" class="input-label">Share with:</label>
-				<input type="text" class="input input-tags" placeholder="Type and search team members..." />
-			</div>
-
-
-
-			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-			
-				<p class="input-label">Share Access Level:</p>
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-					<label class="flex-child">
-						<input name="share-note-access" type="radio" class="input input-inline" value="read">
-						Read only
-					</label>
-					<label class="flex-child">
-						<input name="share-note-access" type="radio" class="input input-inline" value="readwrite">
-						Read-Write
-					</label>
-				</div>
-			</div>
-
-			<div class="text-align-right">
-				<button class="flex-0-0 btn btn-neutral-outline" data-toggle="modal-close">Cancel</button>
-				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
-			</div>
-		</form>
-</div>
+<?php app_get_component('components/modal-share-notes-with','',false,array(
+	'is_in_note_edit_form' => false
+)) ?>

@@ -10,7 +10,9 @@
 						<h1 class="project-title no-margin-top">
 							<span class="REPLACE">Project Title</span>
 						</h1>
-
+						<p class="h4 font-weight-400 project-type no-margin-top color-primary">
+							<span class="REPLACE">SEO Quicklaunch Site</span>
+						</p>
 
 						<p class="color-neutral">
 							<span class="project-name"><span class="REPLACE">Dental on Central (DEC)</span></span>

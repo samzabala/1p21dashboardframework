@@ -995,6 +995,17 @@
 		<h1 data-toggle="accordion">form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
+			<h2>external plugin support/throttle/yea boi</h2>
+			<script>
+				function keyUpThis(event){
+
+				}
+			</script>
+			<!-- <input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags"
+				data-tags-callback-on-keyup="function(e){
+                    console.warn('buray ni ina yan',_););
+				}" /> -->
+
 
 		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" placeholder="suck ma diiick" data-tags-multiple-lines="true" />
 		
