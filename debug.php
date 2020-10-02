@@ -1001,10 +1001,8 @@
 
 				}
 			</script>
-			<!-- <input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags"
-				data-tags-callback-on-keyup="function(e){
-                    console.warn('buray ni ina yan',_););
-				}" /> -->
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags"
+				data-tags-callback-on-keyup="console.warn('buray ni ina yan',_,event);" />
 
 
 		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" placeholder="suck ma diiick" data-tags-multiple-lines="true" />
@@ -1170,16 +1168,6 @@
 					<li>Fuck</li>
 				</ul>
 			</div>
-			<script>
-
-				function paker(e){
-					console.log('suck my dick');
-				}
-				function fooker(e){
-					console.log(e.target.innerHTML);
-				}
-				</script>
-
 
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-primary" />
 			<br><br>

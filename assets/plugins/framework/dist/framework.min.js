@@ -1825,8 +1825,10 @@
 			}
 
 			if (args.callbackOnKeyup) {
-				const fOnKeyUp = new Function(args.callbackOnKeyup);
-				theUi.input.addEventListener('keyup', fOnKeyUp);
+				theUi.input.addEventListener('keyup', (event)=>{
+					const keyUpScript = eval(args.callbackOnKeyup);
+					if(keyUpScript) keyUpScript();
+				});
 			}
 
 			const oldTags = theUi.wrapper.querySelectorAll(`.${_.uiPrefix('tags')}tag`);
