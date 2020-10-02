@@ -380,22 +380,32 @@ $sidebar-base-slim-mobile: 60px;
 		}
 	}
 
-	&-modal-gutterless {
+	&-modal{
+		&-gutterless {
 
-		&,
-		&-x {
+			&,
+			&-x {
 
-			.modal-popup {
-				padding-left:0;
-				padding-right:0;
+				.modal-popup {
+					padding-left:0;
+					padding-right:0;
+				}
+			}
+			
+			&,
+			&-y {
+				.modal-popup {
+					padding-top:0;
+					padding-bottom:0;
+				}
 			}
 		}
-		
-		&,
-		&-y {
+
+		&-share-notes {
 			.modal-popup {
-				padding-top:0;
-				padding-bottom:0;
+
+				background: transparent;
+				box-shadow: none;
 			}
 		}
 	}

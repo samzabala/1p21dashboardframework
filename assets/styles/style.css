@@ -176,6 +176,9 @@ html, body {
   font-weight: 400;
   min-height: 100vh; }
 
+html {
+  scroll-behavior: smooth; }
+
 .body-no-scroll {
   overflow: hidden !important; }
 
@@ -9085,6 +9088,10 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 .dashboard-modal-gutterless .modal-popup, .dashboard-modal-gutterless-y .modal-popup {
   padding-top: 0;
   padding-bottom: 0; }
+
+.dashboard-modal-share-notes .modal-popup {
+  background: transparent;
+  box-shadow: none; }
 
 .dashboard-comment-replies-wrapper {
   padding-left: 2em; }
