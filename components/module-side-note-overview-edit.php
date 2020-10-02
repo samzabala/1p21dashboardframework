@@ -43,29 +43,6 @@ $args = app_parse_args($data,$defs);
 					</span>
 				</div>
 			</div>
-
-			<!--
-				@NOTE classes to add:
-
-				#<?=$args['post']?>-access
-
-					`display-none` if input[name="<?=$args['post']?>-status"] is set to [value=private]
-				
-			-->
-			<div  id="<?=$args['post']?>-access" >
-			
-				<h5>Access Level</h5>
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-					<span class="flex-child">
-						<input name="<?=$args['post']?>-access" type="radio" class="input input-inline" value="read" />
-						Read only
-					</span>
-					<span class="flex-child">
-						<input name="<?=$args['post']?>-access" type="radio" class="input input-inline" value="readwrite" />
-						Read-Write
-					</span>
-				</div>
-			</div>
 			
 
 		<hr>
@@ -80,17 +57,11 @@ $args = app_parse_args($data,$defs);
 					<div class="flex-child">
 						<input id="<?=$args['post']?>-followers-id" name="<?=$args['post']?>-followers-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Share <i class="symbol symbol-edit"></i></a>
-						<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
+						<?php app_get_component('components/modal-share-notes-with','',false,array(
+							'is_in_note_edit_form' => true
+						)); ?>
 					</div>
 				</div>
-			</div>
-			<div class="note-shared-to">
-						
-				<?php app_get_component('components/profile-named-for-edit') ?>
-					<!-- @PLACEHOLDER: DELETE WHEN READY -->
-					<?php for($i=1; $i<=3; $i++){ ?>
-						<?php app_get_component('components/profile-named-for-edit') ?>
-					<?php } ?>
 			</div>
 	</div>
 </div>

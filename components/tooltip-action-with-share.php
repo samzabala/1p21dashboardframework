@@ -47,4 +47,6 @@
 		>
 		<i class="symbol symbol-kebab-horizontal"></i>
 	</span> 
-<?php app_get_component('components/modal-share-notes-with') ?>
+<?php app_get_component('components/modal-share-notes-with','',false,array(
+	'is_in_note_edit_form' => false
+)) ?>
