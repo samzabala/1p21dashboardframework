@@ -43,7 +43,51 @@
 		<script src="/_fortesting.js"></script>
 
 
+		<script type="text/javascript"
+			src="https://cdn.datatables.net/v/dt/dt-1.10.21/b-1.6.2/b-colvis-1.6.2/datatables.min.js">
+		</script>
+		<link rel="stylesheet" type="text/css"
+			href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+		<script>
+			(function(jQuery){
+				jQuery('.data-log-today').DataTable({
+					dom: '<"text-align-right hide-mobile"<"#activity-log-column-settings.accordion dashboard-table-column-toggle"B>>t',
+					searching: false,
+					ordering: false,
+					paging: false,
+					columnDefs: [
+						{ targets: [1], visible: false },
+					],
+					buttons:{
+						dom: {
+						button: {
+							tag: 'button',
+							className: 'btn btn-default',
+						},
+						container: {
+							className: 'btn-group btn-group-horizontal p hide-mobile btn-block btn-no-shadow',
+						}
+						},
+						buttons: [
+						{ extend: 'columnsToggle' },
+						],
+					},
+					stateSave: true,
+					stateDuration: 60 * 60 * 24 * 30,
+					initComplete: function() {
+						jQuery(this).removeClass('dataTable');
+						jQuery('.dashboard-table-column-toggle')
+						// .before(`<a data-accordion-change-hash="false"
+						// 			href="#activity-log-column-settings" data-toggle="accordion"
+						// 			class="btn btn-link">
 
+						// 			Table Columns
+						// 			<i class="symbol symbol-plus symbol-minus-toggle"></i>
+						// 		</a>`);
+					}
+				});
+			}(jQuery));
+		</script>
 
 </body>
 

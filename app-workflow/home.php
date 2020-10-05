@@ -1145,23 +1145,41 @@
 
 				<br>
 
+				
+
 				<div class="accordion open" id="activity-log-today">
+
+					<div class="module-functions flex-md">
+						<?php app_get_component('components/pagination') ?>
+						<?php app_get_component('components/pagination-view-per-page') ?>
+						<div class="module-function text-align-right flex-1-1 hide-mobile justify-content-flex-end">
+							<a data-accordion-change-hash="false"
+								href="#activity-log-column-settings" data-toggle="accordion"
+								class="btn btn-default">
+
+								Table Columns
+								<i class="symbol symbol-plus symbol-minus-toggle"></i>
+							</a>
+						</div>
+					</div>
 
 					<!-- @if there are entries -->
 						<div class="table-wrapper dashboard-table-wrapper-gutterless">
-
-							<table class="table-small data-log-today">
-								<tr>
-									<th class="text-nowrap">Start Time</th>
-									<th class="text-nowrap">End Time</th>
-									<th class="text-nowrap">Task</th>
-									<th class="text-nowrap">Project</th>
-									<th class="text-nowrap">Client</th>
-									<th class="text-nowrap text-align-center">Notes</th>
-									<th class="text-nowrap">Total Time</th>
-									<th class="dashboard-table-cell-watch-btns text-align-center">Status</th>
-									<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
-								</tr>
+							
+							<table class="data-log-today text-vertical-align-middle">
+								<thead>
+									<tr>
+										<th class="text-nowrap dashboard-table-cell-date">Date</th>
+										<th class="text-nowrap">Start Time</th>
+										<th class="text-nowrap">End Time</th>
+										<th class="text-nowrap">Task</th>
+										<th class="text-nowrap">Project/ Client</th>
+										<th class="text-nowrap text-align-center">Notes</th>
+										<th class="text-nowrap">Total Time</th>
+										<th class="dashboard-table-cell-watch-btns text-align-center">Status</th>
+										<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
+									</tr>
+								</thead>
 								
 								<!-- @LOOP TR-->
 								<!-- @NOTE
@@ -1171,14 +1189,21 @@
 										-->
 									<tr class="">
 
-										<td>
+										<td class="dashboard-table-cell-date">
+											<span class="log-today-start-time">
+												<span class="REPLACE">
+													Apr 20, 2069
+												</span>
+											</span>
+										</td>
+										<td class="">
 											<span class="log-today-start-time">
 												<span class="REPLACE">
 													6:00am
 												</span>
 											</span>
 										</td>
-										<td>
+										<td class="">
 											<span class="log-today-end-time">
 												<span class="REPLACE">
 													9:00pm
@@ -1192,17 +1217,13 @@
 												<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 											</a>
 										</td>
-										
-
 
 										<td class="dashboard-table-cell-max">
 											<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis">
 												<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
 											</a>
-										</td>
-
-										<td class="dashboard-table-cell-max">
-											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis">
+											
+											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic">
 												<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
 											</span>
 										</td>
@@ -1240,14 +1261,21 @@
 												
 												<tr class="">
 
-													<td>
+													<td class="dashboard-table-cell-date">
+														<span class="log-today-start-time">
+															<span class="REPLACE">
+																Apr 20, 2069
+															</span>
+														</span>
+													</td>
+													<td class="">
 														<span class="log-today-start-time">
 															<span class="REPLACE">
 																6:00am
 															</span>
 														</span>
 													</td>
-													<td>
+													<td class="">
 														<span class="log-today-end-time">
 															<span class="REPLACE">
 																9:00pm
@@ -1262,16 +1290,12 @@
 														</a>
 													</td>
 													
-
-
 													<td class="dashboard-table-cell-max">
 														<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis">
 															<span class="REPLACE">cant restart this particular entry anymore</span>
 														</a>
-													</td>
-
-													<td class="dashboard-table-cell-max">
-														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis">
+														
+														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic">
 															<span class="REPLACE">bye bye buttons</span>
 														</span>
 													</td>
@@ -1302,14 +1326,22 @@
 
 												<tr class="table-row-primary">
 
-													<td>
+
+													<td class="dashboard-table-cell-date">
+														<span class="log-today-start-time">
+															<span class="REPLACE">
+																Apr 20, 2069
+															</span>
+														</span>
+													</td>
+													<td class="">
 														<span class="log-today-start-time">
 															<span class="REPLACE">
 																6:00am
 															</span>
 														</span>
 													</td>
-													<td>
+													<td class="">
 														<span class="log-today-end-time">
 															<span class="REPLACE">
 																9:00pm
@@ -1325,15 +1357,12 @@
 													</td>
 													
 
-
 													<td class="dashboard-table-cell-max">
 														<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis">
-															<span class="REPLACE">cant restart this particular entry anymore</span>
+															<span class="REPLACE">ya boi still running</span>
 														</a>
-													</td>
-
-													<td class="dashboard-table-cell-max">
-														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis">
+														
+														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic">
 															<span class="REPLACE">hi butts</span>
 														</span>
 													</td>
@@ -1396,6 +1425,10 @@
 						<a href="#board-track-time" class="zone zone-primary">
 							Start Your First Project of the Day <i class="symbol symbol-plus"></i>
 						</a>
+						<div class="module-functions">
+							<?php app_get_component('components/pagination') ?>
+							<?php app_get_component('components/pagination-view-per-page') ?>
+						</div>
 				</div>
 
 
