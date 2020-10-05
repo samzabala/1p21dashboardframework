@@ -1119,8 +1119,8 @@ table {
   .table-cell.table-cell-heading {
     vertical-align: inherit;
     text-align: inherit;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 100%;
     display: table-cell;
     position: relative; }
@@ -9118,13 +9118,18 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   height: 3.7333333333rem; }
 
 .dashboard-table-cell-max {
-  width: 230px;
-  max-width: 230px !important;
-  min-width: 230px !important; }
+  width: 200px;
+  max-width: 200px !important;
+  min-width: 200px !important; }
   .dashboard-table-cell-max-larger {
     width: 70%;
     max-width: 230px !important;
     min-width: 70% !important; }
+
+.dashboard-table-cell-date {
+  width: 150px;
+  max-width: 150px !important;
+  min-width: 120px; }
 
 .dashboard-table-cell-thumbnail {
   min-width: 90px;
@@ -9135,11 +9140,12 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   min-width: 260px; }
 
 .dashboard-table-cell-action {
-  width: 100px; }
+  min-width: 70px;
+  width: 70px; }
 
 .dashboard-table-cell-watch-btns, .dashboard-table-cell-edit-btns {
   width: 140px;
-  right: 100px;
+  right: 70px;
   z-index: 2; }
 
 .dashboard-table-cell-action, .dashboard-table-cell-watch-btns, .dashboard-table-cell-edit-btns {
@@ -9247,10 +9253,6 @@ APPS / OUR CUSTOM STYLES
 #timetracker-app-trigger {
   right: 1rem;
   top: 1rem; }
-
-.dashboard-table-cell-date {
-  width: 150px;
-  max-width: 170px !important; }
 
 .record-notes-modal .modal-popup {
   padding-left: 50px;

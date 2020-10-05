@@ -459,9 +459,9 @@ $sidebar-base-slim-mobile: 60px;
 			//holy grail. that wont let your cells stretvch too much
 			&-max {
 
-				width: 230px;
-				max-width: 230px!important;
-				min-width: 230px!important;
+				width: 200px;
+				max-width: 200px!important;
+				min-width: 200px!important;
 
 
 				&-larger {
@@ -470,6 +470,12 @@ $sidebar-base-slim-mobile: 60px;
 					max-width: 230px!important;
 					min-width: 70%!important;
 				}
+			}
+			&-date {
+	
+				width: 150px;
+				max-width: 150px!important;
+				min-width: 120px;
 			}
 
 
@@ -484,13 +490,14 @@ $sidebar-base-slim-mobile: 60px;
 
 
 			&-action {
-				width: 100px;
+				min-width: 70px;
+				width: 70px;
 			}
 
 			&-watch-btns,
 			&-edit-btns {
 				width: 140px;
-				right:100px;
+				right:70px;
 				z-index:2;
 			}
 
