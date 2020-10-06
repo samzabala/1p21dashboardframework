@@ -1001,7 +1001,7 @@
 
 				}
 			</script>
-			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags"
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
 				data-tags-callback-on-keyup="console.warn('buray ni ina yan',_,event);" />
 
 
