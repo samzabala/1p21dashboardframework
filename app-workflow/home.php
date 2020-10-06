@@ -1149,7 +1149,7 @@
 
 				<div class="accordion open" id="activity-log-today">
 
-					<div class="module-functions flex-md">
+					<div class="module-functions flex-md p">
 						<?php app_get_component('components/pagination') ?>
 						<?php app_get_component('components/pagination-view-per-page') ?>
 						<div class="module-function text-align-right flex-1-1 hide-mobile justify-content-flex-end">
