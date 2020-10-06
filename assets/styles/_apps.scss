@@ -8,11 +8,11 @@ $sidebar-base-slim-mobile: 60px;
 
 
 //custom
-#dashboard,.fw-modal-component {
-	td {
-		max-width: 300px;
-	}
-}
+// .container,.fw-modal-component {
+// 	td {
+// 		max-width: 300px;
+// 	}
+// }
 
 //whole page layout
 #dashboard {
@@ -461,7 +461,7 @@ $sidebar-base-slim-mobile: 60px;
 
 				width: 180px;
 				max-width: 180px!important;
-				min-width: 180px!important;
+				min-width: auto!important;
 
 
 				&-larger {
@@ -471,11 +471,12 @@ $sidebar-base-slim-mobile: 60px;
 					min-width: 70%!important;
 				}
 			}
+
 			&-date {
 	
-				width: 150px;
-				max-width: 150px!important;
-				min-width: 120px;
+				width: 120px!important;
+				max-width: 120px!important;
+				min-width: 120px!important;
 			}
 
 
@@ -489,14 +490,16 @@ $sidebar-base-slim-mobile: 60px;
 			}
 
 
+			&-single-btn-symbol,
 			&-action {
-				min-width: 70px;
-				width: 70px;
+				width: 70px!important;
+				max-width: 70px!important;
 			}
 
 			&-watch-btns,
 			&-edit-btns {
-				width: 140px;
+				width: 140px!important;
+				max-width: 140px!important;
 				right:70px;
 				z-index:2;
 			}

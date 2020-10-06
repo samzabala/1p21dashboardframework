@@ -586,7 +586,7 @@
 									</span>
 								</td>
 
-								<td class="text-align-center">
+								<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 									<?php app_get_component('components/table-modal-notes') ?>
 								</td>
 
@@ -655,7 +655,7 @@
 												</span>
 											</td>
 
-											<td class="text-align-center">
+											<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 												
 												<?php app_get_component('components/table-modal-notes') ?>
 											</td>
@@ -740,7 +740,7 @@
 												</span>
 											</td>
 
-											<td class="text-align-center">
+											<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 												
 												<?php app_get_component('components/table-modal-notes') ?>
 											</td>
@@ -875,7 +875,7 @@
 									</span>
 								</td>
 
-								<td class="text-align-center">
+								<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 									<?php app_get_component('components/table-modal-notes') ?>
 								</td>
 
@@ -950,7 +950,7 @@
 												</span>
 											</td>
 
-											<td class="text-align-center">
+											<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 												
 												<?php app_get_component('components/table-modal-notes') ?>
 											</td>
@@ -1041,7 +1041,7 @@
 												</span>
 											</td>
 
-											<td class="text-align-center">
+											<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 												
 												<?php app_get_component('components/table-modal-notes') ?>
 											</td>
@@ -1170,12 +1170,12 @@
 								<thead>
 									<tr>
 										<th class="text-nowrap dashboard-table-cell-date">Date</th>
-										<th class="text-nowrap">Start Time</th>
-										<th class="text-nowrap">End Time</th>
-										<th class="text-nowrap">Task</th>
-										<th class="text-nowrap">Project/ Client</th>
-										<th class="text-nowrap text-align-center">Notes</th>
-										<th class="text-nowrap">Total Time</th>
+										<th class="text-nowrap dashboard-table-cell-date">Start Time</th>
+										<th class="text-nowrap dashboard-table-cell-date">End Time</th>
+										<th class="text-nowrap dashboard-table-cell-max">Task</th>
+										<th class="text-nowrap dashboard-table-cell-max">Project/ Client</th>
+										<th class="text-nowrap text-align-center dashboard-table-cell-single-btn-symbol">Notes</th>
+										<th class="text-nowrap dashboard-table-cell-date">Total Time</th>
 										<th class="dashboard-table-cell-watch-btns text-align-center">Status</th>
 										<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
 									</tr>
@@ -1196,14 +1196,14 @@
 												</span>
 											</span>
 										</td>
-										<td class="">
+										<td class=" dashboard-table-cell-date">
 											<span class="log-today-start-time">
 												<span class="REPLACE">
 													6:00am
 												</span>
 											</span>
 										</td>
-										<td class="">
+										<td class=" dashboard-table-cell-date">
 											<span class="log-today-end-time">
 												<span class="REPLACE">
 													9:00pm
@@ -1228,13 +1228,13 @@
 											</span>
 										</td>
 
-										<td class="text-align-center">
+										<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 											
 											<?php app_get_component('components/table-modal-notes'); ?>
 										</td>
 
 
-										<td>
+										<td class=" dashboard-table-cell-date">
 											<span class="font-weight-700 log-today-total-time text-nowrap">
 												<span class="REPLACE">6h 09m
 											</span>
@@ -1269,14 +1269,14 @@
 														</span>
 													</td>
 													<td class="">
-														<span class="log-today-start-time">
+														<span class="log-today-start-time dashboard-table-cell-date">
 															<span class="REPLACE">
 																6:00am
 															</span>
 														</span>
 													</td>
 													<td class="">
-														<span class="log-today-end-time">
+														<span class="log-today-end-time dashboard-table-cell-date">
 															<span class="REPLACE">
 																9:00pm
 															</span>
@@ -1300,11 +1300,11 @@
 														</span>
 													</td>
 
-													<td class="text-align-center">
+													<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 														
 														<?php app_get_component('components/table-modal-notes'); ?>
 													</td>
-													<td>
+													<td class=" dashboard-table-cell-date">
 														<span class="font-weight-700 log-today-total-time text-nowrap">
 															<span class="REPLACE">6h 09m
 														</span>
@@ -1335,14 +1335,14 @@
 														</span>
 													</td>
 													<td class="">
-														<span class="log-today-start-time">
+														<span class="log-today-start-time dashboard-table-cell-date">
 															<span class="REPLACE">
 																6:00am
 															</span>
 														</span>
 													</td>
 													<td class="">
-														<span class="log-today-end-time">
+														<span class="log-today-end-time dashboard-table-cell-date">
 															<span class="REPLACE">
 																9:00pm
 															</span>
@@ -1367,11 +1367,11 @@
 														</span>
 													</td>
 
-													<td class="text-align-center">
+													<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 														
 														<?php app_get_component('components/table-modal-notes'); ?>
 													</td>
-													<td>
+													<td class=" dashboard-table-cell-date">
 														<span class="font-weight-700 log-today-total-time text-nowrap">
 															<span class="REPLACE">6h 09m
 														</span>
