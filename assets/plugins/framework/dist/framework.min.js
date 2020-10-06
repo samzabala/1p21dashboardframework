@@ -1710,9 +1710,10 @@
 
 		//check for ya boi
 		toReturn.forEach((tag, i) => {
-			if (!tag || tag == '') {
-				toReturn.splice(i, 1);
-			} else if (tag === _.tagsInputString && !returnWithInput) {
+			if (
+				(!tag || tag == '')
+				|| (tag === _.tagsInputString && !returnWithInput)
+			) {
 				toReturn.splice(i, 1);
 			}
 		});
@@ -3020,7 +3021,7 @@
 
 		frameWork.addEvent(
 			document.body,
-			'click',
+			'click', 
 			'a.input-calendar-ui-date',
 			(e) => {
 				const triggerer = e.target;
@@ -3180,11 +3181,13 @@
 						inputUiIndex = triggerer.getAttribute('data-value'),
 						currValue = _.tagsToParse(inputTags.value);
 
-					currValue.splice(
-						parseInt(inputUiIndex),
-						0,
-						triggerer.innerText.replace(',', '')
-					);
+					if(triggerer.text() && triggerer.text() != ''){
+						currValue.splice(
+							parseInt(inputUiIndex),
+							0,
+							triggerer.innerText.replace(',', '')
+						);
+					}
 
 					triggerer.innerText = '';
 
@@ -3193,8 +3196,7 @@
 					frameWork.updateTags(
 						inputTags,
 						true,
-						currValue,
-						currValue
+						_.tagsToVal(currValue)
 					);
 				}
 			}
@@ -3944,4 +3946,4 @@
 	window.fw = frameWork;
 	window.frameWork = frameWork;
 	// window.frameWork.DEBUG = _;
-})(window);
+}(window));
