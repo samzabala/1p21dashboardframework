@@ -1085,9 +1085,11 @@ table {
   .table.table-fixed,
   table.table-fixed {
     table-layout: fixed !important; }
-  .table .text-wrap-ellipsis,
-  table .text-wrap-ellipsis {
-    width: 32em; }
+  .table .text-wrap-ellipsis, .table .text-wrap-ellipsis-multiple,
+  table .text-wrap-ellipsis,
+  table .text-wrap-ellipsis-multiple {
+    width: 10em;
+    width: clamp(10em, 25vw, 24em); }
   thead,
   tbody,
   tfoot,
@@ -8859,9 +8861,6 @@ fieldset {
 /*! 
 SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 ****************************************************************************/
-#dashboard td, .fw-modal-component td {
-  max-width: 300px; }
-
 #dashboard-svg-styles {
   width: 0;
   height: 0;
@@ -9119,18 +9118,18 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   height: 3.7333333333rem; }
 
 .dashboard-table-cell-max {
-  width: 200px;
-  max-width: 200px !important;
-  min-width: 200px !important; }
+  width: 180px;
+  max-width: 180px !important;
+  min-width: auto !important; }
   .dashboard-table-cell-max-larger {
     width: 70%;
     max-width: 230px !important;
     min-width: 70% !important; }
 
 .dashboard-table-cell-date {
-  width: 150px;
-  max-width: 150px !important;
-  min-width: 120px; }
+  width: 120px !important;
+  max-width: 120px !important;
+  min-width: 120px !important; }
 
 .dashboard-table-cell-thumbnail {
   min-width: 90px;
@@ -9140,12 +9139,13 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 .dashboard-table-cell-name {
   min-width: 260px; }
 
-.dashboard-table-cell-action {
-  min-width: 70px;
-  width: 70px; }
+.dashboard-table-cell-single-btn-symbol, .dashboard-table-cell-action {
+  width: 70px !important;
+  max-width: 70px !important; }
 
 .dashboard-table-cell-watch-btns, .dashboard-table-cell-edit-btns {
-  width: 140px;
+  width: 140px !important;
+  max-width: 140px !important;
   right: 70px;
   z-index: 2; }
 
