@@ -1,3 +1,5 @@
+console.log('Sam\'s ass blast testing script initiated too. huhuhuhu')
+
 function testCallback(value){
 	// console.warn("i yield my time",value);
 

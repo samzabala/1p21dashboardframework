@@ -1213,17 +1213,32 @@
 
 
 										<td class="dashboard-table-cell-max">
-											<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="log-today-task text-wrap-ellipsis">
+											<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="log-today-task text-wrap-ellipsis"
+												data-toggle="tooltip-hover"
+												data-tooltip-placement="right"
+												data-tooltip-center-y="true"
+												data-tooltip-content="REPLACE with actual Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long"
+											>
 												<span class="REPLACE">Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long </span>
 											</a>
 										</td>
 
 										<td class="dashboard-table-cell-max">
-											<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis">
+											<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis"
+												data-toggle="tooltip-hover"
+												data-tooltip-placement="right"
+												data-tooltip-center-y="true"
+												data-tooltip-content="REPLACE with actual Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long "
+											>
 												<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
 											</a>
 											
-											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic">
+											<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic"
+												data-toggle="tooltip-hover"
+												data-tooltip-placement="right"
+												data-tooltip-center-y="true"
+												data-tooltip-content="REPLACE with actual Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long "
+											>
 												<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
 											</span>
 										</td>
@@ -1285,20 +1300,37 @@
 
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="log-today-task text-wrap-ellipsis">
-															<span class="REPLACE">ya boi is done now no take backs </span>
+														<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="log-today-task text-wrap-ellipsis"
+															data-toggle="tooltip-hover"
+															data-tooltip-placement="right"
+															data-tooltip-center-y="true"
+															data-tooltip-content="REPLACE with actual Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long"
+														>
+															<span class="REPLACE">no morre buttons coz this bitch done yEET </span>
 														</a>
 													</td>
-													
+
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis">
-															<span class="REPLACE">cant restart this particular entry anymore</span>
+														<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis"
+															data-toggle="tooltip-hover"
+															data-tooltip-placement="right"
+															data-tooltip-center-y="true"
+															data-tooltip-content="REPLACE with actual Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long "
+														>
+															<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
 														</a>
 														
-														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic">
-															<span class="REPLACE">bye bye buttons</span>
+														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic"
+															data-toggle="tooltip-hover"
+															data-tooltip-placement="right"
+															data-tooltip-center-y="true"
+															data-tooltip-content="REPLACE with actual Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long "
+														>
+															<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
 														</span>
 													</td>
+
+
 
 													<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 														
@@ -1351,21 +1383,37 @@
 
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="log-today-task text-wrap-ellipsis">
-															<span class="REPLACE">ya boi is still running </span>
+														<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="log-today-task text-wrap-ellipsis"
+															data-toggle="tooltip-hover"
+															data-tooltip-placement="right"
+															data-tooltip-center-y="true"
+															data-tooltip-content="REPLACE with actual Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long Task Name but really long"
+														>
+															<span class="REPLACE">Ya not done with this boi yet, this is still running</span>
 														</a>
 													</td>
-													
 
 													<td class="dashboard-table-cell-max">
-														<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis">
-															<span class="REPLACE">ya boi still running</span>
+														<a href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-project text-wrap-ellipsis"
+															data-toggle="tooltip-hover"
+															data-tooltip-placement="right"
+															data-tooltip-center-y="true"
+															data-tooltip-content="REPLACE with actual Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long "
+														>
+															<span class="REPLACE">Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long Project Name but really long </span>
 														</a>
 														
-														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic">
-															<span class="REPLACE">hi butts</span>
+														<span href="<?=app_create_link(array('template'=>'project-view')) ?>" class="log-today-client text-wrap-ellipsis color-neutral font-style-italic"
+															data-toggle="tooltip-hover"
+															data-tooltip-placement="right"
+															data-tooltip-center-y="true"
+															data-tooltip-content="REPLACE with actual Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long "
+														>
+															<span class="REPLACE">Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long Client Name  but really long </span>
 														</span>
 													</td>
+
+
 
 													<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 														
