@@ -1650,11 +1650,27 @@ window.jQuery && jQuery.noConflict();
 
 			if (!theUi.input.length) {
 				theUi.wrapper.append(
-					`<span contenteditable="true" class="input ${__f.uiPrefix(
+					`<span
+						${ 
+							(args.callbackOnKeyup)
+								? 'onkeyup="' + args.callbackOnKeyup + '"'
+								: ''
+						}
+						contenteditable="true"
+						class="input ${__f.uiPrefix(
 						'tags'
 					)}input"></span>`
 				);
 				theUi.input = theUi.wrapper.children(`.${__f.uiPrefix('tags')}input`);
+
+				// if (args.callbackOnKeyup) {
+				// 	theUi.input.on('keyup', (event)=>{
+				// 		const keyUpScript = eval(args.callbackOnKeyup);
+				// 		if(keyUpScript){
+				// 			keyUpScript();
+				// 		};
+				// 	});
+				// }
 			}
 
 			if(inputTags.attr('placeholder')){
@@ -1674,15 +1690,6 @@ window.jQuery && jQuery.noConflict();
 
 			if (frameWork.isDisabled(inputTags)) {
 				theUi.input.addClass('disabled');
-			}
-
-			if (args.callbackOnKeyup) {
-				theUi.input.on('keyup', (event)=>{
-					const keyUpScript = eval(args.callbackOnKeyup);
-					if(keyUpScript) keyUpScript();
-				});
-
-
 			}
 
 			theUi.wrapper.children(`.${__f.uiPrefix('tags')}tag`).remove();
