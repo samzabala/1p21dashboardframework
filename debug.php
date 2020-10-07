@@ -998,13 +998,16 @@
 			<h2>external plugin support/throttle/yea boi</h2>
 			<script>
 				function keyUpThis(event){
-					console.log(event,'eeee');
+					return _.throttle(()=>{ console.log('trotel fuucu'); },1000);
 				}
 			</script>
 			<input value="lil,stupid,ass,console,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
-				data-tags-callback-on-keyup="console.log('bitch'); " />
+				data-tags-callback-on-keyup="_.debounce(()=>{ alert('trotel fuucu'); },500);" />
+
+
+
 			<input value="lil,stupid,ass,throttle,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
-				data-tags-callback-on-keyup="console.log('ass'); _.throttle(function(){ console.log('trotel fuucu'); },1000)" />
+				data-tags-callback-on-keyup="console.log('ass'); " />
 			<input value="lil,stupid,ass,setTimeout,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
 				data-tags-callback-on-keyup="console.log('boss'); setTimeout(function(){ console.log('taymawt fuucu'); },1000)" />
 

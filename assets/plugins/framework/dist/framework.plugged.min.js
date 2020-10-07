@@ -1651,11 +1651,6 @@ window.jQuery && jQuery.noConflict();
 			if (!theUi.input.length) {
 				theUi.wrapper.append(
 					`<span
-						${ 
-							(args.callbackOnKeyup)
-								? 'onkeyup="' + args.callbackOnKeyup + '"'
-								: ''
-						}
 						contenteditable="true"
 						class="input ${__f.uiPrefix(
 						'tags'
@@ -1663,14 +1658,14 @@ window.jQuery && jQuery.noConflict();
 				);
 				theUi.input = theUi.wrapper.children(`.${__f.uiPrefix('tags')}input`);
 
-				// if (args.callbackOnKeyup) {
-				// 	theUi.input.on('keyup', (event)=>{
-				// 		const keyUpScript = eval(args.callbackOnKeyup);
-				// 		if(keyUpScript){
-				// 			keyUpScript();
-				// 		};
-				// 	});
-				// }
+				if (args.callbackOnKeyup) {
+					theUi.input.on('keyup', (event)=>{
+						const keyUpScript = eval(args.callbackOnKeyup);
+						if(keyUpScript){
+							keyUpScript();
+						};
+					});
+				}
 			}
 
 			if(inputTags.attr('placeholder')){

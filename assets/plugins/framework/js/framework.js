@@ -1798,26 +1798,16 @@
 				theUi.input = document.createElement('span');
 				theUi.wrapper.appendChild(theUi.input);
 				theUi.input.contentEditable = true;
-				theUi.input.setAttribute(
-					'class',
-					`input ${__f.uiPrefix('tags')}input`
-				);
-				if (args.callbackOnKeyup) {
-					theUi.input.setAttribute(
-						'onkeyup',
-						args.callbackOnKeyup
-					);
-				}
 				theUi.input = theUi.container.querySelector(`.${__f.uiPrefix('tags')}input`);
 
-				// if (args.callbackOnKeyup) {
-				// 	theUi.input.addEventListener('keyup', (event)=>{
-				// 		const keyUpScript = eval(args.callbackOnKeyup);
-				// 		if(keyUpScript){
-				// 			keyUpScript();
-				// 		};
-				// 	});
-				// }
+				if (args.callbackOnKeyup) {
+					theUi.input.addEventListener('keyup', (event)=>{
+						const keyUpScript = eval(args.callbackOnKeyup);
+						if(keyUpScript){
+							keyUpScript();
+						};
+					});
+				}
 			}
 
 
