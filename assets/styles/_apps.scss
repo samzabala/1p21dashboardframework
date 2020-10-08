@@ -459,6 +459,7 @@ $sidebar-base-slim-mobile: 60px;
 			//holy grail. that wont let your cells stretvch too much
 			&-max {
 
+				// width: clamp(80px, 5vw,180px)!important;
 				width: 180px;
 				max-width: 180px!important;
 				min-width: auto!important;
@@ -474,6 +475,15 @@ $sidebar-base-slim-mobile: 60px;
 
 			&-date {
 	
+				// width: clamp(80px, 5vw,110px)!important;
+				width: 100px!important;
+				max-width: 100px!important;
+				min-width: 100px!important;
+			}
+
+			&-category {
+	
+				// width: clamp(80px, 5vw,110px)!important;
 				width: 120px!important;
 				max-width: 120px!important;
 				min-width: 120px!important;

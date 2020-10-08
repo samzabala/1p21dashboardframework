@@ -1172,10 +1172,11 @@
 										<th class="text-nowrap dashboard-table-cell-date">Date</th>
 										<th class="text-nowrap dashboard-table-cell-date">Start Time</th>
 										<th class="text-nowrap dashboard-table-cell-date">End Time</th>
+										<th class="text-nowrap dashboard-table-cell-date">Total Time</th>
+										<th class="text-nowrap dashboard-table-cell-category">Task Category</th>
 										<th class="text-nowrap dashboard-table-cell-max">Task</th>
 										<th class="text-nowrap dashboard-table-cell-max">Project/ Client</th>
 										<th class="text-nowrap text-align-center dashboard-table-cell-single-btn-symbol">Notes</th>
-										<th class="text-nowrap dashboard-table-cell-date">Total Time</th>
 										<th class="dashboard-table-cell-watch-btns text-align-center">Status</th>
 										<th class="dashboard-table-cell-action">&nbsp;<span class="sr-only">Actions</span></th>
 									</tr>
@@ -1210,6 +1211,19 @@
 												</span>
 											</span>
 										</td>
+
+										<td class=" dashboard-table-cell-date">
+											<span class="font-weight-700 log-today-total-time text-nowrap">
+												<span class="REPLACE">6h 09m
+											</span>
+										</td>
+
+										<td class="text-nowrap dashboard-table-cell-category">
+											<span class="text-wrap-ellipsis">
+												<span class="REPLACE">Task Category</span>
+											</span>
+										</td>
+
 
 
 										<td class="dashboard-table-cell-max">
@@ -1246,13 +1260,6 @@
 										<td class="text-align-center dashboard-table-cell-single-btn-symbol">
 											
 											<?php app_get_component('components/table-modal-notes'); ?>
-										</td>
-
-
-										<td class=" dashboard-table-cell-date">
-											<span class="font-weight-700 log-today-total-time text-nowrap">
-												<span class="REPLACE">6h 09m
-											</span>
 										</td>
 
 
@@ -1297,6 +1304,17 @@
 															</span>
 														</span>
 													</td>
+													<td class=" dashboard-table-cell-date">
+														<span class="font-weight-700 log-today-total-time text-nowrap">
+															<span class="REPLACE">6h 09m
+														</span>
+													</td>
+
+													<td class="text-nowrap dashboard-table-cell-category">
+														<span class="text-wrap-ellipsis">
+															<span class="REPLACE">Task Category</span>
+														</span>
+													</td>
 
 
 													<td class="dashboard-table-cell-max">
@@ -1336,12 +1354,6 @@
 														
 														<?php app_get_component('components/table-modal-notes'); ?>
 													</td>
-													<td class=" dashboard-table-cell-date">
-														<span class="font-weight-700 log-today-total-time text-nowrap">
-															<span class="REPLACE">6h 09m
-														</span>
-													</td>
-
 
 													<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 														&nbsp;
@@ -1378,6 +1390,17 @@
 															<span class="REPLACE">
 																9:00pm
 															</span>
+														</span>
+													</td>
+													<td class=" dashboard-table-cell-date">
+														<span class="font-weight-700 log-today-total-time text-nowrap">
+															<span class="REPLACE">6h 09m
+														</span>
+													</td>
+
+													<td class="text-nowrap dashboard-table-cell-category">
+														<span class="text-wrap-ellipsis">
+															<span class="REPLACE">Task Category</span>
 														</span>
 													</td>
 
@@ -1419,12 +1442,6 @@
 														
 														<?php app_get_component('components/table-modal-notes'); ?>
 													</td>
-													<td class=" dashboard-table-cell-date">
-														<span class="font-weight-700 log-today-total-time text-nowrap">
-															<span class="REPLACE">6h 09m
-														</span>
-													</td>
-
 
 													<td class="dashboard-table-cell-watch-btns text-align-center text-nowrap">
 														
@@ -1467,16 +1484,16 @@
 
 							</table>
 						</div>
+						<div class="module-functions">
+							<?php app_get_component('components/pagination') ?>
+							<?php app_get_component('components/pagination-view-per-page') ?>
+						</div>
 			
 					
 					<!-- @else no entries -->
 						<a href="#board-track-time" class="zone zone-primary">
 							Start Your First Project of the Day <i class="symbol symbol-plus"></i>
 						</a>
-						<div class="module-functions">
-							<?php app_get_component('components/pagination') ?>
-							<?php app_get_component('components/pagination-view-per-page') ?>
-						</div>
 				</div>
 
 
