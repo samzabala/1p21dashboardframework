@@ -44,10 +44,10 @@
 
 
 		<script type="text/javascript"
-			src="https://cdn.datatables.net/v/dt/dt-1.10.21/b-1.6.2/b-colvis-1.6.2/datatables.min.js">
+			src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
 		</script>
 		<link rel="stylesheet" type="text/css"
-			href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+			href="https://cdn.datatables.net/1.10.21/css/dataTables.min.css"/>
 		<script>
 			(function(jQuery){
 				jQuery('.data-log-today').DataTable({
