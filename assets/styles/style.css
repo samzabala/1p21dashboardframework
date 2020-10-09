@@ -9127,7 +9127,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     min-width: 70% !important; }
 
 .dashboard-table-cell-date, .dashboard-table-cell-category {
-  width: 5vw !important;
+  width: 100px !important;
   max-width: 120px !important;
   min-width: 100px !important; }
 

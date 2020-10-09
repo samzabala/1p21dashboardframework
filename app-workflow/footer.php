@@ -52,33 +52,32 @@
 			(function(jQuery){
 				jQuery('.data-log-today').DataTable({
 					dom: '<"text-align-right hide-mobile"<"#activity-log-column-settings.accordion dashboard-table-column-toggle"B>>t',
-					searching: false,
-					ordering: false,
-					scrollY: "200px",
-					paging: true,
-					columnDefs: [
-						{ targets: [1], visible: false },
-					],
-					buttons:{
-						dom: {
-						button: {
-							tag: 'button',
-							className: 'btn btn-default',
-						},
-						container: {
-							className: 'btn-group btn-group-horizontal p hide-mobile btn-block btn-no-shadow',
-						}
-						},
-						buttons: [
-						{ extend: 'columnsToggle' },
-						],
-					},
-					stateSave: true,
-					stateDuration: 60 * 60 * 24 * 30,
-					initComplete: function() {
-						jQuery(this).removeClass('dataTable');
-						jQuery('.dashboard-table-column-toggle')
-					}
+					// searching: false,
+					// ordering: false,
+					// paging: true,
+					// lengthMenu : [[25, 50, 100,150,200, -1], [25, 50, 100,150,200, "All"]],
+					// columnDefs: [
+					// 	{ targets: [1], visible: false },
+					// ],
+					// buttons:{
+					// 	dom: {
+					// 	button: {
+					// 		tag: 'button',
+					// 		className: 'btn btn-default',
+					// 	},
+					// 	container: {
+					// 		className: 'btn-group btn-group-horizontal p hide-mobile btn-block btn-no-shadow',
+					// 	}
+					// 	},
+					// 	buttons: [
+					// 	{ extend: 'columnsToggle' },
+					// 	],
+					// },
+					// stateSave: true,
+					// stateDuration: 60 * 60 * 24 * 30,
+					// initComplete: function() {
+					// 	jQuery(this).removeClass('dataTable');
+					// }
 				});
 			}(jQuery));
 		</script>
