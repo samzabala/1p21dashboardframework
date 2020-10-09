@@ -15,6 +15,477 @@
 		
 
 		<h1 data-toggle="accordion">Modal with a bitch ass table<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div  class="table-wrapper">
+		<table class="dashboard-table-cells-match-height text-vertical-align-middle">
+			<thead>
+			<tr>
+				<th class="dashboard-table-cell-date">
+				Created
+				</th>
+
+				<th class="dashboard-table-cell-thumbnail text-align-center">
+				Author
+				</th>
+
+				<th class="">
+				Title
+				</th>
+
+				<th class="">Task</th>
+
+				<th class="dashboard-table-cell-action table-cell-no-gutter">
+				&nbsp;
+				<span class="sr-only">Actions</span>
+				</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			
+				<tr>
+				<td class="dashboard-table-cell-date">
+					Oct 7, 2020
+				</td>
+
+				<td class="dashboard-table-cell-thumbnail text-align-center ">
+					
+					
+					
+
+
+		<a href="#" class="thumbnail thumbnail-small" title="Derrick Tran">
+		<!-- @IF has profile image -->
+		<!--div class="thumbnail-image">
+		<img class="profile-image" data-src="<?=DASHBOARD_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+		</div-->
+		<!-- @ELSE -->
+		<span class="thumbnail-text profile-name-initial">
+		DT
+		</span>
+		</a>
+
+
+		<div class="modal" id="modal-tz-picker">
+		<form action="/user/profile" method="post">
+
+
+		<input id="csrf_token" name="csrf_token" type="hidden" value="20201010025205##4bf40c11c2b5fb079d62e38a69d063de21893211">
+
+		<p class="input-wrapper input-wrapper-vertical">
+		<label class="input-label" for="timezone">Select Timezone</label>
+		<select class="input input-select" id="timezone" name="timezone" required=""><option value="US/Pacific">US/Pacific</option><option value="America/Chicago">America/Chicago</option><option selected="" value="America/Buenos_Aires">America/Buenos_Aires</option><option value="US/Eastern">US/Eastern</option></select>
+		</p>
+
+
+		<button type="submit" class="btn btn-primary btn-block">
+		Change Timezone
+		</button>
+		</form>
+		</div>
+					
+				</td>
+
+				<td class="">
+					<a href="/notes/4/edit?date_from=2020-10-09&amp;date_to=2020-10-09" class="text-wrap-ellipsis">
+
+					Derrick's TT Task Note
+					</a>
+				</td>
+
+				<td class="">
+					<a href="/tasks/113863?date_from=2020-10-09&amp;date_to=2020-10-09">
+					<span class="text-wrap-ellipsis">
+						Software Development
+					</span>
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-action">
+					
+					
+
+					
+						<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="tooltip-click" data-tooltip-placement="bottom" data-tooltip-center-x="true" data-tooltip-allow-interaction="true" data-tooltip-width="150px" data-tooltip-classes="dashboard-actions-tooltip text-leading-expanded" data-tooltip-content="<ul class='unstyled no-margin-y'>
+					
+						
+
+						
+						<li>
+							<a href='#modal-share-note-with'
+							class='color-inherit color-primary-hover'
+							data-toggle='modal'
+							data-modal-callback='initShareNoteModal(4)'
+							data-modal-disable-overlay='false'>
+
+							Share
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/4/edit?return_to=%2Fprojects%2F58'
+							class='color-inherit color-primary-hover'>
+
+							Edit
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/4?date_from=2020-10-09&amp;date_to=2020-10-09'
+							class='color-inherit color-primary-hover js-del-note'
+							data-note-title='Derrick%27s%20TT%20Task%20Note'>
+
+							Delete
+							</a>
+						</li>
+						
+					
+					</ul>">
+
+		<i class="symbol symbol-kebab-horizontal"></i>
+		</span>
+					
+					
+				</td>
+				</tr>
+			
+				<tr>
+				<td class="dashboard-table-cell-date">
+					Oct 7, 2020
+				</td>
+
+				<td class="dashboard-table-cell-thumbnail text-align-center ">
+					
+					
+					
+
+
+		<a href="#" class="thumbnail thumbnail-small" title="Derrick Tran">
+		<!-- @IF has profile image -->
+		<!--div class="thumbnail-image">
+		<img class="profile-image" data-src="<?=DASHBOARD_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+		</div-->
+		<!-- @ELSE -->
+		<span class="thumbnail-text profile-name-initial">
+		DT
+		</span>
+		</a>
+
+
+		<div class="modal" id="modal-tz-picker">
+		<form action="/user/profile" method="post">
+
+
+		<input id="csrf_token" name="csrf_token" type="hidden" value="20201010025205##4bf40c11c2b5fb079d62e38a69d063de21893211">
+
+		<p class="input-wrapper input-wrapper-vertical">
+		<label class="input-label" for="timezone">Select Timezone</label>
+		<select class="input input-select" id="timezone" name="timezone" required=""><option value="US/Pacific">US/Pacific</option><option value="America/Chicago">America/Chicago</option><option selected="" value="America/Buenos_Aires">America/Buenos_Aires</option><option value="US/Eastern">US/Eastern</option></select>
+		</p>
+
+
+		<button type="submit" class="btn btn-primary btn-block">
+		Change Timezone
+		</button>
+		</form>
+		</div>
+					
+				</td>
+
+				<td class="dashboard-table-cell-max">
+					<a href="/notes/3/edit?date_from=2020-10-09&amp;date_to=2020-10-09" class="text-wrap-ellipsis dashboard-table-cell-max">
+
+					Derrick's TT Project Note
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-max">
+					<a href="/tasks/58?date_from=2020-10-09&amp;date_to=2020-10-09">
+					<span class="text-wrap-ellipsis">
+						
+					</span>
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-action">
+					
+					
+
+					
+						<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="tooltip-click" data-tooltip-placement="bottom" data-tooltip-center-x="true" data-tooltip-allow-interaction="true" data-tooltip-width="150px" data-tooltip-classes="dashboard-actions-tooltip text-leading-expanded" data-tooltip-content="<ul class='unstyled no-margin-y'>
+					
+						
+
+						
+						<li>
+							<a href='#modal-share-note-with'
+							class='color-inherit color-primary-hover'
+							data-toggle='modal'
+							data-modal-callback='initShareNoteModal(3)'
+							data-modal-disable-overlay='false'>
+
+							Share
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/3/edit?return_to=%2Fprojects%2F58'
+							class='color-inherit color-primary-hover'>
+
+							Edit
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/3?date_from=2020-10-09&amp;date_to=2020-10-09'
+							class='color-inherit color-primary-hover js-del-note'
+							data-note-title='Derrick%27s%20TT%20Project%20Note'>
+
+							Delete
+							</a>
+						</li>
+						
+					
+					</ul>">
+
+		<i class="symbol symbol-kebab-horizontal"></i>
+		</span>
+					
+					
+				</td>
+				</tr>
+			
+				<tr>
+				<td class="dashboard-table-cell-date">
+					Oct 7, 2020
+				</td>
+
+				<td class="dashboard-table-cell-thumbnail text-align-center ">
+					
+					
+					
+
+
+		<a href="#" class="thumbnail thumbnail-small" title="Cristian Rasch">
+		<!-- @IF has profile image -->
+		<!--div class="thumbnail-image">
+		<img class="profile-image" data-src="<?=DASHBOARD_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+		</div-->
+		<!-- @ELSE -->
+		<span class="thumbnail-text profile-name-initial">
+		CR
+		</span>
+		</a>
+
+
+		<div class="modal" id="modal-tz-picker">
+		<form action="/user/profile" method="post">
+
+
+		<input id="csrf_token" name="csrf_token" type="hidden" value="20201010025205##4bf40c11c2b5fb079d62e38a69d063de21893211">
+
+		<p class="input-wrapper input-wrapper-vertical">
+		<label class="input-label" for="timezone">Select Timezone</label>
+		<select class="input input-select" id="timezone" name="timezone" required=""><option value="US/Pacific">US/Pacific</option><option value="America/Chicago">America/Chicago</option><option selected="" value="America/Buenos_Aires">America/Buenos_Aires</option><option value="US/Eastern">US/Eastern</option></select>
+		</p>
+
+
+		<button type="submit" class="btn btn-primary btn-block">
+		Change Timezone
+		</button>
+		</form>
+		</div>
+					
+				</td>
+
+				<td class="dashboard-table-cell-max">
+					<a href="/notes/2/edit?date_from=2020-10-09&amp;date_to=2020-10-09" class="text-wrap-ellipsis dashboard-table-cell-max">
+
+					Cristian's TT Task Note
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-max">
+					<a href="/tasks/113863?date_from=2020-10-09&amp;date_to=2020-10-09">
+					<span class="text-wrap-ellipsis">
+						Software Development
+					</span>
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-action">
+					
+					
+
+					
+						<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="tooltip-click" data-tooltip-placement="bottom" data-tooltip-center-x="true" data-tooltip-allow-interaction="true" data-tooltip-width="150px" data-tooltip-classes="dashboard-actions-tooltip text-leading-expanded" data-tooltip-content="<ul class='unstyled no-margin-y'>
+					
+						
+
+						
+						<li>
+							<a href='#modal-share-note-with'
+							class='color-inherit color-primary-hover'
+							data-toggle='modal'
+							data-modal-callback='initShareNoteModal(2)'
+							data-modal-disable-overlay='false'>
+
+							Share
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/2/edit?return_to=%2Fprojects%2F58'
+							class='color-inherit color-primary-hover'>
+
+							Edit
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/2?date_from=2020-10-09&amp;date_to=2020-10-09'
+							class='color-inherit color-primary-hover js-del-note'
+							data-note-title='Cristian%27s%20TT%20Task%20Note'>
+
+							Delete
+							</a>
+						</li>
+						
+					
+					</ul>">
+
+		<i class="symbol symbol-kebab-horizontal"></i>
+		</span>
+					
+					
+				</td>
+				</tr>
+			
+				<tr>
+				<td class="dashboard-table-cell-date">
+					Oct 7, 2020
+				</td>
+
+				<td class="dashboard-table-cell-thumbnail text-align-center ">
+					
+					
+					
+
+
+		<a href="#" class="thumbnail thumbnail-small" title="Cristian Rasch">
+		<!-- @IF has profile image -->
+		<!--div class="thumbnail-image">
+		<img class="profile-image" data-src="<?=DASHBOARD_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+		</div-->
+		<!-- @ELSE -->
+		<span class="thumbnail-text profile-name-initial">
+		CR
+		</span>
+		</a>
+
+
+		<div class="modal" id="modal-tz-picker">
+		<form action="/user/profile" method="post">
+
+
+		<input id="csrf_token" name="csrf_token" type="hidden" value="20201010025205##4bf40c11c2b5fb079d62e38a69d063de21893211">
+
+		<p class="input-wrapper input-wrapper-vertical">
+		<label class="input-label" for="timezone">Select Timezone</label>
+		<select class="input input-select" id="timezone" name="timezone" required=""><option value="US/Pacific">US/Pacific</option><option value="America/Chicago">America/Chicago</option><option selected="" value="America/Buenos_Aires">America/Buenos_Aires</option><option value="US/Eastern">US/Eastern</option></select>
+		</p>
+
+
+		<button type="submit" class="btn btn-primary btn-block">
+		Change Timezone
+		</button>
+		</form>
+		</div>
+					
+				</td>
+
+				<td class="dashboard-table-cell-max">
+					<a href="/notes/1/edit?date_from=2020-10-09&amp;date_to=2020-10-09" class="text-wrap-ellipsis dashboard-table-cell-max">
+
+					Cristian's TT Project Note
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-max">
+					<a href="/tasks/58?date_from=2020-10-09&amp;date_to=2020-10-09">
+					<span class="text-wrap-ellipsis">
+						
+					</span>
+					</a>
+				</td>
+
+				<td class="dashboard-table-cell-action">
+					
+					
+
+					
+						<span class="btn color-primary color-secondary-hover btn-no-shadow btn-symbol" data-toggle="tooltip-click" data-tooltip-placement="bottom" data-tooltip-center-x="true" data-tooltip-allow-interaction="true" data-tooltip-width="150px" data-tooltip-classes="dashboard-actions-tooltip text-leading-expanded" data-tooltip-content="<ul class='unstyled no-margin-y'>
+					
+						
+
+						
+						<li>
+							<a href='#modal-share-note-with'
+							class='color-inherit color-primary-hover'
+							data-toggle='modal'
+							data-modal-callback='initShareNoteModal(1)'
+							data-modal-disable-overlay='false'>
+
+							Share
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/1/edit?return_to=%2Fprojects%2F58'
+							class='color-inherit color-primary-hover'>
+
+							Edit
+							</a>
+						</li>
+						
+
+						
+						<li>
+							<a href='/notes/1?date_from=2020-10-09&amp;date_to=2020-10-09'
+							class='color-inherit color-primary-hover js-del-note'
+							data-note-title='Cristian%27s%20TT%20Project%20Note'>
+
+							Delete
+							</a>
+						</li>
+						
+					
+					</ul>">
+
+					<i class="symbol symbol-kebab-horizontal"></i>
+					</span>
+					
+					
+				</td>
+				</tr>
+			
+			</tbody>
+</table></div>
+
+
 		<div class="accordion">
 			<a href="#table-modal" data-toggle="modal">test</a>
 			<table class="rank-hist-task-items">

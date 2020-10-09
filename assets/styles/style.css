@@ -9126,19 +9126,20 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     max-width: 230px !important;
     min-width: 70% !important; }
 
-.dashboard-table-cell-date {
-  width: 100px !important;
-  max-width: 100px !important;
+.dashboard-table-cell-date, .dashboard-table-cell-category {
+  width: 5vw !important;
+  max-width: 120px !important;
   min-width: 100px !important; }
 
-.dashboard-table-cell-category {
-  width: 120px !important;
-  max-width: 120px !important;
-  min-width: 120px !important; }
+.dashboard-table-cell-fave {
+  width: 40px !important;
+  max-width: 40px !important;
+  min-width: 40px !important; }
 
 .dashboard-table-cell-thumbnail {
   min-width: 90px;
   max-width: 150px;
+  width: 5vw;
   text-align: center; }
 
 .dashboard-table-cell-name {
