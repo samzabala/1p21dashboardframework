@@ -54,7 +54,8 @@
 					dom: '<"text-align-right hide-mobile"<"#activity-log-column-settings.accordion dashboard-table-column-toggle"B>>t',
 					searching: false,
 					ordering: false,
-					paging: false,
+					scrollY: "200px",
+					paging: true,
 					columnDefs: [
 						{ targets: [1], visible: false },
 					],
@@ -77,13 +78,6 @@
 					initComplete: function() {
 						jQuery(this).removeClass('dataTable');
 						jQuery('.dashboard-table-column-toggle')
-						// .before(`<a data-accordion-change-hash="false"
-						// 			href="#activity-log-column-settings" data-toggle="accordion"
-						// 			class="btn btn-link">
-
-						// 			Table Columns
-						// 			<i class="symbol symbol-plus symbol-minus-toggle"></i>
-						// 		</a>`);
 					}
 				});
 			}(jQuery));

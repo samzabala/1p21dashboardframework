@@ -104,12 +104,12 @@
 																<?php app_get_component('components/profile-image-small') ?>
 															</td>
 															<td>
-																<a href="<?=app_create_link(array('template'=>'note-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+																<a href="<?=app_create_link(array('template'=>'note-view')) ?>" class="project-note-title text-wrap-ellipsis">
 																	<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
 																</a>
 															</td>
 															<td>
-																<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
+																<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis">
 																	<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
 																</a>
 															</td>
@@ -129,12 +129,12 @@
 																		<?php app_get_component('components/profile-image-small') ?>
 																	</td>
 																	<td>
-																		<a href="<?=app_create_link(array('template'=>'note-view')) ?>" class="project-note-title text-wrap-ellipsis dashboard-table-cell-max">
+																		<a href="<?=app_create_link(array('template'=>'note-view')) ?>" class="project-note-title text-wrap-ellipsis">
 																			<span class="REPLACE">Duis aute irure dolor in reprehendert </span>
 																		</a>
 																	</td>
 																	<td>
-																		<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis dashboard-table-cell-max">
+																		<a href="<?=app_create_link(array('template'=>'task-view')) ?>" class="project-note-task text-wrap-ellipsis">
 																			<span class="REPLACE">Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here Long task name here </span>
 																		</a>
 																	</td>
