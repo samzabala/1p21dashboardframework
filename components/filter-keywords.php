@@ -1,5 +1,5 @@
-<div class="module-function filter-keywords-meta text-align-left">
-	<form action="/keywords/improved" method="get">
+<div class="filter-keywords-meta display-block module-function text-align-left">
+	<form action="/keywords/improved" method="get" class="flex-1-1">
 		<div class=" filter-profile input-group input-group-horizontal input-group-responsive input-block">
 			<span class="input-label">Filters</span>
 			<!-- @note hidden start fields here -->

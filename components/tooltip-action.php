@@ -10,8 +10,8 @@
 			<li>
 				<a
 					class='color-inherit color-primary-hover js-edit-time-record'
-					href='#modal-track-time'
-					data-toggle='modal'
+					href='#board-track-time'
+					data-toggle='board'
 					data-record-id='TASKID'>
 						Edit
 				</a>

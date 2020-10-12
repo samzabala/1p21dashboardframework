@@ -9119,22 +9119,22 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 
 .dashboard-table-cell-max {
   width: 180px;
-  max-width: 180px !important;
-  min-width: auto !important; }
+  max-width: 180px;
+  min-width: auto; }
   .dashboard-table-cell-max-larger {
     width: 70%;
-    max-width: 230px !important;
-    min-width: 70% !important; }
+    max-width: 230px;
+    min-width: 70%; }
 
 .dashboard-table-cell-date, .dashboard-table-cell-category {
-  width: 100px !important;
-  max-width: 120px !important;
-  min-width: 100px !important; }
+  width: 100px;
+  max-width: 120px;
+  min-width: 100px; }
 
 .dashboard-table-cell-fave {
-  width: 40px !important;
-  max-width: 40px !important;
-  min-width: 40px !important; }
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px; }
 
 .dashboard-table-cell-thumbnail {
   min-width: 90px;
@@ -9146,12 +9146,14 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
   min-width: 260px; }
 
 .dashboard-table-cell-single-btn-symbol, .dashboard-table-cell-action {
-  width: 90px !important;
-  max-width: 90px !important; }
+  width: 90px;
+  max-width: 90px;
+  min-width: 90px; }
 
 .dashboard-table-cell-watch-btns, .dashboard-table-cell-edit-btns {
-  width: 140px !important;
-  max-width: 140px !important;
+  width: 130px;
+  max-width: 130px;
+  min-width: 130px;
   right: 90px;
   z-index: 2; }
 

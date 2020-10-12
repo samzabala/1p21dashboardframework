@@ -108,48 +108,71 @@ function app_init_content(){
 					app_get_template_part("app-{$app}/home");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
 					break;
-				case 'projects':
-					app_get_template_part("app-{$app}/projects");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/projects";
-					break;
-				case 'project-edit':
-				case 'project-new':
-					app_get_template_part("app-{$app}/project-edit");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-edit";
-					break;
-				case 'project-details':
-				case 'project-view':
-				case 'project':
-					app_get_template_part("app-{$app}/project-view");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-view";
-					break;
-				case 'note-edit':
-				//debug only
-					case '_DEMO-task':
-					case '_DEMO-alert':
-				//end ebug only
-					app_get_template_part("app-{$app}/{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
-					break;
 
-				case 'task':
-				case 'task-view':
-					app_get_template_part("app-{$app}/task-view");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-view";
-					break;
+				//notes
+					case 'note-edit':
+						//debug only
+							case '_DEMO-task':
+							case '_DEMO-alert':
+						//end ebug only
+							app_get_template_part("app-{$app}/{$template_part}");
+							$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+							break;
 
-				case 'task-new':
-				case 'task-edit':
-					app_get_template_part("app-{$app}/task-edit");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-edit";
-					break;
+				//project
+					case 'projects':
+						app_get_template_part("app-{$app}/projects");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/projects";
+						break;
+					case 'project-edit':
+					case 'project-new':
+						app_get_template_part("app-{$app}/project-edit");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-edit";
+						break;
+					case 'project-details':
+					case 'project-view':
+					case 'project':
+						app_get_template_part("app-{$app}/project-view");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/project-view";
+						break;
+
+				
+				//client
+					case 'clients':
+						app_get_template_part("app-{$app}/clients");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/clients";
+						break;
+					case 'client-edit':
+					case 'client-new':
+						app_get_template_part("app-{$app}/client-edit");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/client-edit";
+						break;
+					case 'client-details':
+					case 'client-view':
+					case 'client':
+						app_get_template_part("app-{$app}/client-view");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/client-view";
+						break;
+
+				//task
+					case 'task':
+					case 'task-view':
+						app_get_template_part("app-{$app}/task-view");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-view";
+						break;
+
+					case 'task-new':
+					case 'task-edit':
+						app_get_template_part("app-{$app}/task-edit");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-edit";
+						break;
 
 				// content pages im not sure of but good to have fallbacks for or at least a basic page to render
-				case 'page':
-				case 'note-view':
-					app_get_template_part("app-{$app}/page");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/page";
-					break;
+					case 'page':
+					case 'note-view':
+						app_get_template_part("app-{$app}/page");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/page";
+						break;
 
 				case 'workflux':
 				case 'clients':
