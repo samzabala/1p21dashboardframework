@@ -461,15 +461,15 @@ $sidebar-base-slim-mobile: 60px;
 
 				// width: clamp(80px, 5vw,180px)!important;
 				width: 180px;
-				max-width: 180px!important;
-				min-width: auto!important;
+				max-width: 180px;
+				min-width: auto;
 
 
 				&-larger {
 
 					width: 70%;
-					max-width: 230px!important;
-					min-width: 70%!important;
+					max-width: 230px;
+					min-width: 70%;
 				}
 			}
 
@@ -477,17 +477,17 @@ $sidebar-base-slim-mobile: 60px;
 			&-category {
 	
 				// width: clamp(80px, 5vw,110px)!important;
-				width: 100px!important;
-				max-width: 120px!important;
-				min-width: 100px!important;
+				width: 100px;
+				max-width: 120px;
+				min-width: 100px;
 			}
 
 			&-fave {
 	
 				// width: clamp(80px, 5vw,110px)!important;
-				width: 40px!important;
-				max-width: 40px!important;
-				min-width: 40px!important;
+				width: 40px;
+				max-width: 40px;
+				min-width: 40px;
 
 			}
 
@@ -506,14 +506,16 @@ $sidebar-base-slim-mobile: 60px;
 
 			&-single-btn-symbol,
 			&-action {
-				width: 90px!important;
-				max-width: 90px!important;
+				width: 90px;
+				max-width: 90px;
+				min-width: 90px; 
 			}
 
 			&-watch-btns,
 			&-edit-btns {
-				width: 140px!important;
-				max-width: 140px!important;
+				width: 130px;
+				max-width: 130px;
+				min-width: 130px;
 				right:90px;
 				z-index:2;
 			}

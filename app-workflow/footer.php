@@ -44,40 +44,46 @@
 
 
 		<script type="text/javascript"
-			src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+			src="https://cdn.datatables.net/v/dt/dt-1.10.21/b-1.6.2/b-colvis-1.6.2/datatables.min.js">
 		</script>
 		<link rel="stylesheet" type="text/css"
 			href="https://cdn.datatables.net/1.10.21/css/dataTables.min.css"/>
 		<script>
 			(function(jQuery){
 				jQuery('.data-log-today').DataTable({
-					dom: '<"text-align-right hide-mobile"<"#activity-log-column-settings.accordion dashboard-table-column-toggle"B>>t',
-					// searching: false,
-					// ordering: false,
-					// paging: true,
-					// lengthMenu : [[25, 50, 100,150,200, -1], [25, 50, 100,150,200, "All"]],
+					sDom: `<"text-align-right hide-mobile"
+						<"#activity-log-column-settings.accordion dashboard-table-column-toggle"B>>t`,
+					searching: false,
+					ordering: false,
+					// paging: false,
+					lengthMenu : [
+
+						[25, 50, 100,150,200, -1],
+						[25, 50, 100,150,200, "All"]
+					],
 					// columnDefs: [
 					// 	{ targets: [1], visible: false },
 					// ],
-					// buttons:{
-					// 	dom: {
-					// 	button: {
-					// 		tag: 'button',
-					// 		className: 'btn btn-default',
-					// 	},
-					// 	container: {
-					// 		className: 'btn-group btn-group-horizontal p hide-mobile btn-block btn-no-shadow',
-					// 	}
-					// 	},
-					// 	buttons: [
-					// 	{ extend: 'columnsToggle' },
-					// 	],
-					// },
-					// stateSave: true,
-					// stateDuration: 60 * 60 * 24 * 30,
-					// initComplete: function() {
-					// 	jQuery(this).removeClass('dataTable');
-					// }
+					buttons:{
+						dom: {
+							button: {
+								tag: 'button',
+								className: 'btn btn-default',
+							},
+							container: {
+								className: 'btn-group btn-group-horizontal p hide-mobile btn-block btn-no-shadow',
+							}
+						},
+						buttons: [
+							{ extend: 'columnsToggle' },
+						],
+						},
+						stateSave: true,
+						stateDuration: 60 * 60 * 24 * 30,
+						initComplete: function() {
+							jQuery(this).removeClass('dataTable');
+							console.log(jQuery(this)); 
+						}
 				});
 			}(jQuery));
 		</script>
