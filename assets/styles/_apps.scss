@@ -339,6 +339,14 @@ $sidebar-base-slim-mobile: 60px;
 //helpers
 .dashboard {
 
+	&-filter {
+		&-meta-key {
+			@include br(#{$mobile-br-max-polar}){
+				width: 125px;
+			}
+		}
+	}
+
 	&-btn {
 		&-serp {
 			margin: .25em .125em;
@@ -436,10 +444,28 @@ $sidebar-base-slim-mobile: 60px;
 
 	//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
 	&-table-wrapper-gutterless {
-		margin: 0 -25px;
+		margin-left: calc(#{$module-gutter-x * -1} + #{$module-border-width});
+		margin-right: calc(#{$module-gutter-x * -1} + #{$module-border-width});
 		width: auto;
 		@include br(#{$mobile-br-max}-max){
-			margin: 0 -15px;
+			margin-left: calc(#{$module-gutter-x-mobile * -1} + #{$module-border-width});
+			margin-right: calc(#{$module-gutter-x-mobile * -1} + #{$module-border-width});
+		}
+
+		.module-content:first-child > &:first-child {
+			margin-top: calc(#{$module-gutter-y * -1} + #{$module-border-width});
+			width: auto;
+			@include br(#{$mobile-br-max}-max){
+				margin-top: calc(#{$module-gutter-y-mobile * -1} + #{$module-border-width});
+			}
+		}
+
+		.module-content:last-child > &:last-child {
+			margin-bottom: calc(#{$module-gutter-y * -1} + #{$module-border-width});
+			width: auto;
+			@include br(#{$mobile-br-max}-max){
+				margin-bottom: calc(#{$module-gutter-y-mobile * -1} + #{$module-border-width});
+			}
 		}
 	}
 	
@@ -467,10 +493,17 @@ $sidebar-base-slim-mobile: 60px;
 
 				&-larger {
 
-					width: 70%;
-					max-width: 230px;
-					min-width: 70%;
+					width: 200px;
+					max-width: 200px;
+					min-width: auto;
 				}
+			}
+
+			&-client-addnotes {
+
+				width: calc(100% - 200px);
+				max-width: calc(100% - 200px);
+				min-width: auto;
 			}
 
 			&-date,
@@ -485,9 +518,10 @@ $sidebar-base-slim-mobile: 60px;
 			&-fave {
 	
 				// width: clamp(80px, 5vw,110px)!important;
-				width: 40px;
-				max-width: 40px;
-				min-width: 40px;
+				width: 50px;
+				max-width: 50px;
+				min-width: 50px;
+				text-align: center;
 
 			}
 
@@ -506,9 +540,9 @@ $sidebar-base-slim-mobile: 60px;
 
 			&-single-btn-symbol,
 			&-action {
-				width: 90px;
-				max-width: 90px;
-				min-width: 90px; 
+				width: 70px;
+				max-width: 70px;
+				min-width: 70px; 
 			}
 
 			&-watch-btns,
@@ -516,7 +550,7 @@ $sidebar-base-slim-mobile: 60px;
 				width: 130px;
 				max-width: 130px;
 				min-width: 130px;
-				right:90px;
+				right:70px;
 				z-index:2;
 			}
 
@@ -529,7 +563,7 @@ $sidebar-base-slim-mobile: 60px;
 				&:not(th)  {
 					background-color:inherit;
 					@at-root tr:not([class*=table-row]) & {
-						background-color: var(--theme-background);
+						background-color: $var-theme-background;
 					}
 				}
 			

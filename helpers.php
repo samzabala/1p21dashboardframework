@@ -7,7 +7,7 @@ function app_get_template_part($filename = '', $slug = '',$data = array() ){
 
 		$source = FWAPPS_ROOT_PATH.'/'.$filename;
 		
-		if(isset($slug) && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
+		if($slug!== '' && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
 			$source .= '-'.$slug;
 		}
 		
@@ -173,6 +173,12 @@ function app_init_content(){
 						app_get_template_part("app-{$app}/page");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/page";
 						break;
+
+				// exists and the setup ran smoothly for this
+				// case '':
+				// 	app_get_template_part("app-{$app}/{$template_part}");
+				// 	$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+				// 	break;
 
 				case 'workflux':
 				case 'clients':

@@ -10,6 +10,32 @@
 		<h1 data-toggle="accordion">TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		</div>
+		
+
+		<h1 data-toggle="accordion">data-toggle switch-on and switch-off<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			
+			<div class="switch">
+				<div class="switch-off" id="titty-view">
+					<div href="titty-edit" data-toggle="switch-on" class="pointer-reference color-inherit text-decoration-none display-block cf">
+						<h2 class="no-margin-y"> Click to edit me 
+
+
+						<span class="only-hover color-primary">
+							<i class="symbol symbol-pencil"></i>
+						</span>
+						</h2>
+					</div>
+					
+				</div>
+				<div id="titty-edit" class="switch-on">
+					<div class="input-group input-large input-block input-group-horizontal">
+						<input type="text" class="input input-single-line">
+						<button data-toggle="switch-off" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		
@@ -4174,6 +4200,11 @@
 
 			<h2>groups and symbols</h2>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol pencil</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-pencil"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol edit</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-edit"></i></span>
 			</a>
@@ -4401,7 +4432,10 @@
 				<span class="btn btn-default">Symbol text justify</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-justify"></i></span>
 			</a>
-						
+					
+			<p>
+				Pencil <i class="color-primary symbol symbol-pencil"></i>
+			</p>		
 						
 			<p>
 				Edit <i class="color-primary symbol symbol-edit"></i>
@@ -4604,21 +4638,6 @@
 			</p>
 			<p>
 				<span class="badge badge-error"></span> Error
-			</p>
-			<p>
-				<span class="badge badge-intensity-1"></span> Intensity 1
-			</p>
-			<p>
-				<span class="badge badge-intensity-2"></span> Intensity 2
-			</p>
-			<p>
-				<span class="badge badge-intensity-3"></span> Intensity 3
-			</p>
-			<p>
-				<span class="badge badge-intensity-4"></span> Intensity 4
-			</p>
-			<p>
-				<span class="badge badge-intensity-5"></span> Intensity 5
 			</p>
 
 
@@ -6174,12 +6193,6 @@
 			.position-me:nth-child(2) {
 				top: 50%;
 				left: 50%;
-
-			}
-
-			.accordion:nth-child(n+9) .flex-child,
-			.accordion:nth-child(n+9) *[class*="flex-col-"] {
-				min-height: 200px;
 
 			}
 

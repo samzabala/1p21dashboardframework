@@ -2562,6 +2562,32 @@ this.jQuery && this.jQuery.noConflict();
 		frameWork.destroyModal(removeHash, 'board');
 	};
 
+	frameWork.initSwitch = (triggerer,mode) => {
+		triggerer = triggerer || false;
+		mode = mode || 'off';
+
+		console.log('bitch be here');
+		if(triggerer){
+			const switchWrapper = triggerer.closest('.switch');
+			if(switchWrapper.length){
+				switch(mode){
+					case 'on':
+						switchWrapper.removeClass('switch-to-off').addClass('switch-to-on');
+						break;
+					case 'off':
+						switchWrapper.removeClass('switch-to-on').addClass('switch-to-off');
+						break;
+					default:
+						switchWrapper.toggleClass('switch-to-off switch-to-on');
+						break;
+				}
+			}
+		}else if(mode == 'off'){
+			$('.switch').removeClass('switch-to-on').addClass('switch-to-off')
+		}
+	}
+	__f.fns_on_rightAway.push(frameWork.initSwitch);
+
 	frameWork.closeDropdowns = (currentDropdown) => {
 		currentDropdown = currentDropdown || false;
 
@@ -3555,6 +3581,34 @@ this.jQuery && this.jQuery.noConflict();
 
 		$('body').on(
 			'click',
+			'*[data-toggle="switch-off"]',
+			(e) => {
+				const triggerer = $(e.target);
+
+				e.preventDefault();
+
+				if (!frameWork.isDisabled(triggerer)) {
+					frameWork.initSwitch(triggerer,'off')
+				}
+			}
+		);
+
+		$('body').on(
+			'click',
+			'*[data-toggle="switch-on"]',
+			(e) => {
+				const triggerer = $(e.target);
+
+				e.preventDefault();
+
+				if (!frameWork.isDisabled(triggerer)) {
+					frameWork.initSwitch(triggerer,'on')
+				}
+			}
+		);
+
+		$('body').on(
+			'click',
 			'*[data-toggle="board-resize"]',
 			(e) => {
 				e.preventDefault();
@@ -3710,6 +3764,16 @@ this.jQuery && this.jQuery.noConflict();
 						&& !triggerer.closest('[data-value]').length //temp fix for ui elements not getting ancestry
 					) {
 						frameWork.closeDropdowns(false);
+					}
+
+					//switch
+					if (
+						!triggerer.closest('[data-toggle="switch-off"]').length
+						&& !triggerer.closest('[data-toggle="switch-on"]').length
+						&& !triggerer.closest('.switch').length
+						&& !triggerer.closest('[data-value]').length //temp fix for ui elements not getting ancestry
+					){
+						frameWork.initSwitch()
 					}
 				}
 			}

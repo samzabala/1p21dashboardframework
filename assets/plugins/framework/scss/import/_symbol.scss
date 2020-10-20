@@ -100,6 +100,76 @@ $prefix: '.symbol';
 		}
 	}
 
+	@include create-symbol-styles(#{&}-pencil) {
+		@extend %for-valid-symbol;
+	
+		&:before,&:after {
+			@extend %for-valid-symbol-pseudo;
+		}
+
+		&:before {
+			@extend %for-valid-symbol-pseudo-filled;
+			width: .3625em;
+			height: .3625em;
+			top:auto;
+			right:auto;
+			clip-path: polygon(
+				0 0,
+				0 100%,
+				100% 100%,
+				calc(100% - #{em(1px/$calculated-symbol-basis)}) calc(100% - #{em(1px/$calculated-symbol-basis)}),
+				45% calc(100% - #{em(1px/$calculated-symbol-basis)}),
+				#{em(1px/$calculated-symbol-basis)} 56%,
+				#{em(1px/$calculated-symbol-basis)} #{em(1px/$calculated-symbol-basis)},
+			);
+		}
+
+		&:after {
+			@extend %for-valid-symbol-pseudo-filled;
+			clip-path: polygon(
+				0 0,
+				0 25%,
+				100% 25%,
+				100% calc(25% + #{em(1px/$calculated-symbol-basis)}),
+				0 calc(25% + #{em(1px/$calculated-symbol-basis)}),
+				0 calc(25% + #{em(2px/$calculated-symbol-basis)}),
+				100% calc(25% + #{em(2px/$calculated-symbol-basis)}),
+				100% calc(25% + #{em(3px/$calculated-symbol-basis)}),
+				0 calc(25% + #{em(3px/$calculated-symbol-basis)}),
+				0 100%,
+				#{em(1.25px/$calculated-symbol-basis)} 100%,
+				#{em(1.25px/$calculated-symbol-basis)} 92%,
+				30% 98%,
+				50% 92%,
+				70% 98%,
+
+				calc(100% - #{em(1.25px/$calculated-symbol-basis)}) 92%,
+				calc(100% - #{em(1.25px/$calculated-symbol-basis)}) 100%,
+				100% 100%,
+				100% 0
+			);
+			// border-right: em(1px/$calculated-symbol-basis) solid;
+			// background-image: 
+			// 	repeating-linear-gradient(
+			// 	180deg,
+			// 	currentColor 0,
+			// 	currentColor .2875em,
+			// 	transparent .2875em,
+			// 	transparent .2875em + em(1.5px/$calculated-symbol-basis),
+			// 	currentColor .2875em + em(1.5px/$calculated-symbol-basis),
+			// 	currentColor 100%
+			// );
+			transform: rotate(45deg);
+			width: 0.5em;
+			top: -.1875em;
+			right: -.1875em;
+			height:1.1875em;
+			border-radius: .1875em .1875em 0 0;
+			background-repeat: no-repeat;
+			background-position: top center;
+		}
+	}
+
 	@include create-symbol-styles(#{&}-edit) {
 		@extend %for-valid-symbol;
 	
