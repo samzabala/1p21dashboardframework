@@ -24,7 +24,7 @@ $args = app_parse_args($data,$defs);
 			<!-- @NOTE
 				replace REPLACEUserVerbiage with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 			-->
-			<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for REPLACEUserVerbiage" />
+			<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Search for REPLACEUserVerbiage" />
 		</div>
 
 		
