@@ -5,7 +5,7 @@
 	>
 
 	<!-- Toolbar -->
-	<?php app_get_component('components/toolbar-side-view') ?>
+	<?php app_get_component('components/toolbar-side','view') ?>
 
 	<!-- Main-->
 	<div
@@ -13,18 +13,18 @@
 		data-grid-column-md="main"
 		data-grid-row-md="1 / span 6">
 		<div class="module-content">
-			<?php app_get_component('components/task-main-view'); ?>
+			<?php app_get_component('components/task-main','view'); ?>
 		</div>
 	</div>
 
 	<!-- Team Info -->
-	<?php app_get_component('components/module-side-team-view') ?>
+	<?php app_get_component('components/module-side-team','view') ?>
 
 	<!-- Time Tracker -->
-	<?php app_get_component('components/module-side-time-view') ?>
+	<?php app_get_component('components/module-side-time','view') ?>
 
 	<!-- Categries Boards/Tags -->
-	<?php app_get_component('components/module-side-flux-view') ?>
+	<?php app_get_component('components/module-side-flux','view') ?>
 
 	<!-- Followers/Wiki/Reminders -->
 	<?php app_get_component('components/module-side-followers-view') ?>

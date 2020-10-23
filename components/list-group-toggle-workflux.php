@@ -7,13 +7,13 @@
 					if workflux id is in the corresponding workflux id field => `active`
 
 		-->
-		<a href="#" class="list-group-item flex-wrap align-items-center justify-content-space-between">
+		<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 			<span class="flex-1-1">
 				<?php app_get_component('components/profile-workflux-image-small-span') ?>
 				<span class="REPLACE">Workflux Board Name</span>
 			</span>
 
-			<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+			<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 		</a>
 
 			<!-- placeholder -->
@@ -25,7 +25,7 @@
 						<span class="REPLACE">Workflux Board Name</span>
 					</span>
 
-					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+					<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 				</a>
 			<?php } ?>
 			

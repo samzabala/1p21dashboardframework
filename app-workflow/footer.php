@@ -48,45 +48,7 @@
 		</script>
 		<link rel="stylesheet" type="text/css"
 			href="https://cdn.datatables.net/1.10.21/css/dataTables.min.css"/>
-		<script>
-			(function(jQuery){
-				jQuery('.data-log-today').DataTable({
-					sDom: `<"text-align-right hide-mobile"
-						<"#activity-log-column-settings.accordion dashboard-table-column-toggle"B>>t`,
-					searching: false,
-					ordering: false,
-					// paging: false,
-					lengthMenu : [
-
-						[25, 50, 100,150,200, -1],
-						[25, 50, 100,150,200, "All"]
-					],
-					// columnDefs: [
-					// 	{ targets: [1], visible: false },
-					// ],
-					buttons:{
-						dom: {
-							button: {
-								tag: 'button',
-								className: 'btn btn-default',
-							},
-							container: {
-								className: 'btn-group btn-group-horizontal p hide-mobile btn-block btn-no-shadow',
-							}
-						},
-						buttons: [
-							{ extend: 'columnsToggle' },
-						],
-						},
-						stateSave: true,
-						stateDuration: 60 * 60 * 24 * 30,
-						initComplete: function() {
-							jQuery(this).removeClass('dataTable');
-							console.log(jQuery(this)); 
-						}
-				});
-			}(jQuery));
-		</script>
+		
 
 </body>
 

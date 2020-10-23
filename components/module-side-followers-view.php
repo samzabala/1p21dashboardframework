@@ -28,7 +28,7 @@ $args = app_parse_args($data,$defs);
 									if user follows <?=$args['post']?> => `active`
 									if user doesnt follow <?=$args['post']?> => ``
 					-->
-							<a href="#" data-board-title="Add Time Entry" class="btn btn-primary-outline btn-small">
+							<a href="#" data-board-title="Add Time Entry" class="btn btn-primary-outline btn-small pointer-reference">
 								<span class="hide-toggle">Follow</span>
 								<i class="hide-toggle symbol symbol-plus"></i>
 

@@ -44,7 +44,7 @@
 		editing projects, editing task
 
 	-->
-		<a href="#" data-toggle="asset-close" class="asset-delete btn btn-symbol  btn-small btn-secondary">
+		<a href="#" data-toggle="asset-close" class="asset-button btn btn-symbol  btn-small btn-secondary">
 			<i class="symbol symbol-close"></i>
 		</a>
 		

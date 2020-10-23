@@ -8,21 +8,21 @@ $args = app_parse_args($data,$defs);
 
 
 ?>
-<div class="module no-padding background-transparent position-relative"
+<div class="module no-padding background-transparent position-relative no-shadow"
 	data-grid-area-md="auto / side"
 >
 
-	<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y">
-		<div class="flex-child">
+	<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
+		<div class="flex-child flex-1-1">
 			<!-- @if <?=$args['post']?> is not marked as complete yet -->
 				<a href="#" class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit">
-					<div class="toolbar-tile">
+					<div class="toolbar-tile flex-0-0">
 						<span class="well well-compact btn btn-symbol btn-small btn-neutral background-success-hover">
 							<i class="symbol symbol-check"></i>
 						</span>
 					</div>
 					<div class="toolbar-tile flex-1-1 ">
-						<span class="flex-1-1 btn-no-shadow btn">
+						<span class="flex-1-1 btn-no-shadow btn no-padding-x">
 								Mark <?=$args['post']?> as complete
 						</span>
 					</div>
@@ -30,14 +30,14 @@ $args = app_parse_args($data,$defs);
 			<!-- @else <?=$args['post']?> marked as complete -->
 				
 					<span class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit ">
-						<div class="toolbar-tile flex-1-1">
+						<div class="toolbar-tile flex-0-0">
 							<span class="well well-compact btn btn-symbol btn-small btn-success btn-no-interaction">
 								<i class="symbol symbol-check"></i>
 							</span>
 						</div>
-						<div class="toolbar-tile">
-							<span class="flex-1-1 btn-no-shadow btn">
-								Marked <?=$args['post']?> complete
+						<div class="toolbar-tile flex-1-1 "">
+							<span class="flex-1-1 btn-no-shadow btn no-padding-x">
+								<?=$args['post']?> completed
 							</span>
 						</div>
 					</span>

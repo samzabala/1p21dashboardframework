@@ -13,7 +13,7 @@
 					<span class="REPLACE">Profile Name</span>
 				</span>
 
-				<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+				<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 			</a>
 
 				<!-- placeholder -->
@@ -25,7 +25,7 @@
 							<span class="REPLACE">Profile Name</span>
 						</span>
 
-						<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+						<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 					</a>
 
 				<?php } ?>

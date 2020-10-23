@@ -7,7 +7,7 @@ function app_get_template_part($filename = '', $slug = '',$data = array() ){
 
 		$source = FWAPPS_ROOT_PATH.'/'.$filename;
 		
-		if(isset($slug) && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
+		if($slug!== '' && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
 			$source .= '-'.$slug;
 		}
 		
@@ -120,6 +120,7 @@ function app_init_content(){
 							break;
 
 				//project
+					case 'search':
 					case 'projects':
 						app_get_template_part("app-{$app}/projects");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/projects";
@@ -155,24 +156,38 @@ function app_init_content(){
 						break;
 
 				//task
+
 					case 'task':
 					case 'task-view':
-						app_get_template_part("app-{$app}/task-view");
-						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-view";
+
+						app_get_template_part("app-{$app}/task-onpage");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-onpage";
 						break;
 
-					case 'task-new':
 					case 'task-edit':
+					case 'task-new':
 						app_get_template_part("app-{$app}/task-edit");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-edit";
 						break;
 
+					case 'task-view-legacy':
+						app_get_template_part("app-{$app}/task-view");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/task-view";
+						break;
+
 				// content pages im not sure of but good to have fallbacks for or at least a basic page to render
 					case 'page':
+					case 'note':
 					case 'note-view':
 						app_get_template_part("app-{$app}/page");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/page";
 						break;
+
+				// exists and the setup ran smoothly for this
+				// case '':
+				// 	app_get_template_part("app-{$app}/{$template_part}");
+				// 	$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+				// 	break;
 
 				case 'workflux':
 				case 'clients':

@@ -265,7 +265,7 @@
 								<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 									<tr>
 										<th class="dashboard-table-cell-max text-nowrap">Name</th>
-										<th class="text-nowrap">Status</th>
+										<th class="dashboard-table-cell-max text-nowrap">Status</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap">Assignee</th>
 										<th class="text-nowrap text-align-center dashboard-table-cell-date">Assigned On</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Created By</th>
@@ -277,7 +277,7 @@
 												<span class="REPLACE">Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name </span>
 											</a>
 										</td>
-										<td>
+										<td class="dashboard-table-cell-max">
 											<span class="task-status text-wrap-ellipsis">
 												<span class="REPLACE">Backlog</span>
 											</span>
@@ -306,7 +306,7 @@
 															<span class="REPLACE">Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name </span>
 														</a>
 													</td>
-													<td>
+													<td class="dashboard-table-cell-max">
 														<span class="task-status text-wrap-ellipsis">
 															<span class="REPLACE">Backlog</span>
 														</span>
@@ -335,13 +335,14 @@
 					</div>
 					<div class="accordion" id="project-closed-tasks">
 						<!-- @if there are entries -->
-							<div class="table-wrapper dashboard-table-wrapper-gutterless">
+							
+						<div class="table-wrapper dashboard-table-wrapper-gutterless">
 								<table class=" dashboard-table-cells-match-height text-vertical-align-middle">
 									<tr>
 										<th class="dashboard-table-cell-max text-nowrap">Name</th>
-										<th class="text-nowrap">Status</th>
+										<th class="dashboard-table-cell-max text-nowrap">Status</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap">Assignee</th>
-										<th class="text-nowrap text-align-center dashboard-table-cell-date ">Assigned On</th>
+										<th class="text-nowrap text-align-center dashboard-table-cell-date">Assigned On</th>
 										<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Created By</th>
 									</tr>
 
@@ -351,7 +352,7 @@
 												<span class="REPLACE">Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name </span>
 											</a>
 										</td>
-										<td>
+										<td class="dashboard-table-cell-max">
 											<span class="task-status text-wrap-ellipsis">
 												<span class="REPLACE">Backlog</span>
 											</span>
@@ -380,7 +381,7 @@
 															<span class="REPLACE">Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name Task with a really long name </span>
 														</a>
 													</td>
-													<td>
+													<td class="dashboard-table-cell-max">
 														<span class="task-status text-wrap-ellipsis">
 															<span class="REPLACE">Backlog</span>
 														</span>
