@@ -14,32 +14,32 @@
 			<span class="flex-1-1">
 				<span class="REPLACE">Workflux board list name</span>
 			</span>
-			<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+			<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 		</a>
 			<!-- @PLACEHOLDER DELETE WHEN READY -->
 				<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 					<span class="flex-1-1">
 						<span class="REPLACE">Backlog</span>
 					</span>
-					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+					<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 				</a>
 				<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 					<span class="flex-1-1">
 						<span class="REPLACE">In Progress</span>
 					</span>
-					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+					<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 				</a>
 				<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 					<span class="flex-1-1">
 						<span class="REPLACE">Review</span>
 					</span>
-					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+					<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 				</a>
 				<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 					<span class="flex-1-1">
 						<span class="REPLACE">Done</span>
 					</span>
-					<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+					<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 				</a>
 
 	<!-- else -->

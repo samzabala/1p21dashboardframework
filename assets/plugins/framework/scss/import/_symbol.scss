@@ -102,6 +102,7 @@ $prefix: '.symbol';
 
 	@include create-symbol-styles(#{&}-pencil) {
 		@extend %for-valid-symbol;
+		// font-size: 128px;
 	
 		&:before,&:after {
 			@extend %for-valid-symbol-pseudo;
@@ -109,8 +110,8 @@ $prefix: '.symbol';
 
 		&:before {
 			@extend %for-valid-symbol-pseudo-filled;
-			width: .3625em;
-			height: .3625em;
+			width: .3125em;
+			height: .3125em;
 			top:auto;
 			right:auto;
 			clip-path: polygon(
@@ -139,32 +140,21 @@ $prefix: '.symbol';
 				0 100%,
 				#{em(1.25px/$calculated-symbol-basis)} 100%,
 				#{em(1.25px/$calculated-symbol-basis)} 92%,
-				30% 98%,
+				40% 97%,
 				50% 92%,
-				70% 98%,
+				60% 97%,
 
 				calc(100% - #{em(1.25px/$calculated-symbol-basis)}) 92%,
 				calc(100% - #{em(1.25px/$calculated-symbol-basis)}) 100%,
 				100% 100%,
 				100% 0
 			);
-			// border-right: em(1px/$calculated-symbol-basis) solid;
-			// background-image: 
-			// 	repeating-linear-gradient(
-			// 	180deg,
-			// 	currentColor 0,
-			// 	currentColor .2875em,
-			// 	transparent .2875em,
-			// 	transparent .2875em + em(1.5px/$calculated-symbol-basis),
-			// 	currentColor .2875em + em(1.5px/$calculated-symbol-basis),
-			// 	currentColor 100%
-			// );
 			transform: rotate(45deg);
-			width: 0.5em;
-			top: -.1875em;
-			right: -.1875em;
-			height:1.1875em;
-			border-radius: .1875em .1875em 0 0;
+			width: 0.4375em;
+			// top: .125em;
+			// right: .125em;
+			height: .9875em;
+			border-radius: .125em .125em 0 0;
 			background-repeat: no-repeat;
 			background-position: top center;
 		}

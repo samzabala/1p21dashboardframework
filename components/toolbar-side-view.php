@@ -8,7 +8,7 @@ $args = app_parse_args($data,$defs);
 
 
 ?>
-<div class="module no-padding background-transparent position-relative"
+<div class="module no-padding background-transparent position-relative no-shadow"
 	data-grid-area-md="auto / side"
 >
 

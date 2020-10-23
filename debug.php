@@ -764,7 +764,7 @@
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-default"></span>
 						</div>
-						<a href="#" class="asset-delete btn btn-symbol btn-small btn-secondary">
+						<a href="#" class="asset-button btn btn-symbol btn-small btn-secondary">
 							<i class="symbol symbol-close"></i>
 						</a>
 						<p class="asset-title">bitch-ass.probablyavirus</p>

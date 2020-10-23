@@ -316,19 +316,19 @@ $args = app_parse_args($data,$defs);
 									<div class="list-group list-group-interactive list-group-toggle">
 										<a class="list-group-item active">
 											<span>Low</span>
-											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+											<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 										</a>
 										<a class="list-group-item">
 											<span>Medium</span>
-											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+											<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 										</a>
 										<a class="list-group-item">
 											<span>High</span>
-											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+											<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 										</a>
 										<a class="list-group-item">
 											<span>Urgent</span>
-											<i class="color-primary symbol float-right symbol-check-toggle font-size-normalize"></i>
+											<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 										</a>
 									</div>
 									<button data-toggle="dropdown" class="btn btn-primary-outline btn-block btn-no-radius border-color-transparent">Done</button>
