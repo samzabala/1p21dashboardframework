@@ -1,4 +1,4 @@
-<div class="dashboard-list-group-clip-thumbed list-group list-group-toggle  font-size-large">
+<div class="dashboard-list-group-clip-thumbed list-group list-group-toggle">
 			
 	<a class="team-lead-title-default list-group-item flex-xs flex-wrap align-items-center justify-content-space-between active">
 		<span>

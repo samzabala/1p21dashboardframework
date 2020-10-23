@@ -21,7 +21,7 @@ $args = app_parse_args($data,$defs);
 
 			<label for="filter-<?=$args['post']?>-team-lead-title-to-add" class="input-label">Choose team member title</label>
 
-			<select id="filter-<?=$args['post']?>-team-lead-title-to-add" name="filter-<?=$args['post']?>-team-lead-title-to-add" type="text" class="input input-block input-large input-select" />
+			<select id="filter-<?=$args['post']?>-team-lead-title-to-add" name="filter-<?=$args['post']?>-team-lead-title-to-add" type="text" class="input input-block input-select" />
 			<?php app_get_component('components/options-team-lead-title') ?>
 			</select>
 		</div>
@@ -39,7 +39,7 @@ $args = app_parse_args($data,$defs);
 
 			<label for="filter-<?=$args['post']?>-team-lead-to-add" class="input-label">Choose team member</label>
 
-			<input id="filter-<?=$args['post']?>-team-lead-to-add" name="filter-<?=$args['post']?>-team-lead-to-add" type="text" class="input input-block input-large input-single-line p" placeholder="Search for user" />
+			<input id="filter-<?=$args['post']?>-team-lead-to-add" name="filter-<?=$args['post']?>-team-lead-to-add" type="text" class="input input-block input-single-line p" placeholder="Search for user" />
 			<?php app_get_component('components/list-group-toggle-users') ?>
 		</div>
 

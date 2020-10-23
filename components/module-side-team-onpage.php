@@ -278,12 +278,25 @@ $args = app_parse_args($data,$defs);
 						<!-- @if hasteam leads -->
 							<div class="project-leads">
 
-								<!-- @LOOP component -->
-								<?php app_get_component('components/profile-titled-for-onpage') ?>
-									<!-- @PLACEHOLDER: DELETE WHEN READY -->
-									<?php for($i=1; $i<5; $i++){ ?>
-										<?php app_get_component('components/profile-titled-for-onpage'); ?>
-									<?php } ?>
+								<?php if($args['post'] == 'project'): ?>
+
+									<!-- @LOOP component -->
+									<?php app_get_component('components/profile-titled-for-onpage') ?>
+										<!-- @PLACEHOLDER: DELETE WHEN READY -->
+										<?php for($i=1; $i<5; $i++){ ?>
+											<?php app_get_component('components/profile-titled-for-onpage'); ?>
+										<?php } ?>
+
+								<?php else: ?>
+
+									<!-- @LOOP component -->
+									<?php app_get_component('components/profile-titled') ?>
+										<!-- @PLACEHOLDER: DELETE WHEN READY -->
+										<?php for($i=1; $i<5; $i++){ ?>
+											<?php app_get_component('components/profile-titled'); ?>
+										<?php } ?>
+
+								<?php endif; ?>
 							</div>
 								
 						<!-- @else -->
@@ -292,13 +305,16 @@ $args = app_parse_args($data,$defs);
 									No team members yet.
 								</span>
 							</p>
-					<div>
-						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
-						<?php app_get_component('components/modal-workflow-edit-team-leads',null,false,array(
-							'post'=>$args['post'],
-							'is_in_onpage' => true
-						)); ?>
-					</div>
+
+					<?php if($args['post'] == 'project'): ?>
+						<div>
+							<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Team Member <i class="symbol symbol-plus"></i></a>
+							<?php app_get_component('components/modal-workflow-edit-team-leads',null,false,array(
+								'post'=>$args['post'],
+								'is_in_onpage' => true
+							)); ?>
+						</div>
+					<?php endif; ?>
 
 
 				<hr class="no-margin-bottom">
