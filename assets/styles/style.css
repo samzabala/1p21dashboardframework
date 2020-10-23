@@ -329,7 +329,7 @@ html, body {
   min-width: 320px;
   font-size: 15px;
   line-height: 1.5;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--fw-font-primary);
   font-weight: 400;
   min-height: 100vh; }
 
@@ -722,7 +722,7 @@ blockquote {
     border-left-color: currentColor; }
 
 pre, code, kbd, tt {
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--fw-font-monospace);
   word-wrap: break-word;
   white-space: pre-wrap;
   background: var(--fw-theme-background-contrast); }
