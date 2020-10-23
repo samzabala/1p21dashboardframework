@@ -1,4 +1,4 @@
-<div class="dashboard-list-group-clip-thumbed list-group list-group-toggle list-group-toggle-allow-no-active font-size-large">
+<div class="dashboard-list-group-clip-thumbed list-group list-group-toggle list-group-toggle-allow-no-active">
 	<!-- @if profile matches or has rows -->
 		<!-- 
 		@NOTE

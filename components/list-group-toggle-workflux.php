@@ -1,4 +1,4 @@
-<div class="list-group list-group-toggle list-group-toggle-allow-no-active font-size-large">
+<div class="list-group list-group-toggle list-group-toggle-allow-no-active">
 	<!-- @if workflux has rows or matchs -->
 		<!-- 
 		@NOTE
@@ -19,7 +19,7 @@
 			<!-- placeholder -->
 			<?php for($i=1; $i<10; $i++){ ?>
 				
-				<a href="#" class="list-group-item flex-wrap align-items-center justify-content-space-between">
+				<a href="#" class="list-group-item flex-xs flex-wrap align-items-center justify-content-space-between">
 					<span class="flex-1-1">
 						<?php app_get_component('components/profile-workflux-image-small-span') ?>
 						<span class="REPLACE">Workflux Board Name</span>

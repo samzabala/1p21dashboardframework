@@ -48,7 +48,7 @@
 				<!-- @IF there is a description -->
 					<!-- @PLACEHOLDER delete when ready -->
 					<div class="REPLACE">
-							<div class="overflow-hidden" style="height:1000px;">
+							<div class="overflow-hidden" style="height:2000px;">
 								<?php app_get_component('components/_DEMO-html-markup'); ?>
 							</div>
 
