@@ -13,13 +13,13 @@ $args = app_parse_args($data,$defs);
 <div class="module"
 	data-grid-area-md="auto / side"
 >
-	<div class="module-content">
+	<div class="module-content no-padding-y">
 
 		<!-- TIME TRACKING + ACC HEADER -->
 			<div class="h5 no-margin-y">
 				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
 					<div class="flex-child">
-						<h5 class="no-margin-y">Time Tracking</h5>
+						<h5 class="input-label">Time Tracking</h5>
 					</div>
 					<div class="flex-child">
 					

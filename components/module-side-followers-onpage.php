@@ -15,7 +15,7 @@ $args = app_parse_args($data,$defs);
 		data-grid-area-md="auto / side"
 	<?php endif; ?>
 >
-	<div class="module-content">
+	<div class="module-content no-padding-y">
 
 
 		<!-- FOLLOWERS ?? -->
@@ -87,7 +87,7 @@ $args = app_parse_args($data,$defs);
 
 
 		<?php if( $args['post'] == 'task' ): ?>
-		<hr>
+		<hr class="no-margin-y">
 
 		<!-- Notes -->
 			<div class="h5 no-margin-y">
@@ -169,7 +169,7 @@ $args = app_parse_args($data,$defs);
 		<?php endif; ?>
 
 
-		<hr>
+		<hr class="no-margin-y">
 		<!-- REMINDERS -->
 			<div class="h5 no-margin-y">
 				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">

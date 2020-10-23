@@ -463,27 +463,27 @@ $sidebar-base-slim-mobile: 60px;
 
 	//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
 	&-table-wrapper-gutterless {
-		margin-left: calc(#{$module-gutter-x * -1} + #{$module-border-width});
-		margin-right: calc(#{$module-gutter-x * -1} + #{$module-border-width});
+		margin-left: $module-gutter-x * -1;
+		margin-right: $module-gutter-x * -1;
 		width: auto;
 		@include br(#{$mobile-br-max}-max){
-			margin-left: calc(#{$module-gutter-x-mobile * -1} + #{$module-border-width});
-			margin-right: calc(#{$module-gutter-x-mobile * -1} + #{$module-border-width});
+			margin-left: $module-gutter-x-mobile * -1;
+			margin-right: $module-gutter-x-mobile * -1;
 		}
 
 		.module-content:first-child > &:first-child {
-			margin-top: calc(#{$module-gutter-y * -1} + #{$module-border-width});
+			margin-top: $module-gutter-y * -1;
 			width: auto;
 			@include br(#{$mobile-br-max}-max){
-				margin-top: calc(#{$module-gutter-y-mobile * -1} + #{$module-border-width});
+				margin-top: $module-gutter-y-mobile * -1;
 			}
 		}
 
 		.module-content:last-child > &:last-child {
-			margin-bottom: calc(#{$module-gutter-y * -1} + #{$module-border-width});
+			margin-bottom: $module-gutter-y * -1;
 			width: auto;
 			@include br(#{$mobile-br-max}-max){
-				margin-bottom: calc(#{$module-gutter-y-mobile * -1} + #{$module-border-width});
+				margin-bottom: $module-gutter-y-mobile * -1;
 			}
 		}
 	}
