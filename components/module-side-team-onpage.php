@@ -12,7 +12,7 @@ $args = app_parse_args($data,$defs);
 <div class="module"
 	data-grid-area-md="auto / side"
 >
-	<div class="module-content">
+	<div class="module-content no-padding-y">
 
 		<!-- PROJECT + ACC HEADER-->
 
@@ -317,7 +317,7 @@ $args = app_parse_args($data,$defs);
 					<?php endif; ?>
 
 
-				<hr class="no-margin-bottom">
+				<hr class="no-margin-y">
 
 				<!-- ASSIGNEES + DUE + PRIORITOOT-->
 					<div class="<?=$args['post']; ?>-status position-relative module-content">
@@ -399,7 +399,7 @@ $args = app_parse_args($data,$defs);
 											<input id="<?=$args['post']?>-due-time" name="<?=$args['post']?>-due-time" type="time" size="7" class="input input-single-line " data-toggle="dropdown" placeholder="--:-- --" />
 										</div>
 
-										<hr class="no-margin">
+										<hr class="no-margin-y">
 
 										<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 											<label class="input-label sr-only" for="<?=$args['post']?>-due-date">Date Due</label>

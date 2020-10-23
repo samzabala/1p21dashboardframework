@@ -15,7 +15,7 @@ $args = app_parse_args($data,$defs);
 		data-grid-area-md="auto / side"
 	<?php endif; ?>
 >
-	<div class="module-content">
+	<div class="module-content no-padding-y">
 	
 		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
 		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
@@ -61,7 +61,7 @@ $args = app_parse_args($data,$defs);
 				</div>
 
 				
-			<hr>
+			<hr class="no-margin-y">
 		<?php endif; ?>
 
 
