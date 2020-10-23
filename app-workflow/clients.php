@@ -21,9 +21,9 @@
 	<div
 		id="workflow-dash-clients"
 		class="module">
-		<div class="module-content">
+		<div class="module-content overlow-hidden">
 			<!-- @if there are entries -->
-				<div class="table-wrapper dashboard-table-wrapper-gutterless radius-top">
+				<div class="table-wrapper dashboard-table-wrapper-gutterless">
 					<table class="text-vertical-align-middle dashboard-table-cells-match-height accordion-group">
 						<tr>
 							<th class="dashboard-table-cell-max-larger text-nowrap">Name</th>
