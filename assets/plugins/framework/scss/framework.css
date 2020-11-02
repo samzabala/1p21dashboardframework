@@ -6441,10 +6441,8 @@ table {
     color: inherit;
     opacity: 0.5;
     background: none;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    display: flex; }
+    margin: 0 .25em 0 0;
+    padding: 0; }
   .input-tags-ui:focus::-webkit-input-placeholder, .input-calendar-ui:focus::-webkit-input-placeholder, .input-multiple-line:focus::-webkit-input-placeholder, .input-select:focus::-webkit-input-placeholder, .input-single-line:focus::-webkit-input-placeholder {
     color: transparent !important; }
   .input-tags-ui:focus:-moz-placeholder, .input-calendar-ui:focus:-moz-placeholder, .input-multiple-line:focus:-moz-placeholder, .input-select:focus:-moz-placeholder, .input-single-line:focus:-moz-placeholder {
