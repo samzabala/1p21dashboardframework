@@ -75,7 +75,7 @@ $args = app_parse_args($data,$defs);
 
 
 				<!-- @if user can edit -->
-					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit Followers <i class="symbol symbol-edit"></i></a>
+					<a href="#" data-toggle="modal" class="p btn btn-primary-outline btn-small">Edit Followers <i class="symbol symbol-edit"></i></a>
 					<?php app_get_component('components/modal-workflow-edit-users-multiple','',false,array(
 						'post'=>$args['post'],
 						'is_in_onpage' => true,
