@@ -845,6 +845,16 @@
 				<div class="flex-col-xs-12 flex-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
+							<img src="/placeholder/files/donk.jpg" alt="">
+						</div>
+						<p class="asset-title">bitch-ass-portrait.jpg</p>
+						<p class="asset-caption">69kb</p>
+					</div>
+				</div>
+
+				<div class="flex-col-xs-12 flex-col-md-3">
+					<div class="asset">
+						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-img"></span>
 						</div>
 						<p class="asset-title">bitch-ass-obscure-or-nonweb-image-type-or-vector-shit-that-dont-like-fit-cover.tiff</p>
