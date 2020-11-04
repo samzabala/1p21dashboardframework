@@ -1,10 +1,15 @@
 <div class="asset flex-child p">
 	<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
 		<div class="asset-thumbnail" data-toggle="modal">
+			<!-- @NOTE this is thumbnail dimensions contained size-->
 			<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" />
 		</div>
-		<div class="modal">
-			<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" />
+		<div class="modal" data-modal-disable-overlay="false" data-modal-close="true" data-modal-width="REPLACEWithFullsizeImageWidth">
+			<!-- @NOTE. this is full size -->
+			<div class="text-align-center">
+
+				<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" /> 
+			</div>
 		</div>
 
 		<!-- @ELSE file is not a web image -->
