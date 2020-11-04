@@ -1,12 +1,13 @@
 <div class="asset flex-child p">
-	<div class="asset-thumbnail">
-
-		<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
+	<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
+		<div class="asset-thumbnail" data-toggle="modal">
 			<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" />
+		</div>
+		<div class="modal">
+			<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" />
+		</div>
 
 		<!-- @ELSE file is not a web image -->
-
-
 			<!--
 			@NOTE add to `asset-image` these classes that should output based on file type/ extension
 
@@ -32,10 +33,12 @@
 				`.asset-image-audio`   => any audio file types
 
 			-->
-			<span class="asset-image asset-image-default"></span>
-
-
-	</div>
+				<!-- markup is commented out for less scary looking front end -->
+				<!--
+					<a href="#REPLACEWithFileNameURI" class="asset-thumbnail">
+						<span class="asset-image asset-image-default"></span>
+					</a>
+				-->
 
 	<!--
 	 @IF user is on edit mode and files can be deleted
