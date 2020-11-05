@@ -300,6 +300,7 @@ function app_init_content(){
 				case 'login':
 				case 'unique-links':
 				case 'activity-log':
+				case 'sponsorships':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					break;

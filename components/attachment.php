@@ -38,9 +38,9 @@
 
 			-->
 				<!-- markup is commented out for less messy looking front end -->
-					<!-- <a href="#REPLACEWithFileNameURI" class="asset-thumbnail" target="_blank">
+					<a href="#REPLACEWithFileNameURI" class="asset-thumbnail" target="_blank">
 						<span class="asset-image asset-image-default"></span>
-					</a> -->
+					</a>
 
 	<!--
 	 @IF user is on edit mode and files can be deleted

@@ -811,7 +811,7 @@ $prefix: '.asset';
 		box-shadow: $asset-box-shadow;
 		margin-bottom: $asset-thumbnail-margin-bottom;
 		background: $asset-thumbnail-background;
-		@include aspect-ratio($asset-thumbnail-width,$asset-thumbnail-height,false,false,true,false,true,false);
+		@include aspect-ratio($asset-thumbnail-width,$asset-thumbnail-height,false,false,true,false,false,false);
 		border-radius: $asset-border-radius;
 
 		> * {

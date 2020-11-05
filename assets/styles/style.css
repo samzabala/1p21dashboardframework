@@ -4557,7 +4557,6 @@ table {
     margin-bottom: 10px;
     background: var(--fw-theme-background-contrast);
     overflow: hidden;
-    display: block;
     border-radius: 5px; }
     .asset-thumbnail:before {
       content: "";
