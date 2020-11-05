@@ -1,12 +1,17 @@
 <div class="asset flex-child p">
-	<div class="asset-thumbnail">
-
-		<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
+	<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
+		<div class="asset-thumbnail" data-toggle="modal">
+			<!-- @NOTE this is thumbnail dimensions contained size-->
 			<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" />
+		</div>
+		<div class="modal" data-modal-disable-overlay="false" data-modal-close="true" data-modal-width="REPLACEWithFullsizeImageWidth">
+			<!-- @NOTE. this is full size -->
+			<div class="text-align-center">
+				<img data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/files/photo.jpg" alt="" /> 
+			</div>
+		</div>
 
 		<!-- @ELSE file is not a web image -->
-
-
 			<!--
 			@NOTE add to `asset-image` these classes that should output based on file type/ extension
 
@@ -32,10 +37,10 @@
 				`.asset-image-audio`   => any audio file types
 
 			-->
-			<span class="asset-image asset-image-default"></span>
-
-
-	</div>
+				<!-- markup is commented out for less messy looking front end -->
+					<!-- <a href="#REPLACEWithFileNameURI" class="asset-thumbnail" target="_blank">
+						<span class="asset-image asset-image-default"></span>
+					</a> -->
 
 	<!--
 	 @IF user is on edit mode and files can be deleted
@@ -44,9 +49,21 @@
 		editing projects, editing task
 
 	-->
-		<a href="#" data-toggle="asset-close" class="asset-button btn btn-symbol  btn-small btn-secondary">
-			<i class="symbol symbol-close"></i>
-		</a>
+		<div class="asset-functions">
+			<!-- DELETE BUTTON -->
+				<div class="asset-function">
+					<a href="#" class="asset-function btn btn-symbol  btn-small btn-secondary">
+						<i class="symbol symbol-close"></i>
+					</a>
+				</div>
+			<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
+				<!-- DOWNLOAD BUTTON -->
+					<div class="asset-function">
+						<a href="#" class="asset-function btn btn-symbol  btn-small btn-primary">
+							<i class="symbol symbol-download"></i>
+						</a>
+					</div>
+		</div>
 		
 
 	<p class="asset-title">

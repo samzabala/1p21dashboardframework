@@ -764,9 +764,21 @@
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-default"></span>
 						</div>
-						<a href="#" class="asset-button btn btn-symbol btn-small btn-secondary">
-							<i class="symbol symbol-close"></i>
-						</a>
+						<div class="asset-functions">
+							<!-- DELETE BUTTON -->
+								<div class="asset-function">
+									<a href="#" class="asset-function btn btn-symbol  btn-small btn-secondary">
+										<i class="symbol symbol-close"></i>
+									</a>
+								</div>
+							<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
+								<!-- DOWNLOAD BUTTON -->
+									<div class="asset-function">
+										<a href="#" class="asset-function btn btn-symbol  btn-small btn-primary">
+											<i class="symbol symbol-download"></i>
+										</a>
+									</div>
+						</div>
 						<p class="asset-title">bitch-ass.probablyavirus</p>
 						<p class="asset-caption">69kb</p>
 					</div>
