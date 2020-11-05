@@ -19,7 +19,7 @@
 					<div class="flex-child flex-1-1">
 						<?php app_get_component('components/filter-sponsorships'); ?>
 					</div>
-					<div class="flex-child flex-0-0">
+					<div class="flex-child">
 						<a href="#" class="btn btn-primary btn-symbol">
 							<i class="symbol symbol-plus"></i>
 						</a>
