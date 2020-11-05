@@ -5,9 +5,17 @@
 
 		<button class="btn-group  btn-group-horizontal btn-group-unite" data-toggle="dropdown">
 			<span class="btn btn-default">
-				<span class="current">
+				<span class="date-a">
 				<!-- 
-					@NOTE this will change to active span
+					@NOTE this will change dynamicalyy
+				-->
+					<span class="REPLACE">Jan 2018</span>
+				</span>
+				-
+
+				<span class="date-b">
+				<!-- 
+					@NOTE this will change dynamicalyy
 				-->
 					<span class="REPLACE">Jan 2018</span>
 				</span>

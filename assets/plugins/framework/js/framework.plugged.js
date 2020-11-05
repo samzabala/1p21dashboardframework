@@ -2441,6 +2441,7 @@ this.jQuery && this.jQuery.noConflict();
 				frameWork.resizeModal(subcom,args.width,modal,args);
 			}
 
+			console.log('patalon');
 			if (args.callback) {
 				__f.runFn(args.callback);
 			}
