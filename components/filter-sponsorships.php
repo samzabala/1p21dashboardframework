@@ -1,6 +1,6 @@
 <div class="filter-sponsorships-meta display-block module-function text-align-left">
 	<form action="/sponsorships/improved" method="get" class="flex-1-1">
-		<div class="filter-sponsorships input-group input-group-horizontal input-group-responsive input-block">
+		<div class="filter-sponsorships input-group input-group-horizontal input-group-responsive">
 			<span class="input-label">Filters</span>
 			<!-- @note hidden start fields here -->
 			<input type="text" placeholder="Website" name="filter-website" class="input input-single-line" />
