@@ -16,10 +16,10 @@
 			</div>
 			<div class="module-content">
 				<div class="flex-grid align-items-center justify-content-space-between flex-grid-fixed">
-					<div class="flex-col-xs-12 flex-col-md-10">
+					<div class="flex-child flex-1-1">
 						<?php app_get_component('components/filter-sponsorships'); ?>
 					</div>
-					<div class="flex-col-xs-12 flex-col-md-2 text-align-right">
+					<div class="flex-child flex-0-0">
 						<a href="#" class="btn btn-primary btn-symbol">
 							<i class="symbol symbol-plus"></i>
 						</a>
