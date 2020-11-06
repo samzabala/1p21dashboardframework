@@ -15,6 +15,34 @@ window.jQuery && jQuery.noConflict();
 
 The script relies on set css var properties by the framework properties so that it remains consistent with the styles of that jugagu, if you fuck with those css variables, it will have its own default values
 
+# Components that have Javascript up on its shits
+
+| component | events listener themselves/within dom/ |  events listener sub/add on helpers  | html markup/attribute manipulation for styling (toggling classes, etc.) | html markup/attribute manipulation for creating complete/part of UI design purely with js | 
+| -- | -- | -- | -- | -- |
+| `.accordion` |  | x | x |  |
+| `.alert` |  | x | x |  |
+| `.switch` |  | x | x |  |
+| `.btn-group-toggle` / `.list-group-toggle` | x | x | x |  |
+| `.dropdown`+ |  | x | x |  |
+| `.input-tags`+ | x |  |  | x |
+| `.input-date`+ | x |  | x | x |
+| `.modal`/ `.board`+ | x | x | x | x |
+| `.tab` | x |  | x |  |
+| `[data-toggle*=tooltip]` | x |  |  | x |
+| `.zone` | x |  | x | x |
+
+
+`+` element containing mentioned component attribute is simply hidden
+
+### All Toggl bois
+* `[data-toggle=tooltip-hover]`, `[data-toggle=tooltip-click]`
+* `[data-toggle=dropdown]`
+* `[data-toggle=accordion]`
+* `[data-toggle=alert-close]`, `[data-toggle=alert-close-all]`
+* `[data-toggle=modal]`, `[data-toggle=modal-open]`, `[data-toggle=modal-close]`
+    * `[data-toggle=board]`, `[data-toggle=board-open]`, `[data-toggle=board-close]`, `[data-toggle=board-resize]`
+* `[data-toggle=switch-on]`, `[data-toggle=switch-off]`
+
 That's all I can think of sharing for now because my brain is as fried as a chickenjoy right now
 
 [Back to TOC](../../../readme.md)

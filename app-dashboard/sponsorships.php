@@ -20,9 +20,10 @@
 						<?php app_get_component('components/filter-sponsorships'); ?>
 					</div>
 					<div class="flex-child">
-						<a href="#" class="btn btn-primary btn-symbol">
+						<a href="#sponsorship-form"  data-modal-title="Add New Sponsorship Link" data-toggle="modal" class="btn btn-primary btn-symbol">
 							<i class="symbol symbol-plus"></i>
 						</a>
+						<?php app_get_component('components/modal-sponsorship-form'); ?>
 					</div>
 				</div>
 			</div>
@@ -43,6 +44,7 @@
 							<th class="text-nowrap">Created By</th>
 							<th class="text-nowrap">Geo Area</th>
 							<th class="dashboard-table-cell-date text-align-center text-nowrap">Date Added</th>
+							<th class="dashboard-table-cell-action text-nowrap">&nbsp;<span class="sr-only">Actions</span></th>
 						</tr>
 						
 						<!-- @LOOP TR-->
@@ -113,6 +115,10 @@
 									</span>
 								</td>
 
+								<td class="dashboard-table-cell-action">
+									<?php app_get_component('components/tooltip-action-sponsorhip'); ?>
+								</td>
+
 							</tr>
 
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
@@ -179,10 +185,14 @@
 												</span>
 											</td>
 
-											<td class="">
+											<td class=" text-align-center ">
 												<span class="row-date-added">
 													<span class="REPLACE">4/20/69</span>
 												</span>
+											</td>
+
+											<td class="dashboard-table-cell-action">
+												<?php app_get_component('components/tooltip-action-sponsorhip'); ?>
 											</td>
 
 										</tr>
