@@ -1953,7 +1953,7 @@ this.jQuery && this.jQuery.noConflict();
 	};
 
 	frameWork.settings.lazyLoad &&
-		__f.fns_on_rightAway.push(frameWork.loadImages);
+		__f.fns_on_ready.push(frameWork.loadImages);
 
 	frameWork.createToolTip = (triggerer) => {
 
@@ -2844,6 +2844,7 @@ this.jQuery && this.jQuery.noConflict();
 	});
 
 	$(document).ready(() => {
+		console.log('running ready fns');
 		__f.fns_on_ready.forEach((fn) => {
 			fn();
 		});

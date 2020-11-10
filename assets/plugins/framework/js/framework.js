@@ -2102,7 +2102,7 @@
 		document.documentElement.classList.add('lazy-initialized');
 	};
 
-	frameWork.settings.lazyLoad && __f.fns_on_rightAway.push(frameWork.loadImages);
+	frameWork.settings.lazyLoad && __f.fns_on_ready.push(frameWork.loadImages);
 
 	frameWork.createToolTip = (triggerer) => {
 
