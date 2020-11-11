@@ -2983,14 +2983,14 @@
 		}
 	};
 
-	frameWork.readyGrid = () => {
+	frameWork.readyGrids = () => {
 		const grids = document.querySelectorAll('.module-grid:not(.module-grid-custom)');
 		grids.forEach((grid) => {
 			frameWork.initGrid(grid);
 		});
 	};
-	__f.fns_on_rightAway.push(frameWork.readyGrid);
-	__f.fns_on_resize.push(frameWork.readyGrid);
+	__f.fns_on_rightAway.push(frameWork.readyGrids);
+	__f.fns_on_resize.push(frameWork.readyGrids);
 
 	frameWork.readyCalendar = () => {
 		const calendars = document.querySelectorAll('.input-calendar');

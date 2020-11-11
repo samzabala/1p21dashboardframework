@@ -17,6 +17,9 @@
 		<!-- DEPENDENCIES OF DEPENDENCIES -->
 			<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/jquery.js'; ?>"></script>
 			<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/jquery.js'); ?>
+
+		<!--turbu  -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script>
 		
 		<!-- DEPENDENCIES -->
 			<?php 
@@ -35,9 +38,6 @@
 			
 			?>
 
-		<!--turbu  -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script>
-
 
 
 		<!-- app specific -->
@@ -47,13 +47,10 @@
 
 
 	<!-- @PLACEHOLDER for debugging framework. delete when ready. or repurpose or... idk -->
-		<script  data-turbolinks-track="reload">
-			jQuery(document).on('turbolinks:load', function() {
-				jQuery.ready();
-				jQuery(window).trigger('load');
-				jQuery(window).trigger('resize');
-				// ...
-			});
+		<script>
+			document.addEventListener("turbolinks:load", function() {
+				fw.reInit();
+			})
 			// duh
 			function setCookie(cname, cvalue, exdays) {
 				var d = new Date();

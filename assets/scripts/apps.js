@@ -1,6 +1,6 @@
 
-
 window.jQuery && jQuery.noConflict();
+Turbolinks.start();
 (function($,fw,window){
 
 	//toggle our boi
@@ -26,4 +26,4 @@ window.jQuery && jQuery.noConflict();
 
 
 
-}(jQuery,frameWork,window));
+}(jQuery,fw,window));
