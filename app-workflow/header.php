@@ -48,9 +48,6 @@
 
 	<!-- @PLACEHOLDER for debugging framework. delete when ready. or repurpose or... idk -->
 		<script>
-			document.addEventListener("turbolinks:load", function() {
-				fw.reInit();
-			})
 			// duh
 			function setCookie(cname, cvalue, exdays) {
 				var d = new Date();

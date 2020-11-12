@@ -797,7 +797,7 @@ big {
 *[data-srcset] {
   opacity: 1;
   transition: 0.25s opacity ease-in-out; }
-  html:not(.lazy-initialized) .lazy, html:not(.lazy-initialized) *[data-src], html:not(.lazy-initialized) *[data-srcset] {
+  html:not(.lazy-completed) .lazy, html:not(.lazy-completed) *[data-src], html:not(.lazy-completed) *[data-srcset] {
     opacity: 0; }
 
 /* SVGS */

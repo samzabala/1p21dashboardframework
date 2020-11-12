@@ -4,7 +4,7 @@ this.jQuery && this.jQuery.noConflict();
 (function (global,$,fn) {
 	'use strict';
 	fn(global,$);
-})(
+}(
 	window !== "undefined" ? window : this,
 	jQuery,
 	function (window, $){
@@ -126,7 +126,7 @@ this.jQuery && this.jQuery.noConflict();
 					arr.push(undefined);
 				}
 			}
-			
+
 			arr.splice(ni, 0, arr.splice(oi, 1)[0]);
 
 			return arr;
@@ -1944,6 +1944,8 @@ this.jQuery && this.jQuery.noConflict();
 		}
 
 		frameWork.loadImages = (images) => {
+			$('html').removeClass('lazy-completed');
+			$('html').addClass('lazy-in-progress');
 			//css images
 			// images
 			images = images || $('*[data-src]');
@@ -1953,7 +1955,8 @@ this.jQuery && this.jQuery.noConflict();
 			});
 
 			//css images
-			$('html').addClass('lazy-initialized');
+			$('html').removeClass('lazy-in-progress');
+			$('html').addClass('lazy-completed');
 		};
 
 		frameWork.settings.lazyLoad &&
@@ -2384,7 +2387,6 @@ this.jQuery && this.jQuery.noConflict();
 										</a>`;
 									}
 								html += `</div>`;
-									
 
 								html += `<div class="${subcom}-popup">`;
 
@@ -2836,83 +2838,8 @@ this.jQuery && this.jQuery.noConflict();
 		__f.fns_on_load.push(frameWork.readyTags);
 		__f.fns_on_resize.push(frameWork.readyTags);
 
-		frameWork.runInit = () => {
-			// console.warn(__f.fns_on_rightAway,'Running initiation sequence ooooOOOOoo');
-			// //will run. right away. boi
-			__f.fns_on_rightAway.forEach((fn) => {
-				fn();
-			});
-
-			frameWork.settings.initializeModal
-				&& frameWork.createModal();
-			frameWork.settings.initializeBoard
-				&& frameWork.createBoard();
-			frameWork.settings.initializeAccordion
-				&& frameWork.toggleAccordion();
-		};
-
-		frameWork.runReady = () => {
-			// console.warn(__f.fns_on_ready,'Running ready sequence ooooOOOOoo');
-			__f.fns_on_ready.forEach((fn) => {
-				fn();
-			});
-		};
-
-		frameWork.runLoad = () => {
-			// console.warn(__f.fns_on_load,'Running load sequence ooooOOOOoo');
-			__f.fns_on_load.forEach((fn) => {
-				fn();
-			});
-
-			$('body')
-				.removeClass('body-loading')
-				.addClass('body-loaded');
-		};
-
-		frameWork.runResize = () => {
-			clearTimeout(resizeTimerInternal);
-
-			resizeTimerInternal = setTimeout(() => {
-				__f.fns_on_resize.forEach((fn) => {
-					fn();
-				});
-			}, 100);
-		};
-
-		frameWork.runScroll = () => {
-			clearTimeout(scrollTimerInternal);
-
-			scrollTimerInternal = setTimeout(() => {
-				__f.fns_on_scroll.forEach((fn) => {
-					fn();
-				});
-			}, 100);
-		};
-
-		frameWork.reInit = () => {
-			$('body')
-				.removeClass('body-loaded')
-				.addClass('body-loading')
-				;
-			frameWork.runInit();
-			frameWork.runReady();
-			frameWork.runLoad();
-			// frameWork.initcomponentsEvents();
-		};
-
-		frameWork.runInit();
-
-		$(document).ready(() => {
-			frameWork.runReady();
-			// frameWork.initcomponentsEvents();
-		});
-
-		$(window).on('load',frameWork.runLoad);
-
-
-
-
 		frameWork.initcomponentsEvents = () => {
+
 			//hash events
 				$(window).on('hashchange', () => {
 					frameWork.settings.initializeModal && frameWork.createModal();
@@ -2921,12 +2848,10 @@ this.jQuery && this.jQuery.noConflict();
 				});
 
 			//windu events
-				let resizeTimerInternal;
 				$(window).on('resize', frameWork.runResize);
 
-				let scrollTimerInternal;
-				$(window).on('scroll','*',frameWork.runScroll);
-				
+				$(window).on('scroll','*', frameWork.runScroll);
+
 			//key events
 				$('html').on(
 					'keydown',
@@ -2951,8 +2876,6 @@ this.jQuery && this.jQuery.noConflict();
 						}
 					}
 				);
-
-			//component events
 
 				$('html').on(
 					'keyup',
@@ -2989,6 +2912,7 @@ this.jQuery && this.jQuery.noConflict();
 					}
 				);
 
+			//component events
 				$('html').on(
 					'click',
 					'a.input-calendar-ui-date',
@@ -2996,7 +2920,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3022,7 +2946,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3048,7 +2972,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 
 						if (frameWork.isDisabled(triggerer)) {
 							e.preventDefault();
@@ -3104,7 +3028,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3128,7 +3052,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3183,7 +3107,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 
 						if (frameWork.isDisabled(triggerer)) {
 							e.preventDefault();
@@ -3207,7 +3131,7 @@ this.jQuery && this.jQuery.noConflict();
 							switch (e.keyCode) {
 								//enter
 								case 13:
-									e.stopImmediatePropagation();
+									// e.stopPropagation(); //@ADDEDFORTURBO
 									e.preventDefault();
 									break;
 
@@ -3215,7 +3139,7 @@ this.jQuery && this.jQuery.noConflict();
 								case 188:
 									if (!__f.modifierIsActive()) {
 										allowFilter = true;
-										e.stopImmediatePropagation();
+										// e.stopPropagation(); //@ADDEDFORTURBO
 										e.preventDefault();
 										currValue.splice(
 											parseInt(inputUiIndex),
@@ -3231,7 +3155,7 @@ this.jQuery && this.jQuery.noConflict();
 								//left
 								case 37:
 									if (!triggerer.text()) {
-										e.stopImmediatePropagation();
+										// e.stopPropagation(); //@ADDEDFORTURBO
 										e.preventDefault();
 										__f.arrMoveItem(
 											currValue,
@@ -3247,7 +3171,7 @@ this.jQuery && this.jQuery.noConflict();
 								//right
 								case 39:
 									if (!triggerer.text()) {
-										e.stopImmediatePropagation();
+										// e.stopPropagation(); //@ADDEDFORTURBO
 										e.preventDefault();
 										__f.arrMoveItem(
 											currValue,
@@ -3262,7 +3186,7 @@ this.jQuery && this.jQuery.noConflict();
 								//backspace
 								case 8:
 									if (!triggerer.text()) {
-										e.stopImmediatePropagation();
+										// e.stopPropagation(); //@ADDEDFORTURBO
 										e.preventDefault();
 										allowFilter = true;
 										currValue.splice(
@@ -3275,7 +3199,7 @@ this.jQuery && this.jQuery.noConflict();
 								//delete
 								case 46:
 									if (!triggerer.text()) {
-										e.stopImmediatePropagation();
+										// e.stopPropagation(); //@ADDEDFORTURBO
 										e.preventDefault();
 										allowFilter = true;
 										currValue.splice(
@@ -3305,7 +3229,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						const inputTags = triggerer
@@ -3336,7 +3260,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3374,7 +3298,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3392,7 +3316,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3411,7 +3335,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3486,7 +3410,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const uiTrigger = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(uiTrigger)) {
@@ -3536,7 +3460,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 
 						if (frameWork.isDisabled(triggerer)) {
 							e.preventDefault();
@@ -3560,7 +3484,7 @@ this.jQuery && this.jQuery.noConflict();
 					(e) => {
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3576,7 +3500,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3598,7 +3522,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3614,7 +3538,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 
 						if (frameWork.isDisabled(triggerer)) {
 							e.preventDefault();
@@ -3640,7 +3564,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3656,7 +3580,7 @@ this.jQuery && this.jQuery.noConflict();
 
 					const triggerer = $(e.target);
 
-					e.stopImmediatePropagation();
+					// e.stopPropagation(); //@ADDEDFORTURBO
 					e.preventDefault();
 
 					if (!frameWork.isDisabled(triggerer)) {
@@ -3671,7 +3595,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						const triggerer = $(e.target);
 
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 
 						if (!frameWork.isDisabled(triggerer)) {
@@ -3698,7 +3622,7 @@ this.jQuery && this.jQuery.noConflict();
 					'click',
 					'*[data-toggle="board-resize"]',
 					(e) => {
-						e.stopImmediatePropagation();
+						// e.stopPropagation(); //@ADDEDFORTURBO
 						e.preventDefault();
 					}
 				);
@@ -3706,7 +3630,7 @@ this.jQuery && this.jQuery.noConflict();
 							
 					const startBoardResize = (e)=>{
 
-						$('html').addClass('body-on-drag');
+						$('body').addClass('body-on-drag');
 
 						const widthBasis = 
 							e.clientX
@@ -3728,7 +3652,7 @@ this.jQuery && this.jQuery.noConflict();
 
 					const removeBoardResize = (e)=>{
 
-						$('html').removeClass('body-on-drag');
+						$('body').removeClass('body-on-drag');
 						$(window).off(
 							'mousemove',
 							startBoardResize
@@ -3776,7 +3700,7 @@ this.jQuery && this.jQuery.noConflict();
 						'mousedown',
 						'*[data-toggle="board-resize"]',
 						(e) => {
-							e.stopImmediatePropagation();
+							// e.stopPropagation(); //@ADDEDFORTURBO
 							e.preventDefault();
 							initBoardResize(e);
 						}
@@ -3798,7 +3722,7 @@ this.jQuery && this.jQuery.noConflict();
 						if (!frameWork.isDisabled(triggerer)) {
 							frameWork.initSwitch(triggerer,'off')
 						}else{
-							e.stopImmediatePropagation();
+							// e.stopPropagation(); //@ADDEDFORTURBO
 							e.preventDefault();
 						}
 					}
@@ -3813,7 +3737,7 @@ this.jQuery && this.jQuery.noConflict();
 						if (!frameWork.isDisabled(triggerer)) {
 							frameWork.initSwitch(triggerer,'on')
 						}else{
-							e.stopImmediatePropagation();
+							// e.stopPropagation(); //@ADDEDFORTURBO
 							e.preventDefault();
 						}
 					}
@@ -3850,7 +3774,7 @@ this.jQuery && this.jQuery.noConflict();
 
 						if (frameWork.isDisabled(triggerer)) {
 
-							e.stopImmediatePropagation();
+							// e.stopPropagation(); //@ADDEDFORTURBO
 							e.preventDefault();
 						} else {
 							if(
@@ -3887,10 +3811,82 @@ this.jQuery && this.jQuery.noConflict();
 				);
 		}
 
+		frameWork.runInit = () => {
+			// console.warn(__f.fns_on_rightAway,'Running initiation sequence ooooOOOOoo');
+			// //will run. right away. boi
+			__f.fns_on_rightAway.forEach((fn) => {
+				fn();
+			});
+		};
+
+		frameWork.runReady = () => {
+			// console.warn(__f.fns_on_ready,'Running ready sequence ooooOOOOoo');
+			__f.fns_on_ready.forEach((fn) => {
+				fn();
+			});
+		};
+
+		frameWork.runLoad = () => {
+			// console.warn(__f.fns_on_load,'Running load sequence ooooOOOOoo');
+			__f.fns_on_load.forEach((fn) => {
+				fn();
+			});
+
+			frameWork.settings.initializeModal
+				&& frameWork.createModal();
+			frameWork.settings.initializeBoard
+				&& frameWork.createBoard();
+			frameWork.settings.initializeAccordion
+				&& frameWork.toggleAccordion();
+
+			$('body')
+				.removeClass('body-loading')
+				.addClass('body-loaded');
+		};
+
+		let resizeTimerInternal;
+		frameWork.runResize = () => {
+			clearTimeout(resizeTimerInternal);
+
+			resizeTimerInternal = setTimeout(() => {
+				__f.fns_on_resize.forEach((fn) => {
+					fn();
+				});
+			}, 100);
+		};
+
+		let scrollTimerInternal;
+		frameWork.runScroll = () => {
+			clearTimeout(scrollTimerInternal);
+
+			scrollTimerInternal = setTimeout(() => {
+				__f.fns_on_scroll.forEach((fn) => {
+					fn();
+				});
+			}, 100);
+		};
+
+		frameWork.reInit = () => {
+			$('body')
+				.removeClass('body-loaded')
+				.addClass('body-loading')
+				;
+			frameWork.runInit();
+			frameWork.runReady();
+			frameWork.runLoad();
+		};
+
+		frameWork.runInit();
+
+		$(document).ready(frameWork.runReady);
+
+		$(window).on('load',frameWork.runLoad);
+
 		frameWork.initcomponentsEvents();
 
-		window.frameWork = window.fw = frameWork;
-		window.frameWork.DEBUG = __f;
+		//put boi on global
+			window.frameWork = window.fw = frameWork;
+			window.frameWork.DEBUG = __f;
 	}
-);
+));
 
