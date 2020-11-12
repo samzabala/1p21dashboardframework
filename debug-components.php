@@ -12,7 +12,9 @@
 					<div class="position-relative">
 
 						<h3><code><?=$filename ?></code></h3>
-						<?php app_get_component('components/'. str_replace('.php','',$filename)); ?>
+						<div class="border-style-dotted border-color-neutral background-theme-contrast-hover border-width-thin position-relative component-container">
+							<?php app_get_component('components/'. str_replace('.php','',$filename)); ?>
+						</div>
 					</div>
 				<?php
 				}

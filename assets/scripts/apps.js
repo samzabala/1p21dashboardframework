@@ -1,7 +1,10 @@
 
-
 window.jQuery && jQuery.noConflict();
+Turbolinks.start();
 (function($,fw,window){
+	document.addEventListener("turbolinks:load", function() {
+		fw.reInit();
+	})
 
 	//toggle our boi
 	$('body').on('click','.dashboard-sidenav-toggle',function(e){	
@@ -26,4 +29,4 @@ window.jQuery && jQuery.noConflict();
 
 
 
-}(jQuery,frameWork,window));
+}(jQuery,fw,window));
