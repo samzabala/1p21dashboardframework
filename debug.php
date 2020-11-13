@@ -1690,31 +1690,20 @@
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-caution but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
+			
 			<div class="alert alert-error p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				.alert.alert-error but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
-
-			<br>
-			<br>
-			<br>
-			<br>
 
 			<div class="alert alert-error p">
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				I have a close button suck my dick
 			</div>
 
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-
 			<div class="alert alert-default p" id="life-alert">
 				<a href="#life-alert" class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></a>
 				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
-
 
 				
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
@@ -1724,6 +1713,120 @@
 				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
+
+				
+				<h2>TABLES BIIIIIITXCCCCHHHTHTHCVHCHTYHVHTH^</h2>
+
+				<table class="table">
+					<thead>
+					<tr>
+							
+							<th>Column heading</th>
+							<th>Column heading</th>
+							<th class="text-align-right">Column heading</th>
+							<th class="text-align-center">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						
+						
+						
+						<tr class="table-row-primary">
+							
+							<td>Primary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-secondary">
+							
+							<td>secondary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-accent">
+							
+							<td>accent</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+						<tr class="table-row-success">
+							
+							<td>Success</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">666</td>
+						</tr>
+						<tr class="table-row-error">
+							
+							<td>Error</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-caution">
+							
+							<td>Caution</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-neutral">
+							
+							<td>neutral</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-1">
+							
+							<td>Intensity 1</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-2">
+							
+							<td>Intensity 2</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-3">
+							
+							<td>Intensity 3</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-4">
+							
+							<td>Intensity 4</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-5">
+							
+							<td>Intensity 5</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-disabled">
+							
+							<td>Disabled</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+					</tbody>
+				</table>
 
 				
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
@@ -1827,7 +1930,6 @@
 
 			<div class="modal" id="modal-demo" data-modal-title="PUNYETA">
 				<h1>Look at this bitchboy going modal and shit</h1>
-
 				
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
@@ -4938,106 +5040,106 @@
 							<th class="text-align-center">Total</th>
 						</tr>
 					</thead>
-				<tbody>
-					
-					
-					
-					
-					<tr class="table-row-primary">
+					<tbody>
 						
-						<td>Primary</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-secondary">
 						
-						<td>secondary</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-accent">
 						
-						<td>accent</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					
-					<tr class="table-row-success">
 						
-						<td>Success</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">666</td>
-					</tr>
-					<tr class="table-row-error">
+						<tr class="table-row-primary">
+							
+							<td>Primary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-secondary">
+							
+							<td>secondary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-accent">
+							
+							<td>accent</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
 						
-						<td>Error</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-caution">
+						<tr class="table-row-success">
+							
+							<td>Success</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">666</td>
+						</tr>
+						<tr class="table-row-error">
+							
+							<td>Error</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-caution">
+							
+							<td>Caution</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-neutral">
+							
+							<td>neutral</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-1">
+							
+							<td>Intensity 1</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-2">
+							
+							<td>Intensity 2</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-3">
+							
+							<td>Intensity 3</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-4">
+							
+							<td>Intensity 4</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-5">
+							
+							<td>Intensity 5</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-disabled">
+							
+							<td>Disabled</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
 						
-						<td>Caution</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-neutral">
-						
-						<td>neutral</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-intensity-1">
-						
-						<td>Intensity 1</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-intensity-2">
-						
-						<td>Intensity 2</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-intensity-3">
-						
-						<td>Intensity 3</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-intensity-4">
-						
-						<td>Intensity 4</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-intensity-5">
-						
-						<td>Intensity 5</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					<tr class="table-row-disabled">
-						
-						<td>Disabled</td>
-						<td>Column content</td>
-						<td class="text-align-right">Column content</td>
-						<td class="text-align-center">0</td>
-					</tr>
-					
-				</tbody>
-			</table>
+					</tbody>
+				</table>
 
 
 			<h2>Table but just generated with dem classes</h2>

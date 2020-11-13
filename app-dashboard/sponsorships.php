@@ -15,7 +15,27 @@
 				</div>
 			</div>
 			<div class="module-content">
-				<div class="flex-grid align-items-center justify-content-space-between flex-grid-fixed">
+				<div class="flex-grid flex-grid-compact align-items-center justify-content-space-between flex-grid-fixed">
+					<div class="flex-col-12">
+						<div class="input-wrapper input-wrapper-vertical">
+							<label class="input-toggle">
+								<!-- <%= f.check_box :all_links, checked: params[:all_links].to_i == 1, class: 'input' %> -->
+								<input type="checkbox" name="notifications_enabled" class="input" />
+								<span class="input-label input-toggle-label">
+									Show all links
+								</span>
+							</label>
+						</div>
+						<div class="input-wrapper input-wrapper-vertical">
+							<label class="input-toggle">
+								<!-- <%= f.check_box :duplicate_vendors, checked: params[:duplicate_vendors].to_i == 1, class: 'input' %> -->
+								<input type="checkbox" name="notifications_enabled" class="input" />
+								<span class="input-label input-toggle-label">
+									Show duplicate link vendors
+								</span>
+							</label>
+						</div>
+					</div>
 					<div class="flex-child flex-1-1">
 						<?php app_get_component('components/filter-sponsorships'); ?>
 					</div>

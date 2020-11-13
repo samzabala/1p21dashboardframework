@@ -97,15 +97,16 @@ $prefix: '.table';
 				background:$table-row-background-inverse;
 			}
 
+			.alert &,
+			.theme-inverse .alert & {
+				background:transparent;
+				border-color: currentColor;
+			}
+
 			&:last-child {
 				border-bottom-width: $table-cell-border-width;
 			}
 			
-
-			.alert &,
-			.theme-inverse .alert & {
-				border-color: currentColor;
-			}
 		}
 		@at-root th,td,
 		#{$prefix}-cell,
@@ -260,6 +261,11 @@ $prefix: '.table';
 					.theme-inverse & {
 						background-color: map-get($colors,inverse);
 					}
+
+					.alert &,
+					.theme-inverse .alert & {
+						background: map-get(map-get($calculated-color-vars-variations,#{$tag}),alpha-2)
+					}
 				}
 			}
 
@@ -276,6 +282,11 @@ $prefix: '.table';
 
 					.theme-inverse & {
 						background-color: map-get($colors,inverse);
+					}
+
+					.alert &,
+					.theme-inverse .alert & {
+						background: map-get(map-get($calculated-color-vars-variations,#{$tag}),alpha-5)
 					}
 				}
 			}
