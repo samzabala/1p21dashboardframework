@@ -2,6 +2,10 @@
 window.jQuery && jQuery.noConflict();
 Turbolinks.start();
 (function($,fw,window){
+	
+	document.addEventListener("turbolinks:render", function(e) {
+		fw.setLoadingState();
+	})
 	document.addEventListener("turbolinks:load", function() {
 		fw.reInit();
 	})
