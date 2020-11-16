@@ -1,9 +1,25 @@
 (function (global,fn) {
 	'use strict';
-	fn(global);
+
+	if (
+		typeof module === "object"
+		&& typeof module.exports === "object"
+	) {
+		
+		module.exports = global.document ?
+			fn(global) :
+			function(w) {
+				if (!w.document) {
+					throw new Error( "Where's yo window document boi I need it?" );
+				}
+				return fn(w,true);
+			};
+	} else {
+		fn( global,true);
+	}
 }(
 	window !== "undefined" ? window : this,
-	function (window){
+	function (window, setUpGlobal){
 
 		console.info('Framework vanilla script is initiated');
 
@@ -4119,9 +4135,11 @@
 		window.addEventListener('load',frameWork.runLoad);
 
 		frameWork.initcomponentsEvents();
-		
+
 		//put boi on global
+		if (typeof setUpGlobal !== "undefined") {
 			window.frameWork = window.fw = frameWork;
 			window.frameWork.DEBUG = __f;
+		}
 	}
 ));
