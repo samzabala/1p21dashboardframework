@@ -9162,7 +9162,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
     content: "Loading Stuff.."; }
   100% {
     content: "Loading Stuff..."; } }
-  .body-loading #content-wrapper:before {
+  .body-loading #dashboard-block-main:before {
     -webkit-animation-name: dashboardLoading;
             animation-name: dashboardLoading;
     -webkit-animation-duration: .5s;
@@ -9173,14 +9173,18 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
             animation-iteration-count: infinite;
     content: "Loading Stuff...";
     display: block;
-    font-size: 24px;
-    opacity: .2;
-    position: absolute;
-    top: calc(75px + 2em);
-    left: calc(285px + 2em);
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 30px;
+    font-size: 2rem;
+    font-weight: 300;
+    opacity: .5;
+    position: static;
     transition: opacity 0.25s ease-in-out; }
-    .body-loaded .body-loading #content-wrapper:before {
-      opacity: 0; }
+    .body-loaded .body-loading #dashboard-block-main:before {
+      opacity: 0;
+      position: absolute; }
   #nav {
     /* pre-workflow */
     /* workflow onward and some pre ones */ }

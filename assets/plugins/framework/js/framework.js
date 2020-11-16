@@ -4029,6 +4029,8 @@
 			__f.fns_on_ready.forEach((fn) => {
 				fn();
 			});
+
+			frameWork.setCompleteState();
 		};
 
 		frameWork.runLoad = () => {
@@ -4043,8 +4045,6 @@
 				&& frameWork.createBoard();
 			frameWork.settings.initializeAccordion
 				&& frameWork.toggleAccordion();
-
-			frameWork.setCompleteState();
 		};
 
 		let resizeTimerInternal;
@@ -4083,12 +4083,14 @@
 					break;
 				case 'complete':
 				default:
-					document.body
-						.classList
-						.remove('body-loading');
-					document.body
-						.classList
-						.add('body-loaded');
+					setTimeout(()=>{ 
+						document.body
+							.classList
+							.remove('body-loading');
+						document.body
+							.classList
+							.add('body-loaded');
+					},100);
 					break;
 			}
 

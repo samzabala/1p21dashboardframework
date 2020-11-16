@@ -3824,6 +3824,8 @@ this.jQuery && this.jQuery.noConflict();
 			__f.fns_on_ready.forEach((fn) => {
 				fn();
 			});
+
+			frameWork.setCompleteState();
 		};
 
 		frameWork.runLoad = () => {
@@ -3838,8 +3840,6 @@ this.jQuery && this.jQuery.noConflict();
 				&& frameWork.createBoard();
 			frameWork.settings.initializeAccordion
 				&& frameWork.toggleAccordion();
-
-			frameWork.setCompleteState();
 		};
 
 		let resizeTimerInternal;
@@ -3876,9 +3876,11 @@ this.jQuery && this.jQuery.noConflict();
 					break;
 				case 'complete':
 				default:
-					$('body')
-						.removeClass('body-loading')
-						.addClass('body-loaded');
+					setTimeout(()=>{
+						$('body')
+							.removeClass('body-loading')
+							.addClass('body-loaded');
+					},100);
 					break;
 			}
 
