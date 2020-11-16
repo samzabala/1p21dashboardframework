@@ -9149,19 +9149,19 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 
 @-webkit-keyframes dashboardLoading {
   0% {
-    content: "Loading Stuff."; }
+    content: "Loading."; }
   50% {
-    content: "Loading Stuff.."; }
+    content: "Loading.."; }
   100% {
-    content: "Loading Stuff..."; } }
+    content: "Loading..."; } }
 
 @keyframes dashboardLoading {
   0% {
-    content: "Loading Stuff."; }
+    content: "Loading."; }
   50% {
-    content: "Loading Stuff.."; }
+    content: "Loading.."; }
   100% {
-    content: "Loading Stuff..."; } }
+    content: "Loading..."; } }
   .body-loading #dashboard-block-main:before {
     -webkit-animation-name: dashboardLoading;
             animation-name: dashboardLoading;
@@ -9171,7 +9171,7 @@ SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
             animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    content: "Loading Stuff...";
+    content: "Loading...";
     display: block;
     width: 100%;
     margin: 0 auto;
