@@ -85,4 +85,71 @@
 
 		</script>
 
+
+
+
+		<link rel="stylesheet"
+				href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+		<script src="https://cdn.datatables.net/v/dt/dt-1.10.21/b-1.6.2/b-colvis-1.6.2/datatables.min.js">
+		</script>
+		<script>
+			(function($){
+				var $sponsorships = $(`#sponsorship-table table`).DataTable({
+					dom: '<"p cf" lfp><"table-wrapper" t>',
+	drawCallback: function() {
+		// this.removeClass('dataTable');
+		const dTWrapper = this.closest('.dataTables_wrapper');
+		const pagination = dTWrapper.find('.dataTables_paginate');
+		const length = dTWrapper.find('.dataTables_length');
+		const filter = dTWrapper.find('.dataTables_filter');
+
+		//length control
+		if(length.length){
+
+			length
+				// .removeClass('dataTables_length')
+				.addClass('input-group input-group-horizontal');
+
+			length
+				.children('label')
+				.addClass('input-label background-transparent')
+		}
+
+		//pagination
+		if(pagination.length){
+			//modfy container classes
+			pagination
+				.addClass('btn-group btn-group-horizontal float-right');
+
+			//modify pagination into a butn-group
+			pagination.children('span').children().detach().appendTo(pagination);
+			pagination.children('span').remove();
+			pagination.find('.paginate_button.next').detach().appendTo(pagination);
+			pagination.children().each((i,butt)=>{
+				butt.classList.remove('paginate_button');
+				butt.classList.add('btn');
+				butt.classList.add('btn-default');
+				if(butt.classList.contains('current')){
+					butt.classList.remove('current');
+					butt.classList.add('active')
+				}
+			})
+		}
+
+		//filter control
+		if(filter.length){
+			filter
+				.addClass('input-group input-group-horizontal float-right');
+			filter
+				.children('label')
+				.addClass('input-label background-transparent')
+		}
+	}
+					// paging: false,
+					// ordering: true,
+					// searching: false
+				});
+			}(jQuery))
+		</script>
+
 </html>

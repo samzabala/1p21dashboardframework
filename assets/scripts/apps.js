@@ -1,6 +1,6 @@
 
 window.jQuery && jQuery.noConflict();
-Turbolinks.start();
+typeof Turbolinks == 'object' && Turbolinks.start();
 (function($,fw,window){
 	
 	document.addEventListener("turbolinks:render", function(e) {

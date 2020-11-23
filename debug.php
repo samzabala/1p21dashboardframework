@@ -3898,6 +3898,7 @@
 			<button type="button" class="btn btn-caution">caution</button>
 			<button type="button" class="btn btn-error">error</button>
 			<button type="button" class="btn btn-link">Link</button>
+			<button type="button" class="btn btn-gradient">Gradient</button>
 			
 
 			<h3>outline</h3>
