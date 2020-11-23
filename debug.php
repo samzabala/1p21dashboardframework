@@ -4323,6 +4323,10 @@
 		<h1 data-toggle="accordion">Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
+		<p class="no-margin special-primary text-clip-background background-gradient text-leading-expanded">
+				Good Morning McFly <i class="symbol symbol-robot"></i> <i class="symbol sybol-clap"></i>
+			</p>
+
 			<h2>groups and symbols</h2>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol pencil</span>
@@ -4557,7 +4561,184 @@
 				<span class="btn btn-default">Symbol text justify</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-text-justify"></i></span>
 			</a>
-					
+
+			<h2>Font support only</h2>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol square-outline</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-square-outline"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol checkbox</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-checkbox"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol checkbox-inverse</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-checkbox-inverse"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol grid</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-grid"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol list</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-list"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol thumbs-up</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-thumbs-up"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol thumbs-down</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-thumbs-down"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol thumbs-up-inverse</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-thumbs-up-inverse"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol thumbs-down-inverse</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-thumbs-down-inverse"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol upload</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-upload"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol calendar</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-calendar"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol bell</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-bell"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol bell-active</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-bell-active"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol dash</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-dash"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol caution</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-caution"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol error</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-error"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol info</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-info"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol success</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-success"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol stack</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-stack"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol clap</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-clap"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol copy</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-copy"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol share</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-share"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol filter</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-filter"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol chart</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-chart"></i></span>
+			</a>
+
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol segment</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-segment"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol user</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-user"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol user-add</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-user-add"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol user-remove</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-user-remove"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol expand</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-expand"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol collapse</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-collapse"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol expand-alt</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-expand-alt"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol collapse-alt</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-collapse-alt"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol waffle</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-waffle"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol robot</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-robot"></i></span>
+			</a>
+			
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol clipboard</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-clipboard"></i></span>
+			</a>
+
 			<p>
 				Pencil <i class="color-primary symbol symbol-pencil"></i>
 			</p>		
@@ -4612,6 +4793,7 @@
 			</p>
 
 			<p>
+				close <i class="color-primary symbol symbol-close"></i>
 			</p>
 
 			<p>
