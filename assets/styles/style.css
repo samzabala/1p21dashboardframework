@@ -478,6 +478,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* to toggley bitches kids  */
 *[data-toggle] {
   cursor: pointer;
