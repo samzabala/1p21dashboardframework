@@ -5,9 +5,7 @@
 // $debug: true;
 
 
-/*! 
-CUSTOM VARIABLES FOR FRAMEWORK IF ANY
-****************************************************************************/
+// CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 
 $br-xs-max: 600px;
 $br-sm-max: 1200px;
@@ -60,20 +58,14 @@ $input-font-weight: 600;
 
 
 $input-height-large: 50px;
-
-/*! 
-FRAMEWORK / SCAFFOLDING STYLES
-****************************************************************************/
+ 
+// FRAMEWORK / SCAFFOLDING STYLES
 	@import '../plugins/framework/scss/framework.scss';
 
-
-/*! 
-SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
-****************************************************************************/
+ 
+// SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
 	@import '_apps';
-	
-/*! 
-APPS / OUR CUSTOM STYLES
-****************************************************************************/
+	 
+// APPS / OUR CUSTOM STYLES
 	@import '_dashboard';
 	@import '_timetracker';

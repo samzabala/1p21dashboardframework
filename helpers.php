@@ -98,6 +98,13 @@ function app_init_content(){
 	switch($app):
 			
 		//time tracker shit
+		case 'webpack':
+			case 'home':
+			case null:
+				app_get_template_part("app-{$app}/home");
+				$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
+				break;
+			break;
 		case 'workflow':
 			$slug = '';
 			switch($template_part):
@@ -345,6 +352,12 @@ function app_init_content(){
 // links for debugging our boi
 function app_debug_li() {
 ?>
+	<li>
+		<a href="<?=app_create_link(array(
+			'env'=>FWAPPS_SLUG,
+			'app'=>'webpack'));
+		?>">Switch to Webpack Tester</a>
+	</li>
 	<li>
 		<a href="<?=app_create_link(array(
 			'env'=>FWAPPS_SLUG,

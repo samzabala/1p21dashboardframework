@@ -1049,19 +1049,30 @@
 
 			<h2>external plugin support/throttle/yea boi</h2>
 			<script>
-				function keyUpThis(event){
-					return _.throttle(()=>{ console.log('trotel fuucu'); },1000);
-				}
+				// function keyUpThis(event){
+				// 	return _.throttle(()=>{ console.log('trotel fuucu'); },1000);
+				// }
+				// const bietch = document.querySelectorAll('h1[data-toggle="accordion"]');
+				// console.log('huuuyy');
+				// bietch.forEach((eh)=>{
+				// 	eh.addEventListener('click.fw.accordion',(e)=>{
+				// 		console.log('biiitch',e)
+				// 	});
+				// })
 			</script>
-			<input value="lil,stupid,ass,console,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
-				data-tags-callback-on-keyup="_.debounce(()=>{ alert('trotel fuucu'); },500);" />
+			<style>
+				span:focus {
+					background: yellow!impoprtant;
+				}
+			</style>
+			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-filter="testCallback" />
 
 
 
 			<input value="lil,stupid,ass,throttle,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
-				data-tags-callback-on-keyup="console.log('ass'); " />
+				data-tags-on-keyup="console.log('ass'); " />
 			<input value="lil,stupid,ass,setTimeout,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
-				data-tags-callback-on-keyup="console.log('boss'); setTimeout(function(){ console.log('taymawt fuucu'); },1000)" />
+				data-tags-on-keyup="console.log('boss'); setTimeout(function(){ console.log('taymawt fuucu'); },1000)" />
 
 
 				<h2>other basic bitches</h2>
@@ -1092,8 +1103,8 @@
 					value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
 					class="input input-tags"
 					data-toggle="dropdown"
-					data-tags-callback-on-keyup="shareNoteWithUsernamesChgCb(event)"
-					data-tags-callback-name-filter="validateUsernameNoteSharedWith">
+					data-tags-on-keyup="shareNoteWithUsernamesChgCb(event)"
+					data-tags-filter="validateUsernameNoteSharedWith">
 				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
 			</div>
 			<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
@@ -1204,7 +1215,7 @@
 							value="asshit,brah,shiit"
 							class="input input-tags"
 							data-toggle="dropdown"
-							data-tags-callback-name-filter="testCallback">
+							data-tags-filter="testCallback">
 
 						<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
 					</div>
@@ -1217,7 +1228,7 @@
 			</div>
 			
 			<div class="position-relative">
-				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-callback-on-keyup="fooker(event)" data-tags-callback="paker()" />
+				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-on-keyup="fooker(event)" data-tags-callback="paker()" />
 				<ul class="dropdown">
 					<li>Fuck</li>
 					<li>Fuck</li>
@@ -1329,9 +1340,16 @@
 		
 		<h1 data-toggle="accordion">form: Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
 		<div class="accordion ">
+			<form>
+
+			<input type="text" class="input input-calendar" 
+				data-calendar-text-input="true"
+				data-calendar-start-day="3"
+				data-calendar-disabled-dates="past"  />
+			</form>
 
 			<input type="date" class="input input-calendar" 
-				data-calendar-year-span="0"
+				data-calendar-year-span="5"
 				data-calendar-text-input="true" />
 
 
@@ -1398,7 +1416,7 @@
 				<pre>
 				data-calendar-start-day="0"
 					data-calendar-disabled-dates="past"
-					data-calendar-dropdown-year-span="0"
+					data-calendar-year-span="0"
 					min="2019-01-20"
 					data-calendar-max="2021-02-20"
 					value="2020-03-05"
@@ -1424,7 +1442,7 @@
 					<div class="input-wrapper input-wrapper-vertical">
 						<label for="" class="input-label">eggeggeggeggeggeggeggeggeggeggeggegg</label>
 
-						<input type="text" class="input input-calendar" data-calendar-start-day="0"
+						<input type="text" class="input input-calendar" data-calendar-start-day="0" data-calendar-year-span="1"
 							value="2020-01-05" />
 					</div>
 				</fieldset>
@@ -2043,7 +2061,7 @@
 					
 					<li class="nav-item">
 						<a href="<?=FWAPPS_ROOT_URL ?>">
-						<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="nav-item-text">Item</span>
+						<img class="nav-icon lazy" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-home.svg"> <span class="nav-item-text">Item</span>
 						</a>
 					</li>
 
@@ -2051,7 +2069,7 @@
 					
 					<li class="nav-item">
 						<a href="#nav-demo-dropdown" data-toggle="dropdown">
-						<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
+						<img class="nav-icon lazy" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
 						</a>
 						<ul class="dropdown" id="nav-demo-dropdown" >
 							<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
@@ -2072,13 +2090,13 @@
 					
 					<li class="nav-item">
 						<a href="<?=FWAPPS_ROOT_URL ?>">
-						<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="nav-item-text">Item</span>
+						<img class="nav-icon lazy" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-designers.svg"> <span class="nav-item-text">Item</span>
 						</a>
 					</li>
 					
 					<li class="nav-item">
 						<a href="<?=FWAPPS_ROOT_URL ?>">
-						<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="nav-item-text">Item</span>
+						<img class="nav-icon lazy" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-devs.svg"> <span class="nav-item-text">Item</span>
 						</a>
 					</li>
 				</ul>
@@ -4208,26 +4226,26 @@
 			<div class="thumbnail-cluster">
 					
 				<div class="thumbnail thumbnail-small">
-					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 				<div class="thumbnail thumbnail-small">
-					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
-				</div>
-
-				<div class="thumbnail thumbnail-small">
-					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
 				<div class="thumbnail thumbnail-small">
-					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
 				<div class="thumbnail thumbnail-small">
-					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
 				<div class="thumbnail thumbnail-small">
-					<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-small">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
 				<div class="thumbnail thumbnail-small">
@@ -4237,7 +4255,7 @@
 
 			</div>
 			<div class="thumbnail">
-				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
 			<div class="thumbnail">
@@ -4248,7 +4266,7 @@
 
 			<h2>Thumbnail but inline</h2>
 			<div class="thumbnail thumbnail-small">
-				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
 			<div class="thumbnail thumbnail-small">
@@ -4267,7 +4285,7 @@
 
 			<div class="thumbnail thumbnail">
 				<span class="badge badge-primary"></span>
-				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
 			<div class="thumbnail thumbnail">
@@ -4279,7 +4297,7 @@
 
 			<div class="thumbnail thumbnail-small">
 				<span class="badge badge-primary"></span>
-				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
 			<div class="thumbnail thumbnail-small">
@@ -4296,7 +4314,7 @@
 
 			<div class="thumbnail thumbnail">
 				<span class="tag tag-primary">69</span>
-				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
 			<div class="thumbnail thumbnail">
@@ -4308,7 +4326,7 @@
 
 			<div class="thumbnail thumbnail-small">
 				<span class="tag tag-primary">69</span>
-				<img src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
 			<div class="thumbnail thumbnail-small">
@@ -4328,6 +4346,10 @@
 			</p>
 
 			<h2>groups and symbols</h2>
+			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
+				<span class="btn btn-default">Symbol 1p21</span>
+				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-1p21"></i></span>
+			</a>
 			<a href="#" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol pencil</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-pencil"></i></span>

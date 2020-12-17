@@ -29,7 +29,6 @@ $prefix: '.btn';
 				style: $btn-font-style,
 				font: $btn-font-family,
 				align:center,
-				decoration:none,
 				case: $btn-text-transform,
 			));
 			// overflow:hidden;
@@ -191,7 +190,11 @@ $prefix: '.btn';
 			-webkit-appearance:none;
 			appearance:none;
 			vertical-align: middle;
-			// @extend %for-anchor-reset !optional;
+			-moz-background-clip: padding;
+			-webkit-background-clip: padding;
+			background-clip: padding-box;
+			text-decoration: get-anchor-dec();
+			
 	
 			&:hover,
 			&:focus,
@@ -199,6 +202,7 @@ $prefix: '.btn';
 			&:active,
 			&.active {
 				color:inherit;
+				text-decoration:  get-anchor-dec(true);
 				&:not(.btn-no-interaction) {
 					box-shadow: $btn-box-shadow-hover;
 				}

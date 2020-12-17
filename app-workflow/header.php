@@ -27,12 +27,12 @@
 			if(FWAPPS_JS == 'vanilla') {
 				// app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); 
 				?>
-				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/framework.min.js'?>" data-turbolinks-track="reload"></script>
+				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/js/framework.js'?>" data-turbolinks-track="reload"></script>
 				<?php
 			}else{
 				// app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js');
 				?>
-				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/framework.plugged.min.js'?>" data-turbolinks-track="reload"></script>
+				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/js/framework.plugged.js'?>" data-turbolinks-track="reload"></script>
 				<?php
 			}
 			

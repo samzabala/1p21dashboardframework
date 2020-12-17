@@ -11,8 +11,8 @@
 					placeholder="Type and select client..."
 					class="input input-tags input-select input-block"
 					type="text"
-					data-tags-callback-on-keyup="REPLACEfnToFilterTag(event)" 
-					data-tags-callback-name-filter="REPLACEfnToFilterTag" />
+					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
+					data-tags-filter="REPLACEfnToFilterTag" />
 
 				<div class="dropdown" data-dropdown-width="100%">
 					<!-- @PLACEHOLDER. delete for dynamic readiness  -->
@@ -37,8 +37,8 @@
 					placeholder="Type and select manager..."
 					class="input input-tags input-select input-block"
 					type="text"
-					data-tags-callback-on-keyup="REPLACEfnToFilterTag(event)" 
-					data-tags-callback-name-filter="REPLACEfnToFilterTag" />
+					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
+					data-tags-filter="REPLACEfnToFilterTag" />
 
 				<div class="dropdown" data-dropdown-width="100%">
 					<!-- @PLACEHOLDER. delete for dynamic readiness  -->
@@ -63,8 +63,8 @@
 					placeholder="Type and select manager..."
 					class="input input-tags input-select input-block"
 					type="text"
-					data-tags-callback-on-keyup="REPLACEfnToFilterTag(event)" 
-					data-tags-callback-name-filter="REPLACEfnToFilterTag" />
+					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
+					data-tags-filter="REPLACEfnToFilterTag" />
 
 				<div class="dropdown" data-dropdown-width="100%">
 					<!-- @PLACEHOLDER. delete for dynamic readiness  -->
@@ -89,8 +89,8 @@
 					placeholder="Type and select project..."
 					class="input input-tags input-select input-block"
 					type="text"
-					data-tags-callback-on-keyup="REPLACEfnToFilterTag(event)" 
-					data-tags-callback-name-filter="REPLACEfnToFilterTag" />
+					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
+					data-tags-filter="REPLACEfnToFilterTag" />
 
 				<div class="dropdown" data-dropdown-width="100%">
 					<!-- @PLACEHOLDER. delete for dynamic readiness  -->
