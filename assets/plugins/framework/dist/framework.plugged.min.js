@@ -1,13 +1,28 @@
-
 this.jQuery && this.jQuery.noConflict();
 
 (function (global,$,fn) {
-	'use strict';
-	fn(global,$);
+	"use strict";
+
+	if (
+		typeof module === "object"
+		&& typeof module.exports === "object"
+	) {
+		
+		module.exports = global.document ?
+			fn(global,$) :
+			function(w) {
+				if (!w.document) {
+					throw new Error( "Where's yo window document boi I need it?" );
+				}
+				return fn(w,$,true);
+			};
+	} else {
+		fn( global,$,true);
+	}
 }(
 	window !== "undefined" ? window : this,
 	jQuery,
-	function (window, $){
+	function (window, $, setUpGlobal){
 
 		console.info('Framework plugged script is initiated');
 
@@ -3911,8 +3926,10 @@ this.jQuery && this.jQuery.noConflict();
 		frameWork.initcomponentsEvents();
 
 		//put boi on global
+		if (typeof setUpGlobal !== "undefined") {
 			window.frameWork = window.fw = frameWork;
 			window.frameWork.DEBUG = __f;
+		}
 	}
 ));
 

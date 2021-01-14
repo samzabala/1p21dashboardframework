@@ -110,6 +110,7 @@ function app_init_content(){
 					break;
 
 				//notes
+					case 'note-view':
 					case 'note-edit':
 						//debug only
 							case '_DEMO-task':

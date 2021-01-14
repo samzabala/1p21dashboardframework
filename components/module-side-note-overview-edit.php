@@ -45,7 +45,7 @@ $args = app_parse_args($data,$defs);
 			</div>
 			
 
-		<hr class="no-margin-y">
+		<hr class="no-margin-bottom">
 
 
 		<!-- Sher -->
