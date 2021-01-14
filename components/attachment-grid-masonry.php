@@ -50,7 +50,7 @@
 	deps to make it work
 	- Masonry v4
 	- imagesLoaded v4
-	- Infinite Scroll v4??
+	- Infinite Scroll v4?? (if theres too many attachments or needed)
 
 -->
 <script>
@@ -87,27 +87,28 @@
 			});
 
 			
-			//@NOTE modify this to retrieve the true url to display the next pagination set of attachments. for front end build purposes this script is just a fake bitch
-			function nextPageUrlRetriever(){
-				return window.location.toString().replace(
-					/attachment_page\=[0-9]+/g,
-					(
-						'&attachment_page='+(
-							this.loadCount
-							? this.loadCount
-							: ''
+
+			// endless scroll for cases where theres like 9989999 attachments on the note. can comment this part out if uneccesary
+
+				//@NOTE modify this to retrieve the true url to display the next pagination set of attachments. for front end build purposes this script is just a fake bitch
+				function nextPageUrlRetriever(){
+					return window.location.toString().replace(
+						/attachment_page\=[0-9]+/g,
+						(
+							'&attachment_page='+(
+								this.loadCount
+								? this.loadCount
+								: ''
+							)
 						)
 					)
-				)
-			}
-
-			// endless scroll 
-			let infScroll = new InfiniteScroll( grid, {
-			path: nextPageUrlRetriever,
-			append: ITEMS,
-			outlayer: msnry,
-			status: STATUS,
-			});
+				}
+				let infScroll = new InfiniteScroll( grid, {
+					path: nextPageUrlRetriever,
+					append: ITEMS,
+					outlayer: msnry,
+					status: STATUS,
+				});
 		})
 	}
 	
