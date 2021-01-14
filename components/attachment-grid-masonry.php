@@ -111,8 +111,6 @@
 				});
 		})
 	}
-	
-		
 
-		initMasonry();
+	initMasonry();
 </script>

@@ -5,6 +5,8 @@
 		data-grid-template-rows-md="repeat(auto-fill,minmax(0,min-content))"
 		>
 
+		<!-- Toolbar -->
+		<?php app_get_component('components/toolbar-side-note-view') ?>
 
 		<!-- Main-->
 		<div
