@@ -1630,6 +1630,12 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
 	"/readme.md": {
 		"cB": 0,
 		"cS": 0,
@@ -1660,7 +1666,7 @@
 		"oAP": "/dist/framework.css",
 		"oF": 3,
 		"oS": 0,
-		"sct": 1
+		"sct": 0
 		},
 	"/scss/import/_alert.scss": {
 		"aP": 0,
