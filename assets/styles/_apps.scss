@@ -16,6 +16,11 @@ $sidebar-base-slim-mobile: 60px;
 
 //whole page layout
 #dashboard {
+	.note-content-wrapper {
+		@include br(xl){
+			padding: 20px;
+		}
+	}
 	//hides svgs that contain defs for styling and not actually ouputting a pichur
 	&-svg-styles {
 		width:0;

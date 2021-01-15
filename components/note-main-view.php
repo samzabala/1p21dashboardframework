@@ -1,6 +1,7 @@
-<h1 class="no-margin-top">
-	<span class="REPLACE">Note title </span>
-</h1>
+<div class="note-content-wrapper">
+	<h1 class="no-margin-top">
+		<span class="REPLACE">Note title </span>
+	</h1>
 <!-- Description -->
 	<div class="note-description overflow-hidden" style="height: 69em;">
 		<!-- @if description it has -->
@@ -9,6 +10,7 @@
 			<p class="color-neutral font-style-italic">No description available.</p>
 	</div>
 
+</div>
 <!-- Attachments -->
 	<div class="note-attachments" id="attachments">
 		<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
