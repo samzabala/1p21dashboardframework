@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.803" height="54.042" viewBox="0 0 45.803 54.042">
+  <g id="Group_2057" data-name="Group 2057" transform="translate(-642 -216.565)">
+    <g id="Group_2018" data-name="Group 2018" transform="translate(-149.188 -389.317)">
+      <path id="Path_959" data-name="Path 959" d="M791.188,1058.627c0,.653.722,1.182,1.612,1.182h42.579c.89,0,1.612-.53,1.612-1.182v-29.2h-45.8Z" transform="translate(0 -399.885)" fill="#39b54a"/>
+      <path id="Path_960" data-name="Path 960" d="M826.722,605.882H792.8a1.691,1.691,0,0,0-1.612,1.759v22.9h45.8V617.092Z" transform="translate(0)" fill="#39b54a"/>
+      <path id="Path_961" data-name="Path 961" d="M1457.444,615.333a1.759,1.759,0,0,0,1.759,1.759h9.451l-11.21-11.21Z" transform="translate(-631.663)" fill="#219331"/>
+      <g id="Group_2016" data-name="Group 2016" transform="translate(797.188 636.278)">
+        <rect id="Rectangle_2754" data-name="Rectangle 2754" width="32.824" height="2" transform="translate(0 0.039)" fill="#fff"/>
+        <rect id="Rectangle_2757" data-name="Rectangle 2757" width="32.824" height="2" transform="translate(0 -5.961)" fill="#fff"/>
+        <rect id="Rectangle_2755" data-name="Rectangle 2755" width="32.824" height="2" transform="translate(0 6.347)" fill="#fff"/>
+        <rect id="Rectangle_2756" data-name="Rectangle 2756" width="32.824" height="2" transform="translate(0 12.654)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="CSV" transform="translate(648 234)" fill="#fff" font-size="13" font-family="Lato-Black, Lato" font-weight="800"><tspan x="0" y="0">CSV</tspan></text>
+  </g>
+</svg>

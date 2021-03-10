@@ -1,0 +1,107 @@
+//google font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap');
+
+
+// $debug: true;
+
+
+// CUSTOM VARIABLES FOR FRAMEWORK IF ANY
+
+
+
+$brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+$brand-font-secondary: $brand-font-primary;
+$brand-font-accent: 'Roboto', $brand-font-primary;
+
+$brand-color-background-alt: #eff4f8;
+
+$symbol-font-path: '/assets/plugins/framework/dist/fonts/fw-icons';
+
+
+$brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+$brand-font-secondary: $brand-font-primary;
+$brand-font-accent: 'Roboto', $brand-font-primary;
+
+$brand-color-background-alt: #eff4f8;
+
+// $brand-theme-background-inverse: #302a4b;
+// $brand-theme-background-contrast-inverse: #1e1931;
+
+// $brand-color-base-alt: #3d3d3d;
+
+
+// $brand-color-base: #24212c;
+// $brand-color-base-alt: #3b394b;
+
+
+$brand-color-base: #1e1931;
+$brand-color-base-alt: #302a4b;
+
+$brand-color-primary: #0480FE;
+$brand-color-secondary: #F204A2;
+$brand-color-accent: #894EC7;
+
+// $brand-color-success: #64B4AE !default;
+
+$gutter-base: 30px;
+	$gutter-large: 40px;
+	$gutter-small: 20px;
+	$gutter-micro: 10px;
+
+
+	$container-gutter: $gutter-base !default;
+	$container-gutter-wide: $gutter-small !default;
+	$container-gutter-slim: $gutter-large !default;
+	$container-gutter-mobile: $gutter-small !default;
+$container-max-width: 1600px !default;
+	$container-max-width-mobile: 750px !default;
+
+// $gradient-end: $brand-color-accent;
+
+
+
+// $brand-color-success: #64B4AE !default;
+
+
+$body-font-size: 15px;
+
+		
+$module-gutter-between: $gutter-micro !default;
+$module-grid-title-text-transform: uppercase;
+$module-title-text-transform: uppercase;
+
+
+$btn-font-weight: 600;
+// $nav-top-font-weight: 600;
+$tag-font-weight: 600;
+$input-label-font-weight: 600;
+$input-font-weight: 600;
+
+
+$input-height: 48px !default;
+$input-height-small: 30px !default;
+$input-height-large: 50px;
+$input-border-radius: $input-height * .5 !default;
+$input-border-radius-large: $input-height-large * .5 !default;
+$input-border-radius-small: $input-height-small * .5 !default;
+
+
+$btn-height: $input-height !default;
+$btn-height-large: $input-height-large !default;
+$btn-height-small: $input-height-small !default;
+
+$btn-border-radius: $btn-height * .5 !default;
+$btn-border-radius-large: $btn-height-large * .5 !default;
+$btn-border-radius-small:  $btn-height-small * .5 !default;
+ 
+// FRAMEWORK / SCAFFOLDING STYLES
+	@import '../../plugins/framework/src/scss/framework.scss';
+
+ 
+// @error $calculated-color-tags;
+// SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
+	@import '_apps';
+	 
+// APPS / OUR CUSTOM STYLES
+	@import '_dashboard';
+	@import '_timetracker';

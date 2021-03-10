@@ -7,17 +7,35 @@
 		</p>
 		
 
-		<h1 data-toggle="accordion">TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+		</div>
+
+		<h1 data-toggle-accordion>Module grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<div class="module-grid" data-grid-template-columns="1fr 1fr 1fr"  data-grid-template-columns-lg="1fr 1fr 1fr 1fr">
+				<div class="module">
+					shit
+				</div>
+				<div class="module">
+					shit
+				</div><div class="module">
+					shit
+				</div><div class="module">
+					shit
+				</div><div class="module">
+					shit
+				</div>
+			</div>
 		</div>
 		
 
-		<h1 data-toggle="accordion">data-toggle switch-on and switch-off<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>data-toggle switch-on and switch-off<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			
 			<div class="switch">
 				<div class="switch-off" id="titty-view">
-					<div href="titty-edit" data-toggle="switch-on" class="pointer-reference color-inherit text-decoration-none display-block cf">
+					<div href="titty-edit" data-toggle-switch-on class="pointer-reference color-inherit text-decoration-none display-block cf">
 						<h2 class="no-margin-y"> Click to edit me 
 
 
@@ -31,7 +49,73 @@
 				<div id="titty-edit" class="switch-on">
 					<div class="input-group input-large input-block input-group-horizontal">
 						<input type="text" class="input input-single-line">
-						<button data-toggle="switch-off" class="btn btn-primary">Save</button>
+						<button data-toggle-switch-off class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="switch switch-to-on">
+				<div class="switch-off" id="titty-view">
+					<div href="titty-edit" data-toggle-switch-on class="pointer-reference color-inherit text-decoration-none display-block cf">
+						<h2 class="no-margin-y"> switch but it on first 
+
+
+						<span class="only-hover color-primary">
+							<i class="symbol symbol-pencil"></i>
+						</span>
+						</h2>
+					</div>
+					
+				</div>
+				<div id="titty-edit" class="switch-on">
+					<div class="input-group input-large input-block input-group-horizontal">
+						<input type="text" class="input input-single-line">
+						<button data-toggle-switch-off class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="switch switch-to-on switch-idle">
+				<div class="switch-off" id="titty-view">
+					<div href="titty-edit" data-toggle-switch-on class="pointer-reference color-inherit text-decoration-none display-block cf">
+						<h2 class="no-margin-y"> switch but it on first n idlidldidle
+
+
+						<span class="only-hover color-primary">
+							<i class="symbol symbol-pencil"></i>
+						</span>
+						</h2>
+					</div>
+					
+				</div>
+				<div id="titty-edit" class="switch-on">
+					<div class="input-group input-large input-block input-group-horizontal">
+						<input type="text" class="input input-single-line">
+						<button data-toggle-switch-off class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="switch switch-idle">
+				<div class="switch-off" id="titty-view">
+					<div href="titty-edit" data-toggle-switch-on class="pointer-reference color-inherit text-decoration-none display-block cf">
+						<h2 class="no-margin-y"> switch but idle 
+
+
+						<span class="only-hover color-primary">
+							<i class="symbol symbol-pencil"></i>
+						</span>
+						</h2>
+					</div>
+					
+				</div>
+				<div id="titty-edit" class="switch-on">
+					<div class="input-group input-large input-block input-group-horizontal">
+						<input type="text" class="input input-single-line">
+						<button data-toggle-switch-off class="btn btn-primary">Save</button>
 					</div>
 				</div>
 			</div>
@@ -40,13 +124,13 @@
 
 		
 
-		<h1 data-toggle="accordion">Modal with a bitch ass table<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Modal with a bitch ass table<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div  class="table-wrapper">
 		</div>
 
 
 		<div class="accordion">
-			<a href="#table-modal" data-toggle="modal">test</a>
+			<a href="#table-modal" data-toggle-modal>test</a>
 			<table class="rank-hist-task-items">
 				<thead>
 					<tr>
@@ -78,7 +162,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<div class="modal" id="table-modal">
+			<div class="modal modal-default" id="table-modal">
 				
 				<div class="table-wrapper">
 					<table class="rank-hist-task-items">
@@ -120,7 +204,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">sidebar module template<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>sidebar module template<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			sidebar module template
 
@@ -131,7 +215,7 @@
 							<h5 class="no-margin-y">TITLE</h5>
 						</div>
 						<div class="flex-child">
-							<a href="#task-side-MODULE" data-toggle="accordion" class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
+							<a href="#task-side-MODULE" data-toggle-accordion class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
 						</div>
 					</div>
 
@@ -144,7 +228,7 @@
 			</div>
 		</div>
 
-		<h1 data-toggle="accordion">Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<!-- <div class="ratio ratio-4-by-3 bidju-me">
@@ -174,7 +258,7 @@
 
 		
 
-		<h1 data-toggle="accordion">Border Radius<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Border Radius<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<div class="radius-ellipse ratio-1-by-1 ratio ratio-me background-theme-contrast">
@@ -384,7 +468,7 @@
 			
 		</div>
 
-		<h1 data-toggle="accordion">Toolbar<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Toolbar<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<div class="toolbar toolbar-horizontal">
 				<span class="toolbar-tile">
@@ -522,7 +606,7 @@
 
 
 
-		<h1 data-toggle="accordion">input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>input-toggle<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
@@ -634,7 +718,7 @@
 
 		</div>
 
-<h1 data-toggle="accordion">highlight for #hashtags and @tagging profiles and shit<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+<h1 data-toggle-accordion>highlight for #hashtags and @tagging profiles and shit<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 <div class="accordion">
 	<p>Oooh… that’s hard.</p>
 
@@ -755,7 +839,7 @@
 </div>
 
 
-		<h1 data-toggle="accordion">ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<div class="flex-grid flex-grid-fixed flex-frid-compact">
 				<div class="flex-col-xs-12 flex-col-md-3">
@@ -967,7 +1051,7 @@
 
 
 
-		<h1 data-toggle="accordion">Zone<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Zone<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion ">
 
 		<h3>with input fiweld</h3>
@@ -1020,9 +1104,9 @@
 
 
 
-		<h1 data-toggle="accordion">board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<a href="#board-demo" data-toggle="board">Use this for worflow screens that slide from the slide</a>
+			<a href="#board-demo" data-toggle-modalBoard>Use this for worflow screens that slide from the slide</a>
 			<div id="board-demo" class="dashboard-board-partition board board-left">
 				<div class="flex-grid flex-grid-no-gutter">
 					<div class="flex-col-xs-12 flex-col-md-9">
@@ -1044,7 +1128,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<h2>external plugin support/throttle/yea boi</h2>
@@ -1052,7 +1136,7 @@
 				// function keyUpThis(event){
 				// 	return _.throttle(()=>{ console.log('trotel fuucu'); },1000);
 				// }
-				// const bietch = document.querySelectorAll('h1[data-toggle="accordion"]');
+				// const bietch = document.querySelectorAll('h1[data-toggle-accordion]');
 				// console.log('huuuyy');
 				// bietch.forEach((eh)=>{
 				// 	eh.addEventListener('click.fw.accordion',(e)=>{
@@ -1089,8 +1173,8 @@
 
 			<h2>Cristian's code 06-09 ayyyyy</h2>
 			
-			<a href="#modal-share-note-with" data-toggle="modal">modddddaaaal</a> 
-		<div class="modal" id="modal-share-note-with"
+			<a href="#modal-share-note-with" data-toggle-modal>modddddaaaal</a> 
+		<div class="modal modal-default" id="modal-share-note-with"
 			data-modal-width="800px" data-modal-title="Share">
 		<!-- @if user has rights to share this note -->
 		<form action="{{ url_for('notes.share_note', id=note.id) }}" method="post">
@@ -1102,7 +1186,7 @@
 				<input type="text" name="share_note_with_usernames"
 					value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
 					class="input input-tags"
-					data-toggle="dropdown"
+					data-toggle-dropdown
 					data-tags-on-keyup="shareNoteWithUsernamesChgCb(event)"
 					data-tags-filter="validateUsernameNoteSharedWith">
 				<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
@@ -1119,7 +1203,7 @@
     <!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
     <!-- @IF label the filter -->
 		<div class="input-group input-group-horizontal input-block-mobile text-align-left">
-			<button class="btn btn-default" data-toggle="dropdown">
+			<button class="btn btn-default" data-toggle-dropdown>
 				<span>Filter (3)</span>
 				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</button>
@@ -1135,7 +1219,7 @@
 				<input type="text" name="share_note_with_usernames"
 					value="asshit,brah,shiit"
 					class="input input-small input-tags"
-					data-toggle="dropdown">
+					data-toggle-dropdown>
 
 				<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
 					fuuiuuuck yallll
@@ -1150,7 +1234,7 @@
 		<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
 		<!-- @IF label the filter -->
 		<div class="input-group input-group-horizontal input-block-mobile text-align-left">
-			<button class="btn btn-default" data-toggle="dropdown">
+			<button class="btn btn-default" data-toggle-dropdown>
 				<span>Filter (3)</span>
 				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</button>
@@ -1180,7 +1264,7 @@
 			
 			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block position-relative">
 				<label class="input-label" >Account Manager</label>
-				<input class="input input-single-line input-small input-tags input-select" type="text" placeholder="Type and select manager..." data-toggle="dropdown">
+				<input class="input input-single-line input-small input-tags input-select" type="text" placeholder="Type and select manager..." data-toggle-dropdown>
 				<div class="dropdown am-dropdown">
 					<?= app_get_component('components/list-group-toggle-users-small-multiple'); ?>
 				</div>
@@ -1205,7 +1289,7 @@
 
 			<h2>cristian's code</h2>
 			<a href="#fuckwad">modddddaaaal</a>
-			<div id="fuckwad" class="modal">
+			<div id="fuckwad" class="modal modal-default">
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 					<label class="input-label">Share note with:</label>
@@ -1214,7 +1298,7 @@
 						<input type="text" name="share_note_with_usernames"
 							value="asshit,brah,shiit"
 							class="input input-tags"
-							data-toggle="dropdown"
+							data-toggle-dropdown
 							data-tags-filter="testCallback">
 
 						<button type="submit" class="flex-0-0 btn btn-primary">Share</button>
@@ -1228,7 +1312,7 @@
 			</div>
 			
 			<div class="position-relative">
-				<input data-tags-width="69em" data-toggle="dropdown" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-on-keyup="fooker(event)" data-tags-callback="paker()" />
+				<input data-tags-width="69em" data-toggle-dropdown value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-on-keyup="fooker(event)" data-tags-callback="paker()" />
 				<ul class="dropdown">
 					<li>Fuck</li>
 					<li>Fuck</li>
@@ -1282,7 +1366,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Well<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 				<span class="btn btn-symbol well btn-theme ">
 					<i class="symbol symbol-plus"></i>
@@ -1304,7 +1388,7 @@
 
 
 
-		<h1 data-toggle="accordion">Tabs<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Tabs<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 				<ul class="tabs">
 					<li class="tab active"> 
@@ -1333,12 +1417,12 @@
 		</div>
 
 
-		<h1 class="fuck-you-po-pakshet" data-toggle="accordion" data-href="#bitchboio">bititichhc<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 class="fuck-you-po-pakshet" data-toggle-accordion data-href="#bitchboio">bititichhc<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion" id="bitchboio">
 			bitchacho
 		</div>
 		
-		<h1 data-toggle="accordion">form: Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
+		<h1 data-toggle-accordion>form: Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
 		<div class="accordion ">
 			<form>
 
@@ -1354,7 +1438,7 @@
 
 
 			<div class="position-relative">
-				<a href="#dropcal" data-toggle="dropdown">Toggle ya boi</a>
+				<a href="#dropcal" data-toggle-dropdown>Toggle ya boi</a>
 				<div id="dropcal" class="dropdown" data-dropdown-width="100%">
 					<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
 
@@ -1391,7 +1475,7 @@
 								<li><a href="#">Today</a></li>
 								<li><a href="#">Last 3 days</a></li>
 								<li><a href="#">Last week</a></li>
-								<data-toggle="moda><a href="#">Last Month</a></li>
+								<data-toggle-moda><a href=#">Last Month</a></li>
 							</ul>
 
 						</div>
@@ -1540,9 +1624,9 @@
 			
 		</div>
 
-		<h1 data-toggle="accordion">Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Alerts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<a data-toggle="alert-close-all">Close em all</a>
+			<a data-toggle-alert-close-all>Close em all</a>
 			<div class="alert alert-default p" id="life-alert">
 				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
@@ -1551,7 +1635,7 @@
 			<div class="alert alert-default p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1565,7 +1649,7 @@
 			<div class="alert alert-small alert-default p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default.alert-small with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1579,7 +1663,7 @@
 			<div class="alert alert-large alert-default p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default.alert-large with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1592,7 +1676,7 @@
 
 
 			<div class="alert alert-primary p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 				
@@ -1602,7 +1686,7 @@
 			<div class="alert alert-primary p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1617,7 +1701,7 @@
 			<div class="alert alert-secondary p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1632,7 +1716,7 @@
 			<div class="alert alert-neutral p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1647,7 +1731,7 @@
 			<div class="alert alert-success p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1662,7 +1746,7 @@
 			<div class="alert alert-caution p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1677,7 +1761,7 @@
 			<div class="alert alert-error p" id="life-alert">
 				<div class="alert-header">
 					<h3 class="alert-title">Alert titty</h3>	
-					<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span></a>
+					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
 				</div>
 				<div class="alert-content">
 				.alert.alert-default with headers and footers and shit but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
@@ -1689,38 +1773,38 @@
 			</div>
 
 			<div class="alert alert-secondary p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 			<div class="alert alert-accent p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-accent  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 			<div class="alert alert-neutral p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-neutral but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 			<div class="alert alert-success p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-success but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 			<div class="alert alert-caution p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-caution but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 			
 			<div class="alert alert-error p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				.alert.alert-error but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 			</div>
 
 			<div class="alert alert-error p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				I have a close button suck my dick
 			</div>
 
 			<div class="alert alert-default p" id="life-alert">
-				<a href="#life-alert" class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></a>
+				<a href="#life-alert" class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></a>
 				.alert.alert-default but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy
 
 				
@@ -1728,7 +1812,7 @@
 			</div>
 
 			<div class="alert alert-primary p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-primary but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1850,7 +1934,7 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-secondary p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-secondary  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1858,7 +1942,7 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-accent p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-accent  but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1866,7 +1950,7 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-neutral p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-neutral but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1874,7 +1958,7 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-success p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-success but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1882,7 +1966,7 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-caution p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-caution but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1890,7 +1974,7 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 			<div class="alert alert-error p">
-				<span class="alert-close" data-toggle="alert-close"><i class="symbol symbol-close"></i></span>
+				<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span>
 				<p>.alert.alert-error but then also <a href="#fuck">There's a fucking link hooheehoo</a> that shit sexy</p>
 
 
@@ -1898,10 +1982,10 @@
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
 			</div>
 		</div>
-		<h1 data-toggle="accordion">Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<span  class="btn-group btn-group-horizontal" data-toggle="modal">
+			<span  class="btn-group btn-group-horizontal" data-toggle-modal>
 				<span class="btn-default btn">
 					Bitch ass
 				</span>
@@ -1910,16 +1994,16 @@
 				</span>
 			</span>
 
-			<div class="modal">modal</div>
+			<div class="modal modal-default">modal</div>
 
 				<a
-					data-toggle="modal"
+					data-toggle-modal
 					data-modal-title="Bitch"
 					href="#modal-demo">Modal boi</a>
 					<br>
 				
 				<a
-					data-toggle="modal"
+					data-toggle-modal
 					data-modal-close="false"
 					data-modal-disable-overlay="false"
 					data-modal-width="800px"
@@ -1929,11 +2013,11 @@
 					<br>
 				
 				<a
-					data-toggle="modal"
+					data-toggle-modal
 					data-modal-title="dumb Bitch juice"
 					data-href="#modal-demo">Modal boi</a>
 				<a
-					data-toggle="modal"
+					data-toggle-modal
 					data-modal-title="Titties"
 					data-modal-callback="fuckinModalCallback()"
 					data-href="#modal-demo">Modal boi with a callback</a>
@@ -1946,7 +2030,7 @@
 	}
 </script>
 
-			<div class="modal" id="modal-demo" data-modal-title="PUNYETA">
+			<div class="modal modal-default" id="modal-demo" data-modal-title="PUNYETA">
 				<h1>Look at this bitchboy going modal and shit</h1>
 				
 				<?php app_get_component('components/_DEMO-html-markup'); ?>
@@ -1954,23 +2038,23 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Tooltips <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Tooltips <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
-				Add a tooltip with <code>data-toggle="tooltip-click"</code> of  <code>data-toggle="tooltip-hover"</code>
+				Add a tooltip with <code>data-toggle-tooltip-click</code> of  <code>data-toggle-tooltip-hover</code>
 			</p>
 
 			<h2>Tooltip on click </h2>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-click"
+					data-toggle-tooltip-click
 					data-tooltip-placement="left"
 					data-tooltip-content="<span class=&quot;badge tooltip-badge badge-primary&quot;></span>This bitch empty<br><strong>YEET</strong>">
 					Bitch boi to the left
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-click"
+					data-toggle-tooltip-click
 					data-tooltip-placement="bottom"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="error"
@@ -1980,7 +2064,7 @@
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-click"
+					data-toggle-tooltip-click
 					data-tooltip-placement="top"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="caution"
@@ -1989,7 +2073,7 @@
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-click"
+					data-toggle-tooltip-click
 					data-tooltip-placement="right"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="secondary"
@@ -1999,7 +2083,7 @@
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-click"
+					data-toggle-tooltip-click
 					data-tooltip-placement="right"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="accent"
@@ -2014,7 +2098,7 @@
 			<h2>Tooltip on hover</h2>
 
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-hover"
+					data-toggle-tooltip-hover
 					data-tooltip-placement="left"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="success"
@@ -2023,7 +2107,7 @@
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-hover"
+					data-toggle-tooltip-hover
 					data-tooltip-placement="bottom"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="base"
@@ -2032,7 +2116,7 @@
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-hover"
+					data-toggle-tooltip-hover
 					data-tooltip-placement="top"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="neutral"
@@ -2041,7 +2125,7 @@
 				</a>
 				
 				<a href="#" class="btn btn-primary"
-					data-toggle="tooltip-hover"
+					data-toggle-tooltip-hover
 					data-tooltip-placement="right"
 					data-tooltip-badge="true"
 					data-tooltip-badge-background="#f00"
@@ -2052,7 +2136,7 @@
 					
 
 
-		<h1 data-toggle="accordion">Nav <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Nav <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<div class="nav">
@@ -2068,13 +2152,13 @@
 
 					
 					<li class="nav-item">
-						<a href="#nav-demo-dropdown" data-toggle="dropdown">
+						<a href="#nav-demo-dropdown" data-toggle-dropdown>
 						<img class="nav-icon lazy" data-src="<?=FWAPPS_ROOT_URL ?>/assets/images/icon-projects.svg"> <span class="nav-item-text">Item but with dropdown</span>
 						</a>
 						<ul class="dropdown" id="nav-demo-dropdown" >
-							<li><p>Drop item. data-toggle="accordion" and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
+							<li><p>Drop item. data-toggle-accordion and .toggle-accordion must be sibliiings. if it can't be siblings. make the href of [data-toggle] the accordion to toggle</p></li>
 							<li>
-								<a href="#" data-toggle="dropdown">Drop item</a>
+								<a href="#" data-toggle-dropdown>Drop item</a>
 								<div class="dropdown">
 									<span>yea</span>
 								</div>
@@ -2104,7 +2188,7 @@
 
 		</div>
 
-		<h1 data-toggle="accordion">Progress Bar <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Progress Bar <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 
@@ -2175,7 +2259,7 @@
 
 				<div class="progress">
 					<div class="progress-bar" style="width: 2%; background-color:teal;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="top"
 						data-tooltip-badge="true"
 						data-tooltip-classes="text-align-center"
@@ -2184,7 +2268,7 @@
 						data-tooltip-badge-background="teal"
 						data-tooltip-content="I have center x and center y so the badge boi is centered to the tooltip triggerer and shit"></div>
 					<div class="progress-bar" style="width: 8%; background-color:aliceblue;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="top"
 						data-tooltip-classes="text-align-center"
 						data-tooltip-center-y="true"
@@ -2192,7 +2276,7 @@
 						data-tooltip-badge-background="aliceblue"
 						data-tooltip-content="This is without the badge boi. eat shit fucker"></div>
 					<div class="progress-bar" style="width: 5%; background-color:BlueViolet;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="right"
 						data-tooltip-badge="true"
 						data-tooltip-classes="text-align-center"
@@ -2201,7 +2285,7 @@
 						data-tooltip-badge-background="BlueViolet"
 						data-tooltip-content="I'm placed on the right. Starved dogs eat their masters."></div>
 					<div class="progress-bar" style="width: 5%; background-color:BurlyWood;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="top"
 						data-tooltip-badge="true"
 						data-tooltip-classes="text-align-center"
@@ -2210,7 +2294,7 @@
 						data-tooltip-badge-background="BurlyWood"
 						data-tooltip-content="The color of your anus is the color of your eyes"></div>
 					<div class="progress-bar" style="width: 7%; background-color:#fe85d6;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="top"
 						data-tooltip-badge="true"
 						data-tooltip-classes="text-align-center"
@@ -2219,7 +2303,7 @@
 						data-tooltip-badge-background="#fe85d6"
 						data-tooltip-content="<strong>KNEEL!</strong>"></div>
 					<div class="progress-bar" style="width: 3%; background-color:#006c3d;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="top"
 						data-tooltip-badge="true"
 						data-tooltip-classes="text-align-center"
@@ -2228,7 +2312,7 @@
 						data-tooltip-badge-background="#006c3d"
 						data-tooltip-content="<em>butthole!</em>"></div>
 					<div class="progress-bar" style="width: 10%; background-color:#01c6ab;"
-					data-toggle="tooltip-hover"
+					data-toggle-tooltip-hover
 						data-tooltip-placement="left"
 						data-tooltip-badge="true"
 						data-tooltip-badge-size="large"
@@ -2240,7 +2324,7 @@
 						data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
 						></div>
 					<div class="progress-bar" style="width: 20%; background-color:#b6e4b6;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="top"
 						data-tooltip-badge="true"
 						data-tooltip-badge-size="large"
@@ -2252,7 +2336,7 @@
 						data-tooltip-content="dAEMON I am jusrtifyed"
 						></div>
 					<div class="progress-bar" style="width: 15%; background-color:#0037b4;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="bottom"
 						data-tooltip-badge="true"
 						data-tooltip-badge-size="large"
@@ -2264,7 +2348,7 @@
 						data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong><br> skinny penis"
 						></div>
 					<div class="progress-bar" style="width: 5%; background-color:#a168d9;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="right"
 						data-tooltip-badge="true"
 						data-tooltip-badge-size="large"
@@ -2275,7 +2359,7 @@
 						data-tooltip-content="Hey demon,<br> it's me.<br> <strong>Ya Boi</strong>"
 						></div>
 					<div class="progress-bar" style="width: 10%; background-color:#f7bc00;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="bottom"
 						data-tooltip-badge="true"
 						data-tooltip-badge-size="large"
@@ -2286,7 +2370,7 @@
 						data-tooltip-content="That's what she said"
 						></div>
 					<div class="progress-bar" style="width: 10%; background-color:#fd7f03;"
-						data-toggle="tooltip-hover"
+						data-toggle-tooltip-hover
 						data-tooltip-placement="left"
 						data-tooltip-badge="true"
 						data-tooltip-badge-size="large"
@@ -2327,7 +2411,7 @@
 				</div>
 		</div>
 
-		<h1 data-toggle="accordion">Dropdowns <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Dropdowns <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<h2>Basic offset classes</h2>
 				<br>
@@ -2337,7 +2421,7 @@
 
 				<ul class="inline">
 					<li style="position:relative;">
-						<div class="btn btn-default open" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default open" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-bottom open">
 							I'm a bottom dropdown and your mother will never love you
 							<br>has data-width but number
@@ -2346,7 +2430,7 @@
 
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-dropdown-width="500px" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-dropdown-width="500px" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-top">
 							I'm a top dropdown and your mother will never love you
 							<br> has data width but pixeled
@@ -2354,14 +2438,14 @@
 					</li>
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-left">
 							I'm a left dropdown and your mother will never love you
 						</ul>
 					</li>
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-right">
 							I'm a right dropdown and your mother will never love you
 						</ul>
@@ -2382,7 +2466,7 @@
 
 				<ul class="inline">
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-bottom-flush">
 							I'm a bottom-flush dropdown and your mother will never love you
 						</ul>
@@ -2390,21 +2474,21 @@
 
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-top-flush">
 							I'm a top-flush dropdown and your mother will never love you
 						</ul>
 					</li>
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-left-flush">
 							I'm a left-flush dropdown and your mother will never love you
 						</ul>
 					</li>
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-right-flush">
 							I'm a right-flush dropdown and your mother will never love you
 						</ul>
@@ -2426,27 +2510,27 @@
 
 				<ul class="inline">
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-right-flush dropdown-bottom">
 							I'm a bottom right-flush dropdown and your mother will never love you
 						</ul>
 					</li>
 
 					<li style="position:relative;">
-						<div class="btn btn-default open" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default open" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-top-flush dropdown-right open">
 							I'm a right top-flush dropdown and your mother will never love you
 						</ul>
 					</li>
 					<li style="position:relative;">
-						<div class="btn btn-default open" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default open" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-bottom-flush dropdown-left open">
 							I'm a left bottom-flush dropdown and your mother will never love you
 						</ul>
 					</li>
 
 					<li style="position:relative;">
-						<div class="btn btn-default" data-toggle="dropdown">Drop DOWN</div>
+						<div class="btn btn-default" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-left-flush dropdown-top">
 							I'm a top left-flush dropdown and your mother will never love you
 						</ul>
@@ -2468,7 +2552,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Form <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			
 
@@ -2978,12 +3062,12 @@
 			</form>
 		</div>
 
-		<h1 data-toggle="accordion">Form: Accordion + extreme testing for input fields because fuck input fields <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Form: Accordion + extreme testing for input fields because fuck input fields <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		
 		<div class="accordion">
 			<div class="accordion-group">
 
-				<h3 data-toggle="accordion">form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<h3 data-toggle-accordion>form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 				<div class="accordion">
 					<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
 					<input type="button" value="bitch">
@@ -3027,7 +3111,7 @@
 					<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 
-				<h3 data-href="#bitch-accordion" data-toggle="accordion">with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<h3 data-href="#bitch-accordion" data-toggle-accordion>with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 				<div id="bitch-accordion" class="accordion">
 					<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
 					<input class="input" type="button" value="Bitch">
@@ -3079,7 +3163,7 @@
 					<textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 
-				<a class="h3" href="#other-bitch-accordion" data-toggle="accordion">prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+				<a class="h3" href="#other-bitch-accordion" data-toggle-accordion>prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				<div id="other-bitch-accordion" class="accordion">
 					<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
 					<input class="input input-inline" type="button" value="Bitch">
@@ -3285,7 +3369,7 @@
 				</div>
 
 
-				<a class="h3" href="#other-other-bitch-accordion" data-toggle="accordion">bitch in a nav<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+				<a class="h3" href="#other-other-bitch-accordion" data-toggle-accordion>bitch in a nav<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 				<div id="other-other-bitch-accordion" class="accordion">
 						<p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
 					<div class="nav nav-vertical">
@@ -3904,7 +3988,7 @@
 			</div>
 		</div>
 
-		<h1 data-toggle="accordion">Btn <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Btn <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<h2>Basic</h2>
 			<button type="button" class="btn btn-default">Default</button>
@@ -4125,7 +4209,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">list group <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>list group <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<ul class="list-group">
@@ -4200,7 +4284,7 @@
 			</ul>
 		</div>
 
-		<h1 data-toggle="accordion">SPECIAL TEXT <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>SPECIAL TEXT <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p class="special-primary">
 				Yo I'm jumbo. don't talk to me or my sons ever again
@@ -4220,35 +4304,35 @@
 
 		</div>
 
-		<h1 data-toggle="accordion">Thumbnail <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Thumbnail <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<h4>Thumbnail clooster</h4>
 			<div class="thumbnail-cluster">
 					
-				<div class="thumbnail thumbnail-small">
+				<div class="thumbnail thumbnail-micro">
 					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
-				<div class="thumbnail thumbnail-small">
-					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
-				</div>
-
-				<div class="thumbnail thumbnail-small">
+				<div class="thumbnail thumbnail-micro">
 					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
-				<div class="thumbnail thumbnail-small">
+				<div class="thumbnail thumbnail-micro">
 					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
-				<div class="thumbnail thumbnail-small">
+				<div class="thumbnail thumbnail-micro">
 					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
-				<div class="thumbnail thumbnail-small">
+				<div class="thumbnail thumbnail-micro">
 					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 				</div>
 
-				<div class="thumbnail thumbnail-small">
+				<div class="thumbnail thumbnail-micro">
+					<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
+				</div>
+
+				<div class="thumbnail thumbnail-micro">
 					<span class="thumbnail-text">2+</span>
 				</div>
 
@@ -4265,11 +4349,11 @@
 			</div>
 
 			<h2>Thumbnail but inline</h2>
-			<div class="thumbnail thumbnail-small">
+			<div class="thumbnail thumbnail-micro">
 				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
-			<div class="thumbnail thumbnail-small">
+			<div class="thumbnail thumbnail-micro">
 				<span class="thumbnail-text">
 					MF
 				</span>
@@ -4295,12 +4379,12 @@
 				</span>
 			</div>
 
-			<div class="thumbnail thumbnail-small">
+			<div class="thumbnail thumbnail-micro">
 				<span class="badge badge-primary"></span>
 				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
-			<div class="thumbnail thumbnail-small">
+			<div class="thumbnail thumbnail-micro">
 				<span class="badge badge-primary"></span>
 				<span class="thumbnail-text">
 					MF
@@ -4324,12 +4408,12 @@
 				</span>
 			</div>
 
-			<div class="thumbnail thumbnail-small">
+			<div class="thumbnail thumbnail-micro">
 				<span class="tag tag-primary">69</span>
 				<img class="lazy" data-src="placeholder/profiles/team-des-jenn.jpg" alt="Mike Perez">
 			</div>
 
-			<div class="thumbnail thumbnail-small">
+			<div class="thumbnail thumbnail-micro">
 				<span class="tag tag-primary">pucha</span>
 				<span class="thumbnail-text">
 					MF
@@ -4338,7 +4422,7 @@
 
 		</div>
 
-		<h1 data-toggle="accordion">Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 		<p class="no-margin special-primary text-clip-background background-gradient text-leading-expanded">
@@ -4387,17 +4471,17 @@
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-square"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Search</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-search"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol time</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-time"></i> </span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol timer</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-timer"></i></span>
 			</a>
@@ -4419,62 +4503,62 @@
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-check"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol close</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-close"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol file</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-file"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star-half</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-half"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star-stroke</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-stroke"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol download</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-download"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol hyperlink</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-hyperlink"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-burger"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol fries</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-fries"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab vertical</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
 			</a>
 
-			<a data-toggle="modal" href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab horizontal</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
 			</a>
@@ -4761,190 +4845,113 @@
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-clipboard"></i></span>
 			</a>
 
-			<p>
-				Pencil <i class="color-primary symbol symbol-pencil"></i>
-			</p>		
-						
-			<p>
-				Edit <i class="color-primary symbol symbol-edit"></i>
-			</p>
-
-			<p>
-				Delete <i class="color-primary symbol symbol-delete"></i>
-			</p>
-						
-						
-			<p>
-				Play <i class="color-primary symbol symbol-play"></i>
-			</p>
-
-			<p>
-				Pause <i class="color-primary symbol symbol-pause"></i>
-			</p>
-
-			<p>
-				Stop <i class="color-primary symbol symbol-stop"></i>
-			</p>
-
-			<p>
-				Square <i class="color-primary symbol symbol-square"></i>
-			</p>
-
-			<p>
-				Search <i class="color-primary symbol symbol-search"></i>
-			</p>
-
-			<p>
-				Time <i class="color-primary symbol symbol-time"></i>
-			</p>
-
-			<p>
-				Timer <i class="color-primary symbol symbol-timer"></i>
-			</p>
-
-			<p>
-				plus <i class="color-primary symbol symbol-plus"></i>
-			</p>
-
-			<p>
-				minus <i class="color-primary symbol symbol-minus"></i>
-			</p>
-
-			<p>
-				check <i class="color-primary symbol symbol-check"></i>
-			</p>
-
-			<p>
-				close <i class="color-primary symbol symbol-close"></i>
-			</p>
-
-			<p>
-				map <i class="color-primary symbol symbol-map"></i>
-			</p>
-
-			<p>
-				file <i class="color-primary symbol symbol-file"></i>
-			</p>
-
-			<p>
-				star <i class="color-primary symbol symbol-star"></i>
-			</p>
-
-			<p>
-				star-half <i class="color-primary symbol symbol-star-half"></i>
-			</p>
-
-			<p>
-				star-stroke <i class="color-primary symbol symbol-star-stroke"></i>
-			</p>
-
-			<p>
-				download <i class="color-primary symbol symbol-download"></i>
-			</p>
-
-			<p>
-				hyperlink <i class="color-primary symbol symbol-hyperlink"></i>
-			</p>
-
-			<p>
-				burger <i class="color-primary symbol symbol-burger"></i>
-			</p>
-
-			<p>
-				fries <i class="color-primary symbol symbol-fries"></i>
-			</p>
-
-			<p>
-				kebab vertical <i class="color-primary symbol symbol-kebab-vertical"></i>
-			</p>
-
-			<p>
-				kebab horizontal <i class="color-primary symbol symbol-kebab-horizontal"></i>
-			</p>
-
-			<p>
-				arrow down <i class="color-primary symbol symbol-arrow-down"></i>
-			</p>
-
-			<p>
-				arrow up <i class="color-primary symbol symbol-arrow-up"></i>
-			</p>
-
-			<p>
-				arrow left <i class="color-primary symbol symbol-arrow-left"></i>
-			</p>
-
-			<p>
-				arrow right <i class="color-primary symbol symbol-arrow-right"></i>
-			</p>
-
-			<p>
-				arrow double down <i class="color-primary symbol symbol-arrow-double-down"></i>
-			</p>
-
-			<p>
-				arrow double up <i class="color-primary symbol symbol-arrow-double-up"></i>
-			</p>
-
-			<p>
-				arrow double left <i class="color-primary symbol symbol-arrow-double-left"></i>
-			</p>
-
-			<p>
-				arrow double right <i class="color-primary symbol symbol-arrow-double-right"></i>
-			</p>
-
-			<p>
-				arrow tail down <i class="color-primary symbol symbol-arrow-tail-down"></i>
-			</p>
-
-			<p>
-				arrow tail up <i class="color-primary symbol symbol-arrow-tail-up"></i>
-			</p>
-
-			<p>
-				arrow tail left <i class="color-primary symbol symbol-arrow-tail-left"></i>
-			</p>
-
-			<p>
-				arrow tail right <i class="color-primary symbol symbol-arrow-tail-right"></i>
-			</p>
+			<?php
+			$supported_symbols = array(
+				'1p21',
+				'play',
+				'pause',
+				'stop',
+				'square',
+				'square-outline',
+				'checkbox',
+				'checkbox-inverse',
+				'addbox',
+				'addbox-inverse',
+				'grid',
+				'list',
+				'search',
+				'plus',
+				'minus',
+				'check',
+				'close',
+				'thumbs-up',
+				'thumbs-up-inverse',
+				'thumbs-down',
+				'thumbs-down-inverse',
+				'star',
+				'star-half',
+				'star-stroke',
+				'kebab-vertical',
+				'kebab-horizontal',
+				'arrow-up',
+				'arrow-down',
+				'arrow-left',
+				'arrow-right',
+				'arrow-double-up',
+				'arrow-double-down',
+				'arrow-double-left',
+				'arrow-double-right',
+				'upload',
+				'download',
+				'arrow-tail-up',
+				'arrow-tail-down',
+				'arrow-tail-left',
+				'arrow-tail-right',
+				'caret-up',
+				'caret-down',
+				'caret-left',
+				'caret-right',
+				'text-center',
+				'text-left',
+				'text-right',
+				'text-justify',
+				'map',
+				'pin',
+				'bell',
+				'bell-active',
+				'hyperlink',
+				'dash',
+				'caution',
+				'error',
+				'info',
+				'success',
+				'stack',
+				'clap',
+				'copy',
+				'share',
+				'filter',
+				'chart',
+				'segment',
+				'user',
+				'user-add',
+				'user-remove',
+				'expand',
+				'collapse',
+				'expand-alt',
+				'collapse-alt',
+				'burger',
+				'fries',
+				'waffle',
+				'pencil',
+				'edit',
+				'delete',
+				'robot',
+				'file',
+				'clipboard',
+				'paperplane',
+				'timer',
+				'time',
+				'caution-inverse',
+				'error-inverse',
+				'info-inverse',
+				'success-inverse',
+				'phone',
+				'calendar',
+				'calendar-alt',
+				'paperclip',
+			);
+			?>
 			
-			<p>
-				caret up <i class="color-primary symbol symbol-caret-up"></i>
-			</p>
+			<?php foreach($supported_symbols as $symbol): ?>
 
-			<p>
-				caret down <i class="color-primary symbol symbol-caret-down"></i>
-			</p>
-
-			<p>
-				caret left <i class="color-primary symbol symbol-caret-left"></i>
-			</p>
-
-			<p>
-				caret right <i class="color-primary symbol symbol-caret-right"></i>
-			</p>
-
-			<p>
-				text center <i class="color-primary symbol symbol-text-center"></i>
-			</p>
-
-			<p>
-				text left <i class="color-primary symbol symbol-text-left"></i>
-			</p>
-
-			<p>
-				text right <i class="color-primary symbol symbol-text-right"></i>
-			</p>
-
-			<p>
-				text justify <i class="color-primary symbol symbol-text-justify"></i>
-			</p>
+				<p>
+					<?=$symbol?> <i class="color-primary symbol symbol-<?=$symbol?>"></i>
+				</p>
+			<?php endforeach; ?>
 
 		</div>
 			
-		<h1 data-toggle="accordion">Badges <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Badges <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
 				<span class="badge badge-primary"></span> Primary
@@ -4982,7 +4989,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Legends <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Legends <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<p>
 				<span class="legend legend-primary"></span> Primary
@@ -5038,7 +5045,7 @@
 		</div>
 			
 
-		<h1 data-toggle="accordion">Tags <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Tags <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<span class="tag tag-default">Default</span>
 			<span class="tag tag-primary">Primary</span>
@@ -5058,7 +5065,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Table <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Table <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<table class="table">
 				<thead>
@@ -5416,7 +5423,7 @@
 			</div>
 		</div>
 
-		<h1 data-toggle="accordion">Helpers  <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Helpers  <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<h2>Helper classes: font family</h2>
@@ -5756,14 +5763,14 @@
 
 		</div>
 
-		<h1  data-toggle="accordion" >Typographeee <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1  data-toggle-accordion >Typographeee <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		<h3 class="true-title">Page Markup And Formatting</h3>	
 			<?php app_get_component('components/_DEMO-html-markup'); ?>
 		</div>
 
 
-		<h1 data-toggle="accordion" data-href="#accordion-svg" >SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion data-href="#accordion-svg" >SVG <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion" id="accordion-svg">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 742 720" style="enable-background:new 0 0 742 720;" xml:space="preserve" class="alignnone size-medium wp-image-1067 svg replaced-svg">
 				<g transform="translate(71,60)">
@@ -5894,7 +5901,7 @@
 		</div>
 
 
-		<h1 data-toggle="accordion">Grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<h2>Typical grid</h2>
@@ -6097,7 +6104,7 @@
 		</div>
 
 
-		<h1  data-toggle="accordion" >Would toolt tip work for dynamic shit? Idk let's see <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1  data-toggle-accordion >Would toolt tip work for dynamic shit? Idk let's see <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		<div id="kanoski-chart" style="width: 100%;"></div>
 
@@ -6106,6 +6113,15 @@
 			//wrap in cdata so google doesn't think it's renderblocking 
 
 			(function(){
+				const FRAMEWORK_FN_TO_USE=(x,y)=> {
+					if(frameWork.positionToolTip){
+						return frameWork.positionToolTip(x,y);
+
+					}else{
+						tooltip = new frameWork.Tooltip();
+						return tooltip.position(x,y);
+					}
+				}
 				const isIE = function(){
 				var ua = navigator.userAgent;
 				return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1
@@ -6232,10 +6248,10 @@
 						.attr('fill', d => colors(d.Make))
 						.attr('stroke-width',strokeWidth)
 						.on('mousemove',function(){
-							frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
+							FRAMEWORK_FN_TO_USE(d3.event.pageX,d3.event.pageY);
 						})
 						.on('mouseenter',function(){
-							frameWork.positionToolTip(d3.event.pageX,d3.event.pageY);
+							FRAMEWORK_FN_TO_USE(d3.event.pageX,d3.event.pageY);
 						})
 						.attr('stroke',backgroundColor)
 						.attr('d', (d,i) => getArcPath( getPiData(dataToUse,i),( width * radius[outerRadiusIndex]),( width * radius[innerRadiusIndex]) ))
@@ -6429,7 +6445,7 @@
 </div>
 </div>
 
-<div class="modal" id="secret-modal" data-modal-title="YEET">
+<div class="modal modal-default" id="secret-modal" data-modal-title="YEET">
 	<div class="color-background" data-src="/placeholder/files/shrek.jpg">
 		<h1>
 			We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give, never gonna give (Give you up) (Ooh) Never gonna give, never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry

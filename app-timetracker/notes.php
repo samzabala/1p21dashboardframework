@@ -216,7 +216,7 @@
 											<div class="profile-image-multiple">
 												<a class="thumbnail-cluster" href="#modal-more-members">
 													<!-- @while profiles are < 3 : loop until it hits max number of dom items, 3 -->
-														<span class="thumbnail thumbnail-small">
+														<span class="thumbnail thumbnail-micro">
 															<!-- @IF has profile imahe -->
 															<div class="thumbnail-image">
 
@@ -229,7 +229,7 @@
 															</span>
 														</span>
 
-														<span class="thumbnail thumbnail-small">
+														<span class="thumbnail thumbnail-micro">
 															<!-- @IF has profile imahe -->
 															<div class="thumbnail-image">
 
@@ -245,7 +245,7 @@
 															<!-- @PLACEHOLDER: DELETE WHEN READY -->
 																<?php if($j % 2 == 0){ ?>
 																
-																	<span class="thumbnail thumbnail-small">
+																	<span class="thumbnail thumbnail-micro">
 																		<!-- @IF has profile imahe -->
 																		<div class="thumbnail-image">
 

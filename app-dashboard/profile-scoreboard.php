@@ -449,7 +449,7 @@
 
 									<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
 									<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-										<div class="thumbnail project-priority thumbnail-small background-intensity-5">
+										<div class="thumbnail project-priority thumbnail-micro background-intensity-5">
 											<span class="thumbnail-text">
 												<span class="REPLACE">5</span>
 											</span>
@@ -542,7 +542,7 @@
 
 												<!-- @NOTE: @DYNAMIC class .background-intensity-REPLACE -->
 												<td class="dashboard-table-cell-thumbnail" class="text-align-center">
-													<div class="thumbnail project-priority thumbnail-small background-intensity-<?=$i ?>">
+													<div class="thumbnail project-priority thumbnail-micro background-intensity-<?=$i ?>">
 														<span class="thumbnail-text">
 															<span class="REPLACE"><?=$i ?></span>
 														</span>

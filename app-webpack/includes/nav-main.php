@@ -1,7 +1,7 @@
 
 
 <a id="nav-logo" href="<?=app_create_link(); ?>" class="nav-logo nav-block nav-block flex-0-0">
-	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="Logo">
+	<img class="lazy" data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="Logo">
 </a>
 
 
@@ -14,11 +14,11 @@
 		<div id="nav-account-info">
 
 
-			<a class="thumbnail thumbnail-small" href="#nav-notification-dropdown"
-				data-toggle="dropdown">
+			<a class="thumbnail thumbnail-micro" href="#nav-notification-dropdown"
+				data-toggle-dropdown>
 				<!-- @IF has profile imahe -->
 					<div class="thumbnail-image">
-						<img class="profile-image" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+						<img class="profile-image lazy" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
 					</div>
 
 				<!-- @ELSE -->
@@ -67,7 +67,7 @@
 			
 		</div>
 
-		<a href="#nav-account-dropdown" class="btn btn-link btn-symbol btn-no-shadow"  data-toggle="dropdown" title="More"> 
+		<a href="#nav-account-dropdown" class="btn btn-link btn-symbol btn-no-shadow"  data-toggle-dropdown title="More"> 
 			<i class="symbol symbol-kebab-vertical"></i>
 		</a>
 

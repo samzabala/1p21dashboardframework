@@ -80,7 +80,7 @@
 
 	<!-- @NOTE : templates these link to are not finalized yet. we may comment these out for now while their not sent yet -->
 	<li class="flex-col-xs-12 position-relative">
-		<a href="#" data-toggle="dropdown">
+		<a href="#" data-toggle-dropdown>
 			<span class="p">
 				<img class="nav-icon" data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP;?>/assets/images/icon-users.svg">
 			</span>

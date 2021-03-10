@@ -22,14 +22,14 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
 		<!-- DEPENDENCIES -->
-		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js'); ?>
+		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/js/framework.legacy.plugged.min.js'); ?>
 		<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); ?>
 	
 
 
 
 		<!-- THE BOI -->
-		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/apps.js'); ?>
+		<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/legacy/scripts/apps.js'); ?>
 
 
 		<script src="/_fortesting.js"></script>

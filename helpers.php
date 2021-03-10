@@ -27,7 +27,7 @@ function app_get_template_part($filename = '', $slug = '',$data = array() ){
 
 
 //include a file
-function app_get_component($filename = '', $slug ='',$once = false, $data = array()){
+function app_get_component( $filename = '', $slug ='',$once = false, $data = array()){
 	// echo '<pre>';
 	// var_dump(array(
 	// 	'filename' => $filename,
@@ -39,21 +39,50 @@ function app_get_component($filename = '', $slug ='',$once = false, $data = arra
 
 	if($filename !== ''){
 
-		$source = FWAPPS_ROOT_PATH.'/'.$filename;
-		
-		if(isset($slug) && file_exists( FWAPPS_ROOT_PATH.'/'.$filename.'-'.$slug.'.php' )){
-			$source .= '-'.$slug;
-		}
-		
-		$source .='.php';
-		if( file_exists( $source ) ){
+		$source_from_app = FWAPPS_ROOT_PATH.'/app-'.FWAPPS_APP.'/'.$filename;
+		$source_from_global = FWAPPS_ROOT_PATH.'/'.$filename;
 
+		
+		$suffix = '.php';
+
+		/*
+		order
+		slug app
+		slug global
+		app
+		global
+		*/
+
+
+		if(
+			isset($slug)
+			&& file_exists( $source_from_app.'-'.$slug.$suffix )
+		){
+			$source = $source_from_app.'-'.$slug.$suffix;
+		}elseif(
+			isset($slug)
+			&& file_exists( $source_from_global.'-'.$slug.$suffix )
+		){
+			$source = $source_from_global.'-'.$slug.$suffix;
+		}elseif(
+			file_exists( $source_from_app.$suffix )
+		){
+			$source = $source_from_app.$suffix;
+		}elseif(
+			file_exists( $source_from_global.$suffix )
+		){
+			$source = $source_from_global.$suffix;
+		}
+
+		
+		if(isset($source)){
 
 			if ($once == true) {
 				include_once $source;
 			} else {
 				include $source;
 			}
+
 		}
 	}
 }
@@ -96,7 +125,46 @@ function app_init_content(){
 	
 	//specific shit
 	switch($app):
-			
+		//outreach
+		case 'outreach':
+			$slug = '';
+			switch($template_part):
+
+
+				case 'home':
+				case null:
+					?>
+						<div class="module">
+
+							Not yet brah
+							<br>
+							<br>
+							<br>
+							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
+						</div>
+					<?php
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
+					break;
+					case 'company-detail':
+					case 'contact-detail':
+					case 'tasks':
+					case 'contacts':
+					app_get_template_part("app-{$app}/{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+					break;
+				break;
+
+				case 'debug':
+				case 'debug-components':
+					app_get_template_part("{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					break;
+
+				default:
+					app_get_template_part('global/error');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
+					break;
+				endswitch;
 		//time tracker shit
 		case 'webpack':
 			case 'home':
@@ -218,6 +286,9 @@ function app_init_content(){
 					break;
 
 				case 'debug':
+					app_get_template_part('debug-legacy');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					break;
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
@@ -264,6 +335,9 @@ function app_init_content(){
 
 
 				case 'debug':
+					app_get_template_part('debug-legacy');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					break;
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
@@ -332,6 +406,9 @@ function app_init_content(){
 					
 				
 				case 'debug':
+					app_get_template_part('debug-legacy');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					break;
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
@@ -352,6 +429,12 @@ function app_init_content(){
 // links for debugging our boi
 function app_debug_li() {
 ?>
+	<li>
+		<a href="<?=app_create_link(array(
+			'env'=>FWAPPS_SLUG,
+			'app'=>'outreach'));
+		?>">Switch to Client Outreach</a>
+	</li>
 	<li>
 		<a href="<?=app_create_link(array(
 			'env'=>FWAPPS_SLUG,
@@ -571,4 +654,11 @@ function app_parse_args( $args, $defaults = array() ) {
 		return array_merge( $defaults, $parsed_args );
 	}
 	return $parsed_args;
+}
+
+function app_get_path(){
+	return FWAPPS_ROOT_PATH.'/app-'.FWAPPS_APP;
+}
+function app_get_uri(){
+	return FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP;
 }

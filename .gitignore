@@ -8,12 +8,3 @@ node_modules/*
 wp-content/
 wp-admin/
 wp-includes/
-
-framework.layout.js
-framework.layout.min.js
-framework.lite.js
-framework.lite.min.js
-framework.normalize.js
-framework.normalize.min.js
-framework.utilities.js
-framework.utilities.min.js

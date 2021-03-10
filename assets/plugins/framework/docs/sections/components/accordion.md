@@ -208,11 +208,11 @@ to disable this write ya script
 
 
 ```js
-(function(fw){
-	frameWork.settings.initializeAccordion = false;
+(function(frameWork){
+	frameWork.Settings.modify('initializeAccordion',false);
 }(frameWork));
 ```
-NOTE: this is useless if `frameWork.settings.dynamicHash` is set to `false`
+NOTE: this is useless if `frameWork.settings.get('dynamicHash')` is set to `false`
 
 ### Functions
 

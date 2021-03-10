@@ -7,7 +7,7 @@ will separate dashboard and framework one the bois are readeh
 
 ## Dependencies
 ### Javascript
-*	[jQuery](https://jquery.com/)
+*	~[jQuery](https://jquery.com/)~
 *	~[Trumbowyg](https://alex-d.github.io/Trumbowyg/) (will be replaced with TinyMCE)~
 	*	~Trumbowyg Upload Plugin (1p21 Dashboard Custom) (will be deprecated when replaced with TinyMCE)~
 *	[1p21 Dashboard Framework](https://github.com/samzabala/framework/)

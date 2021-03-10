@@ -70,7 +70,7 @@
 		<div id="nav-account-info">
 
 
-			<a class="thumbnail thumbnail-small" href="#nav-notification-dropdown"
+			<a class="thumbnail thumbnail-micro" href="#nav-notification-dropdown"
 				data-toggle="dropdown">
 				<!-- @IF has profile imahe -->
 					<div class="thumbnail-image">
