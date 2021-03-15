@@ -6,6 +6,69 @@ All influenced by [color declarations](../scaffolding/colors.md)
 
 ###  Basic
 
+
+
+#### Border Color
+
+*   **`.border-color-base` (Not to be confused with theme-color)**
+*   **`.border-color-background` (Not to be confused with theme-background)**
+*   **`.border-color-primary`**
+*   **`.border-color-secondary`**
+*   **`.border-color-accent`**
+*   **`.border-color-neutral`**
+*   **`.border-color-success`**
+*   **`.border-color-caution`**
+*   **`.border-color-error`**
+*   **`.border-color-intensity-1`**
+*   **`.border-color-intensity-2`**
+*   **`.border-color-intensity-3`**
+*   **`.border-color-intensity-4`**
+*   **`.border-color-intensity-5`**
+*   **`.border-color-inherit`**
+*   **`.border-color-transparent`**
+
+
+#### Border Style
+
+*   **`.border-style-none`**
+*   **`.border-style-hidden`**
+*   **`.border-style-dotted`**
+*   **`.border-style-dashed`**
+*   **`.border-style-solid`**
+*   **`.border-style-double`**
+*   **`.border-style-groove`**
+*   **`.border-style-ridge`**
+*   **`.border-style-inset`**
+*   **`.border-style-outset`**
+
+Can also be specific to a side. for example for `.border-style-solid`
+
+*   **`.border-style-solid-left`**
+*   **`.border-style-solid-bottom`**
+*   **`.border-style-solid-right`**
+*   **`.border-style-solid-top`**
+*   **`.border-style-solid-x`**
+*   **`.border-style-solid-y`**
+
+
+#### Border Width
+
+*   **`.border-width-thin`**
+*   **`.border-width-medium`**
+*   **`.border-width-thick`**
+
+
+Can also be specific to a side. for example for `.border-width-thick`
+
+*   **`.border-width-thick-left`**
+*   **`.border-width-thick-bottom`**
+*   **`.border-width-thick-right`**
+*   **`.border-width-thick-top`**
+*   **`.border-width-thick-x`**
+*   **`.border-width-thick-y`**
+
+To reset brder- widths view [Reset Borders](#reset-borders)
+
 #### Background
 
 *   **`.background-base` (Not to be confused with theme-color)**
@@ -67,10 +130,10 @@ These classes will set the proper color based off of html tag having the `.theme
 
 | Class 							| Set color | Set color when `.theme-inverse is active` 				|
 | --								| --		| --														|
-| **`.background-theme`** 			| `$theme-background`			| `$theme-background-inverse` 			|
-| **`.background-theme-contrast`** 	| `$theme-background-contrast`	| `$theme-background-contrast-inverse`	|
-| **`.background-theme-polar`** 			| `$theme-color`				| `$theme-color-inverse`				|
-| **`.background-theme-polar-contrast`** 	| `$theme-color-contrast`		| `$theme-color-contrast-inverse`		|
+| **`.background-theme`** 			| `$brand-theme-background`			| `$brand-theme-background-inverse` 			|
+| **`.background-theme-contrast`** 	| `$brand-theme-background-contrast`	| `$brand-theme-background-contrast-inverse`	|
+| **`.background-theme-polar`** 			| `$brand-theme-color`				| `$brand-theme-color-inverse`				|
+| **`.background-theme-polar-contrast`** 	| `$brand-theme-color-contrast`		| `$brand-theme-color-contrast-inverse`		|
 
 To set any background classes only on pseudo classes or interactive conditions, append whichever is needed
 
@@ -81,10 +144,23 @@ These classes will set the proper color based off of html tag having the `.theme
 
 | Class							 | Set color | Set color when `.theme-inverse is active`				|
 | --							| --		| --														|
-| **`.color-theme`**			| `$theme-color` 				| `$theme-color-inverse`				|
-| **`.color-theme-contrast`** 	| `$theme-color-contrast`		| `$theme-color-contrast-inverse`		|
-| **`.color-theme-polar`** 			| `$theme-background`			| `$theme-background-inverse`			|
-| **`.color-theme-polar-contrast`** 	| `$theme-background-contrast` 	| `$theme-background-contrast-inverse` 	|
+| **`.color-theme`**			| `$brand-theme-color` 				| `$brand-theme-color-inverse`				|
+| **`.color-theme-contrast`** 	| `$brand-theme-color-contrast`		| `$brand-theme-color-contrast-inverse`		|
+| **`.color-theme-polar`** 			| `$brand-theme-background`			| `$brand-theme-background-inverse`			|
+| **`.color-theme-polar-contrast`** 	| `$brand-theme-background-contrast` 	| `$brand-theme-background-contrast-inverse` 	|
+
+
+#### Border color
+
+These classes will set the proper color based off of html tag having the `.theme-inverse` class
+
+| Class							 | Set color | Set color when `.theme-inverse is active`				|
+| --							| --		| --														|
+| **`.border-color-theme`**			| `$brand-theme-color` 				| `$brand-theme-color-inverse`				|
+| **`.border-color-theme-contrast`** 	| `$brand-theme-color-contrast`		| `$brand-theme-color-contrast-inverse`		|
+| **`.border-color-theme-polar`** 			| `$brand-theme-background`			| `$brand-theme-background-inverse`			|
+| **`.border-color-theme-polar-contrast`** 	| `$brand-theme-background-contrast` 	| `$brand-theme-background-contrast-inverse` 	|
+
 
 
 ### Pseudo/Toggle Based
@@ -97,6 +173,7 @@ These classes will set the proper color based off of html tag having the `.theme
 | **.background-[color-tag]-focus** | &:focus,&.focus |
 | **.background-[color-tag]-active** | &:active |
 | **.background-[color-tag]-toggle** | &.open,&.active |
+| **.background-[color-tag]-inverse** | .theme-inverse & |
 
 
 
@@ -107,10 +184,22 @@ eg: `.background-primary-hover` applies $brand-color-primary on :hover
 
 | Appendage | Condition when the color is applied |
 | -- | -- |
-| **.color-[color]-hover** | &:hover |
-| **.color-[color]-focus** | &:focus,&.focus |
-| **.color-[color]-active** | &:active |
-| **.color-[color]-toggle** | &.open,&.active |
+| **.color-[color-tag]-hover** | &:hover |
+| **.color-[color-tag]-focus** | &:focus,&.focus |
+| **.color-[color-tag]-active** | &:active |
+| **.color-[color-tag]-toggle** | &.open,&.active |
+| **.color-[color-tag]-inverse** | .theme-inverse & |
+
+#### Border Color
+
+| Appendage | Condition when the color is applied |
+| -- | -- |
+| **.border-color-[color-tag]-hover** | &:hover |
+| **.border-color-[color-tag]-focus** | &:focus,&.focus |
+| **.border-color-[color-tag]-active** | &:active |
+| **.border-color-[color-tag]-toggle** | &.open,&.active |
+| **.border-color-[color-tag]-inverse** | .theme-inverse & |
+
 
 
 ## Fill and Stroke
@@ -125,9 +214,17 @@ eg: `.background-primary-hover` applies $brand-color-primary on :hover
 	
 	Set font-family to set `$brand-font-primary`;
 
+*   **`.font-family-secondary`**
+	
+	Set font-family to set `$brand-font-secondary`;
+
 *   **`.font-family-accent`**
 
 	Set font-family to set `$brand-font-accent`;
+
+*   **`.font-family-monospace`**
+	
+	Set font-family to set `$brand-font-monospace`;
 
 *   **`.font-family-inherit`**
 
@@ -211,6 +308,10 @@ Set to whatever font weight ya need boi
 *	**`.text-leading-inherit`**
 
 	line-height is set to inherit line-height.
+
+*	**`.text-leading-whole`**
+
+	line-height is set to 1. which means no line-height. just the same height as the font.
 
 [More info on the css property](https://www.w3schools.com/cssref/pr_dim_line-height.asp)
 
@@ -321,7 +422,74 @@ Set to whatever font weight ya need boi
 
 	No margin on the right
 
+
+
+
+# Auto Margins
+
+*   **`.margin-auto`**
+
+	`margin:auto` on all sides
+
+*   **`.margin-auto-x`**
+
+	`margin:auto` on left and right sides
+
+*   **`.margin-auto-y`**
+
+	`margin:auto` on top and bottom sides
+
+*   **`.margin-auto-top`**
+
+	`margin:auto` on the top
+
+*   **`.margin-auto-bottom`**
+
+	`margin:auto` on the bottom
+
+*   **`.margin-auto-left`**
+
+	`margin:auto` on the left
+
+*   **`.margin-auto-right`**
+
+	`margin:auto` on the right
+
 [More info on the css property](https://www.w3schools.com/css/css_margin.asp)
+
+
+
+# Reset borders
+
+*   **`.no-border`**
+
+	No border on all sides
+
+*   **`.no-border-x`**
+
+	No border on left and right sides
+
+*   **`.no-border-y`**
+
+	No border on top and bottom sides
+
+*   **`.no-border-top`**
+
+	No border on the top
+
+*   **`.no-border-bottom`**
+
+	No border on the bottom
+
+*   **`.no-border-left`**
+
+	No border on the left
+
+*   **`.no-border-right`**
+
+	No border on the right
+
+[More info on the css property](https://www.w3schools.com/css/css_border.asp)
 
 
 # Reset Padding
@@ -391,6 +559,33 @@ Set to whatever font weight ya need boi
 *   **`.position-absolute`**
 *   **`.position-fixed`**
 *   **`.position-sticky`**
+
+## Offsetting
+
+you can add a 0 to top,bottom,left,right horizontally or vertically with dem bois
+
+### All sides 
+
+*   **`.offset-auto`**
+*   **`.offset-0`**
+
+### Horizontal or vertical sidez 
+
+*   **`.offset-x-auto`**
+*   **`.offset-x-0`**
+*   **`.offset-y-auto`**
+*   **`.offset-y-0`**
+
+### Indivisual sidez 
+
+*   **`.offset-top-auto`**
+*   **`.offset-top-0`**
+*   **`.offset-left-auto`**
+*   **`.offset-left-0`**
+*   **`.offset-bottom-auto`**
+*   **`.offset-bottom-0`**
+*   **`.offset-right-auto`**
+*   **`.offset-left-0`**
   
 [More info on the css property](https://www.w3schools.com/css/css_positioning.asp)
 
@@ -415,64 +610,105 @@ Set to whatever font weight ya need boi
 
 # Justify Content
 
+*   **`.justify-content-start`**
+*   **`.justify-content-end`**
 *   **`.justify-content-flex-start`**
 *   **`.justify-content-flex-end`**
+*   **`.justify-content-left`**
+*   **`.justify-content-right`**
 *   **`.justify-content-center`**
+*   **`.justify-content-stretch`**
+*   **`.justify-content-normal`**
 *   **`.justify-content-space-between`**
 *   **`.justify-content-space-around`**
 *   **`.justify-content-space-evenly`**
-*   **`.justify-content-start`**
-*   **`.justify-content-end`**
-*   **`.justify-content-left`**
-*   **`.justify-content-right`**
-*   **`.justify-content-normal`**
-*   **`.justify-content-stretch`**
 *   **`.justify-content-inherit`**
+
+[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+
+# Justify Items
+
+*   **`.justify-items-start`**
+*   **`.justify-items-end`**
+*   **`.justify-items-flex-start`**
+*   **`.justify-items-flex-end`**
+*   **`.justify-items-self-start`**
+*   **`.justify-items-self-end`**
+*   **`.justify-items-left`**
+*   **`.justify-items-right`**
+*   **`.justify-items-center`**
+*   **`.justify-items-baseline`**
+*   **`.justify-items-stretch`**
+*   **`.justify-items-normal`**
+*   **`.justify-items-inherit`**
 *   
-[More info on the css property](https://www.w3schools.com/cssref/css3_pr_justify-content.asp)
+[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)
 
-# Align Self
+# Justify Self
 
-*   **`.align-self-flex-start`**
-*   **`.align-self-flex-end`**
-*   **`.align-self-center`**
-*   **`.align-self-baseline`**
-*   **`.align-self-stretch`**
-*   **`.align-self-inherit`**
-
-[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
-
-# Align Items
-
-*   **`.align-items-flex-start`**
-*   **`.align-items-flex-end`**
-*   **`.align-items-stretch`**
-*   **`.align-items-center`**
-*   **`.align-items-baseline`**
-*   **`.align-items-start`**
-*   **`.align-items-end`**
-*   **`.align-items-inherit`**
-
-[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+*   **`.justify-self-start`**
+*   **`.justify-self-end`**
+*   **`.justify-self-flex-start`**
+*   **`.justify-self-flex-end`**
+*   **`.justify-self-self-start`**
+*   **`.justify-self-self-end`**
+*   **`.justify-self-left`**
+*   **`.justify-self-right`**
+*   **`.justify-self-center`**
+*   **`.justify-self-baseline`**
+*   **`.justify-self-stretch`**
+*   **`.justify-self-normal`**
+*   **`.justify-self-inherit`**
+*   
+[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)
 
 # Align Content
 
+*   **`.align-content-start`**
+*   **`.align-content-end`**
 *   **`.align-content-flex-start`**
 *   **`.align-content-flex-end`**
 *   **`.align-content-center`**
+*   **`.align-content-stretch`**
+*   **`.align-content-normal`**
 *   **`.align-content-space-between`**
 *   **`.align-content-space-around`**
 *   **`.align-content-space-evenly`**
-*   **`.align-content-baseline`**
-*   **`.align-content-stretch`**
-*   **`.align-content-start`**
-*   **`.align-content-end`**
-*   **`.align-content-left`**
-*   **`.align-content-right`**
-*   **`.align-content-normal`**
 *   **`.align-content-inherit`**
 
 [More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+
+# Align Items
+
+*   **`.align-items-start`**
+*   **`.align-items-end`**
+*   **`.align-items-flex-start`**
+*   **`.align-items-flex-end`**
+*   **`.align-items-self-start`**
+*   **`.align-items-self-end`**
+*   **`.align-items-center`**
+*   **`.align-items-baseline`**
+*   **`.align-items-stretch`**
+*   **`.align-items-normal`**
+*   **`.align-items-inherit`**
+*   
+[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+
+# Align Self
+
+*   **`.align-self-start`**
+*   **`.align-self-end`**
+*   **`.align-self-flex-start`**
+*   **`.align-self-flex-end`**
+*   **`.align-self-self-start`**
+*   **`.align-self-self-end`**
+*   **`.align-self-center`**
+*   **`.align-self-baseline`**
+*   **`.align-self-stretch`**
+*   **`.align-self-normal`**
+*   **`.align-self-inherit`**
+*   
+[More info on the css property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
 
 # Inline Flex
 
@@ -546,6 +782,19 @@ Hide on breakpoint or device
 *   **`.hide-mobile`**
 *   **`.hide-nonmobile`**
 
+
+
+Hide on certain ineractions of parent
+
+*   **`.hide-hover`** (hide when on hover)
+*   **`.hide-not-hover`** (hide when not on hover)
+*   **`.hide-focus`** (hide when on focus)
+*   **`.hide-not-focus`** (hide when not on focus)
+*   **`.hide-active`** (hide when on active)
+*   **`.hide-not-active`** (hide when not on active)
+*   **`.hide-toggle`** (hide when classed as `open` or `active`)
+*   **`.hide-not-toggle`** (hide when not classed as `open` or `active`)
+
 ## Only
 
 Show only on breakpoint or device
@@ -557,6 +806,19 @@ Show only on breakpoint or device
 *   **`.only-mobile`**
 *   **`.only-nonmobile`**
 
+Show on certain ineractions of parent
+
+*   **`.only-hover`** (only when on hover)
+*   **`.only-not-hover`** (only when not on hover)
+*   **`.only-focus`** (only when on focus)
+*   **`.only-not-focus`** (only when not on focus)
+*   **`.only-active`** (only when on active)
+*   **`.only-not-active`** (only when not on active)
+*   **`.only-toggle`** (only when classed as `open` or `active`)
+*   **`.only-not-toggle`** (only when not classed as `open` or `active`)
+
+By default, the this works based on the pointer interactions on parent element. If styles based on a different ancestor is desired, Add `.pointer-reference` to that ancestor
+
 # Screen reader only
 
 **`.sr-only`**
@@ -567,6 +829,60 @@ Yea boi
 # Clearfix
 
 **`.cf`**
+
+
+# Round corners
+
+*   **`.radius`** - all corners
+*   **`.round-ellipse`** - all corners but all the way to create an ellipse (for a circle combine with `.ratio-1-by-1`)
+*   **`.radius-top`**
+*   **`.radius-bottom`**
+*   **`.radius-left`**
+*   **`.radius-right`**
+*   **`.radius-top-left`**
+*   **`.radius-bottom-left`**
+*   **`.radius-top-right`**
+*   **`.radius-bottom-right`**
+
+### Smaller radius
+
+*   **`.radius-small`** - all corners
+*   **`.radius-top-small`**
+*   **`.radius-bottom-small`**
+*   **`.radius-left-small`**
+*   **`.radius-right-small`**
+*   **`.radius-top-left-small`**
+*   **`.radius-bottom-left-small`**
+*   **`.radius-top-right-small`**
+*   **`.radius-bottom-right-small`**
+
+
+
+### Larger radius
+
+*   **`.radius-large`** - all corners
+*   **`.radius-top-large`**
+*   **`.radius-bottom-large`**
+*   **`.radius-left-large`**
+*   **`.radius-right-large`**
+*   **`.radius-top-left-large`**
+*   **`.radius-bottom-left-large`**
+*   **`.radius-top-right-large`**
+*   **`.radius-bottom-right-large`**
+
+### Resets
+
+
+
+*   **`.no-radius`** - all corners
+*   **`.no-radius-top`**
+*   **`.no-radius-bottom`**
+*   **`.no-radius-left`**
+*   **`.no-radius-right`**
+*   **`.no-radius-top-left`**
+*   **`.no-radius-bottom-left`**
+*   **`.no-radius-top-right`**
+*   **`.no-radius-bottom-right`**
 
 
 [Back to TOC](../../../readme.md)

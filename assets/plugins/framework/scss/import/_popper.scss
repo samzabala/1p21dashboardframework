@@ -23,8 +23,12 @@ $prefix: '.tooltip';
 #{$prefix} {
 	@extend %for-pop;
 	pointer-events:none;
-	max-width: $tooltip-max-width;
 	display: none;
+	z-index:99999;
+
+	&:not(#{$prefix}-has-custom-width){
+		max-width: $tooltip-max-width;
+	}
 
 	&#{&}-allow-interaction {
 		pointer-events: auto;
@@ -150,6 +154,10 @@ $prefix: '.dropdown';
 	transform-origin: center center;
 	transform-style: preserve-3d;
 
+	&[data-dropdown-max-height]{
+		overflow-y:auto;
+	}
+
 	.theme-inverse & {
 		color: $nav-color-inverse;
 	}
@@ -218,9 +226,19 @@ $prefix: '.dropdown';
 		}
 	}
 
+	&#{$prefix}-static {
+		position:static;
+		box-shadow:none;
+		transform: none;
+	}
+
 	li {
 		&:before {
 			content: none;
 		}
 	}
+
+	// @include br(#{$mobile-br-max}-max) {
+	// 	max-width:100%;
+	// }
 }

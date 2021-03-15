@@ -1,3 +1,52 @@
+
+:root {
+
+	//prefix must not change here because these variables are affected by js
+		--fw-br-xxs: #{$br-xxs-max};
+		--fw-br-xs: #{$br-xs-max};
+		--fw-br-sm: #{$br-sm-max};
+		--fw-br-md: #{$br-md-max};
+		--fw-br-lg: #{$br-lg-max};
+
+		--fw-br-mobile-max: #{$mobile-br-max};
+
+	// FONT
+		--#{$variable-prefix}-font-primary: #{$brand-font-primary};
+		--#{$variable-prefix}-font-accent: #{$brand-font-secondary};
+		--#{$variable-prefix}-font-monospace: #{$brand-font-monospace};
+
+	//colour
+
+		@each $tag,$value in $calculated-color-tags {
+			--#{$variable-prefix}-color-#{$tag}: #{$value};
+
+			@each $slug,$slug-value in map-get($calculated-color-variations,$tag) {
+				--#{$variable-prefix}-color-#{$tag}-#{$slug}: #{$slug-value};
+			}
+		}
+		
+		--#{$variable-prefix}-gradient-start: #{$brand-gradient-start};
+		--#{$variable-prefix}-gradient-end: #{$brand-gradient-end};
+		
+	// GLOBAL html + body coloring
+		--#{$variable-prefix}-theme-color: #{$brand-theme-color};
+		--#{$variable-prefix}-theme-color-contrast: #{$brand-theme-color-contrast};
+		--#{$variable-prefix}-theme-background: #{$brand-theme-background};
+		--#{$variable-prefix}-theme-background-contrast: #{$brand-theme-background-contrast};
+
+
+
+		
+}
+
+%for-inverse-var-setup {
+	--#{$variable-prefix}-theme-color: #{$brand-theme-color-inverse};
+	--#{$variable-prefix}-theme-color-contrast: #{$brand-theme-color-contrast-inverse};
+	--#{$variable-prefix}-theme-background: #{$brand-theme-background-inverse};
+	--#{$variable-prefix}-theme-background-contrast: #{$brand-theme-background-contrast-inverse};
+}
+
+
 /*** SCAFFOLDING ***/
 	$prefix:'.body';
 
@@ -9,27 +58,84 @@
 			font: $body-font-family,
 			weight: $body-font-weight,
 			leading: $body-line-height,
-			color: $theme-color,
 		));
-		word-wrap: break-word;
-		background: $theme-background;
 		min-height: 100vh;
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+	*.theme-inverse,
+	html,body {
+		color: $var-theme-color;
+		background-color: $var-theme-background;
+	}
 
-	.theme-inverse,
+
+	*.theme-inverse,
 	html.theme-inverse, 
 	.theme-inverse body {
-		background: $theme-background-inverse;
-		color: $theme-color-inverse;
+		@extend %for-inverse-var-setup;
+	}
+
+	#{$prefix}-no-scroll {
+		overflow:hidden !important;
+	}
+
+	#{$prefix}-on-drag {
+
+		&, * {
+			cursor:grabbing!important;
+			-webkit-user-select: none!important; /* Safari 3.1+ */
+			-moz-user-select: none!important; /* Firefox 2+ */
+			-ms-user-select: none!important; /* IE 10+ */
+			user-select: none!important; /* Standard syntax */
+		}
+	}
+
+
+
+	body {
+		word-wrap: break-word;
+		scrollbar-width: thin;
+		scrollbar-color: $var-color-neutral transparent;
+	}
+
+
+
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: transparent; 
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: $var-color-neutral;
+		border: 2px solid transparent;
+		background-clip: padding-box;
+		border-radius: 8px;
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: $var-color-neutral; 
+		border: 2px solid transparent;
+		background-clip: padding-box;
+		border-radius: 8px;
 	}
 
 	::-moz-selection{
-		background: $body-selection-background;
+		background-color: $body-selection-background;
 		color: $body-selection-color;
 	}
 	::selection{
-		background: $body-selection-background;
+		background-color: $body-selection-background;
 		color: $body-selection-color;
 	}
 
@@ -61,24 +167,6 @@
 		max-width:100%!important;
 	}
 	
-	.clearfix:after {
-		visibility: hidden;
-		display: block;
-		font-size: 0;
-		content: '';
-		clear: both;
-		height: 0;
-	}
-	
-	* html .clearfix {
-		zoom: 1;
-	}
-	
-	/* IE6 */
-	
-	*:first-child+html .clearfix {
-		zoom: 1;
-	}
 	
 	/* IE7 */
 	
@@ -139,4 +227,3 @@
 	a {
 		text-decoration: none;
 	}
-

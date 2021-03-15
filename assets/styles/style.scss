@@ -1,63 +1,74 @@
 //google font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap');
 
 
+// $debug: true;
 
 
 /*! 
 CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 ****************************************************************************/
 
-$br-xs-max: 767px;
-$br-sm-max: 1279px;
-$br-md-max: 1799px;
+$br-xs-max: 600px;
+$br-sm-max: 1200px;
+$br-md-max: 1500px;
+$br-lg-max: 1800px;
+
 
 $brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-$brand-font-accent: $brand-font-primary;
-$brand-font-monospace: 'Menlo', 'Monaco', 'Consolas', "Courier New", monospace;
+$brand-font-secondary: $brand-font-primary;
+$brand-font-accent: 'Roboto', $brand-font-primary;
 
-$theme-background-inverse: #292440;
-$theme-background-contrast-inverse: #1F1B30;
+$brand-color-background-alt: #eff4f8;
 
-$brand-color-primary: #0480fe;
-$brand-color-secondary: #d415af;
-$brand-color-accent: #1a38d2;
+// $brand-theme-background-inverse: #302a4b;
+// $brand-theme-background-contrast-inverse: #1e1931;
 
-$brand-color-base-alt: #3d3d3d;
-$brand-color-background-alt: #ecedf0;
+// $brand-color-base-alt: #3d3d3d;
 
-$brand-color-intensity-1: $brand-color-primary;
-$brand-color-intensity-2: #4b5be3;
-$brand-color-intensity-3: #843ecd;
-$brand-color-intensity-4: $brand-color-secondary;
-$brand-color-intensity-5: #fc01a7;
 
-$body-font-size: 14px;
+// $brand-color-base: #24212c;
+// $brand-color-base-alt: #3b394b;
+
+
+$brand-color-base: #1e1931;
+$brand-color-base-alt: #302a4b;
+
+$brand-color-primary: #0480FE;
+$brand-color-secondary: #F204A2;
+$brand-color-accent: #894EC7;
+
+// $brand-color-success: #64B4AE !default;
+
+
+$body-font-size: 15px;
 
 $module-grid-title-text-transform: uppercase;
 $module-title-text-transform: uppercase;
 
 
 $btn-font-weight: 600;
-$nav-top-font-weight: 600;
+// $nav-top-font-weight: 600;
 $tag-font-weight: 600;
 $input-label-font-weight: 600;
 $input-font-weight: 600;
 
-// $debug: true;
-
 
 $input-height-large: 50px;
-
-// $body-font-weight-bold:900;
 
 /*! 
 FRAMEWORK / SCAFFOLDING STYLES
 ****************************************************************************/
-	@import '../plugins/framework/scss/framework';
+	@import '../plugins/framework/scss/framework.scss';
 
 
 /*! 
-DASHBOARD / OUR CUSTOM STYLES
+SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
+****************************************************************************/
+	@import '_apps';
+	
+/*! 
+APPS / OUR CUSTOM STYLES
 ****************************************************************************/
 	@import '_dashboard';
+	@import '_timetracker';

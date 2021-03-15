@@ -91,9 +91,19 @@ Makes a square boi. very nice for [symbols](../components/symbol.md)
 </button>
 ```
 
-NOTE: this btn will always stayr a square boi even in `.btn-group`
+NOTE: this btn will always stay a equilateral boi even in `.btn-group`
 
 ![](../../images/btn-symbol.png)
+<!-- 
+#### **`.btn-round`**
+
+Makes the edges of your `.btn` half circle round. If used on a `.btn-symbol`, wi make the button a circle :O
+
+```html
+<button type="button" class="btn btn-round btn-default">
+	my edges are round like the fuCKING EARTH
+</button>
+``` -->
 
 
 # Button Groups
@@ -158,7 +168,7 @@ NOTE if there are too much btns, there will be a scrollbar on the button group c
 In case absolutely horizontal and vertical button groups look too ugly, use this to make vertical and horizontal groups vertically stack like blocks on [max mobile breakpoint](../scaffolding/breakpoint.md#mobile-split)
 
 
-### **`.btn-group-block`**
+### **`.btn-block`**
 
 Keep btn-group full width all the fucking time
 
@@ -194,17 +204,20 @@ this toggles `.active` styles on butt butts
 
 Allows multiple active butt butts.
 
-If you want one of the butts reset the active class, add **`.btn-toggle-reset`**
+If you want one of the butts reset the active class, add the class **`.btn-group-toggle-reset`** to it
+
+If you want to allow the group to have no active bitches add  **`.btn-group-toggle-allow-no-active`** to the group
 
 ```html
-<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple btn-group-responsive">
-	<button type="button" class="active btn btn-default btn-toggle-reset"> All</button>
+<div class="btn-group btn-group-horizontal btn-group-toggle btn-group-toggle-multiple  btn-group-toggle-allow-no-active btn-group-responsive">
+	<button type="button" class="active btn btn-default btn-group-toggle-reset"> All</button>
 	<button type="button" class=" btn btn-default"> butt</button>
 	<button type="button" class="btn btn-default">  Butt </button>
 	<button type="button" class="btn btn-default">Butt</button>
 	<button type="button" class="btn btn-default"> Butt</button>
 </div>
 ```
+
 ![](../../images/btn-group-toggle-multiple-and-resetter.gif)
 
 # Button and Button Group Helpers

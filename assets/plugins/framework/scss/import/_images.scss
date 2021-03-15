@@ -11,7 +11,7 @@ $prefix: '.lazy';
 *[data-srcset] {
 	opacity: 1;
 	transition: $transition-duration-base opacity $transition-timing;
-	html:not(.lazy-initialized) & {
+	html:not(.lazy-completed) & {
 		opacity: 0;
 	}
 }
@@ -39,8 +39,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme,
 		fill,
-		$theme-color,
-		$theme-color-inverse
+		$var-theme-color
 	);
 
 
@@ -48,8 +47,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme-contrast,
 		fill,
-		$theme-color-contrast,
-		$theme-color-contrast-inverse
+		$var-theme-color-contrast
 	);
 
 
@@ -57,8 +55,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme-polar,
 		fill,
-		$theme-background,
-		$theme-background-inverse
+		$var-theme-background
 	);
 
 
@@ -66,8 +63,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme-polar-contrast,
 		fill,
-		$theme-background-contrast,
-		$theme-background-contrast-inverse
+		$var-theme-background-contrast
 	);
 
 	//intensity
@@ -95,7 +91,7 @@ $prefix: '.svg';
 		none
 	);
 	
-	@each $tag,$color in $calculated-brand-color-declarations {
+	@each $tag,$color in $calculated-brand-color-declarations-for-components {
 		@include create-palette-helper(
 			#{&}-#{$tag},
 			fill,
@@ -112,8 +108,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme,
 		stroke,
-		$theme-color,
-		$theme-color-inverse
+		$var-theme-color
 	);
 
 
@@ -121,8 +116,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme-contrast,
 		stroke,
-		$theme-color-contrast,
-		$theme-color-contrast-inverse
+		$var-theme-color-contrast
 	);
 
 
@@ -130,8 +124,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme-polar,
 		stroke,
-		$theme-background,
-		$theme-background-inverse
+		$var-theme-background
 	);
 
 
@@ -139,8 +132,7 @@ $prefix: '.svg';
 	@include create-palette-helper(
 		#{&}-theme-polar-contrast,
 		stroke,
-		$theme-background-contrast,
-		$theme-background-contrast-inverse
+		$var-theme-background-contrast
 	);
 
 	//intensity
@@ -168,7 +160,7 @@ $prefix: '.svg';
 		none
 	);
 	
-	@each $tag,$color in $calculated-brand-color-declarations {
+	@each $tag,$color in $calculated-brand-color-declarations-for-components {
 		@include create-palette-helper(
 			#{&}-#{$tag},
 			stroke,
@@ -182,21 +174,50 @@ $prefix: '.svg';
 
 	/* emulate background cover on image tags */
 	%for-fit-image {
-		img {
-			position:absolute;
-			width: 100%;
-			height: 100%;
-			max-width:none;
-			top:-50%;
-			left:-50%;
-			right:-50%;
-			bottom:-50%;
-			margin:auto;
-			object-fit: cover;
+		&-img {
+			position:absolute!important;
+			width: 100%!important;
+			height: 100%!important;
+			max-width:none!important;
+			top:-50%!important;
+			left:-50%!important;
+			right:-50%!important;
+			bottom:-50%!important;
+			margin:auto!important;
+			
+		}
+
+		&-contain {
+			&-img {
+				@extend %for-fit-image-img;
+				object-fit: contain!important;
+			}
+
+			img {
+				@extend %for-fit-image-contain-img;
+			}
+		}
+
+		&-cover {
+			&-img {
+				@extend %for-fit-image-img;
+				object-fit: cover!important;
+			}
+
+			img {
+				@extend %for-fit-image-cover-img;
+			}
 		}
 	}
+	
 	.fit-image {
-		position: relative;
-		@extend %for-fit-image;
-	}
+		&-cover {
+			position: relative;
+			@extend %for-fit-image-cover;
+		}
+		&-contain {
+			position: relative;
+			@extend %for-fit-image-contain;
+		}
+}
 

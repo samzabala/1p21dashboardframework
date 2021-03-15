@@ -15,7 +15,7 @@ $calculated-nav-line-height: $nav-line-height;
 
 $calculated-nav-single-line: $calculated-nav-line-height;
 @if unitless($calculated-nav-single-line) and unit($nav-font-size) == px {
-    $calculated-nav-single-line: 1em * #{ type-lead( $nav-font-size,$nav-line-height ) }
+    $calculated-nav-single-line: #{1em * type-lead( $nav-font-size,$nav-line-height ) }
 }
 
 // $calculated-nav-height is internal vars because the body needs it. tHE BODEH
@@ -89,6 +89,7 @@ $prefix: '.nav';
 		left:0;
 		right:0;
 		box-shadow: $nav-drop-shadow;
+		z-index: 9999;
 
 		.theme-inverse & {
 			box-shadow: $nav-drop-shadow-inverse;
@@ -109,7 +110,7 @@ $prefix: '.nav';
 		#{$prefix}-list li {
 
 			> a,
-			> [data-toggle=dropdown] {
+			> [data-toggle] {
 				display:block;
 			}
 		}
@@ -132,7 +133,7 @@ $prefix: '.nav';
 		
 
 		> a,
-		> [data-toggle=dropdown] {
+		> [data-toggle] {
 			
 			padding-top: calc( ( #{$calculated-nav-item-height} - ( #{ $calculated-nav-single-line })) * .5 );
 			padding-bottom: calc( ( #{$calculated-nav-item-height} - ( #{ $calculated-nav-single-line })) * .5 );
@@ -141,9 +142,31 @@ $prefix: '.nav';
 
 		&:hover{
 			> a,
-			> [data-toggle=dropdown] {
+			> [data-toggle] {
 				color: $nav-color-hover;
 			}
+		}
+	}
+
+	&-block {
+		display:flex;
+		align-self: stretch;
+		align-items: center;
+		align-content: center;
+		position:relative;
+
+		// > * {
+		// 	max-width:100%;
+		// }
+
+		&:nth-child(n+2) {
+			margin-left: .5em;
+		}
+
+		&#{&}-stretch {
+
+			align-items: stretch;
+			align-content: stretch;
 		}
 	}
 
@@ -166,12 +189,15 @@ $prefix: '.nav';
 	&-list > li {
 
 		> a,
-		> [data-toggle=dropdown] {
+		> [data-toggle] {
+			@extend %for-anchor-reset-hover !optional;
 			@include type-set((
+				color:inherit,
+				decoration:none,
 				size: $calculated-nav-top-font-size,
 				style: $nav-top-font-style,
 				weight: $nav-top-font-weight,
-				case: $nav-top-text-transform
+				case: $nav-top-text-transform,
 			));
 			position:relative;
 
@@ -190,8 +216,8 @@ $prefix: '.nav';
 				height:0;
 				transition: $transition-duration-short all $transition-timing;
 				@include gradient((
-					color1: $brand-gradient-start,
-					color2: $brand-gradient-end,
+					color1: $nav-current-gradient-start,
+					color2: $nav-current-gradient-end,
 					angle: 0deg,
 					use-shorthand:false
 				));
@@ -204,8 +230,8 @@ $prefix: '.nav';
 					left:auto;
 
 					@include gradient((
-						color1: $brand-gradient-start,
-						color2: $brand-gradient-end,
+						color1: $nav-current-gradient-start,
+						color2: $nav-current-gradient-end,
 						angle: 90deg,
 						use-shorthand:false
 					));
@@ -216,7 +242,7 @@ $prefix: '.nav';
 		&.open {
 			
 			> a,
-			> [data-toggle=dropdown] {
+			> [data-toggle] {
 				
 				&:after {
 					height: $nav-current-size;
@@ -237,7 +263,6 @@ $prefix: '.nav';
 	}
 
 	@include br(#{$mobile-br-max}-max) {
-		height:auto;
 
 		&-list {
 			display:block;
@@ -256,7 +281,7 @@ $prefix: '.nav';
 		&-list > #{$prefix}-item,
 		&-list > li {
 			> a,
-			> [data-toggle=dropdown] {
+			> [data-toggle] {
 				display:block;
 			}
 		}

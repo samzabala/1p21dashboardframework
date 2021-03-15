@@ -37,6 +37,7 @@ $prefix: '.table';
 			width: auto;
 			min-width:100%;
 			margin-bottom:0;
+			table-layout: auto!important;
 
 			.tag,.btn {
 				white-space:nowrap;
@@ -46,19 +47,21 @@ $prefix: '.table';
 	}
 	@at-root &,
 	table {
-		white-space: normal;
-		display:table;
 		width: 100%;
-		max-width: 100%;
+		max-width:100%;
+		display:table;
 		border-collapse: collapse;
-		border-spacing: 0;
 		text-align: inherit;
 		background:transparent;
-		// table-layout: fixed;
 
-		// &#{$prefix}-wrap {
-		// 	white-space: normal;
-		// }
+		&#{$prefix}-fixed {
+			table-layout: fixed!important;
+		}
+
+		.text-wrap-ellipsis,.text-wrap-ellipsis-multiple {
+			width: 10em;
+			width: clamp(10em, 25vw, 24em);
+		}
 
 
 		@at-root thead,
@@ -66,7 +69,7 @@ $prefix: '.table';
 		tfoot,
 		tr,
 		#{$prefix}-row {
-			min-width:100%;
+			width:100%;
 		}
 
 		@at-root thead,
@@ -84,30 +87,26 @@ $prefix: '.table';
 			display:table-row;
 			vertical-align: inherit;
 			text-align: inherit;
+			border-color: $table-cell-border-color;
+			border-style: solid;
+			border-top-width: $table-cell-border-width;
+			background:$table-row-background;
 
-			&:first-child {
-				border-top: $table-cell-border-width solid $table-cell-border-color;
-
-				.theme-inverse & {
-					border-top: $table-cell-border-width solid $table-cell-border-color-inverse;
-				}
+			.theme-inverse & {
+				border-color: $table-cell-border-color-inverse;
+				background:$table-row-background-inverse;
 			}
-
-			// &:nth-last-child(n+2),
-			// thead ~ tbody &:last-child {
-				border-bottom: $table-cell-border-width solid $table-cell-border-color;
-
-				.theme-inverse & {
-					border-bottom: $table-cell-border-width solid $table-cell-border-color-inverse;
-				}
-
-			// }
-			
 
 			.alert &,
 			.theme-inverse .alert & {
+				background:transparent;
 				border-color: currentColor;
 			}
+
+			&:last-child {
+				border-bottom-width: $table-cell-border-width;
+			}
+			
 		}
 		@at-root th,td,
 		#{$prefix}-cell,
@@ -120,6 +119,24 @@ $prefix: '.table';
 			height:100%;
 			display: table-cell;
 			position:relative;
+
+
+
+			&#{$prefix}-bordered,
+			#{$prefix}-bordered & {
+				border-color: $table-cell-border-color;
+				border-style: solid;
+				border-left-width: $table-cell-border-width;
+
+				.theme-inverse & {
+					border-color: $table-cell-border-color-inverse;
+				}
+
+				&:last-child {
+					border-right-width: $table-cell-border-width;
+				}
+			}
+
 		}
 
 
@@ -161,10 +178,21 @@ $prefix: '.table';
 			padding-bottom: calc((#{ $calculated-table-cell-height } - ( #{ $calculated-body-single-line } )) * .5);
 		}
 
+		@at-root #{$prefix}-col-separation {
+			td,
+			#{$prefix}-cell {
+				&:nth-child(n+2) {
+					border-left: $table-cell-border-width solid $table-cell-border-color;
+
+					.theme-inverse & {
+						border-left: $table-cell-border-width solid $table-cell-border-color-inverse;
+					}
+				}
+			}
+		}
 
 
-
-		@at-root &#{$prefix}-small {
+		@at-root #{$prefix}-small {
 			td,
 			#{$prefix}-cell {
 				padding-top: calc((#{ $calculated-table-cell-height-small } - ( #{ $calculated-body-single-line-compact } )) * .5);
@@ -173,7 +201,7 @@ $prefix: '.table';
 			}
 		}
 
-		@at-root &#{$prefix}-large {
+		@at-root #{$prefix}-large {
 			td,
 			#{$prefix}-cell {
 				padding-top: calc((#{ $calculated-table-cell-height-large } - ( #{ $calculated-body-single-line-expanded } )) * .5);
@@ -199,7 +227,7 @@ $prefix: '.table';
 				height: calc(#{ $calculated-table-cell-height-small } - (#{$table-label-offset} * 2));
 			}
 			
-			@each $tag,$color in $calculated-brand-color-declarations {
+			@each $tag,$color in $calculated-brand-color-declarations-for-components {
 				&-#{$tag} {
 					@extend %for-background-#{$tag};
 				}
@@ -214,28 +242,55 @@ $prefix: '.table';
 			}
 		}
 
-		@at-root #{$prefix}-row {
-			@each $tag,$color in $calculated-brand-color-declarations {
-				&-#{$tag} {
-					background-color: rgba($color,$table-row-background-opacity);
-				}
-			}
-
-			&-intensity {
-				@for $i from 1 through length($calculated-color-brand-intensity) {
-
-					&-#{$i} {
-						background-color: rgba(nth($calculated-color-brand-intensity,$i),$table-row-background-opacity);
-					}
-				}
-			}
-
+		@at-root #{$prefix}-row,
+		#{$prefix}-cell {
 			&-disabled {
 				td,
 				#{$prefix}-cell {
 					@extend %for-disabled;
 				}
 			}
+		}
+
+		@at-root #{$prefix}-row {
+			
+			@each $tag,$colors in $calculated-table-row-background {
+				&-#{$tag} {
+					background-color: map-get($colors,normal);
+
+					.theme-inverse & {
+						background-color: map-get($colors,inverse);
+					}
+
+					.alert &,
+					.theme-inverse .alert & {
+						background: map-get(map-get($calculated-color-vars-variations,#{$tag}),alpha-2)
+					}
+				}
+			}
+
+		}
+
+
+
+		@at-root #{$prefix}-cell {
+			
+			@each $tag,$colors in $calculated-table-cell-background {
+				@at-root td#{&}-#{$tag},
+				&#{&}-#{$tag} {
+					background-color: map-get($colors,normal);
+
+					.theme-inverse & {
+						background-color: map-get($colors,inverse);
+					}
+
+					.alert &,
+					.theme-inverse .alert & {
+						background: map-get(map-get($calculated-color-vars-variations,#{$tag}),alpha-5)
+					}
+				}
+			}
+
 		}
 
 

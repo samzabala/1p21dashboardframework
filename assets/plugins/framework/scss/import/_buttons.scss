@@ -21,7 +21,7 @@ $calculated-btn-line-height: type-lead( $btn-font-size,$btn-line-height );
 
 $calculated-btn-single-line: $calculated-btn-line-height;
 @if unitless($calculated-btn-single-line) and unit($btn-font-size) == px {
-	$calculated-btn-single-line: 1em * #{ type-lead( $btn-font-size,$btn-line-height ) }
+	$calculated-btn-single-line: #{1em * type-lead( $btn-font-size,$btn-line-height ) }
 }
 
 $calculated-btn-height: $btn-height;
@@ -54,310 +54,166 @@ $calculated-btn-gutter-x: $btn-gutter-x;
 }
 
 $prefix: '.btn';
-@mixin button-generate-schemes($args:(),$scheme:''){
-	$defaults: (
-		init: (
-			border: '',
-			background: '',
-			color: '',
-		),
-		hover: (
-			border: '',
-			background: '',
-			color: '',
-		),
-		active: (
-			border: '',
-			background: '',
-			color: '',
-		)
-	);
-	$opts: map-merge($defaults,$args);
-
-
-	@each $state,$properties in $opts {
-
-		@if $state == 'hover' {
-			
-		
-			@at-root &:hover,
-			#{$prefix}-group#{$prefix}-group-unite:hover &,
-			
-			&:focus,
-			#{$prefix}-group#{$prefix}-group-unite:focus &,
-
-			&.focus,
-			#{$prefix}-group#{$prefix}-group-unite.focus & {
-				@include internal-btn-set-scheme($properties)
-			}
-			// @at-root &:hover,
-			// &:focus,
-			// &:.focus {
-			//     @include internal-btn-set-scheme($properties)
-			// }
-
-		}@else if $state == 'active' {
-			@at-root &:active,
-			#{$prefix}-group#{$prefix}-group-unite:active &,
-
-			&.active,
-			#{$prefix}-group#{$prefix}-group-unite.active & {
-				@include internal-btn-set-scheme($properties);
-			}
-			
-		}@else{
-
-			@include internal-btn-set-scheme($properties);
-		
-			&{
-
-				@at-root
-					&#{$prefix}-no-interaction,
-					&#{$prefix}-no-interaction:hover,
-					&#{$prefix}-no-interaction:focus,
-					&#{$prefix}-no-interaction.focus,
-					&#{$prefix}-no-interaction:active,
-					&#{$prefix}-no-interaction.active,
-
-					&#{$prefix}-disabled,
-					&#{$prefix}-disabled:hover,
-					&#{$prefix}-disabled:focus,
-					&#{$prefix}-disabled.focus,
-					&#{$prefix}-disabled:active,
-					&#{$prefix}-disabled.active,
-					
-					#{$prefix}-disabled &,
-					#{$prefix}-disabled:hover &,
-					#{$prefix}-disabled:focus &,
-					#{$prefix}-disabled.focus &,
-					#{$prefix}-disabled:active &,
-					#{$prefix}-disabled.active & {
-						@include internal-btn-set-scheme($properties,true);
-					}
-			}
-		}
-	}
-
-}
-
-@mixin internal-btn-set-scheme($properties,$add-important: false) {
-
-
-	$important: '';
-
-	@if $add-important {
-
-		$important: '!important';
-	}
-
-	@if map-get($properties,border) {
-		border-color: map-get($properties,border) #{$important};
-	}
-
-	@if map-get($properties,background) {
-		background: map-get($properties,background) #{$important};
-	}
-
-	@if map-get($properties,color) {
-		color: map-get($properties,color) #{$important};
-	}
-
-}
-
-@function internal-btn-calculate-disabled($color){
-	@if type-of($color) == 'color' and $color != transparent {
-		@return rgba( $color,$global-disabled-opacity );
-	}@else {
-		@return $color;
-	}
-}
 
 #{$prefix} {
-	
-	@at-root %for-btn {
-		@include type-set((
-			size: #{$calculated-btn-font-size},
-			leading: #{$calculated-btn-line-height},
-			weight: $btn-font-weight,
-			style: $btn-font-style,
-			font: $btn-font-family,
-			align:center,
-			decoration:none,
-			case: $btn-text-transform,
-		));
-		// overflow:hidden;
-		padding-top: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-		padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-		min-height:$calculated-btn-height;
-		padding-right: $calculated-btn-gutter-x;
-		padding-left: $calculated-btn-gutter-x;
-		border: $btn-border-width solid transparent;
-		transition: $btn-transition-duration all $transition-timing;
-		max-width:100%;
-		width:auto;
-		display:inline-flex;
-		align-content: center;
-		justify-content: center;
-		align-items: center;
-		vertical-align: middle;
-		background:none;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
 
-		.badge {
-			&:last-child {
-				margin-left: .25em;
-			}
-			&:first-child {
-				margin-right: .25em;
-			}
-		}
-	}
-		& {
-			@extend %for-btn;
-		}
+	@at-root %for-btn-global {
 
-	.nav & {
-		&,
-		&#{$prefix}-large,
-		&#{$prefix}-small,
-		#{$prefix}-large &,
-		#{$prefix}-small & {
-
-			padding-top: calc(  (  (#{ $calculated-nav-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-			padding-bottom: calc(  (  (#{ $calculated-nav-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-			height: #{ $calculated-nav-height };
-		}
-	}
-
-	&#{$prefix}-no-radius,
-	&-group#{$prefix}-no-radius {
-		border-radius: 0!important;
-	}
-
-	&#{$prefix}-no-shadow,
-	&-group#{$prefix}-no-shadow,
-	&#{$prefix}-link {
-		box-shadow:none!important;
-	}
-
-	@at-root %for-btn {
-
-		&-on-mobile {
-			@include br(#{$mobile-br-max}-max) {
-	
-				display:flex;
-				width:100%;
-			}
-		}
-	
-		&-itself-and-group {
+		&-radius {
 			border-radius: $btn-border-radius;
-			box-shadow: $btn-box-shadow;
-			background-color:transparent;
-			color:inherit;
-			-webkit-appearance:none;
-			appearance:none;
+
+			&-small {
+				border-radius: $btn-border-radius-small;
+			}
+
+			&-large {
+				border-radius: $btn-border-radius-large;
+			}
+		}
+	}
 	
-			&:hover,
-			&:focus,
-			&.focus,
-			&:active,
-			&.active {
-				box-shadow: $btn-box-shadow-hover;
-				color:inherit;
-				text-decoration:none;
-			}
-		}
-	}
-
-		&,&-group {
-			@extend %for-btn-itself-and-group;
-			@extend %for-btn-on-mobile;
-		}
-
-	#{$prefix}-group & {
-		&,&:hover {
-			box-shadow: none;
-		}
-	}
-
-	&-block {
-		display:block;
-		width:100%;
-
-		&-mobile {
-			@include br(#{$mobile-br-max}-max) {
-				display:block;
-				width:100%;
-			}
-		}
-	}
-
-		&#{$prefix}-disabled,
-		#{$prefix}-disabled & {
-			@extend %for-disabled;
-		}
-
+	
 	@at-root %for-btn {
+
+		& {
+			@include type-set((
+				size: #{$calculated-btn-font-size},
+				leading: #{$calculated-btn-line-height},
+				weight: $btn-font-weight,
+				style: $btn-font-style,
+				font: $btn-font-family,
+				align:center,
+				decoration:none,
+				case: $btn-text-transform,
+			));
+			// overflow:hidden;
+			padding-top: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+			padding-bottom: calc(  (  (#{ $calculated-btn-height } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
+			min-height:$calculated-btn-height;
+			padding-right: $calculated-btn-gutter-x;
+			padding-left: $calculated-btn-gutter-x;
+			border: $btn-border-width solid transparent;
+			transition: $btn-transition-duration all $transition-timing;
+			width:auto;
+			display:inline-flex;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+			background:none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			.badge,
+			.symbol {
+				&:last-child {
+					margin-left: .25em;
+				}
+				&:first-child {
+					margin-right: .25em;
+				}
+			}
+			
+		}
 
 		&-large {
+			@extend %for-btn-global-radius-large;
 			padding-top: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 			padding-bottom: calc(  (  (#{ $calculated-btn-height-large } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-			border-radius: $btn-border-radius-large;
 			min-height:$calculated-btn-height-large;
 			@include br(xs){
 				font-size: $calculated-btn-font-size-large;
 			}
+
 		}
 	
 		&-small {
-	
+			@extend %for-btn-global-radius-small;
 			font-size: $calculated-btn-font-size-small;
 			padding-top: calc(  (  (#{ $calculated-btn-height-small } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
 			padding-bottom: calc(  (  (#{ $calculated-btn-height-small } - (#{$btn-border-width} * 2)) - (#{$calculated-btn-single-line}) ) * .5 );
-			border-radius: $btn-border-radius-small;
 			min-height:$calculated-btn-height-small;
 		}
-	}
-
-		&#{$prefix}-large,
-		#{$prefix}-group#{$prefix}-large & {
-			@extend %for-btn-large;
+		
+		&-in-nav {
+			padding-top: 0;
+			padding-bottom:0;
+			align-self:stretch;
 		}
 
-		&#{$prefix}-small,
-		#{$prefix}-group#{$prefix}-small & {
-			@extend %for-btn-small;
-		}
+		&-in-group {
+			position:relative;
+			max-width:100%;
+			flex: 0 0 auto; // ??
 
-	
-
-	@at-root %for-btn {
-
-		&-symbol {
+			&:hover,
+			&:active,
+			&.active,
+			&:focus,
+			&.focus,
+			&.open {
+				z-index:1;
+			}
 
 			& {
-				width: $calculated-btn-height;
-				padding-left:0;
-				padding-right:0;
-
-
-				> .symbol {
-					margin-left:auto;
-					margin-right:auto;
-				}
+				@extend %for-no-shadow-important !optional;
+			}
+		}
+		
+	}
+		& {
+			@extend %for-btn;
+		
+			#{$prefix}-large &,
+			&#{$prefix}-large {
+				@extend %for-btn-large;
+			}
+	
+			#{$prefix}-small &,
+			&#{$prefix}-small {
+				@extend %for-btn-small;
 			}
 
-			&-large {
-				width: $calculated-btn-height-large ;
+			.nav-block.nav-block-stretch > &,
+			.nav > & {
+				@extend %for-btn-in-nav;
 			}
 
-			&-small {
-				width: $calculated-btn-height-small;
+			#{$prefix}-no-radius & {
+				@extend %for-no-radius !optional;
 			}
+
+			#{$prefix}-group & {
+				@extend %for-btn-in-group;
+			}
+
+			&-disabled {
+				@extend %for-disabled;
+			}
+			
+			&-disabled,
+			&-disabled & {
+				@extend %for-no-shadow !optional;
+			}
+			
+
+		}
+
+	@at-root %for-btn-symbol {
+
+		& {
+			width: $calculated-btn-height;
+			padding-left:0;
+			padding-right:0;
+		}
+
+		&-large {
+			width: $calculated-btn-height-large ;
+		}
+
+		&-small {
+			width: $calculated-btn-height-small;
 		}
 	}
 
@@ -374,10 +230,97 @@ $prefix: '.btn';
 				@extend %for-btn-symbol-large;
 			}
 		}
+
+
+
+	@at-root %for-btn-and-group {
+		
+
+		& {
+			@extend %for-btn-global-radius;
+			box-shadow: $btn-box-shadow;
+			max-width:100%;
+			background-color:transparent;
+			color:inherit;
+			-webkit-appearance:none;
+			appearance:none;
+			vertical-align: middle;
+			@extend %for-anchor-reset-hover !optional;
+	
+			&:hover,
+			&:focus,
+			&.focus,
+			&:active,
+			&.active {
+				color:inherit;
+				&:not(.btn-no-interaction) {
+					box-shadow: $btn-box-shadow-hover;
+				}
+			}
+
+			&-small {
+				@extend %for-btn-global-radius-small;
+			}
+
+			&-large {
+				@extend %for-btn-global-radius-large;
+			}
+
+			&-in-nav {
+				@extend %for-no-radius !optional;
+				@extend %for-no-shadow-important !optional;
+				height: #{ $calculated-nav-height }!important;
+			}
+		}
+
+	}
+
+		&,&-group {
+			@extend %for-btn-and-group;
+			@extend %for-btn-global-radius;
+			
+			&#{$prefix}-large {
+				@extend %for-btn-and-group-large;
+			}
+
+			&#{$prefix}-small {
+				@extend %for-btn-and-group-small;
+			}
+
+			.nav > & {
+				@extend %for-btn-and-group-in-nav;
+				
+			}
+
+			&#{$prefix}-no-radius {
+				@extend %for-no-radius !optional;
+			}
+			
+			&#{$prefix}-no-shadow {
+				@extend %for-no-shadow-important !optional;
+			}
+
+			&#{$prefix}-block {
+				display:flex;
+				width:100%;
+
+				&-mobile {
+					@include br(#{$mobile-br-max}-max) {
+						display:flex;
+						width:100%;
+					}
+				}
+			}
+
+
+		}
+		
 	
 	///updates here should match input-group 
 	&-group {
 		display:inline-flex;
+		align-content: stretch;
+		align-items: stretch;
 		position:relative;
 		max-width:100%;
 		padding:0;
@@ -386,38 +329,32 @@ $prefix: '.btn';
 		font:inherit;
 		overflow-x:auto;
 		overflow-y:visible;
-
-		#{$prefix} {
-			position:relative;
-
-			&:hover,
-			&:active,
-			&.active,
-			&:focus,
-			&.focus,
-			&.open {
-				z-index:1;
-			}
-		}
 		
-		&-block {
+		&#{$prefix}-block {
 			display:flex;
 			width:100%;
 
 			& > .btn:not(.btn-symbol) {
 				flex: 1 1;
 			}
-		}
 
-		&#{$prefix}-large {
-			border-radius: $btn-border-radius-large;
-		}
+			@include br(#{$mobile-br-max}-max) {
+				&-mobile {
+					display:flex;
+					width:100%;
 
-		&#{$prefix}-small {
-			border-radius: $btn-border-radius-small;
+					& > .btn:not(.btn-symbol) {
+						flex: 1 1;
+					}
+				}
+			}
 		}
 
 		&#{&}-horizontal {
+
+			#{$prefix}-symbol {
+				flex: 0 0 auto;
+			}
 			
 
 			&:not(#{$prefix}-group-responsive) {
@@ -430,10 +367,10 @@ $prefix: '.btn';
 				> #{$prefix}:nth-child(n+2) {
 					border-top-left-radius: 0!important;
 					border-bottom-left-radius: 0!important;
+					margin-left: $btn-border-width * -1;
 
-					&,
-					&:hover {
-						border-left-color: $btn-group-separator-color !important;
+					&:not(:focus):not(.focus):not(:hover) {
+						border-left-color: $btn-group-separator-color;
 					}
 				}
 			}
@@ -454,10 +391,10 @@ $prefix: '.btn';
 			> #{$prefix}:nth-child(n+2) {
 				border-top-right-radius: 0!important;
 				border-top-left-radius: 0!important;
+				margin-top: $btn-border-width * -1;
 
-				&,
-				&:hover {
-					border-top-color: $btn-group-separator-color !important;
+				&:not(:focus):not(.focus):not(:hover) {
+					border-top-color: $btn-group-separator-color;
 				}
 			}
 		}
@@ -480,17 +417,16 @@ $prefix: '.btn';
 					> #{$prefix}:nth-child(n+2) {
 						border-top-left-radius: 0!important;
 						border-bottom-left-radius: 0!important;
-
-						&,
-						&:hover {
-							border-left-color: $btn-group-separator-color !important;
+						margin-left: $btn-border-width * -1;
+		
+						&:not(:focus):not(.focus):not(:hover) {
+							border-left-color: $btn-group-separator-color;
 						}
 					}
 				}
 			}
 			@include br(#{$mobile-br-max}-max) {
 				width:100%;
-				
 				flex-wrap:wrap;
 				display:flex;
 				flex-direction:column;
@@ -503,10 +439,10 @@ $prefix: '.btn';
 				> #{$prefix}:nth-child(n+2) {
 					border-top-right-radius: 0!important;
 					border-top-left-radius: 0!important;
-
-					&,
-					&:hover {
-						border-top-color: $btn-group-separator-color !important;
+					margin-top: $btn-border-width * -1;
+	
+					&:not(:focus):not(.focus):not(:hover) {
+						border-top-color: $btn-group-separator-color;
 					}
 				}
 			}
@@ -517,6 +453,10 @@ $prefix: '.btn';
 		@at-root %for-btn-#{$scheme} {
 
 			@include button-generate-schemes($properties,$scheme);
+
+			@if $scheme == 'link' or str-index($scheme, '-outline'){
+				@extend %for-no-shadow;
+			}
 		}
 		&#{&}-#{$scheme} {
 			@extend %for-btn-#{$scheme};

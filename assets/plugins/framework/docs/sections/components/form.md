@@ -6,7 +6,9 @@ More info on [form elements](https://www.w3schools.com/html/html_forms.asp)
 
 ## Form elements
 
-Although styles are reset, To normalize or basically allow the framework to style them items add **`.input`** to your input bitch boy
+Although styles are reset, To normalize or basically allow the framework to style them items as basic as a hoe add **`.input`** to your input bitch boy
+
+
 
 
 ```html
@@ -218,47 +220,16 @@ For inline shit or fields that dont necessarily accept text looking input like r
 | `text` | if you want it ugly-ish, sure |
 | `url` | if you want it ugly-ish, sure |
 | `list` | no |
+<!-- 
+#### **`.input-round`**
 
-### Custom UI
+Makes the edges of your stylized `.input` or `.input group` half circle round.
 
-#### **`.input-calendar`**
-
-For date input except it fancy
-
-
-
-##### Support
-
-###### Non input tags
-
-| Element | do it support? |
-| -- | -- |
-| `button` | yes |
-| `select` | no |
-| `textarea` | i guess??? but pls don't |
-| `datalist` | no |
-
-######  Input tags
-
-| `input[type*]` 	| do it support? |
-| -- | -- |
-|`submit`, `reset`,`button` |  NOPE |
-| `checkbox` | no |
-| `color` | no |
-| `date`, `datetime-local`, `month`, `time`, `week` | if you want it ugly-ish, sure |
-| `email` | if you want it ugly-ish, sure |
-| `file` | if you want it ugly-ish, sure |
-| `hidden` | IT'S NO USE IT'S HIDDEN |
-| `image` | yis |
-| `number` | if you want it ugly-ish, sure |
-| `password` | if you want it ugly-ish, sure |
-| `radio` | yes |
-| `range` | yes |
-| `search` | if you want it ugly-ish, sure |
-| `tel` | if you want it ugly-ish, sure |
-| `text` | if you want it ugly-ish, sure |
-| `url` | if you want it ugly-ish, sure |
-| `list` | no |
+```html
+<button type="button" class="btn btn-round btn-default">
+	my edges are round like the fuCKING EARTH
+</button>
+``` -->
 
 
 ### Input templates
@@ -494,16 +465,15 @@ NOTE if there are too much inputs, there will be a scrollbar on the button group
 In case absolutely horizontal and vertical button groups look too ugly, use this to make vertical and horizontal groups vertically stack like blocks on [max mobile breakpoint](../scaffolding/breakpoint.md#mobile-split)
 
 
-### **`.input-group-block`**
+### **`.input-block`**
 
 Keep input-group full width all the fucking time
 
 
 
-## Trumbowyg
+### **`.input-block-mobile`**
 
-See [Trumbowyg](../components/trumbowyg.md)
-
+Keep input-group full width only on mobile
 
 
 # **`.input-wrapper`**
@@ -644,9 +614,137 @@ Change em size. can be attached to `.input`, `.input-group`, `.input-label`, and
 | `list` | yes |
 
 
-#Custom framework fields
+# Custom framework fields
+
+
+## Toggle
+
+true false input except... pure css and fancy
+
+This works on either a `checkbox` or `radio`
+
+```html
+<div class="input-toggle p">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label">
+		Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+	</span>
+</div>
+
+<div class="input-toggle p input-small">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label">
+		Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+	</span>
+</div>
+
+<div class="input-toggle p input-large">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label">
+		Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
+	</span>
+</div>
+
+<div class="input-toggle p">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label input-primary">
+		Test this fucker primary
+	</span>
+</div>
+
+<div class="input-toggle p">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label input-secondary">
+		Test this fucker secondary
+	</span>
+</div>
+
+<div class="input-toggle p">
+	<input type="checkbox" class="input"> 
+	<span class="input-label input-toggle-label input-accent">
+		Test this fucker accent
+	</span>
+</div>
+
+<div class="input-toggle p">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label input-success"> 
+		Test this fucker success
+	</span>
+</div>
+
+<div class="input-toggle p">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label input-caution">
+		Test this fucker caution
+	</span>
+</div>
+
+<div class="input-toggle p">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label input-error">
+		Test this fucker error
+	</span>
+</div>
+
+<div class="input-toggle p input-disabled">
+	<input type="checkbox" class="input">
+	<span class="input-label input-toggle-label">
+		Test this fucker 
+	</span>
+</div>
+
+<div class="input-toggle p input-toggle-reverse">
+	<input type="checkbox" class="input "> 
+	<span class="input-label input-toggle-label">
+		Test this fucker this one should have toggle on the other side of the text
+	</span>
+</div>
+```
+
+you can put the toggle on the other side by adding `input-toggle-reverse` to `input-toggle`
+
+Also it supports dem color tag bois
+
+![Toggle](../../images/input-toggle.png)
+
+
+
+#### Non input tags
+
+| Element | do it support? |
+| -- | -- |
+| `button` | no |
+| `select` | no |
+| `textarea` | no|
+| `datalist` | no |
+
+
+### Support 
+| `input[type*]` | Support it? |
+| -- | -- |
+|`submit`, `reset`,`button` | nope |
+| `checkbox` | yesssss |
+| `color` | no |
+| `date`, `datetime-local`, `month`, `time`, `week` | no |
+| `email` | no |
+| `file` | no |
+| `hidden` | no |
+| `image` | no |
+| `number` | no |
+| `password` | no |
+| `radio` | yea |
+| `range` | no |
+| `search` | no |
+| `tel` | no |
+| `text` | yes |
+| `url` | no |
+| `list` | no |
+
 
 ## Calendar
+
+For date input except it fancy
 
 
 It's an input where you have a date input type except it's fancier :')
@@ -664,6 +762,17 @@ Once a value is set, the it will return an ISO8601 or `yyyy-mm-dd` formattted va
 It will also render the date active in the calendar ui
 
 This is also how to set a default value to the calendar as well
+
+
+
+#### Non input tags
+
+| Element | do it support? |
+| -- | -- |
+| `button` | yes |
+| `select` | no |
+| `textarea` | i guess??? but pls don't |
+| `datalist` | no |
 
 
 ### Support 
@@ -710,7 +819,7 @@ Also supports [input color helpers](#input-colors)
 <input type="text" class="input input-calendar input-caution" value="2020-05-05" />
 <input type="text" class="input input-calendar input-error" value="2020-06-05" />
 ```
-![Calendar](../../images/input-calendar-color.png)
+![Calendar](../../images/input-calendar-colors.png)
 
 ### Attributes
 
@@ -771,6 +880,151 @@ Defaults to `false`
 
 Enables a text input field to input dates along with the calendar as well
 
-#### 
+
+
+**`data-calendar-month-skip`**
+
+Defaults to `true`
+
+Enable skipping through months
+
+
+**`data-calendar-year-skip`**
+
+Defaults to `false`
+
+Enable skipping through years
+
+
+## Tags
+
+Imagine inputting in a text field some tags separated by commas... but gucci :')
+
+To allow the framework to generate a UI for this, add a class of `input-tags`
+The generated UI will wrap the input field and also replicate the classes added to the input tag except `input-tags` will now be `input-tags-ui` to avoid clashing outfits and what not
+
+```html
+	<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" />
+```
+![Tagas](../../images/input-tags.png)
+
+Once a value is set, the values separated with commas will be separated as tags in the front end
+
+
+### Support 
+| `input[type*]` | Support it? |
+| -- | -- |
+|`submit`, `reset`,`button` | no |
+| `checkbox` | no |
+| `color` | no |
+| `date`, `datetime-local`, `month`, `time`, `week` | no |
+| `email` | no |
+| `file` | no |
+| `hidden` | yes |
+| `image` | no |
+| `number` | no |
+| `password` | no |
+| `radio` | no |
+| `range` | no |
+| `search` | no |
+| `tel` | no |
+| `text` | yes |
+| `url` | no |
+| `list` | no |
+
+
+### Size
+
+The UI also supports **`.input-large`** and  **`.input-small`**
+
+```html
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-small" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-large" />
+```
+![Calendar](../../images/input-tags-size.png)
+
+### Colors
+
+Also supports [input color helpers](#input-colors)
+
+```html
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-primary" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-secondary" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-accent" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-success" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-error" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-caution" />
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags input-disabled" />
+```
+![Calendar](../../images/input-tags-colors.png)
+
+### Attributes
+
+Add these to customize ya boi further
+
+**`data-tags-width`**
+
+```html
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-width="69em" />
+```
+
+Defaults to `auto`
+
+Set a width for the input field. Note that there is a set max-width on ya boi so this will shrink if its containing element becomes too small
+
+**`data-tags-callback`**
+
+callback function for after rendering the ui and changing the value
+
+```html
+<script>
+	function doSomething(){
+		alert('i did something');
+	}
+</script>
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-callback="doSomehing()" />
+```
+
+**`data-tags-callback-name-filter`**
+
+name of the function to callback to manipulating and return the value before rendering of the input tags
+
+
+```html
+<script>
+	function changeCurseWord(value){
+		//manipulate value
+		value = value.replace('bitch','shitbag');
+
+
+		//return value for render 
+		return value;
+	}
+</script>
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-callback-name-filter="changeCurseWord" />
+```
+
+
+**`data-tags-callback-on-keyup`**
+
+callback function after keyup on the input field. NOTE. the field is actually a `span[contenteditable]`
+
+
+```html
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-callback-on-keyup="logSomeFuckers(e)" />
+```
+
+
+
+**`data-tags-multiple-lines`**
+
+defaults to false
+
+if enabled, allows floe of tags intoo multiple lines like a textarea
+
+```html
+<input type="text" value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" data-tags-multiple-lines="true" />
+```
 
 [Back to TOC](../../../readme.md)

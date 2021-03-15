@@ -4,11 +4,6 @@
 $prefix: '.modal';
 
 
-//also used by module
-
-.body-modal-active {
-	overflow-y:hidden;
-}
 
 #{$prefix} {
 	display:none!important;
@@ -16,7 +11,14 @@ $prefix: '.modal';
 
 	@at-root %for-modal {
 
+		&-scroller {
+			overflow-y: scroll;
 
+			&-no-scrollbar {
+				@extend %for-no-scrollbar;
+			}
+
+		}
 
 		&-wrapper { 
 			position: fixed;
@@ -24,44 +26,36 @@ $prefix: '.modal';
 			left: 0!important;
 			right: 0!important;
 			bottom: 0!important;
-			margin: auto;
-			width: 100vw!important;
-			height: 100vh!important;
-			padding: $gutter-base;
-			overflow-y: scroll;
+			margin: 0;
 			background: $modal-overlay-bg;
-			z-index: 99999;
+			display:none!important;
 
-			&::-webkit-scrollbar {
-				display:none;
-			}
-
-			@include br(#{$mobile-br-max}-max) {
-				padding: $gutter-small;
-			}
+			&.active {
+				display:block!important;
+			} 
 
 		}
 	}
 
 		&-wrapper {
 			@extend %for-modal-wrapper;
-			display:none!important;
+			@extend %for-modal-scroller;
+			@extend %for-modal-scroller-no-scrollbar;
+			z-index: 99999;
 
-			&.active {
-				display:block!important;
+			padding: $modal-gutter;
+
+			@include br(#{$mobile-br-max}-max) {
+				padding: $modal-gutter-mobile;
 			}
 		}
 		&-title {
 			margin-top:0;
 		}
 
-	&-close {
-		& {
-			font-size: $modal-close-button-font-size;
-			position:absolute;
-			right: $modal-close-offset;
-			top: $modal-close-offset;
-		}
+
+	@at-root %for-modal {
+
 		&-overlay {
 			position:fixed;
 			top:0;
@@ -69,29 +63,51 @@ $prefix: '.modal';
 			left:0;
 			right:0;
 
-			&:not([data-toggle="modal-close"]) {
+			&-not-closeable {
 				pointer-events:none;
 			}
 		}
 	}
+
+		&-close {
+			& {
+				position:absolute;
+				right: $modal-close-offset;
+				top: $modal-close-offset;
+				z-index:9;
+
+				&-default {
+					font-size: $modal-close-button-font-size;
+				}
+
+				
+				@include br(#{$mobile-br-max}-max) {
+					right: $modal-close-offset-mobile;
+					top: $modal-close-offset-mobile;
+				}
+			}
+			&-overlay {
+				@extend %for-modal-overlay;
+
+
+				&:not([data-toggle="modal-close"]) {
+					@extend %for-modal-overlay-not-closeable;
+				}
+			}
+		}
 
 
 
 	@at-root %for-modal {
 
 		&-popup {
-	
-	
-			padding: $modal-gutter-y $modal-gutter-x;
-			border-radius: $modal-border-radius;
-			background: $modal-background;
 			backface-visibility: hidden;
 			position:relative;
-			margin: auto;
 			z-index:2;
 			box-shadow: rgba(0, 0, 0, .2) 0 2px 3px;
-			width: 100%;
-		
+			max-width: 100%;
+			background: $modal-background;
+			
 			.theme-inverse & {
 				background: $modal-background-inverse;
 			}
@@ -100,5 +116,13 @@ $prefix: '.modal';
 
 	&-popup {
 		@extend %for-modal-popup;
+		border-radius: $modal-border-radius;
+		margin: auto;
+
+		padding: $modal-padding-y $modal-padding-x;
+
+		@include br(#{$mobile-br-max}-max) {
+			padding: $modal-padding-y-mobile $modal-padding-x-mobile;
+		}
 	}
 }

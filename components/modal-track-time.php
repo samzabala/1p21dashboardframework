@@ -1,20 +1,38 @@
 <div class="modal-track-time module-function">
 
-	<!--
-		NOTE: switch out `btn-success` to `btn-secondary` when timer is running,
-		if inactive, or paused, put back `btn-success`
-	-->
-	<div class="btn-group btn-group-horizontal btn-group-unite">
-		<!-- <span class="btn btn-default btn-no-interaction"><strong class="profile-project-time"><span class="REPLACE">00:00</span> </strong>&nbsp;Hours</span> -->
-	
-		<a class="btn btn-success"  href="#modal-track-time" data-toggle="modal">
-			<span class="text-active">Start new Timer</span>
+
+	<div class="btn-group btn-group-horizontal">
+
+		<!-- add entry -->
+		<a class="btn btn-primary-outline" href="#modal-track-time" data-toggle="modal">
+			Add Entry <i class="symbol symbol-plus"></i>
 		</a>
+
+		<!--
+			start timer
+			NOTE: display only when timer is paused
+		-->
+		<a class="btn btn-primary" href="#modal-track-time" data-toggle="modal">
+			Start Timer <i class="symbol symbol-play"></i>
+		</a>
+
+
+		<!--
+			pause timer
+			NOTE: display only when timer is active
+		-->
+		<a class="btn btn-secondary" href="#modal-track-time" data-toggle="modal">
+			Pause Timer <i class="symbol symbol-pause"></i>
+		</a>
+
 	</div>
 
 
+<!-- @NOTE:
+ON STANDBY FOR DESIGNER'S UPDATES
 
-	<div class="modal" id="modal-track-time" data-modal-max-width="960px" data-modal-title="Add new Entry">
+-->
+	<div class="modal" id="modal-track-time" data-modal-width="960px" data-modal-title="Add new Entry">
 		<div class="container">
 
 			<form action="" class="add-new-timer">
@@ -136,7 +154,18 @@
 							<label class="input-label">
 								Notes
 							</label>
-							<textarea type="text" name="project-name" class="input input-multiple-line"></textarea>
+
+							<!-- @NOTE. this has tinymce naw -->
+							<div class="REPLACE">
+
+								<textarea type="text" name="project-name" class="input input-multiple-line">
+								</textarea>
+							</div>
+						</div>
+
+						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
+							<label class="input-label" for="attachments">Attachments</label>
+							<input class="input input-single-line" id="attachments" multiple="" name="attachments" type="file">
 						</div>
 					</div>
 

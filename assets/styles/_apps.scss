@@ -1,0 +1,724 @@
+
+
+$sidebar-base: 285px;
+$sidebar-mobile: 245px;
+$sidebar-base-slim: 80px;
+$sidebar-base-slim-mobile: 60px;
+// $sidebar-xs: 60px;
+
+
+//custom
+// .container,.fw-modal-component {
+// 	td {
+// 		max-width: 300px;
+// 	}
+// }
+
+//whole page layout
+#dashboard {
+	.note-content-wrapper {
+		@include br(xl){
+			padding: 20px;
+		}
+	}
+	//hides svgs that contain defs for styling and not actually ouputting a pichur
+	&-svg-styles {
+		width:0;
+		height:0;
+		position:absolute;
+		z-index:-9999;
+		top:0;
+		left:0;
+		overflow:hidden;
+	}
+
+	&-block {
+		// &-sidebar,&-main {
+		// }
+
+	&-nav {
+
+
+		.nav-logo {
+			padding: 0 1rem;	
+			display:flex;
+			flex-direction:column;
+			justify-content: center;
+			margin-right: .5em;
+		
+			svg {
+				max-height: 35px;
+				max-width: 100%;
+				width: auto;
+			}
+		}
+	}
+
+		&-sidebar {
+			width: $sidebar-base;
+			box-shadow: 0 0 10px -5px color(b);
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			padding-top: 45px;
+			padding-bottom: 45px;
+			z-index:99999;
+			overflow-y:scroll;
+			overflow-x:hidden;
+			scrollbar-width: none;
+
+			&.dashboard-block-sidebar-slim {
+				width: $sidebar-base-slim;
+				top:$nav-height;
+				z-index:9998;
+			}
+
+			&::-webkit-scrollbar {
+				display:none!important;
+			}
+
+			// .container {
+			// 	opacity: 1;
+			// 	transition: opacity $transition-duration-base $transition-timing;
+
+			// 	body.body-loading & {
+			// 		opacity: 0;
+			// 	}
+			// }
+
+			.sidebar {
+				&-logo {
+
+					&,
+					img,
+					svg {
+						margin: 0 auto 65px;
+						display:block;
+					}
+				}
+			}
+
+			&-nav {
+				margin: 0 ($container-gutter-wide * -1);
+
+				&:first-child {
+					margin-top: 0;
+
+					li  {
+						
+						> .dropdown,
+						> ul {
+							position:fixed;
+							top: $nav-height;
+							bottom:0;
+							left: $sidebar-base-slim;
+							overflow-y:scroll;
+							overflow-x:hidden;
+							width: 200px;
+							text-align:left;
+							z-index:99;
+							box-shadow:inset 3px 0 5px -5px #000,3px 0 5px -5px #000;
+							padding: 45px $gutter-base;
+	
+							&::-webkit-scrollbar {
+								display:none!important;
+							}
+						}
+					}
+				}
+
+				.nav-list .nav-item  {
+					overflow:auto;
+					> .dropdown,
+					> ul {
+
+						width:calc(100% - #{$nav-gutter-x} - #{$nav-icon-width} - 1.5rem);
+						margin-right: 0;
+					}
+				}
+			}
+
+			@include br(#{$mobile-br-max}-max) {
+				&:not(.dashboard-block-sidebar-slim) {
+					width:$sidebar-mobile;
+				}
+				&-nav {
+					margin: 0 ($container-gutter-mobile * -1);
+				}
+			}
+
+			@include br(xs-max) {
+				&:not(.dashboard-block-sidebar-slim) {
+					left: -100%;
+					transition: left $transition-duration-base $transition-timing;
+
+					&.open {
+						left:0;
+					}
+				}
+			}
+		}
+
+		&-main {
+			width:calc(100% - #{$sidebar-base});
+			padding-top: $container-gutter;
+			padding-bottom: $container-gutter;
+			margin-left: auto;
+
+			.dashboard-block-sidebar-slim  + & {
+				width:calc(100% - #{$sidebar-base-slim});
+			}
+
+			&-nav {
+				left: $sidebar-base;
+				z-index:99998;
+				justify-content: space-between;
+
+				&-toggle {
+					transition: left $transition-duration-base $transition-timing;
+					position:relative;
+					z-index:99999;
+					left:0;
+				}
+			}
+
+			#content-wrapper {
+				.body-loading & {
+					opacity:0;
+				}
+				.body-loaded & {
+					opacity:1;
+				}
+			}
+
+			@keyframes dashboardLoading {
+				0% {
+					content:"Loading.";
+				}
+				50% {
+					content:"Loading..";
+				}
+				100% {
+					content:"Loading...";
+				}
+			}
+
+			@at-root .body-loading #dashboard-block-main {
+				&:before {
+					animation-name: dashboardLoading;
+					animation-duration: .5s;
+					animation-fill-mode: both;
+					animation-iteration-count: infinite;
+					content:"Loading...";
+					display:block;
+					width:100%;
+					margin: 0 auto;
+					max-width: $container-max-width;
+					padding: $gutter-base;
+					font-size: 2rem;
+					font-weight:300;
+					opacity: .5;
+					position:static;
+					transition: opacity $transition-duration-base $transition-timing;
+
+					.body-loaded & {
+						opacity:0;
+						position:absolute;
+					}
+				}
+			}
+
+			@at-root #nav {
+				/* pre-workflow */
+				.nav > &-logo {
+					min-width: $nav-height;
+					margin-right: auto;
+				}
+				.nav > &-search {
+					margin-right: auto;
+					flex: 1 1;
+					overflow-x:hidden;
+					
+					position:relative;
+
+					.btn {
+						width:auto;
+						// order:-1;
+					}
+
+					.input {
+						border-color: transparent;
+						background-color: transparent;
+						font-size: rem(16px/ $body-font-size);
+						text-align: right;
+					}
+
+					.symbol-search {
+	
+						&:before {
+							border-width: em(3px/24px);
+						}
+	
+						&:after {
+							width: em(3px/24px);
+						}
+					}
+				}
+				.nav > &-account {
+					display: flex;
+					align-items: center;
+					position: relative;
+				}
+
+				/* workflow onward and some pre ones */
+				&-functions {
+
+					max-width: 500px;
+					.filter-dropdown-global {
+						max-width:rem(760px/$body-font-size);
+					}
+
+					> form {
+						max-width: 100%;
+					}
+
+					@include br(#{$mobile-br-max}-max) {
+						width:50%;
+						max-width: 250px;
+					}
+				}
+
+
+				&-quick-functions {
+					margin-right: 2rem;
+				}
+			}
+
+			@include br(#{$mobile-br-max}-max) {
+				width:calc(100% - #{$sidebar-mobile});
+				padding-top: $container-gutter-mobile;
+				padding-bottom: $container-gutter-mobile;
+	
+				&-nav {
+					left: $sidebar-mobile;
+				}
+
+			}
+
+			@include br(xs-max) {
+				padding-top: $gutter-micro;
+				padding-bottom: $gutter-micro;
+				width: 100%;
+
+				&-nav {
+					left: 0;
+
+					&-toggle {
+	
+						&.open {
+							left: $sidebar-mobile;
+						}
+					}
+				}
+
+				@at-root #content-wrapper {
+					&:before {
+						left: 2em;
+					}
+				}
+			}
+		}
+	}
+
+	&-dynamic {
+		&-alert-container {
+			left: $sidebar-base-slim;
+			top: $nav-height;
+			// margin-left: $gutter-small * -1;
+			// margin-top: $gutter-small * -1;
+			max-width:400px;
+			z-index:99;
+			width: 400px;
+			max-width: 72%;
+			padding: $gutter-small 0 0 $gutter-small;
+			
+			.alert {
+
+				box-shadow: 0 2px 10px -5px $var-color-base;
+			}
+		}
+	}
+}
+
+#nav {
+
+	&-notification {
+
+		.tag {
+			position: absolute;
+			top: 1em;
+			right: -.5em;
+		}
+	}
+}
+
+
+//helpers
+.dashboard {
+
+	&-filter {
+		&-meta-key {
+			@include br(#{$mobile-br-max-polar}){
+				width: 125px;
+			}
+		}
+	}
+
+	&-btn {
+		&-serp {
+			margin: .25em .125em;
+		}
+	}
+
+	&-tooltip {
+		&-serp {
+			&-rows{
+				max-height: 360px;
+			}
+		}
+
+		&-row {
+			padding-right: 1em;
+
+			> hr {
+				margin-right: -1em;
+				width: calc(100% + 1em);
+			}
+		}
+	}
+
+	&-alert {
+		&-icon {
+			font-size: em(21px/$body-font-size);
+			float: left;
+			height: 1em;
+			width: 1.08em;
+			// margin-top: em((($body-font-size - 21px) * .5)/$body-font-size);
+			margin-right: .25em;
+			// display: inline-block;
+			line-height: 1;
+
+			svg,img,* {
+				max-width:100%;
+				max-height:100%;
+			}
+		}
+	}
+
+	&-modal{
+		&-gutterless {
+
+			&,
+			&-x {
+
+				.modal-popup {
+					padding-left:0;
+					padding-right:0;
+				}
+			}
+			
+			&,
+			&-y {
+				.modal-popup {
+					padding-top:0;
+					padding-bottom:0;
+				}
+			}
+		}
+
+		&-share-notes {
+			.modal-popup {
+
+				background: transparent;
+				box-shadow: none;
+			}
+		}
+	}
+
+	&-comment-replies-wrapper {
+		padding-left: 2em;
+	}
+
+	&-list-group-clip-thumbed {
+		overflow-y:auto;
+		max-height: rem(564px/($body-font-size * 1.5));
+
+		&#{&}-shorter {
+			max-height: rem((564px/2)/($body-font-size * 1.5));
+		}
+		
+		&#{&}-normal {
+			
+			max-height: rem(250px/($body-font-size * 1.5));
+		}
+	}
+
+	&-list-group-clip-text {
+		overflow-y:auto;
+		max-height: em(491px/($body-font-size));
+	}
+
+
+	//if this doesnt work pls comment out. add this to `.table-wrapper` that is NOT within a flex grid
+	&-table-wrapper-gutterless {
+		margin-left: $module-gutter-x * -1;
+		margin-right: $module-gutter-x * -1;
+		width: auto;
+		@include br(#{$mobile-br-max}-max){
+			margin-left: $module-gutter-x-mobile * -1;
+			margin-right: $module-gutter-x-mobile * -1;
+		}
+
+		.module-content:first-child > &:first-child {
+			margin-top: $module-gutter-y * -1;
+			width: auto;
+			@include br(#{$mobile-br-max}-max){
+				margin-top: $module-gutter-y-mobile * -1;
+			}
+		}
+
+		.module-content:last-child > &:last-child {
+			margin-bottom: $module-gutter-y * -1;
+			width: auto;
+			@include br(#{$mobile-br-max}-max){
+				margin-bottom: $module-gutter-y-mobile * -1;
+			}
+		}
+	}
+	
+	&-table {
+
+		&-cells-match-height td {
+			height: rem(56px/$body-font-size);
+		}
+
+		//the stars for varoite tasks and shit
+		&-icon-flush-left {
+			//something something
+		}
+
+
+		&-cell {
+			//holy grail. that wont let your cells stretvch too much
+			&-max {
+
+				// width: clamp(80px, 5vw,180px)!important;
+				width: 180px;
+				max-width: 180px;
+				min-width: auto;
+
+
+				&-larger {
+
+					width: 200px;
+					max-width: 200px;
+					min-width: auto;
+				}
+			}
+
+			&-client-addnotes {
+
+				width: calc(100% - 200px);
+				max-width: calc(100% - 200px);
+				min-width: auto;
+			}
+
+			&-date,
+			&-category {
+	
+				// width: clamp(80px, 5vw,110px)!important;
+				width: 100px;
+				max-width: 120px;
+				min-width: 100px;
+			}
+
+			&-fave {
+	
+				// width: clamp(80px, 5vw,110px)!important;
+				width: 50px;
+				max-width: 50px;
+				min-width: 50px;
+				text-align: center;
+
+			}
+
+
+			&-thumbnail {
+				min-width: 90px; 
+				max-width: 150px; 
+				width: 5vw; 
+				text-align:center;
+			}
+
+			&-name {
+				min-width: 260px;
+			}
+
+
+			&-single-btn-symbol,
+			&-action {
+				width: 70px;
+				max-width: 70px;
+				min-width: 70px; 
+			}
+
+			&-watch-btns,
+			&-edit-btns {
+				width: 130px;
+				max-width: 130px;
+				min-width: 130px;
+				right:70px;
+				z-index:2;
+			}
+
+			&-action,
+			&-watch-btns,
+			&-edit-btns {
+				position:sticky;
+				box-shadow: -2px 0 0 -1px $var-color-neutral-alpha-2;
+
+				&:not(th)  {
+					background-color:inherit;
+					@at-root tr:not([class*=table-row]) & {
+						background-color: $var-theme-background;
+					}
+				}
+			
+
+				&:last-child {
+					right:0;
+				}
+			}
+
+			&-url {
+				max-width: 350px;
+				min-width: 350px;
+			}
+		}
+
+		&-row {
+			
+			//accordion infused table like in timertracker/team.php
+			&-accordion {
+				&-header {
+
+				}
+
+				&-body {
+					box-shadow: inset 0 20px 10px -20px $var-color-neutral-alpha-2;
+
+					td:first-child {
+						padding-left: $btn-height * 1.125;
+					}
+				}
+			}
+		}
+	}
+
+	//layout styles for 2 column board layouts
+	&-board {
+
+
+		//style board column vertical paadding
+		&-partition {
+			padding: 50px 0;
+			
+			@include br(#{$mobile-br-max}-max){
+				padding: 30px 0;
+			}
+			
+			@include br(#{$mobile-br-max-polar}){
+				max-height:100%;
+				overflow-y:auto;
+		
+				// &::-webkit-scrollbar {
+				// 	display:none!important;
+				// }
+			}
+		}
+		&-column-layout {
+			.board-popup {
+				padding:0;
+				// display:flex;
+				// flex-wrap:wrap;
+				@include br(#{$mobile-br-max-polar}){
+					max-height:100%;
+					overflow-y:hidden;
+			
+					// &::-webkit-scrollbar {
+					// 	display:none!important;
+					// }
+				}
+			}
+			.board-popup-content {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				flex: 1 1;
+				height:100%;
+			}
+			&-container {
+				flex: 1 1;
+				@include br(#{$mobile-br-max-polar}){
+					display: flex;
+					flex-wrap: wrap;
+					max-height:100%;
+				}
+			}
+
+			&-main {
+
+
+				@include br(#{$mobile-br-max-polar}){
+					width: calc(100% - 400px);
+				}
+			}
+
+			&-side {
+				flex: 0 0 auto;
+				@include br(#{$mobile-br-max-polar}){
+					width: 400px;
+				}
+			}
+		}
+	}
+}
+
+#workflow {
+	&-dash {
+		&-today {
+
+
+			//my dash size
+			.today-total-halo {
+				width: rem(180px/$body-font-size);
+			}
+		}
+
+		&-weekly {
+
+			.weekly-hours-row-day,.weekly-hours-row-total {
+				text-align: right;
+			}
+			.weekly-hours-row-day {
+				width: 1.5em;
+			}
+
+			.weekly-hours-row-total {
+				width: 4em;
+				overflow:hidden;
+			}
+		}
+	}
+}

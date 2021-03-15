@@ -1,6 +1,6 @@
 # Modal
 
-NOTE: only one instance of a modal (not counting trumbowyg modals) can be rendered a time because it makes managing the modal easier 
+NOTE: only one instance of a modal can be rendered a time because it makes managing the modal easier 
 
 This is how to setup a basic modal
 
@@ -113,7 +113,7 @@ Whether or not to allow clicking on the overlay to close the modal
 ```
 
 
-### **`data-modal-max-width`**
+### **`data-modal-width`**
 
 Dafaults to `null`
 
@@ -123,7 +123,7 @@ Whether or not to add a max-width to the modal. The modal is styled to be respon
 
 ```html
 <a
-	data-modal-max-width="800px"
+	data-modal-width="800px"
 	href="#modal-demo">Modal boi with max width <i class="symbol symbol-search"></i></a>
 
 <div class="modal" id="modal-demo">
@@ -132,6 +132,25 @@ Whether or not to add a max-width to the modal. The modal is styled to be respon
 ```
 
 
+
+
+### **`data-modal-change-hash`**
+
+Dafaults to `true`
+
+Whether or not to have the modal change the location.hash when enabled and then disabled
+
+
+
+```html
+<a
+	data-modal-width="800px"
+	href="#modal-demo">Modal boi with max width <i class="symbol symbol-search"></i></a>
+
+<div class="modal" id="modal-demo">
+	<!-- content heeeere -->
+</div>
+```
 
 ### **`data-modal-callback`**
 
@@ -180,7 +199,7 @@ classes to add to the generated modal or `#fw-modal`
 data-toggle="modal"
 data-modal-close="false"
 data-modal-disable-overlay="false"
-data-modal-max-width="800px"
+data-modal-width="800px"
 data-modal-title="Bitch"
 href="#modal-demo">Modal boi with max width and no close butt <i class="symbol symbol-search"></i></a>
 
@@ -197,32 +216,101 @@ href="#modal-demo">Modal boi with max width and no close butt <i class="symbol s
 
 This is the markup our framework generates in case you need to make your own. 
 
-```html
-<!-- Wrapper and color overlay... adding .active shows the boi -->
-<div class="modal-wrapper active" id="modal-demo">
-	
-	<!-- This goes around the background to allow closing the modal -->
-	<a class="modal-close-overlay" href="#"></a>
-	
-	<!-- The popup itself -->
-	<div class="modal-popup">
-		<!-- duh -->
-		<div class="modal-header">
-			<!-- duh -->
-			<h1 class="modal-title"></h1>
-		</div>
+```js
+let html = '';
 
-		<!-- That cute close button -->
-		<a class="modal-close" data-toggle="modal-close" href="#"><i class="symbol symbol-close"></i></a>
+	html += `<div id="fw-modal"
+			class="${frameWork.settings.prefix}-modal-component
+			${subcom}-wrapper
+			${args.classes}
+			${args.align ? `${subcom}-${args.align}` : ''}
+		">`;
 
-		<!-- duh -->
-		<div class="modal-popup-content">
-		<!-- Content here -->
-		</div>
+		//overlay
+		html += `<a href="#"
+				class="
+					${subcom}-close-overlay"
+					${
+						args.disableOverlay == false
+						? `data-toggle="${subcom}-close"`
+						: ''
+					}
+			></a>`;
 
-	</div>
+		//markup changes for a basic modal vs the board
+		switch (subcom) {
+			case 'board':
+				html += `<div class="${subcom}-button-wrapper">`;
+					if (args.close !== false) {
+						html += `<a href="#"
+							class="
+								${subcom}-close ${subcom}-button
+								${
+									args.closeClasses
+									? args.closeClasses
+									: `${subcom}-button-default`}"
+							data-toggle="${subcom}-close"
+						>
+							<i class="symbol symbol-close "></i>
+						</a>`;
+					}
 
-</div>
+					if (args.resize !== false && args.width) {
+						html += `<a
+							class="
+								${subcom}-resize ${subcom}-button
+								${
+									args.resizeClasses
+									? args.resizeClasses
+									: `${subcom}-button-default`}"
+							data-toggle="${subcom}-resize"
+						>
+							<i class="symbol symbol-arrow-tail-left "></i>
+							<i class="symbol symbol-arrow-tail-right "></i>
+						</a>`;
+					}
+				html += `</div>`;
+
+				html += `<div class="${subcom}-popup">`;
+
+					if (args.header) {
+						html += `<div class="${subcom}-header">
+								<h1 class="${subcom}-title">${decodeURIComponent(args.header)}</h1>
+							</div>`;
+					}
+
+					html += `<div class="${subcom}-popup-content"></div>`;
+
+				html += `</div>`;
+
+				break;
+
+			case 'modal':
+				html += `<div class="${subcom}-popup">`;
+
+				if (args.header) {
+					html += `<div class="${subcom}-header">
+							<h1 class="${subcom}-title">${decodeURIComponent(args.header)}</h1>
+						</div>`;
+				}
+
+				if (args.close !== false) {
+					html += `<a href="#"
+							class="${subcom}-close ${args.closeClasses}"
+							data-toggle="${subcom}-close"
+						>
+							<i class="symbol symbol-close "></i>
+						</a>`;
+				}
+
+				html += `<div class="${subcom}-popup-content">${MODAL_CONTENT_HERE}</div>`;
+
+				html += `</div>`;
+
+				break;
+		}
+
+	html += `</div>`;
 ```
 
 NOTE add `.body-modal-active` to the body tag so scrolling doesnt conflict with the modal's scrolling capability
@@ -249,9 +337,11 @@ NOTE: this is useless if `frameWork.settings.dynamicHash` is set to `false`
 
 ### Functions
 
-#### **`fw.createModal(triggerer)`**
+#### **`fw.createModal(mode,triggerer)`**
 
 Creates a modal
+
+`mode` is the type of subcomponent of modal. defaults to `false` to render default modal,
 
 `triggerer` is the element that toggles the modal or [data-toggle="modal*"],
 
@@ -263,3 +353,20 @@ Kills ya boi
 
 
 [Back to TOC](../../../readme.md)
+
+# Sub-components
+
+## Board
+
+Same functions as modal except this looks different because the design says so biechhhh
+
+
+```html
+<a
+	data-toggle="board" href="#board-demo">board Toggle</a>
+<div class="board" id="board-demo">
+	<!-- Put ya content here -->
+</div>
+```
+
+halat ta igwa pa akong ilalaag igdi

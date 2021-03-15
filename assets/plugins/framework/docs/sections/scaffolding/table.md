@@ -6,7 +6,7 @@ Yes we have that too.
 ## Helper Classes
 
 ### **.table-wrapper**
-. tables may not be absolutely responsive depending on content. to allow horizontal scrolling without looking ugly, wrap yuh table in a div with this class
+tables may not be absolutely responsive depending on content. to allow horizontal scrolling without looking ugly, wrap yuh table in a div with this class
 
 ```html
 <div class="table-wrapper">
@@ -15,7 +15,6 @@ Yes we have that too.
 	</table>
 </div>
 ```
- 
 
 ### **.table**
 
@@ -25,6 +24,10 @@ Replicate a `<table>` element
 <div class="table">
 </div>
 ```
+ 
+### **.table-fixed**
+
+add to `<table>` or `.table` element if you want it to be abso-fucking-lutely mushy
 
 ### **.table-row**
 
@@ -60,6 +63,37 @@ The folloing classes style table rows to [framework colors](../scaffolding/color
 ```html
 <table>
 	<tr class="table-row table-row-success"></tr>
+</table>
+```
+
+
+#### Cell classes
+
+![Yes](../../images/table-color.png)
+
+##### Colors 
+The folloing classes style a single table cell to [framework colors](../scaffolding/colors.md#color-tags)
+
+*	**.table-cell-primary**
+*	**.table-cell-secondary**
+*	**.table-cell-accent**
+*	**.table-cell-neutral**
+*	**.table-cell-success**
+*	**.table-cell-caution**
+*	**.table-cell-error**
+*	**.table-cell-intensity-1**
+*	**.table-cell-intensity-2**
+*	**.table-cell-intensity-3**
+*	**.table-cell-intensity-4**
+*	**.table-cell-intensity-5**
+
+```html
+<table>
+	<tr class="table-row">
+		<td class=" table-row-succes">
+			weeee
+		</td>
+	</tr>
 </table>
 ```
 

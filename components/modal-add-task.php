@@ -1,7 +1,7 @@
 <div class="module-function modal-add-task">
 	<a href="#modal-add-task" data-toggle="modal" class=" btn btn-primary"><span>Add Task</span> <i class="symbol symbol-plus"></i></a>
 
-	<div class="modal" id="modal-add-task" data-modal-max-width="800px" data-modal-disable-overlay="true" data-modal-title="Add New Task">
+	<div class="modal" id="modal-add-task" data-modal-width="800px" data-modal-disable-overlay="true" data-modal-title="Add New Task">
 							
 		<form method="get">
 			<div class="special-form">
@@ -16,7 +16,7 @@
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 					<label for="task-description" class="sr-only">Content</label>
 
-					<textarea id="task-description" class="input input-trumbowyg">
+					<textarea id="task-description" class="input input-multiple-line">
 					</textarea>
 				</div>
 			</div>

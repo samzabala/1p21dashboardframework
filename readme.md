@@ -3,7 +3,7 @@ will separate dashboard and framework one the bois are readeh
 
 
 
-# Dashboard Documentation
+# Documentation
 
 ## Dependencies
 ### Javascript
@@ -23,6 +23,223 @@ will separate dashboard and framework one the bois are readeh
 
 [Bubble chart demo code](template/chart.php)
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
+
+
+# Worfklow sidebar modules notes:
+NOTE: all modules with forms/accordions elements with id or name attributes will be reused by the incoming edit project board as well
+
+
+@NOTE on each module-side-*-edit.php components, we need to have prefixes prepended to input field names/id attributes, etc to avoid conflicting instances of user filter components
+
+(ie when the project edit board and task edit board markups are both present in one page. This is guaranteed to occur on some or all of the incoming project-view templates being built by nadia)
+
+Keep an eye out for these strings to make sense of why the fuc sam did??. Feel free to change the structure of the naming system as well to whatever is comfortable on your end, but keep in mind prefixes will be primarily important to avoid ui/ front end conflicts if there are ids/names that fall out of this standardized syntax, feel free to fix too:
+
+
+REPLACEwithPostType
+
+	definition:
+		=> either `project` ot `task`, depending which editing board the module is placed.
+		so if it's in the task-id-edit board, the a field REPLACEMODE-REPLACEwithPostType-team-lead-to-add-id the field's name is `edit-task-lead-sales-rep-id`
+
+	
+	logic:
+		if board's for viewing/editing/adding a task
+			REPLACEwithPostType = `task`
+		
+			if board's for editing a project (thank god only editing)
+			REPLACEwithPostType = `project`
+	
+
+	example front end render:
+
+			<label for="edit-task-title" class="input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-single-line input-large">
+
+		vs
+
+			<label for="edit-project-title" class="input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="edit-project-title" name="edit-project-title" class=" input input-single-line input-large">
+
+
+
+REPLACEMODE 
+
+	definition:
+		depending on which board editor (new task vs edit task) contains the form
+
+		both Add new task or edit new task boards will be present together on pages. This is to ensure eding the task from the view board works.  REPLACEMODE prefix is to resolve any front end conflicts, like input field and label relations or modals and accordions
+
+	logic:
+		if board's id is `task-69-edit`
+			REPLACEMODE = `edit`
+
+		if board's id is `task-69-new`
+			REPLACEMODE = `new`
+
+
+	example front end render:
+
+			<label for="edit-task-title" class="input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-single-line input-large">
+
+		vs
+
+			<label for="new-task-title" class="input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="new-task-title" name="new-task-title" class=" input input-single-line input-large">
+
+
+
+filter-FIELDNAME
+	definition:
+		prefix for input fields that will only extend a valid input fields' capabilities (ie, search for a user name to append to team or search for valid tags to append to labels and tags)
+
+
+	example front end render:'
+			field that will contain tags to add to actuial field
+				<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+			field that will actually submit to the database
+				<input id="edit-task-tags" name="edit-task-tags" type="hidden" />
+
+REPLACEwithCorrespondingInputFieldName
+	definition:
+		coimplete name of the filter-* field is connected tofield that will actually submit to the database
+
+
+	example front end render:'
+
+		code on html/php demo version
+			field that will contain tags to add to actuial field
+				<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+			field that will actually submit to the database
+				<input id="edit-task-tags" name="edit-task-tags" type="hidden" />
+
+		vs
+
+			field that will contain tags to add to actuial field
+				<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+			field that will actually submit to the database
+				<input id="REPLACEwithCorrespondingInputFieldName" name="REPLACEwithCorrespondingInputFieldName" type="hidden" />
+
+
+# For Cristian
+
+## As of 08-22-20
+
+Conditional statements for which post (eg task vs project) renders a certain sidebar section that still need verification will have `@TODO finalize apporpriate or remove uneeded conditional statement here` as the the html comment
+
+Find and replace the following:
+*	`[data-toggle="accordion"]` with hrefs/data-hrefs to "#task-side-*"
+
+	attribute/s to replace: `hrefs/data-hrefs `
+
+	old: `"#task-side-*"`
+
+	new: `"#post-side-*"`
+
+*	`.accordion` with id to "task-side-*"
+
+	attribute/s to replace: `id`
+
+	old: `"task-side-*"`
+
+	new: `"post-side-*"`
+
+### only on markup within `/components/module-side-*` and `/components/toolbar-side-*` files. These classes may not apply depending on how much the markup has changed on back end dev setup, but please keep an eye out for them
+
+
+| Selector | attribute to change | old | new |
+| --       | --                  | --  |  -- |
+| `.module .task-workflux` | class | `task-workflux"` | `post-workflux` |
+| `.module .task-tags` | class | `task-tags"` | `post-tags` |
+| `.module .task-followers` | class | `task-followers"` | `post-followers` |
+| `.module .task-wiki` | class | `task-wiki"` | `post-wiki` |
+| `.module .task-reminders` | class | `task-reminders"` | `post-reminders` |
+| `.module .task-project-new` | class | `task-project-new"` | `post-new` |
+| `.module .task-leads` | class | `task-leads"` | `project-leads` |
+
+
+--------------------------
+
+# Older Notes
+
+## As of 07-21-2020
+
+instances of data atrtributes `data-modal-max-width` and `data-board-max-width` will now be  `data-modal-width` and `data-board-width`
+
+
+## As of 07-13-2020
+
+Workflow board components will now have their toggles and board bllock elements separated to allow more modularity
+eg:
+
+`board-track-time` => `board-track-time` and `board-track-time-toggle`
+
+`board-track-time` will contain only the board element while `board-track-time-toggle` will contain the toggle we see on `my-dash`
+
+
+These are classes that need to be found and replaced for framework 2.0.0
+```
+btn-symbol-round => btn-round
+btn-block => btn-block
+btn-block-mobile => btn-block-mobile
+input-block => input-block
+input-block-mobile => input-block-mobile
+```
+
+
+# Structure 
+
+I reorganized im sorry :...DDDDDD
+
+Files to translate
+* assets - front end shit boi
+	* images - duh
+	* plugins - third party bitches eg framework, trumbowyg, etc
+	* scripts - duh
+	* styles - duh
+* placeholder - they can alll go awei
+* app-* - templates built for apps on the framework
+  * includes - contains navigation and header contents for specific app
+* global - templates used by all apps/placehodr
+* components - shared or repeating markup. second holy grail
+  For visual reference, see YOURLOCALENV.domain?template=debug-components
+* includes - template parts
+* header.php - duh
+* footer.php - duh
+
+Files you dont need because it's just to setup the templates for showing off or internal bitches.. or.. whatever pls ignore them they're not needed on the actual dashboardt 
+* config.codekit
+* config.php
+* content.php
+* helpers.php
+* index.php
+
+
+# Timetracker Notes
+
+Leave add entry modal anmd date dropdowns as is for now. still awaiting design updates for those
+
+Links are setup for templates that do not exist yet
+
+
+
+## Matching Templates
+
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[New&nbsp;Templates](https://github.com/samzabala/1p21dashboardframework/app-timetracker)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |  New Template Live Demo | Current Template Live Link |
+| -- | -- | -- | -- |
+| error	 | Internal errors (eg. 404, 503.. ).<br><br>for both envs: production and scoreboard | http://frameworkdashboarddebug.1p21.io/?template=error |
+| home/my-time | Landing page | http://frameworkdashboarddebug.1p21.io/?template=home&env=&app=timetracker | https://time-tracker.1p21.io/ |
+| team | team data  | http://frameworkdashboarddebug.1p21.io/?template=team&env=&app=timetracker | https://time-tracker.1p21.io/views/team<br><br>https://time-tracker.1p21.io/views/week |
+| project | view for a single project/client? | not yet |
+| profile | view for a single user | not yet |
+| tasks | ?? | not yet |
+| analytics | ?? | not yet |
+
+
+
+
+
 
 
 Calendar ui dropdown markup
@@ -79,7 +296,9 @@ Calendar ui dropdown markup
 # Assets Flowchart
 [Flowchart](assets-flow-chart.png)
 
-#	NOTES
+--
+
+#	Dashboard NOTES
 
 *	Highcharts with tooltips
 
@@ -93,31 +312,8 @@ Calendar ui dropdown markup
 
 *	dynamic content will be classed with corresponding prefix (eg. .profile-name contains the profile's name data ) but not necessarily styled yet
 
-# Structure 
 
-Files to translate
-* assets - front end shit boi
-	* images - duh
-	* plugins - third party bitches eg framework, trumbowyg, etc
-	* scripts - duh
-	* styles - duh
-* placeholder - they can alll go awei
-* template - markup for each page. this is the holy grail of bitches
-* components - shared or repeating markup. second holy grail
-* includes - template parts
-* header.php - duh
-* footer.php - duh
-
-Files you dont need because it's just to setup the templates for showing off or internal bitches.. or.. whatever pls ignore them they're not needed on the actual dashboardt 
-* config.codekit
-* config.php
-* content.php
-* helpers.php
-* index.php
-
-# Templates
-
-## Equivalent Templates
+## Templates
 
 Found in templates directory
 
@@ -145,6 +341,7 @@ Found in templates directory
 ## New Templates that are can be disregarded for dashy boi 
 
 * debug.php - used to debug the framework build.
+* debug-components.php - reference for componentsd available so we can reuse or improve what already exists and code less
 
 ## Found Features in design that do not exist on current dashboard yet 
 
@@ -211,3 +408,77 @@ There are html comments or string instances by markup with dynamic attributes an
 
 # Framework Documentation
 [Here](https://github.com/samzabala/framework/blob/master/readme.md)
+
+
+
+#2.0.0 Rebuilds and additions (for workflow suport)
+
+framework 2.0.0
+---------------------------
+new components / helpers
+ang mga may js baka matagasalan ka kasi tanga ka rin minsan
+
+js/ js + html
+
+js + css (1 week or more)
+* .board - modal... but from the side. see debug template for basuc demo
+
+css
+* PRIORITY
+    * OK zone
+        * zone-large
+        * zone-small // transfer default boi here
+    * modal close button
+        * add attribute to override classes + change to button
+    * OK border radius rounding classes  - *
+        * btn-round
+        * input round
+        * btn-group-round
+        * btn-group-round
+    * OK btn palettes not fully customizeable (eg btn-theme-outline, btn-theme-polar- outline etc) - *
+        * btn-COLORTAG-outline
+    * input-toggle - *
+        * requires 3 block elements
+        * input-wrapper.input-checkbox-wrapper
+            * input.input-checkbox
+            * input-label.input-label-checkbox
+    * OK Panel - * reminders USE .alert instead
+    * summary - * donloadable assets
+        * my dumbass didnt name dem thumbnails as avatar instead so here we are
+        * possible files
+            * default - download button na lang
+            * image
+            * word
+            * excel
+            * text
+            * pdf
+            * powerpoint
+* 1 day or less 
+    * progress bar - view task
+        * sizing
+            * progress-bar-small *
+            * progress-bar-large
+        * change default styles ???
+    * symbol-download - * task pages
+        *  - use polygon
+    * highlight - * task pages
+        * tagged names at comments
+    * OK modal
+        * adjust paddings for non mobile breakpoint and shit
+
+
+redesign/ rebuild 
+* may take more than 1 day
+* 1 day or less 
+    * tags color - edit task
+        * bg changes + dynamic variable setup
+
+
+
+Can't do due to layout/ usability issues
+* tables in modules w/o x-padding
+    * - layout and scroll issues to tables
+* arrow toggle flushed on right side with title on left while having module functions in between
+*  Thumbnail possobility 4 files
+
+

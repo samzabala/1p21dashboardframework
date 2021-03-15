@@ -31,15 +31,24 @@ Lazyloading also supports replacement of img tag into the src's svg markup. As l
 <img class="svg" data-src="icoo.svg" alt="bitch boi" />
 ```
 
-This way you can utilize [SVG Classes](#svg) tto :')
+This way you can utilize [SVG Classes](#svg) to :')
 
 ### Disable Lazyloading
 To disable lazyload, do this to ya script
 ```js
 (function(fw){
-	frameWork.settings.lazyLoad = false;
+	fw.settings.lazyLoad = false;
 }(frameWork));
 ```
+
+
+
+### Functions for Lazyloading or loading images
+
+As longas yuh image tags vae either `data-src` or `data-srcset` this should be able to work. hopefullly.
+
+`fw.loadImage(imgELEMENT)` - load just one boi
+`fw.loadImages(multipleImages)` - load nultiple bois
 
 ## Classes
 **`.fit-image`**
@@ -101,10 +110,10 @@ These classes will set the proper color based off of html tag having the `.theme
 
 | Class							 | Set color | Set color when `.theme-inverse is active`				|
 | --							| --		| --														|
-| **`.['fill' or 'stroke']-theme`**			| `$theme-color` 				| `$theme-color-inverse`				|
-| **`.['fill' or 'stroke']-theme-contrast`** 	| `$theme-color-contrast`		| `$theme-color-contrast-inverse`		|
-| **`.['fill' or 'stroke']-polar`** 			| `$theme-background`			| `$theme-background-inverse`			|
-| **`.['fill' or 'stroke']-polar-contrast`** 	| `$theme-background-contrast` 	| `$theme-background-contrast-inverse` 	|
+| **`.['fill' or 'stroke']-theme`**			| `$brand-theme-color` 				| `$brand-theme-color-inverse`				|
+| **`.['fill' or 'stroke']-theme-contrast`** 	| `$brand-theme-color-contrast`		| `$brand-theme-color-contrast-inverse`		|
+| **`.['fill' or 'stroke']-polar`** 			| `$brand-theme-background`			| `$brand-theme-background-inverse`			|
+| **`.['fill' or 'stroke']-polar-contrast`** 	| `$brand-theme-background-contrast` 	| `$brand-theme-background-contrast-inverse` 	|
 
 
 ###### Pseudo/Toggle Based
