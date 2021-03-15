@@ -5,9 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>1p21 Dashboard - <?=FWAPPS_APP; ?>: <?=FWAPPS_TEMPLATE; ?></title>
+	<meta name="robots" content="noindex" />
 
 	<!-- styles .sass has ya bois styles -->
-		<?php app_inline_style(FWAPPS_ROOT_PATH.'/assets/styles/style.css'); ?>
+		<link href="<?=FWAPPS_ROOT_URL.'/assets/legacy/styles/style.legacy.css'?>" rel="stylesheet" />
+
 
 
 
@@ -19,7 +21,7 @@
 			<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/jquery.js'); ?>
 
 		<!--turbu  -->
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script>
+			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script> -->
 		
 		<!-- DEPENDENCIES -->
 			<?php 
@@ -27,12 +29,12 @@
 			if(FWAPPS_JS == 'vanilla') {
 				// app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.min.js'); 
 				?>
-				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/framework.min.js'?>" data-turbolinks-track="reload"></script>
+				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.legacy.min.js'?>" data-turbolinks-track="reload"></script>
 				<?php
 			}else{
-				// app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.plugged.min.js');
+				// app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/framework/dist/framework.legacy.plugged.min.js');
 				?>
-				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/framework.plugged.min.js'?>" data-turbolinks-track="reload"></script>
+				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.legacy.plugged.min.js'?>" data-turbolinks-track="reload"></script>
 				<?php
 			}
 			
@@ -41,8 +43,8 @@
 
 
 		<!-- app specific -->
-			<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/scripts/apps.js'); ?>
-			<script src="<?=FWAPPS_ROOT_URL.'/assets/scripts/apps.js'?>" data-turbolinks-track="reload"></script>
+			<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/legacy/scripts/apps.js'); ?>
+			<script src="<?=FWAPPS_ROOT_URL.'/assets/legacy/scripts/apps.js'?>" data-turbolinks-track="reload"></script>
 
 
 

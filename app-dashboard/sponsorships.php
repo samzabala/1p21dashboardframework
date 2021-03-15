@@ -46,14 +46,36 @@
 						<?php app_get_component('components/modal-sponsorship-form'); ?>
 					</div>
 				</div>
+				
+<hr>
+<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact">
+	<div class="flex-child">
+		<form class="display-inline-block"
+			data-REPLACE-the-rest-of-existing-attributes-follow="yes"
+		>
+			<!-- @REPLACE w/ hidden field -->
+
+			<div class="input-group input-group-horizontal input-group-responsive">
+				<label for="file" class="input-label">Upload new Sponsorship Links</label>
+				<input accept="text/csv" required="required" type="file" name="file" id="file" class="input-single-line">
+
+				<button name="button" type="submit" class="btn btn-primary">Import</button>
+			</div>
+		
+		</form>
+	</div>
+	<div class="flex-child">
+		<a id="sponsorship-link-import-sample" href="#" class="btn btn-neutral-outline">Download sample file</a>
+	</div>
+</div>
 			</div>
 		</div>
 	<!-- TABLE -->
 		<div id="sponsorship-table" class="module">
 			<div class="module-content">
-				<div class="table-wrapper">
 
 					<table class="table text-vertical-align-middle">
+					<thead>
 						<tr>
 							<th class="dashboard-table-cell-max text-nowrap" >Website</th>
 							<th class="text-nowrap">DA</th>
@@ -67,6 +89,7 @@
 							<th class="dashboard-table-cell-date text-align-center text-nowrap">Date Added</th>
 							<th class="dashboard-table-cell-action text-nowrap">&nbsp;<span class="sr-only">Actions</span></th>
 						</tr>
+					</thead>
 						
 						<!-- @LOOP TR-->
 							<tr class="">
@@ -146,14 +169,159 @@
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
 									<?php for($i=1; $i<=10; $i++){ ?>
 
+										<tr class="">
 
+											<td class="dashboard-table-cell-max ">
+												<span class="text-leading-compact">
+													<span class="row-website display-block text-wrap-ellipsis">
+														<span class="REPLACE">http://tebsite.com</span>
+													</span>
+													<a href="#REPLACE" target="_blank" class="row-url display-block no-margin text-wrap-ellipsis">
+														<span class="REPLACE">http://website.com/something-somthing/oooeee/this-url-is-long</span>
+													</a>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-da">
+													<span class="REPLACE">69</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-pa">
+													<span class="REPLACE">420</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-cost">
+													<span class="REPLACE">$666</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-period">
+													<span class="REPLACE">One Time</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-max ">
+												<span class="text-leading-compact">
+													<span class="row-vendor display-block text-wrap-ellipsis">
+														<span class="REPLACE">Vendor with a really long name Vendor with a really long name Vendor with a really long name Vendor with a really long name Vendor with a really long name Vendor with a really long name </span>
+													</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-creator">
+													<span class="REPLACE">First Name Last Name</span>
+												</span>
+											</td>
+
+
+											<td class="">
+												<span class="row-geoarea">
+													<span class="REPLACE">Daet, Camarines Norte</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-max">
+												<?php app_get_component('components/table-modal-notes') ?>
+											</td>
+
+											<td class="dashboard-table-cell-date text-align-center">
+												<span class="row-date-added">
+													<span class="REPLACE">4/20/69</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-action">
+												<?php app_get_component('components/tooltip-action-sponsorhip'); ?>
+											</td>
+
+										</tr>
+
+										<tr class="">
+
+											<td class="dashboard-table-cell-max ">
+												<span class="text-leading-compact">
+													<span class="row-website display-block text-wrap-ellipsis">
+														<span class="REPLACE">http://aebsite.com</span>
+													</span>
+													<a href="#REPLACE" target="_blank" class="row-url display-block no-margin text-wrap-ellipsis">
+														<span class="REPLACE">http://website.com/something-somthing/oooeee/this-url-is-long</span>
+													</a>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-da">
+													<span class="REPLACE">69</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-pa">
+													<span class="REPLACE">420</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-cost">
+													<span class="REPLACE">$866</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-period">
+													<span class="REPLACE">One Time</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-max ">
+												<span class="text-leading-compact">
+													<span class="row-vendor display-block text-wrap-ellipsis">
+														<span class="REPLACE">Vendor with a really long name Vendor with a really long name Vendor with a really long name Vendor with a really long name Vendor with a really long name Vendor with a really long name </span>
+													</span>
+												</span>
+											</td>
+
+											<td class="">
+												<span class="row-creator">
+													<span class="REPLACE">First Name Last Name</span>
+												</span>
+											</td>
+
+
+											<td class="">
+												<span class="row-geoarea">
+													<span class="REPLACE">Daet, Camarines Norte</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-max">
+												<?php app_get_component('components/table-modal-notes') ?>
+											</td>
+
+											<td class="dashboard-table-cell-date text-align-center">
+												<span class="row-date-added">
+													<span class="REPLACE">4/20/69</span>
+												</span>
+											</td>
+
+											<td class="dashboard-table-cell-action">
+												<?php app_get_component('components/tooltip-action-sponsorhip'); ?>
+											</td>
+
+										</tr>
 									<?php } ?>
 
 
 
 
 					</table>
-				</div>
 			</div>
 		</div>
 </div>

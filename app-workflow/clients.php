@@ -58,7 +58,7 @@
 											<span class="client-contact-name text-wrap-ellipsis">
 												<span class="REPLACE">Dayman A. Fighter of The Nightman aka Champion of The Sun</span>
 											</span>
-											<a class="client-contact-email text-wrap-ellipsis" href="mailto:REPLACEWithValid@emailaddress.com">
+											<a class="client-contact-email text-wrap-ellipsis" href="#mb-editor-email" data-toggle-modal-board>
 												<span class="REPLACE">
 													scarKillsMufasa@lionKingSpoilers.com
 												</span>
@@ -151,7 +151,7 @@
 														<span class="client-contact-name text-wrap-ellipsis">
 															<span class="REPLACE">Dayman A. Fighter of The Nightman aka Champion of The Sun</span>
 														</span>
-														<a class="client-contact-email text-wrap-ellipsis" href="mailto:REPLACEWithValid@emailaddress.com">
+														<a class="client-contact-email text-wrap-ellipsis" href="#mb-editor-email" data-toggle-modal-board>
 															<span class="REPLACE">
 																scarKillsMufasa@lionKingSpoilers.com
 															</span>

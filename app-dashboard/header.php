@@ -6,9 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="robots" content="noindex">
 	<title>1p21 Dashboard - <?=FWAPPS_APP; ?></title>
+	<meta name="robots" content="noindex" />
 
 	<!-- styles .sass has ya bois styles -->
-	<?php app_inline_style(FWAPPS_ROOT_PATH.'/assets/styles/style.css'); ?>
+	<?php app_inline_style(FWAPPS_ROOT_PATH.'/assets/legacy/styles/style.legacy.css'); ?>
 
 
 
