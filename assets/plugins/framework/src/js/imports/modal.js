@@ -110,16 +110,13 @@ class Modal extends FwComponent {
 		super(
 			element,
 			{
-				triggerer:(
-					triggerer
-						? new FwDom(triggerer)
-					: false
-				),
+				triggerer: triggerer,
 				_customArgs: args
 					|| false,
 				_mode: currMode,
 			}
 		);
+
 	}
 
 	dispose() {
@@ -162,11 +159,7 @@ class Modal extends FwComponent {
 	}
 
 	static #modeToggle(mode){
-		if(!mode || mode == DEFAULT_NAME){
-			return TOGGLE_MODE_PREFIX;
-		}else{
-			return FwString.ToCamelCase(`${TOGGLE_MODE_PREFIX}-${mode}`);
-		}
+		return FwString.ToDashed(`${TOGGLE_MODE_PREFIX}-${mode}`);
 	}
 
 	get modeToggle(){
@@ -186,7 +179,7 @@ class Modal extends FwComponent {
 		return {
 			
 			changeHash: true,
-			header: '',
+			title: '',
 			close: true,
 			disableOverlay: true,
 			width: null,
@@ -228,7 +221,7 @@ class Modal extends FwComponent {
 							&& this.triggerer.getAttribute(`data-${ARG_ATTRIBUTE_NAME}-change-hash`)
 						)
 						|| super.UIEl().getAttribute(`data-${ARG_ATTRIBUTE_NAME}-change-hash`),
-					header:
+					title:
 						(
 							this.triggerer
 							&& this.triggerer.getAttribute(`data-${ARG_ATTRIBUTE_NAME}-title`)
@@ -376,34 +369,23 @@ class Modal extends FwComponent {
 	}
 
 	destroy(elem){
-		if(!this.#current.element){
+		const element = elem ?
+			super.UIEl(elem)
+			: this.#current.element;
+
+		if(!element){
 			return;
 		}
-
-		// const element = elem ?
-		// 	super.UIEl(elem)
-		// 	: super.UIEl();
-
-		// if(!element && this.mode){
-		// 	element = Modal.current(this.mode).element;
-		// }else if(!element && !this.mode){
-		// 	return
-		// }
-
-		// if(!this.#current.element){
-		// 	return;
-		// }
 		
-
-		FwEvent.trigger(this.#current.element,EVENT_BEFORE_DESTROY);
-		FwEvent.trigger(this.#current.element,EVENT_DESTROY);
+		FwEvent.trigger(element,EVENT_BEFORE_DESTROY);
+		FwEvent.trigger(element,EVENT_DESTROY);
 		// removeHash = removeHash || false;
 
 		let canRemoveHash = false;
 	
 		if (
-			this.#current.element.hasAttribute('id')
-			&& this.#current.element.getAttribute('id') == window.location.hash.replace('#','')
+			element.hasAttribute('id')
+			&& element.getAttribute('id') == window.location.hash.replace('#','')
 		) {
 			canRemoveHash = true;
 		}
@@ -411,7 +393,7 @@ class Modal extends FwComponent {
 		if (this.UIRoot) {
 			FwDom.moveContents(
 				this.UIContentBlock,
-				this.#current.element
+				element
 			);
 	
 			this.UIRoot.classList.remove('active');
@@ -432,7 +414,7 @@ class Modal extends FwComponent {
 	
 		canRemoveHash && UIChangeHash('');
 	
-		FwEvent.trigger(this.#current.element,EVENT_AFTER_DESTROY);
+		FwEvent.trigger(element,EVENT_AFTER_DESTROY);
 
 		this.#current = {
 			element: false,
@@ -440,9 +422,10 @@ class Modal extends FwComponent {
 		}
 	}
 
-	update(){
-
-		const element = this.element;
+	update(elem){
+		const element = elem ?
+			super.UIEl(elem)
+			: this.#current.element;
 	
 		if(!element) {
 			return
@@ -506,6 +489,8 @@ class Modal extends FwComponent {
 	}
 	
 	get _markup(){
+		this.triggerer && console.warn(this.triggerer.getAttribute(`data-${ARG_ATTRIBUTE_NAME}-title`));
+		
 		let html =
 			`<div
 				class="
@@ -558,9 +543,9 @@ class Modal extends FwComponent {
 	
 							html += `<div class="${UIPrefix(COMPONENT_CLASS)}-popup">`;
 	
-								if (this.args.header) {
+								if (this.args.title) {
 									html += `<div class="${UIPrefix(COMPONENT_CLASS)}-header">
-											<h1 class="${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(this.args.header)}</h1>
+											<h1 class="${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(this.args.title)}</h1>
 										</div>`;
 								}
 	
@@ -573,9 +558,9 @@ class Modal extends FwComponent {
 						default:
 							html += `<div class="${UIPrefix(COMPONENT_CLASS)}-popup">`;
 	
-								if (this.args.header) {
+								if (this.args.title) {
 									html += `<div class="${UIPrefix(COMPONENT_CLASS)}-header">
-											<h1 class="${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(this.args.header)}</h1>
+											<h1 class="${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(this.args.title)}</h1>
 										</div>`;
 								}
 		
@@ -631,8 +616,7 @@ class Modal extends FwComponent {
 						)
 					);
 					modal.create();
-				});				
-
+				});
 			};
 		}
 		
@@ -680,7 +664,7 @@ class Modal extends FwComponent {
 	
 
 	static initListeners() {
-		VALID_MODAL_MODES.forEach(mode=>{
+		VALID_MODAL_MODES.forEach((mode)=>{
 			const modeToggle = Modal.#modeToggle(mode);
 		
 			FwEvent.addListener(

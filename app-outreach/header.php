@@ -20,7 +20,7 @@
 			<?php app_inline_script(FWAPPS_ROOT_PATH.'/assets/plugins/jquery.js'); ?>
 
 		<!--turbu  -->
-			<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script> -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous"></script>
 		
 		<!-- DEPENDENCIES -->
 			<!-- <?php 
@@ -42,7 +42,7 @@
 
 		<!-- app specific -->
 			<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/legacy/scripts/apps.js'); ?>
-			<!-- <script src="<?=FWAPPS_ROOT_URL.'/assets/legacy/scripts/apps.js'?>" data-turbolinks-track="reload"></script> -->
+			<script src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/scripts/app.js'?>" data-turbolinks-track="reload"></script>
 
 
 

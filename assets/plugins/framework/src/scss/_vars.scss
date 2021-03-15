@@ -1353,8 +1353,8 @@
 
 				$input-calendar-block-gutter-x: 0px !default;
 					$input-calendar-block-gutter-x-mobile: 0px !default;
-					$input-calendar-block-gutter-y: 8px !default;
-						$input-calendar-block-gutter-y-mobile: 8px !default;
+					$input-calendar-block-gutter-y: .375em !default;
+						$input-calendar-block-gutter-y-mobile: $input-calendar-block-gutter-y !default;
 				$input-calendar-block-border-radius: $border-radius-base !default;
 
 				$input-calendar-date-hover-color: inherit !default;

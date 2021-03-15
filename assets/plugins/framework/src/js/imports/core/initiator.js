@@ -179,7 +179,6 @@ class Initiator {
 	}
 
 	static restart(){
-		console.warn('frameWork restarted');
 		if(!Initiator.isStarted){
 			return;
 		}
@@ -190,6 +189,7 @@ class Initiator {
 		ini.#runReady();
 		Initiator.setCompleteState();
 		ini.#runLoad();
+		console.info('frameWork restarted');
 	}
 
 }

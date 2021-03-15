@@ -1,5 +1,5 @@
 
-// Mixins s**thole
+// Mixins ****hole
 // follow my soundlcloud for mor surprises
 // github.io/samzabala
 
@@ -920,6 +920,7 @@
 				indent:null,
 				word-spacing:null,
 				root-size: null,
+				force-em: false,
 				style: null,
 				//@TODO other fancy
 			),$args);
@@ -931,15 +932,23 @@
 				and (type-of( map-get($opts,size) ) == number )
 				and unit(map-get($opts,size)) == px
 				{
-					font-size: rem(map-get($opts,size)/map-get($opts,root-size));
+					@if(map-get($opts,force-em) ){
+						font-size: em( map-get($opts,size) / map-get($opts,root-size) );
+					}@else{
+						font-size: rem( map-get($opts,size) / map-get($opts,root-size) );
+					}
 				}@else{
 					font-size: map-get($opts,size);
 				}
 
 
 			}
-			@if (map-get($opts,leading) and $force-responsive-units == false) or ($force-responsive-units == true and map-get($opts,size) and map-get($opts,leading) ) {
-				
+			@if ( map-get($opts,leading) and $force-responsive-units == false)
+			or (
+				$force-responsive-units == true
+				and map-get($opts,size) and map-get($opts,leading)
+			)
+			or (type-of(map-get($opts,leading)) == number and unitless(map-get($opts,leading))){
 				line-height: type-lead(map-get($opts,size),map-get($opts,leading));
 			}
 			
@@ -994,11 +1003,12 @@
 			/// @param $font-size: !required | (number) | duh
 			/// @param $line-height: !required | (number) | duh
 			/// @return stripped font size relative value without unit
-			@mixin type($font-size,$line-height:'',$root-size:null){
+			@mixin type($font-size,$line-height:'',$root-size:null,$force-em: false){
 				@include type-set((
 					size: $font-size,
 					root-size: $root-size,
-					leading: $line-height
+					leading: $line-height,
+					force-em: $force-em
 				));
 			}
 
@@ -2668,7 +2678,7 @@
 }
 
 //FLEX CONTAINERS
-%flex {
+%for-flex {
 
 	&-xs {
 		@include flex(false,xs,true);

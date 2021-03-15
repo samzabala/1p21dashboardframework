@@ -130,7 +130,7 @@
 
 
 		<div class="accordion">
-			<a href="#table-modal" data-toggle-modal>test</a>
+			<a href="#table-modal"   data-toggle-modal-default>test</a>
 			<table class="rank-hist-task-items">
 				<thead>
 					<tr>
@@ -1106,8 +1106,8 @@
 
 		<h1 data-toggle-accordion>board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<a href="#board-demo" data-toggle-modalBoard>Use this for worflow screens that slide from the slide</a>
-			<div id="board-demo" class="dashboard-board-partition board board-left">
+			<a href="#board-demo"  data-toggle-modal-board>Use this for worflow screens that slide from the slide</a>
+			<div id="board-demo" class="dashboard-board-partition modal modal-board">
 				<div class="flex-grid flex-grid-no-gutter">
 					<div class="flex-col-xs-12 flex-col-md-9">
 						<div class="dashboard-board-partition dashboard-board-main">
@@ -1173,7 +1173,7 @@
 
 			<h2>Cristian's code 06-09 ayyyyy</h2>
 			
-			<a href="#modal-share-note-with" data-toggle-modal>modddddaaaal</a> 
+			<a href="#modal-share-note-with"  data-toggle-modal-default>modddddaaaal</a> 
 		<div class="modal modal-default" id="modal-share-note-with"
 			data-modal-width="800px" data-modal-title="Share">
 		<!-- @if user has rights to share this note -->
@@ -1985,7 +1985,7 @@
 		<h1 data-toggle-accordion>Modal <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<span  class="btn-group btn-group-horizontal" data-toggle-modal>
+			<span  class="btn-group btn-group-horizontal"  data-toggle-modal-default>
 				<span class="btn-default btn">
 					Bitch ass
 				</span>
@@ -1997,13 +1997,13 @@
 			<div class="modal modal-default">modal</div>
 
 				<a
-					data-toggle-modal
+					 data-toggle-modal-default
 					data-modal-title="Bitch"
 					href="#modal-demo">Modal boi</a>
 					<br>
 				
 				<a
-					data-toggle-modal
+					 data-toggle-modal-default
 					data-modal-close="false"
 					data-modal-disable-overlay="false"
 					data-modal-width="800px"
@@ -2013,11 +2013,11 @@
 					<br>
 				
 				<a
-					data-toggle-modal
+					 data-toggle-modal-default
 					data-modal-title="dumb Bitch juice"
 					data-href="#modal-demo">Modal boi</a>
 				<a
-					data-toggle-modal
+					 data-toggle-modal-default
 					data-modal-title="Titties"
 					data-modal-callback="fuckinModalCallback()"
 					data-href="#modal-demo">Modal boi with a callback</a>
@@ -4471,17 +4471,17 @@
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-square"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Search</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-search"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol time</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-time"></i> </span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol timer</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-timer"></i></span>
 			</a>
@@ -4503,62 +4503,62 @@
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-check"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol close</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-close"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol map</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-map"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol file</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-file"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star-half</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-half"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol star-stroke</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-star-stroke"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol download</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-download"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol hyperlink</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-hyperlink"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol Burger</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-burger"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol fries</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-fries"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab vertical</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-vertical"></i></span>
 			</a>
 
-			<a data-toggle-modal href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
+			<a  data-toggle-modal-default href="#secret-modal" class="btn-group btn-group-horizontal btn-group-unite">
 				<span class="btn btn-default">Symbol kebab horizontal</span>
 				<span class="btn btn-primary-outline btn-symbol"><i class="symbol symbol-kebab-horizontal"></i></span>
 			</a>

@@ -55,6 +55,23 @@ table {
 }
 
 /* heading bars or rules from tiny rectangles to long rules and what not. */
+a:hover {
+  text-decoration: none;
+}
+[data-toggle] {
+  cursor: pointer;
+  -webkit-user-select: none !important;
+  /* Safari 3.1+ */
+  -moz-user-select: none !important;
+  /* Firefox 2+ */
+  -ms-user-select: none !important;
+  /* IE 10+ */
+  user-select: none !important;
+  /* Standard syntax */
+}
+[data-toggle] * {
+  pointer-events: none !important;
+}
 [disabled] {
   cursor: not-allowed !important;
   opacity: 0.5;

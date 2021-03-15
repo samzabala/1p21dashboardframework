@@ -8,13 +8,13 @@ $args = app_parse_args($data,$defs);
 ?>
 <!-- @NOTE
 	classes to add
-		`background-primary-alpha-1` => if comment is pinned
+		`background-primary-alpha-1` => if note is pinned
 
 	@NOTE
-		pinned comments are outputted first before u
+		pinned notes are outputted first before u
  -->
 <div
-	class="comment-row padding border-color-theme-polar-contrast border-style-solid border-bottom border-width-thin-top
+	class="note-row padding border-color-theme-polar-contrast border-style-solid border-bottom border-width-thin-top
 	<?= $args['is_pinned'] ? ' background-primary-alpha-1' : '' ?>
 ">
 	<div class=" flex-grid flex-grid-compact align-items-flex-start flex-grid-fixed flex-nowrap position-relative">
@@ -22,17 +22,17 @@ $args = app_parse_args($data,$defs);
 			<?php app_get_component('components/profile-image','micro'); ?>
 		</div>
 		<div class="flex-child flex-1-1">
-			<p class="no-margin comment-row-meta">
+			<p class="no-margin note-row-meta">
 				<a class="color-inherit font-weight-700" href="<?=app_create_link(array('template'=>'profile')) ?>">
 					<span class="REPLACE">Profile name</span>
 				</a>
-				<span class="comment-row-meta-timespan color-neutral">
+				<span class="note-row-meta-timespan color-neutral">
 					<span class="REPLACE">2 hours ago</span>
 				</span>
 			</p>
 
 
-			<div class="comment-body">
+			<div class="note-body">
 				<div class="REPLACE">
 					<p>
 						Tagged users like <a class="highlight highlight-primary" href="<?=app_create_link(array('template'=>'profile'))?>">@Beyonce Knowles</a> will be links to profiles with the classes <code>highlight highlight-primary</code> 
@@ -46,12 +46,14 @@ $args = app_parse_args($data,$defs);
 			
 		<div class="flex-child flex-0-0">
 			<!-- @note
-		
+				.btn
 				classes to add
-				`active` => when comment is pinned
+				`active` => when note is pinned
 			-->
 			<div class="btn-group btn-group-toggle btn-group-horizontal btn-group-toggle-allow-no-active">
-				<a href="" class="btn btn-symbol btn-default">
+				<a href="#" class="btn btn-symbol btn-default
+				<?= $args['is_pinned'] ? ' active' : '' ?>
+				">
 					<i class="symbol symbol-pin"></i>
 				</a>
 			</div>

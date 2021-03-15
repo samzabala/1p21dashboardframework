@@ -13,7 +13,7 @@
 	"fix_gasp":"xy",
 	"fix_vertical_metrics":"C",
 	"metrics_ascent":"",
-	"metrics_descent":"4",
+	"metrics_descent":"8",
 	"metrics_linegap":"",
 	"fallback":"custom",
 	"fallback_custom":"120",

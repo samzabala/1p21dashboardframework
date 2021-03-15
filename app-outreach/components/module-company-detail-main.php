@@ -16,10 +16,7 @@
 									<span class="REPLACE">Company Name</span>
 								</h1>
 								
-								<!-- @if has company type tag -->
-								<span class="tag tag-primary">
-									<span class="REPLACE">Company Type</span>
-								</span>
+								<?php app_get_component('components/tag-clienttype') ?>
 							</div>
 
 							<div>
@@ -80,7 +77,7 @@
 
 									
 									<?app_get_component('components/link-add-row','',false,array(
-										'href' => 'mb-editor-contact',
+										'href' => '#mb-editor-contact',
 										'attrs' => 'data-toggle-modal-board data-toggle="Add Contact"'
 									)) ?>
 								</div>
@@ -294,7 +291,7 @@
 													placeholder="1990 - Present"
 													id="company-vendor-history-add-date"
 													name="company-vendor-history-add-date"
-													value="2010 - Present" />
+													value="2069-04-20" />
 												<a href="#" data-toggle-dropdown class="btn btn-primary btn-block no-radius-top">Set</a>
 											</div>
 										</div>
@@ -341,7 +338,7 @@
 															<span class="REPLACE">ARC Score</span>
 														</span>
 													</td>
-													<td>
+													<td colspan="2">
 														<!-- @if has arc score -->
 															<div class="flex-grid flex-grid-no-gutter justify-content-space-between font-weight-700 align-items-center">
 																<div class="flex-child">
@@ -362,7 +359,7 @@
 															<span class="REPLACE">SEO Analysis Link</span>
 														</span>
 													</td>
-													<td>
+													<td colspan="2">
 														<!-- @if has lead source -->
 															<a href="REPLACEWITHURI" class="text-wrap-ellipsis">
 																ilawyermarketing.net/REPLACEWITHURL
@@ -378,7 +375,7 @@
 															<span class="REPLACE">Lead Source</span>
 														</span>
 													</td>
-													<td>
+													<td colspan="2">
 														<!-- @if has lead source -->
 															<span class="REPLACE">Lead Source Name</span>
 														<!-- @else -->
@@ -392,7 +389,7 @@
 															<span class="REPLACE">Marketing Budget</span>
 														</span>
 													</td>
-													<td>
+													<td colspan="2">
 														<!-- @if has budget -->
 															<span class="REPLACE">$1012029389</span>
 														<!-- @else -->
@@ -409,7 +406,7 @@
 																	<span class="REPLACE">Custom Info Name</span>
 																</span>
 															</td>
-															<td>
+															<td colspan="2">
 																<!-- @if has custom info description -->
 																	<span class="REPLACE">Custom Info Description</span>
 																<!-- @else -->
@@ -425,7 +422,7 @@
 																		<span class="REPLACE">Custom Info Name</span>
 																	</span>
 																</td>
-																<td>
+																<td colspan="2">
 																	<!-- @if has custom info description -->
 																		<span class="REPLACE">Custom Info Description</span>
 																	<!-- @else -->
@@ -446,19 +443,19 @@
 														<span class="REPLACE">ARC Score</span>
 													</label>
 												</td>
-												<td>
+												<td colspan="2">
 													<div class="flex-grid flex-grid-compact flex-grid-fixed">
-														<div class="flex-col-xs-6">
+														<div class="flex-col-xs-4">
 															<input
-																type="number" size="3" class="input input-single-line"
+																type="number" size="3" class="input input-single-line input-block"
 																placeholder="0.00"
 																id="company-addtl-info-arc-score"
 																name="company-addtl-info-arc-score"
 																value="REPLACEwithrowvalue" />
 														</div>
-														<div class="flex-col-xs-6">
+														<div class="flex-col-xs-8">
 															<input
-																type="date" size="3" class="input input-single-line"
+																type="date" size="3" class="input input-single-line input-block"
 																placeholder="mm/dd/yyyy"
 																id="company-addtl-info-arc-last-check"
 																name="company-addtl-info-arc-last-check"
@@ -474,7 +471,7 @@
 														<span class="REPLACE">SEO Analysis Link</span>
 													</label>
 												</td>
-												<td>
+												<td colspan="2">
 													<div class="input-group input-group-horizontal input-block">
 														<input
 															type="url" size="12" class="input input-single-line"
@@ -492,7 +489,7 @@
 														<span class="REPLACE">Lead Source</span>
 													</label>
 												</td>
-												<td>
+												<td colspan="2">
 													<div class="input-group input-group-horizontal input-block">
 														<input
 															type="url" size="12" class="input input-single-line"
@@ -510,7 +507,7 @@
 														<span class="REPLACE">Marketing Budget</span>
 													</label>
 												</td>
-												<td>
+												<td colspan="2">
 													<div class="input-group input-group-horizontal input-block">
 														<input
 															type="url" size="12" class="input input-single-line"
@@ -527,7 +524,7 @@
 												<!-- @LOOP tr -->
 
 													<tr>
-														<td colspan="2">
+														<td colspan="3">
 															
 															<?php app_get_component('components/input-company-addtl-info');?>
 														</td>
@@ -536,7 +533,7 @@
 													<!-- @PLACEHOLDER: DELETE WHEN READY -->
 														<?php for($i=1; $i<=2; $i++){ ?>
 															<tr>
-																<td colspan="2">
+																<td colspan="3">
 																	<?php app_get_component('components/input-company-addtl-info');?>
 																</td>
 															</tr>
@@ -678,8 +675,8 @@
 			</div>
 
 
-		<!-- comments -->
-			<?php app_get_component('components/module-comments') ?>
+		<!-- notes -->
+			<?php app_get_component('components/module-notes') ?>
 	</div>
 
 	

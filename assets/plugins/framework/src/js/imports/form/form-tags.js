@@ -526,9 +526,9 @@ class Tags extends FwComponent {
 	}
 
 	static initAll(){
-		FwEvent.trigger(document.documentElement,EVENT_BEFORE_INIT);
+		FwEvent.trigger(document,EVENT_BEFORE_INIT);
 
-		FwEvent.trigger(document.documentElement,EVENT_INIT);
+		FwEvent.trigger(document,EVENT_INIT);
 
 		const tagsInputs = document.querySelectorAll(`.${COMPONENT_CLASS}`);
 		
@@ -538,7 +538,7 @@ class Tags extends FwComponent {
 			tagsInput.init();
 		});
 
-		FwEvent.trigger(document.documentElement,EVENT_AFTER_INIT);
+		FwEvent.trigger(document,EVENT_AFTER_INIT);
 	}
 
 	static handleChange() {

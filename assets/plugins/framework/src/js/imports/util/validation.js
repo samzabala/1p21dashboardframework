@@ -16,7 +16,7 @@ export const lookupResetToParentClass = [
 
 export const lookupResetFromClosestComponent = [
 	'dropdown',
-	'modal',
+	'modal-default',
 	'modal-board',
 	'switch',
 	'alert',
@@ -24,7 +24,7 @@ export const lookupResetFromClosestComponent = [
 
 export const lookupResetFromClosestComponentUi = [
 	//root component name, subcomponent mods
-	'modal',
+	'modal-default',
 	'modal-board',
 	'input-calendar',
 	'input-tags',

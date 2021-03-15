@@ -1140,19 +1140,23 @@
 	display:flex!important;
 
 	&-xs {
-		@extend %flex-xs;
+		@include flex(false,xs,true);
 	}
 	
 	&-sm {
-		@extend %flex-sm;
+		@include flex(false,sm,true);
 	}
 	
 	&-md {
-		@extend %flex-md;
+		@include flex(false,md,true);
 	}
 	
 	&-lg {
-		@extend %flex-lg;
+		@include flex(false,lg,true);
+	}
+	
+	&-xl {
+		@include flex(false,xl,true);
 	}
 
 	&-direction {

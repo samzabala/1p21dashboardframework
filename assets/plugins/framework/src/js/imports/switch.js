@@ -3,7 +3,6 @@ import Settings from './core/settings.js';
 
 import FwEvent from './data-helper/event.js';
 import FwString from './data-helper/string.js';
-import FwDom from './data-helper/dom.js';
 
 import FwComponent from './classes/component.js';
 import { UIToggled,UIPurge } from './util/ui.js';
@@ -39,24 +38,10 @@ const EVENT_AFTER_OFF = `after_off${EVENT_KEY}`;
 
 class Switch extends FwComponent {
 
-	constructor(element,triggerer){
+	constructor(element){
 		element = element || UIToggled(TOGGLE_MODE) || false;
 
-		super(
-			element,
-			{
-				triggerer:(
-					triggerer
-						? new FwDom(triggerer)
-					: false
-				)
-			}
-		);
-	}
-
-	dispose() {
-		super.dispose();
-		this.triggerer = null;
+		super(element);
 	}
 
 	static get DATA_KEY(){
@@ -158,12 +143,11 @@ class Switch extends FwComponent {
 			e.preventDefault();
 
 			if(!FwComponent.isDisabled(e.target)){
-				const switcher = new Switch(
-					UIToggled(TOGGLE_MODE,e.target),
-					e.target
+				const switchElement = new Switch(
+					UIToggled(TOGGLE_MODE,e.target)
 				);
 				Switch.purge(UIToggled(TOGGLE_MODE,e.target));
-				switcher.turnOn();
+				switchElement.turnOn();
 
 			}
 		}
@@ -174,11 +158,10 @@ class Switch extends FwComponent {
 			e.preventDefault();
 
 			if(!FwComponent.isDisabled(e.target)){
-				const switcher = new Switch(
-					UIToggled(TOGGLE_MODE,e.target),
-					e.target
+				const switchElement = new Switch(
+					UIToggled(TOGGLE_MODE,e.target)
 				);
-				switcher.turnOff();
+				switchElement.turnOff();
 				
 			}
 		}
@@ -186,8 +169,8 @@ class Switch extends FwComponent {
 
 	static handleInit(){
 		return () => {
-		FwEvent.trigger(document.documentElement,EVENT_BEFORE_INIT);
-		FwEvent.trigger(document.documentElement,EVENT_INIT);
+		FwEvent.trigger(document,EVENT_BEFORE_INIT);
+		FwEvent.trigger(document,EVENT_INIT);
 
 			UIPurge(
 				false,
@@ -197,7 +180,7 @@ class Switch extends FwComponent {
 				}
 			);
 
-		FwEvent.trigger(document.documentElement,EVENT_AFTER_INIT);
+		FwEvent.trigger(document,EVENT_AFTER_INIT);
 		}
 	}
 

@@ -344,8 +344,10 @@ $sidebar-slim: 60px;
 	&-nav-item-container {
 		justify-content:center;
 
-		#outreach-sidebar:hover & {
-			justify-content:flex-start;
+		@include br(#{$mobile-br-max-polar}){
+			#outreach-sidebar:hover & {
+				justify-content:flex-start;
+			}
 		}
 	}
 }

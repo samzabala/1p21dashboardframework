@@ -83,11 +83,11 @@ class FwEvent extends FwDataHelper {
 		parent = parent || false;
 		
 		// runNative = runNative !== false || runNative == true; //no apipipi
+		//dai mo ilaag sa ddocument ta maerror si matches habo nya ki element
 
 		const elemToAddTo = parent || selectorOrParentFallback;
 		const evtNoApi = evt.split(`.${Settings.get('prefix')}`)[0];
 		const isNative = NativeEvents.includes(evt);
-
 		if(!isNative){
 			elemToAddTo.addEventListener(
 				evtNoApi,

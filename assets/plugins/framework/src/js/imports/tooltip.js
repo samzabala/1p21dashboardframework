@@ -465,7 +465,7 @@ class Tooltip extends FwComponent {
 				if (
 					!e.target.closest(`[data-toggle-${TOGGLE_MODE_CLICK}]`)
 					&& !e.target.closest(`[data-toggle-${TOGGLE_MODE_HOVER}]`)
-					&& !e.target.closest(`.${COMPONENT_CLASS}.${COMPONENT_ALLOW_INTERACTION_CLASS}`)
+					// && !e.target.closest(`.${COMPONENT_CLASS}.${COMPONENT_ALLOW_INTERACTION_CLASS}`)
 				){
 					const tooltip =  new Tooltip();
 					tooltip.destroy();
@@ -531,7 +531,7 @@ class Tooltip extends FwComponent {
 		FwEvent.addListener(
 			document.documentElement,
 			EVENT_CLICK_PURGE,
-			`*, *.${COMPONENT_PURGER_CLASS}`,
+			`*, .${COMPONENT_PURGER_CLASS}`,
 			Tooltip.handleUniversalPurge()
 		);
 

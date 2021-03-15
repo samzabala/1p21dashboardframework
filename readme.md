@@ -25,6 +25,30 @@ will separate dashboard and framework one the bois are readeh
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
 
+
+# 2021/Outreach Tool Notes
+
+* As of app-outreach, all pertinent components will now be placed inside the app's folder
+* app-outreach uses the updated version of the framework scripts that allows modular setup (rollup,webpack etc.). changed attributers have been documented
+* NOTE: [data-toggle*] attributes are restructured to allow multiple component toggles if needed  (tooltip-hover + modal  for example) These changes are also reflected in the documentation
+`data-toggle="accordion"` => `data-toggle-accordion`
+`data-toggle="dropdown"` => `data-toggle-dropdown`
+`data-toggle="tooltip-click"` => `data-toggle-tooltip-click`
+`data-toggle="tooltip-hover"` => `data-toggle-tooltip-hover`
+`data-toggle="accordion"` => `data-toggle-accordion`
+*	Syntax of board and modal components are merged and rely on a `mode` to render proper modal ui. These changes are also reflected in the documentation
+
+	*	attribute settings:
+		*	`data-board-title`,`data-modal-title` => `data-modal-title`
+	
+	*	attribute toggle modes:
+		*	`data-toggle="modal"` => `data-toggle-modal-default`
+		*	`data-toggle="board"` => `data-toggle-modal-board`
+	*	modal class helpers:
+		*	`.modal` => `.modal.modal-default`
+		*	`.board` => `.modal.modal-board`
+
+
 # Worfklow sidebar modules notes:
 NOTE: all modules with forms/accordions elements with id or name attributes will be reused by the incoming edit project board as well
 

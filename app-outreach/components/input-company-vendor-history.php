@@ -17,7 +17,7 @@
 			placeholder="1990 - Present"
 			id="company-vendor-history-row[REPLACE]-date"
 			name="company-vendor-history-row[REPLACE]-date"
-			value="REPLACEwithrowvalue" />
+			value="2069-04-20" />
 		<a href="#" data-toggle-dropdown class="btn btn-primary btn-block  no-radius-top">Set</a>
 	</div>
 </div>

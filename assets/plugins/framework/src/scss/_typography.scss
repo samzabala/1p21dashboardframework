@@ -135,12 +135,12 @@ a,.a {
 	}
 }
 
-a:not([href]):not([class]) {
-	&,
-	&:hover {
+	a,a:not([class]) {
 		@include dump-styles(no-text-decoration);
+		&:hover {
+			@include dump-styles(no-text-decoration-hover);
+		}
 	}
-}
 
 
 	p,

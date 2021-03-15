@@ -8,10 +8,11 @@
 			<span class="REPLACE">Phoenix Wright</span>
 		</h1>
 		<div class="font-size-small p">
-			<p class="contact-company no-margin">
+			<a href="<?=app_create_link(array('template'=>'company-detail')) ?>" class="color-inherit contact-company no-margin">
 				Wright &amp; Co Law Offices
-			</p>
-			<a href="mailto:REPLACE@email.com" class="contact-email">
+			</a>
+			<br>
+			<a href="#mb-editor-email" data-toggle-modal-board class="contact-email">
 				<span class="REPLACE">REPLACE@email.com</span>
 			</a>
 		</div>

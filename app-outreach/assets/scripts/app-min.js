@@ -1,0 +1,1 @@
+window.jQuery&&jQuery.noConflict(),"object"==typeof Turbolinks&&Turbolinks.start(),function(t,n){document.addEventListener("turbolinks:render",(function(n){t.Initiator.setLoadingState()})),document.addEventListener("turbolinks:load",(function(){t.Initiator.restart()}))}(fw,window);

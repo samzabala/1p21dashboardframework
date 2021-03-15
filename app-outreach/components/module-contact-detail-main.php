@@ -7,8 +7,8 @@
 	<div class="module-content align-self-stretch">
 
 		<!-- <div class="module module-large border-color-transparent"></div> -->
-		<?php app_get_component('components/module-comments','',false,array(
-			'has_add_comment' => true
+		<?php app_get_component('components/module-notes','',false,array(
+			'has_add_note' => true
 		)) ?>
 	</div>
 

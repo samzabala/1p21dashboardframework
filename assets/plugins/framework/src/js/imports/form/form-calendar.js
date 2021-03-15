@@ -76,6 +76,7 @@ class Calendar extends FwComponent {
 		: this.theValue
 			? this.theValue
 		:  new Date()
+
 		return FwDate.toVal(theRenderDate);
 	}
 
@@ -171,10 +172,13 @@ class Calendar extends FwComponent {
 
 	}
 
-	update(newValue,valueToRender) {		
-		FwEvent.trigger(super.UIEl(),EVENT_BEFORE_UPDATE);
+	update(newValue,valueToRender) {
 
-		const theValue =
+		const element = this.element;
+
+		FwEvent.trigger(element,EVENT_BEFORE_UPDATE);
+
+		const theValue = 
 			FwDate.toVal(newValue)
 			|| this.theValue;
 		
@@ -184,7 +188,7 @@ class Calendar extends FwComponent {
 			|| this.renderValue;
 			
 		
-		FwEvent.trigger(super.UIEl(),EVENT_UPDATE);
+		FwEvent.trigger(element,EVENT_UPDATE);
 		//set up calendar
 		if (this.validates(theValue) || !theValue) {
 			this.theValue = FwDate.toVal(theValue, false);
@@ -219,7 +223,7 @@ class Calendar extends FwComponent {
 				this.UIInputValue = theValue;
 			}
 		}
-		FwEvent.trigger(super.UIEl(),EVENT_AFTER_UPDATE);
+		FwEvent.trigger(element,EVENT_AFTER_UPDATE);
 	}
 
 	
@@ -505,7 +509,7 @@ class Calendar extends FwComponent {
 				`${UIPrefix(COMPONENT_CLASS)}-title ${UIPrefix(COMPONENT_CLASS)}-dropdown-toggle
 				${UIDynamicClass}` //NEED THIS AT ALL TIMES IF U DONT WANNA DIE
 			);
-			theUI.title.setAttribute('data-toggle', 'dropdown');
+			theUI.title.setAttribute('data-toggle-dropdown','');
 			theUI.title.innerHTML = `<span
 				class="${UIPrefix(COMPONENT_CLASS)}-month-text">
 					${monthNamesShort[this._calendar.month]}
@@ -742,13 +746,17 @@ class Calendar extends FwComponent {
 		const element = elem ?
 			super.UIEl(elem)
 			: super.UIEl();
+
+			FwEvent.trigger(element,EVENT_BEFORE_INIT);
+			FwEvent.trigger(element,EVENT_INIT);
+
+
 		this.update();
+
+		FwEvent.trigger(element,EVENT_AFTER_INIT);
 	}
 
 	static initAll(){
-
-		FwEvent.trigger(document.documentElement,EVENT_BEFORE_INIT);
-		FwEvent.trigger(document.documentElement,EVENT_INIT);
 
 		const calendars = document.querySelectorAll(`.${COMPONENT_CLASS}`);
 		
@@ -757,8 +765,6 @@ class Calendar extends FwComponent {
 			
 			calendar.init();
 		});
-
-		FwEvent.trigger(document.documentElement,EVENT_AFTER_INIT);
 	}
 
 	static handleChange() {

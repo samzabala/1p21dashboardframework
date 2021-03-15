@@ -29,9 +29,9 @@ const EVENT_KEY = `.${DATA_KEY}`;
 	const EVENT_SVGCONVERSION = `svgconversion${EVENT_KEY}`;
 	const EVENT_AFTER_SVGCONVERSION = `after_svgconversion${EVENT_KEY}`;
 
-	const EVENT_BEFORE_LAZYLOAD = `before_lazyload${EVENT_KEY}`;
-	const EVENT_LAZYLOAD = `lazyload${EVENT_KEY}`;
-	const EVENT_AFTER_LAZYLOAD = `after_lazyload${EVENT_KEY}`;
+	const EVENT_BEFORE_LOAD = `before_load${EVENT_KEY}`;
+	const EVENT_LOAD = `load${EVENT_KEY}`;
+	const EVENT_AFTER_LOAD = `after_load${EVENT_KEY}`;
 
 class Lazy extends FwComponent {
 
@@ -126,11 +126,11 @@ class Lazy extends FwComponent {
 				return
 			}
 
-			FwEvent.trigger(element,EVENT_BEFORE_LAZYLOAD);
+			FwEvent.trigger(element,EVENT_BEFORE_LOAD);
 
 
 			if(element.classList.contains(`${COMPONENT_CLASS}`)){
-				FwEvent.trigger(element,EVENT_LAZYLOAD);
+				FwEvent.trigger(element,EVENT_LOAD);
 				if (element.matches('img') || element.closest('picture')) {
 					
 					this.theSrc && element.setAttribute('src', this.theSrc);
@@ -154,7 +154,7 @@ class Lazy extends FwComponent {
 					this.readyLoaded();
 				}
 
-				FwEvent.trigger(element,EVENT_AFTER_LAZYLOAD);
+				FwEvent.trigger(element,EVENT_AFTER_LOAD);
 			}
 
 	}
@@ -183,9 +183,9 @@ class Lazy extends FwComponent {
 
 	static loadAll(images){
 		
-		FwEvent.trigger(document.documentElement,EVENT_BEFORE_INIT);
+		FwEvent.trigger(document,EVENT_BEFORE_INIT);
 		
-		FwEvent.trigger(document.documentElement,EVENT_INIT);
+		FwEvent.trigger(document,EVENT_INIT);
 
 		Lazy.setStatus('loading');
 		images = images || document.querySelectorAll(COMPONENT_SELECTOR);
@@ -197,7 +197,7 @@ class Lazy extends FwComponent {
 	
 		Lazy.setStatus('loaded');
 
-		FwEvent.trigger(document.documentElement,EVENT_AFTER_INIT);
+		FwEvent.trigger(document,EVENT_AFTER_INIT);
 	}
 	
 

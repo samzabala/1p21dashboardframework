@@ -162,7 +162,7 @@ $args = app_parse_args($data,$defs);
 									First Name Last Name
 								</span>
 								<br>
-								<a href="mailto:REPLACE@email.com" class="text-wrap-ellipsis">
+								<a href="#mb-editor-email" data-toggle-modal-board class="text-wrap-ellipsis">
 									<span class="REPLACE">REPLACE@emailemailemailemailemailemail.com</span>
 								</a>
 							<!-- @else -->
@@ -192,12 +192,12 @@ $args = app_parse_args($data,$defs);
 							</span>
 						</td>
 						<td colspan="6">
-							<div>
+							<a href="<?=app_create_link(array('template'=>'profile')) ?>" class="color-inherit">
 								<?php app_get_component('components/profile-image-micro') ?>
 								<span class="REPLACE">
 									Profile name
 								</span>
-							</div>
+							</a>
 						</td>
 					</tr>
 				<?php endif; ?>

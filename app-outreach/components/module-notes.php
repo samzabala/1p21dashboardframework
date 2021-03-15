@@ -1,7 +1,7 @@
 <?php
 $defs = array(
 	//@param post - type of single achuchuchu
-	'has_add_comment' => false, 
+	'has_add_note' => false, 
 );
 
 $args = app_parse_args($data,$defs);
@@ -14,31 +14,31 @@ $args = app_parse_args($data,$defs);
 
 				<?php app_get_component('components/function-select-by-type') ?>
 
-				<?php if($args['has_add_comment']): ?>
-					<?php app_get_component('components/function-add-comment') ?>
+				<?php if($args['has_add_note']): ?>
+					<?php app_get_component('components/function-add-note') ?>
 				<?php endif; ?>
 			</div>
 		</div>
 		<div class="module-content background-theme no-padding">
-		<!-- @if has comments -->
+		<!-- @if has notes -->
 			<!-- @if has pinned -->
-				<!-- @loop .comment-row PINNED -->
-					<?php app_get_component('components/comment-row','',false,array(
+				<!-- @loop .note-row PINNED -->
+					<?php app_get_component('components/note-row','',false,array(
 						'is_pinned' => true
 					)) ?>
 
-				<!-- @loop .comment-row NOT_PINNED -->
-					<?php app_get_component('components/comment-row','',false,array(
+				<!-- @loop .note-row NOT_PINNED -->
+					<?php app_get_component('components/note-row','',false,array(
 						'is_pinned' => false
 					)) ?>
 
 				<?php for($i=1; $i<=4; $i++){ ?>
-					<?php app_get_component('components/comment-row') ?>
+					<?php app_get_component('components/note-row') ?>
 				<?php } ?>
 
 		<!-- @else -->
 			<p class="padding color-neutral font-style-italic">
-				No comments yet.
+				No notes yet.
 			</p>
 		</div>
 	</div>

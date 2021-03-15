@@ -237,3 +237,8 @@ html.theme-inverse,
 [disabled] {
 	@include dump-styles(disabled)
 }
+
+//legacy
+[data-toggle]{
+	@include dump-styles(data-toggle);
+}

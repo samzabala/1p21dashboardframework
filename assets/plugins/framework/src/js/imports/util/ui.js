@@ -138,25 +138,13 @@ export const UIToggled = (toggleMode,triggerer,selector) => {
 			
 			while (possibleSiblings) {
 				if (possibleSiblings.matches(selectorToMatch)) {
-					// console.warn('toggle trigger anybody whos a sibling');
+					console.warn('toggle trigger anybody whos a sibling');
 					return possibleSiblings;
 				}
 				possibleSiblings =
 					possibleSiblings.nextElementSibling;
 			}
 			toReturn = possibleSiblings;
-		}
-	} else {
-		
-		if (
-			window.location.hash !== ''
-			&& document.querySelector(window.location.hash)
-			&& document
-				.querySelector(window.location.hash)
-				.matches(selectorToMatch)
-		) {
-			// console.warn('no trigger but found the hash is a matching toggle');
-			toReturn = document.querySelector(window.location.hash);
 		}
 	}
 
@@ -189,6 +177,20 @@ export const UIToggled = (toggleMode,triggerer,selector) => {
 		){
 			// console.warn('found for an ancestor');
 			toReturn = triggerer.parentNode.closest(selectorToMatch);
+		}
+	}
+
+	if(!toReturn) {
+		
+		if (
+			window.location.hash !== ''
+			&& document.querySelector(window.location.hash)
+			&& document
+				.querySelector(window.location.hash)
+				.matches(selectorToMatch)
+		) {
+			// console.warn('no trigger but found the hash is a matching toggle');
+			toReturn = document.querySelector(window.location.hash);
 		}
 	}
 

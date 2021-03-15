@@ -40,7 +40,7 @@ class Accordion extends FwComponent {
 			{
 				triggerer:(
 					triggerer
-						? new FwDom(triggerer)
+						? triggerer
 					: false
 				),
 				_customArgs: args
@@ -166,7 +166,7 @@ class Accordion extends FwComponent {
 			return toReturn;
 	}	
 
-	close(elem,hashChangeOverride){
+	close(elem,triggerer){
 		const element = elem ?
 			super.UIEl(elem)
 			: super.UIEl();
@@ -175,7 +175,7 @@ class Accordion extends FwComponent {
 			return;
 		}
 
-		hashChangeOverride = hashChangeOverride || this.args.changeHash;
+		triggerer = triggerer || this.triggerer;
 
 		if( this._isValidWithinQuery ) {
 
@@ -184,7 +184,7 @@ class Accordion extends FwComponent {
 			if ( !this.UIGroot || this._isWithinAllowNoActive ) {
 
 				
-				this.triggerer && this.triggerer.classList.remove(ACTIVATED_CLASS);
+				triggerer && triggerer.classList.remove(ACTIVATED_CLASS);
 				this._probablyToggle.forEach((toggle) => {
 					toggle.classList.remove(ACTIVATED_CLASS);
 				});
@@ -202,7 +202,7 @@ class Accordion extends FwComponent {
 		}
 	}
 
-	open(elem){
+	open(elem,triggerer){
 		const element = elem ?
 			super.UIEl(elem)
 			: super.UIEl();
@@ -211,6 +211,7 @@ class Accordion extends FwComponent {
 			return;
 		}
 
+		triggerer = triggerer || this.triggerer;
 
 		this._siblicide();
 
@@ -218,7 +219,7 @@ class Accordion extends FwComponent {
 
 			FwEvent.trigger(element,EVENT_BEFORE_OPEN);
 			
-				this.triggerer && this.triggerer.classList.add(ACTIVATED_CLASS);
+				triggerer && triggerer.classList.add(ACTIVATED_CLASS);
 				this._probablyToggle.forEach((toggle) => {
 					toggle.classList.add(ACTIVATED_CLASS);
 				});
@@ -239,7 +240,7 @@ class Accordion extends FwComponent {
 
 
 
-	toggle(elem,hashChangeOverride){
+	toggle(elem,triggerer){
 		const element = elem ?
 			super.UIEl(elem)
 			: super.UIEl();
@@ -247,11 +248,12 @@ class Accordion extends FwComponent {
 		if(!element){
 			return;
 		}
+		triggerer = triggerer || this.triggerer;
 
 		if(element.classList.contains(ACTIVATED_CLASS)){
-			this.close(elem,hashChangeOverride);
+			this.close(elem,triggerer);
 		}else{
-			this.open(elem,hashChangeOverride);
+			this.open(elem,triggerer);
 		}
 	}
 

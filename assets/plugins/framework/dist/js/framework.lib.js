@@ -92,9 +92,9 @@
   var DisableClasses = ['table-row-disabled', 'tab-disabled', 'btn-disabled', 'input-disabled', 'disabled']; // @TODO push instead of hard coding to arrays because
 
   var lookupResetToParentClass = ['input-group', 'btn-group'];
-  var lookupResetFromClosestComponent = ['dropdown', 'modal', 'modal-board', 'switch', 'alert'];
+  var lookupResetFromClosestComponent = ['dropdown', 'modal-default', 'modal-board', 'switch', 'alert'];
   var lookupResetFromClosestComponentUi = [//root component name, subcomponent mods
-  'modal', 'modal-board', 'input-calendar', 'input-tags'];
+  'modal-default', 'modal-board', 'input-calendar', 'input-tags'];
   var DateTimePreset = {
     HumanDate: {
       placeholder: 'mm/dd/yyyy',
@@ -406,7 +406,7 @@
 
         while (possibleSiblings) {
           if (possibleSiblings.matches(selectorToMatch)) {
-            // console.warn('toggle trigger anybody whos a sibling');
+            console.warn('toggle trigger anybody whos a sibling');
             return possibleSiblings;
           }
 
@@ -414,11 +414,6 @@
         }
 
         toReturn = possibleSiblings;
-      }
-    } else {
-      if (window.location.hash !== '' && document.querySelector(window.location.hash) && document.querySelector(window.location.hash).matches(selectorToMatch)) {
-        // console.warn('no trigger but found the hash is a matching toggle');
-        toReturn = document.querySelector(window.location.hash);
       }
     }
 
@@ -435,6 +430,13 @@
       } else if (triggerer && toggleMode && triggerer.parentNode.closest(selectorToMatch)) {
         // console.warn('found for an ancestor');
         toReturn = triggerer.parentNode.closest(selectorToMatch);
+      }
+    }
+
+    if (!toReturn) {
+      if (window.location.hash !== '' && document.querySelector(window.location.hash) && document.querySelector(window.location.hash).matches(selectorToMatch)) {
+        // console.warn('no trigger but found the hash is a matching toggle');
+        toReturn = document.querySelector(window.location.hash);
       }
     }
 
@@ -686,8 +688,6 @@
     };
 
     Initiator.restart = function restart() {
-      console.warn('frameWork restarted');
-
       if (!Initiator.isStarted) {
         return;
       }
@@ -702,6 +702,8 @@
       Initiator.setCompleteState();
 
       _classPrivateFieldLooseBase(ini, _runLoad)[_runLoad]();
+
+      console.info('frameWork restarted');
     };
 
     _createClass(Initiator, null, [{
@@ -782,6 +784,7 @@
 
     FwEvent.addListener = function addListener(parent, evt, selectorOrParentFallback, handler) {
       parent = parent || false; // runNative = runNative !== false || runNative == true; //no apipipi
+      //dai mo ilaag sa ddocument ta maerror si matches habo nya ki element
 
       var elemToAddTo = parent || selectorOrParentFallback;
       var evtNoApi = evt.split("." + Settings.get('prefix'))[0];
@@ -1112,7 +1115,7 @@
     function Accordion(element, triggerer, args) {
       element = element || UIToggled(TOGGLE_MODE) || false;
       return _FwComponent.call(this, element, {
-        triggerer: triggerer ? new FwDom(triggerer) : false,
+        triggerer: triggerer ? triggerer : false,
         _customArgs: args || false
       }) || this;
     }
@@ -1139,20 +1142,20 @@
     } //which came first the accordion-gruoup or the accordiiinbsbob?? the actual bitch none of that accordion-group shit
     ;
 
-    _proto.close = function close(elem, hashChangeOverride) {
+    _proto.close = function close(elem, triggerer) {
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
 
       if (!element) {
         return;
       }
 
-      hashChangeOverride = hashChangeOverride || this.args.changeHash;
+      triggerer = triggerer || this.triggerer;
 
       if (this._isValidWithinQuery) {
         FwEvent$1.trigger(element, EVENT_BEFORE_CLOSE); //is not within an accordion group that needs one of them open 
 
         if (!this.UIGroot || this._isWithinAllowNoActive) {
-          this.triggerer && this.triggerer.classList.remove(ACTIVATED_CLASS);
+          triggerer && triggerer.classList.remove(ACTIVATED_CLASS);
 
           this._probablyToggle.forEach(function (toggle) {
             toggle.classList.remove(ACTIVATED_CLASS);
@@ -1170,18 +1173,20 @@
       }
     };
 
-    _proto.open = function open(elem) {
+    _proto.open = function open(elem, triggerer) {
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
 
       if (!element) {
         return;
       }
 
+      triggerer = triggerer || this.triggerer;
+
       this._siblicide();
 
       if (this._isValidWithinQuery) {
         FwEvent$1.trigger(element, EVENT_BEFORE_OPEN);
-        this.triggerer && this.triggerer.classList.add(ACTIVATED_CLASS);
+        triggerer && triggerer.classList.add(ACTIVATED_CLASS);
 
         this._probablyToggle.forEach(function (toggle) {
           toggle.classList.add(ACTIVATED_CLASS);
@@ -1198,17 +1203,19 @@
       }
     };
 
-    _proto.toggle = function toggle(elem, hashChangeOverride) {
+    _proto.toggle = function toggle(elem, triggerer) {
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
 
       if (!element) {
         return;
       }
 
+      triggerer = triggerer || this.triggerer;
+
       if (element.classList.contains(ACTIVATED_CLASS)) {
-        this.close(elem, hashChangeOverride);
+        this.close(elem, triggerer);
       } else {
-        this.open(elem, hashChangeOverride);
+        this.open(elem, triggerer);
       }
     };
 
@@ -1472,7 +1479,7 @@
 
     function Dropdown(element, triggerer, args) {
       return _FwComponent.call(this, element, {
-        triggerer: triggerer ? new FwDom(triggerer) : false,
+        triggerer: triggerer ? triggerer : false,
         _customArgs: args || false
       }) || this;
     }
@@ -1489,16 +1496,18 @@
     _proto.close = function close(elem, triggerer) {
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : this.element;
 
-      if (element) {
-        triggerer = triggerer || this.triggerer;
-        FwEvent$1.trigger(element, EVENT_BEFORE_CLOSE$2);
-        this.setDimensions(null, Dropdown.configDefaults);
-        FwEvent$1.trigger(element, EVENT_CLOSE$2);
-        element.classList.remove(ACTIVATED_CLASS$1);
-        triggerer && triggerer.classList.remove(ACTIVATED_CLASS$1);
-        this.UIElNavcestor && this.UIElNavcestor.classList.remove(ACTIVATED_CLASS$1);
-        FwEvent$1.trigger(element, EVENT_AFTER_CLOSE$2);
+      if (!element) {
+        return;
       }
+
+      triggerer = triggerer || this.triggerer;
+      FwEvent$1.trigger(element, EVENT_BEFORE_CLOSE$2);
+      this.setDimensions(null, Dropdown.configDefaults);
+      FwEvent$1.trigger(element, EVENT_CLOSE$2);
+      element.classList.remove(ACTIVATED_CLASS$1);
+      triggerer && triggerer.classList.remove(ACTIVATED_CLASS$1);
+      this.UIElNavcestor && this.UIElNavcestor.classList.remove(ACTIVATED_CLASS$1);
+      FwEvent$1.trigger(element, EVENT_AFTER_CLOSE$2);
     };
 
     _proto.open = function open(elem, triggerer) {
@@ -1558,8 +1567,8 @@
       }
     };
 
-    Dropdown.purge = function purge(exemptedDropdown) {
-      UIPurge(exemptedDropdown, "." + COMPONENT_CLASS$3, function (elem) {
+    Dropdown.purge = function purge(exempted) {
+      UIPurge(exempted, "." + COMPONENT_CLASS$3, function (elem) {
         new Dropdown(elem).close();
       });
     };
@@ -1616,7 +1625,7 @@
       FwEvent$1.addListener(document.documentElement, EVENT_CLICK$3, "*[data-toggle-" + TOGGLE_MODE$2 + "]:not(input):not([contenteditable]):not(." + Settings.get('uiJsClass') + ")", Dropdown.handleToggle());
       FwEvent$1.addListener(document.documentElement, EVENT_FOCUS, "input[data-toggle-" + TOGGLE_MODE$2 + "], *[contenteditable][data-toggle-" + TOGGLE_MODE$2 + "], ." + Settings.get('uiJsClass') + "[data-toggle-" + TOGGLE_MODE$2 + "] [contenteditable]", Dropdown.handleFocusOpen());
       FwEvent$1.addListener(document.documentElement, EVENT_BLUR, "input[data-toggle-" + TOGGLE_MODE$2 + "], *[contenteditable][data-toggle-" + TOGGLE_MODE$2 + "], ." + Settings.get('uiJsClass') + "[data-toggle-" + TOGGLE_MODE$2 + "] [contenteditable]", Dropdown.handleBlurClose());
-      FwEvent$1.addListener(document.documentElement, EVENT_CLICK_PURGE, "*, *." + COMPONENT_PURGER_CLASS, Dropdown.handleUniversalPurge());
+      FwEvent$1.addListener(document.documentElement, EVENT_CLICK_PURGE, "*, ." + COMPONENT_PURGER_CLASS, Dropdown.handleUniversalPurge());
     };
 
     _createClass(Dropdown, [{
@@ -1983,10 +1992,11 @@
     };
 
     _proto.update = function update(newValue, valueToRender) {
-      FwEvent$1.trigger(_FwComponent.prototype.UIEl.call(this), EVENT_BEFORE_UPDATE);
+      var element = this.element;
+      FwEvent$1.trigger(element, EVENT_BEFORE_UPDATE);
       var theValue = FwDate.toVal(newValue) || this.theValue;
       var uiValue = FwDate.toVal(valueToRender) || theValue || this.renderValue;
-      FwEvent$1.trigger(_FwComponent.prototype.UIEl.call(this), EVENT_UPDATE); //set up calendar
+      FwEvent$1.trigger(element, EVENT_UPDATE); //set up calendar
 
       if (this.validates(theValue) || !theValue) {
         this.theValue = FwDate.toVal(theValue, false);
@@ -2016,7 +2026,7 @@
         }
       }
 
-      FwEvent$1.trigger(_FwComponent.prototype.UIEl.call(this), EVENT_AFTER_UPDATE);
+      FwEvent$1.trigger(element, EVENT_AFTER_UPDATE);
     };
 
     _proto.validates = function validates(date, rangeOnly) {
@@ -2119,7 +2129,7 @@
       theUI.heading.appendChild(theUI.title);
       theUI.title.setAttribute('class', UIPrefix(COMPONENT_CLASS$4) + "-title " + UIPrefix(COMPONENT_CLASS$4) + "-dropdown-toggle\n\t\t\t\t" + UIDynamicClass //NEED THIS AT ALL TIMES IF U DONT WANNA DIE
       );
-      theUI.title.setAttribute('data-toggle', 'dropdown');
+      theUI.title.setAttribute('data-toggle-dropdown', '');
       theUI.title.innerHTML = "<span\n\t\t\t\tclass=\"" + UIPrefix(COMPONENT_CLASS$4) + "-month-text\">\n\t\t\t\t\t" + monthNamesShort[this._calendar.month] + "\n\t\t\t\t</span>\n\t\t\t\t<span class=\"" + UIPrefix(COMPONENT_CLASS$4) + "-year-text\">\n\t\t\t\t\t" + this._calendar.year + "\n\t\t\t\t</span>\n\t\t\t\t<i class=\"" + UIPrefix(COMPONENT_CLASS$4) + "-symbol symbol symbol-caret-down no-margin-x\"></i>"; //dropdown
 
       var dropdown = document.createElement('ul');
@@ -2239,19 +2249,19 @@
     };
 
     _proto.init = function init(elem) {
-      elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
+      var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
+      FwEvent$1.trigger(element, EVENT_BEFORE_INIT);
+      FwEvent$1.trigger(element, EVENT_INIT);
       this.update();
+      FwEvent$1.trigger(element, EVENT_AFTER_INIT);
     };
 
     Calendar.initAll = function initAll() {
-      FwEvent$1.trigger(document.documentElement, EVENT_BEFORE_INIT);
-      FwEvent$1.trigger(document.documentElement, EVENT_INIT);
       var calendars = document.querySelectorAll("." + COMPONENT_CLASS$4);
       calendars.forEach(function (cal) {
         var calendar = new Calendar(cal);
         calendar.init();
       });
-      FwEvent$1.trigger(document.documentElement, EVENT_AFTER_INIT);
     };
 
     Calendar.handleChange = function handleChange() {
@@ -2804,14 +2814,14 @@
     };
 
     Tags.initAll = function initAll() {
-      FwEvent$1.trigger(document.documentElement, EVENT_BEFORE_INIT$1);
-      FwEvent$1.trigger(document.documentElement, EVENT_INIT$1);
+      FwEvent$1.trigger(document, EVENT_BEFORE_INIT$1);
+      FwEvent$1.trigger(document, EVENT_INIT$1);
       var tagsInputs = document.querySelectorAll("." + COMPONENT_CLASS$5);
       tagsInputs.forEach(function (poot) {
         var tagsInput = new Tags(poot);
         tagsInput.init();
       });
-      FwEvent$1.trigger(document.documentElement, EVENT_AFTER_INIT$1);
+      FwEvent$1.trigger(document, EVENT_AFTER_INIT$1);
     };
 
     Tags.handleChange = function handleChange() {
@@ -3111,9 +3121,9 @@
   var EVENT_BEFORE_SVGCONVERSION = "before_svgconversion" + EVENT_KEY$6;
   var EVENT_SVGCONVERSION = "svgconversion" + EVENT_KEY$6;
   var EVENT_AFTER_SVGCONVERSION = "after_svgconversion" + EVENT_KEY$6;
-  var EVENT_BEFORE_LAZYLOAD = "before_lazyload" + EVENT_KEY$6;
-  var EVENT_LAZYLOAD = "lazyload" + EVENT_KEY$6;
-  var EVENT_AFTER_LAZYLOAD = "after_lazyload" + EVENT_KEY$6;
+  var EVENT_BEFORE_LOAD = "before_load" + EVENT_KEY$6;
+  var EVENT_LOAD = "load" + EVENT_KEY$6;
+  var EVENT_AFTER_LOAD = "after_load" + EVENT_KEY$6;
 
   var Lazy = /*#__PURE__*/function (_FwComponent) {
     _inheritsLoose(Lazy, _FwComponent);
@@ -3180,10 +3190,10 @@
         return;
       }
 
-      FwEvent$1.trigger(element, EVENT_BEFORE_LAZYLOAD);
+      FwEvent$1.trigger(element, EVENT_BEFORE_LOAD);
 
       if (element.classList.contains("" + COMPONENT_CLASS$6)) {
-        FwEvent$1.trigger(element, EVENT_LAZYLOAD);
+        FwEvent$1.trigger(element, EVENT_LOAD);
 
         if (element.matches('img') || element.closest('picture')) {
           this.theSrc && element.setAttribute('src', this.theSrc);
@@ -3199,7 +3209,7 @@
           this.readyLoaded();
         }
 
-        FwEvent$1.trigger(element, EVENT_AFTER_LAZYLOAD);
+        FwEvent$1.trigger(element, EVENT_AFTER_LOAD);
       }
     };
 
@@ -3224,8 +3234,8 @@
     };
 
     Lazy.loadAll = function loadAll(images) {
-      FwEvent$1.trigger(document.documentElement, EVENT_BEFORE_INIT$2);
-      FwEvent$1.trigger(document.documentElement, EVENT_INIT$2);
+      FwEvent$1.trigger(document, EVENT_BEFORE_INIT$2);
+      FwEvent$1.trigger(document, EVENT_INIT$2);
       Lazy.setStatus('loading');
       images = images || document.querySelectorAll(COMPONENT_SELECTOR);
       images.forEach(function (img) {
@@ -3233,7 +3243,7 @@
         lazy.load();
       });
       Lazy.setStatus('loaded');
-      FwEvent$1.trigger(document.documentElement, EVENT_AFTER_INIT$2);
+      FwEvent$1.trigger(document, EVENT_AFTER_INIT$2);
     };
 
     Lazy.initListeners = function initListeners() {
@@ -3426,7 +3436,7 @@
       }
 
       _this = _FwComponent.call(this, element, {
-        triggerer: triggerer ? new FwDom(triggerer) : false,
+        triggerer: triggerer,
         _customArgs: args || false,
         _mode: currMode
       }) || this;
@@ -3493,32 +3503,23 @@
     };
 
     _proto.destroy = function destroy(elem) {
-      if (!_classPrivateFieldLooseBase(this, _current)[_current].element) {
+      var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _classPrivateFieldLooseBase(this, _current)[_current].element;
+
+      if (!element) {
         return;
-      } // const element = elem ?
-      // 	super.UIEl(elem)
-      // 	: super.UIEl();
-      // if(!element && this.mode){
-      // 	element = Modal.current(this.mode).element;
-      // }else if(!element && !this.mode){
-      // 	return
-      // }
-      // if(!this.#current.element){
-      // 	return;
-      // }
+      }
 
-
-      FwEvent$1.trigger(_classPrivateFieldLooseBase(this, _current)[_current].element, EVENT_BEFORE_DESTROY);
-      FwEvent$1.trigger(_classPrivateFieldLooseBase(this, _current)[_current].element, EVENT_DESTROY); // removeHash = removeHash || false;
+      FwEvent$1.trigger(element, EVENT_BEFORE_DESTROY);
+      FwEvent$1.trigger(element, EVENT_DESTROY); // removeHash = removeHash || false;
 
       var canRemoveHash = false;
 
-      if (_classPrivateFieldLooseBase(this, _current)[_current].element.hasAttribute('id') && _classPrivateFieldLooseBase(this, _current)[_current].element.getAttribute('id') == window.location.hash.replace('#', '')) {
+      if (element.hasAttribute('id') && element.getAttribute('id') == window.location.hash.replace('#', '')) {
         canRemoveHash = true;
       }
 
       if (this.UIRoot) {
-        FwDom.moveContents(this.UIContentBlock, _classPrivateFieldLooseBase(this, _current)[_current].element);
+        FwDom.moveContents(this.UIContentBlock, element);
         this.UIRoot.classList.remove('active');
         this.UIRoot.parentNode.removeChild(this.UIRoot);
       }
@@ -3531,15 +3532,15 @@
 
       removeBodClass && document.body.classList.remove(UIBodyClass.noScroll);
       canRemoveHash && UIChangeHash('');
-      FwEvent$1.trigger(_classPrivateFieldLooseBase(this, _current)[_current].element, EVENT_AFTER_DESTROY);
+      FwEvent$1.trigger(element, EVENT_AFTER_DESTROY);
       _classPrivateFieldLooseBase(this, _current)[_current] = {
         element: false,
         args: false
       };
     };
 
-    _proto.update = function update() {
-      var element = this.element;
+    _proto.update = function update(elem) {
+      var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _classPrivateFieldLooseBase(this, _current)[_current].element;
 
       if (!element) {
         return;
@@ -3685,7 +3686,7 @@
       get: function get() {
         return FwComponent._parseArgs(this._customArgs ? this._customArgs : {
           changeHash: this.triggerer && this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-change-hash") || _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-change-hash"),
-          header: this.triggerer && this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-title") || _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-title"),
+          title: this.triggerer && this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-title") || _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-title"),
           disableOverlay: this.triggerer && this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-disable-overlay") || _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-disable-overlay"),
           width: this.triggerer && this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-width") || _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-width"),
           callback: this.triggerer && this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-callback") || _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-callback"),
@@ -3706,6 +3707,7 @@
     }, {
       key: "_markup",
       get: function get() {
+        this.triggerer && console.warn(this.triggerer.getAttribute("data-" + ARG_ATTRIBUTE_NAME$4 + "-title"));
         var html = "<div\n\t\t\t\tclass=\"\n\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$8) + "-wrapper\"\n\t\t\t>"; //overlay
 
         html += "<a href=\"#\"\n\t\t\t\t\t\tclass=\"\n\t\t\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$8) + "-close-overlay\"\n\t\t\t\t\t\t\t" + (this.args.disableOverlay == false ? "data-toggle-" + this.modeToggle + "-close" : '') + "\n\t\t\t\t\t></a>";
@@ -3725,8 +3727,8 @@
             html += "</div>";
             html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-popup\">";
 
-            if (this.args.header) {
-              html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-title\">" + decodeURIComponent(this.args.header) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
+            if (this.args.title) {
+              html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-title\">" + decodeURIComponent(this.args.title) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
             }
 
             html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-popup-content\"></div>";
@@ -3736,8 +3738,8 @@
           default:
             html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-popup\">";
 
-            if (this.args.header) {
-              html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-title\">" + decodeURIComponent(this.args.header) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
+            if (this.args.title) {
+              html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + UIPrefix(COMPONENT_CLASS$8) + "-title\">" + decodeURIComponent(this.args.title) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
             }
 
             if (this.args.close !== false) {
@@ -3758,7 +3760,7 @@
         var mode = this.mode;
         return {
           changeHash: true,
-          header: '',
+          title: '',
           close: true,
           disableOverlay: true,
           width: null,
@@ -3800,11 +3802,7 @@
   };
 
   var _modeToggle2 = function _modeToggle2(mode) {
-    if (!mode || mode == DEFAULT_NAME) {
-      return TOGGLE_MODE_PREFIX;
-    } else {
-      return FwString.ToCamelCase(TOGGLE_MODE_PREFIX + "-" + mode);
-    }
+    return FwString.ToDashed(TOGGLE_MODE_PREFIX + "-" + mode);
   };
 
   var _get_current = function _get_current() {
@@ -3919,14 +3917,14 @@
 
     ModuleGrid.handleUniversal = function handleUniversal() {
       return function () {
-        FwEvent$1.trigger(document.documentElement, EVENT_BEFORE_INIT$3);
-        FwEvent$1.trigger(document.documentElement, EVENT_INIT$3);
+        FwEvent$1.trigger(document, EVENT_BEFORE_INIT$3);
+        FwEvent$1.trigger(document, EVENT_INIT$3);
         var grids = document.querySelectorAll("." + COMPONENT_CLASS$9);
         grids.forEach(function (grid) {
           var moduleGrid = new ModuleGrid(grid);
           moduleGrid.render();
         });
-        FwEvent$1.trigger(document.documentElement, EVENT_AFTER_INIT$3);
+        FwEvent$1.trigger(document, EVENT_AFTER_INIT$3);
       };
     };
 
@@ -3976,20 +3974,12 @@
   var Switch = /*#__PURE__*/function (_FwComponent) {
     _inheritsLoose(Switch, _FwComponent);
 
-    function Switch(element, triggerer) {
+    function Switch(element) {
       element = element || UIToggled(TOGGLE_MODE$3) || false;
-      return _FwComponent.call(this, element, {
-        triggerer: triggerer ? new FwDom(triggerer) : false
-      }) || this;
+      return _FwComponent.call(this, element) || this;
     }
 
     var _proto = Switch.prototype;
-
-    _proto.dispose = function dispose() {
-      _FwComponent.prototype.dispose.call(this);
-
-      this.triggerer = null;
-    };
 
     _proto.isOff = function isOff(elem) {
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
@@ -4054,9 +4044,9 @@
         e.preventDefault();
 
         if (!FwComponent.isDisabled(e.target)) {
-          var switcher = new Switch(UIToggled(TOGGLE_MODE$3, e.target), e.target);
+          var switchElement = new Switch(UIToggled(TOGGLE_MODE$3, e.target));
           Switch.purge(UIToggled(TOGGLE_MODE$3, e.target));
-          switcher.turnOn();
+          switchElement.turnOn();
         }
       };
     };
@@ -4066,20 +4056,20 @@
         e.preventDefault();
 
         if (!FwComponent.isDisabled(e.target)) {
-          var switcher = new Switch(UIToggled(TOGGLE_MODE$3, e.target), e.target);
-          switcher.turnOff();
+          var switchElement = new Switch(UIToggled(TOGGLE_MODE$3, e.target));
+          switchElement.turnOff();
         }
       };
     };
 
     Switch.handleInit = function handleInit() {
       return function () {
-        FwEvent$1.trigger(document.documentElement, EVENT_BEFORE_INIT$4);
-        FwEvent$1.trigger(document.documentElement, EVENT_INIT$4);
+        FwEvent$1.trigger(document, EVENT_BEFORE_INIT$4);
+        FwEvent$1.trigger(document, EVENT_INIT$4);
         UIPurge(false, "." + COMPONENT_CLASS$a, function (elem) {
           new Switch(elem).init();
         });
-        FwEvent$1.trigger(document.documentElement, EVENT_AFTER_INIT$4);
+        FwEvent$1.trigger(document, EVENT_AFTER_INIT$4);
       };
     };
 
@@ -4353,11 +4343,12 @@
         if (FwComponent.isDisabled(e.target)) {
           e.preventDefault();
         } else if (!FwComponent.isDynamic(e.target)) {
-          if (!e.target.closest("[data-toggle-" + TOGGLE_MODE_CLICK + "]") && !e.target.closest("[data-toggle-" + TOGGLE_MODE_HOVER + "]") && !e.target.closest("." + COMPONENT_CLASS$c + "." + COMPONENT_ALLOW_INTERACTION_CLASS)) {
-            var _tooltip2 = new Tooltip();
+          if (!e.target.closest("[data-toggle-" + TOGGLE_MODE_CLICK + "]") && !e.target.closest("[data-toggle-" + TOGGLE_MODE_HOVER + "]") // && !e.target.closest(`.${COMPONENT_CLASS}.${COMPONENT_ALLOW_INTERACTION_CLASS}`)
+          ) {
+              var _tooltip2 = new Tooltip();
 
-            _tooltip2.destroy();
-          }
+              _tooltip2.destroy();
+            }
         }
       };
     };
@@ -4394,7 +4385,7 @@
       FwEvent$1.addListener(document.documentElement, EVENT_MOUSEENTER, "*[data-toggle-" + TOGGLE_MODE_HOVER + "]", Tooltip.handleToggleHoverOn());
       FwEvent$1.addListener(document.documentElement, EVENT_MOUSELEAVE, "*[data-toggle-" + TOGGLE_MODE_HOVER + "]", Tooltip.handleToggleHoverOff());
       FwEvent$1.addListener(document.documentElement, EVENT_CLICK$a, "*[data-toggle-" + TOGGLE_MODE_CLICK + "]", Tooltip.handleToggleClickOn());
-      FwEvent$1.addListener(document.documentElement, EVENT_CLICK_PURGE$2, "*, *." + COMPONENT_PURGER_CLASS$1, Tooltip.handleUniversalPurge());
+      FwEvent$1.addListener(document.documentElement, EVENT_CLICK_PURGE$2, "*, ." + COMPONENT_PURGER_CLASS$1, Tooltip.handleUniversalPurge());
       Initiator.Q.on_ready = Tooltip.handleResizeScroll();
       Initiator.Q.on_resize = Tooltip.handleResizeScroll();
     };

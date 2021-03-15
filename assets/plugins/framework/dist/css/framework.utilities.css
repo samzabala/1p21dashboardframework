@@ -1,23 +1,5 @@
 /*! it's helpers only bitch */
 /* heading bars or rules from tiny rectangles to long rules and what not. */
-.flex-xs {
-  display: flex!important;
-}
-@media (min-width: 768px) {
-  .flex-sm {
-    display: flex!important;
-  }
-}
-@media (min-width: 1200px) {
-  .flex-md {
-    display: flex!important;
-  }
-}
-@media (min-width: 1600px) {
-  .flex-lg {
-    display: flex!important;
-  }
-}
 .no-scrollbar {
   scrollbar-width: none;
 }
@@ -12290,6 +12272,29 @@
 
 .flex {
   display: flex !important;
+}
+.flex-xs {
+  display: flex!important;
+}
+@media (min-width: 768px) {
+  .flex-sm {
+    display: flex!important;
+  }
+}
+@media (min-width: 1200px) {
+  .flex-md {
+    display: flex!important;
+  }
+}
+@media (min-width: 1600px) {
+  .flex-lg {
+    display: flex!important;
+  }
+}
+@media (min-width: 1801px) {
+  .flex-xl {
+    display: flex!important;
+  }
 }
 .flex-direction-row {
   flex-direction: row !important;

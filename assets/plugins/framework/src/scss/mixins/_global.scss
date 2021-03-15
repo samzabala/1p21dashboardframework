@@ -301,9 +301,17 @@
 
 @function get-anchor-dec($is-hover:false){
 	@if $is-hover {
-		@return  if($body-anchor-text-decoration-hover == underline, none, null);
+		@if($body-anchor-text-decoration-hover == underline){
+			@return none;
+		}@else{
+			@return null;
+		}
 	} @else {
-		@return  if($body-anchor-text-decoration == none, null, none);
+		@if($body-anchor-text-decoration == none){
+			@return null;
+		}@else{
+			@return none;
+		}
 	}
 }
 

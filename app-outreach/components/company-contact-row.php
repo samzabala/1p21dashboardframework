@@ -1,13 +1,5 @@
 <tr>
-	<tbody class="switch">
-		<tr class="switch-off">
-
-		</tr>
-		<tr class="switch-on">
-
-		</tr>
-	</tbody>
-	<td>
+	<td width="250">
 		<!-- @if has contact profile -->
 			<a href="<?=app_create_link(array('template'=>'contact-detail')) ?>" class="flex-grid flex-grid-compact flex-grid-no-gutter-y color-inherit">
 				<div class="flex-child flex-0-0 hide-mobile">
@@ -23,17 +15,16 @@
 					</div>
 				</div>
 			</a>
-		
-		<!-- @else -->
-			&nbsp;
 	</td>
-	<td>
+	<td width="250">
 		<!-- @if has email -->
-			<a href="#mb-editor-email" data-toggle-modal-board data-modal-title="Compose email">
+			<a href="#mb-editor-email" class="text-wrap-ellipsis" data-toggle-modal-board data-modal-title="Compose email">
 				<span class="REPLACE">ace@attorney.com</span>
 			</a>
 		<!-- @else -->
-			&nbsp;
+			<span class="color-neutral font-style-italic">
+				Not Available
+			</span>
 	</td>
 	<td>
 		<?app_get_component('components/list-social') ?>

@@ -177,8 +177,8 @@ class ModuleGrid extends FwComponent {
 		return () => {
 
 
-			FwEvent.trigger(document.documentElement,EVENT_BEFORE_INIT);
-			FwEvent.trigger(document.documentElement,EVENT_INIT);
+			FwEvent.trigger(document,EVENT_BEFORE_INIT);
+			FwEvent.trigger(document,EVENT_INIT);
 
 			const grids = document.querySelectorAll(`.${COMPONENT_CLASS}`);
 
@@ -187,7 +187,7 @@ class ModuleGrid extends FwComponent {
 				moduleGrid.render();
 			})
 
-			FwEvent.trigger(document.documentElement,EVENT_AFTER_INIT);
+			FwEvent.trigger(document,EVENT_AFTER_INIT);
 		}
 		
 	}

@@ -40,7 +40,7 @@ class Dropdown extends FwComponent {
 			{
 				triggerer:(
 					triggerer
-						? new FwDom(triggerer)
+						? triggerer
 					: false
 				),
 				_customArgs: args
@@ -114,25 +114,27 @@ class Dropdown extends FwComponent {
 			super.UIEl(elem)
 			: this.element;
 
-		if(element){
-			triggerer = triggerer || this.triggerer;
-
-			FwEvent.trigger(element,EVENT_BEFORE_CLOSE);
-	
-			this.setDimensions(
-				null,
-				Dropdown.configDefaults
-			);
-		
-			FwEvent.trigger(element,EVENT_CLOSE);
-			element.classList.remove(ACTIVATED_CLASS);
-			triggerer
-				&& triggerer.classList.remove(ACTIVATED_CLASS);
-			this.UIElNavcestor
-				&& this.UIElNavcestor.classList.remove(ACTIVATED_CLASS);
-				
-			FwEvent.trigger(element,EVENT_AFTER_CLOSE);
+		if(!element){
+			return;
 		}
+
+		triggerer = triggerer || this.triggerer;
+
+		FwEvent.trigger(element,EVENT_BEFORE_CLOSE);
+
+		this.setDimensions(
+			null,
+			Dropdown.configDefaults
+		);
+	
+		FwEvent.trigger(element,EVENT_CLOSE);
+		element.classList.remove(ACTIVATED_CLASS);
+		triggerer
+			&& triggerer.classList.remove(ACTIVATED_CLASS);
+		this.UIElNavcestor
+			&& this.UIElNavcestor.classList.remove(ACTIVATED_CLASS);
+			
+		FwEvent.trigger(element,EVENT_AFTER_CLOSE);
 	}
 
 	open(elem,triggerer){
@@ -217,9 +219,9 @@ class Dropdown extends FwComponent {
 		}
 	}
 
-	static purge(exemptedDropdown) {
+	static purge(exempted) {
 		UIPurge(
-			exemptedDropdown,
+			exempted,
 			`.${COMPONENT_CLASS}`,
 			(elem) => {
 				new Dropdown(elem).close();
@@ -336,7 +338,7 @@ class Dropdown extends FwComponent {
 		FwEvent.addListener(
 			document.documentElement,
 			EVENT_CLICK_PURGE,
-			`*, *.${COMPONENT_PURGER_CLASS}`,
+			`*, .${COMPONENT_PURGER_CLASS}`,
 			Dropdown.handleUniversalPurge()
 		);
 	}
