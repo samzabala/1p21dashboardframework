@@ -266,9 +266,9 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/styles\/style.css",
-      "oF" : 3,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.example.css",
+      "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
