@@ -8,3 +8,5 @@ node_modules/*
 wp-content/
 wp-admin/
 wp-includes/
+
+*.mine.scss

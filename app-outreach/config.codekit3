@@ -219,6 +219,20 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/_fw_var_overrides.mine.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_fw_var_overrides.mine.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/styles\/_fw_var_overrides.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -246,6 +260,20 @@
       "pg" : 0
     },
     "\/assets\/styles\/style.example.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/style.css",
+      "oF" : 3,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/style.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
