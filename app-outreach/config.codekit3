@@ -180,17 +180,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/scripts\/app.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/scripts\/app-min.js",
-      "oF" : 1,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/assets\/styles\/_custom.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -239,22 +228,6 @@
       "oAP" : "\/company-detail.php",
       "oF" : 0
     },
-    "\/components\/note-form.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/note-form.php",
-      "oF" : 0
-    },
-    "\/components\/note-row.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/note-row.php",
-      "oF" : 0
-    },
     "\/components\/company-contact-row.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -271,20 +244,20 @@
       "oAP" : "\/components\/event-row.php",
       "oF" : 0
     },
-    "\/components\/function-add-comment.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-add-comment.php",
-      "oF" : 0
-    },
     "\/components\/function-add-model.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/function-add-model.php",
+      "oF" : 0
+    },
+    "\/components\/function-add-note.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/function-add-note.php",
       "oF" : 0
     },
     "\/components\/function-input-search.php" : {
@@ -399,20 +372,12 @@
       "oAP" : "\/components\/modal-board-form-task.php",
       "oF" : 0
     },
-    "\/components\/modal-form-comment.php" : {
+    "\/components\/modal-form-note.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/components\/modal-form-comment.php",
-      "oF" : 0
-    },
-    "\/components\/module-comments.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-comments.php",
+      "oAP" : "\/components\/modal-form-note.php",
       "oF" : 0
     },
     "\/components\/module-company-detail-main.php" : {
@@ -463,6 +428,30 @@
       "oAP" : "\/components\/module-detail-events.php",
       "oF" : 0
     },
+    "\/components\/module-notes.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-notes.php",
+      "oF" : 0
+    },
+    "\/components\/note-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/note-form.php",
+      "oF" : 0
+    },
+    "\/components\/note-row.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/note-row.php",
+      "oF" : 0
+    },
     "\/components\/profile-image-micro.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -485,6 +474,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/profile-image.php",
+      "oF" : 0
+    },
+    "\/components\/tag-clienttype.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/tag-clienttype.php",
       "oF" : 0
     },
     "\/components\/toolbar-contact.php" : {
@@ -525,14 +522,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/footer.php",
-      "oF" : 0
-    },
-    "\/header.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/header.php",
       "oF" : 0
     },
     "\/includes\/nav-main.php" : {

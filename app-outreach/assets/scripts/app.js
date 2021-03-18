@@ -1,5 +1,3 @@
-
-window.jQuery && jQuery.noConflict();
 typeof Turbolinks == 'object' && Turbolinks.start();
 (function(fw,window){
 	
