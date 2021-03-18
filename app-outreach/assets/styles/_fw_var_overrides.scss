@@ -1,14 +1,4 @@
-//google font
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap');
-
-
-// $debug: true;
-
-
-// CUSTOM VARIABLES FOR FRAMEWORK IF ANY
-
-
-
+// variables to override framework defaults
 $brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 $brand-font-secondary: $brand-font-primary;
 $brand-font-accent: 'Roboto', $brand-font-primary;
@@ -58,9 +48,3 @@ $module-title-text-transform: uppercase;
 
 $input-height-large: 50px;
  
-// FRAMEWORK / SCAFFOLDING STYLES
-	@import './../../../assets/plugins/framework/src/scss/framework.scss';
-
- 
-// SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
-	@import '_custom';

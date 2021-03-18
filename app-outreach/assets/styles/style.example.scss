@@ -1,0 +1,20 @@
+//use this style.scss as a reference /example 
+
+//1. external fonts
+	@import '_ext_fonts';
+
+//2. custom framework variables fonts
+	@import '_fw_var_overrides.scss';
+
+//3. import frameworks here. change file path as needed
+	// all of it
+		@import './../../../assets/plugins/framework/src/scss/framework.scss';
+
+	//just core functionalities + scaffolding (no components or helpers). use this in case stuff looks broken
+		// @import './../../../assets/plugins/framework/src/scss/framework.normalize.scss';
+	//just core functionalities
+		// @import './../../../assets/plugins/framework/src/scss/framework.core.scss';
+
+
+// 4. additional css specific for this app
+	@import '_custom';

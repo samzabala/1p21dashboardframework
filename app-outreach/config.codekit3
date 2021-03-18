@@ -180,6 +180,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/scripts\/app.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/app-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/styles\/_custom.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -189,6 +200,34 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/styles\/_custom.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/_ext_fonts.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_ext_fonts.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/_fw_var_overrides.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_fw_var_overrides.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -206,7 +245,7 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/assets\/styles\/style.scss" : {
+    "\/assets\/styles\/style.example.scss" : {
       "aP" : 0,
       "bl" : 0,
       "dP" : 10,
@@ -215,7 +254,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/styles\/style.css",
-      "oF" : 0,
+      "oF" : 2,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -522,6 +561,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/footer.php",
+      "oF" : 0
+    },
+    "\/header.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/header.php",
       "oF" : 0
     },
     "\/includes\/nav-main.php" : {
