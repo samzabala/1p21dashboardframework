@@ -7,7 +7,7 @@
       "uuidString" : "F2E6C694-13FC-436E-B8DD-DA8B3F832CE6"
     }
   ],
-  "creatorBuild" : "34081",
+  "creatorBuild" : "34127",
   "files" : {
     "\/assets\/images\/icon-facebook-currentColor.svg" : {
       "ft" : 2097152,
@@ -615,6 +615,22 @@
       "oAP" : "\/includes\/nav-sidebar.php",
       "oF" : 0
     },
+    "\/login-forgot.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login-forgot.php",
+      "oF" : 0
+    },
+    "\/login.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login.php",
+      "oF" : 0
+    },
     "\/tasks.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -622,6 +638,20 @@
       "oA" : 0,
       "oAP" : "\/tasks.php",
       "oF" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.lite.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.lite.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     }
   },
   "hooks" : [
@@ -2688,6 +2718,9 @@
       "removeVariables" : 0,
       "safelistEntries" : [
 
+      ],
+      "skippedEntries" : [
+        "node_modules\/**"
       ]
     },
     "rollupContext" : "",
@@ -2722,6 +2755,7 @@
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
+    "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
     "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
