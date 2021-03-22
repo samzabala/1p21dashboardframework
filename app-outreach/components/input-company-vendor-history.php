@@ -26,33 +26,8 @@
 			</div>
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-			
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-					<div class="flex-col-6">
-
-						<label for="company-vendor-history-row[REPLACE]-date-end" class="input-label">End Date</label>
-					</div>
-					<div class="flex-col-6">
-
-						<div class="input-wrapper input-wrapper-horizontal input-wrapper-block text-align-right">
-							<label for="company-vendor-history-row[REPLACE]-date-present" class="input-label no-padding-right">
-								<input type="checkbox" class="input input-line" 
-									id="company-vendor-history-row[REPLACE]-date-present"
-									name="company-vendor-history-row[REPLACE]-date-present" />
-
-								Present Vendor
-									
-							</label>
-						</div>
-					</div>
-				</div>
-
-				<!-- @NOTE
-					.input-wrapper
-						classes to add:
-						`#company-vendor-history-row[REPLACE]-date-end` => if input#company-vendor-history-row[REPLACE]-date-present is checked
-
-				-->
+				<label for="company-vendor-history-row[REPLACE]-date-end" class="input-label">End Date</label>
+				
 				<input
 					type="text" size="12" class="input input-calendar input-block no-radius-bottom"
 					placeholder="1990 - Present"
