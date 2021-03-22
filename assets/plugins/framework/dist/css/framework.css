@@ -6160,10 +6160,6 @@ hr.dropdown-separator {
   margin: 0.5em 0;
 }
 
-.dropdown a,
-.dropdown [data-toggle-dropdown] {
-  color: inherit;
-}
 .dropdown.dropdown-bottom {
   bottom: 0;
 }

@@ -145,12 +145,16 @@ function app_init_content(){
 					<?php
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
 					break;
-					case 'company-detail':
-					case 'contact-detail':
-					case 'tasks':
-					case 'contacts':
+				case 'company-detail':
+				case 'contact-detail':
+				case 'tasks':
+				case 'contacts':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+					?>
+
+					<link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" />
+					<?php
 					break;
 				break;
 
@@ -158,11 +162,13 @@ function app_init_content(){
 				case 'debug-components':
 					app_get_template_part("{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					$GLOBALS['VALID_TEMPLATE'] = $template_part;
 					break;
 
 				default:
 					app_get_template_part('global/error');
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
+					$GLOBALS['VALID_TEMPLATE'] = "error";
 					break;
 				endswitch;
 		//time tracker shit
@@ -171,6 +177,7 @@ function app_init_content(){
 			case null:
 				app_get_template_part("app-{$app}/home");
 				$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
+				$GLOBALS['VALID_TEMPLATE'] = 'home';
 				break;
 			break;
 		case 'workflow':

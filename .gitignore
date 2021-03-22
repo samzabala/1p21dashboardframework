@@ -10,3 +10,4 @@ wp-admin/
 wp-includes/
 
 *.mine.scss
+*.mine.css

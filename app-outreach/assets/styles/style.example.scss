@@ -7,13 +7,19 @@
 	@import '_fw_var_overrides.scss';
 
 //3. import frameworks here. change file path as needed
-	// all of it
-		@import './../../../assets/plugins/framework/src/scss/framework.scss';
-
-	//just core functionalities + scaffolding (no components or helpers). use this in case stuff looks broken
-		// @import './../../../assets/plugins/framework/src/scss/framework.normalize.scss';
-	//just core functionalities
-		// @import './../../../assets/plugins/framework/src/scss/framework.core.scss';
+	// layout components + helpers + core
+		@import './../../../assets/plugins/framework/src/scss/framework.lite.scss';
+	//components used by global components (header + sidebar)
+		@import './../../../assets/plugins/framework/src/scss/_badge';
+		@import './../../../assets/plugins/framework/src/scss/_buttons';
+		@import './../../../assets/plugins/framework/src/scss/_dropdown';
+		@import './../../../assets/plugins/framework/src/scss/_form';
+		@import './../../../assets/plugins/framework/src/scss/_lazy';
+		@import './../../../assets/plugins/framework/src/scss/_list-group';
+		@import './../../../assets/plugins/framework/src/scss/_modal';
+		@import './../../../assets/plugins/framework/src/scss/_nav';
+		@import './../../../assets/plugins/framework/src/scss/_symbol';
+		@import './../../../assets/plugins/framework/src/scss/_thumbnail';
 
 
 // 4. additional css specific for this app

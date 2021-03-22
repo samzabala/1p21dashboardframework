@@ -8,7 +8,7 @@
 	<meta name="robots" content="noindex" />
 
 	<!-- styles .sass has ya bois styles -->
-		<link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/style.css'?>" rel="stylesheet" />
+		<link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/style.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" />
 
 
 
