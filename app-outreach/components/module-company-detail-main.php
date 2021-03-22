@@ -300,25 +300,7 @@
 
 													<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 													
-														<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-															<div class="flex-col-6">
-
-																<label for="company-vendor-history-add-date-end" class="input-label">End Date</label>
-															</div>
-															<div class="flex-col-6">
-
-																<div class="input-wrapper input-wrapper-horizontal input-wrapper-block text-align-right">
-																	<label for="company-vendor-history-add-date-present" class="input-label no-padding-right">
-																		<input type="checkbox" class="input input-line" 
-																			id="company-vendor-history-add-date-present"
-																			name="company-vendor-history-add-date-present" />
-
-																		Present Vendor
-																			
-																	</label>
-																</div>
-															</div>
-														</div>
+														<label for="company-vendor-history-add-date-end" class="input-label">End Date</label>
 
 														<!-- @NOTE
 															.input-wrapper
