@@ -11,3 +11,4 @@ wp-includes/
 
 *.mine.scss
 *.mine.css
+*.map.*

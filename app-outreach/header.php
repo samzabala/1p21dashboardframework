@@ -23,11 +23,11 @@
 			
 			if(FWAPPS_JS == 'vanilla') {
 				?>
-				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.legacy.min.js'?>" data-turbolinks-track="reload"></script>
+				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.legacy.js'?>" data-turbolinks-track="reload"></script>
 				<?php
 			}else{
 				?>
-				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.legacy.plugged.min.js'?>" data-turbolinks-track="reload"></script>
+				<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.legacy.plugged.js'?>" data-turbolinks-track="reload"></script>
 				<?php
 			}
 			
