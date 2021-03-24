@@ -36,11 +36,16 @@
 
 
 
+			<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/jquery.js'?>" data-turbolinks-track="reload"></script>
 		<!-- app specific -->
 			<?php //app_inline_script(FWAPPS_ROOT_PATH.'/assets/legacy/scripts/apps.js'); ?>
 			<script src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/scripts/app.js'?>" data-turbolinks-track="reload"></script>
 
 
+			<!-- for sam to test shit onlyyy -->
+			<script
+				src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/scripts/__fortesting.js'?>" data-turbolinks-track="reload"
+			></script>
 
 	<!-- @PLACEHOLDER for debugging framework. delete when ready. or repurpose or... idk -->
 		<script>

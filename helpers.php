@@ -153,7 +153,7 @@ function app_init_content(){
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					?>
 
-					<link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" />
+					<!-- <link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" /> -->
 					<?php
 					break;
 				break;

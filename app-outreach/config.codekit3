@@ -169,6 +169,17 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/scripts\/__fortesting.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/__fortesting-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/scripts\/app-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -380,6 +391,18 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/style.mine.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.mine-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/assets\/styles\/style.mine.scss" : {
       "aP" : 0,
