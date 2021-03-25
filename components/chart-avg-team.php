@@ -10,15 +10,12 @@ Chart Step No. 1. DATASETUP - JSON format
 
 	`department` is department where member belongs
 
+
 	`items` are instances of data under the member
 
 		each item will have the following properties
-
-		`task_cat` - type of task
-
-		`date` - date of duration
-
-		`duration` - integer to be used to calculate represent the width of bars
+		
+			`Task Cat Title`: sum of amount of hours spent on the task category
 
 
 	If structure is not possible, let me know so I can modify the script to accept form of data structure
@@ -30,24 +27,20 @@ var placeholderData = [
 		"department": "developers",
 		"items": [
 			{
-				"task_cat": "AC Task",
-				"date": "2069-04-20",
+				"task_cat":"AC Task",
 				"duration": 20
 			},
 			{
-				"task_cat": "Software Development",
-				"date": "2069-04-20",
+				"task_cat":"Software Development",
 				"duration": 30
 			},
 			{
-				"task_cat": "Internal Project Development",
-				"date": "2069-04-20",
-				"duration": 1
+				"task_cat":"Internal Project Development",
+				"duration": 35
 			},
 			{
-				"task_cat": "Email Innbox Management",
-				"date": "2069-04-20",
-				"duration": 1
+				"task_cat":"Email Inbox Management",
+				"duration": 15
 			}
 		]
 	},
@@ -56,23 +49,19 @@ var placeholderData = [
 		"department": "developers",
 		"items": [
 			{
-				"task_cat": "AC Task",
-				"date": "2069-04-20",
+				"task_cat":"AC Task",
 				"duration": 40
 			},
 			{
-				"task_cat": "Software Development",
-				"date": "2069-04-20",
+				"task_cat":"Software Development",
 				"duration": 20
 			},
 			{
-				"task_cat": "Bugherds",
-				"date": "2069-04-20",
+				"task_cat":"Bugherds",
 				"duration": 69
 			},
 			{
-				"task_cat": "Research, Education & Training",
-				"date": "2069-04-20",
+				"task_cat":"Research, Education & Training",
 				"duration": 10
 			}
 		]
@@ -82,24 +71,20 @@ var placeholderData = [
 		"department": "developers",
 		"items": [
 			{
-				"task_cat": "AC Task",
-				"date": "2069-04-20",
+				"task_cat":"AC Task",
 				"duration": 40
 			},
 			{
-				"task_cat": "Software Development",
-				"date": "2069-04-20",
+				"task_cat":"Software Development",
 				"duration": 20
 			},
 			{
-				"task_cat": "Bugherds",
-				"date": "2069-04-20",
+				"task_cat":"Bugherds",
 				"duration": 69
 			},
 			{
-				"task_cat": "Research, Education & Training",
-				"date": "2069-04-20",
-				"duration": 1
+				"task_cat":"Research, Education & Training",
+				"duration": 16
 			}
 		]
 	},
@@ -108,23 +93,19 @@ var placeholderData = [
 		"department": "developers",
 		"items": [
 			{
-				"task_cat": "AC Task",
-				"date": "2069-04-20",
+				"task_cat":"AC Task",
 				"duration": 40
 			},
 			{
-				"task_cat": "Software Development",
-				"date": "2069-04-20",
+				"task_cat":"Software Development",
 				"duration": 20
 			},
 			{
-				"task_cat": "Bugherds",
-				"date": "2069-04-20",
+				"task_cat":"Bugherds",
 				"duration": 69
 			},
 			{
-				"task_cat": "Research, Education & Training",
-				"date": "2069-04-20",
+				"task_cat":"Research, Education & Training",
 				"duration": 50
 			}
 		]
@@ -136,39 +117,32 @@ var placeholderData = [
 		"department": "designers",
 		"items": [
 			{
-				"task_cat": "Client Homepage Design",
-				"date": "2069-04-20",
+				"task_cat":"Client Homepage Design",
 				"duration": 20
 			},
 			{
-				"task_cat": "Client Internal Page Design",
-				"date": "2069-04-20",
+				"task_cat":"Client Internal Page Design",
 				"duration": 30
 			},
 			{
-				"task_cat": "Meetings",
-				"date": "2069-04-20",
+				"task_cat":"Meetings",
 				"duration": 30
 			},
 			{
-				"task_cat": "Research, Education & Training",
-				"date": "2069-04-20",
+				"task_cat":"Research, Education & Training",
 				"duration": 80
 			},
 			{
-				"task_cat": "Bugherds",
-				"date": "2069-04-20",
+				"task_cat":"Bugherds",
 				"duration": 1
 			},
 			{
-				"task_cat": "Maintenance Task",
-				"date": "2069-04-20",
+				"task_cat":"Maintenance Task",
 				"duration": 1
 			},
 			{
-				"task_cat": "AC Tasks Management",
-				"date": "2069-04-20",
-				"duration": 1
+				"task_cat":"AC Tasks Management",
+				"duration": 11
 			}
 		]
 	},
@@ -177,38 +151,31 @@ var placeholderData = [
 		"department": "designers",
 		"items": [
 			{
-				"task_cat": "Client Homepage Design",
-				"date": "2069-04-20",
+				"task_cat":"Client Homepage Design",
 				"duration": 20
 			},
 			{
-				"task_cat": "Client Internal Page Design",
-				"date": "2069-04-20",
+				"task_cat":"Client Internal Page Design",
 				"duration": 10
 			},
 			{
-				"task_cat": "Meetings",
-				"date": "2069-04-20",
+				"task_cat":"Meetings",
 				"duration": 40
 			},
 			{
-				"task_cat": "Research, Education & Training",
-				"date": "2069-04-20",
+				"task_cat":"Research, Education & Training",
 				"duration": 80
 			},
 			{
-				"task_cat": "Bugherds",
-				"date": "2069-04-20",
+				"task_cat":"Bugherds",
 				"duration": 90
 			},
 			{
-				"task_cat": "Maintenance Task",
-				"date": "2069-04-20",
+				"task_cat":"Maintenance Task",
 				"duration": 1
 			},
 			{
-				"task_cat": "AC Tasks Management",
-				"date": "2069-04-20",
+				"task_cat":"AC Tasks Management",
 				"duration": 1
 			}
 		]
@@ -220,38 +187,31 @@ var placeholderData = [
 		"department": "seo",
 		"items": [
 			{
-				"task_cat": "Link Building",
-				"date": "2069-04-20",
+				"task_cat":"Link Building",
 				"duration": 90
 			},
 			{
-				"task_cat": "On-Page SEO",
-				"date": "2069-04-20",
+				"task_cat":"On-Page SEO",
 				"duration": 10
 			},
 			{
-				"task_cat": "Research",
-				"date": "2069-04-20",
+				"task_cat":"Research",
 				"duration": 40
 			},
 			{
-				"task_cat": "Campaign Analysis",
-				"date": "2069-04-20",
+				"task_cat":"Campaign Analysis",
 				"duration": 80
 			},
 			{
-				"task_cat": "Website Content Posts",
-				"date": "2069-04-20",
+				"task_cat":"Website Content Posts",
 				"duration": 90
 			},
 			{
-				"task_cat": "Maintenance Task",
-				"date": "2069-04-20",
+				"task_cat":"Maintenance Task",
 				"duration": 1
 			},
 			{
-				"task_cat": "AC Tasks Management",
-				"date": "2069-04-20",
+				"task_cat":"AC Tasks Management",
 				"duration": 1
 			}
 		]
@@ -262,38 +222,31 @@ var placeholderData = [
 		"department": "seo",
 		"items": [
 			{
-				"task_cat": "Link Building",
-				"date": "2069-04-20",
+				"task_cat":"Link Building",
 				"duration": 20
 			},
 			{
-				"task_cat": "On-Page SEO",
-				"date": "2069-04-20",
+				"task_cat":"On-Page SEO",
 				"duration": 10
 			},
 			{
-				"task_cat": "Research",
-				"date": "2069-04-20",
+				"task_cat":"Research",
 				"duration": 22
 			},
 			{
-				"task_cat": "Campaign Analysis",
-				"date": "2069-04-20",
+				"task_cat":"Campaign Analysis",
 				"duration": 80
 			},
 			{
-				"task_cat": "Website Content Posts",
-				"date": "2069-04-20",
+				"task_cat":"Website Content Posts",
 				"duration": 90
 			},
 			{
-				"task_cat": "Maintenance Task",
-				"date": "2069-04-20",
+				"task_cat":"Maintenance Task",
 				"duration": 9
 			},
 			{
-				"task_cat": "AC Tasks Management",
-				"date": "2069-04-20",
+				"task_cat":"AC Tasks Management",
 				"duration": 1
 			}
 		]
@@ -326,45 +279,32 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			if (!selector || !incomingData ){
 				return false;
 			}
-			const WBC = this;//hELP
-			WBC.selector = selector;
-			WBC.initData = incomingData;
-			WBC.data = [];
 
-			WBC.barHeight = 64;
+			this.selector = selector;
+			this.data = [];
 
-			WBC.padding = [10,10,10,50];
-
-			WBC.width = 1500;
-
-			WBC.height = (()=>{
+			this.barHeight = 64;
+			this.padding = [10,10,10,50];
+			this.width = 1500;
+			this.height = (()=>{
 				return this.data.length 
 					? (this.data.length * this.barHeight )
-					: (this.initData.length  * this.barHeight)
+					: 800
 			})();
 
-			WBC.CanvasWidth = WBC.width + WBC.padding[0] + WBC.padding[2];
-			WBC.CanvasHeight = WBC.height + WBC.padding[1] + WBC.padding[3];
-			
+			this.CanvasWidth = this.width + this.padding[1] + this.padding[3];
+			this.CanvasHeight = this.height + this.padding[0] + this.padding[2];
 
-			WBC.init = ()=> {
+			this.init = ()=> {
 
-
+				const WBC = this;
 
 				//select the dootdoot and set it up for the svg that will bear our bois
-				WBC.container = d3.select(WBC.selector)
-					.html('')
-					.style('position','relative')
-					.style('padding-bottom', function(){
-						return  (( (WBC.CanvasHeight) / (WBC.CanvasWidth) ) * 100) +'%'; //responsive
-					});
-
-
-				
+				this.container = d3.select(this.selector)
+					.html('');
 
 				//append svg where we render the bois
-				WBC.svg  = WBC.container.append('svg')
-						.attr('viewBox','0 0 ' + WBC.CanvasWidth + ' ' + WBC.CanvasHeight ) 
+				this.svg  = this.container.append('svg')
 						.style('position','absolute')
 						.style('top','0')
 						.style('left','0')
@@ -384,15 +324,139 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						// .attr('width',_.canvasWidth) //so svg has a reference of "actual size" or responsive common sense
 						// .attr('height',_.canvasOuterHeight) //so svg has a reference of "actual size" or responsive common sense
 						;
+
+				return this.update(incomingData);
 			}
 
-			WBC.update = (department,dateRange) => {
+			this.xMin = ()=>{
+				return d3.min(this.data,(dis)=>{
+					return d3.min(dis.items,(dit)=>{
+						return dit.duration;
+					});
+				});
+			}
+
+			this.xMax = ()=>{
+				return d3.max(this.data,(dis)=>{
+					return d3.max(dis.items,(dit)=>{
+						return dit.duration;
+					});
+				});
+			}
+
+			this.colorDomain = ()=>{
+
+			}
+
+
+
+
+
+
+			this.update = (newData,department) => {
+				const WBC = this;
+
+				newData  = newData || WBC.data;
+				WBC.data = newData;
+
+				department = department || false;
+
+
+				this.x = d3.scaleLinear()
+					.range([
+						this.padding[4],
+						this.width - this.padding[1]
+					])
+					.domain([
+						this.xMin(),
+						this.xMax()
+					])
+					;
+				
+				this.y = d3.scaleBand()
+					.range([
+						this.padding[0],
+						this.height - this.padding[2]
+					])
+					.domain(this.data.map(d => d.name))
+					.padding(10)
+					;
+
+				this.color = d3.scaleOrdinal()
+					.range([
+						'#fec87c', '#fb1818', '#f7bc00', '#006943', '#b6e4b6', '#0480fe', '#a168d9', '#fd7f03', '#16b900', '#01c6ab', '#0037b4', '#5e01a8', '#fe85d6', '#fff200', '#d7c368', '#e18256', '#313f76', '#547b80', '#8f4139', '#ecc65f', '#d069a9', '#008eb0', '#5f6046', '#c26558', '#4db7ff', '#5a3b00', '#e1e43c', '#6154a4', '#9e005d', '#000000'
+					])
+					.domain(this.colorDomain)
+					;
+				
+
+				WBC.container
+					.style('position','relative')
+					.style('padding-bottom', function(){
+						return  (( (WBC.CanvasHeight) / (WBC.CanvasWidth) ) * 100) +'%'; //responsive
+					});
+
+
+				WBC.svg
+					.attr('viewBox','0 0 ' + WBC.CanvasWidth + ' ' + WBC.CanvasHeight )
+					;
+
+
+				WBC.member = WBC.svg.selectAll('g.chart-team-member')
+					.data(
+						WBC.data,
+						(dat)=>{
+							
+							if(
+								(
+									department
+									&& dat.department == department
+								) || (
+									!department
+								)
+							){
+								return dat.name
+							}
+						}
+					)
+					;
+
+				WBC.member_enter = WBC.member.enter()
+					.append('g')
+					.attr('class','chart-team-member');
+
+				WBC.shape = WBC.member_enter
+					.selectAll('rect')
+					.data((d)=>{
+						var filteredItems = [];
+						var instances = d.items.reduce(function(acc,dis){
+							if(!acc.includes(dis.task_cat)){
+								acc.push(dis.task_cat);
+								filteredItems.push(dis);
+							}
+							
+							return acc;
+						},[]);
+						
+
+						return filteredItems;
+					})
+					;
+
+				WBC.shape
+					.enter()
+					.append('rect')
+
+				console.log(WBC);
+
+				console.log(this.color.domain())
+
+
+				return this;
 
 			}
 			
-			WBC.init();
-
-			return WBC;
+			this.init();
 		}
 
 	window.WorkflowBarChart = WorkflowBarChart;
@@ -413,15 +477,6 @@ this Version loads d3 as well instead of manually embedding script. may cause th
 	);
 	
 	// graph.updateBubbles(
-	// 	// newData,
-	// 	null,
-	// 	{
-	// 		bubbleDomain:[0,max],
-	// 		dateRange: [
-	// 			new Date(2020,month,1),
-	// 			new Date(2020,month+2,1)
-	// 		]
-	// 		// palette:['#fff200', '#d7c368', '#e18256', '#313f76', '#547b80', '#8f4139', '#ecc65f', '#d069a9', '#008eb0', '#5f6046', '#c26558', '#4db7ff', '#5a3b00', '#e1e43c', '#6154a4', '#9e005d', '#000000']
-	// 	}
+	// 	newData
 	// );
 </script>
