@@ -345,7 +345,31 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			}
 
 			this.colorDomain = ()=>{
+				var colDomain = [];
 
+				this.data.forEach((member)=>{
+					member.items.forEach(item=>{
+						if(!colDomain.includes(item.task_cat)){
+							colDomain.push(item.task_cat);
+						}
+					})
+				});
+				
+
+				return colDomain;
+			}
+
+			this.parsedData = (data)=>{
+				data = data || this.data;
+				data.forEach((member,i)=>{
+					const name = member.name;
+
+					member.items.forEach((item,j)=>{
+						data[i].items[j]._name = name;
+					})
+				})
+
+				return data;
 			}
 
 
@@ -362,9 +386,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				department = department || false;
 
 
-				this.x = d3.scaleLinear()
+				WBC.x = d3.scaleLinear()
 					.range([
-						this.padding[4],
+						this.padding[3],
 						this.width - this.padding[1]
 					])
 					.domain([
@@ -372,8 +396,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						this.xMax()
 					])
 					;
+
 				
-				this.y = d3.scaleBand()
+				WBC.y = d3.scaleBand()
 					.range([
 						this.padding[0],
 						this.height - this.padding[2]
@@ -382,7 +407,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.padding(10)
 					;
 
-				this.color = d3.scaleOrdinal()
+				WBC.color = d3.scaleOrdinal()
 					.range([
 						'#fec87c', '#fb1818', '#f7bc00', '#006943', '#b6e4b6', '#0480fe', '#a168d9', '#fd7f03', '#16b900', '#01c6ab', '#0037b4', '#5e01a8', '#fe85d6', '#fff200', '#d7c368', '#e18256', '#313f76', '#547b80', '#8f4139', '#ecc65f', '#d069a9', '#008eb0', '#5f6046', '#c26558', '#4db7ff', '#5a3b00', '#e1e43c', '#6154a4', '#9e005d', '#000000'
 					])
@@ -401,10 +426,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('viewBox','0 0 ' + WBC.CanvasWidth + ' ' + WBC.CanvasHeight )
 					;
 
+				console.log(WBC.parsedData());
 
 				WBC.member = WBC.svg.selectAll('g.chart-team-member')
 					.data(
-						WBC.data,
+						WBC.parsedData(),
 						(dat)=>{
 							
 							if(
@@ -423,9 +449,22 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				WBC.member_enter = WBC.member.enter()
 					.append('g')
-					.attr('class','chart-team-member');
+					.attr('class','chart-team-member')
+					
+				WBC.member.exit()
+					.remove()
+					;
 
-				WBC.shape = WBC.member_enter
+				WBC.member_merge = WBC.member.merge(WBC.member_enter);
+
+				WBC.member_merge
+					.attr('transform',(d)=>{
+						const coordY = WBC.y(d.name);
+
+						return `translate(0,${coordY})`;
+					})
+
+				WBC.shape = WBC.member_merge
 					.selectAll('rect')
 					.data((d)=>{
 						var filteredItems = [];
@@ -443,9 +482,23 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					})
 					;
 
-				WBC.shape
-					.enter()
+				WBC.shape_enter = WBC.shape.enter()
 					.append('rect')
+
+				WBC.shape_merge = WBC.shape.merge(WBC.shape_enter)
+					.attr('x',(d)=>{
+						return WBC.x(d.duration)
+					})
+					.attr('height',(d)=>{
+						return WBC.barHeight
+					})
+					.attr('width',(d)=>{
+						return 4
+					})
+					.attr('fill',(d)=>{
+						return WBC.color(d.task_cat)
+					})
+					;
 
 				console.log(WBC);
 
