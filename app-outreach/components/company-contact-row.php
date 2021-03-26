@@ -31,7 +31,7 @@
 	</td>
 	<td>
 		
-		<?app_get_component('components/tooltip-actions','',false,array(
+		<?app_get_component('components/dropdown-actions','',false,array(
 			'links' => array(
 				'Edit name or description' => 'class="tooltip-purger" data-toggle-modal-board href="#mb-editor-contact" data-modal-title="Edit Contact"',
 				'Copy Link' => 'href="#"',

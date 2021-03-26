@@ -474,6 +474,14 @@
       "oAP" : "\/components\/company-contact-row.php",
       "oF" : 0
     },
+    "\/components\/dropdown-actions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-actions.php",
+      "oF" : 0
+    },
     "\/components\/event-row.php" : {
       "cB" : 0,
       "ft" : 8192,
