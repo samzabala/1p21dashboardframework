@@ -2004,7 +2004,6 @@
 				
 				<a
 					 data-toggle-modal-default
-					data-modal-close="false"
 					data-modal-disable-overlay="false"
 					data-modal-width="800px"
 					data-modal-title="Bitch ass"
