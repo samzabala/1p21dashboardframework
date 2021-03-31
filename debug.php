@@ -32,6 +32,29 @@
 
 		<h1 data-toggle-accordion>data-toggle switch-on and switch-off<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+
+
+			<div class="switch">
+				<a href="#" data-toggle-switch>TOGGLE TIOGGLE TOGGLE</a>
+				<div class="switch-off" id="titty-view">
+					<div href="titty-edit" data-toggle-switch-on class="pointer-reference color-inherit text-decoration-none display-block cf">
+						<h2 class="no-margin-y"> Click to edit me 
+
+
+						<span class="only-hover color-primary">
+							<i class="symbol symbol-pencil"></i>
+						</span>
+						</h2>
+					</div>
+					
+				</div>
+				<div id="titty-edit" class="switch-on">
+					<div class="input-group input-large input-block input-group-horizontal">
+						<input type="text" class="input input-single-line">
+						<button data-toggle-switch-off class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
 			
 			<div class="switch">
 				<div class="switch-off" id="titty-view">

@@ -3445,7 +3445,9 @@
   VALID_MODAL_MODES.forEach(function (mode) {
     CURRENT_MODAL_INSTANCE[mode] = {
       element: false,
-      args: false
+      args: false,
+      UI: false,
+      UIContentBlock: false
     };
   });
 
@@ -3545,7 +3547,9 @@
         FwDom.moveContents(element, _this2.UIContentBlock);
         _classPrivateFieldLooseBase(_this2, _current)[_current] = {
           element: element,
-          args: _this2.args
+          args: _this2.args,
+          UI: _this2.UIRoot,
+          UIContentBlock: _this2.UIContentBlock
         };
 
         if (_this2.args.width) {
@@ -3600,7 +3604,9 @@
         canRemoveHash && UIChangeHash('');
         _classPrivateFieldLooseBase(_this3, _current)[_current] = {
           element: false,
-          args: false
+          args: false,
+          UI: false,
+          UIContentBlock: false
         };
       }, element);
     };
@@ -3724,6 +3730,11 @@
     };
 
     _createClass(Modal, [{
+      key: "instance",
+      get: function get() {
+        return _classPrivateFieldLooseBase(this, _current)[_current];
+      }
+    }, {
       key: "mode",
       get: function get() {
         return this._mode;
@@ -3880,6 +3891,8 @@
   function _set_current(obj) {
     CURRENT_MODAL_INSTANCE[this.mode].element = obj.element;
     CURRENT_MODAL_INSTANCE[this.mode].args = obj.args;
+    CURRENT_MODAL_INSTANCE[this.mode].UI = obj.UI;
+    CURRENT_MODAL_INSTANCE[this.mode].UIContentBlock = obj.UIContentBlock;
   }
 
   function _modeToggle2(mode) {
