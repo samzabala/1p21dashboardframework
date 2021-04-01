@@ -283,7 +283,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.selector = selector;
 			this.data = [];
 
-			this.barHeight = 64;
+			this.barHeight = 24;
 			this.padding = [10,10,10,50];
 			this.width = 1500;
 			this.height = (()=>{
@@ -404,7 +404,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						this.height - this.padding[2]
 					])
 					.domain(this.data.map(d => d.name))
-					.padding(10)
+					.padding(.1)
 					;
 
 				WBC.color = d3.scaleOrdinal()
@@ -461,12 +461,13 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('transform',(d)=>{
 						const coordY = WBC.y(d.name);
 
-						return `translate(0,${coordY})`;
+						return `translate(${WBC.padding[3]},${coordY})`;
 					})
 
 				WBC.shape = WBC.member_merge
 					.selectAll('rect')
 					.data((d)=>{
+						console.warn(d);
 						var filteredItems = [];
 						var instances = d.items.reduce(function(acc,dis){
 							if(!acc.includes(dis.task_cat)){
@@ -486,23 +487,20 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.append('rect')
 
 				WBC.shape_merge = WBC.shape.merge(WBC.shape_enter)
-					.attr('x',(d)=>{
+					.attr('x',(d,i)=>{
 						return WBC.x(d.duration)
 					})
 					.attr('height',(d)=>{
-						return WBC.barHeight
+						console.log(WBC.y.bandwidth());
+						return WBC.y.bandwidth()
 					})
 					.attr('width',(d)=>{
-						return 4
+						return WBC.x(d.duration);
 					})
 					.attr('fill',(d)=>{
 						return WBC.color(d.task_cat)
 					})
 					;
-
-				console.log(WBC);
-
-				console.log(this.color.domain())
 
 
 				return this;
