@@ -283,9 +283,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.selector = selector;
 			this.data = [];
 
-			this.barHeight = 24;
+			this.barHeight = 10;
 			this.padding = [10,10,10,50];
-			this.width = 1500;
+			this.width = 1800;
 			this.height = (()=>{
 				return this.data.length 
 					? (this.data.length * this.barHeight )
@@ -338,9 +338,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 			this.xMax = ()=>{
 				return d3.max(this.data,(dis)=>{
-					return d3.max(dis.items,(dit)=>{
-						return dit.duration;
+					let sum = 0;
+					dis.items.forEach(dit=>{
+						sum += parseFloat(dit.duration);
 					});
+					return sum;
 				});
 			}
 
@@ -467,7 +469,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				WBC.shape = WBC.member_merge
 					.selectAll('rect')
 					.data((d)=>{
-						console.warn(d);
 						var filteredItems = [];
 						var instances = d.items.reduce(function(acc,dis){
 							if(!acc.includes(dis.task_cat)){
@@ -478,6 +479,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 							return acc;
 						},[]);
 						
+						console.warn(filteredItems);
 
 						return filteredItems;
 					})
