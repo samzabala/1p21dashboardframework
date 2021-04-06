@@ -15,7 +15,8 @@ Chart Step No. 1. DATASETUP - JSON format
 
 		each item will have the following properties
 		
-			`Task Cat Title`: sum of amount of hours spent on the task category
+			`Task Cat Title`: category
+			`duration`: decimal percentage of hours to total (should be more than 0 but less than or equal to 1)
 
 
 	If structure is not possible, let me know so I can modify the script to accept form of data structure
@@ -28,19 +29,19 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"AC Task",
-				"duration": 20
+				"duration": .20
 			},
 			{
 				"task_cat":"Software Development",
-				"duration": 30
+				"duration": .30
 			},
 			{
 				"task_cat":"Internal Project Development",
-				"duration": 35
+				"duration": .35
 			},
 			{
 				"task_cat":"Email Inbox Management",
-				"duration": 15
+				"duration": .15
 			}
 		]
 	},
@@ -50,19 +51,19 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"AC Task",
-				"duration": 40
+				"duration": .40
 			},
 			{
 				"task_cat":"Software Development",
-				"duration": 20
+				"duration": .20
 			},
 			{
 				"task_cat":"Bugherds",
-				"duration": 69
+				"duration": .20
 			},
 			{
 				"task_cat":"Research, Education & Training",
-				"duration": 10
+				"duration": .20
 			}
 		]
 	},
@@ -72,19 +73,19 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"AC Task",
-				"duration": 40
+				"duration": .69
 			},
 			{
 				"task_cat":"Software Development",
-				"duration": 20
+				"duration": .01
 			},
 			{
 				"task_cat":"Bugherds",
-				"duration": 69
+				"duration": .10
 			},
 			{
 				"task_cat":"Research, Education & Training",
-				"duration": 16
+				"duration": .20
 			}
 		]
 	},
@@ -94,19 +95,19 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"AC Task",
-				"duration": 40
+				"duration": .25
 			},
 			{
 				"task_cat":"Software Development",
-				"duration": 20
+				"duration": .25
 			},
 			{
 				"task_cat":"Bugherds",
-				"duration": 69
+				"duration": .25
 			},
 			{
 				"task_cat":"Research, Education & Training",
-				"duration": 50
+				"duration": .25
 			}
 		]
 	},
@@ -118,31 +119,31 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"Client Homepage Design",
-				"duration": 20
+				"duration": .75
 			},
 			{
 				"task_cat":"Client Internal Page Design",
-				"duration": 30
+				"duration": .05
 			},
 			{
 				"task_cat":"Meetings",
-				"duration": 30
+				"duration": .01
 			},
 			{
 				"task_cat":"Research, Education & Training",
-				"duration": 80
+				"duration": .09
 			},
 			{
 				"task_cat":"Bugherds",
-				"duration": 1
+				"duration": .01
 			},
 			{
 				"task_cat":"Maintenance Task",
-				"duration": 1
+				"duration": .04
 			},
 			{
 				"task_cat":"AC Tasks Management",
-				"duration": 11
+				"duration": .05
 			}
 		]
 	},
@@ -152,31 +153,31 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"Client Homepage Design",
-				"duration": 20
+				"duration": .20
 			},
 			{
 				"task_cat":"Client Internal Page Design",
-				"duration": 10
+				"duration": .10
 			},
 			{
 				"task_cat":"Meetings",
-				"duration": 40
+				"duration": .40
 			},
 			{
 				"task_cat":"Research, Education & Training",
-				"duration": 80
+				"duration": .14
 			},
 			{
 				"task_cat":"Bugherds",
-				"duration": 90
+				"duration": .15
 			},
 			{
 				"task_cat":"Maintenance Task",
-				"duration": 1
+				"duration": .005
 			},
 			{
 				"task_cat":"AC Tasks Management",
-				"duration": 1
+				"duration": .005
 			}
 		]
 	},
@@ -188,31 +189,31 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"Link Building",
-				"duration": 90
+				"duration": .20
 			},
 			{
 				"task_cat":"On-Page SEO",
-				"duration": 10
+				"duration": .10
 			},
 			{
 				"task_cat":"Research",
-				"duration": 40
+				"duration": .40
 			},
 			{
 				"task_cat":"Campaign Analysis",
-				"duration": 80
+				"duration": .10
 			},
 			{
 				"task_cat":"Website Content Posts",
-				"duration": 90
+				"duration": .05
 			},
 			{
 				"task_cat":"Maintenance Task",
-				"duration": 1
+				"duration": .05
 			},
 			{
 				"task_cat":"AC Tasks Management",
-				"duration": 1
+				"duration": .1
 			}
 		]
 	},
@@ -223,31 +224,268 @@ var placeholderData = [
 		"items": [
 			{
 				"task_cat":"Link Building",
-				"duration": 20
+				"duration": .20
 			},
 			{
 				"task_cat":"On-Page SEO",
-				"duration": 10
+				"duration": .10
 			},
 			{
 				"task_cat":"Research",
-				"duration": 22
+				"duration": .22
 			},
 			{
 				"task_cat":"Campaign Analysis",
-				"duration": 80
+				"duration": .18
 			},
 			{
 				"task_cat":"Website Content Posts",
-				"duration": 90
+				"duration": .1
 			},
 			{
 				"task_cat":"Maintenance Task",
-				"duration": 9
+				"duration": .1
 			},
 			{
 				"task_cat":"AC Tasks Management",
-				"duration": 1
+				"duration": .1
+			}
+		]
+	},
+
+
+
+];
+
+
+
+var placeholderDataChange = [
+	{
+		"name": "Cristian R",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .20
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .30
+			},
+			{
+				"task_cat":"Internal Project Development",
+				"duration": .35
+			},
+			{
+				"task_cat":"Email Inbox Management",
+				"duration": .15
+			}
+		]
+	},
+	{
+		"name": "Sam Z",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .40
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .20
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .20
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .20
+			}
+		]
+	},
+	{
+		"name": "Nadia R",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .69
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .01
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .10
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .20
+			}
+		]
+	},
+	{
+		"name": "Mark S",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .25
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .25
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .25
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .25
+			}
+		]
+	},
+
+
+	{
+		"name": "Jenna E",
+		"department": "designers",
+		"items": [
+			{
+				"task_cat":"Client Homepage Design",
+				"duration": .75
+			},
+			{
+				"task_cat":"Client Internal Page Design",
+				"duration": .05
+			},
+			{
+				"task_cat":"Meetings",
+				"duration": .01
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .09
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .01
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .04
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .05
+			}
+		]
+	},
+	{
+		"name": "Stacy W",
+		"department": "designers",
+		"items": [
+			{
+				"task_cat":"Client Homepage Design",
+				"duration": .20
+			},
+			{
+				"task_cat":"Client Internal Page Design",
+				"duration": .10
+			},
+			{
+				"task_cat":"Meetings",
+				"duration": .40
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .14
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .15
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .005
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .005
+			}
+		]
+	},
+
+
+	{
+		"name": "Alana R.",
+		"department": "seo",
+		"items": [
+			{
+				"task_cat":"Link Building",
+				"duration": .20
+			},
+			{
+				"task_cat":"On-Page SEO",
+				"duration": .10
+			},
+			{
+				"task_cat":"Research",
+				"duration": .40
+			},
+			{
+				"task_cat":"Campaign Analysis",
+				"duration": .10
+			},
+			{
+				"task_cat":"Website Content Posts",
+				"duration": .05
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .05
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .1
+			}
+		]
+	},
+
+	{
+		"name": "Adam H.",
+		"department": "seo",
+		"items": [
+			{
+				"task_cat":"Link Building",
+				"duration": .20
+			},
+			{
+				"task_cat":"On-Page SEO",
+				"duration": .10
+			},
+			{
+				"task_cat":"Research",
+				"duration": .22
+			},
+			{
+				"task_cat":"Campaign Analysis",
+				"duration": .18
+			},
+			{
+				"task_cat":"Website Content Posts",
+				"duration": .1
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .1
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .1
 			}
 		]
 	},
@@ -261,7 +499,7 @@ var placeholderData = [
 Chart Step No. 2. + D3 Library + DOM ELEMENT
 an element with a unique id to render the graph to. add color and background helpers for more fancyness as desired. chart markup shouls look like this: 
  -->
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
 <div id="avg-all-chart" class="background-theme color-theme"></div>
 <!-- 
 Chart Step No 3. Script that must be copy pasted
@@ -283,17 +521,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.selector = selector;
 			this.data = [];
 
-			this.barHeight = 10;
-			this.padding = [10,10,10,50];
-			this.width = 1800;
-			this.height = (()=>{
-				return this.data.length 
-					? (this.data.length * this.barHeight )
-					: 800
-			})();
-
-			this.CanvasWidth = this.width + this.padding[1] + this.padding[3];
-			this.CanvasHeight = this.height + this.padding[0] + this.padding[2];
+			this.barHeight = 50;
+			this.width = 1280;
+			this.padding = [50,10,10,75];
 
 			this.init = ()=> {
 
@@ -303,8 +533,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				this.container = d3.select(this.selector)
 					.html('');
 
+				this.svgWrapper = this.container.append('div');
+
 				//append svg where we render the bois
-				this.svg  = this.container.append('svg')
+				this.svg  = this.svgWrapper.append('svg')
 						.style('position','absolute')
 						.style('top','0')
 						.style('left','0')
@@ -312,7 +544,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						.style('right','0')
 						.attr('font-size','1em')
 						.attr('font-family','inherit')
-						.style('text-transform','uppercase')
 						.attr('color','inherit')
 						.style('line-height',1)
 						.style('margin','auto')
@@ -321,12 +552,21 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						.attr('y','0px')
 						.attr("preserveAspectRatio", "xMidYMid meet") //responsive
 						.attr('xml:space','preserve')
-						// .attr('width',_.canvasWidth) //so svg has a reference of "actual size" or responsive common sense
-						// .attr('height',_.canvasOuterHeight) //so svg has a reference of "actual size" or responsive common sense
 						;
+
+				
+
+				WBC.legends = WBC.container.append('div')
+					.attr('class','flex-grid flex-grid-fixed');
 
 				return this.update(incomingData);
 			}
+
+			this.sibData = (teamMember)=>{
+				let toReturn = this.data.filter((d)=>{return d.name == teamMember})[0];
+				return toReturn.items;
+			}
+			
 
 			this.xMin = ()=>{
 				return d3.min(this.data,(dis)=>{
@@ -387,48 +627,66 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				department = department || false;
 
+				console.log(newData);
+
+				WBC.height = (()=>{
+					return newData.length 
+						? (newData.length * WBC.barHeight )
+						: 800
+				})();
+
+				WBC.canvasWidth = WBC.width + WBC.padding[1] + WBC.padding[3];
+				WBC.canvasHeight = WBC.height + WBC.padding[0] + WBC.padding[2];
+
 
 				WBC.x = d3.scaleLinear()
 					.range([
 						this.padding[3],
-						this.width - this.padding[1]
+						this.canvasWidth - this.padding[1]
+						// this.padding[3] + this.width
 					])
-					.domain([
-						this.xMin(),
-						this.xMax()
-					])
+					.domain([0,1])
 					;
 
 				
 				WBC.y = d3.scaleBand()
 					.range([
 						this.padding[0],
-						this.height - this.padding[2]
+						this.canvasHeight - this.padding[2]
+						// this.padding[0] + this.height
 					])
 					.domain(this.data.map(d => d.name))
 					.padding(.1)
+					;
+
+				WBC.yAxis = WBC.svg.append('g')
+					.attr("transform", `translate(${this.padding[3]})`)
+					.call(d3.axisLeft(WBC.y))
+					.attr('font-family',null)
 					;
 
 				WBC.color = d3.scaleOrdinal()
 					.range([
 						'#fec87c', '#fb1818', '#f7bc00', '#006943', '#b6e4b6', '#0480fe', '#a168d9', '#fd7f03', '#16b900', '#01c6ab', '#0037b4', '#5e01a8', '#fe85d6', '#fff200', '#d7c368', '#e18256', '#313f76', '#547b80', '#8f4139', '#ecc65f', '#d069a9', '#008eb0', '#5f6046', '#c26558', '#4db7ff', '#5a3b00', '#e1e43c', '#6154a4', '#9e005d', '#000000'
 					])
-					.domain(this.colorDomain)
+					.domain(WBC.colorDomain())
 					;
 				
 
-				WBC.container
+				WBC.svgWrapper
 					.style('position','relative')
 					.style('padding-bottom', function(){
-						return  (( (WBC.CanvasHeight) / (WBC.CanvasWidth) ) * 100) +'%'; //responsive
+						return  (( (WBC.canvasHeight) / (WBC.canvasWidth) ) * 100) +'%'; //responsive
 					});
 
 
 				WBC.svg
-					.attr('viewBox','0 0 ' + WBC.CanvasWidth + ' ' + WBC.CanvasHeight )
+					// .attr('width',WBC.canvasWidth) //so svg has a reference of "actual size" or responsive common sense
+					// .attr('height',WBC.canvasOuterHeight) //so svg has a reference of "actual size" or responsive common sense
+					// .style('outline','1px solid red')
+					.attr('viewBox','0 0 ' + WBC.canvasWidth + ' ' + WBC.canvasHeight )
 					;
 
-				console.log(WBC.parsedData());
 
 				WBC.member = WBC.svg.selectAll('g.chart-team-member')
 					.data(
@@ -451,20 +709,15 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				WBC.member_enter = WBC.member.enter()
 					.append('g')
-					.attr('class','chart-team-member')
+					.attr('class',(d)=>{
+						return 'chart-team-member chart-team-member-'+d.name
+					})
 					
 				WBC.member.exit()
 					.remove()
 					;
 
 				WBC.member_merge = WBC.member.merge(WBC.member_enter);
-
-				WBC.member_merge
-					.attr('transform',(d)=>{
-						const coordY = WBC.y(d.name);
-
-						return `translate(${WBC.padding[3]},${coordY})`;
-					})
 
 				WBC.shape = WBC.member_merge
 					.selectAll('rect')
@@ -478,8 +731,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 							
 							return acc;
 						},[]);
-						
-						console.warn(filteredItems);
 
 						return filteredItems;
 					})
@@ -488,21 +739,51 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				WBC.shape_enter = WBC.shape.enter()
 					.append('rect')
 
+
 				WBC.shape_merge = WBC.shape.merge(WBC.shape_enter)
+					.attr('y',(d)=>{
+						return WBC.y(d._name);
+					})
 					.attr('x',(d,i)=>{
-						return WBC.x(d.duration)
+						const prevD = i > 0 ? WBC.sibData(d._name)[i - 1] : false;
+
+						d._x = prevD ?
+							(parseFloat(prevD._x) + parseFloat(prevD.duration)) :
+							0;
+
+						
+						return WBC.x(d._x)
 					})
 					.attr('height',(d)=>{
-						console.log(WBC.y.bandwidth());
 						return WBC.y.bandwidth()
 					})
 					.attr('width',(d)=>{
-						return WBC.x(d.duration);
+
+					console.log(d._name,d.duration,WBC.x(d.duration),WBC.x.range());
+						return WBC.x(d.duration) - WBC.x.range()[0];
 					})
 					.attr('fill',(d)=>{
 						return WBC.color(d.task_cat)
 					})
 					;
+
+				WBC.legend = WBC.legends.selectAll('div.legend-item')
+					.data(WBC.colorDomain())
+
+				WBC.legend_enter = WBC.legend.enter()
+					.append('div')
+					.attr('class',(d)=>{
+						return 'legend-item flex-col-xs-12 flex-col-sm-6 flex-col-md-3'
+					})
+					.html((d)=>`
+						<span class="legend" style="background-color:${WBC.color(d)}"></span> ${d}
+					`)
+					;
+					
+				WBC.legend.exit()
+					.remove()
+					;
+					
 
 
 				return this;
