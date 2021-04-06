@@ -266,7 +266,7 @@ var placeholderDataChange = [
 		"items": [
 			{
 				"task_cat":"AC Task",
-				"duration": .20
+				"duration": .40
 			},
 			{
 				"task_cat":"Software Development",
@@ -274,7 +274,7 @@ var placeholderDataChange = [
 			},
 			{
 				"task_cat":"Internal Project Development",
-				"duration": .35
+				"duration": .15
 			},
 			{
 				"task_cat":"Email Inbox Management",
