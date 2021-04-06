@@ -1,30 +1,28 @@
 //change file paths depending on setup
 
 //core. for restart functions and modifying settings
-import Initiator from './imports/core/initiator.js';
-import Settings from './imports/core/settings.js';
+import Initiator from './../../../assets/plugins/framework/src/js/imports/core/initiator.js';
+import Settings from './../../../assets/plugins/framework/src/js/imports/core/settings.js';
 
-import Accordion from './imports/accordion.js';
-import Button from './imports/button.js';
-import Dropdown from './imports/dropdown.js';
-import Form from './imports/form.js';
-import Lazy from './imports/lazy.js';
-import Modal from './imports/modal.js';
-import ModuleGrid from './imports/module-grid.js';
-import Switch from './imports/switch.js';
-import Tooltip from './imports/tooltip.js';
+//globally used components
+import Dropdown from './../../../assets/plugins/framework/src/js/imports/dropdown.js';
+import Lazy from './../../../assets/plugins/framework/src/js/imports/lazy.js';
+import ModuleGrid from './../../../assets/plugins/framework/src/js/imports/module-grid.js';
+
+/* component/template specific components. will be mentioned in specific components where they are present */
+	// import Tooltip from './../../../assets/plugins/framework/src/js/imports/tooltip.js';
+	// import Accordion from './../../../assets/plugins/framework/src/js/imports/accordion.js';
+	// import Button from './../../../assets/plugins/framework/src/js/imports/button.js'; //
+	// import Form from './../../../assets/plugins/framework/src/js/imports/form.js';
+	// import Modal from './../../../assets/plugins/framework/src/js/imports/modal.js';
+	// import Switch from './../../../assets/plugins/framework/src/js/imports/switch.js';
 
 const FrameWork = {
   Initiator,
-  Button,
   Settings,
-  Accordion,
+
   Dropdown,
-  Form,
   Lazy,
-  Modal,
   ModuleGrid,
-  Switch,
-  Tooltip,
 };
 export default FrameWork;
