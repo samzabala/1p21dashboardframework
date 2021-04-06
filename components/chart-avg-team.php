@@ -521,7 +521,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.selector = selector;
 			this.data = [];
 
-			this.barHeight = 50;
+			this.barHeight = 32;
 			this.width = 1280;
 			this.padding = [50,10,10,75];
 
@@ -779,6 +779,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						<span class="legend" style="background-color:${WBC.color(d)}"></span> ${d}
 					`)
 					;
+					//@TODO merge for update
 					
 				WBC.legend.exit()
 					.remove()
