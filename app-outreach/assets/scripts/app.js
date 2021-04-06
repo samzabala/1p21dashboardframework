@@ -1,12 +1,12 @@
 typeof Turbolinks == 'object' && Turbolinks.start();
-(function(fw,window){
+(function(FrameWork,window){
 	
 	document.addEventListener("turbolinks:before-render", function(e) {
-		fw.Initiator.setLoadingState();
+		FrameWork.Initiator.setLoadingState();
 	})
 	document.addEventListener("turbolinks:load", function() {
-		fw.Initiator.restart();
+		FrameWork.Initiator.restart();
 	})
 
 
-}(fw,window));
+}(framework,window));

@@ -202,6 +202,39 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/scripts\/framework.custom.example.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/framework.custom.example-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/framework.custom.mine.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/framework.custom.mine.min.js",
+      "oF" : 3,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/framework.custom.mine.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/framework.custom.mine.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/styles\/_custom.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -818,6 +851,270 @@
       "oAP" : "\/tasks.php",
       "oF" : 0
     },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/accordion.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/accordion-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/data-helper.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/data-helper-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/core\/initiator.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/core\/initiator-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/core\/settings.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/core\/settings-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/array.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/array-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/date.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/date-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/dom.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/dom-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/event.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/event-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/string.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/string-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/dropdown.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/dropdown-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-calendar.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-calendar-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-tags.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-tags-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/lazy.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/lazy-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/modal.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/modal-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/module-grid.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/module-grid-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/switch.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/switch-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/tooltip.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/tooltip-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/breakpoint.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/breakpoint-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/datahandler.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/datahandler-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/modifiers.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/modifiers-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/ui.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/ui-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/validation.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/validation-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.lite.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -881,7 +1178,7 @@
         "active" : 0
       },
       "class-properties" : {
-        "active" : 0
+        "active" : 1
       },
       "classes" : {
         "active" : 0
@@ -1043,7 +1340,7 @@
         "active" : 0
       },
       "private-methods" : {
-        "active" : 0
+        "active" : 1
       },
       "property-literals" : {
         "active" : 0
@@ -2904,11 +3201,12 @@
     },
     "rollupContext" : "",
     "rollupExternalEntries" : [
-
+      "FrameWork:::fw"
     ],
     "rollupReplacementEntries" : [
-      "process.env.NODE_ENV:::$NODE_ENV",
-      "ENVIRONMENT:::$NODE_ENV"
+      "'process.env.NODE_ENV':::$NODE_ENV",
+      "ENVIRONMENT:::$NODE_ENV",
+      "New_Target_String:::"
     ],
     "rollupTreeshakingEnabled" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",

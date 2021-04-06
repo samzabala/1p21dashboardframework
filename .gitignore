@@ -11,6 +11,8 @@ wp-includes/
 
 *.mine.scss
 *.mine.css
+*.mine.js
+*.mine.min.js
 *.map.*
 
 __fortesting.*
