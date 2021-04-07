@@ -1,4 +1,9 @@
+<!--
+Imports JS:
 
+Tooltip from framework/src/js/imports/tooltip
+
+-->
 <?php
 $defs = array(
 	'links' => array(

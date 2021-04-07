@@ -1,3 +1,9 @@
+<!--
+Imports JS:
+
+Button from framework/src/js/imports/button
+
+-->
 <?php
 $defs = array(
 	//@param post - type of single achuchuchu

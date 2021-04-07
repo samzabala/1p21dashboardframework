@@ -5,7 +5,7 @@
 				For your dashboard utility needs
 			</p>
 			<?php
-			if($_GET['component']){
+			if(isset($_GET['component'])){
 				$filename = filter_var($_GET['component']);
 				$avail_components = array(
 					$filename

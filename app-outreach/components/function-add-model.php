@@ -1,3 +1,9 @@
+<!--
+Imports JS:
+
+Modal from framework/src/js/imports/modal
+
+-->
 <div class="module-function function-add-model position-relative">
 
 	<a href="#" data-toggle-dropdown class="btn btn-primary">

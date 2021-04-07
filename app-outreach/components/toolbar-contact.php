@@ -1,3 +1,9 @@
+<!--
+Imports JS:
+
+Tooltip from framework/src/js/imports/tooltip
+
+-->
 <div class="toolbar-block justify-content-space-evenly toolbar toolbar-horizontal toolbar-small margin-auto-x border-color-transparent">
 	<!-- @if email is available -->
 		<div

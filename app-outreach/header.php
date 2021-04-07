@@ -32,8 +32,8 @@
 			}
 			
 			?> -->
-			<script src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/scripts/framework.custom.mine.min.js'?>" data-turbolinks-track="reload"></script>
-			<!-- <script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.lib.js'?>" data-turbolinks-track="reload"></script> -->
+			<!-- <script src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/scripts/framework.custom.mine.min.js'?>" data-turbolinks-track="reload"></script> -->
+			<script src="<?=FWAPPS_ROOT_URL.'/assets/plugins/framework/dist/js/framework.lib.js'?>" data-turbolinks-track="reload"></script>
 
 
 

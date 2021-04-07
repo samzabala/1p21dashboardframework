@@ -1,4 +1,9 @@
-<!-- toggler will manipulate title -->
+<!--
+Imports JS:
+
+Modal from framework/src/js/imports/modal
+
+-->
 <div class="modal modal-board" id="mb-editor-task" data-modal-title="Edit Task" data-modal-width="670px">
 	<form action="" class="flex-grid flex-grid-fixed">
 

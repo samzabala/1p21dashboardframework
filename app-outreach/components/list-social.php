@@ -1,3 +1,9 @@
+<!--
+Imports JS:
+
+Lazy from framework/src/js/imports/lazy
+
+-->
 <ul class="inline unstyled list-social no-margin-bottom color-neutral">
 	<!-- @if has facebook link -->
 		<li>

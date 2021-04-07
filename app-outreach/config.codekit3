@@ -862,6 +862,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/button.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/button-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component.js" : {
       "bF" : 0,
       "ft" : 64,

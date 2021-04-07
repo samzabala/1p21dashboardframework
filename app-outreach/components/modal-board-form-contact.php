@@ -1,4 +1,9 @@
-<!-- toggler will manipulate title -->
+<!--
+Imports JS:
+
+Modal from framework/src/js/imports/modal
+
+-->
 <div class="modal modal-board" id="mb-editor-contact" data-modal-title="Edit Contact" data-modal-width="770px">
 		<form class="flex-grid flex-grid-fixed">
 				<div class="flex-col-12">

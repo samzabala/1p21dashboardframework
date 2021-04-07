@@ -2,7 +2,7 @@
 <span class="thumbnail thumbnail-small">
 	<!-- @IF has profile imahe -->
 	<div class="thumbnail-image">
-		<img class="profile-image lazy" data-src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
+		<img class="profile-image" src="<?=FWAPPS_ROOT_URL ?>/placeholder/profiles/team-des-jenn.jpg" alt="">
 	</div>
 
 	<!-- @ELSE -->
