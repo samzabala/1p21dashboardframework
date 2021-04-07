@@ -31,8 +31,10 @@ export const UITriggerer = (triggerer, isGroupable) => {
       return;
     } else if (
       //calendar fix
-      triggerer.closest(`.${Settings.get('uiJsClass')}`) &&
-      !triggerer.closest(`.${UIDynamicClass}`)
+      (
+        triggerer.closest(`.${Settings.get('uiJsClass')}`) &&
+        !triggerer.closest(`.${UIDynamicClass}`)
+      )
     ) {
       toReturn = triggerer.closest(`.${Settings.get('uiJsClass')}`);
     } else {

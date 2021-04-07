@@ -13,14 +13,17 @@ Modal from framework/src/js/imports/form
 			id="company-vendor-history-row[REPLACE]-name"
 			name="company-vendor-history-row[REPLACE]-name"
 			value="REPLACEwithrowvalue" />
-		<a href="#" class="btn btn-default" data-toggle-dropdown>
-			<span class="REPLACE">REPLACEwithrowvalue</span>
+		<a href="#company-vendor-history-row-REPLACE-dropdown-start-date" class="btn btn-default" data-toggle-dropdown>
+			<span class="REPLACE">2010</span>
+		</a>
+		<span class="btn btn-default color-neutral btn-no-interaction">-</span>
+		<a href="#company-vendor-history-row-REPLACE-dropdown-end-date" class="btn btn-default" data-toggle-dropdown>
+			<span class="REPLACE">Present</span>
 		</a>
 	</div>
 	
 	
-	<div class="dropdown dropdown-right dropdown-top-flush" data-dropdown-width="100%">
-		<div class="">
+	<div id="company-vendor-history-row-REPLACE-dropdown-start-date" class="dropdown dropdown-right dropdown-top-flush" data-dropdown-width="100%">
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 				<label for="" class="input-label">Start Date</label>
 				<input
@@ -30,6 +33,10 @@ Modal from framework/src/js/imports/form
 					name="company-vendor-history-row[REPLACE]-date-start"
 					value="2069-04-20" />
 			</div>
+	</div>
+
+	<div id="company-vendor-history-row-REPLACE-dropdown-end-date" class="dropdown dropdown-right dropdown-top-flush" data-dropdown-width="100%">
+			
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 				<label for="company-vendor-history-row[REPLACE]-date-end" class="input-label">End Date</label>
@@ -42,7 +49,5 @@ Modal from framework/src/js/imports/form
 					value="2069-04-20" />
 				<br>
 			</div>
-		</div>
-		<a href="#" data-toggle-dropdown class="btn btn-primary btn-block">Set</a>
 	</div>
 </div>
