@@ -344,6 +344,16 @@ $sidebar-slim: 60px;
 
 
 .outreach {
+	&-body {
+		&-login {
+			background-image: linear-gradient(
+				0deg,
+				var(--fw-theme-color) 0%,
+				var(--fw-theme-color-contrast) 100%,
+			)
+			;
+		}
+	}
 	&-nav-item-container {
 		justify-content:center;
 
