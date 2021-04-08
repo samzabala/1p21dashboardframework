@@ -579,14 +579,6 @@
       "oAP" : "\/components\/input-company-competitors.php",
       "oF" : 0
     },
-    "\/components\/input-company-vendor-history.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/input-company-vendor-history.php",
-      "oF" : 0
-    },
     "\/components\/input-social.php" : {
       "cB" : 0,
       "ft" : 8192,
