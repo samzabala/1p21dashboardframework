@@ -256,250 +256,13 @@ var placeholderData = [
 
 
 ];
-
-
-
-var placeholderDataChange = [
-	{
-		"name": "Cristian R",
-		"department": "developers",
-		"items": [
-			{
-				"task_cat":"AC Task",
-				"duration": .40
-			},
-			{
-				"task_cat":"Software Development",
-				"duration": .30
-			},
-			{
-				"task_cat":"Internal Project Development",
-				"duration": .15
-			},
-			{
-				"task_cat":"Email Inbox Management",
-				"duration": .15
-			}
-		]
-	},
-	{
-		"name": "Sam Z",
-		"department": "developers",
-		"items": [
-			{
-				"task_cat":"AC Task",
-				"duration": .40
-			},
-			{
-				"task_cat":"Software Development",
-				"duration": .20
-			},
-			{
-				"task_cat":"Bugherds",
-				"duration": .20
-			},
-			{
-				"task_cat":"Research, Education & Training",
-				"duration": .20
-			}
-		]
-	},
-	{
-		"name": "Nadia R",
-		"department": "developers",
-		"items": [
-			{
-				"task_cat":"AC Task",
-				"duration": .69
-			},
-			{
-				"task_cat":"Software Development",
-				"duration": .01
-			},
-			{
-				"task_cat":"Bugherds",
-				"duration": .10
-			},
-			{
-				"task_cat":"Research, Education & Training",
-				"duration": .20
-			}
-		]
-	},
-	{
-		"name": "Mark S",
-		"department": "developers",
-		"items": [
-			{
-				"task_cat":"AC Task",
-				"duration": .25
-			},
-			{
-				"task_cat":"Software Development",
-				"duration": .25
-			},
-			{
-				"task_cat":"Bugherds",
-				"duration": .25
-			},
-			{
-				"task_cat":"Research, Education & Training",
-				"duration": .25
-			}
-		]
-	},
-
-
-	{
-		"name": "Jenna E",
-		"department": "designers",
-		"items": [
-			{
-				"task_cat":"Client Homepage Design",
-				"duration": .75
-			},
-			{
-				"task_cat":"Client Internal Page Design",
-				"duration": .05
-			},
-			{
-				"task_cat":"Meetings",
-				"duration": .01
-			},
-			{
-				"task_cat":"Research, Education & Training",
-				"duration": .09
-			},
-			{
-				"task_cat":"Bugherds",
-				"duration": .01
-			},
-			{
-				"task_cat":"Maintenance Task",
-				"duration": .04
-			},
-			{
-				"task_cat":"AC Tasks Management",
-				"duration": .05
-			}
-		]
-	},
-	{
-		"name": "Stacy W",
-		"department": "designers",
-		"items": [
-			{
-				"task_cat":"Client Homepage Design",
-				"duration": .20
-			},
-			{
-				"task_cat":"Client Internal Page Design",
-				"duration": .10
-			},
-			{
-				"task_cat":"Meetings",
-				"duration": .40
-			},
-			{
-				"task_cat":"Research, Education & Training",
-				"duration": .14
-			},
-			{
-				"task_cat":"Bugherds",
-				"duration": .15
-			},
-			{
-				"task_cat":"Maintenance Task",
-				"duration": .005
-			},
-			{
-				"task_cat":"AC Tasks Management",
-				"duration": .005
-			}
-		]
-	},
-
-
-	{
-		"name": "Alana R.",
-		"department": "seo",
-		"items": [
-			{
-				"task_cat":"Link Building",
-				"duration": .20
-			},
-			{
-				"task_cat":"On-Page SEO",
-				"duration": .10
-			},
-			{
-				"task_cat":"Research",
-				"duration": .40
-			},
-			{
-				"task_cat":"Campaign Analysis",
-				"duration": .10
-			},
-			{
-				"task_cat":"Website Content Posts",
-				"duration": .05
-			},
-			{
-				"task_cat":"Maintenance Task",
-				"duration": .05
-			},
-			{
-				"task_cat":"AC Tasks Management",
-				"duration": .1
-			}
-		]
-	},
-
-	{
-		"name": "Adam H.",
-		"department": "seo",
-		"items": [
-			{
-				"task_cat":"Link Building",
-				"duration": .20
-			},
-			{
-				"task_cat":"On-Page SEO",
-				"duration": .10
-			},
-			{
-				"task_cat":"Research",
-				"duration": .22
-			},
-			{
-				"task_cat":"Campaign Analysis",
-				"duration": .18
-			},
-			{
-				"task_cat":"Website Content Posts",
-				"duration": .1
-			},
-			{
-				"task_cat":"Maintenance Task",
-				"duration": .1
-			},
-			{
-				"task_cat":"AC Tasks Management",
-				"duration": .1
-			}
-		]
-	},
-
-
-
-];
 </script>
 
 <!-- 
 Chart Step No. 2. + D3 Library + DOM ELEMENT
 an element with a unique id to render the graph to. add color and background helpers for more fancyness as desired. chart markup shouls look like this: 
  -->
-<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://d3js.org/d3.v6.js"></script>
 <div id="avg-all-chart" class="background-theme color-theme"></div>
 <!-- 
 Chart Step No 3. Script that must be copy pasted
@@ -525,9 +288,12 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.width = 1280;
 			this.padding = [50,10,10,75];
 
-			this.init = ()=> {
+			this.transition = d3.transition()
+				.duration( 150 )
+				.ease(d3.easeLinear)
+				;
 
-				const WBC = this;
+			this.init = ()=> {
 
 				//select the dootdoot and set it up for the svg that will bear our bois
 				this.container = d3.select(this.selector)
@@ -556,8 +322,12 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				
 
-				WBC.legends = WBC.container.append('div')
+				this.legends = this.container.append('div')
 					.attr('class','flex-grid flex-grid-fixed');
+
+				
+				this.yAxis = this.svg.append('g')
+					.attr("transform", `translate(${this.padding[3]})`)
 
 				return this.update(incomingData);
 			}
@@ -659,8 +429,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.padding(.1)
 					;
 
-				WBC.yAxis = WBC.svg.append('g')
-					.attr("transform", `translate(${this.padding[3]})`)
+				console.log(WBC.transition);
+
+				WBC.yAxis
+					.transition(WBC.transition)
 					.call(d3.axisLeft(WBC.y))
 					.attr('font-family',null)
 					;
@@ -810,8 +582,294 @@ this Version loads d3 as well instead of manually embedding script. may cause th
 		'#avg-all-chart',
 		placeholderData
 	);
+	var usePlaceholder = true;
 	
-	// graph.updateBubbles(
-	// 	newData
-	// );
+// // // //debug dont use this
+
+var placeholderDataChange = [
+	{
+		"name": "Cristian R",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .40
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .30
+			},
+			{
+				"task_cat":"Internal Project Development",
+				"duration": .15
+			},
+			{
+				"task_cat":"Email Inbox Management",
+				"duration": .15
+			}
+		]
+	},
+	{
+		"name": "Nadia R",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .69
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .01
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .10
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .20
+			}
+		]
+	},
+	{
+		"name": "Mark S",
+		"department": "developers",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .25
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .25
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .25
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .25
+			}
+		]
+	},
+
+
+	{
+		"name": "Jenna E",
+		"department": "designers",
+		"items": [
+			{
+				"task_cat":"Client Homepage Design",
+				"duration": .75
+			},
+			{
+				"task_cat":"Client Internal Page Design",
+				"duration": .05
+			},
+			{
+				"task_cat":"Meetings",
+				"duration": .01
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .09
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .01
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .04
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .05
+			}
+		]
+	},
+	{
+		"name": "Stacy W",
+		"department": "designers",
+		"items": [
+			{
+				"task_cat":"Client Homepage Design",
+				"duration": .20
+			},
+			{
+				"task_cat":"Client Internal Page Design",
+				"duration": .10
+			},
+			{
+				"task_cat":"Meetings",
+				"duration": .40
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .14
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .15
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .005
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .005
+			}
+		]
+	},
+	{
+		"name": "Phoenix W",
+		"department": "game character",
+		"items": [
+			{
+				"task_cat":"Campaign Analysis",
+				"duration": .2
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .6
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .1
+			},
+			{
+				"task_cat":"Research, Education & Training",
+				"duration": .1
+			}
+		]
+	},
+	{
+		"name": "Miles E",
+		"department": "game character",
+		"items": [
+			{
+				"task_cat":"AC Task",
+				"duration": .1
+			},
+			{
+				"task_cat":"Software Development",
+				"duration": .1
+			},
+			{
+				"task_cat":"Bugherds",
+				"duration": .3
+			},
+			{
+				"task_cat":"On-Page SEO",
+				"duration": .5
+			}
+		]
+	},
+
+
+	{
+		"name": "Alana R.",
+		"department": "seo",
+		"items": [
+			{
+				"task_cat":"Link Building",
+				"duration": .20
+			},
+			{
+				"task_cat":"On-Page SEO",
+				"duration": .10
+			},
+			{
+				"task_cat":"Research",
+				"duration": .40
+			},
+			{
+				"task_cat":"Campaign Analysis",
+				"duration": .10
+			},
+			{
+				"task_cat":"Website Content Posts",
+				"duration": .05
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .05
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .1
+			}
+		]
+	},
+
+	{
+		"name": "Adam H.",
+		"department": "seo",
+		"items": [
+			{
+				"task_cat":"Link Building",
+				"duration": .20
+			},
+			{
+				"task_cat":"On-Page SEO",
+				"duration": .10
+			},
+			{
+				"task_cat":"Research",
+				"duration": .22
+			},
+			{
+				"task_cat":"Campaign Analysis",
+				"duration": .18
+			},
+			{
+				"task_cat":"Website Content Posts",
+				"duration": .1
+			},
+			{
+				"task_cat":"Maintenance Task",
+				"duration": .1
+			},
+			{
+				"task_cat":"AC Tasks Management",
+				"duration": .1
+			}
+		]
+	},
+
+
+
+];
+setTimeout(function(){
+	
+	var intervalId = setInterval(function(){
+		usePlaceholder = !usePlaceholder;
+		// clearInterval(intervalId);
+
+		var newData = (!usePlaceholder ? placeholderDataChange : placeholderData);
+	
+
+
+
+
+
+
+
+		/*
+		Chart Step No. 5 - Updating
+		updateBubbles allows you to modify arguments and render a different variation of the data
+		*/
+		
+		graph.update(newData);
+
+
+	}, 2000);
+
+},2000);
+	
 </script>
+
+
+
