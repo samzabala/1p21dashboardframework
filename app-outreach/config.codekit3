@@ -169,17 +169,6 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/assets\/scripts\/__fortesting.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/scripts\/__fortesting-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/assets\/scripts\/app-min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -196,9 +185,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/assets\/scripts\/app-min.js",
-      "oF" : 1,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 0
     },
@@ -207,30 +196,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/assets\/scripts\/framework.custom.example-min.js",
-      "oF" : 1,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/scripts\/framework.custom.mine.js" : {
-      "bF" : 6,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/scripts\/framework.custom.mine.min.js",
-      "oF" : 3,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/scripts\/framework.custom.mine.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/scripts\/framework.custom.mine.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -305,18 +272,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/styles\/company-detail.mine.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/company-detail.mine-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/styles\/company-detail.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -344,18 +299,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/assets\/styles\/contact-detail.mine.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/contact-detail.mine-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/styles\/contact-detail.mine.scss" : {
       "aP" : 0,
@@ -385,18 +328,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/styles\/contacts.mine.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/contacts.mine-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/styles\/contacts.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -418,24 +349,12 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/styles\/style.example.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/assets\/styles\/style.mine.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/style.mine-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/styles\/style.mine.scss" : {
       "aP" : 0,
@@ -458,24 +377,12 @@
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/assets\/styles\/tasks.example.css",
-      "oF" : 1,
+      "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/assets\/styles\/tasks.mine.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/tasks.mine-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/styles\/tasks.mine.scss" : {
       "aP" : 0,
@@ -577,6 +484,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/input-company-competitors.php",
+      "oF" : 0
+    },
+    "\/components\/input-company-vendor-history.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-company-vendor-history.php",
       "oF" : 0
     },
     "\/components\/input-social.php" : {
@@ -843,17 +758,6 @@
       "oAP" : "\/tasks.php",
       "oF" : 0
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/accordion.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/accordion-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -909,17 +813,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/date.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/date-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/data-helper\/dom.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -964,39 +857,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-calendar.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-calendar-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-tags.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/form\/form-tags-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/lazy.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1008,17 +868,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/modal.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/modal-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/module-grid.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1026,28 +875,6 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/module-grid-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/switch.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/switch-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/tooltip.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/tooltip-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1070,17 +897,6 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/datahandler-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/modifiers.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/util\/modifiers-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1170,7 +986,7 @@
         "active" : 0
       },
       "class-properties" : {
-        "active" : 1
+        "active" : 0
       },
       "classes" : {
         "active" : 0
@@ -1332,7 +1148,7 @@
         "active" : 0
       },
       "private-methods" : {
-        "active" : 1
+        "active" : 0
       },
       "property-literals" : {
         "active" : 0
@@ -3193,12 +3009,11 @@
     },
     "rollupContext" : "",
     "rollupExternalEntries" : [
-      "FrameWork:::fw"
+
     ],
     "rollupReplacementEntries" : [
-      "'process.env.NODE_ENV':::$NODE_ENV",
-      "ENVIRONMENT:::$NODE_ENV",
-      "New_Target_String:::"
+      "process.env.NODE_ENV:::$NODE_ENV",
+      "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
