@@ -150,6 +150,8 @@ function app_init_content(){
 				case 'tasks':
 				case 'contacts':
 				case 'login':
+				case 'login-reset':
+				case 'login-forgot':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					?>

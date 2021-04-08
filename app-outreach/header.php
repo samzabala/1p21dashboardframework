@@ -92,14 +92,14 @@
 
 </head>
 <body class="
-	<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'forgot-password'): ?>
+	<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'login-forgot' && FWAPPS_TEMPLATE !== 'login-reset'): ?>
 		body-nav-sticky-offset cf body-loading background-theme-contrast
 	<?php else: ?>
-		cf body-loading background-theme-polar flex-xs flex-wrap align-items-center justify-content-center outreach-body-login
+		cf body-loading background-theme-polar flex-xs flex-wrap justify-content-center outreach-body-login
 	<?php endif; ?>
 ">
 
-<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'forgot-password'): ?>
+<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'login-forgot' && FWAPPS_TEMPLATE !== 'login-reset'): ?>
 	<div id="outreach">
 			<!-- Nav -->
 				<!-- appp-*/includes/main-nav -->

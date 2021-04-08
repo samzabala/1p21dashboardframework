@@ -25,7 +25,7 @@
 							</div>
 						</div>
 						<div class="flex-col-xs-6 text-align-right">
-							<a href="<?=app_create_link(array('template' => 'forgot-password')) ?>">Forgot Password?</a>
+							<a href="<?=app_create_link(array('template' => 'login-forgot')) ?>">Forgot Password?</a>
 						</div>
 					</div>
 					<br>

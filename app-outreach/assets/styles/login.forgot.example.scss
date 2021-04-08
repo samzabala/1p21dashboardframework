@@ -1,0 +1,5 @@
+//@represents the core app.css (style.example.com)
+@import 'style.mine.scss';
+
+//components used in this page. js component should match names too=
+	@import './../../../assets/plugins/framework/src/scss/_alert';

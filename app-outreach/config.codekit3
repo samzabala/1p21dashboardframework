@@ -195,9 +195,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/scripts\/app-min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },
@@ -282,6 +282,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/company-detail.mine.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/company-detail.mine-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/styles\/company-detail.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -309,6 +321,18 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/contact-detail.mine.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contact-detail.mine-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/assets\/styles\/contact-detail.mine.scss" : {
       "aP" : 0,
@@ -338,6 +362,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/contacts.mine.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contacts.mine-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/styles\/contacts.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -351,6 +387,32 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/login.forgot.example.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/login.forgot.example.css",
+      "oF" : 1,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/style.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.example-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/assets\/styles\/style.example.scss" : {
       "aP" : 0,
@@ -405,6 +467,18 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/tasks.mine.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/tasks.mine-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/assets\/styles\/tasks.mine.scss" : {
       "aP" : 0,
@@ -762,6 +836,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/login-forgot.php",
+      "oF" : 0
+    },
+    "\/login-reset.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login-reset.php",
       "oF" : 0
     },
     "\/login.php" : {
