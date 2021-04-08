@@ -91,27 +91,34 @@
 		</script>
 
 </head>
-<body class="body-nav-sticky-offset cf body-loading background-theme-contrast">
+<body class="
+	<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'forgot-password'): ?>
+		body-nav-sticky-offset cf body-loading background-theme-contrast
+	<?php else: ?>
+		cf body-loading background-theme-polar flex-xs flex-wrap align-items-center justify-content-center outreach-body-login
+	<?php endif; ?>
+">
 
+<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'forgot-password'): ?>
 	<div id="outreach">
-
-		<!-- Nav -->
-			<!-- appp-*/includes/main-nav -->
-				<div id="outreach-header" class="nav nav-sticky">
-					<?php app_get_nav(); ?>
-				</div>
-		<!-- Sidebar -->
-		<aside id="outreach-sidebar"
-		class="theme-inverse pointer-reference background-theme-contrast">
-			<div id="outreach-sidebar-nav" class="nav nav-vertical background-transparent">
-				<!-- appp-*/includes/sidebar-nav -->
-				<?php app_get_sidebar(); ?>
-			</div>
-		</aside>
+			<!-- Nav -->
+				<!-- appp-*/includes/main-nav -->
+					<div id="outreach-header" class="nav nav-sticky">
+						<?php app_get_nav(); ?>
+					</div>
+			<!-- Sidebar -->
+				<aside id="outreach-sidebar"
+				class="theme-inverse pointer-reference background-theme-contrast">
+					<div id="outreach-sidebar-nav" class="nav nav-vertical background-transparent">
+						<!-- appp-*/includes/sidebar-nav -->
+						<?php app_get_sidebar(); ?>
+					</div>
+				</aside>
 			<main id="outreach-main">
 				<!-- App Content -->
 				<div id="content-wrapper">
 					<div class="container">
+		<?php endif; ?>
 
 
 	
