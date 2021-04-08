@@ -271,17 +271,17 @@ function app_init_content(){
 						break;
 
 				// exists and the setup ran smoothly for this
-				// case '':
-				// 	app_get_template_part("app-{$app}/{$template_part}");
-				// 	$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
-				// 	break;
+				
+				case 'analytics':
+					app_get_template_part("app-{$app}/{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+					break;
 
 				case 'workflux':
 				case 'clients':
 				case 'client-view':
 				case 'client-edit':
 				case 'profile':
-				case 'analytics':
 				case 'workflow':
 				case 'notes':
 					?>
