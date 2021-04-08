@@ -1,4 +1,4 @@
-<form id="outreach-forgot" class="padding-y" action="<?=app_create_link(array('template' => 'login-forgot','app'=>'outreach')) ?>" method="post">
+<form id="outreach-forgot" class="padding-y" action="<?=app_create_link(array('template' => 'login-reset','app'=>'outreach')) ?>" method="post">
 	<div class="container">
 		<div class="text-align-center">
 			<img src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo-expanded-alt.svg" alt="">

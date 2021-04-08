@@ -9,6 +9,22 @@
   ],
   "creatorBuild" : "34127",
   "files" : {
+    "\/404.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/404.php",
+      "oF" : 0
+    },
+    "\/500.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/500.php",
+      "oF" : 0
+    },
     "\/assets\/images\/icon-facebook-currentColor.svg" : {
       "ft" : 2097152,
       "miP" : 0,
