@@ -286,11 +286,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 			this.barHeight = 32;
 			this.width = 1280;
-			this.padding = [50,10,10,75];
+			this.padding = [20,10,10,75];
 
 			this.transition = d3.transition()
-				.duration( 150 )
-				.ease(d3.easeLinear)
+				.duration( 500 )
 				;
 
 			this.init = ()=> {
@@ -327,7 +326,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				
 				this.yAxis = this.svg.append('g')
-					.attr("transform", `translate(${this.padding[3]})`)
+					.attr("transform", `translate(${this.padding[3]},0)`)
+
+				
+				this.xAxis = this.svg.append('g')
+					.attr("transform", `translate(0,${this.padding[0]})`)
 
 				return this.update(incomingData);
 			}
@@ -359,7 +362,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.colorDomain = ()=>{
 				var colDomain = [];
 
-				this.data.forEach((member)=>{
+				this.parsedData(this.data).forEach((member)=>{
 					member.items.forEach(item=>{
 						if(!colDomain.includes(item.task_cat)){
 							colDomain.push(item.task_cat);
@@ -397,8 +400,6 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				department = department || false;
 
-				console.log(newData);
-
 				WBC.height = (()=>{
 					return newData.length 
 						? (newData.length * WBC.barHeight )
@@ -429,11 +430,18 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.padding(.1)
 					;
 
-				console.log(WBC.transition);
-
 				WBC.yAxis
-					.transition(WBC.transition)
+					.transition()
 					.call(d3.axisLeft(WBC.y))
+					.attr('font-family',null)
+					;
+
+				WBC.xAxis
+					.transition()
+					.call(
+						d3.axisTop(WBC.x)
+							.tickFormat((d)=>`${d * 100 }%`)
+					)
 					.attr('font-family',null)
 					;
 
@@ -484,8 +492,12 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('class',(d)=>{
 						return 'chart-team-member chart-team-member-'+d.name
 					})
+					// .transition()
+					// .style('opacity',1)
 					
 				WBC.member.exit()
+					// .transition()
+					// .style('opacity',0)
 					.remove()
 					;
 
@@ -510,12 +522,32 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 				WBC.shape_enter = WBC.shape.enter()
 					.append('rect')
+					.attr('x',WBC.x(0))
+					// .attr('y',(d)=>{
+					// 	return WBC.y(d._name);
+					// })
+					.attr('width',WBC.x(0) - WBC.x.range()[0])
+					.attr('height',(d)=>{
+						return WBC.y.bandwidth()
+					})
+					.attr('fill',(d)=>{
+						return WBC.color(d.task_cat)
+					})
+					;
+
+				WBC.shape.exit()
+					.transition()
+					.style('opacity',0)
+					.remove()
+					;
 
 
 				WBC.shape_merge = WBC.shape.merge(WBC.shape_enter)
 					.attr('y',(d)=>{
 						return WBC.y(d._name);
 					})
+					.transition()
+					
 					.attr('x',(d,i)=>{
 						const prevD = i > 0 ? WBC.sibData(d._name)[i - 1] : false;
 
@@ -526,16 +558,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						
 						return WBC.x(d._x)
 					})
-					.attr('height',(d)=>{
-						return WBC.y.bandwidth()
-					})
 					.attr('width',(d)=>{
-
-					console.log(d._name,d.duration,WBC.x(d.duration),WBC.x.range());
 						return WBC.x(d.duration) - WBC.x.range()[0];
-					})
-					.attr('fill',(d)=>{
-						return WBC.color(d.task_cat)
 					})
 					;
 
@@ -547,6 +571,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('class',(d)=>{
 						return 'legend-item flex-col-xs-12 flex-col-sm-6 flex-col-md-3'
 					})
+					;
+
+
+
+				WBC.legend_merge = WBC.legend.merge(WBC.legend_enter)
 					.html((d)=>`
 						<span class="legend" style="background-color:${WBC.color(d)}"></span> ${d}
 					`)
@@ -556,6 +585,8 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				WBC.legend.exit()
 					.remove()
 					;
+
+				// debugger;
 					
 
 
@@ -736,7 +767,7 @@ var placeholderDataChange = [
 				"duration": .6
 			},
 			{
-				"task_cat":"Bugherds",
+				"task_cat":"Pooping",
 				"duration": .1
 			},
 			{
@@ -775,31 +806,27 @@ var placeholderDataChange = [
 		"items": [
 			{
 				"task_cat":"Link Building",
-				"duration": .20
+				"duration": .09
 			},
 			{
 				"task_cat":"On-Page SEO",
-				"duration": .10
+				"duration": .01
 			},
 			{
 				"task_cat":"Research",
-				"duration": .40
+				"duration": .30
 			},
 			{
 				"task_cat":"Campaign Analysis",
-				"duration": .10
+				"duration": .50
 			},
 			{
 				"task_cat":"Website Content Posts",
 				"duration": .05
 			},
 			{
-				"task_cat":"Maintenance Task",
-				"duration": .05
-			},
-			{
 				"task_cat":"AC Tasks Management",
-				"duration": .1
+				"duration": .05
 			}
 		]
 	},
@@ -842,6 +869,8 @@ var placeholderDataChange = [
 
 
 ];
+
+
 setTimeout(function(){
 	
 	var intervalId = setInterval(function(){
