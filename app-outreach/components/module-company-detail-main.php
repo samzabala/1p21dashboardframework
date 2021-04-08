@@ -639,6 +639,18 @@
 										)) ?>
 									</div>
 								</div>
+								<!-- @NOTE: options are placeholders. replace as needed -->
+								<datalist id="company-competitors-available">
+									<option value="Wright & Co Law Offices">
+									<option value="Fey & Co Law Offices">
+									<option value="Wright Talent Agency">
+									<option value="Wright Anything Agency">
+									<option value="Gavin Law Offices">
+									<option value="Grossberg Law Offices">
+									<option value="Edgeworth Law Offices">
+									<option value="Von Karma Law Offices">
+								</datalist>
+
 								<!-- 
 									@NOTE
 									if by the time im still in progressw of documenting the events api, use `off.fw.switch` to initiate saving changes
@@ -704,6 +716,7 @@
 									<form class="padding-small-y padding-micro-x" action="">
 										<div class="input-group input-group-horizontal input-block">
 											<input
+												list="company-competitors-available"
 												type="text" class="input input-single-line"
 												placeholder="domain.com"
 												id="company-competitors-add-name"
