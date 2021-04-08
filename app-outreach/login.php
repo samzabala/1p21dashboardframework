@@ -1,4 +1,4 @@
-<form id="outreach-login" action="<?=app_create_link(array('template' => 'home','app'=>'outreach')) ?>" method="post">
+<form id="outreach-login" class="padding-y" action="<?=app_create_link(array('template' => 'home','app'=>'outreach')) ?>" method="post">
 	<div class="container">
 		<div class="text-align-center">
 			<img src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo-expanded-alt.svg" alt="">
@@ -9,11 +9,11 @@
 				<div class="module-content">
 					<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 						<label for="login-user" class="input-label">Email or Username</label>
-						<input id="login-user" name="login-user" type="text" placeholder="email@domain.com" class="input input-single-line">
+						<input id="login-user" name="login-user" type="text" placeholder="email@domain.com" class="input input-single-line input-large">
 					</div>
 					<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
 						<label for="login-password" class="input-label">Password</label>
-						<input id="login-password" name="login-password" type="passworc" placeholder="********" class="input input-single-line">
+						<input id="login-password" name="login-password" type="passworc" placeholder="********" class="input input-single-line input-large">
 					</div>
 					<div class="flex-grid flex-grid-compact flex-grid-fixed">
 						<div class="flex-col-xs-6 text-align-left">

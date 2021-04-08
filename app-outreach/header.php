@@ -95,7 +95,7 @@
 	<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'forgot-password'): ?>
 		body-nav-sticky-offset cf body-loading background-theme-contrast
 	<?php else: ?>
-		cf body-loading background-gradient-90 flex-xs flex-wrap align-items-center justify-content-center 
+		cf body-loading background-theme-polar flex-xs flex-wrap align-items-center justify-content-center 
 	<?php endif; ?>
 ">
 
