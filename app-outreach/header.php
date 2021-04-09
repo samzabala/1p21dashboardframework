@@ -45,9 +45,9 @@
 
 
 			<!-- for sam to test shit onlyyy -->
-			<script
+			<!-- <script
 				src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/scripts/__fortesting.js'?>" data-turbolinks-track="reload"
-			></script>
+			></script> -->
 
 	<!-- @PLACEHOLDER for debugging framework. delete when ready. or repurpose or... idk -->
 		<script>

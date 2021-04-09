@@ -3,9 +3,8 @@ $brand-font-primary: 'Inter',Helvetica,Arial,sans-serif;
 $brand-font-secondary: $brand-font-primary;
 $brand-font-accent: $brand-font-primary;
 
-$brand-color-background-alt: #eff4f8;
 
-$symbol-font-path: './framework/src/fonts/fw-icons';
+$symbol-font-path: '/assets/plugins/framework/dist/fonts/fw-icons';
 
 // $brand-theme-background-inverse: #302a4b;
 // $brand-theme-background-contrast-inverse: #1e1931;
@@ -19,6 +18,7 @@ $symbol-font-path: './framework/src/fonts/fw-icons';
 
 $brand-color-base: #040849;
 $brand-color-base-alt: #0F2060;
+$brand-color-background-alt: #ECF0F7;
 
 $brand-color-primary: #3981DC;
 $brand-color-secondary: #9C6CC6; //F204A2
@@ -27,6 +27,9 @@ $brand-color-neutral: #687DA5;
 $brand-color-error:#fd6234;
 $brand-color-caution:#fd9934;
 $brand-color-success:#6CC6A7;
+
+// $brand-gradient-end: $brand-color-accent;
+
 
 
 // $brand-color-success: #64B4AE !default;
@@ -38,12 +41,13 @@ $module-grid-title-text-transform: uppercase;
 $module-title-text-transform: uppercase;
 
 
-// $btn-font-weight: 600;
+$btn-font-weight: 500;
 // // $nav-top-font-weight: 600;
 // $tag-font-weight: 600;
 // $input-label-font-weight: 600;
 // $input-font-weight: 600;
+// $nav-top-font-weight: 500 !default;
 
 
-$input-height-large: 50px;
+$nav-top-font-size: 12px;
  

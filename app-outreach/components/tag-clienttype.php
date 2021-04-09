@@ -6,6 +6,6 @@
 		`tag-success` => Prospect
 
 -->
-<span class="tag tag-primary">
+<span class="tag tag-small tag-primary">
 	<span class="REPLACE">Client</span>
 </span>

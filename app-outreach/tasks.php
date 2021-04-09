@@ -127,7 +127,7 @@
 							`tag-success` => Completed
 				
 					-->
-					<span class="tag tag-error">
+					<span class="tag tag-small tag-error">
 						<span class="REPLACE">Overdue</span>
 					</span>
 				</div>
@@ -240,7 +240,7 @@
 										`tag-success` => Completed
 							
 								-->
-								<span class="tag tag-error">
+								<span class="tag tag-small tag-error">
 									<span class="REPLACE">Overdue</span>
 								</span>
 							</div>

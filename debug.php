@@ -4035,6 +4035,26 @@
 			<button type="button" class="btn btn-caution-outline">caution</button>
 			<button type="button" class="btn btn-error-outline">error</button>
 
+			<h3>glassy</h3>
+
+			<button type="button" class="btn btn-primary-glassy">Primary</button>
+			<button type="button" class="btn btn-secondary-glassy">secondary</button>
+			<button type="button" class="btn btn-accent-glassy">accent</button>
+			<button type="button" class="btn btn-neutral-glassy">neutral</button>
+			<button type="button" class="btn btn-success-glassy">Success</button>
+			<button type="button" class="btn btn-caution-glassy">caution</button>
+			<button type="button" class="btn btn-error-glassy">error</button>
+
+			<h3>gradient</h3>
+
+			<button type="button" class="btn btn-primary-gradient">Primary</button>
+			<button type="button" class="btn btn-secondary-gradient">secondary</button>
+			<button type="button" class="btn btn-accent-gradient">accent</button>
+			<button type="button" class="btn btn-neutral-gradient">neutral</button>
+			<button type="button" class="btn btn-success-gradient">Success</button>
+			<button type="button" class="btn btn-caution-gradient">caution</button>
+			<button type="button" class="btn btn-error-gradient">error</button>
+
 			<h2>Small</h2>
 			<button type="button" class="btn btn-small btn-default">Default</button>
 			<button type="button" class="btn btn-small btn-primary">Primary</button>
@@ -5640,7 +5660,7 @@
 
 
 
-			<p class="special-secondary text-clip-background font-weight-900 text-transform-uppercase" data-src="/placeholder/files/shrek.jpg">
+			<p class="special-secondary text-clip-background font-weight-900 text-transform-uppercase lazy" data-src="/placeholder/files/shrek.jpg">
 				text-clip-background feat ya boi secondary. i have a background-image and other bullshit classes so u see what the fuck is happening to this child. it's on drugs. look how high the child is. don't do drugs kids. i'm trying to gill up more text so you can see shrek's bitch ass face. do you see it yet? layers motherfucker. if shrek was a graphic designer he'd be photoshop. personally i like illustrator myself because di becters are my life. We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy I just wanna tell you how I'm feeling Gotta make you understand Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you 
 			</p>
 

@@ -12,7 +12,7 @@ $args = app_parse_args($data,$defs);
 		<div class="module-functions">
 			<?php if($args['has_add_event']): ?>
 				<div class="nav-function">
-					<a href="#mb-editor-task" data-toggle-modal-board data-modal-title="Add Task" class="btn btn-round btn-symbol btn-neutral">
+					<a href="#mb-editor-task" data-toggle-modal-board data-modal-title="Add Task" class="btn btn-round btn-symbol btn-primary-glassy">
 						<i class="symbol symbol-plus"></i>
 					</a>
 				</div>
