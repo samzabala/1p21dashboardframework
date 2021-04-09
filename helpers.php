@@ -151,6 +151,7 @@ function app_init_content(){
 				case 'contacts':
 				case 'login':
 				case 'login-reset':
+				case 'login-forgot':
 				case '404':
 				case '500':
 					app_get_template_part("app-{$app}/{$template_part}");
