@@ -1,7 +1,7 @@
 // variables to override framework defaults
-$brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+$brand-font-primary: 'Inter',Helvetica,Arial,sans-serif;
 $brand-font-secondary: $brand-font-primary;
-$brand-font-accent: 'Roboto', $brand-font-primary;
+$brand-font-accent: $brand-font-primary;
 
 $brand-color-background-alt: #eff4f8;
 
@@ -23,6 +23,7 @@ $brand-color-base-alt: #0F2060;
 $brand-color-primary: #3981DC;
 $brand-color-secondary: #9C6CC6; //F204A2
 $brand-color-accent: #4d60eb; //F204A2
+$brand-color-neutral: #687DA5;
 $brand-color-error:#fd6234;
 $brand-color-caution:#fd9934;
 $brand-color-success:#6CC6A7;

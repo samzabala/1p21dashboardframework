@@ -22,7 +22,7 @@ $args = app_parse_args($data,$defs);
 >
 	<i class="symbol symbol-kebab-horizontal"></i>
 </button>
-<div class="dropdown dropdown-right" data-dropdown-width="250px">
+<div class="dropdown dropdown-right text-align-left" data-dropdown-width="250px">
 	<ul class='list-group list-group-small no-margin-y'>
 		<? foreach($args['links'] as $link_text => $attrs): ?>
 			<li>
