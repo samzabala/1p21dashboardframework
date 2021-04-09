@@ -356,6 +356,9 @@ $sidebar-slim: 60px;
 			;
 		}
 	}
+	&-anon-ui-wrapper {
+		max-width: 460px;
+	}
 	&-nav-item-container {
 		justify-content:center;
 
