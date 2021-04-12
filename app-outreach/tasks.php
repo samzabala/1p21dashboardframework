@@ -12,7 +12,7 @@
 	</div>
 </div>
 
-<div id="outreach-contacts" class="module module-no-gutter overflow-hidden">
+<div id="outreach-contacts" class="module module-no-gutter">
 	<table class="table-fixed">
 		<tr>
 			<th class="text-align-center" width="50">
