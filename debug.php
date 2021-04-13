@@ -1125,7 +1125,13 @@
 			<div class="zone zone-large zone-error">click me boi</div>
 		</div>
 
-
+		<h1 data-toggle-accordion>fuullscreen<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a href="#fullscreen-demo"  data-toggle-modal-fullscreen>Use this for worflow screens that slide from the slide</a>
+			<div id="fullscreen-demo" data-modal-width="500px" class="dashboard-board-partition modal modal-fullscreen">
+				<?php app_get_component('components/_DEMO-html-markup'); ?>
+			</div>
+		</div>
 
 		<h1 data-toggle-accordion>board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
