@@ -16,7 +16,7 @@ $defs = array(
 
 $args = app_parse_args($data,$defs);
 ?>
-<div class="module" data-grid-area-md="auto / side">
+<div class="module" >
 	<?php if($args['has_module_title']): ?>
 	<div class="module-header">
 		<div class="module-title">Contact Information</div>

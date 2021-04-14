@@ -176,17 +176,17 @@ class Modal extends FwComponent {
     return {
       changeHash: true,
       title: '',
-      close: {  
-        value:true,
+      close: {
+        value: true,
         parser: (value) => {
-          return (mode !== FULLSCREEN_NAME) ? value : false;
-        }
+          return mode !== FULLSCREEN_NAME ? value : false;
+        },
       },
       disableOverlay: {
-        value:true,
+        value: true,
         parser: (value) => {
-          return (mode !== FULLSCREEN_NAME) ? value : false;
-        }
+          return mode !== FULLSCREEN_NAME ? value : false;
+        },
       },
       width: null,
       callback: null,

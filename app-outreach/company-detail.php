@@ -1,26 +1,29 @@
 <div
 	id="outreach-company-detail"
-	class="module-grid"
-	data-grid-template-columns-md="[main] 1fr [side] 315px"
-	data-grid-template-rows-md="repeat(auto-fill,minmax(0,min-content))">
-
+	class="flex-grid flex-grid-fixed">
+	<div class="flex-col-xs-12 flex-col-md-8">
 	<!-- Main -->
 		<?php app_get_component('components/module-company-detail-main') ?>
-	<!-- Utility Contact -->
-		<?php app_get_component('components/module-company-detail-utility') ?>
-	<!-- Calling Card because Contact Info is redundant -->
-		<?php app_get_component('components/module-detail-calling-card','',false,array(
-			'has_address' => true,
-			'has_phone' => true,
-			'has_fax' => true,
-			'has_url' => true,
-			'has_primary' => true,
-			'has_social' => true,
-		)) ?>
-	<!-- events -->
-		<?php app_get_component('components/module-detail-events','',false,array(
-			'has_add_event' => true
-		)) ?>
+	</div>
+	<div class="flex-col-xs-12 flex-col-md-4">
+		<div class="module-grid">
+			<!-- Utility Contact -->
+				<?php app_get_component('components/module-company-detail-utility') ?>
+			<!-- Calling Card because Contact Info is redundant -->
+				<?php app_get_component('components/module-detail-calling-card','',false,array(
+					'has_address' => true,
+					'has_phone' => true,
+					'has_fax' => true,
+					'has_url' => true,
+					'has_primary' => true,
+					'has_social' => true,
+				)) ?>
+			<!-- events -->
+				<?php app_get_component('components/module-detail-events','',false,array(
+					'has_add_event' => true
+				)) ?>
+		</div>
+	</div>
 </div>
 
 <!-- boards that appear -->
