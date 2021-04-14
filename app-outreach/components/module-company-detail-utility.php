@@ -1,3 +1,3 @@
-<div class="module" data-grid-area-md="auto / side">
+<div class="module">
 	<?php app_get_component('components/toolbar-contact') ?>
 </div>

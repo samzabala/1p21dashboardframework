@@ -6,7 +6,7 @@ $defs = array(
 
 $args = app_parse_args($data,$defs);
 ?>
-<div class="module" data-grid-area-md="auto / side">
+<div class="module" >
 	<div class="module-header module-header-break">
 		<h3 class="module-title">Upcoming Events and Tasks</h3>
 		<div class="module-functions">

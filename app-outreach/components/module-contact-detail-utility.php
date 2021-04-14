@@ -1,5 +1,5 @@
 
-<div class="module module-large" data-grid-area-md="auto / side">
+<div class="module module-large" >
 	<div class="text-align-center">
 	<div class="p">
 		<?php app_get_component('components/profile-image-small') ?>
