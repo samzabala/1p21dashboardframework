@@ -33,7 +33,7 @@
 			<th class="text-nowrap text-align-center" width="100">Task Owner</th>
 			<th class="text-align-center" width="75">Status</th>
 			<th class="text-nowra text-align-right" width="50">
-				<div class="contact-actions">
+				<div class="contact-actions position-relative">
 					<?php app_get_component('components/tooltip-actions','',false,array(
 						'links' => array(
 							'Change Status for Selected'
@@ -140,7 +140,7 @@
 			</td>
 			<td class="text-align-right">
 				
-				<div class="contact-actions">
+				<div class="contact-actions position-relative">
 					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
 							'Edit Details'
@@ -253,7 +253,7 @@
 						</td>
 						<td class="text-align-right" width="50">
 							
-							<div class="contact-actions">
+							<div class="contact-actions position-relative">
 								<?php app_get_component('components/dropdown-actions','',false,array(
 									'links' => array(
 										'Edit Details'

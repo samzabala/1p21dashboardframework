@@ -79,7 +79,7 @@
 				</div>
 			</td>
 			<td class="text-align-center" width="50">
-				<div class="contact-acct-owner">
+				<div class="contact-actions position-relative">
 					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
 							'Edit Details'
@@ -194,7 +194,7 @@
 							</div>
 						</td>
 						<td class="text-align-center">
-							<div class="contact-actions">
+							<div class="contact-actions position-relative">
 								<?php app_get_component('components/dropdown-actions','',false,array(
 									'links' => array(
 										'Edit Details'
