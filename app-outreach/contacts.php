@@ -14,6 +14,11 @@
 </div>
 
 <div id="outreach-contacts" class="module module-no-gutter">
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 	<table class="table-fixed">
 		<tr>
 			<th class="text-nowrap">Name</th>
@@ -240,6 +245,11 @@
 					</tr>
 				<?php } ?>
 	</table>
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 </div>
 
 <!-- boards that appear -->

@@ -5,25 +5,54 @@ Modal from framework/src/js/imports/modal
 
 -->
 <div class="modal modal-board" id="mb-editor-contact" data-modal-title="Edit Contact" data-modal-width="770px">
-		<form class="flex-grid flex-grid-fixed">
-				<div class="flex-col-12">
-					<div class="flex-grid align-items-center">
+		<form class="flex-grid flex-grid-fixed flex-grid-no-gutter">
+				<div class="flex-col-2">
+					<div class="flex-grid flex-grid-fixed align-items-center justify-content-center">
 						<div class="flex-child flex-0-0">
 							<?php app_get_component('components/profile-image-small') ?>
 						</div>
-						<div class="flex-child flex-1-1">
+					</div>
+				</div>
+				<div class="flex-col-10">
+					<div class="flex-grid flex-grid-fixed">
+						<div class="flex-col-xs-12 flex-col-sm-4">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-								<label class="input-label" for="contact-fullname">Full Name</label>
-								<input class="input input-single-line" type="text" name="contact-fullname" id="contact-fullname" value="Franziska von Karma">
+								<label class="input-label" for="contact-firstname">First Name</label>
+								<input class="input input-single-line" type="text" name="contact-firstname" id="contact-firstname" value="Franziska">
 							</div>
 						</div>
-						<div class="flex-child flex-1-1">
-							
+						<div class="flex-col-xs-12 flex-col-sm-4">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-								<label class="input-label" for="contact-title">Partner</label>
+								<label class="input-label" for="contact-lastname">Last Name</label>
+								<input class="input input-single-line" type="text" name="contact-lastname" id="contact-lastname" value="von Karma">
+							</div>
+						</div>
+						<div class="flex-col-xs-12 flex-col-sm-4">
+							<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+								<label class="input-label" for="contact-title">Title</label>
 								<input class="input input-single-line" type="text" name="contact-title" id="contact-title" value="Partner">
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="flex-col-12">
+					<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+						<label class="input-label" for="contact-company">Company</label>
+						<select class="input input-single-line input-select" type="text" name="contact-company" id="contact-company">
+
+							<!-- @NOTE: options are placeholders. replace as needed -->
+							<datalist id="existing-companies">
+								<option value="">Select Company...</option>
+								<option value="">Wright & Co Law Offices</option>
+								<option value="">Fey & Co Law Offices</option>
+								<option value="">Wright Talent Agency</option>
+								<option value="">Wright Anything Agency</option>
+								<option value="">Gavin Law Offices</option>
+								<option value="">Grossberg Law Offices</option>
+								<option value="">Edgeworth Law Offices</option>
+								<option value="">Von Karma Law Offices</option>
+							</datalist>
+						</select>
 					</div>
 				</div>
 				<div class="flex-col-12">
