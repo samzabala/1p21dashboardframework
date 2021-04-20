@@ -5,7 +5,7 @@ Modal from framework/src/js/imports/modal
 
 -->
 <div class="modal modal-board" id="mb-editor-contact" data-modal-title="Edit Contact" data-modal-width="770px">
-		<form class="flex-grid flex-grid-fixed flex-grid-no-gutter">
+		<form class="flex-grid flex-grid-fixed">
 				<div class="flex-col-2">
 					<div class="flex-grid flex-grid-fixed align-items-center justify-content-center">
 						<div class="flex-child flex-0-0">
@@ -14,7 +14,7 @@ Modal from framework/src/js/imports/modal
 					</div>
 				</div>
 				<div class="flex-col-10">
-					<div class="flex-grid flex-grid-fixed">
+					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
 						<div class="flex-col-xs-12 flex-col-sm-4">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
 								<label class="input-label" for="contact-firstname">First Name</label>
