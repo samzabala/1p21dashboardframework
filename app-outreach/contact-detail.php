@@ -21,6 +21,3 @@
 			'has_acct_owner' => true,
 		)) ?>
 </div>
-<?app_get_component('components/modal-board-form-email') ?>
-<?app_get_component('components/modal-board-form-task') ?>
-<?app_get_component('components/modal-board-form-event') ?>

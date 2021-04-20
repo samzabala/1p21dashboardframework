@@ -13,6 +13,12 @@
 </div>
 
 <div id="outreach-contacts" class="module module-no-gutter">
+
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 	<table class="table-fixed">
 		<tr>
 			<th class="text-align-center" width="50">
@@ -27,8 +33,8 @@
 			<th class="text-nowrap text-align-center" width="100">Task Owner</th>
 			<th class="text-align-center" width="75">Status</th>
 			<th class="text-nowra text-align-right" width="50">
-				<div class="contact-actions">
-					<?php app_get_component('components/dropdown-actions','',false,array(
+				<div class="contact-actions position-relative">
+					<?php app_get_component('components/tooltip-actions','',false,array(
 						'links' => array(
 							'Change Status for Selected'
 								=> 'href="#m-contact-status-REPLACEID" data-toggle-modal-default data-modal-title="Set Tasks Status"',
@@ -37,7 +43,7 @@
 						)
 					)) ?>
 
-					<div class="modal modal-default text-align-left" id="m-contact-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
+					<div class="modal modal-default" id="m-contact-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 								<label for="" class="input-label sr-only">Change Status To</label>
@@ -134,7 +140,7 @@
 			</td>
 			<td class="text-align-right">
 				
-				<div class="contact-actions">
+				<div class="contact-actions position-relative">
 					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
 							'Edit Details'
@@ -247,7 +253,7 @@
 						</td>
 						<td class="text-align-right" width="50">
 							
-							<div class="contact-actions">
+							<div class="contact-actions position-relative">
 								<?php app_get_component('components/dropdown-actions','',false,array(
 									'links' => array(
 										'Edit Details'
@@ -279,6 +285,11 @@
 					</tr>
 				<?php } ?>
 	</table>
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 </div>
 
 <!-- boards that appear -->

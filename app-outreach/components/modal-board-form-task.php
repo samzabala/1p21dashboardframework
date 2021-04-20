@@ -13,6 +13,48 @@ Modal from framework/src/js/imports/modal
 			</div>
 		</div>
 
+		<div class=" flex-col-xs-3">
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
+				<label for="task-resource" class="input-label">Resource Type</label>
+				<select class="input input-single-line" name="task-resource">
+					<option value="">Select..</option>
+					<option value="contact">Contact</option>
+					<option value="company">Company</option>
+				</select>
+			</div>
+		</div>
+		<div class=" flex-col-xs-9">
+			<!-- 
+				@NOTE
+				classes to add
+
+					.input-wrapper
+						`input-disabled` => if [name=task-resource] value is empty
+			-->
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
+			<?php $resource_is_contact = false; //@PLACEHOLDER. not needed in actual app. used to demonstrate logic for the label ?>
+				<label for="task-resource-list" class="input-label">Select <?= $resource_is_contact ? 'Contact' : 'Company' ?></label>
+				<input list="task-resource-list-data" class="input input-single-line" name="task-resource-list" />
+				<datalist id="task-resource-list-data">
+					<option value="">Select...</option>
+					<option value="">Wright & Co Law Offices</option>
+					<option value="">Fey & Co Law Offices</option>
+					<option value="">Wright Talent Agency</option>
+					<option value="">Wright Anything Agency</option>
+					<option value="">Gavin Law Offices</option>
+					<option value="">Grossberg Law Offices</option>
+					<option value="">Edgeworth Law Offices</option>
+					<option value="">Von Karma Law Offices</option>
+					<option value="">Squidward</option>
+					<option value="">Edward Elric</option>
+					<option value="">Ferb Fletcher</option>
+					<option value="">Frank Reynolds</option>
+					<option value="">Armin Arlert</option>
+					<option value="">Levi Ackerman</option>
+				</datalist>
+			</div>
+		</div>
+
 		<div class="flex-col-md-8 flex-col-xs-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
 				<label for="task-schedule-date" class="input-label">Scheduled Date</label>
@@ -88,9 +130,19 @@ Modal from framework/src/js/imports/modal
 		</div>
 		<div class=" flex-col-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
-				<label for="task-time" class="input-label">Attachments</label>
+				<label for="task-time" class="input-label">Add Attachments</label>
 				<input type="file" multiple class="input input-single-line" name="task-attachments" />
 			</div>
+		</div>
+
+
+		<div class=" flex-col-12">
+				<p  class="input-label">Edit Attachments</p>
+
+			<!-- @if there are attchments available -->
+				<div class="margin-top">
+					<?php app_get_component('components/attachments-grid-simple'); ?>
+				</div>
 		</div>
 
 		<div class=" flex-col-12">

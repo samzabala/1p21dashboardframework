@@ -518,6 +518,14 @@
       "oAP" : "\/company-detail.php",
       "oF" : 0
     },
+    "\/components\/attachments-grid-simple.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/attachments-grid-simple.php",
+      "oF" : 0
+    },
     "\/components\/company-contact-row.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -748,6 +756,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/note-row.php",
+      "oF" : 0
+    },
+    "\/components\/pagination-view-per-page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination-view-per-page.php",
+      "oF" : 0
+    },
+    "\/components\/pagination.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination.php",
       "oF" : 0
     },
     "\/components\/profile-image-micro.php" : {

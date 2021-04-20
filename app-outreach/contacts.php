@@ -14,6 +14,11 @@
 </div>
 
 <div id="outreach-contacts" class="module module-no-gutter">
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 	<table class="table-fixed">
 		<tr>
 			<th class="text-nowrap">Name</th>
@@ -74,7 +79,7 @@
 				</div>
 			</td>
 			<td class="text-align-center" width="50">
-				<div class="contact-acct-owner">
+				<div class="contact-actions position-relative">
 					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
 							'Edit Details'
@@ -189,7 +194,7 @@
 							</div>
 						</td>
 						<td class="text-align-center">
-							<div class="contact-actions">
+							<div class="contact-actions position-relative">
 								<?php app_get_component('components/dropdown-actions','',false,array(
 									'links' => array(
 										'Edit Details'
@@ -240,6 +245,11 @@
 					</tr>
 				<?php } ?>
 	</table>
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 </div>
 
 <!-- boards that appear -->

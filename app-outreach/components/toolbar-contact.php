@@ -20,6 +20,8 @@ Tooltip from framework/src/js/imports/tooltip
 				class="utility-mail to btn btn-caution-glassy btn-symbol btn-large">
 				<i class="symbol symbol-envelope-inverse"></i>
 			</a>
+
+			<?app_get_component('components/modal-board-form-email') ?>
 		</div>
 
 	<!-- @if phone number is available -->
@@ -55,6 +57,7 @@ Tooltip from framework/src/js/imports/tooltip
 				class="utility-mail to btn btn-success-glassy btn-symbol btn-large">
 				<i class="symbol symbol-check"></i>
 			</a>
+			<?app_get_component('components/modal-board-form-task') ?>
 		</div>
 
 	<!-- @if uswer can add new event -->
@@ -74,5 +77,6 @@ Tooltip from framework/src/js/imports/tooltip
 				class="utility-mail to btn btn-error-glassy btn-symbol btn-large">
 				<i class="symbol symbol-calendar-alt"></i>
 			</a>
+			<?app_get_component('components/modal-board-form-event') ?>
 		</div>
 </div>
