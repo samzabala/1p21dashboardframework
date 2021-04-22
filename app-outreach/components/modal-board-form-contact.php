@@ -14,7 +14,7 @@ Modal from framework/src/js/imports/modal
 					</div>
 				</div>
 				<div class="flex-col-10">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
+					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
 						<div class="flex-col-xs-12 flex-col-sm-4">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
 								<label class="input-label" for="contact-firstname">First Name</label>
