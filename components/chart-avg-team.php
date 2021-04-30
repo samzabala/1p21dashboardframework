@@ -6,20 +6,14 @@
 Chart Step No. 1. DATASETUP - JSON format
 	Each object represents aan employee.
 
-	`name` has to contains the name of tje team member. needed for axis labeling
-
+	`name` has to contains the name of the team member. needed for axis labeling
 	`department` is department where member belongs
-
-
 	`items` are instances of data under the member
-
 		each item will have the following properties
-		
 			`Task Cat Title`: category
 			`duration`: decimal percentage of hours to total (should be more than 0 but less than or equal to 1)
 
-
-	If structure is not possible, let me know so I can modify the script to accept form of data structure
+	If structure is not possible, let me know so I can modify the script
 	*/
 
 var placeholderData = [
@@ -260,10 +254,10 @@ var placeholderData = [
 
 <!-- 
 Chart Step No. 2. + D3 Library + DOM ELEMENT
-an element with a unique id to render the graph to. add color and background helpers for more fancyness as desired. chart markup shouls look like this: 
+an element with a unique id to render the graph to. add color and background helpers for more fancyness as desired. chart markup should look like this: 
  -->
 <script src="https://d3js.org/d3.v6.js"></script>
-<div id="avg-all-chart" class="background-theme color-theme"></div>
+<div id="analytics-chart" class="background-theme color-theme"></div>
 <!-- 
 Chart Step No 3. Script that must be copy pasted
 this is the hellhole. Copy everything in the following script tag and paste where needed
@@ -274,7 +268,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 //////////////////////////////START COPY HERE//////////////////////////////
 "use strict";
 	(function(window){
-		const WorkflowBarChart = function(selector,incomingData,settings){
+		const WorkflowBarChart = function(selector,incomingData,department){
 
 
 			if (!selector || !incomingData ){
@@ -289,7 +283,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.padding = [20,10,10,75];
 
 			this.transition = d3.transition()
-				.duration( 500 )
+				.duration( 500)
 				;
 
 			this.init = ()=> {
@@ -322,7 +316,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				
 
 				this.legends = this.container.append('div')
-					.attr('class','flex-grid flex-grid-fixed');
+					.attr('class','flex-grid flex-grid-fixed flex-grid-compact');
 
 				
 				this.yAxis = this.svg.append('g')
@@ -332,7 +326,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				this.xAxis = this.svg.append('g')
 					.attr("transform", `translate(0,${this.padding[0]})`)
 
-				return this.update(incomingData);
+				return this.update(incomingData,department);
 			}
 
 			this.sibData = (teamMember)=>{
@@ -362,7 +356,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 			this.colorDomain = ()=>{
 				var colDomain = [];
 
-				this.parsedData(this.data).forEach((member)=>{
+				this.data.forEach((member)=>{
 					member.items.forEach(item=>{
 						if(!colDomain.includes(item.task_cat)){
 							colDomain.push(item.task_cat);
@@ -370,41 +364,45 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					})
 				});
 				
-
 				return colDomain;
 			}
 
-			this.parsedData = (data)=>{
-				data = data || this.data;
+			this.parsedData = (data,department)=>{
+				const WBC = this;
 				data.forEach((member,i)=>{
 					const name = member.name;
 
 					member.items.forEach((item,j)=>{
 						data[i].items[j]._name = name;
 					})
-				})
-
+				});
+				
+				if(department){
+					data = data.filter(member => {
+						return member.department == department
+					})
+				}
+				
 				return data;
 			}
-
-
-
-
-
 
 			this.update = (newData,department) => {
 				const WBC = this;
 
-				newData  = newData || WBC.data;
+				department  = department || false;
+
+				newData  = newData
+					? WBC.parsedData(newData,department)
+					: WBC.data;
 				WBC.data = newData;
 
-				department = department || false;
-
+				
 				WBC.height = (()=>{
-					return newData.length 
-						? (newData.length * WBC.barHeight )
+					return WBC.data.length 
+						? (WBC.data.length * WBC.barHeight )
 						: 800
 				})();
+
 
 				WBC.canvasWidth = WBC.width + WBC.padding[1] + WBC.padding[3];
 				WBC.canvasHeight = WBC.height + WBC.padding[0] + WBC.padding[2];
@@ -426,7 +424,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 						this.canvasHeight - this.padding[2]
 						// this.padding[0] + this.height
 					])
-					.domain(this.data.map(d => d.name))
+					.domain(WBC.data.map(d => d.name))
 					.padding(.1)
 					;
 
@@ -467,22 +465,11 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('viewBox','0 0 ' + WBC.canvasWidth + ' ' + WBC.canvasHeight )
 					;
 
-
 				WBC.member = WBC.svg.selectAll('g.chart-team-member')
 					.data(
-						WBC.parsedData(),
+						WBC.data,
 						(dat)=>{
-							
-							if(
-								(
-									department
-									&& dat.department == department
-								) || (
-									!department
-								)
-							){
-								return dat.name
-							}
+							return dat.name;
 						}
 					)
 					;
@@ -492,12 +479,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('class',(d)=>{
 						return 'chart-team-member chart-team-member-'+d.name
 					})
-					// .transition()
-					// .style('opacity',1)
+					;
 					
 				WBC.member.exit()
-					// .transition()
-					// .style('opacity',0)
 					.remove()
 					;
 
@@ -523,9 +507,9 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 				WBC.shape_enter = WBC.shape.enter()
 					.append('rect')
 					.attr('x',WBC.x(0))
-					// .attr('y',(d)=>{
-					// 	return WBC.y(d._name);
-					// })
+					.attr('y',(d)=>{
+						return WBC.y(d._name);
+					})
 					.attr('width',WBC.x(0) - WBC.x.range()[0])
 					.attr('height',(d)=>{
 						return WBC.y.bandwidth()
@@ -599,6 +583,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 
 	window.WorkflowBarChart = WorkflowBarChart;
 	}(window));
+//////////////////////////////END COPY HERE//////////////////////////////
 </script>
 
 
@@ -610,13 +595,12 @@ this Version loads d3 as well instead of manually embedding script. may cause th
 
 	//store graph in a variable to allow updates
 	var graph = new WorkflowBarChart(
-		'#avg-all-chart',
+		'#analytics-chart',
 		placeholderData
 	);
 	var usePlaceholder = true;
 	
 // // // //debug dont use this
-
 var placeholderDataChange = [
 	{
 		"name": "Cristian R",
@@ -756,7 +740,7 @@ var placeholderDataChange = [
 	},
 	{
 		"name": "Phoenix W",
-		"department": "game character",
+		"department": "game_character",
 		"items": [
 			{
 				"task_cat":"Campaign Analysis",
@@ -778,7 +762,7 @@ var placeholderDataChange = [
 	},
 	{
 		"name": "Miles E",
-		"department": "game character",
+		"department": "game_character",
 		"items": [
 			{
 				"task_cat":"AC Task",
@@ -878,6 +862,7 @@ setTimeout(function(){
 		// clearInterval(intervalId);
 
 		var newData = (!usePlaceholder ? placeholderDataChange : placeholderData);
+		var departmentStringToFilter = (!usePlaceholder ? false : false);
 	
 
 
@@ -891,7 +876,7 @@ setTimeout(function(){
 		updateBubbles allows you to modify arguments and render a different variation of the data
 		*/
 		
-		graph.update(newData);
+		graph.update(newData,departmentStringToFilter);
 
 
 	}, 2000);
