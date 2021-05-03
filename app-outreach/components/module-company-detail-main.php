@@ -740,7 +740,9 @@
 
 
 		<!-- notes -->
-			<?php app_get_component('components/module-notes') ?>
+			<?php app_get_component('components/module-notes','',false,array(
+				'has_add_note' => true
+			)) ?>
 	</div>
 
 	

@@ -7,16 +7,13 @@ $defs = array(
 $args = app_parse_args($data,$defs);
 ?>
 
-	<div class="module module-large background-neutral-alpha-2">
+	<div class="module module-large background-neutral-alpha-2 position-relative">
 		<div class="module-header module-header-break margin-bottom">
 			<h3 class="module-title">Activities &amp; Notes</h3>
 			<div class="module-functions">
 
 				<?php app_get_component('components/function-select-by-type') ?>
 
-				<?php if($args['has_add_note']): ?>
-					<?php app_get_component('components/function-add-note') ?>
-				<?php endif; ?>
 			</div>
 		</div>
 		<div class="module-content background-theme no-padding">
@@ -40,5 +37,10 @@ $args = app_parse_args($data,$defs);
 			<p class="padding color-neutral font-style-italic">
 				No notes yet.
 			</p>
+
+
+		<?php if($args['has_add_note']): ?>
+			<?php app_get_component('components/module-add-notes') ?>
+		<?php endif; ?>
 		</div>
 	</div>
