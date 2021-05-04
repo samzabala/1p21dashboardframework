@@ -50,7 +50,22 @@ $args = app_parse_args($data,$defs);
 			</div>
 		</div>
 			
-		<div class="flex-child flex-0-0">
+		<div class="flex-child flex-0-0 position-relative">
+			
+
+		<?php app_get_component('components/dropdown-actions','',false,array(
+				'links' => array(
+					'Edit'
+						=> 'class="dropdown-purger" href="#"',
+
+					'Delete'
+						=> 'class="dropdown-purger" href="#"',
+						
+					'Pin note'
+						=> 'class="dropdown-purger" href="#"',
+				)
+			)) ?>
+			<span class="spacer">&nbsp;</span>
 			<!-- @note
 				.btn
 				classes to add
