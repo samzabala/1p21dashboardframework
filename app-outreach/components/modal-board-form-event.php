@@ -15,7 +15,7 @@ Modal from framework/src/js/imports/modal
 
 		<div class=" flex-col-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
-				<label for="event-note" class="input-label">event Note</label>
+				<label for="event-note" class="input-label">Event Note</label>
 				<textarea class="input input-multiple-line" name="event-note">
 					REPLACE with tinymce
 				</textarea>
