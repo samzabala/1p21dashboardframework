@@ -6865,6 +6865,8 @@ hr.dropdown-separator {
   position: fixed;
   z-index: 99999;
   padding: 20px 20px;
+  width: 100%;
+  max-width: 400px;
 }
 @media (max-width: 1199px) {
   .alert-container {

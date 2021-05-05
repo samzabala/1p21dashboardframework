@@ -1095,8 +1095,8 @@ $alert-title-color: inherit !default;
 $alert-title-text-transform: uppercase !default;
 
 //schemes
-$alert-border-default: $var-color-neutral !default;
-$alert-background-default: transparent !default;
+$alert-border-default: $var-color-base-alpha-2 !default;
+$alert-background-default: $var-theme-background !default;
 $alert-color-default: inherit !default;
 
 $alert-border-primary: $var-color-base-alpha-2 !default;

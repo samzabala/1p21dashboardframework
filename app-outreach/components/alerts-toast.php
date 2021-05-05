@@ -35,7 +35,7 @@
 
         <!--`info`: for minor things/ default alert type -->
             <?php app_get_component('components/alert','',false,array(
-                'content'	=> 'I\'m pretty neutral and not that critical. meh.'
+                'content'	=> 'fyi pretty neutral and not that critical.'
             )); ?>
 
 
