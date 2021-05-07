@@ -117,7 +117,7 @@
 
 			<?php if($args['add_close_btn']): ?>
 				<div class="flex-0-0">
-					<span class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></span></a>
+					<a href="#" class="alert-close" data-toggle-alert-close><i class="symbol symbol-close"></i></a>
 				</div>
 			<?php endif; ?>
 		</div>
