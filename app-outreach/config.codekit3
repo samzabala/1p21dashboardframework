@@ -506,12 +506,20 @@
       "oAP" : "\/company-detail.php",
       "oF" : 0
     },
-    "\/components\/alert.php" : {
+    "\/components\/alert-basic.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/components\/alert.php",
+      "oAP" : "\/components\/alert-basic.php",
+      "oF" : 0
+    },
+    "\/components\/alert-reminder.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/alert-reminder.php",
       "oF" : 0
     },
     "\/components\/alerts-toast.php" : {

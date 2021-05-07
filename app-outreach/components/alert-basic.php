@@ -24,25 +24,6 @@
 	$_alert_label = ''; //label text for alert
 	switch($args['type']):
 
-		case 'reminder':
-			$_palette_tag  = 'primary';
-			$_symbol_tag  = 'check';
-			$_alert_label = 'Reminder:';
-			break;
-
-		case 'due':
-			$_palette_tag  = 'primary';
-			$_symbol_tag  = 'calendar';
-			$_alert_label = 'Due Date:';
-			break;
-
-		case 'activity':
-			$_palette_tag  = 'primary';
-			$_symbol_tag  = 'bell';
-			$_alert_label = 'Notification:';
-			break;
-            
-
 		case 'error':
 			$_palette_tag  = 'error';
 			$_symbol_tag  = 'error';
