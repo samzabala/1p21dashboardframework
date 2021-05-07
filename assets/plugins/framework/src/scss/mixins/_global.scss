@@ -1,3 +1,14 @@
+@mixin on-breakpoint($device: nonmobile){
+  @if $device == mobile {
+    @include br(#{$mobile-br-max}-max){
+      @content;
+    }
+  }@else{
+    @include br(#{$mobile-br-max-polar}){
+      @content;
+    }
+  }
+}
 @mixin create-box-helper(
   $selector-prefix,
   $selector-suffix: '',
@@ -426,7 +437,7 @@
     overflow: hidden !important;
 
     &-mobile {
-      @include br(#{$mobile-br-max}-max) {
+      @include on-breakpoint(mobile) {
         pointer-events: none !important;
         position: absolute !important;
         left: -99999999vw !important;
@@ -456,6 +467,10 @@
         overflow: hidden !important;
       }
     }
+  }
+
+  &-nav-offset-sticky {
+    top: $calculated-nav-height !important;
   }
 
   &-visibility-hidden {
@@ -536,5 +551,59 @@
     --fw-theme-color-contrast: #{$brand-theme-color-contrast};
     --fw-theme-background: #{$brand-theme-background};
     --fw-theme-background-contrast: #{$brand-theme-background-contrast};
+  }
+}
+
+@mixin dump-z-index-helpers($prefix: '.z-index',$multiplier,$max){
+  $z: $multiplier;
+
+  @while $z <= $max {
+    // @if $z != $multiplier or $z == 1 {
+      @at-root #{$prefix}-#{$z} {
+        z-index: $z !important;
+      }
+    // }
+    $z: $z + $multiplier;
+  }
+}
+
+@mixin dump-flex-increments($max: 1) {
+
+  //extend
+  @for $h from 0 through $max {
+    @at-root %fw_flex_inc {
+      &-grow-#{$h} {
+        flex-grow: #{$h} !important;
+      }
+
+      &-shrink-#{$h} {
+        flex-shrink: #{$h} !important;
+      }
+    }
+  }
+
+  @for $i from 0 through $max {
+    @for $j from 0 through $max {
+    // @each $j in $past-flex-increments {
+      @at-root #{& + '-'+$i+'-'+$i},
+      #{& + '-'+$i+'-'+$j} {
+          @extend %fw_flex_inc-grow-#{$i} !optional;
+      }
+
+      @at-root #{& + '-'+$i+'-'+$i},
+        #{& + '-'+$j+'-'+$i} {
+          @extend %fw_flex_inc-shrink-#{$i} !optional;
+      }
+
+      @at-root #{& + '-'+$j+'-'+$i},
+        #{& + '-'+$j+'-'+$j} {
+          @extend %for-flex-grow-#{$j} !optional;
+      }
+
+      @at-root #{& + '-'+$i+'-'+$j},
+        #{& + '-'+$j+'-'+$j} {
+        @extend %for-flex-shrink-#{$j} !optional;
+      }
+    }
   }
 }

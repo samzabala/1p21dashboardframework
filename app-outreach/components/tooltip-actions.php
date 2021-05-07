@@ -9,6 +9,7 @@ $defs = array(
 	'links' => array(
 		'Link Text' => 'href="#"' //it just an array of link text and anchor attributes
 	),
+	'button_classes' => 'btn-link'
 );
 
 $args = app_parse_args($data,$defs);
@@ -28,7 +29,7 @@ $args = app_parse_args($data,$defs);
 		<?php endforeach; ?>
 	</ul>
 	"
-	class="btn btn-link btn-symbol btn-link"
+	class="btn btn-symbol <?=$args['button_classes'] ?>"
 	title="More options"
 >
 	<i class="symbol symbol-kebab-horizontal"></i>

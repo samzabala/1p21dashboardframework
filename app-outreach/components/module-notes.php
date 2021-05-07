@@ -24,14 +24,19 @@ $args = app_parse_args($data,$defs);
 						'is_pinned' => true
 					)) ?>
 
+					
+						<?php app_get_component('components/note-row','',false,array(
+							'is_pinned' => true
+						)) ?>
+
 				<!-- @loop .note-row NOT_PINNED -->
 					<?php app_get_component('components/note-row','',false,array(
 						'is_pinned' => false
 					)) ?>
 
-				<?php for($i=1; $i<=4; $i++){ ?>
-					<?php app_get_component('components/note-row') ?>
-				<?php } ?>
+						<?php for($i=1; $i<=4; $i++){ ?>
+							<?php app_get_component('components/note-row') ?>
+						<?php } ?>
 
 		<!-- @else -->
 			<p class="padding color-neutral font-style-italic">
