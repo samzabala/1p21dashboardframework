@@ -1,8 +1,6 @@
 import Initiator from './core/initiator.js';
 import Settings from './core/settings.js';
 
-import FwEvent from './data-helper/event.js';
-import FwDom from './data-helper/dom.js';
 import FwString from './data-helper/string.js';
 import FwArray from './data-helper/array.js';
 
@@ -117,9 +115,9 @@ class ModuleGrid extends FwComponent {
     const element = elem ? super.UIEl(elem) : super.UIEl();
 
     super.runCycle(
-      EVENT_BEFORE_RENDER_BLOCK,
-      EVENT_RENDER_BLOCK,
-      EVENT_AFTER_RENDER_BLOCK,
+      EVENT_BEFORE_RENDER_GRID,
+      EVENT_RENDER_GRID,
+      EVENT_AFTER_RENDER_GRID,
       () => {
         this._loopProps(element, PROPERTIES_WRAPPER);
       },

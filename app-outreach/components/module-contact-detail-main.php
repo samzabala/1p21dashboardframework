@@ -1,8 +1,6 @@
 <!-- Main -->
 <div
 	class="module module-no-gutter background-transparent no-border no-shadow"
-	data-grid-column-md="main"
-	data-grid-row-md="1 / span 6"
 >
 	<div class="module-content align-self-stretch">
 

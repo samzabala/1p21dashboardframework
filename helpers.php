@@ -105,7 +105,7 @@ function app_get_footer($slug = FWAPPS_APP){
 
 //GETS THE TEMPLETE FOR THE BOI WHILE HANDLEBARS IS NOT READY
 function app_init_content(){
-	$app  = 'dashboard';
+	$app  = 'outreach';
 	$template_part = '';
 	$slug = '';
 
@@ -125,57 +125,6 @@ function app_init_content(){
 	
 	//specific shit
 	switch($app):
-		//outreach
-		case 'outreach':
-			$slug = '';
-			switch($template_part):
-
-
-				case 'home':
-				case null:
-					?>
-						<div class="module">
-
-							Not yet brah
-							<br>
-							<br>
-							<br>
-							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
-						</div>
-					<?php
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
-					break;
-				case 'company-detail':
-				case 'contact-detail':
-				case 'tasks':
-				case 'contacts':
-				case 'login':
-				case 'login-reset':
-				case 'login-forgot':
-				case '404':
-				case '500':
-					app_get_template_part("app-{$app}/{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
-					?>
-
-					<!-- <link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" /> -->
-					<?php
-					break;
-				break;
-
-				case 'debug':
-				case 'debug-components':
-					app_get_template_part("{$template_part}");
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
-					$GLOBALS['VALID_TEMPLATE'] = $template_part;
-					break;
-
-				default:
-					app_get_template_part('global/error');
-					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
-					$GLOBALS['VALID_TEMPLATE'] = "error";
-					break;
-				endswitch;
 		//time tracker shit
 		case 'webpack':
 			case 'home':
@@ -366,7 +315,6 @@ function app_init_content(){
 
 		//dashboard shit
 		case 'dashboard':
-		default:
 
 			if($slug == ''){
 				$slug = 'production';
@@ -433,6 +381,62 @@ function app_init_content(){
 	
 			endswitch;
 			break;
+
+		
+		//outreach
+		case 'outreach':
+		default:
+			$slug = '';
+			switch($template_part):
+
+
+				case 'home':
+				case null:
+					?>
+						<div class="module">
+
+							Not yet brah
+							<br>
+							<br>
+							<br>
+							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
+						</div>
+					<?php
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
+					break;
+				case 'company-detail':
+				case 'contact-detail':
+				case 'tasks':
+				case 'contacts':
+				case 'companies':
+				case 'companiy-detail':
+				case 'login':
+				case 'login-reset':
+				case 'login-forgot':
+				case '404':
+				case '500':
+					app_get_template_part("app-{$app}/{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+					?>
+
+					<!-- <link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" /> -->
+					<?php
+					break;
+				break;
+
+				case 'debug':
+				case 'debug-components':
+					app_get_template_part("{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					$GLOBALS['VALID_TEMPLATE'] = $template_part;
+					break;
+
+				default:
+					app_get_template_part('global/error');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
+					$GLOBALS['VALID_TEMPLATE'] = "error";
+					break;
+				endswitch;
 
 	endswitch;
 
@@ -533,7 +537,7 @@ function app_debug_li() {
 	</li>
 	<li>
 		<?php 
-			$js_to_switch = FWAPPS_JS == 'vanilla' ? '' : 'vanilla';
+			$js_to_switch = FWAPPS_JS == 'vanilla' ? 'plugged' : 'vanilla';
 		?>
 		<a href="<?=app_create_link(array('js'=>$js_to_switch)); ?>">Switch to <?= $js_to_switch == 'vanilla' ? 'indie' : 'plugged' ?> js</a>
 	</li>

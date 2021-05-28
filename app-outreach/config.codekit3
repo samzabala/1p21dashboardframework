@@ -284,6 +284,20 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/companies.example.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/companies.example.css",
+      "oF" : 1,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/styles\/company-detail.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -320,6 +334,20 @@
       "oA" : 0,
       "oAP" : "\/assets\/styles\/company-detail.mine.css",
       "oF" : 2,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/company.example.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/company.example.css",
+      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -498,6 +526,14 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/companies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/companies.php",
+      "oF" : 0
+    },
     "\/company-detail.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -658,6 +694,14 @@
       "oAP" : "\/components\/list-social.php",
       "oF" : 0
     },
+    "\/components\/modal-board-form-company.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-board-form-company.php",
+      "oF" : 0
+    },
     "\/components\/modal-board-form-contact.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -720,6 +764,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/module-company-detail-utility.php",
+      "oF" : 0
+    },
+    "\/components\/module-contact-detail-header.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-contact-detail-header.php",
       "oF" : 0
     },
     "\/components\/module-contact-detail-main.php" : {

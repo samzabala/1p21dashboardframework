@@ -291,8 +291,3 @@
 		<?app_get_component('components/pagination') ?>
 	</div>
 </div>
-
-<!-- boards that appear -->
-<?app_get_component('components/modal-board-form-contact') ?>
-<?app_get_component('components/modal-board-form-task') ?>
-<?app_get_component('components/modal-board-form-event') ?>

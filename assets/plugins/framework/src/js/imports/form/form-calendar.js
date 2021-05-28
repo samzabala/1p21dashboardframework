@@ -25,7 +25,7 @@ const DATA_KEY = `${Settings.get('prefix')}_${NAME}`;
 const EVENT_KEY = `_${DATA_KEY}`;
 const EVENT_CLICK = `click${EVENT_KEY}`;
 const EVENT_KEYUP = `keyup${EVENT_KEY}`;
-const EVENT_CHANGE = `change${EVENT_KEY}`;
+// const EVENT_CHANGE = `change${EVENT_KEY}`;
 
 const EVENT_BEFORE_INIT = `before_init${EVENT_KEY}`;
 const EVENT_INIT = `init${EVENT_KEY}`;
@@ -47,7 +47,7 @@ class Calendar extends FwComponent {
   constructor(element, valueToRender, args) {
     super(element, {
       UIValue: valueToRender || false,
-      _customArgs: args || false,
+      _customArgs: args || (element ? element.__customArgs : false),
     });
   }
 

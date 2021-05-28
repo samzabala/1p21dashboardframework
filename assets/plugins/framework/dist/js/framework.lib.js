@@ -102,7 +102,9 @@
   var DisableClasses = ['table-row-disabled', 'tab-disabled', 'btn-disabled', 'input-disabled', 'disabled']; // @TODO push instead of hard coding to arrays because
 
   var lookupResetToParentClass = ['input-group', 'btn-group'];
-  var lookupResetFromClosestComponent = ['dropdown', 'modal-default', 'modal-board', 'switch', 'alert'];
+  var lookupResetFromClosestComponent = ['dropdown', // 'modal-default',
+  // 'modal-board',
+  'switch', 'alert'];
   var lookupResetFromClosestComponentUi = [//root component name, subcomponent mods
   'modal-default', 'modal-board', 'input-calendar', 'input-tags'];
   var DateTimePreset = {
@@ -412,43 +414,44 @@
         // console.warn('toggle trigger was in group');
         toReturn = UIToggled(toggleMode, triggerer.parentNode);
       } else {
+        // console.warn('toggle trigger anybody whos a sibling',selectorToMatch);
         var possibleSiblings = triggerer.nextElementSibling;
 
         while (possibleSiblings) {
-          if (possibleSiblings.matches(selectorToMatch)) {
-            // console.warn('toggle trigger anybody whos a sibling');
-            return possibleSiblings;
+          if (possibleSiblings.matches(selectorToMatch) && !toReturn) {
+            toReturn = possibleSiblings;
           }
 
           possibleSiblings = possibleSiblings.nextElementSibling;
         }
-
-        toReturn = possibleSiblings;
       }
-    }
+    } // console.warn(toReturn);
 
-    if (!toReturn && lookupResetFromClosestComponent.filter(function (i) {
+
+    if (!toReturn && triggerer && toggleMode && lookupResetFromClosestComponent.filter(function (i) {
       return i == componentClass;
     })) {
       //look if theres an ancestor it can toggle. last prioroty
-      // console.warn('has a ttrigger, looking for closest compopnent');
-      if (triggerer && toggleMode && lookupResetFromClosestComponentUi.filter(function (i) {
+      // console.warn('has a ttrigger, looking for closest compopnent',componentClass);
+      if (lookupResetFromClosestComponentUi.filter(function (i) {
         return triggerer.parentNode.matches("." + i);
       }).length > 0 && triggerer.parentNode.closest("." + UIPrefix(componentClass))) {
         // console.warn('found for a ui ancestor');
         toReturn = triggerer.parentNode.closest("." + componentClass);
-      } else if (triggerer && toggleMode && triggerer.parentNode.closest(selectorToMatch)) {
+      } else if (triggerer.parentNode.closest(selectorToMatch)) {
         // console.warn('found for an ancestor');
         toReturn = triggerer.parentNode.closest(selectorToMatch);
       }
     }
 
     if (!toReturn) {
+      // console.warn( window.location.hash,'looking for by this hash',selectorToMatch);
       if (window.location.hash !== '' && document.querySelector(window.location.hash) && document.querySelector(window.location.hash).matches(selectorToMatch)) {
-        // console.warn('no trigger but found the hash is a matching toggle');
+        // console.warn(document.querySelector(window.location.hash),'no trigger but found the hash is a matching toggle');
         toReturn = document.querySelector(window.location.hash);
       }
-    }
+    } // console.warn('idiot',toReturn);
+
 
     return toReturn;
   };
@@ -769,7 +772,7 @@
 
   Initiator.start();
 
-  var NativeEvents = ['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectstart', 'selectend', 'keydown', 'keypress', 'keyup', 'paste', 'orientationchange', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gesturestart', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll'];
+  var NativeEvents = ['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouseover', 'mouseout', 'mousemove', 'selectstart', 'selectend', 'keydown', 'keypress', 'keyup', 'paste', 'orientationchange', 'touchstart', 'touchmove', 'touchend', 'touchcancel', 'pointerdown', 'pointermove', 'pointerup', 'pointerleave', 'pointercancel', 'gesturestart', 'gesturechange', 'gestureend', 'focus', 'blur', 'change', 'reset', 'select', 'submit', 'focusin', 'focusout', 'load', 'unload', 'beforeunload', 'resize', 'move', 'DOMContentLoaded', 'readystatechange', 'error', 'abort', 'scroll', 'hashchange'];
 
   var FwEvent = /*#__PURE__*/function (_FwDataHelper) {
     _inheritsLoose(FwEvent, _FwDataHelper);
@@ -950,6 +953,7 @@
       if (typeof props === 'object') {
         for (var key in props) {
           this[key] = props[key];
+          this.element["_" + key] = props[key];
         }
       }
     }
@@ -1131,8 +1135,8 @@
     function Accordion(element, triggerer, args) {
       element = element || UIToggled(TOGGLE_MODE$3) || false;
       return _FwComponent.call(this, element, {
-        triggerer: triggerer ? triggerer : false,
-        _customArgs: args || false
+        triggerer: triggerer ? triggerer : element ? element._triggerer : false,
+        _customArgs: args || (element ? element.__customArgs : false)
       }) || this;
     }
 
@@ -1326,7 +1330,7 @@
       key: "configDefaults",
       get: function get() {
         return {
-          changeHash: 'true'
+          changeHash: true
         };
       }
     }]);
@@ -1506,8 +1510,8 @@
 
     function Dropdown(element, triggerer, args) {
       return _FwComponent.call(this, element, {
-        triggerer: triggerer ? triggerer : false,
-        _customArgs: args || false
+        triggerer: triggerer ? triggerer : element ? element._triggerer : false,
+        _customArgs: args || (element ? element.__customArgs : false)
       }) || this;
     }
 
@@ -1956,7 +1960,8 @@
   var DATA_KEY$9 = Settings.get('prefix') + "_" + NAME$9;
   var EVENT_KEY$9 = "_" + DATA_KEY$9;
   var EVENT_CLICK$6 = "click" + EVENT_KEY$9;
-  var EVENT_KEYUP = "keyup" + EVENT_KEY$9;
+  var EVENT_KEYUP = "keyup" + EVENT_KEY$9; // const EVENT_CHANGE = `change${EVENT_KEY}`;
+
   var EVENT_BEFORE_INIT$4 = "before_init" + EVENT_KEY$9;
   var EVENT_INIT$4 = "init" + EVENT_KEY$9;
   var EVENT_AFTER_INIT$4 = "after_init" + EVENT_KEY$9;
@@ -1978,7 +1983,7 @@
 
       _this = _FwComponent.call(this, element, {
         UIValue: valueToRender || false,
-        _customArgs: args || false
+        _customArgs: args || (element ? element.__customArgs : false)
       }) || this;
 
       _this._arrowHtml = function (buttonClass) {
@@ -2609,7 +2614,8 @@
   var EVENT_CLICK$5 = "click" + EVENT_KEY$8;
   var EVENT_KEYDOWN = "keydown" + EVENT_KEY$8;
   var EVENT_BLUR = "blur" + EVENT_KEY$8;
-  var EVENT_PASTE = "paste" + EVENT_KEY$8;
+  var EVENT_PASTE = "paste" + EVENT_KEY$8; // const EVENT_CHANGE = `change${EVENT_KEY}`;
+
   var EVENT_BEFORE_INIT$3 = "before_init" + EVENT_KEY$8;
   var EVENT_INIT$3 = "init" + EVENT_KEY$8;
   var EVENT_AFTER_INIT$3 = "after_init" + EVENT_KEY$8;
@@ -2626,8 +2632,8 @@
 
     function Tags(element, valueToRender, args) {
       return _FwComponent.call(this, element, {
-        UIValue: valueToRender || false,
-        _customArgs: args || false
+        UIValue: valueToRender || (element ? element.UIValue : false),
+        _customArgs: args || (element ? element.__customArgs : false)
       }) || this;
     }
 
@@ -2686,17 +2692,23 @@
       var fnToFilter, applyFilter;
 
       try {
-        fnToFilter = custFn || eval(this.args.filter);
+        fnToFilter = custFn || (typeof this.args.filter === 'string' ? eval(this.args.filter) : this.args.filter);
       } catch (err) {}
 
       if (typeof fnToFilter === 'function') {
-        applyFilter = function applyFilter(valueToFilter, filterFnName) {
+        var fn = fnToFilter;
+
+        applyFilter = function applyFilter(valueToFilter, fn) {
           var noInputValueToFilter = function () {
             return Tags.toVal(valueToFilter, false);
           }(); // turn to array ya bopi without the input tag string
+          // let toReturn = Tags.toArr(
+          //   eval(`${filterFnName}("${noInputValueToFilter}")`),
+          //   false
+          // );
 
 
-          var toReturn = Tags.toArr(eval(filterFnName + "(\"" + noInputValueToFilter + "\")"), false); // console.log(
+          var toReturn = Tags.toArr(fn(noInputValueToFilter), false); // console.log(
           // 	'index of input\n',inputIndex,
           // 	'\n\n\nfiltered and ready for splice\n',toReturn,
           // 	'\n\n\npassed to the fil;ter\n'Tags.toVal(valueToFilter,false),
@@ -2715,8 +2727,8 @@
           return Tags.toVal(toReturn);
         };
 
-        this.theValue = applyFilter(this.theValue, this.args.filter);
-        this.renderValue = applyFilter(this.renderValue, this.args.filter);
+        this.theValue = applyFilter(this.theValue, fn);
+        this.renderValue = applyFilter(this.renderValue, fn);
       }
     };
 
@@ -2725,8 +2737,9 @@
 
       var theValue = newValue || this.theValue || '';
       var uiValue = valueToRender || theValue || this.renderValue || '';
-      allowFilter = allowFilter != false || allowFilter == true;
+      allowFilter = allowFilter == false ? false : true;
       inputText = inputText || false;
+      var triggerChange = newValue && Tags.toVal(newValue, false) !== this.theValue ? true : false;
 
       _FwComponent.prototype.runCycle.call(this, EVENT_BEFORE_UPDATE$1, EVENT_UPDATE$1, EVENT_AFTER_UPDATE$1, function () {
         _this2.theValue = theValue;
@@ -2744,7 +2757,9 @@
           _this2.focus();
         }
 
-        newValue && FwEvent.trigger(_FwComponent.prototype.UIEl.call(_this2), 'change');
+        if (triggerChange) {
+          FwEvent.trigger(_FwComponent.prototype.UIEl.call(_this2), 'change');
+        }
       });
     };
 
@@ -2769,6 +2784,7 @@
           theUI.container.classList.add('input');
           theUI.container.setAttribute('class', Settings.get('uiClass') + "\n          " + Settings.get('uiJsClass') + "\n          " + element.getAttribute('class').toString().replace(COMPONENT_CLASS$8, UIPrefix(COMPONENT_CLASS$8)));
           theUI.container.classList.add(_this3.args.multipleLines ? UIPrefix(COMPONENT_CLASS$8) + "-multiple" : UIPrefix(COMPONENT_CLASS$8) + "-single");
+          _this3.args.multipleLines && _this3.args.multipleLinesBreak && theUI.container.classList.add(UIPrefix(COMPONENT_CLASS$8) + "-multiple-break");
         }
 
         if (_this3.args.width) {
@@ -2788,20 +2804,24 @@
         theUI.input = _this3.UIInput;
 
         if (!theUI.input) {
-          theUI.input = document.createElement('span');
+          theUI.input = document.createElement('input'); // theUI.input = document.createElement('span');
+
           theUI.wrapper.appendChild(theUI.input);
-          theUI.input.setAttribute('class', UIPrefix(COMPONENT_CLASS$8) + "-input");
-          theUI.input.contentEditable = true;
+          theUI.input.setAttribute('class', UIPrefix(COMPONENT_CLASS$8) + "-input"); // theUI.input.contentEditable = true;
+
           theUI.input = theUI.wrapper.querySelector("." + UIPrefix(COMPONENT_CLASS$8) + "-input");
 
           if (element.hasAttribute('placeholder')) {
-            theUI.input.setAttribute('data-placeholder', element.getAttribute('placeholder'));
+            theUI.input.setAttribute( // 'data-placeholder',
+            'placeholder', element.getAttribute('placeholder'));
           } //nearest fw-ui parent will actually do tgoggl for bby because baby cant stand up on its own
+          // if (element.hasAttribute('data-toggle')) {
+          //   theUI.input.setAttribute(
+          //     'data-toggle',
+          //     element.getAttribute('data-toggle')
+          //   );
+          // }
 
-
-          if (element.hasAttribute('data-toggle')) {
-            theUI.input.setAttribute('data-toggle', element.getAttribute('data-toggle'));
-          }
 
           if (FwComponent.isDisabled(element)) {
             theUI.input.classList.add('disabled');
@@ -2869,7 +2889,7 @@
       disableNative = disableNative || false;
       var self = this;
       !disableNative && setTimeout(function () {
-        // console.log('poku','naAAANDATAAAOOOO');
+        // console.log('poku','naAAANDATAAAOOOO',self.UIInput);
         self.UIInput.focus();
       }, 0);
       self.UIRoot.classList.add(FOCUS_CLASS);
@@ -3122,10 +3142,10 @@
     }, {
       key: "UIInputValue",
       get: function get() {
-        return this.UIInput.innerText;
+        return this.UIInput.value;
       },
       set: function set(inputValue) {
-        this.UIInput.innerText = inputValue.toString().replace(/\n|\r/g, '\\n');
+        this.UIInput.value = inputValue.toString().replace(/\n|\r/g, '\\n');
       }
     }, {
       key: "UIInputIdx",
@@ -3150,7 +3170,8 @@
           width: _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$1 + "-width"),
           onKeyUp: _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$1 + "-on-keyup"),
           filter: _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$1 + "-filter"),
-          multipleLines: _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$1 + "-multiple-lines")
+          multipleLines: _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$1 + "-multiple-lines"),
+          multipleLinesBreak: _FwComponent.prototype.UIEl.call(this).getAttribute("data-" + ARG_ATTRIBUTE_NAME$1 + "-multiple-lines-break")
         }, Tags.configDefaults);
       }
     }], [{
@@ -3169,8 +3190,14 @@
         return {
           width: null,
           filter: null,
-          onKeyUp: null,
-          multipleLines: false
+          onKeyUp: {
+            value: null,
+            parser: function parser(value) {
+              return value ? value.toString() : null;
+            }
+          },
+          multipleLines: false,
+          multipleLinesBreak: false
         };
       }
     }]);
@@ -3209,7 +3236,7 @@
 
     function Lazy(element) {
       return _FwComponent.call(this, element, {
-        _ogElement: false
+        _ogElement: element ? element.__ogElement : false
       }) || this;
     }
 
@@ -3379,7 +3406,7 @@
     function ListGroup(element, triggeredChild) {
       element = element || false;
       return _FwComponent.call(this, element, {
-        _triggeredChild: triggeredChild ? new FwDom(triggeredChild) : false
+        _triggeredChild: triggeredChild ? new FwDom(triggeredChild) : element ? element.__triggeredChild : false
       }) || this;
     }
 
@@ -3492,41 +3519,43 @@
       element = element || false;
       args = args || false; //get currMode
 
-      var currMode = false; //look by triggerer first
+      var currMode = false; //look for currMode
 
-      if (triggerer && !element) {
-        //look for subcom
-        VALID_MODAL_MODES.forEach(function (mode) {
-          if ((triggerer.hasAttribute("data-toggle-" + _classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode)) || triggerer.hasAttribute("data-toggle-" + _classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode) + "-open") || triggerer.hasAttribute("data-toggle-" + _classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode) + "-close")) && !currMode) {
-            currMode = mode;
-          }
-        });
-      } else if (element) {
-        //look for subcom
-        VALID_MODAL_MODES.forEach(function (mode) {
-          if (element.classList.contains(COMPONENT_CLASS$5 + "-" + mode) && !currMode) {
-            currMode = mode;
-          }
-        }); //ok default probable
+      VALID_MODAL_MODES.forEach(function (mode) {
+        if (!element) {
+          element = UIToggled(_classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](currMode), null, "." + COMPONENT_CLASS$5 + "." + _classPrivateFieldLooseBase(Modal, _modeClass)[_modeClass](mode)) || Modal.current(currMode).element;
+        } //if not set yet of course
 
-        if (element.classList.contains(COMPONENT_CLASS$5) && !currMode) {
-          currMode = DEFAULT_NAME;
+
+        if (!currMode) {
+          // by triggerer first
+          if (triggerer && !element) {
+            if (triggerer.hasAttribute("data-toggle-" + _classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode)) || triggerer.hasAttribute("data-toggle-" + _classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode) + "-open") || triggerer.hasAttribute("data-toggle-" + _classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode) + "-close")) {
+              currMode = mode;
+            }
+          } else if (element) {
+            //look for subcom
+            if (element.classList.contains(COMPONENT_CLASS$5 + "-" + mode)) {
+              currMode = mode; //ok default probable
+            } else if (element.classList.contains(COMPONENT_CLASS$5)) {
+              currMode = DEFAULT_NAME;
+            }
+          } else if (!element) {
+            if (Modal.current(mode).element) {
+              currMode = mode;
+            }
+          }
         }
-      } //kill if not a valid bode boi
-
+      }); //kill if not a valid bode boi
 
       if (!currMode) {
         element = false;
-      } else {
-        if (currMode && !element) {
-          element = Modal.current(currMode).element;
-        }
       }
 
       _this = _FwComponent.call(this, element, {
-        triggerer: triggerer,
-        _customArgs: args || false,
-        _mode: currMode
+        triggerer: triggerer ? triggerer : element ? element._triggerer : false,
+        _customArgs: args || (element ? element.__customArgs : false),
+        _mode: currMode || (element && element._mode ? element._mode : false)
       }) || this;
       Object.defineProperty(_assertThisInitialized(_this), _current, {
         get: _get_current,
@@ -3548,26 +3577,46 @@
       return mode ? CURRENT_MODAL_INSTANCE[mode] : CURRENT_MODAL_INSTANCE;
     };
 
+    _proto.toggle = function toggle(elem) {
+      var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
+
+      if (element && element.classList.contains(ACTIVATED_CLASS$3)) {
+        this.create();
+      } else {
+        this.destroy();
+      }
+    };
+
     _proto.create = function create(elem) {
       var _this2 = this;
 
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
+      var matchedHashDestroy = false;
+
+      if (!window.location.hash && _classPrivateFieldLooseBase(this, _current)[_current] && _classPrivateFieldLooseBase(this, _current)[_current].element) {
+        if (element === _classPrivateFieldLooseBase(this, _current)[_current].element) {
+          matchedHashDestroy = true;
+        }
+
+        new Modal(_classPrivateFieldLooseBase(this, _current)[_current].element).destroy();
+      } //no need to create it twice or create it after already desttroiny it
+
+
+      if (matchedHashDestroy) {
+        return;
+      }
 
       if (!element) {
         return;
       }
 
       _FwComponent.prototype.runCycle.call(this, EVENT_BEFORE_CREATE$1, EVENT_CREATE$1, EVENT_AFTER_CREATE$1, function () {
-        if (element || !window.location.hash) {
-          _this2.destroy();
-        }
-
         var id = _this2.UIElId || _this2.UIId;
         id !== "" + _this2.UIId && _this2.args.changeHash && UIChangeHash(id);
         var theUI = document.createElement('div'); // document.querySelector('body').appendChild(theUI);
 
         element.parentNode.insertBefore(theUI, element.nextSibling);
-        theUI.className = UIPrefix(COMPONENT_CLASS$5) + "  " + UIPrefix(COMPONENT_CLASS$5) + "-mode-" + _this2.mode + " " + UIPrefix(COMPONENT_CLASS$5) + "-component\n          " + (_this2.args.align ? UIPrefix(COMPONENT_CLASS$5) + "-align-" + _this2.args.align : '') + "\n          " + _this2.args.classes;
+        theUI.className = UIPrefix(COMPONENT_CLASS$5) + " " + _this2.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-component\n          " + (_this2.args.align ? UIPrefix(COMPONENT_CLASS$5) + "-align-" + _this2.args.align : '') + "\n          " + _this2.args.classes;
         theUI.setAttribute('id', _this2.UIId);
         theUI.innerHTML = _this2._markup;
         FwDom.moveContents(element, _this2.UIContentBlock);
@@ -3597,7 +3646,8 @@
     _proto.destroy = function destroy(elem) {
       var _this3 = this;
 
-      var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _classPrivateFieldLooseBase(this, _current)[_current].element;
+      var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
+      var hash = window.location.hash;
 
       if (!element) {
         return;
@@ -3606,7 +3656,7 @@
       _FwComponent.prototype.runCycle.call(this, EVENT_BEFORE_DESTROY$1, EVENT_DESTROY$1, EVENT_AFTER_DESTROY$1, function () {
         var canRemoveHash = false;
 
-        if (element.hasAttribute('id') && element.getAttribute('id') == window.location.hash.replace('#', '')) {
+        if (element.hasAttribute('id') && element.getAttribute('id') == hash.replace('#', '')) {
           canRemoveHash = true;
         }
 
@@ -3674,7 +3724,7 @@
         return;
       }
 
-      var args = args || this.args || _classPrivateFieldLooseBase(this, _current)[_current].args || {};
+      var args = this.args || _classPrivateFieldLooseBase(this, _current)[_current].args || {};
       width = width || args.width || null;
 
       if (this.UIRoot && parseInt(width) >= parseInt(args.width)) {
@@ -3702,13 +3752,11 @@
       };
     };
 
-    Modal.handleUniversal = function handleUniversal() {
-      return function () {
+    Modal.handleHash = function handleHash() {
+      return function (e) {
         if (Settings.get('initializeModal')) {
-          VALID_MODAL_MODES.forEach(function (mode) {
-            var modal = new Modal(UIToggled(_classPrivateFieldLooseBase(Modal, _modeToggle)[_modeToggle](mode), null, "." + COMPONENT_CLASS$5 + "." + _classPrivateFieldLooseBase(Modal, _modeClass)[_modeClass](mode)));
-            modal.create();
-          });
+          var modal = new Modal();
+          modal.create();
         }
       };
     };
@@ -3742,8 +3790,8 @@
         FwEvent.addListener(document.documentElement, EVENT_CLICK$3, "*[data-toggle-" + modeToggle + "], *[data-toggle-" + modeToggle + "-open]", Modal.handleOpen(mode));
         FwEvent.addListener(document.documentElement, EVENT_CLICK$3, "*[data-toggle-" + modeToggle + "-close]", Modal.handleClose(mode));
       });
-      FwEvent.addListener(null, EVENT_HASHCHANGE, window, Modal.handleUniversal());
-      Initiator.Q.on_ready = Modal.handleUniversal();
+      FwEvent.addListener(null, EVENT_HASHCHANGE, window, Modal.handleHash());
+      Initiator.Q.on_ready = Modal.handleHash();
       Initiator.Q.on_resize = Modal.handleResize();
     };
 
@@ -3754,7 +3802,7 @@
         FwEvent.removeListener(document.documentElement, EVENT_CLICK$3, Modal.handleOpen(mode));
         FwEvent.removeListener(document.documentElement, EVENT_CLICK$3, Modal.handleClose(mode));
       });
-      FwEvent.removeListener(window, EVENT_HASHCHANGE, Modal.handleUniversal());
+      FwEvent.removeListener(window, EVENT_HASHCHANGE, Modal.handleHash());
     };
 
     _createClass(Modal, [{
@@ -3798,6 +3846,11 @@
         return _classPrivateFieldLooseBase(Modal, _modeClass)[_modeClass](this.mode);
       }
     }, {
+      key: "UiModeClass",
+      get: function get() {
+        return " " + UIPrefix(COMPONENT_CLASS$5) + "-mode-" + this.mode;
+      }
+    }, {
       key: "args",
       get: function get() {
         return FwComponent._parseArgs(this._customArgs ? this._customArgs : {
@@ -3823,45 +3876,45 @@
     }, {
       key: "_markup",
       get: function get() {
-        var html = "<div\n\t\t\t\tclass=\"\n\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$5) + "-wrapper\"\n\t\t\t>"; //overlay
+        var html = "<div\n\t\t\t\tclass=\"\n          " + this.UiModeClass + "\n\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$5) + "-wrapper\"\n\t\t\t>"; //overlay
 
-        html += "<a href=\"#\"\n\t\t\t\t\t\tclass=\"\n\t\t\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$5) + "-close-overlay\"\n\t\t\t\t\t\t\t" + (this.args.disableOverlay == false ? "data-toggle-" + this.modeToggle + "-close" : '') + "\n\t\t\t\t\t></a>";
+        html += "<div\n\t\t\t\t\t\tclass=\"\n              " + this.UiModeClass + "\n\t\t\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$5) + "-close-overlay\"\n\t\t\t\t\t\t\t" + (this.args.disableOverlay == false ? "data-toggle-" + this.modeToggle + "-close" : '') + "\n\t\t\t\t\t></div>";
 
         switch (this.mode) {
           case 'board':
-            html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-button-wrapper\">";
+            html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-popup\">";
+            html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-button-wrapper\">";
 
             if (this.args.close !== false) {
-              html += "<a href=\"#\"\n\t\t\t\t\t\t\t\t\t\tclass=\"\n\t\t\t\t\t\t\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$5) + "-close " + UIPrefix(COMPONENT_CLASS$5) + "-button\n\t\t\t\t\t\t\t\t\t\t\t" + (this.args.closeClasses ? this.args.closeClasses : UIPrefix(COMPONENT_CLASS$5) + "-button-default") + "\"\n\t\t\t\t\t\t\t\t\t\tdata-toggle-" + this.modeToggle + "-close\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<i class=\"symbol symbol-close \"></i>\n\t\t\t\t\t\t\t\t\t</a>";
+              html += "<a href=\"#\"\n                      class=\"\n                        " + this.UiModeClass + "\n                        " + UIPrefix(COMPONENT_CLASS$5) + "-close\n                        " + UIPrefix(COMPONENT_CLASS$5) + "-button\n                        " + (this.args.closeClasses ? this.args.closeClasses : UIPrefix(COMPONENT_CLASS$5) + "-button-default") + "\"\n                      data-toggle-" + this.modeToggle + "-close\n                    >\n                      <i class=\"symbol symbol-close \"></i>\n                    </a>";
             }
 
             if (this.args.resize !== false && this.args.width) {
-              html += "<a\n\t\t\t\t\t\t\t\t\t\tclass=\"\n\t\t\t\t\t\t\t\t\t\t\t" + UIPrefix(COMPONENT_CLASS$5) + "-resize " + UIPrefix(COMPONENT_CLASS$5) + "-button\n\t\t\t\t\t\t\t\t\t\t\t" + (this.args.resizeClasses ? this.args.resizeClasses : UIPrefix(COMPONENT_CLASS$5) + "-button-default") + "\"\n\t\t\t\t\t\t\t\t\t\tdata-toggle-" + this.modeToggle + "-resize\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<i class=\"symbol symbol-arrow-tail-left \"></i>\n\t\t\t\t\t\t\t\t\t\t<i class=\"symbol symbol-arrow-tail-right \"></i>\n\t\t\t\t\t\t\t\t\t</a>";
+              html += "<a\n                      class=\"\n                        " + this.UiModeClass + "\n                        " + UIPrefix(COMPONENT_CLASS$5) + "-resize\n                        " + UIPrefix(COMPONENT_CLASS$5) + "-button\n                        " + (this.args.resizeClasses ? this.args.resizeClasses : UIPrefix(COMPONENT_CLASS$5) + "-button-default") + "\"\n                      data-toggle-" + this.modeToggle + "-resize\n                    >\n                      <i class=\"symbol symbol-arrow-tail-left \"></i>\n                      <i class=\"symbol symbol-arrow-tail-right \"></i>\n                    </a>";
             }
 
             html += "</div>";
-            html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-popup\">";
 
             if (this.args.title) {
-              html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-title\">" + decodeURIComponent(this.args.title) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
+              html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-title\">" + decodeURIComponent(this.args.title) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
             }
 
-            html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-popup-content\"></div>";
+            html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-popup-content\"></div>";
             html += "</div>";
             break;
 
           default:
-            html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-popup\">";
+            html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-popup\">";
 
             if (this.args.title) {
-              html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-title\">" + decodeURIComponent(this.args.title) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
+              html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-header\">\n\t\t\t\t\t\t\t\t\t\t\t<h1 class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-title\">" + decodeURIComponent(this.args.title) + "</h1>\n\t\t\t\t\t\t\t\t\t\t</div>";
             }
 
             if (this.args.close !== false) {
-              html += "<a href=\"#\"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"" + UIPrefix(COMPONENT_CLASS$5) + "-close " + this.args.closeClasses + "\"\n\t\t\t\t\t\t\t\t\t\t\tdata-toggle-" + this.modeToggle + "-close\n\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<i class=\"symbol symbol-close\"></i>\n\t\t\t\t\t\t\t\t\t\t</a>";
+              html += "<a href=\"#\"\n\t\t\t\t\t\t\t\t\t\t\tclass=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-close " + this.args.closeClasses + "\"\n\t\t\t\t\t\t\t\t\t\t\tdata-toggle-" + this.modeToggle + "-close\n\t\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<i class=\"symbol symbol-close\"></i>\n\t\t\t\t\t\t\t\t\t\t</a>";
             }
 
-            html += "<div class=\"" + UIPrefix(COMPONENT_CLASS$5) + "-popup-content\"></div>";
+            html += "<div class=\"" + this.UiModeClass + " " + UIPrefix(COMPONENT_CLASS$5) + "-popup-content\"></div>";
             html += "</div>";
             break;
         }
@@ -3960,6 +4013,9 @@
   var EVENT_BEFORE_RENDER = "before_render" + EVENT_KEY$4;
   var EVENT_RENDER = "render" + EVENT_KEY$4;
   var EVENT_AFTER_RENDER = "after_render" + EVENT_KEY$4;
+  var EVENT_BEFORE_RENDER_GRID = "before_render_grid" + EVENT_KEY$4;
+  var EVENT_RENDER_GRID = "render_grid" + EVENT_KEY$4;
+  var EVENT_AFTER_RENDER_GRID = "after_render_grid" + EVENT_KEY$4;
   var EVENT_BEFORE_RENDER_BLOCK = "before_render_block" + EVENT_KEY$4;
   var EVENT_RENDER_BLOCK = "render_block" + EVENT_KEY$4;
   var EVENT_AFTER_RENDER_BLOCK = "after_render_block" + EVENT_KEY$4;
@@ -4012,7 +4068,7 @@
 
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
 
-      _FwComponent.prototype.runCycle.call(this, EVENT_BEFORE_RENDER_BLOCK, EVENT_RENDER_BLOCK, EVENT_AFTER_RENDER_BLOCK, function () {
+      _FwComponent.prototype.runCycle.call(this, EVENT_BEFORE_RENDER_GRID, EVENT_RENDER_GRID, EVENT_AFTER_RENDER_GRID, function () {
         _this._loopProps(element, PROPERTIES_WRAPPER);
       }, element);
     };
@@ -4367,7 +4423,7 @@
     function Tooltip(triggerElement, args) {
       triggerElement = triggerElement || false;
       return _FwComponent.call(this, triggerElement, {
-        _customArgs: args || false
+        _customArgs: args || (triggerElement ? triggerElement.__customArgs : false)
       }) || this;
     }
 
@@ -4771,7 +4827,7 @@
     function Zone(element, formControl) {
       element = element || false;
       return _FwComponent.call(this, element, {
-        _formControl: formControl ? new FwDom(formControl) : false
+        _formControl: formControl ? new FwDom(formControl) : element ? element._triggerer : false
       }) || this;
     }
 
