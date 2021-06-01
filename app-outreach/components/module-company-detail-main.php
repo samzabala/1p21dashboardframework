@@ -9,7 +9,7 @@
 		<!-- main -->
 			<div class="module module-large border-color-transparent">
 				<!-- Heading -->
-					<div class="company-heading flex-grid flex-grid-compact">
+					<div class="company-heading flex-grid flex-grid-compact position-relative">
 						<div class="flex-col-xs-12 flex-col-md-8">
 							<div>
 								<h1 class="no-margin display-inline">
@@ -40,6 +40,19 @@
 								</div>
 							</div>
 						</div>
+
+                        <div class="position-absolute btn-symbol position-absolute offset-right-0 offset-top-0">
+                            <a data-toggle-dropdown class="btn btn-neutral-glassy">
+                                <span class="sr-only">Edit</span>
+                                <i class="symbol symbol-kebab-horizontal"></i>
+                            </a>
+                            <div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="200px">
+                                <ul class="list-group">
+                                    <li><a href="#mb-editor-company" data-toggle-modal-board>Edit</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                            </div>
+                        </div>
 					</div>
 
 				<!-- tables -->

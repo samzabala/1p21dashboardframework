@@ -22,7 +22,7 @@ if(isset($_GET['app'])):
 	$_GET['app'] = filter_var($_GET['app'], FILTER_SANITIZE_STRING);
 endif;
 
-$___app = 'dashboard';
+$___app = 'outreach';
 
 if(isset($_GET['app'])):
 	$___app = $_GET['app'];
