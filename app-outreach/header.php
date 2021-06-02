@@ -87,8 +87,11 @@
 
 <?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'login-forgot' && FWAPPS_TEMPLATE !== 'login-reset'): ?>
 	<div id="outreach">
-			<!-- Notifications -->
-				<?php app_get_component('components/alerts-toast'); ?>
+
+			<?php if(FWAPPS_TEMPLATE !== 'debug'): ?>
+				<!-- Notifications -->
+					<?php app_get_component('components/alerts-toast'); ?>
+			<?php endif; ?>
 			<!-- Nav -->
 				<!-- appp-*/includes/main-nav -->
 					<div id="outreach-header" class="nav nav-sticky">
