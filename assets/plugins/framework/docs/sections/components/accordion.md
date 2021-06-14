@@ -41,6 +41,7 @@ Another way but [data-toggle-accordion] looks for a sibling because there's no `
   <div class="accordion">Sup mofos, I'm an accordion content</div>
 </div>
 ```
+
 ##Attributes/Settings
 
 ### **`[data-accordion-change-hash]`** - `args.changeHash`
