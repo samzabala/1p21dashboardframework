@@ -40,11 +40,12 @@
                             </a>
                             <div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="200px">
                                 <ul class="list-group">
-                                    <li><a href="#mb-editor-contact" data-toggle-modal-board>Edit</a></li>
+                                    <li><a href="#mb-editor-contact-details" data-toggle-modal-board>Edit</a></li>
                                     <li><a href="#">Delete</a></li>
                                 </ul>
                             </div>
                         </div>
+                        <?php app_get_component('components/modal-board-form-contact-details') ?>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,7 @@ $args = app_parse_args($data,$defs);
 					contact-social-btn-content-facebook
 					<?= $args['type'] !== 'facebook' ? 'display-none' : '' ?>
 					">
-						<img class="lazy lazy-svg hide-hover" data-src="<?=app_get_uri(); ?>/assets/images/icon-facebook-currentColor.svg" alt="" />
+						<img src="<?=app_get_uri(); ?>/assets/images/icon-facebook.svg" alt="" />
 						&nbsp;Facebook
 					</span>
 
@@ -33,7 +33,7 @@ $args = app_parse_args($data,$defs);
 					contact-social-btn-content-linkedin
 					<?= $args['type'] !== 'linkedin' ? 'display-none' : '' ?>
 					">
-						<img class="lazy lazy-svg hide-hover" data-src="<?=app_get_uri(); ?>/assets/images/icon-linkedin-currentColor.svg" alt="" />
+						<img src="<?=app_get_uri(); ?>/assets/images/icon-linkedin.svg" alt="" />
 						&nbsp;Linkedin
 					</span>
 
@@ -43,7 +43,7 @@ $args = app_parse_args($data,$defs);
 					contact-social-btn-content-twitter
 					<?= $args['type'] !== 'twitter' ? 'display-none' : '' ?>
 					">
-						<img class="lazy lazy-svg hide-hover" data-src="<?=app_get_uri(); ?>/assets/images/icon-twitter-currentColor.svg" alt="" />
+						<img src="<?=app_get_uri(); ?>/assets/images/icon-twitter.svg" alt="" />
 						&nbsp;Twitter
 					</span>
 
@@ -52,7 +52,7 @@ $args = app_parse_args($data,$defs);
 					contact-social-btn-content-google
 					<?= $args['type'] !== 'google' ? 'display-none' : '' ?>
 					">
-						<img class="lazy lazy-svg hide-hover" data-src="<?=app_get_uri(); ?>/assets/images/icon-google-currentColor.svg" alt="" />
+						<img src="<?=app_get_uri(); ?>/assets/images/icon-google.svg" alt="" />
 						&nbsp;Google
 					</span>
 
