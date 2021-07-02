@@ -85,9 +85,98 @@ Calendar from framework/src/js/imports/form/form-calendar
                 <hr class="no-margin-top">
             </div>
             <div class="flex-col-12">
-                <div class="input-wrapper input-wrapper-block input-wrapper-horizontal">
-                    <label class="input-label" for="company-address">Company Address</label>
-                    <textarea class="input input-multiple-line" type="text" address="company-address" id="company-address"></textarea>
+                <div class="flex-grid flex-grid-no-gutter flex-grid-fixed">
+                    <div class="flex-col-12 flex-col-sm-3">
+                        <span class="input-label">Company Address</span>
+                    </div>
+                    <div class="flex-col-12 flex-col-sm-9">
+                        <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
+                            <div class="flex-col-xs-12 flex-col-sm-10">
+                                <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
+                                    <label for="company-address-street" class="input-label color-neutral font-size-small">Street Address</label>
+                                    <input class="input input-single-line" type="text" name="contact-address-street" id="contact-address-street" placeholder="123 Street Name" value="" />
+                                </div>
+                            </div>
+                            <div class="flex-col-xs-12 flex-col-sm-2">
+                                <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
+                                    <label for="company-address-suite" class="input-label color-neutral font-size-small">Suite #</label>
+                                    <input class="input input-single-line" type="text" name="contact-address-suite" id="contact-address-suite" placeholder="#456" value="" />
+                                </div>
+                            </div>
+                            <div class="flex-col-xs-12 flex-col-sm-4">
+                                <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
+                                    <label for="company-address-city" class="input-label color-neutral font-size-small">City</label>
+                                    <input class="input input-single-line" type="text" name="contact-address-city" id="contact-address-city" placeholder="" value="" />
+                                </div>
+                            </div>
+                            <div class="flex-col-xs-12 flex-col-sm-4">
+                                <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
+                                    <label for="company-address-state" class="input-label color-neutral font-size-small">State</label>
+                                    <select class="input input-single-line" type="text" name="contact-address-state" id="contact-address-state" placeholder="" value="" >
+                                        <option value="">Select state...</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="flex-col-xs-12 flex-col-sm-4">
+                                <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
+                                    <label for="company-address-zip" class="input-label color-neutral font-size-small">Zip Code</label>
+                                    <input class="input input-single-line" type="text" name="contact-address-zip" id="contact-address-zip" placeholder="12345" value="" max="99999" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="flex-col-xs-12">
