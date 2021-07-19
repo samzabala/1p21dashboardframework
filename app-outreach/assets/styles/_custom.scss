@@ -3,6 +3,12 @@ $sidebar-expanded: 240px;
 $sidebar-slim: 60px;
 
 #outreach {
+	&-calendar {
+		position:fixed;
+		right:0;
+		top: $nav-height;
+		left: $sidebar-slim;
+	}
 	&-login {
 		
 	}
@@ -369,3 +375,8 @@ $sidebar-slim: 60px;
 		}
 	}
 }
+
+.fc-daygrid-event * {
+	text-decoration: inherit;
+}
+
