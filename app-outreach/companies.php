@@ -13,16 +13,53 @@
 	</div>
 </div>
 
-<div id="outreach-contacts" class="module module-no-gutter">
+<div id="outreach-companies" class="module module-no-gutter">
 
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<? app_get_component('components/pagination-view-per-page') ?>
+		<div class="flex-xs flex-wrap">
+			<div class="margin-right">
+				<? app_get_component('components/function-filter-companies') ?>
+			</div>
+			<?app_get_component('components/pagination') ?>
+		</div>
+	</div>
 	<table class="table-fixed">
 		<tr>
-			<th class="text-nowrap">Name</th>
-			<th class="text-nowrap">Description</th>
-			<th class="text-nowrap">Phone</th>
-			<th class="text-nowrap text-align-center" width="120">Acct Owner</th>
-			<th class="text-nowrap text-align-center" width="120">Last Activity</th>
-			<th class="text-nowrap text-align-center" width="100">Type</th>
+			<!--
+				th a
+					@NOTE: for sortable column headers
+					classes to add
+
+					`` => if column is sorted descending
+					`active` => if column is sorted ascending
+
+				th a i
+					classes to add
+					`display-none` => if column is not set to sort
+			-->
+			<th class="filter-sortable text-nowrap">
+				<a href="#" class="color-inherit text-decoration-none">
+					Name <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+				</a>
+			</th>
+			<th class="text-nowrap">
+				Description
+			</th>
+			<th class="text-nowrap">
+				Phone
+			</th>
+			<th class="text-nowrap text-align-center" width="120">
+				Acct Owner
+			</th>
+			<th class="filter-sortable text-nowrap text-align-center" width="120">
+				<a href="#" class="color-inherit text-decoration-none">
+					Last Activity <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+				</a>
+			</th>
+			<th class="text-nowrap text-align-center" width="100">
+				Type
+			</th>
 			<th class="text-nowrap text-align-center" width="50">&nbsp;<span class="sr-only">Actions</span></th>
 		</tr>
 
@@ -244,5 +281,10 @@
 					</tr>
 				<?php } ?>
 	</table>
+
+	<div class="padding flex-xs flex-wrap justify-content-space-between">
+		<?app_get_component('components/pagination-view-per-page') ?>
+		<?app_get_component('components/pagination') ?>
+	</div>
 
 </div>
