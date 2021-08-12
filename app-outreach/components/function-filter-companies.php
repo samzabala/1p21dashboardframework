@@ -1,5 +1,5 @@
 
-<div class="module-function function-filter-companies-status">
+<div class="module-function function-filter-companies-status margin-right">
     <label class="input-label">Filter By</label>
     <div class="position-relative">
         <button data-toggle-dropdown class="input input-select">
