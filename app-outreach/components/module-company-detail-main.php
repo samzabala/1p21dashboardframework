@@ -295,21 +295,43 @@
 													id="company-vendor-history-add-name"
 													name="company-vendor-history-add-name"
 													value="REPLACEwithrowvalue" />
-												<input type="number" size="2" class="input input-single-line"
-														placeholder="Start"
-														id="company-vendor-history-add-date-start"
-														name="company-vendor-history-add-date-start"
-														min="1970"
-														max="9999"
-														value="2069" />
-												<input type="number" size="2" class="input input-single-line"
-														placeholder="End"
-														id="company-vendor-history-add-date-end"
-														name="company-vendor-history-add-date-end"
-														min="1970"
-														max="9999"
-														value="" />
+												<a href="#" class="btn btn-default" data-toggle-dropdown>
+													<span class="REPLACE">2010 - Present</span>
+												</a>
 												<button data-toggle-accordion class="btn btn-primary">Add</button>
+											</div>
+	
+											<div class="dropdown dropdown-right dropdown-top-flush" data-dropdown-width="100%">
+												<div class="">
+													<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+														<label for="" class="input-label">Start Date</label>
+														<input
+															type="text" size="12" class="input input-calendar input-block no-radius-bottom"
+															placeholder="1990 - Present"
+															id="company-vendor-history-add-date-start"
+															name="company-vendor-history-add-date-start"
+															value="2069-04-20" />
+													</div>
+
+													<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+													
+														<label for="company-vendor-history-add-date-end" class="input-label">End Date</label>
+
+														<!-- @NOTE
+															.input-wrapper
+																classes to add:
+																`#company-vendor-history-add-date-end` => if input#company-vendor-history-add-date-present is checked
+														-->
+														<input
+															type="text" size="12" class="input input-calendar input-block no-radius-bottom"
+															placeholder="1990 - Present"
+															id="company-vendor-history-add-date-end"
+															name="company-vendor-history-add-date-end"
+															value="2069-04-20" />
+														<br>
+													</div>
+												</div>
+												<a href="#" data-toggle-dropdown class="btn btn-primary btn-block">Set</a>
 											</div>
 										</div>
 									</form>
