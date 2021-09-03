@@ -748,6 +748,142 @@
 									'attrs' => 'data-toggle-accordion'
 								)) ?>
 							</div>
+
+						<!-- sales -->
+							<div class="flex-col-xs-12">
+								<table class="margin-small-bottom table-fixed">
+									<tr>
+										<th width="165" class="background-theme-contrast module-title">Products Sold</th>
+										<th class="background-theme-contrast module-title">Date Sold</th>
+										<th class="background-theme-contrast module-title">Launch Date</th>
+										<th class="background-theme-contrast module-title">Sale Amount</th>
+										<th class="background-theme-contrast module-title">Sales Rep</th>
+										<th class="background-theme-contrast" width="50">
+											<span class="sr-only">Notes</span>
+										</th>
+									</tr>
+
+									<!-- @LOOP tr -->
+										<tr>
+											<td>
+												<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference">
+													<span>
+														<span class="REPLACE">SEO</span>
+													</span>
+													<span class="only-hover">
+														<i class="symbol symbol-pencil"></i>
+													</span>
+												</a>
+											</td>
+											<td>
+												<div class="company-product-sold color-neutral">
+														<span class="REPLACE">06-12-1898</span>
+												</div>
+											</td>
+											<td>
+												<div class="company-product-launch color-neutral">
+														<span class="REPLACE">04-20-2069</span>
+												</div>
+											</td>
+											<td>
+												<div class="company-product-amount color-neutral">
+														<span class="company-product-amount-usd">
+															<span class="REPLACE">$42069</span>
+														</span>
+														/
+														<span class="company-product-amount-recurrence">
+															(<span class="REPLACE">Monthly</span>)
+														</span>
+														
+												</div>
+											</td>
+											<td>
+												<div class="company-product-salesrep color-neutral">
+														<span class="REPLACE">Dahlia Hawthorne</span>
+												</div>
+											</td>
+											<td>
+												<div class="company-product-notes color-neutral">
+													<a href="#" data-toggle-modal-default class="btn btn-primary btn-symbol">
+														<i class="symbol symbol-file"></i>
+													</a>
+													<div class="modal modal-default" data-modal-width="700px">
+														<span class="REPLACE">
+															<?php app_get_component('components/_DEMO-html-markup') ?>
+														</span>
+													</div>
+												</div>
+											</td>
+										</tr>
+
+											<!-- @PLACEHOLDER: DELETE WHEN READY -->
+												<?php for($i=1; $i<=4; $i++){ ?>
+													<tr>
+														<td>
+															<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference">
+																<span>
+																	<span class="REPLACE">SEO</span>
+																</span>
+																<span class="only-hover">
+																	<i class="symbol symbol-pencil"></i>
+																</span>
+															</a>
+														</td>
+														<td>
+															<div class="company-product-sold color-neutral">
+																	<span class="REPLACE">06-12-1898</span>
+															</div>
+														</td>
+														<td>
+															<div class="company-product-launch color-neutral">
+																	<span class="REPLACE">04-20-2069</span>
+															</div>
+														</td>
+														<td>
+															<div class="company-product-amount color-neutral">
+																	<span class="company-product-amount-usd">
+																		<span class="REPLACE">$42069</span>
+																	</span>
+																	/
+																	<span class="company-product-amount-recurrence">
+																		(<span class="REPLACE">Monthly</span>)
+																	</span>
+																	
+															</div>
+														</td>
+														<td>
+															<div class="company-product-salesrep color-neutral">
+																	<span class="REPLACE">Dahlia Hawthorne</span>
+															</div>
+														</td>
+														<td>
+															<div class="company-product-notes color-neutral">
+																<a href="#" data-toggle-modal-default class="btn btn-primary btn-symbol">
+																	<i class="symbol symbol-file"></i>
+																</a>
+																<div class="modal modal-default" data-modal-width="700px">
+																	<span class="REPLACE">
+																		<?php app_get_component('components/_DEMO-html-markup') ?>
+																	</span>
+																</div>
+															</div>
+														</td>
+													</tr>
+												<?php } ?>
+								</table>
+
+								<a
+									href="#m-editor-sales"
+									data-toggle-modal-default
+									data-modal-title="Add Sale"
+									class="display-inline-block text-decoration-none">
+										<span class="btn btn-symbol btn-primary-glassy btn-round">
+											<i class="symbol symbol-plus"></i>
+										</span>
+										<span class="color-neutral text-transform-uppercase">Add</span>
+								</a>
+								<?php app_get_component('components/modal-form-sales') ?>
+							</div>
 						
 					</div>
 			</div>
@@ -755,7 +891,7 @@
 
 		<!-- notes -->
 			<?php app_get_component('components/module-notes','',false,array(
-				'has_add_note' => true
+				'has_add_note' => true,
 			)) ?>
 	</div>
 
