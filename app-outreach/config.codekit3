@@ -797,6 +797,14 @@
       "oAP" : "\/components\/modal-form-note.php",
       "oF" : 0
     },
+    "\/components\/modal-form-sales.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-form-sales.php",
+      "oF" : 0
+    },
     "\/components\/module-add-notes.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -931,6 +939,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/profile-image.php",
+      "oF" : 0
+    },
+    "\/components\/sales-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/sales-form.php",
       "oF" : 0
     },
     "\/components\/tag-clienttype.php" : {
@@ -1300,6 +1316,20 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_debug.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_debug.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_dropdown.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -1519,20 +1549,6 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_ratio.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_reset.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_reset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -2639,6 +2655,20 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-global.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/plugins\/_reset.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_reset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
