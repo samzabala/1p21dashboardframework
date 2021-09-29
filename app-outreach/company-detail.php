@@ -22,6 +22,10 @@
 				<?php app_get_component('components/module-detail-events','',false,array(
 					'has_add_event' => true
 				)) ?>
+
+			
+			<!-- tags -->
+				<?php app_get_component('components/module-tags') ?>
 		</div>
 	</div>
 </div>
