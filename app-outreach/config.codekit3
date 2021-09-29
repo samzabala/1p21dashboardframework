@@ -805,6 +805,14 @@
       "oAP" : "\/components\/modal-form-sales.php",
       "oF" : 0
     },
+    "\/components\/modal-form-tags.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-form-tags.php",
+      "oF" : 0
+    },
     "\/components\/module-add-notes.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -875,6 +883,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/module-notes.php",
+      "oF" : 0
+    },
+    "\/components\/module-tags.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-tags.php",
       "oF" : 0
     },
     "\/components\/note-form-simple.php" : {
@@ -955,6 +971,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/tag-clienttype.php",
+      "oF" : 0
+    },
+    "\/components\/tags-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/tags-form.php",
       "oF" : 0
     },
     "\/components\/toolbar-contact.php" : {
