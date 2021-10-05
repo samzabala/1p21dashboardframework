@@ -4503,7 +4503,8 @@ body:not(.body-loaded) .module-grid, body:not(.body-loaded) .module-grid-title {
 @media (max-width: 1199px) {
   .module-function {
     display: flex;
-    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -4521,12 +4522,16 @@ body:not(.body-loaded) .module-grid, body:not(.body-loaded) .module-grid-title {
   margin-bottom: 5px;
 }
 @media (min-width: 1200px) {
-  .module-functions .module-function:nth-child(n+2) {
-    margin-left: 0.75rem;
+  .module-functions .module-function {
+    margin-right: 5px;
+  }
+  .module-functions .module-function:last-child {
+    margin-right: 0;
   }
 }
 @media (max-width: 1199px) {
   .module-functions .module-function {
+    width: 100%;
     display: block;
   }
 }
