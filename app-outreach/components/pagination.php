@@ -1,6 +1,6 @@
-<div class="outreach-pagination module-function">
+<div class="outreach-pagination outreach-pagination-default module-function">
 
-	<div class="btn-group btn-group-horizontal">
+	<div class="btn-group btn-block-mobile btn-group-horizontal">
 		<!-- 
 
 			@NOTE classes to add
