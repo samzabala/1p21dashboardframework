@@ -7,7 +7,7 @@
       "uuidString" : "F2E6C694-13FC-436E-B8DD-DA8B3F832CE6"
     }
   ],
-  "creatorBuild" : "34127",
+  "creatorBuild" : "34214",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -251,23 +251,10 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/assets\/styles\/_custom.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/styles\/_custom.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/assets\/styles\/_ext_fonts.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -282,6 +269,7 @@
     "\/assets\/styles\/_fw_var_overrides.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -296,6 +284,7 @@
     "\/assets\/styles\/_fw_var_overrides.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -310,6 +299,7 @@
     "\/assets\/styles\/companies.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -324,6 +314,7 @@
     "\/assets\/styles\/company-detail.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -350,6 +341,7 @@
     "\/assets\/styles\/company-detail.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -364,6 +356,7 @@
     "\/assets\/styles\/company.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -378,6 +371,7 @@
     "\/assets\/styles\/contact-detail.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -404,6 +398,7 @@
     "\/assets\/styles\/contact-detail.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -418,6 +413,7 @@
     "\/assets\/styles\/contacts.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -444,6 +440,7 @@
     "\/assets\/styles\/contacts.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -458,6 +455,7 @@
     "\/assets\/styles\/login.forgot.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -472,6 +470,7 @@
     "\/assets\/styles\/style.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -498,6 +497,7 @@
     "\/assets\/styles\/style.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -512,6 +512,7 @@
     "\/assets\/styles\/tasks.example.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -538,6 +539,7 @@
     "\/assets\/styles\/tasks.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -555,14 +557,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/calendar.php",
-      "oF" : 0
-    },
-    "\/companies.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/companies.php",
       "oF" : 0
     },
     "\/company-detail.php" : {
@@ -587,14 +581,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/alert-reminder.php",
-      "oF" : 0
-    },
-    "\/components\/alerts-toast.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/alerts-toast.php",
       "oF" : 0
     },
     "\/components\/attachments-grid-simple.php" : {
@@ -643,22 +629,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/function-add-note.php",
-      "oF" : 0
-    },
-    "\/components\/function-filter-companies.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-filter-companies.php",
-      "oF" : 0
-    },
-    "\/components\/function-input-search.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-input-search.php",
       "oF" : 0
     },
     "\/components\/function-select-by-type.php" : {
@@ -917,22 +887,6 @@
       "oAP" : "\/components\/note-row.php",
       "oF" : 0
     },
-    "\/components\/pagination-view-per-page.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/pagination-view-per-page.php",
-      "oF" : 0
-    },
-    "\/components\/pagination.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/pagination.php",
-      "oF" : 0
-    },
     "\/components\/profile-image-micro.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1005,14 +959,6 @@
       "oAP" : "\/contact-detail.php",
       "oF" : 0
     },
-    "\/contacts.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/contacts.php",
-      "oF" : 0
-    },
     "\/footer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1067,14 +1013,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/login.php",
-      "oF" : 0
-    },
-    "\/tasks.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/tasks.php",
       "oF" : 0
     },
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component.js" : {
@@ -1245,6 +1183,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_accordion.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1259,6 +1198,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_alert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1273,6 +1213,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_asset.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1287,6 +1228,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_badge.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1301,6 +1243,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1315,6 +1258,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_calculations.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1329,6 +1273,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_container.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1343,6 +1288,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_debug.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1357,6 +1303,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_dropdown.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1371,6 +1318,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_form.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1385,6 +1333,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_functions.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1399,6 +1348,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_grid.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1413,6 +1363,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_helpers.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1427,6 +1378,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_highlight.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1441,6 +1393,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_lazy.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1455,6 +1408,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_legend.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1469,6 +1423,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_list-group.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1483,6 +1438,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_mixins.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1497,6 +1453,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_modal.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1511,6 +1468,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_module.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1525,6 +1483,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_nav.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1539,6 +1498,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_pagination.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1553,6 +1513,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_progress.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1567,6 +1528,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_ratio.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1581,6 +1543,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_scaffolding.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1595,6 +1558,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_switch.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1609,6 +1573,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_symbol.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1623,6 +1588,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tab.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1637,6 +1603,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_table.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1651,6 +1618,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tag.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1665,6 +1633,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_thumbnail.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1679,6 +1648,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_toolbar.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1693,6 +1663,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tooltip.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1707,6 +1678,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_typography.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1721,6 +1693,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_vars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1735,6 +1708,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_well.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1749,6 +1723,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_zone.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1763,6 +1738,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_alert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1777,6 +1753,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_asset.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1791,6 +1768,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_badge.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1805,6 +1783,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1819,6 +1798,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-calendar.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1833,6 +1813,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-tags.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1847,6 +1828,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-toggle.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1861,6 +1843,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1875,6 +1858,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_global.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1889,6 +1873,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_highlight.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1903,6 +1888,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_legend.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1917,6 +1903,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_list-group.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1931,6 +1918,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_modal-board.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1945,6 +1933,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_module.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1959,6 +1948,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_nav.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1973,6 +1963,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_progress.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1987,6 +1978,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_symbol.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2001,6 +1993,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tab.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2015,6 +2008,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_table.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2029,6 +2023,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tag.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2043,6 +2038,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_thumbnail.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2057,6 +2053,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tooltip.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2071,6 +2068,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_typography.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2085,6 +2083,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_well.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2099,6 +2098,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_zone.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2113,6 +2113,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-boxy.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2127,6 +2128,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-calendar.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2141,6 +2143,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-fieldset.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2155,6 +2158,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-global.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2169,6 +2173,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-info.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2183,6 +2188,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-inline.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2197,6 +2203,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-label.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2211,6 +2218,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-tags.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2225,6 +2233,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-toggle.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2239,6 +2248,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.lite.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2253,6 +2263,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2267,6 +2278,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/functions\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2281,6 +2293,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/functions\/_global.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2295,6 +2308,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-align.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2309,6 +2323,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-background.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2323,6 +2338,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-border.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2337,6 +2353,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-color.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2351,6 +2368,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-disable.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2365,6 +2383,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-display.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2379,6 +2398,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-flex.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2393,6 +2413,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-float.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2407,6 +2428,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-font.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2421,6 +2443,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-image.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2435,6 +2458,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-justify.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2449,6 +2473,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-margin.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2463,6 +2488,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-overflow.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2477,6 +2503,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-padding.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2491,6 +2518,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-position.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2505,6 +2533,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-radius.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2519,6 +2548,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-shadow.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2533,6 +2563,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-svg.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2547,6 +2578,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-text.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2561,6 +2593,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-visibility.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2575,6 +2608,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2589,6 +2623,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_global.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2603,6 +2638,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_grid.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2617,6 +2653,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_symbol.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2631,6 +2668,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-board.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2645,6 +2683,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-default.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2659,6 +2698,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-fullscreen.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2673,6 +2713,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-global.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2687,12 +2728,13 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/plugins\/_reset.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_reset.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/plugins\/_reset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -2701,6 +2743,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/plugins\/_shithole.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2715,6 +2758,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-inverse.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2729,6 +2773,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-normalize.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2743,6 +2788,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-root.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2757,6 +2803,7 @@
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-ui.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -3715,7 +3762,8 @@
         "optionString" : ""
       },
       "no-multi-assign" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'ignoreNonDeclaration': false}"
       },
       "no-multi-spaces" : {
         "active" : 0,
@@ -3838,7 +3886,8 @@
         "active" : 0
       },
       "no-sequences" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowInParentheses': true}"
       },
       "no-setter-return" : {
         "active" : 1
@@ -4202,354 +4251,6 @@
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
-    "jsHintFlags2" : {
-      "asi" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "bitwise" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "boss" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "browserify" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camelcase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "curly" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "debug" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "dojo" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "elision" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqeqeq" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqnull" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es3" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "esnext" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "evil" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "expr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "forin" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "freeze" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "funcscope" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "futurehostile" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "globalstrict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "immed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "indent" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "iterator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jasmine" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jquery" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "lastsemic" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "latedef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "laxbreak" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "laxcomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "loopfunc" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxcomplexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "maxdepth" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "maxparams" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxstatements" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "mocha" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "mootools" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "moz" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "multistr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newcap" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noarg" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nocomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "noempty" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonbsp" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonew" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nonstandard" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "notypeof" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noyield" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "onecase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "phantom" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "proto" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prototypejs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "qunit" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "regexp" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "rhino" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "scripturl" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shadow" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shelljs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "singleGroups" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "strict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "sub" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "supernew" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "typed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "undef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "unused" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "varstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "withstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "worker" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "wsh" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "yui" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
-    "jsLintFlags2" : {
-      "bitwise" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es6" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "eval" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "for" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "white" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",
@@ -4858,6 +4559,7 @@
     "tsEmitBOM" : 0,
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
+    "tsExactOptionalPropertyTypes" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
@@ -4866,6 +4568,7 @@
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
+    "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
@@ -4886,6 +4589,7 @@
     "tsStripInternal" : 0,
     "tsSuppressExcessPropertyErrors" : 0,
     "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseUnknownInCatchVariables" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
