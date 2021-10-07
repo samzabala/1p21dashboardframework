@@ -7,7 +7,9 @@
 				</div>
 				<div class="flex-child flex-1-1">
 					<div class="contact-profile-name text-leading-compact">
-						<span class="REPLACE">Miles Edgewworth</span>
+						<strong>
+							<span class="REPLACE">Miles Edgewworth</span>
+						</strong>
 						<br>
 						<small class="color-neutral contact-profile-title">
 							<span class="REPLACE">Partner</span>
@@ -17,6 +19,7 @@
 			</a>
 	</td>
 	<td width="250">
+		<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Email</span>
 		<!-- @if has email -->
 			<a href="#mb-editor-email" class="text-wrap-ellipsis" data-toggle-modal-board data-modal-title="Compose email">
 				<span class="REPLACE">ace@attorney.com</span>
@@ -27,9 +30,10 @@
 			</span>
 	</td>
 	<td>
+		<span class="hide-nonmobile no-margin-top outreach-table-mobile-label h6 color-neutral">Social</span>
 		<?app_get_component('components/list-social') ?>
 	</td>
-	<td>
+	<td class="outreach-table-cell-actions">
 		
 		<?app_get_component('components/dropdown-actions','',false,array(
 			'links' => array(

@@ -69,7 +69,7 @@
 								</div>
 								<div id="company-contact" class="accordion">
 									<!-- @if has rows -->
-										<table class="margin-small-bottom">
+										<table class="outreach-table margin-small-bottom">
 											<tr>
 												<th>Name</th>
 												<th>Email</th>
@@ -105,7 +105,7 @@
 										<span class="module-title" >Additional Websites</span>
 									</div>
 									<div class="flex-child flex-0-0">
-										<?app_get_component('components/tooltip-actions','',false,array(
+										<?app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-addtl-sites" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -205,7 +205,7 @@
 									</div>
 									<div class="flex-child flex-0-0">
 
-										<?app_get_component('components/tooltip-actions','',false,array(
+										<?app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-vendor-history" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -352,7 +352,7 @@
 									</div>
 									<div class="flex-child flex-0-0">
 
-										<?app_get_component('components/tooltip-actions','',false,array(
+										<?app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit Info' => 'class="tooltip-purger" href="#company-addtl-info" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -644,7 +644,7 @@
 										<span class="module-title" >Main Competitors</span>
 									</div>
 									<div class="flex-child flex-0-0">
-										<?app_get_component('components/tooltip-actions','',false,array(
+										<?app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-main-competitors" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -751,7 +751,7 @@
 
 						<!-- sales -->
 							<div class="flex-col-xs-12">
-								<table class="margin-small-bottom table-fixed">
+								<table class="outreach-table margin-small-bottom table-fixed">
 									<tr>
 										<th width="165" class="background-theme-contrast module-title">Products Sold</th>
 										<th class="background-theme-contrast module-title">Date Sold</th>
@@ -766,7 +766,8 @@
 									<!-- @LOOP tr -->
 										<tr>
 											<td>
-												<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference">
+												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Products Sold</span>
+												<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold text-transform-uppercase font-weight-700 pointer-reference">
 													<span>
 														<span class="REPLACE">SEO</span>
 													</span>
@@ -776,16 +777,19 @@
 												</a>
 											</td>
 											<td>
+												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Date Sold</span>
 												<div class="company-product-sold color-neutral">
 														<span class="REPLACE">06-12-1898</span>
 												</div>
 											</td>
 											<td>
+												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Launch Date</span>
 												<div class="company-product-launch color-neutral">
 														<span class="REPLACE">04-20-2069</span>
 												</div>
 											</td>
 											<td>
+												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sale Amount</span>
 												<div class="company-product-amount color-neutral">
 														<span class="company-product-amount-usd">
 															<span class="REPLACE">$42069</span>
@@ -798,11 +802,12 @@
 												</div>
 											</td>
 											<td>
+												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sales Rep</span>
 												<div class="company-product-salesrep color-neutral">
 														<span class="REPLACE">Dahlia Hawthorne</span>
 												</div>
 											</td>
-											<td>
+											<td class="outreach-table-cell-actions" width="50">
 												<div class="company-product-notes color-neutral">
 													<a href="#" data-toggle-modal-default class="btn btn-primary btn-symbol">
 														<i class="symbol symbol-file"></i>
@@ -820,6 +825,7 @@
 												<?php for($i=1; $i<=4; $i++){ ?>
 													<tr>
 														<td>
+															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Products Sold</span>
 															<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference">
 																<span>
 																	<span class="REPLACE">SEO</span>
@@ -830,16 +836,19 @@
 															</a>
 														</td>
 														<td>
+															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Date Sold</span>
 															<div class="company-product-sold color-neutral">
 																	<span class="REPLACE">06-12-1898</span>
 															</div>
 														</td>
 														<td>
+															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Launch Date</span>
 															<div class="company-product-launch color-neutral">
 																	<span class="REPLACE">04-20-2069</span>
 															</div>
 														</td>
 														<td>
+															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sale Amount</span>
 															<div class="company-product-amount color-neutral">
 																	<span class="company-product-amount-usd">
 																		<span class="REPLACE">$42069</span>
@@ -852,11 +861,12 @@
 															</div>
 														</td>
 														<td>
+															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sales Rep</span>
 															<div class="company-product-salesrep color-neutral">
 																	<span class="REPLACE">Dahlia Hawthorne</span>
 															</div>
 														</td>
-														<td>
+														<td class="outreach-table-cell-actions" width="50">
 															<div class="company-product-notes color-neutral">
 																<a href="#" data-toggle-modal-default class="btn btn-primary btn-symbol">
 																	<i class="symbol symbol-file"></i>
