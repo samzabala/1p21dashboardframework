@@ -1,5 +1,5 @@
 <!-- @if there are notifications -->
-    <div class="alert-container offset-nav-sticky alert-container-top alert-container-right">
+    <div class="outreach-alert-container alert-container offset-nav-sticky alert-container-top alert-container-right">
         <!-- reminders -->
             <?php app_get_component('components/alert','reminder',false,array(
                 'type' => 'event',

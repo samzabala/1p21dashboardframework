@@ -1,30 +1,32 @@
 
 <div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12 flex-col-sm-4">
+	<div class="flex-col-xs-12 flex-col-md-4">
 		<h1 class="no-margin">Companies</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
 		<div class="module-function">
-			<a  href="#mb-editor-company" data-modal-title="Add company" data-toggle-modal-board class="btn btn-primary">
+			<a  href="#mb-editor-company" data-modal-title="Add company" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
 				Add New <i class="symbol symbol-plus"></i>
 			</a>
 		</div>
 	</div>
 </div>
 
-<div id="outreach-companies" class="module module-no-gutter">
+<div id="outreach-companies" class="module">
 
-	<div class="padding flex-xs flex-wrap justify-content-space-between">
-		<? app_get_component('components/pagination-view-per-page') ?>
-		<div class="flex-xs flex-wrap">
-			<div class="margin-right">
-				<? app_get_component('components/function-filter-companies') ?>
-			</div>
-			<?app_get_component('components/pagination') ?>
+	<div class="module-header">
+		<div class="module-functions no-margin no-padding flex-xs flex-wrap justify-content-space-between">
+
+			<hr class="hide-nonmobile">
+			
+			<?php app_get_component('components/pagination-view-per-page') ?>
+			<?php app_get_component('components/function-filter-companies') ?>
+
+			<?php app_get_component('components/pagination') ?>
 		</div>
 	</div>
-	<table class="table-fixed">
+	<table class="table-fixed outreach-table">
 		<tr>
 			<!--
 				th a
@@ -82,6 +84,7 @@
 				</p>
 			</td>
 			<td>
+				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Phone</span>
 				<!-- @if has phone -->
 					<a tel="#REPLACEwithPhoneNumber">
 						<span class="RELPACE">(555) 555 - 5555</span>
@@ -92,21 +95,24 @@
 					</span>
 			</td>
 			<td class="text-align-center" width="120">
+				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Account Owner</span>
 				<a href="<?=app_create_link(array('template' => 'profile')); ?>" class="company-acct-owner text-align-center">
 					<?php app_get_component('components/profile-image-micro') ?>
 				</a>
 			</td>
 			<td class="text-align-center" width="120">
+				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Last Activity</span>
 				<p class="company-last-activity">
 					<span class="REPLACE">04/20/69</span>
 				</p>
 			</td>
 			<td class="text-align-center" width="100">
-				<div class="company-clienttype text-align-center">
+				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Type</span>
+				<div class="company-clienttype">
 					<?php app_get_component('components/tag-clienttype') ?>
 				</div>
 			</td>
-			<td class="text-align-center" width="50">
+			<td class="outreach-table-cell-actions text-align-center" width="50">
 				<div class="company-actions position-relative">
 					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
@@ -191,6 +197,7 @@
 							</p>
 						</td>
 						<td>
+							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Phone</span>
 							<!-- @if has phone -->
 								<a tel="#REPLACEwithPhoneNumber">
 									<span class="RELPACE">(555) 555 - 5555</span>
@@ -201,21 +208,24 @@
 								</span>
 						</td>
 						<td class="text-align-center" width="120">
+							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Account Owner</span>
 							<a href="<?=app_create_link(array('template' => 'profile')); ?>" class="company-acct-owner text-align-center">
 								<?php app_get_component('components/profile-image-micro') ?>
 							</a>
 						</td>
 						<td class="text-align-center" width="120">
+							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Last Activity</span>
 							<p class="company-last-activity">
 								<span class="REPLACE">04/20/69</span>
 							</p>
 						</td>
 						<td class="text-align-center" width="100">
-							<div class="company-clienttype text-align-center">
+							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Type</span>
+							<div class="company-clienttype">
 								<?php app_get_component('components/tag-clienttype') ?>
 							</div>
 						</td>
-						<td class="text-align-center" width="50">
+						<td class="outreach-table-cell-actions text-align-center" width="50">
 							<div class="company-actions position-relative">
 								<?php app_get_component('components/dropdown-actions','',false,array(
 									'links' => array(
@@ -282,9 +292,11 @@
 				<?php } ?>
 	</table>
 
-	<div class="padding flex-xs flex-wrap justify-content-space-between">
-		<?app_get_component('components/pagination-view-per-page') ?>
-		<?app_get_component('components/pagination') ?>
+	<div class="module-footer">
+		<div class="module-functions no-margin no-padding flex-xs flex-wrap justify-content-space-between">
+			<?php app_get_component('components/pagination-view-per-page') ?>
+			<?php app_get_component('components/pagination') ?>
+		</div>
 	</div>
 
 </div>

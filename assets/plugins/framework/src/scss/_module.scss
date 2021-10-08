@@ -194,7 +194,8 @@ $prefix: '.module';
 
     @include on-breakpoint(mobile) {
       display: flex;
-      max-width: 100%;
+      width: 100%;
+      margin-bottom: $module-gutter-between;
     }
   }
 
@@ -216,14 +217,17 @@ $prefix: '.module';
 
     @include on-breakpoint(nonmobile) {
       #{$prefix}-function {
-        &:nth-child(n + 2) {
-          margin-left: 0.75rem;
+        margin-right: $module-gutter-between * 0.5;
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
 
     @include on-breakpoint(mobile) {
       #{$prefix}-function {
+        width: 100%;
         display: block;
       }
     }

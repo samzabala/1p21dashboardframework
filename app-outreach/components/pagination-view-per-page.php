@@ -1,5 +1,5 @@
-<div class="dashboard-pagination-view-per-page module-function position-relative">
-	<div class="input-group input-group-horizontal btn-group-unite">
+<div class="outreach-pagination outreach-pagination-view-per-page module-function position-relative margin-auto-right">
+	<div class="input-group input-block-mobile input-group-horizontal btn-group-unite">
 		<div class="btn btn-default btn-no-interaction color-neutral"> Per Page</div>
 		<select name="view-per-page" id="view-per-page" class="input input-select input-single-line">
 			<option value="25">25</option>
