@@ -5,7 +5,7 @@
 	</div>
 	<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
-		<div class="module-function">
+		<div class="module-function function-add">
 			<a  href="#mb-editor-contact" data-modal-title="Add contact" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
 				Add <i class="symbol symbol-plus"></i>
 			</a>

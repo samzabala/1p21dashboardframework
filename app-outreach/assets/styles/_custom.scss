@@ -242,22 +242,39 @@ $sidebar-slim: 60px;
 					width: auto!important;
 				}
 			}
-		}
-	}
-}
 
-.task {
-	@include on-breakpoint(mobile) {
-		&-toggle-reminder-wrapper {
-			align-items: flex-end;
-
-		}
-		&-reminder-info {
-			p {
-				display: inline;
-				margin-right: .75em;
-				margin-bottom: 0 !important;
-				font-size: 1rem !important;
+			.contact {
+				//@TODO anticipated design tweaks
+			}
+		
+			.company {
+				&-upcoming-info {
+					margin-top: -1em;
+				}
+				&-product-sold {
+					font-size: 1.125rem;
+					color:inherit!important;
+				}
+			}
+		
+			.task {
+				&-toggle-reminder-wrapper {
+					align-items: flex-end;
+		
+				}
+			}
+		
+		
+			.company-upcoming-info,
+			.task-reminder-info,
+			.task-due-info {
+				p {
+		
+					display: inline;
+					margin-right: .5em!important;
+					margin-bottom: 0 !important;
+					font-size: 1rem !important;
+				}
 			}
 		}
 	}

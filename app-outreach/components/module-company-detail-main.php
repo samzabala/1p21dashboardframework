@@ -753,7 +753,7 @@
 							<div class="flex-col-xs-12">
 								<table class="outreach-table margin-small-bottom table-fixed">
 									<tr>
-										<th width="165" class="background-theme-contrast module-title">Products Sold</th>
+										<th width="165" class="background-theme-contrast module-title text-align-center outreach-table-mobile-th">Products Sold</th>
 										<th class="background-theme-contrast module-title">Date Sold</th>
 										<th class="background-theme-contrast module-title">Launch Date</th>
 										<th class="background-theme-contrast module-title">Sale Amount</th>
@@ -766,8 +766,7 @@
 									<!-- @LOOP tr -->
 										<tr>
 											<td>
-												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Products Sold</span>
-												<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold text-transform-uppercase font-weight-700 pointer-reference">
+												<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference text-decoration-none">
 													<span>
 														<span class="REPLACE">SEO</span>
 													</span>
@@ -825,8 +824,7 @@
 												<?php for($i=1; $i<=4; $i++){ ?>
 													<tr>
 														<td>
-															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Products Sold</span>
-															<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference">
+															<a href="#m-editor-sales" data-toggle-modal-default class="company-product-sold color-neutral text-transform-uppercase font-weight-700 pointer-reference text-decoration-none">
 																<span>
 																	<span class="REPLACE">SEO</span>
 																</span>

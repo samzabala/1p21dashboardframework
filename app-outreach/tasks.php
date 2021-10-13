@@ -4,7 +4,7 @@
 	</div>
 	<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
-		<div class="module-function">
+		<div class="module-function function-add">
 			<a  href="#mb-editor-task" data-modal-title="Add Task" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
 				Add New <i class="symbol symbol-plus"></i>
 			</a>
@@ -36,7 +36,7 @@
 			<th class="text-nowrap" width="130">Reminder</th>
 			<th class="text-nowrap text-align-center" width="100">Task Owner</th>
 			<th class="text-align-center" width="85">Status</th>
-			<th class="text-nowra text-align-right" width="50">
+			<th class="text-nowrap text-align-right" width="50">
 				<div class="contact-actions position-relative">
 					<?php app_get_component('components/tooltip-actions','',false,array(
 						'links' => array(
@@ -212,9 +212,15 @@
 						</td>
 						<td class=" text-align-center">
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Due Date</span>
-							<a href="#" class="task-due-date color-inherit text-nowrap">
-								<span class="RELPACE">4/20/69</span>
-							</a>
+							<div class="task-due-info">
+								<p class="task-due-date no-margin color-primary font-weight-700">
+									<span class="RELPACE">4/20/69</span>
+								</p>
+
+								<p class="task-due-time font-size-small no-margin color-neutral">
+									<span class="RELPACE">4:20pm</span>
+								</p>
+							</div>
 						</td>
 						<td width="130">
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Reminder</span>
