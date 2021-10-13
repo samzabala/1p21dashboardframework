@@ -145,6 +145,34 @@ $sidebar-slim: 60px;
 	}
 }
 
+%outreach-extend {
+	&-mobile {
+		&-info {
+			&-timing {
+				@include on-breakpoint(mobile) {
+					& {
+						p {
+							display: inline;
+							margin-bottom: 0 !important;
+							font-size: 1rem !important;
+						}
+					}
+
+					&-date {
+						// color: inherit!important;
+					}
+
+					&-time {
+						&:before {
+							content:"at ";
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 
 .outreach {
 	&-body {
@@ -188,6 +216,71 @@ $sidebar-slim: 60px;
 	}
 
 	&-table {
+
+
+		.contact {
+			//@TODO anticipated design tweaks
+		}
+	
+		.company {
+			&-upcoming {
+				&-info {
+					margin-top: -1em;
+					@extend %outreach-extend-mobile-info-timing !optional;
+				}
+
+				&-time {
+					@extend %outreach-extend-mobile-info-timing-time !optional;
+				}
+
+				&-date {
+					@extend %outreach-extend-mobile-info-timing-date !optional;
+				}
+			}
+			&-product-sold {
+				// font-size: 1.125rem;
+				color:inherit!important;
+			}
+		}
+
+		.activity {
+			&-created {
+				&-info {
+					@extend %outreach-extend-mobile-info-timing !optional;
+				}
+
+				&-time {
+					@extend %outreach-extend-mobile-info-timing-time !optional;
+				}
+
+				&-date {
+					@extend %outreach-extend-mobile-info-timing-date !optional;
+				}
+			}
+		}
+	
+		.task {
+			&-toggle-reminder-wrapper {
+				align-items: flex-end;
+	
+			}
+			&-reminder,
+			&-due {
+				&-info {
+					@extend %outreach-extend-mobile-info-timing !optional;
+				}
+
+				&-time {
+					@extend %outreach-extend-mobile-info-timing-time !optional;
+				}
+
+				&-date {
+					@extend %outreach-extend-mobile-info-timing-date !optional;
+				}
+			}
+		}
+	
+		
 		@include on-breakpoint(mobile) {
 			@at-root table#{&} {
 				&,
@@ -240,40 +333,6 @@ $sidebar-slim: 60px;
 					top:0;
 					right:0;
 					width: auto!important;
-				}
-			}
-
-			.contact {
-				//@TODO anticipated design tweaks
-			}
-		
-			.company {
-				&-upcoming-info {
-					margin-top: -1em;
-				}
-				&-product-sold {
-					// font-size: 1.125rem;
-					color:inherit!important;
-				}
-			}
-		
-			.task {
-				&-toggle-reminder-wrapper {
-					align-items: flex-end;
-		
-				}
-			}
-		
-		
-			.company-upcoming-info,
-			.task-reminder-info,
-			.task-due-info {
-				p {
-		
-					display: inline;
-					margin-right: .5em!important;
-					margin-bottom: 0 !important;
-					font-size: 1rem !important;
 				}
 			}
 		}
