@@ -1,6 +1,6 @@
 
-<div class="module-function function-filter-companies-status">
-    <div class="input-wrapper input-wrapper-horizontal input-wrapper-block-mobile input-wrapper-responsive position-relative no-padding-right">
+<div class="module-function function-filter-companies-status position-relative">
+    <div class="input-wrapper input-wrapper-horizontal input-wrapper-block-mobile input-wrapper-responsive no-padding-right">
         <label class="input-label">Filter By</label>
         <button data-toggle-dropdown class="input input-block-mobile input-select">
             Status
