@@ -203,19 +203,6 @@ $sidebar-slim: 60px;
 					height: auto !important;
 				}
 
-				&,
-				td,
-				tr,
-				th.outreach-table-mobile-th,
-				thead,
-				tbody,
-				tfoot {
-					text-align: left!important;
-					display: block!important;
-					width:100%;
-					height: auto !important;
-				}
-
 				/* safari fix -_- */
 				thead,
 				tbody,
@@ -223,7 +210,7 @@ $sidebar-slim: 60px;
 					overflow: auto !important;
 				}
 
-				td {
+				td,th {
 					overflow: visible !important;
 				}
 
