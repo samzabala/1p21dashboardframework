@@ -409,6 +409,7 @@ function app_init_content(){
 				case 'tasks':
 				case 'contacts':
 				case 'calendar':
+				case 'leads':
 				case 'companies':
 				case 'companiy-detail':
 				case 'login':

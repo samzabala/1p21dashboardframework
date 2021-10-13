@@ -251,6 +251,21 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/styles\/_custom.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_custom.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/styles\/_ext_fonts.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -559,6 +574,14 @@
       "oAP" : "\/calendar.php",
       "oF" : 0
     },
+    "\/companies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/companies.php",
+      "oF" : 0
+    },
     "\/company-detail.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -581,6 +604,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/alert-reminder.php",
+      "oF" : 0
+    },
+    "\/components\/alerts-toast.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/alerts-toast.php",
       "oF" : 0
     },
     "\/components\/attachments-grid-simple.php" : {
@@ -629,6 +660,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/function-add-note.php",
+      "oF" : 0
+    },
+    "\/components\/function-filter-companies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/function-filter-companies.php",
+      "oF" : 0
+    },
+    "\/components\/function-input-search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/function-input-search.php",
       "oF" : 0
     },
     "\/components\/function-select-by-type.php" : {
@@ -887,6 +934,22 @@
       "oAP" : "\/components\/note-row.php",
       "oF" : 0
     },
+    "\/components\/pagination-view-per-page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination-view-per-page.php",
+      "oF" : 0
+    },
+    "\/components\/pagination.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination.php",
+      "oF" : 0
+    },
     "\/components\/profile-image-micro.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -959,6 +1022,14 @@
       "oAP" : "\/contact-detail.php",
       "oF" : 0
     },
+    "\/contacts.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/contacts.php",
+      "oF" : 0
+    },
     "\/footer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -991,6 +1062,14 @@
       "oAP" : "\/includes\/nav-sidebar.php",
       "oF" : 0
     },
+    "\/leads.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/leads.php",
+      "oF" : 0
+    },
     "\/login-forgot.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1013,6 +1092,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/login.php",
+      "oF" : 0
+    },
+    "\/tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/tasks.php",
       "oF" : 0
     },
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component.js" : {
