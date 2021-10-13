@@ -204,18 +204,17 @@ $sidebar-slim: 60px;
 				}
 
 				/* safari fix -_- */
+				/* safari fix -_- */
 				thead,
 				tbody,
-				tfoot {
-					overflow: auto !important;
-				}
-
+				tfoot,
 				td,th,tr {
 					overflow: visible !important;
 				}
 
 				tr {
 					position: relative;
+					border-bottom:0;
 				}
 
 
