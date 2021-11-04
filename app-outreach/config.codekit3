@@ -838,14 +838,6 @@
       "oAP" : "\/components\/module-add-notes.php",
       "oF" : 0
     },
-    "\/components\/module-company-detail-main.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-company-detail-main.php",
-      "oF" : 0
-    },
     "\/components\/module-company-detail-utility.php" : {
       "cB" : 0,
       "ft" : 8192,
