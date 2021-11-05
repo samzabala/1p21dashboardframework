@@ -814,6 +814,14 @@
       "oAP" : "\/components\/modal-form-note.php",
       "oF" : 0
     },
+    "\/components\/modal-form-proposed-products.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-form-proposed-products.php",
+      "oF" : 0
+    },
     "\/components\/modal-form-sales.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -972,6 +980,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/profile-image.php",
+      "oF" : 0
+    },
+    "\/components\/proposed-products-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/proposed-products-form.php",
       "oF" : 0
     },
     "\/components\/sales-form.php" : {

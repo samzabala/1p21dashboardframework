@@ -893,6 +893,140 @@
 								<?php app_get_component('components/modal-form-sales') ?>
 							</div>
 						
+						<!-- hot prospects -->
+							<div class="flex-col-xs-12">
+									<div class="padding-small background-error color-background radius-top">
+										<h5 class="no-margin color-inherit leading-compact">
+											Proposed Products
+										</h5>
+									</div>
+									<table class="outreach-table margin-small-bottom outreach-table-proposed-products">
+										<tr>
+											<th width="165" class="background-theme-contrast module-title">Product</th>
+											<th class="background-theme-contrast module-title">Price</th>
+											<th class="background-theme-contrast module-title">Monthly Value</th>
+											<th class="background-theme-contrast module-title">Annual Value</th>
+											<th class="background-theme-contrast module-title">Est Close %</th>
+											<th class="background-theme-contrast module-title">PMV</th>
+											<th class="background-theme-contrast module-title">
+												<a href="#m-editor-proposed-products" class="btn btn-link" data-modal-title="Add Proposed Products" data-toggle-modal-default>
+													<i class="symbol symbol-plus"></i>
+												</a>
+											</th>
+											
+										</tr>
+
+										<!-- @LOOP tr -->
+											<tr>
+												<td>
+													<div class="company-proposed-product-name color-neutral font-weight-700 pointer-reference text-decoration-none">
+														<span>
+															<span class="REPLACE">Lawsite 360</span>
+														</span>
+													</div>
+												</td>
+												<td>
+													<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Price</span>
+													<div class="company-proposed-product-price color-neutral">
+														<span class="REPLACE">$12,345</span>
+													</div>
+												</td>
+												<td>
+													<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Monthly Value</span>
+													<div class="company-proposed-product-monthlyvalue color-neutral">
+														<span class="REPLACE">$54,321</span>
+													</div>
+												</td>
+												<td>
+													<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Annual Value</span>
+													<div class="company-proposed-product-annualvalue color-neutral">
+														<span class="REPLACE">$666,420</span>
+													</div>
+												</td>
+												<td>
+													<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Estimated Close %</span>
+													<div class="company-proposed-product-estclose color-neutral">
+														<span class="REPLACE">69%</span>
+													</div>
+												</td>
+												<td>
+													<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">PMV</span>
+													<div class="company-proposed-product-pmv font-weight-700 color-neutral">
+														<span class="REPLACE">$12,345</span>
+													</div>
+												</td>
+												<td class="outreach-table-cell-actions text-align-center" width="50">
+													<div class="company-actions position-relative">
+														<?php app_get_component('components/dropdown-actions','',false,array(
+															'links' => array(
+																'Edit Product'
+																	=> 'class="dropdown-purger" href="#m-editor-proposed-products" data-toggle-modal-default href="#m-editor-proposed-products" data-modal-title="Edit product"',
+																'Delete'
+																	=> 'href="#"'
+															)
+														)) ?>
+													</div>
+												</td>
+											</tr>
+
+												<!-- @PLACEHOLDER: DELETE WHEN READY -->
+													<?php for($i=1; $i<=4; $i++){ ?>
+														<tr>
+															<td>
+																<div class="company-proposed-product-name color-neutral font-weight-700 pointer-reference text-decoration-none">
+																	<span>
+																		<span class="REPLACE">Lawsite 360</span>
+																	</span>
+																</div>
+															</td>
+															<td>
+																<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Price</span>
+																<div class="company-proposed-product-price color-neutral">
+																	<span class="REPLACE">$12,345</span>
+																</div>
+															</td>
+															<td>
+																<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Monthly Value</span>
+																<div class="company-proposed-product-monthlyvalue color-neutral">
+																	<span class="REPLACE">$54,321</span>
+																</div>
+															</td>
+															<td>
+																<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Annual Value</span>
+																<div class="company-proposed-product-annualvalue color-neutral">
+																	<span class="REPLACE">$666,420</span>
+																</div>
+															</td>
+															<td>
+																<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Estimated Close %</span>
+																<div class="company-proposed-product-estclose color-neutral">
+																	<span class="REPLACE">69%</span>
+																</div>
+															</td>
+															<td>
+																<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">PMV</span>
+																<div class="company-proposed-product-pmv font-weight-700 color-neutral">
+																	<span class="REPLACE">$12,345</span>
+																</div>
+															</td>
+															<td class="outreach-table-cell-actions text-align-center" width="50">
+																<div class="company-actions position-relative">
+																	<?php app_get_component('components/dropdown-actions','',false,array(
+																		'links' => array(
+																			'Edit Product'
+																				=> 'class="dropdown-purger" href="#m-editor-proposed-products" data-toggle-modal-default href="#m-editor-proposed-products" data-modal-title="Edit company"',
+																			'Delete'
+																				=> 'href="#"'
+																		)
+																	)) ?>
+																</div>
+															</td>
+														</tr>
+													<?php } ?>
+									</table>
+
+									<?php app_get_component('components/modal-form-proposed-products') ?>
+								</div>
 					</div>
 			</div>
 
