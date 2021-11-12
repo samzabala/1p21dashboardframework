@@ -241,6 +241,13 @@ $sidebar-slim: 60px;
 				// font-size: 1.125rem;
 				color:inherit!important;
 			}
+			&-proposed-product {
+				@include on-breakpoint(mobile) { 
+					&-name {
+						font-size: 1.125em;
+					}
+				}
+			}
 		}
 
 		.activity {
