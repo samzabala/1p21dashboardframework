@@ -1,7 +1,7 @@
 
 <div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
 	<div class="flex-col-xs-12 flex-col-md-4">
-		<h1 class="no-margin">Companies</h1>
+		<h1 class="no-margin">Leads</h1>
 	</div>
 	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>

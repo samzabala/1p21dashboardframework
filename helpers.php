@@ -406,6 +406,7 @@ function app_init_content(){
 					break;
 				case 'company-detail':
 				case 'contact-detail':
+				case 'sales-tracking':
 				case 'tasks':
 				case 'contacts':
 				case 'calendar':

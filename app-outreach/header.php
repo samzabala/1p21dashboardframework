@@ -91,7 +91,7 @@
 
 			<?php if(FWAPPS_TEMPLATE !== 'debug'): ?>
 				<!-- Notifications -->
-					<?php app_get_component('components/alerts-toast'); ?>
+					<?php //app_get_component('components/alerts-toast'); ?>
 			<?php endif; ?>
 			<!-- Nav -->
 				<!-- appp-*/includes/main-nav -->

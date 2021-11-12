@@ -36,7 +36,7 @@
 			<th class="text-nowrap" width="130">Reminder</th>
 			<th class="text-nowrap text-align-center" width="100">Task Owner</th>
 			<th class="text-align-center" width="85">Status</th>
-			<th class="text-nowrap text-align-right" width="50">
+			<th class="text-nowrap text-align-right outreach-table-cell-actions outreach-table-mobile-th" width="50">
 				<div class="contact-actions position-relative">
 					<?php app_get_component('components/tooltip-actions','',false,array(
 						'links' => array(
