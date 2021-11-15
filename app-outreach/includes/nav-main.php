@@ -128,10 +128,9 @@
 	<ul data-dropdown-width="200px" id="nav-account-dropdown" class="dropdown dropdown-right dropdown-top-flush">
 		
 		<!-- @PLACEHOLDER: DELETE QWHEN READY-->
-			<?php app_debug_li() ?>
-			<li class="REPLACE"><a href="#">Item</a></li>
-			<li class="REPLACE"><a href="#">Item</a></li>
-			<li class="REPLACE"><a href="#">Logout</a></li>
+			<li><a href="#">Admin</a></li>
+			<li><a href="<?=app_create_link(array('template' => 'sales-tracking')) ?>">Sales Tracking</a></li>
+			<li><a href="#">Logout</a></li>
 	</ul>
 
 </div>
