@@ -1179,6 +1179,11 @@
 				}
 			</style>
 			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-filter="testCallback" />
+			<a href="#putangina" class="data-toggle-modal-board">pota</a>
+			<div id="putangina" class="modal modal-board">
+				<input value="lil,stupid,ass,throttle,i,ain't,fuckin,with,u" placeholder="suck ma diiick" class="input input-tags"
+					data-tags-on-keyup="console.log('ass'); " />
+			</div>
 
 
 

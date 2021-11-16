@@ -754,6 +754,14 @@
       "oAP" : "\/components\/function-filter-companies.php",
       "oF" : 0
     },
+    "\/components\/function-filter-salestrack.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/function-filter-salestrack.php",
+      "oF" : 0
+    },
     "\/components\/function-input-search.php" : {
       "cB" : 0,
       "ft" : 8192,
