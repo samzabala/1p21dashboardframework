@@ -1,5 +1,6 @@
 $sidebar-expanded: 240px;
 $sidebar-slim: 60px;
+$outreach-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
 
 #outreach {
 	&-calendar {
@@ -342,6 +343,25 @@ $sidebar-slim: 60px;
 					width: auto!important;
 				}
 			}
+		}
+	}
+
+	&-animate {
+		&-fade {
+			&-leave-active,
+			&-enter-active {
+				transition: all $outreach-table-tr-fade-duration ease-out;
+			  }
+			  
+			  &-enter-from {
+				transform: translateX(-20px);
+				opacity: 0;
+
+			  }
+			  &-leave-to {
+				transform: translateX(20px);
+				opacity: 0;
+			  }
 		}
 	}
 }

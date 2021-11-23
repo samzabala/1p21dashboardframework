@@ -30,8 +30,9 @@
 					<label for="select-task-all" class="input-label hide-nonmobile">Select All Tasks</label>
 				</form>
 			</th>
+			<th class="text-align-center text-nowrap" width="200">Mark as Complete</th>
 			<th class="text-nowrap">Description</th>
-			<th class="text-nowrap" width="200">Contact</th>
+			<th class="text-nowrap">Contact</th>
 			<th class="text-nowrap text-align-center" width="90">Due Date</th>
 			<th class="text-nowrap" width="130">Reminder</th>
 			<th class="text-nowrap text-align-center" width="100">Task Owner</th>
@@ -63,12 +64,40 @@
 			</th>
 		</tr>
 
-		<!-- @LOOP row -->
-		<tr>
+		<!-- @LOOP row
+
+
+		NOTE: For animations
+		1: wrap the tr with `<transition name="outreach-animate-fade"></transition>`. Markup demo is not wrapped with the element right now so that the front end doesn't freak out. 
+
+		2: add a v-if attribute for this to work: `v-if="!taskComplete"`
+
+		This is how the markup should look like for TaskDetail.vue:
+		<transition name="outreach-animate-fade">
+			<tr v-if="!taskComplete">...</tr>
+		</transition>
+
+		reference here:
+		https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components 
+	
+		-->
+		<tr v-if="!taskComplete">
 			<td class="text-align-center" width="50">
 				<form action="" class="task-c">
 					<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-REPLACEID">
 					<label for="select-task-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Task</label>
+				</form>
+			</td>
+			<td class="text-align-center" width="200">
+				<form action="" class="task-completion">
+					<div class="input-toggle input-large justify-content-center">
+						<input type="checkbox" class="input outreach-table-toggle-animate-fade">
+						<label class="input-label input-toggle-label no-padding">
+							<span class="hide-nonmobile">
+								<span class="font-size-normalize margin-left">Mark as Complete</span>
+							</span>
+						</label>
+					</div>
 				</form>
 			</td>
 			<td width="350">
@@ -77,7 +106,7 @@
 					<span class="REPLACE">Our school had a saying: “When something smells, it’s usually the Butz.” In the 23 years I’ve known him, it’s usually been true.</span>
 				</div>
 			</td>
-			<td width="200">
+			<td>
 				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Contact</span>
 				<a class="color-inherit" href="<?= app_create_link(array('template'=>'contact-detail')) ?>">
 
@@ -192,13 +221,25 @@
 								<label for="select-task-<?=$i; ?>" class="input-label color-neutral hide-nonmobile">Select Task</label>
 							</form>
 						</td>
+						<td class="text-align-center" width="200">
+							<form action="" class="task-completion">
+								<div class="input-toggle input-large justify-content-center">
+									<input type="checkbox" class="input outreach-table-toggle-animate-fade">
+									<label class="input-label input-toggle-label no-padding">
+										<span class="hide-nonmobile">
+											<span class="font-size-normalize margin-left">Mark as Complete</span>
+										</span>
+									</label>
+								</div>
+							</form>
+						</td>
 						<td width="350">
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Description</span>
 							<div class="task-description">
 								<span class="REPLACE">Our school had a saying: “When something smells, it’s usually the Butz.” In the 23 years I’ve known him, it’s usually been true.</span>
 							</div>
 						</td>
-							<td width="200">
+						<td width="250">
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Task</span>
 							<a class="color-inherit" href="<?= app_create_link(array('template'=>'contact-detail')) ?>">
 
