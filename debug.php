@@ -1178,7 +1178,7 @@
 					background: yellow!impoprtant;
 				}
 			</style>
-			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-max="5" data-tags-filter="testCallback" />
+			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-max-char="5" data-tags-filter="testCallback" />
 			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-max-char="5" data-tags-max-char-snip="true" data-tags-filter="testCallback" />
 			<a href="#putangina" class="data-toggle-modal-board">pota</a>
 			<div id="putangina" class="modal modal-board">
@@ -1460,6 +1460,12 @@
 		<h1 data-toggle-accordion>form: Date module<i class="symbol symbol-arrow-down symbol-arrow-up-toggle" class=""></i></h1>
 		<div class="accordion ">
 			<form>
+			<input type="text" class="input input-calendar" data-calendar-start-day="0"  data-calendar-year-skip="true"
+			data-calendar-disabled-dates="2020-03-01,2020-03-02"
+			data-calendar-text-input="true"
+
+			min="2018-01-20"
+			value="2020-03-05" />
 
 			<input type="text" class="input input-calendar" 
 				data-calendar-text-input="true"
@@ -1520,12 +1526,6 @@
 			The div is somewhere here... suck a dick
 
 			ALSO FUCK SKIP YEARSSS
-			<input type="text" class="input input-calendar" data-calendar-start-day="0"  data-calendar-year-skip="true"
-			data-calendar-disabled-dates="2020-03-01,2020-03-02"
-			data-calendar-text-input="true"
-
-			min="2018-01-20"
-			value="2020-03-05" />
 
 			<p>bitch but no value</p>
 			<input type="text" class="input input-calendar" data-calendar-start-day="0"
