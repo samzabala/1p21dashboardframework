@@ -39,7 +39,7 @@
 			<th class="text-align-center" width="85">Status</th>
 			<th class="text-nowrap text-align-right outreach-table-cell-actions outreach-table-mobile-th" width="50">
 				<div class="contact-actions position-relative">
-					<?php app_get_component('components/tooltip-actions','',false,array(
+					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
 							'Change Status for Selected'
 								=> 'href="#m-contact-status-REPLACEID" data-toggle-modal-default data-modal-title="Set Tasks Status"',
@@ -184,6 +184,8 @@
 				<div class="contact-actions position-relative">
 					<?php app_get_component('components/dropdown-actions','',false,array(
 						'links' => array(
+							'View Details'
+								=> 'class="dropdown-purger" href="#mb-detail-task" data-toggle-modal-board',
 							'Edit Details'
 								=> 'class="tooltip-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
 							'Change Status'
@@ -322,8 +324,10 @@
 							<div class="contact-actions position-relative">
 								<?php app_get_component('components/dropdown-actions','',false,array(
 									'links' => array(
+										'View Details'
+											=> 'class="dropdown-purger" href="#mb-detail-task" data-toggle-modal-board',
 										'Edit Details'
-											=> 'class="tooltip-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
+											=> 'class="dropdown-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
 										'Change Status'
 											=> 'href="#m-contact-status-REPLACEID" data-toggle-modal-default ',
 										'Delete'
