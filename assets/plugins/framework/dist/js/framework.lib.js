@@ -2799,15 +2799,12 @@
 
     _proto.validate = function validate() {
       //limit tag lengths
-      this.trim();
-      console.log('trim', this.theValue, this.renderValue); //filter args
+      this.trim(); //filter args
 
       if (this.args.filter && this.isFiltering) {
         this.filterValue(); //reset filtering to true after
 
         this.__enableFilter();
-
-        console.log('filter', this.theValue, this.renderValue);
       }
     };
 
@@ -3236,8 +3233,7 @@
         return this.UIInput.innerText;
       },
       set: function set(inputValue) {
-        console.log(this.UIInput.innerText, inputValue); // this.UIInput.value = inputValue.toString().replace(/\n|\r/g, '\\n');
-
+        // this.UIInput.value = inputValue.toString().replace(/\n|\r/g, '\\n');
         this.UIInput.innerText = inputValue.toString().replace(/\n|\r/g, '\\n');
       }
     }, {
@@ -3712,9 +3708,13 @@
       var _this2 = this;
 
       var element = elem ? _FwComponent.prototype.UIEl.call(this, elem) : _FwComponent.prototype.UIEl.call(this);
-      var matchedHashDestroy = false;
+      var matchedHashDestroy = false; // if (!window.location.hash && this.#current && this.#current.element) {
+      //   if (element === this.#current.element) {
+      //     matchedHashDestroy = true;
+      //   }
+      // }
 
-      if (!window.location.hash && _classPrivateFieldLooseBase(this, _current)[_current] && _classPrivateFieldLooseBase(this, _current)[_current].element) {
+      if (_classPrivateFieldLooseBase(this, _current)[_current] && _classPrivateFieldLooseBase(this, _current)[_current].element) {
         if (element === _classPrivateFieldLooseBase(this, _current)[_current].element) {
           matchedHashDestroy = true;
         }
