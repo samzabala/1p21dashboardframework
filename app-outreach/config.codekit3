@@ -311,18 +311,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/styles\/companies.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/companies.example-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/styles\/companies.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -337,18 +325,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/assets\/styles\/company-detail.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/company-detail.example-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/styles\/company-detail.example.scss" : {
       "aP" : 0,
@@ -392,18 +368,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/styles\/company.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/company.example-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/styles\/company.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -418,18 +382,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/assets\/styles\/contact-detail.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/contact-detail.example-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/styles\/contact-detail.example.scss" : {
       "aP" : 0,
@@ -473,18 +425,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/styles\/contacts.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/contacts.example-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/styles\/contacts.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -527,18 +467,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/styles\/login.forgot.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/login.forgot.example-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/styles\/login.forgot.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -562,9 +490,9 @@
       "ec" : 0,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/styles\/style.example.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -595,18 +523,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/assets\/styles\/tasks.example.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/styles\/tasks.example-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/assets\/styles\/tasks.example.scss" : {
       "aP" : 0,
@@ -696,6 +612,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/alerts-toast.php",
+      "oF" : 0
+    },
+    "\/components\/attachments-grid-detailed-view.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/attachments-grid-detailed-view.php",
       "oF" : 0
     },
     "\/components\/attachments-grid-simple.php" : {
@@ -848,6 +772,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/list-social.php",
+      "oF" : 0
+    },
+    "\/components\/modal-board-detail-event.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-board-detail-event.php",
+      "oF" : 0
+    },
+    "\/components\/modal-board-detail-task.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-board-detail-task.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-company-details.php" : {

@@ -4639,6 +4639,9 @@
 				<span class="badge badge-error"></span> Error
 			</p>
 
+			<p>
+				<span class="badge badge-primary badge-micro"></span> micro
+			</p>
 
 			<p>
 				<span class="badge badge-primary badge-small"></span> Small
