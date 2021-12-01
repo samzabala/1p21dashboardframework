@@ -176,6 +176,14 @@ $outreach-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
 
 
 .outreach {
+	&-palette {
+		&-tag {
+			&-company {
+				background-color: $brand-color-primary;
+				color: $brand-color-background;
+			}
+		}
+	}
 	&-body {
 		&-login {
 			padding-top: 15vh;
@@ -248,10 +256,6 @@ $outreach-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
 						font-size: 1.125em;
 					}
 				}
-			}
-			&-tag {
-				background-color: $brand-color-primary;
-				color: $brand-color-background;
 			}
 		}
 
