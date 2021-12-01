@@ -249,6 +249,10 @@ $outreach-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
 					}
 				}
 			}
+			&-tag {
+				background-color: $brand-color-primary;
+				color: $brand-color-background;
+			}
 		}
 
 		.activity {

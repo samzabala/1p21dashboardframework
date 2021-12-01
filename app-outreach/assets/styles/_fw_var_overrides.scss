@@ -35,12 +35,19 @@ $brand-color-success:#6CC6A7;
 // $brand-color-success: #64B4AE !default;
 
 
-$body-font-size: 14px;
+$body-font-size: 15px;
+$body-font-size-small: 13px;
 
+$h1-font-size: 25px;
+$h2-font-size: 20px;
+$h3-font-size: 18px;
+$h4-font-size: 16px;
+
+$module-title-font-size: 12px;
 $module-grid-title-text-transform: uppercase;
 $module-title-text-transform: uppercase;
 
-
+$input-line-height: 1.375;
 $btn-font-weight: 500;
 // // $nav-top-font-weight: 600;
 // $tag-font-weight: 600;
@@ -49,5 +56,6 @@ $btn-font-weight: 500;
 // $nav-top-font-weight: 500 !default;
 
 
-$nav-top-font-size: 12px;
+$nav-top-font-size: 14px;
+$tag-font-size: 12px;
  
