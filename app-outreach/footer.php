@@ -2,11 +2,13 @@
 
 <!-- boards that appear -->
 <?php if(FWAPPS_TEMPLATE !== 'debug'): ?>
-<?app_get_component('components/modal-board-form-contact') ?>
-<?app_get_component('components/modal-board-form-task') ?>
-<?app_get_component('components/modal-board-form-event') ?>
-<?app_get_component('components/modal-board-form-email') ?>
-<?app_get_component('components/modal-board-form-company') ?>
+<?php app_get_component('components/modal-board-form-contact') ?>
+<?php app_get_component('components/modal-board-form-task') ?>
+<?php app_get_component('components/modal-board-form-event') ?>
+<?php app_get_component('components/modal-board-form-email') ?>
+<?php app_get_component('components/modal-board-form-company') ?>
+<?php app_get_component('components/modal-board-detail-task') ?>
+<?php app_get_component('components/modal-board-detail-event') ?>
 <?php endif; ?>
 
 
