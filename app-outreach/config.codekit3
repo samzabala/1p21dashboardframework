@@ -251,6 +251,21 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/assets\/styles\/_custom.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 3,
+      "ec" : 0,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_custom.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/styles\/_ext_fonts.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -276,6 +291,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/styles\/_fw_var_overrides.mine.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/_fw_var_overrides.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 3,
+      "ec" : 0,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_fw_var_overrides.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -1032,6 +1062,14 @@
       "oAP" : "\/contacts.php",
       "oF" : 0
     },
+    "\/footer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/footer.php",
+      "oF" : 0
+    },
     "\/header.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1094,6 +1132,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sales-tracking.php",
+      "oF" : 0
+    },
+    "\/tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/tasks.php",
       "oF" : 0
     },
     "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/js\/imports\/classes\/component.js" : {
