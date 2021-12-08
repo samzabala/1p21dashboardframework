@@ -16,3 +16,6 @@ wp-includes/
 *.map.*
 
 __fortesting.*
+
+webpack.*.js
+webpack.*.json
