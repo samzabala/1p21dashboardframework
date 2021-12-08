@@ -774,14 +774,6 @@
       "oAP" : "\/components\/list-social.php",
       "oF" : 0
     },
-    "\/components\/modal-actions.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-actions.php",
-      "oF" : 0
-    },
     "\/components\/modal-board-detail-event.php" : {
       "cB" : 0,
       "ft" : 8192,
