@@ -376,20 +376,23 @@ $table-column-widths: (50,100,200,300,400,500);
 }
 
 .body-no-scroll {
-  overflow-y: hidden;
-}
-.body-no-scroll .tox-tinymce-aux {
-  z-index: 100000 !important;
-}
-
-form label.required:after
-{
-  color: red;
-  content: " *";
-}
-
-.fc-daygrid-event * {
+	overflow-y: hidden;
+  }
+  .body-no-scroll .tox-tinymce-aux {
+	z-index: 100000 !important;
+  }
+  
+  form label.required:after
+  {
+	color: red;
+	content: " *";
+  }
+  
+  .fc-daygrid-event * {
 	text-decoration: inherit;
-}
-
-
+  }
+  
+  .full-width {
+	width: 100% !important;
+  }
+  
