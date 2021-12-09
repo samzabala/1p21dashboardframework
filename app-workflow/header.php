@@ -12,7 +12,82 @@
 		<link href="<?=FWAPPS_ROOT_URL.'/assets/legacy/styles/style.css'?>" rel="stylesheet" />
 
 
+		<!-- from actual app -->
+		<style>
+			.body-no-scroll {
+				overflow-y: hidden;
+				}
+				.body-no-scroll .tox-tinymce-aux {
+				z-index: 100000 !important;
+				}
 
+				.activity-log-column-settings {
+				margin-bottom: 1.5rem;
+				}
+
+				.record-comments-modal .modal-popup {
+				padding-left: 50px;
+				padding-right: 50px;
+				max-height: 75vh;
+				overflow-y: scroll;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				}
+
+				.board-popup-content .alert.alert-caution {
+				margin-bottom: 1rem;
+				}
+
+				.modal-popup-content .alert.alert-caution {
+				margin-bottom: 1.5rem;
+				}
+
+				table > thead > tr > th {
+				vertical-align: middle;
+				}
+				table > tbody > tr > td {
+				vertical-align: middle;
+				}
+
+				table.time-dist-ana caption {
+				font-weight: bold;
+				text-align: left;
+				margin-bottom: 1rem;
+				}
+
+				.half-wide {
+				width: 47.5%;
+				}
+
+				.draggable {
+				cursor: pointer;
+				}
+
+				.analytics-xyz-time td:last-child {
+				width: 125px;
+				}
+				.analytics-xyz-time .progress {
+				background: #eee no-repeat;
+				}
+
+				.dt-buttons {
+				margin-bottom: 1rem;
+				}
+
+				#model-reminders > .model-reminder:first-child {
+				margin-top: 1.25rem;
+				}
+
+				table.notes th.author {
+				width: 5%;
+				}
+				table.notes th.last-edited {
+				width: 5%;
+				}
+
+		</style>
 
 
 
