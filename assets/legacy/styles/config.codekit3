@@ -7,11 +7,12 @@
       "uuidString" : "4C42CC39-0D4E-412F-B9D4-7F42505F4091"
     }
   ],
-  "creatorBuild" : "34127",
+  "creatorBuild" : "34214",
   "files" : {
     "\/_apps.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -26,6 +27,7 @@
     "\/_dashboard.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -40,6 +42,7 @@
     "\/_timetracker.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -70,14 +73,15 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/style.legacy-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/style.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -85,1503 +89,620 @@
       "oA" : 0,
       "oAP" : "\/style.css",
       "oF" : 0,
-      "oS" : 0,
+      "oS" : 1,
       "pg" : 0,
       "sct" : 0
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_accordion.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/framework.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_accordion.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/framework.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_alert.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_alert.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_alert.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_alert.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_asset.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_asset.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_asset.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_asset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_badge.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_badge.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_badge.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_badge.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_buttons.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_buttons.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_buttons.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_buttons.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_calculations.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form-calendar.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_calculations.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form-calendar.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_container.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form-tags.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_container.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form-tags.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_dropdown.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form-toggle.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_dropdown.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form-toggle.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_form.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_form.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_form.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_functions.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_grid.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_functions.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_grid.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_grid.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_helpers.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_grid.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_helpers.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_helpers.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_highlight.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_helpers.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_highlight.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_highlight.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_images.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_highlight.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_images.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_lazy.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_internal-vars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_lazy.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_internal-vars.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_legend.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_layout.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_legend.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_layout.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_list-group.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_legend.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_list-group.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_legend.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_mixins.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_list-groups.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_mixins.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_list-groups.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_modal.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_mixins.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_modal.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_mixins.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_module.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_modal-board.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_module.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_modal-board.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_nav.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_modal.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_nav.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_modal.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_pagination.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_module.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_pagination.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_module.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_progress.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_nav.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_progress.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_nav.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_ratio.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_pagination.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_ratio.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_pagination.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_reset.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_popper.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_reset.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_popper.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_scaffolding.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_progress.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_scaffolding.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_progress.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_switch.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_ratio.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_switch.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_ratio.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_symbol.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_reset.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_symbol.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_reset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tab.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_scaffolding.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tab.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_scaffolding.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_table.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_switch.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_table.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_switch.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tag.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_symbol.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tag.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_symbol.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_thumbnail.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_table.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_thumbnail.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_table.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_toolbar.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_tabs.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_toolbar.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_tabs.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tooltip.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_tag.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_tooltip.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_tag.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_typography.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_thumbnail.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_typography.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_thumbnail.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_vars.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_toggle.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_vars.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_toggle.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_well.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_toolbar.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_well.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_toolbar.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_zone.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_typography.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/_zone.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_typography.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_alert.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_vars.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_alert.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_vars.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_asset.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_well.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_asset.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_well.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_badge.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_zone.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_badge.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/_zone.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 1
     },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_buttons.scss" : {
+    "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/plugins\/_shithole.scss" : {
       "aP" : 0,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_buttons.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-calendar.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-calendar.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-tags.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-tags.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-toggle.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form-toggle.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_form.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_global.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_global.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_highlight.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_highlight.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_legend.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_legend.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_list-group.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_list-group.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_modal-board.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_modal-board.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_module.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_module.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_nav.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_nav.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_progress.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_progress.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_symbol.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_symbol.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tab.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tab.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_table.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_table.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tag.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tag.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_thumbnail.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_thumbnail.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tooltip.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_tooltip.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_typography.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_typography.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_well.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_well.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_zone.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/calculations\/_zone.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-boxy.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-boxy.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-calendar.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-calendar.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-fieldset.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-fieldset.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-global.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-global.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-info.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-info.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-inline.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-inline.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-label.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-label.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-tags.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-tags.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-toggle.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/form\/_form-toggle.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/framework.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/functions\/_buttons.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/functions\/_buttons.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/functions\/_global.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/functions\/_global.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-align.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-align.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-background.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-background.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-border.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-border.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-color.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-color.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-disable.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-disable.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-display.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-display.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-flex.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-flex.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-float.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-float.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-font.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-font.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-image.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-image.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-justify.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-justify.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-margin.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-margin.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-overflow.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-overflow.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-padding.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-padding.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-position.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-position.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-radius.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-radius.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-shadow.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-shadow.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-svg.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-svg.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-text.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-text.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-visibility.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/helpers\/_helpers-visibility.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_buttons.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_buttons.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_global.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_global.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_grid.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_grid.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_symbol.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/mixins\/_symbol.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-board.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-board.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-default.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-default.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-fullscreen.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-fullscreen.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-global.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/modal\/_modal-global.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/plugins\/_shithole.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/plugins\/_shithole.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-inverse.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-inverse.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-normalize.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-normalize.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-root.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-root.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 1
-    },
-    "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-ui.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/Users\/Sam\/Sites\/1p21dashboard\/app\/public\/assets\/plugins\/framework\/src\/scss\/scaffolding\/_scaffolding-ui.css",
+      "oAP" : "\/Users\/sam\/Sites\/1p21dashboard\/app\/public\/assets\/legacy\/framework-legacy\/scss\/import\/plugins\/_shithole.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -2534,7 +1655,8 @@
         "optionString" : ""
       },
       "no-multi-assign" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'ignoreNonDeclaration': false}"
       },
       "no-multi-spaces" : {
         "active" : 0,
@@ -2657,7 +1779,8 @@
         "active" : 0
       },
       "no-sequences" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowInParentheses': true}"
       },
       "no-setter-return" : {
         "active" : 1
@@ -3021,354 +2144,6 @@
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
-    "jsHintFlags2" : {
-      "asi" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "bitwise" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "boss" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "browserify" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camelcase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "curly" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "debug" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "dojo" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "elision" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqeqeq" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqnull" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es3" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "esnext" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "evil" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "expr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "forin" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "freeze" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "funcscope" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "futurehostile" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "globalstrict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "immed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "indent" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "iterator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jasmine" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jquery" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "lastsemic" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "latedef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "laxbreak" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "laxcomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "loopfunc" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxcomplexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "maxdepth" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "maxparams" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxstatements" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "mocha" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "mootools" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "moz" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "multistr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newcap" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noarg" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nocomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "noempty" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonbsp" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonew" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nonstandard" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "notypeof" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noyield" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "onecase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "phantom" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "proto" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prototypejs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "qunit" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "regexp" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "rhino" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "scripturl" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shadow" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shelljs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "singleGroups" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "strict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "sub" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "supernew" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "typed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "undef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "unused" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "varstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "withstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "worker" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "wsh" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "yui" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
-    "jsLintFlags2" : {
-      "bitwise" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es6" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "eval" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "for" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "white" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",
@@ -3677,6 +2452,7 @@
     "tsEmitBOM" : 0,
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
+    "tsExactOptionalPropertyTypes" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
@@ -3685,6 +2461,7 @@
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
+    "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
@@ -3705,6 +2482,7 @@
     "tsStripInternal" : 0,
     "tsSuppressExcessPropertyErrors" : 0,
     "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseUnknownInCatchVariables" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {

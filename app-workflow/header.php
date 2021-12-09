@@ -8,7 +8,8 @@
 	<meta name="robots" content="noindex" />
 
 	<!-- styles .sass has ya bois styles -->
-		<link href="<?=FWAPPS_ROOT_URL.'/assets/legacy/styles/style.legacy.css'?>" rel="stylesheet" />
+		<!-- <link href="<?=FWAPPS_ROOT_URL.'/assets/legacy/styles/style.legacy.css'?>" rel="stylesheet" /> -->
+		<link href="<?=FWAPPS_ROOT_URL.'/assets/legacy/styles/style.css'?>" rel="stylesheet" />
 
 
 

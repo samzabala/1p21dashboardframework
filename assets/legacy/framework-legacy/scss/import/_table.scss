@@ -1,6 +1,26 @@
 /*** Tables ***/
 //internal vars
 
+//table
+$calculated-table-heading-height: $table-heading-height;
+@if internal-is-convertable($table-heading-height) {
+  $calculated-table-heading-height: rem($table-heading-height / $body-font-size);
+}
+
+$calculated-table-cell-height: $table-cell-height;
+@if internal-is-convertable($table-cell-height) {
+  $calculated-table-cell-height: rem($table-cell-height / $body-font-size);
+}
+
+$calculated-table-cell-height-large: $table-cell-height-large;
+@if internal-is-convertable($table-cell-height-large) {
+  $calculated-table-cell-height-large: rem($table-cell-height-large / $body-font-size);
+}
+$calculated-table-cell-height-small: $table-cell-height-small;
+@if internal-is-convertable($table-cell-height-small) {
+  $calculated-table-cell-height-small: rem($table-cell-height-small / $body-font-size);
+}
+
 $prefix: '.table';
 #{$prefix} {
   &-wrapper {
@@ -25,6 +45,7 @@ $prefix: '.table';
   @at-root &,
     table {
     width: 100%;
+    max-width: 100%;
     display: table;
     border-collapse: collapse;
     text-align: inherit;
@@ -36,9 +57,8 @@ $prefix: '.table';
 
     .text-wrap-ellipsis,
     .text-wrap-ellipsis-multiple {
-      width: 10rem;
-      width: clamp(12rem, 100%, 16rem);
-      max-width: 16rem !important;
+      width: 10em;
+      width: clamp(10em, 25vw, 24em);
     }
 
     @at-root thead,
@@ -58,7 +78,7 @@ $prefix: '.table';
 
     @at-root tr,
       #{$prefix}-row {
-      // height: 100%;
+      height: 100%;
       display: table-row;
       vertical-align: inherit;
       text-align: inherit;
@@ -91,9 +111,9 @@ $prefix: '.table';
       padding-left: $table-cell-gutter;
       padding-right: $table-cell-gutter;
       // vertical-align:middle;
-      // height: 100%;
+      height: 100%;
       display: table-cell;
-      // position: relative;
+      position: relative;
 
       &#{$prefix}-bordered,
       #{$prefix}-bordered & {
@@ -226,14 +246,14 @@ $prefix: '.table';
 
       @each $tag, $color in $calculated-brand-color-declarations-for-components {
         &-#{$tag} {
-          background-color: $color;
+          @extend %for-background-#{$tag};
         }
       }
 
       &-intensity {
-        @for $i from 1 through length($calculated-brand-color-intensity) {
+        @for $i from 1 through length($calculated-color-brand-intensity) {
           &-#{$i} {
-            background-color: nth($calculated-brand-color-intensity, $i);
+            @extend %for-background-intensity-#{$i};
           }
         }
       }
@@ -244,7 +264,7 @@ $prefix: '.table';
       &-disabled {
         td,
         #{$prefix}-cell {
-          @include dump-styles(disabled);
+          @extend %for-disabled;
         }
       }
     }
@@ -252,21 +272,18 @@ $prefix: '.table';
     @at-root #{$prefix}-row {
       @each $tag, $colors in $calculated-table-row-background {
         &-#{$tag} {
-          td,
-          #{$prefix}-cell {
-            background-color: map-get($colors, normal);
+          background-color: map-get($colors, normal);
 
-            .theme-inverse & {
-              background-color: map-get($colors, inverse);
-            }
+          .theme-inverse & {
+            background-color: map-get($colors, inverse);
+          }
 
-            .alert &,
-            .theme-inverse .alert & {
-              background: map-get(
-                map-get($calculated-color-vars-variations, #{$tag}),
-                alpha-2
-              );
-            }
+          .alert &,
+          .theme-inverse .alert & {
+            background: map-get(
+              map-get($calculated-color-vars-variations, #{$tag}),
+              alpha-2
+            );
           }
         }
       }

@@ -1,5 +1,8 @@
+@use 'sass:math';
+
 //google font
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap');
+@import url(/assets/plugins/framework/dist/fonts/fw-icons/import.css);
 
 
 // $debug: true;
@@ -7,13 +10,15 @@
 
 // CUSTOM VARIABLES FOR FRAMEWORK IF ANY
 
+$var-theme-color: var(--fw-theme-color);
+$var-theme-color-contrast: var(--fw-theme-color-contrast);
+$var-theme-background: var(--fw-theme-background);
+$var-theme-background-contrast: var(--fw-theme-background-contrast);
 
 
 $brand-font-primary: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 $brand-font-secondary: $brand-font-primary;
 $brand-font-accent: 'Roboto', $brand-font-primary;
-
-$brand-color-background-alt: #eff4f8;
 
 $symbol-font-path: '/assets/plugins/framework/dist/fonts/fw-icons';
 
@@ -23,6 +28,7 @@ $brand-font-secondary: $brand-font-primary;
 $brand-font-accent: 'Roboto', $brand-font-primary;
 
 $brand-color-background-alt: #eff4f8;
+$brand-color-background: #fff;
 
 // $brand-theme-background-inverse: #302a4b;
 // $brand-theme-background-contrast-inverse: #1e1931;
@@ -41,67 +47,235 @@ $brand-color-primary: #0480FE;
 $brand-color-secondary: #F204A2;
 $brand-color-accent: #894EC7;
 
-// $brand-color-success: #64B4AE !default;
+$brand-color-background-alt: #eff4f8;
+$brand-theme-color-contrast: $brand-color-base-alt;
+
+$brand-color-intensity-1: $brand-color-primary;
+$brand-color-intensity-5: $brand-color-secondary;
+
+$theme-default-scheme: light;
+$theme-inverse-scheme: dark;
+// $brand-color-success: #64B4AE;
+$border-radius-base: 10px !default;
+$border-radius-small: $border-radius-base * 0.5 !default;
+$border-radius-large: $border-radius-base * 2 !default;
+//BOX SHADOW globals
+$box-shadow-base: 0px 3px 10px -6px !default;
+$box-shadow-mild: 0px 2px 20px -5px !default;
+$box-shadow-spicy: 0px 5px 20px -10px !default;
 
 $gutter-base: 30px;
-	$gutter-large: 40px;
-	$gutter-small: 20px;
-	$gutter-micro: 10px;
+$gutter-large: 40px;
+$gutter-small: 20px;
+$gutter-micro: 10px;
 
 
-	$container-gutter: $gutter-base !default;
-	$container-gutter-wide: $gutter-small !default;
-	$container-gutter-slim: $gutter-large !default;
-	$container-gutter-mobile: $gutter-small !default;
-$container-max-width: 1600px !default;
-	$container-max-width-mobile: 750px !default;
+$br-xs-max: 600px;
+$br-sm-max: 1200px;
+$br-md-max: 1600px;
+$br-lg-max: 1800px;
+
+//extra breakpoints
+$br-xxs-max: 400px;
+//when to separate mobile like styles
+$mobile-br-max: 'sm';
+
+$container-gutter: $gutter-base;
+$container-gutter-wide: $gutter-small;
+$container-gutter-slim: $gutter-large;
+$container-gutter-mobile: $gutter-small;
+$container-max-width: 1600px;
+$container-max-width-mobile: 750px;
 
 // $gradient-end: $brand-color-accent;
 
 
 
-// $brand-color-success: #64B4AE !default;
+// $brand-color-success: #64B4AE;
 
 
 $body-font-size: 15px;
+$body-font-weight-bold: 700;
 
-		
-$module-gutter-between: $gutter-micro !default;
+$body-heading-color: $brand-theme-color-contrast;
+
+$body-ellipsis-multiple-factor: 2;
+
+$table-cell-gutter: $gutter-micro;
+$table-heading-font-weight: $body-font-weight-bold;
+// $table-heading-color: $var-color-neutral;
+$table-heading-text-transform: uppercase;
+$table-heading-background: $var-theme-background-contrast;
+
+$icon-size: 30px;
+
+$nav-height: 75px;
+$nav-gutter-x: $gutter-small;
+$nav-current-size: 5px;
+$nav-top-font-size: $body-font-size;
+$nav-top-font-weight: 700;
+
+$nav-padding-x: $gutter-small;
+
+$thumbnail-small-size: 30px;
+$thumbnail-small-font-size: 12px;
+
+$tabs-current-height: 5px;
+
+// $alert-border-default: $var-color-neutral;
+$alert-background-default: transparent;
+
+$module-gutter-x: $gutter-small;
+$module-gutter-y: $gutter-micro;
+
+$module-gutter-grid-gap: $gutter-small;
+
+$module-gutter-between: $gutter-micro;
 $module-grid-title-text-transform: uppercase;
 $module-title-text-transform: uppercase;
+
+$well-spread: 7px;
+$well-spread-expanded: 14px;
+
+$list-group-height: 40px;	
+$list-group-height-compact: 20px;	
+$list-group-height-expanded: 60px;
+
+$badge-size: 24px;	
+$badge-size-large: 32px;	
+$badge-size-small: 16px;
+$badge-border-width: 4px;
+
+$highlight-margin: 1px;
+$highlight-border-radius: $border-radius-base;
+
+$tag-height: 28px;
+$tag-height-large: 35px;
+$tag-height-small: 21px;	
+$tag-font-size: 13px;	
+$tag-font-weight: 600;
+$tag-gutter-x: 20px;
+$tag-border-radius: $tag-height * 0.5;
+$tag-border-radius-large: $tag-height-large * 0.5;
+$tag-border-radius-small: $tag-height-small * 0.25;
+
+$toolbar-cross-min-size: 75px;
+$toolbar-cross-min-size-small: 50px;
+$toolbar-cross-min-size-large: 100px;
+$toolbar-main-gutter: $gutter-small;
+$toolbar-main-gutter-small: $gutter-micro;
+$toolbar-main-gutter-large: $gutter-base;
+$toolbar-border-radius: $toolbar-cross-min-size * 0.5;
+$toolbar-border-radius-small: $toolbar-cross-min-size-small * 0.5;
+$toolbar-border-radius-large: $toolbar-cross-min-size-large * 0.5;
+$toolbar-tile-gutter: $gutter-micro; //
+
+
+$input-height: 48px;
+$input-height-large: 60px;
+$input-height-small: 30px;
+$input-font-size-large: $body-font-size * 1.25;
+$input-font-size-small: $body-font-size * 0.875;
+$input-label-font-weight: 600;
+$input-font-weight: 600;
+$input-border-radius: $input-height * .5;
+$input-border-radius-large: $input-height-large * .5;
+$input-border-radius-small: $input-height-small * .5;
+$input-calendar-block-gutter-y: 8px;
+$input-calendar-block-gutter-y-mobile: 8px;
+$input-calendar-block-border-radius: $border-radius-base;
+$input-tags-padding-x: 1em;
+$input-tags-padding-y: 0.25em;
+$input-tags-padding-y-small: 0.0625em;
+$input-tags-border-radius: $border-radius-large;
+
+$btn-gutter-x: 20px;
+$btn-height: $input-height;
+$btn-height-large: $input-height-large;
+$btn-height-small: $input-height-small;
+
+$btn-border-radius: $btn-height * .5;
+$btn-border-radius-large: $btn-height-large * .5;
+$btn-border-radius-small:  $btn-height-small * .5;
+
 
 
 $btn-font-weight: 600;
 // $nav-top-font-weight: 600;
-$tag-font-weight: 600;
-$input-label-font-weight: 600;
-$input-font-weight: 600;
 
 
-$input-height: 48px !default;
-$input-height-small: 30px !default;
-$input-height-large: 50px;
-$input-border-radius: $input-height * .5 !default;
-$input-border-radius-large: $input-height-large * .5 !default;
-$input-border-radius-small: $input-height-small * .5 !default;
+// new version support	
+$alert-container-padding-x: $gutter-base;	
+$alert-container-padding-x-mobile: $gutter-micro;	
+$alert-container-padding-y: $gutter-base;	
+$alert-container-padding-y-mobile: $gutter-micro;	
+$alert-container-max-width: 460px;
+
+$modal-board-padding-spacer: $gutter-base;	
+$modal-board-padding-spacer-mobile: $gutter-small;	
+$modal-board-padding-x: $gutter-base;	
+$modal-board-padding-y: $gutter-base;	
+$modal-board-padding-x-mobile: $gutter-small;	
+$modal-board-padding-y-mobile: $gutter-small;	
+$modal-board-close-button-font-size: 1rem;	
+$modal-board-close-offset-x: $modal-board-padding-x;	
+$modal-board-close-offset-y: $modal-board-padding-y;	
+$modal-board-close-offset-x-mobile: $modal-board-padding-x-mobile;	
+$modal-board-close-offset-y-mobile: $modal-board-padding-y-mobile;	
+$modal-board-resize-width: 20px; //not yet	
+$modal-board-resize-height: 55px; //not yet	
+$modal-board-close-size: 38px;
+
+// DROPDOWN	
+$dropdown-gutter-x: $gutter-small;	
+$dropdown-gutter-y: $gutter-small;	
+$dropdown-small-gutter-x: $gutter-micro;	
+$dropdown-small-gutter-y: $gutter-micro;	
+$dropdown-large-gutter-x: $gutter-base;	
+$dropdown-large-gutter-y: $gutter-base;	
+$dropdown-border-radius: $border-radius-small;	
+$dropdown-background: $var-theme-background;	
+$dropdown-background-inverse: $dropdown-background;	
+$dropdown-color: $var-theme-color;	
+$dropdown-color-inverse: $dropdown-color;
+
+$btn-background-angle-gradient: 0deg;	
+$btn-color-gradient: $brand-color-background;	
+$btn-background-angle-gradient-hover: 180deg;	
+$btn-color-gradient-hover: $brand-color-background;	
+$btn-background-angle-gradient-active: 45deg;	
+	
+// SYMBOLS	
+$symbol-font-path: './../../plugins/framework/dist/fonts/fw-icons';	
+//Z index	
+$z-index-helper-max: 99;	
+$z-index-helper-multiplier: 10;	
+$z-index-small-helper-max: 9;	
+$z-index-small-helper-multiplier: 1;	
+$z-index-large-helper-max: 10000;	
+$z-index-large-helper-multiplier: 1000;	
+$z-index-alert-container: 9998;	
+$z-index-dropdown: 999;	
+$z-index-modal-default: 9990;	
+$z-index-modal-board: 9991;	
+$z-index-modal-fullscreen: 9992;	
+$z-index-nav: 999;	
+$z-index-tooltip: 9999;	
+//grow shrink	
+$flex-max: 3;	
+// @OTHER @TODOS	
+//padding and margin classe
 
 
-$btn-height: $input-height !default;
-$btn-height-large: $input-height-large !default;
-$btn-height-small: $input-height-small !default;
-
-$btn-border-radius: $btn-height * .5 !default;
-$btn-border-radius-large: $btn-height-large * .5 !default;
-$btn-border-radius-small:  $btn-height-small * .5 !default;
- 
 // FRAMEWORK / SCAFFOLDING STYLES
-	@import '../../plugins/framework/src/scss/framework.scss';
+@import './../framework-legacy/scss/framework.scss';
+// @import './../../plugins/framework/src/scss/framework';
 
- 
+
 // @error $calculated-color-tags;
 // SHARED HELPERS/CUSTOMIZATIONS. used by both timetracker and dashboard
-	@import '_apps';
-	 
+@import '_apps';
+
 // APPS / OUR CUSTOM STYLES
-	@import '_dashboard';
-	@import '_timetracker';
+@import '_dashboard';
+@import '_timetracker';
