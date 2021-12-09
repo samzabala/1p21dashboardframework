@@ -145,6 +145,28 @@ $table-column-widths: (50,100,200,300,400,500);
 		padding-bottom: $container-gutter;
 		margin-left: auto;
 	}
+
+	&-dynamic {
+		&-alert-container {
+			left: $sidebar-slim;
+			top: $nav-height;
+			// margin-left: $gutter-small * -1;
+			// margin-top: $gutter-small * -1;
+			max-width:400px;
+			z-index:99;
+			width: 400px;
+			max-width: 72%;
+			padding: $gutter-small 0 0 $gutter-small;
+
+			.alert {
+				box-shadow: 0 2px 10px -5px $var-color-base;
+			}
+		}
+	}
+
+  .user-warnings {
+    margin-left: $sidebar-slim;
+  }
 }
 
 %outreach-extend {
@@ -293,6 +315,20 @@ $table-column-widths: (50,100,200,300,400,500);
 
 				&-date {
 					@extend %outreach-extend-mobile-info-timing-date !optional;
+				}
+			}
+		}
+
+		&-cell {
+			&-columnwidth {
+				@include on-breakpoint(nonmobile){
+					@each $table-column-width in $table-column-widths {
+						&-#{$table-column-width} {
+							max-width: $table-column-width * 1px !important;
+							width: $table-column-width * 1px !important;
+							min-width: $table-column-width - 30px !important;
+						}
+					}
 				}
 			}
 		}
