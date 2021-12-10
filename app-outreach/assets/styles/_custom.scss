@@ -326,7 +326,15 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 						&-#{$table-column-width} {
 							max-width: $table-column-width * 1px !important;
 							width: $table-column-width * 1px !important;
-							min-width: $table-column-width - 30px !important;
+							min-width: percentage(
+								math.div(
+									$table-column-width,
+									nth(
+										$table-column-widths,
+										length($table-column-widths)
+									)
+								) * .25
+							) !important;
 						}
 					}
 				}
