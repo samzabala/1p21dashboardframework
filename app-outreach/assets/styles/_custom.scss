@@ -373,6 +373,14 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 					border-bottom:0;
 				}
 
+				th,td {
+					border-bottom:0 !important;
+					
+					&:nth-child(n+2) {
+						border-top: 0 !important;
+					}
+				}
+
 
 				th:not(.outreach-table-mobile-th) {
 					display: none;
