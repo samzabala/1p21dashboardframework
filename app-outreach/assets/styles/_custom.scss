@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $sidebar-expanded: 240px;
 $sidebar-slim: 60px;
 $outreach-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
@@ -253,7 +255,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 		.contact {
 			//@TODO anticipated design tweaks
 		}
-	
+
 		.company {
 			&-upcoming {
 				&-info {
@@ -274,7 +276,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 				color:inherit!important;
 			}
 			&-proposed-product {
-				@include on-breakpoint(mobile) { 
+				@include on-breakpoint(mobile) {
 					&-name {
 						font-size: 1.125em;
 					}
@@ -297,11 +299,11 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 				}
 			}
 		}
-	
+
 		.task {
 			&-toggle-reminder-wrapper {
 				align-items: flex-end;
-	
+
 			}
 			&-reminder,
 			&-due {
@@ -340,8 +342,8 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 				}
 			}
 		}
-	
-		
+
+
 		@include on-breakpoint(mobile) {
 			@at-root table#{&} {
 				&,
@@ -405,7 +407,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 			&-enter-active {
 				transition: all $outreach-table-tr-fade-duration ease-out;
 			  }
-			  
+
 			  &-enter-from {
 				transform: translateX(-20px);
 				opacity: 0;
@@ -425,18 +427,17 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
   .body-no-scroll .tox-tinymce-aux {
 	z-index: 100000 !important;
   }
-  
+
   form label.required:after
   {
 	color: red;
 	content: " *";
   }
-  
+
   .fc-daygrid-event * {
 	text-decoration: inherit;
   }
-  
+
   .full-width {
 	width: 100% !important;
   }
-  

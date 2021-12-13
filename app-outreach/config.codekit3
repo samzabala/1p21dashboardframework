@@ -7,7 +7,7 @@
       "uuidString" : "F2E6C694-13FC-436E-B8DD-DA8B3F832CE6"
     }
   ],
-  "creatorBuild" : "34214",
+  "creatorBuild" : "34264",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -4133,6 +4133,9 @@
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,

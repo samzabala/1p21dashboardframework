@@ -4906,6 +4906,121 @@
 					</table>
 
 				</div>
+
+				<h2>Table but bordad</h2>
+
+
+				<table class="table table-bordered">
+					<thead>
+					<tr>
+							
+							<th>Column heading</th>
+							<th>Column heading</th>
+							<th class="text-align-right">Column heading</th>
+							<th class="text-align-center">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						
+						
+						
+						<tr class="table-row-primary">
+							
+							<td>Primary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-secondary">
+							
+							<td>secondary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-accent">
+							
+							<td>accent</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+						<tr class="table-row-success">
+							
+							<td>Success</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">666</td>
+						</tr>
+						<tr class="table-row-error">
+							
+							<td>Error</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-caution">
+							
+							<td>Caution</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-neutral">
+							
+							<td>neutral</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-1">
+							
+							<td>Intensity 1</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-2">
+							
+							<td>Intensity 2</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-3">
+							
+							<td>Intensity 3</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-4">
+							
+							<td>Intensity 4</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-5">
+							
+							<td>Intensity 5</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-disabled">
+							
+							<td>Disabled</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+					</tbody>
+				</table>
+
 				<h2>Table but large spacing + color scheme</h2>
 
 				<table class="table table-large">
