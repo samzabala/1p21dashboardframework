@@ -370,15 +370,23 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 
 				tr {
 					position: relative;
-					border-bottom:0;
+					border-color: $table-cell-border-color;
+					border-style: solid;
+					border-bottom-width: $table-cell-border-width;
+
+					.theme-inverse & {
+						border-color: $table-cell-border-color-inverse;
+					}
+
+					.alert &,
+					.theme-inverse .alert & {
+						border-color: currentColor;
+					}
 				}
 
 				th,td {
 					border-bottom:0 !important;
-					
-					&:nth-child(n+2) {
-						border-top: 0 !important;
-					}
+					border-top: 0 !important;
 				}
 
 
