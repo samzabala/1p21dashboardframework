@@ -38,6 +38,7 @@
 				<th class="text-nowrap">Reminder</th>
 				<th class="text-nowrap text-align-center">Assignee</th>
 				<th class="text-nowrap text-align-center">Author</th>
+				<th class="text-nowrap text-align-center">Completed</th>
 				<th class="text-align-center">Status</th>
 				<th class="text-nowrap text-align-right outreach-table-cell-actions outreach-table-mobile-th">
 					<div class="task-actions position-relative">
@@ -175,6 +176,12 @@
 					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Author</span>
 					<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="task-author">
 						<?php app_get_component('components/profile-image-micro') ?>
+					</a>
+				</td>
+				<td class="text-align-center outreach-table-cell-columnwidth-100">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Mark as complete?</span>
+					<a href="#" class="btn btn-success well well-compact btn-round btn-symbol">
+						<i class="symbol symbol-check"></i>
 					</a>
 				</td>
 				<td class="text-align-center outreach-table-cell-columnwidth-100">
@@ -322,6 +329,12 @@
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Author</span>
 								<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="task-author">
 									<?php app_get_component('components/profile-image-micro') ?>
+								</a>
+							</td>
+							<td class="text-align-center outreach-table-cell-columnwidth-100">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Mark as complete?</span>
+								<a href="#" class="btn btn-success well well-compact btn-round btn-symbol">
+									<i class="symbol symbol-check"></i>
 								</a>
 							</td>
 							<td class="text-align-center outreach-table-cell-columnwidth-100">
