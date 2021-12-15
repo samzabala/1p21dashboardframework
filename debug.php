@@ -11,6 +11,327 @@
 		<div class="accordion">
 		</div>
 
+		<h1 data-toggle-accordion>what the hell<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+
+<div class="module-function filter-analytics-client-department position-relative">
+    <div class="input-wrapper input-wrapper-horizontal input-wrapper-responsive no-padding-right">
+        <label class="input-label">Filter By</label>
+        <button data-toggle="dropdown" class="input input-block-mobile input-select">
+            Department
+            <!-- @if one or more status is checked -->
+            <span class="filter-analytics-client-department-counter">
+                <!-- @NOTE: counter will be rendered here -->
+                (<span class="REPLACE">1</span>)
+            </span>
+        </button>
+        <ul class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px">
+            <li>
+                <label class="input-label">
+                    <input type="checkbox" name="filter-analytics-client-department" value="Production" class="input input-inline">
+                    Production
+                </label>
+            </li>
+            <li>
+                <label class="input-label">
+                    <input type="checkbox" name="filter-analytics-client-department" value="SEO" class="input input-inline">
+                    SEO
+                </label>
+            </li>
+            <li>
+                <label class="input-label">
+                    <input type="checkbox" name="filter-analytics-client-department" value="Sales" class="input input-inline">
+                    Sales
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="module-function function-filter-employee position-relative">
+    <button data-toggle="dropdown" class="input input-select input-block-mobile">
+        Employee
+        <!-- @if one or more Owner is checked -->
+        <span class="filter-companies-employee-active">
+            <!-- @NOTE: acct owner name will be rendered here -->
+            (<span class="REPLACE">Yanni Yogi</span>)
+        </span>
+    </button>
+    <ul class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px">
+        <!-- @LOOP li -->
+            <li>
+                <label class="input-label">
+                    <input type="checkbox" name="filter-companies-employee" value="profile_name" class="input input-inline">
+                    Profile Name
+                </label>
+            </li>
+
+            <!-- @PLACEHOLDER delete when ready -->
+
+                <li>
+                    <label class="input-label">
+                        <input type="checkbox" checked name="filter-companies-employee" value="Yanni Yogi" class="input input-inline">
+                        Yanni Yogi
+                    </label>
+                </li>
+                <li>
+                    <label class="input-label">
+                        <input type="checkbox" name="filter-companies-employee" value="El Tigre" class="input input-inline">
+                        El Tigre
+                    </label>
+                </li>
+                <li>
+                    <label class="input-label">
+                        <input type="checkbox" name="filter-companies-employee" value="Matt Engarde" class="input input-inline">
+                        Matt Engarde
+                    </label>
+                </li>
+                <li>
+                    <label class="input-label">
+                        <input type="checkbox" name="filter-companies-employee" value="Frank Sahwit" class="input input-inline">
+                        Frank Sahwit
+                    </label>
+                </li>
+                <li>
+                    <label class="input-label">
+                        <input type="checkbox" name="filter-companies-employee" value="Dee Vasquez" class="input input-inline">
+                        Dee Vasquez
+                    </label>
+                </li>
+    </ul>
+</div>
+
+
+<div class="module-function function-filter-client position-relative" style="max-width:30rem;">
+    <input id="cli_ids" name="cli_ids" type="hidden">
+    <input id="cli_names" name="cli_names" type="text" class="input-tags" data-tags-filter="filterDataListUi" data-toggle-dropdown />
+    <div class="dropdown dropdown-left dropdown-top-flush">
+        <ul id="cli_list" class="list-group list-group-toggle list-group-toggle-multiple list-group-toggle-allow-no-active">
+
+                <!-- @NOTE: right now the js sets up to add all values to the hidden input field if this is selected, but let me know if we need to change this setup  -->
+                <li><a href="#" data-client-id="all">Select All</a></li>
+            <!-- @LOOP -->
+                <li><a href="#" data-client-id="69"><span class="REPLACE">Client Name</span></a></li>
+            <!-- @PLACEHOLDER delete when ready -->
+                <li><a href="#" data-client-id="1">Terry Fawles</a></li>
+                <li><a href="#" data-client-id="2">Phoenix Wright</a></li>
+                <li><a href="#" data-client-id="3">Larry Butz</a></li>
+                <li><a href="#" data-client-id="4">Maya Fey</a></li>
+                <li><a href="#" data-client-id="5">Will Powers</a></li>
+                <li><a href="#" data-client-id="6">Miles Edgelord</a></li>
+                <li><a href="#" data-client-id="7">Lana Skye</a></li>
+                <li><a href="#" data-client-id="8">Max Galactica</a></li>
+                <li><a href="#" data-client-id="9">Matt Engarde</a></li>
+                <li><a href="#" data-client-id="10">Ron Delite</a></li>
+                <li><a href="#" data-client-id="11">Maggey Byrde</a></li>
+                <li><a href="#" data-client-id="12">Iris Nun</a></li>
+                <li><a href="#" data-client-id="13">Zak Gramarye</a></li>
+                <li><a href="#" data-client-id="14">Wocky Kitaki</a></li>
+                <li><a href="#" data-client-id="15">Machi Tobaye</a></li>
+                <li><a href="#" data-client-id="16">Vera Misham</a></li>
+                <li><a href="#" data-client-id="17">Solomon Starbuck</a></li>
+                <li><a href="#" data-client-id="18">Juniper Woods</a></li>
+                <li><a href="#" data-client-id="19">Damian Tenma</a></li>
+                <li><a href="#" data-client-id="20">Athena Cykes</a></li>
+                <li><a href="#" data-client-id="21">Ahlbi Ur'gaid</a></li>
+                <li><a href="#" data-client-id="22">Trucy Wright</a></li>
+                <li><a href="#" data-client-id="23">Bucky Whet</a></li>
+                <li><a href="#" data-client-id="24">Dhurke Sahdmadhi</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+
+
+
+
+        //DEMO START HERE
+            const INPUT_IDS = document.querySelector('#cli_ids');
+            const INPUT_UI = document.querySelector('#cli_names.input-tags');
+            const INPUT_LIST = document.getElementById('cli_list');
+            const LIST_ITEMS_ID_ATTRIBUTE = 'data-client-id';
+
+            const filterDataListUi = (value)=>{
+                return value;
+            }
+
+            //just gets all client data list as obj. Can be replaced or modified
+            const getDataListObj = ()=>{
+                const itemValues = INPUT_LIST.querySelectorAll(`a[${LIST_ITEMS_ID_ATTRIBUTE}]`);
+                let toReturn = {};
+
+                itemValues.forEach((itemValue) => {
+                    const id = itemValue.getAttribute(LIST_ITEMS_ID_ATTRIBUTE);
+                    if(id && id !== 'all'){
+                        toReturn[id] = itemValue.innerText
+                    }
+                });
+
+                return toReturn;
+            }
+            
+            //initialize linking up the faux datalist, hidden id input field, and list group
+            const initDataList = ()=>{
+                const INPUT_TAG_UI = INPUT_UI.closest('.input-tags-ui');
+                const INPUT_TAG_UI_FIELD = INPUT_TAG_UI.querySelector('.input-tags-ui-input');
+                const LIST_ITEMS = INPUT_LIST.querySelectorAll('li');
+
+
+                //toggles display none for matching items from input text 
+                const filterListItems = (textFilter)=>{
+                    textFilter = textFilter || '';
+                    
+                    LIST_ITEMS.forEach(item=>{
+                        const itemName = item.innerText.toString();
+
+                        if(textFilter === ''){
+                            item.classList.remove('display-none');
+                        }else{
+                            if(itemName.toLowerCase().includes( textFilter.toLowerCase() )){
+                                item.classList.remove('display-none');
+                            }else{
+                                item.classList.add('display-none');
+                            }
+                        }
+
+                    })
+
+                }
+
+                //get matching a element
+                const getItemLink = (id) => {
+                    return INPUT_LIST.querySelector(`a[${LIST_ITEMS_ID_ATTRIBUTE}="${id}"]`);
+                }
+
+                //validator for input tags
+                const validateTags = (ValueArr)=>{
+
+                }
+
+                //update hidden field, input tags and
+                const updateList = (updatedIds)=>{
+                    let inputIdsArr = [];
+                    //setup what values we want based on what we got
+                    if(updatedIds){
+                        if(updatedIds == 'all'){
+                            for(id in getDataListObj()){
+                                inputIdsArr.push(id);
+                            }
+                        }else{
+                            inputIdsArr = updatedIds.split(',');
+                        }
+                    }
+                    console.log(updatedIds ? 'meron' : 'wala',inputIdsArr);
+
+                    //reflect on true input field
+                    INPUT_IDS.value = inputIdsArr.join(',');
+
+
+                    //reflect on list
+                    LIST_ITEMS.forEach(item=>{
+                        const itemValue = item.querySelector(`a[${LIST_ITEMS_ID_ATTRIBUTE}]`);
+                        
+                        if(
+                            inputIdsArr.length
+                            && (
+                                (
+                                    updatedIds !== 'all'
+                                    && inputIdsArr.includes(itemValue.getAttribute(LIST_ITEMS_ID_ATTRIBUTE))
+                                ) || (
+                                    updatedIds == 'all'
+                                )
+                            )
+                        ){
+                            item.classList.add('active');
+                        }else{
+                            item.classList.remove('active');
+                        }
+                    })
+                    
+                    // reflect on tags ui
+                        let UiValueArr = [];
+                        if(inputIdsArr.length){
+                            inputIdsArr.forEach(id=>{
+                                UiValueArr.push(getDataListObj()[id]);
+                            });
+                        }
+
+                        const UiValue = UiValueArr.length ? UiValueArr.join(',') : '';
+
+						console.log('INPUT_UI.value',INPUT_UI.value);
+						console.log('UiValue',UiValue);
+						// debugger;
+
+                        // INPUT_UI.value = UiValueArr.join(',');
+                        new fw.Form.Tags(INPUT_UI).update(UiValue,null);
+                }
+
+                const listItemHandlerClick = (e)=>{
+                        e.stopPropagation();
+                        e.preventDefault();
+                        const itemLink = e.target.querySelector(`a[${LIST_ITEMS_ID_ATTRIBUTE}]`);
+
+                        let valueArr = INPUT_IDS.value ? INPUT_IDS.value.split(',') : [];
+
+                        const id = itemLink.getAttribute(LIST_ITEMS_ID_ATTRIBUTE);
+                        const idX = valueArr.indexOf(id);
+                        
+                        if(id !== 'all'){
+                            if(!e.target.classList.contains('active') && idX !== -1){
+                                valueArr.splice(idX,1);
+                            }else{
+                                valueArr.push(id);
+                            }
+                        }else{
+                            if(!e.target.classList.contains('active')){
+                                valueArr = [];
+                            }else{
+                                valueArr = [id];
+                            }
+                        }
+
+                        console.log(id,valueArr);
+
+                        updateList(valueArr.join(','));
+                        
+                    }
+
+                const InputUiHandlerKeyup = (e)=>{
+                    // NOTE: ui uses a span so front end render is styleable
+                    const fieldValue = e.target.innerText;
+                    filterListItems(fieldValue);
+                }
+
+
+                const InputUiHandlerChange = (e)=>{
+                    const inputTags = e.target
+                }
+
+
+                //update now
+                updateList(INPUT_IDS.value);
+
+
+                //Event listeners
+                LIST_ITEMS.forEach(item=>{
+                    item.addEventListener('click',listItemHandlerClick);
+                });
+                INPUT_TAG_UI_FIELD.addEventListener('keyup',InputUiHandlerKeyup);
+                INPUT_TAG_UI_FIELD.addEventListener('change',InputUiHandlerChange);
+            }
+            
+            //initialize
+            window.addEventListener('load',()=>{
+                initDataList();
+            });
+
+    //DEMO ENDS HERE
+    
+</script>
+		</div>
+
 		<h1 data-toggle-accordion>Module grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 			<div class="module-grid" data-grid-template-columns="1fr 1fr 1fr"  data-grid-template-columns-lg="1fr 1fr 1fr 1fr">
