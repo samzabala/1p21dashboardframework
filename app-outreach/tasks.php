@@ -22,339 +22,361 @@
 			<?php app_get_component('components/pagination') ?>
 		</div>
 	</div>
-	<table class="table-fixed outreach-table">
-		<tr>
-			<th class="text-align-center outreach-table-mobile-th" width="50">
-				<form action="">
-					<input type="checkbox" class="input-inline" name="select-task-all" class="task-selector" id="select-task-all">
-					<label for="select-task-all" class="input-label hide-nonmobile">Select All Tasks</label>
-				</form>
-			</th>
-			<th class="text-align-center text-nowrap" width="200">Mark as Complete</th>
-			<th class="text-nowrap">Description</th>
-			<th class="text-nowrap">Contact</th>
-			<th class="text-nowrap text-align-center" width="90">Due Date</th>
-			<th class="text-nowrap" width="130">Reminder</th>
-			<th class="text-nowrap text-align-center" width="100">Task Owner</th>
-			<th class="text-align-center" width="85">Status</th>
-			<th class="text-nowrap text-align-right outreach-table-cell-actions outreach-table-mobile-th" width="50">
-				<div class="contact-actions position-relative">
-					<?php app_get_component('components/dropdown-actions','',false,array(
-						'links' => array(
-							'Change Status for Selected'
-								=> 'href="#m-contact-status-REPLACEID" data-toggle-modal-default data-modal-title="Set Tasks Status"',
-							'Delete Selected'
-								=> 'href="#"'
-						)
-					)) ?>
+	<div class="table-wrapper">
+		<table class="outreach-table">
+			<tr>
+				<th class="text-align-center outreach-table-mobile-th">
+					<form action="">
+						<input type="checkbox" class="input-inline" name="select-task-all" class="task-selector" id="select-task-all">
+						<label for="select-task-all" class="input-label hide-nonmobile">Select All Tasks</label>
+					</form>
+				</th>
+				<th class="text-nowrap">Title</th>
+				<th class="text-nowrap">Company / contact</th>
+				<th class="text-nowrap text-align-center">Created</th>
+				<th class="text-nowrap text-align-center">Due Date</th>
+				<th class="text-nowrap">Reminder</th>
+				<th class="text-nowrap text-align-center">Assignee</th>
+				<th class="text-nowrap text-align-center">Author</th>
+				<th class="text-align-center">Status</th>
+				<th class="text-nowrap text-align-right outreach-table-cell-actions outreach-table-mobile-th">
+					<div class="task-actions position-relative">
+						<?php app_get_component('components/modal-actions','',false,array(
+							'links' => array(
+								'Change Status for Selected'
+									=> 'href="#m-task-status-REPLACEID" data-toggle-modal-default data-modal-title="Set Tasks Status"',
+								'Delete Selected'
+									=> 'href="#"'
+							)
+						)) ?>
 
-					<div class="modal modal-default" id="m-contact-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
-						<form action="">
-							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Change Status To</label>
-								<select name="contact-status" id="" class="input-select">
-									<option value="">Select</option>
-									<!-- @REPLACE  -->
-								</select>
-							</div>
-							<button class="btn btn-primary btn-block">Save</button>
-						</form>
-					</div>
-				</div>
-			</th>
-		</tr>
-
-		<!-- @LOOP row
-
-
-		NOTE: For animations
-		1: wrap the tr with `<transition name="outreach-animate-fade"></transition>`. Markup demo is not wrapped with the element right now so that the front end doesn't freak out. 
-
-		2: add a v-if attribute for this to work: `v-if="!taskComplete"`
-
-		This is how the markup should look like for TaskDetail.vue:
-		<transition name="outreach-animate-fade">
-			<tr v-if="!taskComplete">...</tr>
-		</transition>
-
-		reference here:
-		https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components 
-	
-		-->
-		<tr v-if="!taskComplete">
-			<td class="text-align-center" width="50">
-				<form action="" class="task-c">
-					<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-REPLACEID">
-					<label for="select-task-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Task</label>
-				</form>
-			</td>
-			<td class="text-align-center" width="200">
-				<form action="" class="task-completion">
-					<div class="input-toggle input-large justify-content-center">
-						<input type="checkbox" class="input outreach-table-toggle-animate-fade">
-						<label class="input-label input-toggle-label no-padding">
-							<span class="hide-nonmobile">
-								<span class="font-size-normalize margin-left">Mark as Complete</span>
-							</span>
-						</label>
-					</div>
-				</form>
-			</td>
-			<td width="350">
-				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Description</span>
-				<div class="task-description">
-					<span class="REPLACE">Our school had a saying: “When something smells, it’s usually the Butz.” In the 23 years I’ve known him, it’s usually been true.</span>
-				</div>
-			</td>
-			<td>
-				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Contact</span>
-				<a class="color-inherit" href="<?= app_create_link(array('template'=>'contact-detail')) ?>">
-
-					<h5 class="task-contact-name no-margin-y">
-						<span class="REPLACE">Phoenix Wright</span>
-					</h5>
-					<div class="task-contact-domain text-wrap-ellipsis">
-						<span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
-					</div>
-				</a>
-			</td>
-			<td class=" text-align-center" width="90">
-				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Due Date</span>
-				<a href="#" class="task-due-date color-inherit text-nowrap">
-					<span class="RELPACE">4/20/69</span>
-				</a>
-			</td>
-			<td width="130">
-				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Reminder</span>
-
-				<!-- @NOTE
-					.task-toggle-reminder-wrapper 
-						classes to add
-							`disabled` => if reminder is disabled
-			
-				-->
-				<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between flex-grid-no-gutter-y">
-					<div class="flex-col-xs-2 flex-col-sm-1 flex-col-md-5">
-						<div class="input-toggle input-large">
-							<input type="checkbox" class="input">
-							<label class="input-label input-toggle-label">
-								<div class="sr-only">
-									Toggle Reminder
+						<div class="modal modal-default" id="m-task-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
+							<form action="">
+								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+									<label for="" class="input-label sr-only">Change Status To</label>
+									<select name="task-status" id="" class="input-select">
+										<option value="">Select</option>
+										<!-- @REPLACE  -->
+									</select>
 								</div>
-							</label>
+								<button class="btn btn-primary btn-block">Save</button>
+							</form>
 						</div>
 					</div>
-					<div class="flex-col-xs-10 flex-col-sm-11 flex-col-md-6">
-						<!-- @if reminder is enabled -->
-						<div class="task-reminder-info font-size-small ">
-							<p class="task-reminder-date no-margin color-primary font-weight-700">
-								<span class="REPLACE">4/20/69</span>
-							</p>
-							<p class="task-reminder-time no-margin color-neutral">
-								<span class="REPLACE">4:20pm</span>
-							</p>
-						</div>
+				</th>
+			</tr>
+
+			<!-- @LOOP row
+
+
+			NOTE: For animations
+			1: wrap the tr with `<transition name="outreach-animate-fade"></transition>`. Markup demo is not wrapped with the element right now so that the front end doesn't freak out. 
+
+			2: add a v-if attribute for this to work: `v-if="!taskComplete"`
+
+			This is how the markup should look like for TaskDetail.vue:
+			<transition name="outreach-animate-fade">
+				<tr v-if="!taskComplete">...</tr>
+			</transition>
+
+			reference here:
+			https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components 
+		
+			-->
+			<tr v-if="!taskComplete">
+				<td class="text-align-center outreach-table-cell-columnwidth-50">
+					<form action="" class="task-c">
+						<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-REPLACEID">
+						<label for="select-task-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Task</label>
+					</form>
+				</td>
+				
+
+				<td class="outreach-table-cell-columnwidth-400">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Description</span>
+					<div class="task-description">
+						<span class="REPLACE">Our school had a saying: “When something smells, it’s usually the Butz.” In the 23 years I’ve known him, it’s usually been true.</span>
 					</div>
-				</div>
-			</td>
-			<td width="100" class="text-align-center" width="100">
-				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Task Owner</span>
-				<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="contact-acct-owner">
-					<?php app_get_component('components/profile-image-micro') ?>
-				</a>
-			</td>
-			<td class="text-align-center" width="85">
-				<div class="task-status">
-					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Status</span>
+				</td>
+				<td class="outreach-table-cell-columnwidth-100">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Company / Contact</span>
+					<a class="color-inherit" href="<?= app_create_link(array('template'=>'task-detail')) ?>">
+
+						<h5 class="task-task-name no-margin-y">
+							<span class="REPLACE">Phoenix Wright</span>
+						</h5>
+						<div class="task-task-domain text-wrap-ellipsis">
+							<span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
+						</div>
+					</a>
+				</td>
+				<td class="text-align-center outreach-table-cell-columnwidth-100">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Created</span>
+					<div>
+						<p class="no-margin color-primary font-weight-700">
+							<span class="REPLACE">4/20/69</span>
+						</p>
+						<p class="font-size-small no-margin color-neutral">
+							<span class="REPLACE">4:20pm</span>
+						</p>
+					</div>
+				</td>
+				<td class="text-align-center outreach-table-cell-columnwidth-100">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Due Date</span>
+					<div>
+						<p class="no-margin color-primary font-weight-700">
+							<span class="REPLACE">4/20/69</span>
+						</p>
+						<p class="font-size-small no-margin color-neutral">
+							<span class="REPLACE">4:20pm</span>
+						</p>
+					</div>
+				</td>
+				<td class="outreach-table-cell-columnwidth-150">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Reminder</span>
+
 					<!-- @NOTE
-						.tag
-						classes to add => task status tag
-							`tag-error` => Overdue 
-							`tag-caution` => Pending
-							`tag-success` => Completed
+						.task-toggle-reminder-wrapper 
+							classes to add
+								`disabled` => if reminder is disabled
 				
 					-->
-					<span class="tag tag-small tag-error">
-						<span class="REPLACE">Overdue</span>
-					</span>
-				</div>
-			</td>
-			<td class="outreach-table-cell-actions text-align-right">
-				
-				<div class="contact-actions position-relative">
-					<?php app_get_component('components/dropdown-actions','',false,array(
-						'links' => array(
-							'View Details'
-								=> 'class="dropdown-purger" href="#mb-detail-task" data-toggle-modal-board',
-							'Edit Details'
-								=> 'class="tooltip-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
-							'Change Status'
-								=> 'href="#m-contact-status-REPLACEID" data-toggle-modal-default ',
-							'Delete'
-								=> 'href="#"'
-						)
-					)) ?>
-
-					<div class="modal modal-default" id="m-contact-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
-						<form action="">
-							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Change Status To</label>
-								<select name="contact-status" id="" class="input-select">
-									<option value="">Select</option>
-									<!-- @REPLACE  -->
-									<option value="Backlog">Backlog</option>
-									<option value="In Progress">In Progress</option>
-									<option value="Completed">Completed</option>
-								</select>
+					<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between flex-grid-no-gutter-y">
+						<div class="flex-col-xs-2 flex-col-sm-1 flex-col-md-5">
+							<div class="input-toggle input-large">
+								<input type="checkbox" class="input">
+								<label class="input-label input-toggle-label">
+									<div class="sr-only">
+										Toggle Reminder
+									</div>
+								</label>
 							</div>
-							<button class="btn btn-primary btn-block">Save</button>
-						</form>
+						</div>
+						<div class="flex-col-xs-10 flex-col-sm-11 flex-col-md-6">
+							<!-- @if reminder is enabled -->
+							<div class="task-reminder-info font-size-small ">
+								<p class="task-reminder-date no-margin color-primary font-weight-700">
+									<span class="REPLACE">4/20/69</span>
+								</p>
+								<p class="task-reminder-time no-margin color-neutral">
+									<span class="REPLACE">4:20pm</span>
+								</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</td>
-		</tr>
+				</td>
+				<td class="text-align-center outreach-table-cell-columnwidth-100">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Assignee</span>
+					<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="task-assignee">
+						<?php app_get_component('components/profile-image-micro') ?>
+					</a>
+				</td>
+				<td class="text-align-center outreach-table-cell-columnwidth-100">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Author</span>
+					<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="task-author">
+						<?php app_get_component('components/profile-image-micro') ?>
+					</a>
+				</td>
+				<td class="text-align-center outreach-table-cell-columnwidth-100">
+					<div class="task-status">
+						<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Status</span>
+						<!-- @NOTE
+							.tag
+							classes to add => task status tag
+								`tag-error` => Overdue 
+								`tag-caution` => Pending
+								`tag-success` => Completed
+					
+						-->
+						<span class="tag tag-small tag-error">
+							<span class="REPLACE">Overdue</span>
+						</span>
+					</div>
+				</td>
+				<td class="outreach-table-cell-actions text-align-right outreach-table-cell-columnwidth-50">
+					
+					<div class="task-actions position-relative">
+						<?php app_get_component('components/modal-actions','',false,array(
+							'links' => array(
+								'View Details'
+									=> 'class="dropdown-purger" href="#mb-detail-task" data-toggle-modal-board',
+								'Edit Details'
+									=> 'class="tooltip-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
+								'Change Status'
+									=> 'href="#m-task-status-REPLACEID" data-toggle-modal-default ',
+								'Delete'
+									=> 'href="#"'
+							)
+						)) ?>
 
-			<!-- @PLACEHOLDER: DELETE WHEN READY -->
-				<?php for($i=1; $i<=4; $i++){ ?>
-					<tr>
-						<td class="text-align-center">
-							<form action="" class="task-c">
-								<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-<?=$i; ?>">
-								<label for="select-task-<?=$i; ?>" class="input-label color-neutral hide-nonmobile">Select Task</label>
+						<div class="modal modal-default" id="m-task-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
+							<form action="">
+								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+									<label for="" class="input-label sr-only">Change Status To</label>
+									<select name="task-status" id="" class="input-select">
+										<option value="">Select</option>
+										<!-- @REPLACE  -->
+										<option value="Backlog">Backlog</option>
+										<option value="In Progress">In Progress</option>
+										<option value="Completed">Completed</option>
+									</select>
+								</div>
+								<button class="btn btn-primary btn-block">Save</button>
 							</form>
-						</td>
-						<td class="text-align-center" width="200">
-							<form action="" class="task-completion">
-								<div class="input-toggle input-large justify-content-center">
-									<input type="checkbox" class="input outreach-table-toggle-animate-fade">
-									<label class="input-label input-toggle-label no-padding">
-										<span class="hide-nonmobile">
-											<span class="font-size-normalize margin-left">Mark as Complete</span>
-										</span>
-									</label>
-								</div>
-							</form>
-						</td>
-						<td width="350">
-							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Description</span>
-							<div class="task-description">
-								<span class="REPLACE">Our school had a saying: “When something smells, it’s usually the Butz.” In the 23 years I’ve known him, it’s usually been true.</span>
-							</div>
-						</td>
-						<td width="250">
-							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Task</span>
-							<a class="color-inherit" href="<?= app_create_link(array('template'=>'contact-detail')) ?>">
+						</div>
+					</div>
+				</td>
+			</tr>
 
-								<h5 class="task-contact-name no-margin-y">
-									<span class="REPLACE">Phoenix Wright</span>
-								</h5>
-								<div class="task-contact-domain text-wrap-ellipsis">
-									<span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
-								</div>
-							</a>
-						</td>
-						<td class=" text-align-center">
-							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Due Date</span>
-							<div class="task-due-info">
-								<p class="task-due-date no-margin color-primary font-weight-700">
-									<span class="RELPACE">4/20/69</span>
-								</p>
+				<!-- @PLACEHOLDER: DELETE WHEN READY -->
+					<?php for($i=1; $i<=4; $i++){ ?>
+						<tr v-if="!taskComplete">
+							<td class="text-align-center outreach-table-cell-columnwidth-50">
+								<form action="" class="task-c">
+									<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-REPLACEID">
+									<label for="select-task-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Task</label>
+								</form>
+							</td>
+							
 
-								<p class="task-due-time font-size-small no-margin color-neutral">
-									<span class="RELPACE">4:20pm</span>
-								</p>
-							</div>
-						</td>
-						<td width="130">
-							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Reminder</span>
-							<!-- @NOTE
-								.task-toggle-reminder-wrapper 
-									classes to add
-										`disabled` => if reminder is disabled
-						
-							-->
-							<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between flex-grid-no-gutter-y">
-								<div class="flex-col-xs-2 flex-col-sm-1 flex-col-md-5">
-									<div class="input-toggle input-large">
-										<input type="checkbox" class="input">
-										<label class="input-label input-toggle-label">
-											<div class="sr-only">
-												Toggle Reminder
-											</div>
-										</label>
-									</div>
+							<td class="outreach-table-cell-columnwidth-400">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Description</span>
+								<div class="task-description">
+									<span class="REPLACE">Our school had a saying: “When something smells, it’s usually the Butz.” In the 23 years I’ve known him, it’s usually been true.</span>
 								</div>
-								<div class="flex-col-xs-10 flex-col-sm-11 flex-col-md-6">
-									<!-- @if reminder is enabled -->
-									<div class="task-reminder-info font-size-small">
-										<p class="task-reminder-date no-margin color-primary font-weight-700">
-											<span class="REPLACE">4/20/69</span>
-										</p>
-										<p class="task-reminder-time no-margin color-neutral">
-											<span class="REPLACE">4:20pm</span>
-										</p>
+							</td>
+							<td class="outreach-table-cell-columnwidth-300">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Company / Contact</span>
+								<a class="color-inherit" href="<?= app_create_link(array('template'=>'task-detail')) ?>">
+
+									<h5 class="task-task-name no-margin-y">
+										<span class="REPLACE">Phoenix Wright</span>
+									</h5>
+									<div class="task-task-domain text-wrap-ellipsis">
+										<span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
 									</div>
+								</a>
+							</td>
+							<td class="text-align-center outreach-table-cell-columnwidth-100">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Created</span>
+								<div>
+									<p class="no-margin color-primary font-weight-700">
+										<span class="REPLACE">4/20/69</span>
+									</p>
+									<p class="font-size-small no-margin color-neutral">
+										<span class="REPLACE">4:20pm</span>
+									</p>
 								</div>
-							</div>
-						</td>
-						<td width="100" class="text-align-center">
-							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Task Owner</span>
-							<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="contact-acct-owner">
-								<?php app_get_component('components/profile-image-micro') ?>
-							</a>
-						</td>
-						<td class="text-align-center">
-							<div class="task-status">
-								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Status</span>
+							</td>
+							<td class="text-align-center outreach-table-cell-columnwidth-100">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Due Date</span>
+								<div>
+									<p class="no-margin color-primary font-weight-700">
+										<span class="REPLACE">4/20/69</span>
+									</p>
+									<p class="font-size-small no-margin color-neutral">
+										<span class="REPLACE">4:20pm</span>
+									</p>
+								</div>
+							</td>
+							<td class="outreach-table-cell-columnwidth-150">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Reminder</span>
+
 								<!-- @NOTE
-									.tag
-									classes to add => task status tag
-										`tag-error` => Overdue 
-										`tag-caution` => Pending
-										`tag-success` => Completed
+									.task-toggle-reminder-wrapper 
+										classes to add
+											`disabled` => if reminder is disabled
 							
 								-->
-								<span class="tag tag-small tag-error">
-									<span class="REPLACE">Overdue</span>
-								</span>
-							</div>
-						</td>
-						<td class="outreach-table-cell-actions text-align-right" width="50">
-							
-							<div class="contact-actions position-relative">
-								<?php app_get_component('components/dropdown-actions','',false,array(
-									'links' => array(
-										'View Details'
-											=> 'class="dropdown-purger" href="#mb-detail-task" data-toggle-modal-board',
-										'Edit Details'
-											=> 'class="dropdown-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
-										'Change Status'
-											=> 'href="#m-contact-status-REPLACEID" data-toggle-modal-default ',
-										'Delete'
-											=> 'href="#"'
-									)
-								)) ?>
-
-								<div class="modal modal-default" id="m-contact-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
-									<form action="">
-										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Change Status To</label>
-											<select name="contact-status" id="" class="input-select">
-												<option value="">Select</option>
-												<!-- @REPLACE  -->
-												<option value="Backlog">Backlog</option>
-												<option value="In Progress">In Progress</option>
-												<option value="Completed">Completed</option>
-											</select>
+								<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between flex-grid-no-gutter-y">
+									<div class="flex-col-xs-2 flex-col-sm-1 flex-col-md-5">
+										<div class="input-toggle input-large">
+											<input type="checkbox" class="input">
+											<label class="input-label input-toggle-label">
+												<div class="sr-only">
+													Toggle Reminder
+												</div>
+											</label>
 										</div>
-										<button class="btn btn-primary btn-block">Save</button>
-									</form>
+									</div>
+									<div class="flex-col-xs-10 flex-col-sm-11 flex-col-md-6">
+										<!-- @if reminder is enabled -->
+										<div class="task-reminder-info font-size-small ">
+											<p class="task-reminder-date no-margin color-primary font-weight-700">
+												<span class="REPLACE">4/20/69</span>
+											</p>
+											<p class="task-reminder-time no-margin color-neutral">
+												<span class="REPLACE">4:20pm</span>
+											</p>
+										</div>
+									</div>
 								</div>
-							</div>
-						</td>
-					</tr>
-				<?php } ?>
-	</table>
+							</td>
+							<td class="text-align-center outreach-table-cell-columnwidth-100">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Assignee</span>
+								<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="task-assignee">
+									<?php app_get_component('components/profile-image-micro') ?>
+								</a>
+							</td>
+							<td class="text-align-center outreach-table-cell-columnwidth-100">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Author</span>
+								<a href="<?= app_create_link(array('template'=>'profile')) ?>" class="task-author">
+									<?php app_get_component('components/profile-image-micro') ?>
+								</a>
+							</td>
+							<td class="text-align-center outreach-table-cell-columnwidth-100">
+								<div class="task-status">
+									<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Status</span>
+									<!-- @NOTE
+										.tag
+										classes to add => task status tag
+											`tag-error` => Overdue 
+											`tag-caution` => Pending
+											`tag-success` => Completed
+								
+									-->
+									<span class="tag tag-small tag-error">
+										<span class="REPLACE">Overdue</span>
+									</span>
+								</div>
+							</td>
+							<td class="outreach-table-cell-actions text-align-right outreach-table-cell-columnwidth-50">
+								
+								<div class="task-actions position-relative">
+									<?php app_get_component('components/modal-actions','',false,array(
+										'links' => array(
+											'View Details'
+												=> 'class="dropdown-purger" href="#mb-detail-task" data-toggle-modal-board',
+											'Edit Details'
+												=> 'class="tooltip-purger" href="#mb-editor-task" data-toggle-modal-board href="#mb-editor-task" data-modal-title="Edit Details"',
+											'Change Status'
+												=> 'href="#m-task-status-REPLACEID" data-toggle-modal-default ',
+											'Delete'
+												=> 'href="#"'
+										)
+									)) ?>
+
+									<div class="modal modal-default" id="m-task-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
+										<form action="">
+											<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+												<label for="" class="input-label sr-only">Change Status To</label>
+												<select name="task-status" id="" class="input-select">
+													<option value="">Select</option>
+													<!-- @REPLACE  -->
+													<option value="Backlog">Backlog</option>
+													<option value="In Progress">In Progress</option>
+													<option value="Completed">Completed</option>
+												</select>
+											</div>
+											<button class="btn btn-primary btn-block">Save</button>
+										</form>
+									</div>
+								</div>
+							</td>
+						</tr>
+					<?php } ?>
+		</table>
+	</div>
 
 	<div class="module-footer">
 		<div class="module-functions no-margin no-padding flex-xs flex-wrap justify-content-space-between">
