@@ -1684,7 +1684,8 @@
         if (FwComponent.isDisabled(e.target)) {
           e.target.blur();
         } else {
-          var dropdown = new Dropdown(UIToggled(TOGGLE_MODE$1, UITriggerer(e.target)), UITriggerer(e.target));
+          var triggerer = UITriggerer(e.target);
+          var dropdown = new Dropdown(UIToggled(TOGGLE_MODE$1, triggerer), triggerer);
           dropdown.open();
           triggerer.classList.add('focus');
         }
@@ -1694,7 +1695,8 @@
     Dropdown.handleBlurClose = function handleBlurClose() {
       return function (e) {
         if (!FwComponent.isDisabled(e.target)) {
-          var dropdown = new Dropdown(UIToggled(TOGGLE_MODE$1, UITriggerer(e.target)), UITriggerer(e.target));
+          var triggerer = UITriggerer(e.target);
+          var dropdown = new Dropdown(UIToggled(TOGGLE_MODE$1, triggerer), triggerer);
           setTimeout(function () {
             dropdown.close();
           }, 200);
@@ -2160,7 +2162,7 @@
 
       var element = this.element;
       var theValue = newValue || newValue == '' ? newValue : this.theValue ? this.theValue : false;
-      var uiValue = valueToRender || theValue || this.renderValue || false;
+      var uiValue = valueToRender ? valueToRender : newValue || newValue == '' ? theValue : this.renderValue ? this.renderValue : false;
 
       this._updateValues(theValue, uiValue);
 
@@ -2989,8 +2991,8 @@
     _proto.update = function update(newValue, valueToRender, inputText) {
       var _this3 = this;
 
-      var theValue = newValue || this.theValue || '';
-      var uiValue = valueToRender || theValue || this.renderValue || '';
+      var theValue = newValue || newValue == '' ? newValue : this.theValue ? this.theValue : false;
+      var uiValue = valueToRender ? valueToRender : newValue || newValue == '' ? theValue : this.renderValue ? this.renderValue : false;
       inputText = inputText || false; // console.warn('passed');
       // console.log(newValue,'|',valueToRender,'|',inputText);
       // console.warn('parsed');
@@ -3158,8 +3160,8 @@
           var attr = element.attributes[i];
 
           if (attr.specified) {
-            if (attr.name.includes('data') && !attr.name.includes('data-tags') && !attr.name.includes('data-toggle') && !attr.name.includes('data-value-ui')) {
-              theUI.container.setAttribute(attr.name, attr.value);
+            if (attr.name.includes('data') && !attr.name.includes('data-tags') && !attr.name.includes('data-value-ui')) {
+              theUI.input.setAttribute(attr.name, attr.value);
             }
           }
         } //keep that shoit bisibol
