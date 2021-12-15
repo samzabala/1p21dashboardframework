@@ -180,9 +180,15 @@
 				</td>
 				<td class="text-align-center outreach-table-cell-columnwidth-100">
 					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Mark as complete?</span>
-					<a href="#" class="btn btn-success well well-compact btn-round btn-symbol">
-						<i class="symbol symbol-check"></i>
-					</a>
+					<!-- 
+						@NOTE .btn
+						class to add
+							'btn-neutral background-neutral-alpha-5 color-background-hover background-success-hover' => if not complete yet
+							'btn-success btn-no-interaction' => completed. NOTE: mike would like to start the transition for completion 1s later after click
+					 -->
+						<a href="#" class="btn btn-neutral background-neutral-alpha-5 color-background-hover background-success-hover well well-compact btn-round btn-symbol">
+							<i class="symbol symbol-check"></i>
+						</a>
 				</td>
 				<td class="text-align-center outreach-table-cell-columnwidth-100">
 					<div class="task-status">
@@ -333,9 +339,15 @@
 							</td>
 							<td class="text-align-center outreach-table-cell-columnwidth-100">
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Mark as complete?</span>
-								<a href="#" class="btn btn-success well well-compact btn-round btn-symbol">
-									<i class="symbol symbol-check"></i>
-								</a>
+								<!-- 
+									@NOTE .btn
+									class to add
+										'btn-neutral background-neutral-alpha-5 color-background-hover background-success-hover' => if not complete yet
+										'btn-success btn-no-interaction' => completed. NOTE: mike would like to start the transition for completion 1s later after click
+								-->
+									<a href="#" class="btn btn-success btn-no-interaction well well-compact btn-round btn-symbol">
+										<i class="symbol symbol-check"></i>
+									</a>
 							</td>
 							<td class="text-align-center outreach-table-cell-columnwidth-100">
 								<div class="task-status">
