@@ -53,10 +53,12 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 				@include on-breakpoint(mobile){
 					padding: 1rem;
 					position:fixed;
-					top: $nav-height;
-					left: $sidebar-slim;
+					// top: $nav-height;
+					// left: $sidebar-slim;
+					// width: calc(100% - #{$sidebar-slim});
+					left: 0;
+					top: $sidebar-slim * 2;
 					height: calc(100vh - #{$nav-height});
-					width: calc(100% - #{$sidebar-slim});
 					box-shadow: inset  0 10px 5px -5px $var-theme-background-contrast;
 					overflow-y:scroll;
 
@@ -166,9 +168,50 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 		}
 	}
 
-  .user-warnings {
-    margin-left: $sidebar-slim;
-  }
+
+
+	//override sidebar for mobile 
+	@include br(#{$mobile-br-max}-max){
+		&-header {
+			&,
+			&-nav .nav-list {
+				width:100%;
+			}
+		}
+		&-sidebar {
+			top: $sidebar-slim;
+			bottom: auto;
+			height: auto;
+			width: 100%;
+			padding: 0;
+			
+			&-nav {
+				display: flex;
+				
+				.outreach-nav-side {
+					display: flex;
+					justify-content: space-around;
+				}
+
+				.nav-list > li > a::after {
+					display:none;
+				}
+			}
+		}
+		&-main {
+			width:100%;
+		}
+
+		@at-root {
+			body.body-nav-sticky-offset {
+				padding-top: $sidebar-slim * 2;
+			}
+		}
+	}
+
+	.user-warnings {
+		margin-left: $sidebar-slim;
+  	}
 }
 
 %outreach-extend {

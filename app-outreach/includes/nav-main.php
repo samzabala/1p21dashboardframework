@@ -3,6 +3,10 @@
 		<div class="symbol symbol-burger"></div>
 	</button>
 
+	<a class="margin-left hide-nonmobile nav-logo nav-block no-padding-x" href="<?=app_create_link(); ?>">
+		<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="" class="logo lazy">
+	</a>
+
 	<ul class="nav-list nav-list-responsive accordion accordion-mobile background-theme flex-1-1 justify-content-space-around">
 		<li>
 			<a href="<?= app_create_link(array('template'=>'prospects')); ?>" class="color">Prospects</a>

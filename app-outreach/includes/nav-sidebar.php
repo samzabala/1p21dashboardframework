@@ -1,8 +1,7 @@
 
-<a class="nav-logo nav-block no-padding-x" href="<?=app_create_link(); ?>">
-	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="" class="logo lazy only-mobile margin-auto">
-	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="" class="logo lazy hide-hover hide-mobile margin-auto">
-	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo-expanded.svg" alt="" class="logo-expanded lazy only-hover hide-mobile margin-auto">
+<a class="hide-mobile nav-logo nav-block no-padding-x" href="<?=app_create_link(); ?>">
+	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo.svg" alt="" class="logo lazy hide-hover margin-auto">
+	<img data-src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/logo-expanded.svg" alt="" class="logo-expanded lazy only-hover margin-auto">
 </a>
 
 <ul class="nav-list outreach-nav-side">
