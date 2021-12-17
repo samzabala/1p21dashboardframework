@@ -173,7 +173,6 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 	//override sidebar for mobile
 	@include br(#{$mobile-br-max}-max){
 		&-header {
-			z-index: 9999;
 			box-shadow: none;
 			&,
 			&-nav .nav-list {
@@ -186,6 +185,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 			height: auto;
 			width: 100%;
 			padding: 0;
+			z-index: 980;
 
 			&-nav {
 				display: flex;
@@ -200,7 +200,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 					> a {
 						height: $sidebar-slim;
 						padding-top: 0;
-						padding-bottom:0; 
+						padding-bottom:0;
 						align-items: center;
 						display: flex;
 
