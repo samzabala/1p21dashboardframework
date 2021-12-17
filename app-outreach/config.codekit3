@@ -490,9 +490,9 @@
       "ec" : 0,
       "ft" : 4,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/styles\/style.example.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
