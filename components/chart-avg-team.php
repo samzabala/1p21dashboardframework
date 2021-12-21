@@ -517,6 +517,17 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					.attr('fill',(d)=>{
 						return WBC.color(d.task_cat)
 					})
+					.attr('data-tooltip-badge-background',(d)=>{
+						return WBC.color(d.task_cat)
+					})
+					.attr('data-toggle','tooltip-hover')
+					.attr('data-tooltip-placement','top')
+					.attr('data-tooltip-center-x','true')
+					.attr('data-tooltip-center-y','true')
+					.attr('data-tooltip-badge','true')
+					.attr('data-tooltip-badge-size','large')
+					.attr('data-tooltip-classes','text-align-center')
+					.attr('data-tooltip-width','200')
 					;
 
 				WBC.shape.exit()
@@ -544,6 +555,10 @@ this is the hellhole. Copy everything in the following script tag and paste wher
 					})
 					.attr('width',(d)=>{
 						return WBC.x(d.duration) - WBC.x.range()[0];
+					})
+					.attr('data-tooltip-content',(d)=>{
+						const percent = (100 * ((WBC.x(d.duration) - WBC.x.range()[0]) / WBC.width)) + '%';
+						return `<h5 class="no-margin-top">${d.task_cat}</h5>${percent}`
 					})
 					;
 
@@ -879,7 +894,7 @@ setTimeout(function(){
 		graph.update(newData,departmentStringToFilter);
 
 
-	}, 2000);
+	}, 5000);
 
 },2000);
 	
