@@ -485,6 +485,8 @@
 
     if (d) {
       return __f.dateToHuman(d, __f.datetimeFormatPresets.Value.template);
+    } else {
+      return '';
     }
   };
 
@@ -1312,7 +1314,21 @@
   frameWork.updateCalendar = (inputCalendar, newValue, valueForUi) => {
     const theValue = newValue || __f.dateToVal(inputCalendar.value);
 
-    valueForUi = valueForUi || theValue || __f.dateToVal(new Date());
+    inputCalendar.__fwEnableChange =
+      inputCalendar.__fwEnableChange || false;
+
+
+    if(!inputCalendar.__fwRenderValue){
+      inputCalendar.__fwRenderValue = __f.tagsToVal(inputCalendar.value,true);
+    }
+
+    valueForUi = valueForUi
+      ? valueForUi
+      : theValue || theValue == ''
+      ? theValue
+      : inputCalendar.__fwRenderValue
+      ? inputCalendar.__fwRenderValue
+      : __f.dateToVal(new Date());
 
     const arr = {
       class: inputCalendar.getAttribute('class'),
@@ -1344,51 +1360,58 @@
 
     const args = __f.parseArgs(arr, defaults);
 
-    if (parseInt(arr.dropdownYearSpan) <= 0) {
-      args.dropdownYearSpan = defaults.dropdownYearSpan;
-    }
-
-    args.startDay = parseInt(args.startDay) % 7;
-
-    //set up calendar
-    if (__f.dateIsValid(theValue, args) || !theValue) {
-      __f.createCalendarUi(inputCalendar, valueForUi, args);
-    }
-
-    if (__f.dateIsValid(theValue, args)) {
-      inputCalendar
-        .closest(`.${frameWork.settings.uiClass}`)
-        .classList.remove('input-error');
-    } else {
-      inputCalendar
-        .closest(`.${frameWork.settings.uiClass}`)
-        .classList.add('input-error');
-    }
 
     if (theValue) {
       //update the actual butt
       inputCalendar.setAttribute('value', theValue);
       inputCalendar.value = theValue;
+      inputCalendar.__fwRenderValue = valueForUi;
+    }
 
-      const dates = inputCalendar.parentNode.querySelectorAll(
-        `.${__f.uiPrefix('calendar')}date`
-      );
+    if (inputCalendar.__fwEnableChange) {
+      frameWork.triggerEvent(inputCalendar,'change');
+    } else {
+      if (parseInt(arr.dropdownYearSpan) <= 0) {
+        args.dropdownYearSpan = defaults.dropdownYearSpan;
+      }
 
-      dates.forEach((date) => {
-        if (date.getAttribute('data-value') == __f.dateToVal(theValue)) {
-          date.classList.add('active');
-        } else {
-          date.classList.remove('active');
+      args.startDay = parseInt(args.startDay) % 7;
+      //set up calendar
+      if (__f.dateIsValid(theValue, args) || !theValue) {
+        __f.createCalendarUi(inputCalendar, valueForUi, args);
+      }
+
+      if (__f.dateIsValid(theValue, args)) {
+        inputCalendar
+          .closest(`.${frameWork.settings.uiClass}`)
+          .classList.remove('input-error');
+      } else {
+        inputCalendar
+          .closest(`.${frameWork.settings.uiClass}`)
+          .classList.add('input-error');
+
+        if (theValue) {
+          const dates = inputCalendar.parentNode.querySelectorAll(
+            `.${__f.uiPrefix('calendar')}date`
+          );
+
+          dates.forEach((date) => {
+            if (date.getAttribute('data-value') == __f.dateToVal(theValue)) {
+              date.classList.add('active');
+            } else {
+              date.classList.remove('active');
+            }
+          });
+
+          const inputField = inputCalendar.parentNode.querySelector(
+            `.${__f.uiPrefix('calendar')}input input`
+          );
+
+          if (inputField) {
+            inputField.setAttribute('value', __f.dateToHuman(theValue));
+            inputField.value = __f.dateToHuman(theValue);
+          }
         }
-      });
-
-      const inputField = inputCalendar.parentNode.querySelector(
-        `.${__f.uiPrefix('calendar')}input input`
-      );
-
-      if (inputField) {
-        inputField.setAttribute('value', __f.dateToHuman(theValue));
-        inputField.value = __f.dateToHuman(theValue);
       }
     }
   };
@@ -1399,7 +1422,10 @@
   __f.tagsToParse = (value, returnWithInput) => {
     returnWithInput = returnWithInput !== false || returnWithInput == true;
 
-    let toReturn = Array.isArray(value) ? value : value.split(',') || [];
+    let toReturn =
+    Array.isArray(value) ? value
+    : typeof value === 'string' ? value.split(',')
+    : [];
 
     //check for ya boi
     toReturn.forEach((tag, i) => {
@@ -1432,7 +1458,7 @@
 
   __f.createTagsUi = (inputTags, valueForUi, inputText, args) => {
     if (inputTags) {
-      valueForUi = valueForUi || __f.tagsToVal(inputTags.value) || '';
+      valueForUi = valueForUi || __f.tagsToVal(inputTags.value,true) || '';
       inputText = inputText || false;
 
       const theUi = {};
@@ -1543,9 +1569,7 @@
           tagHtml.innerHTML = `<span
 								data-value="${i}"
 								class="${__f.uiPrefix('tags')}tag-text"
-							>
-								${tag}
-							</span>
+							>${tag}</span>
 							<a data-value="${i}" class="${__f.uiPrefix('tags')}tag-close" href="#">
 							<i class="symbol symbol-close"></i></a>`;
         }
@@ -1581,10 +1605,27 @@
   };
 
   frameWork.updateTags = (inputTags, allowFilter, newValue, valueForUi, inputText) => {
-    let theValue = newValue || (inputTags.value !== '' && inputTags.value) || '';
+    let theValue =
+    newValue || newValue == ''
+    ? newValue
+    : inputTags.value
+    ? inputTags.value
+    : false;
+
+
+    if(!inputTags.__fwRenderValue){
+      inputTags.__fwRenderValue = __f.tagsToVal(inputTags.value,true);
+    }
+    inputTags.__fwEnableChange = inputTags.__fwEnableChange || false;
 
     inputText = inputText || false;
-    valueForUi = valueForUi || theValue || '';
+    valueForUi = valueForUi
+      ? valueForUi
+      : newValue || newValue == ''
+      ? theValue
+      : inputTags.__fwRenderValue
+      ? inputTags.__fwRenderValue
+      : false;
     allowFilter = allowFilter != false;
 
     const arr = {
@@ -1624,7 +1665,7 @@
 
             // turn to array ya bopi without the input tag string
             let toReturn = __f.tagsToParse(
-              eval(`${filterFnName}("${noInputValueToFilter}")`),
+              eval(filterFnName + '("' + noInputValueToFilter + '")'),
               false
             );
 
@@ -1658,16 +1699,21 @@
         }
       }
 
-      __f.createTagsUi(inputTags, __f.tagsToVal(valueForUi), inputText, args);
-
       //update the actual butt
       inputTags.setAttribute('value', __f.tagsToVal(theValue, false));
       inputTags.value = __f.tagsToVal(theValue, false);
+      inputTags.__fwRenderValue = __f.tagsToVal(valueForUi,true)
 
-      //ATODO UPDATE SETUP HERE
-      //update fake hoes
-      if (args.callback) {
-        __f.runFn(args.callback);
+      if (inputTags.__fwEnableChange) {
+        frameWork.triggerEvent(inputTags,'change');
+      } else {
+        __f.createTagsUi(inputTags, inputTags.__fwRenderValue, inputText, args);
+
+        //ATODO UPDATE SETUP HERE
+        //update fake hoes
+        if (args.callback) {
+          __f.runFn(args.callback);
+        }
       }
     }
   };
@@ -2605,8 +2651,8 @@
 
     //component events
     frameWork.addEvent(document.documentElement, 'change', '.input-calendar', (e) => {
-      const triggerer = e.target;
-      frameWork.updateCalendar(triggerer);
+      e.target.__fwEnableChange = false;
+      frameWork.updateCalendar(e.target);
     });
 
     frameWork.addEvent(
@@ -2649,6 +2695,7 @@
             .querySelector('.input-calendar');
 
           if (inputCalendar) {
+          inputCalendar.__fwEnableChange = true;
             frameWork.updateCalendar(
               inputCalendar,
               null,
@@ -2673,26 +2720,43 @@
             .closest('.input-calendar-ui')
             .querySelector('.input.input-calendar');
 
-          const v = e.target.value;
-          if (v.match(/^\d{2}$/) !== null) {
-            e.target.value = `${v}/`;
-          } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
-            e.target.value = `${v}/`;
+          const uiInput = e.target.value;
+          if (uiInput.match(/^\d{2}$/) !== null) {
+            e.target.value = `${uiInput}/`;
+          } else if (uiInput.match(/^\d{2}\/\d{2}$/) !== null) {
+            e.target.value = `${uiInput}/`;
           }
 
-          const pattern = new RegExp(__f.datetimeFormatPresets.HumanDate.pattern);
+          let preParsedVal,
+            enableChange,
+            renderValue = inputCalendar.__fwRenderValue;
 
-          const isValid = pattern.test(v);
+          if (uiInput) {
+            const pattern = new RegExp(__f.datetimeFormatPresets.HumanDate.pattern);
+            const isValid = pattern.test(uiInput);
 
-          if (isValid) {
-            const theValue = v.split('/');
+            if (inputCalendar && isValid) {
+              const theValue = uiInput.split('/');
 
-            const y = theValue[2] || '';
-            const m = theValue[0] || '';
-            const d = theValue[1] || '';
+              const y = theValue[2] || '';
+              const m = theValue[0] || '';
+              const d = theValue[1] || '';
 
-            const preParsedVal = `${y}-${m}-${d}`;
+              const preParsedVal = `${y}-${m}-${d}`;
+              renderValue = preParsedVal;
+            }
+          } else {
+            //blank. letterrrippp
+            preParsedVal = '';
+            enableChange = true;
+          }
 
+          if (enableChange) {
+            inputCalendar__fwEnableChange = true;
+          }
+
+
+          if (typeof preParsedVal !== 'undefined') {
             frameWork.updateCalendar(inputCalendar, preParsedVal);
           }
         }
@@ -2700,8 +2764,8 @@
     );
 
     frameWork.addEvent(document.documentElement, 'change', '.input-tags', (e) => {
-      const triggerer = e.target;
-      frameWork.updateTags(triggerer);
+      e.target.__fwEnableChange = false;
+      frameWork.updateTags(e.target);
     });
 
     frameWork.addEvent(
@@ -2717,7 +2781,7 @@
           const pasted =
             e.clipboardData || window.clipboardData || e.originalEvent.clipboardData;
 
-          triggerer.innerHTML += pasted.getData('text');
+          triggerer.innerHTML = (triggerer.innerHTML ? triggerer.innerHTML : '') + pasted.getData('text');
 
           triggerer.blur();
         }
@@ -2756,19 +2820,23 @@
             inputUiIndex = triggerer.getAttribute('data-value'),
             currValue = __f.tagsToParse(inputTags.value);
 
-          if (triggerer.innerText && triggerer.innerText != '') {
+
+        const updatedTag = triggerer.innerText.trim();
+
+          if (inputUiIndex) {
             currValue.splice(
               parseInt(inputUiIndex),
-              0,
-              triggerer.innerText.replace(',', '')
+              currValue[inputUiIndex] == updatedTag ? 1 : 0,
+              updatedTag.replace(',', '')
             );
+            inputTags.__fwEnableChange = true;
           }
 
           triggerer.innerText = '';
 
           // const newValue = __f.arrMoveItem(currValue,parseInt(inputUiIndex), currValue.length -1);
 
-          frameWork.updateTags(inputTags, true, __f.tagsToVal(currValue));
+          frameWork.updateTags(inputTags, true, __f.tagsToVal(currValue,false));
         }
       }
     );
@@ -2790,15 +2858,20 @@
             inputUiIndex = triggerer.getAttribute('data-value'),
             currValue = __f.tagsToParse(inputTags.getAttribute('data-value-ui'));
 
+
           let newValue,
+            enableChange,
             allowFilter = false;
 
-          inputTags.innerText = inputTags.innerText.replace(/\n|\r/g, '\\n');
+            if(triggerer.innerText){
+              triggerer.innerText = triggerer.innerText.replace(/\n|\r/g, '\\n');
+            }
 
           switch (e.keyCode) {
             //enter
             case 13:
               e.preventDefault();
+              enableChange = true;
               break;
 
             //comma
@@ -2809,8 +2882,9 @@
                 currValue.splice(
                   parseInt(inputUiIndex),
                   0,
-                  triggerer.innerText.replace((',', ''))
+                  triggerer.innerText.replace(',', '')
                 );
+                enableChange = true;
 
                 triggerer.innerText = '';
               }
@@ -2850,6 +2924,7 @@
                 e.preventDefault();
                 allowFilter = true;
                 currValue.splice(parseInt(inputUiIndex) - 1, 1);
+                enableChange = true;
               }
               break;
 
@@ -2859,11 +2934,18 @@
                 e.preventDefault();
                 allowFilter = true;
                 currValue.splice(parseInt(inputUiIndex) + 1, 1);
+                enableChange = true;
               }
               break;
           }
 
           newValue = __f.tagsToVal(currValue);
+
+
+
+          if (enableChange) {
+            inputTags.__fwEnableChange = true;
+          }
 
           frameWork.updateTags(inputTags, allowFilter, newValue);
         }
@@ -2892,6 +2974,7 @@
 
           const newValue = __f.tagsToVal(currValue);
 
+          inputTags.__fwEnableChange = true;
           frameWork.updateTags(inputTags, true, newValue);
         }
       }
