@@ -10,7 +10,7 @@
 		</div>
 		<div class="flex-col-12">
 
-			<div>
+			<div class="position-relative">
 				<?php app_get_component('components/function-filter-analytics-client'); ?>
 			</div>
 			<!-- 

@@ -42,7 +42,7 @@
             (<span class="REPLACE">Yanni Yogi</span>)
         </span>
     </button>
-    <ul class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px">
+    <div class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px" >
         <!-- @LOOP li -->
             <li>
                 <label class="input-label">
@@ -83,50 +83,75 @@
                         Dee Vasquez
                     </label>
                 </li>
-    </ul>
-</div>
-
-
-<div class="module-function function-filter-client position-relative" style="max-width:30rem;">
-    <input id="cli_ids" name="cli_ids" type="hidden">
-    <input id="cli_names" name="cli_names" type="text" class="input-tags" data-tags-callback-name-filter="filterDataListUi" data-toggle="dropdown" />
-    <div class="dropdown dropdown-left dropdown-top-flush">
-        <ul id="cli_list" class="list-group list-group-toggle list-group-toggle-multiple list-group-toggle-allow-no-active">
-
-                <!-- @NOTE: right now the js sets up to add all values to the hidden input field if this is selected, but let me know if we need to change this setup  -->
-                <li><a href="#" data-client-id="all">Select All</a></li>
-            <!-- @LOOP -->
-                <li><a href="#" data-client-id="69"><span class="REPLACE">Client Name</span></a></li>
-            <!-- @PLACEHOLDER delete when ready -->
-                <li><a href="#" data-client-id="1">Terry Fawles</a></li>
-                <li><a href="#" data-client-id="2">Phoenix Wright</a></li>
-                <li><a href="#" data-client-id="3">Larry Butz</a></li>
-                <li><a href="#" data-client-id="4">Maya Fey</a></li>
-                <li><a href="#" data-client-id="5">Will Powers</a></li>
-                <li><a href="#" data-client-id="6">Miles Edgelord</a></li>
-                <li><a href="#" data-client-id="7">Lana Skye</a></li>
-                <li><a href="#" data-client-id="8">Max Galactica</a></li>
-                <li><a href="#" data-client-id="9">Matt Engarde</a></li>
-                <li><a href="#" data-client-id="10">Ron Delite</a></li>
-                <li><a href="#" data-client-id="11">Maggey Byrde</a></li>
-                <li><a href="#" data-client-id="12">Iris Nun</a></li>
-                <li><a href="#" data-client-id="13">Zak Gramarye</a></li>
-                <li><a href="#" data-client-id="14">Wocky Kitaki</a></li>
-                <li><a href="#" data-client-id="15">Machi Tobaye</a></li>
-                <li><a href="#" data-client-id="16">Vera Misham</a></li>
-                <li><a href="#" data-client-id="17">Solomon Starbuck</a></li>
-                <li><a href="#" data-client-id="18">Juniper Woods</a></li>
-                <li><a href="#" data-client-id="19">Damian Tenma</a></li>
-                <li><a href="#" data-client-id="20">Athena Cykes</a></li>
-                <li><a href="#" data-client-id="21">Ahlbi Ur'gaid</a></li>
-                <li><a href="#" data-client-id="22">Trucy Wright</a></li>
-                <li><a href="#" data-client-id="23">Bucky Whet</a></li>
-                <li><a href="#" data-client-id="24">Dhurke Sahdmadhi</a></li>
-        </ul>
     </div>
 </div>
 
-<script>
+
+<div class="module-function function-filter-client position-static">
+    
+    <button data-toggle="dropdown" data-dropdown-width="100%"  class="input input-block-mobile input-select">
+        Client
+        <!-- @if one or more status is checked -->
+        <span class="filter-analytics-client-name-counter">
+            <!-- @NOTE: counter will be rendered here -->
+            (<span class="REPLACE">1</span>)
+        </span>
+    </button>
+    <div class="dropdown dropdown-left dropdown-top-flush">
+        <div class="module background-theme-contrast padding-small p flex-0-0 position-sticky offset-0-top offset-0-right offset-0-left">
+            <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y">
+                <div class="flex-col-xs-12 flex-col-md-3  flex-col-lg-6">
+                    <input type="text" id="cli_ui_search" class="input input-block input-single-line" placeholder="Search to filter list" />
+                </div>
+                <div class="flex-col-xs-12 flex-col-md-3 flex-col-lg-2">
+                    <label for="cli_ui_selectall" class="input-label">
+                        <input type="checkbox" id="cli_ui_selectall" name="cli_ui_selectall" class="input input-inline" />
+                        Select All
+                    </label>
+                </div>
+                <div class="flex-col-xs-12 flex-col-md-3 flex-col-lg-2">
+                    <label for="cli_ui_selectclient" class="input-label">
+                        <input type="checkbox" id="cli_ui_selectclient" name="cli_ui_selectclient" class="input input-inline" />
+                        Select all client projects
+                    </label>
+                </div>
+                <div class="flex-col-xs-12 flex-col-md-3 flex-col-lg-2">
+                    <label for="cli_ui_selectint" class="input-label">
+                        <input type="checkbox" id="cli_ui_selectint" name="cli_ui_selectint" class="input input-inline" />
+                        Select all internal projects
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class=" margin-large-top flex-1-1 overflow-y-scroll" style="max-height: 420px">
+
+            <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
+                <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+                    <label for="cli_id_REPLACE" class="input-label">
+                        <input type="checkbox" id="cli_id_REPLACE" name="cli_ids[]" data-cli-internal class="input input-inline" />
+                        Client Internal
+                    </label>
+                </div>
+                <?php for($i=1; $i<=34; $i++){ ?>
+                    <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+                        <label for="cli_id_REPLACE" class="input-label">
+                            <input type="checkbox" id="cli_id_REPLACE" name="cli_ids[]" class="input input-inline" />
+                            Client not internal
+                        </label>
+                    </div>
+                    <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+                        <label for="cli_id_REPLACE" class="input-label">
+                            <input type="checkbox" id="cli_id_REPLACE" name="cli_ids[]" data-cli-internal class="input input-inline" />
+                            Client internal
+                        </label>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script>
 
 
 
@@ -382,4 +407,4 @@
 
     //DEMO ENDS HERE
     
-</script>
+</script> -->

@@ -467,14 +467,14 @@ function app_debug_li() {
 			'env'=>FWAPPS_SLUG,
 			'template'=>'home',
 			'app'=>'workflow'));
-		?>">Switch to Workflow App</a>
+		?>">Switch to Workflow/Time Tracker App</a>
 	</li>
 	<li>
 		<a href="<?=app_create_link(array(
 			'env'=>FWAPPS_SLUG,
 			'template'=>'home',
 			'app'=>'timetracker'));
-		?>">Switch to Time tracker App</a>
+		?>">Switch to Time tracker App (Prototype)</a>
 	</li>
 
 	<li>
