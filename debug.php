@@ -11,6 +11,25 @@
 		<div class="accordion">
 		</div>
 
+		<h1 data-toggle-accordion>kanban boi<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			if i do it right it should work no matter what ass container ya bitch in
+			<div
+				class="overflow-x-scroll padding-y module-grid"
+				data-grid-auto-columns="250px"
+				data-grid-template-columns="250px"
+				data-grid-auto-flow="column"
+			>
+				<?php for($i = 1; $i < 10; $i++): ?>
+					<div class="module">
+						<div class="border-theme-contrast">
+							hi <?= $i ?>
+						</div>
+					</div>
+				<?php endfor; ?>
+			</div>
+		</div>
+
 		<h1 data-toggle-accordion>what the hell<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 

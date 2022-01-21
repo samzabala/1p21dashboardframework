@@ -9,7 +9,7 @@
 
 	<ul class="nav-list nav-list-responsive accordion accordion-mobile background-theme flex-1-1 justify-content-space-around">
 		<li>
-			<a href="<?= app_create_link(array('template'=>'prospects')); ?>" class="color">Prospects</a>
+			<a href="<?= app_create_link(array('template'=>'prospects-kanban')); ?>" class="color">Prospects</a>
 		</li>
 		<li>
 			<a href="<?= app_create_link(array('template'=>'prospects-hot')); ?>" class="color">Hot Prospects</a>

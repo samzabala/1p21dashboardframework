@@ -413,6 +413,7 @@ function app_init_content(){
 				case 'calendar':
 				case 'leads':
 				case 'companies':
+				case 'prospects-kanban':
 				case 'companiy-detail':
 				case 'login':
 				case 'login-reset':

@@ -1158,6 +1158,14 @@
       "oAP" : "\/login.php",
       "oF" : 0
     },
+    "\/prospects-kanban.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/prospects-kanban.php",
+      "oF" : 0
+    },
     "\/sales-tracking.php" : {
       "cB" : 0,
       "ft" : 8192,
