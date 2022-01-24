@@ -7,7 +7,7 @@
 	<div class="module-content">
 
 		<!-- main -->
-			<div class="module module-large border-color-transparent">
+			<div class="module module-expanded border-color-transparent">
 				<!-- Heading -->
 					<div class="company-heading flex-grid flex-grid-compact position-relative">
 						<div class="flex-col-xs-12 flex-col-md-8">

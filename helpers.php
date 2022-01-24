@@ -413,7 +413,7 @@ function app_init_content(){
 				case 'calendar':
 				case 'leads':
 				case 'companies':
-				case 'prospects-kanban':
+				case 'kanban':
 				case 'companiy-detail':
 				case 'login':
 				case 'login-reset':
@@ -683,4 +683,40 @@ function app_get_path(){
 }
 function app_get_uri(){
 	return FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP;
+}
+
+function app_polar_tag($hexcolor){
+
+	if(!preg_match('/^#[a-f0-9]{6}$/i', $hexcolor)){
+		return 'inherit';
+	} 
+	
+	$threshold = 128;
+
+	$hex = app_get_rgb($hexcolor);
+	$hex_compu = (
+			($hex['r'] * 299)
+			+ ($hex['g'] * 587)
+			+ ($hex['b'] * 114)
+		) / 1000;
+
+	$to_return = 'background';
+	if($hex_compu >= 128){
+		$to_return = 'base';
+	}
+
+	return $to_return;
+}
+
+
+function app_get_rgb($hexcolor){
+	$r = hexdec(substr($hexcolor,1,2));
+	$g = hexdec(substr($hexcolor,3,2));
+	$b = hexdec(substr($hexcolor,5,2));
+
+	return array(
+		'r' => $r,
+		'g' => $g,
+		'b' => $b
+	);
 }
