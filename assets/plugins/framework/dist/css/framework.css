@@ -5166,6 +5166,14 @@ body:not(.body-loaded) .symbol:before {
   content: "\e95c";
 }
 
+.symbol-cloud-upload:before, .active > .symbol-cloud-upload-toggle:before, .open > .symbol-cloud-upload-toggle:before {
+  content: "\e95d";
+}
+
+.symbol-cloud-download:before, .active > .symbol-cloud-download-toggle:before, .open > .symbol-cloud-download-toggle:before {
+  content: "\e95e";
+}
+
 /*** ASSET ***/
 .asset {
   max-width: 100%;
@@ -9918,6 +9926,9 @@ input[type=checkbox]:not(:checked) + .input-toggle-label:after, .input[type=chec
                 );
 }
 
+.modal {
+  text-align: initial;
+}
 .modal-ui-mode-fullscreen.modal-ui-wrapper, .modal-ui-mode-board.modal-ui-popup, .modal-ui-mode-default.modal-ui-wrapper {
   overflow-y: scroll;
 }
@@ -9928,7 +9939,6 @@ input[type=checkbox]:not(:checked) + .input-toggle-label:after, .input[type=chec
   right: 0 !important;
   bottom: 0 !important;
   margin: 0;
-  text-align: initial;
 }
 .modal-ui-mode-board.modal-ui-wrapper, .modal-ui-mode-default.modal-ui-wrapper {
   background: var(--fw-color-base-alpha-5);
