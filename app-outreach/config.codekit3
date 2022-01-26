@@ -630,6 +630,14 @@
       "oAP" : "\/components\/attachments-grid-simple.php",
       "oF" : 0
     },
+    "\/components\/bulk-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/bulk-form.php",
+      "oF" : 0
+    },
     "\/components\/company-contact-row.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -852,6 +860,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/modal-board-form-task.php",
+      "oF" : 0
+    },
+    "\/components\/modal-form-bulk.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-form-bulk.php",
       "oF" : 0
     },
     "\/components\/modal-form-note.php" : {
@@ -1156,14 +1172,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/login.php",
-      "oF" : 0
-    },
-    "\/prospects-kanban.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/prospects-kanban.php",
       "oF" : 0
     },
     "\/sales-tracking.php" : {

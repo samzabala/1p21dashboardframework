@@ -4917,6 +4917,10 @@
 				'calendar',
 				'calendar-alt',
 				'paperclip',
+				'envelope',
+				'envelope-inverse',
+				'cloud-upload',
+				'cloud-download',
 			);
 			?>
 
