@@ -1,9 +1,10 @@
 
-    <form action="" class="bulk-editor text-align-center">
+    <form action="" class="bulk-editor">
         <h1 class="no-margin-y">Import List</h1>
+        <p>Import companies from a file</p>
         <!-- Form -->
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="bulk-file" class="input-label">Import companies from a file</label>
+                <label for="bulk-file" class="input-label">CSV or Excel File</label>
                 <div class="input-group input-group-responsive input-group-horizontal">
                     <input type="file" name="bulk-file"  id="bulk-file" class="text-align-center input input-single-line" />
                 </div>
@@ -18,114 +19,47 @@
         <!-- Notification scroll -->
             <!-- @if has notifications -->
                 <hr>
-                <div class="overflow-y-auto text-align-initial" style="max-height: 16rem;">
-                    <!-- @alert: info -->
-                        <?php app_get_component('components/alert-basic','',false,array(
-                            'type' => 'info',
-                            'content' => 'Basic. not that important but just so you know',
-                        )); ?>
-                    <!-- @alert: error -->
-                        <?php app_get_component('components/alert-basic','',false,array(
-                            'type' => 'error',
-                            'content' => 'File type not accepted.',
-                        )); ?>
-                    <!-- @alert: caution -->
-                        <?php app_get_component('components/alert-basic','',false,array(
-                            'type' => 'caution',
-                            'content' => 'Unrecognized character on line 420',
-                        )); ?>
-                    <!-- @alert: success -->
-                        <?php app_get_component('components/alert-basic','',false,array(
-                            'type' => 'success',
-                            'content' => 'CSV import completed!',
-                        )); ?>
+
+                <!-- @if has successful rows -->
+                    <h5 class="no-margin-top color-success">
+                        <i class="symbol symbol-success"></i> <span class="REPLACE">420</span> Companies successfully imported
+                    </h5>
+                <!-- @if has failed rows -->
+                    <h5 class="no-margin-top color-error">
+                        <i class="symbol symbol-error"></i> <span class="REPLACE">69</span> Companies failed to import due to errors
+                    </h5>
 
 
+                <!-- @if failed rows -->
+                <p>The following records failed to import</p>
+                <div class="overflow-y-auto list-group list-group-striped border-style-solid border-width-thin border-color-neutral-alpha-2" style="max-height: 30rem;">
+                    <!-- @loop -->
+                        <div class="list-group-item padding no-border-bottom">
 
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'error',
-                                'content' => 'Hot mess express at line 69',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'caution',
-                                'content' => 'Bruno mention on row 9. we don\'t talk about Bruno no no no...',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => 'I\'m just trying to fill this up so you can see the scrolly boi work',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'caution',
-                                'content' => 'Huwag banggitin si Bruno \'wag \'wag \'wag... Huwag banggitin si Bruno.. ',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => 'BUTT',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'info',
-                                'content' => 'Noong kasalan day',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => '(shet babe ang wedding day)',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'info',
-                                'content' => 'We were making ready at wala nung ulap sa may sky',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => '(Bawal ang ulap sa sky)',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'caution',
-                                'content' => 'Siya\'y dumating na may mischievous grin',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => 'BAGYERRRRRR',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'error',
-                                'content' => 'You telling this story or am I?',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => 'I\'m sorry, mi vida, go on',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'caution',
-                                'content' => 'ᜐᜊᜒ ᜈ᜔ᜌ ᜋᜓᜃ᜔ᜑᜅ᜔ ᜋᜌ᜔ rain',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => 'why did he tell us?',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'caution',
-                                'content' => 'at binaha ang aking brain',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'success',
-                                'content' => 'Abuela, get the umbrellas',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'error',
-                                'content' => 'Kinasal, may hurricane',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'info',
-                                'content' => 'sobrang joyous day, pero anyway',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'error',
-                                'content' => 'ᜑᜓᜏᜄ᜔ ᜊᜅ᜔ᜄᜒᜆᜒᜈ᜔ ᜐᜒ ᜊ᜔ᜍᜓᜈ᜔o ᜏᜄ᜔ ᜏᜄ᜔ ᜏᜄ᜔',
-                            )); ?>
-                            <?php app_get_component('components/alert-basic','',false,array(
-                                'type' => 'error',
-                                'content' => 'WE DON\'T TALK ABOUT BRUNO SABI',
-                            )); ?>
+                            <pre class=" background-transparent no-padding"><b>Row:</b><br>Wright Anything Agency,+1234567890,Phoenix Wright,Other info</pre>
+
+                            <ul class="bulk-error-info">
+                                <li><a href="#">'Wright Anything Agency'</a> is already taken</li>
+                                <!-- @placeholder -->
+                                    <li><a href="#">'Wright Anything Agency'</a> has another error</li>
+                                    <li>Bruno was mentioned. we don't talk about Bruno no no no...</li>
+                            </ul>
+                        </div>
+
+
+                        <?php for($i=1; $i<=4; $i++){ ?>
+                            <div class="list-group-item padding no-border-bottom">
+
+                                <pre class="bulk-error-row background-transparent no-padding"><b>Row:</b><br>Wright Anything Agency,+1234567890,Phoenix Wright,Other info</pre>
+
+                                <ul class="bulk-error-info">
+                                    <li>Huwag banggitin si Bruno 'wag 'wag 'wag</li>
+                                    <li>ᜑᜓᜏᜄ᜔ ᜊᜅ᜔ᜄᜒᜆᜒᜈ᜔ ᜐᜒ ᜊ᜔ᜍᜓᜈ᜔o ᜏᜄ᜔ ᜏᜄ᜔ ᜏᜄ᜔</li>
+                                    <li>입에 담지마 브루노 노노노</li>
+                                    <li>No corran in the hospital Bruno</li>
+                                </ul>
+                            </div>
+                        <?php } ?>
                 </div>
 </form>
     <!-- Modal Close -->
