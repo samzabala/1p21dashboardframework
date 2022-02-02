@@ -1,27 +1,32 @@
 
 <div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-12 ">
+	<div class="flex-col-12  flex-col-md-8">
 		<h1 class="no-margin">Companies</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-4">
+	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
 		<div class="module-functions">
+
+		<div class="module-function function-add">
+			<a  href="#m-editor-bulk" data-toggle-modal-default class="btn btn-primary-outline">
+				Upload in Bulk&nbsp;<i class="symbol symbol-upload font-large"></i> 
+			</a>
+			<?php app_get_component('components/modal-form-bulk') ?>
+		</div>
 
 			<div class="module-function function-add">
 				<a  href="#mb-editor-company" data-modal-title="Add company" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
-					Add New <i class="symbol symbol-plus"></i>
+					Add New&nbsp;<i class="symbol symbol-plus"></i>
 				</a>
-			</div>
-
-			<div class="module-function function-add">
-				<a  href="#m-editor-bulk" data-toggle-modal-default class="btn btn-link btn-block-mobile">
-					<i class="symbol symbol-cloud-upload font-size-large"></i><span class="hide-nonmobile">&nbsp;Bulk Upload CSV</span>
-				</a>
-				<?php app_get_component('components/modal-form-bulk') ?>
 			</div>
 		</div>
+		<div class="module-functions">
+		</div>
+	</div>
+	<div class="flex-col-12  flex-col-md-8">
+		<?php app_get_component('components/function-input-search') ?>
 	</div>
 	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
-		<?php app_get_component('components/function-input-search') ?>
+		<?php app_get_component('components/function-filter-companies') ?>
 	</div>
 </div>
 
@@ -33,7 +38,6 @@
 			<hr class="hide-nonmobile">
 			
 			<?php app_get_component('components/pagination-view-per-page') ?>
-			<?php app_get_component('components/function-filter-companies') ?>
 
 			<?php app_get_component('components/pagination') ?>
 		</div>
