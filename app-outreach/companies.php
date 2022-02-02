@@ -6,20 +6,18 @@
 	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
 		<div class="module-functions">
 
-		<div class="module-function function-add">
-			<a  href="#m-editor-bulk" data-toggle-modal-default class="btn btn-primary-outline">
-				Upload in Bulk&nbsp;<i class="symbol symbol-upload font-large"></i> 
-			</a>
-			<?php app_get_component('components/modal-form-bulk') ?>
-		</div>
+			<div class="module-function function-bulk">
+				<a  href="#m-editor-bulk" data-toggle-modal-default class="btn btn-primary-outline">
+					Upload in Bulk&nbsp;<i class="symbol symbol-upload font-large"></i> 
+				</a>
+				<?php app_get_component('components/modal-form-bulk') ?>
+			</div>
 
 			<div class="module-function function-add">
 				<a  href="#mb-editor-company" data-modal-title="Add company" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
 					Add New&nbsp;<i class="symbol symbol-plus"></i>
 				</a>
 			</div>
-		</div>
-		<div class="module-functions">
 		</div>
 	</div>
 	<div class="flex-col-12  flex-col-md-8">
