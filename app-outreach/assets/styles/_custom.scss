@@ -6,12 +6,19 @@ $outreach-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
 $table-column-widths: (50,100,150,200,250,300,400,500);
 
 #outreach {
+	&-kanban,
 	&-calendar {
 		&-wrapper {
 			position:fixed;
 			right:0;
+			bottom:0;
 			top: $nav-height;
 			left: $sidebar-slim;
+
+			@include on-breakpoint(mobile){
+				left:0;
+				top: $nav-height * 2;
+			}
 		}
 	}
 
@@ -80,7 +87,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 		left:0;
 		padding-top: 45px;
 		padding-bottom: 45px;
-		z-index:999;
+		z-index:1001;
 		overflow-y:scroll;
 		overflow-x:hidden;
 		scrollbar-width: none;

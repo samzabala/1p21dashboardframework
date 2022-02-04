@@ -7,7 +7,7 @@
 				</div>
 
 				<div class="module-grid justify-content-center margin-auto-x" data-grid-template-columns-sm="minmax(100%,420px)">
-					<div class="module module-large" data-grid-row-sm="2" >
+					<div class="module module-expanded" data-grid-row-sm="2" >
 						<div class="module-content">
 
 						<!-- @if successful reset password send -->

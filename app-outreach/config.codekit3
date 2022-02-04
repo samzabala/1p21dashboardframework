@@ -758,6 +758,22 @@
       "oAP" : "\/components\/input-social.php",
       "oF" : 0
     },
+    "\/components\/kanban-card.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/kanban-card.php",
+      "oF" : 0
+    },
+    "\/components\/kanban-swimlane.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/kanban-swimlane.php",
+      "oF" : 0
+    },
     "\/components\/link-add-row.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -892,6 +908,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/modal-form-sales.php",
+      "oF" : 0
+    },
+    "\/components\/modal-form-swimlane.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-form-swimlane.php",
       "oF" : 0
     },
     "\/components\/modal-form-tags.php" : {
@@ -1062,6 +1086,14 @@
       "oAP" : "\/components\/sales-form.php",
       "oF" : 0
     },
+    "\/components\/swimlane-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/swimlane-form.php",
+      "oF" : 0
+    },
     "\/components\/tag-clienttype.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1140,6 +1172,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/includes\/nav-sidebar.php",
+      "oF" : 0
+    },
+    "\/kanban.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/kanban.php",
       "oF" : 0
     },
     "\/leads.php" : {
