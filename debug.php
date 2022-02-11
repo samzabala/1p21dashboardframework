@@ -4921,6 +4921,7 @@
 				'envelope-inverse',
 				'cloud-upload',
 				'cloud-download',
+				'drag',
 			);
 			?>
 
@@ -5639,52 +5640,108 @@
 
 			<h2>Helper classes: Colors... there's a text shadow so you can see it shit itself</h2>
 
+			<?php $color_palettes = array(
+				'theme',
+				'theme-polar',
+				'theme-contrast',
+				'theme-polar-contrast',
+				'base',
+				'background',
+				'primary',
+				'secondary',
+				'accent',
+				'neutral',
+				'success',
+				'caution',
+				'error',
+				'intensity-1',
+				'intensity-2',
+				'intensity-3',
+				'intensity-4',
+				'intensity-5',
+			);
+			
+			
+			$color_variations_b = array(
+				'alt',
+				'alpha-1',
+				'alpha-2',
+				'alpha-3',
+				'alpha-4',
+				'alpha-5',
+				'alpha-6',
+				'alpha-7',
+				'alpha-8',
+				'alpha-9',
+			);
+			
+			$color_variations_a = array(
+				'light',
+				'lighter',
+				'lightest',
+				'dark',
+				'darker',
+				'darkest',
+				'alpha-1',
+				'alpha-2',
+				'alpha-3',
+				'alpha-4',
+				'alpha-5',
+				'alpha-6',
+				'alpha-7',
+				'alpha-8',
+				'alpha-9',
+			);
+			?>
 
-
-			<p class="color-theme">color theme</p>
-			<p class="color-theme-polar">color theme polar</p>
-			<p class="color-theme-contrast">color theme contrast</p>
-			<p class="color-theme-polar-contrast">color theme polar contrast</p>
-
-			<p class="color-base">Color Base</p>
-			<p class="color-background">Color Background</p>
-			<p class="color-primary">Color Primary</p>
-			<p class="color-secondary">Color secondary</p>
-			<p class="color-accent">Color accent</p>
-			<p class="color-neutral">Color Neutral</p>
-			<p class="color-success">Color Success</p>
-			<p class="color-caution">Color Caution</p>
-			<p class="color-error">Color Error</p>
-
-			<p class="color-intensity-1">Color Intensity 1</p>
-			<p class="color-intensity-2">Color Intensity 2</p>
-			<p class="color-intensity-3">Color Intensity 3</p>
-			<p class="color-intensity-4">Color Intensity 4</p>
-			<p class="color-intensity-5">Color Intensity 5</p>
+			<?php foreach($color_palettes as $color): ?>
+				<p class="color-<?=$color ?>">color-<?=$color ?></p>
+				<?php switch($color):
+					case 'theme':
+					case 'theme-polar':
+					case 'theme-contrast':
+					case 'theme-polar-contrast':
+						break;
+					case 'background':
+					case 'base':
+						foreach($color_variations_b as $variation): ?>
+							<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
+						<?php endforeach;
+						break;
+					default:
+						foreach($color_variations_a as $variation): ?>
+							<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
+						<?php endforeach;
+						break;
+						break;
+				
+					endswitch; endforeach; ?>
 
 			<h2>Helper classes: backgrounds</h2>
 
 
-			<p class="background-theme">background theme</p>
-			<p class="background-theme-polar">background theme polar</p>
-			<p class="background-theme-contrast">background theme contrast</p>
-			<p class="background-theme-polar-contrast">background theme polar contrast</p>
-
-			<p class="background-base">background Base</p>
-			<p class="background-background">background Background</p>
-			<p class="background-primary">Background Primary</p>
-			<p class="background-secondary">Background secondary</p>
-			<p class="background-accent">Background accent</p>
-			<p class="background-neutral">Background Neutral</p>
-			<p class="background-success">Background Success</p>
-			<p class="background-caution">Background Caution</p>
-			<p class="background-error">Background Error</p>
-
-			<p class="background-intensity-1">Background Intensity 1</p>
-			<p class="background-intensity-2">Background Intensity 2</p>
-			<p class="background-intensity-3">Background Intensity 3</p>
-			<p class="background-intensity-4">Background Intensity 4</p>
-			<p class="background-intensity-5">Background Intensity 5</p>
+			<?php foreach($color_palettes as $color): ?>
+				<p class="background-<?=$color ?>">background-<?=$color ?></p>
+				<?php switch($color):
+					case 'theme':
+					case 'theme-polar':
+					case 'theme-contrast':
+					case 'theme-polar-contrast':
+						break;
+					case 'background':
+					case 'base':
+						foreach($color_variations_b as $variation): ?>
+							<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
+						<?php endforeach;
+						break;
+					default:
+						foreach($color_variations_a as $variation): ?>
+							<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
+						<?php endforeach;
+						break;
+						break;
+				
+					endswitch; endforeach; ?>
 
 
 			<p class="background-gradient">Background Gradient</p>

@@ -1,41 +1,51 @@
 
-<div class=" outreach-kanban-card module border-color-neutral-alpha-5 p">
-    <div class="module-content" data-toggle-modal-default>
+<div class=" outreach-kanban-card module border-color-neutral-alpha-5 p no-padding-x">
+    <div class="module-content padding-small-left no-margin-x" data-toggle-modal-default>
+        <div class="flex-grid flex-nowrap flex-grid-no-gutter">
+            <div class="flex-0-0 flex-child">
+                <button class="
+                    outreach-kanban-dragger
+                    btn font-size-large no-padding-y no-padding-left padding-small-right color-neutral  align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow">
+                    <i class="symbol symbol-drag"></i>
+                </button>
+            </div>
+            <div class="flex-1-1 flex-child">
+                <div class="position-relative padding-large-right">
 
-        <div class="position-relative padding-large-right">
+                    <div class="card-client-owner position-absolute offset-right-0 offset-top-0">
+                        <a href="<?=app_create_link(array('template' => 'profile')); ?>" class="company-acct-owner text-align-center">
+                            <?php app_get_component('components/profile-image-micro') ?>
+                        </a>
+                    </div>
+                    <h5 class="card-client-name no-margin-y">
+                        <span class="REPLACE">Wright & Co. Law Offices</span>
+                    </h5>
+                    <a href="#REPLACE" class="card-client-domain text-wrap-ellipsis">
+                        <span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
+                    </a>
+                </div>
+                <div class="flex-grid flex-grid-compact justify-content-space-between">
+                    <div class="flex-child">
+                        <h6 class="no-margin">Last Activity Date:</h6>
+                    </div>
+                    <div class="flex-child">
+                        <p class="no-margin">
+                            <span class="REPLACE">4/20/69</span>
+                        </p>
+                    </div>
+                </div>
 
-            <div class="card-client-owner position-absolute offset-right-0 offset-top-0">
-                <a href="<?=app_create_link(array('template' => 'profile')); ?>" class="company-acct-owner text-align-center">
-                    <?php app_get_component('components/profile-image-micro') ?>
-                </a>
-            </div>
-            <h5 class="card-client-name no-margin-y">
-                <span class="REPLACE">Wright & Co. Law Offices</span>
-            </h5>
-            <a href="#REPLACE" class="card-client-domain text-wrap-ellipsis">
-                <span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
-            </a>
-            </div>
-            <div class="flex-grid flex-grid-compact justify-content-space-between">
-            <div class="flex-child">
-                <h6 class="no-margin">Last Activity Date:</h6>
-            </div>
-            <div class="flex-child">
-                <p class="no-margin">
-                    <span class="REPLACE">4/20/69</span>
-                </p>
-            </div>
-            </div>
+                <!-- @if has tags -->
+                    <!-- @loop .tag -->
+                        <span class="tag tag-primary">
+                            <span class="REPLACE">Tag content here</span>
+                        </span>
 
-            <!-- @if has tags -->
-                <!-- @loop .tag -->
-                    <span class="tag tag-primary">
-                        <span class="REPLACE">Tag content here</span>
-                    </span>
-
-                    <!-- @PLACEHOLDER: DELETE WHEN READY -->
-                        <span class="tag tag-primary">Edible</span>
-                        <span class="tag tag-primary">Incoming Edge Case Tag That has a lot of words in it We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy  I just wanna tell you how I'm feeling Gotta make you understand  Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you  We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see  Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you  Ooh (Give you up) Ooh-ooh (Give you up) Ooh-ooh Never gonna give never gonna give (Give you up) Ooh-ooh Never gonna give never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it  I just wanna tell you how I'm feeling Gotta make you understand  Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you </span>
+                        <!-- @PLACEHOLDER: DELETE WHEN READY -->
+                            <span class="tag tag-primary">Edible</span>
+                            <span class="tag tag-primary">Incoming Edge Case Tag That has a lot of words in it We're no strangers to love You know the rules and so do I A full commitment's what I'm thinking of You wouldn't get this from any other guy  I just wanna tell you how I'm feeling Gotta make you understand  Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you  We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it And if you ask me how I'm feeling Don't tell me you're too blind to see  Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you  Ooh (Give you up) Ooh-ooh (Give you up) Ooh-ooh Never gonna give never gonna give (Give you up) Ooh-ooh Never gonna give never gonna give (Give you up) We've known each other for so long Your heart's been aching but you're too shy to say it Inside we both know what's been going on We know the game and we're gonna play it  I just wanna tell you how I'm feeling Gotta make you understand  Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you </span>
+            </div>
+        </div>
     </div>
     
     <div class="modal modal-default" data-modal-width="630px" data-modal-title="REPLACE Wright & Co. Law Offices">
