@@ -1,6 +1,6 @@
 <div
 	id="outreach-kanban" class="">
-		<div id="outreach-kanban-wrapper" class="background-theme-contrast padding-top background-theme-contrast flex-xs flex-direction-column z-index-1000">
+		<div id="outreach-kanban-wrapper" class="background-theme-contrast padding-top background-theme-contrast flex-xs flex-direction-column">
 			<div class="flex-0-0">
 				<div class="container container-fluid">
 					<!-- @NOTE: #outreach-contacts-heading is the same markup as the copmany table templates except the toggle underneath the heading -->
