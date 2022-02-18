@@ -20,10 +20,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex-col-12  flex-col-md-8">
+	<div class="flex-col-12  flex-col-md-3">
 		<?php app_get_component('components/function-input-search') ?>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
+	<div class="flex-col-xs-12 flex-col-md-9 text-align-right">
 		<?php app_get_component('components/function-filter-companies') ?>
 	</div>
 </div>
