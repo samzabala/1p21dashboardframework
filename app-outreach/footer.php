@@ -10,6 +10,7 @@
 <?php app_get_component('components/modal-board-form-company') ?>
 <?php app_get_component('components/modal-board-detail-task') ?>
 <?php app_get_component('components/modal-board-detail-event') ?>
+<?php app_get_component('components/modal-board-form-search') ?>
 <?php endif; ?>
 
 
