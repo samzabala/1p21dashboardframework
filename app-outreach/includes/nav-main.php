@@ -47,35 +47,12 @@
 
 
 <div id="outreach-header-search" class="nav-block flex-wrap flex-0-0 justify-content-flex-end position-static">
-	<a data-toggle-dropdown href="#" class="btn btn-symbol btn-round btn-default">
+	<a data-toggle-modal-board href="#mb-advanced-search" class="btn btn-symbol btn-round btn-default">
 		<span class="sr-only">Search</span>
 		<span>
 			<i class="symbol symbol-search"></i>
 		</span>
 	</a>
-
-	<div id="outreach-header-search" class="dropdown dropdown-top dropdown-left" data-dropdown-width="100%">
-
-		<form id="nav-search"
-			action="<? app_create_link( array('template' => 'projects') ); ?>"
-			class="flex-1-1 flex-xs flex-wrap "
-			method="get">
-			<div class="input-group input-round input-group-horizontal input-block flex-1-1 ">
-
-				<input
-					id="search"
-					class="input input-single-line flex-1-1"
-					type="text"
-					name="search"
-					size="12"
-					placeholder="Search Projects..."
-					value="<?php echo ( isset($_GET['search'] )) ? $_GET['search'] : ''; ?>" />
-					<button class="btn btn-default" type="submit"><i class="symbol symbol-search"></i></button>
-					<button class="btn btn-default" data-toggle-dropdown><i class="symbol symbol-close"></i></button>
-			</div>
-				
-		</form>
-	</div>
 </div>
 
 <div class="nav-block" id="header-notifications">
