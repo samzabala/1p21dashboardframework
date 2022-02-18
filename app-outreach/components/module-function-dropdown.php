@@ -5,6 +5,7 @@ $defs = array(
     'count' => 1,
     'slug' => '',
     'dropdown_x_offset' => 'right',
+    'content' => '',
 	'items' => array(
 
     ),
@@ -20,7 +21,7 @@ $args = app_parse_args($data,$defs);
 <div class="module-function function-filter-<?=$args['slug']; ?> position-relative">
     <?php if($args['label']): ?>
         <div class="input-wrapper input-wrapper-horizontal input-wrapper-block-mobile input-wrapper-responsive no-padding-right">
-        <label class="input-label">Filter By</label>
+        <label class="input-label"><?=$args['label']; ?></label>
     <?php endif; ?>
         <button data-toggle-dropdown class="input input-select input-block-mobile">
             <?=$args['title']; ?>
@@ -31,7 +32,8 @@ $args = app_parse_args($data,$defs);
             </span>
         </button>
         <ul class="dropdown dropdown-top-flush dropdown-<?= $args['dropdown_x_offset'] ?>" data-dropdown-width="200px" data-dropdown-max-height="30em">
-            <?php foreach($args['items'] as $i => $item): ?>
+            <?php if($args['content']) echo $args['content'];
+            foreach($args['items'] as $i => $item): ?>
                 <li>
                     <label class="input-label">
                         <input type="checkbox"
