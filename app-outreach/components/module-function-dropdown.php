@@ -28,7 +28,7 @@ $args = app_parse_args($data,$defs);
             <!-- @if one or more Owner is checked -->
             <span class="filter-companies-<?=$args['slug']; ?>-active">
                 <!-- @NOTE: filter count -->
-                (<span class="REPLACE">1</span>)
+                (<span class="REPLACE"><?=$args['count'] ?></span>)
             </span>
         </button>
         <ul class="dropdown dropdown-top-flush dropdown-<?= $args['dropdown_x_offset'] ?>" data-dropdown-width="200px" data-dropdown-max-height="30em">
