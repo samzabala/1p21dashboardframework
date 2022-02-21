@@ -100,8 +100,8 @@
                 (<span class="REPLACE">1</span>)
             </span>
         </button>
-        <ul class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="300px" data-dropdown-max-height="30em">
-            <div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+        <div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="300px" data-dropdown-max-height="30em">
+            <div class="input-wrapper input-wrapper-block input-wrapper-vertical margin-small-bottom">
                 <label for="company-location-state" class="input-label">State</label>
                 <select name="state" id="company-location-state" class="input input-single-line input-select">
                     <option value="">Select</option>
@@ -181,5 +181,9 @@
                             <option value="Barako">
                     </datalist>	
             </div>
-        </ul>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Add Location</button>
+            </div>
+        </div>
 </div>
