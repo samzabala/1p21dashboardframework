@@ -385,6 +385,50 @@ function app_init_content(){
 
 		
 		//outreach
+		case 'timetracker-ext':
+			$slug = '';
+			switch($template_part):
+				case 'WIP':?>
+					<div class="module">
+
+						Not yet brah
+						<br>
+						<br>
+						<br>
+						<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
+					</div>
+					<?php
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
+					break;
+				case 'analytics':
+				case 'home':
+				case 'focus':
+				case 'logs':
+				case 'log-edit':
+				case 'favorites':
+				case null:
+					app_get_template_part("app-{$app}/{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+					?>
+
+
+					<!-- <link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" /> -->
+					<?php
+					break;
+
+				case 'debug':
+				case 'debug-components':
+					app_get_template_part("{$template_part}");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+					$GLOBALS['VALID_TEMPLATE'] = $template_part;
+					break;
+				default:
+					app_get_template_part('global/error');
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
+					$GLOBALS['VALID_TEMPLATE'] = "error";
+					break;
+			endswitch;
+			break;
 		case 'outreach':
 		default:
 			$slug = '';
@@ -456,6 +500,12 @@ function app_debug_li() {
 			'env'=>FWAPPS_SLUG,
 			'app'=>'outreach'));
 		?>">Switch to Client Outreach</a>
+	</li>
+	<li>
+		<a href="<?=app_create_link(array(
+			'env'=>FWAPPS_SLUG,
+			'app'=>'timetracker-ext'));
+		?>">Switch to Timetracker Extension</a>
 	</li>
 	<li>
 		<a href="<?=app_create_link(array(

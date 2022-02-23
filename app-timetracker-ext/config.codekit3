@@ -9,27 +9,109 @@
   ],
   "creatorBuild" : "34335",
   "files" : {
+    "\/assets\/scripts\/framework.customglobal.example.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/framework.customglobal.example-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/scripts\/framework.customglobal.mine.js" : {
       "bF" : 6,
       "ft" : 64,
       "ma" : 0,
       "mi" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scripts\/framework.customglobal.mine-min.js",
-      "oF" : 0,
+      "oAP" : "\/assets\/scripts\/framework.customglobal.mine.min.js",
+      "oF" : 2,
       "sC" : 3,
       "tS" : 1
+    },
+    "\/assets\/scripts\/framework.customglobal.mine.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/framework.customglobal.mine.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/assets\/scripts\/webpack.config.example.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/assets\/scripts\/webpack.config.example-min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/styles\/_custom.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_custom.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/_ext_fonts.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_ext_fonts.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/_fw_var_overrides.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_fw_var_overrides.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/styles\/style.example.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/style.example.css",
+      "oF" : 1,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/assets\/styles\/style.mine.css" : {
       "aP" : 1,
@@ -57,6 +139,94 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/components\/icon-logo.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-logo.php",
+      "oF" : 0
+    },
+    "\/components\/icon-toggle.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-toggle.php",
+      "oF" : 0
+    },
+    "\/components\/input-task-category.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-task-category.php",
+      "oF" : 0
+    },
+    "\/components\/input-task-client.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-task-client.php",
+      "oF" : 0
+    },
+    "\/components\/input-task-name.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-task-name.php",
+      "oF" : 0
+    },
+    "\/components\/input-task-project.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-task-project.php",
+      "oF" : 0
+    },
+    "\/components\/nav-svg-timer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/nav-svg-timer.php",
+      "oF" : 0
+    },
+    "\/footer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/footer.php",
+      "oF" : 0
+    },
+    "\/header.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/header.php",
+      "oF" : 0
+    },
+    "\/home.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/home.php",
+      "oF" : 0
+    },
+    "\/includes\/nav-main.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/includes\/nav-main.php",
+      "oF" : 0
     }
   },
   "hooks" : [
@@ -110,7 +280,7 @@
         "active" : 0
       },
       "classes" : {
-        "active" : 0
+        "active" : 1
       },
       "computed-properties" : {
         "active" : 0
@@ -269,7 +439,7 @@
         "active" : 0
       },
       "private-methods" : {
-        "active" : 0
+        "active" : 1
       },
       "property-literals" : {
         "active" : 0
