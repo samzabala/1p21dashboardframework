@@ -1,21 +1,28 @@
 <div class="modal modal-board" id="mb-detail-task" data-modal-width="670px">
-    <div class="task-header">
-        <h1 class="no-margin-bottom position-relative">
-            <!-- @if task is incomplete/active -->
-            <!-- 
-                @NOTE
-                classes to add
-                    color-error => when task is past due date
-                    color-primary => default
+    <div class="flex-grid flex-grid-fixed align-items-flex-end">
+		<div class=" flex-col-xs-12 flex-col-sm-8">
+            <div class="task-header">
+                <h1 class="no-margin-bottom position-relative">
+                    <!-- @if task is incomplete/active -->
+                    <!-- 
+                        @NOTE
+                        classes to add
+                            color-error => when task is past due date
+                            color-primary => default
 
-             -->
-                <i class="badge badge-primary badge-small no-border position-absolute offset-right-flush offset-y-0 margin-auto-y margin-small-right"></i>
+                    -->
+                        <i class="badge badge-primary badge-small no-border position-absolute offset-right-flush offset-y-0 margin-auto-y margin-small-right"></i>
 
-            <span class="REPLACE">Task Title Here</span>
-        </h1>
-        <p class="color-neutral">
-            Created by <span class="REPLACE">Herlock Sholmes</span> on <span class="REPLACE">4/20/69</span>
-        </p>
+                    <span class="REPLACE">Task Title Here</span>
+                </h1>
+                <p class="color-neutral">
+                    Created by <span class="REPLACE">Herlock Sholmes</span> on <span class="REPLACE">4/20/69</span>
+                </p>
+            </div>
+		</div>
+        <div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+            <a href="#" class="btn btn-primary-outline margin-bottom btn-block-mobile"> Mark as complete </a>
+        </div>
     </div>
     <div class="background-theme-contrast padding-x">
         <div class="flex-grid flex-grid-fixed">
