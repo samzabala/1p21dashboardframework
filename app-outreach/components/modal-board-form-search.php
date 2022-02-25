@@ -124,18 +124,7 @@ Modal from framework/src/js/imports/modal
                     <datalist id="as-city-list">
 
                         <!-- @NOTE: options are placeholders. replace as needed -->
-                            <option value="Naga City">
-                            <option value="Legazpi City">
-                            <option value="Manila">
-                            <option value="Sitti">
-                            <option value="CD">
-                            <option value="Seedy">
-                            <option value="See tea">
-                            <option value="Pili">
-                            <option value="Tinambac">
-                            <option value="Quezon">
-                            <option value="Daet">
-                            <option value="Barako">
+                            <?php app_get_component('components/_DEMO-datalist'); ?>
                     </datalist>	
                 </div>
             </div>
@@ -165,12 +154,7 @@ Modal from framework/src/js/imports/modal
                             <datalist class="input" id="as-vendor-name-list">
 
                                 <!-- @NOTE: options are placeholders. replace as needed -->
-                                <option value="Findlaw">
-                                <option value="Jollibee">
-                                <option value="Greenwhich">
-                                <option value="Mang Inasal">
-                                <option value="Chowking">
-                                <option value="Potato Corner">
+                                <?php app_get_component('components/_DEMO-datalist'); ?>
                             </datalist>
                         </div>
                     </div>
@@ -217,16 +201,7 @@ Modal from framework/src/js/imports/modal
                             <option value="">Select from list</option>
 
                         <!-- @PLACEHOLDER: modify as needed -->
-                            <option value="">Dahlia Hawthorne</option>
-                            <option value="">Candice Arm</option>
-                            <option value="">Bobby Fullbright</option>
-                            <option value="">Trucy Wright</option>
-                            <option value="">Laurice Deauxnim</option>
-                            <option value="">Dee Vasquez</option>
-                            <option value="">Will Powers</option>
-                            <option value="">Wendy Oldbag</option>
-                            <option value="">Simon Blackquill</option>
-                            <option value="">Geiru Toneido</option>
+                            <?php app_get_component('components/_DEMO-datalist'); ?>
                     </select>
                 </div>
             </div>
