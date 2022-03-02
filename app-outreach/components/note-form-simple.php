@@ -7,12 +7,40 @@ $args = app_parse_args($data,$defs);
 ?>
 <form action="" class="notes-editor">
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-        <label for="note" class="input-label sr-only">Add Note</label>
+		<label for="note" class="input-label sr-only">Add Note</label>
 		<textarea name="note" id="note" cols="30" rows="2" class="input input-multiple-line">Body note. will be replaced by tinymce</textarea>
 	</div>
 
+	<div class=" p">
+		<a class="input-label text-decoration-none no-padding-top" data-toggle-accordion>
+			Attachments Options <i class="symbol symbol-plus"></i>
+		</a>
+		<div class="accordion">
+
+			<div class="p">
+				<div class="input-group input-block input-group-horizontal">
+					<label for="note-attachment" class="btn btn-primary-glassy border-color-neutral-alpha-3">Add Attachments</label>
+					<input type="file" name="attachment" id="note-attachment" class="sr-only text-align-center input input-single-line" />
+					<label for="note-attachment" class="input input-single-line">
+						<!-- @if has file -->
+							<span class="REPLACE">filename.virus</span>
+						<!-- @else -->
+							No files chosen
+					</label>
+				</div>
+
+			</div>
+
+				<!-- @if edit note -->
+					<p class="input-label">Edit Attachments</p>
+					<div class="p overflow-y-auto" style="max-height:18em;">
+						<?php app_get_component('components/attachments-grid-simple'); ?>
+					</div>	
+		</div>
+	</div>
+	<hr>
 	<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-		<div class="flex-col-xs-12 flex-col-sm-6 flex-col-lg-5">
+		<div class="flex-col-xs-12 flex-col-sm-6 flex-col-lg-7">
 			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center">
 				<div class="flex-child flex-0-0">
 					<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
@@ -80,7 +108,7 @@ $args = app_parse_args($data,$defs);
 				</div>
 			</div>
 		</div>
-		<div class="flex-col-xs-12 flex-col-sm-6 flex-col-lg-7">
+		<div class="flex-col-xs-12 flex-col-sm-6 flex-col-lg-5">
 			<div class="text-align-right p">
 				<?php if($args['add_close_btn']): ?>
 					<a href="#close-add-note" data-toggle-accordion class="btn btn-link">
