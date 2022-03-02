@@ -10,9 +10,10 @@ $args = app_parse_args($data,$defs);
 	<div class="module module-expanded background-neutral-alpha-2 position-relative">
 		<div class="module-header padding-top module-header-break margin-bottom">
 			<h3 class="module-title">Activities &amp; Notes</h3>
-			<div class="module-functions">
+			<div class="module-functions justify-content-space-between">
 
 				<?php app_get_component('components/function-select-by-type') ?>
+				<?php app_get_component('components/function-add-note') ?>
 
 			</div>
 		</div>
