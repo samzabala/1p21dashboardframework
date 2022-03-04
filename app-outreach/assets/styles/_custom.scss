@@ -540,12 +540,22 @@ form label.required:after
 .tag-outreach {
 	&-s {
 		&-ghosted {
-			background-color: mix(
-				#7b4397,
-				$brand-color-background,
-				15%
-			);
+			background-color: #333;
 			color: #7b4397;
+		}
+		&-formerclient {
+			background-color: #c092c7;
+			color: var(--fw-color-background);
+
+		}
+		&-contractsent {
+			background-color: #6de1e2;
+			color: var(--fw-color-base);
+
+		}
+		&-proposalsent {
+			background-color: #4e9cf4;
+			color: var(--fw-color-background);
 		}
 	}
 }
