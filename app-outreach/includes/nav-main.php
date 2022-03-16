@@ -112,6 +112,7 @@
 			<li><a href="#">Admin</a></li>
 			<li><a href="<?=app_create_link(array('template' => 'sales-tracking')) ?>">Sales Tracking</a></li>
 			<li><a href="#">Logout</a></li>
+			<?php app_debug_li() ?>
 	</ul>
 
 </div>

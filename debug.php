@@ -1,7 +1,7 @@
 <div class="module-grid">
 <div class="module">
 	<div class="module-content">
-		<h1>Sam's Debug Paradise/Hell</h1>
+		<h1 class="special-primary">Sam's Debug Paradise/Hell</h1>
 		<p>
 			this boi is to debug almost all components in this framework in your own risk because shit's about to get dirrty, some helpers are not present. it's kinda laggy now because i shat on it too much
 		</p>
@@ -5661,9 +5661,7 @@
 				'intensity-5',
 			);
 			
-			
-			$color_variations_b = array(
-				'alt',
+			$color_variations_alpha = array(
 				'alpha-1',
 				'alpha-2',
 				'alpha-3',
@@ -5675,73 +5673,208 @@
 				'alpha-9',
 			);
 			
-			$color_variations_a = array(
+			$color_variations_tint = array(
 				'light',
 				'lighter',
 				'lightest',
 				'dark',
 				'darker',
 				'darkest',
-				'alpha-1',
-				'alpha-2',
-				'alpha-3',
-				'alpha-4',
-				'alpha-5',
-				'alpha-6',
-				'alpha-7',
-				'alpha-8',
-				'alpha-9',
+			);
+			
+			$color_variations_alt = array(
+				'alt',
 			);
 			?>
 
-			<?php foreach($color_palettes as $color): ?>
-				<p class="color-<?=$color ?>">color-<?=$color ?></p>
-				<?php switch($color):
-					case 'theme':
-					case 'theme-polar':
-					case 'theme-contrast':
-					case 'theme-polar-contrast':
-						break;
-					case 'background':
-					case 'base':
-						foreach($color_variations_b as $variation): ?>
-							<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
-						<?php endforeach;
-						break;
-					default:
-						foreach($color_variations_a as $variation): ?>
-							<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
-						<?php endforeach;
-						break;
-						break;
+
+
+			<?php foreach($color_palettes as $color):  ?>
+
+				<?php $has_variation_tint = false;	
+					$has_variation_alt = false;	
+					$has_variation_alpha = false;	
+					$col_num = 1;
+					$col_num_var = '';
+
+					switch($color):
+						case 'theme':
+						case 'theme-polar':
+						case 'theme-contrast':
+						case 'theme-polar-contrast':
+							$col_num = 0;
+							break;
+						case 'background':
+						case 'base':
+							$has_variation_alt = true;
+							$has_variation_alpha = true;
+
+							$col_num += count($color_variations_alt);
+							$col_num += count($color_variations_alpha);
+							break;
+						default:
+							$has_variation_tint = true;
+							$has_variation_alpha = true;
+
+							$col_num += count($color_variations_tint);
+							$col_num += count($color_variations_alpha);
+
+							$col_num /= 2;
+							break;
+					endswitch;
+					// print_r( array($color,  $has_variation_tint ? 'true' : 'false' , $has_variation_alt ? 'true' : 'false' , $has_variation_alpha ? 'true' : 'false'));
+				?>
+				<?php if($col_num): ?>
+					<div style="
+						display: grid;
+						grid-template-columns: repeat(<?=$col_num ?>,1fr);
+						column-gap: 1em;">
+				<?php endif; ?>
+					<p class="font-weight-900 color-<?=$color ?>">color-<?=$color ?></p>
+					
+					<?php if($has_variation_tint): foreach($color_variations_tint as $variation): ?>
+						<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+					
+					<?php if($has_variation_alt): foreach($color_variations_alt as $variation): ?>
+						<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+					
+					<?php if($has_variation_alpha): foreach($color_variations_alpha as $variation): ?>
+						<p class="font-weight-900 color-<?=$color ?>-<?=$variation ?>">color-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
 				
-					endswitch; endforeach; ?>
+				<?php if($col_num): ?>
+					</div>
+				<?php endif; ?>
+			<?php endforeach; ?>
 
 			<h2>Helper classes: backgrounds</h2>
+			
+			<?php foreach($color_palettes as $color):  ?>
 
+				<?php $has_variation_tint = false;	
+					$has_variation_alt = false;	
+					$has_variation_alpha = false;	
+					$col_num = 1;
+					$col_num_var = '';
 
-			<?php foreach($color_palettes as $color): ?>
-				<p class="background-<?=$color ?>">background-<?=$color ?></p>
-				<?php switch($color):
-					case 'theme':
-					case 'theme-polar':
-					case 'theme-contrast':
-					case 'theme-polar-contrast':
-						break;
-					case 'background':
-					case 'base':
-						foreach($color_variations_b as $variation): ?>
-							<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
-						<?php endforeach;
-						break;
-					default:
-						foreach($color_variations_a as $variation): ?>
-							<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
-						<?php endforeach;
-						break;
-						break;
-				
-					endswitch; endforeach; ?>
+					switch($color):
+						case 'theme':
+						case 'theme-polar':
+						case 'theme-contrast':
+						case 'theme-polar-contrast':
+							$col_num = 0;
+							break;
+						case 'background':
+						case 'base':
+							$has_variation_alt = true;
+							$has_variation_alpha = true;
+
+							$col_num += count($color_variations_alt);
+							$col_num += count($color_variations_alpha);
+							break;
+						default:
+							$has_variation_tint = true;
+							$has_variation_alpha = true;
+
+							$col_num += count($color_variations_tint);
+							$col_num += count($color_variations_alpha);
+
+							$col_num /= 2;
+							break;
+					endswitch;
+					// print_r( array($color,  $has_variation_tint ? 'true' : 'false' , $has_variation_alt ? 'true' : 'false' , $has_variation_alpha ? 'true' : 'false'));
+				?>
+				<?php if($col_num): ?>
+					<div style="
+						display: grid;
+						grid-template-columns: repeat(<?=$col_num ?>,1fr);
+						column-gap: 1em;">
+				<?php endif; ?>
+					<p class="background-<?=$color ?>">background-<?=$color ?></p>
+					
+					<?php if($has_variation_tint): foreach($color_variations_tint as $variation): ?>
+						<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+					
+					<?php if($has_variation_alt): foreach($color_variations_alt as $variation): ?>
+						<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+					
+					<?php if($has_variation_alpha): foreach($color_variations_alpha as $variation): ?>
+						<p class="background-<?=$color ?>-<?=$variation ?>">background-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+
+				<?php if($col_num): ?>
+					</div>
+				<?php endif; ?>
+
+			<?php endforeach; ?>
+
+			<h2>Helper classes: border-color</h2>
+			
+			<?php foreach($color_palettes as $color):  ?>
+
+				<?php $has_variation_tint = false;	
+					$has_variation_alt = false;	
+					$has_variation_alpha = false;	
+					$col_num = 1;
+					$col_num_var = '';
+
+					switch($color):
+						case 'theme':
+						case 'theme-polar':
+						case 'theme-contrast':
+						case 'theme-polar-contrast':
+							$col_num = 0;
+							break;
+						case 'background':
+						case 'base':
+							$has_variation_alt = true;
+							$has_variation_alpha = true;
+
+							$col_num += count($color_variations_alt);
+							$col_num += count($color_variations_alpha);
+							break;
+						default:
+							$has_variation_tint = true;
+							$has_variation_alpha = true;
+
+							$col_num += count($color_variations_tint);
+							$col_num += count($color_variations_alpha);
+
+							$col_num /= 2;
+							break;
+					endswitch;
+					// print_r( array($color,  $has_variation_tint ? 'true' : 'false' , $has_variation_alt ? 'true' : 'false' , $has_variation_alpha ? 'true' : 'false'));
+				?>
+				<?php if($col_num): ?>
+					<div style="
+						display: grid;
+						grid-template-columns: repeat(<?=$col_num ?>,1fr);
+						column-gap: 1em;">
+				<?php endif; ?>
+					<p class="border-width-thick border-style-solid border-color-<?=$color ?>">border-color-<?=$color ?></p>
+					
+					<?php if($has_variation_tint): foreach($color_variations_tint as $variation): ?>
+						<p class="border-width-thick border-style-solid border-color-<?=$color ?>-<?=$variation ?>">border-color-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+					
+					<?php if($has_variation_alt): foreach($color_variations_alt as $variation): ?>
+						<p class="border-width-thick border-style-solid border-color-<?=$color ?>-<?=$variation ?>">border-color-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+					
+					<?php if($has_variation_alpha): foreach($color_variations_alpha as $variation): ?>
+						<p class="border-width-thick border-style-solid border-color-<?=$color ?>-<?=$variation ?>">border-color-<?=$color ?>-<?=$variation ?></p>
+					<?php endforeach; endif; ?>
+
+				<?php if($col_num): ?>
+					</div>
+				<?php endif; ?>
+
+			<?php endforeach; ?>
+
 
 			<div style="
 			display: grid;
@@ -5760,17 +5893,9 @@
 				<p class="background-gradient-315">Background Gradient 315</p>
 			</div>
 			
-			<div style="
-			display: grid;
-			grid-template-columns: repeat(13,1fr);
-			grid-auto-rows: 250px;
-			column-gap: 1em;
-			">
 				
-				<?php
+			<?php
 				$calculated_gradient_color_stops = array(
-					'base',
-					'background',
 					'primary',
 					'secondary',
 					'accent',
@@ -5789,6 +5914,12 @@
 					'',45, 90, 135,
 				);
 				?>
+			<div style="
+			display: grid;
+			grid-template-columns: repeat(<?= count($calculated_gradient_color_stops) - 1 ?>,1fr);
+			grid-auto-rows: 250px;
+			column-gap: 1em;
+			">
 				
 				<?php foreach($calculated_gradient_angles as $angle): ?>
 					<?php foreach($calculated_gradient_color_stops as $from): ?>
@@ -6735,10 +6866,11 @@
 	</div>
 
 		<style>
-			.accordion.accordion:nth-child(n+20) *[class*="background-"]:not(*[class*="clip"]),
-			.accordion.accordion:nth-child(n+20) .flex-child,
-			.accordion.accordion:nth-child(n+20) *[class*="flex-col-"],
-			.accordion.accordion:nth-child(n+20) *[class*="color-"]:not(.symbol)
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="background-"]:not(*[class*="clip"]),
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) .flex-child,
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="flex-col-"],
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="color-"]:not(.symbol),
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="border-"],
 			.ratio-me {
 				outline: 1px solid rgba(0,0,0,.2);
 				padding: 1em;
@@ -6773,8 +6905,8 @@
 
 			}
 
-			.accordion:nth-child(n+9) *[class*="color-"],
-			.accordion:nth-child(n+9) *[class*="background-"]:not(*[class*="clip"]){
+			.accordion:nth-last-of-type(-n+6) *[class*="color-"],
+			.accordion:nth-last-of-type(-n+6) *[class*="background-"]:not(*[class*="clip"]){
 
 				text-shadow:
 
