@@ -24,6 +24,10 @@ will separate dashboard and framework one the bois are readeh
 [Bubble chart demo code](template/chart.php)
 [Bubble Live](http://frameworkdashboarddebug.1p21.io/?template=chart)
 
+# 2022 FW Update notes for Oyutreach + Timetracker Extension
+Find and replace 
+: offset-DIR-VALUE => offset-VALUE-DIR
+
 
 
 # 2021/Outreach Tool Notes
