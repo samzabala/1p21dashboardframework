@@ -4922,6 +4922,7 @@
 				'cloud-upload',
 				'cloud-download',
 				'drag',
+				'sync',
 			);
 			?>
 
