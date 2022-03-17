@@ -33,7 +33,7 @@
                         </div>
 
 
-                        <div class="position-absolute btn-symbol position-absolute offset-right-0 offset-top-0">
+                        <div class="position-absolute btn-symbol position-absolute offset-0-right offset-0-top">
                             <a data-toggle-dropdown class="btn btn-neutral-glassy">
                                 <span class="sr-only">Edit</span>
                                 <i class="symbol symbol-kebab-horizontal"></i>

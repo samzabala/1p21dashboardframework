@@ -12,7 +12,7 @@
             <div class="flex-1-1 flex-child">
                 <div class="position-relative padding-large-right">
 
-                    <div class="card-client-owner position-absolute offset-right-0 offset-top-0">
+                    <div class="card-client-owner position-absolute offset-0-right offset-0-top">
                         <a href="<?=app_create_link(array('template' => 'profile')); ?>" class="company-acct-owner text-align-center">
                             <?php app_get_component('components/profile-image-micro') ?>
                         </a>

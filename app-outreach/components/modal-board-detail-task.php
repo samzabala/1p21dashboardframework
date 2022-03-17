@@ -11,7 +11,7 @@
                             color-primary => default
 
                     -->
-                        <i class="badge badge-primary badge-small no-border position-absolute offset-right-flush offset-y-0 margin-auto-y margin-small-right"></i>
+                        <i class="badge badge-primary badge-small no-border position-absolute offset-flush-right offset-0-y margin-auto-y margin-small-right"></i>
 
                     <span class="REPLACE">Task Title Here</span>
                 </h1>

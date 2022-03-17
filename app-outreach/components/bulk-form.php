@@ -15,9 +15,11 @@
         <!-- Form -->
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
                 <label for="bulk-file" class="input-label">CSV or Excel File</label>
-                <div class="input-group input-group-responsive input-group-horizontal">
-                    <input type="file" name="bulk-file"  id="bulk-file" class="text-align-center input input-single-line" />
-                    <button type="submit" class="btn btn-primary">Import File</button>
+                <div class="input-group input-group-responsive input-group-horizontal input-block">
+                    <label for="bulk-file" class="btn btn-primary-glassy border-color-neutral-alpha-3">Choose file</label>
+                    <label for="file" class="input input-single-line">No file chosen</label>
+                    <input type="file" name="file" id="bulk-file" class="sr-only text-align-center input input-single-line" accept="text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required="">
+                    <button type="submit" class="btn btn-primary"> Upload file </button>
                 </div>
             </div>
         <!-- Submit -->

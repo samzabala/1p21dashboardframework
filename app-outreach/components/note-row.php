@@ -41,7 +41,7 @@ $args = app_parse_args($data,$defs);
 				</div>
 				<div class="flex-col-4 position-relative">
 
-					<div class=" position-absolute offset-bottom-0 offset-right-0">
+					<div class=" position-absolute offset-0-bottom offset-0-right">
 						<span class="hide-not-hover">
 							<?php app_get_component('components/dropdown-actions','',false,array(
 								'button_classes' => 'btn-neutral-glassy',
