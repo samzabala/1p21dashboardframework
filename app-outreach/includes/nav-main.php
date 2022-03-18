@@ -1,5 +1,5 @@
 <div id="outreach-header-nav" class="nav-block background-inherit flex-1-1">
-	<button class="btn btn-link only-mobile btn-symbol btn-no-shadow" data-toggle-accordion>
+	<button class="btn btn-link only-mobile btn-symbol no-shadow" data-toggle-accordion>
 		<div class="symbol symbol-burger"></div>
 	</button>
 
