@@ -684,44 +684,44 @@
 
 
 
-			<div class="radius-top-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-top ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top</span>
 			</div>
 
 
 
-			<div class="radius-bottom-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-bottom ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom</span>
 			</div>
 
 
-			<div class="radius-left-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-left ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">left</span>
 			</div>
 
 
 
-			<div class="radius-right-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-right ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">right</span>
 			</div>
 
 
-			<div class="radius-top-left-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-top-left ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top-left</span>
 			</div>
 
 
 
-			<div class="radius-top-right-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-top-right ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">top-right</span>
 			</div>
 
-			<div class="radius-bottom-left-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-bottom-left ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom-left</span>
 			</div>
 
 
-			<div class="radius-bottom-right-small ratio-1-by-1 ratio ratio-me background-theme-contrast">
+			<div class="radius-small-bottom-right ratio-1-by-1 ratio ratio-me background-theme-contrast">
 				<span class="ratio ratio-child-contain">bottom-right</span>
 			</div>
 
@@ -736,44 +736,44 @@
 
 
 
-			<div class="ratio radius-top-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-top ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">top</span>
 			</div>
 
 
 
-			<div class="ratio radius-bottom-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-bottom ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">bottom</span>
 			</div>
 
 
-			<div class="ratio radius-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-left ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">left</span>
 			</div>
 
 
 
-			<div class="ratio radius-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-right ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">right</span>
 			</div>
 
 
-			<div class="ratio radius-top-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-top-left ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">top-left</span>
 			</div>
 
 
 
-			<div class="ratio radius-top-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-top-right ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">top-right</span>
 			</div>
 
-			<div class="ratio radius-bottom-left-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-bottom-left ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">bottom-left</span>
 			</div>
 
 
-			<div class="ratio radius-bottom-right-large ratio-1-by-1 ratio-me background-theme-contrast">
+			<div class="ratio radius-large-bottom-right ratio-1-by-1 ratio-me background-theme-contrast">
 				<span class="ratio-child-contain">bottom-right</span>
 			</div>
 			
