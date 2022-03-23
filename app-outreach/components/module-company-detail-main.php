@@ -78,11 +78,11 @@
 											</tr>
 											
 											<!-- @LOOP tr -->
-											<?app_get_component('components/company-contact-row') ?>
+											<?php app_get_component('components/company-contact-row') ?>
 
 											<!-- @PLACEHOLDER: DELETE WHEN READY -->
 											<?php for($i=1; $i<=4; $i++){ ?>
-												<?app_get_component('components/company-contact-row') ?>
+												<?php app_get_component('components/company-contact-row') ?>
 											<?php } ?>
 										</table>
 									<!-- @else -->
@@ -91,7 +91,7 @@
 									
 
 									
-									<?app_get_component('components/link-add-row','',false,array(
+									<?php app_get_component('components/link-add-row','',false,array(
 										'href' => '#mb-editor-contact',
 										'attrs' => 'data-toggle-modal-board data-toggle="Add Contact"'
 									)) ?>
@@ -105,7 +105,7 @@
 										<span class="module-title" >Additional Websites</span>
 									</div>
 									<div class="flex-child flex-0-0">
-										<?app_get_component('components/dropdown-actions','',false,array(
+										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-addtl-sites" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -191,7 +191,7 @@
 								</div>
 
 								
-								<?app_get_component('components/link-add-row','',false,array(
+								<?php app_get_component('components/link-add-row','',false,array(
 									'href' => '#company-addtl-sites-add',
 									'attrs' => 'data-toggle-accordion'
 								)) ?>
@@ -205,7 +205,7 @@
 									</div>
 									<div class="flex-child flex-0-0">
 
-										<?app_get_component('components/dropdown-actions','',false,array(
+										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-vendor-history" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -338,7 +338,7 @@
 								</div>
 
 								
-								<?app_get_component('components/link-add-row','',false,array(
+								<?php app_get_component('components/link-add-row','',false,array(
 									'href' => '#company-vendor-history-add',
 									'attrs' => 'data-toggle-accordion'
 								)) ?>
@@ -352,7 +352,7 @@
 									</div>
 									<div class="flex-child flex-0-0">
 
-										<?app_get_component('components/dropdown-actions','',false,array(
+										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit Info' => 'class="tooltip-purger" href="#company-addtl-info" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -629,7 +629,7 @@
 								</div>
 
 								
-								<?app_get_component('components/link-add-row','',false,array(
+								<?php app_get_component('components/link-add-row','',false,array(
 									'href' => '#company-addtl-info-add',
 									'attrs' => 'data-toggle-accordion'
 								)) ?>
@@ -644,7 +644,7 @@
 										<span class="module-title" >Main Competitors</span>
 									</div>
 									<div class="flex-child flex-0-0">
-										<?app_get_component('components/dropdown-actions','',false,array(
+										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-main-competitors" data-toggle-switch-on',
 												'Copy Link' => 'href="#"',
@@ -743,7 +743,7 @@
 								</div>
 
 								
-								<?app_get_component('components/link-add-row','',false,array(
+								<?php app_get_component('components/link-add-row','',false,array(
 									'href' => '#company-main-competitors-add',
 									'attrs' => 'data-toggle-accordion'
 								)) ?>

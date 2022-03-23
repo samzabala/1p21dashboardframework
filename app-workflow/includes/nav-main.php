@@ -6,7 +6,7 @@
 
 <div id="nav-functions" class="nav-block flex-wrap flex-1-1 justify-content-flex-end position-static">
 	<form id="nav-search"
-		action="<? app_create_link( array('template' => 'projects') ); ?>"
+		action="<?php app_create_link( array('template' => 'projects') ); ?>"
 		class="flex-1-1 flex-xs flex-wrap "
 		method="get">
 		<div class="input-group input-group-horizontal input-block flex-1-1 ">

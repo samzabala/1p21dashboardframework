@@ -2,7 +2,7 @@
 
 	<form
 		id="nav-search"
-		action="<? app_create_link( array('template' => 'projects') ); ?>"
+		action="<?php app_create_link( array('template' => 'projects') ); ?>"
 		method="get"
 		class="input-group">
 

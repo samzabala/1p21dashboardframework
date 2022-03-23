@@ -1730,7 +1730,7 @@
 
 			<div class="module-function filter-search">
 				<form
-					action="<? app_create_link( array('template' => 'projects') ); ?>"
+					action="<?php app_create_link( array('template' => 'projects') ); ?>"
 					method="get"
 					class="input-group input-group-horizontal text-align-left">
 					<input type="text" placeholder="Search" name="search" class="input input-tags font-weight-600" />

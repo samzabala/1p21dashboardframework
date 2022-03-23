@@ -3,7 +3,7 @@
 		<!-- @if has contact profile -->
 			<a href="<?=app_create_link(array('template'=>'contact-detail')) ?>" class="flex-grid flex-grid-compact flex-grid-no-gutter-y color-inherit">
 				<div class="flex-child flex-0-0 hide-mobile">
-					<?app_get_component('components/profile-image','micro') ?>
+					<?php app_get_component('components/profile-image','micro') ?>
 				</div>
 				<div class="flex-child flex-1-1">
 					<div class="contact-profile-name text-leading-compact">
@@ -31,11 +31,11 @@
 	</td>
 	<td>
 		<span class="hide-nonmobile no-margin-top outreach-table-mobile-label h6 color-neutral">Social</span>
-		<?app_get_component('components/list-social') ?>
+		<?php app_get_component('components/list-social') ?>
 	</td>
 	<td class="outreach-table-cell-actions">
 		
-		<?app_get_component('components/dropdown-actions','',false,array(
+		<?php app_get_component('components/dropdown-actions','',false,array(
 			'links' => array(
 				'Edit name or description' => 'class="tooltip-purger" data-toggle-modal-board href="#mb-editor-contact" data-modal-title="Edit Contact"',
 				'Copy Link' => 'href="#"',
