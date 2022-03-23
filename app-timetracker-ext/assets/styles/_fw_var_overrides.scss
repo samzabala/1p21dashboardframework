@@ -1,0 +1,168 @@
+// variables to override framewors
+$brand-font-primary: 'Inter',Helvetica,Arial,sans-serif;
+$brand-font-secondary: $brand-font-primary;
+$brand-font-accent: $brand-font-primary;
+
+//@NOTE: customize this as needed for setup
+$symbol-font-path: '/assets/plugins/framework/dist/fonts/fw-icons';
+
+
+$brand-color-background-alt: #E9EDED;
+$brand-color-base: #1A1E8B;
+// $brand-color-base-alt: #696D79;
+$brand-color-base-alt: #2A3EA8;
+$brand-color-primary: #0098FD;
+$brand-color-secondary: #663FEF;
+// $brand-color-accent: #1A1E8B;
+$brand-color-accent: #FD6666; //error
+$brand-color-caution: #F7D168;
+$brand-color-neutral: #696D79;
+
+$brand-gradient-start: var(--fw-color-accent); //error
+$brand-gradient-end: var(--fw-color-secondary);
+$btn-background-angle-gradient-active: 225deg;
+
+$body-scrollbar-track-background: var(--fw-color-neutral-lighter);
+$body-scrollbar-thumb-background: var(--fw-theme-color);
+$body-scrollbar-thumb-background-hover: var(--fw-theme-color-contrast);
+
+
+$body-font-size: 14px;
+$body-font-size-small: 12px;
+// $body-font-size-large: 28px;
+
+$h3-font-size: 19px;
+
+$input-height-small: 12px;
+
+$gutter-base: 20px;
+$gutter-large: 30px;
+$gutter-small: 10px;
+$gutter-micro: 5px;
+
+$border-radius-base: 15px;
+$border-radius-small: $border-radius-base * 0.5;
+$border-radius-large: $gutter-base;
+
+$container-gutter-slim: $gutter-large * 2;
+
+$special-primary-font-size: 90px;
+$special-secondary-font-size: 59px;
+$lead-font-size: 28px;
+
+$input-height: 50px;
+$input-height-large: $input-height;
+$input-height-small: 45px;
+$input-select-dropdown-color: currentColor;
+$input-gutter-x: 1.33rem;
+
+$input-font-size-large: 26px;
+$btn-gutter-x: $gutter-large;
+$btn-height: 50px;
+$btn-height-large: 50px;
+$btn-height-small: 33px;
+
+$nav-height: 56px;
+$nav-padding-x: $gutter-base + 5px;
+$nav-current-size: 0;
+$nav-color: var(--fw-color-neutral-alpha-5);
+$nav-color-hover: var(--fw-theme-color);
+
+$container-gutter: $gutter-large + $gutter-base;
+$container-gutter-wide: $container-gutter;
+$container-gutter-slim: $container-gutter;
+$container-gutter-mobile: $container-gutter;
+
+$tag-border-radius: $border-radius-small * .5;
+$tag-text-transform: none;
+
+$module-border-color: var(--fw-theme-background-contrast);
+$module-title-font-size: $body-font-size-small;
+$module-title-font-weight: normal;
+$module-title-text-transform: none;
+
+$progress-height-small: 7px;
+
+// $btn-border-primary: transparent;
+// $btn-background-primary: $var-color-primary;
+// $btn-color-primary: $var-color-background;
+
+// $btn-border-primary-hover: transparent;
+// $btn-background-primary-hover: $var-color-primary-light;
+// $btn-color-primary-hover: $var-color-background;
+
+// $btn-border-primary-active: transparent;
+// $btn-background-primary-active: $var-color-primary;
+// $btn-color-primary-active: $var-color-background;
+
+// $btn-border-secondary: transparent;
+// $btn-background-secondary: $var-color-secondary;
+// $btn-color-secondary: $var-color-background;
+
+// $btn-border-secondary-hover: transparent;
+// $btn-background-secondary-hover: $var-color-secondary-light;
+// $btn-color-secondary-hover: $var-color-background;
+
+// $btn-border-secondary-active: transparent;
+// $btn-background-secondary-active: $var-color-secondary;
+// $btn-color-secondary-active: $var-color-background;
+
+// $btn-border-accent: transparent;
+// $btn-background-accent: $var-color-accent;
+// $btn-color-accent: $var-color-background;
+
+// $btn-border-accent-hover: transparent;
+// $btn-background-accent-hover: $var-color-accent-light;
+// $btn-color-accent-hover: $var-color-background;
+
+// $btn-border-accent-active: transparent;
+// $btn-background-accent-active: $var-color-accent;
+// $btn-color-accent-active: $var-color-background;
+
+// $btn-border-neutral: transparent;
+// $btn-background-neutral: $var-color-neutral;
+// $btn-color-neutral: $var-color-background;
+
+// $btn-border-neutral-hover: transparent;
+// $btn-background-neutral-hover: $var-color-neutral-light;
+// $btn-color-neutral-hover: $var-color-background;
+
+// $btn-border-neutral-active: transparent;
+// $btn-background-neutral-active: $var-color-neutral;
+// $btn-color-neutral-active: $var-color-background;
+
+// $btn-border-success: transparent;
+// $btn-background-success: $var-color-success;
+// $btn-color-success: $var-color-background;
+
+// $btn-border-success-hover: transparent;
+// $btn-background-success-hover: $var-color-success-light;
+// $btn-color-success-hover: $var-color-background;
+
+// $btn-border-success-active: transparent;
+// $btn-background-success-active: $var-color-success;
+// $btn-color-success-active: $var-color-background;
+
+// $btn-border-caution: transparent;
+// $btn-background-caution: $var-color-caution;
+// $btn-color-caution: $var-color-background;
+
+// $btn-border-caution-hover: transparent;
+// $btn-background-caution-hover: $var-color-caution-light;
+// $btn-color-caution-hover: $var-color-background;
+
+// $btn-border-caution-active: transparent;
+// $btn-background-caution-active: $var-color-caution;
+// $btn-color-caution-active: $var-color-background;
+
+// $btn-border-error: transparent;
+// $btn-background-error: $var-color-error;
+// $btn-color-error: $var-color-background;
+
+// $btn-border-error-hover: transparent;
+// $btn-background-error-hover: $var-color-error-light;
+// $btn-color-error-hover: $var-color-background;
+
+// $btn-border-error-active: transparent;
+// $btn-background-error-active: $var-color-error;
+// $btn-color-error-active: $var-color-background;
