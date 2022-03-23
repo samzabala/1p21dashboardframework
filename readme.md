@@ -28,6 +28,11 @@ will separate dashboard and framework one the bois are readeh
 Find and replace 
 : offset-DIR-VALUE => offset-VALUE-DIR
 
+Backlog/minor
+@TODO: cleanup helper classes & consolidate to .disabled so the fw is not a jumbo fuck of things
+	*-disabled
+@TODO: cleanup overspecificity
+
 
 
 # 2021/Outreach Tool Notes
