@@ -1689,13 +1689,97 @@
 			<div class="position-relative">
 				<input data-tags-width="69em" data-toggle-dropdown value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-on-keyup="fooker(event)" data-tags-callback="paker()" />
 				<ul class="dropdown">
-					<li>Fuck</li>
-					<li>Fuck</li>
-					<li>Fuck</li>
-					<li>Fuck</li>
-					<li>Fuck</li>
-					<li>Fuck</li>
-					<li>Fuck</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" data-toggle-dropdown>Fuck</a>
+						<ul>
+
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+							<li>Fuck</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
@@ -2797,8 +2881,101 @@
 					<li style="position:relative;">
 						<div class="btn btn-default open" data-toggle-dropdown>Drop DOWN</div>
 						<ul class="dropdown dropdown-bottom open">
+							<li>
 							I'm a bottom dropdown and your mother will never love you
-							<br>has data-width but number
+							<br>has data-width but number</li>
+
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" data-toggle-dropdown>Fuck</a>
+								<ul class="dropdown">
+
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+									<li>Fuck</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 

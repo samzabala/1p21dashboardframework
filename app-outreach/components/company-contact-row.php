@@ -1,4 +1,4 @@
-<tr>
+<tr class="position-relative">
 	<td width="250">
 		<!-- @if has contact profile -->
 			<a href="<?=app_create_link(array('template'=>'contact-detail')) ?>" class="flex-grid flex-grid-compact flex-grid-no-gutter-y color-inherit">
@@ -8,7 +8,7 @@
 				<div class="flex-child flex-1-1">
 					<div class="contact-profile-name text-leading-compact">
 						<strong>
-							<span class="REPLACE">Miles Edgewworth</span>
+							<span class="REPLACE">Miles Edgeworth</span>
 						</strong>
 						<br>
 						<small class="color-neutral contact-profile-title">

@@ -4,7 +4,8 @@ $brand-font-secondary: $brand-font-primary;
 $brand-font-accent: $brand-font-primary;
 
 //@NOTE: customize this as needed for setup
-$symbol-font-path: '/assets/plugins/framework/dist/fonts/fw-icons';
+// $symbol-font-path: '/assets/plugins/framework/dist/fonts/fw-icons';
+$symbol-font-path: './fw-icons';
 
 
 $brand-color-background-alt: #E9EDED;
@@ -49,6 +50,9 @@ $container-gutter-slim: $gutter-large * 2;
 $special-primary-font-size: 90px;
 $special-secondary-font-size: 59px;
 $lead-font-size: 28px;
+$special-primary-font-size-mobile: $special-primary-font-size;
+$special-secondary-font-size-mobile: $special-secondary-font-size;
+$lead-font-size-mobile: $lead-font-size;
 
 $input-height: 50px;
 $input-height-large: $input-height;

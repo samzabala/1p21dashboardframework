@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34335",
   "files" : {
+    "\/analytics.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/analytics.php",
+      "oF" : 0
+    },
     "\/assets\/scripts\/framework.customglobal.example.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -140,12 +148,68 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/components\/form-filter-log.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/form-filter-log.php",
+      "oF" : 0
+    },
+    "\/components\/icon-analytics.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-analytics.php",
+      "oF" : 0
+    },
+    "\/components\/icon-break.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-break.php",
+      "oF" : 0
+    },
+    "\/components\/icon-favorites.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-favorites.php",
+      "oF" : 0
+    },
+    "\/components\/icon-focus.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-focus.php",
+      "oF" : 0
+    },
+    "\/components\/icon-home.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-home.php",
+      "oF" : 0
+    },
     "\/components\/icon-logo.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/icon-logo.php",
+      "oF" : 0
+    },
+    "\/components\/icon-logs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-logs.php",
       "oF" : 0
     },
     "\/components\/icon-toggle.php" : {
@@ -180,6 +244,14 @@
       "oAP" : "\/components\/input-task-name.php",
       "oF" : 0
     },
+    "\/components\/input-task-notes.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-task-notes.php",
+      "oF" : 0
+    },
     "\/components\/input-task-project.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -188,12 +260,28 @@
       "oAP" : "\/components\/input-task-project.php",
       "oF" : 0
     },
-    "\/components\/nav-svg-timer.php" : {
+    "\/components\/list-logs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/components\/nav-svg-timer.php",
+      "oAP" : "\/components\/list-logs.php",
+      "oF" : 0
+    },
+    "\/favorites.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/favorites.php",
+      "oF" : 0
+    },
+    "\/focus.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/focus.php",
       "oF" : 0
     },
     "\/footer.php" : {
@@ -226,6 +314,30 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/includes\/nav-main.php",
+      "oF" : 0
+    },
+    "\/log-edit.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/log-edit.php",
+      "oF" : 0
+    },
+    "\/logs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/logs.php",
+      "oF" : 0
+    },
+    "\/webpack.config.js.example" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/webpack.config.js.example",
       "oF" : 0
     }
   },
