@@ -91,10 +91,84 @@
 									
 
 									
-									<?php app_get_component('components/link-add-row','',false,array(
-										'href' => '#mb-editor-contact',
-										'attrs' => 'data-toggle-modal-board data-toggle="Add Contact"'
-									)) ?>
+									
+									<div class="flex-grid flex-grid-fixed flex-grid-compact justify-content-space-between align-items-center">
+										<div class="flex-col-xs-12 flex-col-md-4 flex-col-lg-5  flex-col-xl-6">
+											<?app_get_component('components/link-add-row','',false,array(
+												'href' => '#mb-editor-contact',
+												'attrs' => 'data-toggle-modal-board data-toggle="Add Contact"'
+											)) ?>
+										</div>
+										<div class="flex-child flex-1-1 text-align-right position-relative">
+											<a href="#" data-toggle-dropdown class="btn-group btn-group-horizontal btn-block-mobile">
+												<span class="btn btn-small text-leading-whole no-padding-y btn-symbol btn-success font-size-large">
+													<i class="symbol symbol-user-add"></i>
+												</span>
+												<span class="btn btn-default">Import emails via Hunter.io</span>
+											</a>
+											<div class="dropdown no-padding dropdown-top-flush dropdown-right" data-dropdown-width="100%" data-dropdown-max-height="20em">
+												<!-- @if has results -->
+													<h4 class="no-margin padding-large-x padding-small-y position-sticky offset-0-top z-index-1 background-theme border-width-thin-bottom border-style-solid border-color-theme-polar-contrast">Emails found</h4>
+													<div class="padding-large no-padding-top">
+														<ul class="list-group">
+															<!--@loop li  -->
+																<li class="no-padding-x">
+																	<div class="flex-xs justify-content-space-between align-items-center">
+																		<div>
+																			<h5 class="no-margin">
+																				<span class="REPLACE">Phoenix Wright</span>
+																			</h5>
+																			<p class="color-neutral no-margin">naruhodo@ace-attorney.com</p>
+																		</div>
+																		<div>
+																			<!-- @if added  -->
+																			<span class="color-success">added <i class="symbol symbol-check"></i></span>
+																			<!-- @else -->
+																				<a href="#" class="text-decoration-none">add <i class="symbol symbol-plus"></i></a>
+																		</div>
+																	</div>
+																</li>
+
+																	<!-- @PLACEHOLDER : delete when ready -->
+																	<?php for($i=1; $i<=4; $i++){ ?>
+																		<li class="no-padding-x">
+																			<div class="flex-xs justify-content-space-between align-items-center">
+																				<div>
+																					<h5 class="no-margin">
+																						<span class="REPLACE">Miles Edgeworth</span>
+																					</h5>
+																					<p class="color-neutral no-margin">mitsurugi@ace-attorney.com</p>
+																				</div>
+																				<div>
+																					<!-- @if added  -->
+																					<span class="color-success">added <i class="symbol symbol-check"></i></span>
+																				</div>
+																			</div>
+																		</li>
+
+																		<li class="no-padding-x">
+																			<div class="flex-xs justify-content-space-between align-items-center">
+																				<div>
+																					<h5 class="no-margin">
+																						<span class="REPLACE">Dick Gumshoe</span>
+																					</h5>
+																					<p class="color-neutral no-margin">itonokogiri@ace-attorney.com</p>
+																				</div>
+																				<div>
+																					<!-- @else -->
+																						<a href="#" class="text-decoration-none">add <i class="symbol symbol-plus"></i></a>
+																				</div>
+																			</div>
+																		</li>
+																	<?php } ?>
+														</ul>
+													</div>
+												<!-- @else -->
+													
+													<p class="no-margin color-neutral font-style-italic text-align-center padding-large">No email addresses found for <span class="REPLACE">www.domain.com</span></p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
