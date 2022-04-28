@@ -108,7 +108,9 @@
             <?php app_get_component('components/form-filter-log'); ?>
             <div class="module no-radius-top">
                 <div class="module-header">
-                    <div class="module-title text-align-center">Current Active Task</div>
+                    <div class="module-title text-align-center">
+                        <span class="REPLACE">Today</span>
+                    </div>
                 </div>
                 <div class="module-content no-padding-x no-padding-bottom">
                     <!-- @if has logs -->
