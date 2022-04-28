@@ -6,13 +6,13 @@
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block">
                 <label for="filter-status" class="sr-only">Task Status</label>
                 <select name="" id="filter-status" class="input input-select">
-                        <option value="">Status</option>
+                        <option value="">Time Range</option>
 
                     <!-- @PLACEHOLDER. delete when ready -->
-                        <option value="">Backlog</option>
-                        <option value="">In Progress</option>
-                        <option value="">Review</option>
-                        <option value="">Completed</option>
+                        <option value="">Today</option>
+                        <option value="">Last 3 Days</option>
+                        <option value="">Last Week</option>
+                        <option value="">Last Month</option>
                 </select>
             </div>
         </div>
