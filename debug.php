@@ -10,6 +10,78 @@
 		<h1 data-toggle-accordion>TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		</div>
+		<h1 data-toggle-accordion>.scroller<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+
+			<div class="position-fixed offset-0-bottom offset-0-right background-primary color-background padding-large">
+				<a href="#scrolly-1" class="color-inherit" data-toggle-scroller>Bitch One</a>	
+				<a href="#scrolly-2" class="color-inherit" data-toggle-scroller>Bitch Two</a>	
+				<a href="#scrolly-3" class="color-inherit" data-toggle-scroller>Your Not Getting My Vote Either</a>	
+
+			</div>
+
+			<div class="scroller background-theme-contrast-active" data-scroller-offset="120" id="scrolly-1">
+				<h1>Bitch one should light up</h1>
+
+				<pre>
+				The coconut nut is a giant nut
+				If you eat too much, you'll get very fat
+				Now, the coconut nut is a big, big nut
+				But this delicious nut is not a nut
+				It's the coco fruit (it's the coco fruit)
+				Of the coco tree (of the coco tree)
+				From the coco palm family
+				There are so many uses of the coconut tree
+				You can build a big house for the family
+				All you need is to find a coconut man
+				If he cuts the tree, he gets the fruit free
+				It's the coco fruit (it's the coco fruit)
+				Of the coco tree (of the coco tree)
+				From the coco palm family
+				</pre>
+			</div>
+			<div class="scroller background-theme-contrast-active" data-scroller-offset="120" id="scrolly-2">
+
+				<h1>Bitch two should light up</h1>
+
+				<pre>
+				The coconut bark for the kitchen floor
+				If you save some of it, you can build a door
+				Now, the coconut trunk, do not throw this junk
+				If you save some of it, you'll have the second floor
+				The coconut wood is very good
+				It can stand 20 years if you pray it would
+				Now, the coconut root, to tell you the truth
+				You can throw it or use it as firewood
+				The coconut leaves, good shade it gives
+				For the roof, for the walls up against the eaves
+				Now, the coconut fruit, say my relatives
+				Make good cannonballs up against the eaves
+				It's the coco fruit (it's the coco fruit)
+				Of the coco tree (of the coco tree)
+				From the coco palm family
+				</pre>
+			</div>
+			<div class="scroller background-theme-contrast-active" data-scroller-offset="120" id="scrolly-3">
+				<h1>Bitch three should light up</h1>
+
+				<pre>
+				The coconut nut is a giant nut
+				If you eat too much, you'll get very fat
+				Now, the coconut nut is a big, big nut
+				But this delicious nut is not a nut
+				It's the coco fruit (it's the coco fruit)
+				Of the coco tree (of the coco tree)
+				From the coco palm family
+				It's the coco fruit (it's the coco fruit)
+				Of the coco tree (of the coco tree)
+				From the coco palm family
+				It's the coco fruit (it's the coco fruit)
+				Of the coco tree (of the coco tree)
+				From the coco palm family
+				</pre>
+			</div>
+		</div>
 
 		<h1 data-toggle-accordion>kanban boi<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
