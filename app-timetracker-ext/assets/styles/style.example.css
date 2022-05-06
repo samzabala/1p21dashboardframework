@@ -29543,6 +29543,10 @@ body {
   box-shadow: inset 0 0 0 calc(var(--btn-size) * 0.51) var(--fw-theme-background-contrast);
 }
 
+.background-gradient-tt-pause-active-task {
+  background-image: linear-gradient(45deg, var(--fw-color-secondary), #06C548) !important;
+}
+
 .progress-tt-mask {
   --mask-gap: .5rem;
   mix-blend-mode: screen;

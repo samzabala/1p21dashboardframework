@@ -2,7 +2,7 @@
     <!-- @NOTE div
         classes to add
         `background-gradient-45-from-secondary-to-primary` => if timer is not active AND no task is actively selected
-        `background-gradient-45-from-secondary-to-caution` => if timer is not active AND a task is actively selected
+        `background-gradient-tt-pause-active-task` => if timer is not active AND a task is actively selected
         `background-gradient-45-from-secondary-to-accent` => if timer is active AND a task is actively selected
     -->
     <div class="

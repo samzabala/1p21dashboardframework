@@ -159,6 +159,14 @@ body {
     }
 }
 
+.background-gradient {
+    &-tt {
+        &-pause-active-task {
+            background-image: linear-gradient(45deg , var(--fw-color-secondary) , #06C548 ) !important;
+        }
+    }
+}
+
 .progress {
     &-tt {
         &-mask {
