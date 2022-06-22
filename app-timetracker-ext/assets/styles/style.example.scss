@@ -16,6 +16,7 @@ npm install the following for css/sass deps:
 		@import './../../../assets/plugins/framework/src/scss/framework.lite';
 
 	//components used by global components (header + sidebar)
+		@import './../../../assets/plugins/framework/src/scss/_accordion';
 		@import './../../../assets/plugins/framework/src/scss/_buttons';
 		@import './../../../assets/plugins/framework/src/scss/_dropdown';
 		@import './../../../assets/plugins/framework/src/scss/_form';

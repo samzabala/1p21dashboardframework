@@ -4,17 +4,19 @@ $viewport-h: 600px;
 :root {
     --viewport-w: #{$viewport-w};
     --viewport-h: #{$viewport-h};
+    --sticky-timer-height: 50px;
 }
 
 html,body{
     width: var(--viewport-w);
     height: var(--viewport-h);
     overflow:auto;
-    min-height: var(--viewport-h)!important;
+    min-height: var(--viewport-h);
 }
 
 body {
     position:relative; /* for the sticky bois */
+    min-height: var(--viewport-h);
 }
 
 .timetracker {
@@ -23,6 +25,10 @@ body {
             0 0 0 .8em $var-color-background-alpha-1,
             0 0 0 (.8em * 2) $var-color-background-alpha-1
             !important;
+
+            &#{&}-mini {
+                box-shadow: none!important;
+            }
     }
     &-offset {
         &-wrapper {
@@ -48,8 +54,8 @@ body {
         }
 
         &-adjacent {
-            position:relative;
             &-crossover {
+                position:relative;
                 min-height: var(--offset);
 
             }
@@ -62,6 +68,10 @@ body {
     display: flex;
     min-height: 100%;
     flex-direction: column;
+
+    &-timer-sticky {
+        height: var(--sticky-timer-height);
+    }
 
     &-toggle-view {
         transition: transform .25s ease-in-out; 
@@ -145,6 +155,14 @@ body {
                 }
 
             }
+        }
+    }
+}
+
+.background-gradient {
+    &-tt {
+        &-pause-active-task {
+            background-image: linear-gradient(45deg , var(--fw-color-secondary) , #06C548 ) !important;
         }
     }
 }

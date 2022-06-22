@@ -2,7 +2,7 @@
     <!-- @NOTE div
         classes to add
         `background-gradient-45-from-secondary-to-primary` => if timer is not active AND no task is actively selected
-        `background-gradient-45-from-secondary-to-caution` => if timer is not active AND a task is actively selected
+        `background-gradient-tt-pause-active-task` => if timer is not active AND a task is actively selected
         `background-gradient-45-from-secondary-to-accent` => if timer is active AND a task is actively selected
     -->
     <div class="
@@ -108,7 +108,9 @@
             <?php app_get_component('components/form-filter-log'); ?>
             <div class="module no-radius-top">
                 <div class="module-header">
-                    <div class="module-title text-align-center">Current Active Task</div>
+                    <div class="module-title text-align-center">
+                        <span class="REPLACE">Today</span>
+                    </div>
                 </div>
                 <div class="module-content no-padding-x no-padding-bottom">
                     <!-- @if has logs -->

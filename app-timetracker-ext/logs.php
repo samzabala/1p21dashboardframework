@@ -31,7 +31,7 @@
                         <!-- @if has logs for today -->
                             <div class="module-content no-padding-x no-padding-bottom">
                                 <?php app_get_component('components/list-logs','',false,array(
-                                    'has_toggle' => true
+                                    'has_toggle' => false
                                 )) ?>
                             </div>
                         <!-- @else -->
@@ -51,7 +51,7 @@
                             <!-- @if has logs for the day -->
                                 <div class="module-content no-padding-x no-padding-bottom">
                                     <?php app_get_component('components/list-logs','',false,array(
-                                        'has_toggle' => true
+                                        'has_toggle' => false
                                     )) ?>
                                 </div>
                             <!-- @else -->
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="module-content no-padding-x no-padding-bottom">
                                     <?php app_get_component('components/list-logs','',false,array(
-                                        'has_toggle' => true
+                                        'has_toggle' => false
                                     )) ?>
                                 </div>
                             </div>
