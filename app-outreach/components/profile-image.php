@@ -1,4 +1,9 @@
 
+<!-- 
+	@classes to add
+	`` => if no profile image available
+	'background-transparent' => if profile image available
+-->
 <span class="thumbnail">
 	<!-- @IF has profile imahe -->
 	<div class="thumbnail-image">
