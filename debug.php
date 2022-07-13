@@ -666,7 +666,7 @@
 		<h1 data-toggle-accordion>Ratio<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<!-- <div class="ratio ratio-4-by-3 bidju-me">
+			<div class="ratio ratio-4-by-3 bidju-me">
 				<iframe class="ratio-child-stretch" src="https://www.youtube.com/embed/kwEZRPkAAu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		
@@ -675,7 +675,7 @@
 			</div>
 			<div class="ratio ratio-1-by-1 bidju-me">
 				<iframe class="ratio-child-stretch" src="https://www.youtube.com/embed/zHhg5hDs6Q8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div> -->
+			</div>
 
 
 			<div class="ratio ratio-1-by-1 ratio-me background-theme-contrast">
@@ -1571,6 +1571,20 @@
 
 		<h1 data-toggle-accordion>form: tags field<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<h3>Keyup shits</h3>
+			<input data-tags-width="69em" data-toggle-dropdown value="attribute,lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-on-keyup="console.warn('poonyeta');"  />
+
+			<input data-tags-width="69em" data-toggle-dropdown value="attribute,lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" data-tags-on-keyup="bootyhole(event)"  />
+
+			<input id="thismotherbitchole" data-tags-width="69em" value="attribute,lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-large" />
+			<script>
+				function bootyhole(event){
+					console.warn('bootyhole');
+				}
+
+				const inputApi = new fw.Form.Tags(document.getElementById('thismotherbitchole'),null,{onKeyUp: bootyhole})
+
+			</script>
 
 			<h2>external plugin support/throttle/yea boi</h2>
 			<script>
