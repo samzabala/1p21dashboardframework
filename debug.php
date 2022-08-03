@@ -3704,7 +3704,7 @@
 		<div class="accordion">
 			<div class="accordion-group">
 
-				<h3 data-toggle-accordion>form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+			<h3 data-toggle-accordion>form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 				<div class="accordion">
 					<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
 					<input type="button" value="bitch">
@@ -3746,6 +3746,210 @@
 					</select>
 
 					<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+				</div>
+
+				<h3 data-toggle-accordion>form field types input-blend <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<div class="accordion"><p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
+					<input class="input input-inline" type="button" value="Bitch">
+					<input class="input input-inline" type="checkbox">
+					<input class="input input-inline" type="color">
+					<input class="input input-blend" type="date">
+					<input class="input input-blend" type="datetime-local">
+					<input class="input input-blend" type="email">
+					<input class="input input-blend" type="file">
+					<input class="input input-blend" type="hidden">
+					<input class="input input-blend" type="image">
+					<input class="input input-blend" type="month">
+					<input class="input input-blend" type="number">
+					<input class="input input-blend" type="password">
+					<input class="input input-inline" type="radio">
+					<input class="input input-inline" type="range">
+					<input class="input input-inline" type="reset">
+					<input class="input input-blend" type="search">
+					<input class="input input-inline" type="submit">
+					<input class="input input-blend" type="tel">
+					<input class="input input-blend" type="text">
+					<input class="input input-blend" type="time">
+					<input class="input input-blend" type="url">
+					<input class="input input-blend" type="week">
+					<input class="input input-blend" list="browsers">
+					<datalist class="input" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input input-blend" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input input-blend" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input input-blend" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+
+					color
+
+					<hr>
+
+					<input class="input input-error input-inline" type="button" value="Bitch">
+					<input class="input input-error input-inline" type="checkbox">
+					<input class="input input-error input-inline" type="color">
+					<input class="input input-error input-blend" type="date">
+					<input class="input input-error input-blend" type="datetime-local">
+					<input class="input input-error input-blend" type="email">
+					<input class="input input-error input-blend" type="file">
+					<input class="input input-error input-blend" type="hidden">
+					<input class="input input-error input-blend" type="image">
+					<input class="input input-error input-blend" type="month">
+					<input class="input input-error input-blend" type="number">
+					<input class="input input-error input-blend" type="password">
+					<input class="input input-error input-inline" type="radio">
+					<input class="input input-error input-inline" type="range">
+					<input class="input input-error input-inline" type="reset">
+					<input class="input input-error input-blend" type="search">
+					<input class="input input-error input-inline" type="submit">
+					<input class="input input-error input-blend" type="tel">
+					<input class="input input-error input-blend" type="text">
+					<input class="input input-error input-blend" type="time">
+					<input class="input input-error input-blend" type="url">
+					<input class="input input-error input-blend" type="week">
+					<input class="input input-error input-blend" list="browsers">
+					<datalist class="input input-error" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input input-error input-blend" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input input-error input-blend" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input input-error input-blend" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+					<hr>
+
+					<input class="input input-large input-inline" type="button" value="Bitch">
+					<input class="input input-large input-inline" type="checkbox">
+					<input class="input input-large input-inline" type="color">
+					<input class="input input-large input-blend" type="date">
+					<input class="input input-large input-blend" type="datetime-local">
+					<input class="input input-large input-blend" type="email">
+					<input class="input input-large input-blend" type="file">
+					<input class="input input-large input-blend" type="hidden">
+					<input class="input input-large input-blend" type="image">
+					<input class="input input-large input-blend" type="month">
+					<input class="input input-large input-blend" type="number">
+					<input class="input input-large input-blend" type="password">
+					<input class="input input-large input-inline" type="radio">
+					<input class="input input-large input-inline" type="range">
+					<input class="input input-large input-inline" type="reset">
+					<input class="input input-large input-blend" type="search">
+					<input class="input input-large input-inline" type="submit">
+					<input class="input input-large input-blend" type="tel">
+					<input class="input input-large input-blend" type="text">
+					<input class="input input-large input-blend" type="time">
+					<input class="input input-large input-blend" type="url">
+					<input class="input input-large input-blend" type="week">
+					<input class="input input-large input-blend" list="browsers">
+					<datalist class="input input-large" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input input-large input-blend" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input input-large input-blend" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input input-large input-blend" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+					<hr>
+
+					<input class="input-large" type="button" value="Bitch">
+					<input class="input-large" type="checkbox">
+					<input class="input-large" type="color">
+					<input class="input-large" type="date">
+					<input class="input-large" type="datetime-local">
+					<input class="input-large" type="email">
+					<input class="input-large" type="file">
+					<input class="input-large" type="hidden">
+					<input class="input-large" type="image">
+					<input class="input-large" type="month">
+					<input class="input-large" type="number">
+					<input class="input-large" type="password">
+					<input class="input-large" type="radio">
+					<input class="input-large" type="range">
+					<input class="input-large" type="reset">
+					<input class="input-large" type="search">
+					<input class="input-large" type="submit">
+					<input class="input-large" type="tel">
+					<input class="input-large" type="text">
+					<input class="input-large" type="time">
+					<input class="input-large" type="url">
+					<input class="input-large" type="week">
+					<input class="input-large" list="browsers">
+					<datalist class="input-large" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input-large" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class=" input-large" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class=" input-large" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 
 				<h3 data-href="#bitch-accordion" data-toggle-accordion>with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
