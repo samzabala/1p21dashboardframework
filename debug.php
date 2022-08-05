@@ -10,6 +10,72 @@
 		<h1 data-toggle-accordion>TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		</div>
+
+
+
+		<h1 data-toggle-accordion>Add Tags<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<input id="putangina" type="text" class="input-tags"  data-tags-multiple-lines="true" value="ass,bitch,bitch fucckiiin work,bitch fuckin work,i love rihanna,Lead,oh my god more tags,please,shit shit shittt,test,test some more,wooooork,xHaskins,xTriple Digital,xScorpion" />
+			<button class="btn btn-default shit-btn" onclick="addTag(event);">wah</button>
+			<button class="btn btn-default shit-btn" onclick="addTag(event);">shit bro</button>
+
+			<script>
+				function addTag(event){
+					console.log(event.relatedTarget);
+					event.preventDefault();
+					const Tags = fw.Form.Tags;
+					const tagName = event.target.innerText;
+
+					//init Tags input so we can retreive the value before blur
+
+					let prevVal;
+
+					const inputTags = new Tags(document.querySelector('#putangina'),false,{
+						filter: (val)=>{
+							prevVal = val;
+							return val;
+						}
+					});
+					// //init to be able to retreive ui parameters and values
+					inputTags.init();
+					console.warn('prevVal',prevVal);
+
+
+					// // // debugger;
+
+					// // //find where the input element of the tag field  was last seen
+					const inputTagsRenderVal = Tags.toArr(prevVal,false);
+					const inputStringIdx = inputTags.UIInputIdx - 1;
+					// const inputTagsUiVal = inputTags.UIInputValue;
+
+					console.warn('before update',inputStringIdx,inputTagsRenderVal);
+
+					// // console.warn(inputStringIdx ? 'index found' : 'index not found');
+					// // console.warn(inputTagsRenderVal);
+
+					// //replace input string with the added tag
+					// if(inputStringIdx){
+					// } else{
+					// 	//push if it wasn't typed upon
+					// 	inputTagsRenderVal.push(tagName);
+					// }
+
+					inputTagsRenderVal.splice(inputStringIdx,1,tagName);
+
+					console.warn('i update',inputTagsRenderVal);
+					// //update tags input ui too
+					inputTags.__enableChange();
+					inputTags.update(inputTagsRenderVal);
+					// // remove focus
+					inputTags.blur();
+
+
+					console.warn('after update',inputTagsRenderVal);
+				}
+			</script>
+		</div>
+
+
 		<h1 data-toggle-accordion>.scroller<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
@@ -3704,7 +3770,7 @@
 		<div class="accordion">
 			<div class="accordion-group">
 
-			<h3 data-toggle-accordion>form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<h3 data-toggle-accordion>form field types without classes just to say no conflicty bois <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
 				<div class="accordion">
 					<p>This is a basic accordion setup with just data-toggle, and a sibling .accordion element</p>
 					<input type="button" value="bitch">
@@ -3748,8 +3814,61 @@
 					<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 
-				<h3 data-toggle-accordion>form field types input-blend <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-				<div class="accordion"><p>This is a a dom weridness ready accordion setup with data-toggle and href setup to the id of this accordi boi, and a sibling .accordion element</p>
+				<h3 data-href="#bitch-accordion" data-toggle-accordion>with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
+				<div id="bitch-accordion" class="accordion">
+					<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
+					<input class="input" type="button" value="Bitch">
+					<input class="input" type="checkbox">
+					<input class="input" type="color">
+					<input class="input" type="date">
+					<input class="input" type="datetime-local">
+					<input class="input" type="email">
+					<input class="input" type="file">
+					<input class="input" type="hidden">
+					<input class="input" type="image">
+					<input class="input" type="month">
+					<input class="input" type="number">
+					<input class="input" type="password">
+					<input class="input" type="radio">
+					<input class="input" type="range">
+					<input class="input" type="reset">
+					<input class="input" type="search">
+					<input class="input" type="submit" value="Bitch">
+					<input class="input" type="tel">
+					<input class="input" type="text">
+					<input class="input" type="time">
+					<input class="input" type="url">
+					<input class="input" type="week">
+					<input class="input" list="browsers">
+					<datalist class="input" id="browsers">
+						<option value="Internet Explorer">
+						</option><option value="Firefox">
+						</option><option value="Chrome">
+						</option><option value="Opera">
+						</option><option value="Safari">
+					</option></datalist>
+
+					<select class="input" name="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+
+					<select class="input" name="cars" multiple>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+					</select>
+
+					<textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+				</div>
+
+				<a class="h3" href="#other-other-bitch-accordion" data-toggle-accordion>blendy bois<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
+				<div id="other-other-bitch-accordion" class="accordion">
+					<p>it blends motherfucker</p>
 					<input class="input input-inline" type="button" value="Bitch">
 					<input class="input input-inline" type="checkbox">
 					<input class="input input-inline" type="color">
@@ -3950,58 +4069,6 @@
 					</select>
 
 					<textarea class=" input-large" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-				</div>
-
-				<h3 data-href="#bitch-accordion" data-toggle-accordion>with the basic input class to normalize the bitch<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h3>
-				<div id="bitch-accordion" class="accordion">
-					<p>This is a a dom weridness ready accordion setup with data-toggle and data-href setup to the id of this accordi boi, and a sibling .accordion element</p>
-					<input class="input" type="button" value="Bitch">
-					<input class="input" type="checkbox">
-					<input class="input" type="color">
-					<input class="input" type="date">
-					<input class="input" type="datetime-local">
-					<input class="input" type="email">
-					<input class="input" type="file">
-					<input class="input" type="hidden">
-					<input class="input" type="image">
-					<input class="input" type="month">
-					<input class="input" type="number">
-					<input class="input" type="password">
-					<input class="input" type="radio">
-					<input class="input" type="range">
-					<input class="input" type="reset">
-					<input class="input" type="search">
-					<input class="input" type="submit" value="Bitch">
-					<input class="input" type="tel">
-					<input class="input" type="text">
-					<input class="input" type="time">
-					<input class="input" type="url">
-					<input class="input" type="week">
-					<input class="input" list="browsers">
-					<datalist class="input" id="browsers">
-						<option value="Internet Explorer">
-						</option><option value="Firefox">
-						</option><option value="Chrome">
-						</option><option value="Opera">
-						</option><option value="Safari">
-					</option></datalist>
-
-					<select class="input" name="cars">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-					</select>
-
-
-					<select class="input" name="cars" multiple>
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-					</select>
-
-					<textarea class="input" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 				</div>
 
 				<a class="h3" href="#other-bitch-accordion" data-toggle-accordion>prepare for fuckhole<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>

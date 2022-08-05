@@ -125,14 +125,60 @@ function app_init_content(){
 	
 	//specific shit
 	switch($app):
+		case 'timetracker':
+			switch($template_part):
+
+					case 'projects':
+					case 'clients':
+					case 'tasks':
+					case 'reports':
+					case 'insights':
+					case 'settings':
+						?>
+						<div class="module">
+							Not yet brah
+							<br>
+							<br>
+							<br>
+							<a href="<?=app_create_link(array('template' => 'home')) ?>">Go to the home template</a>
+						</div>
+						<?php
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
+						break;
+					case 'home':
+					case 'timer':
+					case 'time':
+					case null:
+						app_get_template_part("app-{$app}/time");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/time";
+						break;
+					case 'my-tasks':
+					case 'favorites':
+						app_get_template_part("app-{$app}/{$template_part}");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+						break;
+
+
+					case 'debug':
+						app_get_template_part('debug');
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+						break;
+					case 'debug-components':
+						app_get_template_part("{$template_part}");
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] ="{$template_part}";
+						break;
+
+					default:
+						app_get_template_part('global/error');
+						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "global/error";
+						break;
+			endswitch;
+			break;
 		//time tracker shit
 		case 'webpack':
-			case 'home':
-			case null:
-				app_get_template_part("app-{$app}/home");
-				$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
-				$GLOBALS['VALID_TEMPLATE'] = 'home';
-				break;
+			app_get_template_part("app-{$app}/home");
+			$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/home";
+			$GLOBALS['VALID_TEMPLATE'] = 'home';
 			break;
 		case 'workflow':
 			$slug = '';
@@ -264,7 +310,7 @@ function app_init_content(){
 	
 			endswitch;
 			break;
-		case 'timetracker':
+		case 'timetracker-legacy':
 			$slug = '';
 			switch($template_part):
 				case null:
@@ -498,6 +544,13 @@ function app_debug_li() {
 	<li>
 		<a href="<?=app_create_link(array(
 			'env'=>FWAPPS_SLUG,
+			'template'=>'home',
+			'app'=>'timetracker'));
+		?>">Switch to Time tracker App (For realsies)</a>
+	</li>
+	<li>
+		<a href="<?=app_create_link(array(
+			'env'=>FWAPPS_SLUG,
 			'app'=>'outreach'));
 		?>">Switch to Client Outreach</a>
 	</li>
@@ -524,7 +577,7 @@ function app_debug_li() {
 		<a href="<?=app_create_link(array(
 			'env'=>FWAPPS_SLUG,
 			'template'=>'home',
-			'app'=>'timetracker'));
+			'app'=>'timetracker-legacy'));
 		?>">Switch to Time tracker App (Prototype)</a>
 	</li>
 
