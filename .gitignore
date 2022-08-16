@@ -10,11 +10,14 @@ wp-admin/
 wp-includes/
 
 *.mine.scss
-*.mine.css
-!app-timetracker-ext/**/*.example.css
+*.mine.*
+*.mine.*.*
+*.mine.*.*.*
 *.mine.js
-*.mine.min.js
-*.map.*
+*.map
+*.example.css
+!app-timetracker-ext/**/*.example.css
+!app-timetracker-ext/**/*.mine.css
 
 __fortesting.*
 
