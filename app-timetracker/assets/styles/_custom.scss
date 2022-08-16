@@ -1,0 +1,289 @@
+@use 'sass:math';
+
+:root {
+	--timetracker-sidebar-width: 197px;
+
+
+
+	@include br(#{$mobile-br-max}-max) {
+		--timetracker-sidebar-width: 60px;
+	}
+}
+
+$sidebar-expanded: 240px;
+$sidebar-slim: 60px;
+$timetracker-table-tr-fade-duration: 1s; //equivalent to 1000. change if needed
+$table-column-widths: (50,60,75,100,150,200,250,300,400,500,600,700,800);
+
+* {
+	// //debug only
+	// outline: 1px solid red !important;
+}
+
+#timetracker {
+	
+	&-header {
+		
+	}
+
+	&-sidebar {
+		width: var(--timetracker-sidebar-width);
+		transition: .125s ease-in-out width;
+		box-shadow: 0 0 10px -5px #000c;
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		z-index:1001;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display:none!important;
+		}
+
+		.nav-logo {
+			height: 60px;
+			overflow:hidden;
+
+			.logo-expanded {
+				max-width:none;
+				width: 197px;
+			}
+
+		}
+
+		&-nav {
+
+			li  {
+
+			}
+		}
+
+		// @include br(#{$mobile-br-max-polar}) {
+		// 	&:hover{
+
+		// 		transition: .25s ease-in-out width;
+		// 		width: $sidebar-expanded;
+		// 	}
+		// }
+	}
+
+	&-timer-sticky,
+	&-main {
+		width:calc(100% - var(--timetracker-sidebar-width));
+		margin-left: auto;
+	}
+
+	&-timer-sticky {
+		top: 0;
+		left:0;
+		right:0;
+	}
+
+	
+
+
+	@include br(#{$mobile-br-max-polar}) {
+		&-sidebar {
+			.timetracker-nav-list {
+				padding-right: 90px;
+				> li {
+					> a {
+						&:after {
+							right: auto;
+							left:0;
+							border-top-right-radius: 999rem;
+							border-bottom-right-radius: 999rem;
+						}
+					}
+					> .dropdown,
+					> ul {
+						position:fixed;
+						top: 0;
+						bottom:0;
+						left: $sidebar-slim;
+						overflow-y:scroll;
+						overflow-x:hidden;
+						width: 200px;
+						text-align:left;
+						z-index:99;
+						box-shadow:inset 3px 0 5px -5px #000,3px 0 5px -5px #000;
+						transition: .125s ease-in-out left;
+	
+						&::-webkit-scrollbar {
+							display:none!important;
+						}
+	
+						padding: 45px $gutter-base;
+					}
+				}
+			}
+		}
+	}
+
+
+	//override sidebar for mobile
+	@include br(#{$mobile-br-max}-max){
+		&-header {
+			box-shadow: none;
+
+			&,
+			&-nav,
+			.timetracker-nav-list {
+				width:100%;
+			}
+		}
+		&-sidebar {
+			// top: $sidebar-slim;
+			top:0;
+			position: sticky;
+			left:0;
+			right:0;
+			bottom: auto;
+			height: auto;
+			width: 100%;
+			padding: 0;
+			z-index: 980;
+
+			&-nav {
+				display: flex;
+
+				.timetracker-logo {
+					// background: var(--fw-theme-background);
+				}
+
+				.timetracker-nav-list {
+					display: flex;
+					flex: 1 1;
+					justify-content: space-evenly;
+					text-align:center;
+
+					> li {
+						flex: 1 1;
+						> a {
+							padding-left: 0;
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+		&-timer-sticky,
+		&-main {
+			width:100%;
+		}
+		&-timer-sticky {
+			top: $nav-height;
+		}
+	}
+}
+
+
+.timetracker {
+    &-timer-toggle {
+        box-shadow:
+            0 0 0 .8em $var-color-background-alpha-1,
+            0 0 0 (.8em * 2) $var-color-background-alpha-1
+            !important;
+
+            &#{&}-mini {
+                box-shadow: none!important;
+            }
+    }
+
+	&-table {
+
+
+		.text-wrap-ellipsis,
+		.text-wrap-ellipsis-multiple {
+			max-width: 600px !important;
+		}
+		@include on-breakpoint(mobile) {
+
+			&,
+			td,
+			tr,
+			th.timetracker-table-mobile-th,
+			thead,
+			tbody,
+			tfoot {
+				&:not([class*="hide-"]) {
+					text-align: left!important;
+					display: block!important;
+					width:100%;
+					height: auto !important;
+				}
+			}
+
+			/* safari fix -_- */
+			thead,
+			tbody,
+			tfoot,
+			td,th,tr {
+				overflow: visible !important;
+			}
+
+			tr {
+				position: relative;
+				border-color: $table-cell-border-color;
+				border-style: solid;
+				border-bottom-width: $table-cell-border-width;
+
+				.theme-inverse & {
+					border-color: $table-cell-border-color-inverse;
+				}
+
+				.alert &,
+				.theme-inverse .alert & {
+					border-color: currentColor;
+				}
+			}
+
+			th,td {
+				border-bottom:0 !important;
+				border-top: 0 !important;
+			}
+
+
+			th:not(.timetracker-table-mobile-th) {
+				display: none;
+			}
+		}
+	}
+
+	&-td {
+		&-actions {
+			text-align:right;
+
+			@include on-breakpoint(mobile) {
+
+				position:absolute;
+				top:0;
+				right:0;
+				width: auto!important;
+			}
+		}
+
+		.text-wrap-ellipsis,
+		.text-wrap-ellipsis-multiple {
+			max-width: 100% !important;
+			width:100% !important;
+		}
+		&-w {
+			@include on-breakpoint(nonmobile){
+				@each $table-column-width in $table-column-widths {
+					&-#{$table-column-width} {
+						max-width: $table-column-width * 1px !important;
+						width: $table-column-width * 1px !important;
+						min-width: ($table-column-width * 1px) - 10px !important;
+					}
+				}
+			}
+		}
+	}
+	
+}
