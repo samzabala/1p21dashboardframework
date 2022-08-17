@@ -1,0 +1,31 @@
+/*
+@NPM SETUP
+npm install the following for css/sass deps:
+    dart-sass ^1.25.0
+    sass ^1.33.0
+*/
+
+//1. external fonts
+@import '_ext_fonts';
+
+//2. custom framework variables fonts
+	@import '_fw_var_overrides.scss';
+
+//3. import frameworks here. change file path as needed
+	// layout components + helpers + core
+		@import './../../../assets/plugins/framework/src/scss/framework.lite';
+
+	//components used by global components (header + sidebar)
+		@import './../../../assets/plugins/framework/src/scss/_accordion';
+		@import './../../../assets/plugins/framework/src/scss/_buttons';
+		@import './../../../assets/plugins/framework/src/scss/_form';
+		@import './../../../assets/plugins/framework/src/scss/_nav';
+		@import './../../../assets/plugins/framework/src/scss/_progress';
+		@import './../../../assets/plugins/framework/src/scss/_table';
+		@import './../../../assets/plugins/framework/src/scss/_tag';
+		@import './../../../assets/plugins/framework/src/scss/_symbol';
+		@import './../../../assets/plugins/framework/src/scss/_well';
+
+
+// 4. additional css specific for this app
+	@import '_custom';
