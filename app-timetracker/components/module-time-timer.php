@@ -23,7 +23,7 @@ $defs = array(
 
 $args = app_parse_args($data,$defs);
 ?>
-<form class="module no-border module-expanded theme-inverse margin-large-y 
+<form id="timetracker-timer" class="module no-border module-expanded theme-inverse margin-large-y 
 <?=$args['is_active'] ? 'background-gradient-90-from-secondary-to-success' : 'background-gradient-90-from-secondary-to-primary' ?>">
 	<div class="module-content">
 		<div class="flex-grid flex-grid-fixed flex-grid-compact flex-direction-row-reverse">

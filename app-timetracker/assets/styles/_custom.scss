@@ -84,13 +84,35 @@ $table-column-widths: (50,60,75,100,150,200,250,300,400,500,600,700,800);
 		right:0;
 	}
 
+	&-timer {
+		.input.input-blend {
+
+
+			&::-webkit-input-placeholder {
+				opacity: .9;
+			}
+		
+			&::-moz-placeholder {
+				opacity: .9;
+			}
+		
+			&:-ms-input-placeholder {
+				opacity: .9;
+			}
+			&:-moz-placeholder {
+				/* Firefox 18- */
+				opacity: .9;
+			}
+		}
+	}
+
 	
 
 
 	@include br(#{$mobile-br-max-polar}) {
 		&-sidebar {
 			.timetracker-nav-list {
-				padding-right: 90px;
+				padding-right: 1rem;
 				> li {
 					> a {
 						&:after {
@@ -202,6 +224,10 @@ $table-column-widths: (50,60,75,100,150,200,250,300,400,500,600,700,800);
 		.text-wrap-ellipsis-multiple {
 			max-width: 600px !important;
 		}
+
+		.tag {
+			max-width: 12em !important;
+		}
 		@include on-breakpoint(mobile) {
 
 			&,
@@ -246,6 +272,10 @@ $table-column-widths: (50,60,75,100,150,200,250,300,400,500,600,700,800);
 			th,td {
 				border-bottom:0 !important;
 				border-top: 0 !important;
+
+				&:nth-child(-n+2):not(.timetracker-td-actions){
+					padding-right: 90px;
+				}
 			}
 
 
