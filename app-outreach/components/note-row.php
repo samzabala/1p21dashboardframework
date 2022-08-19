@@ -8,6 +8,7 @@ Button from framework/src/js/imports/button
 $defs = array(
 	//@param post - type of single achuchuchu
 	'is_pinned' => false, 
+	'is_task' => false,
 );
 
 $args = app_parse_args($data,$defs);
@@ -77,6 +78,10 @@ $args = app_parse_args($data,$defs);
 
 
 			<div class="note-body">
+				<?php if($args['is_task']): ?>
+					<?php app_get_component('components/note-row-task-header'); ?>
+				<?php endif; ?>
+
 				<div class="REPLACE">
 					<p>
 						Tagged users like <a class="highlight highlight-primary" href="<?=app_create_link(array('template'=>'profile'))?>">@Beyonce Knowles</a> will be links to profiles with the classes <code>highlight highlight-primary</code> 
@@ -85,6 +90,11 @@ $args = app_parse_args($data,$defs);
 						Listen, Morty, I hate to break it to you, but what people call love is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it
 					</p>
 				</div>
+
+
+				<?php if($args['is_task']): ?>
+					<?php app_get_component('components/note-row-task-footer'); ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

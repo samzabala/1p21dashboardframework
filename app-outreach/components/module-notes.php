@@ -21,22 +21,36 @@ $args = app_parse_args($data,$defs);
 		<!-- @if has notes -->
 			<!-- @if has pinned -->
 				<!-- @loop .note-row PINNED -->
-					<?php app_get_component('components/note-row','',false,array(
-						'is_pinned' => true
-					)) ?>
-
-					
+					<!-- @if a task type -->
 						<?php app_get_component('components/note-row','',false,array(
+							'is_task' => false,
+							'is_pinned' => true
+						)) ?>
+					<!-- @else -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_task' => false,
 							'is_pinned' => true
 						)) ?>
 
 				<!-- @loop .note-row NOT_PINNED -->
-					<?php app_get_component('components/note-row','',false,array(
-						'is_pinned' => false
-					)) ?>
+				
+					<!-- @if a task type -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_task' => true
+						)) ?>
+					<!-- @else -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_task' => false
+						)) ?>
 
 						<?php for($i=1; $i<=4; $i++){ ?>
-							<?php app_get_component('components/note-row') ?>
+							<?php app_get_component('components/note-row','',false,array(
+								'is_task' => true
+							)) ?>
+							<?php app_get_component('components/note-row','',false,array(
+								'is_task' => false
+							)) ?>
+
 						<?php } ?>
 
 		<!-- @else -->
