@@ -5457,6 +5457,8 @@
 				'cloud-download',
 				'drag',
 				'sync',
+				'invisible',
+				'visible',
 			);
 			?>
 
