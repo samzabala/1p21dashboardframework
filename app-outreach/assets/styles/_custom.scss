@@ -35,6 +35,7 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 	&-header {
 		left: auto;
 		right:0;
+		margin-left: auto;
 		width: calc(100% - #{$sidebar-slim});
 
 
