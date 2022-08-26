@@ -13,67 +13,183 @@
 
 
 
+		<h1 data-toggle-accordion>Nested modal test<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<a href="#" class="btn btn-default" data-toggle-modal-default> default w/ inside modal board</a>
+			<div class="modal modal-default" data-modal-title="YEET">
+				yeeeeet
+
+
+				<a href="#" class="btn btn-default" data-toggle-modal-board> the board</a>
+				<div class="modal modal-board" data-modal-title="YEET">
+					yeeeeeteeee
+
+					
+
+				</div>
+
+			</div>
+
+
+			<a href="#" class="btn btn-primary" data-toggle-modal-board> board w/ inside modal default</a>
+			<div class="modal modal-board" data-modal-title="YEET">
+				yeeeeet
+
+
+				<a href="#" class="btn btn-primary" data-toggle-modal-default> the default</a>
+				<div class="modal modal-default" data-modal-title="YEET">
+					yeeeeeteeee
+
+					
+
+				</div>
+
+			</div>
+
+		</div>
+
 		<h1 data-toggle-accordion>Add Tags<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<input id="putangina" type="text" class="input-tags"  data-tags-multiple-lines="true" value="ass,bitch,bitch fucckiiin work,bitch fuckin work,i love rihanna,Lead,oh my god more tags,please,shit shit shittt,test,test some more,wooooork,xHaskins,xTriple Digital,xScorpion" />
+
+			<a href="#" onclick="syncTags(event);"  class="button">Sync it</a>
+			<input onchange="filterTags(event)" id="putanginang-tags-iyan" type="text" class="input-tags"  data-tags-multiple-lines="true" value="ass,bitch,bitch fucckiiin work,bitch fuckin work,i love rihanna,Lead,oh my god more tags,please,shit shit shittt,test,test some more,wooooork,xHaskins,xTriple Digital,xScorpion" />
+			<hr>
+
 			<button class="btn btn-default shit-btn" onclick="addTag(event);">wah</button>
 			<button class="btn btn-default shit-btn" onclick="addTag(event);">shit bro</button>
 
-			<script>
-				function addTag(event){
-					console.log(event.relatedTarget);
-					event.preventDefault();
-					const Tags = fw.Form.Tags;
-					const tagName = event.target.innerText;
 
-					//init Tags input so we can retreive the value before blur
-
-					let prevVal;
-
-					const inputTags = new Tags(document.querySelector('#putangina'),false,{
-						filter: (val)=>{
-							prevVal = val;
-							return val;
-						}
-					});
-					// //init to be able to retreive ui parameters and values
-					inputTags.init();
-					console.warn('prevVal',prevVal);
-
-
-					// // // debugger;
-
-					// // //find where the input element of the tag field  was last seen
-					const inputTagsRenderVal = Tags.toArr(prevVal,false);
-					const inputStringIdx = inputTags.UIInputIdx - 1;
-					// const inputTagsUiVal = inputTags.UIInputValue;
-
-					console.warn('before update',inputStringIdx,inputTagsRenderVal);
-
-					// // console.warn(inputStringIdx ? 'index found' : 'index not found');
-					// // console.warn(inputTagsRenderVal);
-
-					// //replace input string with the added tag
-					// if(inputStringIdx){
-					// } else{
-					// 	//push if it wasn't typed upon
-					// 	inputTagsRenderVal.push(tagName);
-					// }
-
-					inputTagsRenderVal.splice(inputStringIdx,1,tagName);
-
-					console.warn('i update',inputTagsRenderVal);
-					// //update tags input ui too
-					inputTags.__enableChange();
-					inputTags.update(inputTagsRenderVal);
-					// // remove focus
-					inputTags.blur();
-
-
-					console.warn('after update',inputTagsRenderVal);
-				}
-			</script>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Talent Agency
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Law Firm
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Japanifornia Locations
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Herlock Sholmes
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Metal Detector
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Spirit Medium Services
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Jollibee
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Eat your hamburgers Apollo
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
+			<a href="#" onclick="addTag(event);" class="btn btn-primary-outline margin-small-right margin-small-top">
+				<div class="text-wrap-ellipsis margin-small-right">
+					Can defeat Thanos
+				</div>
+				<i class="symbol symbol-plus"></i>
+			</a>
 		</div>
+
+		<script>
+			let q = '',
+			prevTagsUiInputI = null,
+			prevTagsUiTags = null,
+			_tags = [],
+			modelTags = ['ass','bitch','bitch fucckiiin work','bitch fuckin work','i love rihanna','Lead','oh my god more tags','please','shit shit shittt','test','test some more','wooooork','xHaskins','xTriple Digital','xScorpion'],
+			refTags = document.querySelector('#putanginang-tags-iyan')
+			;
+			const Tags = fw.Form.Tags;
+
+
+
+			function onKeyup(event){
+
+				const inputTags = new Tags(event.target);
+				inputTags.init();
+
+				q = inputTags.UIInputValue;
+
+				prevTagsUiInputI = inputTags.UIInputIdx;
+				prevTagsUiTags = Tags.toArr(inputTags.renderValue,true);
+
+				console.log(q,
+				prevTagsUiInputI,
+				prevTagsUiTags);
+			}
+			function filterTags(event){
+				_tags = event.target.value.split(',').filter(Boolean);
+				new Tags(event.target).update(_tags);
+			}
+			function addTag(event){
+
+				event.preventDefault();
+				const tagName = event.target.innerText;
+
+				const inputTags = new Tags(refTags);
+				// //init to be able to retreive ui parameters and values
+				inputTags.init();
+
+				console.log(inputTags);
+
+				if(q && prevTagsUiTags.length){
+
+					// replace input string with the added tag
+					prevTagsUiTags.splice(prevTagsUiInputI,1,tagName)
+					_tags = Tags.toArr(prevTagsUiTags,false); //we dont need input string at this point
+				}else{
+					//just push
+					_tags.push(tagName);
+				}
+
+				// make tags trigger change on update so it makes filterTags after to
+				inputTags.__enableChange();
+
+				// update
+				inputTags.update(_tags);
+
+				//reset input tags stuff
+				// this.q = '';
+				this.prevTagsUiInputI = null;
+				this.prevTagsUiTags = [];
+				
+			}
+
+			function syncTags(event){
+				event.preventDefault();
+				new Tags(refTags).update(modelTags.join(','));
+				console.log(q,
+				prevTagsUiInputI,
+				prevTagsUiTags);
+			}
+			_tags = modelTags;
+
+			console.warn('addTag',addTag);
+		</script>
 
 
 		<h1 data-toggle-accordion>.scroller<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
@@ -174,7 +290,7 @@
 <div class="module-function filter-analytics-client-department position-relative">
     <div class="input-wrapper input-wrapper-horizontal input-wrapper-responsive no-padding-right">
         <label class="input-label">Filter By</label>
-        <button data-toggle="dropdown" class="input input-block-mobile input-select">
+        <button data-toggle-dropdown class="input input-block-mobile input-select">
             Department
             <!-- @if one or more status is checked -->
             <span class="filter-analytics-client-department-counter">
@@ -206,7 +322,7 @@
 </div>
 
 <div class="module-function function-filter-employee position-relative">
-    <button data-toggle="dropdown" class="input input-select input-block-mobile">
+    <button data-toggle-dropdown class="input input-select input-block-mobile">
         Employee
         <!-- @if one or more Owner is checked -->
         <span class="filter-companies-employee-active">
