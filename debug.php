@@ -25,7 +25,11 @@
 					yeeeeeteeee
 
 					
+					<a href="#fuck-here">anchor bitch</a>
 
+					<div id="fuck-here">
+						An anchor here
+					</div>
 				</div>
 
 			</div>
@@ -42,6 +46,13 @@
 
 					
 
+
+					
+					<a href="#another-fuck-here">anchor bitch</a>
+
+					<div id="another-fuck-here">
+						An anchor here
+					</div>
 				</div>
 
 			</div>
