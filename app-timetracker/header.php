@@ -60,9 +60,18 @@
 			</script>
 
 </head>
-<body class="body-nav-sticky-offset cf body-loading background-theme-contrast">
+<body class="
+	<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'login-forgot' && FWAPPS_TEMPLATE !== 'login-reset'): ?>
+		cf body-loading background-theme-contrast
+	<?php else: ?>
+		cf body-loading background-theme-polar flex-xs flex-wrap justify-content-center align-items-center timetracker-body-login
+	<?php endif; ?>
+">
+
+<?php if(FWAPPS_TEMPLATE !== 'login' ): ?>
 
 	<div id="timetracker">
+
 
 		<!-- Sidebar -->
 			<aside id="timetracker-sidebar"
@@ -78,6 +87,7 @@
 		<main id="timetracker-main" class="padding-large-y">
 			<!-- App Content -->
 				<div class="container">
+<?php endif; ?>
 					
 
 
