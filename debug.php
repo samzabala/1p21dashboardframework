@@ -13,8 +13,10 @@
 
 
 
-		<h1 data-toggle-accordion>Nested modal test<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>Nested modal/accordion test<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
+			<a href="#nestacco" data-toggle-accordion>nested accordion but pretty sure this is stable?</a>
+			<div id="nestacco" class="accordion">naka nest ako</div>
 			<a href="#" class="btn btn-default" data-toggle-modal-default> default w/ inside modal board</a>
 			<div class="modal modal-default" data-modal-title="YEET">
 				yeeeeet
