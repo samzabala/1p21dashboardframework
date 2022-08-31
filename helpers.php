@@ -154,6 +154,8 @@ function app_init_content(){
 						break;
 					case 'my-tasks':
 					case 'favorites':
+					case 'login':
+					case 'error':
 						app_get_template_part("app-{$app}/{$template_part}");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 						break;
