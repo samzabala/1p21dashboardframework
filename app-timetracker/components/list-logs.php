@@ -21,6 +21,11 @@
 			-->
 			<!-- <template> -->
 				<tr>
+					<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-40 text-align-center no-padding-right" v-if="status">
+						<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow">
+							<i class="symbol symbol-drag"></i>
+						</div>
+					</td>
 		
 					<td class="hide-mobile no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-60">
 					
@@ -142,6 +147,9 @@
 							<td class="hide-mobile">
 								<span class="spacer">&nbsp;</span>
 							</td>
+							<td class="hide-mobile">
+								<span class="spacer">&nbsp;</span>
+							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 								<!-- @if entry is done today -->
 									<span class="REPLACE">Today</span>
@@ -214,6 +222,13 @@
 						<?php $is_fave = ($i % 3 == 0);  ?>
 
 						<tr>
+
+							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-40 text-align-center no-padding-right" v-if="status">
+								<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow">
+									<i class="symbol symbol-drag"></i>
+								</div>
+							</td>
+							
 							<td class="hide-mobile no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-60">
 							
 								<?php if($has_sub): ?>
@@ -354,6 +369,9 @@
 						<tbody class="accordion" id="entry-subentries-<?= $h ?>-<?=$i ?>">
 							<?php for($j = 0; $j < 5; $j++): ?>
 								<tr class="entry-subentries background-primary-alpha-1">
+									<td class="hide-mobile">
+										<span class="spacer">&nbsp;</span>
+									</td>
 									<td class="hide-mobile">
 										<span class="spacer">&nbsp;</span>
 									</td>
