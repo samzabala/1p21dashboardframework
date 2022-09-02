@@ -10,6 +10,87 @@
 		<h1 data-toggle-accordion>TEMPLATE ACCORDIO BOI<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 		</div>
+		<h1 data-toggle-accordion>Curse<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<div class="accordion">
+			<button class="btn btn-default cursor-alias">alias</button>
+			<button class="btn btn-default cursor-all-scroll">all-scroll</button>
+			<button class="btn btn-default cursor-auto">auto</button>
+			<button class="btn btn-default cursor-cell">cell</button>
+			<button class="btn btn-default cursor-col-resize">col-resize</button>
+			<button class="btn btn-default cursor-context-menu">context-menu</button>
+			<button class="btn btn-default cursor-copy">copy</button>
+			<button class="btn btn-default cursor-crosshair">crosshair</button>
+			<button class="btn btn-default cursor-default">default</button>
+			<button class="btn btn-default cursor-e-resize">e-resize</button>
+			<button class="btn btn-default cursor-ew-resize">ew-resize</button>
+			<button class="btn btn-default cursor-grab">grab</button>
+			<button class="btn btn-default cursor-grabbing">grabbing</button>
+			<button class="btn btn-default cursor-help">help</button>
+			<button class="btn btn-default cursor-move">move</button>
+			<button class="btn btn-default cursor-n-resize">n-resize</button>
+			<button class="btn btn-default cursor-ne-resize">ne-resize</button>
+			<button class="btn btn-default cursor-nesw-resize">nesw-resize</button>
+			<button class="btn btn-default cursor-ns-resize">ns-resize</button>
+			<button class="btn btn-default cursor-nw-resize">nw-resize</button>
+			<button class="btn btn-default cursor-nwse-resize">nwse-resize</button>
+			<button class="btn btn-default cursor-no-drop">no-drop</button>
+			<button class="btn btn-default cursor-none">none</button>
+			<button class="btn btn-default cursor-not-allowed">not-allowed</button>
+			<button class="btn btn-default cursor-pointer">pointer</button>
+			<button class="btn btn-default cursor-progress">progress</button>
+			<button class="btn btn-default cursor-row-resize">row-resize</button>
+			<button class="btn btn-default cursor-s-resize">s-resize</button>
+			<button class="btn btn-default cursor-se-resize">se-resize</button>
+			<button class="btn btn-default cursor-sw-resize">sw-resize</button>
+			<button class="btn btn-default cursor-text">text</button>
+			<button class="btn btn-default cursor-vertical-text">vertical-text</button>
+			<button class="btn btn-default cursor-w-resize">w-resize</button>
+			<button class="btn btn-default cursor-wait">wait</button>
+			<button class="btn btn-default cursor-zoom-in">zoom-in</button>
+			<button class="btn btn-default cursor-zoom-out">zoom-out</button>
+			<button class="btn btn-default cursor-inherit">inherit</button>
+
+			<h2>mousedown</h2>
+
+
+			<button class="btn btn-default cursor-alias-active">alias</button>
+			<button class="btn btn-default cursor-all-scroll-active">all-scroll</button>
+			<button class="btn btn-default cursor-auto-active">auto</button>
+			<button class="btn btn-default cursor-cell-active">cell</button>
+			<button class="btn btn-default cursor-col-resize-active">col-resize</button>
+			<button class="btn btn-default cursor-context-menu-active">context-menu</button>
+			<button class="btn btn-default cursor-copy-active">copy</button>
+			<button class="btn btn-default cursor-crosshair-active">crosshair</button>
+			<button class="btn btn-default cursor-default-active">default</button>
+			<button class="btn btn-default cursor-e-resize-active">e-resize</button>
+			<button class="btn btn-default cursor-ew-resize-active">ew-resize</button>
+			<button class="btn btn-default cursor-grab-active">grab</button>
+			<button class="btn btn-default cursor-grabbing-active">grabbing</button>
+			<button class="btn btn-default cursor-help-active">help</button>
+			<button class="btn btn-default cursor-move-active">move</button>
+			<button class="btn btn-default cursor-n-resize-active">n-resize</button>
+			<button class="btn btn-default cursor-ne-resize-active">ne-resize</button>
+			<button class="btn btn-default cursor-nesw-resize-active">nesw-resize</button>
+			<button class="btn btn-default cursor-ns-resize-active">ns-resize</button>
+			<button class="btn btn-default cursor-nw-resize-active">nw-resize</button>
+			<button class="btn btn-default cursor-nwse-resize-active">nwse-resize</button>
+			<button class="btn btn-default cursor-no-drop-active">no-drop</button>
+			<button class="btn btn-default cursor-none-active">none</button>
+			<button class="btn btn-default cursor-not-allowed-active">not-allowed</button>
+			<button class="btn btn-default cursor-pointer-active">pointer</button>
+			<button class="btn btn-default cursor-progress-active">progress</button>
+			<button class="btn btn-default cursor-row-resize-active">row-resize</button>
+			<button class="btn btn-default cursor-s-resize-active">s-resize</button>
+			<button class="btn btn-default cursor-se-resize-active">se-resize</button>
+			<button class="btn btn-default cursor-sw-resize-active">sw-resize</button>
+			<button class="btn btn-default cursor-text-active">text</button>
+			<button class="btn btn-default cursor-vertical-text-active">vertical-text</button>
+			<button class="btn btn-default cursor-w-resize-active">w-resize</button>
+			<button class="btn btn-default cursor-wait-active">wait</button>
+			<button class="btn btn-default cursor-zoom-in-active">zoom-in</button>
+			<button class="btn btn-default cursor-zoom-out-active">zoom-out</button>
+			<button class="btn btn-default cursor-inherit-active">inherit</button>
+		</div>
 
 
 
