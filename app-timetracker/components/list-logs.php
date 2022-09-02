@@ -22,7 +22,7 @@
 			<!-- <template> -->
 				<tr>
 					<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-40 text-align-center no-padding-right" v-if="status">
-						<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow">
+						<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow cursor-grab cursor-grabbing-active">
 							<i class="symbol symbol-drag"></i>
 						</div>
 					</td>
@@ -224,7 +224,7 @@
 						<tr>
 
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-40 text-align-center no-padding-right" v-if="status">
-								<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow">
+								<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow cursor-grab cursor-grabbing-active">
 									<i class="symbol symbol-drag"></i>
 								</div>
 							</td>
