@@ -130,10 +130,12 @@
 				<!-- @LOOP row -->
 					<tr>
 						<td>
-							<span class="REPLACE">hello@ace-attorney.com</span>
-
-							<!-- @if is the default -->
-								<span class="tag tag-primary">Default</span>
+							<form action="">
+								<input type="email" class="input input-blend" size="24" value="hello@ace-attorney.com">
+	
+								<!-- @if is the default -->
+									<span class="tag tag-primary">Default</span>
+							</form>
 						</td>
 						<td width="100">
 							<div class="inline-flex-xs align-items-center">
@@ -173,7 +175,25 @@
 						</td>
 						<td width="200">
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sent by</span>
-							<span class="REPLACE">Gmail</span>
+							<div data-toggle-modal-default>
+								<span class="REPLACE">Gmail</span>
+							</div>
+							<div class="modal modal-default" data-modal-width="360px" data-modal-title="Edit Source">
+									<form action="">
+										<ul class="list-group list-group-small no-margin-y">
+											<li><label><input name="email-source" type="radio"> <span class="REPLACE">Send source name</span></label></li>
+												<!-- @PLACEHOLDER. delete when ready -->
+													<li><label><input name="email-source" type="radio"> Office365</label></li>
+													<li><label><input name="email-source" type="radio"> Gmail</label></li>
+													<li><label><input name="email-source" type="radio"> Mailgun</label></li>
+										</ul>
+										<div class="text-align-right margin-top">
+											<button class="btn btn-link" href="#" data-toggle-modal-default-close>Cancel</button>
+											<button class="btn btn-primary">Save</button>
+										</div>
+									</form>
+							</div>
+
 						</td>
 						<td class="outreach-table-cell-actions text-align-center" width="50">
 							<div class="company-actions position-relative">
@@ -193,11 +213,13 @@
 						<?php for($i=1; $i<=4; $i++){ ?>
 							<tr>
 								<td>
-									<?php if( $i % 2 == 0): ?>
-										<span class="REPLACE">twilight@spy-family.net</span>
-									<?php else: ?>
-											<span class="REPLACE">miles.edgelord@ace-attorney.com</span>
-									<?php endif; ?>
+									<form action="">
+										<?php if( $i % 2 == 0): ?>
+											<input type="email" class="input input-blend" size="24" value="twilight@spy-family.net">
+										<?php else: ?>
+											<input type="email" class="input input-blend" size="24" value="miles.edgelord@ace-attorney.com">
+										<?php endif; ?>
+									</form>
 								</td>
 								<td width="100">
 									<div class="inline-flex-xs align-items-center">
@@ -237,7 +259,24 @@
 								</td>
 								<td>
 									<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sent by</span>
-									<span class="REPLACE">Office365</span>
+									<div data-toggle-modal-default>
+										<span class="REPLACE">Office365</span>
+									</div>
+									<div class="modal modal-default" data-modal-width="360px" data-modal-title="Edit Source">
+											<form action="">
+												<ul class="list-group list-group-small no-margin-y">
+													<li><label><input name="email-source" type="radio"> <span class="REPLACE">Send source name</span></label></li>
+														<!-- @PLACEHOLDER. delete when ready -->
+															<li><label><input name="email-source" type="radio"> Office365</label></li>
+															<li><label><input name="email-source" type="radio"> Gmail</label></li>
+															<li><label><input name="email-source" type="radio"> Mailgun</label></li>
+												</ul>
+												<div class="text-align-right margin-top">
+													<button class="btn btn-link" href="#" data-toggle-modal-default-close>Cancel</button>
+													<button class="btn btn-primary">Save</button>
+												</div>
+											</form>
+									</div>
 								</td>
 								<td class="outreach-table-cell-actions text-align-center" width="50">
 									<div class="company-actions position-relative">
