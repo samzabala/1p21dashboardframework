@@ -146,7 +146,7 @@
 		<div class="accordion">
 
 			<a href="#" onclick="syncTags(event);"  class="button">Sync it</a>
-			<input onchange="filterTags(event)" id="putanginang-tags-iyan" type="text" class="input-tags"  data-tags-multiple-lines="true" value="ass,bitch,bitch fucckiiin work,bitch fuckin work,i love rihanna,Lead,oh my god more tags,please,shit shit shittt,test,test some more,wooooork,xHaskins,xTriple Digital,xScorpion" />
+			<input onchange="filterTags(event)" id="putanginang-tags-iyan" type="text" class="input-tags"  data-tags-multiple-lines="true" value="" />
 			<hr>
 
 			<button class="btn btn-default shit-btn" onclick="addTag(event);">wah</button>
@@ -214,12 +214,13 @@
 			prevTagsUiInputI = null,
 			prevTagsUiTags = null,
 			_tags = [],
-			modelTags = ['ass','bitch','bitch fucckiiin work','bitch fuckin work','i love rihanna','Lead','oh my god more tags','please','shit shit shittt','test','test some more','wooooork','xHaskins','xTriple Digital','xScorpion'],
 			refTags = document.querySelector('#putanginang-tags-iyan')
 			;
-			const Tags = fw.Form.Tags;
+			const Tags = fw.Form.Tags,
+			truTags = ['ass','bitch','bitch fucckiiin work','bitch fuckin work','i love rihanna','Lead','oh my god more tags','please','shit shit shittt','test','test some more','wooooork','xHaskins','xTriple Digital','xScorpion']
+			;
 
-
+			console.log('truTags',truTags);
 
 			function onKeyup(event){
 
@@ -231,13 +232,13 @@
 				prevTagsUiInputI = inputTags.UIInputIdx;
 				prevTagsUiTags = Tags.toArr(inputTags.renderValue,true);
 
-				console.log(q,
-				prevTagsUiInputI,
-				prevTagsUiTags);
+				console.log(truTags);
 			}
 			function filterTags(event){
+				console.warn('filter b4',_tags);
 				_tags = event.target.value.split(',').filter(Boolean);
 				new Tags(event.target).update(_tags);
+				console.warn('filter after',_tags);
 			}
 			function addTag(event){
 
@@ -245,20 +246,24 @@
 				const tagName = event.target.innerText;
 
 				const inputTags = new Tags(refTags);
-				// //init to be able to retreive ui parameters and values
-				inputTags.init();
-
-				console.log(inputTags);
+				console.warn(truTags);
+				
 
 				if(q && prevTagsUiTags.length){
+					console.log('butthole is splice');
 
 					// replace input string with the added tag
 					prevTagsUiTags.splice(prevTagsUiInputI,1,tagName)
 					_tags = Tags.toArr(prevTagsUiTags,false); //we dont need input string at this point
 				}else{
+					console.log('asshole is push');
 					//just push
-					_tags.push(tagName);
+					// debugger;
+					// _tags.push(tagName);
+					_tags = [..._tags, tagName]; //@FIX
+					// debugger;
 				}
+				console.warn('b4 change enable... ass',truTags);
 
 				// make tags trigger change on update so it makes filterTags after to
 				inputTags.__enableChange();
@@ -268,19 +273,20 @@
 
 				//reset input tags stuff
 				// this.q = '';
-				this.prevTagsUiInputI = null;
-				this.prevTagsUiTags = [];
+				prevTagsUiInputI = null;
+				prevTagsUiTags = [];
 				
 			}
 
 			function syncTags(event){
 				event.preventDefault();
-				new Tags(refTags).update(modelTags.join(','));
-				console.log(q,
-				prevTagsUiInputI,
-				prevTagsUiTags);
+				const inputTags =new Tags(refTags);
+				inputTags.update(truTags.join(','));
+				_tags = truTags;
 			}
-			_tags = modelTags;
+			_tags = truTags;
+
+			new Tags(refTags).update(truTags);
 
 			console.warn('addTag',addTag);
 		</script>
@@ -1857,6 +1863,8 @@
 				function bootyhole(event){
 					console.warn('bootyhole');
 				}
+
+				console.warn(document.getElementById('thismotherbitchole'));
 
 				const inputApi = new fw.Form.Tags(document.getElementById('thismotherbitchole'),null,{onKeyUp: bootyhole})
 

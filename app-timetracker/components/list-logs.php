@@ -186,7 +186,7 @@
 									<div class="modal modal-default" id="m-entry-options-REPLACEID" data-modal-width="400px">
 											<div class="text-align-center">
 												<h1 class="no-margin-top color-inherit">Options</h1>
-												<ul class="list-group list-group-compact">
+												<ul class="list-group">
 													<li><a href="#">View Details</a></li>
 													<li><a href="#">Something else</a></li>
 													<li><a href="#">Delete</a></li>
@@ -343,7 +343,7 @@
 									<div class="modal modal-default" id="m-entry-options-<?= $h ?>-<?=$i ?>" data-modal-width="400px">
 											<div class="text-align-center">
 												<h1 class="no-margin-top color-inherit">Options</h1>
-												<ul class="list-group list-group-compact">
+												<ul class="list-group">
 													<li><a href="#">Edit Task</a></li>
 													<li><a href="#">View Details</a></li>
 													<li><a href="#">Favorite</a></li>
@@ -409,7 +409,7 @@
 											<div class="modal modal-default" id="m-entry-options-<?= $h ?>-<?=$i ?>-subentry-<?= $j ?>" data-modal-width="400px">
 													<div class="text-align-center">
 														<h1 class="no-margin-top color-inherit">Options</h1>
-														<ul class="list-group list-group-compact">
+														<ul class="list-group">
 															<li><a href="#">View Details</a></li>
 															<li><a href="#">Something else</a></li>
 															<li><a href="#">Delete</a></li>
