@@ -29,7 +29,8 @@ $args = app_parse_args($data,$defs);
 					<!-- @else -->
 						<?php app_get_component('components/note-row','',false,array(
 							'is_task' => false,
-							'is_pinned' => true
+							'is_pinned' => true,
+							'has_attachments' => true //@if has attachments
 						)) ?>
 
 				<!-- @loop .note-row NOT_PINNED -->
@@ -40,7 +41,8 @@ $args = app_parse_args($data,$defs);
 						)) ?>
 					<!-- @else -->
 						<?php app_get_component('components/note-row','',false,array(
-							'is_task' => false
+							'is_task' => false,
+							'has_attachments' => true, //if note has attachments
 						)) ?>
 
 						<?php for($i=1; $i<=4; $i++){ ?>
@@ -48,7 +50,8 @@ $args = app_parse_args($data,$defs);
 								'is_task' => true
 							)) ?>
 							<?php app_get_component('components/note-row','',false,array(
-								'is_task' => false
+								'is_task' => false,
+								'has_attachments' => true, //if note has attachments
 							)) ?>
 
 						<?php } ?>
