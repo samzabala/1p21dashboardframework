@@ -9,6 +9,7 @@ $defs = array(
 	//@param post - type of single achuchuchu
 	'is_pinned' => false, 
 	'is_task' => false,
+	'has_attachments' => false,
 );
 
 $args = app_parse_args($data,$defs);
@@ -90,6 +91,11 @@ $args = app_parse_args($data,$defs);
 						Listen, Morty, I hate to break it to you, but what people call love is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it
 					</p>
 				</div>
+
+
+				<?php if($args['has_attachments']): ?>
+					<?php app_get_component('components/attachments-grid-columns'); ?>
+				<?php endif; ?>
 
 
 				<?php if($args['is_task']): ?>
