@@ -7,57 +7,55 @@
 
 	$args = app_parse_args($data,$defs);
 ?>
-<div class="background-neutral-alpha-1 padding-small pointer-reference position-relative">
-	<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-		<div class="flex-col-xs-4 flex-col-lg-3 align-self-flex-start">
-			<div class="ratio ratio-4-by-3">
-				<!-- @if a csv -->
-					<?php if( in_array( $args['file_extension'],
-						array('csv')
-					)): ?>
-						<img src="<?=app_get_uri(); ?>/assets/images/logo-csv.svg" alt="" class="ratio-child-contain">
+<div class="flex-1-1 outreach-attachment-item outreach-attachment-item-grid flex-0-0 background-neutral-alpha-1 padding-small pointer-reference position-relative">
+	<div class="outreach-attachment-item-thumbnail align-self-center">
 
-				<!-- @if a word documente -->
-					<?php elseif( in_array( $args['file_extension'],
-						array('doc','docx')
-					)): ?>
-						<img src="<?=app_get_uri(); ?>/assets/images/logo-doc.svg" alt="" class="ratio-child-contain">
+		<!-- @if a csv -->
+			<?php if( in_array( $args['file_extension'],
+				array('csv')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-csv.svg" alt="" />
 
-				<!-- @if a  pdf -->
-					<?php elseif( in_array( $args['file_extension'],
-						array('pdf')
-					)): ?>
-						<img src="<?=app_get_uri(); ?>/assets/images/logo-pdf.svg" alt="" class="ratio-child-contain">
+		<!-- @if a word documente -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('doc','docx')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-doc.svg" alt="" />
 
-				<!-- @if a txt -->
-					<?php elseif( in_array( $args['file_extension'],
-						array('txt')
-					)): ?>
-						<img src="<?=app_get_uri(); ?>/assets/images/logo-txt.svg" alt="" class="ratio-child-contain">
+		<!-- @if a  pdf -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('pdf')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-pdf.svg" alt="" />
 
-				<!-- @if a web friendly image -->
-					<?php elseif( in_array( $args['file_extension'],
-						array('jpg','png','svg','gif','webp')
-					) ): ?>
-						<!-- @REPLACE url with image file's url -->
-						<img src="/placeholder/files/shrek.jpg" alt="" class="ratio-child-cover">
+		<!-- @if a txt -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('txt')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-txt.svg" alt="" />
 
-				<!-- unknown filetype -->
-					<?php else: ?>
-						<img src="<?=app_get_uri(); ?>/assets/images/logo-unknown.svg" alt="" class="ratio-child-contain">
+		<!-- @if a web friendly image -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('jpg','png','svg','gif','webp')
+			) ): ?>
+				<div class="outreach-attachment-item-thumbnail-img ratio ratio-4-by-3">
+					<!-- @REPLACE url with image file's url -->
+					<img src="/placeholder/files/shrek.jpg" alt="" class="ratio-child-cover">
+				</div>
 
-					<?php endif; ?>
 
-			</div>
+		<!-- unknown filetype -->
+			<?php else: ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-unknown.svg" alt="" />
+
+			<?php endif; ?>
+	</div>
+	<div class="outreach-attachment-item-details">
+		<div class="attachment-name text-wrap-ellipsis">
+			<span class="REPLACE">totally-not-a-virus<?= $args['file_extension'] ? '.'. $args['file_extension'] : '' ?></span>
 		</div>
-		<div class="flex-col-xs-8 flex-col-lg-9">
-			<div class="attachment-name text-wrap-ellipsis">
-				<span class="REPLACE">totally-not-a-virus<?= $args['file_extension'] ? '.'. $args['file_extension'] : '' ?></span>
-			</div>
-			<div class="attachment-size color-neutral">
-				<span class="REPLACE">69kb</span>
-			</div>
-
+		<div class="attachment-size color-neutral">
+			<span class="REPLACE">69kb</span>
 		</div>
 	</div>
 

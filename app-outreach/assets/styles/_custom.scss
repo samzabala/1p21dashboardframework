@@ -282,6 +282,32 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 }
 
 .outreach {
+	&-attachment-item {
+		&-grid#{&} {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-gap: $gutter-small;
+		}
+		&-grid#{&} & {
+			&-thumbnail,
+			&-details {
+				min-width: 0;
+			}
+	
+			&-thumbnail {
+				justify-self: center;
+
+				&-img {
+					width:64px;
+				}
+	
+				&-icon {
+					width: 28px;
+					display: block;
+				}
+			}
+		}
+	}
 	&-error-container {
 		padding-right: 1rem;
 		margin-right: -1rem;
