@@ -12,13 +12,13 @@
 
 		<!-- @if a csv -->
 			<?php if( in_array( $args['file_extension'],
-				array('csv')
+				array('xls','xlsx','xlsm','slxb','csv','tsv','dsv')
 			)): ?>
-				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-csv.svg" alt="" />
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-x.svg" alt="" />
 
 		<!-- @if a word documente -->
 			<?php elseif( in_array( $args['file_extension'],
-				array('doc','docx')
+				array('doc','docx','docm')
 			)): ?>
 				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-doc.svg" alt="" />
 
@@ -30,9 +30,45 @@
 
 		<!-- @if a txt -->
 			<?php elseif( in_array( $args['file_extension'],
-				array('txt')
+				array('txt','rtf')
 			)): ?>
 				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-txt.svg" alt="" />
+
+		<!-- @if a xml/front end language -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('json','xml','rss','css','html')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-code.svg" alt="" />
+
+		<!-- @if a font file -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('otf','ttf','eot','woff','woff2')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-font.svg" alt="" />
+
+		<!-- @if a video file -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('mp4','mov','wmv','flv','avi','avchd')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-video.svg" alt="" />
+
+		<!-- @if a compressed file -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('zip','rar')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-zip.svg" alt="" />
+
+		<!-- @if a compressed file -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('wav','mp3')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-audio.svg" alt="" />
+
+		<!-- @if a non-web img -->
+			<?php elseif( in_array( $args['file_extension'],
+				array('tiff','eps')
+			)): ?>
+				<img class="outreach-attachment-item-thumbnail-icon" src="<?=app_get_uri(); ?>/assets/images/logo-img.svg" alt="" />
 
 		<!-- @if a web friendly image -->
 			<?php elseif( in_array( $args['file_extension'],
