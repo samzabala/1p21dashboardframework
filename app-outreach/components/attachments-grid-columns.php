@@ -14,6 +14,11 @@
 			'doc',
 			'pdf',
 			'txt',
+			'json',
+			'otf',
+			'mp4',
+			'zip',
+			'tiff',
 			'jpg',
 		);
 		for($i=0; $i<count($file_ext_demo); $i++){ ?>
