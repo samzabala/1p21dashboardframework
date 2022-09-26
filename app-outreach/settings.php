@@ -124,7 +124,7 @@
 					<th class="background-theme-contrast module-title text-nowrap" width="185">
 						&nbsp;<span class="sr-only">Track Opens</span>
 					</th>
-					<th class="background-theme-contrast module-title text-nowrap" width="180-">
+					<th class="background-theme-contrast module-title text-nowrap" width="180">
 						&nbsp;<span class="sr-only">Track Clicks</span>
 					</th>
 					<th class="background-theme-contrast module-title text-nowrap">
