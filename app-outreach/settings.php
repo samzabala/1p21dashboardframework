@@ -121,6 +121,12 @@
 					<th class="background-theme-contrast module-title text-nowrap">
 						&nbsp;<span class="sr-only">Sync</span>
 					</th>
+					<th class="background-theme-contrast module-title text-nowrap" width="185">
+						&nbsp;<span class="sr-only">Track Opens</span>
+					</th>
+					<th class="background-theme-contrast module-title text-nowrap" width="180-">
+						&nbsp;<span class="sr-only">Track Clicks</span>
+					</th>
 					<th class="background-theme-contrast module-title text-nowrap">
 						Sent By
 					</th>
@@ -143,9 +149,7 @@
 								<div id="email-send" name="email-send" class="input-toggle input-large">
 									<input type="checkbox" class="input">
 									<label for="email-send" class="input-label input-toggle-label">
-										<div class="sr-only">
-											Toggle Send
-										</div>
+										<div class="sr-only">Toggle send enabled</div>
 									</label>
 								</div>
 							</div>
@@ -159,21 +163,47 @@
 										<div id="email-sync" name="email-sync" class="input-toggle input-large">
 											<input type="checkbox" class="input">
 											<label for="email-send" class="input-label input-toggle-label">
-												<div class="sr-only">
-													Toggle Sync
-												</div>
+												<div class="sr-only">Toggle sync enabled</div>
 											</label>
 										</div>
 									</div>
 								</div>
-								<div class="flex-child flex-1-1 no-margin-left">
+								<div class="flex-child flex-1-1">
 									<div class="font-size-small color-neutral margin-small-top">
 										synced <span class="REPLACE">a year</span> ago
 									</div>
 								</div>
 							</div>
 						</td>
-						<td width="200">
+						<td width="185">
+							<div class="inline-flex-xs align-items-center">
+								<label for="email-open-tracking-enabled" class="margin-small-top margin-small-right">
+									Track opens
+								</label>
+								<div id="email-send" name="email-send" class="input-toggle input-large">
+									<input type="checkbox" class="input">
+									<label for="email-send" class="input-label input-toggle-label">
+										<div class="sr-only">Toggle track opens</div>
+									</label>
+								</div>
+							</div>
+						</td>
+						
+						<td width="180">
+							<div class="inline-flex-xs align-items-center">
+								<label for="email-open-tracking-enabled" class="margin-small-top margin-small-right">
+									Track clicks
+								</label>
+								<div id="email-send" name="email-send" class="input-toggle input-large">
+									<input type="checkbox" class="input">
+									<label for="email-send" class="input-label input-toggle-label">
+									<div class="sr-only">Toggle track clicks</div>
+									</label>
+								</div>
+							</div>
+						</td>
+						
+						<td>
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Sent by</span>
 							<div data-toggle-modal-default>
 								<span class="REPLACE">Gmail</span>
@@ -250,10 +280,37 @@
 												</div>
 											</div>
 										</div>
-										<div class="flex-child flex-1-1 no-margin-left">
+										<div class="flex-child flex-1-1">
 											<div class="font-size-small color-neutral margin-small-top">
 												synced <span class="REPLACE">69 seconds</span> ago
 											</div>
+										</div>
+									</div>
+								</td>
+								<td width="185">
+									<div class="inline-flex-xs align-items-center">
+										<label for="email-open-tracking-enabled" class="margin-small-top margin-small-right">
+											Track opens
+										</label>
+										<div id="email-send" name="email-send" class="input-toggle input-large">
+											<input type="checkbox" class="input">
+											<label for="email-send" class="input-label input-toggle-label">
+												<div class="sr-only">Toggle track opens</div>
+											</label>
+										</div>
+									</div>
+								</td>
+								
+								<td width="180">
+									<div class="inline-flex-xs align-items-center">
+										<label for="email-open-tracking-enabled" class="margin-small-top margin-small-right">
+											Track clicks
+										</label>
+										<div id="email-send" name="email-send" class="input-toggle input-large">
+											<input type="checkbox" class="input">
+											<label for="email-send" class="input-label input-toggle-label">
+											<div class="sr-only">Toggle track clicks</div>
+											</label>
 										</div>
 									</div>
 								</td>
