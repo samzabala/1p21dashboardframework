@@ -55,7 +55,7 @@
 			<td>
 				<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Email</span>
 				<!-- @if has email -->
-					<a href="#mb-editor-email" data-toggle-modal-board class="contact-email color-inherit text-wrap-ellipsis">
+					<a href="#m-editor-email" data-toggle-modal-default class="contact-email color-inherit text-wrap-ellipsis">
 						<span class="RELPACE">naruhodo@ace-attorney.com</span>
 					</a>
 				<!-- @else -->
@@ -175,7 +175,7 @@
 						<td width="200">
 							<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Email</span>
 							<!-- @if has email -->
-								<a href="#mb-editor-email" data-toggle-modal-board class="contact-email color-inherit text-wrap-ellipsis">
+								<a href="#m-editor-email" data-toggle-modal-default class="contact-email color-inherit text-wrap-ellipsis">
 									<span class="RELPACE">naruhodo@ace-attorney.com</span>
 								</a>
 							<!-- @else -->
