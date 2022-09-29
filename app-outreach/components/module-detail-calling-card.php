@@ -162,7 +162,7 @@ $args = app_parse_args($data,$defs);
 									First Name Last Name
 								</span>
 								<br>
-								<a href="#mb-editor-email" data-toggle-modal-board class="text-wrap-ellipsis">
+								<a href="#m-editor-email" data-toggle-modal-default class="text-wrap-ellipsis">
 									<span class="REPLACE">REPLACE@emailemailemailemailemailemail.com</span>
 								</a>
 							<!-- @else -->
