@@ -927,7 +927,7 @@
 
 			<div class="module">
 				<div class="module-content">
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
+					<div class="flex-grid flex-grid-compact flex-grid-constricted-y justify-content-space-between align-items-center">
 						<div class="flex-child">
 							<h5 class="no-margin-y">TITLE</h5>
 						</div>
@@ -1798,40 +1798,35 @@
 			<div class="zone zone-disabled zone-error">click me boi also i cant be fucked with</div>
 
 
-			<div class="zone zone-small zone-default">click me boi</div>
-			<div class="zone zone-small zone-primary">click me boi</div>
-			<div class="zone zone-small zone-secondary">click me boi</div>
-			<div class="zone zone-small zone-accent">click me boi</div>
-			<div class="zone zone-small zone-neutral">click me boi</div>
-			<div class="zone zone-small zone-success">click me boi</div>
-			<div class="zone zone-small zone-caution">click me boi</div>
-			<div class="zone zone-small zone-error">click me boi</div>
+			<div class="zone zone-compact zone-default">click me boi</div>
+			<div class="zone zone-compact zone-primary">click me boi</div>
+			<div class="zone zone-compact zone-secondary">click me boi</div>
+			<div class="zone zone-compact zone-accent">click me boi</div>
+			<div class="zone zone-compact zone-neutral">click me boi</div>
+			<div class="zone zone-compact zone-success">click me boi</div>
+			<div class="zone zone-compact zone-caution">click me boi</div>
+			<div class="zone zone-compact zone-error">click me boi</div>
 
 
 
-			<div class="zone zone-large zone-default">click me boi</div>
-			<div class="zone zone-large zone-primary">click me boi</div>
-			<div class="zone zone-large zone-secondary">click me boi</div>
-			<div class="zone zone-large zone-accent">click me boi</div>
-			<div class="zone zone-large zone-neutral">click me boi</div>
-			<div class="zone zone-large zone-success">click me boi</div>
-			<div class="zone zone-large zone-caution">click me boi</div>
-			<div class="zone zone-large zone-error">click me boi</div>
-		</div>
-
-		<h1 data-toggle-accordion>fuullscreen<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
-		<div class="accordion">
-			<a href="#fullscreen-demo"  data-toggle-modal-fullscreen>Use this for worflow screens that slide from the slide</a>
-			<div id="fullscreen-demo" data-modal-width="500px" class="dashboard-board-partition modal modal-fullscreen">
-				<?php app_get_component('components/_DEMO-html-markup'); ?>
-			</div>
+			<div class="zone zone-expanded zone-default">click me boi</div>
+			<div class="zone zone-expanded zone-primary">click me boi</div>
+			<div class="zone zone-expanded zone-secondary">click me boi</div>
+			<div class="zone zone-expanded zone-accent">click me boi</div>
+			<div class="zone zone-expanded zone-neutral">click me boi</div>
+			<div class="zone zone-expanded zone-success">click me boi</div>
+			<div class="zone zone-expanded zone-caution">click me boi</div>
+			<div class="zone zone-expanded zone-error">click me boi</div>
 		</div>
 
 		<h1 data-toggle-accordion>board<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<a href="#board-demo"  data-toggle-modal-board>Use this for worflow screens that slide from the slide</a>
+
+			<a href="#board-demo"  data-toggle-modal-board data-modal-fullscreen="true" data-modal-resize="true" >fullscreen is enabled boi</a>
+			<a href="#board-demo"  data-toggle-modal-board data-modal-align="left" data-modal-resize="true" >align left</a>
+			<a href="#board-demo"  data-toggle-modal-board data-modal-align="right" data-modal-resize="true" >align right</a>
 			<div id="board-demo" class="dashboard-board-partition modal modal-board">
-				<div class="flex-grid flex-grid-no-gutter">
+				<div class="flex-grid flex-grid-constricted">
 					<div class="flex-col-xs-12 flex-col-md-9">
 						<div class="dashboard-board-partition dashboard-board-main">
 							<div class="container">
@@ -2275,7 +2270,7 @@
 			<div class="position-relative">
 				<a href="#dropcal" data-toggle-dropdown>Toggle ya boi</a>
 				<div id="dropcal" class="dropdown" data-dropdown-width="100%">
-					<div class="flex-grid flex-wrap flex-grid-no-gutter-y">
+					<div class="flex-grid flex-wrap flex-grid-constricted-y">
 
 						<div class="flex-col-md-4 flex-col-sm-6">
 
@@ -2844,11 +2839,19 @@
 					 data-toggle-modal-default
 					data-modal-title="dumb Bitch juice"
 					data-href="#modal-demo">Modal boi</a>
+					<br>
 				<a
 					 data-toggle-modal-default
 					data-modal-title="Titties"
 					data-modal-callback="fuckinModalCallback()"
 					data-href="#modal-demo">Modal boi with a callback</a>
+					<br>
+
+					<a
+					 data-toggle-modal-default
+					data-modal-title="Titties"
+					data-modal-fullscreen="true"
+					data-href="#modal-demo">Modal boi with a fullscreen</a>
 
 
 <script>
@@ -5371,6 +5374,19 @@
 				</li>
 			</ul>
 
+			<ul class="list-group list-group-constricted">
+				<li>
+				<span class="badge badge-primary"></span>
+				Cras justo odio
+				</li>
+				<li>
+				Dapibus ac facilisis in
+				</li>
+				<li>
+				Morbi leo risus
+				</li>
+			</ul>
+
 			<ul class="list-group list-group-compact">
 				<li>
 				<span class="badge badge-primary"></span>
@@ -5571,7 +5587,7 @@
 		<h1 data-toggle-accordion>Symbols fucker <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-		<p class="no-margin special-primary text-clip-background background-gradient text-leading-expanded">
+			<p class="no-margin special-primary text-clip-background background-gradient text-leading-expanded">
 				Good Morning McFly <i class="symbol symbol-robot"></i> <i class="symbol sybol-clap"></i>
 			</p>
 
@@ -5836,7 +5852,7 @@
 			<table class="table">
 				<thead>
 					<tr>
-							<th class="table-cell-no-gutter">#</th>
+							<th class="table-cell-constricted">#</th>
 							<th>Column heading</th>
 							<th>Column heading</th>
 							<th class="text-align-right">Column heading</th>
@@ -5845,21 +5861,21 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-primary"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">69</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-secondary"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">420</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-accent"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
@@ -5867,56 +5883,56 @@
 						</tr>
 						
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-success"></span></td>
 							<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 							<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 							<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 							<td class="text-align-center">666</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-caution"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-error"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-1"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-intensity-1"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-2"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-intensity-2"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-3"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-intensity-3"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-4"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-intensity-4"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
 						<tr>
-							<td class="table-cell-no-gutter"><span class="table-label table-label-intensity-5"></span></td>
+							<td class="table-cell-constricted"><span class="table-label table-label-intensity-5"></span></td>
 							<td>Column content</td>
 							<td>Column content</td>
 							<td class="text-align-right">Column content</td>
@@ -5927,10 +5943,10 @@
 
 				<h2>Table small and with wrapper so you can scroll through the bullshit</h2>
 				<div class="table-wrapper">
-					<table class="table-small">
+					<table class="table-compact">
 						<thead>
 						<tr>
-								<th class="table-cell-no-gutter">#</th>
+								<th class="table-cell-constricted">#</th>
 								<th>Column heading</th>
 								<th>Column heading</th>
 								<th class="text-align-right">Column heading</th>
@@ -5939,21 +5955,21 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-primary"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">69</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-secondary"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">420</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-accent"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
@@ -5961,42 +5977,42 @@
 							</tr>
 							
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-success"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-success"></span></td>
 								<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 								<td>Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 								<td class="text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</td>
 								<td class="text-align-center">666</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-error"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-error"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">0</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-caution"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-caution"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">0</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-primary"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-primary"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">0</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-secondary"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-secondary"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
 								<td class="text-align-center">0</td>
 							</tr>
 							<tr>
-								<td class="table-cell-no-gutter"><span class="table-label table-label-accent"></span></td>
+								<td class="table-cell-constricted"><span class="table-label table-label-accent"></span></td>
 								<td>Column content</td>
 								<td>Column content</td>
 								<td class="text-align-right">Column content</td>
@@ -6123,7 +6139,235 @@
 
 				<h2>Table but large spacing + color scheme</h2>
 
-				<table class="table table-large">
+				<table class="table table-expanded">
+					<thead>
+					<tr>
+							
+							<th>Column heading</th>
+							<th>Column heading</th>
+							<th class="text-align-right">Column heading</th>
+							<th class="text-align-center">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						
+						
+						
+						<tr class="table-row-primary">
+							
+							<td>Primary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-secondary">
+							
+							<td>secondary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-accent">
+							
+							<td>accent</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+						<tr class="table-row-success">
+							
+							<td>Success</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">666</td>
+						</tr>
+						<tr class="table-row-error">
+							
+							<td>Error</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-caution">
+							
+							<td>Caution</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-neutral">
+							
+							<td>neutral</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-1">
+							
+							<td>Intensity 1</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-2">
+							
+							<td>Intensity 2</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-3">
+							
+							<td>Intensity 3</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-4">
+							
+							<td>Intensity 4</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-5">
+							
+							<td>Intensity 5</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-disabled">
+							
+							<td>Disabled</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+					</tbody>
+				</table>
+
+
+
+			<h2>Table but compact</h2>
+
+				<table class="table table-compact">
+					<thead>
+					<tr>
+							
+							<th>Column heading</th>
+							<th>Column heading</th>
+							<th class="text-align-right">Column heading</th>
+							<th class="text-align-center">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						
+						
+						
+						<tr class="table-row-primary">
+							
+							<td>Primary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-secondary">
+							
+							<td>secondary</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-accent">
+							
+							<td>accent</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+						<tr class="table-row-success">
+							
+							<td>Success</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">666</td>
+						</tr>
+						<tr class="table-row-error">
+							
+							<td>Error</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-caution">
+							
+							<td>Caution</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-neutral">
+							
+							<td>neutral</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-1">
+							
+							<td>Intensity 1</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-2">
+							
+							<td>Intensity 2</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-3">
+							
+							<td>Intensity 3</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-4">
+							
+							<td>Intensity 4</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-intensity-5">
+							
+							<td>Intensity 5</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						<tr class="table-row-disabled">
+							
+							<td>Disabled</td>
+							<td>Column content</td>
+							<td class="text-align-right">Column content</td>
+							<td class="text-align-center">0</td>
+						</tr>
+						
+					</tbody>
+				</table>
+
+			<h2>Table but constricted</h2>
+
+				<table class="table table-constricted">
 					<thead>
 					<tr>
 							
@@ -6238,64 +6482,63 @@
 			<h2>Table but just generated with dem classes</h2>
 			<div class="table">
 				<div class="table-row">
-						<p class="table-cell table-cell-no-gutter table-cell table-cell-heading">#</p>
+						<p class="table-cell table-cell-constricted table-cell table-cell-heading">#</p>
 						<p class="table-cell table-cell-heading">Column heading</p>
 						<p class="table-cell table-cell-heading">Column heading</p>
 						<p class="table-cell table-cell-heading">Column heading</p>
 						<p class="table-cell table-cell-heading">Total</p>
 				</div>
-				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
+				<div class="table-row table-expanded">
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-primary"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell text-align-right">Column content</p>
 					<p class="table-cell text-align-center">69</p>
 				</div>
-				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
+				<div class="table-row table-compact">
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-accent"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell text-align-right">Column content</p>
 					<p class="table-cell text-align-center">420</p>
 				</div>
-				
+				<div class="table-row table-constricted">
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-error"></span></p>
+					<p class="table-cell">Column content</p>
+					<p class="table-cell">Column content</p>
+					<p class="table-cell text-align-right">Column content</p>
+					<p class="table-cell text-align-center">0</p>
+				</div>
 				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-success"></span></p>
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-success"></span></p>
 					<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
 					<p class="table-cell">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
 					<p class="table-cell text-align-right">Column contentColumn contentColumn contentColumn contentColumn contentColumn contentColumn content more more more</p>
 					<p class="table-cell text-align-center">666</p>
 				</div>
 				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-error"></span></p>
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-caution"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell text-align-right">Column content</p>
 					<p class="table-cell text-align-center">0</p>
 				</div>
 				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-caution"></span></p>
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-primary"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell text-align-right">Column content</p>
 					<p class="table-cell text-align-center">0</p>
 				</div>
 				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-primary"></span></p>
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-secondary"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell text-align-right">Column content</p>
 					<p class="table-cell text-align-center">0</p>
 				</div>
 				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-secondary"></span></p>
-					<p class="table-cell">Column content</p>
-					<p class="table-cell">Column content</p>
-					<p class="table-cell text-align-right">Column content</p>
-					<p class="table-cell text-align-center">0</p>
-				</div>
-				<div class="table-row">
-					<p class="table-cell table-cell-no-gutter"><span class="table-label table-label-accent"></span></p>
+					<p class="table-cell table-cell-constricted"><span class="table-label table-label-accent"></span></p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell">Column content</p>
 					<p class="table-cell text-align-right">Column content</p>
@@ -6343,6 +6586,10 @@
 
 			<p class="text-leading-compact">
 				Compact Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
+			</p>
+
+			<p class="text-leading-constricted">
+				Expanded  Center Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.
 			</p>
 
 			<p class="text-leading-normalize">
@@ -7095,74 +7342,74 @@
 				</div>
 			</div>
 
-			<h3>no gutter grid</h3>
+			<h3>constricted grid</h3>
 
-			<div class="flex-grid flex-grid-no-gutter">
+			<div class="flex-grid flex-grid-constricted">
 				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
-					A column boi but no gutter
+					A column boi but constricted
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
-					A column boi but no gutter
+					A column boi but constricted
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter
+					A column boi but constricted
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter
+					A column boi but constricted
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter
+					A column boi but constricted
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter
+					A column boi but constricted
 				</div>
 			</div>
 
 
 
-			<h3>no gutter x grid</h3>
+			<h3>constricted x grid</h3>
 
-			<div class="flex-grid flex-grid-no-gutter-x">
+			<div class="flex-grid flex-grid-constricted-x">
 				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
-					A column boi but no gutter x
+					A column boi but constricted x
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
-					A column boi but no gutter x
+					A column boi but constricted x
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter x
+					A column boi but constricted x
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter x
+					A column boi but constricted x
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter x
+					A column boi but constricted x
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter x
+					A column boi but constricted x
 				</div>
 			</div>
 
-			<h3>no gutter y grid</h3>
+			<h3>constricted y grid</h3>
 
-			<div class="flex-grid flex-grid-no-gutter-y">
+			<div class="flex-grid flex-grid-constricted-y">
 				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
-					A column boi but no gutter y
+					A column boi but constricted y
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
-					A column boi but no gutter y
+					A column boi but constricted y
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter y
+					A column boi but constricted y
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter y
+					A column boi but constricted y
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter y
+					A column boi but constricted y
 				</div>
 				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
-					A column boi but no gutter y
+					A column boi but constricted y
 				</div>
 			</div>
 
