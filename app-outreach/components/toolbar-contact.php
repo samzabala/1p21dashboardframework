@@ -16,7 +16,7 @@ Tooltip from framework/src/js/imports/tooltip
 				data-tooltip-content="<span class='text-transform-uppercase font-weight-700'>Email</span>"
 				data-tooltip-center-x="true"
 				data-tooltip-placement="top"
-				href="#mb-editor-email" data-toggle-modal-board
+				href="#m-editor-email" data-toggle-modal-default
 				class="utility-mail to btn btn-caution-glassy btn-symbol btn-large">
 				<i class="symbol symbol-envelope-inverse"></i>
 			</a>
