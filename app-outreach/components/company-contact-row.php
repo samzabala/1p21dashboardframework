@@ -21,7 +21,7 @@
 	<td width="250">
 		<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Email</span>
 		<!-- @if has email -->
-			<a href="#mb-editor-email" class="text-wrap-ellipsis" data-toggle-modal-board data-modal-title="Compose email">
+			<a href="#m-editor-email" class="text-wrap-ellipsis" data-toggle-modal-default data-modal-title="Compose email">
 				<span class="REPLACE">ace@attorney.com</span>
 			</a>
 		<!-- @else -->
