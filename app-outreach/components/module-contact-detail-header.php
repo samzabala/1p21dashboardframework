@@ -27,7 +27,7 @@
                                 Wright &amp; Co Law Offices
                             </a>
                             <span class="separator">|</span>
-                            <a href="#mb-editor-email" data-toggle-modal-board class="contact-email">
+                            <a href="#m-editor-email" data-toggle-modal-default class="contact-email">
                                 <span class="REPLACE">REPLACE@email.com</span>
                             </a>
                         </div>

@@ -1058,11 +1058,11 @@ $zone-gutter-x: $gutter-base !default;
 $zone-gutter-y: $gutter-base !default;
 $zone-margin-y: $gutter-base !default;
 
-$zone-gutter-x-small: $gutter-small !default;
-$zone-gutter-y-small: $gutter-small !default;
+$zone-gutter-x-compact: $gutter-small !default;
+$zone-gutter-y-compact: $gutter-small !default;
 
-$zone-gutter-x-large: $gutter-large !default;
-$zone-gutter-y-large: $gutter-large !default;
+$zone-gutter-x-expanded: $gutter-large !default;
+$zone-gutter-y-expanded: $gutter-large !default;
 
 $zone-border-radius: 0 !default;
 
@@ -1284,6 +1284,17 @@ $modal-board-resize-width: 20px !default; //not yet
 $modal-board-resize-height: 55px !default; //not yet
 $modal-board-close-size: 38px !default;
 $modal-board-close-box-shadow: $box-shadow-base $var-color-base !default;
+
+//FULLSCREEN
+
+$modal-fullscreen-padding-x: $modal-padding-x !default;
+$modal-fullscreen-padding-y: $modal-padding-y !default;
+$modal-fullscreen-expanded-padding-x: $modal-expanded-padding-x !default;
+$modal-fullscreen-expanded-padding-y: $modal-expanded-padding-y !default;
+$modal-fullscreen-compact-padding-x: $modal-compact-padding-x !default;
+$modal-fullscreen-compact-padding-y: $modal-compact-padding-y !default;
+$modal-fullscreen-padding-x-mobile: $modal-padding-x-mobile !default;
+$modal-fullscreen-padding-y-mobile: $modal-padding-y-mobile !default;
 
 // DROPDOWN
 $dropdown-gutter-x: $gutter-small !default;
