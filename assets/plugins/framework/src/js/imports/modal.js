@@ -283,29 +283,19 @@ class Modal extends FwComponent {
   }
 
   get UIToggle() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}]`
-    );
+    return this.UIRoot.querySelectorAll(`*[data-toggle-${this.modeToggle}]`);
   }
   get UIToggleClose() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-close]`
-    );
+    return this.UIRoot.querySelectorAll(`*[data-toggle-${this.modeToggle}-close]`);
   }
   get UIToggleOpen() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-open]`
-    );
+    return this.UIRoot.querySelectorAll(`*[data-toggle-${this.modeToggle}-open]`);
   }
   get UIToggleFullscreen() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-fullscreen]`
-    );
+    return this.UIRoot.querySelectorAll(`*[data-toggle-${this.modeToggle}-fullscreen]`);
   }
   get UIToggleResize() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-resize]`
-    );
+    return this.UIRoot.querySelectorAll(`*[data-toggle-${this.modeToggle}-resize]`);
   }
 
   static #modeToggle(mode) {
@@ -448,10 +438,18 @@ class Modal extends FwComponent {
             : this._customArgs.fullscreen,
         fullscreenContentDisplay:
           this.triggerer &&
-          this.triggerer.hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            ? this.triggerer.getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            : super.UIEl().hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            ? super.UIEl().getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
+          this.triggerer.hasAttribute(
+            `data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`
+          )
+            ? this.triggerer.getAttribute(
+                `data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`
+              )
+            : super
+                .UIEl()
+                .hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
+            ? super
+                .UIEl()
+                .getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
             : this._customArgs.fullscreenContentDisplay,
         centerY:
           this.triggerer &&
@@ -563,13 +561,12 @@ class Modal extends FwComponent {
         }
         ${this.args.centerY ? `${UIPrefix(COMPONENT_CLASS)}-center-y` : ''}
         ${this.args.classes}`;
-      theUI.setAttribute('id', this.UIId)
+      theUI.setAttribute('id', this.UIId);
 
       theUI.innerHTML = this._markup;
 
       FwDom.moveContents(element, this.UIContentBlock);
       element.appendChild(theUI);
-
 
       this.#current = {
         element: element,
@@ -656,7 +653,7 @@ class Modal extends FwComponent {
     );
   }
 
-  activateFullscreen(elem){
+  activateFullscreen(elem) {
     const element = elem
       ? super.UIEl(elem)
       : this.#current
@@ -678,10 +675,9 @@ class Modal extends FwComponent {
       },
       element
     );
-
   }
 
-  deactivateFullscreen(elem){
+  deactivateFullscreen(elem) {
     const element = elem
       ? super.UIEl(elem)
       : this.#current
@@ -691,7 +687,6 @@ class Modal extends FwComponent {
     if (!element) {
       return;
     }
-
 
     super.runCycle(
       EVENT_BEFORE_FULLSCREEN_DEACTIVATE,
@@ -704,7 +699,6 @@ class Modal extends FwComponent {
       },
       element
     );
-
   }
 
   toggleFullscreen(elem) {
@@ -732,14 +726,13 @@ class Modal extends FwComponent {
       EVENT_UPDATE,
       EVENT_AFTER_UPDATE,
       () => {
-
         // buttons
         if (this.UIToggleFullscreen) {
-          if(this.isFullscreen){
+          if (this.isFullscreen) {
             this.UIToggleFullscreen.forEach((butt) => {
               butt.classList.add(TOGGLE_ACTIVATED_CLASS);
             });
-          }else{
+          } else {
             this.UIToggleFullscreen.forEach((butt) => {
               butt.classList.remove(TOGGLE_ACTIVATED_CLASS);
             });
