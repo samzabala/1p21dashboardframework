@@ -33,7 +33,7 @@
 			<div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-from" class="input-label">From</label>
 						</div>
 						<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
@@ -49,7 +49,7 @@
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact justify-content-space-between">
-						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-to" class="input-label">To</label>
 						</div>
 						<div class="flex-col-xs-8 flex-col-sm-8 margin-auto-right align-self-center">
@@ -75,8 +75,8 @@
 					
 					<!-- @loop div -->
 						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-							<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
-								<div class="flex-sm justify-content-space-between flex-direction-row-reverse">
+							<div class="flex-col-xs-4 flex-col-sm-2">
+								<div class="flex-sm justify-content-space-between">
 									<label for="editor-email-cc-REPLACEWithId" class="input-label display-block">Cc</label>
 									<div class="btn btn-group btn-group-horizontal margin-small-right">
 										<!-- @Note. clicking this should append a new @loop div next to the @loop div ancestor -->
@@ -102,8 +102,8 @@
 				<div id="m-editor-email-bcc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid">
 					<!-- @loop div -->
 						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-							<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
-								<div class="flex-sm justify-content-space-between flex-direction-row-reverse">
+							<div class="flex-col-xs-4 flex-col-sm-2">
+								<div class="flex-sm justify-content-space-between">
 									<label for="editor-email-bcc-REPLACEWithId" class="input-label display-block">Bcc</label>
 									<div class="btn btn-group btn-group-horizontal margin-small-right">
 										<!-- @Note. clicking this should append a new @loop div next to the @loop div ancestor -->
@@ -128,7 +128,7 @@
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-" class="input-label">Template</label>
 						</div>
 						<div class="flex-col-xs-8 flex-col-sm-10 flex-col-md-8 align-self-center">
@@ -145,7 +145,7 @@
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-subject" class="input-label">Subject</label>
 						</div>
 						<div class="flex-col-xs-7 flex-col-sm-10 align-self-center">
