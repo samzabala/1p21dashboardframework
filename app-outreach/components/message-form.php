@@ -1,6 +1,6 @@
 
 <form  action="" class="flex-1-1 flex-xs flex-direction-column">
-	<div class="theme-inverse padding radius-small-top position-sticky offfset-0-x offset-0-top">
+	<div class="z-index-20 theme-inverse padding radius-small-top position-sticky offfset-0-x offset-0-top">
 		<div class="flex-grid flex-grid-compact flex-no-wrap flex-grid-no-gutter-y flex-grid-compact align-items-center justify-content-space-between">
 			<div class="flex-col-xs-4 flex-col-sm-6">
 				<!-- Heading -->
@@ -33,11 +33,11 @@
 			<div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-3 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
 							<label for="editor-email-from" class="input-label">From</label>
 						</div>
-						<div class="flex-col-xs-9 flex-col-sm-8">
-							<select name="" id="editor-email-from" class="input input-select input-block-mobile">
+						<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
+							<select name="" id="editor-email-from" class="input input-select input-blend input-block no-border">
 								<option value="">Select Your Email Address...</option>
 									<!-- @PLACEHOLDER. delete when ready -->
 										<option value="">myemail@outlook.com</option>
@@ -49,11 +49,11 @@
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact justify-content-space-between">
-						<div class="flex-col-xs-3 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
 							<label for="editor-email-to" class="input-label">To</label>
 						</div>
-						<div class="flex-col-xs-9 flex-col-sm-8 margin-auto-right">
-							<select name="" id="editor-email-to" class="input input-select input-block-mobile">
+						<div class="flex-col-xs-8 flex-col-sm-8 margin-auto-right align-self-center">
+							<select name="" id="editor-email-to" class="input input-select input-blend input-block no-border">
 								<option value="">Send to...</option>
 									<!-- @PLACEHOLDER. delete when ready -->
 										<option value="">phoenixwright@ace-attorney.com</option>
@@ -72,48 +72,67 @@
 					</div>
 				</div>
 				<div id="m-editor-email-cc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-3 flex-col-sm-2 text-align-right">
-							<label for="editor-email-cc" class="input-label">Cc</label>
+					
+					<!-- @loop div -->
+						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
+							<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+								<div class="flex-sm justify-content-space-between flex-direction-row-reverse">
+									<label for="editor-email-cc-REPLACEWithId" class="input-label display-block">Cc</label>
+									<div class="btn btn-group btn-group-horizontal margin-small-right">
+										<!-- @Note. clicking this should append a new @loop div next to the @loop div ancestor -->
+										<a class="btn btn-default btn-symbol" title="Add Another Cc"><i class="symbol symbol-plus"></i></a>
+										<!-- @Note. clicking this should remove the @loop div ancestor -->
+										<a class="btn btn-default btn-symbol" title="Remove Cc"><i class="symbol symbol-minus"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
+								<select name="" id="editor-email-cc-REPLACEWithId" class="input input-select input-blend input-block no-border">
+									<option value="">CC to...</option>
+										<!-- @PLACEHOLDER. delete when ready -->
+											<option value="">phoenixwright@ace-attorney.com</option>
+											<option value="">aceattorneyvalentina@ihatedarna.com</option>
+											<option value="">email@email.com</option>
+											<option value="">email@email.com</option>
+											<option value="">email@email.com</option>
+								</select>
+							</div>
 						</div>
-						<div class="flex-col-xs-9 flex-col-sm-8">
-							<select name="" id="editor-email-cc" class="input input-select input-block-mobile">
-								<option value="">CC to...</option>
-									<!-- @PLACEHOLDER. delete when ready -->
-										<option value="">phoenixwright@ace-attorney.com</option>
-										<option value="">aceattorneyvalentina@ihatedarna.com</option>
-										<option value="">email@email.com</option>
-										<option value="">email@email.com</option>
-										<option value="">email@email.com</option>
-							</select>
-						</div>
-					</div>
 				</div>
 				<div id="m-editor-email-bcc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-3 flex-col-sm-2 text-align-right">
-							<label for="editor-email-bcc" class="input-label">Bcc</label>
+					<!-- @loop div -->
+						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
+							<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+								<div class="flex-sm justify-content-space-between flex-direction-row-reverse">
+									<label for="editor-email-bcc-REPLACEWithId" class="input-label display-block">Bcc</label>
+									<div class="btn btn-group btn-group-horizontal margin-small-right">
+										<!-- @Note. clicking this should append a new @loop div next to the @loop div ancestor -->
+										<a class="btn btn-default btn-symbol" title="Add Another Bcc"><i class="symbol symbol-plus"></i></a>
+										<!-- @Note. clicking this should remove the @loop div ancestor -->
+										<a class="btn btn-default btn-symbol" title="Remove Bcc"><i class="symbol symbol-minus"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
+								<select name="" id="editor-email-bcc-REPLACEWithId" class="input input-select input-blend input-block no-border">
+									<option value="">BCC to...</option>
+										<!-- @PLACEHOLDER. delete when ready -->
+											<option value="">phoenixwright@ace-attorney.com</option>
+											<option value="">aceattorneyvalentina@ihatedarna.com</option>
+											<option value="">email@email.com</option>
+											<option value="">email@email.com</option>
+											<option value="">email@email.com</option>
+								</select>
+							</div>
 						</div>
-						<div class="flex-col-xs-9 flex-col-sm-8">
-							<select name="" id="editor-email-bcc" class="input input-select input-block-mobile">
-								<option value="">BCC to...</option>
-									<!-- @PLACEHOLDER. delete when ready -->
-										<option value="">edgelord@ace-attorney.com</option>
-										<option value="">darna@excuseyouiamdarna.com</option>
-										<option value="">email@email.com</option>
-										<option value="">email@email.com</option>
-										<option value="">email@email.com</option>
-							</select>
-						</div>
-					</div>
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-3 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
 							<label for="editor-email-" class="input-label">Template</label>
 						</div>
-						<div class="flex-col-xs-9 flex-col-sm-10 flex-col-md-8">
-							<select name="" id="editor-email-bcc" class="input input-select input-block">
+						<div class="flex-col-xs-8 flex-col-sm-10 flex-col-md-8 align-self-center">
+							<select name="" id="editor-email-bcc" class="input input-select input-blend input-block no-border">
 								<option value="">Select a Template...</option>
 									<!-- @PLACEHOLDER. delete when ready -->
 										<option value="">A Template</option>
@@ -126,7 +145,7 @@
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-3 flex-col-sm-2 text-align-right">
+						<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
 							<label for="editor-email-subject" class="input-label">Subject</label>
 						</div>
 						<div class="flex-col-xs-7 flex-col-sm-10 align-self-center">
@@ -141,7 +160,7 @@
 			</div>
 		<!-- </div> -->
 	</div>
-	<div class="background-theme-contrast padding-x radius-small-bottom position-sticky offfset-0-x offset-0-bottom">
+	<div class="z-index-20 background-theme-contrast padding-x radius-small-bottom position-sticky offfset-0-x offset-0-bottom">
 		<div class="flex-grid flex-grid-compact">
 			<!-- @NOTE
 				.btn[type=submit]
@@ -179,8 +198,22 @@
 						</span>
 					</div>
 					<div class="flex-col-xs-12 flex-col-sm-3">
-						<label for="editor-email-schedule-date" class="sr-only">Schedule date</label>
-						<input type="date" name="" id="editor-email-schedule-date" class="input input-single-line input-block">
+						<div class="position-relative">
+							<label for="editor-email-schedule-date" class="sr-only">Schedule date</label>
+							<a href="#" class="btn btn-group btn-group-horizontal btn-block" data-toggle-dropdown>
+								<span class="btn btn-default">
+									<span class="REPLACE">June 12, 1898</span>
+								</span>
+								<span class="btn  btn-default btn-symbol">
+									<i class="symbol symbol-kebab-horizontal"></i>
+								</span>
+							</a>
+							<div class="dropdown dropdown-bottom-flush dropdown-left no-padding" data-dropdown-width="300px">
+								<input type="date" name="" id="editor-email-schedule-date" class="input input-calendar" data-calendar-disabled-dates="past">
+
+							</div>
+
+						</div>
 					</div>
 					<div class="flex-col-xs-12 flex-col-sm-3">
 						<label for="editor-email-schedule-time" class="sr-only">Schedule time</label>

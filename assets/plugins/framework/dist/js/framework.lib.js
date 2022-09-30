@@ -2451,13 +2451,12 @@
           // @TODO AAAAAAAAAAAA FIGURE OUT THE MATH
           // for( dayLoopI = this._calendar.prevDay; dayLoopI >= (parseInt(this.args.startDay)); dayLoopI--){
           // for(let i = 0; i < 7; i++){
-          for (var _i2 = 0; _i2 < freeGridSpacePrev; _i2++) {
+          for (var _i2 = freeGridSpacePrev; _i2 >= 0; _i2--) {
             var offset = _this3._calendar.prevDate.getDate() - _i2;
 
             var loopDatePrev = new Date(_this3._calendar.prevDate.getFullYear(), _this3._calendar.prevDate.getMonth(), offset);
 
-            var dateBlockPrev = _this3._blockHtml(loopDatePrev, UIPrefix(COMPONENT_CLASS$a) + "-block-adjacent\n                " + (!_this3.validates(loopDatePrev) ? 'disabled' : '')); //prepend because we loopped this bitch in reverse
-
+            var dateBlockPrev = _this3._blockHtml(loopDatePrev, UIPrefix(COMPONENT_CLASS$a) + "-block-adjacent\n                " + (!_this3.validates(loopDatePrev) ? 'disabled' : ''));
 
             theUI.dates.innerHTML += dateBlockPrev;
           }
