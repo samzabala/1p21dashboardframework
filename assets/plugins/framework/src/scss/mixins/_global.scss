@@ -298,10 +298,7 @@
   background: $background;
   color: $color;
   border-radius: $border-radius;
-  padding-top: $gutter-x;
-  padding-bottom: $gutter-x;
-  padding-left: $gutter-y;
-  padding-right: $gutter-y;
+  padding: $gutter-x $gutter-y;
   box-shadow: $box-shadow;
   z-index: $z-index;
   text-align: initial;

@@ -22,9 +22,7 @@
         }
 
         @at-root #{$prefix}-grid-no-gutter#{$prefix}-grid-fixed#{&},
-          #{$prefix}-grid-no-gutter-x#{$prefix}-grid-fixed#{&},
-          #{$prefix}-grid-constricted#{$prefix}-grid-fixed#{&},
-          #{$prefix}-grid-constricted-x#{$prefix}-grid-fixed#{&} {
+          #{$prefix}-grid-no-gutter-x#{$prefix}-grid-fixed#{&} {
           width: #{$col-width};
         }
       }
@@ -46,9 +44,7 @@
         }
 
         #{$prefix}-grid-no-gutter#{$prefix}-grid-fixed > &,
-        #{$prefix}-grid-no-gutter-x#{$prefix}-grid-fixed > &,
-        #{$prefix}-grid-constricted#{$prefix}-grid-fixed > &,
-        #{$prefix}-grid-constricted-x#{$prefix}-grid-fixed > & {
+        #{$prefix}-grid-no-gutter-x#{$prefix}-grid-fixed > & {
           width: #{$col-width};
         }
       }

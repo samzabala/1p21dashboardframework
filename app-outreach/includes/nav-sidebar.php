@@ -59,7 +59,7 @@
 	</li>
 
 	<li>
-		<a data-toggle-modal-default data-modal="Compose Email" href="#m-editor-email" class="color-inherit-hover">
+		<a data-toggle-modal-board data-modal="Compose Email" href="#mb-editor-email" class="color-inherit-hover">
 			<div class="flex-xs outreach-nav-item-container">
 				<span class="nav-icon flex-0-0">
 					<i class="symbol symbol-addbox-inverse"></i>

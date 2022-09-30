@@ -1,8 +1,6 @@
 import Initiator from './core/initiator.js';
 import Settings from './core/settings.js';
 
-// import Modifiers from './../util/modifiers.js';
-
 import FwEvent from './data-helper/event.js';
 import FwString from './data-helper/string.js';
 import FwDom from './data-helper/dom.js';
@@ -14,10 +12,8 @@ const NAME = 'modal';
 const COMPONENT_CLASS = `${FwString.ToDashed(NAME)}`;
 const ARG_ATTRIBUTE_NAME = `${NAME}`;
 const TOGGLE_MODE_PREFIX = `${NAME}`;
-const FULLSCREEN_CLASS = `${UIPrefix(COMPONENT_CLASS)}-on-fullscreen`;
 
 const ACTIVATED_CLASS = `active`;
-const TOGGLE_ACTIVATED_CLASS = ACTIVATED_CLASS;
 
 const DEFAULT_NAME = `default`;
 const BOARD_NAME = `board`;
@@ -26,18 +22,6 @@ const DATA_KEY = `${Settings.get('prefix')}_${NAME}`;
 
 const EVENT_KEY = `_${DATA_KEY}`;
 const EVENT_CLICK = `click${EVENT_KEY}`;
-
-const EVENT_MOUSEDOWN = `mousedown${EVENT_KEY}`;
-// const EVENT_TOUCHSTART = `touchstart${EVENT_KEY}`;
-
-const EVENT_MOUSEMOVE = `mousemove${EVENT_KEY}`;
-// const EVENT_TOUCHMOVE = `touchmove${EVENT_KEY}`;
-
-const EVENT_MOUSEUP = `mouseup${EVENT_KEY}`;
-// const EVENT_TOUCHEND = `mouseup${EVENT_KEY}`;
-
-// const EVENT_KEYDOWN = `keydown${EVENT_KEY}`;
-
 const EVENT_HASHCHANGE = `hashchange${EVENT_KEY}`;
 
 const EVENT_BEFORE_CREATE = `before_create${EVENT_KEY}`;
@@ -56,17 +40,7 @@ const EVENT_BEFORE_RESIZE = `before_resize${EVENT_KEY}`;
 const EVENT_RESIZE = `resize${EVENT_KEY}`;
 const EVENT_AFTER_RESIZE = `after_resize${EVENT_KEY}`;
 
-const EVENT_BEFORE_FULLSCREEN_ACTIVATE = `before_fullscreen_activate${EVENT_KEY}`;
-const EVENT_FULLSCREEN_ACTIVATE = `fullscreen_activate${EVENT_KEY}`;
-const EVENT_AFTER_FULLSCREEN_ACTIVATE = `after_fullscreen_activate${EVENT_KEY}`;
-
-const EVENT_BEFORE_FULLSCREEN_DEACTIVATE = `before_fullscreen_deactivate${EVENT_KEY}`;
-const EVENT_FULLSCREEN_DEACTIVATE = `fullscreen_deactivate${EVENT_KEY}`;
-const EVENT_AFTER_FULLSCREEN_DEACTIVATE = `after_fullscreen_deactivate${EVENT_KEY}`;
-
 const CURRENT_MODAL_INSTANCE = {};
-
-let LAST_POS_X = 0;
 
 const VALID_MODAL_MODES = [
   BOARD_NAME,
@@ -111,11 +85,7 @@ class Modal extends FwComponent {
           if (
             triggerer.hasAttribute(`data-toggle-${Modal.#modeToggle(mode)}`) ||
             triggerer.hasAttribute(`data-toggle-${Modal.#modeToggle(mode)}-open`) ||
-            triggerer.hasAttribute(`data-toggle-${Modal.#modeToggle(mode)}-close`) ||
-            triggerer.hasAttribute(
-              `data-toggle-${Modal.#modeToggle(mode)}-fullscreen`
-            ) ||
-            triggerer.hasAttribute(`data-toggle-${Modal.#modeToggle(mode)}-resize`)
+            triggerer.hasAttribute(`data-toggle-${Modal.#modeToggle(mode)}-close`)
           ) {
             currMode = mode;
           }
@@ -153,8 +123,8 @@ class Modal extends FwComponent {
         : element && element.__customArgs
         ? element.__customArgs
         : {},
+      // _mode: currMode ? currMode : element && element.__mode ? element.__mode : false,
       _mode: currMode,
-      _canDrag: element && element.__canDrag ? element.__canDrag : false,
     });
   }
 
@@ -162,7 +132,6 @@ class Modal extends FwComponent {
     super.setProp('triggerer', '__dispose');
     super.setProp('_customArgs', '__dispose');
     super.setProp('_mode', '__dispose');
-    super.setProp('_canDrag', '__dispose');
     super.dispose();
   }
 
@@ -205,68 +174,6 @@ class Modal extends FwComponent {
     return possibEl && possibEl.classList.contains(COMPONENT_CLASS);
   }
 
-  get hasButtons() {
-    return (
-      this.args.close !== false ||
-      this.args.fullscreen !== false ||
-      (this.args.resize !== false && this.args.width)
-    );
-  }
-
-  get buttonsMarkup() {
-    let html = '';
-
-    if (this.args.close !== false) {
-      html += `<a href="#" title="Close"
-        class="
-          ${UIPrefix(COMPONENT_CLASS)}-close
-          ${UIPrefix(COMPONENT_CLASS)}-button
-          ${
-            this.args.closeClasses
-              ? this.args.closeClasses
-              : `${UIPrefix(COMPONENT_CLASS)}-button-default`
-          }"
-        data-toggle-${this.modeToggle}-close
-      >
-        <i class="symbol symbol-close "></i>
-      </a>`;
-    }
-
-    if (this.args.fullscreen !== false) {
-      html += `<a href="#" title="Toggle fullscreen"
-        class="
-          ${UIPrefix(COMPONENT_CLASS)}-fullscreen
-          ${UIPrefix(COMPONENT_CLASS)}-button
-          ${
-            this.args.closeClasses
-              ? this.args.closeClasses
-              : `${UIPrefix(COMPONENT_CLASS)}-button-default`
-          }"
-        data-toggle-${this.modeToggle}-fullscreen
-      >
-        <i class="symbol symbol-expand symbol-collapse-toggle"></i>
-      </a>`;
-    }
-
-    if (this.args.resize !== false && this.args.width) {
-      html += `<a title="Drag resize"
-        class="
-          ${UIPrefix(COMPONENT_CLASS)}-resize
-          ${UIPrefix(COMPONENT_CLASS)}-button
-          ${
-            this.args.resizeClasses
-              ? this.args.resizeClasses
-              : `${UIPrefix(COMPONENT_CLASS)}-button-default`
-          }"
-        data-toggle-${this.modeToggle}-resize
-      >
-        <i class="symbol symbol-fries"></i>
-      </a>`;
-    }
-
-    return html;
-  }
-
   get UIId() {
     return `${Settings.get('prefix')}-${NAME}-${this.mode}`;
   }
@@ -280,32 +187,6 @@ class Modal extends FwComponent {
   }
   get UIElId() {
     return super.UIEl().getAttribute('id');
-  }
-
-  get UIToggle() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}]`
-    );
-  }
-  get UIToggleClose() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-close]`
-    );
-  }
-  get UIToggleOpen() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-open]`
-    );
-  }
-  get UIToggleFullscreen() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-fullscreen]`
-    );
-  }
-  get UIToggleResize() {
-    return this.UIRoot.querySelectorAll(
-      `*[data-toggle-${this.modeToggle}-resize]`
-    );
   }
 
   static #modeToggle(mode) {
@@ -325,15 +206,7 @@ class Modal extends FwComponent {
   }
 
   get UiModeClass() {
-    return `${UIPrefix(COMPONENT_CLASS)}-mode-${this.mode}`;
-  }
-
-  get UiModeStyleClass() {
-    return `${UIPrefix(COMPONENT_CLASS)}-on-mode-${this.mode}`;
-  }
-
-  get isFullscreen() {
-    return this.UIRoot.classList.contains(FULLSCREEN_CLASS);
+    return ` ${UIPrefix(COMPONENT_CLASS)}-mode-${this.mode}`;
   }
 
   static configDefaults(mode) {
@@ -348,7 +221,7 @@ class Modal extends FwComponent {
       classes: '',
       closeClasses: '',
       fullscreen: false, //@TODO: this shit
-      fullscreenContentDisplay: 'block',
+      fullscreenClasses: '',
       centerY: {
         value: true,
         parser: (value) => {
@@ -368,13 +241,13 @@ class Modal extends FwComponent {
       resize: {
         value: false,
         parser: (value) => {
-          return mode == BOARD_NAME ? value : false;
+          if (mode == BOARD_NAME) return value;
         },
       },
       resizeClasses: {
         value: null,
         parser: (value) => {
-          return mode == BOARD_NAME ? value : false;
+          if (mode == BOARD_NAME) return value;
         },
       },
     };
@@ -439,6 +312,7 @@ class Modal extends FwComponent {
             : super.UIEl().hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-close-classes`)
             ? super.UIEl().getAttribute(`data-${ARG_ATTRIBUTE_NAME}-close-classes`)
             : this._customArgs.closeClasses,
+        //@TODO
         fullscreen:
           this.triggerer &&
           this.triggerer.hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen`)
@@ -446,13 +320,15 @@ class Modal extends FwComponent {
             : super.UIEl().hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen`)
             ? super.UIEl().getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen`)
             : this._customArgs.fullscreen,
-        fullscreenContentDisplay:
+        fullscreenClasses:
           this.triggerer &&
-          this.triggerer.hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            ? this.triggerer.getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            : super.UIEl().hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            ? super.UIEl().getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-content-display`)
-            : this._customArgs.fullscreenContentDisplay,
+          this.triggerer.hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-classes`)
+            ? this.triggerer.getAttribute(
+                `data-${ARG_ATTRIBUTE_NAME}-fullscreen-classes`
+              )
+            : super.UIEl().hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-classes`)
+            ? super.UIEl().getAttribute(`data-${ARG_ATTRIBUTE_NAME}-fullscreen-classes`)
+            : this._customArgs.fullscreenClasses,
         centerY:
           this.triggerer &&
           this.triggerer.hasAttribute(`data-${ARG_ATTRIBUTE_NAME}-center-y`)
@@ -503,20 +379,6 @@ class Modal extends FwComponent {
     }
   }
 
-  get canDrag() {
-    return super.getProp('_canDrag');
-  }
-
-  set canDrag(val) {
-    super.setProp('_canDrag', val);
-
-    if (val !== false) {
-      document.body.classList.add(UIBodyClass.onDrag);
-    } else {
-      document.body.classList.remove(UIBodyClass.onDrag);
-    }
-  }
-
   create(elem) {
     const element = elem ? super.UIEl(elem) : super.UIEl();
 
@@ -532,6 +394,12 @@ class Modal extends FwComponent {
 
     lifeCycle.before = () => {
       let matchedHashDestroy = false;
+
+      // if (!window.location.hash && this.#current && this.#current.element) {
+      //   if (element === this.#current.element) {
+      //     matchedHashDestroy = true;
+      //   }
+      // }
 
       if (this.#current && this.#current.element) {
         if (element === this.#current.element) {
@@ -555,21 +423,20 @@ class Modal extends FwComponent {
       const theUI = document.createElement('div');
       // document.querySelector('body').appendChild(theUI);
       element.parentNode.insertBefore(theUI, element.nextSibling);
-      theUI.className = `${UIPrefix(COMPONENT_CLASS)} ${this.UiModeClass} ${
-        this.UiModeStyleClass
-      } ${UIPrefix(COMPONENT_CLASS)}-component
+      theUI.className = `${UIPrefix(COMPONENT_CLASS)} ${this.UiModeClass} ${UIPrefix(
+        COMPONENT_CLASS
+      )}-component
         ${
           this.args.align ? `${UIPrefix(COMPONENT_CLASS)}-align-${this.args.align}` : ''
         }
         ${this.args.centerY ? `${UIPrefix(COMPONENT_CLASS)}-center-y` : ''}
         ${this.args.classes}`;
-      theUI.setAttribute('id', this.UIId)
+      theUI.setAttribute('id', this.UIId);
 
       theUI.innerHTML = this._markup;
 
       FwDom.moveContents(element, this.UIContentBlock);
       element.appendChild(theUI);
-
 
       this.#current = {
         element: element,
@@ -627,8 +494,6 @@ class Modal extends FwComponent {
         if (this.UIRoot) {
           element.classList.remove(ACTIVATED_CLASS);
 
-          this.update();
-
           element.parentNode.insertBefore(this.UIRoot, element.nextSibling);
           FwDom.moveContents(this.UIContentBlock, element);
 
@@ -656,66 +521,6 @@ class Modal extends FwComponent {
     );
   }
 
-  activateFullscreen(elem){
-    const element = elem
-      ? super.UIEl(elem)
-      : this.#current
-      ? this.#current.element
-      : false;
-
-    if (!element) {
-      return;
-    }
-
-    super.runCycle(
-      EVENT_BEFORE_FULLSCREEN_ACTIVATE,
-      EVENT_FULLSCREEN_ACTIVATE,
-      EVENT_AFTER_FULLSCREEN_ACTIVATE,
-      () => {
-        this.UIRoot.classList.add(FULLSCREEN_CLASS);
-        this.UIRoot.classList.remove(this.UiModeStyleClass);
-        this.UIContentBlock.style.display = this.args.fullscreenContentDisplay;
-      },
-      element
-    );
-
-  }
-
-  deactivateFullscreen(elem){
-    const element = elem
-      ? super.UIEl(elem)
-      : this.#current
-      ? this.#current.element
-      : false;
-
-    if (!element) {
-      return;
-    }
-
-
-    super.runCycle(
-      EVENT_BEFORE_FULLSCREEN_DEACTIVATE,
-      EVENT_FULLSCREEN_DEACTIVATE,
-      EVENT_AFTER_FULLSCREEN_DEACTIVATE,
-      () => {
-        this.UIRoot.classList.remove(FULLSCREEN_CLASS);
-        this.UIRoot.classList.add(this.UiModeStyleClass);
-        this.UIContentBlock.style.display = '';
-      },
-      element
-    );
-
-  }
-
-  toggleFullscreen(elem) {
-    if (this.isFullscreen) {
-      this.deactivateFullscreen(elem);
-    } else {
-      this.activateFullscreen(elem);
-    }
-    this.update();
-  }
-
   update(elem) {
     const element = elem
       ? super.UIEl(elem)
@@ -732,18 +537,24 @@ class Modal extends FwComponent {
       EVENT_UPDATE,
       EVENT_AFTER_UPDATE,
       () => {
-
         // buttons
-        if (this.UIToggleFullscreen) {
-          if(this.isFullscreen){
-            this.UIToggleFullscreen.forEach((butt) => {
-              butt.classList.add(TOGGLE_ACTIVATED_CLASS);
-            });
-          }else{
-            this.UIToggleFullscreen.forEach((butt) => {
-              butt.classList.remove(TOGGLE_ACTIVATED_CLASS);
-            });
-          }
+        // resize
+        const currentWidth = this.UIRoot.querySelector(
+          `.${UIPrefix(COMPONENT_CLASS)}-popup`
+        ).clientWidth;
+
+        const resizeBtn = this.UIRoot.querySelectorAll(
+          `*[data-toggle-${this.modeToggle}-resize]`
+        );
+
+        if (resizeBtn && currentWidth < parseInt(this.args.width)) {
+          resizeBtn.forEach((butt) => {
+            butt.classList.add('disabled');
+          });
+        } else {
+          resizeBtn.forEach((butt) => {
+            butt.classList.remove('disabled');
+          });
         }
       },
       element
@@ -752,12 +563,6 @@ class Modal extends FwComponent {
 
   resize(width) {
     if (!this.#current || !super.UIEl()) {
-      return;
-    }
-
-    const element = this.#current ? this.#current.element : false;
-
-    if (!element) {
       return;
     }
 
@@ -774,78 +579,120 @@ class Modal extends FwComponent {
           if (this.UIRoot.querySelector(`.${UIPrefix(COMPONENT_CLASS)}-popup`)) {
             this.UIRoot.querySelector(
               `.${UIPrefix(COMPONENT_CLASS)}-popup`
-            ).style.width = typeof width == 'string' ? width : `${width}px`;
+            ).style.width = width;
           }
 
           //bboard
-          if (this.mode == 'board') {
-            if (
-              this.UIRoot.querySelector(`.${UIPrefix(COMPONENT_CLASS)}-button-wrapper`)
-            ) {
-              this.UIRoot.querySelector(
-                `.${UIPrefix(COMPONENT_CLASS)}-button-wrapper`
-              ).style.width = typeof width == 'string' ? width : `${width}px`;
-            }
+          if (
+            this.UIRoot.querySelector(`.${UIPrefix(COMPONENT_CLASS)}-button-wrapper`)
+          ) {
+            this.UIRoot.querySelector(
+              `.${UIPrefix(COMPONENT_CLASS)}-button-wrapper`
+            ).style.width = width;
           }
-          this.update();
         },
-        element
+        this.#current.element
       );
     }
   }
 
   get _markup() {
-    let html = `<div class="${UIPrefix(COMPONENT_CLASS)}-wrapper">`;
+    let html = `<div
+				class="
+          ${this.UiModeClass}
+					${UIPrefix(COMPONENT_CLASS)}-wrapper"
+			>`;
 
     //overlay
     html += `<div
-      class="${UIPrefix(COMPONENT_CLASS)}-close-overlay" ${
-      this.args.disableOverlay == false ? `data-toggle-${this.modeToggle}-close` : ''
-    }
-    ></div>`;
+						class="
+              ${this.UiModeClass}
+							${UIPrefix(COMPONENT_CLASS)}-close-overlay"
+							${this.args.disableOverlay == false ? `data-toggle-${this.modeToggle}-close` : ''}
+					></div>`;
 
     switch (this.mode) {
       case 'board':
-        html += `<div class="${UIPrefix(COMPONENT_CLASS)}-popup">`;
+        html += `<div class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-popup">`;
 
-        html += `<div class="${UIPrefix(COMPONENT_CLASS)}-button-wrapper">
-          ${this.buttonsMarkup}
-        </div>`;
-
-        if (this.args.title) {
-          html += `<div class="${UIPrefix(COMPONENT_CLASS)}-header">
-            <h1 class="${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(
-            this.args.title
-          )}</h1>
-          </div>`;
+        html += `<div class="${this.UiModeClass} ${UIPrefix(
+          COMPONENT_CLASS
+        )}-button-wrapper">`;
+        if (this.args.close !== false) {
+          html += `<a href="#"
+                      class="
+                        ${this.UiModeClass}
+                        ${UIPrefix(COMPONENT_CLASS)}-close
+                        ${UIPrefix(COMPONENT_CLASS)}-button
+                        ${
+                          this.args.closeClasses
+                            ? this.args.closeClasses
+                            : `${UIPrefix(COMPONENT_CLASS)}-button-default`
+                        }"
+                      data-toggle-${this.modeToggle}-close
+                    >
+                      <i class="symbol symbol-close "></i>
+                    </a>`;
         }
 
-        html += `<div class="${UIPrefix(COMPONENT_CLASS)}-popup-content"></div>`;
+        if (this.args.resize !== false && this.args.width) {
+          html += `<a
+                      class="
+                        ${this.UiModeClass}
+                        ${UIPrefix(COMPONENT_CLASS)}-resize
+                        ${UIPrefix(COMPONENT_CLASS)}-button
+                        ${
+                          this.args.resizeClasses
+                            ? this.args.resizeClasses
+                            : `${UIPrefix(COMPONENT_CLASS)}-button-default`
+                        }"
+                      data-toggle-${this.modeToggle}-resize
+                    >
+                      <i class="symbol symbol-arrow-tail-left "></i>
+                      <i class="symbol symbol-arrow-tail-right "></i>
+                    </a>`;
+        }
+        html += `</div>`;
+
+        if (this.args.title) {
+          html += `<div class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-header">
+											<h1 class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(
+            this.args.title
+          )}</h1>
+										</div>`;
+        }
+
+        html += `<div class="${this.UiModeClass} ${UIPrefix(
+          COMPONENT_CLASS
+        )}-popup-content"></div>`;
+
         html += `</div>`;
 
         break;
 
       default:
-        html += `<div class="${UIPrefix(COMPONENT_CLASS)}-popup">`;
+        html += `<div class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-popup">`;
 
-        if (this.args.title || this.hasButtons) {
-          html += `<div class="${UIPrefix(COMPONENT_CLASS)}-header">`;
-          if (this.args.title) {
-            html += `<h1 class="${UIPrefix(COMPONENT_CLASS)}-title">
-            ${decodeURIComponent(this.args.title)}
-            </h1>`;
-          }
-
-          if (this.hasButtons) {
-            html += `<div class="${UIPrefix(COMPONENT_CLASS)}-button-wrapper">
-              ${this.buttonsMarkup}
-            </div>`;
-          }
-
-          html += `</div>`;
+        if (this.args.title) {
+          html += `<div class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-header">
+											<h1 class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-title">${decodeURIComponent(
+            this.args.title
+          )}</h1>
+										</div>`;
         }
 
-        html += `<div class="${UIPrefix(COMPONENT_CLASS)}-popup-content"></div>`;
+        if (this.args.close !== false) {
+          html += `<a href="#"
+											class="${this.UiModeClass} ${UIPrefix(COMPONENT_CLASS)}-close ${this.args.closeClasses}"
+											data-toggle-${this.modeToggle}-close
+										>
+											<i class="symbol symbol-close"></i>
+										</a>`;
+        }
+
+        html += `<div class="${this.UiModeClass} ${UIPrefix(
+          COMPONENT_CLASS
+        )}-popup-content"></div>`;
 
         html += `</div>`;
 
@@ -866,6 +713,7 @@ class Modal extends FwComponent {
           Modal.current(mode).args
         );
         modal.resize();
+        modal.update();
       });
     };
   }
@@ -882,7 +730,7 @@ class Modal extends FwComponent {
     };
   }
 
-  static handleToggleOpen(mode) {
+  static handleOpen(mode) {
     return (e) => {
       e.preventDefault();
 
@@ -900,7 +748,7 @@ class Modal extends FwComponent {
     };
   }
 
-  static handleToggleClose(mode) {
+  static handleClose(mode) {
     return (e) => {
       e.preventDefault();
 
@@ -918,128 +766,6 @@ class Modal extends FwComponent {
     };
   }
 
-  static handleToggleResizeMouseDown(mode) {
-    return (e) => {
-      if (!FwComponent.isDisabled(e.target)) {
-        const modal = new Modal(
-          UIToggled(
-            Modal.#modeToggle(mode),
-            e.target,
-            `.${COMPONENT_CLASS}.${Modal.#modeClass(mode)}`
-          ),
-          e.target
-        );
-
-        if (modal) {
-          // console.warn('MouseDown');
-          modal.canDrag = true;
-
-          FwEvent.addListener(
-            null,
-            EVENT_MOUSEMOVE,
-            window,
-            Modal.handleToggleResizeMouseMove(mode)
-          );
-
-          // FwEvent.addListener(
-          //   null,
-          //   EVENT_TOUCHMOVE,
-          //   window,
-          //   Modal.handleToggleResizeMouseMove(mode)
-          // );
-        }
-      }
-    };
-  }
-
-  static handleToggleResizeMouseMove(mode) {
-    return (e) => {
-      if (Modal.current(mode).element) {
-        const modal = new Modal(
-          Modal.current(mode).element,
-          null,
-          Modal.current(mode).args
-        );
-
-        if (modal && modal.canDrag) {
-          const widthBasis =
-            e.clientX ||
-            (e.touches && e.touches[0].clientX) ||
-            (e.originalEvent.touches && e.originalEvent.touches[0].clientX);
-
-          if (LAST_POS_X !== widthBasis) {
-            console.warn(e.type, 'MouseMove', e.clientX, LAST_POS_X);
-            LAST_POS_X = widthBasis;
-
-            let newWidth;
-
-            if (modal.args.align == 'right') {
-              newWidth = window.innerWidth - widthBasis;
-            } else if (modal.args.align == 'left') {
-              newWidth = widthBasis;
-            }
-
-            modal.resize(newWidth);
-          }
-        }
-      }
-    };
-  }
-
-  static handleToggleResizeMouseUp(mode) {
-    return () => {
-      if (Modal.current(mode).element) {
-        // console.warn(e.type,'MouseUp',document.body.classList);
-
-        const modal = new Modal(
-          Modal.current(mode).element,
-          null,
-          Modal.current(mode).args
-        );
-
-        if (modal) {
-          modal.canDrag = false;
-        }
-      }
-
-      FwEvent.removeListener(
-        window,
-        EVENT_MOUSEMOVE,
-        Modal.handleToggleResizeMouseMove(mode)
-      );
-
-      // FwEvent.removeListener(
-      //   window,
-      //   EVENT_TOUCHMOVE,
-      //   Modal.handleToggleResizeMouseMove(mode)
-      // );
-    };
-  }
-
-  static handleToggleResizeClick() {
-    return (e) => {
-      e.preventDefault();
-    };
-  }
-
-  static handleFullscreen(mode) {
-    return (e) => {
-      e.preventDefault();
-
-      if (!FwComponent.isDisabled(e.target)) {
-        const modal = new Modal(
-          UIToggled(
-            Modal.#modeToggle(mode),
-            e.target,
-            `.${COMPONENT_CLASS}.${Modal.#modeClass(mode)}`
-          ),
-          e.target
-        );
-        modal.toggleFullscreen();
-      }
-    };
-  }
-
   static initListeners() {
     VALID_MODAL_MODES.forEach((mode) => {
       const modeToggle = Modal.#modeToggle(mode);
@@ -1048,56 +774,14 @@ class Modal extends FwComponent {
         document.documentElement,
         EVENT_CLICK,
         `*[data-toggle-${modeToggle}], *[data-toggle-${modeToggle}-open]`,
-        Modal.handleToggleOpen(mode)
+        Modal.handleOpen(mode)
       );
 
       FwEvent.addListener(
         document.documentElement,
         EVENT_CLICK,
         `*[data-toggle-${modeToggle}-close]`,
-        Modal.handleToggleClose(mode)
-      );
-
-      FwEvent.addListener(
-        document.documentElement,
-        EVENT_CLICK,
-        `*[data-toggle-${modeToggle}-resize]`,
-        Modal.handleToggleResizeClick(mode)
-      );
-
-      FwEvent.addListener(
-        window,
-        EVENT_MOUSEDOWN,
-        `*[data-toggle-${modeToggle}-resize]`,
-        Modal.handleToggleResizeMouseDown(mode)
-      );
-
-      // FwEvent.addListener(
-      //   window,
-      //   EVENT_TOUCHSTART,
-      //   `*[data-toggle-${modeToggle}-resize]`,
-      //   Modal.handleToggleResizeMouseDown(mode),
-      // );
-
-      FwEvent.addListener(
-        null,
-        EVENT_MOUSEUP,
-        window,
-        Modal.handleToggleResizeMouseUp(mode)
-      );
-
-      // FwEvent.addListener(
-      //   null,
-      //   EVENT_TOUCHEND,
-      //   window,
-      //   Modal.handleToggleResizeMouseUp(mode)
-      // );
-
-      FwEvent.addListener(
-        document.documentElement,
-        EVENT_CLICK,
-        `*[data-toggle-${modeToggle}-fullscreen]`,
-        Modal.handleFullscreen(mode)
+        Modal.handleClose(mode)
       );
     });
 
@@ -1111,49 +795,13 @@ class Modal extends FwComponent {
       FwEvent.removeListener(
         document.documentElement,
         EVENT_CLICK,
-        Modal.handleToggleOpen(mode)
+        Modal.handleOpen(mode)
       );
 
       FwEvent.removeListener(
         document.documentElement,
         EVENT_CLICK,
-        Modal.handleToggleClose(mode)
-      );
-
-      FwEvent.removeListener(
-        document.documentElement,
-        EVENT_CLICK,
-        Modal.handleToggleResizeClick(mode)
-      );
-
-      FwEvent.addListener(
-        window,
-        EVENT_MOUSEDOWN,
-        Modal.handleToggleResizeMouseDown(mode)
-      );
-
-      // FwEvent.addListener(
-      //   window,
-      //   EVENT_TOUCHSTART,
-      //   Modal.handleToggleResizeMouseDown(mode)
-      // );
-
-      FwEvent.removeListener(
-        window,
-        EVENT_MOUSEUP,
-        Modal.handleToggleResizeMouseUp(mode)
-      );
-
-      // FwEvent.removeListener(
-      //   window,
-      //   EVENT_TOUCHEND,
-      //   Modal.handleToggleResizeMouseUp(mode)
-      // );
-
-      FwEvent.removeListener(
-        document.documentElement,
-        EVENT_CLICK,
-        Modal.handleFullscreen(mode)
+        Modal.handleClose(mode)
       );
     });
 

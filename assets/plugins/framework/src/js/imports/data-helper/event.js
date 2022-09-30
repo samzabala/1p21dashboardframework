@@ -51,43 +51,22 @@ const NativeEvents = [
   'scroll',
   'hashchange',
 ];
-let FWESIDEvent = 0;
+let uIdEvent = 0;
 
 const EVENT_STORAGE = {};
 
 class FwEvent extends FwDataHelper {
-  static getEventSorageId(element, FWESID) {
-    const toReturn = FWESID || element.FWESIDEvent || FWESIDEvent++;
-
-    element.FWESIDEvent = toReturn;
-    // debugger;
-    return toReturn;
+  static getUIDEvent(element, uid) {
+    return (uid && `${uid}::${uIdEvent++}`) || element.uIdEvent || uIdEvent++;
   }
 
-  static getListenerArgs(element) {
-    const FWESID = FwEvent.getEventSorageId(element);
+  static getEvent(element) {
+    const uid = FwEvent.getUIDEvent(element);
 
-    EVENT_STORAGE[FWESID] = EVENT_STORAGE[FWESID] || {};
+    element.uIdEvent = uid;
+    EVENT_STORAGE[uid] = EVENT_STORAGE[uid] || {};
 
-    return EVENT_STORAGE[FWESID];
-  }
-
-  static saveListenerArgs(element, evt, evtNoApi, handler, handlerNoApi, trueHandler) {
-    const FWESID = FwEvent.getEventSorageId(element, evt);
-
-    EVENT_STORAGE[FWESID] = {};
-
-    if (evt !== null) EVENT_STORAGE[FWESID].evt = evt;
-    if (evtNoApi !== null) EVENT_STORAGE[FWESID].evtNoApi = evtNoApi;
-    if (handler !== null) EVENT_STORAGE[FWESID].handler = handler;
-    if (handlerNoApi !== null) EVENT_STORAGE[FWESID].handlerNoApi = handlerNoApi;
-    if (trueHandler !== null) EVENT_STORAGE[FWESID].trueHandler = trueHandler;
-  }
-
-  static deleteListenerArgs(element) {
-    const FWESID = FwEvent.getEventSorageId(element);
-    delete element.FWESIDEvent;
-    delete EVENT_STORAGE[FWESID];
+    return EVENT_STORAGE[uid];
   }
 
   static classNester(selector) {
@@ -104,110 +83,63 @@ class FwEvent extends FwDataHelper {
     }
   }
 
-  // static isNative(evtName) {
-  //   return NativeEvents.filter((nativeEvt) => {
-  //     return evtName.includes(nativeEvt);
-  //   }).length > 0;
-  // }
-
   static addListener(parent, evt, selectorOrParentFallback, handler) {
     parent = parent || false;
 
     // runNative = runNative !== false || runNative == true; //no apipipi
     //dai mo ilaag sa ddocument ta maerror si matches habo nya ki element
 
-    const remember = {
-      evt: evt,
-      evtNoApi: null,
-      handler: null,
-      handlerNoApi: null,
-      trueHandler: handler,
-    };
-
-    const element = parent || selectorOrParentFallback;
+    const elemToAddTo = parent || selectorOrParentFallback;
     const evtNoApi = evt.split(`_${Settings.get('prefix')}`)[0];
     const isNative = NativeEvents.includes(evt);
 
     if (!isNative) {
-      remember.evtNoApi = evtNoApi;
-      remember.handler = (event) => {
-        if (
-          !parent ||
-          (parent &&
-            event.target.matches(FwEvent.classNester(selectorOrParentFallback)))
-          // && event.target.closest(selectorOrParentFallback)
-        ) {
-          FwEvent.trigger(event.target, evt, {
-            detail: {
-              nativeEvt: event,
-              _selection: FwEvent.classNester(selectorOrParentFallback),
-              bubbles: true,
-              cancelable: true,
-            },
-          });
-        }
-      };
-    }
-
-    remember.handlerNoApi = (event) => {
-      if (
-        !parent ||
-        (parent &&
-          // && event.target.matches(FwEvent.classNester(selectorOrParentFallback))
-          event.target.closest(selectorOrParentFallback))
-      ) {
-        handler(event);
-      }
-    };
-
-    FwEvent.saveListenerArgs(
-      element,
-      remember.evt,
-      remember.evtNoApi,
-      remember.handler,
-      remember.handlerNoApi,
-      remember.trueHandler
-    );
-    const FWESID = FwEvent.getEventSorageId(element);
-
-    if (!isNative) {
-      element.addEventListener(
-        EVENT_STORAGE[FWESID].evtNoApi,
-        EVENT_STORAGE[FWESID].handlerNoApi,
+      elemToAddTo.addEventListener(
+        evtNoApi,
+        (event) => {
+          if (
+            !parent ||
+            (parent &&
+              event.target.matches(FwEvent.classNester(selectorOrParentFallback)))
+            // && event.target.closest(selectorOrParentFallback)
+          ) {
+            FwEvent.trigger(event.target, evt, {
+              detail: {
+                nativeEvt: event,
+                _selection: FwEvent.classNester(selectorOrParentFallback),
+                bubbles: true,
+                cancelable: true,
+              },
+            });
+          }
+        },
         true
       );
     }
 
-    element.addEventListener(
-      EVENT_STORAGE[FWESID].evt,
-      EVENT_STORAGE[FWESID].handler,
+    elemToAddTo.addEventListener(
+      evt,
+      (event) => {
+        if (
+          !parent ||
+          (parent &&
+            // && event.target.matches(FwEvent.classNester(selectorOrParentFallback))
+            event.target.closest(selectorOrParentFallback))
+        ) {
+          if (!isNative) {
+            handler(event.detail.nativeEvt);
+          } else {
+            handler(event);
+          }
+        }
+      },
       true
     );
   }
 
   static removeListener(element, evt, handler) {
-    const FWESID = FwEvent.getEventSorageId(element);
-
-    // const evtNoApi = evt.split(`_${Settings.get('prefix')}`)[0];
-    const isNative = NativeEvents.includes(evt);
-
-    if (handler === EVENT_STORAGE[FWESID].trueHandler) {
-      if (!isNative) {
-        // element.removeEventListener(evtNoApi, handler, true);
-        element.removeEventListener(
-          EVENT_STORAGE[FWESID].evt,
-          EVENT_STORAGE[FWESID].handler,
-          true
-        );
-      }
-      element.removeEventListener(
-        EVENT_STORAGE[FWESID].evtNoApi,
-        EVENT_STORAGE[FWESID].handlerNoApi,
-        true
-      );
-
-      FwEvent.deleteListenerArgs(element);
-    }
+    element.removeEventListener(evt, handler, true);
+    // @TODO. neet to rethink this shit
   }
 
   static trigger(el, evt, customEventOpts) {
@@ -222,15 +154,15 @@ class FwEvent extends FwDataHelper {
         cancelable: true,
       };
       if (customEventOpts) {
-        event = new Event(evt, customEventOpts);
+        event = new CustomEvent(evt, customEventOpts);
       } else {
-        event = new Event(evt);
+        event = new CustomEvent(evt);
       }
     }
 
-    el.dispatchEvent(event);
+    return el.dispatchEvent(event);
 
-    return event;
+    // return event;
   }
 }
 

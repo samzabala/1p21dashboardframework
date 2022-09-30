@@ -1,31 +1,30 @@
-/*** MODAL ***/
+/*** MODAL FULLSCREEN ***/
 $global-prefix: '.modal';
 $prefix: '.modal-ui';
-$mode-class: #{$prefix}-mode-default;
+$mode-class: #{$prefix}-mode-fullscreen;
 
-[data-toggle-modal-default] {
+[data-toggle-modal-fullscreen] {
   @include dump-styles(data-toggle);
 }
 
 #{$mode-class}#{$prefix} {
-  z-index: $z-index-modal-default;
+  z-index: $z-index-modal-fullscreen;
 }
 
 #{$mode-class}#{$prefix}-wrapper {
-  @extend %fwe-modal-wrapper-background !optional;
+  @extend %fwe-modal-wrapper !optional;
   @extend %fwe-modal-scroller !optional;
   @extend %fwe-modal-scroller-no-scrollbar !optional;
+  background: $modal-background;
 
-  padding: $modal-gutter;
-
-  @include on-breakpoint(mobile) {
-    padding: $modal-gutter-mobile;
+  .theme-inverse & {
+    background: $modal-background-inverse;
   }
 }
 
 #{$mode-class}#{$prefix}-close {
   & {
-    position: absolute;
+    position: fixed;
     right: $modal-close-offset;
     top: $modal-close-offset;
     z-index: 9;
@@ -42,20 +41,9 @@ $mode-class: #{$prefix}-mode-default;
 }
 
 #{$mode-class}#{$prefix}-popup {
-  border-radius: $modal-border-radius;
-  @extend %fwe-modal-popup-shadow !optional;
   margin: auto;
 
   padding: $modal-padding-y $modal-padding-x;
-
-  @include on-breakpoint(nonmobile) {
-    #{$global-prefix}-compact & {
-      padding: $modal-compact-padding-y $modal-compact-padding-x;
-    }
-    #{$global-prefix}-expanded & {
-      padding: $modal-expanded-padding-y $modal-expanded-padding-x;
-    }
-  }
 
   @include on-breakpoint(mobile) {
     padding: $modal-padding-y-mobile $modal-padding-x-mobile;

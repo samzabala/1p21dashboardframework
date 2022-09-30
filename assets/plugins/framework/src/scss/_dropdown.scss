@@ -21,17 +21,6 @@ $prefix: '.dropdown';
   transform-style: preserve-3d;
   z-index: $z-index-dropdown;
 
-  &#{$prefix}-expanded {
-    @include create-popper-styles(
-      null,
-      null,
-      null,
-      null,
-      $dropdown-expanded-gutter-x,
-      $dropdown-expanded-gutter-y
-    );
-  }
-
   &#{$prefix}-compact {
     @include create-popper-styles(
       null,
@@ -43,8 +32,15 @@ $prefix: '.dropdown';
     );
   }
 
-  &#{$prefix}-constricted {
-    @include create-popper-styles(null, null, null, null, 0);
+  &#{$prefix}-expanded {
+    @include create-popper-styles(
+      null,
+      null,
+      null,
+      null,
+      $dropdown-expanded-gutter-x,
+      $dropdown-expanded-gutter-y
+    );
   }
 
   &[data-dropdown-max-height] {
