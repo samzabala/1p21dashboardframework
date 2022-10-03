@@ -9,7 +9,10 @@ $defs = array(
 	//@param post - type of single achuchuchu
 	'is_pinned' => false, 
 	'is_task' => false,
+	'is_email_sent' => false,
+	'is_email_received' => false,
 	'has_attachments' => false,
+	'has_long_body' => false,
 );
 
 $args = app_parse_args($data,$defs);
@@ -82,26 +85,47 @@ $args = app_parse_args($data,$defs);
 				<?php if($args['is_task']): ?>
 					<?php app_get_component('components/note-row-task-header'); ?>
 				<?php endif; ?>
+				<?php if($args['is_email_sent']): ?>
+					<?php app_get_component('components/note-row-email-header-sent'); ?>
+				<?php endif; ?>
+				<?php if($args['is_email_received']): ?>
+					<?php app_get_component('components/note-row-email-header-received'); ?>
+				<?php endif; ?>
 
+				
 				<div class="REPLACE">
 					<p>
 						Tagged users like <a class="highlight highlight-primary" href="<?=app_create_link(array('template'=>'profile'))?>">@Beyonce Knowles</a> will be links to profiles with the classes <code>highlight highlight-primary</code> 
 					</p>
 					<p>
 						Listen, Morty, I hate to break it to you, but what people call love is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it
+
+						<?php if($args['has_long_body']): ?>
+							<span>&hellip;</span>
+						<?php endif; ?>
 					</p>
 				</div>
 
 
+				<?php if($args['has_long_body']): ?>
+					<?php app_get_component('components/note-row-read-more'); ?>
+				<?php endif; ?>
 				<?php if($args['has_attachments']): ?>
 					<?php app_get_component('components/attachments-grid-columns'); ?>
 				<?php endif; ?>
-
+				
 
 				<?php if($args['is_task']): ?>
 					<?php app_get_component('components/note-row-task-footer'); ?>
 				<?php endif; ?>
+				<?php if($args['is_email_sent']): ?>
+					<!-- none :3 -->
+				<?php endif; ?>
+				<?php if($args['is_email_received']): ?>
+					<?php app_get_component('components/note-row-email-footer-received'); ?>
+				<?php endif; ?>
 			</div>
+
 		</div>
 	</div>
 </div>
