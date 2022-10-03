@@ -1,0 +1,51 @@
+/*** highlights ***/
+$prefix: '.highlight';
+#{$prefix} {
+  @include type-set(
+    (
+      size: inherit,
+      leading: inherit,
+      weight: $highlight-font-weight,
+      style: $highlight-font-style,
+      case: $highlight-text-transform,
+      decoration: get-anchor-dec(),
+      color: inherit,
+    )
+  );
+  padding-top: calc(((#{$_fwc-highlight-height} - (#{$_fwc-body-single-line})) * 0.5));
+  padding-bottom: calc(
+    ((#{$_fwc-highlight-height} - (#{$_fwc-body-single-line})) * 0.5)
+  );
+  padding-left: $_fwc-highlight-padding-x;
+  padding-right: $_fwc-highlight-padding-x;
+  margin-left: $_fwc-highlight-margin-x;
+  margin-top: $_fwc-highlight-margin-x;
+  border-radius: $highlight-border-radius;
+  // display: inline-flex;
+  // align-items:center;
+  margin-bottom: 0.2em;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &.focus,
+  &.active {
+    @include dump-styles(no-text-decoration-hover);
+    color: $highlight-color;
+  }
+
+  @each $tag, $properties in $_fwc-highlight-schemes-color {
+    &-#{$tag} {
+      background: map-get($properties, background);
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.focus,
+      &.active {
+        color: map-get($properties, color);
+      }
+    }
+  }
+}

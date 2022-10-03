@@ -1,0 +1,94 @@
+.position {
+  &-relative {
+    position: relative !important;
+  }
+  &-static {
+    position: static !important;
+  }
+  &-absolute {
+    position: absolute !important;
+  }
+  &-fixed {
+    position: fixed !important;
+  }
+  &-sticky {
+    position: sticky !important;
+  }
+}
+
+.offset {
+  & {
+    @include create-box-helper(#{&}, '', '', '', $gutter-base, 'for-offset-base');
+    @include create-box-helper(
+      #{&},
+      'negate',
+      '',
+      '',
+      ($gutter-base * -1),
+      'for-offset-base',
+      'negate'
+    );
+  }
+  &-large {
+    @include create-box-helper(#{&}, '', '', '', $gutter-large, 'for-offset-large');
+    @include create-box-helper(
+      #{&},
+      'negate',
+      '',
+      '',
+      ($gutter-large * -1),
+      'for-offset-large',
+      'negate'
+    );
+  }
+  &-small {
+    @include create-box-helper(#{&}, '', '', '', $gutter-small, 'for-offset-small');
+    @include create-box-helper(
+      #{&},
+      'negate',
+      '',
+      '',
+      ($gutter-small * -1),
+      'for-offset-small',
+      'negate'
+    );
+  }
+  &-micro {
+    @include create-box-helper(#{&}, '', '', '', $gutter-micro, 'for-offset-micro');
+    @include create-box-helper(
+      #{&},
+      'negate',
+      '',
+      '',
+      ($gutter-micro * -1),
+      'for-offset-micro',
+      'negate'
+    );
+  }
+  &-0 {
+    @include create-box-helper(#{&}, '', '', '', 0, 'for-offset');
+  }
+  &-auto {
+    @include create-box-helper(#{&}, '', '', '', auto, 'for-offset-auto');
+  }
+  &-flush {
+    @include create-box-helper(#{&}, '', '', '', 100%, 'for-offset-flush');
+  }
+}
+
+.z-index {
+  &-auto {
+    z-index: auto !important;
+  }
+  @include dump-z-index-helpers(
+    #{&},
+    $z-index-small-helper-multiplier,
+    $z-index-small-helper-max
+  );
+  @include dump-z-index-helpers(#{&}, $z-index-helper-multiplier, $z-index-helper-max);
+  @include dump-z-index-helpers(
+    #{&},
+    $z-index-large-helper-multiplier,
+    $z-index-large-helper-max
+  );
+}

@@ -1,0 +1,30 @@
+[data-toggle-accordion] {
+  @include dump-styles(data-toggle);
+}
+
+$prefix: '.accordion';
+
+#{$prefix} {
+  &:not(#{$prefix}-mobile):not(.open) {
+    // max-height:0;
+    // overflow:hidden;
+    min-width: 100%;
+    @include dump-styles(hide-js-friendly);
+    // transition: $transition-duration-long max-height $transition-timing;
+    // overflow:hidden;
+
+    // so uh.. needed to use this bitch on tables and tables dont like being display block it shits itself
+    // &.open {
+    //     // max-height:none;
+    //     // overflow:visible;
+    //     display:block!important;
+    // }
+  }
+
+  &#{&}-mobile {
+    &:not(.open) {
+      @include dump-styles(hide-js-friendly-mobile);
+      min-width: 100%;
+    }
+  }
+}

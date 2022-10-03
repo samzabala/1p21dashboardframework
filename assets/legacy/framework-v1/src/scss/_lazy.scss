@@ -1,0 +1,17 @@
+/*** IMAGES ***/
+
+/* LAZYLOAD */
+
+$prefix: '.lazy';
+#{$prefix},
+*[data-src],
+*[data-srcset] {
+  opacity: 1;
+  transition: $transition-duration-base opacity $transition-timing;
+  .fw-js-ready body:not(.body-lazy-loaded) & {
+    opacity: 0;
+  }
+  .fw-js-ready body:not(.body-loaded) {
+    transition: none !important;
+  }
+}

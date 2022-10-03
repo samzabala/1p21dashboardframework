@@ -1,0 +1,264 @@
+/*** Tables ***/
+//internal vars
+
+$prefix: '.table';
+#{$prefix} {
+  &-wrapper {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+
+    @at-root & .table,
+      & table {
+      // white-space: nowrap;
+      width: auto;
+      min-width: 100%;
+      margin-bottom: 0;
+      table-layout: auto !important;
+
+      .tag,
+      .btn {
+        white-space: nowrap;
+      }
+    }
+  }
+  @at-root &,
+    table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    text-align: inherit;
+    background: transparent;
+
+    .text-wrap-ellipsis,
+    .text-wrap-ellipsis-multiple {
+      width: 10rem;
+      width: clamp(10rem, 25rem, 100%);
+    }
+
+    &#{$prefix}-fixed {
+      table-layout: fixed !important;
+    }
+  }
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+#{$prefix}-row {
+  width: 100%;
+}
+
+thead,
+tbody,
+tfoot {
+  vertical-align: inherit;
+  text-align: inherit;
+}
+
+tr,
+#{$prefix}-row {
+  // height: 100%;
+  display: table-row;
+  vertical-align: inherit;
+  text-align: inherit;
+  background: $table-row-background;
+
+  .theme-inverse & {
+    background: $table-row-background-inverse;
+  }
+
+  .alert &,
+  .theme-inverse .alert & {
+    background: transparent;
+  }
+}
+
+#{$prefix}-row {
+  @each $tag, $colors in $_fwc-table-row-background {
+    &-#{$tag} {
+      td,
+      #{$prefix}-cell {
+        background-color: map-get($colors, normal);
+
+        .theme-inverse & {
+          background-color: map-get($colors, inverse);
+        }
+
+        .alert &,
+        .theme-inverse .alert & {
+          background: map-get(map-get($_fwc-color-vars-variations, #{$tag}), alpha-2);
+        }
+      }
+    }
+  }
+}
+
+th,
+td,
+#{$prefix}-cell,
+#{$prefix}-cell#{$prefix}-cell-heading {
+  // vertical-align:middle;
+  // height: 100%;
+  // position: relative;
+  vertical-align: inherit;
+  text-align: inherit;
+  padding-left: $table-cell-gutter;
+  padding-right: $table-cell-gutter;
+  display: table-cell;
+
+  border-color: $table-cell-border-color;
+  border-style: solid;
+  border-top-width: $table-cell-border-width;
+
+  .theme-inverse & {
+    border-color: $table-cell-border-color-inverse;
+  }
+
+  .alert &,
+  .theme-inverse .alert & {
+    border-color: currentColor;
+  }
+
+  tr:last-child &,
+  #{$prefix}-row:last-child & {
+    border-bottom-width: $table-cell-border-width;
+  }
+
+  &#{$prefix}-bordered,
+  #{$prefix}-bordered & {
+    border-color: $table-cell-border-color;
+    border-style: solid;
+    border-left-width: $table-cell-border-width;
+
+    .theme-inverse & {
+      border-color: $table-cell-border-color-inverse;
+    }
+
+    &:last-child {
+      border-right-width: $table-cell-border-width;
+    }
+  }
+}
+
+#{$prefix}-disabled {
+  @include dump-styles(disabled);
+}
+
+th,
+#{$prefix}-cell#{$prefix}-cell-heading {
+  padding-top: calc(
+    (#{$_fwc-table-heading-height} - (#{$_fwc-body-single-line})) * 0.5
+  );
+  padding-bottom: calc(
+    (#{$_fwc-table-heading-height} - (#{$_fwc-body-single-line})) * 0.5
+  );
+  background: $table-heading-background;
+  // vertical-align:middle;
+
+  @include type-set(
+    (
+      color: $table-heading-color,
+      weight: $table-heading-font-weight,
+      style: $table-heading-font-style,
+      case: $table-heading-text-transform,
+    )
+  );
+
+  .theme-inverse & {
+    background: $table-heading-background-inverse;
+    color: $table-heading-color-inverse;
+  }
+
+  .alert &,
+  .theme-inverse .alert & {
+    background: none;
+    color: inherit;
+  }
+}
+
+td,
+#{$prefix}-cell {
+  padding-top: calc((#{$_fwc-table-cell-height} - #{$_fwc-body-single-line}) * 0.5);
+  padding-bottom: calc((#{$_fwc-table-cell-height} - #{$_fwc-body-single-line}) * 0.5);
+
+  #{$prefix}-expanded & {
+    padding-top: calc(
+      (#{$_fwc-table-expanded-cell-height} - #{$_fwc-body-single-line-expanded}) * 0.5
+    );
+    padding-bottom: calc(
+      (#{$_fwc-table-expanded-cell-height} - #{$_fwc-body-single-line-expanded}) * 0.5
+    );
+    line-height: $_fwc-body-line-height * $body-line-height-expanded-factor;
+  }
+
+  #{$prefix}-compact & {
+    padding-top: calc(
+      (#{$_fwc-table-compact-cell-height} - #{$_fwc-body-single-line-compact}) * 0.5
+    );
+    padding-bottom: calc(
+      (#{$_fwc-table-compact-cell-height} - #{$_fwc-body-single-line-compact}) * 0.5
+    );
+    line-height: $_fwc-body-line-height * $body-line-height-compact-factor;
+  }
+
+  #{$prefix}-constricted & {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1;
+  }
+}
+
+#{$prefix}-label {
+  width: $table-label-width;
+  height: calc(#{$_fwc-table-cell-height} - (#{$table-label-offset} * 2));
+  border-radius: $table-label-border-radius;
+  display: inline-block;
+  vertical-align: middle;
+  margin: #{$table-label-offset * -1} 0;
+
+  #{$prefix}-expanded & {
+    height: calc(#{$_fwc-table-expanded-cell-height} - (#{$table-label-offset} * 2));
+  }
+
+  #{$prefix}-compact & {
+    height: calc(#{$_fwc-table-compact-cell-height} - (#{$table-label-offset} * 2));
+  }
+
+  #{$prefix}-constricted & {
+    height: 1em;
+  }
+
+  @each $tag, $color in $_fwc-brand-color-declarations-for-components {
+    &-#{$tag} {
+      background-color: $color;
+    }
+  }
+
+  &-intensity {
+    @for $i from 1 through length($_fwc-brand-color-intensity) {
+      &-#{$i} {
+        background-color: nth($_fwc-brand-color-intensity, $i);
+      }
+    }
+  }
+}
+
+#{$prefix}-cell {
+  @each $tag, $colors in $_fwc-table-cell-background {
+    @at-root td#{&}-#{$tag},
+      &#{&}-#{$tag} {
+      background-color: map-get($colors, normal);
+
+      .theme-inverse & {
+        background-color: map-get($colors, inverse);
+      }
+
+      .alert &,
+      .theme-inverse .alert & {
+        background: map-get(map-get($_fwc-color-vars-variations, #{$tag}), alpha-5);
+      }
+    }
+  }
+}
