@@ -5693,6 +5693,9 @@
 				'sync',
 				'invisible',
 				'visible',
+				'envelope-open',
+				'envelope-open-inverse',
+				'reply',
 			);
 			?>
 
