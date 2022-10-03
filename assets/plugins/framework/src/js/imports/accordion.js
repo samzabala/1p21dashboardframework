@@ -121,7 +121,7 @@ class Accordion extends FwComponent {
         `[data-toggle-${TOGGLE_MODE}]`,
         `.${COMPONENT_CLASS}-group`,
         (toggleBbies) => {
-          if ( toggleBbies !== this.triggerer ) {
+          if (toggleBbies !== this.triggerer) {
             toggleBbies.classList.remove(ACTIVATED_TOGGLE_CLASS);
           }
         }
@@ -131,7 +131,7 @@ class Accordion extends FwComponent {
         `.${COMPONENT_CLASS}`,
         `.${COMPONENT_CLASS}-group`,
         (accBbies) => {
-          if ( accBbies !== super.UIEl() ) {
+          if (accBbies !== super.UIEl()) {
             accBbies.classList.remove(ACTIVATED_CLASS);
           }
         }
