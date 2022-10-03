@@ -26,6 +26,18 @@ $args = app_parse_args($data,$defs);
 							'is_task' => false,
 							'is_pinned' => true
 						)) ?>
+					<!-- @else if is an email sent -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_email_sent' => true,
+							'has_long_body' => true, //if note has extra extra long content
+							'is_pinned' => true,
+						)) ?>
+					<!-- @else if is an email received -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_email_received' => true,
+							'has_long_body' => true, //if note has extra extra long content
+							'is_pinned' => true,
+						)) ?>
 					<!-- @else -->
 						<?php app_get_component('components/note-row','',false,array(
 							'is_task' => false,
@@ -39,6 +51,16 @@ $args = app_parse_args($data,$defs);
 						<?php app_get_component('components/note-row','',false,array(
 							'is_task' => true
 						)) ?>
+					<!-- @else if is an email sent -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_email_sent' => true,
+							'has_long_body' => true, //if note has extra extra long content
+						)) ?>
+					<!-- @else if is an email received -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_email_received' => true,
+							'has_long_body' => true, //if note has extra extra long content
+						)) ?>
 					<!-- @else -->
 						<?php app_get_component('components/note-row','',false,array(
 							'is_task' => false,
@@ -49,6 +71,17 @@ $args = app_parse_args($data,$defs);
 							<?php app_get_component('components/note-row','',false,array(
 								'is_task' => true
 							)) ?>
+							<?php if($i % 2 !== 0): ?>
+								<?php app_get_component('components/note-row','',false,array(
+									'is_email_sent' => true,
+									'has_long_body' => $i % 2 == 0, 
+								)) ?>
+							<?php else: ?>
+								<?php app_get_component('components/note-row','',false,array(
+									'is_email_received' => true,
+									'has_long_body' => $i % 2 == 0,
+								)) ?>
+							<?php endif; ?>
 							<?php app_get_component('components/note-row','',false,array(
 								'is_task' => false,
 								'has_attachments' => true, //if note has attachments
