@@ -1,5 +1,3 @@
 
 <a href="#" data-toggle-modal-default>Read More</a>
-<div class="modal modal-default" data-modal-title="REPLACE With Email Subject" data-modal-width="800px" data-modal-close="true">
-	<?php app_get_component('components/_DEMO-html-markup'); ?>
-</div>
+<?php app_get_component('components/modal-email-full'); ?>
