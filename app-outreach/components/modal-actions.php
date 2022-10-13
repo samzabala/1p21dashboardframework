@@ -20,7 +20,6 @@ $args = app_parse_args($data,$defs);
 	href="#"
 	data-toggle-modal-default
     data-modal-disable-overlay="false"
-    data-modal-close="false"
 	class="btn btn-symbol <?=$args['button_classes'] ?>"
     data-modal-center-y="true"
 	title="More options"

@@ -506,7 +506,6 @@ function app_init_content(){
 				case 'leads':
 				case 'companies':
 				case 'kanban':
-				case 'companiy-detail':
 				case 'login':
 				case 'login-reset':
 				case 'login-forgot':
@@ -515,12 +514,19 @@ function app_init_content(){
 				case 'settings':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
-					?>
-
-					<!-- <link href="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP.'/assets/styles/'.$template_part.'.mine.css'?>" rel="stylesheet" data-turbolinks-track="reload" /> -->
-					<?php
 					break;
 				break;
+
+
+				case 'messages-inbox':
+				case 'messages-sent':
+				case 'messages-scheduled':
+				case 'messages-unmatched':
+				case 'messages':
+					app_get_template_part("app-{$app}/messages");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/messages";
+					break;
+					break;
 
 				case 'debug':
 				case 'debug-components':
