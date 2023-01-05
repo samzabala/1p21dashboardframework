@@ -156,6 +156,15 @@ function app_init_content(){
 					case 'favorites':
 					case 'login':
 					case 'error':
+					case 'jobs':
+					case 'job-new':
+					case 'job-edit':
+					case 'departments':
+					case 'department-new':
+					case 'department-edit':
+					case 'team-members':
+					case 'team-member-new':
+					case 'team-member-edit':
 						app_get_template_part("app-{$app}/{$template_part}");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 						break;

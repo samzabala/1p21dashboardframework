@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 :root {
-	--timetracker-sidebar-width: 197px;
+	--timetracker-sidebar-width: 240px;
 
 
 
@@ -164,6 +164,9 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 				width:100%;
 			}
 		}
+		&-logo {
+			width: 100%;
+		}
 		&-sidebar {
 			// top: $sidebar-slim;
 			top:0;
@@ -174,28 +177,52 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 			height: auto;
 			width: 100%;
 			padding: 0;
-			z-index: 980;
 
 			&-nav {
 				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
 
 				.timetracker-logo {
 					// background: var(--fw-theme-background);
 				}
 
-				.timetracker-nav-list {
-					display: flex;
-					flex: 1 1;
-					justify-content: space-evenly;
-					text-align:center;
+				.timetracker-nav-toggle {
+					z-index: 10000;
 
-					> li {
-						flex: 1 1;
-						> a {
-							padding-left: 0;
-							padding-right: 0;
-						}
+				}
+				.timetracker-nav-list {
+					// display: flex;
+					// flex: 1 1;
+					// justify-content: space-evenly;
+					// text-align:center;
+
+					// > li {
+					// 	flex: 1 1;
+					// 	> a {
+					// 		padding-left: 0;
+					// 		padding-right: 0;
+					// 	}
+					// }
+
+					padding-top: var(--fw-nav-height, #{$nav-height});
+					padding-bottom: var(--fw-nav-height, #{$nav-height});
+					position:fixed;
+					top: 0;
+					bottom: 0;
+					left:0;
+					right: 0;
+					width:100%;
+					z-index: 9999;
+					background: var(--fw-theme-background-contrast);
+					overflow-y:scroll;
+					overflow-x:hidden;
+					scrollbar-width: none;
+			
+					&::-webkit-scrollbar {
+						display:none!important;
 					}
+
 				}
 			}
 		}
