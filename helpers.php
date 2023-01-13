@@ -132,7 +132,6 @@ function app_init_content(){
 					case 'clients':
 					case 'tasks':
 					case 'reports':
-					case 'insights':
 					case 'settings':
 						?>
 						<div class="module">
@@ -156,6 +155,7 @@ function app_init_content(){
 					case 'favorites':
 					case 'login':
 					case 'error':
+					case 'insights':
 					case 'jobs':
 					case 'job-new':
 					case 'job-edit':
