@@ -59,7 +59,7 @@
 	</div>
 
 <!-- Task Category / Time Dist. -->
-	<div class="h4 font-weight-300 margin-bottom">
+	<div class="h4 margin-bottom">
 		Time Distribution
 	</div>
 	<div class="module p">
@@ -253,7 +253,7 @@
 	</div>
 
 <!-- Projects -->
-	<div class="h4 font-weight-300 margin-bottom">
+	<div class="h4 margin-bottom">
 		Projects
 	</div>
 	<div class="module p">
@@ -459,7 +459,7 @@
 
 	
 <!-- Tasks -->
-	<div class="h4 font-weight-300 margin-bottom">
+	<div class="h4 margin-bottom">
 		Tasks
 	</div>
 	<div class="module">
