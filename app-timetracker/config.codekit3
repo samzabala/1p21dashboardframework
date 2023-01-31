@@ -7,8 +7,58 @@
       "uuidString" : "8DAE37A0-EA52-4E9D-93AF-19EAAFB3BF8C"
     }
   ],
-  "creatorBuild" : "34408",
+  "creatorBuild" : "34434",
   "files" : {
+    "\/assets\/images\/icon-microsoft.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/icon-microsoft.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/icon-wrike.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/icon-wrike.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/scripts\/d3insightChart.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/d3insightChart-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/d3insightChart.mine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/d3insightChart.mine-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/d3insightChart.mine.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/d3insightChart.mine.js.map",
+      "oF" : 1
+    },
     "\/assets\/scripts\/framework.customglobal.example.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -80,6 +130,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/_style.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/styles\/_style.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/styles\/_style.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -115,6 +177,14 @@
       "oAP" : "\/assets\/styles\/style.mine.css.map",
       "oF" : 0
     },
+    "\/assets\/styles\/style.mine.css.zip" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.mine.css.zip",
+      "oF" : 0
+    },
     "\/assets\/styles\/style.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -130,12 +200,44 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/components\/chart-time-distribution.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/chart-time-distribution.php",
+      "oF" : 0
+    },
     "\/components\/filter-logs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/filter-logs.php",
+      "oF" : 0
+    },
+    "\/components\/form-department.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/form-department.php",
+      "oF" : 0
+    },
+    "\/components\/form-job.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/form-job.php",
+      "oF" : 0
+    },
+    "\/components\/form-team-member.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/form-team-member.php",
       "oF" : 0
     },
     "\/components\/icon-clients.php" : {
@@ -146,12 +248,28 @@
       "oAP" : "\/components\/icon-clients.php",
       "oF" : 0
     },
+    "\/components\/icon-departments.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-departments.php",
+      "oF" : 0
+    },
     "\/components\/icon-insights.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/icon-insights.php",
+      "oF" : 0
+    },
+    "\/components\/icon-jobs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-jobs.php",
       "oF" : 0
     },
     "\/components\/icon-logo.php" : {
@@ -192,6 +310,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/icon-tasks.php",
+      "oF" : 0
+    },
+    "\/components\/icon-team.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-team.php",
       "oF" : 0
     },
     "\/components\/icon-timer.php" : {
@@ -266,6 +392,38 @@
       "oAP" : "\/components\/timer-nav-tabs.php",
       "oF" : 0
     },
+    "\/department-edit.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/department-edit.php",
+      "oF" : 0
+    },
+    "\/department-new.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/department-new.php",
+      "oF" : 0
+    },
+    "\/departments.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/departments.php",
+      "oF" : 0
+    },
+    "\/error.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/error.php",
+      "oF" : 0
+    },
     "\/favorites.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -298,12 +456,76 @@
       "oAP" : "\/includes\/nav-sidebar.php",
       "oF" : 0
     },
+    "\/insights.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/insights.php",
+      "oF" : 0
+    },
+    "\/job-edit.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/job-edit.php",
+      "oF" : 0
+    },
+    "\/job-new.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/job-new.php",
+      "oF" : 0
+    },
+    "\/jobs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/jobs.php",
+      "oF" : 0
+    },
+    "\/login.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login.php",
+      "oF" : 0
+    },
     "\/my-tasks.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/my-tasks.php",
+      "oF" : 0
+    },
+    "\/team-member-edit.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/team-member-edit.php",
+      "oF" : 0
+    },
+    "\/team-member-new.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/team-member-new.php",
+      "oF" : 0
+    },
+    "\/team-members.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/team-members.php",
       "oF" : 0
     },
     "\/time.php" : {
@@ -1033,7 +1255,8 @@
         "active" : 1
       },
       "no-fallthrough" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowEmptyCase': false}"
       },
       "no-floating-decimal" : {
         "active" : 0
@@ -1874,7 +2097,7 @@
     },
     "rollupContext" : "",
     "rollupExternalEntries" : [
-
+      "d3:::d3"
     ],
     "rollupReplacementEntries" : [
       "process.env.NODE_ENV:::$NODE_ENV",

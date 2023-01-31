@@ -111,16 +111,11 @@
 								<td class=" timetracker-td">
 									<h6 class="hide-nonmobile no-margin-top">Time Distribution</h6>
 
-									<span>
-										min:
-										<span class="REPLACE">0</span>
-									</span>
-									&ndash;
-
-									<span>
-										max:
-										<span class="REPLACE">0</span>
-									</span>
+									<?php app_get_component('components/chart-time-distribution','',false,array(
+										'id' => 'REPLACEID',
+										'min' => 3,
+										'max' => 36,
+									)); ?>
 								</td>
 
 								<td class="timetracker-td-actions text-align-right">
@@ -166,19 +161,16 @@
 												<span class="REPLACE">2 of 2</span>
 											</td>
 											
-											<td class="timetracker-td">
-												<h6 class="hide-nonmobile no-margin-top">Hours Rank</h6>
+											
+								
+											<td class=" timetracker-td">
+												<h6 class="hide-nonmobile no-margin-top">Time Distribution</h6>
 
-												<span>
-													min:
-													<span class="REPLACE">0</span>
-												</span>
-												&ndash;
-
-												<span>
-													max:
-													<span class="REPLACE">0</span>
-												</span>
+												<?php app_get_component('components/chart-time-distribution','',false,array(
+													'id' => $i,
+													'min' => random_int(0,20),
+													'max' => random_int(21,40),
+												)); ?>
 											</td>
 
 											<td class="timetracker-td-actions text-align-right">
@@ -219,19 +211,16 @@
 												<span class="REPLACE">2 of 2</span>
 											</td>
 											
+											
+								
 											<td class=" timetracker-td">
-												<h6 class="hide-nonmobile no-margin-top">Hours Rank</h6>
+												<h6 class="hide-nonmobile no-margin-top">Time Distribution</h6>
 
-												<span>
-													min:
-													<span class="REPLACE">0</span>
-												</span>
-												&ndash;
-
-												<span>
-													max:
-													<span class="REPLACE">0</span>
-												</span>
+												<?php app_get_component('components/chart-time-distribution','',false,array(
+													'id' => $i.'-2',
+													'min' => random_int(0,20),
+													'max' => random_int(21,40),
+												)); ?>
 											</td>
 
 											<td class="timetracker-td-actions text-align-right">
