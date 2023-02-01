@@ -113,8 +113,7 @@
 
 									<?php app_get_component('components/chart-time-distribution','',false,array(
 										'id' => 'REPLACEID',
-										'min' => 3,
-										'max' => 36,
+										'val' => 36,
 									)); ?>
 								</td>
 
@@ -218,8 +217,7 @@
 
 												<?php app_get_component('components/chart-time-distribution','',false,array(
 													'id' => $i.'-2',
-													'min' => random_int(0,20),
-													'max' => random_int(21,40),
+													'val' => random_int(0,100),
 												)); ?>
 											</td>
 
