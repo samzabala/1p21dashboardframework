@@ -2,8 +2,7 @@ import * as d3 from 'd3';
 
 //color palette for dots
 const COLOR_PALETTE = {
-	min: 'var(--fw-color-secondary)',
-	max: 'var(--fw-color-success)',
+	val: 'var(--fw-color-secondary)',
 	line: 'var(--fw-color-neutral)'
 }
 
@@ -34,20 +33,17 @@ class d3insightChart {
 		return d3.select(this.element);
 	}
 
-	get min(){
-		return this.element.getAttribute('data-td-min');
-	}
-
-	get max(){
-		return this.element.getAttribute('data-td-max');
+	get val(){
+		return this.element.getAttribute('data-td-val');
 	}
 
 	get data(){
 		const self = this;
 		return [{
 			name: 'entry',
-			min: self.min,
-			max: self.max,
+			val: self.val,
+			totalMin: self.totalMin,
+			totalMax: self.totalMax,
 		}]
 	}
 
@@ -76,6 +72,7 @@ class d3insightChart {
 		return d3.axisBottom(this.scale)
 			.tickValues(this.domain)
 			.tickSize(CHART_CANVAS.h * .125)
+			.tickFormat(x=>`${x}%`)
 	}
 
 	get gAxis(){
@@ -96,26 +93,17 @@ class d3insightChart {
 		return this.line.enter();
 	}
 
-	get minDot(){
-		return this.gShapes.selectAll('circle.min-dot')
+	get valDot(){
+		return this.gShapes.selectAll('circle.val-dot')
 			.data(this.data,d=>d.name);
 	}
 
-	get minDotEnter(){
-		return this.minDot.enter();
-	}
-
-	get maxDot(){
-		return this.gShapes.selectAll('circle.max-dot')
-			.data(this.data,d=>d.name);
-	}
-
-	get maxDotEnter(){
-		return this.maxDot.enter();
+	get valDotEnter(){
+		return this.valDot.enter();
 	}
 
 	get domain(){
-		return [this.totalMin,this.totalMax];
+		return [0,100];
 	}
 
 	get scale(){
@@ -182,72 +170,51 @@ class d3insightChart {
 			)
 			;
 
-		this.line
+			this.line
+				.exit()
+				.remove()
+				;
+	
+			this.lineEnter
+				.append('line')
+				.attr('stroke-width',DOT_SIZE * .5)
+				.attr('stroke',COLOR_PALETTE.line)
+				.attr('x1',0)
+				.attr('x2',0)
+				;
+	
+			this.line.merge(this.lineEnter)
+				.transition()
+				.duration(TRANSITION_DURATION)
+				.attr('x1',d=> self.scale(d.totalMin))
+				.attr('x2',d=> self.scale(d.totalMax))
+				;
+
+		this.valDot
 			.exit()
 			.remove()
 			;
 
-		this.lineEnter
-			.append('line')
-			.attr('stroke-width',DOT_SIZE * .5)
-			.attr('stroke',COLOR_PALETTE.line)
-			.attr('x1',0)
-			.attr('x2',0)
-			;
-
-		this.line.merge(this.lineEnter)
-			.transition()
-			.duration(TRANSITION_DURATION)
-			.attr('x1',d=> self.scale(d.min))
-			.attr('x2',d=> self.scale(d.max))
-			;
-
-		this.minDot
-			.exit()
-			.remove()
-			;
-
-		this.minDotEnter
+		this.valDotEnter
 			.append('circle')
-			.attr('class','min-dot')
-			.attr('fill',COLOR_PALETTE.min)
+			.attr('class','val-dot')
+			.attr('fill',COLOR_PALETTE.val)
 			.attr('r',0)
 			.attr('cx',0)
 			.attr('cy',0)
 			;
 
-		this.minDot.merge(this.minDotEnter)
+		this.valDot.merge(this.valDotEnter)
 			.attr('data-toggle-tooltip-hover',true)
 			.attr('data-tooltip-placement','top')
 			.attr('data-tooltip-content',d =>
-				`Min: ${d.min} ${d.min == 1 ? 'hr' : 'hrs'}`
+				`${d.val}%`
 			)
 			.transition()
 			.duration(TRANSITION_DURATION)
 			.attr('r',DOT_SIZE)
-			.attr('cx',d => self.scale(d.min))
+			.attr('cx',d => self.scale(d.val))
 
-			
-		this.maxDotEnter
-			.append('circle')
-			.attr('class','max-dot')
-			.attr('fill',COLOR_PALETTE.max)
-			.attr('r',0)
-			.attr('cx',0)
-			.attr('cy',0)
-			;
-
-		this.maxDot.merge(this.maxDotEnter)
-			.attr('data-toggle-tooltip-hover',true)
-			.attr('data-tooltip-placement','top')
-			.attr('data-tooltip-content',d =>
-				`Max: ${d.max} ${d.max == 1 ? 'hr' : 'hrs'}`
-			)
-			.transition()
-			.duration(TRANSITION_DURATION)
-			.attr('r',DOT_SIZE)
-			.attr('cx',d => self.scale(d.max))
-			;
 			
 	}
 }
