@@ -8,11 +8,9 @@ $defs = array(
 	//@param totalMin - number - the minimum range of the chart
 		'totalMin' => 0,
 	//@param totalMax - number - the maximum range of the chart
-		'totalMax' => 40,
+		'totalMax' => 100,
 	//@param min - number - minimum hours from data row
-		'min' => 9,
-	//@param max - number - maximum hours from data row
-		'max' => 32,
+		'val' => 32,
 	
 );
 
@@ -27,21 +25,10 @@ $args = app_parse_args($data,$defs);
 		:data-td-totalMax="totalMax"
 	 -->
 <span ref="chartContainer" id="time-distribution-<?=$args['id'] ?>"
-	data-td-min="<?=$args['min'] ?>"
-	data-td-max="<?=$args['max'] ?>"
+	data-td-val="<?=$args['val'] ?>"
 	data-td-totalMin="<?=$args['totalMin'] ?>"
 	data-td-totalMax="<?=$args['totalMax'] ?>"
 >
-	<span>
-		min:
-		<span class="REPLACE">0</span>
-	</span>
-	&ndash;
-
-	<span>
-		max:
-		<span class="REPLACE">0</span>
-	</span>
 </span>
 
 
