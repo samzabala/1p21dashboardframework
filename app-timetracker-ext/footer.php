@@ -1,3 +1,4 @@
+<?php if(FWAPPS_TEMPLATE !== 'login' ): ?>
 	
 			</main>
         
@@ -17,6 +18,7 @@
                     <?php app_debug_block(); ?>
                 </div>
             </div>
+<?php endif; ?>
 
 	</body>
 </html>
