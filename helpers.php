@@ -460,6 +460,7 @@ function app_init_content(){
 				case 'analytics':
 				case 'home':
 				case 'focus':
+				case 'login':
 				case 'logs':
 				case 'log-edit':
 				case 'favorites':
