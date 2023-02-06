@@ -72,7 +72,16 @@
 
 	</head>
 <!-- START HERE -->
-<body class="cf body-loading">
+<body class="
+	<?php if(FWAPPS_TEMPLATE !== 'login'): ?>
+		cf body-loading
+	<?php else: ?>
+		cf body-loading background-theme-polar
+	<?php endif; ?>
+">
+
+<?php if(FWAPPS_TEMPLATE !== 'login' ): ?>
+
 	<div id="timetracker" class="background-theme-contrast">
 		<!-- @if a task is actively selected -->
 			<?php app_get_component('components/sticky-timer'); ?>
@@ -90,6 +99,7 @@
 					</a>
 				</div>
 			</header>
+<?php endif; ?>
 
 
 
