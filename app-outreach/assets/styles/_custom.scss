@@ -86,7 +86,6 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 		top:0;
 		bottom:0;
 		left:0;
-		padding-top: 45px;
 		padding-bottom: 45px;
 		z-index:1001;
 		overflow-y:scroll;
@@ -99,7 +98,6 @@ $table-column-widths: (50,100,150,200,250,300,400,500);
 
 		.nav-logo {
 			height: 60px;
-			overflow:hidden;
 
 			.logo-expanded {
 				max-width:none;
