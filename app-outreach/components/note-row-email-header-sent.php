@@ -1,5 +1,5 @@
 
-<div class="padding-small-x radius-small text-wrap-ellipsis margin-y background-caution-alpha-2">
+<div class="padding-small-x radius-small text-wrap-ellipsis margin-bottom background-caution-alpha-2">
 	<div class="flex-grid flex-grid-constricted-y flex-grid-compact flex-nowrap align-items-center ">
 		<div class="flex-child flex-0-0">
 			<div class="padding-y">

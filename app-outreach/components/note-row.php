@@ -35,7 +35,7 @@ $args = app_parse_args($data,$defs);
 		<div class="flex-child flex-1-1">
 			<div class="flex-grid flex-grid-no-gutter-y justify-content-space-between">
 				<div class="flex-col-8">
-					<p class="no-margin note-row-meta">
+					<p class="margin-small-top no-margin-bottom note-row-meta">
 						<a class="color-inherit font-weight-700" href="<?=app_create_link(array('template'=>'profile')) ?>">
 							<span class="REPLACE">Profile name</span>
 						</a>
@@ -81,7 +81,7 @@ $args = app_parse_args($data,$defs);
 			</div>
 
 
-			<div class="note-body">
+			<div class="note-body margin-large-top">
 				<?php if($args['is_task']): ?>
 					<?php app_get_component('components/note-row-task-header'); ?>
 				<?php endif; ?>
