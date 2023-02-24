@@ -1,7 +1,7 @@
 
 <div id="outreach-messages-heading">
 	<div  class="flex-grid justify-content-space-between align-items-center">
-		<div class="flex-col-xs-12 flex-col-sm-4">
+		<div class="flex-col-xs-12">
 			<p class="font-weight-700 text-transform-uppercase no-margin-bottom">Sales Outreach</p>
 			<h1 class="no-margin">
 				<?= 
@@ -11,9 +11,12 @@
 					'Inbox' )); ?>
 			</h1>
 		</div>
-		<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+		<div class="flex-col-xs-12 flex-col-md-3">
 			<?php app_get_component('components/function-input-search') ?>
-			<div class="module-function function-add">
+		</div>
+		<div class="flex-col-xs-12 flex-col-md-9 text-align-right">
+			<?php app_get_component('components/function-filter-messages') ?>
+			<div class="module-function function-add margin-large-left">
 				<a  href="#m-editor-email" data-toggle-modal-default class="btn btn-primary btn-block-mobile">
 					Compose <i class="symbol symbol-paperplane"></i>
 				</a>
