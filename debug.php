@@ -5691,6 +5691,7 @@
 				'cloud-download',
 				'drag',
 				'sync',
+				'sync-alt',
 				'invisible',
 				'visible',
 				'envelope-open',
