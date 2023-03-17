@@ -1,7 +1,9 @@
 
 <div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
 	<div class="flex-col-12  flex-col-md-8">
-		<h1 class="no-margin">Companies</h1>
+		<h1 class="no-margin">
+			<?= ucwords(str_replace('-',' ',FWAPPS_TEMPLATE)) ?>
+		</h1>
 	</div>
 	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
 		<div class="module-functions">
@@ -42,6 +44,28 @@
 	</div>
 	<table class="table-fixed outreach-table">
 		<tr>
+			<th class="text-align-center" width="50">
+				<label class="input-label">
+					<input type="checkbox" class="input-inline" name="allCompaniesSelected">
+					<span class="hide-nonmobile">Select all companies</span>
+				</label>
+            </th>
+			<th class="outreach-table-cell-actions text-align-center" width="50">
+				<div class="bulk-actions position-relative">
+					<?php app_get_component('components/modal-actions','',false,array(
+						'links' => array(
+							'Bulk change status'
+								=> 'href="#m-bulk-status" data-toggle-modal-default ',
+							'Bulk change owner'
+								=> 'href="#m-bulk-assigneduser" data-toggle-modal-default"',
+							'Delete Selected'
+								=> 'href="#"',
+							'Tag Selected'
+								=> 'href="#"'
+						)
+					)) ?>
+				</div>
+			</th>
 			<!--
 				th a
 					@NOTE: for sortable column headers
@@ -76,11 +100,94 @@
 			<th class="text-nowrap text-align-center" width="100">
 				Type
 			</th>
-			<th class="text-nowrap text-align-center" width="50">&nbsp;<span class="sr-only">Actions</span></th>
+			<th class="outreach-table-cell-actions text-align-center" width="50">
+				<div class="bulk-actions position-relative">
+					<?php app_get_component('components/modal-actions','',false,array(
+						'links' => array(
+							'Bulk change status'
+								=> 'href="#m-bulk-status" data-toggle-modal-default ',
+							'Bulk change owner'
+								=> 'href="#m-bulk-assigneduser" data-toggle-modal-default"',
+							'Delete Selected'
+								=> 'href="#"',
+							'Tag Selected'
+								=> 'href="#"'
+						)
+					)) ?>
+					<div class="modal modal-default" id="m-bulk-status" data-modal-width="400px" data-modal-title="Set Status to">
+					<form action="">
+						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+							<label for="" class="input-label sr-only">Change Status To</label>
+							<select name="bulk-status" id="" class="input-select">
+								<option value="">Select</option>
+								<option value="client">Client</option>
+								<option value="lead">Lead</option>
+								<option value="prospect">Prospect</option>
+							</select>
+						</div>
+						<button class="btn btn-primary btn-block">Save</button>
+					</form>
+				</div>
+
+				<div class="modal modal-default" id="m-bulk-assigneduser" data-modal-width="400px" data-modal-title="Assign To User">
+					<!-- @PLACELHOLDER: modify as needed -->
+					<form action="">
+						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+							<label for="" class="input-label sr-only">Assign to User</label>
+							<select name="bulk-assigned" id="" class="input-select">
+								<option value="">Select</option>
+								<option value="1">User 1</option>
+								<option value="2">User 2</option>
+								<option value="3">User 3</option>
+							</select>
+						</div>
+						<button class="btn btn-primary btn-block">Save</button>
+					</form>
+				</div>
+
+				<div class="modal modal-default" id="m-bulk-status" data-modal-width="400px" data-modal-title="Set Status to">
+					<!-- @PLACELHOLDER: modify as needed -->
+					<form action="">
+						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+							<label for="" class="input-label sr-only">Assign to User</label>
+							<select name="bulk-status" id="" class="input-select">
+								<option value="">Select</option>
+								<option value="1">User 1</option>
+								<option value="2">User 2</option>
+								<option value="3">User 3</option>
+							</select>
+						</div>
+						<button class="btn btn-primary btn-block">Save</button>
+					</form>
+				</div>
+				</div>
+			</th>
 		</tr>
 
 		<!-- @LOOP row -->
 		<tr>
+			<td class="text-align-center">
+				<label class="input-label">
+					<input type="checkbox" class="input-inline" name="allCompaniesSelected">
+					<span class="hide-nonmobile">Select company</span>
+				</label>
+            </td>
+			<td class="outreach-table-cell-actions text-align-center" width="50">
+				<div class="company-actions position-relative">
+					<?php app_get_component('components/modal-actions','',false,array(
+						'links' => array(
+							'Edit Details'
+								=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
+							'Change Status'
+								=> 'href="#m-company-status-REPLACE_ID" data-toggle-modal-default ',
+							'Assign to User'
+								=> 'href="#m-company-assigneduser-REPLACE_ID" data-toggle-modal-default"',
+							'Delete'
+								=> 'href="#"'
+						)
+					)) ?>
+				</div>
+			</td>
 			<td>
 				<a class="color-inherit" href="<?= app_create_link(array('template'=>'company-detail')) ?>">
 
@@ -128,7 +235,7 @@
 			</td>
 			<td class="outreach-table-cell-actions text-align-center" width="50">
 				<div class="company-actions position-relative">
-					<?php app_get_component('components/dropdown-actions','',false,array(
+					<?php app_get_component('components/modal-actions','',false,array(
 						'links' => array(
 							'Edit Details'
 								=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
@@ -194,6 +301,28 @@
 			<!-- @PLACEHOLDER: DELETE WHEN READY -->
 				<?php for($i=1; $i<=4; $i++){ ?>
 					<tr>
+						<td class="text-align-center">
+							<label class="input-label">
+								<input type="checkbox" class="input-inline" name="allCompaniesSelected">
+								<span class="hide-nonmobile">Select company</span>
+							</label>
+						</td>
+						<td class="outreach-table-cell-actions text-align-center" width="50">
+							<div class="company-actions position-relative">
+								<?php app_get_component('components/modal-actions','',false,array(
+									'links' => array(
+										'Edit Details'
+											=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
+										'Change Status'
+											=> 'href="#m-company-status-'.$i.'" data-toggle-modal-default ',
+										'Assign to User'
+											=> 'href="#m-company-assigneduser-'.$i.'" data-toggle-modal-default"',
+										'Delete'
+											=> 'href="#"'
+									)
+								)) ?>
+							</div>
+						</td>
 						<td>
 							<a class="color-inherit" href="<?= app_create_link(array('template'=>'company-detail')) ?>">
 
@@ -241,7 +370,7 @@
 						</td>
 						<td class="outreach-table-cell-actions text-align-center" width="50">
 							<div class="company-actions position-relative">
-								<?php app_get_component('components/dropdown-actions','',false,array(
+								<?php app_get_component('components/modal-actions','',false,array(
 									'links' => array(
 										'Edit Details'
 											=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
