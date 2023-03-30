@@ -5,6 +5,23 @@ Tooltip from framework/src/js/imports/tooltip
 
 -->
 <div class="toolbar-block justify-content-space-evenly toolbar toolbar-horizontal toolbar-small margin-auto-x border-color-transparent">
+	<!-- @if sequences can be made -->
+
+		<div
+			class="toolbar-tile"
+		>
+			<a
+				data-toggle-tooltip-hover
+				data-tooltip-inverse="true"
+				data-tooltip-size="small"
+				data-tooltip-content="<span class='text-transform-uppercase font-weight-700'>Sequence</span>"
+				data-tooltip-center-x="true"
+				data-tooltip-placement="top"
+				href="#m-sequence-addto" data-toggle-modal-default
+				class="utility-sequence btn btn-accent-glassy btn-symbol btn-large">
+				<i class="symbol symbol-sync-alt"></i>
+			</a>
+		</div>
 	<!-- @if email is available -->
 		<div
 			class="toolbar-tile"
