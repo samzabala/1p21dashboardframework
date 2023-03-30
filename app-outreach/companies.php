@@ -56,6 +56,8 @@
 						'links' => array(
 							'Bulk change status'
 								=> 'href="#m-bulk-status" data-toggle-modal-default ',
+							'Bulk add to Sequence'
+								=> 'href="#m-sequence-addto" data-toggle-modal-default data-modal-title="Bulk Add to Sequence"',
 							'Bulk change owner'
 								=> 'href="#m-bulk-assigneduser" data-toggle-modal-default"',
 							'Delete Selected'
@@ -178,6 +180,8 @@
 						'links' => array(
 							'Edit Details'
 								=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
+							'Add to Sequence'
+								=> 'href="#m-sequence-addto" data-toggle-modal-default',
 							'Change Status'
 								=> 'href="#m-company-status-REPLACE_ID" data-toggle-modal-default ',
 							'Assign to User'
@@ -313,6 +317,8 @@
 									'links' => array(
 										'Edit Details'
 											=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
+										'Add to Sequence'
+											=> 'href="#m-sequence-addto" data-toggle-modal-default',
 										'Change Status'
 											=> 'href="#m-company-status-'.$i.'" data-toggle-modal-default ',
 										'Assign to User'
@@ -374,6 +380,8 @@
 									'links' => array(
 										'Edit Details'
 											=> 'class="dropdown-purger" href="#mb-editor-company" data-toggle-modal-board href="#mb-editor-company" data-modal-title="Edit company"',
+										'Add to Sequence'
+											=> 'href="#m-sequence-addto" data-toggle-modal-default',
 										'Change Status'
 											=> 'href="#m-company-status-'.$i.'" data-toggle-modal-default ',
 										'Assign to User'
