@@ -509,8 +509,11 @@ function app_init_content(){
 					break;
 				case 'company-detail':
 				case 'contact-detail':
+				case 'sequence-detail':
+				case 'sequence-members':
 				case 'sales-tracking':
 				case 'tasks':
+				case 'sequences':
 				case 'contacts':
 				case 'calendar':
 				case 'leads':
