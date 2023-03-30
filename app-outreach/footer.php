@@ -12,6 +12,7 @@
 <?php app_get_component('components/modal-board-detail-task') ?>
 <?php app_get_component('components/modal-board-detail-event') ?>
 <?php app_get_component('components/modal-board-form-search') ?>
+<?php app_get_component('components/modal-form-sequence-addto') ?>
 <?php endif; ?>
 
 
