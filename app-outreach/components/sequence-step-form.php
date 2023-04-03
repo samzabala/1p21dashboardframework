@@ -90,18 +90,25 @@
 					<textarea class="input input-multiple-line"  cols="30" rows="10">REPLACE with tinymce</textarea>
 				</div>
 
-				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-					<label>
-						<input type="checkbox" class=" input input-inline" />
-						<span>Save as a new template</span>
-					</label>
+				<div class="flex-grid flex-grid-no-gutter-y align-items-center">
+					<div class="flex-0-0 flex-child">
+						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+							<label>
+								<input type="checkbox" class=" input input-inline" />
+								<span>Save as a new template</span>
+							</label>
+						</div>
+					</div>
+					<!-- @if save as new template is enabled -->
+					<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-8 flex-1-1">
+						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
+							<label class="input-label sr-only">New Template Name</label>
+							<input type="text" class=" input input-single-line" placeholder="Enter a name for the template" />
+						</div>
+					</div>
 				</div>
 
-				<!-- @if save as new template is enabled -->
-					<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-						<label class="input-label">New Template Name</label>
-						<input type="text" class=" input input-single-line" placeholder="Enter a name for the template" />
-					</div>
+
 
 
 
