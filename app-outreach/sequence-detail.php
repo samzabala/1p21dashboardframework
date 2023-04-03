@@ -16,18 +16,18 @@
 		<?php app_get_component('components/module-sequence-step') ?>
 			<!-- @PLACEHOLDER: DELETE WHEN READY -->
 				
-				<?php for($i=2; $i<=5; $i++){; ?>
+				<?php for($i=2; $i<=4; $i++){; ?>
 					<?php app_get_component('components/module-sequence-step','',false,array(
-						'increment' => $i,
-						'is_last' => $i == 5,
+						'increment' => $i
 					)) ?>
 				<?php } ?>
 
+	<!-- New step -->
+		<?php app_get_component('components/module-sequence-step','',false,array(
+			'increment' => 5, //@PLACEHOLDER set based on last increment
+			'is_last' => true,
+		)) ?>
 
-
-	<?php app_get_component('components/module-sequence-step-new') ?>
-
-		
 </div>
 
 
