@@ -832,6 +832,7 @@
 										<th class="background-theme-contrast module-title">Launch Date</th>
 										<th class="background-theme-contrast module-title">Sale Amount</th>
 										<th class="background-theme-contrast module-title">Sales Rep</th>
+										<th class="background-theme-contrast module-title">Status</th>
 										<th class="background-theme-contrast" width="50">
 											<span class="sr-only">Notes</span>
 										</th>
@@ -879,6 +880,13 @@
 												<div class="company-product-salesrep color-neutral">
 														<span class="REPLACE">Dahlia Hawthorne</span>
 												</div>
+											</td>
+											<td>
+												<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Status</span>
+												<!-- @if active -->
+													<div class="tag tag-success">Active</div>
+												<!-- @else  -->
+													<div class="tag tag-neutral">Inactive</div>
 											</td>
 											<td class="outreach-table-cell-actions" width="50">
 												<div class="company-product-notes color-neutral">
@@ -937,6 +945,16 @@
 															<div class="company-product-salesrep color-neutral">
 																	<span class="REPLACE">Dahlia Hawthorne</span>
 															</div>
+														</td>
+														<td>
+															<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Status</span>
+															<?php if( $i % 2 == 0): ?>
+															<!-- @if active -->
+																<div class="tag tag-success">Active</div>
+															<?php else: ?>
+															<!-- @else  -->
+																<div class="tag tag-neutral">Inactive</div>
+															<?PHP endif; ?>
 														</td>
 														<td class="outreach-table-cell-actions" width="50">
 															<div class="company-product-notes color-neutral">

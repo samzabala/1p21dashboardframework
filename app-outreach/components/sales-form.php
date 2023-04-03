@@ -82,6 +82,14 @@
             </div>
         </div>
         <div class="flex-col-xs-12">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+                <label class="input-label">
+                    <input type="checkbox" name="sales-product-isActive"  id="sales-product-isActive" class="input input-inline" placeholder="mm/dd/yyyy" />
+                    <span>Is Active?</span>
+                </label>
+            </div>
+        </div>
+        <div class="flex-col-xs-12">
             <div class="text-align-right">
                 <button class="btn btn-primary">Submit</button>
             </div>
