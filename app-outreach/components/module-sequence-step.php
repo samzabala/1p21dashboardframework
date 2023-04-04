@@ -19,7 +19,12 @@ Imports CSS:
 
 	$args = app_parse_args($data,$defs);
 ?>
-<div class="module position-relative switch switch-idle no-padding-y margin-bottom">
+<div 
+	<?php if($args['is_last']): ?>
+		id="step-new"
+	<?php endif; ?>
+	class="module position-relative switch switch-idle no-padding-y margin-bottom"
+>
 	<div class="module-header module-header-break no-margin-y padding-small-y pointer-reference position-static">
 		<div class="flex-xs align-items-center">
 			<div class="outreach-module-sequence-insert margin-small-right">
@@ -55,7 +60,10 @@ Imports CSS:
 			<?php if($args['is_last']): ?>
 				<div class="text-align-center p">
 					<a href="#" data-toggle-switch>
-						<h4 class="colo-primary no-margin-top">Create another step</h4>
+						<!-- @if steps exists -->
+							<h4 class="colo-primary no-margin-top">Create another step</h4>
+							<!-- @else if no steps yet -->
+							<h4 class="colo-primary no-margin-top">Create first step</h4>
 						<span class="btn btn-symbol btn-round btn-primary"><i class="symbol symbol-plus"></i></span>
 					</a>
 				</div>
