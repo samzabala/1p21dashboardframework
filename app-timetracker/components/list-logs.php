@@ -1,6 +1,4 @@
 <!-- 
-
-
 @IMPORTS
 	js
 		import Accordion from './../../../assets/plugins/framework/src/js/imports/modal';
@@ -9,7 +7,6 @@
 	scss
 
 		@import './../../../assets/plugins/framework/src/scss/imports/_modal';
-		@import './../../../assets/plugins/framework/src/scss/imports/_list-group';
  -->
 <div class="table-wrapper">
 	<table class="timetracker-table">
@@ -121,8 +118,7 @@
 									<div class="text-align-center">
 										<h1 class="no-margin-top color-inherit">Options</h1>
 										<ul class="list-group list-group-compact">
-											<li><a href="#">Edit Task</a></li>
-											<li><a href="#">View Details</a></li>
+											<li><a href="<?= app_create_link(array('template' => 'task-detail')) ?>">View or Edit</a></li>
 											<li><a href="#">Favorite</a></li>
 											<li><a href="#">Delete</a></li>
 										</ul>
@@ -187,7 +183,7 @@
 											<div class="text-align-center">
 												<h1 class="no-margin-top color-inherit">Options</h1>
 												<ul class="list-group">
-													<li><a href="#">View Details</a></li>
+													<li><a href="<?= app_create_link(array('template' => 'task-detail')) ?>">View or Edit</a></li>
 													<li><a href="#">Something else</a></li>
 													<li><a href="#">Delete</a></li>
 												</ul>
