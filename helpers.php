@@ -127,11 +127,6 @@ function app_init_content(){
 	switch($app):
 		case 'timetracker':
 			switch($template_part):
-
-					case 'projects':
-					case 'clients':
-					case 'tasks':
-					case 'reports':
 					case 'settings':
 						?>
 						<div class="module">
@@ -153,6 +148,15 @@ function app_init_content(){
 						break;
 					case 'my-tasks':
 					case 'favorites':
+					case 'projects':
+					case 'project-detail':
+					case 'project-detail-tasks':
+					case 'clients':
+					case 'client-detail':
+					case 'tasks':
+					case 'task-detail':
+					case 'task-detail-time':
+					case 'reports':
 					case 'login':
 					case 'error':
 					case 'insights':
