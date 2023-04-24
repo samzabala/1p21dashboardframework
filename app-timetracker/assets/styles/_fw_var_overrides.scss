@@ -61,9 +61,9 @@ $lead-font-size-mobile: 24px;
 
 $input-height: 50px;
 $input-height-large: $input-height;
-$input-height-small: 45px;
+$input-height-small: 32px;
 $input-select-dropdown-color: currentColor;
-$input-gutter-x: 1.33rem;
+$input-gutter-x: 1.5em;
 
 $input-placeholder-color: inherit;
 
@@ -71,10 +71,10 @@ $input-label-color:  var(--fw-theme-color-contrast);
 $input-label-font-weight:  normal;
 
 $input-font-size-large: 26px;
-$btn-gutter-x: $gutter-large;
-$btn-height: 50px;
-$btn-height-large: 50px;
-$btn-height-small: 33px;
+$btn-gutter-x: $input-gutter-x;
+// $btn-height: 50px;
+// $btn-height-large: 50px;
+// $btn-height-small: 45px;
 
 $nav-height: 50px;
 $nav-padding-x: $gutter-base + 5px;
@@ -115,6 +115,8 @@ $module-box-shadow: $box-shadow-base var(--fw-color-base-alpha-3);
 // $module-box-shadow: none;
 
 $progress-height-small: 7px;
+
+$list-group-height-compact: $input-height-small;
 
 
 // $btn-border-primary: transparent;
