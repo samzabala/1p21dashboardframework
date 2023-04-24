@@ -5697,6 +5697,18 @@
 				'envelope-open',
 				'envelope-open-inverse',
 				'reply',
+				'users',
+				'users-add',
+				'users-remove',
+				'takoyaki',
+				'folder',
+				'folder-add',
+				'folder-remove',
+				'folder-open',
+				'folder-copy',
+				'window',
+				'window-success',
+				'window-error',
 			);
 			?>
 
