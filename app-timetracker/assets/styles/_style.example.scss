@@ -18,7 +18,10 @@ npm install the following for css/sass deps:
 	//components used by global components (header + sidebar)
 		@import './../../../assets/plugins/framework/src/scss/_accordion';
 		@import './../../../assets/plugins/framework/src/scss/_buttons';
+		@import './../../../assets/plugins/framework/src/scss/_dropdown';
 		@import './../../../assets/plugins/framework/src/scss/_form';
+		@import './../../../assets/plugins/framework/src/scss/_highlight';
+		@import './../../../assets/plugins/framework/src/scss/_list-group';
 		@import './../../../assets/plugins/framework/src/scss/_nav';
 		@import './../../../assets/plugins/framework/src/scss/_progress';
 		@import './../../../assets/plugins/framework/src/scss/_table';
