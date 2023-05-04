@@ -1,0 +1,43 @@
+{
+  "name": "framework",
+  "version": "1.0.0",
+  "description": "yes",
+  "main": "dist/js/framework.lib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "watch 'npm run build' src",
+    "prettier": "prettier --write .",
+    "js-build-umd": "rollup --config build/rollup.config.js",
+    "sass-compile": "sass --style=expanded --no-source-map --no-error-css src/scss/framework.layout.scss:dist/css/framework.layout.css src/scss/framework.lite.scss:dist/css/framework.lite.css src/scss/framework.normalize.scss:dist/css/framework.normalize.css src/scss/framework.scss:dist/css/framework.css src/scss/framework.utilities.scss:dist/css/framework.utilities.css",
+    "css-prettier": "prettier --write dist/css",
+    "css-post": "postcss dist/css/*.css --no-map --use autoprefixer -r",
+    "sass-build": "npm run sass-compile; npm run css-prettier; npm run css-post",
+    "build": "npm run js-build-umd; npm run sass-build;"
+  },
+  "author": "1Point21 Interactive",
+  "license": "eh",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-private-methods": "^7.13.0",
+    "@babel/preset-env": "^7.16.11",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.17",
+    "dart-sass": "^1.25.0",
+    "eslint": "^8.11.0",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "prettier": "^2.2.1",
+    "rollup": "^2.41.4",
+    "sass": "^1.33.0",
+    "watch": "^0.13.0"
+  },
+  "dependencies": {
+    "rollup-plugin-copy": "^3.4.0"
+  }
+}

@@ -1,0 +1,43 @@
+.radius {
+  & {
+    @include create-corner-helper(
+      #{&},
+      '',
+      'border',
+      'radius',
+      $border-radius-base,
+      'for-radius',
+      ''
+    );
+    &-small {
+      @include create-corner-helper(
+        #{&},
+        '',
+        'border',
+        'radius',
+        $border-radius-small,
+        'for-radius',
+        'small'
+      );
+    }
+    &-large {
+      @include create-corner-helper(
+        #{&},
+        '',
+        'border',
+        'radius',
+        $border-radius-large,
+        'for-radius',
+        'large'
+      );
+    }
+  }
+
+  &-ellipse {
+    border-radius: 50% !important;
+  }
+}
+
+.no-radius {
+  @include create-corner-helper(#{&}, '', 'border', 'radius', 0, 'for-no-radius', '');
+}

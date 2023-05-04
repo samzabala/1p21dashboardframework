@@ -1,0 +1,119 @@
+.only-lg {
+  display: none !important;
+}
+
+.only-md {
+  display: none !important;
+}
+
+.only-sm {
+  display: none !important;
+}
+
+.only-xs {
+  display: none !important;
+}
+
+@include breakpoint(lg) {
+  .only-lg {
+    display: block !important;
+  }
+
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+@include breakpoint((md, md-max)) {
+  .only-md {
+    display: block !important;
+  }
+
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@include breakpoint((sm, sm-max)) {
+  .only-sm {
+    display: block !important;
+  }
+
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@include breakpoint(xs-max) {
+  .only-xs {
+    display: block !important;
+  }
+
+  .hide-xs {
+    display: none !important;
+  }
+}
+
+.only-mobile {
+  display: none !important;
+}
+
+.only-nonmobile {
+  display: none !important;
+}
+
+.pointer-reference {
+  &:not(:hover):not(:focus):not(.focus):not(:active):not(.active):not(.open) .hide-idle,
+  &:hover .only-idle,
+  &:focus .only-idle,
+  &.focus .only-idle,
+  &:active .only-idle,
+  &.active .only-idle,
+  &.open .only-idle,
+  &:hover .only-not-hover,
+  &:hover .hide-hover,
+  &:not(:hover) .only-hover,
+  &:not(:hover) .hide-not-hover,
+  &:focus .only-not-focus,
+  &:focus .hide-focus,
+  &:not(:focus):not(.focus) .only-focus,
+  &:not(:focus):not(.focus) .hide-not-focus,
+  &.active .only-not-active,
+  &:active .only-not-active,
+  &.active .hide-active,
+  &:active .hide-active,
+  &:not(:active):not(.active) .only-active,
+  &:not(:active):not(.active) .hide-not-active,
+  &.active .only-not-toggle,
+  &.open .only-not-toggle,
+  &.active .hide-toggle,
+  &.open .hide-toggle,
+  &:not(.active):not(.open) .only-toggle,
+  &:not(.active):not(.open) .hide-not-toggle {
+    @include dump-styles(hide-js-friendly);
+  }
+}
+
+@include on-breakpoint(mobile) {
+  .only-mobile {
+    display: block !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@include on-breakpoint(nonmobile) {
+  .only-nonmobile {
+    display: block !important;
+  }
+
+  .hide-nonmobile {
+    display: none !important;
+  }
+}
+
+.sr-only {
+  @include dump-styles(hide-js-friendly);
+}

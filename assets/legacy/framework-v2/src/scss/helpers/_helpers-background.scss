@@ -1,0 +1,81 @@
+$prefix: '.background';
+#{$prefix} {
+  &-image-none {
+    @include create-state-helper(#{&}) {
+      background-image: none !important;
+    }
+  }
+  @each $color, $var in $_fwc-theme-colors-background {
+    @include create-state-helper(#{&}-#{$color}, background-color, $var);
+  }
+
+  //gradient
+  &-gradient {
+    //legacy/default
+    $gradient-legacy-selector: #{&};
+    $gradient-legacy-selector-angled: $gradient-legacy-selector;
+    $_fwc-gradient-legacy-all-selector: $gradient-legacy-selector;
+
+    @each $angle in $_fwc-gradient-angles-legacy {
+      @if $angle > 0 {
+        $gradient-legacy-selector-angled: #{$gradient-legacy-selector}-#{$angle};
+      }
+
+      @include create-state-helper(#{$gradient-legacy-selector-angled}) {
+        @include gradient(
+          (
+            color1: $var-gradient-start,
+            color2: $var-gradient-end,
+            angle: to-unit($angle, deg),
+            use-shorthand: false,
+            add-important: true,
+            use-fallback: true,
+          )
+        );
+      }
+    }
+
+    //stops support
+    $gradient-selector: #{&};
+    $gradient-selector-angled: $gradient-selector;
+
+    @each $angle in $_fwc-gradient-angles {
+      @if $angle > 0 {
+        $gradient-selector-angled: #{$gradient-selector}-#{$angle};
+      }
+
+      @each $color1, $var1 in $_fwc-gradient-color-stops {
+        @each $color2, $var2 in $_fwc-gradient-color-stops {
+          $selector: #{$gradient-selector-angled}-from-#{'' +
+            $color1}-to-#{'' +
+            $color2};
+          @include create-state-helper($selector) {
+            @if $color1 != $color2 {
+              @extend %fwe-gradient-#{'' + $color1}-fallback !optional;
+              @include gradient(
+                (
+                  color1: $var1,
+                  color2: $var2,
+                  color1-offset: '',
+                  color2-offset: '',
+                  angle: to-unit($angle, deg),
+                  use-shorthand: false,
+                  add-important: true,
+                  use-fallback: true,
+                )
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //inherit
+  @include create-state-helper(#{&}-inherit, background-color, inherit);
+
+  //transparent
+  @include create-state-helper(#{&}-transparent, background-color, transparent);
+
+  @include dump-palette-helpers(background);
+}

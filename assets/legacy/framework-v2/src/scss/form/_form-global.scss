@@ -1,0 +1,263 @@
+/* input (scaffolding) */
+$prefix: '.input';
+
+@at-root %fwe-form-global {
+  &-radius {
+    border-radius: $input-border-radius;
+
+    &-small {
+      border-radius: $input-border-radius-small;
+    }
+
+    &-large {
+      border-radius: $input-border-radius-large;
+    }
+  }
+
+  &-round {
+    & {
+      border-radius: 999rem;
+    }
+  }
+
+  &-in-nav {
+    align-self: center;
+
+    &-custom {
+      height: $_fwc-nav-height !important;
+      // padding-top: 0;
+      // padding-bottom: 0;
+      align-self: stretch;
+    }
+  }
+
+  &-transition {
+    transition: $transition-duration-short color $transition-timing,
+      $transition-duration-short border $transition-timing,
+      $transition-duration-short box-shadow $transition-timing;
+    max-width: 100%;
+  }
+}
+
+@at-root %fwe-form-input {
+  & {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    // vertical-align: middle;
+    background-color: $input-background;
+    transition: $transition-duration-short color $transition-timing,
+      $transition-duration-short border $transition-timing,
+      $transition-duration-short box-shadow $transition-timing;
+    max-width: 100%;
+
+    .theme-inverse & {
+      background-color: $input-background-inverse;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $input-placeholder-color;
+      opacity: $input-placeholder-opacity;
+    }
+
+    &::-moz-placeholder {
+      color: $input-placeholder-color;
+      opacity: $input-placeholder-opacity;
+    }
+
+    &:-ms-input-placeholder {
+      color: $input-placeholder-color;
+      opacity: $input-placeholder-opacity;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $input-placeholder-color;
+      opacity: $input-placeholder-opacity;
+    }
+
+    .theme-inverse & {
+      &::-webkit-input-placeholder {
+        color: $input-placeholder-color-inverse;
+      }
+
+      &::-moz-placeholder {
+        color: $input-placeholder-color-inverse;
+      }
+
+      &:-ms-input-placeholder {
+        color: $input-placeholder-color-inverse;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $input-placeholder-color-inverse;
+      }
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent !important;
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent !important;
+    }
+
+    &:focus:-ms-input-placeholder {
+      color: transparent !important;
+    }
+
+    &.focus::-webkit-input-placeholder {
+      color: transparent !important;
+    }
+
+    &.focus:-moz-placeholder {
+      color: transparent !important;
+    }
+
+    &.focus:-ms-input-placeholder {
+      color: transparent !important;
+    }
+  }
+
+  &-large {
+    font-size: $_fwc-input-font-size-large;
+  }
+
+  &-small {
+    font-size: $_fwc-input-font-size-small;
+  }
+
+  &-in-nav {
+    @extend %fwe-form-global-in-nav-custom;
+  }
+
+  &-in-group {
+    position: relative;
+    max-width: 100%;
+
+    &:focus,
+    &.focus,
+    &:active,
+    &.active &.open {
+      z-index: 1;
+    }
+  }
+
+  &-ui {
+    &-button {
+      font-size: 100%;
+      font: inherit;
+      border: none;
+      background: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    &-control {
+      @include dump-styles(hide-js-friendly);
+      //fallback
+      height: 0 !important;
+      width: 0 !important;
+      overflow: hidden !important;
+    }
+  }
+}
+
+#{$prefix} {
+  //scaffold
+  @extend %fwe-form-input;
+
+  &#{$prefix}-large,
+  #{$prefix}-group#{$prefix}-large & {
+    @extend %fwe-form-input-large;
+  }
+
+  &#{$prefix}-small,
+  #{$prefix}-group#{$prefix}-small & {
+    @extend %fwe-form-input-small;
+  }
+
+  .nav-block.nav-block-stretch > &,
+  .nav > & {
+    @extend %fwe-form-input-in-nav;
+  }
+
+  &-disabled,
+  &[disabled] {
+    @include dump-styles(disabled);
+  }
+
+  &-disabled,
+  &[disabled],
+  &-disabled & {
+    @include dump-styles(no-box-shadow-important);
+  }
+
+  &-in-group {
+    @extend %fwe-form-input-in-group;
+  }
+}
+
+@at-root %fwe-form-wrapper {
+  & {
+    max-width: 100%;
+    position: relative;
+    display: inline-flex;
+    padding-right: 2rem;
+  }
+
+  &-horizontal {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &-block {
+    display: flex;
+    padding-right: 0;
+    width: 100%;
+
+    &-mobile {
+      @include on-breakpoint(mobile) {
+        display: flex;
+        padding-right: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+#{$prefix}-wrapper {
+  & {
+  }
+
+  &#{&}-horizontal {
+    @extend %fwe-form-wrapper !optional;
+    @extend %fwe-form-wrapper-horizontal !optional;
+  }
+
+  &#{&}-vertical {
+    @extend %fwe-form-wrapper !optional;
+    @extend %fwe-form-wrapper-vertical !optional;
+  }
+
+  &#{&}-block {
+    @extend %fwe-form-wrapper-block !optional;
+
+    &-mobile {
+      @extend %fwe-form-wrapper-block-mobile !optional;
+    }
+  }
+
+  &#{&}-responsive {
+    @include on-breakpoint(mobile) {
+      flex-direction: column;
+
+      > %fwe-form-input-boxy {
+        width: 100%;
+      }
+    }
+  }
+}
