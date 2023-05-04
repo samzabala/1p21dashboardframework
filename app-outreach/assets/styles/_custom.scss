@@ -229,7 +229,7 @@ html,body {
 
 					&:hover > a::after,
 					& > a.open::after {
-						height: $nav-current-size;
+						height: $nav-item-current-size;
 					}
 
 					> ul{
@@ -479,10 +479,6 @@ html,body {
 					border-color: $table-cell-border-color;
 					border-style: solid;
 					border-bottom-width: $table-cell-border-width;
-
-					.theme-inverse & {
-						border-color: $table-cell-border-color-inverse;
-					}
 
 					.alert &,
 					.theme-inverse .alert & {

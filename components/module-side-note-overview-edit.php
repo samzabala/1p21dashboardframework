@@ -32,12 +32,12 @@ $args = app_parse_args($data,$defs);
 			<div id="<?=$args['post']?>-status">
 			
 				<h5>Status</h5>
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-					<span class="flex-child">
+				<div class="grid grid-flex grid-compact grid-constricted-y">
+					<span class="grid-col">
 						<input name="<?=$args['post']?>-status" type="radio" class="input input-inline" value="private" />
 						Private
 					</span>
-					<span class="flex-child">
+					<span class="grid-col">
 						<input name="<?=$args['post']?>-status" type="radio" class="input input-inline" value="public" />
 						Public
 					</span>
@@ -50,11 +50,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- Sher -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Share With:</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Share With:</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<input id="<?=$args['post']?>-followers-id" name="<?=$args['post']?>-followers-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Share <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-share-notes-with','',false,array(

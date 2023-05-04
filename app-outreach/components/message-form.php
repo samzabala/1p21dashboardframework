@@ -1,14 +1,14 @@
 
 <form  action="" class="flex-1-1 flex-xs flex-direction-column">
 	<div class="z-index-20 theme-inverse padding radius-small-top position-sticky offfset-0-x offset-0-top">
-		<div class="flex-grid flex-grid-compact flex-no-wrap flex-grid-no-gutter-y flex-grid-compact align-items-center justify-content-space-between">
-			<div class="flex-col-xs-4 flex-col-sm-6">
+		<div class="grid grid-flex grid-compact flex-no-wrap grid-constricted-y grid-compact align-items-center justify-content-space-between">
+			<div class="grid-col-xs-4 grid-col-sm-6">
 				<!-- Heading -->
 				<div class="font-weight-700">
 					New Message
 				</div>
 			</div>
-			<div class="flex-child flex-0-0">
+			<div class="grid-col flex-0-0">
 				<!-- Disable tracking -->
 					<span class="margin-small-right">
 						<label for="email-disable-tracking"><span class="hide-mobile">Disable</span> Tracking</label>
@@ -32,12 +32,12 @@
 
 			<div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-4 flex-col-sm-2">
-							<label for="editor-email-from" class="input-label">From</label>
+					<div class="grid grid-flex grid-flex-fixed grid-constricted-x grid-compact">
+						<div class="grid-col-xs-4 grid-col-sm-2">
+							<label for="editor-email-from" class="input input-label">From</label>
 						</div>
-						<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
-							<select name="" id="editor-email-from" class="input input-select input-blend input-block no-border">
+						<div class="grid-col-xs-8 grid-col-sm-8 align-self-center">
+							<select name="" id="editor-email-from" class="input input-box input-box-select input-blend input-block no-border">
 								<option value="">Select Your Email Address...</option>
 									<!-- @PLACEHOLDER. delete when ready -->
 										<option value="">myemail@outlook.com</option>
@@ -48,12 +48,12 @@
 					</div>
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact justify-content-space-between">
-						<div class="flex-col-xs-4 flex-col-sm-2">
-							<label for="editor-email-to" class="input-label">To</label>
+					<div class="grid grid-flex grid-flex-fixed grid-constricted-x grid-compact justify-content-space-between">
+						<div class="grid-col-xs-4 grid-col-sm-2">
+							<label for="editor-email-to" class="input input-label">To</label>
 						</div>
-						<div class="flex-col-xs-8 flex-col-sm-8 margin-auto-right align-self-center">
-							<select name="" id="editor-email-to" class="input input-select input-blend input-block no-border">
+						<div class="grid-col-xs-8 grid-col-sm-8 margin-auto-right align-self-center">
+							<select name="" id="editor-email-to" class="input input-box input-box-select input-blend input-block no-border">
 								<option value="">Send to...</option>
 									<!-- @PLACEHOLDER. delete when ready -->
 										<option value="">phoenixwright@ace-attorney.com</option>
@@ -63,8 +63,8 @@
 										<option value="">email@email.com</option>
 							</select>
 						</div>
-						<div class="flex-child flex-1-1 text-align-right">
-							<div class="btn btn-group btn-group-horizontal">
+						<div class="grid-col flex-1-1 text-align-right">
+							<div class="btn-group btn-group-horizontal">
 								<a href="#m-editor-email-cc-enable" data-accordion-changehash="false" data-toggle-accordion class="btn btn-default">Cc</a>
 								<a href="#m-editor-email-bcc-enable" data-accordion-changehash="false" data-toggle-accordion class="btn btn-default">Bcc</a>
 							</div>
@@ -74,11 +74,11 @@
 				<div id="m-editor-email-cc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					
 					<!-- @loop div -->
-						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-							<div class="flex-col-xs-4 flex-col-sm-2">
+						<div class="grid grid-flex grid-flex-fixed grid-constricted-x grid-compact">
+							<div class="grid-col-xs-4 grid-col-sm-2">
 								<div class="flex-sm justify-content-space-between">
-									<label for="editor-email-cc-REPLACEWithId" class="input-label display-block">Cc</label>
-									<div class="btn btn-group btn-group-horizontal margin-small-right">
+									<label for="editor-email-cc-REPLACEWithId" class="input input-label display-block">Cc</label>
+									<div class="btn-group btn-group-horizontal margin-small-right">
 										<!-- @Note. clicking this should append a new @loop div next to the @loop div ancestor -->
 										<a class="btn btn-default btn-symbol" title="Add Another Cc"><i class="symbol symbol-plus"></i></a>
 										<!-- @Note. clicking this should remove the @loop div ancestor -->
@@ -86,8 +86,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
-								<select name="" id="editor-email-cc-REPLACEWithId" class="input input-select input-blend input-block no-border">
+							<div class="grid-col-xs-8 grid-col-sm-8 align-self-center">
+								<select name="" id="editor-email-cc-REPLACEWithId" class="input input-box input-box-select input-blend input-block no-border">
 									<option value="">CC to...</option>
 										<!-- @PLACEHOLDER. delete when ready -->
 											<option value="">phoenixwright@ace-attorney.com</option>
@@ -101,11 +101,11 @@
 				</div>
 				<div id="m-editor-email-bcc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					<!-- @loop div -->
-						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-							<div class="flex-col-xs-4 flex-col-sm-2">
+						<div class="grid grid-flex grid-flex-fixed grid-constricted-x grid-compact">
+							<div class="grid-col-xs-4 grid-col-sm-2">
 								<div class="flex-sm justify-content-space-between">
-									<label for="editor-email-bcc-REPLACEWithId" class="input-label display-block">Bcc</label>
-									<div class="btn btn-group btn-group-horizontal margin-small-right">
+									<label for="editor-email-bcc-REPLACEWithId" class="input input-label display-block">Bcc</label>
+									<div class="btn-group btn-group-horizontal margin-small-right">
 										<!-- @Note. clicking this should append a new @loop div next to the @loop div ancestor -->
 										<a class="btn btn-default btn-symbol" title="Add Another Bcc"><i class="symbol symbol-plus"></i></a>
 										<!-- @Note. clicking this should remove the @loop div ancestor -->
@@ -113,8 +113,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="flex-col-xs-8 flex-col-sm-8 align-self-center">
-								<select name="" id="editor-email-bcc-REPLACEWithId" class="input input-select input-blend input-block no-border">
+							<div class="grid-col-xs-8 grid-col-sm-8 align-self-center">
+								<select name="" id="editor-email-bcc-REPLACEWithId" class="input input-box input-box-select input-blend input-block no-border">
 									<option value="">BCC to...</option>
 										<!-- @PLACEHOLDER. delete when ready -->
 											<option value="">phoenixwright@ace-attorney.com</option>
@@ -127,12 +127,12 @@
 						</div>
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-4 flex-col-sm-2">
-							<label for="editor-email-" class="input-label">Template</label>
+					<div class="grid grid-flex grid-flex-fixed grid-constricted-x grid-compact">
+						<div class="grid-col-xs-4 grid-col-sm-2">
+							<label for="editor-email-" class="input input-label">Template</label>
 						</div>
-						<div class="flex-col-xs-8 flex-col-sm-10 flex-col-md-8 align-self-center">
-							<select name="" id="editor-email-bcc" class="input input-select input-blend input-block no-border">
+						<div class="grid-col-xs-8 grid-col-sm-10 grid-col-md-8 align-self-center">
+							<select name="" id="editor-email-bcc" class="input input-box input-box-select input-blend input-block no-border">
 								<option value="">Select a Template...</option>
 									<!-- @PLACEHOLDER. delete when ready -->
 										<option value="">A Template</option>
@@ -144,24 +144,24 @@
 					</div>
 				</div>
 				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
-						<div class="flex-col-xs-4 flex-col-sm-2">
-							<label for="editor-email-subject" class="input-label">Subject</label>
+					<div class="grid grid-flex grid-flex-fixed grid-constricted-x grid-compact">
+						<div class="grid-col-xs-4 grid-col-sm-2">
+							<label for="editor-email-subject" class="input input-label">Subject</label>
 						</div>
-						<div class="flex-col-xs-7 flex-col-sm-10 align-self-center">
+						<div class="grid-col-xs-7 grid-col-sm-10 align-self-center">
 							<input type="text" name="" id="editor-email-subject" class="input input-block input-blend no-border" placeholder="Type a subject line...">
 						</div>
 					</div>
 				</div>
 
 				<div class="p padding-small-y">
-					<textarea name="" id="" cols="30" rows="10" class="input input-multiple-line input-block">REPLACE w/ texteditor</textarea>
+					<textarea name="" id="" cols="30" rows="10" class="input input-box input-box-multiline input-block">REPLACE w/ texteditor</textarea>
 				</div>
 			</div>
 		<!-- </div> -->
 	</div>
 	<div class="z-index-20 background-theme-contrast padding-x radius-small-bottom position-sticky offfset-0-x offset-0-bottom">
-		<div class="flex-grid flex-grid-compact">
+		<div class="grid grid-flex grid-compact">
 			<!-- @NOTE
 				.btn[type=submit]
 					classes to add
@@ -170,9 +170,9 @@
 					'btn-primary' => if schedule email accordion is closed
 		
 			-->
-			<div class="flex-child flex-0-0 align-self-flex-end">
-				<div class="flex-grid flex-grid-compact text-leading-constricted justify-content-space-between">
-					<div class="flex-child flex-0-0 align-self-flex-end">
+			<div class="grid-col flex-0-0 align-self-flex-end">
+				<div class="grid grid-flex grid-compact text-leading-constricted justify-content-space-between">
+					<div class="grid-col flex-0-0 align-self-flex-end">
 
 						<button type="submit" class="btn margin-small-right
 							btn-primary
@@ -189,18 +189,18 @@
 					</div>
 				</div>
 			</div>
-			<div id="editor-email-schedule-enable" class="flex-col-xs-12 flex-col-md-9 accordion">
-				<div class="flex-grid flex-grid-compact text-leading-constricted justify-content-space-between align-items-center">
-					<div class="flex-child flex-0-0">
+			<div id="editor-email-schedule-enable" class="grid-col-xs-12 grid-col-md-9 accordion">
+				<div class="grid grid-flex grid-compact text-leading-constricted justify-content-space-between align-items-center">
+					<div class="grid-col flex-0-0">
 						<strong>Schedule Email</strong><br>
 						<span class="color-neutral font-size-small">
 							<span class="REPLACE">Pacific Time (PT)</span>
 						</span>
 					</div>
-					<div class="flex-col-xs-12 flex-col-sm-3">
+					<div class="grid-col-xs-12 grid-col-sm-3">
 						<div class="position-relative">
 							<label for="editor-email-schedule-date" class="sr-only">Schedule date</label>
-							<a href="#" class="btn btn-group btn-group-horizontal btn-block" data-toggle-dropdown>
+							<a href="#" class="btn-group btn-group-horizontal btn-block" data-toggle-dropdown>
 								<span class="btn btn-default">
 									<span class="REPLACE">June 12, 1898</span>
 								</span>
@@ -215,11 +215,11 @@
 
 						</div>
 					</div>
-					<div class="flex-col-xs-12 flex-col-sm-3">
+					<div class="grid-col-xs-12 grid-col-sm-3">
 						<label for="editor-email-schedule-time" class="sr-only">Schedule time</label>
-						<input type="time" name="" id="editor-email-schedule-time" class="input input-single-line input-block">
+						<input type="time" name="" id="editor-email-schedule-time" class="input input-box input-block">
 					</div>
-					<div class="flex-child flex-0-0">
+					<div class="grid-col flex-0-0">
 
 						<button type="submit" class="btn-group btn-group-horizontal btn-group-unite">
 							<span class="btn btn-primary btn-symbol"><i class="symbol symbol-paperplane text-leading-contricted font-size-large"></i></span>

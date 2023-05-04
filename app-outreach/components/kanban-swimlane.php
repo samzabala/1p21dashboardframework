@@ -14,7 +14,7 @@ $args = app_parse_args($data,$defs);
 <div class="outreach-kanban module module-compact">
     <div
         class="
-        module-header no-margin-bottom padding-small-y background-neutral color-background module-header-break">
+        module-header no-margin-bottom padding-small-y background-neutral color-background module-end-break">
         <h3 class="
         module-title color-inherit
         ">

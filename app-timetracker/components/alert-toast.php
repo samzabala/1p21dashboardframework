@@ -1,5 +1,5 @@
 <!-- @if there are notifications -->
-<div class="timetracker-alert-container alert-container no-padding-x offset-nav-sticky padding-top position-sticky">
+<div class="timetracker-alert-container alert-container no-padding-x offset-nav-top padding-top position-sticky">
 		<!--`error`: for fatal error user feedback -->
 			<?php app_get_component('components/alert','basic',false,array(
 				'type'		=> 'error',

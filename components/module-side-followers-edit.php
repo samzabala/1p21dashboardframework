@@ -21,11 +21,11 @@ $args = app_parse_args($data,$defs);
 		<!-- FOLLOWERS ?? -->
 
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Followers</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Followers</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<input id="<?=$args['post']?>-followers-id" name="<?=$args['post']?>-followers-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Followers <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-users-multiple'); ?>
@@ -51,11 +51,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- Notes -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Notes</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Notes</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<input id="<?=$args['post']?>-wiki-id" name="<?=$args['post']?>-wiki-id" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Edit <i class="symbol symbol-edit"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-wiki-multiple',null,false,array('post'=>$args['post'])); ?>
@@ -67,12 +67,12 @@ $args = app_parse_args($data,$defs);
 				<!-- if has docs -->
 					<ul class="post-note unstyled">
 						<li>
-							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-								<div class="flex-col-xs-9">
+							<div class="grid grid-flex grid-compact grid-fixed align-items-center grid-constricted-y">
+								<div class="grid-col-xs-9">
 									<span class="note-title">Documentation title</span>
 								</div>
 
-								<div class="flex-col-xs-3 text-align-right">
+								<div class="grid-col-xs-3 text-align-right">
 									<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 								</div>
 							</div>
@@ -82,12 +82,12 @@ $args = app_parse_args($data,$defs);
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
 							<?php for($i=1; $i<=3; $i++){ ?>
 								<li>
-									<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-										<div class="flex-col-xs-9">
+									<div class="grid grid-flex grid-compact grid-fixed align-items-center grid-constricted-y">
+										<div class="grid-col-xs-9">
 											<span class="note-title">Documentation title</span>
 										</div>
 
-										<div class="flex-col-xs-3 text-align-right">
+										<div class="grid-col-xs-3 text-align-right">
 											<a href="#" class="btn btn-symbol btn-small btn-link" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 										</div>
 									</div>
@@ -104,11 +104,11 @@ $args = app_parse_args($data,$defs);
 			<hr class="no-margin-y">
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-y">
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-						<div class="flex-child">
-							<h5 class="input-label">Reminders</h5>
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
+							<h5 class="input input-label">Reminders</h5>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 							<input id="<?=$args['post']?>-followers-id" name="<?=$args['post']?>-followers-id" type="hidden" />
 							<a href="#" data-toggle="modal" data-modal-title="Add reminder" class="btn btn-primary-outline btn-small">Reminder <i class="symbol symbol-plus"></i></a>
 							<?php app_get_component('components/modal-workflow-edit-reminder'); ?>

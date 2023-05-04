@@ -26,10 +26,10 @@ $args = app_parse_args($data,$defs);
 <form id="timetracker-timer" class="module no-border module-expanded theme-inverse margin-large-y 
 <?=$args['is_active'] ? 'background-gradient-90-from-secondary-to-success' : 'background-gradient-90-from-secondary-to-primary' ?>">
 	<div class="module-content no-padding">
-		<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
-			<div class="flex-col-xs-12 flex-col-md-8  flex-col-lg-9 flex-md  flex-direction-column">
-				<div class="flex-grid flex-grid-no-gutter flex-grid-fixed">
-					<div class="flex-col-xs-12 flex-col-md-5 flex-col-lg-3">
+		<div class="grid grid-flex grid-flex-fixed grid-constricted">
+			<div class="grid-col-xs-12 grid-col-md-8  grid-col-lg-9 flex-md  flex-direction-column">
+				<div class="grid grid-flex grid-constricted grid-flex-fixed">
+					<div class="grid-col-xs-12 grid-col-md-5 grid-col-lg-3">
 						<div class="padding-y padding-large-x border-style-solid-bottom border-width-thin-bottom border-color-background-alpha-2 h4 color-inherit no-margin">
 							<label for="timer-task-project" class="sr-only">Project</label>
 							<input class="input input-blend input-block no-padding" name="task-project" id="timer-task-project" type="text" placeholder="Enter Project Name" list="projects" 
@@ -55,8 +55,8 @@ $args = app_parse_args($data,$defs);
 							</datalist>
 						</div>
 					</div>
-					<div class="flex-child flex-0-0 hide-mobile spacer border-style-solid-right border-width-thin-right border-color-background-alpha-2"></div>
-					<div class="flex-child flex-1-1">
+					<div class="grid-col flex-0-0 hide-mobile spacer border-style-solid-right border-width-thin-right border-color-background-alpha-2"></div>
+					<div class="grid-col flex-1-1">
 						<div class="padding-y padding-large-x border-style-solid-bottom border-width-thin-bottom border-color-background-alpha-2 h4 font-weight-400 color-inherit no-margin">
 
 							<label for="timer-task-client" class="sr-only">Client</label>
@@ -121,16 +121,16 @@ $args = app_parse_args($data,$defs);
 					</div>
 				</div>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-4 flex-col-lg-3 background-background-alpha-2  flex-md">
+			<div class="grid-col-xs-12 grid-col-md-4 grid-col-lg-3 background-background-alpha-2  flex-md">
 				<div class="padding-small-y">
 					<div class="padding-large-y text-align-center flex-1-1 flex-md flex-direction-column-reverse align-items-center justify-content-center">
 	
 						<div class="padding-large-x">
 	
-							<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y flex-grid-fixed justify-content-center">
-								<div class="flex-col-xs-12 flex-col-sm-5 flex-col-md-12 flex-col-lg-10">
+							<div class="grid grid-flex grid-compact grid-constricted-y grid-flex-fixed justify-content-center">
+								<div class="grid-col-xs-12 grid-col-sm-5 grid-col-md-12 grid-col-lg-10">
 									<label for="timer-task-category" class="sr-only">Task Category</label>
-									<select class="input input-single-line input-select input-block background-transparent border-color-theme input-round margin-small-bottom" name="task-category" id="timer-task-category" placeholder="Select Category">
+									<select class="input input-box input-box input-box-select input-block background-transparent border-color-theme input-round margin-small-bottom" name="task-category" id="timer-task-category" placeholder="Select Category">
 									
 										<option value="">Select Task Category</option>
 			
@@ -148,9 +148,9 @@ $args = app_parse_args($data,$defs);
 												<?php endforeach; ?>
 									</select>
 								</div>
-								<div class="flex-col-xs-12 flex-col-sm-5 flex-col-md-12 flex-col-lg-10">
+								<div class="grid-col-xs-12 grid-col-sm-5 grid-col-md-12 grid-col-lg-10">
 									<label for="timer-task-Status" class="sr-only">Task Status</label>
-									<select class="input input-single-line input-select input-block background-transparent border-color-theme input-round" name="task-status" id="timer-task-status" placeholder="Select Status">
+									<select class="input input-box input-box input-box-select input-block background-transparent border-color-theme input-round" name="task-status" id="timer-task-status" placeholder="Select Status">
 			
 										<option value="">Select Status</option>
 											<!-- @loop option -->
@@ -172,7 +172,7 @@ $args = app_parse_args($data,$defs);
 							</div>
 						</div>
 	
-						<div class="special-primary text-leading-whole inline-flex margin-large-y">
+						<div class="special-primary text-leading-constricted inline-flex margin-large-y">
 							<div class="hours">
 								<span class="REPLACE">00</span>
 							</div>

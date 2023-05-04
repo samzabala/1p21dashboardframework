@@ -1,6 +1,6 @@
 <!-- Main -->
 <div
-	class="module module-no-gutter"
+	class="module module-constricted"
 	data-grid-column-md="main"
 	data-grid-row-md="1 / span 6"
 >
@@ -9,8 +9,8 @@
 		<!-- main -->
 			<div class="module module-expanded border-color-transparent">
 				<!-- Heading -->
-					<div class="company-heading flex-grid flex-grid-compact position-relative">
-						<div class="flex-col-xs-12 flex-col-md-8">
+					<div class="company-heading grid grid-flex grid-compact position-relative">
+						<div class="grid-col-xs-12 grid-col-md-8">
 							<div>
 								<h1 class="no-margin display-inline">
 									<span class="REPLACE">Company Name</span>
@@ -25,14 +25,14 @@
 								Business Type: <span class="REPLACE">Company Business Type</span>
 							</div>
 						</div>
-						<div class="flex-col-xs-12 flex-col-md-4 align-self-flex-end">
-							<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center">
-								<div class="flex-child flex-0-0">
+						<div class="grid-col-xs-12 grid-col-md-4 align-self-flex-end">
+							<div class="grid grid-flex grid-compact grid-constricted-y align-items-center">
+								<div class="grid-col flex-0-0">
 									<span class="btn btn-light btn-no-interaction btn-round btn-symbol btn-success-glassy">
 										<i class="symbol symbol-calendar"></i>
 									</span>
 								</div>
-								<div class="flex-child flex-1-1">
+								<div class="grid-col flex-1-1">
 									<small class="color-neutral">Last Completed</small>
 									<h4 class="no-margin">
 										<span class="REPLACE">April 4th, 2020</span>
@@ -58,12 +58,12 @@
 					<?php app_get_component('components/modal-board-form-company-details') ?>
 
 				<!-- tables -->
-					<div class="flex-grid flex-grid-fixed">
+					<div class="grid grid-flex grid-flex-fixed">
 
 						<!-- contact table -->
-							<div class="flex-col-xs-12">
-								<div class="position-relative background-theme-contrast flex-grid flex-grid-no-gutter justify-content-space-between align-items-center padding-small">
-									<div class="flex-child flex-1-1">
+							<div class="grid-col-xs-12">
+								<div class="position-relative background-theme-contrast grid grid-flex grid-constricted justify-content-space-between align-items-center padding-small">
+									<div class="grid-col flex-1-1">
 										<span data-toggle-accordion class="module-title" href="#company-contact">Contacts <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></span>
 									</div>
 								</div>
@@ -92,16 +92,16 @@
 
 									
 									
-									<div class="flex-grid flex-grid-fixed flex-grid-compact justify-content-space-between align-items-center">
-										<div class="flex-col-xs-12 flex-col-md-4 flex-col-lg-5  flex-col-xl-6">
+									<div class="grid grid-flex grid-flex-fixed grid-compact justify-content-space-between align-items-center">
+										<div class="grid-col-xs-12 grid-col-md-4 grid-col-lg-5  grid-col-xl-6">
 											<?app_get_component('components/link-add-row','',false,array(
 												'href' => '#mb-editor-contact',
 												'attrs' => 'data-toggle-modal-board data-toggle="Add Contact"'
 											)) ?>
 										</div>
-										<div class="flex-child flex-1-1 text-align-right position-relative">
+										<div class="grid-col flex-1-1 text-align-right position-relative">
 											<a href="#" data-toggle-dropdown class="btn-group btn-group-horizontal btn-block-mobile">
-												<span class="btn btn-small text-leading-whole no-padding-y btn-symbol btn-success font-size-large">
+												<span class="btn btn-small text-leading-constricted no-padding-y btn-symbol btn-success font-size-large">
 													<i class="symbol symbol-user-add"></i>
 												</span>
 												<span class="btn btn-default">Import emails via Hunter.io</span>
@@ -173,12 +173,12 @@
 							</div>
 
 						<!-- additional sites -->
-							<div class="flex-col-xs-12 flex-col-md-6">
-								<div class="position-relative background-theme-contrast flex-grid flex-grid-no-gutter justify-content-space-between align-items-center padding-small">
-									<div class="flex-child flex-1-1">
+							<div class="grid-col-xs-12 grid-col-md-6">
+								<div class="position-relative background-theme-contrast grid grid-flex grid-constricted justify-content-space-between align-items-center padding-small">
+									<div class="grid-col flex-1-1">
 										<span class="module-title" >Additional Websites</span>
 									</div>
-									<div class="flex-child flex-0-0">
+									<div class="grid-col flex-0-0">
 										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-addtl-sites" data-toggle-switch-on',
@@ -253,7 +253,7 @@
 									<form class="padding-small-y padding-micro-x" action="">
 										<div class="input-group input-group-horizontal input-block">
 											<input
-												type="text" class="input input-single-line"
+												type="text" class="input input-box"
 												placeholder="domain.com"
 												id="company-addtl-sites-add-name"
 												name="company-addtl-sites-add-name"
@@ -272,12 +272,12 @@
 							</div>
 
 						<!-- vendor history  -->
-							<div class="flex-col-xs-12 flex-col-md-6">
-								<div class="position-relative background-theme-contrast flex-grid flex-grid-no-gutter justify-content-space-between align-items-center padding-small">
-									<div class="flex-child flex-1-1">
+							<div class="grid-col-xs-12 grid-col-md-6">
+								<div class="position-relative background-theme-contrast grid grid-flex grid-constricted justify-content-space-between align-items-center padding-small">
+									<div class="grid-col flex-1-1">
 										<span class="module-title" >Vendor History</span>
 									</div>
-									<div class="flex-child flex-0-0">
+									<div class="grid-col flex-0-0">
 
 										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
@@ -364,7 +364,7 @@
 										<div class="position-relative">
 											<div class="input-group input-group-horizontal input-block">
 												<input
-													type="text" size="12" class="input input-single-line"
+													type="text" size="12" class="input input-box"
 													placeholder="Vendor Name"
 													id="company-vendor-history-add-name"
 													name="company-vendor-history-add-name"
@@ -378,7 +378,7 @@
 											<div class="dropdown dropdown-right dropdown-top-flush" data-dropdown-width="100%">
 												<div class="">
 													<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-														<label for="" class="input-label">Start Date</label>
+														<label for="" class="input input-label">Start Date</label>
 														<input
 															type="text" size="12" class="input input-calendar input-block no-radius-bottom"
 															placeholder="1990 - Present"
@@ -389,7 +389,7 @@
 
 													<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 													
-														<label for="company-vendor-history-add-date-end" class="input-label">End Date</label>
+														<label for="company-vendor-history-add-date-end" class="input input-label">End Date</label>
 
 														<!-- @NOTE
 															.input-wrapper
@@ -419,12 +419,12 @@
 							</div>
 
 						<!-- additional info  -->
-							<div class="flex-col-xs-12 flex-col-md-6">
-								<div class="position-relative background-theme-contrast flex-grid flex-grid-no-gutter justify-content-space-between align-items-center padding-small">
-									<div class="flex-child flex-1-1">
+							<div class="grid-col-xs-12 grid-col-md-6">
+								<div class="position-relative background-theme-contrast grid grid-flex grid-constricted justify-content-space-between align-items-center padding-small">
+									<div class="grid-col flex-1-1">
 										<span class="module-title" >Additional Info</span>
 									</div>
-									<div class="flex-child flex-0-0">
+									<div class="grid-col flex-0-0">
 
 										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
@@ -453,11 +453,11 @@
 													</td>
 													<td colspan="2">
 														<!-- @if has arc score -->
-															<div class="flex-grid flex-grid-no-gutter justify-content-space-between font-weight-700 align-items-center">
-																<div class="flex-child">
+															<div class="grid grid-flex grid-constricted justify-content-space-between font-weight-700 align-items-center">
+																<div class="grid-col">
 																	<span class="REPLACE">4.20</span>
 																</div>
-																<div class="flex-child color-neutral font-size-small">
+																<div class="grid-col color-neutral font-size-small">
 																	Checked <span class="REPLACE">4/2/.69</span>
 																</div>
 															</div>
@@ -572,18 +572,18 @@
 													</label>
 												</td>
 												<td colspan="2">
-													<div class="flex-grid flex-grid-compact flex-grid-fixed">
-														<div class="flex-col-xs-4">
+													<div class="grid grid-flex grid-compact grid-flex-fixed">
+														<div class="grid-col-xs-4">
 															<input
-																type="number" size="3" class="input input-single-line input-block"
+																type="number" size="3" class="input input-box input-block"
 																placeholder="0.00"
 																id="company-addtl-info-arc-score"
 																name="company-addtl-info-arc-score"
 																value="REPLACEwithrowvalue" />
 														</div>
-														<div class="flex-col-xs-8">
+														<div class="grid-col-xs-8">
 															<input
-																type="date" size="3" class="input input-single-line input-block"
+																type="date" size="3" class="input input-box input-block"
 																placeholder="mm/dd/yyyy"
 																id="company-addtl-info-arc-last-check"
 																name="company-addtl-info-arc-last-check"
@@ -602,7 +602,7 @@
 												<td colspan="2">
 													<div class="input-group input-group-horizontal input-block">
 														<input
-															type="url" size="12" class="input input-single-line"
+															type="url" size="12" class="input input-box"
 															placeholder="http://domain.com/path"
 															id="company-addtl-info-seo-analysis"
 															name="company-addtl-info-seo-analysis"
@@ -622,7 +622,7 @@
 														<select 
 															id="company-addtl-info-lead-source"
 															name="company-addtl-info-lead-source"
-															class="input input-select">
+															class="input input-box input-box-select">
 															<option value="">Select</option>
 															<option value="">Lead Source Name</option>
 															<option value="">Lead Source Name</option>
@@ -643,13 +643,13 @@
 													<div class="input-group input-group-horizontal input-block">
 														<span class="btn btn-no-interaction btn-neutral btn-symbol">$</span>
 														<input
-															type="number" step="1"size="3" class="input input-single-line"
+															type="number" step="1"size="3" class="input input-box"
 															placeholder="Minimum"
 															id="company-addtl-info-marketing-budget-min"
 															name="company-addtl-info-marketing-budget-min"
 															value="REPLACEwithrowvalue" style="width:50%" />
 														<input
-															type="number" step="1"size="3" class="input input-single-line"
+															type="number" step="1"size="3" class="input input-box"
 															placeholder="Maximum"
 															id="company-addtl-info-marketing-budget-max"
 															name="company-addtl-info-marketing-budget-max"
@@ -685,13 +685,13 @@
 									<form class="padding-small-y padding-micro-x" action="">
 										<div class="input-group input-group-horizontal input-block">
 											<input
-												type="text" size="12" class="input input-single-line"
+												type="text" size="12" class="input input-box"
 												placeholder="Info Name"
 												id="company-addtl-info-add-name"
 												name="company-addtl-info-add-name"
 												value="" />
 											<input
-												type="text" size="12" class="input input-single-line"
+												type="text" size="12" class="input input-box"
 												placeholder="Info Description"
 												id="company-addtl-info-add-date"
 												name="company-addtl-info-add-date"
@@ -712,12 +712,12 @@
 						
 
 						<!-- additional sites -->
-							<div class="flex-col-xs-12 flex-col-md-6">
-								<div class="position-relative background-theme-contrast flex-grid flex-grid-no-gutter justify-content-space-between align-items-center padding-small">
-									<div class="flex-child flex-1-1">
+							<div class="grid-col-xs-12 grid-col-md-6">
+								<div class="position-relative background-theme-contrast grid grid-flex grid-constricted justify-content-space-between align-items-center padding-small">
+									<div class="grid-col flex-1-1">
 										<span class="module-title" >Main Competitors</span>
 									</div>
-									<div class="flex-child flex-0-0">
+									<div class="grid-col flex-0-0">
 										<?php app_get_component('components/dropdown-actions','',false,array(
 											'links' => array(
 												'Edit name or description' => ' class="tooltip-purger" href="#company-main-competitors" data-toggle-switch-on',
@@ -805,7 +805,7 @@
 										<div class="input-group input-group-horizontal input-block">
 											<input
 												list="company-competitors-available"
-												type="text" class="input input-single-line"
+												type="text" class="input input-box"
 												placeholder="domain.com"
 												id="company-competitors-add-name"
 												name="company-competitors-add-name"
@@ -824,7 +824,7 @@
 							</div>
 
 						<!-- sales -->
-							<div class="flex-col-xs-12">
+							<div class="grid-col-xs-12">
 								<table class="outreach-table margin-small-bottom table-fixed">
 									<tr>
 										<th width="165" class="background-theme-contrast module-title text-align-center outreach-table-mobile-th">Products Sold</th>
@@ -986,7 +986,7 @@
 							</div>
 						
 						<!-- hot prospects -->
-							<div class="flex-col-xs-12">
+							<div class="grid-col-xs-12">
 									<div class="padding-small background-error color-background radius-top">
 										<h5 class="no-margin color-inherit leading-compact">
 											Proposed Products

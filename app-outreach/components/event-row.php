@@ -7,8 +7,8 @@
 
 	$args = app_parse_args($data,$defs);
 ?>
-<div class="event-row flex-grid flex-grid-compact">
-	<div class="flex-child flex-0-0">
+<div class="event-row grid grid-flex grid-compact">
+	<div class="grid-col flex-0-0">
 		<?php if($args['type'] == 'event'): ?>
 			<span class="btn-no-interaction btn btn-error-glassy btn-round btn-symbol">
 				<i class="symbol symbol-calendar-alt"></i>
@@ -19,7 +19,7 @@
 			</span>
 		<?php endif; ?>
 	</div>
-	<div class="flex-child flex-1-1">
+	<div class="grid-col flex-1-1">
 		<h5 class="event-date no-margin-y">
 			<span class="REPLACE">June 12, 1898</span>
 		</h5>

@@ -1,10 +1,10 @@
-<div class="flex-grid">
-	<div class="flex-child flex-col-xs-12 flex-col-md-6">
+<div class="grid grid-flex">
+	<div class="grid-col grid-col-xs-12 grid-col-md-6">
 		<div class="h2 font-weight-300 no-margin-y">
 			Team Members
 		</div>
 	</div>
-	<div class="flex-child flex-col-xs-12 flex-col-md-6 text-align-right">
+	<div class="grid-col grid-col-xs-12 grid-col-md-6 text-align-right">
 		<a href="<?=app_create_link(array('template'=> 'team-member-new')) ?>" class="btn btn-theme btn-block-mobile">Add new</a>
 	</div>
 </div>

@@ -9,14 +9,14 @@
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 
 					<label for="task-title" class="sr-only">Title</label>
-					<input id="task-title" type="text" class="input input-large input-single-line font-weight-600" placeholder="Enter title here">
+					<input id="task-title" type="text" class="input input-large input-box font-weight-600" placeholder="Enter title here">
 				</div>
 
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 					<label for="task-description" class="sr-only">Content</label>
 
-					<textarea id="task-description" class="input input-multiple-line">
+					<textarea id="task-description" class="input input-box input-box-multiline">
 					</textarea>
 				</div>
 			</div>

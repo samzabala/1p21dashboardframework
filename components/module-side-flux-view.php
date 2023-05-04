@@ -15,11 +15,11 @@ $args = app_parse_args($data,$defs);
 	
 			<!-- WORKFLUX BOARDS -->
 				<div class="h5 no-margin-top">
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-						<div class="flex-child">
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
 							<h5 class="no-margin-y">Workflux Boards</h5>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 							<a href="#post-side-flux-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 						</div>
 					</div>
@@ -59,11 +59,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- TAGS -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
 						<h5 class="no-margin-y">Label &amp; Tags</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<a href="#post-side-tags-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 					</div>
 				</div>

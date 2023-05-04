@@ -44,14 +44,14 @@
 
 	<div class="task-attachments">
 
-		<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
-			<div class="flex-col-xs-6">
+		<div class="grid grid-flex grid-compact justify-content-space-between align-items-center">
+			<div class="grid-col-xs-6">
 				<h4 class="no-margin-y">
 					Attachments
 				</h4>
 			</div>
 			<!-- @if there are attachemtns -->
-				<div class="flex-col-xs-6 text-align-right">
+				<div class="grid-col-xs-6 text-align-right">
 					<a href="#" class="task-attachments-downloader" ><i class="symbol symbol-download"></i> Download All</a>
 				</div>
 		</div>

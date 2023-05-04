@@ -17,11 +17,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- TIME TRACKING + ACC HEADER -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Time Tracking</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Time Tracking</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 					
 						<?php if($args['post'] == 'task'): ?>
 							<a href="#"  data-toggle="modal" data-modal-title="REPLACwith<?=$args['post'];?>Title" class="btn btn-primary-outline btn-small">Time <i class="symbol symbol-plus"></i></a>
@@ -159,8 +159,8 @@ $args = app_parse_args($data,$defs);
 
 						<div class="switch-off pointer-reference position-relative">
 
-							<div class="flex-grid flex-grid-compact flex-grid-fixed flex-grid-no-gutter">
-								<div class="flex-col-xs-6">
+							<div class="grid grid-flex grid-compact grid-fixed grid-constricted">
+								<div class="grid-col-xs-6">
 									<p class="<?=$args['post']?>-time-logged no-margin">
 										<span class="REPLACE">6h 9m</span>
 									</p>
@@ -170,7 +170,7 @@ $args = app_parse_args($data,$defs);
 								</div>
 
 
-								<div class="flex-col-xs-6" data-toggle="switch-on">
+								<div class="grid-col-xs-6" data-toggle="switch-on">
 									<p class="<?=$args['post']?>-time-estimate no-margin">
 										<span class="REPLACE">9h 6m</span>
 										
@@ -208,11 +208,11 @@ $args = app_parse_args($data,$defs);
 						<form class="switch-on">
 							<!-- @HIDDEN INPUT TYPES HERE -->
 							<div class="input-wrapper input-wrapper-horizontal input-wrapper-block p">
-								<label class="input-label flex-1-0" for="<?=$args['post']?>-time-estimate" class="no-margin-y flex-1-0">Time Estimated</label>
+								<label class="input input-label flex-1-0" for="<?=$args['post']?>-time-estimate" class="no-margin-y flex-1-0">Time Estimated</label>
 
 								<div class="input-group input-group-horizontal">
 
-									<input type="text" name="<?=$args['post']?>-time-estimate" size="5" id="<?=$args['post']?>-time-estimate" class="input input-single-line" placeholder="00:00">
+									<input type="text" name="<?=$args['post']?>-time-estimate" size="5" id="<?=$args['post']?>-time-estimate" class="input input-box" placeholder="00:00">
 
 									<button type="submit" class="btn btn-primary btn-symbol" data-toggle="switch-off">
 										<i class="symbol symbol-check"></i>

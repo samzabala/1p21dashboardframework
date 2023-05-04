@@ -1,5 +1,5 @@
-<div class="flex-grid align-items-center">
-	<div class="flex-col-xs-12 flex-col-sm-6">
+<div class="grid grid-flex align-items-center">
+	<div class="grid-col-xs-12 grid-col-sm-6">
 		<div class="flex-md justify-content-flex-start align-items-center">
 			<i class="font-size-large color-primary symbol symbol-calendar"></i> <strong class="margin-small-x">Due:</strong>
 			<br class="hide-nonmobile">
@@ -8,7 +8,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-6">
+	<div class="grid-col-xs-12 grid-col-sm-6">
 		<div class="flex-md justify-content-flex-end align-items-center">
 			<i class="font-size-large color-primary symbol symbol-bell"></i> <strong class="margin-small-x">Reminder:</strong>
 			<br class="hide-nonmobile">
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-6">
+	<div class="grid-col-xs-12 grid-col-sm-6">
 		<div class="flex-md justify-content-flex-start align-items-center">
 			<strong class="margin-small-right">Assignee:</strong>
 			<br class="hide-nonmobile">
@@ -28,7 +28,7 @@
 		</div>
 		
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-6">
+	<div class="grid-col-xs-12 grid-col-sm-6">
 		<div class="flex-md justify-content-flex-end align-items-center">
 			<!-- @if not complete yet -->
 				<a href="" class="btn btn-primary-outline">Mark as Complete</a>

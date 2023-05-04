@@ -21,11 +21,11 @@ $args = app_parse_args($data,$defs);
 		<!-- FOLLOWERS ?? -->
 
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Followers</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Followers</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<form action="" class="display-inline">
 							<!-- HIDDEN INPUT TYPES HERE -->
 							<div class="btn-group btn-group-toggle btn-group-horizontal btn-group-toggle-allow-no-active">
@@ -91,11 +91,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- Notes -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Notes</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Notes</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<!-- @if user can edit -->
 							<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">
 								Edit Notes <i class="symbol symbol-pencil"></i>
@@ -116,8 +116,8 @@ $args = app_parse_args($data,$defs);
 				<!-- if has docs -->
 					<ul class="post-note unstyled">
 						<li class="pointer-reference no-margin-y">
-							<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-								<div class="flex-col-xs-9">
+							<div class="grid grid-flex grid-compact grid-fixed align-items-center grid-constricted-y">
+								<div class="grid-col-xs-9">
 									<a
 										href="<?=app_create_link(array('template'=>'note')) ?>"
 										class="note-title btn btn-link no-shadow no-padding-x font-weight-inherit">
@@ -127,7 +127,7 @@ $args = app_parse_args($data,$defs);
 									</a>
 								</div>
 
-								<div class="flex-col-xs-3 text-align-right">
+								<div class="grid-col-xs-3 text-align-right">
 									<!-- @if user can edit -->
 										<a href="#" class="btn btn-symbol btn-small btn-link hide-idle" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 								</div>
@@ -138,8 +138,8 @@ $args = app_parse_args($data,$defs);
 							<!-- @PLACEHOLDER: DELETE WHEN READY -->
 							<?php for($i=1; $i<=3; $i++){ ?>
 								<li class="pointer-reference no-margin-y">
-									<div class="flex-grid flex-grid-compact flex-grid-fixed align-items-center flex-grid-no-gutter-y">
-										<div class="flex-col-xs-9">
+									<div class="grid grid-flex grid-compact grid-fixed align-items-center grid-constricted-y">
+										<div class="grid-col-xs-9">
 											<a
 												href="<?=app_create_link(array('template'=>'note')) ?>"
 												class="note-title btn btn-link no-shadow no-padding-x font-weight-inherit">
@@ -149,7 +149,7 @@ $args = app_parse_args($data,$defs);
 											</a>
 										</div>
 
-										<div class="flex-col-xs-3 text-align-right">
+										<div class="grid-col-xs-3 text-align-right">
 											<!-- @if user can edit -->
 												<a href="#" class="btn btn-symbol btn-small btn-link hide-idle" onclick="REPLACEwithFnToDeleteSetProfile"><i class="symbol symbol-close"></i></a>
 										</div>
@@ -172,11 +172,11 @@ $args = app_parse_args($data,$defs);
 		<hr class="no-margin-y">
 		<!-- REMINDERS -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Reminders</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Reminders</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<a href="#" data-toggle="modal" data-modal-title="Add reminder" class="btn btn-primary-outline btn-small">Reminder <i class="symbol symbol-plus"></i></a>
 						<?php app_get_component('components/modal-workflow-edit-reminder',null,false,array(
 							'post'=>$args['post'],

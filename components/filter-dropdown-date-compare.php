@@ -32,11 +32,11 @@
 		
 
 		<div class="dropdown dropdown-right no-padding" data-dropdown-width="600px">
-			<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
-				<div class="flex-col-md-6 flex-1-1">
+			<div class="grid grid-flex grid-fixed grid-constricted">
+				<div class="grid-col-md-6 flex-1-1">
 
 					<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-						<label class="input-label no-padding-x text-align-center">Date A</label>
+						<label class="input input-label no-padding-x text-align-center">Date A</label>
 						<hr class="no-margin">
 						<input type="date-a"
 						class="input-no-shadow input input-calendar border-color-transparent" data-calendar-text-input="false"
@@ -46,10 +46,10 @@
 					</div>
 				</div>
 
-				<div class="flex-col-md-6 flex-1-1">
+				<div class="grid-col-md-6 flex-1-1">
 
 					<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-						<label class="input-label no-padding-x text-align-center">Date B</label>
+						<label class="input input-label no-padding-x text-align-center">Date B</label>
 						<hr class="no-margin">
 						<input type="date-b"
 						class="input-no-shadow input input-calendar border-color-transparent" data-calendar-text-input="false"
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<hr class="no-margin-y">
-			<button class="btn btn-block btn-no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
+			<button class="btn btn-block no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
 		</div>
 
 	</span>

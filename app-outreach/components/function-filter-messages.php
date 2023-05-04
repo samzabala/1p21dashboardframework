@@ -2,7 +2,7 @@
 <div class="module-function function-filter-acctowner position-relative">
 
     <div class="input-wrapper input-wrapper-horizontal input-wrapper-block-mobile input-wrapper-responsive no-padding-right">
-        <label class="input-label">Filter By</label>
+        <label class="input input-label">Filter By</label>
 	</div>
 </div>
 

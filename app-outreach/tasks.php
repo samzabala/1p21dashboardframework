@@ -1,8 +1,8 @@
-<div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12 flex-col-sm-4">
+<div id="outreach-contacts-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-xs-12 grid-col-sm-4">
 		<h1 class="no-margin">Task</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+	<div class="grid-col-xs-12 grid-col-sm-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
 		<div class="module-function function-add">
 			<a  href="#mb-editor-task" data-modal-title="Add Task" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
@@ -28,7 +28,7 @@
 				<th class="text-align-center outreach-table-mobile-th">
 					<form action="">
 						<input type="checkbox" class="input-inline" name="select-task-all" class="task-selector" id="select-task-all">
-						<label for="select-task-all" class="input-label hide-nonmobile">Select All Tasks</label>
+						<label for="select-task-all" class="input input-label hide-nonmobile">Select All Tasks</label>
 					</form>
 				</th>
 				<th class="text-nowrap">Title</th>
@@ -54,8 +54,8 @@
 						<div class="modal modal-default" id="m-task-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
 							<form action="">
 								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-									<label for="" class="input-label sr-only">Change Status To</label>
-									<select name="task-status" id="" class="input-select">
+									<label for="" class="input input-label sr-only">Change Status To</label>
+									<select name="task-status" id="" class="input-box input-box-select">
 										<option value="">Select</option>
 										<!-- @REPLACE  -->
 									</select>
@@ -88,7 +88,7 @@
 				<td class="text-align-center outreach-table-cell-columnwidth-50">
 					<form action="" class="task-c">
 						<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-REPLACEID">
-						<label for="select-task-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Task</label>
+						<label for="select-task-REPLACEID" class="input input-label color-neutral hide-nonmobile">Select Task</label>
 					</form>
 				</td>
 				
@@ -142,18 +142,18 @@
 								`disabled` => if reminder is disabled
 				
 					-->
-					<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between flex-grid-no-gutter-y">
-						<div class="flex-col-xs-2 flex-col-sm-1 flex-col-md-5">
+					<div class="task-toggle-reminder-wrapper grid grid-flex grid-compact grid-flex-fixed justify-content-space-between grid-constricted-y">
+						<div class="grid-col-xs-2 grid-col-sm-1 grid-col-md-5">
 							<div class="input-toggle input-large">
 								<input type="checkbox" class="input">
-								<label class="input-label input-toggle-label">
+								<label class="input input-label input-toggle-label">
 									<div class="sr-only">
 										Toggle Reminder
 									</div>
 								</label>
 							</div>
 						</div>
-						<div class="flex-col-xs-10 flex-col-sm-11 flex-col-md-6">
+						<div class="grid-col-xs-10 grid-col-sm-11 grid-col-md-6">
 							<!-- @if reminder is enabled -->
 							<div class="task-reminder-info font-size-small ">
 								<p class="task-reminder-date no-margin color-primary font-weight-700">
@@ -225,8 +225,8 @@
 						<div class="modal modal-default" id="m-task-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
 							<form action="">
 								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-									<label for="" class="input-label sr-only">Change Status To</label>
-									<select name="task-status" id="" class="input-select">
+									<label for="" class="input input-label sr-only">Change Status To</label>
+									<select name="task-status" id="" class="input-box input-box-select">
 										<option value="">Select</option>
 										<!-- @REPLACE  -->
 										<option value="Backlog">Backlog</option>
@@ -247,7 +247,7 @@
 							<td class="text-align-center outreach-table-cell-columnwidth-50">
 								<form action="" class="task-c">
 									<input type="checkbox" class="input-inline" name="select-task-REPLACEID" class="task-selector" id="select-task-REPLACEID">
-									<label for="select-task-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Task</label>
+									<label for="select-task-REPLACEID" class="input input-label color-neutral hide-nonmobile">Select Task</label>
 								</form>
 							</td>
 							
@@ -301,18 +301,18 @@
 											`disabled` => if reminder is disabled
 							
 								-->
-								<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between flex-grid-no-gutter-y">
-									<div class="flex-col-xs-2 flex-col-sm-1 flex-col-md-5">
+								<div class="task-toggle-reminder-wrapper grid grid-flex grid-compact grid-flex-fixed justify-content-space-between grid-constricted-y">
+									<div class="grid-col-xs-2 grid-col-sm-1 grid-col-md-5">
 										<div class="input-toggle input-large">
 											<input type="checkbox" class="input">
-											<label class="input-label input-toggle-label">
+											<label class="input input-label input-toggle-label">
 												<div class="sr-only">
 													Toggle Reminder
 												</div>
 											</label>
 										</div>
 									</div>
-									<div class="flex-col-xs-10 flex-col-sm-11 flex-col-md-6">
+									<div class="grid-col-xs-10 grid-col-sm-11 grid-col-md-6">
 										<!-- @if reminder is enabled -->
 										<div class="task-reminder-info font-size-small ">
 											<p class="task-reminder-date no-margin color-primary font-weight-700">
@@ -384,8 +384,8 @@
 									<div class="modal modal-default" id="m-task-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
 										<form action="">
 											<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-												<label for="" class="input-label sr-only">Change Status To</label>
-												<select name="task-status" id="" class="input-select">
+												<label for="" class="input input-label sr-only">Change Status To</label>
+												<select name="task-status" id="" class="input-box input-box-select">
 													<option value="">Select</option>
 													<!-- @REPLACE  -->
 													<option value="Backlog">Backlog</option>

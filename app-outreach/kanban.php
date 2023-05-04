@@ -4,12 +4,12 @@
 			<div class="flex-0-0">
 				<div class="container container-fluid">
 					<!-- @NOTE: #outreach-contacts-heading is the same markup as the copmany table templates except the toggle underneath the heading -->
-					<div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-						<div class="flex-col-xs-12 flex-col-md-4">
+					<div id="outreach-contacts-heading" class="grid grid-flex justify-content-space-between align-items-center">
+						<div class="grid-col-xs-12 grid-col-md-4">
 							<h1 class="no-margin">Prospecting Funnel</h1>
 							<a href="#m-editor-swimlane" data-toggle-modal-default data-modal-title="Add new Swimlane">Add new swimlane</a>
 						</div>
-						<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
+						<div class="grid-col-xs-12 grid-col-md-4 text-align-right">
 							<?php app_get_component('components/function-input-search') ?>
 							<div class="module-function function-add">
 								<a  href="#mb-editor-company" data-modal-title="Add company" data-toggle-modal-board class="btn btn-primary btn-block-mobile">

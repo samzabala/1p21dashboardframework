@@ -1,11 +1,11 @@
 
-<div id="timetracker-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12  flex-col-md-6">
+<div id="timetracker-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-xs-12  grid-col-md-6">
 		<h1 class="no-margin">
 			<?= ucwords(str_replace('-',' ',FWAPPS_TEMPLATE)) ?>
 		</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-6">
+	<div class="grid-col-xs-12 grid-col-md-6">
 		<div class="module-functions text-align-right">
 			<?php app_get_component('components/function-input-search'); ?>
 			<div class="module-function">

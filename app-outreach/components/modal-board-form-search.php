@@ -6,17 +6,17 @@ Modal from framework/src/js/imports/modal
 -->
 <div class="modal modal-board" id="mb-advanced-search" data-modal-title="Advanced Search" data-modal-width="670px">
     <form action="">
-        <div class="flex-grid flex-grid-fixed">
-            <div class="flex-col-xs-12">
+        <div class="grid grid-flex grid-flex-fixed">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="as-title" class="input-label">Company Name</label>
-                    <input type="text" id="as-title" name="title" class="input input-single-line" placeholder="Enter a company name">	
+                    <label for="as-title" class="input input-label">Company Name</label>
+                    <input type="text" id="as-title" name="title" class="input input-box" placeholder="Enter a company name">	
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="as-list" class="input-label">List Type</label>
-                    <select name="list" id="as-list" class="input input-single-line input-select">
+                    <label for="as-list" class="input input-label">List Type</label>
+                    <select name="list" id="as-list" class="input input-box input-box input-box-select">
                         <option value="">Select</option>
 
                         <!-- @NOTE: options are placeholders. replace as needed -->
@@ -30,10 +30,10 @@ Modal from framework/src/js/imports/modal
                     </select>
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="as-list" class="input-label">Business Type</label>
-                    <select name="list" id="as-list" class="input input-single-line input-select">
+                    <label for="as-list" class="input input-label">Business Type</label>
+                    <select name="list" id="as-list" class="input input-box input-box input-box-select">
                         <option value="">Select</option>
 
                         <!-- @NOTE: options are placeholders. replace as needed -->
@@ -56,10 +56,10 @@ Modal from framework/src/js/imports/modal
                     </select>
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="as-state" class="input-label">State</label>
-                    <select name="state" id="as-state" class="input input-single-line input-select">
+                    <label for="as-state" class="input input-label">State</label>
+                    <select name="state" id="as-state" class="input input-box input-box input-box-select">
                         <option value="">Select</option>
 
                         <!-- @NOTE: options are placeholders. replace as needed -->
@@ -117,10 +117,10 @@ Modal from framework/src/js/imports/modal
                     </select>
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="as-city" class="input-label">City</label>
-                    <input type="text" id="as-city" name="city" class="input input-single-line" placeholder="Type a city" list="as-city-list">
+                    <label for="as-city" class="input input-label">City</label>
+                    <input type="text" id="as-city" name="city" class="input input-box" placeholder="Type a city" list="as-city-list">
                     <datalist id="as-city-list">
 
                         <!-- @NOTE: options are placeholders. replace as needed -->
@@ -128,12 +128,12 @@ Modal from framework/src/js/imports/modal
                     </datalist>	
                 </div>
             </div>
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label">Vendor History</label>
-                    <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-                        <div class="flex-col-xs-4 flex-col-sm-3">
-                            <select name="vendor-criteria" class="flex-1-3 input input-single-line input-select input-block">
+                    <label class="input input-label">Vendor History</label>
+                    <div class="grid grid-flex grid-flex-fixed grid-constricted-y">
+                        <div class="grid-col-xs-4 grid-col-sm-3">
+                            <select name="vendor-criteria" class="flex-1-3 input input-box input-box input-box-select input-block">
 
                                 <!-- @NOTE: options are placeholders. replace as needed -->
                                     <option value="">is</option>
@@ -147,10 +147,10 @@ Modal from framework/src/js/imports/modal
                                     <option value="">up</option>
                             </select>
                         </div>
-                        <div class="flex-col-xs-8 flex-col-sm-9">
+                        <div class="grid-col-xs-8 grid-col-sm-9">
 
                             <!-- @NOTE hidden input field here if needed -->
-                            <input  name="vendor-name" type="text" class="flex-3-0 input input-single-line input-select input-block" list="as-vendor-name-list">
+                            <input  name="vendor-name" type="text" class="flex-3-0 input input-box input-box input-box-select input-block" list="as-vendor-name-list">
                             <datalist class="input" id="as-vendor-name-list">
 
                                 <!-- @NOTE: options are placeholders. replace as needed -->
@@ -160,12 +160,12 @@ Modal from framework/src/js/imports/modal
                     </div>
                 </div>
             </div>
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label">ARC Score</label>
-                    <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-                        <div class="flex-col-xs-4 flex-col-sm-3">
-                            <select name="arc-criteria" class="flex-1-3 input input-single-line input-select input-block">
+                    <label class="input input-label">ARC Score</label>
+                    <div class="grid grid-flex grid-flex-fixed grid-constricted-y">
+                        <div class="grid-col-xs-4 grid-col-sm-3">
+                            <select name="arc-criteria" class="flex-1-3 input input-box input-box input-box-select input-block">
 
                                 <!-- @NOTE: options are placeholders. replace as needed -->
                                     <option value="">is between</option>
@@ -173,31 +173,31 @@ Modal from framework/src/js/imports/modal
                                     <option value="">is greater than</option>
                             </select>
                         </div>
-                            <div class="flex-col-xs-8 flex-col-sm-9">
+                            <div class="grid-col-xs-8 grid-col-sm-9">
 
-                                <div class="flex-grid flex-grid-compact flex-grid-fixed flex-grid-no-gutter-y">
-                                    <div class="flex-col-xs-5 flex-col-sm-3">
-                                        <input name="arc-num-a" type="number" class="input input-single-line input-block" placehoder="000">
+                                <div class="grid grid-flex grid-compact grid-flex-fixed grid-constricted-y">
+                                    <div class="grid-col-xs-5 grid-col-sm-3">
+                                        <input name="arc-num-a" type="number" class="input input-box input-block" placehoder="000">
                                     </div>
 
                                     <!-- @if set to is between  -->
-                                        <div class="flex-col-xs-2 flex-col-sm-1 align-self-center">
+                                        <div class="grid-col-xs-2 grid-col-sm-1 align-self-center">
                                             <div class="text-align-center">
                                                 and
                                             </div>
                                         </div>
-                                        <div class="flex-col-xs-5 flex-col-sm-3">
-                                            <input name="arc-num-b" type="number" class="input input-single-line input-block" placehoder="000">
+                                        <div class="grid-col-xs-5 grid-col-sm-3">
+                                            <input name="arc-num-b" type="number" class="input input-box input-block" placehoder="000">
                                         </div>
                                 </div>
                             </div>
                     </div>
                 </div>
             </div>
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="as-lead" class="input-label">Lead Source</label>
-                    <select name="lead" id="as-lead" class="flex-1-3 input input-single-line input-select input-block">
+                    <label for="as-lead" class="input input-label">Lead Source</label>
+                    <select name="lead" id="as-lead" class="flex-1-3 input input-box input-box input-box-select input-block">
                             <option value="">Select from list</option>
 
                         <!-- @PLACEHOLDER: modify as needed -->
@@ -205,7 +205,7 @@ Modal from framework/src/js/imports/modal
                     </select>
                 </div>
             </div>
-            <div class="flex-col-12">
+            <div class="grid-col-12">
                 <hr>
                 <button class="btn-primary btn">Search</button>
             </div>

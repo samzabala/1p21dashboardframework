@@ -1,11 +1,11 @@
 
-<div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-12  flex-col-md-8">
+<div id="outreach-contacts-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-12  grid-col-md-8">
 		<h1 class="no-margin">
 			<?= ucwords(str_replace('-',' ',FWAPPS_TEMPLATE)) ?>
 		</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
+	<div class="grid-col-xs-12 grid-col-md-4 text-align-right">
 		<div class="module-functions">
 
 			<div class="module-function function-bulk">
@@ -22,10 +22,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex-col-12  flex-col-md-3">
+	<div class="grid-col-12  grid-col-md-3">
 		<?php app_get_component('components/function-input-search') ?>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-9 text-align-right">
+	<div class="grid-col-xs-12 grid-col-md-9 text-align-right">
 		<?php app_get_component('components/function-filter-companies') ?>
 	</div>
 </div>
@@ -45,7 +45,7 @@
 	<table class="table-fixed outreach-table">
 		<tr>
 			<th class="text-align-center" width="50">
-				<label class="input-label">
+				<label class="input input-label">
 					<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 					<span class="hide-nonmobile">Select all companies</span>
 				</label>
@@ -119,8 +119,8 @@
 					<div class="modal modal-default" id="m-bulk-status" data-modal-width="400px" data-modal-title="Set Status to">
 					<form action="">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-							<label for="" class="input-label sr-only">Change Status To</label>
-							<select name="bulk-status" id="" class="input-select">
+							<label for="" class="input input-label sr-only">Change Status To</label>
+							<select name="bulk-status" id="" class="input-box input-box-select">
 								<option value="">Select</option>
 								<option value="client">Client</option>
 								<option value="lead">Lead</option>
@@ -135,8 +135,8 @@
 					<!-- @PLACELHOLDER: modify as needed -->
 					<form action="">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-							<label for="" class="input-label sr-only">Assign to User</label>
-							<select name="bulk-assigned" id="" class="input-select">
+							<label for="" class="input input-label sr-only">Assign to User</label>
+							<select name="bulk-assigned" id="" class="input-box input-box-select">
 								<option value="">Select</option>
 								<option value="1">User 1</option>
 								<option value="2">User 2</option>
@@ -151,8 +151,8 @@
 					<!-- @PLACELHOLDER: modify as needed -->
 					<form action="">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-							<label for="" class="input-label sr-only">Assign to User</label>
-							<select name="bulk-status" id="" class="input-select">
+							<label for="" class="input input-label sr-only">Assign to User</label>
+							<select name="bulk-status" id="" class="input-box input-box-select">
 								<option value="">Select</option>
 								<option value="1">User 1</option>
 								<option value="2">User 2</option>
@@ -169,7 +169,7 @@
 		<!-- @LOOP row -->
 		<tr>
 			<td class="text-align-center">
-				<label class="input-label">
+				<label class="input input-label">
 					<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 					<span class="hide-nonmobile">Select company</span>
 				</label>
@@ -255,8 +255,8 @@
 					<div class="modal modal-default" id="m-company-status-REPLACE_ID" data-modal-width="400px" data-modal-title="Set Status to">
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Change Status To</label>
-								<select name="company-status" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Change Status To</label>
+								<select name="company-status" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="client">Client</option>
 									<option value="lead">Lead</option>
@@ -271,8 +271,8 @@
 						<!-- @PLACELHOLDER: modify as needed -->
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Assign to User</label>
-								<select name="company-assigned" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Assign to User</label>
+								<select name="company-assigned" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="1">User 1</option>
 									<option value="2">User 2</option>
@@ -287,8 +287,8 @@
 						<!-- @PLACELHOLDER: modify as needed -->
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Assign to User</label>
-								<select name="company-status" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Assign to User</label>
+								<select name="company-status" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="1">User 1</option>
 									<option value="2">User 2</option>
@@ -306,7 +306,7 @@
 				<?php for($i=1; $i<=4; $i++){ ?>
 					<tr>
 						<td class="text-align-center">
-							<label class="input-label">
+							<label class="input input-label">
 								<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 								<span class="hide-nonmobile">Select company</span>
 							</label>
@@ -394,8 +394,8 @@
 								<div class="modal modal-default" id="m-company-status-'.$i.'" data-modal-width="400px" data-modal-title="Set Status to">
 									<form action="">
 										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Change Status To</label>
-											<select name="company-status" id="" class="input-select">
+											<label for="" class="input input-label sr-only">Change Status To</label>
+											<select name="company-status" id="" class="input-box input-box-select">
 												<option value="">Select</option>
 												<option value="client">Client</option>
 												<option value="lead">Lead</option>
@@ -410,8 +410,8 @@
 									<!-- @PLACELHOLDER: modify as needed -->
 									<form action="">
 										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Assign to User</label>
-											<select name="company-assigned" id="" class="input-select">
+											<label for="" class="input input-label sr-only">Assign to User</label>
+											<select name="company-assigned" id="" class="input-box input-box-select">
 												<option value="">Select</option>
 												<option value="1">User 1</option>
 												<option value="2">User 2</option>
@@ -426,8 +426,8 @@
 									<!-- @PLACELHOLDER: modify as needed -->
 									<form action="">
 										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Assign to User</label>
-											<select name="company-status" id="" class="input-select">
+											<label for="" class="input input-label sr-only">Assign to User</label>
+											<select name="company-status" id="" class="input-box input-box-select">
 												<option value="">Select</option>
 												<option value="1">User 1</option>
 												<option value="2">User 2</option>

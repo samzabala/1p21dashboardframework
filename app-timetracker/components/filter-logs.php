@@ -1,7 +1,7 @@
-<form class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-flex-end">
-	<div class="flex-col-xs-12 flex-col-md-10">
-		<div class="flex-grid flex-grid-fixed flex-grid-compact">
-			<div class="flex-col-xs-12 flex-col-md-3">
+<form class="grid grid-flex grid-flex-fixed grid-compact grid-constricted-y align-items-flex-end">
+	<div class="grid-col-xs-12 grid-col-md-10">
+		<div class="grid grid-flex grid-flex-fixed grid-compact">
+			<div class="grid-col-xs-12 grid-col-md-3">
 				<?php app_get_component('components/module-function-datalist','',false,array(
 					'label' => 'Client',
 					'title' => 'Select or Type Client',
@@ -25,7 +25,7 @@
 					),
 				)) ?>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-3">
+			<div class="grid-col-xs-12 grid-col-md-3">
 				<?php app_get_component('components/module-function-datalist','',false,array(
 					'label' => 'Project',
 					'title' => 'Select or Type Project',
@@ -44,7 +44,7 @@
 					),
 				)) ?>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-3">
+			<div class="grid-col-xs-12 grid-col-md-3">
 				<?php app_get_component('components/module-function-select','',false,array(
 					'label' => 'Status',
 					'title' => 'Select Status',
@@ -58,7 +58,7 @@
 					),
 				)) ?>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-3">
+			<div class="grid-col-xs-12 grid-col-md-3">
 				<?php app_get_component('components/module-function-select','',false,array(
 					'label' => 'Time Range',
 					'title' => 'Time Range',
@@ -75,9 +75,9 @@
 			
 		</div>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-2">
-		<div class="flex-grid flex-grid-fixed flex-grid-compact">
-			<div class="flex-col-12">
+	<div class="grid-col-xs-12 grid-col-md-2">
+		<div class="grid grid-flex grid-flex-fixed grid-compact">
+			<div class="grid-col-12">
 				<button class="btn btn-theme btn-block no-padding-x">Apply Filters</button>
 			</div>
 		</div>

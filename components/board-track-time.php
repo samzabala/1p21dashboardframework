@@ -3,12 +3,12 @@
 	<form action="" class="add-new-timer">
 		
 		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label for="log-client" class="input-label">
+			<label for="log-client" class="input input-label">
 				Client <span class="color-error field-required">*</span>
 			</label>
 			<div class="position-relative flex-xs">
 
-				<input placeholder="Select a client" type="text" id="log-client" name="log-client" class="input input-single-line input-select" value="um" data-toggle="dropdown">
+				<input placeholder="Select a client" type="text" id="log-client" name="log-client" class="input input-box input-box input-box-select" value="um" data-toggle="dropdown">
 				<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
 					<li >
 						<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="javascript:;">Create a new `um` client</a>
@@ -30,12 +30,12 @@
 		</div>
 
 		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-				<label for="log-project" class="input-label">
+				<label for="log-project" class="input input-label">
 					Project<span class="color-error field-required">*</span>
 				</label>
 				<div class="position-relative flex-xs">
 
-					<input placeholder="Select a project" type="text" id="log-project" name="log-project" class="input input-single-line input-select" value="r" data-toggle="dropdown">
+					<input placeholder="Select a project" type="text" id="log-project" name="log-project" class="input input-box input-box input-box-select" value="r" data-toggle="dropdown">
 					<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
 						<li >
 							<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="javascript:;">Create a new `r` client</a>
@@ -64,12 +64,12 @@
 
 
 		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label for="log-task-cat" class="input-label">
+			<label for="log-task-cat" class="input input-label">
 				Task Category
 			</label>
 			<div class="position-relative flex-xs">
 
-				<input placeholder="Select a category" type="text" id="log-task-cat" name="log-task-cat" class="input input-single-line input-select" value="no" data-toggle="dropdown">
+				<input placeholder="Select a category" type="text" id="log-task-cat" name="log-task-cat" class="input input-box input-box input-box-select" value="no" data-toggle="dropdown">
 				<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
 					<li >
 						<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="javascript:;">Create a new `no` client</a>
@@ -100,12 +100,12 @@
 
 
 		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label for="log-task-name" class="input-label">
+			<label for="log-task-name" class="input input-label">
 				Task <span class="color-error field-required">*</span>
 			</label>
 			<div class="position-relative flex-xs">
 
-				<input placeholder="Select a task" type="text" id="log-task-name" name="log-task-name" class="input input-single-line input-select" value="no" data-toggle="dropdown">
+				<input placeholder="Select a task" type="text" id="log-task-name" name="log-task-name" class="input input-box input-box input-box-select" value="no" data-toggle="dropdown">
 				<div data-dropdown-width="100%" class="dropdown dropdown-top-flush">
 					<li >
 						<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="javascript:;">Create a new `no` client</a>
@@ -134,57 +134,57 @@
 
 
 		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label for="log-notes" class="input-label">
+			<label for="log-notes" class="input input-label">
 				Notes
 			</label>
 
 			<!-- @NOTE. this has tinymce naw -->
 			<div class="REPLACE">
 
-				<textarea type="text" id ="log-notes" name="log-notes" class="input input-multiple-line">@PLACEHOLDER replace with tinymce</textarea>
+				<textarea type="text" id ="log-notes" name="log-notes" class="input input-box input-box-multiline">@PLACEHOLDER replace with tinymce</textarea>
 			</div>
 		</div>
 
 		<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-			<label class="input-label" for="attachments">Attachments</label>
-			<input class="input input-single-line" id="attachments" multiple="" name="attachments" type="file">
+			<label class="input input-label" for="attachments">Attachments</label>
+			<input class="input input-box" id="attachments" multiple="" name="attachments" type="file">
 		</div>
 
-		<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact">
-			<div class="flex-col-xs-12 flex-col-sm-6">
+		<div class="grid grid-flex grid-constricted-y grid-compact">
+			<div class="grid-col-xs-12 grid-col-sm-6">
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label for="sdate" class="input-label">
+					<label for="sdate" class="input input-label">
 						Start Date <span class="color-error field-required">*</span>
 					</label>
 
-					<input type="date" id="sdate" name="sdate" class="input input-single-line" value="2020-07-01" min="2020-06-24" disabled="" required="">
+					<input type="date" id="sdate" name="sdate" class="input input-box" value="2020-07-01" min="2020-06-24" disabled="" required="">
 					<input id="start_date" name="start_date" required="" type="hidden" value="2020-07-01">
 				</div>
 			</div>
 
-			<div class="flex-col-xs-12 flex-col-sm-6">
+			<div class="grid-col-xs-12 grid-col-sm-6">
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label for="start_time" class="input-label">
+					<label for="start_time" class="input input-label">
 						Start Time <span class="color-error field-required">*</span>
 					</label>
 
-					<input class="input input-single-line" id="start_time" name="start_time" required="" type="time" value="">
+					<input class="input input-box" id="start_time" name="start_time" required="" type="time" value="">
 				</div>
 			</div>
 
-			<div class="flex-col-xs-12 flex-col-sm-6 display-none">
+			<div class="grid-col-xs-12 grid-col-sm-6 display-none">
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p ">
-					<label for="duration" class="input-label">
+					<label for="duration" class="input input-label">
 					Duration <span class="color-error field-required">*</span>
 					</label>
 
-					<input class="input input-single-line input-inline" id="duration" name="duration" pattern="(?:[0-1]?\d:[0-5]\d|\d+)" placeholder="00:00" size="2" title="m or hh:mm" type="text" value="" witdth="70px"> 
+					<input class="input input-box input-inline" id="duration" name="duration" pattern="(?:[0-1]?\d:[0-5]\d|\d+)" placeholder="00:00" size="2" title="m or hh:mm" type="text" value="" witdth="70px"> 
 				</div>
 			</div>
 			
-			<div class="flex-col-xs-12 flex-col-sm-6">
+			<div class="grid-col-xs-12 grid-col-sm-6">
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<span class="input-label">Status</span>
+					<span class="input input-label">Status</span>
 
 					<label for="billable">
 					<input class="input input-inline" id="billable" name="billable" type="checkbox" value="y">
@@ -201,23 +201,23 @@
 			</div>
 			
 
-			<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-8">
+			<div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-8">
 				<div id="billable-time-wrap" class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 
-					<label for="billable_time" class="input-label">
+					<label for="billable_time" class="input input-label">
 						Billable Time <span class="color-error field-required">*</span>
 					</label>
 
-					<input class="input input-single-line input-inline" id="billable_time" name="billable_time" pattern="(?:[0-1]?\d:[0-5]\d|\d+)" placeholder="00:00" size="2" title="m or h:mm" type="text" value="" witdth="70px">
+					<input class="input input-box input-inline" id="billable_time" name="billable_time" pattern="(?:[0-1]?\d:[0-5]\d|\d+)" placeholder="00:00" size="2" title="m or h:mm" type="text" value="" witdth="70px">
 				</div>
 			
 			</div>
 
-			<div class="flex-col-xs-12 flex-col-sm-6">
+			<div class="grid-col-xs-12 grid-col-sm-6">
 			
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label class="input-label" for="due_date">Due Date</label>
-					<input class="input input-single-line" id="due_date" min="2020-07-01" name="due_date" type="date" value="">
+					<label class="input input-label" for="due_date">Due Date</label>
+					<input class="input input-box" id="due_date" min="2020-07-01" name="due_date" type="date" value="">
 				</div>
 			
 			</div>

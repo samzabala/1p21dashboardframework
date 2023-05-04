@@ -1,6 +1,6 @@
 <div class="module-function filter-input-group-project">
 	<form action="" class=" filter-profile input-group input-group-horizontal input-block-mobile text-align-left">
-		<select name="filter-meta-key" id="" class="input input-single-line input-select">
+		<select name="filter-meta-key" id="" class="input input-box input-box input-box-select">
 			<option value="">Filter by</option>
 			<option value="client">Client</option>
 			<option value="project">Project</option>

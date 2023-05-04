@@ -1,6 +1,6 @@
 
-<div id="outreach-sequences-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-12  flex-col-md-8">
+<div id="outreach-sequences-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-12  grid-col-md-8">
 		<h1 class="no-margin">
 			Sequence Members:
 			<a href="<?= app_create_link(array('template' => 'sequence-detail')) ?>">
@@ -8,7 +8,7 @@
 			</a>
 		</h1>
 	</div>
-	<div class="flex-col-12  flex-col-md-4 text-align-right">
+	<div class="grid-col-12  grid-col-md-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
 	</div>
 </div>
@@ -28,7 +28,7 @@
 	<table class="table-fixed outreach-table">
 		<tr>
 			<th class="outreach-table-mobile-th  text-align-center" width="50">
-				<label class="input-label">
+				<label class="input input-label">
 					<input type="checkbox" class="input-inline">
 					<span class="hide-nonmobile">Select all members</span>
 				</label>
@@ -94,7 +94,7 @@
 		<!-- @LOOP row -->
 			<tr>
 				<td class="text-align-center">
-					<label class="input-label">
+					<label class="input input-label">
 						<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 						<span class="hide-nonmobile">Select Member</span>
 					</label>
@@ -185,7 +185,7 @@
 					<?php for($i=1; $i<=10; $i++){ ?>
 						<tr>
 							<td class="text-align-center">
-								<label class="input-label">
+								<label class="input input-label">
 									<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 									<span class="hide-nonmobile">Select Member</span>
 								</label>
@@ -268,7 +268,7 @@
 						</tr>
 						<tr>
 							<td class="text-align-center">
-								<label class="input-label">
+								<label class="input input-label">
 									<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 									<span class="hide-nonmobile">Select Member</span>
 								</label>
@@ -351,7 +351,7 @@
 						</tr>
 						<tr>
 							<td class="text-align-center">
-								<label class="input-label">
+								<label class="input input-label">
 									<input type="checkbox" class="input-inline" name="allCompaniesSelected">
 									<span class="hide-nonmobile">Select Member</span>
 								</label>

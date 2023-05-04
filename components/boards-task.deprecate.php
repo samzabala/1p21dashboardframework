@@ -28,13 +28,13 @@
 
 		example front end render:
 
-				<label for="edit-task-title" class="input-label sr-only">Title</label>
-				<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-single-line input-large">
+				<label for="edit-task-title" class="input input-label sr-only">Title</label>
+				<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-box input-large">
 
 			vs
 
-				<label for="edit-project-title" class="input-label sr-only">Title</label>
-				<input type="text" placeholder="Enter title" id="edit-project-title" name="edit-project-title" class=" input input-single-line input-large">
+				<label for="edit-project-title" class="input input-label sr-only">Title</label>
+				<input type="text" placeholder="Enter title" id="edit-project-title" name="edit-project-title" class=" input input-box input-large">
 
 
 
@@ -55,13 +55,13 @@
 
 		example front end render:
 
-				<label for="edit-task-title" class="input-label sr-only">Title</label>
-				<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-single-line input-large">
+				<label for="edit-task-title" class="input input-label sr-only">Title</label>
+				<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-box input-large">
 
 			vs
 
-				<label for="new-task-title" class="input-label sr-only">Title</label>
-				<input type="text" placeholder="Enter title" id="new-task-title" name="new-task-title" class=" input input-single-line input-large">
+				<label for="new-task-title" class="input input-label sr-only">Title</label>
+				<input type="text" placeholder="Enter title" id="new-task-title" name="new-task-title" class=" input input-box input-large">
 
 
 
@@ -72,7 +72,7 @@
 
 		example front end render:'
 				field that will contain tags to add to actuial field
-					<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+					<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-box" placeholder="Search for tag" />
 				field that will actually submit to the database
 					<input id="edit-task-tags" name="edit-task-tags" type="hidden" />
 
@@ -85,14 +85,14 @@
 
 			code on html/php demo version
 				field that will contain tags to add to actuial field
-					<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+					<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-box" placeholder="Search for tag" />
 				field that will actually submit to the database
 					<input id="edit-task-tags" name="edit-task-tags" type="hidden" />
 
 			vs
 
 				field that will contain tags to add to actuial field
-					<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+					<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-box" placeholder="Search for tag" />
 				field that will actually submit to the database
 					<input id="REPLACEwithCorrespondingInputFieldName" name="REPLACEwithCorrespondingInputFieldName" type="hidden" />
 

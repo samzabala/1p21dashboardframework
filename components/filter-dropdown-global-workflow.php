@@ -1,15 +1,15 @@
 <div data-dropdown-width="100%" class="text-align-left dropdown no-padding-top dropdown-top-flush dropdown-right filter-dropdown-global">
 
-		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
-			<div class="flex-col-xs-12 flex-col-md-4">
-				<label for="filter-client" class="input-label no-padding-x" >Client</label>
+		<div class="grid grid-flex grid-fixed grid-compact no-margin-bottom align-items-center">
+			<div class="grid-col-xs-12 grid-col-md-4">
+				<label for="filter-client" class="input input-label no-padding-x" >Client</label>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-8 position-relative">
+			<div class="grid-col-xs-12 grid-col-md-8 position-relative">
 				<input
 					id="filter-client"
 					name="filter-client"
 					placeholder="Type and select client..."
-					class="input input-tags input-select input-block"
+					class="input input-tags input-box input-box-select input-block"
 					type="text"
 					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
 					data-tags-filter="REPLACEfnToFilterTag" />
@@ -26,16 +26,16 @@
 			</div>
 		</div>
 
-		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
-			<div class="flex-col-xs-12 flex-col-md-4">
-				<label for="filter-acctmanager" class="input-label no-padding-x" >Account Manager</label>
+		<div class="grid grid-flex grid-fixed grid-compact no-margin-bottom align-items-center">
+			<div class="grid-col-xs-12 grid-col-md-4">
+				<label for="filter-acctmanager" class="input input-label no-padding-x" >Account Manager</label>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-8 position-relative">
+			<div class="grid-col-xs-12 grid-col-md-8 position-relative">
 				<input
 					id="filter-acctmanager"
 					name="filter-acctmanager"
 					placeholder="Type and select manager..."
-					class="input input-tags input-select input-block"
+					class="input input-tags input-box input-box-select input-block"
 					type="text"
 					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
 					data-tags-filter="REPLACEfnToFilterTag" />
@@ -52,16 +52,16 @@
 			</div>
 		</div>
 
-		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
-			<div class="flex-col-xs-12 flex-col-md-4">
-				<label for="filter-projectmanager" class="input-label no-padding-x" >Project Manager</label>
+		<div class="grid grid-flex grid-fixed grid-compact no-margin-bottom align-items-center">
+			<div class="grid-col-xs-12 grid-col-md-4">
+				<label for="filter-projectmanager" class="input input-label no-padding-x" >Project Manager</label>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-8 position-relative">
+			<div class="grid-col-xs-12 grid-col-md-8 position-relative">
 				<input
 					id="filter-projectmanager"
 					name="filter-projectmanager"
 					placeholder="Type and select manager..."
-					class="input input-tags input-select input-block"
+					class="input input-tags input-box input-box-select input-block"
 					type="text"
 					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
 					data-tags-filter="REPLACEfnToFilterTag" />
@@ -78,16 +78,16 @@
 			</div>
 		</div>
 		
-		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom align-items-center">
-			<div class="flex-col-xs-12 flex-col-md-4">
-				<label for="filter-project" class="input-label no-padding-x" >Project Name</label>
+		<div class="grid grid-flex grid-fixed grid-compact no-margin-bottom align-items-center">
+			<div class="grid-col-xs-12 grid-col-md-4">
+				<label for="filter-project" class="input input-label no-padding-x" >Project Name</label>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-8 position-relative">
+			<div class="grid-col-xs-12 grid-col-md-8 position-relative">
 				<input
 					id="filter-project"
 					name="filter-project"
 					placeholder="Type and select project..."
-					class="input input-tags input-select input-block"
+					class="input input-tags input-box input-box-select input-block"
 					type="text"
 					data-tags-on-keyup="REPLACEfnToFilterTag(event)" 
 					data-tags-filter="REPLACEfnToFilterTag" />
@@ -106,15 +106,15 @@
 
 
 		
-		<div class="flex-grid flex-grid-fixed flex-grid-compact align-items-center">
-			<div class="flex-col-xs-12 flex-col-md-4">
-				<label class="input-label no-padding-x" >Date Range</label>
+		<div class="grid grid-flex grid-fixed grid-compact align-items-center">
+			<div class="grid-col-xs-12 grid-col-md-4">
+				<label class="input input-label no-padding-x" >Date Range</label>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-4 position-relative">
+			<div class="grid-col-xs-12 grid-col-md-4 position-relative">
 				<button
 					id="filter-date-a"
 					name="filter-date-a"
-					class="input input-block input-select"
+					class="input input-block input-box input-box-select"
 					data-toggle="dropdown" />
 					<!-- @if filter-data-a has value -->
 						<span class="current-value">Apr 20, 2069</span>
@@ -128,14 +128,14 @@
 						placeholder="Type and select project..."
 						class="input input-calendar border-color-transparent input-block"
 						type="text"/>
-					<button class="btn btn-block btn-no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
+					<button class="btn btn-block no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
 				</div>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-4 position-relative">
+			<div class="grid-col-xs-12 grid-col-md-4 position-relative">
 				<button
 					id="filter-date-b"
 					name="filter-date-b"
-					class="input input-block input-select"
+					class="input input-block input-box input-box-select"
 					data-toggle="dropdown" />
 					<!-- @if filter-data-a has value -->
 						<span class="current-value">Apr 20, 2069</span>
@@ -150,7 +150,7 @@
 						placeholder="Type and select project..."
 						class="input input-calendar border-color-transparent input-block"
 						type="text"/>
-					<button class="btn btn-block btn-no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
+					<button class="btn btn-block no-radius btn-primary-outline border-color-transparent" data-toggle="dropdown">Done</button>
 				</div>
 			</div>
 		</div>

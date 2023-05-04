@@ -20,11 +20,11 @@ $args = app_parse_args($data,$defs);
 	<!-- @if user has rights to share this notes -->
 		<!-- Add Share -->
 			<<?=$args['is_in_note_edit_form'] ? 'div' : 'form  method="get"' ?> class="share-note-with-add module p">
-				<div class="flex-grid flex-grid-no-gutter-x flex-grid-compact flex-grid-no-gutter-y align-items-center">
-					<div class="flex-child flex-1-1">
+				<div class="grid grid-flex grid-constricted-x grid-compact grid-constricted-y align-items-center">
+					<div class="grid-col flex-1-1">
 						<h1 class="no-margin-y">Share Note</h1>
 					</div>
-					<div class="flex-child flex-0-0">
+					<div class="grid-col flex-0-0">
 						<a class="modal-close" href="#" data-toggle="modal-close">
 							<i class="symbol symbol-close"></i>
 						</a>
@@ -35,8 +35,8 @@ $args = app_parse_args($data,$defs);
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 					<h5 class="font-weight-400 no-margin-bottom">Share this note with a group or person:</h5>
-					<div class="flex-grid flex-grid-fixed flex-grid-compact">
-						<div class="flex-col-xs-12 flex-col-sm-7 flex-col-md-8 position-relative">
+					<div class="grid grid-flex grid-fixed grid-compact">
+						<div class="grid-col-xs-12 grid-col-sm-7 grid-col-md-8 position-relative">
 							<input type="hidden" name="shareto-teammates-ids" />
 							<input type="text" name="shareto-teammates" class="input input-tags" data-toggle="dropdown" placeholder="Type and search team members..." />
 							<div class="dropdown" data-dropdown-width="100%">
@@ -53,8 +53,8 @@ $args = app_parse_args($data,$defs);
 								</ul>
 							</div>
 						</div>
-						<div class="flex-col-xs-12 flex-col-sm-5 flex-col-md-4">
-							<select name="shareto-teammates-access-level" class="input-single-line input-select">
+						<div class="grid-col-xs-12 grid-col-sm-5 grid-col-md-4">
+							<select name="shareto-teammates-access-level" class="input-box input-box input-box-select">
 								<option value="read-only">Viewer</option>
 								<option value="read-write">Editor</option>
 							</select>
@@ -67,7 +67,7 @@ $args = app_parse_args($data,$defs);
 				<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
 					<label class="input-toggle">
 						<input type="checkbox" class="input" name="shareto-notify">
-						<span class="input-label input-toggle-label">
+						<span class="input input-label input-toggle-label">
 							Notify People
 						</span>
 					</label>
@@ -82,7 +82,7 @@ $args = app_parse_args($data,$defs);
 							`display-none` => if [name=shareto-notify] is checked
 				-->
 				<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
-					<textarea name="shareto-notify-message" class="input-multiple-line">Replace with tinymce</textarea>
+					<textarea name="shareto-notify-message" class="input-box input-box-multiline">Replace with tinymce</textarea>
 				</div>
 
 				
@@ -112,26 +112,26 @@ $args = app_parse_args($data,$defs);
 				-->
 					<li>
 						<input type="hidden" name="shareto-existing[REPLACEWWithRowId]">
-						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact align-items-center">
-							<div class="flex-col-sm-8 flex-col-xs-6">
+						<div class="grid grid-flex grid-fixed grid-constricted-y grid-compact align-items-center">
+							<div class="grid-col-sm-8 grid-col-xs-6">
 								<?php app_get_component('components/profile-named-for-share-notes') ?>
 							</div>
-							<div class="flex-col-sm-4 flex-col-xs-6">
+							<div class="grid-col-sm-4 grid-col-xs-6">
 
 								<!-- @if user is the author of the note -->
 									<strong>Owner</strong>
 
 								<!-- @else -->
-									<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center justify-content-space-between">
-										<div class="flex-child flex-1-1">
+									<div class="grid grid-flex grid-compact grid-constricted-y align-items-center justify-content-space-between">
+										<div class="grid-col flex-1-1">
 											<div class="input-wrapper input-wrapper-horizontal no-padding input-wrapper-block">
-												<select name="shareto-existing[REPLACEWWithRowId][access-level]" class="input-single-line input-select input-small">
+												<select name="shareto-existing[REPLACEWWithRowId][access-level]" class="input-box input-box input-box-select input-small">
 													<option value="read-only">Viewer</option>
 													<option value="read-write">Editor</option>
 												</select>
 											</div>
 										</div>
-										<div class="flex-child flex-0-0">
+										<div class="grid-col flex-0-0">
 											<a href="#" class="color-neutral color-primary-focus color-primary-hover inline-flex-xs" data-user-id-to-delete="REPLACEWWithRowId">
 												<i class="symbol symbol-delete"></i>
 											</a>
@@ -147,11 +147,11 @@ $args = app_parse_args($data,$defs);
 							
 								<li>
 									<input type="hidden" name="shareto-existing[REPLACEWWithRowId]">
-									<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact align-items-center justify-content-space-between">
-										<div class="flex-col-sm-8 flex-col-xs-6">
+									<div class="grid grid-flex grid-fixed grid-constricted-y grid-compact align-items-center justify-content-space-between">
+										<div class="grid-col-sm-8 grid-col-xs-6">
 											<?php app_get_component('components/profile-named-for-share-notes') ?>
 										</div>
-										<div class="flex-col-sm-4 flex-col-xs-6">
+										<div class="grid-col-sm-4 grid-col-xs-6">
 										
 											<!-- @if user is the author of the note -->
 												<strong>Owner</strong>
@@ -161,21 +161,21 @@ $args = app_parse_args($data,$defs);
 							
 								<li>
 									<input type="hidden" name="shareto-existing[REPLACEWWithRowId]">
-									<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact align-items-center">
-										<div class="flex-col-sm-8 flex-col-xs-6">
+									<div class="grid grid-flex grid-fixed grid-constricted-y grid-compact align-items-center">
+										<div class="grid-col-sm-8 grid-col-xs-6">
 											<?php app_get_component('components/profile-named-for-share-notes') ?>
 										</div>
-										<div class="flex-col-sm-4 flex-col-xs-6">
-											<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center">
-												<div class="flex-child flex-1-1">
+										<div class="grid-col-sm-4 grid-col-xs-6">
+											<div class="grid grid-flex grid-compact grid-constricted-y align-items-center">
+												<div class="grid-col flex-1-1">
 													<div class="input-wrapper input-wrapper-horizontal no-padding input-wrapper-block">
-														<select name="shareto-existing[REPLACEWWithRowId][access-level]" class="input-single-line input-select input-small">
+														<select name="shareto-existing[REPLACEWWithRowId][access-level]" class="input-box input-box input-box-select input-small">
 															<option value="read-only">Viewer</option>
 															<option value="read-write">Editor</option>
 														</select>
 													</div>
 												</div>
-												<div class="flex-child flex-0-0">
+												<div class="grid-col flex-0-0">
 													<a href="#" class="color-neutral color-primary-focus color-primary-hover inline-flex-xs" data-user-id-to-delete="REPLACEWWithRowId">
 														<i class="symbol symbol-delete"></i>
 													</a>

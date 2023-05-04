@@ -34,7 +34,7 @@
 							
 						</h4>
 
-						<div class='dashboard-tooltip-row-body text-wrap-ellipsis-multiple'>
+						<div class='dashboard-tooltip-row-body text-wrap-ellipsis-multiline'>
 							<span class='REPLACE'>
 								Get The Peace Of Mind You Deserve Today. We've Recovered Over 300 Million For Our Clients. Free 24/7 Case Evaluation, Call Today! You Pay $0 Until We Win Your Case. No Fee Unless We Win! Free Legal Consultations. Types: Car Accident, Slip and Fall Injury
 							</span>
@@ -64,7 +64,7 @@
 										
 									</h4>
 
-									<div class='dashboard-tooltip-row-body text-wrap-ellipsis-multiple'>
+									<div class='dashboard-tooltip-row-body text-wrap-ellipsis-multiline'>
 										Get the justice you deserve for your injuries. Free consultations. Call today. These incidents can have long-term effects. Contact us and learn about your legal options. Dedicated legal team. Spanish speaking attorney. Locations: Portland, Hillsboro.
 									</div>
 									<ul class='tooltip-rank inline h5 no-margin-y font-weight-inherit'>
@@ -95,8 +95,8 @@
 
 				<!-- @LOOP .dashboard-tooltip-row -->
 					<div class='dashboard-tooltip-row font-family-accent'>
-						<div class='flex-grid flex-grid-fixed flex-grid-no-gutter-y'>
-							<div class='flex-col-9'>
+						<div class='grid grid-flex grid-fixed grid-constricted-y'>
+							<div class='grid-col-9'>
 
 								<h4 class='dashboard-tooltip-row-title text-wrap-ellipsis no-margin font-family-accent '>
 									<span class='REPLACE'>
@@ -104,7 +104,7 @@
 									</span>
 								</h4>
 							</div>
-							<div class='flex-col-3 text-align-right'>
+							<div class='grid-col-3 text-align-right'>
 								<a class='dashboard-tooltip-row-website text-transform-uppercase' href='#REPLACEWithUri'>
 									Website
 								</a>
@@ -170,8 +170,8 @@
 						<!-- @PLACEHOLDER DELETE WHEN READY -->
 							<?php for($i=1; $i<=6; $i++){ ?>
 								<div class='dashboard-tooltip-row font-family-accent'>
-									<div class='flex-grid flex-grid-fixed flex-grid-no-gutter-y'>
-										<div class='flex-col-9'>
+									<div class='grid grid-flex grid-fixed grid-constricted-y'>
+										<div class='grid-col-9'>
 
 											<h4 class='dashboard-tooltip-row-title text-wrap-ellipsis no-margin font-family-accent '>
 												<span class='REPLACE'>
@@ -179,7 +179,7 @@
 												</span>
 											</h4>
 										</div>
-										<div class='flex-col-3 text-align-right'>
+										<div class='grid-col-3 text-align-right'>
 											<a class='dashboard-tooltip-row-website text-transform-uppercase' href='#REPLACEWithUri'>
 												Website
 											</a>
@@ -269,13 +269,13 @@
 
 				<!-- @LOOP .dashboard-tooltip-row -->
 					<div class='dashboard-tooltip-row font-family-accent'>
-						<div class='flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y'>
-							<div class='flex-col-3'>
+						<div class='grid grid-flex grid-fixed grid-compact grid-constricted-y'>
+							<div class='grid-col-3'>
 								<div class='tooltip-row-thumbnail-background-theme-contrast  ratio ratio-4-by-3'>
 									<img src='#REPLACEWithVideoThumbnail' class=' ratio-child-contain' alt='' />
 								</div>
 							</div>
-							<div class='flex-col-9 align-self-center'>
+							<div class='grid-col-9 align-self-center'>
 								<h4 class='dashboard-tooltip-row-title text-wrap-ellipsis no-margin font-family-accent '>
 									<span class='REPLACE'>
 										Motor Vehicle Accident Lawyer
@@ -309,13 +309,13 @@
 					<!-- @PLACEHOLDER DELETE WHEN READY -->
 							<?php for($i=1; $i<=6; $i++){ ?>
 								<div class='dashboard-tooltip-row font-family-accent'>
-									<div class='flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y'>
-										<div class='flex-col-3'>
+									<div class='grid grid-flex grid-fixed grid-compact grid-constricted-y'>
+										<div class='grid-col-3'>
 											<div class='tooltip-row-thumbnail-background-theme-contrast  ratio ratio-4-by-3'>
 												<img src='#REPLACEWithVideoThumbnail' class=' ratio-child-contain' alt='' />
 											</div>
 										</div>
-										<div class='flex-col-9 align-self-center'>
+										<div class='grid-col-9 align-self-center'>
 											<h4 class='dashboard-tooltip-row-title text-wrap-ellipsis no-margin font-family-accent '>
 												<span class='REPLACE'>
 													Motor Vehicle Accident Lawyer

@@ -17,7 +17,7 @@
 
 	<div class="dropdown dropdown-center-x no-padding" data-dropdown-width="300px">
 		<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-			<label class="input-label sr-only">Date</label>
+			<label class="input input-label sr-only">Date</label>
 			<input type="date"
 			class="input-no-shadow input input-calendar border-color-transparent" data-calendar-text-input="false"
 			data-calendar-month-skip="true"

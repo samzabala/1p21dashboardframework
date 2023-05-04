@@ -21,9 +21,9 @@ $args = app_parse_args($data,$defs);
 <div class="module-function function-filter-<?=$args['slug']; ?> position-relative">
     <?php if($args['label']): ?>
         <div class="input-wrapper input-wrapper-horizontal input-wrapper-block-mobile input-wrapper-responsive no-padding-right">
-        <label class="input-label"><?=$args['label']; ?></label>
+        <label class="input input-label"><?=$args['label']; ?></label>
     <?php endif; ?>
-        <button data-toggle-dropdown class="input input-select input-block-mobile">
+        <button data-toggle-dropdown class="input input-box input-box-select input-block-mobile">
             <?=$args['title']; ?>
             <!-- @if one or more Owner is checked -->
             <span class="filter-companies-<?=$args['slug']; ?>-active">
@@ -35,7 +35,7 @@ $args = app_parse_args($data,$defs);
             <?php if($args['content']) echo $args['content'];
             foreach($args['items'] as $i => $item): ?>
                 <li>
-                    <label class="input-label">
+                    <label class="input input-label">
                         <input type="checkbox"
                             <?=$i == 1 ? 'checked' : '' ?>
                             name="filter-companies-<?=$args['slug']; ?>"

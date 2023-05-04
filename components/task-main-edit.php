@@ -14,8 +14,8 @@
 <!-- Title -->
 	<div class="task-heading">
 		<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-			<label for="task-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="task-title" name="task-title" class=" input input-single-line input-large">
+			<label for="task-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="task-title" name="task-title" class=" input input-box input-large">
 		</div>
 		
 
@@ -30,8 +30,8 @@
 		<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
 
-			<label for="task-body" class="input-label sr-only">Description</label>
-			<textarea name="task-body" id="task-body" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
+			<label for="task-body" class="input input-label sr-only">Description</label>
+			<textarea name="task-body" id="task-body" cols="30" rows="10" class="input input-box input-box-multiline">use tinymce in place</textarea>
 		</div>
 	</div>
 
@@ -40,7 +40,7 @@
 		<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
 			<div class="input-toggle">
 				<input type="checkbox" class="input" name="task-enable-delay" id="task-enable-delay">
-				<label for="task-enable-delay" class="input-label input-toggle-label">
+				<label for="task-enable-delay" class="input input-label input-toggle-label">
 					Delay task requests
 				</label>
 			</div>
@@ -49,12 +49,12 @@
 		<!-- 
 
 		@NOTE
-			.flex-grid
+			.grid grid-flex
 				classes to add
-					`input-disabled` => when input[name=task-enable-delay] is checked
+					`disabled` => when input[name=task-enable-delay] is checked
 		-->
-		<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-			<div class="flex-col-xs-12  flex-col-md-8">
+		<div class="grid grid-flex grid-compact grid-constricted-y">
+			<div class="grid-col-xs-12  grid-col-md-8">
 				<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
 					<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">
 
@@ -72,11 +72,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex-col-xs-12  flex-col-md-4">
+			<div class="grid-col-xs-12  grid-col-md-4">
 
 				<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-					<label for="task-delay-time" class="input-label sr-only">Time</label>
-					<input type="time" placeholder="Enter title" id="task-delay-time" name="task-delay-time" class=" input input-single-line">
+					<label for="task-delay-time" class="input input-label sr-only">Time</label>
+					<input type="time" placeholder="Enter title" id="task-delay-time" name="task-delay-time" class=" input input-box">
 				</div>
 			</div>
 		</div>
@@ -89,14 +89,14 @@
 
 <!-- Attachments -->
 	<div class="task-attachments">
-		<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
-			<div class="flex-col-xs-12">
+		<div class="grid grid-flex grid-compact justify-content-space-between align-items-center">
+			<div class="grid-col-xs-12">
 				<h4 class="no-margin-y">
 					Attachments
 				</h4>
 			</div>
 
-			<!-- <div class="flex-col-xs-6 text-align-right">
+			<!-- <div class="grid-col-xs-6 text-align-right">
 				<a href="#" onClick="REPLACEfnToTriggertaskAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
 			</div>
 				-->

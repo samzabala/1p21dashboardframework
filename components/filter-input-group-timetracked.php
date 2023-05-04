@@ -1,6 +1,6 @@
 <div class="module-function filter-input-group-timetracked">
 	<form action="" class=" filter-profile input-group input-group-horizontal input-block-mobile text-align-left">
-		<select name="timeetrack-filter-meta-key" id="" class="input input-single-line input-select">
+		<select name="timeetrack-filter-meta-key" id="" class="input input-box input-box input-box-select">
 			<option value="">Filter by</option>
 			<option value="author">Author</option>
 			<option value="client">Client</option>

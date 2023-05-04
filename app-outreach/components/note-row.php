@@ -28,13 +28,13 @@ $args = app_parse_args($data,$defs);
 	class="note-row padding border-color-neutral-alpha-3 border-style-solid-top border-width-thin-top pointer-reference
 	<?= $args['is_pinned'] ? ' background-primary-alpha-1' : '' ?>
 ">
-	<div class=" flex-grid flex-grid-compact align-items-flex-start flex-grid-fixed flex-nowrap position-relative">
-		<div class="flex-child flex-0-0">
+	<div class=" grid grid-flex grid-compact align-items-flex-start grid-flex-fixed flex-nowrap position-relative">
+		<div class="grid-col flex-0-0">
 			<?php app_get_component('components/profile-image','micro'); ?>
 		</div>
-		<div class="flex-child flex-1-1">
-			<div class="flex-grid flex-grid-no-gutter-y justify-content-space-between">
-				<div class="flex-col-8">
+		<div class="grid-col flex-1-1">
+			<div class="grid grid-flex grid-constricted-y justify-content-space-between">
+				<div class="grid-col-8">
 					<p class="margin-small-top no-margin-bottom note-row-meta">
 						<a class="color-inherit font-weight-700" href="<?=app_create_link(array('template'=>'profile')) ?>">
 							<span class="REPLACE">Profile name</span>
@@ -44,7 +44,7 @@ $args = app_parse_args($data,$defs);
 						</span>
 					</p>
 				</div>
-				<div class="flex-col-4 position-relative">
+				<div class="grid-col-4 position-relative">
 
 					<div class=" position-absolute offset-0-bottom offset-0-right">
 						<span class="hide-not-hover">

@@ -13,8 +13,8 @@
 <!-- Title -->
 	<div class="project-heading">
 		<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-			<label for="project-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="project-title" name="project-title" class=" input input-single-line input-large">
+			<label for="project-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="project-title" name="project-title" class=" input input-box input-large">
 		</div>
 	</div>
 	
@@ -22,8 +22,8 @@
 	<div class="project-description">
 		<!-- @NOTE use tinymce here -->
 		<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-			<label for="project-body" class="input-label sr-only">Description</label>
-			<textarea name="project-body" id="project-body" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
+			<label for="project-body" class="input input-label sr-only">Description</label>
+			<textarea name="project-body" id="project-body" cols="30" rows="10" class="input input-box input-box-multiline">use tinymce in place</textarea>
 		</div>
 	</div>
 
@@ -33,7 +33,7 @@
 		<div class="input-wrapper p input-wrapper-vertical input-wrapper-block">
 			<div class="input-toggle">
 				<input type="checkbox" class="input" name="project-apply-template" id="project-apply-template">
-				<label for="project-apply-template" class="input-label input-toggle-label">
+				<label for="project-apply-template" class="input input-label input-toggle-label">
 					Apply Project Template
 				</label>
 			</div>
@@ -42,9 +42,9 @@
 		<!-- 
 
 		@NOTE
-			.flex-grid
+			.grid grid-flex
 				classes to add
-					`input-disabled` => when input[name=project-apply-template] is checked
+					`disabled` => when input[name=project-apply-template] is checked
 		-->
 		<div class="input-wrapper p input-wrapper-block input-wrapper-horizontal">
 			<button class="btn  btn-default  btn-block justify-content-space-between" data-toggle="dropdown">

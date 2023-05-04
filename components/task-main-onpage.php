@@ -17,9 +17,9 @@
 			<form class="switch-on">
 				<!-- @HIDDEN INPUT TYPES HERE -->
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-					<label for="task-title" class="input-label sr-only">Title</label>
+					<label for="task-title" class="input input-label sr-only">Title</label>
 					<div class="input-group input-block input-group-horizontal">
-						<input type="text" placeholder="Enter title" id="task-title" name="task-title" class=" input input-single-line input-large">
+						<input type="text" placeholder="Enter title" id="task-title" name="task-title" class=" input input-box input-large">
 							<button type="submit" class="btn btn-primary" data-toggle="switch-off">
 								Save<span class="hide-xs">&nbsp;title</span>
 							</button>
@@ -67,8 +67,8 @@
 			<form class="switch-on">
 				<!-- @HIDDEN INPUT TYPES HERE -->
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-					<label for="task-body" class="input-label sr-only">Description</label>
-					<textarea name="task-body" id="task-body" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
+					<label for="task-body" class="input input-label sr-only">Description</label>
+					<textarea name="task-body" id="task-body" cols="30" rows="10" class="input input-box input-box-multiline">use tinymce in place</textarea>
 				</div>
 
 				<div class="text-align-right">
@@ -87,14 +87,14 @@
 
 <!-- Attachments -->
 	<div class="task-attachments">
-		<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
-			<div class="flex-col-xs-6">
+		<div class="grid grid-flex grid-compact justify-content-space-between align-items-center">
+			<div class="grid-col-xs-6">
 				<h4 class="no-margin-top">
 					Attachments
 				</h4>
 			</div>
 			<!-- @if there are attachemtns -->
-				<div class="flex-col-xs-6 text-align-right">
+				<div class="grid-col-xs-6 text-align-right">
 					<a href="#" class="task-attachments-downloader btn btn-link btn-small" >
 						Download All <i class="symbol symbol-download"></i>
 					</a>

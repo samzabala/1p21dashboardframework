@@ -1,36 +1,36 @@
 
-	<div class="flex-grid flex-grid-fixed">
-		<div class="flex-col-xs-12 flex-col-sm-9 flex-col-md-7">
+	<div class="grid grid-flex grid-flex-fixed">
+		<div class="grid-col-xs-12 grid-col-sm-9 grid-col-md-7">
 			<form action="">
 				
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label for="department-name" class="input-label font-weight-700">Name</label>
+					<label for="department-name" class="input input-label font-weight-700">Name</label>
 
 					<!-- @NOTE .input
 						classes to add:
 							input-error => if field has an error
 					-->
-					<input id="department-name" placeholder="Enter a Department name" class="input input-single-line" />
+					<input id="department-name" placeholder="Enter a Department name" class="input input-box" />
 
 					<!-- @if has error -->
-						<div class="input-info color-error font-weight-700">Error description here</div>
+						<div class="input input-info color-error font-weight-700">Error description here</div>
 				</div>
 				
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label for="department-description" class="input-label font-weight-700">Description</label>
+					<label for="department-description" class="input input-label font-weight-700">Description</label>
 					
 
 					<!-- @NOTE .input
 						classes to add:
 							input-error => if field has an error
 					-->
-					<textarea name="" placeholder="Enter a description" id="department-description" rows="3" class="input input-multiple-line input-block"></textarea>
+					<textarea name="" placeholder="Enter a description" id="department-description" rows="3" class="input input-box input-box-multiline input-block"></textarea>
 
 					<!-- @if has error -->
-						<div class="input-info color-error font-weight-700">Error description here</div>
+						<div class="input input-info color-error font-weight-700">Error description here</div>
 				</div>
 
-				<label class="input-label font-weight-700">Job Titles</label>
+				<label class="input input-label font-weight-700">Job Titles</label>
 				<datalist id="job-titles">
 					<option value="Web Developer">Web Developer</option>
 					<option value="Jr Web Developer">Jr Web Developer</option>
@@ -38,9 +38,9 @@
 					<option value="Software Engineer">Software Engineer</option>
 					<option value="Yes">Yes</option>
 				</datalist>
-				<!-- @loop .flex-grid -->
-					<div class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap">
-						<div class="flex-child flex-1-1 no-margin-top">
+				<!-- @loop .grid grid-flex -->
+					<div class="grid grid-flex grid-compact grid-flex-fixed flex-nowrap">
+						<div class="grid-col flex-1-1 no-margin-top">
 							
 							<label for="department-job-title-[REPLACE]" class="sr-only">Job Title Entry</label>
 							
@@ -48,12 +48,12 @@
 								classes to add:
 									input-error => if field has an error
 							-->
-							<input id="department-job-title-[REPLACE]" placeholder="Enter a Job Title" class="input input-single-line input-block" list="job-titles" />
+							<input id="department-job-title-[REPLACE]" placeholder="Enter a Job Title" class="input input-box input-block" list="job-titles" />
 							
 							<!-- @if has error -->
-								<div class="input-info color-error font-weight-700">Error description here</div>
+								<div class="input input-info color-error font-weight-700">Error description here</div>
 						</div>
-						<div class="flex-child flex-0-0 no-margin-top flex-xs">
+						<div class="grid-col flex-0-0 no-margin-top flex-xs">
 							<!-- @if it is a new entry -->
 								<button title="Add" class="btn btn-primary-glassy btn-symbol">
 									<i class="symbol symbol-plus"></i>
@@ -67,16 +67,16 @@
 
 							<?php for($i = 0; $i < 6; $i++): ?>
 
-								<div class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap">
-									<div class="flex-child flex-1-1 no-margin-top">
+								<div class="grid grid-flex grid-compact grid-flex-fixed flex-nowrap">
+									<div class="grid-col flex-1-1 no-margin-top">
 
 										<label for="department-job-title-<?=$i ?>" class="sr-only">Job Title Entry</label>
-										<input id="department-job-title-<?=$i ?>" placeholder="Enter a Job Title" class="input-error input input-single-line input-block" list="job-titles" />
+										<input id="department-job-title-<?=$i ?>" placeholder="Enter a Job Title" class="input-error input input-box input-block" list="job-titles" />
 										
 										<!-- @if has error -->
-											<div class="input-info color-error font-weight-700">Error description here</div>
+											<div class="input input-info color-error font-weight-700">Error description here</div>
 									</div>
-									<div class="flex-child flex-0-0 no-margin-top flex-xs">
+									<div class="grid-col flex-0-0 no-margin-top flex-xs">
 											<button title="Add" class="btn btn-neutral-glassy btn-symbol">
 												<i class="symbol symbol-minus"></i>
 											</button>
@@ -85,13 +85,13 @@
 							<?php endfor; ?>
 
 
-							<div class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap">
-								<div class="flex-child flex-1-1 no-margin-top">
+							<div class="grid grid-flex grid-compact grid-flex-fixed flex-nowrap">
+								<div class="grid-col flex-1-1 no-margin-top">
 
 									<label for="department-job-title-<?=$i + 1 ?>" class="sr-only">Job Title Entry</label>
-									<input id="department-job-title-<?=$i + 1 ?>" placeholder="Enter a Job Title" class="input input-single-line input-block" list="job-titles" />
+									<input id="department-job-title-<?=$i + 1 ?>" placeholder="Enter a Job Title" class="input input-box input-block" list="job-titles" />
 								</div>
-								<div class="flex-child flex-0-0 no-margin-top flex-xs">
+								<div class="grid-col flex-0-0 no-margin-top flex-xs">
 									<!-- @if it is a new entry -->
 										<button title="Add" class="btn btn-primary-glassy btn-symbol">
 											<i class="symbol symbol-plus"></i>

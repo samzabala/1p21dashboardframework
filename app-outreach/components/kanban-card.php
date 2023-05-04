@@ -1,15 +1,15 @@
 
 <div class=" outreach-kanban-card module border-color-neutral-alpha-5 p no-padding-x">
     <div class="module-content padding-small-left no-margin-x" data-toggle-modal-default>
-        <div class="flex-grid flex-nowrap flex-grid-no-gutter">
-            <div class="flex-0-0 flex-child">
+        <div class="grid grid-flex flex-nowrap grid-constricted">
+            <div class="flex-0-0 grid-col">
                 <button class="
                     outreach-kanban-dragger
                     btn font-size-large no-padding-y no-padding-left padding-small-right color-neutral  align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow">
                     <i class="symbol symbol-drag"></i>
                 </button>
             </div>
-            <div class="flex-1-1 flex-child">
+            <div class="flex-1-1 grid-col">
                 <div class="position-relative padding-large-right">
 
                     <div class="card-client-owner position-absolute offset-0-right offset-0-top">
@@ -24,11 +24,11 @@
                         <span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
                     </a>
                 </div>
-                <div class="flex-grid flex-grid-compact justify-content-space-between">
-                    <div class="flex-child">
+                <div class="grid grid-flex grid-compact justify-content-space-between">
+                    <div class="grid-col">
                         <h6 class="no-margin">Last Activity Date:</h6>
                     </div>
-                    <div class="flex-child">
+                    <div class="grid-col">
                         <p class="no-margin">
                             <span class="REPLACE">4/20/69</span>
                         </p>
@@ -73,9 +73,9 @@
 
 
         <form action="">
-            <label class="h5" for="card-client-stage" class="input-label sr-only">Stage</label>
+            <label class="h5" for="card-client-stage" class="input input-label sr-only">Stage</label>
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <select id="card-client-stage" name="company-stage" id="" class="input-select" style="max-width: 18em">
+                <select id="card-client-stage" name="company-stage" id="" class="input-box input-box-select" style="max-width: 18em">
                     <option value="">Select</option>
                     <option value="outreach">Outreach</option>
                     <option value="pitched">Pitched</option>

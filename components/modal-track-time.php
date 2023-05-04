@@ -36,18 +36,18 @@ ON STANDBY FOR DESIGNER'S UPDATES
 		<div class="container">
 
 			<form action="" class="add-new-timer">
-				<div class="flex-grid flex-grid-fixed flex-grid-compact">
+				<div class="grid grid-flex grid-fixed grid-compact">
 
 
-					<div class="flex-col-xs-12 flex-col-md-8">
+					<div class="grid-col-xs-12 grid-col-md-8">
 						
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label">
+							<label class="input input-label">
 								Client <span class="color-error field-required">*</span>
 							</label>
 							<div class="position-relative flex-xs">
 
-								<input type="text" name="client-name" class="input input-single-line" value="um" data-toggle="dropdown">
+								<input type="text" name="client-name" class="input input-box" value="um" data-toggle="dropdown">
 								<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
 									<li >
 										<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `um` client</a>
@@ -70,15 +70,15 @@ ON STANDBY FOR DESIGNER'S UPDATES
 
 					
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<div class="input-label">
-								<span class="flex-grid flex-grid-fixed flex-grid-no-gutter-y flex-grid-compact">
+							<div class="input input-label">
+								<span class="grid grid-flex grid-fixed grid-constricted-y grid-compact">
 
-									<label  class="flex-col-6">
+									<label  class="grid-col-6">
 
 										Task <span class="color-error field-required">*</span>
 									</label>
 
-									<span class="flex-col-6 text-transform-none text-align-right font-weight-400">
+									<span class="grid-col-6 text-transform-none text-align-right font-weight-400">
 
 										<a href="#" class="js-client-opt">Choose from unfinished tasks</a>
 									</span>
@@ -87,7 +87,7 @@ ON STANDBY FOR DESIGNER'S UPDATES
 							</div>
 							<div class="position-relative flex-xs">
 
-								<input type="text" name="task-name" class="input input-single-line" value="no" data-toggle="dropdown">
+								<input type="text" name="task-name" class="input input-box" value="no" data-toggle="dropdown">
 								<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
 									<li >
 										<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `no` client</a>
@@ -116,12 +116,12 @@ ON STANDBY FOR DESIGNER'S UPDATES
 						
 					
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label">
+							<label class="input input-label">
 								Project
 							</label>
 							<div class="position-relative flex-xs">
 
-								<input type="text" name="project-name" class="input input-single-line" value="r" data-toggle="dropdown">
+								<input type="text" name="project-name" class="input input-box" value="r" data-toggle="dropdown">
 								<div data-dropdown-width="100%" class="dropdown client-name-dropdown dropdown-top-flush">
 									<li >
 										<a class="font-size-smaller font-weight-700 color-primary text-decoration-underline" href="#">Create a new `r` client</a>
@@ -151,42 +151,42 @@ ON STANDBY FOR DESIGNER'S UPDATES
 
 						
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label">
+							<label class="input input-label">
 								Notes
 							</label>
 
 							<!-- @NOTE. this has tinymce naw -->
 							<div class="REPLACE">
 
-								<textarea type="text" name="project-name" class="input input-multiple-line">
+								<textarea type="text" name="project-name" class="input input-box input-box-multiline">
 								</textarea>
 							</div>
 						</div>
 
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label" for="attachments">Attachments</label>
-							<input class="input input-single-line" id="attachments" multiple="" name="attachments" type="file">
+							<label class="input input-label" for="attachments">Attachments</label>
+							<input class="input input-box" id="attachments" multiple="" name="attachments" type="file">
 						</div>
 					</div>
 
 
 
 
-					<div class="flex-col-xs-12 flex-col-md-4">
+					<div class="grid-col-xs-12 grid-col-md-4">
 						
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label">
+							<label class="input input-label">
 								Start Date  <span class="color-error field-required">*</span>
 							</label>
-							<input type="date" name="log-start-date" class="input input-single-line">
+							<input type="date" name="log-start-date" class="input input-box">
 						</div>
 
 						
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label">
+							<label class="input input-label">
 								Start Time  <span class="color-error field-required">*</span>
 							</label>
-							<input type="time" name="log-start-time" class="input input-single-line">
+							<input type="time" name="log-start-time" class="input input-box">
 						</div>
 
 
@@ -194,17 +194,17 @@ ON STANDBY FOR DESIGNER'S UPDATES
 
 						
 						<div class="p">
-							<label class="input-label">
+							<label class="input input-label">
 								Duration <span class="color-error field-required">*</span>
 							</label>
 							<div>
-								<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00" name="log-duration-hours" class="input input-single-line input-inline">
+								<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00" name="log-duration-hours" class="input input-box input-inline">
 								
 								<span class="input input-inline">
 									:
 								</span>
 								
-								<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00" name="log-duration-minutes" class="input input-single-line input-inline">
+								<input width="70px" type="text" step=1" size="2" pattern="[0-9]{2}" placeholder="00" name="log-duration-minutes" class="input input-box input-inline">
 
 							</div>
 						</div>
@@ -214,16 +214,16 @@ ON STANDBY FOR DESIGNER'S UPDATES
 
 
 						<div class="p input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label for="log-due-date" class="input-label">
+							<label for="log-due-date" class="input input-label">
 								Due Date
 							</label>
-							<input type="date" name="log-due-date" class="input input-single-line">
+							<input type="date" name="log-due-date" class="input input-box">
 						</div>
 					
 					</div>
 
 
-					<div class="flex-col-xs-12 text-align-right">
+					<div class="grid-col-xs-12 text-align-right">
 						<button class="btn btn-primary" type="submit">Add Entry</button>
 					
 					</div>

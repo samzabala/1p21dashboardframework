@@ -82,7 +82,7 @@
 							</h5>
 							<form class="entry-task-status tag no-margin-y
 								tag-primary">
-								<select class="input input-blend no-border-bottom text-align-center" name="" id="">
+								<select class="input input-blend input-block no-border-bottom text-align-center" name="" id="">
 									<!-- @PLACEHOLDER. delete when ready -->
 									<option value="">Backlog</option>
 									<option value="" selected>In Progress</option>
@@ -307,7 +307,7 @@
 
 								<form class="entry-task-status tag no-margin-y
 									tag-<?=$placeholder_color[$i]; ?>">
-									<select class="input input-blend no-border-bottom text-align-center" name="" id="">
+									<select class="input input-blend input-block no-border-bottom text-align-center" name="" id="">
 										<?php foreach($placeholder_color as $l=>$pco): ?>
 											<option value="" <?= $l == $i ? 'selected' : '' ?>><?= $placeholder_stuff[ $pco ] ?></option>
 										<?php endforeach; ?>

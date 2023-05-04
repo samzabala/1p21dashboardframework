@@ -1,9 +1,9 @@
 
-<div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12 flex-col-md-4">
+<div id="outreach-contacts-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-xs-12 grid-col-md-4">
 		<h1 class="no-margin">Leads</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-4 text-align-right">
+	<div class="grid-col-xs-12 grid-col-md-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
 		<div class="module-function function-add">
 			<a  href="#mb-editor-company" data-modal-title="Add company" data-toggle-modal-board class="btn btn-primary btn-block-mobile">

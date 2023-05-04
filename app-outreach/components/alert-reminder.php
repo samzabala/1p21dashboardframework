@@ -74,13 +74,13 @@
     border-width-thick-top
     border-color-<?=$_palette_tag?>">
 		
-		<div class="flex-grid flex-grid-compact flex-nowrap">
-			<div class="flex-child flex-0-0">
+		<div class="grid grid-flex grid-compact flex-nowrap">
+			<div class="grid-col flex-0-0">
 				<button class="btn btn-<?=$_palette_tag; ?>-glassy btn-round btn-large btn-symbol">
 					<i class="symbol symbol-<?=$_alert_symbol?>"></i>
 				</button>
 			</div>
-			<div class="flex-child flex-1-1">
+			<div class="grid-col flex-1-1">
 				<h4 class="reminder-datetime no-margin-y">
 					<!-- @if link to detail page is available -->
 						<a href="#REPLACEwithDetailLink">
@@ -91,7 +91,7 @@
 						</a>
 				</h4>
 
-				<div class="reminder-content text-wrap-ellipsis-multiple p">
+				<div class="reminder-content text-wrap-ellipsis-multiline p">
 					<?= $args['content']; ?>
 				</div>
 				

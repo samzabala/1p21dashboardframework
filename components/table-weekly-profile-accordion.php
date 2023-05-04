@@ -10,13 +10,13 @@ look for `-ID`
 <tbody class="dashboard-table-row-accordion-header  log-week-profile-summary-header ">
 	<tr>
 		<td class="dashboard-table-cell-max color-primary font-weight-700 color-primary no-padding-left">
-			<div class="flex-grid flex-grid-no-gutter align-items-center">
-				<div class="flex-child">
+			<div class="grid grid-flex grid-constricted align-items-center">
+				<div class="grid-col">
 					<a href="#log-week-profile-<?= isset($h) ? $h : 'ID' ?>" data-toggle="accordion"  class="btn btn-no-shadow btn-symbol">
 					<i class="symbol symbol-caret-down  symbol-caret-up-toggle"></i>
 					</a>
 				</div>
-				<div class="flex-child">	
+				<div class="grid-col">	
 					<?php app_get_component('components/table-profile-named') ?>
 				</div>
 			</div>

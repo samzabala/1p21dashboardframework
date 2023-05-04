@@ -1,7 +1,7 @@
 <div
 	id="outreach-contact-detail"
-	class="flex-grid flex-grid-fixed">
-		<div class="flex-col-xs-12 flex-col-md-8">
+	class="grid grid-flex grid-flex-fixed">
+		<div class="grid-col-xs-12 grid-col-md-8">
 			<div class="module-grid">
 				<!-- Header -->
 					<?php app_get_component('components/module-contact-detail-header') ?>
@@ -10,7 +10,7 @@
 			</div>
 		</div>
 
-		<div class="flex-col-xs-12 flex-col-md-4">
+		<div class="grid-col-xs-12 grid-col-md-4">
 			<div class="module-grid">
 			<!-- utility -->
 				<?php app_get_component('components/module-contact-detail-utility') ?>

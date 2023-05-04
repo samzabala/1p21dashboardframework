@@ -20,11 +20,11 @@ $args = app_parse_args($data,$defs);
 		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
 		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
 			<!-- WORKFLUX BOARDS -->
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Workflux Boards</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Workflux Boards</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<input id="<?=$args['post']?>-workfluxs-id" name="<?=$args['post']?>-workfluxs-id" type="hidden" />
 						<input id="<?=$args['post']?>-workfluxs-list" name="<?=$args['post']?>-workfluxs-list" type="hidden" />
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
@@ -47,11 +47,11 @@ $args = app_parse_args($data,$defs);
 
 
 		<!-- TAGS -->
-			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-				<div class="flex-child">
-					<h5 class="input-label">Labels &amp; Tags</h5>
+			<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+				<div class="grid-col">
+					<h5 class="input input-label">Labels &amp; Tags</h5>
 				</div>
-				<div class="flex-child">
+				<div class="grid-col">
 					<input id="<?=$args['post']?>-tags" name="<?=$args['post']?>-tags" type="hidden" />
 					<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Tags <i class="symbol symbol-plus"></i></a>
 					<?php app_get_component('components/modal-workflow-edit-tags',null,false,array('post'=>$args['post'])); ?>
