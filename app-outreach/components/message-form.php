@@ -31,7 +31,7 @@
 		<!-- <div class="container"> -->
 
 			<div>
-				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
+				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
 						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-from" class="input-label">From</label>
@@ -47,7 +47,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
+				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact justify-content-space-between">
 						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-to" class="input-label">To</label>
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="m-editor-email-cc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid">
+				<div id="m-editor-email-cc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					
 					<!-- @loop div -->
 						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
@@ -99,7 +99,7 @@
 							</div>
 						</div>
 				</div>
-				<div id="m-editor-email-bcc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid">
+				<div id="m-editor-email-bcc-enable" class="accordion border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					<!-- @loop div -->
 						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
 							<div class="flex-col-xs-4 flex-col-sm-2">
@@ -126,7 +126,7 @@
 							</div>
 						</div>
 				</div>
-				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
+				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
 						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-" class="input-label">Template</label>
@@ -143,7 +143,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="border-width-thin-bottom border-color-neutral border-style-solid">
+				<div class="border-width-thin-bottom border-color-neutral border-style-solid-bottom">
 					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-x flex-grid-compact">
 						<div class="flex-col-xs-4 flex-col-sm-2">
 							<label for="editor-email-subject" class="input-label">Subject</label>

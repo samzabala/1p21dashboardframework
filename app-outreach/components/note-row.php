@@ -25,7 +25,7 @@ $args = app_parse_args($data,$defs);
 		pinned notes are outputted first before u
  -->
 <div
-	class="note-row padding border-color-neutral-alpha-3 border-style-solid border-bottom border-width-thin-top pointer-reference
+	class="note-row padding border-color-neutral-alpha-3 border-style-solid-top border-width-thin-top pointer-reference
 	<?= $args['is_pinned'] ? ' background-primary-alpha-1' : '' ?>
 ">
 	<div class=" flex-grid flex-grid-compact align-items-flex-start flex-grid-fixed flex-nowrap position-relative">
