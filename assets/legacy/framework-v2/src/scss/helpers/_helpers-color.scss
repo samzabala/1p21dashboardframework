@@ -1,0 +1,12 @@
+$prefix: '.color';
+#{$prefix} {
+  // Theme
+  @each $color, $var in $_fwc-theme-colors-color {
+    @include create-state-helper(#{&}-#{$color}, color, $var);
+  }
+
+  //inherit
+  @include create-state-helper(#{&}-inherit, color, inherit);
+
+  @include dump-palette-helpers(color);
+}

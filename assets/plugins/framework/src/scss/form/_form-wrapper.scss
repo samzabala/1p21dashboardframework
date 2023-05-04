@@ -1,0 +1,125 @@
+$sub-prefix: #{$prefix}-wrapper;
+
+:root {
+  // :where(#{$prefix})
+
+  --fw-input-wrapper-gap: #{$input-wrapper-gap};
+  --fw-input-wrapper-padding-right: #{$input-wrapper-padding-right};
+
+  --fw-input-wrapper-label-column-width: #{$input-wrapper-label-column-width};
+}
+
+#{$sub-prefix} {
+  max-width: 100%;
+  position: relative;
+  display: inline-grid;
+  align-items: center;
+  column-gap: var(--fw-input-wrapper-gap);
+  padding-right: var(--fw-input-wrapper-padding-right);
+  grid-template-columns: 100%;
+  // min-height: var(--fw-input-height);
+
+  &,
+  > :where(*) {
+    min-width: 0;
+  }
+
+  &-horizontal {
+    // &:not(#{$sub-prefix}-responsive) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(0, max-content));
+
+    &:where(#{$sub-prefix}-reverse) {
+      grid-template-columns: 1fr auto;
+    }
+
+    &:where(#{$sub-prefix}-block) {
+      grid-template-columns: var(--fw-input-wrapper-label-column-width) 1fr;
+    }
+
+    &:where(#{$sub-prefix}-block#{$sub-prefix}-reverse) {
+      grid-template-columns: 1fr var(--fw-input-wrapper-label-column-width);
+    }
+
+    > :where(*) {
+      grid-column: 2;
+    }
+
+    > :where(
+        *:not(#{$prefix}, #{$prefix}-group),
+        :is(#{$prefix}, #{$prefix}-group):only-child
+      ) {
+      grid-column: span 2;
+    }
+    // }
+
+    // &:is(#{$sub-prefix}-responsive) {
+    //   @include on-breakpoint(nonmobile) {
+    //     grid-template-columns: auto 1fr;
+    //     grid-template-rows: repeat(auto-fill, minmax(0, max-content));
+
+    //     &#{&}-reverse {
+    //       grid-template-columns: 1fr auto;
+    //     }
+
+    //     &#{&}-block {
+    //       grid-template-columns: var(--fw-input-wrapper-label-column-width) 1fr;
+    //     }
+
+    //     &#{&}-block#{&}-reverse {
+    //       grid-template-columns: 1fr var(--fw-input-wrapper-label-column-width);
+    //     }
+
+    //     > :where(*) {
+    //       grid-column: 2;
+    //     }
+
+    //     > :is(
+    //       :where(*):not(#{$prefix}),
+    //       :not(#{$prefix} ~ #{$prefix}),
+    //       #{$prefix}:only-child
+    //       ) {
+    //       grid-column: span 2;
+    //     }
+    //   }
+  }
+
+  &-vertical {
+    grid-template-columns: 100%;
+
+    // &:not(#{$sub-prefix}-responsive) {
+
+    // }
+
+    // &:is(#{$sub-prefix}-responsive) {
+    //   @include on-breakpoint(nonmobile) {
+
+    //   }
+    // }
+  }
+
+  &-block {
+    --fw-input-wrapper-padding-right: 0rem;
+    display: grid;
+    width: 100%;
+
+    &-mobile {
+      @include on-breakpoint(mobile) {
+        --fw-input-wrapper-padding-right: 0rem;
+        display: grid;
+        width: 100%;
+      }
+    }
+  }
+
+  &#{$sub-prefix}-responsive {
+    @include on-breakpoint(mobile) {
+      grid-template-columns: 100%;
+
+      > :is(:where(*), #{$prefix}, #{$prefix}-group) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+  }
+}

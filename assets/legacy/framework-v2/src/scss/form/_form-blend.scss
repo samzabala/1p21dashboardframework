@@ -1,0 +1,52 @@
+/*** input-blend (scaffolding) ***/
+$prefix: '.input';
+
+%fwe-form-input-blend {
+  &-global {
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: inherit;
+    display: inline-block;
+    resize: none;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-style: solid;
+    border-width: 0 0 $input-border-width !important;
+    border-color: transparent;
+    box-shadow: none !important;
+    scrollbar-width: none !important;
+  }
+
+  //   decorations
+  &[list]::-webkit-list-button,
+  &::-webkit-scrollbar,
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+
+  &-block {
+    width: 100%;
+    display: block;
+  }
+
+  &-hover {
+    border-color: currentColor;
+  }
+}
+
+#{$prefix} {
+  &-blend {
+    @extend %fwe-form-input-blend;
+    @extend %fwe-form-input-blend-global;
+
+    &#{$prefix}-block {
+      @extend %fwe-form-input-blend-block;
+    }
+    &:focus,
+    &.focus {
+      @extend %fwe-form-input-blend-hover;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+node_modules/*
+.git/
+.git/*
+.sass-cache/
+.sass-cache/*
+static/*
+static
+
+*.map
+
+webpack.*.js
+webpack.*.json
