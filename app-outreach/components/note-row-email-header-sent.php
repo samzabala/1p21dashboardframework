@@ -1,7 +1,7 @@
 
 <div class="padding-small-x radius-small text-wrap-ellipsis margin-bottom background-caution-alpha-2">
-	<div class="flex-grid flex-grid-constricted-y flex-grid-compact flex-nowrap align-items-center ">
-		<div class="flex-child flex-0-0">
+	<div class="grid grid-flex grid-constricted-y grid-compact flex-nowrap align-items-center ">
+		<div class="grid-col flex-0-0">
 			<div class="padding-y">
 				<strong class="color-caution-dark">
 					<span class="btn btn-symbol btn-no-interaction btn-default background-transparent color-inherit no-border">
@@ -11,7 +11,7 @@
 				</strong>
 			</div>
 		</div>
-		<div class="flex-child flex-1-1">
+		<div class="grid-col flex-1-1">
 			<div class="padding-y">
 				<div class="text-wrap-ellipsis font-weight-700">
 					<strong class="hide-mobile">Subject:</strong>
@@ -24,7 +24,7 @@
 		</div>
 
 		
-		<div class="flex-child flex-0-0">
+		<div class="grid-col flex-0-0">
 			<?php app_get_component('components/email-tracking'); ?>
 		</div>
 

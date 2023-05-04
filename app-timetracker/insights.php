@@ -1,11 +1,11 @@
 
-<div class="flex-grid">
-	<div class="flex-child flex-col-xs-12 flex-col-md-6">
+<div class="grid grid-flex">
+	<div class="grid-col grid-col-xs-12 grid-col-md-6">
 		<h1 class="h2 font-weight-300 no-margin-y">
 			Insights
 		</h1>
 	</div>
-	<div class="flex-child flex-col-xs-12 flex-col-md-6 text-align-right">
+	<div class="grid-col grid-col-xs-12 grid-col-md-6 text-align-right">
 		<a href="#" class="btn btn-neutral-glassy btn-block-mobile">Back</a>
 	</div>
 </div>
@@ -14,8 +14,8 @@
 	<div class="module module-large margin-large-y">
 		<div class="module-content">
 
-			<div class="flex-grid align-items-center">
-				<div class="flex-col-xs-12 flex-col-lg-3">
+			<div class="grid grid-flex align-items-center">
+				<div class="grid-col-xs-12 grid-col-lg-3">
 					<div class="padding-large-right">
 						<p class="h1 font-weight-400 no-margin-y">
 							<strong class="sr-only">Name</strong>
@@ -29,26 +29,26 @@
 						</p>
 					</div>
 				</div>
-				<div class="flex-child flex-1-1">
+				<div class="grid-col flex-1-1">
 					<form action="">
-						<div class="flex-grid flex-grid-fixed flex-grid-expanded flex-grid-no-gutter-y align-items-center">
-							<div class="flex-child flex-1-1">
-								<div class="flex-grid flex-nowrap flex-grid-no-gutter-y flex-grid-compact">
-									<div class="flex-child flex-1-1">
+						<div class="grid grid-flex grid-flex-fixed grid-expanded grid-constricted-y align-items-center">
+							<div class="grid-col flex-1-1">
+								<div class="grid grid-flex flex-nowrap grid-constricted-y grid-compact">
+									<div class="grid-col flex-1-1">
 										<div class="flex-sm">
-											<label for="time-adjust-min" class="input-label">From</label>
-											<input id="time-adjust-min" type="date" name="period-min" class="input input-single-line input-block">
+											<label for="time-adjust-min" class="input input-label">From</label>
+											<input id="time-adjust-min" type="date" name="period-min" class="input input-box input-block">
 										</div>
 									</div>
-									<div class="flex-child flex-1-1">
+									<div class="grid-col flex-1-1">
 										<div class="flex-sm">
-											<label for="time-adjust-max" class="input-label">To</label>
-											<input id="time-adjust-max" type="date" name="period-max" class="input input-single-line input-block">
+											<label for="time-adjust-max" class="input input-label">To</label>
+											<input id="time-adjust-max" type="date" name="period-max" class="input input-box input-block">
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="flex-col-xs-12 flex-col-md-3 ">
+							<div class="grid-col-xs-12 grid-col-md-3 ">
 								<hr class="only-mobile">
 								<button class="btn btn-theme btn-block no-padding-x">Adjust</button>
 							</div>

@@ -16,25 +16,25 @@
 	</button>
 
 	<div class="dropdown dropdown-right" data-dropdown-width="100%">
-		<div class="flex-grid flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
+		<div class="grid grid-flex flex-wrap grid-fixed grid-constricted-y">
 
-			<div class="flex-col-md-8 flex-col-lg-9">
-				<div class="flex-grid  flex-grid-compact flex-wrap flex-grid-fixed flex-grid-no-gutter-y">
+			<div class="grid-col-md-8 grid-col-lg-9">
+				<div class="grid grid-flex  grid-compact flex-wrap grid-fixed grid-constricted-y">
 
 
-					<div class="flex-col-md-6">
+					<div class="grid-col-md-6">
 
 						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-							<label class="input-label">From</label>
+							<label class="input input-label">From</label>
 							<input type="date" class="input input-calendar input-no-shadow" data-calendar-year-skip="false" />
 						</div>
 					</div>
 
 
-					<div class="flex-col-md-6">
+					<div class="grid-col-md-6">
 
 						<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-							<label class="input-label">To</label>
+							<label class="input input-label">To</label>
 							<input type="date" class="input input-calendar input-no-shadow"  data-calendar-year-skip="false" data-calendar-disabled-dates="future" />
 						</div>
 					</div>
@@ -43,8 +43,8 @@
 			</div>
 
 			
-			<div class="flex-col-md-4 flex-col-lg-3">
-				<div class="input-label">Other</div>
+			<div class="grid-col-md-4 grid-col-lg-3">
+				<div class="input input-label">Other</div>
 				<div class="p">
 
 					<ul class="unstyled p font-weight-600">

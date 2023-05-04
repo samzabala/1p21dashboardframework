@@ -92,7 +92,7 @@
 
 
 <div class="module-function function-filter-location position-relative">
-        <button data-toggle-dropdown class="input input-select input-block-mobile">
+        <button data-toggle-dropdown class="input input-box input-box-select input-block-mobile">
             Locations
             <!-- @if one or more Owner is checked -->
             <span class="filter-companies-location-active">
@@ -102,8 +102,8 @@
         </button>
         <div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="300px" data-dropdown-max-height="30em">
             <div class="input-wrapper input-wrapper-block input-wrapper-vertical margin-small-bottom">
-                <label for="company-location-state" class="input-label">State</label>
-                <select name="state" id="company-location-state" class="input input-single-line input-select">
+                <label for="company-location-state" class="input input-label">State</label>
+                <select name="state" id="company-location-state" class="input input-box input-box input-box-select">
                     <option value="">Select</option>
                     <!-- @NOTE: options are placeholders. replace as needed -->
                         <option value="AL">Alabama</option>
@@ -161,9 +161,9 @@
             </div>
 
             <div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-                <label for="company-location-city" class="input-label">City</label>
+                <label for="company-location-city" class="input input-label">City</label>
                 <!-- @NOTE hidden input field here if needed -->
-                <input  name="city" id="company-location-city" type="text" class="flex-3-0 input input-single-line input-select input-block" list="filter-companies-city-list">
+                <input  name="city" id="company-location-city" type="text" class="flex-3-0 input input-box input-box input-box-select input-block" list="filter-companies-city-list">
                     <datalist id="filter-companies-city-list">
 
                         <!-- @NOTE: options are placeholders. replace as needed -->

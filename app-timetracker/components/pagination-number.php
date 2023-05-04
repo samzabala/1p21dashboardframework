@@ -4,7 +4,7 @@
 		<!-- 
 
 			@NOTE classes to add
-				if skipping to previous page is impossible => `.btn-disabled`
+				if skipping to previous page is impossible => `.disabled`
 
 		 -->
 		<a href="#" title="prev" class="btn btn-default btn-symbol"><i class="symbol symbol-arrow-left"></i> </a>
@@ -56,7 +56,7 @@
 		<!-- 
 
 			@NOTE classes to add
-				if skipping to next page is impossible => `.btn-disabled`
+				if skipping to next page is impossible => `.disabled`
 
 		 -->
 		<a href="#" title="next" class="btn btn-default btn-symbol"> <i class="symbol symbol-arrow-right"></i></a>

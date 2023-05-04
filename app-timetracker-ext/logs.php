@@ -2,8 +2,8 @@
     <div class="
         background-gradient-45-from-secondary-to-primary
         radius-large-bottom theme-inverse timetracker-offset-block padding-large-y"">
-        <div class="flex-grid flex-grid-no-gutter padding-y align-items-center text-align-center">
-            <div class="flex-col-2">
+        <div class="grid grid-flex grid-constricted padding-y align-items-center text-align-center">
+            <div class="grid-col-2">
                 <div class="padding-x border-width-thin-right border-style-solid border-color-primary">
                     <div class="total-today lead no-margin-y">
                         <span class="REPLACE">8:00</span>
@@ -11,7 +11,7 @@
                     <span>Today</span>
                 </div>
             </div>
-            <div class="flex-col-2">
+            <div class="grid-col-2">
                 <div class="padding-x">
                     <div class="total-week lead no-margin-y">
                         <span class="REPLACE">69:42</span>

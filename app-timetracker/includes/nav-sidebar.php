@@ -2,7 +2,7 @@
 <a class="timetracker-logo nav-block justify-content-center padding-small-x  flex-0-0" href="<?=app_create_link(); ?>">
 	<?php app_get_component('components/icon-logo'); ?>
 </a>
-<button data-toggle-accordion class="only-mobile timetracker-nav-toggle btn background-theme-polar-active color-theme-polar-active btn-symbol btn-no-radius border-color-transparent position-relative flex-0-0">
+<button data-toggle-accordion class="only-mobile timetracker-nav-toggle btn background-theme-polar-active color-theme-polar-active btn-symbol no-radius border-color-transparent position-relative flex-0-0">
 	<i class="symbol symbol-burger symbol-close-toggle"></i>
 </button>
 <ul class="nav-list timetracker-nav-list nav-list-responsive accordion accordion-mobile">

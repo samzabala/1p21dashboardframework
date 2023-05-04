@@ -1,6 +1,6 @@
 
-<div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12 flex-col-sm-4">
+<div id="outreach-contacts-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-xs-12 grid-col-sm-4">
 		<h5 class="no-margin text-transform-uppercase">Sales Tracking</h5>
 		<h1 class="no-margin">
 			<span class="REPLACE">
@@ -8,7 +8,7 @@
 			</span>
 		</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-4 flex-sm flex-direction-column-reverse align-items-flex-end justify-content-center">
+	<div class="grid-col-xs-12 grid-col-sm-4 flex-sm flex-direction-column-reverse align-items-flex-end justify-content-center">
 		<div class="flex-sm align-items-flex-end margin-small-top">
 			<h5 class="no-margin-top text-transform-uppercase color-neutral margin-small-right">Projected Sales:</h5>
 			<div class="special-secondary no-margin display-inline-block color-primary">
@@ -36,7 +36,7 @@
 				<th class="text-align-center outreach-table-mobile-th" width="50">
 					<form action="">
 						<input type="checkbox" class="input-inline" name="select-task-all" class="salestrack-selector" id="select-task-all">
-						<label for="select-salestrack-all" class="input-label hide-nonmobile">Select All Sales</label>
+						<label for="select-salestrack-all" class="input input-label hide-nonmobile">Select All Sales</label>
 					</form>
 				</th>
 				<th class="text-nowrap  outreach-table-cell-columnwidth-300" width="200">Company</th>
@@ -62,8 +62,8 @@
 					<div class="modal modal-default" id="m-salestrack-status-all" data-modal-width="400px" data-modal-title="Set Status to">
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Change Status To</label>
-								<select name="salestrack-status" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Change Status To</label>
+								<select name="salestrack-status" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="client">Client</option>
 									<option value="lead">Lead</option>
@@ -81,7 +81,7 @@
 				<td class="text-align-center" width="50">
 					<form action="" class="salestrack-c">
 						<input type="checkbox" class="input-inline" name="select-salestrack-REPLACEID" class="salestrack-selector" id="select-salestrack-REPLACEID">
-						<label for="select-salestrack-REPLACEID" class="input-label color-neutral hide-nonmobile">Select Sale</label>
+						<label for="select-salestrack-REPLACEID" class="input input-label color-neutral hide-nonmobile">Select Sale</label>
 					</form>
 				</td>
 				<td>
@@ -171,7 +171,7 @@
 					<!--@if not closed yet -->
 						<a href="#" class="btn btn-primary">Closed Deal</a>
 					<!-- @else -->
-						<span class="btn btn-neutral btn-disabled">Closed Deal</span>
+						<span class="btn btn-neutral disabled">Closed Deal</span>
 				</td>
 				<td class="outreach-table-cell-actions text-align-center" width="50">
 					<div class="salestracking-actions position-relative">
@@ -189,8 +189,8 @@
 					<div class="modal modal-default" id="m-salestrack-status-REPLACEID" data-modal-width="400px" data-modal-title="Set Status to">
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Change Status To</label>
-								<select name="salestrack-status" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Change Status To</label>
+								<select name="salestrack-status" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="client">Client</option>
 									<option value="lead">Lead</option>
@@ -209,7 +209,7 @@
 							<td class="text-align-center" width="50">
 								<form action="" class="salestrack-c">
 									<input type="checkbox" class="input-inline" name="select-salestrack-<?= $i; ?>" class="salestrack-selector" id="select-salestrack-<?= $i; ?>">
-									<label for="select-salestrack-<?= $i; ?>" class="input-label color-neutral hide-nonmobile">Select Sale</label>
+									<label for="select-salestrack-<?= $i; ?>" class="input input-label color-neutral hide-nonmobile">Select Sale</label>
 								</form>
 							</td>
 							<td>
@@ -299,7 +299,7 @@
 								<!--@if not closed yet -->
 									<a href="#" class="btn btn-primary">Closed Deal</a>
 								<!-- @else -->
-									<!-- <span class="btn btn-neutral btn-disabled">Closed Deal</span> -->
+									<!-- <span class="btn btn-neutral disabled">Closed Deal</span> -->
 							</td>
 							<td class="outreach-table-cell-actions text-align-center" width="50">
 								<div class="salestracking-actions position-relative">
@@ -318,8 +318,8 @@
 								<div class="modal modal-default" id="m-salestrack-status-<?=$i ?>" data-modal-width="400px" data-modal-title="Set Status to">
 									<form action="">
 										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Change Status To</label>
-											<select name="salestrack-status" id="" class="input-select">
+											<label for="" class="input input-label sr-only">Change Status To</label>
+											<select name="salestrack-status" id="" class="input-box input-box-select">
 												<option value="">Select</option>
 												<option value="client">Client</option>
 												<option value="lead">Lead</option>

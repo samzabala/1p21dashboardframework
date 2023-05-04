@@ -7,23 +7,23 @@
       "uuidString" : "F2E6C694-13FC-436E-B8DD-DA8B3F832CE6"
     }
   ],
-  "creatorBuild" : "34408",
+  "creatorBuild" : "34484",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/404.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/404-output.php",
+      "oF" : 1
     },
     "\/500.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/500.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/500-output.php",
+      "oF" : 1
     },
     "\/assets\/images\/icon-facebook-currentColor.svg" : {
       "ft" : 2097152,
@@ -105,6 +105,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/images\/logo-audio.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-audio.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/images\/logo-chart.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -115,11 +125,31 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/images\/logo-code.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-code.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/images\/logo-csv.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/images\/logo-csv.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-doc.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-doc.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -145,6 +175,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/images\/logo-font.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-font.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/images\/logo-google-ad.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -165,6 +205,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/images\/logo-img.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-img.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/images\/logo-media.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -180,6 +230,66 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/images\/logo-meter.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-pdf.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-pdf.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-txt.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-txt.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-unknown.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-unknown.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-video.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-video.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-x.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-x.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-zip.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-zip.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -311,6 +421,26 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/companies.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/companies.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/companies.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/companies.example.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/companies.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -325,6 +455,26 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/company-detail.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/company-detail.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/company-detail.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/company-detail.example.css.map",
+      "oF" : 0
     },
     "\/assets\/styles\/company-detail.example.scss" : {
       "aP" : 0,
@@ -353,6 +503,14 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/styles\/company-detail.mine.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/company-detail.mine.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/company-detail.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -368,6 +526,26 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/company.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/company.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/company.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/company.example.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/company.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -382,6 +560,26 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/contact-detail.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contact-detail.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/contact-detail.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contact-detail.example.css.map",
+      "oF" : 0
     },
     "\/assets\/styles\/contact-detail.example.scss" : {
       "aP" : 0,
@@ -410,6 +608,14 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/styles\/contact-detail.mine.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contact-detail.mine.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/contact-detail.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -424,6 +630,26 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/contacts.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contacts.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/contacts.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contacts.example.css.map",
+      "oF" : 0
     },
     "\/assets\/styles\/contacts.example.scss" : {
       "aP" : 0,
@@ -452,6 +678,14 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/styles\/contacts.mine.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/contacts.mine.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/contacts.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -467,6 +701,26 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/styles\/login.forgot.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/login.forgot.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/login.forgot.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/login.forgot.example.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/login.forgot.example.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -481,6 +735,26 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/style.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/style.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.example.css.map",
+      "oF" : 0
     },
     "\/assets\/styles\/style.example.scss" : {
       "aP" : 0,
@@ -509,6 +783,14 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/styles\/style.mine.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/style.mine.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/style.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -523,6 +805,26 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/assets\/styles\/tasks.example.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/tasks.example-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/styles\/tasks.example.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/tasks.example.css.map",
+      "oF" : 0
     },
     "\/assets\/styles\/tasks.example.scss" : {
       "aP" : 0,
@@ -551,6 +853,14 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/styles\/tasks.mine.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/styles\/tasks.mine.css.map",
+      "oF" : 0
+    },
     "\/assets\/styles\/tasks.mine.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -570,689 +880,905 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/calendar.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/calendar-output.php",
+      "oF" : 1
     },
     "\/companies.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/companies.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/companies-output.php",
+      "oF" : 1
     },
     "\/company-detail.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/company-detail.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/company-detail-output.php",
+      "oF" : 1
     },
     "\/components\/_DEMO-datalist.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/components\/_DEMO-datalist.php",
+      "oAP" : "\/components\/_DEMO-datalist-output.php",
       "oF" : 0
     },
     "\/components\/alert-basic.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/alert-basic.php",
+      "oA" : 1,
+      "oAP" : "\/components\/alert-basic-output.php",
       "oF" : 0
     },
     "\/components\/alert-reminder.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/alert-reminder.php",
+      "oA" : 1,
+      "oAP" : "\/components\/alert-reminder-output.php",
       "oF" : 0
     },
     "\/components\/alerts-toast.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/alerts-toast.php",
+      "oA" : 1,
+      "oAP" : "\/components\/alerts-toast-output.php",
+      "oF" : 0
+    },
+    "\/components\/attachment-item-columns.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/attachment-item-columns-output.php",
+      "oF" : 0
+    },
+    "\/components\/attachments-grid-columns.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/attachments-grid-columns-output.php",
       "oF" : 0
     },
     "\/components\/attachments-grid-detailed-view.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/attachments-grid-detailed-view.php",
+      "oA" : 1,
+      "oAP" : "\/components\/attachments-grid-detailed-view-output.php",
       "oF" : 0
     },
     "\/components\/attachments-grid-simple.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/attachments-grid-simple.php",
+      "oA" : 1,
+      "oAP" : "\/components\/attachments-grid-simple-output.php",
       "oF" : 0
     },
     "\/components\/bulk-form.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/bulk-form.php",
+      "oA" : 1,
+      "oAP" : "\/components\/bulk-form-output.php",
       "oF" : 0
     },
     "\/components\/company-contact-row.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/company-contact-row.php",
+      "oA" : 1,
+      "oAP" : "\/components\/company-contact-row-output.php",
       "oF" : 0
     },
     "\/components\/dropdown-actions.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/dropdown-actions.php",
+      "oA" : 1,
+      "oAP" : "\/components\/dropdown-actions-output.php",
+      "oF" : 0
+    },
+    "\/components\/email-tracking.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/email-tracking-output.php",
       "oF" : 0
     },
     "\/components\/event-row.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/event-row.php",
+      "oA" : 1,
+      "oAP" : "\/components\/event-row-output.php",
       "oF" : 0
     },
     "\/components\/function-add-model.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-add-model.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-add-model-output.php",
       "oF" : 0
     },
     "\/components\/function-add-note.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-add-note.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-add-note-output.php",
+      "oF" : 0
+    },
+    "\/components\/function-add-sequence-step.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/function-add-sequence-step-output.php",
       "oF" : 0
     },
     "\/components\/function-filter-companies.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-filter-companies.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-filter-companies-output.php",
+      "oF" : 0
+    },
+    "\/components\/function-filter-messages.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/function-filter-messages-output.php",
       "oF" : 0
     },
     "\/components\/function-filter-salestrack.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-filter-salestrack.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-filter-salestrack-output.php",
       "oF" : 0
     },
     "\/components\/function-input-search.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-input-search.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-input-search-output.php",
       "oF" : 0
     },
     "\/components\/function-select-by-type.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-select-by-type.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-select-by-type-output.php",
       "oF" : 0
     },
     "\/components\/function-select-month.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/function-select-month.php",
+      "oA" : 1,
+      "oAP" : "\/components\/function-select-month-output.php",
       "oF" : 0
     },
     "\/components\/input-company-addtl-info.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/input-company-addtl-info.php",
+      "oA" : 1,
+      "oAP" : "\/components\/input-company-addtl-info-output.php",
       "oF" : 0
     },
     "\/components\/input-company-addtl-sites.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/input-company-addtl-sites.php",
+      "oA" : 1,
+      "oAP" : "\/components\/input-company-addtl-sites-output.php",
       "oF" : 0
     },
     "\/components\/input-company-competitors.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/input-company-competitors.php",
+      "oA" : 1,
+      "oAP" : "\/components\/input-company-competitors-output.php",
       "oF" : 0
     },
     "\/components\/input-company-vendor-history.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/input-company-vendor-history.php",
+      "oA" : 1,
+      "oAP" : "\/components\/input-company-vendor-history-output.php",
       "oF" : 0
     },
     "\/components\/input-social.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/input-social.php",
+      "oA" : 1,
+      "oAP" : "\/components\/input-social-output.php",
       "oF" : 0
     },
     "\/components\/kanban-card.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/kanban-card.php",
+      "oA" : 1,
+      "oAP" : "\/components\/kanban-card-output.php",
       "oF" : 0
     },
     "\/components\/kanban-swimlane.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/kanban-swimlane.php",
+      "oA" : 1,
+      "oAP" : "\/components\/kanban-swimlane-output.php",
       "oF" : 0
     },
     "\/components\/link-add-row.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/link-add-row.php",
+      "oA" : 1,
+      "oAP" : "\/components\/link-add-row-output.php",
       "oF" : 0
     },
     "\/components\/list-social-invert.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/list-social-invert.php",
+      "oA" : 1,
+      "oAP" : "\/components\/list-social-invert-output.php",
       "oF" : 0
     },
     "\/components\/list-social.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/list-social.php",
+      "oA" : 1,
+      "oAP" : "\/components\/list-social-output.php",
+      "oF" : 0
+    },
+    "\/components\/message-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/message-form-output.php",
       "oF" : 0
     },
     "\/components\/modal-actions.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-actions.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-actions-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-detail-event.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-detail-event.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-detail-event-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-detail-task.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-detail-task.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-detail-task-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-company-details.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-company-details.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-company-details-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-company.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-company.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-company-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-contact-details.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-contact-details.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-contact-details-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-contact.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-contact.php",
-      "oF" : 0
-    },
-    "\/components\/modal-board-form-email.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-email.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-contact-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-event.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-event.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-event-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-search.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-search.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-search-output.php",
+      "oF" : 0
+    },
+    "\/components\/modal-board-form-sequence-step.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-sequence-step-output.php",
       "oF" : 0
     },
     "\/components\/modal-board-form-task.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-board-form-task.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-board-form-task-output.php",
+      "oF" : 0
+    },
+    "\/components\/modal-email-full.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/modal-email-full-output.php",
       "oF" : 0
     },
     "\/components\/modal-form-bulk.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-form-bulk.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-bulk-output.php",
+      "oF" : 0
+    },
+    "\/components\/modal-form-email.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-email-output.php",
       "oF" : 0
     },
     "\/components\/modal-form-note.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-form-note.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-note-output.php",
       "oF" : 0
     },
     "\/components\/modal-form-proposed-products.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-form-proposed-products.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-proposed-products-output.php",
       "oF" : 0
     },
     "\/components\/modal-form-sales.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-form-sales.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-sales-output.php",
+      "oF" : 0
+    },
+    "\/components\/modal-form-sequence-addto.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-sequence-addto-output.php",
       "oF" : 0
     },
     "\/components\/modal-form-swimlane.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-form-swimlane.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-swimlane-output.php",
       "oF" : 0
     },
     "\/components\/modal-form-tags.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/modal-form-tags.php",
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-tags-output.php",
+      "oF" : 0
+    },
+    "\/components\/modal-form-template.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/modal-form-template-output.php",
       "oF" : 0
     },
     "\/components\/module-add-notes.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-add-notes.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-add-notes-output.php",
       "oF" : 0
     },
     "\/components\/module-company-detail-main.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-company-detail-main.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-company-detail-main-output.php",
       "oF" : 0
     },
     "\/components\/module-company-detail-utility.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-company-detail-utility.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-company-detail-utility-output.php",
       "oF" : 0
     },
     "\/components\/module-contact-detail-header.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-contact-detail-header.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-contact-detail-header-output.php",
       "oF" : 0
     },
     "\/components\/module-contact-detail-main.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-contact-detail-main.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-contact-detail-main-output.php",
       "oF" : 0
     },
     "\/components\/module-contact-detail-utility.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-contact-detail-utility.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-contact-detail-utility-output.php",
       "oF" : 0
     },
     "\/components\/module-detail-calling-card.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-detail-calling-card.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-detail-calling-card-output.php",
       "oF" : 0
     },
     "\/components\/module-detail-events.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-detail-events.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-detail-events-output.php",
       "oF" : 0
     },
     "\/components\/module-function-dropdown.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-function-dropdown.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-function-dropdown-output.php",
       "oF" : 0
     },
     "\/components\/module-notes.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-notes.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-notes-output.php",
+      "oF" : 0
+    },
+    "\/components\/module-sequence-settings.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/module-sequence-settings-output.php",
+      "oF" : 0
+    },
+    "\/components\/module-sequence-step.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/module-sequence-step-output.php",
       "oF" : 0
     },
     "\/components\/module-tags.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/module-tags.php",
+      "oA" : 1,
+      "oAP" : "\/components\/module-tags-output.php",
       "oF" : 0
     },
     "\/components\/note-form-simple.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/note-form-simple.php",
+      "oA" : 1,
+      "oAP" : "\/components\/note-form-simple-output.php",
       "oF" : 0
     },
     "\/components\/note-form.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/note-form.php",
+      "oA" : 1,
+      "oAP" : "\/components\/note-form-output.php",
+      "oF" : 0
+    },
+    "\/components\/note-row-email-footer-received.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-email-footer-received-output.php",
+      "oF" : 0
+    },
+    "\/components\/note-row-email-header-received.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-email-header-received-output.php",
+      "oF" : 0
+    },
+    "\/components\/note-row-email-header-sent.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-email-header-sent-output.php",
+      "oF" : 0
+    },
+    "\/components\/note-row-read-more.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-read-more-output.php",
+      "oF" : 0
+    },
+    "\/components\/note-row-task-footer.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-task-footer-output.php",
+      "oF" : 0
+    },
+    "\/components\/note-row-task-header.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-task-header-output.php",
       "oF" : 0
     },
     "\/components\/note-row.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/note-row.php",
+      "oA" : 1,
+      "oAP" : "\/components\/note-row-output.php",
       "oF" : 0
     },
     "\/components\/pagination-view-per-page.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/pagination-view-per-page.php",
+      "oA" : 1,
+      "oAP" : "\/components\/pagination-view-per-page-output.php",
       "oF" : 0
     },
     "\/components\/pagination.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/pagination.php",
+      "oA" : 1,
+      "oAP" : "\/components\/pagination-output.php",
       "oF" : 0
     },
     "\/components\/profile-image-micro.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/profile-image-micro.php",
+      "oA" : 1,
+      "oAP" : "\/components\/profile-image-micro-output.php",
       "oF" : 0
     },
     "\/components\/profile-image-small.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/profile-image-small.php",
+      "oA" : 1,
+      "oAP" : "\/components\/profile-image-small-output.php",
       "oF" : 0
     },
     "\/components\/profile-image.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/profile-image.php",
+      "oA" : 1,
+      "oAP" : "\/components\/profile-image-output.php",
       "oF" : 0
     },
     "\/components\/proposed-products-form.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/proposed-products-form.php",
+      "oA" : 1,
+      "oAP" : "\/components\/proposed-products-form-output.php",
       "oF" : 0
     },
     "\/components\/sales-form.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/sales-form.php",
+      "oA" : 1,
+      "oAP" : "\/components\/sales-form-output.php",
+      "oF" : 0
+    },
+    "\/components\/sequence-addto-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/sequence-addto-form-output.php",
+      "oF" : 0
+    },
+    "\/components\/sequence-step-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/sequence-step-form-output.php",
       "oF" : 0
     },
     "\/components\/swimlane-form.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/swimlane-form.php",
+      "oA" : 1,
+      "oAP" : "\/components\/swimlane-form-output.php",
       "oF" : 0
     },
     "\/components\/tag-clienttype.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/tag-clienttype.php",
+      "oA" : 1,
+      "oAP" : "\/components\/tag-clienttype-output.php",
       "oF" : 0
     },
     "\/components\/tags-form.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/tags-form.php",
+      "oA" : 1,
+      "oAP" : "\/components\/tags-form-output.php",
+      "oF" : 0
+    },
+    "\/components\/template-form.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/template-form-output.php",
       "oF" : 0
     },
     "\/components\/toolbar-contact.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/toolbar-contact.php",
+      "oA" : 1,
+      "oAP" : "\/components\/toolbar-contact-output.php",
       "oF" : 0
     },
     "\/components\/tooltip-actions.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/components\/tooltip-actions.php",
+      "oA" : 1,
+      "oAP" : "\/components\/tooltip-actions-output.php",
       "oF" : 0
     },
     "\/contact-detail.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/contact-detail.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/contact-detail-output.php",
+      "oF" : 1
     },
     "\/contacts.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/contacts.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/contacts-output.php",
+      "oF" : 1
     },
     "\/footer.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/footer.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/footer-output.php",
+      "oF" : 1
     },
     "\/header.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/header.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/header-output.php",
+      "oF" : 1
     },
     "\/includes\/nav-main.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/includes\/nav-main.php",
+      "oA" : 1,
+      "oAP" : "\/includes\/nav-main-output.php",
       "oF" : 0
     },
     "\/includes\/nav-sidebar.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/includes\/nav-sidebar.php",
+      "oA" : 1,
+      "oAP" : "\/includes\/nav-sidebar-output.php",
       "oF" : 0
     },
     "\/kanban.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/kanban.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/kanban-output.php",
+      "oF" : 1
     },
     "\/leads.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/leads.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/leads-output.php",
+      "oF" : 1
     },
     "\/login-forgot.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/login-forgot.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/login-forgot-output.php",
+      "oF" : 1
     },
     "\/login-reset.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/login-reset.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/login-reset-output.php",
+      "oF" : 1
     },
     "\/login.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/login.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/login-output.php",
+      "oF" : 1
+    },
+    "\/messages.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/messages-output.php",
+      "oF" : 1
     },
     "\/sales-tracking.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sales-tracking.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/sales-tracking-output.php",
+      "oF" : 1
+    },
+    "\/sequence-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/sequence-detail-output.php",
+      "oF" : 1
+    },
+    "\/sequence-members.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/sequence-members-output.php",
+      "oF" : 1
+    },
+    "\/sequences.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/sequences-output.php",
+      "oF" : 1
+    },
+    "\/settings.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/settings-output.php",
+      "oF" : 1
     },
     "\/tasks.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/tasks.php",
-      "oF" : 0
+      "oA" : 1,
+      "oAP" : "\/tasks-output.php",
+      "oF" : 1
+    },
+    "\/templates.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/templates-output.php",
+      "oF" : 1
     }
   },
   "hooks" : [
@@ -1782,6 +2308,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "1"
@@ -1942,6 +2472,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -1973,7 +2506,8 @@
         "active" : 1
       },
       "no-fallthrough" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowEmptyCase': false}"
       },
       "no-floating-decimal" : {
         "active" : 0
@@ -2079,6 +2613,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -2769,10 +3306,20 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
-
+      {
+        "autoOutputAction" : 1,
+        "autoOutputPathFilenamePattern" : "*-output.php",
+        "autoOutputPathRelativePath" : "",
+        "autoOutputPathReplace1" : "",
+        "autoOutputPathReplace2" : "",
+        "autoOutputPathStyle" : 0,
+        "fileExtension" : "php",
+        "htmlMinifierStyle" : 0,
+        "shouldRunCacheBuster" : 0
+      }
     ],
     "npmAbbreviatedPath" : "",
     "npmCreatePackageLock" : 1,
@@ -2821,10 +3368,14 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -2833,36 +3384,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
@@ -2895,7 +3446,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

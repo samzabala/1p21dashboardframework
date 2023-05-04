@@ -19,9 +19,9 @@ $args = app_parse_args($data,$defs);
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 			<input id="<?=$args['post']?>-team-lead-title-to-add" name="<?=$args['post']?>-team-lead-title-to-add" type="hidden" />
 
-			<label for="filter-<?=$args['post']?>-team-lead-title-to-add" class="input-label">Choose team member title</label>
+			<label for="filter-<?=$args['post']?>-team-lead-title-to-add" class="input input-label">Choose team member title</label>
 
-			<select id="filter-<?=$args['post']?>-team-lead-title-to-add" name="filter-<?=$args['post']?>-team-lead-title-to-add" type="text" class="input input-block input-select" />
+			<select id="filter-<?=$args['post']?>-team-lead-title-to-add" name="filter-<?=$args['post']?>-team-lead-title-to-add" type="text" class="input input-block input-box input-box-select" />
 			<?php app_get_component('components/options-team-lead-title') ?>
 			</select>
 		</div>
@@ -37,9 +37,9 @@ $args = app_parse_args($data,$defs);
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 			<input id="<?=$args['post']?>-team-lead-id-to-add" name="<?=$args['post']?>-team-lead-id-to-add" type="hidden" />
 
-			<label for="filter-<?=$args['post']?>-team-lead-to-add" class="input-label">Choose team member</label>
+			<label for="filter-<?=$args['post']?>-team-lead-to-add" class="input input-label">Choose team member</label>
 
-			<input id="filter-<?=$args['post']?>-team-lead-to-add" name="filter-<?=$args['post']?>-team-lead-to-add" type="text" class="input input-block input-single-line p" placeholder="Search for user" />
+			<input id="filter-<?=$args['post']?>-team-lead-to-add" name="filter-<?=$args['post']?>-team-lead-to-add" type="text" class="input input-block input-box p" placeholder="Search for user" />
 			<?php app_get_component('components/list-group-toggle-users') ?>
 		</div>
 

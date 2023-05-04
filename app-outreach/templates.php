@@ -1,12 +1,12 @@
 
 <div id="outreach-templates-heading">
-	<div  class="flex-grid justify-content-space-between align-items-center">
-		<div class="flex-col-xs-12 flex-col-sm-4">
+	<div  class="grid grid-flex justify-content-space-between align-items-center">
+		<div class="grid-col-xs-12 grid-col-sm-4">
 			<h1 class="no-margin">
 				Email Templates
 			</h1>
 		</div>
-		<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+		<div class="grid-col-xs-12 grid-col-sm-4 text-align-right">
 			<?php app_get_component('components/function-input-search') ?>
 			<div class="module-function function-add">
 				<a  href="#m-editor-template" data-modal-title="New Template" data-toggle-modal-default class="btn btn-primary btn-block-mobile">

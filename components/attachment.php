@@ -1,4 +1,4 @@
-<div class="asset flex-child p">
+<div class="asset grid-col p">
 	<!-- @IF file is a web image ( jpg,jpeg,png,gif ONLY... webp is not supported on safari yet) -->
 		<div class="asset-thumbnail" data-toggle="modal">
 			<!-- @NOTE this is thumbnail dimensions contained size-->

@@ -15,11 +15,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- PROJECT + ACC HEADER-->
 			<div class="h5 no-margin-top">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
 						<h5 class="no-margin-y">Project</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<a href="#post-side-team-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 					</div>
 				</div>
@@ -81,11 +81,11 @@ $args = app_parse_args($data,$defs);
 					<hr class="no-margin-bottom">
 
 					<!-- ASSIGNEES + DUE + PRIORITOOT-->
-						<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
+						<div class="grid grid-flex grid-fixed grid-constricted">
 
 
 							<?php if($args['post'] == 'task'): ?>
-								<div class="flex-col-xs-12">
+								<div class="grid-col-xs-12">
 									
 									<h5>Assigned To</h5>
 									<p class="task-assignees">
@@ -112,7 +112,7 @@ $args = app_parse_args($data,$defs);
 								</div>
 							<?php endif; ?>
 							
-								<div class="flex-col-xs-6 flex-col-md-7">
+								<div class="grid-col-xs-6 grid-col-md-7">
 									<h5>Due on</h5>
 									<p class="color-neutral task-due-date no-margin-bottom">
 										<!-- @if has due date -->
@@ -124,7 +124,7 @@ $args = app_parse_args($data,$defs);
 									</p>
 								</div>
 								<?php if($args['post'] == 'task' ): ?>
-									<div class="flex-col-xs-6 flex-col-md-5">
+									<div class="grid-col-xs-6 grid-col-md-5">
 										
 										<h5>Priority</h5>
 										<p class="color-neutral task-priority no-margin-bottom">

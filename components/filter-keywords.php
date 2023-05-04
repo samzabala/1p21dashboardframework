@@ -1,22 +1,22 @@
 <div class="filter-keywords-meta display-block module-function text-align-left">
 	<form action="/keywords/improved" method="get" class="flex-1-1">
 		<div class=" filter-profile input-group input-group-horizontal input-group-responsive input-block">
-			<span class="input-label">Filters</span>
+			<span class="input input-label">Filters</span>
 			<!-- @note hidden start fields here -->
-			<input type="text" placeholder="Keyword" name="filter-keyword" class="input input-single-line" />
+			<input type="text" placeholder="Keyword" name="filter-keyword" class="input input-box" />
 			
 			
-			<input type="text" placeholder="Domain" name="filter-domain" class="input input-single-line" />
+			<input type="text" placeholder="Domain" name="filter-domain" class="input input-box" />
 			
 			
 			<!-- @placeholder option:not([selected]) -->
-			<select class="input input-select"  name="filter-tops">
+			<select class="input input-box input-box-select"  name="filter-tops">
 				<option value="" selected>All Results</option>
 				<option value="">Top 10 only</option>
 			</select>
 			
 			<!-- @placeholder option:not([selected]) -->
-			<a href="#" data-toggle="dropdown" class="input input-select">Result Type</a>
+			<a href="#" data-toggle="dropdown" class="input input-box input-box-select">Result Type</a>
 
 			<!-- @note hidden fields end here -->
 			<button class="btn btn-primary">Apply Filters</button>

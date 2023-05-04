@@ -11,9 +11,9 @@
         <div class="container">
             <form action="">
                 <div class="timetracker-timer-wrapper padding-large-y">
-                    <div class="flex-grid flex-grid-no-gutter-y justify-content-space-between align-items-center">
-                        <div class="flex-child">
-                            <div class="special-secondary text-leading-whole inline-flex no-margin ">
+                    <div class="grid grid-flex grid-constricted-y justify-content-space-between align-items-center">
+                        <div class="grid-col">
+                            <div class="special-secondary text-leading-constricted inline-flex no-margin ">
                                 <div class="hours">
                                     <span class="REPLACE">00</span>
                                 </div>
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-child">
+                        <div class="grid-col">
                             <!-- @NOTE button
                         
                                 classes to add
@@ -66,29 +66,29 @@
                         </div>
 
 
-                <div class="flex-grid flex-grid-compact flex-grid-fixed theme-default background-transparent margin-bottom">
+                <div class="grid grid-flex grid-compact grid-flex-fixed theme-default background-transparent margin-bottom">
 
                     <!-- @if team member is seo -->
-                        <div class="flex-col-12">
+                        <div class="grid-col-12">
                             <?php app_get_component('components/input-task-client'); ?>
                         </div>
 
                     <!-- @if team member is seo -->
-                        <div class="flex-col-12">
+                        <div class="grid-col-12">
                             <?php app_get_component('components/input-task-project'); ?>
                         </div>
                     
-                    <div class="flex-col-12">
+                    <div class="grid-col-12">
                         <?php app_get_component('components/input-task-category'); ?>
                     </div>
 
                     <!-- @if team member is seo -->
-                        <div class="flex-col-12">
+                        <div class="grid-col-12">
                             <?php app_get_component('components/input-task-name'); ?>
                         </div>
 
                     <!-- @if team member is Production Team -->
-                        <div class="flex-col-12">
+                        <div class="grid-col-12">
                             <?php app_get_component('components/input-task-notes'); ?>
                         </div>
                 </div>

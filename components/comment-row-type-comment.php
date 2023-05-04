@@ -1,12 +1,12 @@
 <div
-class="comment-header flex-grid flex-grid-compact align-items-center flex-grid-fixed flex-nowrap align-items-center">
-	<div class="flex-child flex-1-1 no-margin-top">
+class="comment-header grid grid-flex grid-compact align-items-center grid-fixed flex-nowrap align-items-center">
+	<div class="grid-col flex-1-1 no-margin-top">
 		<div
-		class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap align-items-space-around flex-grid-no-gutter-y">
-			<div class="no-margin-top flex-child">
+		class="grid grid-flex grid-compact grid-fixed flex-nowrap align-items-space-around grid-constricted-y">
+			<div class="no-margin-top grid-col">
 				<?php app_get_component('components/profile-image-small'); ?>
 			</div>
-			<div class="no-margin-top flex-child text-wrap-ellipsis font-weight-400 no-margin-y color-primary-hover">
+			<div class="no-margin-top grid-col text-wrap-ellipsis font-weight-400 no-margin-y color-primary-hover">
 				<a class="color-inherit font-weight-700" href="<?=app_create_link(array('template'=>'profile')) ?>">
 					<span class="REPLACE">Profile name</span>
 				</a>
@@ -23,7 +23,7 @@ class="comment-header flex-grid flex-grid-compact align-items-center flex-grid-f
 		</div>
 	</div>
 
-	<div class="flex-child flex-0-0 no-margin-top">
+	<div class="grid-col flex-0-0 no-margin-top">
 		<?php app_get_component('components/tooltip-action-with-reply'); ?>
 	</div>
 </div>

@@ -2,8 +2,8 @@
 
 <ul class="attachment-list list-group list-group-interactive">
 	<li class="pointer-reference">
-		<div class="flex-grid justify-content-space-between align-items-center flex-grid-fixed flex-grid-no-gutter-y">
-			<div class="flex-col-2 text-align-right">
+		<div class="grid grid-flex justify-content-space-between align-items-center grid-flex-fixed grid-constricted-y">
+			<div class="grid-col-2 text-align-right">
 				<!-- @if attachment is a web image (jpg,png,gif,etc) -->
 					<div class="attachment-thumbnail asset">
 						<div class="asset-thumbnail">
@@ -47,7 +47,7 @@
 					</div>
 				</div> -->
 			</div>
-			<div class="flex-col-4">
+			<div class="grid-col-4">
 
 				<span class="attachement-filename text-wrap-ellipsis">
 					<span class="REPLACE">filename.virus</span>
@@ -58,17 +58,17 @@
 				</span>
 
 			</div>
-			<div class="hide-xs flex-col-2">
+			<div class="hide-xs grid-col-2">
 				<span class="attachement-date-added">
 					<span class="REPLACE">4/20/69</span>
 				</span>
 			</div>
-			<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+			<div class="grid-col-xs-4 grid-col-sm-2 text-align-right">
 				<span class="attachement-adder">
 					<span class="REPLACE">Iris Wilson</span>
 				</span>
 			</div>
-			<div class="flex-col-2 text-align-right">
+			<div class="grid-col-2 text-align-right">
 				<a class="only-hover color-primary color-secondary-hover" target="_blank" href="#REPLACEWithFilePathForDownloading" ><i class="symbol symbol-download"></i></a>
 			</div>
 		</div>
@@ -78,15 +78,15 @@
 	<?php for($i=1; $i<10; $i++){ ?>
 	
 		<li class="pointer-reference">
-			<div class="flex-grid justify-content-space-between align-items-center flex-grid-fixed flex-grid-no-gutter-y">
-				<div class="flex-col-2 text-align-right">
+			<div class="grid grid-flex justify-content-space-between align-items-center grid-flex-fixed grid-constricted-y">
+				<div class="grid-col-2 text-align-right">
 					<div class="attachment-thumbnail asset">
 						<div class="asset-thumbnail">
 							<span data-asset-extension="csv" class="asset-image asset-image-table font-size-small"></span>
 						</div>
 					</div>
 				</div>
-				<div class="flex-col-4">
+				<div class="grid-col-4">
 
 					<span class="attachement-filename text-wrap-ellipsis">
 						<span class="REPLACE">filename.virus</span>
@@ -97,17 +97,17 @@
 					</span>
 
 				</div>
-				<div class="hide-xs flex-col-2">
+				<div class="hide-xs grid-col-2">
 					<span class="attachement-date-added">
 						<span class="REPLACE">4/20/69</span>
 					</span>
 				</div>
-				<div class="flex-col-xs-4 flex-col-sm-2 text-align-right">
+				<div class="grid-col-xs-4 grid-col-sm-2 text-align-right">
 					<span class="attachement-adder">
 						<span class="REPLACE">Iris Wilson</span>
 					</span>
 				</div>
-				<div class="flex-col-2 text-align-right">
+				<div class="grid-col-2 text-align-right">
 					<a class="only-hover color-primary color-secondary-hover" target="_blank" href="#REPLACEWithFilePathForDownloading" ><i class="symbol symbol-download"></i></a>
 				</div>
 			</div>

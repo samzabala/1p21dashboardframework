@@ -17,11 +17,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- TIME TRACKING + ACC HEADER -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
 						<h5 class="no-margin-y">Time Tracking</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 					
 						<?php if($args['post'] == 'task'): ?>
 							<a href="#"  data-toggle="modal" data-modal-title="REPLACwith<?=$args['post'];?>Title" class="btn btn-primary-outline btn-small">Time <i class="symbol symbol-plus"></i></a>
@@ -150,8 +150,8 @@ $args = app_parse_args($data,$defs);
 
 
 				<!-- TIME LOGGED + ESTIMATE -->
-					<div class="flex-grid flex-grid-compact flex-grid-fixed flex-grid-no-gutter">
-						<div class="flex-col-xs-6">
+					<div class="grid grid-flex grid-compact grid-fixed grid-constricted">
+						<div class="grid-col-xs-6">
 							<p class="<?=$args['post']?>-time-logged no-margin">
 								<span class="REPLACE">6h 9m</span>
 							</p>
@@ -161,7 +161,7 @@ $args = app_parse_args($data,$defs);
 						</div>
 
 
-						<div class="flex-col-xs-6">
+						<div class="grid-col-xs-6">
 							<p class="<?=$args['post']?>-time-estimate no-margin">
 								<span class="REPLACE">9h 6m</span>
 							</p>

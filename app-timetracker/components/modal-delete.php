@@ -27,16 +27,16 @@ $args = app_parse_args($data,$defs);
 
 		<label class="input-toggle input-toggle-primary padding-small-y p">
 			<input type="checkbox" class="input"> 
-			<span class="input-label input-toggle-label font-weight-700">
+			<span class="input input-label input-toggle-label font-weight-700">
 					Delete from Wrike
 			</span>
 		</label>
 
-		<div class="flex-grid flex-grid-compact flex-grid-fixed">
-			<div class="flex-col-xs-12 flex-col-sm-6">
+		<div class="grid grid-flex grid-compact grid-flex-fixed">
+			<div class="grid-col-xs-12 grid-col-sm-6">
 				<button class="btn btn-theme btn-block">Delete</button>
 			</div>
-			<div class="flex-col-xs-12 flex-col-sm-6">
+			<div class="grid-col-xs-12 grid-col-sm-6">
 				<a href="#" data-toggle-modal-default-close class="btn btn-theme-outline btn-block font-weight-400">Cancel</a>
 			</div>
 		</div>

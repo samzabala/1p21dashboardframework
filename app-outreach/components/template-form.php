@@ -1,12 +1,12 @@
 
 <form action="" class="template-editor">
 	<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-		<label class="input-label">Template Name</label>
-		<input type="text" class="input input-single-line" placeholder="Type a name for the template">
+		<label class="input input-label">Template Name</label>
+		<input type="text" class="input input-box" placeholder="Type a name for the template">
 	</div>
 	<div class="input-wrapper input-wrapper-vertical p">
-		<label class="input-label">Template Type</label>
-		<select class="input input-select">
+		<label class="input input-label">Template Type</label>
+		<select class="input input-box input-box-select">
 			<option value="">Select Type...</option>
 			<!-- @PLACEHOLDER: Delete when ready -->
 			<option value="">Company</option>
@@ -16,17 +16,17 @@
 	</div>
 
 	<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-		<label class="input-label">Subject</label>
-		<input type="text" class="input input-single-line" placeholder="Type a name for the template">
+		<label class="input input-label">Subject</label>
+		<input type="text" class="input input-box" placeholder="Type a name for the template">
 	</div>
 
 	<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-		<label class="input-label">Message</label>
-		<textarea name="" id="" class="input input-multiple-line"  cols="30" rows="10"></textarea>
+		<label class="input input-label">Message</label>
+		<textarea name="" id="" class="input input-box input-box-multiline"  cols="30" rows="10"></textarea>
 	</div>
 
-	<div class="flex-grid flex-grid-compact align-items-flex-end">
-		<div class="flex-child flex-1-0">
+	<div class="grid grid-flex grid-compact align-items-flex-end">
+		<div class="grid-col flex-1-0">
 			<h5 class="no-margin-y">Customizeable Fields</h5>
 
 			<!-- hidden input fields here if needed -->
@@ -41,7 +41,7 @@
 			<a href="#" class="btn btn-small btn-primary-glassy margin-micro-top">ARC Score</a>
 
 		</div>
-		<div class="flex-child flex-1-1 text-align-right">
+		<div class="grid-col flex-1-1 text-align-right">
 		<button  class="btn btn-primary " type="submit">Save Template</button>
 		</div>
 	</div>

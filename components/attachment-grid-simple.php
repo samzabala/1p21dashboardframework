@@ -2,8 +2,8 @@
 
 <ul class="attachment-list list-group-compact list-group list-group-interactive">
 	<li>
-		<div class="flex-grid justify-content-space-between align-items-center flex-grid-fixed flex-grid-no-gutter-y">
-			<div class="flex-col-9">
+		<div class="grid grid-flex justify-content-space-between align-items-center grid-fixed grid-constricted-y">
+			<div class="grid-col-9">
 
 				<span class="attachement-filename text-wrap-ellipsis">
 					<span class="REPLACE">filename.virus</span>
@@ -14,7 +14,7 @@
 				</span>
 
 			</div>
-			<div class="flex-col-3 text-align-right">
+			<div class="grid-col-3 text-align-right">
 
 				<a class="color-primary color-secondary-hover" href="#" onclick="REPLACEwithFnToFeleteAttachment"><i class="symbol symbol-close"></i></a>
 			</div>
@@ -25,8 +25,8 @@
 	<?php for($i=1; $i<10; $i++){ ?>
 
 		<li>
-			<div class="flex-grid justify-content-space-between align-items-center flex-grid-fixed flex-grid-no-gutter-y">
-				<div class="flex-col-9">
+			<div class="grid grid-flex justify-content-space-between align-items-center grid-fixed grid-constricted-y">
+				<div class="grid-col-9">
 
 					<span class="attachement-filename text-wrap-ellipsis">
 						<span class="REPLACE">filename.virus</span>
@@ -37,7 +37,7 @@
 					</span>
 
 				</div>
-				<div class="flex-col-3 text-align-right">
+				<div class="grid-col-3 text-align-right">
 
 					<a class="color-primary color-secondary-hover" href="#" onclick="REPLACEwithFnToFeleteAttachment"><i class="symbol symbol-close"></i></a>
 				</div>

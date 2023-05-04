@@ -31,7 +31,7 @@
                         <?php } ?>
 
         <div class="margin-top">
-            <label class="input-label sr-only">Tags</label>
+            <label class="input input-label sr-only">Tags</label>
             <input type="text" class="input input-blend input-block no-border" placeholder="Type to search or add tags...">
         </div>
     </div>

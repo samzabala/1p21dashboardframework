@@ -9,11 +9,11 @@ $args = app_parse_args($data,$defs);
 
 <form action="" class="commentes-editor">
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-		<textarea name="comment-REPLACESUFFIX" id="comment-REPLACESUFFIX" cols="30" rows="10" class="input input-multiple-line">Body comment. will be replaced by tinymce</textarea>
+		<textarea name="comment-REPLACESUFFIX" id="comment-REPLACESUFFIX" cols="30" rows="10" class="input input-box input-box-multiline">Body comment. will be replaced by tinymce</textarea>
 	</div>
 	<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-		<label for="comment-attachments-REPLACESUFFIX" class="input-label">Add Attachments</label>
-		<input type="file" name="comment-attachments-REPLACESUFFIX"  id="comment-attachments-REPLACESUFFIX" class="input input-single-line" />
+		<label for="comment-attachments-REPLACESUFFIX" class="input input-label">Add Attachments</label>
+		<input type="file" name="comment-attachments-REPLACESUFFIX"  id="comment-attachments-REPLACESUFFIX" class="input input-box" />
 	</div>
 
 

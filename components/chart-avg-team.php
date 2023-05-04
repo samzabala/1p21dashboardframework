@@ -316,7 +316,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
         
 
         this.legends = this.container.append('div')
-          .attr('class','flex-grid flex-grid-fixed flex-grid-compact');
+          .attr('class','grid grid-flex grid-fixed grid-compact');
 
         
         this.yAxis = this.svg.append('g')
@@ -568,7 +568,7 @@ this is the hellhole. Copy everything in the following script tag and paste wher
         WBC.legend_enter = WBC.legend.enter()
           .append('div')
           .attr('class',(d)=>{
-            return 'legend-item flex-col-xs-12 flex-col-sm-6 flex-col-md-3'
+            return 'legend-item grid-col-xs-12 grid-col-sm-6 grid-col-md-3'
           })
           ;
 

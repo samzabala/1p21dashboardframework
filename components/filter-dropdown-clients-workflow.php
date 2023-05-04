@@ -1,6 +1,6 @@
 <div class="module-function filter-input-group-client">
 	<form action="" class=" filter-profile input-group input-group-horizontal input-block-mobile text-align-left">
-		<select name="filter-meta-key" id="" class="input input-single-line input-select dashboard-filter-meta-key">
+		<select name="filter-meta-key" id="" class="input input-box input-box input-box-select dashboard-filter-meta-key">
 			<option value="">Filter by</option>
 			<option value="rep">Rep</option>
 			<option value="accountmanager">Acct Manager</option>

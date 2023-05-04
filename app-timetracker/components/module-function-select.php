@@ -19,10 +19,10 @@ $args = app_parse_args($data,$defs);
 <div class="function-filter-<?=$args['slug']; ?> position-relative">
 	<?php if($args['label']): ?>
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block no-padding no-margin">
-			<label for="filter-<?=$args['slug']; ?>" class="input-label no-padding-top padding-small-bottom"><?=$args['label']; ?></label>
+			<label for="filter-<?=$args['slug']; ?>" class="input input-label no-padding-top padding-small-bottom"><?=$args['label']; ?></label>
 		<?php endif; ?>
 			
-			<select id="filter-<?=$args['slug']; ?>" placeholder="<?=$args['title']; ?>" class="input input-single-line input-block" list="<?=$args['slug']; ?>">
+			<select id="filter-<?=$args['slug']; ?>" placeholder="<?=$args['title']; ?>" class="input input-box input-block" list="<?=$args['slug']; ?>">
 				<option value=""><?=$args['title']; ?></option>
 					<!-- @PLACEHOLDER: Delete when ready -->
 					<?php foreach($args['items'] as $i => $item): ?>

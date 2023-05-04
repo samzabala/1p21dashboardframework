@@ -23,11 +23,11 @@ data-modal-classes="record-notes-modal" data-modal-disable-overlay="false">
 
 			<!-- @LOOP LI -->
 				<li class="list-group-item no-padding-x">
-					<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-						<a href="/placeholder/files/shrek.jpg" target="_blank" class="flex-col-4">
+					<div class="grid grid-flex grid-fixed grid-constricted-y">
+						<a href="/placeholder/files/shrek.jpg" target="_blank" class="grid-col-4">
 							<img src="/placeholder/files/shrek.jpg">
 						</a>
-						<div class="flex-col-8"> 
+						<div class="grid-col-8"> 
 
 							<a href="/placeholder/files/shrek.jpg" class="text-wrap-ellipsis text-decoration-none p">
 								<span class="file-name">

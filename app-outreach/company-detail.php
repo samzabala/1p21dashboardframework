@@ -1,11 +1,11 @@
 <div
 	id="outreach-company-detail"
-	class="flex-grid flex-grid-fixed">
-	<div class="flex-col-xs-12 flex-col-md-8">
+	class="grid grid-flex grid-flex-fixed">
+	<div class="grid-col-xs-12 grid-col-md-8">
 	<!-- Main -->
 		<?php app_get_component('components/module-company-detail-main') ?>
 	</div>
-	<div class="flex-col-xs-12 flex-col-md-4">
+	<div class="grid-col-xs-12 grid-col-md-4">
 		<div class="module-grid">
 			<!-- Utility Contact -->
 				<?php app_get_component('components/module-company-detail-utility') ?>

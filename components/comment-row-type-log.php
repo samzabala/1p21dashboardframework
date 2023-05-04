@@ -1,9 +1,9 @@
 <div
-class="timetrack-header flex-grid flex-grid-compact align-items-center flex-grid-fixed flex-nowrap align-items-space-around">
-	<div class="no-margin-top flex-child">
+class="timetrack-header grid grid-flex grid-compact align-items-center grid-fixed flex-nowrap align-items-space-around">
+	<div class="no-margin-top grid-col">
 		<?php app_get_component('components/profile-image-small'); ?>
 	</div>
-	<div class="no-margin-top flex-child text-wrap-ellipsis font-weight-400 no-margin-y color-primary-hover">
+	<div class="no-margin-top grid-col text-wrap-ellipsis font-weight-400 no-margin-y color-primary-hover">
 		<a class="color-inherit" href="<?=app_create_link(array('template'=>'profile')) ?>">
 			<span class="REPLACE">Profile name</span>
 		</a>

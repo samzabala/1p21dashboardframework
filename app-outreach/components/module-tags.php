@@ -1,6 +1,6 @@
 <div class="module">
     <div class="module-header">
-    <div class="module-header module-header-break">
+    <div class="module-header module-end-break">
 		<h3 class="module-title">Tags</h3>
 		<div class="module-functions">
             <div class="nav-function">

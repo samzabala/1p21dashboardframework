@@ -7,7 +7,7 @@ $defs = array(
 $args = app_parse_args($data,$defs);
 ?>
 <div class="module" >
-	<div class="module-header module-header-break">
+	<div class="module-header module-end-break">
 		<h3 class="module-title">Upcoming Events and Tasks</h3>
 		<div class="module-functions">
 			<?php if($args['has_add_event']): ?>

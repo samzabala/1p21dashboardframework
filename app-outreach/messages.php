@@ -1,7 +1,7 @@
 
 <div id="outreach-messages-heading">
-	<div  class="flex-grid justify-content-space-between align-items-center">
-		<div class="flex-col-xs-12">
+	<div  class="grid grid-flex justify-content-space-between align-items-center">
+		<div class="grid-col-xs-12">
 			<p class="font-weight-700 text-transform-uppercase no-margin-bottom">Sales Outreach</p>
 			<h1 class="no-margin">
 				<?= 
@@ -11,10 +11,10 @@
 					'Inbox' )); ?>
 			</h1>
 		</div>
-		<div class="flex-col-xs-12 flex-col-md-3">
+		<div class="grid-col-xs-12 grid-col-md-3">
 			<?php app_get_component('components/function-input-search') ?>
 		</div>
-		<div class="flex-col-xs-12 flex-col-md-9 text-align-right">
+		<div class="grid-col-xs-12 grid-col-md-9 text-align-right">
 			<?php app_get_component('components/function-filter-messages') ?>
 			<div class="module-function function-add margin-large-left">
 				<a  href="#m-editor-email" data-toggle-modal-default class="btn btn-primary btn-block-mobile">
@@ -119,8 +119,8 @@
 						<div class="modal modal-default" id="m-contact-status-REPLACEWITHID" data-modal-width="400px" data-modal-title="Set Status to">
 							<form action="">
 								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-									<label for="" class="input-label sr-only">Change Status To</label>
-									<select name="contact-status" id="" class="input-select">
+									<label for="" class="input input-label sr-only">Change Status To</label>
+									<select name="contact-status" id="" class="input-box input-box-select">
 										<option value="">Select</option>
 										<option value="client">Client</option>
 										<option value="lead">Lead</option>
@@ -207,8 +207,8 @@
 									<div class="modal modal-default" id="m-contact-status-<?= $i ?>" data-modal-width="400px" data-modal-title="Set Status to">
 										<form action="">
 											<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-												<label for="" class="input-label sr-only">Change Status To</label>
-												<select name="contact-status" id="" class="input-select">
+												<label for="" class="input input-label sr-only">Change Status To</label>
+												<select name="contact-status" id="" class="input-box input-box-select">
 													<option value="">Select</option>
 													<option value="client">Client</option>
 													<option value="lead">Lead</option>

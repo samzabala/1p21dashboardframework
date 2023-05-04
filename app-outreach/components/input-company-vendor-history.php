@@ -8,7 +8,7 @@ Modal from framework/src/js/imports/form
 
 	<div class="input-group input-group-horizontal input-block">
 		<input
-			type="text" size="12" class="input input-single-line"
+			type="text" size="12" class="input input-box"
 			placeholder="Vendor Name"
 			id="company-vendor-history-row[REPLACE]-name"
 			name="company-vendor-history-row[REPLACE]-name"
@@ -25,7 +25,7 @@ Modal from framework/src/js/imports/form
 	
 	<div id="company-vendor-history-row-REPLACE-dropdown-start-date" class="dropdown dropdown-right dropdown-top-flush" data-dropdown-width="100%">
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="" class="input-label">Start Date</label>
+				<label for="" class="input input-label">Start Date</label>
 				<input
 					type="text" size="12" class="input input-calendar input-block no-border no-padding"
 					placeholder="1990 - Present"
@@ -39,7 +39,7 @@ Modal from framework/src/js/imports/form
 			
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-				<label for="company-vendor-history-row[REPLACE]-date-end" class="input-label">End Date</label>
+				<label for="company-vendor-history-row[REPLACE]-date-end" class="input input-label">End Date</label>
 				<input
 					type="text" size="12" class="input input-calendar input-block no-border no-padding"
 					placeholder="1990 - Present"

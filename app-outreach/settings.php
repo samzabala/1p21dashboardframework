@@ -1,6 +1,6 @@
 
-<div id="outreach-settings-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12">
+<div id="outreach-settings-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-xs-12">
 		<h1 class="no-margin">Settings</h1>
 	</div>
 </div>
@@ -10,26 +10,26 @@
 			<form action="">
 				<h4 class="color-primary no-margin-y">General Information</h4>
 	
-				<div class="flex-grid flex-grid-fixed">
-					<div class="flex-col-xs-12 flex-col-sm-6">
+				<div class="grid grid-flex grid-flex-fixed">
+					<div class="grid-col-xs-12 grid-col-sm-6">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-							<label class="input-label" for="first_name">First Name</label>
-							<input type="text"  name="first_name" id="first_name" class=" input input-single-line" placeholder="First Name">
+							<label class="input input-label" for="first_name">First Name</label>
+							<input type="text"  name="first_name" id="first_name" class=" input input-box" placeholder="First Name">
 						</div>
 					</div>
-					<div class="flex-col-xs-12 flex-col-sm-6">
+					<div class="grid-col-xs-12 grid-col-sm-6">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-							<label class="input-label" for="last_name">Last Name</label>
-							<input type="text"  name="last_name" id="last_name" class=" input input-single-line" placeholder="Last Name">
+							<label class="input input-label" for="last_name">Last Name</label>
+							<input type="text"  name="last_name" id="last_name" class=" input input-box" placeholder="Last Name">
 						</div>
 					</div>
-					<div class="flex-col-xs-12">
+					<div class="grid-col-xs-12">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-							<label class="input-label" for="email">Email</label>
-							<input type="text"  name="email" id="email" class="input-single-line input" placeholder="email@domain.com">
+							<label class="input input-label" for="email">Email</label>
+							<input type="text"  name="email" id="email" class="input-box input" placeholder="email@domain.com">
 						</div>
 					</div>
-					<div class="flex-col-xs-12">
+					<div class="grid-col-xs-12">
 						<button class="btn btn-large btn-primary-gradient font-size-normalize">Save</button>
 					</div>
 				</div>
@@ -40,17 +40,17 @@
 			<form action="">
 				<h4 class="color-primary no-margin-bottom margin-large-top">Change Password</h4>
 	
-				<div class="flex-grid flex-grid-fixed">
-					<div class="flex-col-xs-12 flex-col-sm-6">
+				<div class="grid grid-flex grid-flex-fixed">
+					<div class="grid-col-xs-12 grid-col-sm-6">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-							<label class="input-label" for="first_name">New Password</label>
+							<label class="input input-label" for="first_name">New Password</label>
 							<div class="input-group input-group-horizontal input-block">
 								<!-- @NOTE
 									input
 										dynamic attributes:
 											type => toggles to either text or password
 								-->
-								<input type="password"  name="first_name" id="first_name" class=" input input-single-line" placeholder="First Name">
+								<input type="password"  name="first_name" id="first_name" class=" input input-box" placeholder="First Name">
 								<!--
 									@NOTE:
 									classes to add:
@@ -61,16 +61,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex-col-xs-12 flex-col-sm-6">
+					<div class="grid-col-xs-12 grid-col-sm-6">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-							<label class="input-label" for="last_name">Repeat Password</label>
+							<label class="input input-label" for="last_name">Repeat Password</label>
 							<div class="input-group input-group-horizontal input-block">
 								<!-- @NOTE
 									input
 										dynamic attributes:
 											type => toggles to either text or password
 								-->
-								<input type="password"  name="last_name" id="last_name" class=" input input-single-line" placeholder="Last Name">
+								<input type="password"  name="last_name" id="last_name" class=" input input-box" placeholder="Last Name">
 								<!--
 									@NOTE:
 									classes to add:
@@ -81,7 +81,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex-col-xs-12">
+					<div class="grid-col-xs-12">
 						<button class="btn btn-large btn-primary-gradient font-size-normalize">Save</button>
 					</div>
 				</div>
@@ -89,11 +89,11 @@
 		
 		<!-- Mailbox -->
 
-			<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y align-items-flex-end">
-				<div class="flex-col-xs-12 flex-col-sm-6">
+			<div class="grid grid-flex grid-compact justify-content-space-between grid-constricted-y align-items-flex-end">
+				<div class="grid-col-xs-12 grid-col-sm-6">
 					<h4 class="color-primary no-margin-bottom margin-large-top">Mailboxes</h4>
 				</div>
-				<div class="flex-child flex-0-0">
+				<div class="grid-col flex-0-0">
 					<a href="#m-settings-mailbox-add" class="btn btn-primary-outline" data-toggle-modal-default>Add mailbox <i class="symbol symbol-plus"></i></a>
 					<div id="m-settings-mailbox-add" class="modal modal-default" data-modal-width="360px">
 						<div class="text-align-center">
@@ -148,7 +148,7 @@
 								<label for="email-send" class=" margin-small-top margin-small-right">Send</label>
 								<div id="email-send" name="email-send" class="input-toggle input-large">
 									<input type="checkbox" class="input">
-									<label for="email-send" class="input-label input-toggle-label">
+									<label for="email-send" class="input input-label input-toggle-label">
 										<div class="sr-only">Toggle send enabled</div>
 									</label>
 								</div>
@@ -156,19 +156,19 @@
 						</td>
 						<td width="250">
 							
-							<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between align-items-center flex-grid-no-gutter-y">
-								<div class="flex-child flex-0-0">
+							<div class="task-toggle-reminder-wrapper grid grid-flex grid-compact grid-flex-fixed justify-content-space-between align-items-center grid-constricted-y">
+								<div class="grid-col flex-0-0">
 									<div class="inline-flex-xs align-items-center">
 										<label for="email-sync" class=" margin-small-top margin-small-right">Sync</label>
 										<div id="email-sync" name="email-sync" class="input-toggle input-large">
 											<input type="checkbox" class="input">
-											<label for="email-send" class="input-label input-toggle-label">
+											<label for="email-send" class="input input-label input-toggle-label">
 												<div class="sr-only">Toggle sync enabled</div>
 											</label>
 										</div>
 									</div>
 								</div>
-								<div class="flex-child flex-1-1">
+								<div class="grid-col flex-1-1">
 									<div class="font-size-small color-neutral margin-small-top">
 										synced <span class="REPLACE">a year</span> ago
 									</div>
@@ -182,7 +182,7 @@
 								</label>
 								<div id="email-send" name="email-send" class="input-toggle input-large">
 									<input type="checkbox" class="input">
-									<label for="email-send" class="input-label input-toggle-label">
+									<label for="email-send" class="input input-label input-toggle-label">
 										<div class="sr-only">Toggle track opens</div>
 									</label>
 								</div>
@@ -196,7 +196,7 @@
 								</label>
 								<div id="email-send" name="email-send" class="input-toggle input-large">
 									<input type="checkbox" class="input">
-									<label for="email-send" class="input-label input-toggle-label">
+									<label for="email-send" class="input input-label input-toggle-label">
 									<div class="sr-only">Toggle track clicks</div>
 									</label>
 								</div>
@@ -256,7 +256,7 @@
 										<label for="email-send" class=" margin-small-top margin-small-right">Send</label>
 										<div id="email-send" name="email-send" class="input-toggle input-large ">
 											<input type="checkbox" class="input"  <?= ( $i % 2 == 0) ? 'checked' : '' ?>>
-											<label for="email-send" class="input-label input-toggle-label">
+											<label for="email-send" class="input input-label input-toggle-label">
 												<div class="sr-only">
 													Toggle Send
 												</div>
@@ -266,13 +266,13 @@
 								</td>
 								<td>
 									
-									<div class="task-toggle-reminder-wrapper flex-grid flex-grid-compact flex-grid-fixed justify-content-space-between align-items-center flex-grid-no-gutter-y">
-										<div class="flex-child flex-0-0">
+									<div class="task-toggle-reminder-wrapper grid grid-flex grid-compact grid-flex-fixed justify-content-space-between align-items-center grid-constricted-y">
+										<div class="grid-col flex-0-0">
 											<div class="inline-flex-xs align-items-center">
 												<label for="email-sync" class=" margin-small-top margin-small-right">Sync</label>
 												<div id="email-sync" name="email-sync" class="input-toggle input-large">
 													<input type="checkbox" class="input" <?= ( $i % 3 == 0) ? 'checked' : '' ?>>
-													<label for="email-send" class="input-label input-toggle-label">
+													<label for="email-send" class="input input-label input-toggle-label">
 														<div class="sr-only">
 															Toggle Sync
 														</div>
@@ -280,7 +280,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="flex-child flex-1-1">
+										<div class="grid-col flex-1-1">
 											<div class="font-size-small color-neutral margin-small-top">
 												synced <span class="REPLACE">69 seconds</span> ago
 											</div>
@@ -294,7 +294,7 @@
 										</label>
 										<div id="email-send" name="email-send" class="input-toggle input-large">
 											<input type="checkbox" class="input">
-											<label for="email-send" class="input-label input-toggle-label">
+											<label for="email-send" class="input input-label input-toggle-label">
 												<div class="sr-only">Toggle track opens</div>
 											</label>
 										</div>
@@ -308,7 +308,7 @@
 										</label>
 										<div id="email-send" name="email-send" class="input-toggle input-large">
 											<input type="checkbox" class="input">
-											<label for="email-send" class="input-label input-toggle-label">
+											<label for="email-send" class="input input-label input-toggle-label">
 											<div class="sr-only">Toggle track clicks</div>
 											</label>
 										</div>

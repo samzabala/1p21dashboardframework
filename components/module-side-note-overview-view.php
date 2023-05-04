@@ -40,9 +40,9 @@ $args = app_parse_args($data,$defs);
 
 		<!-- Sher -->
 			<div class="h5 no-margin-y">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Shared With:</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Shared With:</h5>
 					</div>
 				</div>
 			</div>

@@ -11,9 +11,9 @@
     <!-- @loop li -->
         <li class="list-group-item no-padding background-transparent">
             <div class="padding">
-                <div class="flex-grid flex-grid-no-gutter flex-grid-fixed align-items-center justify-content-space-between">
+                <div class="grid grid-flex grid-constricted grid-flex-fixed align-items-center justify-content-space-between">
                     <?php if($args['has_toggle']): ?>
-                        <div class="flex-col-2">
+                        <div class="grid-col-2">
                             <form action="">
                                 <!-- @note hidden fields here -->
                                 <!-- 
@@ -32,13 +32,13 @@
                         </div>
                     <?php else: ?>
                         <!-- @if has multiple entries -->
-                            <div class="flex-col-2">
+                            <div class="grid-col-2">
                                 <a href="#entry-REPLACEID" data-toggle-accordion class="btn btn-small btn-theme btn-round btn-symbol ">
                                     <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i>
                                 </a>
                             </div>
                     <?php endif; ?>
-                    <div class="flex-col-7 flex-1-1">
+                    <div class="grid-col-7 flex-1-1">
                         <a href="<?= app_create_link(array('template' => 'log-edit')) ?>" class="text-decoration-none color-inherit flex-xs flex-direction-column justify-content-center">
                             <p class="text-wrap-ellipsis no-margin">
                                 <span class="REPLACE">Task Name Task Name Task Name Task Name Task Name Task Name Task Name Task Name Task Name </span>
@@ -48,7 +48,7 @@
                             </p>
                         </a>
                     </div>
-                    <div class="flex-col-3 text-align-right">
+                    <div class="grid-col-3 text-align-right">
                         <span class="REPLACE">06:09:01</span>
                         <!-- @if has status -->
                             <!-- @NOTE
@@ -70,14 +70,14 @@
                 <div class="background-intensity-3-alpha-1 color-neutral-dark">
                     <!-- @loop div -->
                         <div class="border-color-neutral-alpha-1 border-width-thin-top border-style-solid padding-x padding-small-y">
-                            <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y align-items-center">
-                                <div class="flex-col-8">
+                            <div class="grid grid-flex grid-flex-fixed grid-constricted-y align-items-center">
+                                <div class="grid-col-8">
                                     <span class="REPLACE">4/20/2069</span>
                                 </div>
-                                <div class="flex-col-2 text-align-right">
+                                <div class="grid-col-2 text-align-right">
                                     <a href="#REPLACEToHyperLinkToTimeTrackerNote" target="_blank" class="tag color-background background-base-alpha-5"><i class="symbol symbol-text-left"></i></a>
                                 </div>
-                                <div class="flex-col-2 text-align-right">
+                                <div class="grid-col-2 text-align-right">
                                     <span class="REPLACE">4:20</span>
                                 </div>
                             </div>
@@ -86,14 +86,14 @@
                         <!-- @PLACEHOLDER delete when ready -->
                             <?php for($g = 0; $g < 9; $g++): ?>
                                 <div class="border-color-neutral-alpha-1 border-width-thin-top border-style-solid padding-x padding-small-y">
-                                    <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y align-items-center">
-                                        <div class="flex-col-8">
+                                    <div class="grid grid-flex grid-flex-fixed grid-constricted-y align-items-center">
+                                        <div class="grid-col-8">
                                             <span class="REPLACE">4/20/2069</span>
                                         </div>
-                                        <div class="flex-col-2 text-align-right">
+                                        <div class="grid-col-2 text-align-right">
                                             <a href="#REPLACEToHyperLinkToTimeTrackerNote" target="_blank" class="tag color-background background-base-alpha-5"><i class="symbol symbol-text-left"></i></a>
                                         </div>
-                                        <div class="flex-col-2 text-align-right">
+                                        <div class="grid-col-2 text-align-right">
                                             <span class="REPLACE">4:20</span>
                                         </div>
                                     </div>
@@ -124,9 +124,9 @@
                 <?php for($i = 0; $i < count($placeholder_stuff); $i++): ?>
                     <li class="list-group-item no-padding background-transparent">
                         <div class="padding">
-                            <div class="flex-grid flex-grid-no-gutter flex-grid-fixed align-items-center justify-content-space-between">
+                            <div class="grid grid-flex grid-constricted grid-flex-fixed align-items-center justify-content-space-between">
                                 <?php if($args['has_toggle']): ?>
-                                    <div class="flex-col-2">
+                                    <div class="grid-col-2">
                                         <form action="">
                                             <!-- @note hidden fields here -->
                                             <!-- 
@@ -146,14 +146,14 @@
                                 <?php else: ?>
                                     <!-- @if has multiple entries -->
                                         <?php if($i > 0): ?>
-                                            <div class="flex-col-2">
+                                            <div class="grid-col-2">
                                                 <a href="#entry-<?=$h ?>-<?=$i ?>" data-toggle-accordion class="btn btn-small btn-theme btn-round btn-symbol ">
                                                     <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i>
                                                 </a>
                                             </div>
                                         <?php endif; ?>
                                 <?php endif; ?>
-                                <div class="flex-col-7">
+                                <div class="grid-col-7">
                                     <a href="<?= app_create_link(array('template' => 'log-edit')) ?>" class="text-decoration-none color-inherit flex-xs flex-direction-column justify-content-center">
                                         <p class="text-wrap-ellipsis no-margin">
                                             <span class="REPLACE">Task Name Task Name Task Name Task Name Task Name Task Name Task Name Task Name Task Name </span>
@@ -163,7 +163,7 @@
                                         </p>
                                     </a>
                                 </div>
-                                <div class="flex-col-3 text-align-right">
+                                <div class="grid-col-3 text-align-right">
                                     <span class="REPLACE">06:09:01</span>
                                     <!-- @if has status -->
                                         <span class="tag tag-small tag-<?=$placeholder_color[$i]; ?>">
@@ -176,14 +176,14 @@
                             <div class="background-intensity-3-alpha-1 color-neutral-dark">
                                 <!-- @loop div -->
                                     <div class="border-color-neutral-alpha-1 border-width-thin-top border-style-solid padding-x padding-small-y">
-                                        <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y align-items-center">
-                                            <div class="flex-col-8">
+                                        <div class="grid grid-flex grid-flex-fixed grid-constricted-y align-items-center">
+                                            <div class="grid-col-8">
                                                 <span class="REPLACE">4/20/2069</span>
                                             </div>
-                                            <div class="flex-col-2 text-align-right">
+                                            <div class="grid-col-2 text-align-right">
                                                 <a href="#REPLACEToHyperLinkToTimeTrackerNote" target="_blank" class="tag color-background background-base-alpha-5"><i class="symbol symbol-text-left"></i></a>
                                             </div>
-                                            <div class="flex-col-2 text-align-right">
+                                            <div class="grid-col-2 text-align-right">
                                                 <span class="REPLACE">4:20</span>
                                             </div>
                                         </div>
@@ -192,14 +192,14 @@
                                     <!-- @PLACEHOLDER delete when ready -->
                                         <?php for($g = 0; $g < 9; $g++): ?>
                                             <div class="border-color-neutral-alpha-1 border-width-thin-top border-style-solid padding-x padding-small-y">
-                                                <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y align-items-center">
-                                                    <div class="flex-col-8">
+                                                <div class="grid grid-flex grid-flex-fixed grid-constricted-y align-items-center">
+                                                    <div class="grid-col-8">
                                                         <span class="REPLACE">4/20/2069</span>
                                                     </div>
-                                                    <div class="flex-col-2 text-align-right">
+                                                    <div class="grid-col-2 text-align-right">
                                                         <a href="#REPLACEToHyperLinkToTimeTrackerNote" target="_blank" class="tag color-background background-base-alpha-5"><i class="symbol symbol-text-left"></i></a>
                                                     </div>
-                                                    <div class="flex-col-2 text-align-right">
+                                                    <div class="grid-col-2 text-align-right">
                                                         <span class="REPLACE">4:20</span>
                                                     </div>
                                                 </div>

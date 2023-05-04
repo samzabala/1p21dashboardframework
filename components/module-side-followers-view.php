@@ -15,11 +15,11 @@ $args = app_parse_args($data,$defs);
 
 		<!-- FOLLOWERS -->
 			<div class="h5 no-margin-top">
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
 						<h5 class="no-margin-y">Followers</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 						<div class="btn-group btn-group-toggle btn-group-horizontal btn-group-toggle-allow-no-active">
 
 						<!-- @NOTE
@@ -74,11 +74,11 @@ $args = app_parse_args($data,$defs);
 
 			<!-- Notes -->
 				<div class="h5 no-margin-y">
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-						<div class="flex-child">
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
 							<h5 class="no-margin-y">Notes</h5>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 							<a href="#post-side-note-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 						</div>
 					</div>
@@ -126,11 +126,11 @@ $args = app_parse_args($data,$defs);
 
 			<!-- REMINDERS -->
 				<div class="h5 no-margin-top">
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-						<div class="flex-child">
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
 							<h5 class="no-margin-y">Reminders</h5>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 							<a href="#post-side-reminders-view" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 						</div>
 					</div>

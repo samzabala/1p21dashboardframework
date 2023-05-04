@@ -25,7 +25,7 @@ Imports CSS:
 	<?php endif; ?>
 	class="module position-relative switch switch-idle no-padding-y margin-bottom"
 >
-	<div class="module-header module-header-break no-margin-y padding-small-y pointer-reference position-static">
+	<div class="module-header module-end-break no-margin-y padding-small-y pointer-reference position-static">
 		<div class="flex-xs align-items-center">
 			<div class="outreach-module-sequence-insert margin-small-right">
 				<!-- @if is the last step -->
@@ -49,8 +49,8 @@ Imports CSS:
 	</div>
 	<div class="module-content no-margin-bottom padding-top border-width-thin-top border-style-solid-top border-color-theme-polar-contrast">
 		<div class="switch-on">
-			<div class="flex-grid flex-grid-no-gutter flex-grid-fixed">
-				<div class="flex-col-xs-12 flex-col-md-10 flex-col-lg-8">
+			<div class="grid grid-flex grid-constricted grid-flex-fixed">
+				<div class="grid-col-xs-12 grid-col-md-10 grid-col-lg-8">
 					<?php app_get_component('components/sequence-step-form') ?>
 				</div>
 			</div>
@@ -68,8 +68,8 @@ Imports CSS:
 					</a>
 				</div>
 			<?php else: ?>
-				<div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-					<div class="flex-col-xs-12 flex-col-sm-4">
+				<div class="grid grid-flex grid-flex-fixed grid-constricted-y">
+					<div class="grid-col-xs-12 grid-col-sm-4">
 						<h5 class="no-margin-top">
 							<span class="REPLACE">Scheduled Email</span>
 						</h5>
@@ -77,7 +77,7 @@ Imports CSS:
 							<span class="REPLACE">Emails Automatically Delivered</span>
 						</p>
 					</div>
-					<div class="flex-col-xs-12 flex-col-sm-4">
+					<div class="grid-col-xs-12 grid-col-sm-4">
 						<h5 class="no-margin-top">
 							<span class="REPLACE">Template:</span>
 						</h5>
@@ -85,7 +85,7 @@ Imports CSS:
 							<span class="REPLACE">Emails Automatically Delivered</span>
 						</p>
 					</div>
-					<div class="flex-col-xs-12 flex-col-sm-4">
+					<div class="grid-col-xs-12 grid-col-sm-4">
 						<h5 class="no-margin-top">
 							<span class="REPLACE">Schedule</span>
 						</h5>
