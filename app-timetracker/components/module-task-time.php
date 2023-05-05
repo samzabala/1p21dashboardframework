@@ -83,11 +83,9 @@
 									</div>
 								</td>
 								<td class="padding-x">
-									<form action="">
-										<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
-										-
-										<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
-									</form>
+									<span class="REPLACE">03:00 AM</span>
+									-
+									<span class="REPLACE">06:00 PM</span>
 								</td>
 								<td class="padding-x text-align-right">
 									<span class="entry-total font-weight-700">
@@ -127,14 +125,9 @@
 											</div>
 										</td>
 										<td class="padding-x">
-											<!-- @if can edit -->
-												<form action="">
-													<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
-													-
-													<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
-												</form>
-											<!-- @else -->
-												<!-- <span class="REPLACE">04:20 AM - 06:09 PM</span> -->
+											<span class="REPLACE">03:00 AM</span>
+											-
+											<span class="REPLACE">06:00 PM</span>
 										</td>
 										<td class="padding-x text-align-right">
 											<span class="entry-total font-weight-700">
@@ -160,15 +153,9 @@
 													</div>
 												</td>
 												<td class="padding-x">
-													<?php if($i % 3 == 0 ): ?>
-														<form action="">
-															<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
-															-
-															<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
-														</form>
-													<?php else: ?>
-														<span class="REPLACE">03:00 AM - 06:00 PM</span>
-													<?php endif; ?>
+													<span class="REPLACE">03:00 AM</span>
+													-
+													<span class="REPLACE">06:00 PM</span>
 												</td>
 												<td class="padding-x text-align-right">
 													<span class="entry-total font-weight-700">
