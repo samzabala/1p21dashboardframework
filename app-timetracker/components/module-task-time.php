@@ -30,7 +30,6 @@
 			<p class="h3 color-theme flex-1-1 no-margin-y">
 				<span class="REPLACE">Float left everything</span>				
 			</p>
-			<?php app_get_component('components/detail-tags'); ?>
 		</div>
 		<div class="module-functions flex-0-0 flex-nowrap flex-xs align-items-center justyify-content-space-between">
 			<div class="module-function">
@@ -55,7 +54,6 @@
 		</div>
 	</div>
 	<div class="module-content no-padding-x no-padding-bottom">
-		<?php app_get_component('components/detail-subheader'); ?>
 			<!-- @if days happen -->
 				<hr class="no-margin-y">
 				<!-- @loop table -->
