@@ -562,15 +562,13 @@ $args = app_parse_args($data,$defs);
 								data-toggle-dropdown
 							<?php endif; ?>
 						>
-							<span>
+							<span class="timetracker-text-wrap-ellipsis-inline text-wrap-ellipsis">
 								<i class="symbol symbol-calendar"></i> 
 								
 								<!-- @if has data -->
 								<?php if($args['has_data']): ?>
 
-									<span class="timetracker-text-wrap-ellipsis-inline text-wrap-ellipsis">
 										<span class="REPLACE">June 12 - 4:55pm</span>
-									</span>
 
 								<!-- @else -->
 								<?php else: ?>
