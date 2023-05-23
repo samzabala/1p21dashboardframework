@@ -239,9 +239,10 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 
 .timetracker {
     &-timer-toggle {
+		width: var(--fw-btn-height,4.25em);
+		height: var(--fw-btn-height,4.25em);
         box-shadow:
-            0 0 0 .8em $var-color-background-alpha-1,
-            0 0 0 (.8em * 2) $var-color-background-alpha-1
+            0 0 0 .8em $var-color-background-alpha-2
             !important;
 
             &#{&}-mini {
