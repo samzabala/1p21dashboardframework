@@ -23,7 +23,7 @@
 					</tr>
 					<!-- @loop tr -->
 						<tr>
-							<td class="hide-mobile">
+							<td>
 								<a href="<?=app_create_link(array('template' => 'department-edit')) ?>">
 									<span class="REPLACE">Department name</span>
 								</a>
