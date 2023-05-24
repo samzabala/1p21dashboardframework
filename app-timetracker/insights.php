@@ -5,6 +5,9 @@
 			Insights
 		</h1>
 	</div>
+	<div class="flex-child flex-col-xs-12 flex-col-md-6 text-align-right">
+		<a href="#" class="btn btn-neutral-glassy btn-block-mobile">Back</a>
+	</div>
 </div>
 
 <!-- Overview -->
