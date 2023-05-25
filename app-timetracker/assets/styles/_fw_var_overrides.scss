@@ -17,7 +17,7 @@ $brand-color-primary: #0098FD;
 $brand-color-secondary: #663FEF;
 $brand-color-accent: #3F61F5;
 $brand-color-error: #FD6666; //error
-$brand-color-caution: #F7D168;
+$brand-color-caution: #d3b404;
 $brand-color-success: #00C444;
 $brand-color-success-dark: #00A535;
 $brand-color-neutral: #858FA2;
@@ -117,6 +117,25 @@ $module-box-shadow: $box-shadow-base var(--fw-color-base-alpha-3);
 $progress-height-small: 7px;
 
 $list-group-height-compact: $input-height-small;
+
+$alert-border-radius: 10px !default;
+$alert-container-max-width: 100% !default;
+
+
+$alert-background-primary: var(--fw-color-primary-lightest);
+$alert-background-secondary: var(--fw-color-secondary-lightest);
+$alert-background-accent: var(--fw-color-accent-lightest);
+$alert-background-success: var(--fw-color-success-lightest);
+$alert-background-caution: var(--fw-color-caution-lightest);
+$alert-background-error: var(--fw-color-error-lightest);
+
+
+$alert-color-primary: inherit;
+$alert-color-secondary: inherit;
+$alert-color-accent: inherit;
+$alert-color-success: inherit;
+$alert-color-caution: inherit;
+$alert-color-error: inherit;
 
 
 // $btn-border-primary: transparent;
