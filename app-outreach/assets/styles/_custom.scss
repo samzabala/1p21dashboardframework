@@ -204,7 +204,8 @@ html,body {
 
 				.outreach-nav-side {
 					display: flex;
-					flex: 1 1;
+					flex-grow: 1;
+					flex-shrink: 1;
 					justify-content: space-around;
 				}
 
