@@ -70,6 +70,7 @@
 
 <?php if(FWAPPS_TEMPLATE !== 'login' ): ?>
 
+
 	<div id="timetracker">
 
 
@@ -84,9 +85,14 @@
 
 		<!-- @if a task is actively selected -->
 			<?php app_get_component('components/sticky-timer'); ?>
+
 		<main id="timetracker-main" class="padding-large-y">
 			<!-- App Content -->
 				<div class="container">
+
+					<!-- @if there are alerts -->
+						<?php app_get_component('components/alert-toast'); ?>
+						
 <?php endif; ?>
 					
 
