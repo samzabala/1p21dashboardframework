@@ -58,8 +58,14 @@ $btn-font-weight: 500;
 $input-height: 32px;
 $input-padding-x: .625em;
 
-$input-toggle-plate-height: .625rem;
-$input-toggle-node-height: 1rem;
+$input-toggle-width: 2em;
+$input-toggle-plate-height: .625em;
+$input-toggle-node-height: 1em;
+$input-toggle-plate-background-color-active: var(--fw-color-primary);
+$input-toggle-plate-border-color-active: currentColor;
+$input-toggle-node-border-color-active: currentColor;
+
+$gutter-base: 20px;
 
 
 $nav-top-font-size: 14px;

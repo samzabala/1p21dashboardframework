@@ -34,6 +34,9 @@ $body-font-size: 14px;
 $body-font-size-small: 12px;
 // $body-font-size-large: 28px;
 
+
+$gutter-base: 20px;
+
 $h1-font-size: 32px;
 $h2-font-size: 24px;
 $h3-font-size: 19px;
@@ -62,7 +65,7 @@ $lead-font-size-mobile: 24px;
 $input-height: 50px;
 $input-height-large: $input-height;
 $input-height-small: 32px;
-$input-select-dropdown-color: currentColor;
+$input-box-box-select-dropdown-color: currentColor;
 $input-gutter-x: 1.5em;
 
 $input-placeholder-color: inherit;
@@ -75,6 +78,8 @@ $btn-gutter-x: $input-gutter-x;
 // $btn-height: 50px;
 // $btn-height-large: 50px;
 // $btn-height-small: 45px;
+
+$btn-box-shadow-hover: none;
 
 $nav-height: 50px;
 $nav-padding-x: $gutter-base + 5px;
