@@ -146,7 +146,7 @@
 		<div class="accordion">
 
 			<a href="#" onclick="syncTags(event);"  class="button">Sync it</a>
-			<input onchange="filterTags(event)" id="putanginang-tags-iyan" type="text" class="input-tags"  data-tags-multiple-lines="true" value="" />
+			<input onchange="filterTags(event)" id="putanginang-tags-iyan" type="text" class="input-tags"  data-tags-multiline="true" value="" />
 			<hr>
 
 			<button class="btn btn-default shit-btn" onclick="addTag(event);">wah</button>
@@ -292,7 +292,7 @@
 		</script>
 
 
-		<h1 data-toggle-accordion>.scroller<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
+		<h1 data-toggle-accordion>.scroller (beta)<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
 			<div class="position-fixed offset-0-bottom offset-0-right background-primary color-background padding-large">
@@ -389,8 +389,8 @@
 
 <div class="module-function filter-analytics-client-department position-relative">
     <div class="input-wrapper input-wrapper-horizontal input-wrapper-responsive no-padding-right">
-        <label class="input-label">Filter By</label>
-        <button data-toggle-dropdown class="input input-block-mobile input-select">
+        <label class="input input-label">Filter By</label>
+        <button data-toggle-dropdown class="input input-block-mobile input-box input-box-select">
             Department
             <!-- @if one or more status is checked -->
             <span class="filter-analytics-client-department-counter">
@@ -400,19 +400,19 @@
         </button>
         <ul class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px">
             <li>
-                <label class="input-label">
+                <label class="input input-label">
                     <input type="checkbox" name="filter-analytics-client-department" value="Production" class="input input-inline">
                     Production
                 </label>
             </li>
             <li>
-                <label class="input-label">
+                <label class="input input-label">
                     <input type="checkbox" name="filter-analytics-client-department" value="SEO" class="input input-inline">
                     SEO
                 </label>
             </li>
             <li>
-                <label class="input-label">
+                <label class="input input-label">
                     <input type="checkbox" name="filter-analytics-client-department" value="Sales" class="input input-inline">
                     Sales
                 </label>
@@ -422,7 +422,7 @@
 </div>
 
 <div class="module-function function-filter-employee position-relative">
-    <button data-toggle-dropdown class="input input-select input-block-mobile">
+    <button data-toggle-dropdown class="input input-box input-box-select input-block-mobile">
         Employee
         <!-- @if one or more Owner is checked -->
         <span class="filter-companies-employee-active">
@@ -433,7 +433,7 @@
     <ul class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px">
         <!-- @LOOP li -->
             <li>
-                <label class="input-label">
+                <label class="input input-label">
                     <input type="checkbox" name="filter-companies-employee" value="profile_name" class="input input-inline">
                     Profile Name
                 </label>
@@ -442,31 +442,31 @@
             <!-- @PLACEHOLDER delete when ready -->
 
                 <li>
-                    <label class="input-label">
+                    <label class="input input-label">
                         <input type="checkbox" checked name="filter-companies-employee" value="Yanni Yogi" class="input input-inline">
                         Yanni Yogi
                     </label>
                 </li>
                 <li>
-                    <label class="input-label">
+                    <label class="input input-label">
                         <input type="checkbox" name="filter-companies-employee" value="El Tigre" class="input input-inline">
                         El Tigre
                     </label>
                 </li>
                 <li>
-                    <label class="input-label">
+                    <label class="input input-label">
                         <input type="checkbox" name="filter-companies-employee" value="Matt Engarde" class="input input-inline">
                         Matt Engarde
                     </label>
                 </li>
                 <li>
-                    <label class="input-label">
+                    <label class="input input-label">
                         <input type="checkbox" name="filter-companies-employee" value="Frank Sahwit" class="input input-inline">
                         Frank Sahwit
                     </label>
                 </li>
                 <li>
-                    <label class="input-label">
+                    <label class="input input-label">
                         <input type="checkbox" name="filter-companies-employee" value="Dee Vasquez" class="input input-inline">
                         Dee Vasquez
                     </label>
@@ -744,7 +744,7 @@
 				</div>
 				<div id="titty-edit" class="switch-on">
 					<div class="input-group input-large input-block input-group-horizontal">
-						<input type="text" class="input input-single-line">
+						<input type="text" class="input input-box">
 						<button data-toggle-switch-off class="btn btn-primary">Save</button>
 					</div>
 				</div>
@@ -765,7 +765,7 @@
 				</div>
 				<div id="titty-edit" class="switch-on">
 					<div class="input-group input-large input-block input-group-horizontal">
-						<input type="text" class="input input-single-line">
+						<input type="text" class="input input-box">
 						<button data-toggle-switch-off class="btn btn-primary">Save</button>
 					</div>
 				</div>
@@ -786,7 +786,7 @@
 				</div>
 				<div id="titty-edit" class="switch-on">
 					<div class="input-group input-large input-block input-group-horizontal">
-						<input type="text" class="input input-single-line">
+						<input type="text" class="input input-box">
 						<button data-toggle-switch-off class="btn btn-primary">Save</button>
 					</div>
 				</div>
@@ -808,7 +808,7 @@
 				</div>
 				<div id="titty-edit" class="switch-on">
 					<div class="input-group input-large input-block input-group-horizontal">
-						<input type="text" class="input input-single-line">
+						<input type="text" class="input input-box">
 						<button data-toggle-switch-off class="btn btn-primary">Save</button>
 					</div>
 				</div>
@@ -831,7 +831,7 @@
 				</div>
 				<div id="titty-edit" class="switch-on">
 					<div class="input-group input-large input-block input-group-horizontal">
-						<input type="text" class="input input-single-line">
+						<input type="text" class="input input-box">
 						<button data-toggle-switch-off class="btn btn-primary">Save</button>
 					</div>
 				</div>
@@ -927,11 +927,11 @@
 
 			<div class="module">
 				<div class="module-content">
-					<div class="flex-grid flex-grid-compact flex-grid-constricted-y justify-content-space-between align-items-center">
-						<div class="flex-child">
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
 							<h5 class="no-margin-y">TITLE</h5>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 							<a href="#task-side-MODULE" data-toggle-accordion class="color-neutral"><i class="symbol symbol-arrow-down"></i></a>
 						</div>
 					</div>
@@ -1328,7 +1328,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label">
+					<span class="input input-label input-toggle-label">
 						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
 					</span>
 				</div>
@@ -1337,7 +1337,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle input-small">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label">
+					<span class="input input-label input-toggle-label">
 						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
 					</span>
 				</div>
@@ -1346,7 +1346,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle input-large">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label">
+					<span class="input input-label input-toggle-label">
 						Test this fucker. do not use horizontal and vertical input classes with this shit or you dIE
 					</span>
 				</div>
@@ -1359,7 +1359,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label input-primary">
+					<span class="input input-label input-toggle-label input-primary">
 						Test this fucker primary
 					</span>
 				</div>
@@ -1368,7 +1368,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label input-secondary">
+					<span class="input input-label input-toggle-label input-secondary">
 						Test this fucker secondary
 					</span>
 				</div>
@@ -1377,7 +1377,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input"> 
-					<span class="input-label input-toggle-label input-accent">
+					<span class="input input-label input-toggle-label input-accent">
 						Test this fucker accent
 					</span>
 				</div>
@@ -1386,7 +1386,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label input-success"> 
+					<span class="input input-label input-toggle-label input-success"> 
 						Test this fucker success
 					</span>
 				</div>
@@ -1396,7 +1396,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label input-caution">
+					<span class="input input-label input-toggle-label input-caution">
 						Test this fucker caution
 					</span>
 				</div>
@@ -1406,7 +1406,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label input-error">
+					<span class="input input-label input-toggle-label input-error">
 						Test this fucker error
 					</span>
 				</div>
@@ -1414,9 +1414,9 @@
 
 
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
-				<div class="input-toggle input-disabled">
+				<div class="input-toggle disabled">
 					<input type="checkbox" class="input">
-					<span class="input-label input-toggle-label">
+					<span class="input input-label input-toggle-label">
 						Test this fucker 
 					</span>
 				</div>
@@ -1425,7 +1425,7 @@
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
 				<div class="input-toggle  input-toggle-reverse">
 					<input type="checkbox" class="input "> 
-					<span class="input-label input-toggle-label">
+					<span class="input input-label input-toggle-label">
 						Test this fucker this one should have toggle on the other side of the text
 					</span>
 				</div>
@@ -1558,8 +1558,8 @@
 
 		<h1 data-toggle-accordion>ASSETS<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
-			<div class="flex-grid flex-grid-fixed flex-frid-compact">
-				<div class="flex-col-xs-12 flex-col-md-3">
+			<div class="grid grid-flex grid-fixed flex-frid-compact">
+				<div class="grid-col-xs-12 grid-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -1586,7 +1586,7 @@
 
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-audio"></span>
@@ -1596,7 +1596,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -1608,7 +1608,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-doc"></span>
@@ -1619,7 +1619,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -1630,7 +1630,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -1643,7 +1643,7 @@
 				
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<img src="/placeholder/files/shrek.jpg" alt="">
@@ -1655,7 +1655,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<img src="/placeholder/files/donk.jpg" alt="">
@@ -1665,7 +1665,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-img"></span>
@@ -1676,7 +1676,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-ps"></span>
@@ -1687,7 +1687,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-ai"></span>
@@ -1698,7 +1698,7 @@
 				</div>
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-xd"></span>
@@ -1710,7 +1710,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-pdf"></span>
@@ -1722,7 +1722,7 @@
 
 
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<div class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-id"></span>
@@ -1732,7 +1732,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -1743,7 +1743,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 
 					<div class="asset">
 						<div class="asset-thumbnail">
@@ -1754,7 +1754,7 @@
 					</div>
 				</div>
 
-				<div class="flex-col-xs-12 flex-col-md-3">
+				<div class="grid-col-xs-12 grid-col-md-3">
 					<a href="#"class="asset">
 						<div class="asset-thumbnail">
 							<span class="asset-image asset-image-zip"></span>
@@ -1795,7 +1795,7 @@
 			<div class="zone zone-neutral">click me boi</div>
 			<div class="zone zone-success">click me boi</div>
 			<div class="zone zone-caution">click me boi</div>
-			<div class="zone zone-disabled zone-error">click me boi also i cant be fucked with</div>
+			<div class="zone disabled zone-error">click me boi also i cant be fucked with</div>
 
 
 			<div class="zone zone-compact zone-default">click me boi</div>
@@ -1826,15 +1826,15 @@
 			<a href="#board-demo"  data-toggle-modal-board data-modal-align="left" data-modal-resize="true" >align left</a>
 			<a href="#board-demo"  data-toggle-modal-board data-modal-align="right" data-modal-resize="true" >align right</a>
 			<div id="board-demo" class="dashboard-board-partition modal modal-board">
-				<div class="flex-grid flex-grid-constricted">
-					<div class="flex-col-xs-12 flex-col-md-9">
+				<div class="grid grid-flex grid-constricted">
+					<div class="grid-col-xs-12 grid-col-md-9">
 						<div class="dashboard-board-partition dashboard-board-main">
 							<div class="container">
 							fuck
 							</div>
 						</div>
 					 </div>
-					<div class="flex-col-xs-12 flex-col-md-3 background-theme-contrast">
+					<div class="grid-col-xs-12 grid-col-md-3 background-theme-contrast">
 						<div class="dashboard-board-partition dashboard-board-side">
 							<div class="container">
 							yea
@@ -1884,6 +1884,13 @@
 				}
 			</style>
 			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-max-char="5" data-tags-filter="testCallback" />
+
+			<script>
+			function testCallback(value){
+				console.log('i work bitych');
+				return value;
+			}
+			</script>
 			<input value="lil,stupid,ass,i,ain't,fuckin,with,u,what,the,fuck,is,going,on,bitches,wat" placeholder="suck ma diiick" class="input input-tags" data-tags-max-char="5" data-tags-max-char-snip="true" data-tags-filter="testCallback" />
 			<a href="#putangina" class="data-toggle-modal-board">pota</a>
 			<div id="putangina" class="modal modal-board">
@@ -1900,7 +1907,7 @@
 
 
 				<h2>other basic bitches</h2>
-		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" placeholder="suck ma diiick" data-tags-multiple-lines="true" />
+		<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u" class="input input-tags" placeholder="suck ma diiick" data-tags-multiline="true" />
 		
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags" />
 			<br><br>
@@ -1921,7 +1928,7 @@
 			<input type="hidden" name="share_note_with_user_ids"
 				value="{{ note.users_shared_with|map(attribute='id')|join(',') }}">
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-			<label class="input-label">Share note with:</label>
+			<label class="input input-label">Share note with:</label>
 			<div class="input-group input-group-horizontal input-block">
 				<input type="text" name="share_note_with_usernames"
 					value="{{ note.users_shared_with|map(attribute='short_name')|join(',') }}"
@@ -1947,14 +1954,14 @@
 				<span>Filter (3)</span>
 				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</button>
-			<input type="text" class="input input-single-line" name="workflow-filter-projects" placeholder="Search projects...">
+			<input type="text" class="input input-box" name="workflow-filter-projects" placeholder="Search projects...">
 			<button type="submit" class="btn btn-default btn-symbol"><i class="symbol symbol-search"></i></button>
 		</div>
 		<!-- @REPLACE  #profile-assigned-date > li -->
 		<div data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
 			
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label class="input-label">Account Manager:</label>
+				<label class="input input-label">Account Manager:</label>
 
 				<input type="text" name="share_note_with_usernames"
 					value="asshit,brah,shiit"
@@ -1978,49 +1985,49 @@
 				<span>Filter (3)</span>
 				<i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 			</button>
-			<input type="text" class="input input-single-line" name="workflow-filter-projects" placeholder="Search projects...">
+			<input type="text" class="input input-box" name="workflow-filter-projects" placeholder="Search projects...">
 			<button type="submit" class="btn btn-default btn-symbol"><i class="symbol symbol-search"></i></button>
 		</div>
 		<!-- @REPLACE  #profile-assigned-date > li -->
 		<ul data-dropdown-width="100%" class="text-align-left dropdown dropdown-top-flush dropdown-center-x">
-			<div class="flex-grid flex-grid-fixed flex-grid-compact">
-				<div class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3 ">
-					<label class="input-label" >Client</label>
+			<div class="grid grid-flex grid-fixed grid-compact">
+				<div class="grid-col-sm-6 grid-col-md-4 grid-col-lg-3 ">
+					<label class="input input-label" >Client</label>
 				</div>
-				<div class="flex-col-sm-6 flex-col-md-8 flex-col-lg-9 ">
-					<input class="input input-single-line input-small input-tags input-select" type="text" value="Hasson Law Offices">
+				<div class="grid-col-sm-6 grid-col-md-8 grid-col-lg-9 ">
+					<input class="input input-box input-small input-tags input-box input-box-select" type="text" value="Hasson Law Offices">
 				</div>
 			</div>
 
 
-			<div class="flex-grid flex-grid-fixed flex-grid-compact input-small">
-				<div class="flex-col-sm-6 flex-col-md-4 flex-col-lg-3 ">
-					<label class="input-label" >Client</label>
+			<div class="grid grid-flex grid-fixed grid-compact input-small">
+				<div class="grid-col-sm-6 grid-col-md-4 grid-col-lg-3 ">
+					<label class="input input-label" >Client</label>
 				</div>
-				<div class="flex-col-sm-6 flex-col-md-8 flex-col-lg-9 ">
-					<input class="input input-single-line input-small input-tags input-select" type="text" value="Hasson Law Offices">
+				<div class="grid-col-sm-6 grid-col-md-8 grid-col-lg-9 ">
+					<input class="input input-box input-small input-tags input-box input-box-select" type="text" value="Hasson Law Offices">
 				</div>
 			</div>
 			
 			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block position-relative">
-				<label class="input-label" >Account Manager</label>
-				<input class="input input-single-line input-small input-tags input-select" type="text" placeholder="Type and select manager..." data-toggle-dropdown>
+				<label class="input input-label" >Account Manager</label>
+				<input class="input input-box input-small input-tags input-box input-box-select" type="text" placeholder="Type and select manager..." data-toggle-dropdown>
 				<div class="dropdown am-dropdown">
 					<?= app_get_component('components/list-group-toggle-users-small-multiple'); ?>
 				</div>
 			</div>
 			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label" >Project Manager</label>
-				<input class="input input-single-line input-small input-tags input-select" type="text" value="Megan B.,Derrick T.">
+				<label class="input input-label" >Project Manager</label>
+				<input class="input input-box input-small input-tags input-box input-box-select" type="text" value="Megan B.,Derrick T.">
 			</div>
 			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label" >Project Name</label>
-				<input class="input input-single-line input-small input-tags input-select" type="text" placeholder="Type and select project...">
+				<label class="input input-label" >Project Name</label>
+				<input class="input input-box input-small input-tags input-box input-box-select" type="text" placeholder="Type and select project...">
 			</div>
 			<div class="p input-wrapper input-wrapper-horizontal input-wrapper-block">
-				<label class="input-label" >Date Range</label>
-				<input class="input input-single-line input-small input-c input-select" type="text" placeholder="From">
-				<input class="input input-single-line input-small input-c input-select" type="text" placeholder="To">
+				<label class="input input-label" >Date Range</label>
+				<input class="input input-box input-small input-c input-box input-box-select" type="text" placeholder="From">
+				<input class="input input-box input-small input-c input-box input-box-select" type="text" placeholder="To">
 			</div>
 		</ul>
 	</div>
@@ -2032,7 +2039,7 @@
 			<div id="fuckwad" class="modal modal-default">
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label class="input-label">Share note with:</label>
+					<label class="input input-label">Share note with:</label>
 
 					<div class="input-group input-group-horizontal input-block">
 						<input type="text" name="share_note_with_usernames"
@@ -2160,7 +2167,7 @@
 			<br><br>
 			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-caution" />
 			<br><br>
-			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags input-disabled" />
+			<input value="lil,stupid,ass,bitch,i,ain't,fuckin,with,u"class="input input-tags disabled" />
 			<br>
 
 
@@ -2169,7 +2176,7 @@
 
 
 
-				<input type="text" class="input input-single-line font-weight-600" placeholder="Enter title here">
+				<input type="text" class="input input-box font-weight-600" placeholder="Enter title here">
 
 
 				<h2>ini mayo pang nakalaag</h2>
@@ -2221,7 +2228,7 @@
 					<li class="tab">
 						<a href="#activity-log-week">Weekly shit</a>
 					</li>
-					<li class="tab tab-disabled">
+					<li class="tab disabled">
 						<a href="#activity-log-week">Disabled huhu can't click me boi</a>
 					</li>
 				</ul>
@@ -2234,7 +2241,7 @@
 					<li class="tab">
 						<a href="#activity-log-week">Weekly shit</a>
 					</li>
-					<li class="tab tab-disabled">
+					<li class="tab disabled">
 						<a href="#activity-log-week">Disabled huhu can't click me boi</a>
 					</li>
 				</ul>
@@ -2270,12 +2277,12 @@
 			<div class="position-relative">
 				<a href="#dropcal" data-toggle-dropdown>Toggle ya boi</a>
 				<div id="dropcal" class="dropdown" data-dropdown-width="100%">
-					<div class="flex-grid flex-wrap flex-grid-constricted-y">
+					<div class="grid grid-flex flex-wrap grid-constricted-y">
 
-						<div class="flex-col-md-4 flex-col-sm-6">
+						<div class="grid-col-md-4 grid-col-sm-6">
 
 							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-								<label class="input-label">From</label>
+								<label class="input input-label">From</label>
 								<input type="date" class="input input-calendar" 
 								value="2019-07-01"
 								data-calendar-min="2019-06-31"
@@ -2284,17 +2291,17 @@
 						</div>
 
 						
-						<div class="flex-col-md-4 flex-col-sm-6">
+						<div class="grid-col-md-4 grid-col-sm-6">
 
 							<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-								<label class="input-label">To</label>
+								<label class="input input-label">To</label>
 								<input type="date" class="input input-calendar" data-calendar-text-input="true" />
 							</div>
 						</div>
 
 						
-						<div class="flex-col-md-4 flex-col-sm-12">
-							<div class="input-label">Or by Month</div>
+						<div class="grid-col-md-4 grid-col-sm-12">
+							<div class="input input-label">Or by Month</div>
 							<ul class="no-padding-left">
 
 								<li><a href="#">Jan 2018</a></li>
@@ -2348,7 +2355,7 @@
 				<fieldset>
 					<legend>fuck wad</legend>
 					<div class="input-wrapper input-wrapper-vertical">
-						<label for="" class="input-label">eggeggeggeggeggeggeggeggeggeggeggegg</label>
+						<label for="" class="input input-label">eggeggeggeggeggeggeggeggeggeggeggegg</label>
 
 						<input type="text" class="input input-calendar" data-calendar-start-day="0" data-calendar-year-span="1"
 							value="2020-01-05" />
@@ -2380,7 +2387,7 @@
 			data-calendar-text-input="true"
 			value="2020-06-05" />
 
-			<input type="text" class="input input-calendar input-disabled" data-calendar-start-day="5"
+			<input type="text" class="input input-calendar disabled" data-calendar-start-day="5"
 			data-calendar-text-input="true"
 			value="2020-06-05" />
 
@@ -2743,7 +2750,7 @@
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
-						<tr class="table-row-disabled">
+						<tr class="disabled">
 							
 							<td>Disabled</td>
 							<td>Column content</td>
@@ -2844,6 +2851,12 @@
 					 data-toggle-modal-default
 					data-modal-title="Titties"
 					data-modal-callback="fuckinModalCallback()"
+					data-href="#modal-demo">Modal boi with a callback</a>
+					<br>
+				<a
+					 data-toggle-modal-default
+					data-modal-title="Titties"
+					data-modal-callback="function(){ console.log()}"
 					data-href="#modal-demo">Modal boi with a callback</a>
 					<br>
 
@@ -3486,75 +3499,75 @@
 					<h2>sizes</h2>
 					
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label input-small" for="Small">Small</label>
-							<input class="input input-single-line input-small" id="Small" placeholder="Small" type="text">
+							<label class="input input-label input-small" for="Small">Small</label>
+							<input class="input input-box input-small" id="Small" placeholder="Small" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label input-large" for="Large">Large</label>
-							<input class="input input-single-line input-large" id="Large" placeholder="Large" type="text">
+							<label class="input input-label input-large" for="Large">Large</label>
+							<input class="input input-box input-large" id="Large" placeholder="Large" type="text">
 						</p>
 
 					<h2>colors</h2>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-primary" for="input-primary">Primary: </label>
-							<input class="input input-single-line input-primary" id="input-primary" placeholder="Primary" type="text">
+							<label class="input input-label input-primary" for="input-primary">Primary: </label>
+							<input class="input input-box input-primary" id="input-primary" placeholder="Primary" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-secondary" for="input-secondary">secondary: </label>
-							<input class="input input-single-line input-secondary" id="input-secondary" placeholder="secondary" type="text">
+							<label class="input input-label input-secondary" for="input-secondary">secondary: </label>
+							<input class="input input-box input-secondary" id="input-secondary" placeholder="secondary" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-accent" for="input-accent">accent: </label>
-							<input class="input input-single-line input-accent" id="input-accent" placeholder="accent" type="text">
+							<label class="input input-label input-accent" for="input-accent">accent: </label>
+							<input class="input input-box input-accent" id="input-accent" placeholder="accent" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-success" for="input-success">success: </label>
-							<input class="input input-single-line input-success" id="input-success" placeholder="success" type="text">
+							<label class="input input-label input-success" for="input-success">success: </label>
+							<input class="input input-box input-success" id="input-success" placeholder="success" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-caution" for="input-caution">caution: </label>
-							<input class="input input-single-line input-caution" id="input-caution" placeholder="caution" type="text">
+							<label class="input input-label input-caution" for="input-caution">caution: </label>
+							<input class="input input-box input-caution" id="input-caution" placeholder="caution" type="text">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-error" for="input-error">error: </label>
-							<input class="input input-single-line input-error" id="input-error" placeholder="error" type="text">
+							<label class="input input-label input-error" for="input-error">error: </label>
+							<input class="input input-box input-error" id="input-error" placeholder="error" type="text">
 						</p>
 						
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label input-disabled" for="input-disabled">disabled: </label>
-							<input class="input input-single-line" disabled id="input-disabled" placeholder="disabled" type="text">
+							<label class="input input-label disabled" for="disabled">disabled: </label>
+							<input class="input input-box" disabled id="disabled" placeholder="disabled" type="text">
 						</p>
 						
 					<h2>types</h2>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-								<label class="input-label" for="inputPassword">Password</label>
-								<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
+								<label class="input input-label" for="inputPassword">Password</label>
+								<input class="input input-box" id="inputPassword" placeholder="Password" type="password">
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
+							<label class="input input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
 						</p>
 
 						<p>
-							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
+							<label class="input input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 						</p>
 						
 						<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label" for="textArea">Textarea + vertical wrapper</label>
+							<label class="input input-label" for="textArea">Textarea + vertical wrapper</label>
 						
-								<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+								<textarea placeholder="git wrecked" class="input input-box input-box-multiline" id="textArea"></textarea> <span class="input input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
 
 						</p>
 
@@ -3566,8 +3579,8 @@
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label" for="select">Selects</label>
-							<select class="input input-select" id="select-demo">
+							<label class="input input-label" for="select">Selects</label>
+							<select class="input input-box input-box-select" id="select-demo">
 								<option>Available option 1</option>
 								<option>Available option 2</option>
 								<option>Available option 3</option>
@@ -3577,7 +3590,7 @@
 						</p>
 
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<select class="input input-select" multiple>
+							<select class="input input-box input-box-select" multiple>
 								<option>Available option 1</option>
 								<option>Available option 2</option>
 								<option>Available option 3</option>
@@ -3600,25 +3613,25 @@
 
 						<h4>inline horizontal</h4>
 						<p class="input-wrapper input-wrapper-horizontal">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 
 						<h4>block horizontal</h4>
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 
 						<h4>inline vertical</h4>
 						<p class="input-wrapper input-wrapper-vertical">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 						<h4>block vertical</h4>
 						<p class="input-wrapper input-wrapper-vertical input-wrapper-block">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 
 						<h3>Responsive</h3>
@@ -3626,25 +3639,25 @@
 
 						<h4>inline horizontal</h4>
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-responsive">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 
 						<h4>block horizontal</h4>
 						<p class="input-wrapper input-wrapper-horizontal input-wrapper-block input-wrapper-responsive">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 
 						<h4>inline vertical</h4>
 						<p class="input-wrapper input-wrapper-vertical input-wrapper-responsive">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 						<h4>block vertical</h4>
 						<p class="input-wrapper input-wrapper-vertical input-wrapper-block input-wrapper-responsive">
-							<label class="input-label" >Basic Ass</label>
-							<input class="input input-single-line" placeholder="Basic Ass" type="text">
+							<label class="input input-label" >Basic Ass</label>
+							<input class="input input-box" placeholder="Basic Ass" type="text">
 						</p>
 
 					<h2>group (all have a .input-group-responsive so they kwan... break to a column layout for mobile and tablet devices)</h2>
@@ -3653,13 +3666,13 @@
 
 							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
-								<label class="input-label" >Basic Ass</label>
+								<label class="input input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal">
 
-								<label class="input-label" >Basic Ass</label>
-								<input type="text" class="input input-single-line">
+								<label class="input input-label" >Basic Ass</label>
+								<input type="text" class="input input-box">
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3667,7 +3680,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3675,7 +3688,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3683,7 +3696,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-single-line input-secondary" >
+									<select class="input input-box input-secondary" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3698,10 +3711,10 @@
 							<h4>small</h4>
 							<p class="input-wrapper input-wrapper-horizontal input-wrapper-block">
 								
-								<label class="input-label" >Basic Ass</label>
+								<label class="input input-label" >Basic Ass</label>
 								<span class="input-group input-group-horizontal input-small input-group-responsive">
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3709,7 +3722,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3717,7 +3730,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3725,7 +3738,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3738,7 +3751,7 @@
 							<h4>large</h4>
 							<span class="input-group input-group-horizontal input-large input-group-responsive">
 
-								<select class="input input-select" >
+								<select class="input input-box input-box-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -3746,7 +3759,7 @@
 									<option>Available option 5</option>
 								</select>
 
-								<select class="input input-select" >
+								<select class="input input-box input-box-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -3754,7 +3767,7 @@
 									<option>Available option 5</option>
 								</select>
 
-								<select class="input input-select" >
+								<select class="input input-box input-box-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -3762,7 +3775,7 @@
 									<option>Available option 5</option>
 								</select>
 
-								<select class="input input-select" >
+								<select class="input input-box input-box-select" >
 									<option>Available option 1</option>
 									<option>Available option 2</option>
 									<option>Available option 3</option>
@@ -3775,10 +3788,10 @@
 
 								<p class="input-wrapper input-wrapper-vertical">
 									
-									<label class="input-label" >Basic Ass</label>
+									<label class="input input-label" >Basic Ass</label>
 									<span class="input-group input-group-vertical ">
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3786,7 +3799,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3794,7 +3807,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3802,7 +3815,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3817,10 +3830,10 @@
 								<h4>small</h4>
 								<p class="input-wrapper input-wrapper-vertical">
 									
-									<label class="input-label" >Basic Ass</label>
+									<label class="input input-label" >Basic Ass</label>
 									<span class="input-group input-group-vertical input-group-vertical input-small input-group-responsive">
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3828,7 +3841,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3836,7 +3849,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3844,7 +3857,7 @@
 											<option>Available option 5</option>
 										</select>
 
-										<select class="input input-select" >
+										<select class="input input-box input-box-select" >
 											<option>Available option 1</option>
 											<option>Available option 2</option>
 											<option>Available option 3</option>
@@ -3858,7 +3871,7 @@
 								<h4>large</h4>
 								<span class="input-group input-group-vertical input-large input-group-responsive">
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3866,7 +3879,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3874,7 +3887,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3882,7 +3895,7 @@
 										<option>Available option 5</option>
 									</select>
 
-									<select class="input input-select" >
+									<select class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3897,7 +3910,7 @@
 
 								<span class="input-group input-group-horizontal input-large input-group-responsive">
 
-								<select multiple class="input input-select" >
+								<select multiple class="input input-box input-box-select" >
 										<option>Available option 1</option>
 										<option>Available option 2</option>
 										<option>Available option 3</option>
@@ -3905,11 +3918,11 @@
 										<option>Available option 5</option>
 									</select>
 
-									<textarea class="input input-multiple-line"></textarea>
+									<textarea class="input input-box input-box-multiline"></textarea>
 
-									<textarea class="input input-multiple-line"></textarea>
+									<textarea class="input input-box input-box-multiline"></textarea>
 
-									<textarea class="input input-multiple-line"></textarea>
+									<textarea class="input input-box input-box-multiline"></textarea>
 								</span>
 					
 
@@ -3919,35 +3932,35 @@
 						<legend>butt</legend>
 
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
-								<label class="input-label" for="inputPassword">Password</label>
-								<input class="input input-single-line" id="inputPassword" placeholder="Password" type="password">
+								<label class="input input-label" for="inputPassword">Password</label>
+								<input class="input input-box" id="inputPassword" placeholder="Password" type="password">
 						</div>
 
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
-							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
+							<label class="input input-label"><input class="input input-checkbox" type="checkbox"> Checkbox</label>
 						</div>
 
 						<div>
-							<label class="input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
+							<label class="input input-label"><input class="input input-checkbox" type="checkbox"> Another Checkbox but not in input wrap</label>
 						</div>
 						
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label" for="textArea">Textarea + horizontal wrapper</label>
+							<label class="input input-label" for="textArea">Textarea + horizontal wrapper</label>
 						
-								<textarea placeholder="git wrecked" class="input input-multiple-line" id="textArea"></textarea> <span class="input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+								<textarea placeholder="git wrecked" class="input input-box input-box-multiline" id="textArea"></textarea> <span class="input input-info">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
 
 						</div>
 
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
-							<label class="input-label"><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
+							<label class="input input-label"><input class="input input-radio" checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1"> Option one is this</label>
 						</div>
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal">
-							<label class="input-label"><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
+							<label class="input input-label"><input class="input input-radio" id="optionsRadios2" name="optionsRadios" type="radio" value="option2"> Option two can be something else</label>
 						</div>
 
 						<div class="input-wrapper p input-wrapper-horizontal input-wrapper-block input-wrapper-horizontal input-wrapper-block">
-							<label class="input-label" for="select">Selects</label>
-							<select class="input input-select" id="select-demo">
+							<label class="input input-label" for="select">Selects</label>
+							<select class="input input-box input-box-select" id="select-demo">
 								<option>Available option 1</option>
 								<option>Available option 2</option>
 								<option>Available option 3</option>
@@ -3957,7 +3970,7 @@
 						</div>
 
 						<div class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-							<select class="input input-select" multiple>
+							<select class="input input-box input-box-select" multiple>
 								<option>Available option 1</option>
 								<option>Available option 2</option>
 								<option>Available option 3</option>
@@ -4298,26 +4311,26 @@
 					<input class="input input-inline" type="button" value="Bitch">
 					<input class="input input-inline" type="checkbox">
 					<input class="input input-inline" type="color">
-					<input class="input input-single-line" type="date">
-					<input class="input input-single-line" type="datetime-local">
-					<input class="input input-single-line" type="email">
-					<input class="input input-single-line" type="file">
-					<input class="input input-single-line" type="hidden">
-					<input class="input input-single-line" type="image">
-					<input class="input input-single-line" type="month">
-					<input class="input input-single-line" type="number">
-					<input class="input input-single-line" type="password">
+					<input class="input input-box" type="date">
+					<input class="input input-box" type="datetime-local">
+					<input class="input input-box" type="email">
+					<input class="input input-box" type="file">
+					<input class="input input-box" type="hidden">
+					<input class="input input-box" type="image">
+					<input class="input input-box" type="month">
+					<input class="input input-box" type="number">
+					<input class="input input-box" type="password">
 					<input class="input input-inline" type="radio">
 					<input class="input input-inline" type="range">
 					<input class="input input-inline" type="reset">
-					<input class="input input-single-line" type="search">
+					<input class="input input-box" type="search">
 					<input class="input input-inline" type="submit">
-					<input class="input input-single-line" type="tel">
-					<input class="input input-single-line" type="text">
-					<input class="input input-single-line" type="time">
-					<input class="input input-single-line" type="url">
-					<input class="input input-single-line" type="week">
-					<input class="input input-single-line" list="browsers">
+					<input class="input input-box" type="tel">
+					<input class="input input-box" type="text">
+					<input class="input input-box" type="time">
+					<input class="input input-box" type="url">
+					<input class="input input-box" type="week">
+					<input class="input input-box" list="browsers">
 					<datalist class="input" id="browsers">
 						<option value="Internet Explorer">
 						</option><option value="Firefox">
@@ -4326,7 +4339,7 @@
 						</option><option value="Safari">
 					</option></datalist>
 
-					<select class="input input-select" name="cars">
+					<select class="input input-box input-box-select" name="cars">
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="fiat">Fiat</option>
@@ -4334,14 +4347,14 @@
 					</select>
 
 
-					<select class="input input-select" name="cars" multiple>
+					<select class="input input-box input-box-select" name="cars" multiple>
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="fiat">Fiat</option>
 					<option value="audi">Audi</option>
 					</select>
 
-					<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+					<textarea class="input input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 
 					color
@@ -4351,26 +4364,26 @@
 					<input class="input input-error input-inline" type="button" value="Bitch">
 					<input class="input input-error input-inline" type="checkbox">
 					<input class="input input-error input-inline" type="color">
-					<input class="input input-error input-single-line" type="date">
-					<input class="input input-error input-single-line" type="datetime-local">
-					<input class="input input-error input-single-line" type="email">
-					<input class="input input-error input-single-line" type="file">
-					<input class="input input-error input-single-line" type="hidden">
-					<input class="input input-error input-single-line" type="image">
-					<input class="input input-error input-single-line" type="month">
-					<input class="input input-error input-single-line" type="number">
-					<input class="input input-error input-single-line" type="password">
+					<input class="input input-error input-box" type="date">
+					<input class="input input-error input-box" type="datetime-local">
+					<input class="input input-error input-box" type="email">
+					<input class="input input-error input-box" type="file">
+					<input class="input input-error input-box" type="hidden">
+					<input class="input input-error input-box" type="image">
+					<input class="input input-error input-box" type="month">
+					<input class="input input-error input-box" type="number">
+					<input class="input input-error input-box" type="password">
 					<input class="input input-error input-inline" type="radio">
 					<input class="input input-error input-inline" type="range">
 					<input class="input input-error input-inline" type="reset">
-					<input class="input input-error input-single-line" type="search">
+					<input class="input input-error input-box" type="search">
 					<input class="input input-error input-inline" type="submit">
-					<input class="input input-error input-single-line" type="tel">
-					<input class="input input-error input-single-line" type="text">
-					<input class="input input-error input-single-line" type="time">
-					<input class="input input-error input-single-line" type="url">
-					<input class="input input-error input-single-line" type="week">
-					<input class="input input-error input-single-line" list="browsers">
+					<input class="input input-error input-box" type="tel">
+					<input class="input input-error input-box" type="text">
+					<input class="input input-error input-box" type="time">
+					<input class="input input-error input-box" type="url">
+					<input class="input input-error input-box" type="week">
+					<input class="input input-error input-box" list="browsers">
 					<datalist class="input input-error" id="browsers">
 						<option value="Internet Explorer">
 						</option><option value="Firefox">
@@ -4379,7 +4392,7 @@
 						</option><option value="Safari">
 					</option></datalist>
 
-					<select class="input input-error input-select" name="cars">
+					<select class="input input-error input-box input-box-select" name="cars">
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="fiat">Fiat</option>
@@ -4387,40 +4400,40 @@
 					</select>
 
 
-					<select class="input input-error input-select" name="cars" multiple>
+					<select class="input input-error input-box input-box-select" name="cars" multiple>
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="fiat">Fiat</option>
 					<option value="audi">Audi</option>
 					</select>
 
-					<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+					<textarea class="input input-error input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 					<hr>
 
 					<input class="input input-large input-inline" type="button" value="Bitch">
 					<input class="input input-large input-inline" type="checkbox">
 					<input class="input input-large input-inline" type="color">
-					<input class="input input-large input-single-line" type="date">
-					<input class="input input-large input-single-line" type="datetime-local">
-					<input class="input input-large input-single-line" type="email">
-					<input class="input input-large input-single-line" type="file">
-					<input class="input input-large input-single-line" type="hidden">
-					<input class="input input-large input-single-line" type="image">
-					<input class="input input-large input-single-line" type="month">
-					<input class="input input-large input-single-line" type="number">
-					<input class="input input-large input-single-line" type="password">
+					<input class="input input-large input-box" type="date">
+					<input class="input input-large input-box" type="datetime-local">
+					<input class="input input-large input-box" type="email">
+					<input class="input input-large input-box" type="file">
+					<input class="input input-large input-box" type="hidden">
+					<input class="input input-large input-box" type="image">
+					<input class="input input-large input-box" type="month">
+					<input class="input input-large input-box" type="number">
+					<input class="input input-large input-box" type="password">
 					<input class="input input-large input-inline" type="radio">
 					<input class="input input-large input-inline" type="range">
 					<input class="input input-large input-inline" type="reset">
-					<input class="input input-large input-single-line" type="search">
+					<input class="input input-large input-box" type="search">
 					<input class="input input-large input-inline" type="submit">
-					<input class="input input-large input-single-line" type="tel">
-					<input class="input input-large input-single-line" type="text">
-					<input class="input input-large input-single-line" type="time">
-					<input class="input input-large input-single-line" type="url">
-					<input class="input input-large input-single-line" type="week">
-					<input class="input input-large input-single-line" list="browsers">
+					<input class="input input-large input-box" type="tel">
+					<input class="input input-large input-box" type="text">
+					<input class="input input-large input-box" type="time">
+					<input class="input input-large input-box" type="url">
+					<input class="input input-large input-box" type="week">
+					<input class="input input-large input-box" list="browsers">
 					<datalist class="input input-large" id="browsers">
 						<option value="Internet Explorer">
 						</option><option value="Firefox">
@@ -4429,7 +4442,7 @@
 						</option><option value="Safari">
 					</option></datalist>
 
-					<select class="input input-large input-select" name="cars">
+					<select class="input input-large input-box input-box-select" name="cars">
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="fiat">Fiat</option>
@@ -4437,14 +4450,14 @@
 					</select>
 
 
-					<select class="input input-large input-select" name="cars" multiple>
+					<select class="input input-large input-box input-box-select" name="cars" multiple>
 					<option value="volvo">Volvo</option>
 					<option value="saab">Saab</option>
 					<option value="fiat">Fiat</option>
 					<option value="audi">Audi</option>
 					</select>
 
-					<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+					<textarea class="input input-large input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 					<hr>
 
@@ -4504,27 +4517,27 @@
 					<div class="nav nav-vertical">
 						<input class="input input-inline" type="button" value="Bitch">
 						<input class="input input-inline" type="checkbox">
-						<input class="input input-single-line" type="color">
-						<input class="input input-single-line" type="date">
-						<input class="input input-single-line" type="datetime-local">
-						<input class="input input-single-line" type="email">
-						<input class="input input-single-line" type="file">
-						<input class="input input-single-line" type="hidden">
-						<input class="input input-single-line" type="image">
-						<input class="input input-single-line" type="month">
-						<input class="input input-single-line" type="number">
-						<input class="input input-single-line" type="password">
+						<input class="input input-box" type="color">
+						<input class="input input-box" type="date">
+						<input class="input input-box" type="datetime-local">
+						<input class="input input-box" type="email">
+						<input class="input input-box" type="file">
+						<input class="input input-box" type="hidden">
+						<input class="input input-box" type="image">
+						<input class="input input-box" type="month">
+						<input class="input input-box" type="number">
+						<input class="input input-box" type="password">
 						<input class="input input-inline" type="radio">
 						<input class="input input-inline" type="range">
 						<input class="input input-inline" type="reset">
-						<input class="input input-single-line" type="search">
+						<input class="input input-box" type="search">
 						<input class="input input-inline" type="submit">
-						<input class="input input-single-line" type="tel">
-						<input class="input input-single-line" type="text">
-						<input class="input input-single-line" type="time">
-						<input class="input input-single-line" type="url">
-						<input class="input input-single-line" type="week">
-						<input class="input input-single-line" list="browsers">
+						<input class="input input-box" type="tel">
+						<input class="input input-box" type="text">
+						<input class="input input-box" type="time">
+						<input class="input input-box" type="url">
+						<input class="input input-box" type="week">
+						<input class="input input-box" list="browsers">
 						<datalist class="input" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
@@ -4533,7 +4546,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-select" name="cars">
+						<select class="input input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4541,14 +4554,14 @@
 						</select>
 
 
-						<select class="input input-select" name="cars" multiple>
+						<select class="input input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 
 						color
@@ -4558,26 +4571,26 @@
 						<input class="input input-error input-inline" type="button" value="Bitch">
 						<input class="input input-error input-inline" type="checkbox">
 						<input class="input input-error input-inline" type="color">
-						<input class="input input-error input-single-line" type="date">
-						<input class="input input-error input-single-line" type="datetime-local">
-						<input class="input input-error input-single-line" type="email">
-						<input class="input input-error input-single-line" type="file">
-						<input class="input input-error input-single-line" type="hidden">
-						<input class="input input-error input-single-line" type="image">
-						<input class="input input-error input-single-line" type="month">
-						<input class="input input-error input-single-line" type="number">
-						<input class="input input-error input-single-line" type="password">
+						<input class="input input-error input-box" type="date">
+						<input class="input input-error input-box" type="datetime-local">
+						<input class="input input-error input-box" type="email">
+						<input class="input input-error input-box" type="file">
+						<input class="input input-error input-box" type="hidden">
+						<input class="input input-error input-box" type="image">
+						<input class="input input-error input-box" type="month">
+						<input class="input input-error input-box" type="number">
+						<input class="input input-error input-box" type="password">
 						<input class="input input-error input-inline" type="radio">
 						<input class="input input-error input-inline" type="range">
 						<input class="input input-error input-inline" type="reset">
-						<input class="input input-error input-single-line" type="search">
+						<input class="input input-error input-box" type="search">
 						<input class="input input-error input-inline" type="submit">
-						<input class="input input-error input-single-line" type="tel">
-						<input class="input input-error input-single-line" type="text">
-						<input class="input input-error input-single-line" type="time">
-						<input class="input input-error input-single-line" type="url">
-						<input class="input input-error input-single-line" type="week">
-						<input class="input input-error input-single-line" list="browsers">
+						<input class="input input-error input-box" type="tel">
+						<input class="input input-error input-box" type="text">
+						<input class="input input-error input-box" type="time">
+						<input class="input input-error input-box" type="url">
+						<input class="input input-error input-box" type="week">
+						<input class="input input-error input-box" list="browsers">
 						<datalist class="input input-error" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
@@ -4586,7 +4599,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-error input-select" name="cars">
+						<select class="input input-error input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4594,40 +4607,40 @@
 						</select>
 
 
-						<select class="input input-error input-select" name="cars" multiple>
+						<select class="input input-error input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input input-error input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 						<hr>
 
 						<input class="input input-large input-inline" type="button" value="Bitch">
 						<input class="input input-large input-inline" type="checkbox">
 						<input class="input input-large input-inline" type="color">
-						<input class="input input-large input-single-line" type="date">
-						<input class="input input-large input-single-line" type="datetime-local">
-						<input class="input input-large input-single-line" type="email">
-						<input class="input input-large input-single-line" type="file">
-						<input class="input input-large input-single-line" type="hidden">
-						<input class="input input-large input-single-line" type="image">
-						<input class="input input-large input-single-line" type="month">
-						<input class="input input-large input-single-line" type="number">
-						<input class="input input-large input-single-line" type="password">
+						<input class="input input-large input-box" type="date">
+						<input class="input input-large input-box" type="datetime-local">
+						<input class="input input-large input-box" type="email">
+						<input class="input input-large input-box" type="file">
+						<input class="input input-large input-box" type="hidden">
+						<input class="input input-large input-box" type="image">
+						<input class="input input-large input-box" type="month">
+						<input class="input input-large input-box" type="number">
+						<input class="input input-large input-box" type="password">
 						<input class="input input-large input-inline" type="radio">
 						<input class="input input-large input-inline" type="range">
 						<input class="input input-large input-inline" type="reset">
-						<input class="input input-large input-single-line" type="search">
+						<input class="input input-large input-box" type="search">
 						<input class="input input-large input-inline" type="submit">
-						<input class="input input-large input-single-line" type="tel">
-						<input class="input input-large input-single-line" type="text">
-						<input class="input input-large input-single-line" type="time">
-						<input class="input input-large input-single-line" type="url">
-						<input class="input input-large input-single-line" type="week">
-						<input class="input input-large input-single-line" list="browsers">
+						<input class="input input-large input-box" type="tel">
+						<input class="input input-large input-box" type="text">
+						<input class="input input-large input-box" type="time">
+						<input class="input input-large input-box" type="url">
+						<input class="input input-large input-box" type="week">
+						<input class="input input-large input-box" list="browsers">
 						<datalist class="input input-large" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
@@ -4636,7 +4649,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-large input-select" name="cars">
+						<select class="input input-large input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4644,41 +4657,41 @@
 						</select>
 
 
-						<select class="input input-large input-select" name="cars" multiple>
+						<select class="input input-large input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input input-large input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 						<hr>
 
-						<input class="input input-disabled input-inline" type="button" value="Bitch">
-						<input class="input input-disabled input-inline" type="checkbox">
-						<input class="input input-disabled input-inline" type="color">
-						<input class="input input-disabled input-single-line" type="date">
-						<input class="input input-disabled input-single-line" type="datetime-local">
-						<input class="input input-disabled input-single-line" type="email">
-						<input class="input input-disabled input-single-line" type="file">
-						<input class="input input-disabled input-single-line" type="hidden">
-						<input class="input input-disabled input-single-line" type="image">
-						<input class="input input-disabled input-single-line" type="month">
-						<input class="input input-disabled input-single-line" type="number">
-						<input class="input input-disabled input-single-line" type="password">
-						<input class="input input-disabled input-inline" type="radio">
-						<input class="input input-disabled input-inline" type="range">
-						<input class="input input-disabled input-inline" type="reset">
-						<input class="input input-disabled input-single-line" type="search">
-						<input class="input input-disabled input-inline" type="submit">
-						<input class="input input-disabled input-single-line" type="tel">
-						<input class="input input-disabled input-single-line" type="text">
-						<input class="input input-disabled input-single-line" type="time">
-						<input class="input input-disabled input-single-line" type="url">
-						<input class="input input-disabled input-single-line" type="week">
-						<input class="input input-disabled input-single-line" list="browsers">
-						<datalist class="input input-disabled" id="browsers">
+						<input class="input disabled input-inline" type="button" value="Bitch">
+						<input class="input disabled input-inline" type="checkbox">
+						<input class="input disabled input-inline" type="color">
+						<input class="input disabled input-box" type="date">
+						<input class="input disabled input-box" type="datetime-local">
+						<input class="input disabled input-box" type="email">
+						<input class="input disabled input-box" type="file">
+						<input class="input disabled input-box" type="hidden">
+						<input class="input disabled input-box" type="image">
+						<input class="input disabled input-box" type="month">
+						<input class="input disabled input-box" type="number">
+						<input class="input disabled input-box" type="password">
+						<input class="input disabled input-inline" type="radio">
+						<input class="input disabled input-inline" type="range">
+						<input class="input disabled input-inline" type="reset">
+						<input class="input disabled input-box" type="search">
+						<input class="input disabled input-inline" type="submit">
+						<input class="input disabled input-box" type="tel">
+						<input class="input disabled input-box" type="text">
+						<input class="input disabled input-box" type="time">
+						<input class="input disabled input-box" type="url">
+						<input class="input disabled input-box" type="week">
+						<input class="input disabled input-box" list="browsers">
+						<datalist class="input disabled" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
 							</option><option value="Chrome">
@@ -4686,7 +4699,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-disabled input-select" name="cars">
+						<select class="input disabled input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4694,14 +4707,14 @@
 						</select>
 
 
-						<select class="input input-disabled input-select" name="cars" multiple>
+						<select class="input disabled input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-disabled input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input disabled input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 						<hr>
 
@@ -4811,27 +4824,27 @@
 					<div class="input-group input-group-vertical">
 						<input class="input input-inline" type="button" value="Bitch">
 						<input class="input input-inline" type="checkbox">
-						<input class="input input-single-line" type="color">
-						<input class="input input-single-line" type="date">
-						<input class="input input-single-line" type="datetime-local">
-						<input class="input input-single-line" type="email">
-						<input class="input input-single-line" type="file">
-						<input class="input input-single-line" type="hidden">
-						<input class="input input-single-line" type="image">
-						<input class="input input-single-line" type="month">
-						<input class="input input-single-line" type="number">
-						<input class="input input-single-line" type="password">
+						<input class="input input-box" type="color">
+						<input class="input input-box" type="date">
+						<input class="input input-box" type="datetime-local">
+						<input class="input input-box" type="email">
+						<input class="input input-box" type="file">
+						<input class="input input-box" type="hidden">
+						<input class="input input-box" type="image">
+						<input class="input input-box" type="month">
+						<input class="input input-box" type="number">
+						<input class="input input-box" type="password">
 						<input class="input input-inline" type="radio">
 						<input class="input input-inline" type="range">
 						<input class="input input-inline" type="reset">
-						<input class="input input-single-line" type="search">
+						<input class="input input-box" type="search">
 						<input class="input input-inline" type="submit">
-						<input class="input input-single-line" type="tel">
-						<input class="input input-single-line" type="text">
-						<input class="input input-single-line" type="time">
-						<input class="input input-single-line" type="url">
-						<input class="input input-single-line" type="week">
-						<input class="input input-single-line" list="browsers">
+						<input class="input input-box" type="tel">
+						<input class="input input-box" type="text">
+						<input class="input input-box" type="time">
+						<input class="input input-box" type="url">
+						<input class="input input-box" type="week">
+						<input class="input input-box" list="browsers">
 						<datalist class="input" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
@@ -4840,7 +4853,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-select" name="cars">
+						<select class="input input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4848,14 +4861,14 @@
 						</select>
 
 
-						<select class="input input-select" name="cars" multiple>
+						<select class="input input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 
 						color
@@ -4865,26 +4878,26 @@
 						<input class="input input-error input-inline" type="button" value="Bitch">
 						<input class="input input-error input-inline" type="checkbox">
 						<input class="input input-error input-inline" type="color">
-						<input class="input input-error input-single-line" type="date">
-						<input class="input input-error input-single-line" type="datetime-local">
-						<input class="input input-error input-single-line" type="email">
-						<input class="input input-error input-single-line" type="file">
-						<input class="input input-error input-single-line" type="hidden">
-						<input class="input input-error input-single-line" type="image">
-						<input class="input input-error input-single-line" type="month">
-						<input class="input input-error input-single-line" type="number">
-						<input class="input input-error input-single-line" type="password">
+						<input class="input input-error input-box" type="date">
+						<input class="input input-error input-box" type="datetime-local">
+						<input class="input input-error input-box" type="email">
+						<input class="input input-error input-box" type="file">
+						<input class="input input-error input-box" type="hidden">
+						<input class="input input-error input-box" type="image">
+						<input class="input input-error input-box" type="month">
+						<input class="input input-error input-box" type="number">
+						<input class="input input-error input-box" type="password">
 						<input class="input input-error input-inline" type="radio">
 						<input class="input input-error input-inline" type="range">
 						<input class="input input-error input-inline" type="reset">
-						<input class="input input-error input-single-line" type="search">
+						<input class="input input-error input-box" type="search">
 						<input class="input input-error input-inline" type="submit">
-						<input class="input input-error input-single-line" type="tel">
-						<input class="input input-error input-single-line" type="text">
-						<input class="input input-error input-single-line" type="time">
-						<input class="input input-error input-single-line" type="url">
-						<input class="input input-error input-single-line" type="week">
-						<input class="input input-error input-single-line" list="browsers">
+						<input class="input input-error input-box" type="tel">
+						<input class="input input-error input-box" type="text">
+						<input class="input input-error input-box" type="time">
+						<input class="input input-error input-box" type="url">
+						<input class="input input-error input-box" type="week">
+						<input class="input input-error input-box" list="browsers">
 						<datalist class="input input-error" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
@@ -4893,7 +4906,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-error input-select" name="cars">
+						<select class="input input-error input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4901,40 +4914,40 @@
 						</select>
 
 
-						<select class="input input-error input-select" name="cars" multiple>
+						<select class="input input-error input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-error input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input input-error input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 						<hr>
 
 						<input class="input input-large input-inline" type="button" value="Bitch">
 						<input class="input input-large input-inline" type="checkbox">
 						<input class="input input-large input-inline" type="color">
-						<input class="input input-large input-single-line" type="date">
-						<input class="input input-large input-single-line" type="datetime-local">
-						<input class="input input-large input-single-line" type="email">
-						<input class="input input-large input-single-line" type="file">
-						<input class="input input-large input-single-line" type="hidden">
-						<input class="input input-large input-single-line" type="image">
-						<input class="input input-large input-single-line" type="month">
-						<input class="input input-large input-single-line" type="number">
-						<input class="input input-large input-single-line" type="password">
+						<input class="input input-large input-box" type="date">
+						<input class="input input-large input-box" type="datetime-local">
+						<input class="input input-large input-box" type="email">
+						<input class="input input-large input-box" type="file">
+						<input class="input input-large input-box" type="hidden">
+						<input class="input input-large input-box" type="image">
+						<input class="input input-large input-box" type="month">
+						<input class="input input-large input-box" type="number">
+						<input class="input input-large input-box" type="password">
 						<input class="input input-large input-inline" type="radio">
 						<input class="input input-large input-inline" type="range">
 						<input class="input input-large input-inline" type="reset">
-						<input class="input input-large input-single-line" type="search">
+						<input class="input input-large input-box" type="search">
 						<input class="input input-large input-inline" type="submit">
-						<input class="input input-large input-single-line" type="tel">
-						<input class="input input-large input-single-line" type="text">
-						<input class="input input-large input-single-line" type="time">
-						<input class="input input-large input-single-line" type="url">
-						<input class="input input-large input-single-line" type="week">
-						<input class="input input-large input-single-line" list="browsers">
+						<input class="input input-large input-box" type="tel">
+						<input class="input input-large input-box" type="text">
+						<input class="input input-large input-box" type="time">
+						<input class="input input-large input-box" type="url">
+						<input class="input input-large input-box" type="week">
+						<input class="input input-large input-box" list="browsers">
 						<datalist class="input input-large" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
@@ -4943,7 +4956,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-large input-select" name="cars">
+						<select class="input input-large input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -4951,41 +4964,41 @@
 						</select>
 
 
-						<select class="input input-large input-select" name="cars" multiple>
+						<select class="input input-large input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-large input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input input-large input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 						<hr>
 
-						<input class="input input-disabled input-inline" type="button" value="Bitch">
-						<input class="input input-disabled input-inline" type="checkbox">
-						<input class="input input-disabled input-inline" type="color">
-						<input class="input input-disabled input-single-line" type="date">
-						<input class="input input-disabled input-single-line" type="datetime-local">
-						<input class="input input-disabled input-single-line" type="email">
-						<input class="input input-disabled input-single-line" type="file">
-						<input class="input input-disabled input-single-line" type="hidden">
-						<input class="input input-disabled input-single-line" type="image">
-						<input class="input input-disabled input-single-line" type="month">
-						<input class="input input-disabled input-single-line" type="number">
-						<input class="input input-disabled input-single-line" type="password">
-						<input class="input input-disabled input-inline" type="radio">
-						<input class="input input-disabled input-inline" type="range">
-						<input class="input input-disabled input-inline" type="reset">
-						<input class="input input-disabled input-single-line" type="search">
-						<input class="input input-disabled input-inline" type="submit">
-						<input class="input input-disabled input-single-line" type="tel">
-						<input class="input input-disabled input-single-line" type="text">
-						<input class="input input-disabled input-single-line" type="time">
-						<input class="input input-disabled input-single-line" type="url">
-						<input class="input input-disabled input-single-line" type="week">
-						<input class="input input-disabled input-single-line" list="browsers">
-						<datalist class="input input-disabled" id="browsers">
+						<input class="input disabled input-inline" type="button" value="Bitch">
+						<input class="input disabled input-inline" type="checkbox">
+						<input class="input disabled input-inline" type="color">
+						<input class="input disabled input-box" type="date">
+						<input class="input disabled input-box" type="datetime-local">
+						<input class="input disabled input-box" type="email">
+						<input class="input disabled input-box" type="file">
+						<input class="input disabled input-box" type="hidden">
+						<input class="input disabled input-box" type="image">
+						<input class="input disabled input-box" type="month">
+						<input class="input disabled input-box" type="number">
+						<input class="input disabled input-box" type="password">
+						<input class="input disabled input-inline" type="radio">
+						<input class="input disabled input-inline" type="range">
+						<input class="input disabled input-inline" type="reset">
+						<input class="input disabled input-box" type="search">
+						<input class="input disabled input-inline" type="submit">
+						<input class="input disabled input-box" type="tel">
+						<input class="input disabled input-box" type="text">
+						<input class="input disabled input-box" type="time">
+						<input class="input disabled input-box" type="url">
+						<input class="input disabled input-box" type="week">
+						<input class="input disabled input-box" list="browsers">
+						<datalist class="input disabled" id="browsers">
 							<option value="Internet Explorer">
 							</option><option value="Firefox">
 							</option><option value="Chrome">
@@ -4993,7 +5006,7 @@
 							</option><option value="Safari">
 						</option></datalist>
 
-						<select class="input input-disabled input-select" name="cars">
+						<select class="input disabled input-box input-box-select" name="cars">
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
@@ -5001,14 +5014,14 @@
 						</select>
 
 
-						<select class="input input-disabled input-select" name="cars" multiple>
+						<select class="input disabled input-box input-box-select" name="cars" multiple>
 						<option value="volvo">Volvo</option>
 						<option value="saab">Saab</option>
 						<option value="fiat">Fiat</option>
 						<option value="audi">Audi</option>
 						</select>
 
-						<textarea class="input input-disabled input-multiple-line" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+						<textarea class="input disabled input-box input-box-multiline" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
 
 						<hr>
 
@@ -5193,15 +5206,15 @@
 			<h2>
 				Disabled
 			</h2>
-			<a href="#" class="btn btn-disabled btn-default">Default</a>
-			<a href="#" class="btn btn-disabled btn-primary">Primary</a>
-			<a href="#" class="btn btn-disabled btn-secondary">secondary</a>
-			<a href="#" class="btn btn-disabled btn-accent">accent</a>
-			<a href="#" class="btn btn-disabled btn-neutral">neutral</a>
-			<a href="#" class="btn btn-disabled btn-success">Success</a>
-			<a href="#" class="btn btn-disabled btn-caution">caution</a>
-			<a href="#" class="btn btn-disabled btn-error">error</a>
-			<a href="#" class="btn btn-disabled btn-link">Link</a>
+			<a href="#" class="btn disabled btn-default">Default</a>
+			<a href="#" class="btn disabled btn-primary">Primary</a>
+			<a href="#" class="btn disabled btn-secondary">secondary</a>
+			<a href="#" class="btn disabled btn-accent">accent</a>
+			<a href="#" class="btn disabled btn-neutral">neutral</a>
+			<a href="#" class="btn disabled btn-success">Success</a>
+			<a href="#" class="btn disabled btn-caution">caution</a>
+			<a href="#" class="btn disabled btn-error">error</a>
+			<a href="#" class="btn disabled btn-link">Link</a>
 
 			<h2>
 				In nav
@@ -5268,11 +5281,11 @@
 			<h3>another group but one is disabled and one has interactive animations disabled</h3>
 			<button class="btn-group btn-group-horizontal">
 			<span class="btn btn-default btn-no-interaction"><strong>00:00</strong> Hours</span>
-			<span class="btn btn-primary btn-disabled">Add Time to Project <i class="symbol symbol-plus"></i></span>
+			<span class="btn btn-primary disabled">Add Time to Project <i class="symbol symbol-plus"></i></span>
 			</button>
 
 		<h3>group it's all disabled interaction enabled</h3>
-		<button class="btn-group btn-group-horizontal btn-disabled">
+		<button class="btn-group btn-group-horizontal disabled">
 		<span class="btn btn-default">Default</span>
 		<span class="btn btn-primary">Primary</span>
 		<span class="btn btn-secondary">secondary</span>
@@ -5284,7 +5297,7 @@
 
 			<div class="btn-group btn-group-vertical btn-group-toggle">
 			<a href="#" class="btn btn-default">butt</a>
-			<a href="#" class="btn btn-default btn-disabled">butt</a>
+			<a href="#" class="btn btn-default disabled">butt</a>
 			<a href="#" class="btn btn-default">butt</a>
 			<a href="#" class="btn btn-default">butt</a>
 			<a href="#" class="btn btn-default">butt</a>
@@ -6142,7 +6155,7 @@
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
-						<tr class="table-row-disabled">
+						<tr class="disabled">
 							
 							<td>Disabled</td>
 							<td>Column content</td>
@@ -6255,7 +6268,7 @@
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
-						<tr class="table-row-disabled">
+						<tr class="disabled">
 							
 							<td>Disabled</td>
 							<td>Column content</td>
@@ -6370,7 +6383,7 @@
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
-						<tr class="table-row-disabled">
+						<tr class="disabled">
 							
 							<td>Disabled</td>
 							<td>Column content</td>
@@ -6483,7 +6496,7 @@
 							<td class="text-align-right">Column content</td>
 							<td class="text-align-center">0</td>
 						</tr>
-						<tr class="table-row-disabled">
+						<tr class="disabled">
 							
 							<td>Disabled</td>
 							<td>Column content</td>
@@ -6995,7 +7008,7 @@
 
 			<div class="overflow-hidden">
 
-				<p class="text-wrap-ellipsis-multiple">text-wrap-ellipsis put an ellipsis on this shit but allow multiple lines but that depends on how many lines you set up that one sass var, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
+				<p class="text-wrap-ellipsis-multiline">text-wrap-ellipsis put an ellipsis on this shit but allow multiple lines but that depends on how many lines you set up that one sass var, consectetur adipiscing elit. Praesent finibus lacus eu ante malesuada, eu consectetur nulla imperdiet. Nam ultricies, risus finibus ultrices molestie, felis magna convallis sem, at blandit massa diam eget sapien. Fusce auctor ut eros id auctor. Fusce tempor blandit neque, ac ultricies tellus tristique vitae. Curabitur tincidunt malesuada libero sit amet lobortis. Pellentesque eu lorem nec est viverra laoreet. Suspendisse id odio malesuada, lobortis lacus eu, feugiat justo.</p>
 			</div>
 
 
@@ -7286,49 +7299,73 @@
 		<h1 data-toggle-accordion>Grid<i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></h1>
 		<div class="accordion">
 
-			<h2>Typical grid</h2>
+			<h2>default grid</h2>
 
 
-			<div class="flex-grid">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-default">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
+					A column boi
+				</div>
+			</div>
+
+			<h2>classic grid</h2>
+
+
+			<div class="grid grid-flex">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
+					A column boi
+				</div>
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
+					A column boi
+				</div>
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
+					A column boi
+				</div>
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
+					A column boi
+				</div>
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
+					A column boi
+				</div>
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi
 				</div>
 			</div>
 
 			<h3>Compact grid</h3>
 
-			<div class="flex-grid flex-grid-compact">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-flex grid-compact">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi but compact
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi but compact
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but compact
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but compact
 				</div>
 			</div>
@@ -7337,46 +7374,46 @@
 
 			<h3>Expanded grid</h3>
 
-			<div class="flex-grid flex-grid-expanded">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-flex grid-expanded">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi but expanded
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi but expanded
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but expanded
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but expanded
 				</div>
 			</div>
 
 			<h3>constricted grid</h3>
 
-			<div class="flex-grid flex-grid-constricted">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-flex grid-constricted">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi but constricted
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi but constricted
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted
 				</div>
 			</div>
@@ -7385,46 +7422,46 @@
 
 			<h3>constricted x grid</h3>
 
-			<div class="flex-grid flex-grid-constricted-x">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-flex grid-constricted-x">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi but constricted x
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi but constricted x
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted x
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted x
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted x
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted x
 				</div>
 			</div>
 
 			<h3>constricted y grid</h3>
 
-			<div class="flex-grid flex-grid-constricted-y">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-flex grid-constricted-y">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi but constricted y
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi but constricted y
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted y
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted y
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted y
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but constricted y
 				</div>
 			</div>
@@ -7432,23 +7469,23 @@
 
 			<h3>fixed grid</h3>
 
-			<div class="flex-grid flex-grid-fixed">
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-4 flex-col-lg-3">
+			<div class="grid grid-flex grid-fixed">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-4 grid-col-lg-3">
 					A column boi but fixed
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-sm-6 flex-col-md-8 flex-col-lg-9">
+				<div class="background-theme-contrast grid-col-12 grid-col-sm-6 grid-col-md-8 grid-col-lg-9">
 					A column boi but fixed
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but fixed
 				</div>
-				<div class="background-theme-contrast flex-col-12 flex-col-md-4">
+				<div class="background-theme-contrast grid-col-12 grid-col-md-4">
 					A column boi but fixed
 				</div>
 			</div>
@@ -7456,29 +7493,29 @@
 
 			<h3> grid but not necessarily columnized children</h3>
 
-			<div class="flex-grid">
-				<div class="background-theme-contrast flex-col-6">
+			<div class="grid grid-flex">
+				<div class="background-theme-contrast grid-col-6">
 					A column boi but not really column
 				</div>
-				<div class="background-theme-contrast flex-col-6">
+				<div class="background-theme-contrast grid-col-6">
 					A column boi but not really column
 				</div>
-				<div class="background-theme-contrast flex-col-3 flex-0-1">
+				<div class="background-theme-contrast grid-col-3 flex-0-1">
 					A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="background-theme-contrast flex-child">
+				<div class="background-theme-contrast grid-col">
 					A column boi but not really column
 				</div>
-				<div class="background-theme-contrast flex-child flex-01-1">
+				<div class="background-theme-contrast grid-col flex-01-1">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="background-theme-contrast flex-col-4">
+				<div class="background-theme-contrast grid-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="background-theme-contrast flex-col-4">
+				<div class="background-theme-contrast grid-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
-				<div class="background-theme-contrast flex-col-4">
+				<div class="background-theme-contrast grid-col-4">
 					A column boi but not really column, just has the margin setup and shit 
 				</div>
 			</div>
@@ -7625,7 +7662,7 @@
 						.join('path')
 						.attr('data-make', d=> d.Make)
 						.attr('data-model', d=> d.Model)
-						.attr('data-toggle','tooltip-hover')
+						.attr('data-toggle-tooltip-hover',true)
 						.attr('data-tooltip-content',d=> d.Make)
 						.attr('fill', d => colors(d.Make))
 						.attr('stroke-width',strokeWidth)
@@ -7885,8 +7922,8 @@
 
 		<style>
 			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="background-"]:not(*[class*="clip"]),
-			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) .flex-child,
-			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="flex-col-"],
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) .grid-col,
+			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="grid-col-"],
 			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="color-"]:not(.symbol),
 			h1.special-primary ~ .accordion:nth-last-of-type(-n+6) *[class*="border-"],
 			.ratio-me {

@@ -55,10 +55,22 @@ $btn-font-weight: 500;
 // $input-font-weight: 600;
 // $nav-top-font-weight: 500 !default;
 
+$input-height: 32px;
+$input-padding-x: .625em;
+
+$input-toggle-width: 2em;
+$input-toggle-plate-height: .625em;
+$input-toggle-node-height: 1em;
+$input-toggle-plate-background-color-active: var(--fw-color-primary);
+$input-toggle-plate-border-color-active: currentColor;
+$input-toggle-node-border-color-active: currentColor;
+
+$gutter-base: 20px;
+
 
 $nav-top-font-size: 14px;
 $tag-font-size: 12px;
  
 
-$thumbnail-micro-size: 45px;
-$thumbnail-micro-font-size: 18px;
+$thumbnail-size-micro: 45px;
+$thumbnail-font-size-micro: 18px;

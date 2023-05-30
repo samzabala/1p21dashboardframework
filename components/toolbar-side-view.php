@@ -12,8 +12,8 @@ $args = app_parse_args($data,$defs);
 	data-grid-area-md="auto / side"
 >
 
-	<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
-		<div class="flex-child flex-1-1">
+	<div class="grid grid-flex grid-constricted-y grid-compact justify-content-space-between">
+		<div class="grid-col flex-1-1">
 			<!-- @if <?=$args['post']?> is not marked as complete yet -->
 				<a href="#" class="toolbar toolbar-small toolbar-horizontal toolbar-block color-inherit">
 					<div class="toolbar-tile flex-0-0">
@@ -44,7 +44,7 @@ $args = app_parse_args($data,$defs);
 				
 		</div>
 
-		<div class="flex-child flex-0-0">
+		<div class="grid-col flex-0-0">
 			<a
 				class="btn btn-link background-theme btn-symbol"
 				data-toggle="dropdown">

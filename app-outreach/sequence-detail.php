@@ -1,11 +1,11 @@
 
-<div id="outreach-sequence-detail-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-12  flex-col-md-8">
+<div id="outreach-sequence-detail-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-12  grid-col-md-8">
 		<h1 class="no-margin">
 			Sequence: <span class="REPLACE">My favorite Sequence</span>
 		</h1>
 	</div>
-	<div class="flex-col-12  flex-col-md-4 text-align-right">
+	<div class="grid-col-12  grid-col-md-4 text-align-right">
 		<?php app_get_component('components/function-add-sequence-step') ?>
 	</div>
 </div>

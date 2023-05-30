@@ -12,8 +12,8 @@ $args = app_parse_args($data,$defs);
 	grid-area-xs="toolbar"
 	grid-area-md="none"
 >
-	<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
-		<div class="flex-child flex-1-1">
+	<div class="grid grid-flex grid-constricted-y grid-compact justify-content-space-between">
+		<div class="grid-col flex-1-1">
 			<!--
 				@NOTE
 				change `Create Task` if task alrerady exists and is just being edited
@@ -25,7 +25,7 @@ $args = app_parse_args($data,$defs);
 					<!-- Save edits <i class="symbol symbol-edit"></i></button> -->
 			</button>
 		</div>
-		<div class="flex-child flex-1-1">
+		<div class="grid-col flex-1-1">
 
 			<!-- @NOTE onclick event should revert to previous history state or previously viewed page. feel free modify as needed -->
 			<button data-toggle="board" href="#" onclick="event.preventDefault(); console.log('work u sonofabitch'); history.back(); " class="btn btn-neutral-outline btn-block">Cancel</button>
@@ -33,7 +33,7 @@ $args = app_parse_args($data,$defs);
 
 		<!-- @NOTE comment out for now. this contains future features such ass project templates, saving drafts etc. -->
 
-		<div class="flex-child flex-0-0">
+		<div class="grid-col flex-0-0">
 			<a
 				class="btn btn-link background-theme btn-symbol"
 				data-toggle="dropdown">

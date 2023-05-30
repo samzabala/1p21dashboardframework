@@ -1,6 +1,6 @@
 <!-- Main -->
 <div
-	class="module module-no-gutter background-transparent no-border no-shadow"
+	class="module module-constricted background-transparent no-border no-shadow"
 >
 	<div class="module-content align-self-stretch">
 

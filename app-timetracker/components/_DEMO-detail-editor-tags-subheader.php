@@ -6,7 +6,7 @@
 
 
 <div class="module margin-large-top">
-	<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+	<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 			<p class="h3 color-theme flex-1-1 no-margin-y">
 				<input id="project-name" value="Editor tags / subheader when contains info" type="text" placeholder="Click here to add a task name" class="input input-blend input-block" />
@@ -45,7 +45,7 @@
 </div>
 
 <div class="module margin-large-top">
-	<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+	<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 			<p class="h3 color-theme flex-1-1 no-margin-y">
 				<span class="REPLACE">Editor tags / subheader cannot be edited</span>
@@ -82,7 +82,7 @@
 </div>
 
 <div class="module margin-large-top">
-	<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+	<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 			<p class="h3 color-theme flex-1-1 no-margin-y">
 				<span class="REPLACE">Editor tags / subheader cannot be edited but has info</span>
@@ -121,7 +121,7 @@
 </div>
 <?php if(FWAPPS_TEMPLATE == 'task-detail'): ?>
 	<div class="module margin-large-top">
-		<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+		<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 			<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 				<p class="h3 color-theme flex-1-1 no-margin-y">
 					<input id="project-name" value="2 assignees" type="text" placeholder="Click here to add a task name" class="input input-blend input-block" />
@@ -161,7 +161,7 @@
 	</div>
 
 	<div class="module margin-large-top">
-		<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+		<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 			<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 				<p class="h3 color-theme flex-1-1 no-margin-y">
 					<input id="project-name" value="edge case assignees" type="text" placeholder="Click here to add a task name" class="input input-blend input-block" />

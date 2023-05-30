@@ -1,4 +1,5 @@
-/* FLEX */
+@use 'sass:list';
+
 .inline-flex {
   display: inline-flex !important;
 
@@ -31,23 +32,27 @@
   display: flex !important;
 
   &-xs {
-    @include flex(false, xs, true);
+    @include br(xs) {
+      display: flex !important;
+    }
   }
 
   &-sm {
-    @include flex(false, sm, true);
+    @include br(sm) {
+      display: flex !important;
+    }
   }
 
   &-md {
-    @include flex(false, md, true);
+    @include br(md) {
+      display: flex !important;
+    }
   }
 
   &-lg {
-    @include flex(false, lg, true);
-  }
-
-  &-xl {
-    @include flex(false, xl, true);
+    @include br(lg) {
+      display: flex !important;
+    }
   }
 
   &-direction {
@@ -84,5 +89,29 @@
     flex-wrap: inherit !important;
   }
 
-  @include dump-flex-increments($flex-max);
+  @for $i from 0 through $flex-max {
+    $selector-grow: ();
+    $selector-shrink: ();
+
+    @for $shrink from 0 through $flex-max {
+      $selector-grow: list.append(
+        $selector-grow,
+        #{& + '-' + $i + '-' + $shrink},
+        comma
+      );
+    }
+    @for $grow from 0 through $flex-max {
+      $selector-shrink: list.append(
+        $selector-shrink,
+        #{& + '-' + $grow + '-' + $i},
+        comma
+      );
+    }
+    @at-root :is(#{$selector-grow}) {
+      flex-grow: #{$i} !important;
+    }
+    @at-root :is(#{$selector-shrink}) {
+      flex-shrink: #{$i} !important;
+    }
+  }
 }

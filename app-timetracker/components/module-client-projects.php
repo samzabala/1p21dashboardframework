@@ -24,7 +24,7 @@
 	?>
 
 <div class="module margin-large-top margin-bottom">
-	<div class="module-header module-header-break align-items-center no-margin-bottom">
+	<div class="module-header module-end-break align-items-center no-margin-bottom">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 			<p class="h4  no-margin-top">
 				Projects

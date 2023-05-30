@@ -254,7 +254,7 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 
 
 		.text-wrap-ellipsis,
-		.text-wrap-ellipsis-multiple {
+		.text-wrap-ellipsis-multiline {
 			max-width: 600px !important;
 		}
 
@@ -291,15 +291,6 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 				border-color: $table-cell-border-color;
 				border-style: solid;
 				border-bottom-width: $table-cell-border-width;
-
-				.theme-inverse & {
-					border-color: $table-cell-border-color-inverse;
-				}
-
-				.alert &,
-				.theme-inverse .alert & {
-					border-color: currentColor;
-				}
 			}
 
 			th,td {
@@ -332,7 +323,7 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 		}
 
 		.text-wrap-ellipsis,
-		.text-wrap-ellipsis-multiple {
+		.text-wrap-ellipsis-multiline {
 			max-width: 100% !important;
 			width:100% !important;
 		}

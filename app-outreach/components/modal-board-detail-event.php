@@ -18,8 +18,8 @@
         </p>
     </div>
     <div class="background-theme-contrast padding-x">
-        <div class="flex-grid flex-grid-fixed">
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+        <div class="grid grid-flex grid-flex-fixed">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Due Date</h5>
                 <p>
                     <i class="symbol symbol-calendar-alt color-primary"></i>
@@ -31,7 +31,7 @@
                         </span>
                 </p>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Time</h5>
                 <p>
                     <i class="symbol symbol-watch color-primary"></i>
@@ -43,7 +43,7 @@
                         </span>
                 </p>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Duration</h5>
                 <p>
                     <!-- @if an hour or more -->
@@ -56,7 +56,7 @@
                         </span>
                 </p>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Type</h5>
                 <p>
                     <span class="REPLACE">Company</span>

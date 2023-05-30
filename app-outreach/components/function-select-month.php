@@ -1,6 +1,6 @@
 <form class="function-select-by-month">
-	<label class="input-label">Month:</label>
-	<select class="input input-single-line input-block-mobile text-align-left" name="select-by-type" id="">
+	<label class="input input-label">Month:</label>
+	<select class="input input-box input-block-mobile text-align-left" name="select-by-type" id="">
 		<!-- @placeholder replace/modify as needed -->
 		<option selected value="">Select Month</option>
 		<option value="">January 2021</option>

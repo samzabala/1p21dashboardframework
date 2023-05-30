@@ -12,14 +12,14 @@ $args = app_parse_args($data,$defs);
 	grid-area-xs="toolbar"
 	grid-area-md="none"
 >
-	<div class="flex-grid flex-grid-no-gutter-y flex-grid-compact justify-content-space-between">
-		<div class="flex-child flex-1-1">
+	<div class="grid grid-flex grid-constricted-y grid-compact justify-content-space-between">
+		<div class="grid-col flex-1-1">
 			<a href="<?=app_create_link(array('template'=>'note-edit')) ?>" class="btn btn-primary btn-block">
 					Edit <?=$args['post']?> <i class="symbol symbol-edit"></i>
 			</a>
 		</div>
 
-		<div class="flex-child flex-0-0">
+		<div class="grid-col flex-0-0">
 			<a
 				class="btn btn-link background-theme btn-symbol"
 				title="Delete"

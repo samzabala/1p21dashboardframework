@@ -4,7 +4,7 @@
 	
 	<!-- @NOTE REPLACE LABEL HOWEVER NEEDED -->
 	<!-- @IF label the filter -->
-	<!-- <div class="input-label"><span class="REPLACE">Date</span>:</div> -->
+	<!-- <div class="input input-label"><span class="REPLACE">Date</span>:</div> -->
 
 	<button class="btn-group  btn-group-horizontal btn-group-unite" data-toggle="dropdown">
 		<span class="btn btn-default"><span class="current">Jan 2018</span></span>

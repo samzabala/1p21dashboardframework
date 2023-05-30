@@ -1,38 +1,38 @@
 
-	<div class="flex-grid flex-grid-fixed">
-		<div class="flex-col-xs-12 flex-col-sm-9 flex-col-md-7">
+	<div class="grid grid-flex grid-flex-fixed">
+		<div class="grid-col-xs-12 grid-col-sm-9 grid-col-md-7">
 			<form action="">
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label class="input-label font-weight-700">Name</label>
+					<label class="input input-label font-weight-700">Name</label>
 					<div>
-						<div class="flex-grid flex-grid-no-gutter-y glex-grid-compact">
-							<div class="flex-col-6">
+						<div class="grid grid-flex grid-constricted-y glex-grid-compact">
+							<div class="grid-col-6">
 
 								<!-- @NOTE .input
 									classes to add:
 										input-error => if field has an error
 								-->
-								<input id="team-first-name" placeholder="First Name" class="input input-single-line input-block" />
+								<input id="team-first-name" placeholder="First Name" class="input input-box input-block" />
 
 							</div>
-							<div class="flex-col-6">
+							<div class="grid-col-6">
 
 								<!-- @NOTE .input
 									classes to add:
 										input-error => if field has an error
 								-->
-								<input id="team-last-name" placeholder="Last Name" class="input input-single-line input-block" />
+								<input id="team-last-name" placeholder="Last Name" class="input input-box input-block" />
 							</div>
 						</div>
 					</div>
 
 					<!-- @if has error -->
-						<div class="input-info color-error font-weight-700">Error description here</div>
+						<div class="input input-info color-error font-weight-700">Error description here</div>
 				</div>
 
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label for="team-job-title" class="input-label font-weight-700">Viewers</label>		
+					<label for="team-job-title" class="input input-label font-weight-700">Viewers</label>		
 					<datalist id="job-titles">
 						<option value="Web Developer">Web Developer</option>
 						<option value="Jr Web Developer">Jr Web Developer</option>
@@ -45,16 +45,16 @@
 						classes to add:
 							input-error => if field has an error
 					-->
-					<input id="team-job-title" placeholder="Enter a Job department" class="input input-single-line" list="job-titles" />
+					<input id="team-job-title" placeholder="Enter a Job department" class="input input-box" list="job-titles" />
 
 
 					<!-- @if has error -->
-						<div class="input-info color-error font-weight-700">Error description here</div>
+						<div class="input input-info color-error font-weight-700">Error description here</div>
 				</div>
 
 
 				<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-					<label for="team-report-to" class="input-label font-weight-700">Reports to</label>
+					<label for="team-report-to" class="input input-label font-weight-700">Reports to</label>
 
 				
 					<datalist id="report-to">
@@ -68,16 +68,16 @@
 						classes to add:
 							input-error => if field has an error
 					-->
-					<input id="team-report-to" placeholder="Enter a report to" class="input input-single-line" list="report-to" />
+					<input id="team-report-to" placeholder="Enter a report to" class="input input-box" list="report-to" />
 
 
 					<!-- @if has error -->
-						<div class="input-info color-error font-weight-700">Error description here</div>
+						<div class="input input-info color-error font-weight-700">Error description here</div>
 				</div>
 
 
 
-				<label for="job-description" class="input-label font-weight-700">Viewers</label>
+				<label for="job-description" class="input input-label font-weight-700">Viewers</label>
 				<datalist id="viewers">
 					<option value="Loid Forger">Loid Forger</option>
 					<option value="Yor Forger">Yor Forger</option>
@@ -97,9 +97,9 @@
 					<option value="Eren Yeager">Eren Yeager</option>
 				</datalist>
 
-				<!-- @loop .flex-grid -->
-					<div class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap">
-						<div class="flex-child flex-1-1 no-margin-top">
+				<!-- @loop .grid grid-flex -->
+					<div class="grid grid-flex grid-compact grid-flex-fixed flex-nowrap">
+						<div class="grid-col flex-1-1 no-margin-top">
 
 							<label for="team-viewers-[REPLACE]" class="sr-only">Viewers Entry</label>
 
@@ -107,12 +107,12 @@
 								classes to add:
 									input-error => if field has an error
 							-->
-							<input id="team-viewers-[REPLACE]" placeholder="Enter a Viewer" class="input input-single-line input-block" list="viewers" />
+							<input id="team-viewers-[REPLACE]" placeholder="Enter a Viewer" class="input input-box input-block" list="viewers" />
 
 							<!-- @if has error -->
-								<div class="input-info color-error font-weight-700">Error description here</div>
+								<div class="input input-info color-error font-weight-700">Error description here</div>
 						</div>
-						<div class="flex-child flex-0-0 no-margin-top flex-xs">
+						<div class="grid-col flex-0-0 no-margin-top flex-xs">
 							<!-- @if it is a new entry -->
 								<button title="Add" class="btn btn-primary-glassy btn-symbol">
 									<i class="symbol symbol-plus"></i>
@@ -129,15 +129,15 @@
 
 							<?php for($i = 0; $i < 6; $i++): ?>
 
-								<div class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap">
-									<div class="flex-child flex-1-1 no-margin-top">
+								<div class="grid grid-flex grid-compact grid-flex-fixed flex-nowrap">
+									<div class="grid-col flex-1-1 no-margin-top">
 
 										<label for="team-viewers-<?=$i ?>" class="sr-only">Viewers Entry</label>
-										<input id="team-viewers-<?=$i ?>" placeholder="Enter a Viewer" class="input-error input input-single-line input-block" list="viewers" />
+										<input id="team-viewers-<?=$i ?>" placeholder="Enter a Viewer" class="input-error input input-box input-block" list="viewers" />
 										<!-- @if has error -->
-											<div class="input-info color-error font-weight-700">Error description here</div>
+											<div class="input input-info color-error font-weight-700">Error description here</div>
 									</div>
-									<div class="flex-child flex-0-0 no-margin-top flex-xs">
+									<div class="grid-col flex-0-0 no-margin-top flex-xs">
 											<button title="Add" class="btn btn-neutral-glassy btn-symbol">
 												<i class="symbol symbol-minus"></i>
 											</button>
@@ -146,13 +146,13 @@
 							<?php endfor; ?>
 
 
-							<div class="flex-grid flex-grid-compact flex-grid-fixed flex-nowrap">
-								<div class="flex-child flex-1-1 no-margin-top">
+							<div class="grid grid-flex grid-compact grid-flex-fixed flex-nowrap">
+								<div class="grid-col flex-1-1 no-margin-top">
 
 									<label for="team-viewers-<?=$i + 1 ?>" class="sr-only">Viewers Entry</label>
-									<input id="team-viewers-<?=$i + 1 ?>" placeholder="Enter a Viewer" class="input input-single-line input-block" list="viewers" />
+									<input id="team-viewers-<?=$i + 1 ?>" placeholder="Enter a Viewer" class="input input-box input-block" list="viewers" />
 								</div>
-								<div class="flex-child flex-0-0 no-margin-top flex-xs">
+								<div class="grid-col flex-0-0 no-margin-top flex-xs">
 									<!-- @if it is a new entry -->
 										<button title="Add" class="btn btn-primary-glassy btn-symbol">
 											<i class="symbol symbol-plus"></i>
@@ -164,12 +164,12 @@
 
 
 				<div class="p">
-					<label class="input-label font-weight-700">More Team Member Options</label>
+					<label class="input input-label font-weight-700">More Team Member Options</label>
 	
 					<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 						<label class="input-toggle input-block p">
 							<input type="checkbox" class="input">
-							<span class="input-label input-toggle-label">
+							<span class="input input-label input-toggle-label">
 								Set as Active
 							</span>
 						</label>
@@ -177,7 +177,7 @@
 					<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 						<label class="input-toggle input-block p">
 							<input type="checkbox" class="input">
-							<span class="input-label input-toggle-label">
+							<span class="input input-label input-toggle-label">
 								Set as Superuser
 							</span>
 						</label>

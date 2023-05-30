@@ -20,11 +20,11 @@ $args = app_parse_args($data,$defs);
 		<!-- @NOTE might need to have suffixes appended to input field name to avoid conflicting other innstances of user filter components -->
 
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-			<label for="filter-REPLACEwithCorrespondingInputFieldName" class="input-label">Choose &nbsp;<span class="filter-verbiage-text">REPLACEUserVerbiage</span>s</label>
+			<label for="filter-REPLACEwithCorrespondingInputFieldName" class="input input-label">Choose &nbsp;<span class="filter-verbiage-text">REPLACEUserVerbiage</span>s</label>
 			<!-- @NOTE
 				replace REPLACEUserVerbiage with appropriate verbiage based on input field it fills in eg Team Leades: Choos Team Leads, Assigned To: Choose Asignee, etc
 			-->
-			<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Search profiles" />
+			<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-box" placeholder="Search profiles" />
 		</div>
 
 		<?php app_get_component('components/list-group-toggle-users-multiple') ?>

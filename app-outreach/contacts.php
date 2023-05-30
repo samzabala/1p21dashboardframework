@@ -1,9 +1,9 @@
 
-<div id="outreach-contacts-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-xs-12 flex-col-sm-4">
+<div id="outreach-contacts-heading" class="grid grid-flex justify-content-space-between align-items-center">
+	<div class="grid-col-xs-12 grid-col-sm-4">
 		<h1 class="no-margin">Contacts</h1>
 	</div>
-	<div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+	<div class="grid-col-xs-12 grid-col-sm-4 text-align-right">
 		<?php app_get_component('components/function-input-search') ?>
 		<div class="module-function function-add">
 			<a  href="#mb-editor-contact" data-modal-title="Add contact" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
@@ -104,8 +104,8 @@
 					<div class="modal modal-default" id="m-contact-status-REPLACE_ID" data-modal-width="400px" data-modal-title="Set Status to">
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Change Status To</label>
-								<select name="contact-status" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Change Status To</label>
+								<select name="contact-status" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="client">Client</option>
 									<option value="lead">Lead</option>
@@ -120,8 +120,8 @@
 						<!-- @PLACELHOLDER: modify as needed -->
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Assign to User</label>
-								<select name="contact-assigned" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Assign to User</label>
+								<select name="contact-assigned" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="1">User 1</option>
 									<option value="2">User 2</option>
@@ -136,8 +136,8 @@
 						<!-- @PLACELHOLDER: modify as needed -->
 						<form action="">
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="" class="input-label sr-only">Assign to User</label>
-								<select name="contact-status" id="" class="input-select">
+								<label for="" class="input input-label sr-only">Assign to User</label>
+								<select name="contact-status" id="" class="input-box input-box-select">
 									<option value="">Select</option>
 									<option value="1">User 1</option>
 									<option value="2">User 2</option>
@@ -224,8 +224,8 @@
 								<div class="modal modal-default" id="m-contact-status-<?= $i ?>" data-modal-width="400px" data-modal-title="Set Status to">
 									<form action="">
 										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Change Status To</label>
-											<select name="contact-status" id="" class="input-select">
+											<label for="" class="input input-label sr-only">Change Status To</label>
+											<select name="contact-status" id="" class="input-box input-box-select">
 												<option value="">Select</option>
 												<option value="client">Client</option>
 												<option value="lead">Lead</option>
@@ -242,8 +242,8 @@
 									<!-- @PLACELHOLDER: modify as needed -->
 									<form action="">
 										<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-											<label for="" class="input-label sr-only">Assign to User</label>
-											<select name="contact-assigned" id="" class="input-select">
+											<label for="" class="input input-label sr-only">Assign to User</label>
+											<select name="contact-assigned" id="" class="input-box input-box-select">
 												<option value="">Select</option>
 												<option value="1">User 1</option>
 												<option value="2">User 2</option>

@@ -86,13 +86,13 @@ REPLACEwithPostType
 
 	example front end render:
 
-			<label for="edit-task-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-single-line input-large">
+			<label for="edit-task-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-box input-large">
 
 		vs
 
-			<label for="edit-project-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="edit-project-title" name="edit-project-title" class=" input input-single-line input-large">
+			<label for="edit-project-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="edit-project-title" name="edit-project-title" class=" input input-box input-large">
 
 
 
@@ -113,13 +113,13 @@ REPLACEMODE
 
 	example front end render:
 
-			<label for="edit-task-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-single-line input-large">
+			<label for="edit-task-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="edit-task-title" name="edit-task-title" class=" input input-box input-large">
 
 		vs
 
-			<label for="new-task-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="new-task-title" name="new-task-title" class=" input input-single-line input-large">
+			<label for="new-task-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="new-task-title" name="new-task-title" class=" input input-box input-large">
 
 
 
@@ -130,7 +130,7 @@ filter-FIELDNAME
 
 	example front end render:'
 			field that will contain tags to add to actuial field
-				<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+				<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-box" placeholder="Search for tag" />
 			field that will actually submit to the database
 				<input id="edit-task-tags" name="edit-task-tags" type="hidden" />
 
@@ -143,14 +143,14 @@ REPLACEwithCorrespondingInputFieldName
 
 		code on html/php demo version
 			field that will contain tags to add to actuial field
-				<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+				<input id="filter-edit-task-tags" name="filter-edit-task-tags" type="text" class="input input-block input-large input-box" placeholder="Search for tag" />
 			field that will actually submit to the database
 				<input id="edit-task-tags" name="edit-task-tags" type="hidden" />
 
 		vs
 
 			field that will contain tags to add to actuial field
-				<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-single-line" placeholder="Search for tag" />
+				<input id="filter-REPLACEwithCorrespondingInputFieldName" name="filter-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-large input-box" placeholder="Search for tag" />
 			field that will actually submit to the database
 				<input id="REPLACEwithCorrespondingInputFieldName" name="REPLACEwithCorrespondingInputFieldName" type="hidden" />
 
@@ -285,28 +285,28 @@ Calendar ui dropdown markup
 
 	<!-- dropdown -->
 	<div id="dropcal" class="dropdown" data-dropdown-width="100%">
-		<div class="flex-grid flex-wrap flex-grid-no-gutter-y"">
+		<div class="grid grid-flex flex-wrap grid-constricted-y"">
 
-			<div class="flex-col-md-4 flex-col-sm-6">
+			<div class="grid-col-md-4 grid-col-sm-6">
 
 				<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-					<label class="input-label">From</label>
+					<label class="input input-label">From</label>
 					<input type="date" class="input input-calendar" data-calendar-text-input="true" />
 				</div>
 			</div>
 
 			
-			<div class="flex-col-md-4 flex-col-sm-6">
+			<div class="grid-col-md-4 grid-col-sm-6">
 
 				<div class=" input-wrapper input-wrapper-vertical input-wrapper-responsive input-wrapper-block">
-					<label class="input-label">To</label>
+					<label class="input input-label">To</label>
 					<input type="date" class="input input-calendar" data-calendar-text-input="true" />
 				</div>
 			</div>
 
 			
-			<div class="flex-col-md-4 flex-col-sm-12">
-				<div class="input-label">Or by Month</div>
+			<div class="grid-col-md-4 grid-col-sm-12">
+				<div class="input input-label">Or by Month</div>
 				<ul class="no-padding-left">
 
 					<li><a href="#">Jan 2018</a></li>
@@ -459,8 +459,8 @@ js + css (1 week or more)
 css
 * PRIORITY
     * OK zone
-        * zone-large
-        * zone-small // transfer default boi here
+        * zone-expanded
+        * zone-compact // transfer default boi here
     * modal close button
         * add attribute to override classes + change to button
     * OK border radius rounding classes  - *
@@ -474,7 +474,7 @@ css
         * requires 3 block elements
         * input-wrapper.input-checkbox-wrapper
             * input.input-checkbox
-            * input-label.input-label-checkbox
+            * input input-label.input input-label-checkbox
     * OK Panel - * reminders USE .alert instead
     * summary - * donloadable assets
         * my dumbass didnt name dem thumbnails as avatar instead so here we are

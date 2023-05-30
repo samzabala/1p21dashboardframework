@@ -7,7 +7,7 @@
       "uuidString" : "8DAE37A0-EA52-4E9D-93AF-19EAAFB3BF8C"
     }
   ],
-  "creatorBuild" : "34434",
+  "creatorBuild" : "34484",
   "files" : {
     "\/assets\/images\/icon-microsoft.svg" : {
       "ft" : 2097152,
@@ -200,12 +200,84 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/client-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/client-detail.php",
+      "oF" : 0
+    },
+    "\/clients.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/clients.php",
+      "oF" : 0
+    },
+    "\/components\/_DEMO-detail-editor-tags-subheader.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/_DEMO-detail-editor-tags-subheader.php",
+      "oF" : 0
+    },
+    "\/components\/alert-basic.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/alert-basic.php",
+      "oF" : 0
+    },
+    "\/components\/alert-toast.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/alert-toast.php",
+      "oF" : 0
+    },
     "\/components\/chart-time-distribution.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/chart-time-distribution.php",
+      "oF" : 0
+    },
+    "\/components\/detail-subheader.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/detail-subheader.php",
+      "oF" : 0
+    },
+    "\/components\/detail-tags.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/detail-tags.php",
+      "oF" : 0
+    },
+    "\/components\/dropdown-actions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-actions.php",
+      "oF" : 0
+    },
+    "\/components\/dropdown-list-group-search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-list-group-search.php",
       "oF" : 0
     },
     "\/components\/filter-logs.php" : {
@@ -238,6 +310,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/form-team-member.php",
+      "oF" : 0
+    },
+    "\/components\/function-input-search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/function-input-search.php",
       "oF" : 0
     },
     "\/components\/icon-clients.php" : {
@@ -328,12 +408,68 @@
       "oAP" : "\/components\/icon-timer.php",
       "oF" : 0
     },
+    "\/components\/list-clients.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/list-clients.php",
+      "oF" : 0
+    },
     "\/components\/list-logs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/list-logs.php",
+      "oF" : 0
+    },
+    "\/components\/list-projects.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/list-projects.php",
+      "oF" : 0
+    },
+    "\/components\/list-tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/list-tasks.php",
+      "oF" : 0
+    },
+    "\/components\/manage-breadcrumbs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/manage-breadcrumbs.php",
+      "oF" : 0
+    },
+    "\/components\/modal-delete.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-delete.php",
+      "oF" : 0
+    },
+    "\/components\/module-client-editor.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-client-editor.php",
+      "oF" : 0
+    },
+    "\/components\/module-client-projects.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-client-projects.php",
       "oF" : 0
     },
     "\/components\/module-function-datalist.php" : {
@@ -360,6 +496,38 @@
       "oAP" : "\/components\/module-logs.php",
       "oF" : 0
     },
+    "\/components\/module-project-editor.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-project-editor.php",
+      "oF" : 0
+    },
+    "\/components\/module-project-tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-project-tasks.php",
+      "oF" : 0
+    },
+    "\/components\/module-task-editor.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-task-editor.php",
+      "oF" : 0
+    },
+    "\/components\/module-task-time.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-task-time.php",
+      "oF" : 0
+    },
     "\/components\/module-time-overview.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -376,12 +544,52 @@
       "oAP" : "\/components\/module-time-timer.php",
       "oF" : 0
     },
+    "\/components\/pagination-number.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination-number.php",
+      "oF" : 0
+    },
+    "\/components\/pagination-per-page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination-per-page.php",
+      "oF" : 0
+    },
+    "\/components\/project-nav-tabs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/project-nav-tabs.php",
+      "oF" : 0
+    },
     "\/components\/sticky-timer.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/sticky-timer.php",
+      "oF" : 0
+    },
+    "\/components\/task-nav-tabs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/task-nav-tabs.php",
+      "oF" : 0
+    },
+    "\/components\/thumbnail-micro.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/thumbnail-micro.php",
       "oF" : 0
     },
     "\/components\/timer-nav-tabs.php" : {
@@ -502,6 +710,54 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/my-tasks.php",
+      "oF" : 0
+    },
+    "\/project-detail-tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/project-detail-tasks.php",
+      "oF" : 0
+    },
+    "\/project-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/project-detail.php",
+      "oF" : 0
+    },
+    "\/projects.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/projects.php",
+      "oF" : 0
+    },
+    "\/task-detail-time.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/task-detail-time.php",
+      "oF" : 0
+    },
+    "\/task-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/task-detail.php",
+      "oF" : 0
+    },
+    "\/tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/tasks.php",
       "oF" : 0
     },
     "\/team-member-edit.php" : {
@@ -1064,6 +1320,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -1224,6 +1484,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -1362,6 +1625,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -2052,7 +2318,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -2104,10 +2370,14 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -2116,36 +2386,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
@@ -2178,7 +2448,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

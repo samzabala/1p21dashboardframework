@@ -1,6 +1,6 @@
 <div class="modal modal-board" id="mb-detail-task" data-modal-width="670px">
-    <div class="flex-grid flex-grid-fixed align-items-flex-end">
-		<div class=" flex-col-xs-12 flex-col-sm-8">
+    <div class="grid grid-flex grid-flex-fixed align-items-flex-end">
+		<div class=" grid-col-xs-12 grid-col-sm-8">
             <div class="task-header">
                 <h1 class="no-margin-bottom position-relative">
                     <!-- @if task is incomplete/active -->
@@ -20,13 +20,13 @@
                 </p>
             </div>
 		</div>
-        <div class="flex-col-xs-12 flex-col-sm-4 text-align-right">
+        <div class="grid-col-xs-12 grid-col-sm-4 text-align-right">
             <a href="#" class="btn btn-primary-outline margin-bottom btn-block-mobile"> Mark as complete </a>
         </div>
     </div>
     <div class="background-theme-contrast padding-x">
-        <div class="flex-grid flex-grid-fixed">
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+        <div class="grid grid-flex grid-flex-fixed">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Due Date</h5>
                 <p>
                     <i class="symbol symbol-calendar-alt color-primary"></i>
@@ -38,7 +38,7 @@
                         </span>
                 </p>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Time</h5>
                 <p>
                     <i class="symbol symbol-watch color-primary"></i>
@@ -50,7 +50,7 @@
                         </span>
                 </p>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Duration</h5>
                 <p>
                     <!-- @if an hour or more -->
@@ -63,7 +63,7 @@
                         </span>
                 </p>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-3">
+            <div class="grid-col-xs-12 grid-col-sm-6 grid-col-md-3">
                 <h5 class="color-neutral no-margin">Type</h5>
                 <p>
                     <span class="REPLACE">Company</span>

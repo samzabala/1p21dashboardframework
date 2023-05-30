@@ -1,0 +1,449 @@
+/*** TYPOGRAPHY ***/
+/* special */
+$prefix: '.special';
+#{$prefix} {
+  &-primary {
+    @include type-set(
+      (
+        size: $_fwc-special-primary-font-size,
+        leading: $_fwc-special-primary-line-height,
+        color: $special-primary-color,
+        weight: $special-primary-font-weight,
+        style: $special-primary-font-style,
+        case: $special-primary-text-transform,
+      )
+    );
+    margin-bottom: $_fwc-special-primary-gutter-y;
+    margin-top: $_fwc-special-primary-gutter-y;
+    display: block;
+
+    @include on-breakpoint(mobile) {
+      font-size: $_fwc-special-primary-font-size-mobile;
+    }
+  }
+  &-secondary {
+    @include type-set(
+      (
+        size: $_fwc-special-secondary-font-size,
+        leading: $_fwc-special-secondary-line-height,
+        color: $special-secondary-color,
+        weight: $special-secondary-font-weight,
+        style: $special-secondary-font-style,
+        case: $special-secondary-text-transform,
+      )
+    );
+    margin-bottom: $_fwc-special-secondary-gutter-y;
+    margin-top: $_fwc-special-secondary-gutter-y;
+    display: block;
+
+    @include on-breakpoint(mobile) {
+      font-size: $_fwc-special-secondary-font-size-mobile !important;
+    }
+  }
+}
+
+.lead {
+  @include type-set(
+    (
+      size: $_fwc-lead-font-size,
+      leading: $_fwc-lead-line-height,
+      color: $lead-color,
+      weight: $lead-font-weight,
+      style: $lead-font-style,
+      case: $lead-text-transform,
+    )
+  );
+  margin-bottom: $_fwc-lead-gutter-y;
+  margin-top: $_fwc-lead-gutter-y;
+  display: block;
+
+  @include on-breakpoint(mobile) {
+    font-size: $_fwc-lead-font-size-mobile;
+  }
+}
+
+/* heading */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  @include type-set(
+    (
+      font: $body-heading-font-family,
+      color: $body-heading-color,
+      leading: $body-heading-line-height,
+      weight: $body-font-weight-bold,
+      style: $body-heading-font-style,
+      case: $body-heading-text-transform,
+    )
+  );
+  display: block;
+  hyphens: auto;
+  margin-bottom: $_fwc-body-heading-gutter-bottom;
+  margin-top: $_fwc-body-heading-gutter-top;
+
+  // &:first-child {
+  // 	margin-top:0;
+  // }
+
+  .theme-inverse & {
+    color: $body-heading-color-inverse;
+  }
+
+  .alert &,
+  .theme-inverse .alert & {
+    color: inherit;
+  }
+}
+
+@for $i from 1 through length($_fwc-body-heading-size) {
+  h#{$i},
+  .h#{$i} {
+    font-size: nth($_fwc-body-heading-size, $i);
+  }
+}
+
+/* OTHER SHIT */
+
+strong,
+b {
+  // font-family: '';
+  font-weight: $body-font-weight-bold;
+}
+em,
+i {
+  font-style: italic;
+}
+
+a,
+.a {
+  // transition: $transition-duration-base color $transition-timing;
+
+  &,
+  &.disabled {
+    color: $body-anchor-color;
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: $body-anchor-text-decoration-hover;
+    color: $body-anchor-color-hover;
+
+    // &,* {
+    // 	cursor: pointer;
+    // }
+
+    // * {
+    // 	text-decoration: inherit;
+    // 	text-decoration-color: currentColor;
+    // }
+  }
+}
+
+a,
+a:not([class]) {
+  @include dump-styles(no-text-decoration);
+  &:hover {
+    @include dump-styles(no-text-decoration-hover);
+  }
+}
+
+p,
+.p,
+ul,
+ol,
+address,
+pre,
+dl {
+  margin-bottom: $_fwc-body-text-gutter-y;
+  display: block;
+}
+
+li:nth-child(n + 2),
+li ul,
+li ol,
+dl:nth-child(n + 2),
+dt:nth-child(n + 2) {
+  margin-top: $_fwc-body-list-gutter-y;
+}
+
+ol,
+ul,
+dd {
+  padding-left: $_fwc-body-list-offset;
+}
+ol,
+ul {
+  &.unstyled,
+  &.inline {
+    &,
+    li {
+      padding-left: 0;
+      margin-top: 0;
+    }
+  }
+
+  &.unstyled,
+  &.inline,
+  &.style-none {
+    li:before {
+      content: none !important;
+    }
+  }
+
+  &.inline {
+    li {
+      display: inline-block;
+      &:nth-child(n + 2) {
+        margin-left: $_fwc-body-list-offset-inline;
+      }
+    }
+  }
+
+  @at-root li {
+    list-style: none;
+    position: relative;
+    // margin-bottom: em(20px / $content-font-size);
+
+    &:before {
+      position: absolute;
+      right: 100%;
+
+      .alert & {
+        color: inherit;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  li & {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  &.style-disc li,
+  & > li {
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      line-height: inherit;
+      width: $_fwc-body-list-bullet-size;
+      height: $_fwc-body-list-bullet-size;
+      color: $body-list-bullet-color;
+      background: currentColor;
+      margin-right: $_fwc-body-list-margin-right;
+      position: absolute;
+      top: $_fwc-body-list-top;
+      border-radius: $body-list-bullet-border-radius;
+    }
+  }
+
+  &.style {
+    &-circle {
+      li:before {
+        background: none !important;
+        border: 0.05em solid $body-list-bullet-color !important;
+      }
+    }
+    &-square {
+      li:before {
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+ol {
+  counter-reset: fwList;
+
+  & > li {
+    counter-increment: fwList;
+    // padding-left: em(15px / $content-font-size);
+
+    &:before {
+      @include type-set(
+        (
+          color: $body-list-bullet-color,
+        )
+      );
+      font-weight: 800;
+      top: 0;
+      margin-right: 1em;
+    }
+  }
+  &.style-decimal li,
+  & > li:before {
+    content: counter(fwList, decimal) !important;
+  }
+
+  &.style {
+    &-decimal-leading-zero {
+      li:before {
+        content: counter(fwList, decimal-leading-zero) !important;
+      }
+    }
+    &-lower-alpha {
+      li:before {
+        content: counter(fwList, lower-alpha) !important;
+      }
+    }
+    &-lower-roman {
+      li:before {
+        content: counter(fwList, lower-roman) !important;
+      }
+    }
+    &-upper-alpha {
+      li:before {
+        content: counter(fwList, upper-alpha) !important;
+      }
+    }
+    &-upper-roman {
+      li:before {
+        content: counter(fwList, upper-roman) !important;
+      }
+    }
+  }
+}
+
+blockquote {
+  @include type-set(
+    (
+      size: $_fwc-body-blockquote-font-size,
+      leading: $_fwc-body-blockquote-line-height,
+      weight: $body-blockquote-font-weight,
+      style: $body-blockquote-font-style,
+      case: $body-blockquote-text-transform,
+    )
+  );
+
+  padding-left: $_fwc-body-blockquote-gutter-x;
+
+  margin-bottom: $_fwc-body-blockquote-margin-y;
+  margin-top: $_fwc-body-blockquote-margin-y;
+  padding-bottom: $_fwc-body-blockquote-padding-y;
+  padding-top: $_fwc-body-blockquote-padding-y;
+  border-left: $body-blockquote-border-width solid $body-blockquote-border-color;
+
+  & > * {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .alert & {
+    border-left-color: currentColor;
+  }
+}
+
+%code-styles {
+  font: inherit;
+  @include type-set(
+    (
+      font: $var-font-monospace,
+      color: $body-mono-color,
+    )
+  );
+  background: $body-mono-background;
+}
+
+pre,
+code,
+kbd,
+tt {
+  @extend %code-styles;
+}
+
+code,
+kbd,
+tt {
+  padding: $_fwc-body-pre-padding * 0.125;
+}
+
+pre {
+  padding: $_fwc-body-pre-padding;
+  overflow: auto;
+
+  * {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+cite {
+  @include type-set(
+    (
+      size: $_fwc-body-cite-font-size,
+      weight: $body-cite-font-weight,
+      style: $body-cite-font-style,
+    )
+  );
+
+  blockquote & {
+    display: block;
+    margin-top: $_fwc-body-text-gutter-y;
+  }
+}
+
+/* obscure fucks I can fuck with myself */
+q {
+  font-style: italic;
+}
+del,
+strike {
+  text-decoration: line-through;
+}
+
+ins {
+  text-decoration: underline;
+}
+sup,
+sub {
+  font-size: 0.75em;
+}
+sup {
+  vertical-align: top;
+}
+sub {
+  vertical-align: bottom;
+}
+var {
+  font-style: italic;
+  font-family: font(a);
+}
+
+hr {
+  display: block;
+  border: 0;
+  height: $_fwc-hr-height;
+  background: $hr-color;
+  opacity: 0.2;
+  width: 100%;
+  flex: 1 1 auto;
+  margin-top: $_fwc-hr-gutter-y;
+  margin-bottom: $_fwc-hr-gutter-y;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+small {
+  font-size: $_fwc-body-size-small;
+}
+
+big {
+  font-size: $_fwc-body-size-large;
+}

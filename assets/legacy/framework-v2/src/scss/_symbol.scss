@@ -1,0 +1,56 @@
+/*** SYMBOLS ***/
+@import url(#{$symbol-font-path+'/import.css'});
+
+// @font-face {
+//     font-family: 'FW Icons';
+// 	src:
+// 	url('#{$symbol-font-path}/fw-icons.eot');
+// 	src:
+// 		url('#{$symbol-font-path}/fw-icons.eot?#iefix') format('embedded-opentype'),
+// 		url('#{$symbol-font-path}/fw-icons.woff2') format('woff2'),
+// 		url('#{$symbol-font-path}/fw-icons.ttf') format('truetype'),
+// 		url('#{$symbol-font-path}/fw-icons.svg#FWIconsRegular') format('svg')
+// 		url('#{$symbol-font-path}/fw-icons.otf') format('opentype'),
+// 		;
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+$prefix: '.symbol';
+#{$prefix} {
+  @include type-set(
+    (
+      font: 'FW Icons',
+      size: 1em,
+      weight: normal,
+      style: normal,
+      leading: 1,
+    )
+  );
+  font-stretch: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-rendering: auto;
+  pointer-events: none;
+  // font-size: 64px; //debug only
+  // outline: 1px solid red;
+
+  &:before {
+    // line-height: 2;
+    // margin: -.5em 0;
+    // display: inline-block;
+
+    .fw-js-ready body:not(.body-loaded) & {
+      color: transparent !important;
+    }
+  }
+
+  @each $tag, $content in $_fwc-symbol-glyphs {
+    @include generate-symbol-styles(#{&}-#{$tag}) {
+      &:before {
+        content: unquote('"') + unquote(str-insert($content, '\\', 1)) + unquote('"');
+      }
+    }
+  }
+}

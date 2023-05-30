@@ -1,5 +1,5 @@
 <form class="module-function function-select-by-type">
-	<select class="input input-single-line" name="selecct-by-type" id="">
+	<select class="input input-box" name="selecct-by-type" id="">
 		<!-- @placeholder replace/modify as needed -->
 		<option value="task">Task</option>
 		<option value="notes">Notes</option>

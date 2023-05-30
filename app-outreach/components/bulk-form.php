@@ -1,12 +1,12 @@
 
     <form action="" class="bulk-editor">
         <h1 class="no-margin-y">Import List</h1>
-        <div class="flex-grid flex-grid-no-gutter-y justify-content-space-between">
-            <div class="flex-child">
+        <div class="grid grid-flex grid-constricted-y justify-content-space-between">
+            <div class="grid-col">
 
                 <p>Import companies from a file</p>
             </div>
-            <div class="flex-child">
+            <div class="grid-col">
                 <p>
                     <a href="#REPLACE">Download sample file</a>
                 </p>
@@ -14,11 +14,11 @@
         </div>
         <!-- Form -->
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="bulk-file" class="input-label">CSV or Excel File</label>
+                <label for="bulk-file" class="input input-label">CSV or Excel File</label>
                 <div class="input-group input-group-responsive input-group-horizontal input-block">
                     <label for="bulk-file" class="btn btn-primary-glassy border-color-neutral-alpha-3">Choose file</label>
-                    <label for="file" class="input input-single-line">No file chosen</label>
-                    <input type="file" name="file" id="bulk-file" class="sr-only text-align-center input input-single-line" accept="text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required="">
+                    <label for="file" class="input input-box">No file chosen</label>
+                    <input type="file" name="file" id="bulk-file" class="sr-only text-align-center input input-box" accept="text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required="">
                     <button type="submit" class="btn btn-primary"> Upload file </button>
                 </div>
             </div>

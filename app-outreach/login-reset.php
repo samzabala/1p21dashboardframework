@@ -9,12 +9,12 @@
 				<div class="module module-expanded" data-grid-row-sm="2" >
 					<div class="module-content">
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-							<label for="reset-password" class="input-label">Password</label>
-							<input id="reset-password" name="reset-password" type="passworc" placeholder="********" class="input input-single-line input-large">
+							<label for="reset-password" class="input input-label">Password</label>
+							<input id="reset-password" name="reset-password" type="passworc" placeholder="********" class="input input-box input-large">
 						</div>
 						<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-							<label for="reset-password-confirm" class="input-label">Password</label>
-							<input id="reset-password-confirm" name="reset-password-confirm" type="passworc" placeholder="********" class="input input-single-line input-large">
+							<label for="reset-password-confirm" class="input input-label">Password</label>
+							<input id="reset-password-confirm" name="reset-password-confirm" type="passworc" placeholder="********" class="input input-box input-large">
 						</div>
 						<br>
 						<button class="btn btn-block btn-primary btn-large" type="submit">Update Password</button>

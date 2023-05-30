@@ -1,5 +1,5 @@
 <div class="module margin-large-top margin-bottom">
-	<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+	<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 			<form class="h3 color-theme flex-1-1 no-margin-y">
 				<!-- @if can edit -->
@@ -36,7 +36,7 @@
 	<div class="module-content no-padding-x no-padding-bottom">
 		<?php app_get_component('components/detail-subheader'); ?>
 		<form action="">
-			<textarea class="input input-multiple-line input-block" rows="25">REPLACE With TinyMCE</textarea>
+			<textarea class="input input-box input-box-multiline input-block" rows="25">REPLACE With TinyMCE</textarea>
 		</form>
 	</div>
 </div>

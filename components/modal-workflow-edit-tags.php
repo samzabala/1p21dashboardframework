@@ -18,9 +18,9 @@ $args = app_parse_args($data,$defs);
 	<?php endif; ?>
 	
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-			<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input-label">Search Existing Tags</label>
+			<label for="filter-tags-REPLACEwithCorrespondingInputFieldName" class="input input-label">Search Existing Tags</label>
 
-			<input id="filter-tags-REPLACEwithCorrespondingInputFieldName" name="filter-tags-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-single-line" placeholder="Search for tag" />
+			<input id="filter-tags-REPLACEwithCorrespondingInputFieldName" name="filter-tags-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-box" placeholder="Search for tag" />
 			
 			<div class="input-group input-block input-group-horizontal">
 			</div>
@@ -76,7 +76,7 @@ $args = app_parse_args($data,$defs);
 				)); ?>
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input-label">Create New Tags</label>
+				<label for="filter-tags-new-REPLACEwithCorrespondingInputFieldName" class="input input-label">Create New Tags</label>
 				<div class="input-group input-block input-group-horizontal p">
 
 					<input id="filter-tags-new-REPLACEwithCorrespondingInputFieldName" name="filter-tags-new-REPLACEwithCorrespondingInputFieldName" type="text" class="input input-block input-tags" placeholder="Type new tag/s" />

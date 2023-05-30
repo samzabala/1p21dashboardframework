@@ -7,19 +7,19 @@ Calendar from framework/src/js/imports/form/form-calendar
 -->
 <div class="modal modal-board" data-modal-width="770px" id="mb-editor-company-details" data-modal-title="Edit Company">
     <form action="">
-        <div class="flex-grid flex-grid-fixed">
+        <div class="grid grid-flex grid-flex-fixed">
 
-            <div class="flex-col-12">
+            <div class="grid-col-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label" for="company-name">Company Name</label>
-                    <input class="input input-single-line" type="text" name="company-name" id="company-name" />
+                    <label class="input input-label" for="company-name">Company Name</label>
+                    <input class="input input-box" type="text" name="company-name" id="company-name" />
                 </div>
             </div>
 
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="company-status" class="input-label">Status</label>
-                    <select name="company-status" id="company-status" class="input-select">
+                    <label for="company-status" class="input input-label">Status</label>
+                    <select name="company-status" id="company-status" class="input-box input-box-select">
                         <option value="">Select</option>
                         <option value="client">Client</option>
                         <option value="lead">Lead</option>
@@ -28,9 +28,9 @@ Calendar from framework/src/js/imports/form/form-calendar
                 </div>
             </div>
 
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label" for="company-acct-owners">Acct Owner</label>
+                    <label class="input input-label" for="company-acct-owners">Acct Owner</label>
 
                     <!-- @NOTE: options are placeholders. replace as needed -->
                     <datalist id="company-acct-owners-available">
@@ -44,14 +44,14 @@ Calendar from framework/src/js/imports/form/form-calendar
                         <option value="Jean Kirstein">Jean Kirstein</option>
                         <option value="Maliksi Kirstein">Maliksi Kirstein</option>
                     </datalist>
-                    <input list="company-acct-owners-available" class="input input-single-line" id="company-acct-owners" name="company-acct-owners" />
+                    <input list="company-acct-owners-available" class="input input-box" id="company-acct-owners" name="company-acct-owners" />
                 </div>
             </div>
 
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label" for="company-type">Business Type</label>
-                    <select class="input input-single-line input-select" type="text" name="company-type" id="company-type">
+                    <label class="input input-label" for="company-type">Business Type</label>
+                    <select class="input input-box input-box input-box-select" type="text" name="company-type" id="company-type">
 
                         <!-- @NOTE: options are placeholders. replace as needed -->
                         
@@ -63,9 +63,9 @@ Calendar from framework/src/js/imports/form/form-calendar
                 </div>
             </div>
 
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
-                    <label for="company-last-contact" class="input-label">Last Contact</label>
+                    <label for="company-last-contact" class="input input-label">Last Contact</label>
                     <a data-toggle-dropdown class="btn-group btn-block btn-group-horizontal btn-group-unite">
                         <div class="btn btn-default justify-content-flex-start">
                             <span class="REPLACE">Friday, April 20, 2069</span>
@@ -80,39 +80,39 @@ Calendar from framework/src/js/imports/form/form-calendar
                 </div>
             </div>
         </div>
-        <div class="flex-grid flex-grid-fixed">
-            <div class="flex-col-xs-12">
+        <div class="grid grid-flex grid-flex-fixed">
+            <div class="grid-col-xs-12">
                 <hr class="no-margin-top">
             </div>
-            <div class="flex-col-12">
-                <div class="flex-grid flex-grid-no-gutter flex-grid-fixed">
-                    <div class="flex-col-12 flex-col-sm-3">
-                        <span class="input-label">Company Address</span>
+            <div class="grid-col-12">
+                <div class="grid grid-flex grid-constricted grid-flex-fixed">
+                    <div class="grid-col-12 grid-col-sm-3">
+                        <span class="input input-label">Company Address</span>
                     </div>
-                    <div class="flex-col-12 flex-col-sm-9">
-                        <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-                            <div class="flex-col-xs-12 flex-col-sm-10">
+                    <div class="grid-col-12 grid-col-sm-9">
+                        <div class="grid grid-flex grid-flex-fixed grid-constricted-y">
+                            <div class="grid-col-xs-12 grid-col-sm-10">
                                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
-                                    <label for="company-address-street" class="input-label color-neutral font-size-small">Street Address</label>
-                                    <input class="input input-single-line" type="text" name="contact-address-street" id="contact-address-street" placeholder="123 Street Name" value="" />
+                                    <label for="company-address-street" class="input input-label color-neutral font-size-small">Street Address</label>
+                                    <input class="input input-box" type="text" name="contact-address-street" id="contact-address-street" placeholder="123 Street Name" value="" />
                                 </div>
                             </div>
-                            <div class="flex-col-xs-12 flex-col-sm-2">
+                            <div class="grid-col-xs-12 grid-col-sm-2">
                                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
-                                    <label for="company-address-suite" class="input-label color-neutral font-size-small">Suite #</label>
-                                    <input class="input input-single-line" type="text" name="contact-address-suite" id="contact-address-suite" placeholder="#456" value="" />
+                                    <label for="company-address-suite" class="input input-label color-neutral font-size-small">Suite #</label>
+                                    <input class="input input-box" type="text" name="contact-address-suite" id="contact-address-suite" placeholder="#456" value="" />
                                 </div>
                             </div>
-                            <div class="flex-col-xs-12 flex-col-sm-4">
+                            <div class="grid-col-xs-12 grid-col-sm-4">
                                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
-                                    <label for="company-address-city" class="input-label color-neutral font-size-small">City</label>
-                                    <input class="input input-single-line" type="text" name="contact-address-city" id="contact-address-city" placeholder="" value="" />
+                                    <label for="company-address-city" class="input input-label color-neutral font-size-small">City</label>
+                                    <input class="input input-box" type="text" name="contact-address-city" id="contact-address-city" placeholder="" value="" />
                                 </div>
                             </div>
-                            <div class="flex-col-xs-12 flex-col-sm-4">
+                            <div class="grid-col-xs-12 grid-col-sm-4">
                                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
-                                    <label for="company-address-state" class="input-label color-neutral font-size-small">State</label>
-                                    <select class="input input-single-line" type="text" name="contact-address-state" id="contact-address-state" placeholder="" value="" >
+                                    <label for="company-address-state" class="input input-label color-neutral font-size-small">State</label>
+                                    <select class="input input-box" type="text" name="contact-address-state" id="contact-address-state" placeholder="" value="" >
                                         <option value="">Select state...</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -169,38 +169,38 @@ Calendar from framework/src/js/imports/form/form-calendar
                                 </div>
                             </div>
 
-                            <div class="flex-col-xs-12 flex-col-sm-4">
+                            <div class="grid-col-xs-12 grid-col-sm-4">
                                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-vertical">
-                                    <label for="company-address-zip" class="input-label color-neutral font-size-small">Zip Code</label>
-                                    <input class="input input-single-line" type="text" name="contact-address-zip" id="contact-address-zip" placeholder="12345" value="" max="99999" />
+                                    <label for="company-address-zip" class="input input-label color-neutral font-size-small">Zip Code</label>
+                                    <input class="input input-box" type="text" name="contact-address-zip" id="contact-address-zip" placeholder="12345" value="" max="99999" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="company-phone" class="input-label">Phone</label>
-                    <input class="input input-single-line" type="text" name="contact-phone" id="contact-phone" placeholder="(***) ***-****" value="" />
+                    <label for="company-phone" class="input input-label">Phone</label>
+                    <input class="input input-box" type="text" name="contact-phone" id="contact-phone" placeholder="(***) ***-****" value="" />
                 </div>
             </div> 
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="company-fax" class="input-label">Fax</label>
-                    <input class="input input-single-line" type="text" name="contact-fax" id="contact-fax" placeholder="(***) ***-****" value="" />
+                    <label for="company-fax" class="input input-label">Fax</label>
+                    <input class="input input-box" type="text" name="contact-fax" id="contact-fax" placeholder="(***) ***-****" value="" />
                 </div>
             </div> 
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="company-domain" class="input-label">Domain</label>
-                    <input class="input input-single-line" type="url" name="contact-domain" id="contact-domain" placeholder="http://domain.com" value="" />
+                    <label for="company-domain" class="input input-label">Domain</label>
+                    <input class="input input-box" type="url" name="contact-domain" id="contact-domain" placeholder="http://domain.com" value="" />
                 </div>
             </div> 
 
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label class="input-label" for="company-primary">Primary Contact</label>
+                    <label class="input input-label" for="company-primary">Primary Contact</label>
 
                     <!-- @NOTE: options are placeholders. replace as needed -->
                     <datalist id="company-primary-available">
@@ -214,13 +214,13 @@ Calendar from framework/src/js/imports/form/form-calendar
                         <option value="Batman">Batman</option>
                         <option value="Zack Snyder">Zack Snyder</option>
                     </datalist>
-                    <input list="company-primary-available" class="input input-single-line" id="company-primary" name="company-primary" />
+                    <input list="company-primary-available" class="input input-box" id="company-primary" name="company-primary" />
                 </div>
             </div>
             
-            <div class="flex-col-12">
+            <div class="grid-col-12">
                 <hr>
-                <span class="input-label">Social</span>
+                <span class="input input-label">Social</span>
                 <?php app_get_component('components/input-social','',false,array(
                     'type' => 'facebook'
                 )) ?>

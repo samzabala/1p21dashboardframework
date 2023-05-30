@@ -20,9 +20,9 @@ $args = app_parse_args($data,$defs);
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 			<input id="<?=$args['post']?>-workflux-id-to-add" name="<?=$args['post']?>-workflux-id-to-add" type="hidden" />
 
-			<label for="filter-<?=$args['post']?>-workflux-to-add" class="input-label">Choose Workflux Board</label>
+			<label for="filter-<?=$args['post']?>-workflux-to-add" class="input input-label">Choose Workflux Board</label>
 
-			<input id="filter-<?=$args['post']?>-workflux-to-add" name="filter-<?=$args['post']?>-workflux-to-add" type="text" class="input input-block input-single-line" placeholder="Type and select workflux board" data-toggle="dropdown"/>
+			<input id="filter-<?=$args['post']?>-workflux-to-add" name="filter-<?=$args['post']?>-workflux-to-add" type="text" class="input input-block input-box" placeholder="Type and select workflux board" data-toggle="dropdown"/>
 			<div class="dropdown dropdown-top-flush no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
 				<?php app_get_component('components/list-group-toggle-workflux') ?>
 			</div>
@@ -37,9 +37,9 @@ $args = app_parse_args($data,$defs);
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 			<input id="<?=$args['post']?>-workflux-list-id-to-add" name="<?=$args['post']?>-workflux-list-id-to-add" type="hidden" />
 
-			<label for="filter-<?=$args['post']?>-workflux-list-to-add" class="input-label">Choose Workflux Board List</label>
+			<label for="filter-<?=$args['post']?>-workflux-list-to-add" class="input input-label">Choose Workflux Board List</label>
 
-			<input id="filter-<?=$args['post']?>-workflux-list-to-add" name="filter-<?=$args['post']?>-workflux-list-to-add" type="text" class="input input-block input-single-line" placeholder="Type and select list"  data-toggle="dropdown" />
+			<input id="filter-<?=$args['post']?>-workflux-list-to-add" name="filter-<?=$args['post']?>-workflux-list-to-add" type="text" class="input input-block input-box" placeholder="Type and select list"  data-toggle="dropdown" />
 			</button>
 			<div class="dropdown dropdown-top-flush no-padding" data-dropdown-width="100%"  data-dropdown-max-height="300px">
 				<?php app_get_component('components/list-group-toggle-workflux-list'); ?>

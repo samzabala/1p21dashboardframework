@@ -4,13 +4,13 @@
 >
 	<div class="module-content">
 
-        <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y align-items-center position-relative">
-            <div class="flex-col-xs12 flex-col-sm-6 flex-col-md-8">
-                <div class="flex-grid flex-nowrap align-items-center flex-grid-no-gutter-y">
-                    <div class="flex-child flex-0-0">
+        <div class="grid grid-flex grid-flex-fixed grid-constricted-y align-items-center position-relative">
+            <div class="grid-col-xs12 grid-col-sm-6 grid-col-md-8">
+                <div class="grid grid-flex flex-nowrap align-items-center grid-constricted-y">
+                    <div class="grid-col flex-0-0">
                         <?php app_get_component('components/profile-image-small') ?>
                     </div>
-                    <div class="flex-child flex-1-1">
+                    <div class="grid-col flex-1-1">
 
                         <span class="contact-status tag tag-primary">
                             <span class="REPLACE">Client</span>
@@ -49,14 +49,14 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-col-xs12 flex-col-sm-6 flex-col-md-4">
-                <div class="flex-grid flex-grid-compact flex-grid-no-gutter-y">
-                    <div class="flex-child flex-0-0">
+            <div class="grid-col-xs12 grid-col-sm-6 grid-col-md-4">
+                <div class="grid grid-flex grid-compact grid-constricted-y">
+                    <div class="grid-col flex-0-0">
                             <span class="btn-no-interaction btn btn-success-glassy btn-round btn-symbol">
                                 <i class="symbol symbol-calendar-alt"></i>
                             </span>
                     </div>
-                    <div class="flex-child flex-1-1">
+                    <div class="grid-col flex-1-1">
                         <!-- @if last contact available -->
                             <strong class="font-size-small color-neutral">Last Contacted</strong>
                             <h5 class="no-margin-y">

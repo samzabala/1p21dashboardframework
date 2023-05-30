@@ -17,8 +17,8 @@ $args = app_parse_args($data,$defs);
 >
 	<div class="module-content">
 		<div class="input-wrapper input-wrapper-horizontal input-wrapper-block">
-			<label class="input-label flex-1-0" for="<?=$args['post']?>-time-estimate" class="no-margin-y flex-1-0">Time Estimated</label>
-			<input type="text" name="<?=$args['post']?>-time-estimate" size="5" id="<?=$args['post']?>-time-estimate" class="input input-single-line" placeholder="00:00">
+			<label class="input input-label flex-1-0" for="<?=$args['post']?>-time-estimate" class="no-margin-y flex-1-0">Time Estimated</label>
+			<input type="text" name="<?=$args['post']?>-time-estimate" size="5" id="<?=$args['post']?>-time-estimate" class="input input-box" placeholder="00:00">
 		</div>
 	</div>
 </div>

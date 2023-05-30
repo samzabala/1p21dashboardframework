@@ -68,13 +68,13 @@
 
 								<!-- notes -->
 									<div class="p project-library-header">
-										<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-											<div class="flex-col-xs-12 flex-col-md-6">
+										<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+											<div class="grid-col-xs-12 grid-col-md-6">
 												<h3 class="module-title open" data-toggle="accordion" data-href="#project-notes">
 													Notes <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 												</h3>
 											</div>
-											<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
+											<div class="grid-col-xs-12 grid-col-md-6 text-align-right">
 												<?php app_get_component('components/linkto-add-notes') ?>
 											</div>
 										</div>
@@ -90,7 +90,7 @@
 														<th class="dashboard-table-cell-thumbnail text-nowrap text-align-center">Author</th>
 														<th class="text-nowrap">Note Title</th>
 														<th class="text-nowrap">Task</th>
-														<th class="dashboard-table-cell-action text-nowrap table-cell-no-gutter">&nbsp;<span class="sr-only">Actions</span></th>
+														<th class="dashboard-table-cell-action text-nowrap table-cell-constricted">&nbsp;<span class="sr-only">Actions</span></th>
 													</tr>
 
 													<!-- @LOOP tr -->
@@ -151,13 +151,13 @@
 
 								<!-- project Docs/files -->
 									<div class="p project-library-header">
-										<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-											<div class="flex-col-xs-12 flex-col-md-6">
+										<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+											<div class="grid-col-xs-12 grid-col-md-6">
 												<h3 class="module-title open" data-toggle="accordion" data-href="#project-files">
 													Documents &amp; Files <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 												</h3>
 											</div>
-											<div class="flex-col-xs-12 flex-col-md-6 text-align-right">
+											<div class="grid-col-xs-12 grid-col-md-6 text-align-right">
 												<?php app_get_component('components/linkto-add-files') ?>
 											</div>
 										</div>

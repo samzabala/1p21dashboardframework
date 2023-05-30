@@ -1,11 +1,11 @@
 <tr class="position-relative">
 	<td width="250">
 		<!-- @if has contact profile -->
-			<a href="<?=app_create_link(array('template'=>'contact-detail')) ?>" class="flex-grid flex-grid-compact flex-grid-no-gutter-y color-inherit">
-				<div class="flex-child flex-0-0 hide-mobile">
+			<a href="<?=app_create_link(array('template'=>'contact-detail')) ?>" class="grid grid-flex grid-compact grid-constricted-y color-inherit">
+				<div class="grid-col flex-0-0 hide-mobile">
 					<?php app_get_component('components/profile-image','micro') ?>
 				</div>
-				<div class="flex-child flex-1-1">
+				<div class="grid-col flex-1-1">
 					<div class="contact-profile-name text-leading-compact">
 						<strong>
 							<span class="REPLACE">Miles Edgeworth</span>

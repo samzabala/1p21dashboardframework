@@ -25,7 +25,7 @@
 	?>
 
 <div class="module margin-large-top margin-bottom">
-	<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
+	<div class="module-header module-end-break padding-top no-margin-bottom padding-bottom align-items-center">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
 			<p class="h3 color-theme flex-1-1 no-margin-y">
 				<span class="REPLACE">Float left everything</span>				

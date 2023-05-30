@@ -1,0 +1,7 @@
+**/*.min.css
+fonts/
+src/
+docs/
+**/vendor/
+/_gh_pages/
+/js/coverage/

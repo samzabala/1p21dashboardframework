@@ -22,8 +22,8 @@
 								</div>
 								
 							<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-								<label for="forgot-user" class="input-label">Enter Email to reset password</label>
-								<input id="forgot-user" name="forgot-user" type="text" placeholder="email@domain.com" class="input input-single-line input-large">
+								<label for="forgot-user" class="input input-label">Enter Email to reset password</label>
+								<input id="forgot-user" name="forgot-user" type="text" placeholder="email@domain.com" class="input input-box input-large">
 							</div>
 							<br>
 							<button class="btn btn-block btn-primary btn-large" type="submit">Reset Password</button>

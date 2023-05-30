@@ -81,8 +81,8 @@ $args = app_parse_args($data,$defs);
 						-->
 						<!-- @loop .list-group-item -->
 							<label class="list-group-item pointer-reference">
-								<span class=" flex-grid flex-nowrap flex-grid-no-gutter justify-content-space-between flex-wrap align-items-center">
-									<span class="flex-child flex-1-1">
+								<span class=" grid grid-flex flex-nowrap grid-constricted justify-content-space-between flex-wrap align-items-center">
+									<span class="grid-col flex-1-1">
 										
 										<input type="radio" class="sr-only" value="">
 
@@ -102,7 +102,7 @@ $args = app_parse_args($data,$defs);
 											<span class="REPLACE">Backlog</span>
 										</span>
 									</span>
-									<span class="flex-child flex-0-0">
+									<span class="grid-col flex-0-0">
 										<i class="symbol symbol-check only-toggle flex-0-0"></i>
 									</span>
 								</span>
@@ -110,8 +110,8 @@ $args = app_parse_args($data,$defs);
 							
 							<?php foreach($placeholder_status as $stat=>$col): ?>
 								<label class="list-group-item pointer-reference">
-									<span class=" flex-grid flex-nowrap flex-grid-no-gutter justify-content-space-between flex-wrap align-items-center">
-										<span class="flex-child flex-1-1">
+									<span class=" grid grid-flex flex-nowrap grid-constricted justify-content-space-between flex-wrap align-items-center">
+										<span class="grid-col flex-1-1">
 											
 											<input type="radio" class="sr-only" value="">
 
@@ -131,7 +131,7 @@ $args = app_parse_args($data,$defs);
 												<span class="REPLACE"><?=$stat; ?></span>
 											</span>
 										</span>
-										<span class="flex-child flex-0-0">
+										<span class="grid-col flex-0-0">
 											<i class="symbol symbol-check only-toggle flex-0-0"></i>
 										</span>
 									</span>
@@ -312,13 +312,13 @@ $args = app_parse_args($data,$defs);
 										<ul class="list-group">
 											<!-- @loop li -->
 												<li>
-													<span class="flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
-														<span class="flex-child flex-0-0">
+													<span class="grid grid-flex grid-compact grid-constricted-y flex-nowrap">
+														<span class="grid-col flex-0-0">
 															<?php app_get_component('components/thumbnail-micro','',false,array(
 																'image' => FWAPPS_ROOT_URL.'/placeholder/profiles/team-des-jenn.jpg',
 															)); ?>
 														</span>
-														<span class="flex-child flex-1-1 align-self-center">
+														<span class="grid-col flex-1-1 align-self-center">
 															<span class="text-wrap-ellipsis">
 																<span class="REPLACE">Profile Name</span>
 															</span>
@@ -330,13 +330,13 @@ $args = app_parse_args($data,$defs);
 												<!-- @PLACEHOLDER: Delete when ready -->
 													<?php for($i = 0; $i < $args['assignees']; $i++): ?>
 														<li>
-															<span class="flex-grid flex-grid-compact flex-grid-no-gutter-y flex-nowrap">
-																<span class="flex-child flex-0-0">
+															<span class="grid grid-flex grid-compact grid-constricted-y flex-nowrap">
+																<span class="grid-col flex-0-0">
 																	<?php app_get_component('components/thumbnail-micro','',false,array(
 																		'image' => FWAPPS_ROOT_URL.'/placeholder/profiles/team-dev-nadia.jpg',
 																	)); ?>
 																</span>
-																<span class="flex-child flex-1-1 align-self-center">
+																<span class="grid-col flex-1-1 align-self-center">
 																	<span class="text-wrap-ellipsis">
 																		Peaches Peaches Peaches Peaches Peaches
 																	</span>
@@ -591,12 +591,12 @@ $args = app_parse_args($data,$defs);
 							<div class="dropdown dropdown-right dropdown-top-flush padding-x padding-small-y no-padding-top" data-dropdown-width="max(100%,300px)" data-dropdown-max-height="400px">
 
 								<label class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-									<span class="input-label font-weight-700">Due Date</span>
-									<input type="date" class="input input-single-line" />
+									<span class="input input-label font-weight-700">Due Date</span>
+									<input type="date" class="input input-box" />
 								</label>
 								<label class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-									<span class="input-label font-weight-700">Due Time</span>
-									<input type="time" class="input input-single-line" />
+									<span class="input input-label font-weight-700">Due Time</span>
+									<input type="time" class="input input-box" />
 								</label>
 
 							</div>
@@ -630,7 +630,7 @@ $args = app_parse_args($data,$defs);
 						<div class=" input-wrapper input-wrapper-horizontal input-wrapper-block justify-content-flex-end">
 							<label class="input-toggle input-toggle-primary input-toggle-reverse padding-small-y">
 								<input type="checkbox" class="input"> 
-								<span class="input-label input-toggle-label font-weight-700">
+								<span class="input input-label input-toggle-label font-weight-700">
 										Sync on Wrike
 								</span>
 							</label>

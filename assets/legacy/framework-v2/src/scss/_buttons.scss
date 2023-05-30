@@ -1,0 +1,472 @@
+/*  BUTTONS ***/
+$prefix: '.btn';
+#{$prefix} {
+  @at-root %fwe-btn-global {
+    &-radius {
+      border-radius: $btn-border-radius;
+
+      &-small {
+        border-radius: $btn-border-radius-small;
+      }
+
+      &-large {
+        border-radius: $btn-border-radius-large;
+      }
+    }
+
+    &-round {
+      & {
+        border-radius: 999rem;
+      }
+    }
+
+    &-shadow {
+      box-shadow: $btn-box-shadow;
+
+      &-hover {
+        box-shadow: $btn-box-shadow-hover;
+      }
+    }
+  }
+
+  @at-root %fwe-btn {
+    & {
+      @include type-set(
+        (
+          size: #{$_fwc-btn-font-size},
+          leading: #{$_fwc-btn-line-height},
+          weight: $btn-font-weight,
+          style: $btn-font-style,
+          font: $btn-font-family,
+          align: center,
+          case: $btn-text-transform,
+        )
+      );
+      // overflow:hidden;
+      padding-top: calc(
+        (
+            (#{$_fwc-btn-height} - (#{$btn-border-width} * 2)) -
+              (#{$_fwc-btn-single-line})
+          ) * 0.5
+      );
+      padding-bottom: calc(
+        (
+            (#{$_fwc-btn-height} - (#{$btn-border-width} * 2)) -
+              (#{$_fwc-btn-single-line})
+          ) * 0.5
+      );
+      // min-height: $_fwc-btn-height;
+      padding-right: $_fwc-btn-gutter-x;
+      padding-left: $_fwc-btn-gutter-x;
+      border: $btn-border-width solid transparent;
+      transition: $btn-transition-duration all $transition-timing;
+      width: auto;
+      display: inline-flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      background-size: calc(100% + (#{$btn-border-width} * 2))
+        calc(100% + (#{$btn-border-width} * 2));
+      background-position: ($btn-border-width * -1) ($btn-border-width * -1);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      // .symbol,
+      .badge {
+        &:last-child:not(:first-child) {
+          margin-left: 0.25em;
+        }
+        &:first-child:not(:last-child) {
+          margin-right: 0.25em;
+        }
+      }
+    }
+
+    &-large {
+      @extend %fwe-btn-global-radius-large;
+      padding-top: calc(
+        (
+            (#{$_fwc-btn-height-large} - (#{$btn-border-width} * 2)) -
+              (#{$_fwc-btn-single-line})
+          ) * 0.5
+      );
+      padding-bottom: calc(
+        (
+            (#{$_fwc-btn-height-large} - (#{$btn-border-width} * 2)) -
+              (#{$_fwc-btn-single-line})
+          ) * 0.5
+      );
+      // min-height: $_fwc-btn-height-large;
+      font-size: $_fwc-btn-font-size-large;
+    }
+
+    &-small {
+      @extend %fwe-btn-global-radius-small;
+      font-size: $_fwc-btn-font-size-small;
+      padding-top: calc(
+        (
+            (#{$_fwc-btn-height-small} - (#{$btn-border-width} * 2)) -
+              (#{$_fwc-btn-single-line})
+          ) * 0.5
+      );
+      padding-bottom: calc(
+        (
+            (#{$_fwc-btn-height-small} - (#{$btn-border-width} * 2)) -
+              (#{$_fwc-btn-single-line})
+          ) * 0.5
+      );
+      // min-height: $_fwc-btn-height-small;
+    }
+
+    &-in-nav {
+      padding-top: 0;
+      padding-bottom: 0;
+      align-self: stretch;
+      height: #{$_fwc-nav-height} !important;
+    }
+
+    &-in-group {
+      position: relative;
+      max-width: 100%;
+      flex: 0 0 auto; // ??
+      border-radius: inherit;
+      &,
+      &:hover,
+      &:active,
+      &.active,
+      &:focus,
+      &.focus,
+      &.open {
+        @include dump-styles(no-box-shadow-important);
+      }
+
+      &:hover,
+      &:active,
+      &.active,
+      &:focus,
+      &.focus,
+      &.open {
+        z-index: 1;
+      }
+    }
+  }
+  & {
+    @extend %fwe-btn;
+
+    &#{$prefix}-large,
+    #{$prefix}-large & {
+      @extend %fwe-btn-large;
+    }
+
+    &#{$prefix}-small,
+    #{$prefix}-small & {
+      @extend %fwe-btn-small;
+    }
+
+    .nav-block.nav-block-stretch > &,
+    .nav > &,
+    .nav > #{$prefix}-group > & {
+      @extend %fwe-btn-in-nav;
+    }
+
+    &#{$prefix}-no-radius,
+    #{$prefix}-no-radius & {
+      @include dump-styles(no-border-radius);
+    }
+
+    #{$prefix}-group > & {
+      @extend %fwe-btn-in-group;
+    }
+
+    &-disabled {
+      @include dump-styles(disabled);
+    }
+
+    &#{$prefix}-no-interaction,
+    #{$prefix}-no-interaction &,
+    &#{$prefix}-disabled,
+    #{$prefix}-disabled & {
+      @include dump-styles(no-box-shadow-important);
+    }
+  }
+
+  @at-root %fwe-btn-symbol {
+    & {
+      width: $_fwc-btn-height;
+      height: $_fwc-btn-height;
+      padding: 0;
+    }
+
+    &-large {
+      width: $_fwc-btn-height-large;
+      height: $_fwc-btn-height-large;
+    }
+
+    &-small {
+      width: $_fwc-btn-height-small;
+      height: $_fwc-btn-height-small;
+    }
+  }
+
+  &-symbol {
+    @extend %fwe-btn-symbol;
+
+    #{$prefix}-small &,
+    &#{$prefix}-small {
+      @extend %fwe-btn-symbol-small;
+    }
+
+    #{$prefix}-large &,
+    &#{$prefix}-large {
+      @extend %fwe-btn-symbol-large;
+    }
+  }
+
+  @at-root %fwe-btn-and-group {
+    & {
+      @extend %fwe-btn-global-radius;
+      max-width: 100%;
+      background-color: transparent;
+      color: inherit;
+      -webkit-appearance: none;
+      appearance: none;
+      vertical-align: middle;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding;
+      background-clip: padding-box;
+      @include dump-styles(no-text-decoration);
+
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        color: inherit;
+        @include dump-styles(no-text-decoration-hover);
+      }
+
+      &-small {
+        @extend %fwe-btn-global-radius-small;
+      }
+
+      &-large {
+        @extend %fwe-btn-global-radius-large;
+      }
+
+      &-in-nav {
+        @include dump-styles(no-border-radius);
+        @include dump-styles(no-box-shadow-important);
+      }
+    }
+  }
+
+  &,
+  &-group {
+    @extend %fwe-btn-and-group;
+    @extend %fwe-btn-global-radius;
+
+    &#{$prefix}-large {
+      @extend %fwe-btn-and-group-large;
+    }
+
+    &#{$prefix}-small {
+      @extend %fwe-btn-and-group-small;
+    }
+
+    .nav > & {
+      @extend %fwe-btn-and-group-in-nav;
+    }
+
+    &#{$prefix}-round {
+      @extend %fwe-btn-global-round;
+    }
+
+    &#{$prefix}-no-radius {
+      @include dump-styles(no-border-radius);
+    }
+
+    &#{$prefix}-block {
+      display: flex;
+      width: 100%;
+
+      &-mobile {
+        @include on-breakpoint(mobile) {
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  ///updates here should match input-group
+  &-group {
+    @extend %fwe-btn-global-shadow;
+    display: inline-flex;
+    align-content: stretch;
+    align-items: stretch;
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    overflow-x: auto;
+    overflow-y: visible;
+
+    &:hover,
+    &:focus-within,
+    &.focus,
+    &:active,
+    &.active {
+      @extend %fwe-btn-global-shadow-hover;
+    }
+
+    &#{$prefix}-block {
+      display: flex;
+      width: 100%;
+
+      & > .btn:not(.btn-symbol) {
+        flex: 1 1;
+      }
+
+      @include on-breakpoint(mobile) {
+        &-mobile {
+          display: flex;
+          width: 100%;
+
+          & > .btn:not(.btn-symbol) {
+            flex: 1 1;
+          }
+        }
+      }
+    }
+
+    &#{&}-horizontal {
+      #{$prefix}-symbol {
+        flex: 0 0 auto;
+      }
+
+      &:not(#{$prefix}-group-responsive) {
+        > #{$prefix}:nth-last-child(n + 2) {
+          border-top-right-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+        }
+
+        > #{$prefix}:nth-child(n + 2) {
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+          margin-left: $btn-border-width * -1;
+
+          &:not(:focus):not(.focus):not(:hover) {
+            border-left-color: $btn-group-separator-color;
+          }
+        }
+      }
+    }
+
+    &#{&}-vertical {
+      flex-direction: column;
+
+      > .btn-symbol {
+        width: auto;
+      }
+
+      > #{$prefix}:nth-last-child(n + 2) {
+        border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+      }
+
+      > #{$prefix}:nth-child(n + 2) {
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        margin-top: $btn-border-width * -1;
+
+        &:not(:focus):not(.focus):not(:hover) {
+          border-top-color: $btn-group-separator-color;
+        }
+      }
+    }
+
+    &#{&}-responsive {
+      @include on-breakpoint(nonmobile) {
+        &#{$prefix}-group-horizontal {
+          > .btn-symbol {
+            width: auto;
+          }
+
+          > #{$prefix}:nth-last-child(n + 2) {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+          }
+
+          > #{$prefix}:nth-child(n + 2) {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            margin-left: $btn-border-width * -1;
+
+            &:not(:focus):not(.focus):not(:hover) {
+              border-left-color: $btn-group-separator-color;
+            }
+          }
+        }
+      }
+      @include on-breakpoint(mobile) {
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+
+        > #{$prefix}:nth-last-child(n + 2) {
+          border-bottom-right-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+        }
+
+        > #{$prefix}:nth-child(n + 2) {
+          border-top-right-radius: 0 !important;
+          border-top-left-radius: 0 !important;
+          margin-top: $btn-border-width * -1;
+
+          &:not(:focus):not(.focus):not(:hover) {
+            border-top-color: $btn-group-separator-color;
+          }
+        }
+      }
+    }
+  }
+
+  @each $scheme, $properties in $_fwc-btn-schemes {
+    $custom-css: ();
+
+    @if str-index($scheme, '-glassy') {
+      $custom-css: (
+        backdrop-filter: blur(5px),
+      );
+    }
+    @at-root %fwe-btn-#{$scheme} {
+      @if $scheme != 'link' {
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+          @extend %fwe-btn-global-shadow-hover;
+        }
+      } @else if str-index($scheme, '-outline') {
+      } @else {
+        @extend %fwe-btn-global-shadow;
+      }
+
+      @include create-btn-schemes($properties, $scheme, $custom-css);
+
+      // @if str-index($scheme, '-gradient'){
+      //   background-origin:border-box;
+      // }
+    }
+    &#{&}-#{$scheme} {
+      @extend %fwe-btn-#{$scheme};
+    }
+  }
+}

@@ -8,39 +8,39 @@ Calendar from framework/src/js/imports/form/form-calendar
 <div class="modal modal-board" data-modal-width="770px" id="mb-editor-contact-details" data-modal-title="Edit Contact">
     <form action="">
 
-        <div class="flex-grid flex-grid-fixed">
-            <div class="flex-col-2">
-                <div class="flex-grid flex-grid-fixed align-items-center justify-content-center">
-                    <div class="flex-child flex-0-0">
+        <div class="grid grid-flex grid-flex-fixed">
+            <div class="grid-col-2">
+                <div class="grid grid-flex grid-flex-fixed align-items-center justify-content-center">
+                    <div class="grid-col flex-0-0">
                         <?php app_get_component('components/profile-image-small') ?>
                     </div>
                 </div>
             </div>
-            <div class="flex-col-10">
-                <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
-                    <div class="flex-col-xs-12 flex-col-sm-4">
+            <div class="grid-col-10">
+                <div class="grid grid-flex grid-flex-fixed grid-constricted-y">
+                    <div class="grid-col-xs-12 grid-col-sm-4">
                         <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                            <label class="input-label" for="contact-firstname">First Name</label>
-                            <input class="input input-single-line" type="text" name="contact-firstname" id="contact-firstname" value="Franziska">
+                            <label class="input input-label" for="contact-firstname">First Name</label>
+                            <input class="input input-box" type="text" name="contact-firstname" id="contact-firstname" value="Franziska">
                         </div>
                     </div>
-                    <div class="flex-col-xs-12 flex-col-sm-4">
+                    <div class="grid-col-xs-12 grid-col-sm-4">
                         <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                            <label class="input-label" for="contact-lastname">Last Name</label>
-                            <input class="input input-single-line" type="text" name="contact-lastname" id="contact-lastname" value="von Karma">
+                            <label class="input input-label" for="contact-lastname">Last Name</label>
+                            <input class="input input-box" type="text" name="contact-lastname" id="contact-lastname" value="von Karma">
                         </div>
                     </div>
-                    <div class="flex-col-xs-12 flex-col-sm-4">
+                    <div class="grid-col-xs-12 grid-col-sm-4">
                         <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                            <label class="input-label" for="contact-title">Title</label>
-                            <input class="input input-single-line" type="text" name="contact-title" id="contact-title" value="Partner">
+                            <label class="input input-label" for="contact-title">Title</label>
+                            <input class="input input-box" type="text" name="contact-title" id="contact-title" value="Partner">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label" for="contact-company">Company</label>
+                    <label class="input input-label" for="contact-company">Company</label>
 
                     <!-- @NOTE: options are placeholders. replace as needed -->
                     <datalist id="contact-company-available">
@@ -54,19 +54,19 @@ Calendar from framework/src/js/imports/form/form-calendar
                         <option value="Edgeworth Law Offices">Edgeworth Law Offices</option>
                         <option value="Von Karma Law Offices">Von Karma Law Offices</option>
                     </datalist>
-                    <input list="contact-company-available" class="input input-single-line" id="contact-company" name="contact-company" />
+                    <input list="contact-company-available" class="input input-box" id="contact-company" name="contact-company" />
                 </div>
             </div>
 
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label class="input-label" for="contact-email">Email</label>
-                    <input class="input input-single-line" type="email" name="contact-email" id="contact-email" value="REPLACE@email.com">
+                    <label class="input input-label" for="contact-email">Email</label>
+                    <input class="input input-box" type="email" name="contact-email" id="contact-email" value="REPLACE@email.com">
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
-                    <label for="contact-last-contact" class="input-label">Last Contact</label>
+                    <label for="contact-last-contact" class="input input-label">Last Contact</label>
                     <a data-toggle-dropdown class="btn-group btn-block btn-group-horizontal btn-group-unite">
                         <div class="btn btn-default justify-content-flex-start">
                             <span class="REPLACE">Friday, April 20, 2069</span>
@@ -80,10 +80,10 @@ Calendar from framework/src/js/imports/form/form-calendar
                     </div>
                 </div>
             </div>
-            <div class="flex-col-xs-12 flex-col-sm-6">
+            <div class="grid-col-xs-12 grid-col-sm-6">
                 <div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-                    <label for="contact-status" class="input-label">Status</label>
-                    <select name="contact-status" id="contact-status" class="input-select">
+                    <label for="contact-status" class="input input-label">Status</label>
+                    <select name="contact-status" id="contact-status" class="input-box input-box-select">
                         <option value="">Select</option>
                         <option value="client">Client</option>
                         <option value="lead">Lead</option>
@@ -92,42 +92,42 @@ Calendar from framework/src/js/imports/form/form-calendar
                 </div>
             </div>
         </div>
-        <div class="flex-grid flex-grid-fixed">
-            <div class="flex-col-xs-12">
+        <div class="grid grid-flex grid-flex-fixed">
+            <div class="grid-col-xs-12">
                 <hr class="no-margin-top">
             </div>
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="contact-phone" class="input-label">Phone</label>
-                    <input class="input input-single-line" type="text" name="contact-phone" id="contact-phone" placeholder="(***) ***-****" value="" />
+                    <label for="contact-phone" class="input input-label">Phone</label>
+                    <input class="input input-box" type="text" name="contact-phone" id="contact-phone" placeholder="(***) ***-****" value="" />
                 </div>
             </div> 
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="contact-cell" class="input-label">Cellphone</label>
-                    <input class="input input-single-line" type="text" name="contact-cell" id="contact-cell" placeholder="(***) ***-****" value="" />
+                    <label for="contact-cell" class="input input-label">Cellphone</label>
+                    <input class="input input-box" type="text" name="contact-cell" id="contact-cell" placeholder="(***) ***-****" value="" />
                 </div>
             </div> 
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="contact-preferred" class="input-label">Preferred Contact Method</label>
-                    <select name="contact-preferred" id="contact-preferred" class="input input-select">
+                    <label for="contact-preferred" class="input input-label">Preferred Contact Method</label>
+                    <select name="contact-preferred" id="contact-preferred" class="input input-box input-box-select">
                         <option value="">Select</option>
                         <option value="phone">Phone</option>
                         <option value="cell">Cell</option>
                     </select>
                 </div> 
             </div> 
-            <div class="flex-col-xs-12">
+            <div class="grid-col-xs-12">
                 <div class="input-wrapper input-wrapper-block input-wrapper-responsive input-wrapper-horizontal">
-                    <label for="contact-undergrad" class="input-label">Undergrad</label>
-                    <input class="input input-single-line" type="text" name="contact-undergrad" id="contact-undergrad" value="Ateneo De La Salle" />
+                    <label for="contact-undergrad" class="input input-label">Undergrad</label>
+                    <input class="input input-box" type="text" name="contact-undergrad" id="contact-undergrad" value="Ateneo De La Salle" />
                 </div> 
             </div> 
             
-            <div class="flex-col-12">
+            <div class="grid-col-12">
                 <hr>
-                <span class="input-label">Social</span>
+                <span class="input input-label">Social</span>
                 <?php app_get_component('components/input-social','',false,array(
                     'type' => 'facebook'
                 )) ?>

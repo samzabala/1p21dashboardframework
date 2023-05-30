@@ -19,9 +19,9 @@ $args = app_parse_args($data,$defs);
 
 		<div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
 
-			<label for="filter-<?=$args['post']?>-wiki-to-add" class="input-label">Choose Documentaions</label>
+			<label for="filter-<?=$args['post']?>-wiki-to-add" class="input input-label">Choose Documentaions</label>
 
-			<input id="filter-<?=$args['post']?>-wiki-to-add" name="filter-<?=$args['post']?>-wiki-to-add" type="text" class="input input-block input-single-line" placeholder="Search for documentation title" />
+			<input id="filter-<?=$args['post']?>-wiki-to-add" name="filter-<?=$args['post']?>-wiki-to-add" type="text" class="input input-block input-box" placeholder="Search for documentation title" />
 		</div>
 			
 		<?php app_get_component('components/list-group-toggle-wiki') ?>

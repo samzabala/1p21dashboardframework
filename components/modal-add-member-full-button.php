@@ -7,12 +7,12 @@
 						
 		<form action="">
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-responsive input-wrapper-block">
-				<label class="input-label">Email</label>
-				<input type="text" class="input input-single-line">
+				<label class="input input-label">Email</label>
+				<input type="text" class="input input-box">
 			</div>
 			<div class="input-wrapper p input-wrapper-horizontal input-wrapper-responsive input-wrapper-block">
-				<label class="input-label">Name</label>
-				<input type="text" class="input input-single-line">
+				<label class="input input-label">Name</label>
+				<input type="text" class="input input-box">
 			</div>
 			<div class="text-align-right">
 				<button type="submit" class="btn-primary btn">Send Invitation</button>

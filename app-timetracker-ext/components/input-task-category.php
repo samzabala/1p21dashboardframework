@@ -2,7 +2,7 @@
 <div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
     <!-- @note hidden fields here -->
     <label for="task-category" class="sr-only">Task Category</label>
-    <input name="" id="task-category" type="text" class="input input-single-line" placeholder="Select Task Category" list="categories" />
+    <input name="" id="task-category" type="text" class="input input-box" placeholder="Select Task Category" list="categories" />
     <datalist id="categories">
         <!-- @if has input value -->
             <option data-value="REPLACEWithInputValue" ref="createNew">Create new Category `REPLACEWithInputValue`</option>
@@ -26,7 +26,7 @@
     Dropdown from framework/src/js/imports/dropdown
 
     -->
-    <input name="" id="task-category" type="text" class="input input-select" placeholder="Select Task Category" data-toggle-dropdown />
+    <input name="" id="task-category" type="text" class="input input-box input-box-select" placeholder="Select Task Category" data-toggle-dropdown />
     <div class="dropdown dropdown-top-flush dropdown-left text-leading-expanded no-padding" data-dropdown-width="100%">
 
 

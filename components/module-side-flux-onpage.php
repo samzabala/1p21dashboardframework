@@ -20,11 +20,11 @@ $args = app_parse_args($data,$defs);
 		<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
 		<?php if($args['post'] == 'task' || $args['post'] == 'project'): ?>
 			<!-- WORKFLUX BOARDS -->
-				<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-					<div class="flex-child">
-						<h5 class="input-label">Workflux Boards</h5>
+				<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+					<div class="grid-col">
+						<h5 class="input input-label">Workflux Boards</h5>
 					</div>
-					<div class="flex-child">
+					<div class="grid-col">
 
 						<!-- @if user can edit -->
 							<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">Board <i class="symbol symbol-plus"></i></a>
@@ -66,11 +66,11 @@ $args = app_parse_args($data,$defs);
 
 
 		<!-- TAGS -->
-			<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-				<div class="flex-child">
-					<h5 class="input-label">Labels &amp; Tags</h5>
+			<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+				<div class="grid-col">
+					<h5 class="input input-label">Labels &amp; Tags</h5>
 				</div>
-				<div class="flex-child">
+				<div class="grid-col">
 					<!-- @if user can edit -->
 						<a href="#" data-toggle="modal" class="btn btn-primary-outline btn-small">
 							Edit Tags <i class="symbol symbol-pencil"></i>

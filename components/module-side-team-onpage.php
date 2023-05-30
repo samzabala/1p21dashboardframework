@@ -18,11 +18,11 @@ $args = app_parse_args($data,$defs);
 
 			<div class="switch p">
 				<div class="switch-off pointer-reference position-relative">
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-						<div class="flex-child">
-							<h5 class="input-label">Project</h5>
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
+							<h5 class="input input-label">Project</h5>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 							<a class="only-hover btn btn-small btn-primary-outline" data-toggle="switch-on">
 								Edit Project <i class="symbol symbol-pencil"></i>
 							</a>
@@ -40,11 +40,11 @@ $args = app_parse_args($data,$defs);
 				</div>
 				<form class="switch-on">
 					<!-- @HIDDEN INPUT TYPES HERE -->
-					<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-						<div class="flex-child">
-							<label class="input-label h5 no-margin-bottom" for="<?=$args['post']?>-project">Project</label>
+					<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+						<div class="grid-col">
+							<label class="input input-label h5 no-margin-bottom" for="<?=$args['post']?>-project">Project</label>
 						</div>
-						<div class="flex-child">
+						<div class="grid-col">
 
 							<a href="#<?=$args['post']?>-side-team-onpage" data-toggle="accordion" class="border-color-transparent btn no-padding-x btn-no-shadow btn-small color-neutral color-primary-hover open"><i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i></a>
 						</div>
@@ -52,7 +52,7 @@ $args = app_parse_args($data,$defs);
 					<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
 						<div class="input-group input-group-horizontal input-block">
-							<input id="<?=$args['post']?>-project" name="<?=$args['post']?>-project" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type or select..." />
+							<input id="<?=$args['post']?>-project" name="<?=$args['post']?>-project" type="text" class="input input-box input-box input-box-select" data-toggle="dropdown" placeholder="Type or select..." />
 
 							<!-- @HIDDEN INPUT TYPES HERE -->
 
@@ -106,11 +106,11 @@ $args = app_parse_args($data,$defs);
 					<?php if($args['post'] !== 'client'): ?>
 						<div class="switch p">
 							<div class="switch-off pointer-reference position-relative">
-								<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-									<div class="flex-child">
-										<h5 class="input-label">Client</h5>
+								<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+									<div class="grid-col">
+										<h5 class="input input-label">Client</h5>
 									</div>
-									<div class="flex-child">
+									<div class="grid-col">
 										<a class="only-hover btn btn-small btn-primary-outline" data-toggle="switch-on">
 											Edit Client<i class="symbol symbol-pencil"></i>
 										</a>
@@ -129,10 +129,10 @@ $args = app_parse_args($data,$defs);
 								
 								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-									<label class="input-label h5 no-margin-bottom" for="<?=$args['post']?>-client">Client</label>
+									<label class="input input-label h5 no-margin-bottom" for="<?=$args['post']?>-client">Client</label>
 
 									<div class="input-group input-group-horizontal input-block">
-										<input id="<?=$args['post']?>-client" name="<?=$args['post']?>-client" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type or select..." />
+										<input id="<?=$args['post']?>-client" name="<?=$args['post']?>-client" type="text" class="input input-box input-box input-box-select" data-toggle="dropdown" placeholder="Type or select..." />
 
 										<!-- @HIDDEN INPUT TYPES HERE -->
 
@@ -191,11 +191,11 @@ $args = app_parse_args($data,$defs);
 					<?php if($args['post'] == 'project'): ?>
 						<div class="switch p">
 							<div class="switch-off pointer-reference position-relative">
-								<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-									<div class="flex-child">
-										<h5 class="input-label">Project Type</h5>
+								<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+									<div class="grid-col">
+										<h5 class="input input-label">Project Type</h5>
 									</div>
-									<div class="flex-child">
+									<div class="grid-col">
 										<p class="<?=$args['post']?>-project-type no-margin-bottom">
 											<!-- @if has project type -->
 												<span class="REPLACE">
@@ -219,10 +219,10 @@ $args = app_parse_args($data,$defs);
 								
 								<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-									<label class="input-label h5 no-margin-bottom" for="<?=$args['post']?>-project-type">Client</label>
+									<label class="input input-label h5 no-margin-bottom" for="<?=$args['post']?>-project-type">Client</label>
 
 									<div class="input-group input-group-horizontal input-block">
-										<input id="<?=$args['post']?>-project-type" name="<?=$args['post']?>-project-type" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type or select..." />
+										<input id="<?=$args['post']?>-project-type" name="<?=$args['post']?>-project-type" type="text" class="input input-box input-box input-box-select" data-toggle="dropdown" placeholder="Type or select..." />
 
 										<!-- @HIDDEN INPUT TYPES HERE -->
 
@@ -274,7 +274,7 @@ $args = app_parse_args($data,$defs);
 					<?php endif; ?>
 
 				<!-- TEAM LEADS -->
-					<h5 class="input-label">Team Leads</h5>
+					<h5 class="input input-label">Team Leads</h5>
 						<!-- @if hasteam leads -->
 							<div class="project-leads">
 
@@ -321,16 +321,16 @@ $args = app_parse_args($data,$defs);
 
 				<!-- ASSIGNEES + DUE + PRIORITOOT-->
 					<div class="<?=$args['post']; ?>-status position-relative module-content">
-						<div class="flex-grid flex-grid-fixed flex-grid-compact">
+						<div class="grid grid-flex grid-fixed grid-compact">
 
 							<?php if($args['post'] == 'task'): ?>
-								<div class="flex-col-xs-12 pointer-reference">
+								<div class="grid-col-xs-12 pointer-reference">
 
-									<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-										<div class="flex-child">
-											<h5 class="input-label">Assigned To</h5>
+									<div class="grid grid-flex grid-compact grid-constricted-y justify-content-space-between align-items-center">
+										<div class="grid-col">
+											<h5 class="input input-label">Assigned To</h5>
 										</div>
-										<div class="flex-child">
+										<div class="grid-col">
 											
 											<!-- @if user can edit -->
 												<a href="#" data-toggle="modal" class="hide-idle btn btn-primary-outline btn-small hide-idle">Edit Assignee <i class="symbol symbol-pencil"></i></a>
@@ -367,8 +367,8 @@ $args = app_parse_args($data,$defs);
 							<?php endif; ?>
 
 
-							<div class="flex-col-xs-6 flex-col-md-8">
-								<h5 class="input-label">Due on</h5>
+							<div class="grid-col-xs-6 grid-col-md-8">
+								<h5 class="input input-label">Due on</h5>
 								<div class="p color-neutral no-margin-bottom">
 									<!--  @if date is set -->
 										<a href="#" class="pointer-reference text-decoration-none" data-toggle="dropdown">
@@ -395,14 +395,14 @@ $args = app_parse_args($data,$defs);
 
 									<div class="dropdown dropdown-top-flush dropdown-center-x"  data-dropdown-width="100%">
 										<div class="input-wrapper input-wrapper-horizontal input-wrapper-block p">
-											<label class="input-label flex-1-0" for="<?=$args['post']?>-due-time">Time Due</label>
-											<input id="<?=$args['post']?>-due-time" name="<?=$args['post']?>-due-time" type="time" size="7" class="input input-single-line " data-toggle="dropdown" placeholder="--:-- --" />
+											<label class="input input-label flex-1-0" for="<?=$args['post']?>-due-time">Time Due</label>
+											<input id="<?=$args['post']?>-due-time" name="<?=$args['post']?>-due-time" type="time" size="7" class="input input-box " data-toggle="dropdown" placeholder="--:-- --" />
 										</div>
 
 										<hr class="no-margin-y">
 
 										<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-											<label class="input-label sr-only" for="<?=$args['post']?>-due-date">Date Due</label>
+											<label class="input input-label sr-only" for="<?=$args['post']?>-due-date">Date Due</label>
 											<input type="text" name="<?=$args['post']?>-due-date" id="<?=$args['post']?>-due-date" data-calendar-disabled-dates="past" class="no-padding-x input-calendar input-no-radius border-color-transparent input-block">
 
 											<button data-toggle="dropdown" class="btn btn-primary-outline btn-block ">Done</button>
@@ -413,9 +413,9 @@ $args = app_parse_args($data,$defs);
 
 						<?php if($args['post'] == 'task' ): ?>
 
-							<div class="flex-col-xs-6 flex-col-md-4">
+							<div class="grid-col-xs-6 grid-col-md-4">
 
-								<h5 class="input-label">Priority</h5>
+								<h5 class="input input-label">Priority</h5>
 								<div class="color-neutral no-margin-bottom">
 
 									<input type="hidden" name="<?=$args['post']?>-priority" id="<?=$args['post']?>-priority">
@@ -454,7 +454,7 @@ $args = app_parse_args($data,$defs);
 												<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 											</a>
 										</div>
-										<button data-toggle="dropdown" class="btn btn-primary-outline btn-block btn-no-radius border-color-transparent">Done</button>
+										<button data-toggle="dropdown" class="btn btn-primary-outline btn-block no-radius border-color-transparent">Done</button>
 									</div>
 								</div>
 							</div>

@@ -22,10 +22,10 @@ $args = app_parse_args($data,$defs);
 			<?php if($args['post'] == 'task'): ?>
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-					<label class="input-label" for="<?=$args['post']?>-project">Project</label>
+					<label class="input input-label" for="<?=$args['post']?>-project">Project</label>
 
 					<input id="<?=$args['post']?>-project-id" name="<?=$args['post']?>-project-id" type="hidden" value="" />
-					<input id="<?=$args['post']?>-project" name="<?=$args['post']?>-project" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type and select project..." />
+					<input id="<?=$args['post']?>-project" name="<?=$args['post']?>-project" type="text" class="input input-box input-box input-box-select" data-toggle="dropdown" placeholder="Type and select project..." />
 					<div class="dropdown dropdown-top-flush dashboard-dropdown-maxed no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
 						<div class="list-group list-group-interactive list-group-toggle list-group-toggle-allow-no-active">
 
@@ -70,11 +70,11 @@ $args = app_parse_args($data,$defs);
 			<!-- @NOTE: not sure if this is suppose to be task edit only, project edit only or both. wrap in whatever logic is fit for the setup :) -->
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 					
-					<label class="input-label" for="<?=$args['post']?>-client">Client</label>
+					<label class="input input-label" for="<?=$args['post']?>-client">Client</label>
 
 
 					<input id="<?=$args['post']?>-client-id" name="<?=$args['post']?>-client-id" type="hidden" value="" />
-					<input id="<?=$args['post']?>-client" name="<?=$args['post']?>-client" type="text" class="input input-single-line input-select" data-toggle="dropdown"  placeholder="Type and select client..." />
+					<input id="<?=$args['post']?>-client" name="<?=$args['post']?>-client" type="text" class="input input-box input-box input-box-select" data-toggle="dropdown"  placeholder="Type and select client..." />
 
 					<div class="dropdown dropdown-top-flush dashboard-dropdown-maxed no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
 						<ul class="list-group list-group-interactive list-group-toggle list-group-toggle-allow-no-active">
@@ -123,10 +123,10 @@ $args = app_parse_args($data,$defs);
 			<?php if($args['post'] == 'project'): ?>
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-					<label class="input-label" for="<?=$args['post']?>-project-type">Project Type</label>
+					<label class="input input-label" for="<?=$args['post']?>-project-type">Project Type</label>
 
 					<input id="<?=$args['post']?>-project-type-id" name="<?=$args['post']?>-project-type-id" type="hidden" value="" />
-					<input id="<?=$args['post']?>-project-type" name="<?=$args['post']?>-project-type" type="text" class="input input-single-line input-select" data-toggle="dropdown" placeholder="Type and select project type..." />
+					<input id="<?=$args['post']?>-project-type" name="<?=$args['post']?>-project-type" type="text" class="input input-box input-box input-box-select" data-toggle="dropdown" placeholder="Type and select project type..." />
 					<div class="dropdown dropdown-top-flush dashboard-dropdown-maxed no-padding" data-dropdown-width="100%" data-dropdown-max-height="322px">
 						<div class="list-group list-group-interactive list-group-toggle list-group-toggle-allow-no-active">
 
@@ -170,7 +170,7 @@ $args = app_parse_args($data,$defs);
 			<?php if($args['post'] == 'project'): ?>
 				<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
 
-					<h5 class="input-label">Team Leads</h5>
+					<h5 class="input input-label">Team Leads</h5>
 					<div class="project-leads">
 
 					<!-- @NOTE if using the design based layout, add hidden fields here -->
@@ -203,12 +203,12 @@ $args = app_parse_args($data,$defs);
 
 		<!-- ASSIGNEES + DUE + PRIORITOOT-->
 
-				<div class="flex-grid flex-grid-fixed flex-grid-compact">
+				<div class="grid grid-flex grid-fixed grid-compact">
 				
 					<?php if($args['post'] == 'task'): ?>
-						<div class="flex-col-xs-12">
+						<div class="grid-col-xs-12">
 
-							<h5 class="input-label">Assigned To</h5>
+							<h5 class="input input-label">Assigned To</h5>
 							<p class="task-assignee">
 								<!-- @if assigned to anyone -->
 									<!-- @LOOP a w/ conditional comma -->
@@ -232,8 +232,8 @@ $args = app_parse_args($data,$defs);
 					<?php endif; ?>
 
 
-						<div class="flex-col-xs-6 flex-col-md-8">
-							<h5 class="input-label">Due on</h5>
+						<div class="grid-col-xs-6 grid-col-md-8">
+							<h5 class="input input-label">Due on</h5>
 							<div class="p color-neutral no-margin-bottom">
 								<a href="#" data-toggle="dropdown">
 										<!-- @NOTE
@@ -266,14 +266,14 @@ $args = app_parse_args($data,$defs);
 								</a>
 								<div class="dropdown dropdown-top-flush dropdown-center-x"  data-dropdown-width="100%">
 									<div class="input-wrapper input-wrapper-horizontal input-wrapper-block p">
-										<label class="input-label flex-1-0" for="<?=$args['post']?>-due-time">Time Due</label>
-										<input id="<?=$args['post']?>-due-time" name="<?=$args['post']?>-due-time" type="time" size="7" class="input input-single-line " data-toggle="dropdown" placeholder="--:-- --" />
+										<label class="input input-label flex-1-0" for="<?=$args['post']?>-due-time">Time Due</label>
+										<input id="<?=$args['post']?>-due-time" name="<?=$args['post']?>-due-time" type="time" size="7" class="input input-box " data-toggle="dropdown" placeholder="--:-- --" />
 									</div>
 
 									<hr class="no-margin">
 
 									<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
-										<label class="input-label sr-only" for="<?=$args['post']?>-due-date">Date Due</label>
+										<label class="input input-label sr-only" for="<?=$args['post']?>-due-date">Date Due</label>
 										<input type="text" name="<?=$args['post']?>-due-date" id="<?=$args['post']?>-due-date" data-calendar-disabled-dates="past" class="no-padding-x input-calendar input-no-radius border-color-transparent input-block">
 
 										<button data-toggle="dropdown" class="btn btn-primary-outline btn-block ">Done</button>
@@ -285,9 +285,9 @@ $args = app_parse_args($data,$defs);
 					<!-- @TODO finalize apporpriate or remove uneeded conditional statement here -->
 					<?php if($args['post'] == 'task' ): ?>
 
-						<div class="flex-col-xs-6 flex-col-md-4">
+						<div class="grid-col-xs-6 grid-col-md-4">
 
-							<h5 class="input-label">Priority</h5>
+							<h5 class="input input-label">Priority</h5>
 							<div class="color-neutral no-margin-bottom">
 
 								<input type="hidden" name="<?=$args['post']?>-priority" id="<?=$args['post']?>-priority">
@@ -331,7 +331,7 @@ $args = app_parse_args($data,$defs);
 											<i class="color-primary symbol symbol-check-toggle font-size-normalize"></i>
 										</a>
 									</div>
-									<button data-toggle="dropdown" class="btn btn-primary-outline btn-block btn-no-radius border-color-transparent">Done</button>
+									<button data-toggle="dropdown" class="btn btn-primary-outline btn-block no-radius border-color-transparent">Done</button>
 								</div>
 							</div>
 						</div>

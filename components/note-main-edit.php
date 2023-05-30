@@ -13,8 +13,8 @@
 <!-- Title -->
 	<div class="note-heading">
 		<div class="input-wrapper p input-wrapper-block input-wrapper-vertical">
-			<label for="note-title" class="input-label sr-only">Title</label>
-			<input type="text" placeholder="Enter title" id="note-title" name="note-title" class=" input input-single-line input-large">
+			<label for="note-title" class="input input-label sr-only">Title</label>
+			<input type="text" placeholder="Enter title" id="note-title" name="note-title" class=" input input-box input-large">
 		</div>
 	</div>
 	
@@ -22,21 +22,21 @@
 	<div class="note-description">
 		<!-- @NOTE use tinymce here -->
 		<div class="input-wrapper input-wrapper-block input-wrapper-vertical p">
-			<label for="note-body" class="input-label sr-only">Description</label>
-			<textarea name="note-body" id="note-body" cols="30" rows="10" class="input input-multiple-line">use tinymce in place</textarea>
+			<label for="note-body" class="input input-label sr-only">Description</label>
+			<textarea name="note-body" id="note-body" cols="30" rows="10" class="input input-box input-box-multiline">use tinymce in place</textarea>
 		</div>
 	</div>
 
 <!-- Attachments -->
 	<div class="note-attachments" id="attachments">
-		<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center">
-			<div class="flex-col-xs-12">
+		<div class="grid grid-flex grid-compact justify-content-space-between align-items-center">
+			<div class="grid-col-xs-12">
 				<h4 class="no-margin-y">
 					Attachments
 				</h4>
 			</div>
 
-			<!-- <div class="flex-col-xs-6 text-align-right">
+			<!-- <div class="grid-col-xs-6 text-align-right">
 				<a href="#" onClick="REPLACEfnToTriggernoteAttachmentsToAdd(event)" class="btn btn-primary-outline btn-small ">Add Attachment <i class="symbol symbol-plus"></i></a>
 			</div>
 				-->

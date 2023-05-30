@@ -7,22 +7,22 @@
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 
-				<label for="task-title" class="input-label">Task</label>
-				<input id="task-title" type="text" class="input input-single-line" placeholder="Enter title here">
+				<label for="task-title" class="input input-label">Task</label>
+				<input id="task-title" type="text" class="input input-box" placeholder="Enter title here">
 			</div>
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="notes" class="input-label">Notes</label>
+				<label for="notes" class="input input-label">Notes</label>
 
 				<!-- @NOTE replace with tinymce -->
-				<textarea id="notes" id="task-description" class="input input-multiple-line"></textarea>
+				<textarea id="notes" id="task-description" class="input input-box input-box-multiline"></textarea>
 			</div>
 
 
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-				<label for="share-title" class="input-label">Share with:</label>
+				<label for="share-title" class="input input-label">Share with:</label>
 
-				<input id="share-with" class="input input-single-line" />
+				<input id="share-with" class="input input-box" />
 			</div>
 
 			<div class="text-align-right">

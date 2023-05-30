@@ -3,8 +3,8 @@
 </div>
 <div class="module">
 	<div class="module-content">
-		<div class="flex-grid flex-grid-compact justify-content-space-between align-items-center text-align-center">
-			<div class="flex-col-xs-12 flex-col-md-4 flex-col-lg-3">
+		<div class="grid grid-flex grid-compact justify-content-space-between align-items-center text-align-center">
+			<div class="grid-col-xs-12 grid-col-md-4 grid-col-lg-3">
 				<div class="inline-flex align-items-center">
 					<span class="h5 no-margin-y font-weight-400 margin-small-right">Today</span>
 					<span class="h3 font-weight-600 no-margin color-inherit">
@@ -19,7 +19,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="flex-col-xs-12 flex-col-md-8">
+			<div class="grid-col-xs-12 grid-col-md-8">
 				<div class="table-wrapper">
 					<table class="table-fixed">
 						<tr>

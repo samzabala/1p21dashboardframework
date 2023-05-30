@@ -8,8 +8,8 @@ $args = app_parse_args($data,$defs);
 ?>
 <div class="position-relative input-social">
 
-	<div class="flex-grid flex-grid-compact flex-grid-fixed">
-		<div class="flex-col-3">
+	<div class="grid grid-flex grid-compact grid-flex-fixed">
+		<div class="grid-col-3">
 			<a data-toggle-dropdown class="flex-1-1 btn btn-block btn-primary-outline">
 				<!-- 
 					@NOTE
@@ -92,10 +92,10 @@ $args = app_parse_args($data,$defs);
 				</ul>
 			</div>
 		</div>
-		<div class="flex-col-9">
+		<div class="grid-col-9">
 
 			<input type="hidden" name="contact-social[REPLACEINDEX]-type">
-			<input type="url" class="input input-single-line input-block" name="contact-social[REPLACEINDEX]-url" value="REPLACE">
+			<input type="url" class="input input-box input-block" name="contact-social[REPLACEINDEX]-url" value="REPLACE">
 		</div>
 	</div>
 </div>
