@@ -39,8 +39,6 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 		top:0;
 		bottom:0;
 		left:0;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
 		z-index:1001;
 		overflow-y:scroll;
 		overflow-x:hidden;
@@ -62,9 +60,18 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 		}
 
 		&-nav {
+			display: flex;
+			flex-direction: column;
 
 			li  {
 
+			}
+		}
+
+		&-utility {
+			background: #19327B;
+			.dropdown {
+				background: #031A5A;
 			}
 		}
 
@@ -116,6 +123,10 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 
 	@include br(#{$mobile-br-max-polar}) {
 		&-sidebar {
+			&-nav {
+				padding-top: 2rem;
+				min-height: 100vh;
+			}
 			.timetracker-nav-list {
 				padding-right: 1rem;
 				> li {
@@ -160,12 +171,13 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 
 			&,
 			&-nav,
-			.timetracker-nav-list {
+			.timetracker-nav-accordion {
 				width:100%;
 			}
 		}
 		&-logo {
 			width: 100%;
+			height:100%;
 		}
 		&-sidebar {
 			// top: $sidebar-slim;
@@ -179,7 +191,7 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 			padding: 0;
 
 			&-nav {
-				display: flex;
+				flex-direction: row;
 				flex-wrap: wrap;
 				justify-content: space-between;
 
@@ -191,7 +203,7 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 					z-index: 10000;
 
 				}
-				.timetracker-nav-list {
+				.timetracker-nav-accordion {
 					// display: flex;
 					// flex: 1 1;
 					// justify-content: space-evenly;
@@ -206,7 +218,6 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 					// }
 
 					padding-top: var(--fw-nav-height, #{$nav-height});
-					padding-bottom: var(--fw-nav-height, #{$nav-height});
 					position:fixed;
 					top: 0;
 					bottom: 0;
