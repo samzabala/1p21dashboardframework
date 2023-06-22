@@ -148,6 +148,7 @@ function app_init_content(){
 						break;
 					case 'my-tasks':
 					case 'favorites':
+					case 'profile':
 					case 'projects':
 					case 'project-detail':
 					case 'project-detail-tasks':
