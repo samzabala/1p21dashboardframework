@@ -115,10 +115,12 @@
 				</div>
 			</div>
 
-			<div>
+			<div class="flex-md justify-content-space-between align-items-center">
 				<button class="btn btn-theme btn-block-mobile">Save</button>
-				<span class="spacer">&nbsp;</span>
-				<button class="btn btn-link color-inherit font-weight-400 btn-block-mobile" data-toggle-modal-default>Delete Account</button>
+				<span class="spacer margin-small-right">&nbsp;</span>
+				<button class="btn btn-neutral-glassy btn-block-mobile">Go back</button>
+				<span class="spacer margin-small-right margin-auto-left">&nbsp;</span>
+				<button class="btn btn-error-glassy font-weight-400 btn-block-mobile" data-toggle-modal-default>Delete Account</button>
 				<div class="modal modal-default" data-modal-title="Delete Account" data-modal-width="450px">
 					<p>Are you sure? this will disable your account.</p>
 
