@@ -61,14 +61,14 @@
 
 </head>
 <body class="
-	<?php if(FWAPPS_TEMPLATE !== 'login' && FWAPPS_TEMPLATE !== 'login-forgot' && FWAPPS_TEMPLATE !== 'login-reset'): ?>
+	<?php if(!str_contains(FWAPPS_TEMPLATE,'login')): ?>
 		cf body-loading background-theme-contrast
 	<?php else: ?>
 		cf body-loading background-theme-polar flex-xs flex-wrap justify-content-center align-items-center timetracker-body-login
 	<?php endif; ?>
 ">
 
-<?php if(FWAPPS_TEMPLATE !== 'login' ): ?>
+<?php if(!str_contains(FWAPPS_TEMPLATE,'login')): ?>
 
 
 	<div id="timetracker">
