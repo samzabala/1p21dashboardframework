@@ -159,6 +159,10 @@ function app_init_content(){
 					case 'task-detail-time':
 					case 'reports':
 					case 'login':
+					case 'login-forgot':
+					case 'login-forgot-success':
+					case 'login-reset':
+					case 'login-reset-success':
 					case 'error':
 					case 'insights':
 					case 'jobs':
