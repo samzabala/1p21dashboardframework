@@ -1,5 +1,5 @@
 
-<?php if(FWAPPS_TEMPLATE !== 'login' ): ?>
+<?php if( !str_contains(FWAPPS_TEMPLATE,'login') ): ?>
 
 	
 
