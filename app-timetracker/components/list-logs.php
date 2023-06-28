@@ -17,6 +17,7 @@
 			:NOTE: tag is commented out for front end demo to work because tables are weird
 			-->
 			<!-- <template> -->
+				
 				<tr>
 					<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-40 text-align-center no-padding-right" v-if="status">
 						<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow cursor-grab cursor-grabbing-active">
@@ -96,9 +97,11 @@
 						<h5 class="hide-nonmobile no-margin-top">
 							Total Time:
 						</h5>
-						<span class="entry-total font-weight-700">
-							<span class="REPLACE">04:20</span>
-						</span>
+						<form>
+							<input class="no-margin input input-blend font-weight-700" size="2" value="04" placeholder="00" />
+							:
+							<input class="no-margin input input-blend font-weight-700" size="2" value="20" placeholder="00" />
+						</form>
 					</td>
 					<td class="no-border-bottom timetracker-td timetracker-td-w-100 timetracker-td-actions text-align-right">
 						<!-- @if can toggle -->
@@ -318,9 +321,11 @@
 								<h5 class="hide-nonmobile no-margin-top">
 									Total Time:
 								</h5>
-								<span class="entry-total font-weight-700">
-									<span class="REPLACE">04:20</span>
-								</span>
+								<form>
+									<input class="no-margin input input-blend font-weight-700" size="2" value="04" placeholder="00" />
+									:
+									<input class="no-margin input input-blend font-weight-700" size="2" value="20" placeholder="00" />
+								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w-100 timetracker-td-actions text-align-right">
 								<!-- @if can toggle -->
