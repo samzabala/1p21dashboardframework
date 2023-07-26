@@ -17,7 +17,6 @@
 			:NOTE: tag is commented out for front end demo to work because tables are weird
 			-->
 			<!-- <template> -->
-				
 				<tr>
 					<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-40 text-align-center no-padding-right" v-if="status">
 						<div class="draggable-task btn font-size-large no-padding color-neutral align-items-flex-start color-theme-hover color-theme-active color-theme-focus no-shadow cursor-grab cursor-grabbing-active">
@@ -97,11 +96,9 @@
 						<h5 class="hide-nonmobile no-margin-top">
 							Total Time:
 						</h5>
-						<form>
-							<input class="no-margin input input-blend font-weight-700" size="2" value="04" placeholder="00" />
-							:
-							<input class="no-margin input input-blend font-weight-700" size="2" value="20" placeholder="00" />
-						</form>
+						<span class="entry-total font-weight-700">
+							<span class="REPLACE">04:20</span>
+						</span>
 					</td>
 					<td class="no-border-bottom timetracker-td timetracker-td-w-100 timetracker-td-actions text-align-right">
 						<!-- @if can toggle -->
@@ -160,20 +157,18 @@
 									<input class="no-margin input input-blend input-block" placeholder="No description available" value="REPLACE You took all the cash I have, naubos ng lahat Gusto ko pa ng picha pie Ngunit ang pera'y di sapat And so I spent so many nights Just feeling sorry for myself It made me cry, wala na ba akong picha pie? Ngayon ako ay nagipit! Hindi na ako istupid person na hindi nag-iisip Medyo mahal ang picha pie You can't expect it to be free That's why I'm saving all my money Para mayroong pambili" />
 								</form>
 							</td>
-							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200 text-align-right color-neutral">	
-								<form action="">
-									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
-									-
-									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
-								</form>
+							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200 text-align-right color-neutral">
+								&nbsp;
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 								<h5 class="hide-nonmobile no-margin-top">
 									Total Time:
 								</h5>
-								<span class="entry-total font-weight-700">
-									<span class="REPLACE">04:20</span>
-								</span>
+								<form class="timetracker-form-total-time" action="">
+									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
+									-
+									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
+								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100 timetracker-td-actions text-align-right">
 								<span class="position-relative ">
@@ -321,11 +316,9 @@
 								<h5 class="hide-nonmobile no-margin-top">
 									Total Time:
 								</h5>
-								<form>
-									<input class="no-margin input input-blend font-weight-700" size="2" value="04" placeholder="00" />
-									:
-									<input class="no-margin input input-blend font-weight-700" size="2" value="20" placeholder="00" />
-								</form>
+								<span class="entry-total font-weight-700">
+									<span class="REPLACE">04:20</span>
+								</span>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w-100 timetracker-td-actions text-align-right">
 								<!-- @if can toggle -->
