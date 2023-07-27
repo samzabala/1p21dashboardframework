@@ -13,6 +13,9 @@
 			</div>
 		</div>
 	</div>
+	<div class="flex-col-xs-12">
+		<?php app_get_component('components/filter-list-pages'); ?>
+	</div>
 </div>
 
 <div id="timetracker-projects" class="module">
