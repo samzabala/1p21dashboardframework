@@ -51,12 +51,7 @@
 			</th>
 			<th class="font-weight-700 color-theme">
 				Task and Project
-
-				<!-- a @NOTES: classes to add:
-					'active' => when ascending order
-					'' => when descending order
-				-->
-				<a href="#" class="color-inherit"><i class="symbol symbol-caret-down symbol-caret-up-toggle"></i></a>
+				<?php app_get_component('components/toggle-order'); ?>
 			</th>
 			<th class="font-weight-700 color-theme text-align-center no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-150">
 				Creator
@@ -66,19 +61,11 @@
 			</th>
 			<th class="font-weight-700 color-theme">
 				Created
-				<!-- a @NOTES: classes to add:
-					'active' => when ascending order
-					'' => when descending order
-				-->
-				<a href="#" class="color-inherit"><i class="symbol symbol-caret-down symbol-caret-up-toggle"></i></a>
+				<?php app_get_component('components/toggle-order'); ?>
 			</th>
 			<th class="font-weight-700 color-theme">
 				Due
-				<!-- a @NOTES: classes to add:
-					'active' => when ascending order
-					'' => when descending order
-				-->
-				<a href="#" class="color-inherit"><i class="symbol symbol-caret-down symbol-caret-up-toggle"></i></a>
+				<?php app_get_component('components/toggle-order'); ?>
 			</th>
 			<th class="font-weight-700 color-theme text-align-center">Status</th>
 			<th class="font-weight-700 color-theme text-align-center">Subtasks</th>
