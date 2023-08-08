@@ -1,5 +1,5 @@
 <form class="flex-grid flex-grid-compact align-items-flex-end">
-	<div class="flex-col-xs-12 flex-col-md-10">
+	<div class="flex-col-xs-12 flex-col-md-8">
 		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom ">
 
 		<!-- @if can filter by Sales Rep -->
@@ -183,7 +183,17 @@
 			
 		</div>
 	</div>
-	<div class="flex-child flex-1-1">
-		<button class="btn btn-theme-outline btn-block margin-top">Apply Filters</button>
+	<div class="flex-child flex-1-0">
+		<div class="flex-md align-items-flex-end">
+			<div>
+				<label for="filter-range" class="input-label no-padding-top padding-small-bottom display-block">Show Overdue Tasks</label>
+				<div class="btn-group btn-group-horizontal btn-group-interactive btn-group-toggle btn-block">
+					<a href="#" class="btn border-color-neutral-alpha-3 background-transparent color-neutral font-weight-inherit background-theme-active color-theme-active active">On</a>
+					<a href="#" class="btn border-color-neutral-alpha-3 background-transparent color-neutral font-weight-inherit background-theme-active color-theme-active">Off</a>
+				</div>
+			</div>
+			<div class="hide-mobile margin-small-right"><span class="spacer"></span></div>
+			<button class="btn btn-theme-outline btn-block-mobile margin-top flex-1-1">Apply Filters</button>
+		</div>
 	</div>
 </form>
