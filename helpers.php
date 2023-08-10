@@ -127,7 +127,7 @@ function app_init_content(){
 	switch($app):
 		case 'timetracker':
 			switch($template_part):
-					case 'settings':
+					/* case 'settings':
 						?>
 						<div class="module">
 							Not yet brah
@@ -138,7 +138,7 @@ function app_init_content(){
 						</div>
 						<?php
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
-						break;
+						break; */
 					case 'home':
 					case 'timer':
 					case 'time':
@@ -171,6 +171,7 @@ function app_init_content(){
 					case 'departments':
 					case 'department-new':
 					case 'department-edit':
+					case 'settings':
 					case 'team-members':
 					case 'team-member-new':
 					case 'team-member-edit':
