@@ -40,6 +40,7 @@
 	<div class="module-content no-padding">
 		<?php app_get_component('components/detail-subheader','',false,array(
 			'has_data' => true,
+			'members' => 6,
 		)) ?>
 	</div>
 </div>
@@ -116,6 +117,7 @@
 		<?php app_get_component('components/detail-subheader','',false,array(
 			'has_data' => true,
 			'can_edit' => false,
+			'members' => 6,
 		)) ?>
 	</div>
 </div>
@@ -156,6 +158,7 @@
 			<?php app_get_component('components/detail-subheader','',false,array(
 				'has_data' => true,
 				'assignees' => 2,
+				'members' => 2,
 			)) ?>
 		</div>
 	</div>
@@ -196,6 +199,7 @@
 			<?php app_get_component('components/detail-subheader','',false,array(
 				'has_data' => true,
 				'assignees' => 8,
+				'members' => 5,
 			)) ?>
 		</div>
 	</div>
