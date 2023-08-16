@@ -39,8 +39,10 @@
 						<form class="entry-task-name h5 color-inherit no-margin-y flex-xs align-items-center">
 							<!-- @if task is a favorite -->
 								<i class="symbol symbol-star color-primary"></i>
-
-							<input class="no-margin input input-blend input-block flex-1-1" placeholder="Type Task Title" value="REPLACE Make everything float left and clear none" />
+							<!-- @if can edit -->
+								<!-- <input class="no-margin input input-blend input-block flex-1-1" placeholder="Type Task Title" value="REPLACE Make everything float left and clear none" /> -->
+							<!-- @else -->
+								<span class="REPLACE">Make everything float left and clear none</span>
 						</form>
 		
 						<!-- @if has tags -->
@@ -82,14 +84,17 @@
 							</h5>
 							<form class="entry-task-status tag no-margin-y
 								tag-primary">
-								<select class="input input-blend no-border-bottom text-align-center" name="" id="">
-									<!-- @PLACEHOLDER. delete when ready -->
-									<option value="">Backlog</option>
-									<option value="" selected>In Progress</option>
-									<option value="">Review</option>
-									<option value="">On Hold</option>
-									<option value="">Completed</option>
-								</select>
+								<!-- @if can edit -->
+									<select class="input input-blend no-border-bottom text-align-center" name="" id="">
+										<!-- @PLACEHOLDER. delete when ready -->
+										<option value="">Backlog</option>
+										<option value="" selected>In Progress</option>
+										<option value="">Review</option>
+										<option value="">On Hold</option>
+										<option value="">Completed</option>
+									</select>
+								<!-- @else -->
+									<!-- <span class="REPLACE">Backlog</span> -->
 							</form>
 					</td>
 					<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
@@ -157,20 +162,31 @@
 									<input class="no-margin input input-blend input-block" placeholder="No description available" value="REPLACE You took all the cash I have, naubos ng lahat Gusto ko pa ng picha pie Ngunit ang pera'y di sapat And so I spent so many nights Just feeling sorry for myself It made me cry, wala na ba akong picha pie? Ngayon ako ay nagipit! Hindi na ako istupid person na hindi nag-iisip Medyo mahal ang picha pie You can't expect it to be free That's why I'm saving all my money Para mayroong pambili" />
 								</form>
 							</td>
-							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200 text-align-right color-neutral">
-								<form action="">
-									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
+							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-250 text-align-right color-neutral-darker">
+								<form action="" class="font-weight-700">
+									<!-- @if can edit -->
+										<!-- <input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="03:00" /> -->
+									<!-- @else -->
+										<span class="REPLACE">03:00 AM</span>
 									-
-									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
+									<!-- @if can edit -->
+										<!-- <input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="18:00" /> -->
+									<!-- @else -->
+										<span class="REPLACE">06:00</span>
 								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 								<h5 class="hide-nonmobile no-margin-top">
 									Total Time:
 								</h5>
-								<span class="entry-total font-weight-700">
-									<span class="REPLACE">04:20</span>
-								</span>
+								<form class="flex-xs timetracker-form-total-time">
+									<!-- @if can edit -->
+										<!-- <input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="04" />
+										:
+										<input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="20" /> -->
+									<!-- @else -->
+										<span class="REPLACE">04:20</span>
+								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100 timetracker-td-actions text-align-right">
 								<span class="position-relative ">
@@ -236,15 +252,18 @@
 								<?php endif; ?>
 							</td>
 							<td class="no-border-bottom timetracker-td" colspan="2">
-									
-				
+
+								<?php $REPLACE_task = ($i == 3) ? 'Yeahboogitadidggitdagoogitydigdigdigtikikiti!!' : (($i % 2 == 0) ? 'Leo! Leo! Leo! Goddammit! Goddammit! Goddammit! Goddammit!' : 'Oh my god they were roommates'); ?>
+										
 								<form class="entry-task-name h5 color-inherit no-margin-y flex-xs align-items-center">
 									<?php if($is_fave): ?>
 										<i class="symbol symbol-star color-primary"></i>
 									<?php endif; ?>
-									
-									<input class="no-margin input input-blend input-block flex-1-1" placeholder="Type Task Title" 
-										value="<?= ($i == 3) ? 'Yeahboogitadidggitdagoogitydigdigdigtikikiti!!' : (($i % 2 == 0) ? 'Leo! Leo! Leo! Goddammit! Goddammit! Goddammit! Goddammit!' : 'Oh my god they were roommates'); ?>" />
+									<?php if($h % 2 == 0): ?>
+										<input class="no-margin input input-blend input-block flex-1-1" placeholder="Type Task Title" value="<?=$REPLACE_task ?>" />
+									<?php else: ?>
+										<span class="REPLACE"><?=$REPLACE_task ?></span>
+									<?php endif; ?>
 								</form>
 				
 							
@@ -307,11 +326,15 @@
 
 								<form class="entry-task-status tag no-margin-y
 									tag-<?=$placeholder_color[$i]; ?>">
-									<select class="input input-blend no-border-bottom text-align-center" name="" id="">
-										<?php foreach($placeholder_color as $l=>$pco): ?>
-											<option value="" <?= $l == $i ? 'selected' : '' ?>><?= $placeholder_stuff[ $pco ] ?></option>
-										<?php endforeach; ?>
-									</select>
+									<?php if($h % 2 == 0): ?>
+										<select class="input input-blend no-border-bottom text-align-center" name="" id="">
+											<?php foreach($placeholder_color as $l=>$pco): ?>
+												<option value="" <?= $l == $i ? 'selected' : '' ?>><?= $placeholder_stuff[ $pco ] ?></option>
+											<?php endforeach; ?>
+										</select>
+									<?php else: ?>
+										<span class="REPLACE"><?= $placeholder_stuff[ $placeholder_color[$i] ] ;?></span>
+									<?php endif; ?>
 								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
@@ -380,20 +403,35 @@
 											<input class="no-margin input input-blend input-block" placeholder="No description available" value="<?= ($j == 3) ? 'Despacito This is how we do it down in Puerto Rico I just wanna hear you screaming, ¡Ay, Bendito! I can move forever cuando esté contigo ¡Báilalo!  Pasito a pasito, suave suavecito Nos vamos pegando, poquito a poquito Que le enseñes a mi boca Tus lugares favoritos (Favorito, favorito, baby) Pasito a pasito, suave suavecito Nos vamos pegando, poquito a poquito Hasta provocar tus gritos (Fonsi) Y que olvides tu apellido (D.Y.) Despacito' :( ($j % 2 == 0) ? 'Description boiiii' : ''); ?>" />
 										</form>
 									</td>
-									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200 text-align-right color-neutral">
-										<form action="">
-											<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
+									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-250 text-align-right color-neutral-darker">
+										<form action="" class="font-weight-700">
+											<?php if($j % 2 == 0): ?>
+												<input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="03:00" />
+											<?php else: ?>
+												<span class="REPLACE">03:00 AM</span>
+											<?php endif; ?>
 											-
-											<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
+											<?php if($j % 2 == 0): ?>
+												<input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="18:00" />
+											<?php else: ?>
+												<span class="REPLACE">06:00 PM</span>
+											<?php endif; ?>
 										</form>
 									</td>
 									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 										<h5 class="hide-nonmobile no-margin-top">
 											Total Time:
 										</h5>
-										<span class="entry-total font-weight-700">
-											<span class="REPLACE">04:20</span>
-										</span>
+
+										<form class="flex-xs timetracker-form-total-time">
+											<?php if($j % 2 == 0): ?>
+												<input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="04" />
+												:
+												<input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="20" />
+											<?php else: ?>
+												<span class="REPLACE">04:20</span>
+											<?php endif; ?>
+										</form>
 									</td>
 									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100 timetracker-td-actions text-align-right">
 										<span class="position-relative ">
