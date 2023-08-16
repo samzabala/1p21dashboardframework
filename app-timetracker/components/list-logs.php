@@ -158,17 +158,19 @@
 								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200 text-align-right color-neutral">
-								&nbsp;
+								<form action="">
+									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
+									-
+									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
+								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 								<h5 class="hide-nonmobile no-margin-top">
 									Total Time:
 								</h5>
-								<form class="timetracker-form-total-time" action="">
-									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="03:00" />
-									-
-									<input class="entry-time-start no-margin input input-blend" placeholder="00:00 --" type="time" value="18:00" />
-								</form>
+								<span class="entry-total font-weight-700">
+									<span class="REPLACE">04:20</span>
+								</span>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100 timetracker-td-actions text-align-right">
 								<span class="position-relative ">
