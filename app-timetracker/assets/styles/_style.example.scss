@@ -13,7 +13,18 @@ npm install the following for css/sass deps:
 
 //3. import frameworks here. change file path as needed
 	// layout components + helpers + core
-		@import './../../../assets/plugins/framework/src/scss/framework.lite';
+		@import './../../../assets/plugins/framework/src/scss/framework.core';
+	
+	//plugin deps
+		@import './../../../assets/plugins/framework/src/scss/plugins/_reset';
+	//to cascade
+		@import './../../../assets/plugins/framework/src/scss/_scaffolding';
+		@import './../../../assets/plugins/framework/src/scss/_typography';
+
+	//layout
+		@import './../../../assets/plugins/framework/src/scss/_container';
+		@import './../../../assets/plugins/framework/src/scss/_grid';
+		@import './../../../assets/plugins/framework/src/scss/_module';
 
 	//components used by global components (header + sidebar)
 		@import './../../../assets/plugins/framework/src/scss/_accordion';
@@ -30,6 +41,9 @@ npm install the following for css/sass deps:
 		@import './../../../assets/plugins/framework/src/scss/_tooltip';
 		@import './../../../assets/plugins/framework/src/scss/_symbol';
 		@import './../../../assets/plugins/framework/src/scss/_well';
+
+	//helpers
+		@import '_helpers';
 
 
 // 4. additional css specific for this app
