@@ -22,15 +22,16 @@ $args = app_parse_args($data,$defs);
 ?>
 <div class="dropdown dropdown-top-flush dropdown-left no-padding" data-dropdown-width="max(100%,300px)" data-dropdown-max-height="400px">
 	<div class="padding-small position-sticky background-theme z-index-1 offset-0-x offset-0-top">
-	
-		<select type="text" placeholder="<?= $args['position_placeholder']; ?>" class="font-size-normalize input input-select input-small input-block font-weight-600 margin-small-bottom">
-			<option value=""><?= $args['position_placeholder']; ?></option>
+		<?php if($args['list_position']) : ?>
+			<select type="text" placeholder="<?= $args['position_placeholder']; ?>" class="font-size-normalize input input-select input-small input-block font-weight-600 margin-small-bottom">
+				<option value=""><?= $args['position_placeholder']; ?></option>
 
-			<!-- @PLACHOLDER: Delete when ready -->
-			<?php foreach( $args['list_position'] as $item ): ?>
-				<option value=""><?= $item; ?></option>
-			<?php endforeach; ?>
-		</select>
+				<!-- @PLACHOLDER: Delete when ready -->
+				<?php foreach( $args['list_position'] as $item ): ?>
+					<option value=""><?= $item; ?></option>
+				<?php endforeach; ?>
+			</select>
+		<?php endif; ?>
 		<div class="input-group input-block input-group-horizontal">
 			<input type="text" placeholder="<?= $args['search_placeholder']; ?>" class="font-size-normalize input input-single-line input-small input-block font-weight-600 no-border-right" />
 			<label for="" class="font-size-normalize btn btn-symbol btn-small btn-default">
@@ -50,7 +51,7 @@ $args = app_parse_args($data,$defs);
 					classes to add:
 						`active` => when the contained input field is checked or has value
 			-->
-			<label class="list-group-item pointer-reference">
+			<label class="list-group-item pointer-reference dropdown-purger">
 				<span class=" flex-grid flex-nowrap flex-grid-no-gutter justify-content-space-between flex-wrap align-items-center">
 					<div class="flex-0-0">
 						<?php app_get_component('components/thumbnail-small','',false,array(
