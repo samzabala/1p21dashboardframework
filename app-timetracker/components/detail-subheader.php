@@ -557,7 +557,7 @@ $placeholder_members = array(
 
 		<!-- Category -->
 			<?php if(str_contains(FWAPPS_TEMPLATE,'task-detail')): ?>
-				<form class="flex-1-1 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top position-relative">
+				<form class="flex-0-0 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top position-relative">
 
 					<!-- @NOTE hidden input types here -->
 
@@ -607,6 +607,25 @@ $placeholder_members = array(
 								
 							)
 						)); ?>
+					<?php endif; ?>
+				</form>
+			<?php endif; ?>
+
+			<!-- Billable -->
+			<?php if(str_contains(FWAPPS_TEMPLATE,'task-detail')): ?>
+
+				<form class="flex-1-1 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top position-relative">
+					<?php if($args['can_edit']): ?>
+
+						<!-- @NOTE hidden input types here -->
+
+						
+						<label class="input input-toggle">
+							<input type="checkbox" class="input">
+							<span class="input-toggle-label">Billable?</span>
+						</label>
+					<?php else: ?>
+						<strong>Billable</strong>
 					<?php endif; ?>
 				</form>
 			<?php endif; ?>
