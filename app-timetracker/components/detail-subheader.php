@@ -614,7 +614,7 @@ $placeholder_members = array(
 			<!-- Billable -->
 			<?php if(str_contains(FWAPPS_TEMPLATE,'task-detail')): ?>
 
-				<form class="flex-1-1 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top position-relative">
+				<form class="flex-0-0 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top position-relative padding-small align-self-stretch flex-xs align-items-center justify-content-center">
 					<?php if($args['can_edit']): ?>
 
 						<!-- @NOTE hidden input types here -->
@@ -630,8 +630,11 @@ $placeholder_members = array(
 				</form>
 			<?php endif; ?>
 
+			<!-- this layout is dipisil -->
+			<div class="spacer flex-1-1 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top align-self-stretch hide-mobile"></div>
+
 		<!-- other functionalities and data but on the right -->
-			<div class="flex-1-0 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top align-self-stretch flex-md align-items-center justify-content-flex-end">
+			<div class="margin-auto-left flex-1-0 border-style-solid-top border-color-theme-polar-contrast border-width-thin-top align-self-stretch flex-md align-items-center justify-content-flex-end">
 
 				<!-- Due date + time -->
 					<?php if(str_contains(FWAPPS_TEMPLATE,'task-detail')): ?>
