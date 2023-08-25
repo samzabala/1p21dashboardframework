@@ -1,8 +1,8 @@
 
 <div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
     <!-- @note hidden fields here -->
-    <label for="task-project" class="sr-only">Task Project</label>
-    <input name="" id="task-project" type="text" class="input input-single-line" placeholder="Select Project" list="projects" />
+    <label for="task-project" class="input-label padding-small-bottom color-inherit font-weight-inherit">Task Project</label>
+    <input name="" id="task-project" type="text" class="input input-single-line theme-default color-theme font-weight-400" placeholder="Select Project" list="projects" />
     <datalist id="projects">
         <!-- @if has input value -->
             <option data-value="REPLACEWithInputValue" ref="createNew">Create new Project `REPLACEWithInputValue`</option>

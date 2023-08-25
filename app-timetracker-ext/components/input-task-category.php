@@ -1,8 +1,8 @@
 
 <div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
     <!-- @note hidden fields here -->
-    <label for="task-category" class="sr-only">Task Category</label>
-    <input name="" id="task-category" type="text" class="input input-single-line" placeholder="Select Task Category" list="categories" />
+    <label for="task-category" class="input-label padding-small-bottom color-inherit font-weight-inherit">Task Category</label>
+    <input name="" id="task-category" type="text" class="input input-single-line theme-default color-theme font-weight-400" placeholder="Select Task Category" list="categories" />
     <datalist id="categories">
         <!-- @if has input value -->
             <option data-value="REPLACEWithInputValue" ref="createNew">Create new Category `REPLACEWithInputValue`</option>

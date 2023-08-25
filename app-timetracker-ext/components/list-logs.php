@@ -20,12 +20,12 @@
                                     @NOTE
                                         button
                                             classes to add
-                                            `btn-theme`              => if not active
+                                            `btn-accent`              => if not active
                                             `btn-gradient active background-image-none-hover background-image-none-focus`   => if currently active
 
                                 -->
                                 <button class="btn btn-round btn-symbol well
-                                btn-theme">
+                                btn-accent">
                                     <i class="symbol symbol-play symbol-pause-toggle"></i>
                                 </button>
                             </form>
@@ -33,7 +33,7 @@
                     <?php else: ?>
                         <!-- @if has multiple entries -->
                             <div class="flex-col-2">
-                                <a href="#entry-REPLACEID" data-toggle-accordion class="btn btn-small btn-theme btn-round btn-symbol ">
+                                <a href="#entry-REPLACEID" data-toggle-accordion class="btn btn-small btn-accent btn-round btn-symbol ">
                                     <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i>
                                 </a>
                             </div>
@@ -87,7 +87,10 @@
                             <?php for($g = 0; $g < 9; $g++): ?>
                                 <div class="border-color-neutral-alpha-1 border-width-thin-top border-style-solid padding-x padding-small-y">
                                     <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y align-items-center">
-                                        <div class="flex-col-8">
+                                        <div class="flex-col-4">
+                                            <span class="REPLACE">4/20/2069</span>
+                                        </div>
+                                        <div class="flex-col-4">
                                             <span class="REPLACE">4/20/2069</span>
                                         </div>
                                         <div class="flex-col-2 text-align-right">
@@ -133,12 +136,12 @@
                                                 @NOTE
                                                     button
                                                         classes to add
-                                                        `btn-theme`              => if not active
+                                                        `btn-accent`              => if not active
                                                         `btn-gradient active background-image-none-hover background-image-none-focus`   => if currently active
 
                                             -->
                                             <button class="btn btn-round btn-symbol well
-                                            <?= $i % 2 == 0 ? 'btn-gradient active background-image-none-hover background-image-none-focus' : 'btn-theme'?>">
+                                            <?= $i % 2 == 0 ? 'btn-gradient active background-image-none-hover background-image-none-focus' : 'btn-accent'?>">
                                                 <i class="symbol symbol-play symbol-pause-toggle"></i>
                                             </button>
                                         </form>
@@ -147,7 +150,7 @@
                                     <!-- @if has multiple entries -->
                                         <?php if($i > 0): ?>
                                             <div class="flex-col-2">
-                                                <a href="#entry-<?=$h ?>-<?=$i ?>" data-toggle-accordion class="btn btn-small btn-theme btn-round btn-symbol ">
+                                                <a href="#entry-<?=$h ?>-<?=$i ?>" data-toggle-accordion class="btn btn-small btn-accent btn-round btn-symbol ">
                                                     <i class="symbol symbol-arrow-down symbol-arrow-up-toggle"></i>
                                                 </a>
                                             </div>
