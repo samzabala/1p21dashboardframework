@@ -37,14 +37,14 @@ body {
             flex: 0 0 auto;
         }
         &-block {
-            &:before,&:after {
+            &:before,&:nth-last-child(n+2):after {
                 content: "";
                 display:block;
             }
             &:before {
                 height: $gutter-base * 2;
             }
-            &:after {
+            &:nth-last-child(n+2):after {
                 height: var(--offset);
             }
         }
@@ -68,6 +68,11 @@ body {
     display: flex;
     min-height: 100%;
     flex-direction: column;
+
+    &-nav {
+        background-color: #eae7e7;
+        box-shadow: 0 -1px 0px 0px var(--fw-color-base-alpha-1)
+    }
 
     &-timer-sticky {
         height: var(--sticky-timer-height);
@@ -163,6 +168,9 @@ body {
     &-tt {
         &-pause-active-task {
             background-image: linear-gradient(45deg , var(--fw-color-secondary) , #06C548 ) !important;
+        }
+        &-active {
+            background-image: linear-gradient(45deg , var(--fw-color-secondary) , var(--fw-color-error-light) ) !important;
         }
     }
 }

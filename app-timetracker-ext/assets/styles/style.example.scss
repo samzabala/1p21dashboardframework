@@ -13,20 +13,37 @@ npm install the following for css/sass deps:
 
 //3. import frameworks here. change file path as needed
 	// layout components + helpers + core
-		@import './../../../assets/plugins/framework/src/scss/framework.lite';
+		@import './../../../assets/plugins/framework/src/scss/framework.core';
+	
+	//plugin deps
+		@import './../../../assets/plugins/framework/src/scss/plugins/_reset';
+		
+	//to cascade
+		@import './../../../assets/plugins/framework/src/scss/_scaffolding';
+		@import './../../../assets/plugins/framework/src/scss/_typography';
+
+	//layout
+		@import './../../../assets/plugins/framework/src/scss/_container';
+		@import './../../../assets/plugins/framework/src/scss/_grid';
+		@import './../../../assets/plugins/framework/src/scss/_module';
 
 	//components used by global components (header + sidebar)
 		@import './../../../assets/plugins/framework/src/scss/_accordion';
+		@import './../../../assets/plugins/framework/src/scss/_alert';
 		@import './../../../assets/plugins/framework/src/scss/_buttons';
 		@import './../../../assets/plugins/framework/src/scss/_dropdown';
 		@import './../../../assets/plugins/framework/src/scss/_form';
 		@import './../../../assets/plugins/framework/src/scss/_list-group';
+		@import './../../../assets/plugins/framework/src/scss/_modal';
 		@import './../../../assets/plugins/framework/src/scss/_nav';
 		@import './../../../assets/plugins/framework/src/scss/_progress';
 		@import './../../../assets/plugins/framework/src/scss/_table';
 		@import './../../../assets/plugins/framework/src/scss/_tag';
 		@import './../../../assets/plugins/framework/src/scss/_symbol';
 		@import './../../../assets/plugins/framework/src/scss/_well';
+
+	//helpers
+		@import './../../../assets/plugins/framework/src/scss/_helpers';
 
 
 // 4. additional css specific for this app
