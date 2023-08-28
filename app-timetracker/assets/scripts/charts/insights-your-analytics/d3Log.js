@@ -71,8 +71,8 @@ class d3Log extends TTChart {
 		day: [0,8],
 		date: [0,8],
 		week: [0,40],
-		month: [0,130],
-		year: [0,1920],
+		month: [0,40], //130
+		year: [0,40], //1920
 	}
 	
 
@@ -1009,7 +1009,7 @@ class d3Log extends TTChart {
 					}
 				)}</h6>
 				<i class="margin-small-right legend" style="background-color: ${self.scale['color'](d[self.meta])}"></i> ${d[self.meta]} <br>
-				<i class="margin-small-right symbol symbol-timer"></i> Total Hours: ${d.__og_total_hours ? d.__og_total_hours : d.total_hours} <br>
+				<i class="margin-small-right symbol symbol-timer"></i> Total time: ${d.__og_total_hours ? d.__og_total_hours : d.total_hours} <br>
 				</div>`
 			
 			})
