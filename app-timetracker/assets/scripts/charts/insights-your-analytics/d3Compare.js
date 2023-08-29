@@ -123,13 +123,13 @@ class d3Compare extends TTChart {
 
 				const to_push_l = {};
 				to_push_l[self.meta] = meta;
-				to_push_l.total_hours = MinsToString(data[meta][compareKeys[0]]);
+				to_push_l.total_hours = MinsToString(data[meta][compareKeys[0]] / 60 );
 
 				self.rawData.l.push(to_push_l);
 
 				const to_push_r = {};
 				to_push_r[self.meta] = meta;
-				to_push_r.total_hours = MinsToString(data[meta][compareKeys[1]]);
+				to_push_r.total_hours = MinsToString(data[meta][compareKeys[1]] / 60 );
 
 				self.rawData.r.push(to_push_r);
 			}

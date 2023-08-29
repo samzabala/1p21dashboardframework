@@ -193,14 +193,14 @@ $args = app_parse_args($data,$defs);
 
 				newData[m].self = d3.sum(
 					data_l.filter(d => d[meta] == m ),
-					d => demo_only.StringToMins( d.total_hours)
+					d => demo_only.StringToMins( d.total_hours) * 60
 				);
 
 
 
 				newData[m].other = d3.sum(
 					data_r.filter(d => d[meta] == m ),
-					d => demo_only.StringToMins( d.total_hours)
+					d => demo_only.StringToMins( d.total_hours) * 60
 				);
 
 
