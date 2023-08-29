@@ -347,7 +347,7 @@ class d3ActiveDays extends TTChart {
 
 				return `<div class="padding-small">
 				<h6 class="color-neutral no-margin">Average</h6>
-				${(self.supportCrData ? d.total_hours : d.__avg)} Hours
+				Total time: ${(self.supportCrData ? d.total_hours : d.__avg)}
 				</div>`
 			
 			})

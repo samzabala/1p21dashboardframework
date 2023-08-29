@@ -389,7 +389,7 @@ class d3ActiveHours extends TTChart {
 
 				return `<div class="padding-small">
 				<h6 class="color-neutral no-margin">Activity</h6>
-				${(TimeToFloat(self.supportCrData ? d.total_hours : d.__avg)  * 100 ).toFixed(2) }%
+					Total hours: ${(TimeToFloat(self.supportCrData ? d.total_hours : d.__avg) ).toFixed(2) }
 				</div>`
 			
 			})
