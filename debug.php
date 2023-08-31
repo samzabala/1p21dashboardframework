@@ -5709,6 +5709,8 @@
 				'window',
 				'window-success',
 				'window-error',
+				'sun',
+				'pin-alt',
 			);
 			?>
 
