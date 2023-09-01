@@ -44,6 +44,10 @@
 							<a href="<?= app_create_link(array('template' => 'timer')) ?>" class="btn btn-large btn-accent">Start Timer</a>
 							
 						<!-- <button class="btn btn-large btn-accent">Start Timer</button> -->
+
+						<p class="margin-top">
+							<a href="#" class="color-theme-polar">Cancel</a>
+						</p>
 					</div>
 				</form>
 	
