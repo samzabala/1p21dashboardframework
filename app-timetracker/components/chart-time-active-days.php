@@ -209,7 +209,7 @@ $args = app_parse_args($data,$defs);
 				const avg = count > 0 ? demo_only.FloatToTime( demo_only.TimeToFloat(totalSum) / count ) : '00:00';
 
 				return {
-					dow: day,
+					dow: day.toUpperCase().substring(0, 3),
 					total_secs: demo_only.StringToMins(avg) * 60,
 
 				}

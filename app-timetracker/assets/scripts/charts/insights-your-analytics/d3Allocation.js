@@ -231,19 +231,19 @@ class d3Allocation extends TTChart {
 			  .innerRadius(self.radius * .6)
 			  .outerRadius(self.radius)
 			)
-			// .attr('data-toggle-tooltip-hover',true)
-			// .attr('data-tooltip-placement','top')
-			// .attr('data-tooltip-content',dis => {
+			.attr('data-toggle-tooltip-hover',true)
+			.attr('data-tooltip-placement','top')
+			.attr('data-tooltip-content',dis => {
 
-			// 	const d = dis.data; 
+				const d = dis.data; 
 
 
-			// 	return `<div class="padding-small">
-			// 	<i class="margin-small-right legend" style="background-color: ${self.scale['color'](d[self.meta])}"></i> ${d[self.meta]} <br>
-			// 	<i class="margin-small-right symbol symbol-timer"></i> Total Hours: ${d.total_hours} <br>
-			// 	</div>`
+				return `<div class="padding-small">
+				<i class="margin-small-right legend" style="background-color: ${self.scale['color'](d[self.meta])}"></i> ${d[self.meta]} <br>
+				<i class="margin-small-right symbol symbol-timer"></i> ${d[self.meta]}: ${ Math.floor(self.scale['p']( TimeToFloat(d.total_hours) )) }% <br>
+				</div>`
 			
-			// })
+			})
 			;
 
 
