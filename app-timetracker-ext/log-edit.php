@@ -62,6 +62,9 @@
                                 <a href="<?= app_create_link(array('template' => 'tasks')) ?>" class="btn btn-large btn-accent btn-block">Save</a>
 							
                             <!-- <button class="btn btn-large btn-accent">Start Timer</button> -->
+                            <div class="margin-small-top">
+                                <a href="#" class="btn btn-large btn-accent-outline btn-block">Go Back</a>
+                            </div>
 
                             <div class="margin-top">
                                 <a href="#" class="color-inherit color-error-hover">
