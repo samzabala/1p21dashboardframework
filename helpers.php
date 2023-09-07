@@ -470,13 +470,31 @@ function app_init_content(){
 					<?php
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
 					break;
-				case 'analytics':
+
 				case 'home':
+				case 'start':
+				case 'timer-success':
+				case null:
+					app_get_template_part("app-{$app}/start");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/start";
+					break;
+
+				case 'start-new':
+				case 'timer':
+				case 'tasks':
+				case 'task-edit':
+				case 'task-detail':
+
+				case 'edit-log':
+				case 'logs':
+				case 'favorites':
+					
+				
+				case 'log-edit':
+
+				case 'analytics':
 				case 'focus':
 				case 'login':
-				case 'logs':
-				case 'log-edit':
-				case 'favorites':
 				case null:
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";

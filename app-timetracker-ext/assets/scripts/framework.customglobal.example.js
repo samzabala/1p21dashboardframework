@@ -7,12 +7,14 @@
 import Initiator from './../../../assets/plugins/framework/src/js/imports/core/initiator.js';
 import Settings from './../../../assets/plugins/framework/src/js/imports/core/settings.js';
 import Accordion from './../../../assets/plugins/framework/src/js/imports/accordion';
+import Modal from './../../../assets/plugins/framework/src/js/imports/modal';
 
 //globally used components
 
 const FrameWork = {
   Initiator,
   Settings,
-  Accordion
+  Accordion,
+  Modal
 };
 export default FrameWork;

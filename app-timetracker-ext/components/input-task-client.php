@@ -1,8 +1,8 @@
 
 <div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
     <!-- @note hidden fields here -->
-    <label for="task-client" class="sr-only">Task Client</label>
-    <input name="" id="task-client" type="text" class="input input-single-line" placeholder="Select Client" list="clients" />
+    <label for="task-client" class="input-label padding-small-bottom color-inherit font-weight-inherit">Task Client</label>
+    <input name="" id="task-client" type="text" class="input input-single-line theme-default color-theme font-weight-400" placeholder="Select Client" list="clients" />
     <datalist id="clients">
         <!-- @if has input value -->
             <option data-value="REPLACEWithInputValue" ref="createNew">Create new Client `REPLACEWithInputValue`</option>

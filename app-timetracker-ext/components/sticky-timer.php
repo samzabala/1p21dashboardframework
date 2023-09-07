@@ -1,5 +1,5 @@
 
-    <div id="timetracker-timer-sticky" class="position-sticky theme-inverse background-theme-contrast  offset-0-top offset-0-left offset-0-right z-index-1000 flex-xs flex-direction-column justify-content-center">
+    <div id="timetracker-timer-sticky" class="position-sticky theme-inverse background-accent  offset-0-top offset-0-left offset-0-right z-index-1000 flex-xs flex-direction-column justify-content-center">
         <div class=" padding-small-x">
 
             <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">

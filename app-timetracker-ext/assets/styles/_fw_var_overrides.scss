@@ -8,18 +8,22 @@ $brand-font-accent: $brand-font-primary;
 $symbol-font-path: './fw-icons';
 
 
-$brand-color-background-alt: #E9EDED;
-$brand-color-base: #1A1E8B;
-// $brand-color-base-alt: #696D79;
-$brand-color-base-alt: #2A3EA8;
-$brand-color-primary: #0098FD;
+$brand-color-background-alt: #F7F8F8;
+$brand-color-base: #2C3039;
+$brand-color-base-alt: #2B2C2F;
+// $brand-color-base-alt: #2A3EA8;
+$brand-color-primary: #2A74F8;
 $brand-color-secondary: #663FEF;
-// $brand-color-accent: #1A1E8B;
-$brand-color-accent: #FD6666; //error
-$brand-color-caution: #F7D168;
-$brand-color-neutral: #696D79;
+$brand-color-accent: #1A1E8B;
+$brand-color-accent-light: #2A3EA8;
+// $brand-color-error: #FD6666; //error
+$brand-color-error-light: #FD6666; //error
+$brand-color-caution: #EDB120;
 
-$brand-gradient-start: var(--fw-color-accent); //error
+$brand-color-neutral: #696D79;
+// $brand-color-neutral-lightest: #ECF0F8;
+
+$brand-gradient-start: var(--fw-color-error-light); //error
 $brand-gradient-end: var(--fw-color-secondary);
 $btn-background-angle-gradient-active: 225deg;
 
@@ -60,11 +64,11 @@ $input-height-small: 45px;
 $input-select-dropdown-color: currentColor;
 $input-gutter-x: 1.33rem;
 
-$input-font-size-large: 26px;
+$input-font-size-large: 14px;
 $btn-gutter-x: $gutter-large;
-$btn-height: 50px;
+$btn-height: 38px;
 $btn-height-large: 50px;
-$btn-height-small: 33px;
+$btn-height-small: 22px;
 
 $nav-height: 56px;
 $nav-padding-x: $gutter-base + 5px;
@@ -86,6 +90,29 @@ $module-title-font-weight: normal;
 $module-title-text-transform: none;
 
 $progress-height-small: 7px;
+
+$nav-color-hover: var(--fw-color-accent);
+
+
+
+$alert-border-radius: 10px !default;
+$alert-container-max-width: 100% !default;
+
+
+$alert-background-primary: var(--fw-color-primary-lightest);
+$alert-background-secondary: var(--fw-color-secondary-lightest);
+$alert-background-accent: var(--fw-color-accent-lightest);
+$alert-background-success: var(--fw-color-success-lightest);
+$alert-background-caution: var(--fw-color-caution-lightest);
+$alert-background-error: var(--fw-color-error-lightest);
+
+
+$alert-color-primary: inherit;
+$alert-color-secondary: inherit;
+$alert-color-accent: inherit;
+$alert-color-success: inherit;
+$alert-color-caution: inherit;
+$alert-color-error: inherit;
 
 // $btn-border-primary: transparent;
 // $btn-background-primary: $var-color-primary;
