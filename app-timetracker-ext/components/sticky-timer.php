@@ -4,8 +4,8 @@
 
             <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
                 <div class="flex-col-1">
-                    <a class="text-decoration-none" href="<?= app_create_link(array('template' => 'timer')); ?>">
-                        <img src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP ?>/assets/images/icon-timer.png" alt="">
+                    <a class="text-decoration-none display-block" href="<?= app_create_link(array('template' => 'timer')); ?>">
+                        <img class="display-block" src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP ?>/assets/images/icon-timer.png" alt="">
                     </a>
 
                 </div>
