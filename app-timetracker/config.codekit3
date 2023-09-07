@@ -7,7 +7,7 @@
       "uuidString" : "8DAE37A0-EA52-4E9D-93AF-19EAAFB3BF8C"
     }
   ],
-  "creatorBuild" : "34434",
+  "creatorBuild" : "34510",
   "files" : {
     "\/assets\/images\/icon-microsoft.svg" : {
       "ft" : 2097152,
@@ -28,6 +28,248 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/assets\/images\/login-clap.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/login-clap.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/login-lock.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/login-lock.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-microsoft.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-microsoft.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/images\/logo-wrike.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/images\/logo-wrike.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/scripts\/charts\/helpers.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/charts\/helpers-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveDays.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveDays.mine.js",
+      "oF" : 2,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveDays.mine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveDays.mine-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveDays.mine.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveDays.mine.js.map",
+      "oF" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveHours.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveHours.mine.js",
+      "oF" : 2,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveHours.mine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveHours.mine-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveHours.mine.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3ActiveHours.mine.js.map",
+      "oF" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Allocation.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Allocation.mine.js",
+      "oF" : 3,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Allocation.mine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Allocation.mine-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Allocation.mine.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Allocation.mine.js.map",
+      "oF" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Compare.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Compare.mine.js",
+      "oF" : 2,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Compare.mine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Compare.mine-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Compare.mine.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Compare.mine.js.map",
+      "oF" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Log.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Log.mine.js",
+      "oF" : 3,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Log.mine.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Log.mine-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/d3Log.mine.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/d3Log.mine.js.map",
+      "oF" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/demo-only.mine.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/demo-only.mine.min.js",
+      "oF" : 2,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/demo-only.mine.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/demo-only.mine.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/scripts\/charts\/insights-your-analytics\/demo-only.mine.min.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts\/charts\/insights-your-analytics\/demo-only.mine.min.js.map",
+      "oF" : 0
+    },
+    "\/assets\/scripts\/charts\/ttChart.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scripts\/charts\/ttChart-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/assets\/scripts\/d3insightChart.js" : {
       "bF" : 0,
@@ -200,12 +442,148 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/client-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/client-detail.php",
+      "oF" : 0
+    },
+    "\/clients.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/clients.php",
+      "oF" : 0
+    },
+    "\/components\/_DEMO-detail-editor-tags-subheader.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/components\/_DEMO-detail-editor-tags-subheader.php",
+      "oF" : 0
+    },
+    "\/components\/alert-basic.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/alert-basic.php",
+      "oF" : 0
+    },
+    "\/components\/alert-toast.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/alert-toast.php",
+      "oF" : 0
+    },
+    "\/components\/chart-time-active-days.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/chart-time-active-days.php",
+      "oF" : 0
+    },
+    "\/components\/chart-time-active-hours.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/chart-time-active-hours.php",
+      "oF" : 0
+    },
+    "\/components\/chart-time-allocation.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/chart-time-allocation.php",
+      "oF" : 0
+    },
+    "\/components\/chart-time-compare.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/chart-time-compare.php",
+      "oF" : 0
+    },
     "\/components\/chart-time-distribution.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/chart-time-distribution.php",
+      "oF" : 0
+    },
+    "\/components\/chart-time-log.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/chart-time-log.php",
+      "oF" : 0
+    },
+    "\/components\/detail-subheader.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/detail-subheader.php",
+      "oF" : 0
+    },
+    "\/components\/detail-tags.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/detail-tags.php",
+      "oF" : 0
+    },
+    "\/components\/dropdown-actions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-actions.php",
+      "oF" : 0
+    },
+    "\/components\/dropdown-compare-user.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-compare-user.php",
+      "oF" : 0
+    },
+    "\/components\/dropdown-list-group-search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-list-group-search.php",
+      "oF" : 0
+    },
+    "\/components\/dropdown-list-users-search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/dropdown-list-users-search.php",
+      "oF" : 0
+    },
+    "\/components\/filter-list-pages.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/filter-list-pages.php",
       "oF" : 0
     },
     "\/components\/filter-logs.php" : {
@@ -238,6 +616,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/form-team-member.php",
+      "oF" : 0
+    },
+    "\/components\/function-input-search.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/function-input-search.php",
       "oF" : 0
     },
     "\/components\/icon-clients.php" : {
@@ -278,6 +664,30 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/icon-logo.php",
+      "oF" : 0
+    },
+    "\/components\/icon-order-ascending.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-order-ascending.php",
+      "oF" : 0
+    },
+    "\/components\/icon-order-descending.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-order-descending.php",
+      "oF" : 0
+    },
+    "\/components\/icon-order-none.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/icon-order-none.php",
       "oF" : 0
     },
     "\/components\/icon-projects.php" : {
@@ -328,12 +738,100 @@
       "oAP" : "\/components\/icon-timer.php",
       "oF" : 0
     },
+    "\/components\/input-custom-description.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/input-custom-description.php",
+      "oF" : 0
+    },
+    "\/components\/insights-export.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/insights-export.php",
+      "oF" : 0
+    },
+    "\/components\/insights-nav-tabs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/insights-nav-tabs.php",
+      "oF" : 0
+    },
+    "\/components\/list-clients.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/list-clients.php",
+      "oF" : 0
+    },
     "\/components\/list-logs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/list-logs.php",
+      "oF" : 0
+    },
+    "\/components\/list-projects.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/list-projects.php",
+      "oF" : 0
+    },
+    "\/components\/list-tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/list-tasks.php",
+      "oF" : 0
+    },
+    "\/components\/manage-breadcrumbs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/manage-breadcrumbs.php",
+      "oF" : 0
+    },
+    "\/components\/modal-actions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-actions.php",
+      "oF" : 0
+    },
+    "\/components\/modal-delete.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/modal-delete.php",
+      "oF" : 0
+    },
+    "\/components\/module-client-editor.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-client-editor.php",
+      "oF" : 0
+    },
+    "\/components\/module-client-projects.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-client-projects.php",
       "oF" : 0
     },
     "\/components\/module-function-datalist.php" : {
@@ -352,12 +850,100 @@
       "oAP" : "\/components\/module-function-select.php",
       "oF" : 0
     },
+    "\/components\/module-insights-activity.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-activity.php",
+      "oF" : 0
+    },
+    "\/components\/module-insights-allocation.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-allocation.php",
+      "oF" : 0
+    },
+    "\/components\/module-insights-latest.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-latest.php",
+      "oF" : 0
+    },
+    "\/components\/module-insights-log.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-log.php",
+      "oF" : 0
+    },
+    "\/components\/module-insights-overview.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-overview.php",
+      "oF" : 0
+    },
+    "\/components\/module-insights-scheduled.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-scheduled.php",
+      "oF" : 0
+    },
+    "\/components\/module-insights-sidebar.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-insights-sidebar.php",
+      "oF" : 0
+    },
     "\/components\/module-logs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/module-logs.php",
+      "oF" : 0
+    },
+    "\/components\/module-project-editor.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-project-editor.php",
+      "oF" : 0
+    },
+    "\/components\/module-project-tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-project-tasks.php",
+      "oF" : 0
+    },
+    "\/components\/module-task-editor.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-task-editor.php",
+      "oF" : 0
+    },
+    "\/components\/module-task-time.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/module-task-time.php",
       "oF" : 0
     },
     "\/components\/module-time-overview.php" : {
@@ -376,6 +962,30 @@
       "oAP" : "\/components\/module-time-timer.php",
       "oF" : 0
     },
+    "\/components\/pagination-number.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination-number.php",
+      "oF" : 0
+    },
+    "\/components\/pagination-per-page.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/pagination-per-page.php",
+      "oF" : 0
+    },
+    "\/components\/project-nav-tabs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/project-nav-tabs.php",
+      "oF" : 0
+    },
     "\/components\/sticky-timer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -384,12 +994,44 @@
       "oAP" : "\/components\/sticky-timer.php",
       "oF" : 0
     },
+    "\/components\/task-nav-tabs.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/task-nav-tabs.php",
+      "oF" : 0
+    },
+    "\/components\/thumbnail-micro.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/thumbnail-micro.php",
+      "oF" : 0
+    },
+    "\/components\/thumbnail-small.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/thumbnail-small.php",
+      "oF" : 0
+    },
     "\/components\/timer-nav-tabs.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/components\/timer-nav-tabs.php",
+      "oF" : 0
+    },
+    "\/components\/toggle-order.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/components\/toggle-order.php",
       "oF" : 0
     },
     "\/department-edit.php" : {
@@ -456,6 +1098,30 @@
       "oAP" : "\/includes\/nav-sidebar.php",
       "oF" : 0
     },
+    "\/insights-compare.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/insights-compare.php",
+      "oF" : 0
+    },
+    "\/insights-team.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/insights-team.php",
+      "oF" : 0
+    },
+    "\/insights-your-analytics.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/insights-your-analytics.php",
+      "oF" : 0
+    },
     "\/insights.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -488,6 +1154,38 @@
       "oAP" : "\/jobs.php",
       "oF" : 0
     },
+    "\/login-forgot-success.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login-forgot-success.php",
+      "oF" : 0
+    },
+    "\/login-forgot.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login-forgot.php",
+      "oF" : 0
+    },
+    "\/login-reset-success.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login-reset-success.php",
+      "oF" : 0
+    },
+    "\/login-reset.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/login-reset.php",
+      "oF" : 0
+    },
     "\/login.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -502,6 +1200,70 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/my-tasks.php",
+      "oF" : 0
+    },
+    "\/profile.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/profile.php",
+      "oF" : 0
+    },
+    "\/project-detail-tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/project-detail-tasks.php",
+      "oF" : 0
+    },
+    "\/project-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/project-detail.php",
+      "oF" : 0
+    },
+    "\/projects.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/projects.php",
+      "oF" : 0
+    },
+    "\/settings.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/settings.php",
+      "oF" : 0
+    },
+    "\/task-detail-time.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/task-detail-time.php",
+      "oF" : 0
+    },
+    "\/task-detail.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/task-detail.php",
+      "oF" : 0
+    },
+    "\/tasks.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/tasks.php",
       "oF" : 0
     },
     "\/team-member-edit.php" : {
@@ -1064,6 +1826,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -1224,6 +1990,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -1362,6 +2131,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -2052,7 +2824,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -2104,10 +2876,14 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -2116,36 +2892,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
@@ -2178,7 +2954,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

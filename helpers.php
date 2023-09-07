@@ -175,6 +175,9 @@ function app_init_content(){
 					case 'team-members':
 					case 'team-member-new':
 					case 'team-member-edit':
+					case 'insights-your-analytics':
+					case 'insights-team':
+					case 'insights-compare':
 						app_get_template_part("app-{$app}/{$template_part}");
 						$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 						break;

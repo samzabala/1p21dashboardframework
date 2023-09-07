@@ -66,7 +66,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="<?=app_create_link(array('template'=> 'insights')); ?>" class="color-inherit-hover position-relative">
+			<a href="<?=app_create_link(array('template'=> 'insights-your-analytics')); ?>" class="color-inherit-hover position-relative">
 				<span class="nav-icon flex-0-0">
 					<?php app_get_component('components/icon-insights'); ?>
 				</span>
