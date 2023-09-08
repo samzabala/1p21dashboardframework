@@ -3,13 +3,18 @@
         <div class=" padding-small-x">
 
             <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y justify-content-space-between align-items-center">
-                <div class="flex-col-8">
+                <div class="flex-col-1">
+                    <a class="text-decoration-none display-block" href="<?= app_create_link(array('template' => 'timer')); ?>">
+                        <img class="display-block" src="<?=FWAPPS_ROOT_URL.'/app-'.FWAPPS_APP ?>/assets/images/icon-timer.png" alt="">
+                    </a>
 
+                </div>
+                <div class="flex-col-8">
                     <p class="font-weight-700 timer-active-task-name no-margin-y text-wrap-ellipsis">
-                    Really long task name here Really long task name here Really long task name here Really long task name here 
+                        Really long task name here Really long task name here Really long task name here Really long task name here 
                     </p>
                 </div>
-                <div class="flex-col-4 text-align-right">
+                <div class="flex-col-3 text-align-right">
                     <!-- @NOTE button
                 
                         classes to add

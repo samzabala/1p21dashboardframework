@@ -11,7 +11,7 @@
     <!-- @loop li -->
         <li class="list-group-item no-padding background-transparent">
             <div class="padding">
-                <div class="flex-grid flex-grid-no-gutter flex-grid-fixed align-items-center justify-content-space-between">
+                <div class="flex-grid flex-grid-no-gutter flex-grid-fixed align-items-center justify-content-space-between flex-nowrap">
                     <?php if($args['has_toggle']): ?>
                         <div class="flex-col-2">
                             <form action="">
@@ -127,7 +127,7 @@
                 <?php for($i = 0; $i < count($placeholder_stuff); $i++): ?>
                     <li class="list-group-item no-padding background-transparent">
                         <div class="padding">
-                            <div class="flex-grid flex-grid-no-gutter flex-grid-fixed align-items-center justify-content-space-between">
+                            <div class="flex-grid flex-grid-no-gutter flex-grid-fixed align-items-center justify-content-space-between flex-nowrap">
                                 <?php if($args['has_toggle']): ?>
                                     <div class="flex-col-2">
                                         <form action="">

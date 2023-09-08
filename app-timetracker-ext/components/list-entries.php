@@ -3,7 +3,7 @@
     <!-- @loop li -->
         <li class="list-group-item background-transparent no-padding">
             <div class="padding">
-                <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center">
+                <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center flex-nowrap">
                     <div class="flex-0-0 flex-child">
         
                         <!-- 
@@ -95,7 +95,7 @@
                     
             <li class="list-group-item background-transparent no-padding">
                 <div class="padding">
-                    <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center">
+                    <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center flex-nowrap">
                         <div class="flex-0-0 flex-child">
             
                             <!-- 
