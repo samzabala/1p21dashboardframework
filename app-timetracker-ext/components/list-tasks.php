@@ -11,7 +11,7 @@
     <!-- @loop li -->
         <li class="list-group-item background-transparent no-padding">
             <div class="padding">
-                <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center">
+                <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center flex-nowrap">
                     <div class="flex-0-0 flex-child">
         
                         <!-- 
@@ -30,15 +30,10 @@
                             <h5 class="text-wrap-ellipsis no-margin-y color-inherit font-weight-600 color-inherit">
                                 <span class="REPLACE">Float Everything Left</span>
                             </h5>
-                            <p class="text-wrap-ellipsis no-margin-y font-size-small color-neutral">
+                            <p class="text-wrap-ellipsis no-margin-top margin-small-bottom font-size-small color-neutral">
                                 <span class="REPLACE">ace-attorney.com</span>
                             </p>
                         </a>
-                    </div>
-                    <div class="flex-col-3 text-align-right">
-                        <p class="no-margin-y font-weight-500">
-                            <span class="REPLACE">4:20</span>
-                        </p>
 
                         <!-- @if has status -->
                             <!-- @NOTE
@@ -53,6 +48,21 @@
                             <span class="tag tag-small tag-primary">
                                 <span class="REPLACE">In Progress</span>
                             </span>
+
+
+                        <div class="flex-grid flex-nowrap flex-grid-compact font-size-small flex-no-gutter-y">
+                            <span class="flex-child flex-0-0">
+                                Created: <span class="color-accent font-weight-600"><span class="REPLACE">Jun 12, 1898</span></span>
+                            </span>
+                            <span class="flex-child flex-0-0">
+                                Due: <span class="color-accent font-weight-600"><span class="REPLACE">Jun 12, 1898</span></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex-0-0 text-align-right">
+                        <p class="no-margin-y font-weight-500">
+                            <span class="REPLACE">4:20</span>
+                        </p>
                     </div>
                     <div class="flex-child flex-0-0 padding-small-left">
                         <form action="">
@@ -120,7 +130,7 @@
 
                 <li class="list-group-item background-transparent no-padding">
                     <div class="padding">
-                        <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center">
+                        <div class="flex-grid flex-grid-fixed flex-grid-compact flex-grid-no-gutter-y align-items-center flex-nowrap">
                             <div class="flex-0-0 flex-child">
                 
                                 <!-- 
@@ -139,20 +149,30 @@
                                     <h5 class="text-wrap-ellipsis no-margin-y color-inherit font-weight-600 color-inherit">
                                         <span class="REPLACE"><?= $tsk; ?></span>
                                     </h5>
-                                    <p class="text-wrap-ellipsis no-margin-y font-size-small color-neutral">
+                                    <p class="text-wrap-ellipsis no-margin-top margin-small-bottom font-size-small color-neutral">
                                         <span class="REPLACE"><?= $cli; ?></span>
                                     </p>
                                 </a>
-                            </div>
-                            <div class="flex-col-3 text-align-right">
-                                <p class="no-margin-y font-weight-500">
-                                    <span class="REPLACE">4:20</span>
-                                </p>
 
                                 <!-- @if has status -->
                                     <span class="tag tag-small tag-<?=$placeholder_color[$h]; ?>">
                                         <span class="REPLACE"><?=  $placeholder_stuff[ $placeholder_color[$h] ]; ?></span>
                                     </span>
+
+
+                                <div class="flex-grid flex-nowrap flex-grid-compact font-size-small flex-no-gutter-y">
+                                    <span class="flex-child flex-0-0">
+                                        Created: <span class="color-accent font-weight-600"><span class="REPLACE">Jun 12, 1898</span></span>
+                                    </span>
+                                    <span class="flex-child flex-0-0">
+                                        Due: <span class="color-accent font-weight-600"><span class="REPLACE">Jun 12, 1898</span></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-col-3 text-align-right">
+                                <p class="no-margin-y font-weight-500">
+                                    <span class="REPLACE">4:20</span>
+                                </p>
                             </div>
                             <div class="flex-child flex-0-0 padding-small-left">
                                 <a href="<?= app_create_link(array('template' => 'timer')) ?>"
