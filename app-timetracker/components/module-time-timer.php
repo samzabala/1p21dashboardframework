@@ -156,6 +156,8 @@ $args = app_parse_args($data,$defs);
 								</div>
 								<div class="flex-col-xs-12 flex-col-sm-5 flex-col-md-12 flex-col-lg-10">
 									<label for="timer-task-Status" class="sr-only">Task Status</label>
+									
+									
 									<div class="position-relative">
 										<!-- @PLACEHOLDER -->
 										<?php $stat = array(
@@ -295,62 +297,52 @@ $args = app_parse_args($data,$defs);
 
 
 												<!-- All -->
-													<div class="position-relative">
-														<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-bottom flex-xs justify-content-space-between flex-wrap align-items-center">
-															<span class="flex-1-1">All account Workflows</span>
-															<i class="symbol symbol-arrow-right"></i>
-														</a>
-														<div class="dropdown dropdown-bottom no-margin-top dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
-															<div class="list-group list-group-interactive list-group-compact">
 
 
-																<!-- @loop  div -->
-																	<div class="position-relative">
-																		<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center">
-																			<span class="flex-1-1">
-																				<span class="REPLACE">Group Folder</span>
-																			</span>
-																			<i class="symbol symbol-arrow-right"></i>
-																		</a>
-																		<div class="dropdown dropdown-bottom dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
-																			<div class="list-group list-group-interactive list-group-compact">
-																				<!-- @loop  div -->
-																					<div class="position-relative">
-																						<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
-																							<span class="flex-1-1">Status</span>
-																						</a>
-																					</div>
-																			</div>
-																		</div>
-																	</div>
-
-																	<!-- @PLACEHOLDER: Delete when Ready -->
-																	<?php foreach($stat as $g => $st): ?>
-
+													<!-- @loop  div -->
+														<div class="position-relative">
+															<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center">
+																<span class="flex-1-1">
+																	<span class="REPLACE">Group Folder</span>
+																</span>
+																<i class="symbol symbol-arrow-right"></i>
+															</a>
+															<div class="dropdown dropdown-bottom dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
+																<div class="list-group list-group-interactive list-group-compact">
+																	<!-- @loop  div -->
 																		<div class="position-relative">
-																			<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center">
-																				<span class="flex-1-1"><?= $g ?></span>
-																				<i class="symbol symbol-arrow-right"></i>
+																			<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
+																				<span class="flex-1-1">Status</span>
 																			</a>
-																			<div class="dropdown dropdown-bottom dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
-																				<div class="list-group list-group-interactive list-group-compact">
-																						<?php foreach($st as $s): ?>
-																							<div class="position-relative">
-																								<label class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
-																									<input type="radio" class="sr-only">
-																									<span class="flex-1-1"><?=$s; ?></span>
-																									<i class="symbol symbol-check only-toggle flex-0-0"></i>
-																								</label>
-																							</div>
-																						<?php endforeach; ?>
-																				</div>
-																			</div>
 																		</div>
-																	<?php endforeach; ?>
-
+																</div>
 															</div>
 														</div>
-													</div>
+
+														<!-- @PLACEHOLDER: Delete when Ready -->
+														<?php foreach($stat as $g => $st): ?>
+
+															<div class="position-relative">
+																<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center">
+																	<span class="flex-1-1"><?= $g ?></span>
+																	<i class="symbol symbol-arrow-right"></i>
+																</a>
+																<div class="dropdown dropdown-bottom dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
+																	<div class="list-group list-group-interactive list-group-compact">
+																			<?php foreach($st as $s): ?>
+																				<div class="position-relative">
+																					<label class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
+																						<input type="radio" class="sr-only">
+																						<span class="flex-1-1"><?=$s; ?></span>
+																						<i class="symbol symbol-check only-toggle flex-0-0"></i>
+																					</label>
+																				</div>
+																			<?php endforeach; ?>
+																	</div>
+																</div>
+															</div>
+														<?php endforeach; ?>
+
 
 											</div>
 										</div>
