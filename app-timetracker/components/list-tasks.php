@@ -99,7 +99,7 @@
 					</label>
 				</td>
 				<td class="no-border-bottom timetracker-td">
-					<a href="<?= app_create_link(array('template' => 'task-detail')); ?>" class="h4 color-inherit font-weight-400 no-margin-y display-inline-block">
+					<a href="<?= app_create_link(array('template' => 'task-detail')); ?>" class="color-inherit font-weight-400 no-margin-y display-inline-block">
 						<span class="REPLACE">
 							Dev Site Edits
 						</span>	
@@ -300,7 +300,7 @@
 						</label>
 					</td>
 					<td class="no-border-bottom timetracker-td">
-						<a href="<?= app_create_link(array('template' => 'task-detail')); ?>" class="h4 color-inherit font-weight-400 no-margin-y display-inline-block">
+						<a href="<?= app_create_link(array('template' => 'task-detail')); ?>" class="color-inherit font-weight-400 no-margin-y display-inline-block">
 							<span class="REPLACE">
 								<?= $task; ?>
 							</span>	
