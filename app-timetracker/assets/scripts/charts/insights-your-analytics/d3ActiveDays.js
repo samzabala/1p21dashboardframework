@@ -5,7 +5,7 @@ import {
 	TimeToFloat,
 	FloatToTime,
 	DayRange,
-	TheDays,
+	TheDaysThree,
 	TimeRange,
 	DataGroupByDate,
 	MinsToString
@@ -72,7 +72,7 @@ class d3ActiveDays extends TTChart {
 			const dataWeekDiff = d3.timeDay.count(
 				tMin,
 				d3.min([lMax,tMax])
-			) / TheDays.length;
+			) / TheDaysThree.length;
 	
 			const dataByDateTotal = DataGroupByDate(data)
 				.map(dat => {
@@ -90,9 +90,9 @@ class d3ActiveDays extends TTChart {
 					};
 				});
 	
-			const group = TheDays.map(day => {
+			const group = TheDaysThree.map(day => {
 				const entries = dataByDateTotal
-					.filter( d => TheDays[ DateToObj([d.date]).getDay() ] == day)
+					.filter( d => d.date.toUpperCase().includes( day.toUpperCase() ) )
 					;
 	
 				const totalSum = FloatToTime(
@@ -168,7 +168,8 @@ class d3ActiveDays extends TTChart {
 		Object.keys(self.domain).forEach(ax => {
 			switch(ax) {
 				case 'x':
-					self.domain[ax] = [...TheDays.slice(1),TheDays[0]];
+					const days = self.rawData.map(d => d.date);
+					self.domain[ax] = [...days.slice(1),days[0]];
 					break;
 				case 'y':
 					self.domain[ax] = [

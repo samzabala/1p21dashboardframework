@@ -351,6 +351,16 @@ export const TheDays = [
 	'Saturday',
 ];
 
+export const TheDaysThree = [
+	'Sun',
+	'Mon',
+	'Tue',
+	'Wed',
+	'Thu',
+	'Fri',
+	'Sat',
+];
+
 export const TheHours = Array.from({ length: 24 }, (_, hour) => FloatToTime(hour));
 
 export const DataSplitByHour = (data) => {
