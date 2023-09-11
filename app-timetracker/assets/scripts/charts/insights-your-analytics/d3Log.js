@@ -21,7 +21,7 @@ const CHART_CANVAS = {
 	w: 645,
 	h: 550,
 	marginLeft: 48,
-	marginBottom: 32,
+	marginBottom: 36,
 	marginTop: 16,
 	marginRight: 24
 };
@@ -68,11 +68,11 @@ class d3Log extends TTChart {
 
 	groupByDomain = {
 		hour: [0,1],
-		day: [0,8],
-		date: [0,8],
-		week: [0,40],
-		month: [0,40], //130
-		year: [0,40], //1920
+		day: [0,1], // 8
+		date: [0,1], // 8
+		week: [0,1], // 40
+		month: [0,1], //130
+		year: [0,1], //1920
 	}
 	
 
@@ -182,22 +182,22 @@ class d3Log extends TTChart {
 	
 
 		const hF = format.hour || `%-I%p`;
-		const dyF = format.day || '%a';
-		const dtF = format.date || '%e';
+		const dyF = format.day || '%m/%d';
+		const dtF = format.date || '%m/%d';
 		const dtFF = format.dateFirst || (
 			(self.groupBy == 'date' && timeTicks.length <= self.freeRangeMaxBars)
-				? '%b %e'
+				? '%m/%d'
 				: false
 			);
-		const wF = format.week || '%m/%d...';
+		const wF = format.week || '%m/%d';
 		const wLF = format.weekLast || false;
-		const mF = format.month || '%b';
+		const mF = format.month || '%m/%d';
 		const mFF = format.monthFirst || (
 			self.startDate
-				? '%b \'%y'
+				? '%m/%d'
 				: false
 			);
-		const yF = format.year || '%Y';
+		const yF = format.year || '%m/%d';
 
 		switch(self.groupBy) {
 			case 'hour':
@@ -289,14 +289,15 @@ class d3Log extends TTChart {
 
 			const startDate = timeTicks[0];
 			const nextTick = timeTicks[1];
+			const nextNextTick = timeTicks[2];
 			const lastTick = timeTicks[ self.timeTicks.length - 1 ];
 
 			// console.warn('--------------------------ilang beh',startDate,lastTick);
 
 
-			const yearDiff = d3.timeYear.count(startDate,lastTick);
-			const monthDiff = d3.timeMonth.count(startDate,lastTick);
-			const weekDiff = d3.timeWeek.count(startDate,lastTick);
+			// const yearDiff = d3.timeYear.count(startDate,lastTick);
+			// const monthDiff = d3.timeMonth.count(startDate,lastTick);
+			// const weekDiff = d3.timeWeek.count(startDate,lastTick);
 			const dayDiff = d3.timeDay.count(startDate,lastTick);
 
 
@@ -305,33 +306,23 @@ class d3Log extends TTChart {
 			const nextWeekDiff = d3.timeWeek.count(startDate,nextTick);
 			const nextDayDiff = d3.timeDay.count(startDate,nextTick);
 
+
+			const nextNextYearDiff = d3.timeYear.count(nextTick,nextNextTick);
+			const nextNextMonthDiff = d3.timeMonth.count(nextTick,nextNextTick);
+			const nextNextWeekDiff = d3.timeWeek.count(nextTick,nextNextTick);
+			// const nextNextDayDiff = d3.timeDay.count(nextTick,nextNextTick);
 			
-	
-			if(nextYearDiff > 0){
+			if(nextYearDiff > 0 && nextNextYearDiff > 0){
 				self.groupBy = 'year';
-			}else if(nextMonthDiff > 0) {
+			}else if(nextMonthDiff > 0 && nextNextMonthDiff > 0) {
 				self.groupBy = 'month';
-			}else if(nextWeekDiff > 0) {
+			}else if(nextWeekDiff > 0 && nextNextWeekDiff > 0) {
 				self.groupBy = 'week';
 			}else if(nextDayDiff > 0 && dayDiff > 7) {
 				self.groupBy = 'date';
 			}else  {
 				self.groupBy = 'day';
 			}
-
-
-
-		
-			// console.warn('my',yearDiff);
-			// console.warn('m:',monthDiff);
-			// console.warn('w:',weekDiff);
-			// console.warn('d:',dayDiff);
-
-			// console.warn('ny:',yearDiff);
-			// console.warn('nm:',nextMonthDiff);
-			// console.warn('nw:',nextWeekDiff);
-			// console.warn('nd:',nextDayDiff);
-			// console.warn(self.groupBy);
 
 		} else {
 
@@ -359,13 +350,6 @@ class d3Log extends TTChart {
 					} else{
 						self.groupBy = 'year';
 					}
-		
-					// console.warn('ilang beh',self.freeRangeMaxBars);
-					// console.warn('y:',yearDiff);
-					// console.warn('m:',monthDiff);
-					// console.warn('w:',weekDiff);
-					// console.warn('d:',dayDiff);
-					// console.warn(self.groupBy);
 	
 			} else {
 				switch(self.renderTimeByMode){
@@ -558,22 +542,22 @@ class d3Log extends TTChart {
 							// ? `${FloatToTime(d)}` // @offsetBarToActualStartMinute
 							: d
 					))
-					.tickValues(
-						d3.range(
-							domain[ax][0],
-							domain[ax][1] + 1,
-						(
-							self.groupBy == 'year'
-								? self.groupByDomain.month[1]
-							: self.groupBy == 'month'
-								? self.groupByDomain.week[1]
-							: self.groupBy == 'week'
-								? self.groupByDomain.date[1]
-							: self.groupBy == 'hour'
-								? .25
-							: 1
-						))
-					)
+					// .tickValues(
+					// 	d3.range(
+					// 		domain[ax][0],
+					// 		domain[ax][1] + 1,
+					// 	(
+					// 		self.groupBy == 'year'
+					// 			? self.groupByDomain.month[1]
+					// 		: self.groupBy == 'month'
+					// 			? self.groupByDomain.week[1]
+					// 		: self.groupBy == 'week'
+					// 			? self.groupByDomain.date[1]
+					// 		: self.groupBy == 'hour'
+					// 			? .25
+					// 		: 1
+					// 	))
+					// )
 					.tickSize( isGrid ? self.canvas.w : 6)
 					;
 			case 'x':
@@ -599,9 +583,7 @@ class d3Log extends TTChart {
 					// 		return  '';
 					// 	}
 					// })
-					.tickFormat((d,i) => self.prettyDate([d],{
-						date: (i == 0 && self.startDate) ? '%b %e' : '%e'
-					}))
+					.tickFormat((d,i) => self.prettyDate([d]))
 					;
 		}
 
@@ -864,7 +846,7 @@ class d3Log extends TTChart {
 		//axis + grid
 		self.yAxis
 			.call(self.axis('y',true))
-			.attr('font-size','12')
+			.attr('font-size','10')
 			// .style('color','inherit')
 			// .style('font-weight','inherit')
 			.attr('transform',
@@ -897,7 +879,7 @@ class d3Log extends TTChart {
 
 		self.xAxis
 			.call(self.axis('x'))
-			.attr('font-size','12')
+			.attr('font-size','10')
 			// .style('color','inherit')
 			// .style('font-weight','inherit')
 			.style('text-transform','uppercase')
@@ -917,6 +899,12 @@ class d3Log extends TTChart {
 					;
 				gA.selectAll('.tick line')
 					.attr('opacity', 0)
+					;
+				gA.selectAll('.tick text')
+					.attr('dx', '.-8em')
+					.attr('text-anchor', 'start')
+					.attr('alignment-baseline', 'top')
+					.attr('transform', 'rotate(45)' )
 					;
 			})
 			;
