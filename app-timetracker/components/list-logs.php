@@ -145,17 +145,17 @@
 					<tbody class="accordion" id="entry-subentries-REPLACEID">
 						<!-- @loop tr -->
 						<tr class="entry-subentries background-primary-alpha-1">
-							<td class="hide-mobile">
+							<td class="no-border-bottom hide-mobile">
 								<span class="spacer">&nbsp;</span>
 							</td>
-							<td class="hide-mobile">
+							<td class="no-border-bottom hide-mobile">
 								<span class="spacer">&nbsp;</span>
 							</td>
-							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
+							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200">
 								<!-- @if entry is done today -->
 									<span class="REPLACE">Today</span>
 								<!-- @else -->
-									<span class="REPLACE">06/12/98</span>
+									<span class="REPLACE">June 12, 1989</span>
 							</td>
 							<td class="no-border-bottom timetracker-td">
 								<form action="" class="entry-notes">
@@ -165,12 +165,12 @@
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-250 text-align-right color-neutral-darker">
 								<form action="" class="font-weight-700">
 									<!-- @if can edit -->
-										<!-- <input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="03:00" /> -->
+										<!-- <input class="no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="03:00" /> -->
 									<!-- @else -->
 										<span class="REPLACE">03:00 AM</span>
 									-
 									<!-- @if can edit -->
-										<!-- <input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="18:00" /> -->
+										<!-- <input class="no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="18:00" /> -->
 									<!-- @else -->
 										<span class="REPLACE">06:00</span>
 								</form>
@@ -179,13 +179,11 @@
 								<h5 class="hide-nonmobile no-margin-top">
 									Total Time:
 								</h5>
-								<form class="flex-xs timetracker-form-total-time">
-									<!-- @if can edit -->
-										<!-- <input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="04" />
-										:
-										<input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="20" /> -->
-									<!-- @else -->
-										<span class="REPLACE">04:20</span>
+								<form>
+										<!-- @if can edit -->
+											<!-- <input class="no-margin input input-blend padding-micro-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" size="5" type="text" placeholder="00:00" value="04:20" /> -->
+										<!-- @else -->
+											<span class="REPLACE">04:20</span>
 								</form>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100 timetracker-td-actions text-align-right">
@@ -388,15 +386,15 @@
 						<tbody class="accordion" id="entry-subentries-<?= $h ?>-<?=$i ?>">
 							<?php for($j = 0; $j < 5; $j++): ?>
 								<tr class="entry-subentries background-primary-alpha-1">
-									<td class="hide-mobile">
+									<td class="no-border-bottom hide-mobile">
 										<span class="spacer">&nbsp;</span>
 									</td>
-									<td class="hide-mobile">
+									<td class="no-border-bottom hide-mobile">
 										<span class="spacer">&nbsp;</span>
 									</td>
-									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
+									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200">
 										<!-- @else -->
-											<span class="REPLACE">06/12/98</span>
+											<span class="REPLACE">June 12, 1989</span>
 									</td>
 									<td class="no-border-bottom timetracker-td">
 										<form action="" class="entry-notes">
@@ -423,11 +421,9 @@
 											Total Time:
 										</h5>
 
-										<form class="flex-xs timetracker-form-total-time">
+										<form>
 											<?php if($j % 2 == 0): ?>
-												<input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="04" />
-												:
-												<input class="entry-time-start no-margin input input-blend" size="2" placeholder="00" value="20" />
+												<input class="no-margin input input-blend padding-micro-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" size="5" type="text" placeholder="00:00" value="04:20" />
 											<?php else: ?>
 												<span class="REPLACE">04:20</span>
 											<?php endif; ?>
