@@ -7,12 +7,12 @@
 						<div class="input-label font-weight-700 no-padding-y">Log In Using</div>
 					</div>
 					<div class="flex-col-xs-12">
-						<button href="#" class="btn btn-block btn-neutral-outline no-padding-x">
+						<button href="#" class="btn btn-block btn-neutral-outline no-padding-x" data-DEMO-replicate-login>
 							<img class="margin-small-right" src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/icon-wrike.svg" alt=""> Wrike
 						</button>
 					</div>
 					<div class="flex-col-xs-12">
-						<button href="#" class="btn btn-block btn-neutral-outline no-padding-x">
+						<button href="#" class="btn btn-block btn-neutral-outline no-padding-x" data-DEMO-replicate-login>
 							<img class="margin-right" src="<?=FWAPPS_ROOT_URL ?>/app-<?=FWAPPS_APP?>/assets/images/icon-microsoft.svg" alt=""> Office365
 						</button>
 					</div>
@@ -37,10 +37,9 @@
 							<a class="color-inherit" href="<?= app_create_link(array('template' => 'login-forgot')); ?> ">Forgot Password</a>
 						</div>
 						<div class="margin-large-top">
-							<button class="btn btn-accent btn-large btn-block">Login</button>
 	
 							<!-- @DEMO only because front end demo will be ugly. use markup after instead -->
-								<a href="<?= app_create_link(array('template' => 'start')) ?>" class="btn btn-accent btn-large btn-block">Login</a>
+								<a data-DEMO-replicate-login href="<?= app_create_link(array('template' => 'start')) ?>" class="btn btn-accent btn-large btn-block">Login</a>
 								
 							<!-- <button class="btn btn-accent btn-large btn-block">Login</button> -->
 						</div>
@@ -51,3 +50,6 @@
 		</div>
 	</main>
 </div>
+
+
+<?php app_get_component('components/loading');?>
