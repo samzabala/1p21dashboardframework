@@ -69,7 +69,7 @@
 											</span>
 							</div>
 					</td>
-					<td class="no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-100">
+					<td class="no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-300">
 							<!-- @NOTE
 								.tag
 									classes to add
@@ -151,6 +151,7 @@
 							<td class="no-border-bottom hide-mobile">
 								<span class="spacer">&nbsp;</span>
 							</td>
+							<!-- timetracker-td-w-200 -->
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-200">
 								<!-- @if entry is done today -->
 									<span class="REPLACE">Today</span>
@@ -162,7 +163,7 @@
 									<input class="no-margin input input-blend input-block" placeholder="No description available" value="REPLACE You took all the cash I have, naubos ng lahat Gusto ko pa ng picha pie Ngunit ang pera'y di sapat And so I spent so many nights Just feeling sorry for myself It made me cry, wala na ba akong picha pie? Ngayon ako ay nagipit! Hindi na ako istupid person na hindi nag-iisip Medyo mahal ang picha pie You can't expect it to be free That's why I'm saving all my money Para mayroong pambili" />
 								</form>
 							</td>
-							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-250 text-align-right color-neutral-darker">
+							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-300 text-align-right color-neutral-darker">
 								<form action="" class="font-weight-700">
 									<!-- @if can edit -->
 										<!-- <input class="no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="03:00" /> -->
@@ -305,7 +306,8 @@
 								<?php endif; ?>
 										
 							</td>
-							<td class="no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-100">
+							<!-- text-nowrap but risks overlaps -->
+							<td class="no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-300">
 				
 													
 								<!-- @if has status -->
@@ -401,7 +403,7 @@
 											<input class="no-margin input input-blend input-block" placeholder="No description available" value="<?= ($j == 3) ? 'Despacito This is how we do it down in Puerto Rico I just wanna hear you screaming, ¡Ay, Bendito! I can move forever cuando esté contigo ¡Báilalo!  Pasito a pasito, suave suavecito Nos vamos pegando, poquito a poquito Que le enseñes a mi boca Tus lugares favoritos (Favorito, favorito, baby) Pasito a pasito, suave suavecito Nos vamos pegando, poquito a poquito Hasta provocar tus gritos (Fonsi) Y que olvides tu apellido (D.Y.) Despacito' :( ($j % 2 == 0) ? 'Description boiiii' : ''); ?>" />
 										</form>
 									</td>
-									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-250 text-align-right color-neutral-darker">
+									<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-300 text-align-right color-neutral-darker">
 										<form action="" class="font-weight-700">
 											<?php if($j % 2 == 0): ?>
 												<input class="entry-time-start no-margin input input-blend padding-small-x border-color-neutral-alpha-5 border-style-solid border-width-thin border-color-neutral-focus radius-small" placeholder="00:00 --" type="time" value="03:00" />

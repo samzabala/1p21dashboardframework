@@ -364,6 +364,10 @@ $table-column-widths: (40,50,60,75,100,150,200,250,300,400,500,600,700,800);
 					}
 				}
 			}
+
+			:where(.input-blend.padding-micro-x.border-style-solid) {
+				min-height: 1.786em;
+			}
 		}
 	}
 	
