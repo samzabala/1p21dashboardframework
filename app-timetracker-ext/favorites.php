@@ -15,7 +15,7 @@
                 </div>
                 <div class="module-content no-padding-x no-padding-bottom">
                     <!-- @if has logs -->
-                        <?php app_get_component('components/list-logs','',false,array(
+                        <?php app_get_component('components/list-tasks','',false,array(
                             'has_toggle' => true
                         )) ?>
                     <!-- @else -->
