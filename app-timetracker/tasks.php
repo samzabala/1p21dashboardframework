@@ -20,8 +20,11 @@
 
 <div id="timetracker-tasks" class="module">
 
-	<div class="module-header">
-		<div class="module-functions no-margin no-padding flex-xs flex-wrap justify-content-space-between align-items-center">
+	<div class="module-header no-padding-x">
+		<div class="module-functions no-margin-top margin-small-bottom no-padding-top padding-small-bottom padding-x flex-md flex-wrap justify-content-flex-end align-items-center  border-width-thin-bottom border-style-solid-bottom border-color-neutral-alpha-2">
+			<?php app_get_component('components/filter-toggle-pages') ?>
+		</div>
+		<div class="module-functions no-margin no-padding-y padding-x flex-xs flex-wrap justify-content-space-between align-items-center">
 			<?php app_get_component('components/pagination-per-page') ?>
 			<?php app_get_component('components/pagination-number') ?>
 		</div>

@@ -1,5 +1,5 @@
 <form class="flex-grid flex-grid-compact align-items-flex-end">
-	<div class="flex-col-xs-12 flex-col-md-8">
+	<div class="flex-col-xs-12 flex-col-md-10 flex-col-lg-9">
 		<div class="flex-grid flex-grid-fixed flex-grid-compact no-margin-bottom ">
 
 		<!-- @if can filter by Sales Rep -->
@@ -179,21 +179,106 @@
 						)) ?>
 					</div>
 				<?php endif; ?>
+
+			
+			<!-- @if can filter by author -->
+				<?php if(FWAPPS_TEMPLATE == 'tasks'): ?>
+					<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-1 flex-1-1">
+						<?php app_get_component('components/module-function-datalist','',false,array(
+							'label' => 'Author',
+							'title' => 'Select or Type',
+							'slug' => 'author',
+							'items' => array(
+								'Lily Andrade',
+								'Jenn Aquino',
+								'Ryan Asignacion',
+								'Garrett Cullen',
+								'Jenna Edwards',
+								'Stacy Garcia',
+								'Nikky Hwang',
+								'Jesus Maldonado',
+								'Paola Moreno',
+								'Nadia Rodriguez',
+								'Mark Silva',
+								'Eva Small',
+								'Derrick Tran',
+								'Sophie Wong',
+								'Sam Zabala',
+								'RM Leader',
+								'Suga Rapper',
+								'J-Hope Rapper',
+								'Jin Vocals',
+								'Jungkook Vocals',
+								'V Vocals',
+								'Jimin Vocals',
+								'Lalisa Rapper',
+								'Rose Vocals',
+								'Jennie Rapper',
+								'Jisoo Vocals',
+								'Felip Suson',
+								'Stell Junard Velarde',
+								'Just Pablo',
+								'Josh Cullen',
+								'Justin Bieber'
+							),
+						)) ?>
+					</div>
+				<?php endif; ?>
+
+			
+			<!-- @if can filter by assignee -->
+				<?php if(FWAPPS_TEMPLATE == 'tasks'): ?>
+					<div class="flex-col-xs-12 flex-col-sm-6 flex-col-md-1 flex-1-1">
+						<?php app_get_component('components/module-function-datalist','',false,array(
+							'label' => 'Assignee',
+							'title' => 'Select or Type',
+							'slug' => 'assignee',
+							'items' => array(
+								'Lily Andrade',
+								'Jenn Aquino',
+								'Ryan Asignacion',
+								'Garrett Cullen',
+								'Jenna Edwards',
+								'Stacy Garcia',
+								'Nikky Hwang',
+								'Jesus Maldonado',
+								'Paola Moreno',
+								'Nadia Rodriguez',
+								'Mark Silva',
+								'Eva Small',
+								'Derrick Tran',
+								'Sophie Wong',
+								'Sam Zabala',
+								'RM Leader',
+								'Suga Rapper',
+								'J-Hope Rapper',
+								'Jin Vocals',
+								'Jungkook Vocals',
+								'V Vocals',
+								'Jimin Vocals',
+								'Lalisa Rapper',
+								'Rose Vocals',
+								'Jennie Rapper',
+								'Jisoo Vocals',
+								'Felip Suson',
+								'Stell Junard Velarde',
+								'Just Pablo',
+								'Josh Cullen',
+								'Justin Bieber'
+							),
+						)) ?>
+					</div>
+				<?php endif; ?>
+
+
 			
 			
 		</div>
 	</div>
 	<div class="flex-child flex-1-0">
 		<div class="flex-md align-items-flex-end">
-			<div>
-				<label for="filter-range" class="input-label no-padding-top padding-small-bottom display-block">Show Overdue Tasks</label>
-				<div class="btn-group btn-group-horizontal btn-group-interactive btn-group-toggle btn-block">
-					<a href="#" class="btn border-color-neutral-alpha-3 background-transparent color-neutral font-weight-inherit background-theme-active color-theme-active active">On</a>
-					<a href="#" class="btn border-color-neutral-alpha-3 background-transparent color-neutral font-weight-inherit background-theme-active color-theme-active">Off</a>
-				</div>
-			</div>
 			<div class="hide-mobile margin-small-right"><span class="spacer"></span></div>
-			<button class="btn btn-theme-outline btn-block-mobile margin-top flex-1-1">Apply Filters</button>
+			<button class="btn btn-theme-outline btn-block-mobile margin-top no-padding-x flex-1-1">Apply Filters</button>
 		</div>
 	</div>
 </form>
