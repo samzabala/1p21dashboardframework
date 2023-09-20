@@ -26,10 +26,10 @@ $args = app_parse_args($data,$defs);
 <form id="timetracker-timer" class="module no-border module-expanded theme-inverse margin-large-y 
 <?=$args['is_active'] ? 'background-gradient-90-from-secondary-to-success' : 'background-gradient-90-from-secondary-to-primary' ?>">
 	<div class="module-content no-padding">
-		<div class="flex-grid flex-grid-fixed flex-grid-no-gutter">
+		<div class="flex-grid flex-grid-fixed flex-grid-no-gutter flex-direction-row-reverse">
 			<div class="flex-col-xs-12 flex-col-md-8  flex-col-lg-9 flex-md  flex-direction-column">
-				<div class="flex-grid flex-grid-no-gutter flex-grid-fixed">
-					<div class="flex-col-xs-12 flex-col-md-5 flex-col-lg-3">
+				<div class="flex-grid flex-grid-no-gutter">
+					<div class="flex-col-xs-12 flex-col-md-4 flex-0-0">
 						<div class="padding-y padding-large-x border-style-solid-bottom border-width-thin-bottom border-color-background-alpha-2 h4 color-inherit no-margin">
 							<label for="timer-task-project" class="sr-only">Project</label>
 							<input class="input input-blend input-block no-padding" name="task-project" id="timer-task-project" type="text" placeholder="Enter Project Name" list="projects" 
@@ -86,6 +86,12 @@ $args = app_parse_args($data,$defs);
 										<option data-value="Liza Soberano">Liza Soberano</option>
 							</datalist>
 						</div>
+					</div>
+					<div class="flex-col-xs-12 flex-col-lg-2 flex-0-0 align-self-stretch flex-xs align-items-stretch">
+						<label class="padding-right border-style-solid-bottom border-width-thin-bottom border-color-background-alpha-2 flex-xs align-items-center justify-content-flex-end padding-y padding-right flex-1-0">
+							<span class="font-weight-700">Sync to Wrike</span>
+							<input class="margin-small-left font-size-large input input-inline" type="checkbox" style="width: 1em;" />
+						</label>
 					</div>
 				</div>
 
@@ -150,21 +156,197 @@ $args = app_parse_args($data,$defs);
 								</div>
 								<div class="flex-col-xs-12 flex-col-sm-5 flex-col-md-12 flex-col-lg-10">
 									<label for="timer-task-Status" class="sr-only">Task Status</label>
-									<select class="input input-single-line input-select input-block background-transparent border-color-theme input-round" name="task-status" id="timer-task-status" placeholder="Select Status">
-			
-										<option value="">Select Status</option>
-											<!-- @loop option -->
-													<!-- @PLACEHOLDER. delete when ready -->
-													<?php $stat = array(
-														'Backlog',
-														'In Progress',
-														'Review',
-														'Completed',
-													); foreach($stat as $s): ?>
-														<option value="<?= urlencode($s) ?>" <?= strtoupper($s) == strtoupper($args['task_status']) ? 'selected' : '' ?>><?=$s ?></optioon>
-													<?php endforeach; ?>
-			
-									</select>
+									
+									
+									<div class="position-relative">
+										<!-- @PLACEHOLDER -->
+										<?php $stat = array(
+											'Default Workflow' => array(
+												'Backlog',
+												'Cancelled',
+												'Completed',
+												'Completed on Staging',
+												'Dev - In Progress',
+												'Launch',
+												'On Hold',
+												'Production',
+												'QA+Integration',
+												'Review',
+												'Review (Internal)',
+												'Review (SEO)',
+												'SEO - In Progress',
+												'SEO In Progress',
+											),
+											'Maintenance Request' => array(
+												'Completed',
+												'Maintenance Request',
+												'Review',
+											),
+											'Monthly Content Workflow' => array(
+												'Backlog for Population',
+												'Client MC Overview',
+												'Content Has Been Populated',
+												'Foundation',
+												'MC Awaiting Client Approval',
+												'MC Client Cancelled',
+												'MC Delivered',
+												'MC In Progress',
+												'MC Needs Topics',
+												'MC Populated and Complete',
+												'MC Populated and in Tracker',
+												'MC Ready to Write',
+												'Ready For Population Team',
+												'[Floater] MC Overview',
+											),
+											'New Site Content Order' => array(
+												'Backlog',
+												'Completed',
+												'Delivered for Review',
+												'In Review',
+												'Order Created Pending Review',
+												'Pending Client Review',
+												'Ready to Populate',
+												'Ready to Write',
+												'Writing In Progress',
+											),
+											'Other' => array(
+												'Waiting on Client Approval LP',
+												'Zebra',
+											),
+											'Paid Workflow' => array(
+												'Advertiser Verification Needed',
+												'Building Campaigns',
+												'Client Meetings Or Updates',
+												'Completed',
+												'For Review/QA',
+												'LSA Call Recording Review',
+												'LSA Lead Reporting',
+												'LSA Optimizations',
+												'LSA Setup',
+												'Landing Page Content',
+												'Launched',
+												'Need Final URL To Begin Setup',
+												'Optimizations',
+												'PPC Pages To Launch - DT',
+												'Reporting',
+												'Tracking Codes',
+												'Waiting for Assets/LP URL',
+												'Waiting on Client Approval',
+												'Waiting-PPC Survey/Lead Docket',
+											),
+											'SEO Workflow' => array(
+												'Backlog',
+												'Blocked',
+												'Completed',
+												'In Progress',
+												'Review',
+											),
+										);
+										$active_sub = array($stat['Default Workflow']);
+										if($args['task_status']):
+											$active_sub = array_filter($stat,function($k) use ($args){
+												return in_array($args['task_status'],$k);
+											});
+										endif;
+
+
+										?>
+										<a href="#" data-toggle-dropdown class="input input-single-line input-select input-block background-transparent border-color-theme input-round text-decoration-none justify-content-space-between">
+											<div class="text-wrap-ellipsis">
+
+												<!-- @if has selection -->
+													<?php if($args['task_status']): ?>
+														<span class="REPLACE"><?= $args['task_status']; ?></span>
+													<?php else: ?>
+														Select Status
+													<?php endif; ?>
+											</div>
+										</a>
+										<div class="dropdown dropdown-top-flush dropdown-left theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
+											<div class="list-group list-group-interactive list-group-compact" >
+												<!-- selected -->
+												<!-- @if current status is within a status group  -->
+													
+													<!-- @loop label as sibling status -->
+													<!--
+														@NOTE:
+															classes to add
+																'active' => if active
+													-->
+														
+														<label class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
+															<input type="radio" class="sr-only">
+															<span class="flex-1-1">
+																<span class="REPLACE">Status</span>
+															</span>
+															<i class="symbol symbol-check only-toggle flex-0-0"></i>
+														</label>
+
+														<!-- @PLACEHOLDER: Delete when ready -->
+															<?php foreach($active_sub as $g): foreach($g as $s): ?>
+																	
+																	<label class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
+																		<input type="radio" class="sr-only">
+																		<span class="flex-1-1">
+																			<span class="REPLACE"><?= $s; ?></span>
+																		</span>
+																		<i class="symbol symbol-check only-toggle flex-0-0"></i>
+																	</label>
+
+															<?php endforeach; endforeach; ?>
+
+
+												<!-- All -->
+
+
+													<!-- @loop  div -->
+														<div class="position-relative">
+															<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center">
+																<span class="flex-1-1">
+																	<span class="REPLACE">Group Folder</span>
+																</span>
+																<i class="symbol symbol-arrow-right"></i>
+															</a>
+															<div class="dropdown dropdown-bottom dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
+																<div class="list-group list-group-interactive list-group-compact">
+																	<!-- @loop  div -->
+																		<div class="position-relative">
+																			<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
+																				<span class="flex-1-1">Status</span>
+																			</a>
+																		</div>
+																</div>
+															</div>
+														</div>
+
+														<!-- @PLACEHOLDER: Delete when Ready -->
+														<?php foreach($stat as $g => $st): ?>
+
+															<div class="position-relative">
+																<a href="#" data-toggle-dropdown class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center">
+																	<span class="flex-1-1"><?= $g ?></span>
+																	<i class="symbol symbol-arrow-right"></i>
+																</a>
+																<div class="dropdown dropdown-bottom dropdown-left-flush theme-default color-theme no-padding-x overflow-visible" data-dropdown-width="100%">
+																	<div class="list-group list-group-interactive list-group-compact">
+																			<?php foreach($st as $s): ?>
+																				<div class="position-relative">
+																					<label class="list-group-item pointer-reference no-border-y flex-xs justify-content-space-between flex-wrap align-items-center dropdown-purger">
+																						<input type="radio" class="sr-only">
+																						<span class="flex-1-1"><?=$s; ?></span>
+																						<i class="symbol symbol-check only-toggle flex-0-0"></i>
+																					</label>
+																				</div>
+																			<?php endforeach; ?>
+																	</div>
+																</div>
+															</div>
+														<?php endforeach; ?>
+
+
+											</div>
+										</div>
+									</div>
 		
 								</div>
 		

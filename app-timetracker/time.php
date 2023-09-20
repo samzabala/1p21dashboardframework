@@ -24,5 +24,5 @@
 	'task_project' => 'Ghost Stories American Dub',
 	'task_client' => 'Not Eren Yeager',
 	'task_category' => 'Dev',
-	'task_status' => 'inprogress',
+	'task_status' => 'In Progress',
 )) ?>
