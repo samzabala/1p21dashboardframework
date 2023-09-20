@@ -28,7 +28,8 @@ ul.list-group-item::after, .alert-header::after, .alert-content::after, .alert-f
   width: 100%;
   flex: 1 1 100%;
 }
-[data-toggle-modal-board], [data-toggle-modal-default], [data-toggle-dropdown], [data-toggle-alert-close],
+[data-toggle-tooltip-click],
+[data-toggle-tooltip-hover], [data-toggle-modal-board], [data-toggle-modal-default], [data-toggle-dropdown], [data-toggle-alert-close],
 [data-toggle-alert-close-all], [data-toggle-accordion], [data-toggle] {
   cursor: pointer;
   -webkit-user-select: none !important; /* Safari 3.1+ */
@@ -36,7 +37,8 @@ ul.list-group-item::after, .alert-header::after, .alert-content::after, .alert-f
   -ms-user-select: none !important; /* IE 10+ */
   user-select: none !important; /* Standard syntax */
 }
-[data-toggle-modal-board] *, [data-toggle-modal-default] *, [data-toggle-dropdown] *, [data-toggle-alert-close] *,
+[data-toggle-tooltip-click] *,
+[data-toggle-tooltip-hover] *, [data-toggle-modal-board] *, [data-toggle-modal-default] *, [data-toggle-dropdown] *, [data-toggle-alert-close] *,
 [data-toggle-alert-close-all] *, [data-toggle-accordion] *, [data-toggle] * {
   pointer-events: none !important;
 }
@@ -46,7 +48,7 @@ ul.list-group-item::after, .alert-header::after, .alert-content::after, .alert-f
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
-.sr-only, .pointer-reference:not(:hover):not(:focus):not(.focus):not(:active):not(.active):not(.open) .hide-idle, .pointer-reference:hover .only-idle, .pointer-reference:focus .only-idle, .pointer-reference.focus .only-idle, .pointer-reference:active .only-idle, .pointer-reference.active .only-idle, .pointer-reference.open .only-idle, .pointer-reference:hover .only-not-hover, .pointer-reference:hover .hide-hover, .pointer-reference:not(:hover) .only-hover, .pointer-reference:not(:hover) .hide-not-hover, .pointer-reference:focus .only-not-focus, .pointer-reference:focus .hide-focus, .pointer-reference:not(:focus):not(.focus) .only-focus, .pointer-reference:not(:focus):not(.focus) .hide-not-focus, .pointer-reference.active .only-not-active, .pointer-reference:active .only-not-active, .pointer-reference.active .hide-active, .pointer-reference:active .hide-active, .pointer-reference:not(:active):not(.active) .only-active, .pointer-reference:not(:active):not(.active) .hide-not-active, .pointer-reference.active .only-not-toggle, .pointer-reference.open .only-not-toggle, .pointer-reference.active .hide-toggle, .pointer-reference.open .hide-toggle, .pointer-reference:not(.active):not(.open) .only-toggle, .pointer-reference:not(.active):not(.open) .hide-not-toggle, .modal:not(.active), .input-tags, .input-calendar, .accordion:not(.accordion-mobile):not(.open) {
+.sr-only, .pointer-reference:not(:hover):not(:focus):not(.focus):not(:active):not(.active):not(.open) .hide-idle, .pointer-reference:hover .only-idle, .pointer-reference:focus .only-idle, .pointer-reference.focus .only-idle, .pointer-reference:active .only-idle, .pointer-reference.active .only-idle, .pointer-reference.open .only-idle, .pointer-reference:hover .only-not-hover, .pointer-reference:hover .hide-hover, .pointer-reference:not(:hover) .only-hover, .pointer-reference:not(:hover) .hide-not-hover, .pointer-reference:focus .only-not-focus, .pointer-reference:focus .hide-focus, .pointer-reference:not(:focus):not(.focus) .only-focus, .pointer-reference:not(:focus):not(.focus) .hide-not-focus, .pointer-reference.active .only-not-active, .pointer-reference:active .only-not-active, .pointer-reference.active .hide-active, .pointer-reference:active .hide-active, .pointer-reference:not(:active):not(.active) .only-active, .pointer-reference:not(:active):not(.active) .hide-not-active, .pointer-reference.active .only-not-toggle, .pointer-reference.open .only-not-toggle, .pointer-reference.active .hide-toggle, .pointer-reference.open .hide-toggle, .pointer-reference:not(.active):not(.open) .only-toggle, .pointer-reference:not(.active):not(.open) .hide-not-toggle, .tooltip:not(.active), .modal:not(.active), .input-tags, .input-calendar, .accordion:not(.accordion-mobile):not(.open) {
   pointer-events: none !important;
   position: absolute !important;
   left: -9999vw !important;
@@ -8170,6 +8172,126 @@ td.table-cell-intensity-5, .table-cell.table-cell-intensity-5 {
   background: var(--fw-color-intensity-5-alpha-5);
 }
 
+.tooltip {
+  position: absolute;
+  background: var(--fw-theme-background);
+  color: var(--fw-theme-color);
+  border-radius: 7.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0px 0px 10px -6px var(--fw-color-base);
+  z-index: 2;
+  text-align: initial;
+  z-index: 9999;
+  pointer-events: none;
+}
+.theme-inverse .tooltip {
+  background: var(--fw-theme-background);
+  color: var(--fw-theme-color);
+}
+.tooltip.tooltip-expanded {
+  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 2;
+  text-align: initial;
+}
+.tooltip.tooltip-compact {
+  position: absolute;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  z-index: 2;
+  text-align: initial;
+}
+.tooltip.tooltip-constricted {
+  position: absolute;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 2;
+  text-align: initial;
+}
+.tooltip:not(.tooltip-has-custom-width) {
+  max-width: 300px;
+}
+.tooltip.tooltip-allow-interaction {
+  pointer-events: auto;
+}
+.tooltip:before, .tooltip:after {
+  content: "";
+  background: inherit;
+  position: absolute;
+  z-index: -1;
+}
+.tooltip:after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: inherit;
+}
+.tooltip:before {
+  margin: auto;
+  box-shadow: 0px 0px 20px -5px var(--fw-color-base);
+  width: 10px;
+  height: 10px;
+  transform-origin: center center;
+  transform: rotate(45deg);
+}
+.tooltip-badge {
+  position: absolute;
+  margin: auto;
+}
+.tooltip.tooltip-top:before,
+.tooltip.tooltip-top .tooltip-badge {
+  left: 0;
+  right: 0;
+}
+.tooltip.tooltip-top:before {
+  bottom: -5px;
+}
+.tooltip.tooltip-top .tooltip-badge {
+  top: calc(100% + (14.1421356237px * 0.5));
+}
+.tooltip.tooltip-bottom:before,
+.tooltip.tooltip-bottom .tooltip-badge {
+  left: 0;
+  right: 0;
+}
+.tooltip.tooltip-bottom:before {
+  top: -5px;
+}
+.tooltip.tooltip-bottom .tooltip-badge {
+  bottom: calc(100% + (14.1421356237px * 0.5));
+}
+.tooltip.tooltip-right:before,
+.tooltip.tooltip-right .tooltip-badge {
+  bottom: 0;
+  top: 0;
+}
+.tooltip.tooltip-right:before {
+  left: -5px;
+}
+.tooltip.tooltip-right .tooltip-badge {
+  right: calc(100% + (14.1421356237px * 0.5));
+}
+.tooltip.tooltip-left:before,
+.tooltip.tooltip-left .tooltip-badge {
+  bottom: 0;
+  top: 0;
+}
+.tooltip.tooltip-left:before {
+  right: -5px;
+}
+.tooltip.tooltip-left .tooltip-badge {
+  left: calc(100% + (14.1421356237px * 0.5));
+}
+
 /*** Tags ***/
 .tag {
   font-size: 0.7142857143rem;
@@ -8770,6 +8892,14 @@ td.table-cell-intensity-5, .table-cell.table-cell-intensity-5 {
 
 .symbol-window-error:before, .active > .symbol-window-error-toggle:before, .open > .symbol-window-error-toggle:before {
   content: "\e978";
+}
+
+.symbol-sun:before, .active > .symbol-sun-toggle:before, .open > .symbol-sun-toggle:before {
+  content: "\e979";
+}
+
+.symbol-pin-alt:before, .active > .symbol-pin-alt-toggle:before, .open > .symbol-pin-alt-toggle:before {
+  content: "\e980";
 }
 
 /* WELL */
@@ -30584,7 +30714,8 @@ td.table-cell-intensity-5, .table-cell.table-cell-intensity-5 {
   --sticky-timer-height: 50px;
 }
 
-html, body {
+body,
+html {
   width: var(--viewport-w);
   height: var(--viewport-h);
   overflow: auto;
@@ -30592,7 +30723,6 @@ html, body {
 }
 
 body {
-  position: relative; /* for the sticky bois */
   min-height: var(--viewport-h);
 }
 

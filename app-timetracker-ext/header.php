@@ -88,36 +88,38 @@
 				<?php app_get_component('components/sticky-timer'); ?>
 			<?php endif; ?>
 
-		<main id="timetracker-main" class="flex-xs flex-wrap">
+		<main id="timetracker-main" class="flex-xs flex-direction-column">
 
-
-			<header id="timetracker-header" class="background-transparent nav color-theme justify-content-space-between theme-inverse position-absolute offset-0-x ">
-				<div class="nav-block background-transparent flex-1-1 justify-content-space-between padding-top">
-					<a class="nav-logo nav-block no-padding-x" href="<?=app_create_link(array('template' => 'start')); ?>">
-						<?php app_get_component('components/icon-logo'); ?>
-					</a>
-
-
-					<!-- Start Button -->
-					<?php if(
-						// @deprecated
-							FWAPPS_TEMPLATE == 'home'
-						
-						|| FWAPPS_TEMPLATE == 'start'
-						|| FWAPPS_TEMPLATE == 'timer-sucess'
-
-					): ?>
-						<a href="<?=app_create_link(array('template' => 'start-new')); ?>" class="btn btn-theme-outline padding-x btn-round margin-auto-left margin-small-right">
-							Start New Timer
+			<div class="position-relative">
+				<header id="timetracker-header" class="background-transparent nav color-theme justify-content-space-between theme-inverse position-absolute offset-0-x ">
+					<div class="nav-block background-transparent flex-1-1 justify-content-space-between padding-top">
+						<a class="nav-logo nav-block no-padding-x" href="<?=app_create_link(array('template' => 'start')); ?>">
+							<?php app_get_component('components/icon-logo'); ?>
 						</a>
-					<?php endif; ?>
+	
+	
+						<!-- Start Button -->
+						<?php if(
+							// @deprecated
+								FWAPPS_TEMPLATE == 'home'
+							
+							|| FWAPPS_TEMPLATE == 'start'
+							|| FWAPPS_TEMPLATE == 'timer-sucess'
+	
+						): ?>
+							<a href="<?=app_create_link(array('template' => 'start-new')); ?>" class="btn btn-theme-outline padding-x btn-round margin-auto-left margin-small-right">
+								Start New Timer
+							</a>
+						<?php endif; ?>
+	
+	
+						<a id="timetracker-toggle-view" href="#" class="btn btn-small btn-link btn-symbol color-inherit">
+							<?php app_get_component('components/icon-toggle'); ?>
+						</a>
+					</div>
+				</header>
+			</div>
 
-
-					<a id="timetracker-toggle-view" href="#" class="btn btn-small btn-link btn-symbol color-inherit">
-						<?php app_get_component('components/icon-toggle'); ?>
-					</a>
-				</div>
-			</header>
 <?php endif; ?>
 
 

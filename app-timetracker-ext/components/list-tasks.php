@@ -27,7 +27,10 @@
                     </div>
                     <div class="flex-1-1 flex-child">
                         <a href="<?= app_create_link(array('template' => 'task-detail')) ?>" class="color-inherit text-decoration-none color-primary-dark-hover">
-                            <h5 class="text-wrap-ellipsis no-margin-y color-inherit font-weight-600 color-inherit">
+                            <h5 class="text-wrap-ellipsis no-margin-y color-inherit font-weight-600 color-inherit"
+                                data-toggle-tooltip-hover data-tooltip-placement="top"
+                                data-tooltip-content="Float Everything Left"
+                                >
                                 <span class="REPLACE">Float Everything Left</span>
                             </h5>
                             <p class="text-wrap-ellipsis no-margin-top margin-small-bottom font-size-small color-neutral">
@@ -146,7 +149,11 @@
                             </div>
                             <div class="flex-1-1 flex-child">
                                 <a href="<?= app_create_link(array('template' => 'task-detail')) ?>" class="color-inherit text-decoration-none color-primary-dark-hover">
-                                    <h5 class="text-wrap-ellipsis no-margin-y color-inherit font-weight-600 color-inherit">
+                                    <h5 class="text-wrap-ellipsis no-margin-y color-inherit font-weight-600 color-inherit"
+                                        
+                                        data-toggle-tooltip-hover data-tooltip-placement="top"
+                                        data-tooltip-content="<?= $tsk; ?>"
+                                        >
                                         <span class="REPLACE"><?= $tsk; ?></span>
                                     </h5>
                                     <p class="text-wrap-ellipsis no-margin-top margin-small-bottom font-size-small color-neutral">

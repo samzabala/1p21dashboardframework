@@ -7,7 +7,9 @@ $viewport-h: 600px;
     --sticky-timer-height: 50px;
 }
 
-html,body{
+body, 
+html
+{
     width: var(--viewport-w);
     height: var(--viewport-h);
     overflow:auto;
@@ -15,7 +17,6 @@ html,body{
 }
 
 body {
-    position:relative; /* for the sticky bois */
     min-height: var(--viewport-h);
 }
 
