@@ -13,6 +13,7 @@ html
     width: var(--viewport-w);
     height: var(--viewport-h);
     overflow:auto;
+    overflow-x: hidden;
     min-height: var(--viewport-h);
 }
 
