@@ -16,7 +16,7 @@
 			
 			
 				<div class="timetracker-timer-wrapper padding-large-top padding-small-bottom margin-top text-align-center">
-					<div class="flex-xs justify-content-center align-items-center margin-small-bottom">
+					<div class="text-wrap-ellipsis text-align-center margin-small-bottom">
 						<!-- @hidden input fields here -->
 
         
@@ -27,12 +27,12 @@
                                     `active` => if favorite
         
                         -->
-                        <a href="#" class="flex-0-0 font-size-large color-caution">
+                        <a href="#" class=" font-size-large color-caution">
                             <i class="symbol symbol-star-stroke symbol-star-toggle"></i>
                         </a>
 
-						<span class="margin-small-left flex-0-1">
-							<span class="h4 no-margin-y text-wrap-ellipsis color-theme">
+						<span class="margin-small-left">
+							<span class="h4 no-margin-y tdisplay-inline color-theme">
 								<span class="REPLACE">Float everything to the left</span>
 							</span>
 						</span>
@@ -187,7 +187,7 @@
 				
 				
 					<div class="timetracker-timer-wrapper padding-large-top padding-small-bottom margin-top text-align-center">
-						<div class="flex-xs justify-content-center align-items-center margin-small-bottom">
+						<div class="text-wrap-ellipsis text-align-center margin-small-bottom">
 							<!-- @hidden input fields here -->
 
 			
@@ -198,12 +198,12 @@
 										`active` => if favorite
 			
 							-->
-							<a href="#" class="flex-0-0 font-size-large color-caution">
+							<a href="#" class=" font-size-large color-caution">
 								<i class="symbol symbol-star-stroke symbol-star-toggle"></i>
 							</a>
 
-							<span class="margin-small-left flex-0-1">
-								<span class="h4 no-margin-y text-wrap-ellipsis color-theme">
+							<span class="margin-small-left">
+								<span class="h4 no-margin-y tdisplay-inline color-theme">
 									<span class="REPLACE">Float everything to the left</span>
 								</span>
 							</span>
@@ -312,7 +312,7 @@
 				
 				
 					<div class="timetracker-timer-wrapper padding-large-top padding-small-bottom margin-top text-align-center">
-						<div class="flex-xs justify-content-center align-items-center margin-small-bottom">
+						<div class="text-wrap-ellipsis text-align-center margin-small-bottom">
 							<!-- @hidden input fields here -->
 
 			
@@ -323,12 +323,12 @@
 										`active` => if favorite
 			
 							-->
-							<a href="#" class="flex-0-0 font-size-large color-caution active">
+							<a href="#" class=" font-size-large color-caution">
 								<i class="symbol symbol-star-stroke symbol-star-toggle"></i>
 							</a>
 
-							<span class="margin-small-left flex-0-1">
-								<span class="h4 no-margin-y text-wrap-ellipsis color-theme">
+							<span class="margin-small-left">
+								<span class="h4 no-margin-y tdisplay-inline color-theme">
 									<span class="REPLACE">Float everything to the left</span>
 								</span>
 							</span>
