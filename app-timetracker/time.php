@@ -1,5 +1,13 @@
 <!-- Tabs -->
-<?php app_get_component('components/timer-nav-tabs') ?>
+<div class="flex-grid flex-grid-fixed align-items-center">
+	<div class="flex-col-xs-12 flex-col-sm-8 flex-col-md-6">
+		<?php app_get_component('components/timer-nav-tabs') ?>
+	</div>
+	<div class="flex-col-xs-12 flex-col-sm-4 flex-col-md-6 flex-md text-align-center text-decoration-line-under justify-content-flex-end">
+		<a href="#m-manual-entry" data-toggle-modal-default class="color-neutral-dark text-decoration-underline color-theme-hover">Add Manual Entry +</a>
+		<?php app_get_component('components/modal-manual-entry') ?>
+	</div>
+</div>
 
 <!-- Timer -->
 <?php app_get_component('components/module-time-timer') ?>
