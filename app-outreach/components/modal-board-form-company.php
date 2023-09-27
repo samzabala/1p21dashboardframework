@@ -67,8 +67,8 @@ Modal from framework/src/js/imports/form/form-tags
                     <label class="input-label">Marketing Budget</label>
                     <div class="input-group input-group-horizontal input-block">
                         
-                    <input class="input input-single-line" type="number" name="company-budget-min"  placeholder="Min" id="company-budget-min" />
-                    <input class="input input-single-line" type="number" name="company-budget-max"  placeholder="Max" id="company-budget-max" />
+                    <input class="input input-single-line input-block flex-1-1" type="number" name="company-budget-min"  placeholder="Min" id="company-budget-min" />
+                    <input class="input input-single-line input-block flex-1-1" type="number" name="company-budget-max"  placeholder="Max" id="company-budget-max" />
                     </div>
                 </div>
             </div>
