@@ -282,9 +282,6 @@ class d3Log extends TTChart {
 		const self = this;
 
 		if(self.supportCrData) {
-
-			let to_set = false;
-			
 			const timeTicks = self.timeTicks;
 
 			const startDate = timeTicks[0];
@@ -292,38 +289,72 @@ class d3Log extends TTChart {
 			const nextNextTick = timeTicks[2];
 			const lastTick = timeTicks[ self.timeTicks.length - 1 ];
 
+			let dayDiff = 0,
+			nextYearDiff = 0,
+			nextMonthDiff = 0,
+			nextWeekDiff = 0,
+			nextDayDiff = 0,
+			nextNextYearDiff = 0,
+			nextNextMonthDiff = 0,
+			nextNextWeekDiff = 0;
+
 			// console.warn('--------------------------ilang beh',startDate,lastTick);
 
 
 			// const yearDiff = d3.timeYear.count(startDate,lastTick);
 			// const monthDiff = d3.timeMonth.count(startDate,lastTick);
 			// const weekDiff = d3.timeWeek.count(startDate,lastTick);
-			const dayDiff = d3.timeDay.count(startDate,lastTick);
+			dayDiff = d3.timeDay.count(startDate,lastTick);
 
 
-			const nextYearDiff = d3.timeYear.count(startDate,nextTick);
-			const nextMonthDiff = d3.timeMonth.count(startDate,nextTick);
-			const nextWeekDiff = d3.timeWeek.count(startDate,nextTick);
-			const nextDayDiff = d3.timeDay.count(startDate,nextTick);
+			if(timeTicks.length >= 2){
+				nextYearDiff = d3.timeYear.count(startDate,nextTick);
+				nextMonthDiff = d3.timeMonth.count(startDate,nextTick);
+				nextWeekDiff = d3.timeWeek.count(startDate,nextTick);
+				nextDayDiff = d3.timeDay.count(startDate,nextTick);
+			}
 
 
-			const nextNextYearDiff = d3.timeYear.count(nextTick,nextNextTick);
-			const nextNextMonthDiff = d3.timeMonth.count(nextTick,nextNextTick);
-			const nextNextWeekDiff = d3.timeWeek.count(nextTick,nextNextTick);
-			// const nextNextDayDiff = d3.timeDay.count(nextTick,nextNextTick);
+			if(timeTicks.length >= 3){
+				nextNextYearDiff = d3.timeYear.count(nextTick,nextNextTick);
+				nextNextMonthDiff = d3.timeMonth.count(nextTick,nextNextTick);
+				nextNextWeekDiff = d3.timeWeek.count(nextTick,nextNextTick);
+				// const nextNextDayDiff = d3.timeDay.count(nextTick,nextNextTick);
+			}
 			
-			if(nextYearDiff > 0 && nextNextYearDiff > 0){
+			if(
+				nextYearDiff > 0
+				&& (
+					nextNextYearDiff > 0
+					|| timeTicks.length < 3
+				)
+			){
 				self.groupBy = 'year';
-			}else if(nextMonthDiff > 0 && nextNextMonthDiff > 0) {
+			}else if(
+				nextMonthDiff > 0
+				&& (
+					nextNextMonthDiff > 0
+					|| timeTicks.length < 3
+				)
+			) {
 				self.groupBy = 'month';
-			}else if(nextWeekDiff > 0 && nextNextWeekDiff > 0) {
+			}else if(
+				nextWeekDiff > 0
+				&& (
+					nextNextWeekDiff > 0
+					|| timeTicks.length < 3
+				)
+			) {
 				self.groupBy = 'week';
-			}else if(nextDayDiff > 0 && dayDiff > 7) {
+			}else if(
+				nextDayDiff > 0
+				&& timeTicks.length > 7
+			){
 				self.groupBy = 'date';
 			}else  {
 				self.groupBy = 'day';
 			}
-
+			
 		} else {
 
 			if(
@@ -901,7 +932,6 @@ class d3Log extends TTChart {
 					.attr('opacity', 0)
 					;
 				gA.selectAll('.tick text')
-					.attr('dx', '.-8em')
 					.attr('text-anchor', 'start')
 					.attr('alignment-baseline', 'top')
 					.attr('transform', 'rotate(45)' )
@@ -981,21 +1011,25 @@ class d3Log extends TTChart {
 			.attr('data-tooltip-content',d => {
 
 				return `<div class="padding-small">
-				<h6 class="color-neutral no-margin">${self.prettyDate(
-					[
-						d.date,
-						self.groupBy == 'hour' ? d.__og_start_time : null
-					],
-					{
-						hour: '%B %e, %Y - %-I:%M%p',
-						day: '%B %e, %Y',
-						date: '%B %e, %Y',
-						week: '%B %e, %Y',
-						weekLast: '%B %e, %Y',
-						month: '%B %Y',
-						year: '%Y',
-					}
-				)}</h6>
+				<h6 class="color-neutral no-margin-top">
+					${
+						( self.groupBy == 'day' ) ? DateToString([d.date],'%A')+' &ndash; ' : ''
+					}${self.prettyDate(
+						[
+							d.date,
+							self.groupBy == 'hour' ? d.__og_start_time : null
+						],
+						{
+							hour: '%B %e, %Y - %-I:%M%p',
+							day: '%B %e, %Y',
+							date: '%B %e, %Y',
+							week: '%B %e, %Y',
+							weekLast: '%B %e, %Y',
+							month: '%B %Y',
+							year: '%Y',
+						}
+					)}
+				</h6>
 				<i class="margin-small-right legend" style="background-color: ${self.scale['color'](d[self.meta])}"></i> ${d[self.meta]} <br>
 				<i class="margin-small-right symbol symbol-timer"></i> Total time: ${d.__og_total_hours ? d.__og_total_hours : d.total_hours} <br>
 				</div>`
