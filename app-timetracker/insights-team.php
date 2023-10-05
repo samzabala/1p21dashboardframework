@@ -129,9 +129,55 @@
 			'title' => 'Peaches Peaches PeachesPeachesPeaches Peaches Peaches Peaches PeachesPeaches PeachesPeaches WaHH LAAAAHAAAVEYouuuu oOH'
 		),
 	);
+
+	$placeholder_cats = array(
+		'Category Name',
+		'Homepage Design',
+		'Meetings',
+		'Bugherds',
+		'General Design',
+		'Other Maintenance Task',
+		'Maintenance Task',
+		'QC Checklist',
+		'Research',
+	);
+
+
+	// @NOTE the same values can also be imported as a javscript array via the helper js that came with the d3 logs by import. path may need to be changed based on app file structure:
+	// import { ColorPalette } from '../lib/charts/insights/d3Log';
+	$REPLACE_color_palette = array(
+		'#E07C39',
+		'#0037b4',
+		'#2699fb',
+		'#EFBC3D',
+		'#042377',
+		'#d92d2d',
+		'#fec87c',
+		'#6154a4',
+		'#a168d9',
+		'#fff200',
+		'#fd7f03',
+		'#fb1818',
+		'#008eb0',
+		'#8f4139',
+		'#006943',
+		'#16b900',
+		'#5e01a8',
+		'#fe85d6',
+		'#01c6ab',
+		'#313f76',
+		'#547b80',
+		'#d069a9',
+		'#5f6046',
+		'#c26558',
+		'#4db7ff',
+		'#5a3b00',
+		'#e1e43c',
+		'#e18256',
+		'#9e005d',
+		'#000000',
+	);
 ?>
-
-
 <div class="flex-grid">
 	<div class="flex-col-xs-12 flex-col-md-5 flex-col-lg-6">
 		<!-- Tabs -->
@@ -208,6 +254,45 @@
 
 	</div>
 	<div class="module-content">
+	<!-- @if categorizing can be enabled -->
+		<div class="flex-grid flex-grid-fixed flex-grid-compact">
+			<!-- @loop div -->
+				<div class="flex-col-xs-6 flex-col-sm-4 flex-col-md-3">
+					<div class="text-wrap-ellipsis">
+						<!-- @NOTE
+							attributes to change
+
+							style background color 
+
+
+							// @NOTE the same values in $REPLACE_color_palette can also be imported as a javscript array via the helper js that came with the d3 logs by import. path may need to be changed based on app file structure:
+							// import { ColorPalette } from '../lib/charts/insights/d3Log';
+						-->
+						<span class="legend" style="background-color: <?= $REPLACE_color_palette[0] ?>"></span>
+						<span class="REPLACE"> <?= $placeholder_cats[0] ?></span>
+					</div>
+				</div>
+
+				<!-- @PLACEHOLDER: DELETE WHEN READY -->
+				<?php $h = 0; foreach($placeholder_cats as $i =>$cat): if($i == 0) continue;?>
+					<div class="flex-col-xs-6 flex-col-sm-4 flex-col-md-3">
+						<div class="text-wrap-ellipsis">
+							<!-- @NOTE
+								attributes to change
+
+								style background color 
+
+
+								// @NOTE the same values in $REPLACE_color_palette can also be imported as a javscript array via the helper js that came with the d3 logs by import. path may need to be changed based on app file structure:
+								// import { ColorPalette } from '../lib/charts/insights/d3Log';
+							-->
+							<span class="legend" style="background-color: <?= $REPLACE_color_palette[$i] ?>"></span>
+							<span class="REPLACE"><?= $cat ?></span>
+						</div>
+					</div>
+				<?PHP endforeach; ?>
+		</div>
+
 	<div class="table-wrapper ">
 		<!-- @if has team members -->
 			<table class="timetracker-table table-bordered text-vertical-align-middle">
@@ -263,13 +348,50 @@
 						</td>
 						<td class="timetracker-td timetracker-td-w padding-x">
 							<div class="progress background-neutral-alpha-4">
-								<!-- @NOTE
-									inline styles to add
-										width => string of percentage to total
-								-->
-								<div class="progress-bar background-primary-dark"
-									style="width:69%;"
-								></div>
+								<!-- @if categorizing can be enabled -->
+									
+
+									<!-- @loop .progress-bar -->
+
+
+										<!-- @NOTE
+										- Requires framework tooltip for hover tooltips to render
+										`import Tooltip from '../imports/tooltip'`;
+
+										-->
+
+
+										<!-- @NOTE
+											inline styles to add
+												width => string of category's percentage to total => .1 / 40, 5 / 40
+												backgroud-color => matching category color
+
+											attributes to add
+												data-tooltip-content => text / attributes with REPLACE only
+										-->
+
+										<div class="progress-bar"
+											data-toggle-tooltip-hover
+											data-tooltip-placement="top"
+											data-tooltip-content='
+											<div>
+												<h6 class="color-neutral no-margin">
+													Time Spent: <span class="REPLACE">69 hours</h5>
+												</h6>
+												<span class="legend" style="background-color: <?= $REPLACE_color_palette[0] ?>"></span>
+												<span class="REPLACE">Category Name</span>
+											</div>
+											'
+											style="width:69%; background-color: <?= $REPLACE_color_palette[0] ?>"
+										></div>
+								<!-- @else -->
+									<!-- @NOTE
+										inline styles to add
+											width => string of percentage to total => 39 / 40, 40 / 40
+									-->
+									<div class="progress-bar background-primary-dark"
+										style="width:69%;"
+									></div>
 							</div>
 						</td>
 						<td class="no-border-x timetracker-td timetracker-td-w timetracker-td-w-150 text-align-center">
@@ -320,14 +442,55 @@
 									</td>
 									<td class="timetracker-td timetracker-td-w padding-x">
 										<div class="progress background-neutral-alpha-4">
-											<!-- @NOTE
-												inline styles to add
-													width => string of percentage to total
-											-->
-											<div class="progress-bar background-primary-dark"
-												style="width:<?= $r ?>%;"
-											></div>
+											<?php if($h % 2 && $r > 1): ?>
+												<?php 
+
+												$_r = $r;
+
+												$results = [];
+    
+												// Generate random numbers within the range [1, $sum - ($numElements - 1)]
+												for ($k = 0; $k < count($placeholder_cats) - 1; $k++) {
+
+													$max = $_r - (count($placeholder_cats) - count($results));
+
+													$s_item = rand(5, $max);
+													$results[] = $s_item;
+													$_r -= $s_item;
+												}
+												
+												// Add the remaining r as the last element
+												$results[] = $_r;
+												
+												// Shuffle the array to randomize the order
+												shuffle($results); ?>
+
+												
+
+
+												<?php foreach($results as $l => $s): ?>
+													<div class="progress-bar"
+														data-toggle-tooltip-hover
+														data-tooltip-placement="top"
+														data-tooltip-content='
+														<div>
+															<h6 class="color-neutral no-margin">
+																Time Spent: <span class="REPLACE"><?=$s / 100 * 40 ?> hours</h5>
+															</h6>
+															<span class="legend" style="background-color: <?= $REPLACE_color_palette[$l] ?>"></span>
+															<span class="REPLACE">Category Name</span>
+														</div>
+														'
+														style="width:<?=$s ?>%; background-color: <?= $REPLACE_color_palette[$l] ?>"
+													></div>
+												<?php endforeach; ?>
+											<?php else: ?>
+												<div class="progress-bar background-primary-dark"
+													style="width:<?= $r ?>%;"
+												></div>
+											<?php endif; ?>
 										</div>
+										<?php if(isset($results)); ?>
 									</td>
 									<td class="no-border-x timetracker-td timetracker-td-w timetracker-td-w-150 text-align-center">
 										<span class="font-weight-700"></span>
