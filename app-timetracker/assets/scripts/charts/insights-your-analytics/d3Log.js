@@ -1013,7 +1013,7 @@ class d3Log extends TTChart {
 				return `<div class="padding-small">
 				<h6 class="color-neutral no-margin-top">
 					${
-						( self.groupBy == 'day' ) ? DateToString([d.date],'%A')+' &ndash; ' : ''
+						( self.groupBy == 'day' || self.groupBy == 'date' ) ? DateToString([d.date],'%A')+' &ndash; ' : ''
 					}${self.prettyDate(
 						[
 							d.date,
