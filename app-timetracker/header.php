@@ -91,7 +91,8 @@
 				<div class="container">
 
 					<!-- @if there are alerts -->
-						<?php  //app_get_component('components/alert-toast'); ?>
+						<?php app_get_component('components/alert-toast'); ?>
+						<?php app_get_component('components/alert-toast-side'); ?>
 						
 <?php endif; ?>
 					
