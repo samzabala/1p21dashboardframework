@@ -144,7 +144,7 @@
 
 
 	// @NOTE the same values can also be imported as a javscript array via the helper js that came with the d3 logs by import. path may need to be changed based on app file structure:
-	// import { ColorPalette } from '../lib/charts/insights/d3Log';
+	// import { ColorPalette } from '../lib/charts/helpers.js';
 	$REPLACE_color_palette = array(
 		'#E07C39',
 		'#0037b4',
