@@ -70,32 +70,11 @@
 							</div>
 					</td>
 					<td class="no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-300">
-							<!-- @NOTE
-								.tag
-									classes to add
-										`neutral` => default/backlog/maintenance backlog/production backlog
-										`primary` => when in progress/production
-										`secondary` => when in review
-										`error` => when on hold
-										`success` => completed
-							-->
+							
 							<h5 class="hide-nonmobile no-margin-top">
 								Status:
 							</h5>
-							<form class="entry-task-status tag no-margin-y
-								tag-primary">
-								<!-- @if can edit -->
-									<select class="input input-blend no-border-bottom text-align-center" name="" id="">
-										<!-- @PLACEHOLDER. delete when ready -->
-										<option value="">Backlog</option>
-										<option value="" selected>In Progress</option>
-										<option value="">Review</option>
-										<option value="">On Hold</option>
-										<option value="">Completed</option>
-									</select>
-								<!-- @else -->
-									<!-- <span class="REPLACE">Backlog</span> -->
-							</form>
+							<?php app_get_component('components/task-status-dropdown','',false,array('can_edit' => true)); ?>
 					</td>
 					<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 						<h5 class="hide-nonmobile no-margin-top">
@@ -224,7 +203,7 @@
 					'primary' => 'In Progress',
 					'secondary' => 'Review',
 					'error' => 'On Hold',
-					'success' => 'Complete',
+					'success' => 'Completed',
 				); ?>
 
 				<?php for($h = 0; $h < 6; $h++): ?>
@@ -309,33 +288,14 @@
 							<!-- text-nowrap but risks overlaps -->
 							<td class="no-border-bottom text-align-right timetracker-td timetracker-td-w timetracker-td-w-300">
 				
-													
-								<!-- @if has status -->
-									<!-- @NOTE
-										.tag
-											classes to add
-												`neutral` => backlog/maintenance backlog/production backlog
-												`primary` => when in progress/production
-												`secondary` => when in review
-												`error` => when on hold
-												`success` => completed
-									-->
 									<h5 class="hide-nonmobile no-margin-top">
 										Status:
 									</h5>
 
-								<form class="entry-task-status tag no-margin-y
-									tag-<?=$placeholder_color[$i]; ?>">
-									<?php if($h % 2 == 0): ?>
-										<select class="input input-blend no-border-bottom text-align-center" name="" id="">
-											<?php foreach($placeholder_color as $l=>$pco): ?>
-												<option value="" <?= $l == $i ? 'selected' : '' ?>><?= $placeholder_stuff[ $pco ] ?></option>
-											<?php endforeach; ?>
-										</select>
-									<?php else: ?>
-										<span class="REPLACE"><?= $placeholder_stuff[ $placeholder_color[$i] ] ;?></span>
-									<?php endif; ?>
-								</form>
+									
+									<?php app_get_component('components/task-status-dropdown','',false,
+										array( 'status' => $placeholder_stuff[ $placeholder_color[$i] ], 'can_edit' => ($h % 2 == 0) )
+									); ?>
 							</td>
 							<td class="no-border-bottom timetracker-td timetracker-td-w timetracker-td-w-100">
 								<h5 class="hide-nonmobile no-margin-top">
