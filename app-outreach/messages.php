@@ -17,7 +17,7 @@
 		<div class="flex-col-xs-12 flex-col-md-9 text-align-right">
 			<?php app_get_component('components/function-filter-messages') ?>
 			<div class="module-function function-add margin-large-left">
-				<a  href="#m-editor-email" data-toggle-modal-default class="btn btn-primary btn-block-mobile">
+				<a  href="#mb-editor-email" data-toggle-modal-board class="btn btn-primary btn-block-mobile">
 					Compose <i class="symbol symbol-paperplane"></i>
 				</a>
 			</div>
@@ -40,9 +40,9 @@
 			<th class="text-nowrap text-align-center" width="75">User</th>
 			<th class="text-nowrap" width="250">From</th>
 			<th class="text-nowrap">Subject</th>
-			<th class="text-nowrap" width="100">Date</th>
+			<th class="text-nowrap" width="200">Date</th>
 			<th class="text-nowrap" width="175">Tracking</th>
-			<th class="text-nowrap" width="150">Detailed View</th>
+			<th class="text-nowrap" width="150">Actions</th>
 			<th class="text-nowrap text-align-center" width="50">&nbsp;<span class="sr-only">Actions</span></th>
 		</tr>
 
@@ -71,22 +71,29 @@
 				<td>
 
 					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Subject</span>
-					<!-- @if has subject line -->
-						<div class="text-wrap-ellipsis">
-							<strong>
-								<span class="REPLACE">HOLD IT! the one who actually committed the crime.. IS YOU!</span>
-							</strong>
-						</div>
-					<!-- @if has message body -->
-						<div class="text-wrap-ellipsis">
-							<span class="REPLACE">
-								The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family There are so many uses of the coconut tree You can build a big house for the family All you need is to find a coconut man If he cuts the tree, he gets the fruit free It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut bark for the kitchen floor If you save some of it, you can build a door Now, the coconut trunk, do not throw this junk If you save some of it, you'll have the second floor The coconut wood is very good It can stand 20 years if you pray it would Now, the coconut root, to tell you the truth You can throw it or use it as firewood The coconut leaves, good shade it gives For the roof, for the walls up against the eaves Now, the coconut fruit, say my relatives Make good cannonballs up against the eaves It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family Ole!
-							</span>
-						</div>
+						
+						<!-- @NOTE modal will be bein actions cell -->
+						<a data-toggle-modal-board href="#mb-email-row-details-REPLACEID" class="color-inherit">
+							<!-- @if has subject line -->
+								<div class="text-wrap-ellipsis">
+									<strong>
+										<span class="REPLACE">HOLD IT! the one who actually committed the crime.. IS YOU!</span>
+									</strong>
+								</div>
+							<!-- @if has message body -->
+								<div class="text-wrap-ellipsis">
+									<span class="REPLACE">
+										The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family There are so many uses of the coconut tree You can build a big house for the family All you need is to find a coconut man If he cuts the tree, he gets the fruit free It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut bark for the kitchen floor If you save some of it, you can build a door Now, the coconut trunk, do not throw this junk If you save some of it, you'll have the second floor The coconut wood is very good It can stand 20 years if you pray it would Now, the coconut root, to tell you the truth You can throw it or use it as firewood The coconut leaves, good shade it gives For the roof, for the walls up against the eaves Now, the coconut fruit, say my relatives Make good cannonballs up against the eaves It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family Ole!
+									</span>
+								</div>
+						</a>
 				</td>
 				<td>
-					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Date</span>
-					<span class="REPLACE">06/12/98</span>
+					<!-- @NOTE modal will be bein actions cell -->
+					<a data-toggle-modal-board href="#mb-email-row-details-REPLACEID" class="color-inherit">
+						<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Date</span>
+						<span class="REPLACE">06/12/98, 4:30PM PhST</span>
+					</a>
 				</td>
 				
 				<td>
@@ -94,11 +101,14 @@
 					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Tracking</span>
 					<?php app_get_component('components/email-tracking'); ?>
 				</td>
-				<td>
-					<a href="#" data-toggle-modal-default class="btn btn-primary">
-						View Details
-					</a>
-					<?php app_get_component('components/modal-email-full'); ?>
+				<td class="text-vertical-align-middle">
+					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Actions</span>
+					<?php app_get_component('components/email-actions','',false,array(
+						'id' => 'REPLACEID'
+					)); ?>
+					<?php app_get_component('components/email-row-modals','',false,array(
+						'id' => 'REPLACEID'
+					)); ?>
 				</td>
 				
 				<td class="outreach-table-cell-actions text-align-center">
@@ -159,22 +169,30 @@
 							<td>
 
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Subject</span>
-								<!-- @if has subject line -->
-									<div class="text-wrap-ellipsis">
-										<strong>
-											<span class="REPLACE">HOLD IT! the one who actually committed the crime.. IS YOU!</span>
-										</strong>
-									</div>
-								<!-- @if has message body -->
-									<div class="text-wrap-ellipsis">
-										<span class="REPLACE">
-											The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family There are so many uses of the coconut tree You can build a big house for the family All you need is to find a coconut man If he cuts the tree, he gets the fruit free It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut bark for the kitchen floor If you save some of it, you can build a door Now, the coconut trunk, do not throw this junk If you save some of it, you'll have the second floor The coconut wood is very good It can stand 20 years if you pray it would Now, the coconut root, to tell you the truth You can throw it or use it as firewood The coconut leaves, good shade it gives For the roof, for the walls up against the eaves Now, the coconut fruit, say my relatives Make good cannonballs up against the eaves It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family Ole!
-										</span>
-									</div>
+								
+											
+									<!-- @NOTE modal will be bein actions cell -->
+									<a data-toggle-modal-board href="#mb-email-row-details-<?=$i ?>" class="color-inherit">
+										<!-- @if has subject line -->
+											<div class="text-wrap-ellipsis">
+												<strong>
+													<span class="REPLACE">HOLD IT! the one who actually committed the crime.. IS YOU!</span>
+												</strong>
+											</div>
+										<!-- @if has message body -->
+											<div class="text-wrap-ellipsis">
+												<span class="REPLACE">
+													The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family There are so many uses of the coconut tree You can build a big house for the family All you need is to find a coconut man If he cuts the tree, he gets the fruit free It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut bark for the kitchen floor If you save some of it, you can build a door Now, the coconut trunk, do not throw this junk If you save some of it, you'll have the second floor The coconut wood is very good It can stand 20 years if you pray it would Now, the coconut root, to tell you the truth You can throw it or use it as firewood The coconut leaves, good shade it gives For the roof, for the walls up against the eaves Now, the coconut fruit, say my relatives Make good cannonballs up against the eaves It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family The coconut nut is a giant nut If you eat too much, you'll get very fat Now, the coconut nut is a big, big nut But this delicious nut is not a nut It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family It's the coco fruit (it's the coco fruit) Of the coco tree (of the coco tree) From the coco palm family Ole!
+												</span>
+											</div>
+									</a>
 							</td>
 							<td>
-								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Date</span>
-								<span class="REPLACE">06/12/98</span>
+								<!-- @NOTE modal will be bein actions cell -->
+								<a data-toggle-modal-board href="#mb-email-row-details-<?=$i ?>" class="color-inherit">
+									<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Date</span>
+									<span class="REPLACE">06/12/98, 4:30PM PhST</span>
+								</a>
 							</td>
 							
 							<td>
@@ -182,11 +200,14 @@
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Tracking</span>
 								<?php app_get_component('components/email-tracking'); ?>
 							</td>
-							<td>
-								<a href="#" data-toggle-modal-default class="btn btn-primary">
-									View Details
-								</a>
-								<?php app_get_component('components/modal-email-full'); ?>
+							<td class="text-vertical-align-middle">
+								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Actions</span>
+								<?php app_get_component('components/email-actions','',false,array(
+									'id' => $i
+								)); ?>
+								<?php app_get_component('components/email-row-modals','',false,array(
+									'id' => $i
+								)); ?>
 							</td>
 							
 							<td class="outreach-table-cell-actions text-align-center">
