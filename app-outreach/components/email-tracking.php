@@ -17,7 +17,7 @@
 		'btn-primary' => if email was opened
 
 	-->
-	<span class="btn btn-symbol btn-small font-size-large btn-no-interaction btn-round
+	<span class="btn btn-symbol btn-small outreach-btn-tracking btn-no-interaction btn-round
 		<?= $disable_butt[0] > 50 ? 'btn-neutral disabled' : ' btn-primary' ?>
 	"
 		title="<?= $disable_butt[0] > 50 ? 'Email not opened yet' : 'Email opened' ?>"
@@ -37,7 +37,7 @@
 		'btn-accent' => if email link was opened
 
 	-->
-	<span class="btn btn-symbol btn-small font-size-large btn-no-interaction btn-round margin-micro-left
+	<span class="btn btn-symbol btn-small outreach-btn-tracking btn-no-interaction btn-round margin-micro-left
 		<?= $disable_butt[1] > 50 ? 'btn-neutral disabled' : ' btn-accent' ?>
 	"
 		title="<?= $disable_butt[1] > 50 ? 'Email Link not opened yet' : 'Email Link opened' ?>"
@@ -57,7 +57,7 @@
 		'btn-success' => if email link was opened
 
 	-->
-	<span class="btn btn-symbol btn-small font-size-large btn-no-interaction btn-round margin-micro-left
+	<span class="btn btn-symbol btn-small outreach-btn-tracking btn-no-interaction btn-round margin-micro-left
 		<?= $disable_butt[2] > 50 ? 'btn-neutral disabled' : ' btn-success' ?>
 	"
 		title="<?= $disable_butt[2] > 50 ? 'No response yet' : 'Email was replied to' ?>"
