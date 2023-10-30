@@ -585,6 +585,19 @@ html,body {
 
 		}
 	}
+
+	&-modal-board-content-stretch {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1;
+	}
+
+	&-btn {
+		&-tracking {
+			font-size: 1.2rem !important;
+		}
+	}
 }
 
 .body-no-scroll {
