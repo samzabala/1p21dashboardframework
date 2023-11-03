@@ -134,16 +134,13 @@ $placeholder_emails = array(
 							<div class="dropdown dropdown-top-flush" id="email-to-dropdown-<?=$instance_id ?>" data-dropdown-width="100%">
 								<ul class="list-group list-group-interactive">
 									<?php foreach($placeholder_emails as $email): ?>
-										<li class="list-group-item">
 
-											<!-- 
-												@on click, appends email to value of the field. there should be no need for + and - button to be able to freeform type
-											-->
-											<a  href="#" class="dropdown-purger"
-												onclick="event.preventDefault()"
-											><?=$email ?></a>
-
-										</li>
+<!-- 
+	@on click, appends email to value of the field. there should be no need for + and - button to be able to freeform type
+-->
+<li class="list-group-item dropdown-purger">
+	<?=$email ?>
+</li>
 									<?php endforeach; ?>
 								</ul>
 							</div>
@@ -178,15 +175,12 @@ $placeholder_emails = array(
 								<div class="dropdown dropdown-top-flush" id="email-cc-dropdown-<?=$instance_id ?>" data-dropdown-width="100%">
 									<ul class="list-group list-group-interactive">
 										<?php foreach($placeholder_emails as $email): ?>
-											<li class="list-group-item">
 
-												<!-- 
-													@on click, appends email to value of the field. there should be no need for + and - button to be able to freeform type
-												-->
-												<a  href="#" class="dropdown-purger"
-													onclick="event.preventDefault()"
-												><?=$email ?></a>
-
+											<!-- 
+												@on click, appends email to value of the field. there should be no need for + and - button to be able to freeform type
+											-->
+											<li class="list-group-item dropdown-purger">
+												<?=$email ?>
 											</li>
 										<?php endforeach; ?>
 									</ul>
@@ -216,16 +210,13 @@ $placeholder_emails = array(
 								<div class="dropdown dropdown-top-flush" id="email-bcc-dropdown-<?=$instance_id ?>" data-dropdown-width="100%">
 									<ul class="list-group list-group-interactive">
 										<?php foreach($placeholder_emails as $email): ?>
-											<li class="list-group-item">
 
-												<!-- 
-													@on click, appends email to value of the field. there should be no need for + and - button to be able to freeform type
-												-->
-												<a  href="#" class="dropdown-purger"
-													onclick="event.preventDefault()"
-												><?=$email ?></a>
-
-											</li>
+<!-- 
+	@on click, appends email to value of the field. there should be no need for + and - button to be able to freeform type
+-->
+<li class="list-group-item dropdown-purger">
+	<?=$email ?>
+</li>
 										<?php endforeach; ?>
 									</ul>
 								</div>
