@@ -546,6 +546,8 @@ function app_init_content(){
 				case 'sales-tracking':
 				case 'tasks':
 				case 'sequences':
+				case 'lead-outcomes':
+				case 'lead-analytics':
 				case 'contacts':
 				case 'calendar':
 				case 'leads':

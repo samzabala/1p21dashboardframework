@@ -285,6 +285,12 @@ html,body {
 }
 
 .outreach {
+	&-mobile-scroll-x {
+		@include on-breakpoint(mobile) {
+			overflow-x: scroll;
+			max-width: 100%;
+		}
+	}
 	&-attachment-item {
 		&-grid#{&} {
 			display: grid;
