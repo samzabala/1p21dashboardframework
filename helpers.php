@@ -558,6 +558,9 @@ function app_init_content(){
 				case '500':
 				case 'templates':
 				case 'settings':
+				case 'prospect-lists':
+				case 'prospect-list-items':
+				case 'prospect-list-new':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
 					break;
