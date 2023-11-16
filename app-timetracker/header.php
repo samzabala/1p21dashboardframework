@@ -93,6 +93,10 @@
 					<!-- @if there are alerts -->
 						<?php app_get_component('components/alert-toast'); ?>
 						<?php app_get_component('components/alert-toast-side'); ?>
+
+
+					<!-- @if timer is running for too long -->
+						<?php app_get_component('components/modal-rogue-timer'); ?>
 						
 <?php endif; ?>
 					
