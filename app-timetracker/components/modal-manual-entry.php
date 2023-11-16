@@ -2,7 +2,7 @@
 	<h2 class="no-margin-top margin-small-bottom">Manual Time Entry</h2>
 	<p class="no-margin-y">Add your time entry below</p>
 	<div class="flex-grid flex-grid-fixed flex-grid-compact">
-		<div class="flex-col-xs-12 flex-col-md-4">
+		<div class="flex-col-xs-12 flex-col-md-6">
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 				<label for="manual-client" class="input-label font-weight-600">Client</label>
 				<input id="manual-client" placeholder="Enter Client Name" type="text" list="clients" class="input input-single-line" />
@@ -31,7 +31,7 @@
 				</datalist>
 			</div>
 		</div>
-		<div class="flex-col-xs-12 flex-col-md-4">
+		<div class="flex-col-xs-12 flex-col-md-6">
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 				<label for="manual-project" class="input-label font-weight-600">Project</label>
 				<input id="manual-project" type="text" placeholder="Enter Project Name" list="projects" class="input input-single-line" />
@@ -56,7 +56,27 @@
 				</datalist>
 			</div>
 		</div>
-		<div class="flex-col-xs-12 flex-col-md-4">
+		<div class="flex-col-xs-12 flex-col-md-6">
+			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
+				<label for="manual-category" class="input-label font-weight-600">Task Category</label>
+				<input id="manual-category" placeholder="Click Here to Enter Category" type="text" list="tasks" class="input input-single-line" />
+		
+				<datalist id="tasks">
+					<!-- @if has input value -->
+						<option data-value="REPLACEWithInputValue" ref="createNew">Create new Category `REPLACEWithInputValue`</option>
+
+					<!-- @loop option -->
+						<option data-value="REPLACEWithTaskName">REPLACEWithTaskName</option>
+								
+						<!-- @PLACEHOLDER. delete when ready -->
+							<option data-value="A Task">A Category</a></li>
+							<option data-value="Another Category">Another Category</a></li>
+							<option data-value="This other Category">This other Category</a></li>
+							<option data-value="Other Other Category">Other Other Category</a></li>
+				</datalist>
+			</div>
+		</div>
+		<div class="flex-col-xs-12 flex-col-md-6">
 			<div class="input-wrapper input-wrapper-vertical input-wrapper-block">
 				<label for="manual-tasks" class="input-label font-weight-600">Task</label>
 				<input id="manual-tasks" placeholder="Click Here to Enter Task Title" type="text" list="tasks" class="input input-single-line" />
