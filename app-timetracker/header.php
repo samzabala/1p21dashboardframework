@@ -91,8 +91,8 @@
 				<div class="container">
 
 					<!-- @if there are alerts -->
-						<?php app_get_component('components/alert-toast'); ?>
-						<?php app_get_component('components/alert-toast-side'); ?>
+						<?php // app_get_component('components/alert-toast'); ?>
+						<?php // app_get_component('components/alert-toast-side'); ?>
 
 
 					<!-- @if timer is running for too long -->
