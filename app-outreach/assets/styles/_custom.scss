@@ -633,6 +633,10 @@ form label.required:after
 
 .tag-outreach {
 	&-s {
+		&-closedandlost {
+			background-color: #333;
+			color: #7b4397;
+		}
 		&-ghosted {
 			background-color: #333;
 			color: #7b4397;
