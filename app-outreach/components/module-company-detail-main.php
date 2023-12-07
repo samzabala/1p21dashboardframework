@@ -68,7 +68,7 @@
 										</a></li>
 
 										<!-- @placeholder -->
-										<li><a href="#">Stage</a></li>
+										<li><a href="#">Outreach</a></li>
 										<li class="active"><a href="#">Pitched</a></li>
 										<li><a href="#">Proposal Sent</a></li>
 										<li><a href="#">Contract Sent</a></li>
