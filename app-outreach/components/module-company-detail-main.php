@@ -24,35 +24,73 @@
 								|
 								Business Type: <span class="REPLACE">Company Business Type</span>
 							</div>
+
+							<div class="margin-top">
+								<span class="color-neutral">Last Activity:</span> <strong>
+									<span class="REPLACE">June 12, 1898</span>
+								</strong>
+							</div>
 						</div>
-						<div class="flex-col-xs-12 flex-col-md-4 align-self-flex-end">
-							<div class="flex-grid flex-grid-compact flex-grid-no-gutter-y align-items-center">
-								<div class="flex-child flex-0-0">
-									<span class="btn btn-light btn-no-interaction btn-round btn-symbol btn-success-glassy">
-										<i class="symbol symbol-calendar"></i>
-									</span>
-								</div>
-								<div class="flex-child flex-1-1">
-									<small class="color-neutral">Last Completed</small>
-									<h4 class="no-margin">
-										<span class="REPLACE">April 4th, 2020</span>
-									</h4>
+						<div class="flex-col-xs-12 flex-col-md-4 align-self-flex-start flex-xs justify-content-flex-end align-items-center">
+							<span class="inline-flex-xs align-items-center position-relative">
+								<!-- hidden input fields here -->
+								<span class="margin-small-right">Stage:</span>
+									<!-- @NOTE
+										.tag
+										classes to add => task status tag
+											`tag-error` => Lead 
+											`tag-primary` => Client
+											`tag-accent` => Pitched
+											`tag-outreach-s-proposalsent` => Proposal Sent
+											`tag-outreach-s-contractsent` => Contract Sent
+											`tag-success` => Closed and Won
+											`tag-outreach-s-closedandlost` => Closed and Lost
+								
+									-->
+									<a data-toggle-dropdown href="#" class="tag tag-accent text-align-center no-border no-bottom padding-x">
+										<!-- @if has stage -->
+										<span class="REPLACE">Pitched</span>
+										<!-- @else -->
+										<!-- Select Stage -->
+									</a>
+									<div class="dropdown dropdown-right dropdown-top-flush">
+										<ul class="list-group list-group-interactive">
+
+										<!-- 
+											@LOOP li
+											@NOTE
+											li 
+												classes to add
+													`active` => when selected
+										-->
+										<li><a href="#">
+											<span class="REPLACE">Stage</span>
+										</a></li>
+
+										<!-- @placeholder -->
+										<li><a href="#">Stage</a></li>
+										<li class="active"><a href="#">Pitched</a></li>
+										<li><a href="#">Proposal Sent</a></li>
+										<li><a href="#">Contract Sent</a></li>
+										<li><a href="#">Closed and Won</a></li>
+										<li><a href="#">Closed and Lost</a></li>
+										</ul>
+									</div>
+							</span>
+
+							<div class="position-relative inline-flex-xs ">
+								<a data-toggle-dropdown class="btn btn-neutral-glassy btn-symbol margin-left ">
+									<span class="sr-only">Edit</span>
+									<i class="symbol symbol-kebab-horizontal"></i>
+								</a>
+								<div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="200px">
+									<ul class="list-group">
+										<li><a href="#mb-editor-company-details" data-toggle-modal-board>Edit</a></li>
+										<li><a href="#">Delete</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-
-                        <div class="position-absolute btn-symbol position-absolute offset-0-right offset-0-top">
-                            <a data-toggle-dropdown class="btn btn-neutral-glassy">
-                                <span class="sr-only">Edit</span>
-                                <i class="symbol symbol-kebab-horizontal"></i>
-                            </a>
-                            <div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="200px">
-                                <ul class="list-group">
-                                    <li><a href="#mb-editor-company-details" data-toggle-modal-board>Edit</a></li>
-                                    <li><a href="#">Delete</a></li>
-                                </ul>
-                            </div>
-                        </div>
 					</div>
 
 					<?php app_get_component('components/modal-board-form-company-details') ?>
@@ -104,7 +142,6 @@
 												<span class="btn btn-small text-leading-whole no-padding-y btn-symbol btn-success font-size-large">
 													<i class="symbol symbol-user-add"></i>
 												</span>
-												<span class="btn btn-default">Import emails via Hunter.io</span>
 											</a>
 											<div class="dropdown no-padding dropdown-top-flush dropdown-right" data-dropdown-width="100%" data-dropdown-max-height="20em">
 												<!-- @if has results -->
