@@ -859,12 +859,27 @@ $placeholder_members = array(
 									classes to add
 										'disabled' => if billing type is non-billable
 								-->
-								<div class="flex-col-xs-12 flex-col-sm-6
+								<div class="flex-col-xs-12 flex-col-sm-3
 									<?= $args['is_billable'] ? '' : 'disabled' ?> 
 								">
 
 									<label class="input-wrapper input-wrapper-vertical input-wrapper-block p">
 										<span class="input-label">Hourly Cost</span>
+										<div class="input-group input-group-horizontal input-block">
+											<span class="btn btn-no-interaction btn btn-default font-weight-400 padding-micro-right no-shadow">$</span>
+											<input class="input input-single-line input-block no-border-left padding-micro-left no-shadow" placeholder="00.00" step=".01" type="number"
+											<?= $args['has_data'] ? 'value="31"' : '' ?>
+											>
+										</div>
+									</label>
+
+								</div>
+								<div class="flex-col-xs-12 flex-col-sm-3
+									<?= $args['is_billable'] ? '' : 'disabled' ?> 
+								">
+
+									<label class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+										<span class="input-label">Total</span>
 										<div class="input-group input-group-horizontal input-block">
 											<span class="btn btn-no-interaction btn btn-default font-weight-400 padding-micro-right no-shadow">$</span>
 											<input class="input input-single-line input-block no-border-left padding-micro-left no-shadow" placeholder="00.00" step=".01" type="number"
