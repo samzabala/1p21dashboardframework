@@ -23,13 +23,9 @@
                     <a href="#REPLACE" class="card-client-domain text-wrap-ellipsis padding-right">
                         <span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
                     </a>
-                </div>
-                <div class="flex-grid flex-grid-compact justify-content-space-between">
-                    <div class="flex-child">
-                        <h6 class="no-margin">Last Activity Date:</h6>
-                    </div>
-                    <div class="flex-child">
-                        <p class="no-margin">
+                    <div class="padding-right">
+                        <h6 class="no-margin-bottom margin-small-top">Last Activity Date:</h6>
+                        <p class="no-margin-top">
                             <span class="REPLACE">4/20/69</span>
                         </p>
                     </div>
