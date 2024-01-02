@@ -17,10 +17,10 @@
                             <?php app_get_component('components/profile-image-micro') ?>
                         </a>
                     </div>
-                    <h5 class="card-client-name no-margin-y">
+                    <h5 class="card-client-name no-margin-y padding-right">
                         <span class="REPLACE">Wright & Co. Law Offices</span>
                     </h5>
-                    <a href="#REPLACE" class="card-client-domain text-wrap-ellipsis">
+                    <a href="#REPLACE" class="card-client-domain text-wrap-ellipsis padding-right">
                         <span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
                     </a>
                 </div>
