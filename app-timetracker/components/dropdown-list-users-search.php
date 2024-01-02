@@ -1,6 +1,12 @@
 <?php 
 //args. feel free to modify as needed
 $defs = array(
+	//@param id - string - id for data toggles to identify specific dropdown. useful for complex layouts
+	'id' => null,
+	
+	//@param id - string - css width for dropdown
+	'width' => 'max(100%,300px)',
+	
 	//@param list - array - list of data to search from
 	'list_users' => array(
 
@@ -20,7 +26,11 @@ $defs = array(
 
 $args = app_parse_args($data,$defs);
 ?>
-<div class="dropdown dropdown-top-flush dropdown-left no-padding" data-dropdown-width="max(100%,300px)" data-dropdown-max-height="400px">
+<div class="dropdown dropdown-top-flush dropdown-left no-padding" data-dropdown-width="<?= $args['width'] ?>" data-dropdown-max-height="400px"
+	<?php if($args['id']): ?>
+		id="<?= $args['id']; ?>"
+	<?php endif; ?>
+>
 	<div class="padding-small position-sticky background-theme z-index-1 offset-0-x offset-0-top">
 		<?php if($args['list_position']) : ?>
 			<select type="text" placeholder="<?= $args['position_placeholder']; ?>" class="font-size-normalize input input-select input-small input-block font-weight-600 margin-small-bottom">
