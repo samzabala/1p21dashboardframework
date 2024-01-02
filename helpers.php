@@ -547,7 +547,6 @@ function app_init_content(){
 				case 'tasks':
 				case 'sequences':
 				case 'lead-outcomes':
-				case 'lead-analytics':
 				case 'contacts':
 				case 'calendar':
 				case 'leads':
@@ -565,6 +564,11 @@ function app_init_content(){
 				case 'prospect-list-new':
 					app_get_template_part("app-{$app}/{$template_part}");
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/{$template_part}";
+					break;
+				case 'lead-analytics-new':
+				case 'lead-analytics':
+					app_get_template_part("app-{$app}/lead-analytics-new");
+					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "app-{$app}/lead-analytics-new";
 					break;
 
 
