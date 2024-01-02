@@ -1,3 +1,15 @@
+<?php
+//args. feel free to modify as needed
+$defs = array(
+	'has_data' => false,
+	'can_edit' => true,
+	'assignees' => 1,
+	'members' => 0,
+);
+
+$args = app_parse_args($data,$defs);
+?>
+
 <div class="module margin-large-top margin-bottom">
 	<div class="module-header module-header-break padding-top no-margin-bottom padding-bottom align-items-center">
 		<div class="flex-1-1 padding-right"> <!-- flex-xs -->
@@ -9,9 +21,26 @@
 					<!-- <span class="REPLACE">ace-attorney.com (PPC)</span> -->
 				
 			</form>
-			<?php app_get_component('components/detail-tags'); ?>
 		</div>
 		<div class="module-functions flex-0-0 flex-nowrap flex-xs align-items-center justyify-content-space-between">
+
+			<div class="module-function">
+				<!-- @if can edit -->
+				<?php if($args['can_edit']): ?>
+					<label class="input-toggle input-toggle-primary input-toggle-reverse margin-right text-nowrap">
+						<input type="checkbox" class="input"> 
+						<span class="input-label input-toggle-label font-weight-700">
+								Sync on Wrike
+						</span>
+					</label>
+				<?php else: ?>
+					<?php if($args['has_data']): ?>
+						<div class="input-label font-weight-700 text-nowrap">
+							<span class="REPLACE">Synced to Wrike</span>
+						</div>
+					<?php endif; ?>
+				<?php endif; ?>
+			</div>
 			<div class="module-function">
 				<div class="color-neutral text-nowrap">
 					Created on <span class="REPLACE">April 20, 1969</span>
@@ -34,7 +63,7 @@
 		</div>
 	</div>
 	<div class="module-content no-padding-x no-padding-bottom">
-		<?php app_get_component('components/detail-subheader'); ?>
+		<?php app_get_component('components/detail-subheader-new'); ?>
 		<form action="">
 			<textarea class="input input-multiple-line input-block" rows="25">REPLACE With TinyMCE</textarea>
 		</form>

@@ -6,14 +6,11 @@ $defs = array(
 	
 	//@param id - string - css width for dropdown
 	'width' => 'max(100%,300px)',
-
+	
 	//@param list - array - list of data to search from
 	'list' => array(
 
 	),
-	//@param search_placeholder - string - placeholder for search field
-	'search_placeholder' => 'Search...',
-
 	//@param allow_multiple - bool - can take multiple items or nah
 	'allow_multiple' => false
 );
@@ -25,15 +22,6 @@ $args = app_parse_args($data,$defs);
 		id="<?= $args['id']; ?>"
 	<?php endif; ?>
 >
-	<div class="padding-small position-sticky background-theme offset-0-x offset-0-top">
-		<div class="input-group input-block input-group-horizontal">
-			<input type="text" placeholder="<?= $args['search_placeholder']; ?>" class="font-size-normalize input input-single-line input-small input-block font-weight-600 no-border-right" />
-			<label for="" class="font-size-normalize btn btn-symbol btn-small btn-default">
-				<span class="sr-only">Search</span>
-				<i class="symbol symbol-search"></i>
-			</label>
-		</div>
-	</div>
 	<div class="list-group list-group-interactive
 		<?= 'list-group-toggle list-group-toggle-allow-no-active '.($args['allow_multiple'] ? 'list-group-toggle-multiple' : '');  //@PLACEHOLDER: DO NOT include this line of code, this is for demo purposes only ?>
 	">
