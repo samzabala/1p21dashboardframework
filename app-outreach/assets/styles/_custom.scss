@@ -604,6 +604,42 @@ html,body {
 			font-size: 1.2rem !important;
 		}
 	}
+	&-symbol-material {
+		height: 1em;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		flex: 0 0 auto;
+		width: max-content;
+		max-width: 100%; //prevent overflow
+		text-overflow: ellipsis;
+	
+	
+		:where(
+			img,
+			picture,
+			svg,
+			object
+		) {
+			max-height: 100%;
+			width: auto;
+			height: 100%;
+			flex: 1 1;
+			object-fit: contain;
+		}
+	}
+
+
+	&-heading-with-bar {
+		&::after {
+			content: "";
+			display: block;
+			width: 1.5rem;
+			height: .125rem;
+			background: var(--fw-color-primary);
+			margin-block: .75em;
+		}
+	}
 }
 
 .body-no-scroll {
