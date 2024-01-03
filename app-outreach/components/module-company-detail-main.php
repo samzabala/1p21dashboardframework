@@ -9,6 +9,7 @@
 		<!-- main -->
 			<div class="module module-expanded border-color-transparent">
 				<!-- Heading -->
+				
 					<div class="company-heading flex-grid flex-grid-compact position-relative">
 						<div class="flex-col-xs-12 flex-col-md-8">
 							<div>
@@ -16,7 +17,20 @@
 									<span class="REPLACE">Company Name</span>
 								</h1>
 								
-								<?php app_get_component('components/tag-clienttype') ?>
+
+
+								<div class="position-relative inline-flex-xs text-vertical-align-text-bottom">
+									<a data-toggle-dropdown class="btn btn-neutral-glassy btn-symbol margin-small-left ">
+										<span class="sr-only">Edit</span>
+										<i class="symbol symbol-kebab-horizontal"></i>
+									</a>
+									<div class="dropdown dropdown-top-flush dropdown-left" data-dropdown-width="200px">
+										<ul class="list-group">
+											<li><a href="#mb-editor-company-details" data-toggle-modal-board>Edit</a></li>
+											<li><a href="#">Delete</a></li>
+										</ul>
+									</div>
+								</div>
 							</div>
 
 							<div>
@@ -32,6 +46,39 @@
 							</div>
 						</div>
 						<div class="flex-col-xs-12 flex-col-md-4 align-self-flex-start flex-xs justify-content-flex-end align-items-center">
+
+							<span class="inline-flex-xs align-items-center position-relative margin-large-right">
+								<span class="margin-small-right">Status:</span>
+
+								<a data-toggle-dropdown href="#">
+									<?php app_get_component('components/tag-clienttype') ?>
+								</a>
+
+
+								<div class="dropdown dropdown-right dropdown-top-flush">
+									<ul class="list-group list-group-interactive">
+
+									<!-- 
+										@LOOP li
+										@NOTE
+										li 
+											classes to add
+												`active` => when selected
+									-->
+									<li><a href="#">
+										<span class="REPLACE">Stage</span>
+									</a></li>
+
+									<!-- @placeholder -->
+									<li><a href="#">Outreach</a></li>
+									<li class="active"><a href="#">Pitched</a></li>
+									<li><a href="#">Proposal Sent</a></li>
+									<li><a href="#">Contract Sent</a></li>
+									<li><a href="#">Closed and Won</a></li>
+									<li><a href="#">Closed and Lost</a></li>
+									</ul>
+								</div>
+							</span>
 							<span class="inline-flex-xs align-items-center position-relative">
 								<!-- hidden input fields here -->
 								<span class="margin-small-right">Stage:</span>
@@ -78,18 +125,6 @@
 									</div>
 							</span>
 
-							<div class="position-relative inline-flex-xs ">
-								<a data-toggle-dropdown class="btn btn-neutral-glassy btn-symbol margin-left ">
-									<span class="sr-only">Edit</span>
-									<i class="symbol symbol-kebab-horizontal"></i>
-								</a>
-								<div class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="200px">
-									<ul class="list-group">
-										<li><a href="#mb-editor-company-details" data-toggle-modal-board>Edit</a></li>
-										<li><a href="#">Delete</a></li>
-									</ul>
-								</div>
-							</div>
 						</div>
 					</div>
 
