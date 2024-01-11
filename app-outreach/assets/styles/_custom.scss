@@ -371,6 +371,11 @@ html,body {
 
 	&-table {
 
+		.text-wrap-ellipsis {
+			max-width: 100%;
+			width: 12rem;
+		}
+
 
 		.contact {
 			//@TODO anticipated design tweaks
