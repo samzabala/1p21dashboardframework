@@ -539,6 +539,7 @@ function app_init_content(){
 					<?php
 					$GLOBALS['FWAPPS_CURR_TEMPLATE'] = "template design in progress. temporarily redirected";
 					break;
+				case 'anonymous-visitors':
 				case 'company-detail':
 				case 'contact-detail':
 				case 'sequence-detail':
