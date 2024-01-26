@@ -371,6 +371,11 @@ html,body {
 
 	&-table {
 
+		.text-wrap-ellipsis {
+			max-width: 100%;
+			width: 12rem;
+		}
+
 
 		.contact {
 			//@TODO anticipated design tweaks
@@ -602,6 +607,20 @@ html,body {
 	&-btn {
 		&-tracking {
 			font-size: 1.2rem !important;
+		}
+	}
+
+	&-favicon {
+		&-size {
+			&-32 {
+				width: 32px;
+			}
+			&-64 {
+				width: 64px;
+			}
+			&-128 {
+				width: 128px;
+			}
 		}
 	}
 }
