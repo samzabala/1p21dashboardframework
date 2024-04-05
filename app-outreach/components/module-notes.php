@@ -26,6 +26,13 @@ $args = app_parse_args($data,$defs);
 							'is_task' => false,
 							'is_pinned' => true
 						)) ?>
+				
+						<!-- @if a task type -->
+							<?php app_get_component('components/note-row','',false,array(
+								'is_sms' => true,
+								'is_pinned' => true
+							)) ?>
+					
 					<!-- @else if is an email sent -->
 						<?php app_get_component('components/note-row','',false,array(
 							'is_email_sent' => true,
@@ -46,6 +53,16 @@ $args = app_parse_args($data,$defs);
 						)) ?>
 
 				<!-- @loop .note-row NOT_PINNED -->
+				
+					<!-- @if sms -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_sms' => true
+						)) ?>
+				
+					<!-- @if sms -->
+						<?php app_get_component('components/note-row','',false,array(
+							'is_my_sms' => true,
+						)) ?>
 				
 					<!-- @if a task type -->
 						<?php app_get_component('components/note-row','',false,array(
