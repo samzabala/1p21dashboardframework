@@ -45,7 +45,7 @@
 	
 	
 			<!-- @if it's my message -->
-				<div class="flex-grid flex-grid-compact justify-content-flex-end">
+				<div class="flex-grid flex-grid-compact justify-content-flex-end margin-large-bottom">
 					<div class="flex-child flex-0-0">
 						<div class="outreach-sms-bubble outreach-sms-bubble-right radius-small background-primary color-background">
 							<span class="REPLACE">My text</span>
@@ -55,7 +55,7 @@
 				</div>
 	
 			<!-- @else -->
-				<div class="flex-grid flex-grid-compact justify-content-flex-start">
+				<div class="flex-grid flex-grid-compact justify-content-flex-start margin-large-bottom">
 					<div class="flex-child flex-0-0">
 						<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-theme-contrast">
 							<span class="REPLACE">Naruto's text</span>
@@ -66,6 +66,15 @@
 
 
 
+					<!-- @PLACEHOLDER. disregard -->
+						<div class="flex-grid flex-grid-compact justify-content-flex-start margin-large-bottom">
+							<div class="flex-child flex-0-0">
+								<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-theme-contrast">
+									<span class="REPLACE">Naruto's text</span>
+								</div>
+			
+							</div>
+						</div>
 	
 		</div>
 		<div class="position-sticky offset-x-0 offset-bottom-0">
