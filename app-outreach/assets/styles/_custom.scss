@@ -619,15 +619,15 @@ html,body {
 			&::before {
 				content: "";
 				background: inherit;
-				width: 2em;
-				height: 2em;
+				width: 1.5em;
+				height: 1em;
 				pointer-events: none;
 				position: absolute;
-				top: 100%;
+				top: 92%;
 			}
 	
 			&#{&}-right::before {
-				right: 1.5em;
+				right: .3em;
 				clip-path: polygon(
 					0 0,
 					100% 0,
@@ -636,7 +636,7 @@ html,body {
 			}
 	
 			&#{&}-left::before {
-				left: 1.5em;
+				left: .3em;
 				clip-path: polygon(
 					0 0,
 					100% 0,
