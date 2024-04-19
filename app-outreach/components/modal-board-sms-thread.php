@@ -45,13 +45,19 @@
 	
 	
 			<!-- @if it's my message -->
-				<div class="flex-grid flex-grid-compact justify-content-flex-end margin-large-bottom">
+				<div class="flex-grid flex-grid-compact justify-content-flex-start flex-direction-row-reverse margin-large-bottom">
 					<div class="flex-child flex-0-0">
 						<div class="outreach-sms-bubble outreach-sms-bubble-right radius-small background-primary color-background">
 							<span class="REPLACE">My text</span>
 						</div>
 	
 					</div>
+
+
+					<!-- @if error -->
+						<div class="flex-child flex-0-0 align-self-center text-align-right">
+									<span class="color-error">This message was not delivered.</span>
+							</div>
 				</div>
 	
 			<!-- @else -->
@@ -60,8 +66,14 @@
 						<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-theme-contrast">
 							<span class="REPLACE">Naruto's text</span>
 						</div>
-	
 					</div>
+
+
+					<!-- @if error -->
+						<div class="flex-child flex-0-0 align-self-center">
+							<span class="color-error">This message was not delivered.</span>
+						</div>
+
 				</div>
 
 
@@ -74,6 +86,13 @@
 								</div>
 			
 							</div>
+							
+
+							<!-- @if error -->
+								<div class="flex-child flex-0-0 align-self-center">
+									<span class="color-error">This message was not delivered.</span>
+								</div>
+
 						</div>
 	
 		</div>
