@@ -113,6 +113,7 @@
 			<li><a href="<?=app_create_link(array('template' => 'settings')) ?>">Settings</a></li>
 			<li><a href="<?=app_create_link(array('template' => 'sales-tracking')) ?>">Sales Tracking</a></li>
 			<li><a href="<?=app_create_link(array('template' => 'prospect-lists')) ?>">Prospect Lists</a></li>
+			<li><a href="<?=app_create_link(array('template' => 'text-messages')) ?>">Text Messages</a></li>
 			<li><a href="#">Logout</a></li>
 			<?php app_debug_li() ?>
 	</ul>
