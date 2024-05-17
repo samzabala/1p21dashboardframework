@@ -1,4 +1,12 @@
-<div class="modal modal-board modal-constricted" id="mb-editor-task">
+<?php 
+	$defs = array(
+		//@param info - string - id of instance
+		'id' => 'mb-editor-sms', //reminder,error,caution,success
+	);
+
+	$args = app_parse_args($data,$defs);
+?>
+<div class="modal modal-board modal-constricted" id="<?= $args['id'] ?>">
 	<div class="outreach-sms-conversation flex-xs flex-direction-column position-absolute offset-0">
 
 		<div class="background-theme-contrast padding-large">
@@ -47,7 +55,8 @@
 			<!-- @if it's my message -->
 				<div class="flex-grid flex-grid-compact justify-content-flex-start flex-direction-row-reverse margin-large-bottom">
 					<div class="flex-child flex-0-0">
-						<div class="outreach-sms-bubble outreach-sms-bubble-right radius-small background-primary color-background">
+						<div class="outreach-sms-bubble outreach-sms-bubble-right radius-small background-theme-contrast
+ background-theme-contrast">
 							<span class="REPLACE">My text</span>
 						</div>
 	
@@ -56,14 +65,14 @@
 
 					<!-- @if error -->
 						<div class="flex-child flex-0-0 align-self-center text-align-right">
-									<span class="color-error">This message was not delivered.</span>
-							</div>
+							<span class="color-error">This message was not delivered.</span>
+						</div>
 				</div>
 	
 			<!-- @else -->
 				<div class="flex-grid flex-grid-compact justify-content-flex-start margin-large-bottom">
 					<div class="flex-child flex-0-0">
-						<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-theme-contrast">
+						<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small  background-primary color-background">
 							<span class="REPLACE">Naruto's text</span>
 						</div>
 					</div>
@@ -81,7 +90,7 @@
 					<!-- @PLACEHOLDER. disregard -->
 						<div class="flex-grid flex-grid-compact justify-content-flex-start margin-large-bottom">
 							<div class="flex-child flex-0-0">
-								<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-theme-contrast">
+								<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small  background-primary color-background">
 									<span class="REPLACE">Naruto's text</span>
 								</div>
 			
