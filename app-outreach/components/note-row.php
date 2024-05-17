@@ -9,6 +9,8 @@ $defs = array(
 	//@param post - type of single achuchuchu
 	'is_pinned' => false, 
 	'is_task' => false,
+	'is_sms' => false,
+	'is_my_sms' => false,
 	'is_email_sent' => false,
 	'is_email_received' => false,
 	'has_attachments' => false,
@@ -85,6 +87,9 @@ $args = app_parse_args($data,$defs);
 				<?php if($args['is_task']): ?>
 					<?php app_get_component('components/note-row-task-header'); ?>
 				<?php endif; ?>
+				<?php if($args['is_sms'] || $args['is_my_sms']): ?>
+					<?php app_get_component('components/note-row-sms-header'); ?>
+				<?php endif; ?>
 				<?php if($args['is_email_sent']): ?>
 					<?php app_get_component('components/note-row-email-header-sent'); ?>
 				<?php endif; ?>
@@ -93,18 +98,38 @@ $args = app_parse_args($data,$defs);
 				<?php endif; ?>
 
 				
-				<div class="REPLACE">
-					<p>
-						Tagged users like <a class="highlight highlight-primary" href="<?=app_create_link(array('template'=>'profile'))?>">@Beyonce Knowles</a> will be links to profiles with the classes <code>highlight highlight-primary</code> 
-					</p>
-					<p>
-						Listen, Morty, I hate to break it to you, but what people call love is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it
-
-						<?php if($args['has_long_body']): ?>
-							<span>&hellip;</span>
-						<?php endif; ?>
-					</p>
-				</div>
+				<?php if($args['is_sms']): ?>
+					<div class="flex-grid flex-grid-compact justify-content-flex-start">
+						<div class="flex-child flex-0-0">
+							<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-theme-contrast">
+								<span class="REPLACE">I will become hokage</span>
+							</div>
+		
+						</div>
+					</div>
+				<?php elseif($args['is_my_sms']): ?>
+					<div class="flex-grid flex-grid-compact justify-content-flex-start">
+						<div class="flex-child flex-0-0">
+							<div class="outreach-sms-bubble outreach-sms-bubble-left radius-small background-primary color-background">
+								<span class="REPLACE">My text</span>
+							</div>
+		
+						</div>
+					</div>
+				<?php else: ?>
+					<div class="REPLACE">
+						<p>
+							Tagged users like <a class="highlight highlight-primary" href="<?=app_create_link(array('template'=>'profile'))?>">@Beyonce Knowles</a> will be links to profiles with the classes <code>highlight highlight-primary</code> 
+						</p>
+						<p>
+							Listen, Morty, I hate to break it to you, but what people call love is just a chemical reaction that compels animals to breed. It hits hard, Morty, then it slowly fades, leaving you stranded in a failing marriage. I did it. Your parents are gonna do it
+	
+							<?php if($args['has_long_body']): ?>
+								<span>&hellip;</span>
+							<?php endif; ?>
+						</p>
+					</div>
+				<?php endif; ?>
 
 
 				<?php if($args['has_long_body']): ?>
@@ -117,6 +142,9 @@ $args = app_parse_args($data,$defs);
 
 				<?php if($args['is_task']): ?>
 					<?php app_get_component('components/note-row-task-footer'); ?>
+				<?php endif; ?>
+				<?php if($args['is_sms'] || $args['is_my_sms']): ?>
+					<?php app_get_component('components/note-row-sms-footer'); ?>
 				<?php endif; ?>
 				<?php if($args['is_email_sent']): ?>
 					<!-- none :3 -->

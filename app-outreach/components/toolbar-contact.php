@@ -6,7 +6,6 @@ Tooltip from framework/src/js/imports/tooltip
 -->
 <div class="toolbar-block justify-content-space-evenly toolbar toolbar-horizontal toolbar-small margin-auto-x border-color-transparent">
 	<!-- @if sequences can be made -->
-
 		<div
 			class="toolbar-tile"
 		>
@@ -22,6 +21,28 @@ Tooltip from framework/src/js/imports/tooltip
 				<i class="symbol symbol-sync-alt"></i>
 			</a>
 		</div>
+
+	<!-- @if casn sms -->
+	<div
+			class="toolbar-tile"
+		>
+			<a
+				data-toggle-tooltip-hover
+				data-tooltip-inverse="true"
+				data-tooltip-size="small"
+				data-tooltip-content="<span class='text-transform-uppercase font-weight-700'>SMS</span>"
+				data-tooltip-center-x="true"
+				data-tooltip-placement="top"
+				href="sms:+1REPLACE" data-toggle-modal-board
+				class="utility-sequence btn outreach-btn-toolbarsms btn-symbol btn-large">
+				<i class="symbol margin-small-bottom-negate">
+					<!-- @NOTE: needs svg markup itself to show correct color -->
+					<?php app_get_component('components/icon-toolbar-sms'); ?>
+				</i>
+			</a>
+			<?php app_get_component('components/modal-board-sms-thread') ?>
+		</div>
+		
 	<!-- @if email is available -->
 		<div
 			class="toolbar-tile"

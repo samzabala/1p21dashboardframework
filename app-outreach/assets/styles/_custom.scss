@@ -604,9 +604,63 @@ html,body {
 		flex: 1 1;
 	}
 
+	&-sms {
+		&-conversation {
+
+			@at-root .modal-ui-popup-content:has(#{&} ) {
+				position: static !important;
+			}
+		}
+		&-bubble {
+
+			padding: 1.5em;
+			position: relative;
+	
+			&::before {
+				content: "";
+				background: inherit;
+				width: 1.5em;
+				height: 1em;
+				pointer-events: none;
+				position: absolute;
+				top: 92%;
+			}
+	
+			&#{&}-right::before {
+				right: .3em;
+				clip-path: polygon(
+					0 0,
+					100% 0,
+					100% 100%
+				)
+			}
+	
+			&#{&}-left::before {
+				left: .3em;
+				clip-path: polygon(
+					0 0,
+					100% 0,
+					0% 100%
+				)
+			}
+		}
+	}
+
 	&-btn {
 		&-tracking {
 			font-size: 1.2rem !important;
+		}
+
+		&-toolbarsms {
+			border-color: transparent;
+			color: #18d172;
+			background: #15d07133;
+
+			&:is(:hover,:focus) {
+				background: #18d172;
+				color: white;
+			}
+
 		}
 	}
 
