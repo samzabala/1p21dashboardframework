@@ -559,6 +559,7 @@ function app_init_content(){
 				case '404':
 				case '500':
 				case 'templates':
+				case 'text-messages':
 				case 'settings':
 				case 'prospect-lists':
 				case 'prospect-list-items':
