@@ -111,8 +111,27 @@
 					<span class="input-label sr-only">Message</span>
 					<textarea name="" id="" rows="3" class="input input-multiple-line" placeholder="Type Message"></textarea>
 				</div>
-				<div class="margin-top text-align-right">
-					<button class="btn btn-primary"><i class="symbol symbol-paperplane"></i>Send Message</button>
+				<div class="flex-grid flex-grid-compact">
+					<div class="flex-col-6">
+						<label>
+							<span class="btn btn-primary-glassy">
+								<span class="outreach-symbol-material">
+									<?php app_get_component('components/icon-sms-attachment'); ?>
+								</span>
+								Attach Images
+							</span>
+							<span class="sr-only">
+								<input type="file" accept=".jpg, .jpeg, .png, .gif" multiple>
+							</span>
+						</label>
+					</div>
+					<div class="flex-col-6 text-align-right">
+
+						<button class="btn btn-primary" :disabled="reqInProgress">
+							<i class="symbol symbol-paperplane"></i>&nbsp;Send SMS
+						</button>
+
+					</div>
 				</div>
 			</form>
 		</div>
