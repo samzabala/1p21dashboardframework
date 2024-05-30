@@ -123,6 +123,11 @@
 							<span class="sr-only">
 								<input type="file" accept=".jpg, .jpeg, .png, .gif" multiple>
 							</span>
+
+							<!-- @if has files -->
+							<span class="btn color-base-alpha-6 color-primary-hover flex-0-1" v-if="images.length">
+								<span class="REPLACE">69 files attached</span>
+							</span>
 						</label>
 					</div>
 					<div class="flex-col-6 text-align-right">
