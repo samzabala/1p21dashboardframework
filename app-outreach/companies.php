@@ -85,6 +85,10 @@
 					Name <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
 				</a>
 			</th>
+
+			<th class="text-nowrap">
+				Notes
+			</th>
 			<th class="text-nowrap">
 				Description
 			</th>
@@ -202,6 +206,31 @@
 						<span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
 					</div>
 				</a>
+			</td>
+			<td class="outreach-table-cell-columnwidth-400 text-vertical-align-middle">
+				<!-- @if can edit -->
+						<textarea name="" id="" rows="1" class="input input-blend input-block">Notes for this guy with input-blend</textarea>
+				<!-- @else -->
+					<!-- @note: commented out to keep front end pretty -->
+					
+					<!-- <span class="disabled">
+						<span class="REPLACE">Notes that cant be edited</span>
+					</span> -->
+
+
+				<!-- switch component variant -->
+					<!-- @note: commented out to keep front end pretty -->
+
+					<!-- <div class="switch">
+						<div class="switch-off" data-toggle-switch>
+							<span class="REPLACE">Notes with switch</span>
+						</div>
+						<div class="switch-on">
+							<form action="">
+								<textarea name="" id="" rows="1" class="input input-blend input-block">Notes with switch</textarea>
+							</form>
+						</div>
+					</div> -->
 			</td>
 			<td>
 				<p class="company-description no-margin-bottom">
@@ -339,6 +368,27 @@
 									<span class="REPLACE">ace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.comace-attorney.com</span>
 								</div>
 							</a>
+						</td>
+						<td class="outreach-table-cell-columnwidth-400 text-vertical-align-middle">
+							<?php if($i <= 1): ?>
+
+								<div class="switch">
+									<div class="switch-off" data-toggle-switch>
+										<span class="REPLACE">Notes with switch</span>
+									</div>
+									<div class="switch-on">
+										<form action="">
+											<textarea name="" id="" rows="1" class="input input-blend input-block">Notes with switch</textarea>
+										</form>
+									</div>
+								</div>
+							<?php elseif($i % 2 == 0): ?>
+									<textarea name="" id="" rows="1" class="input input-blend input-block">Notes for this guy with input-blend</textarea>
+							<?php else: ?>
+								<span class="disabled">
+									<span class="REPLACE">Notes that cant be edited</span>
+								</span>
+							<?php endif; ?>
 						</td>
 						<td>
 							<p class="company-description no-margin-bottom">
