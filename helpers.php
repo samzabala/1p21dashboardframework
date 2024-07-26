@@ -545,6 +545,7 @@ function app_init_content(){
 				case 'sequence-detail':
 				case 'sequence-members':
 				case 'sales-tracking':
+				case 'sales-rep-tracking':
 				case 'tasks':
 				case 'sequences':
 				case 'lead-outcomes':
