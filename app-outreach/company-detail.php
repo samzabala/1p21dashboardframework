@@ -26,6 +26,9 @@
 			
 			<!-- tags -->
 				<?php app_get_component('components/module-tags') ?>
+
+			<!-- email-widget -->
+				<?php app_get_component('components/module-email-widget') ?>
 		</div>
 	</div>
 </div>
