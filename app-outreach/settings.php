@@ -351,6 +351,172 @@
 						<?php } ?>
 			</table>
 
+		<!-- Timezone -->
+			<div class="flex-grid flex-grid-compact justify-content-space-between flex-grid-no-gutter-y align-items-flex-end">
+				<div class="flex-col-xs-12 flex-col-sm-6">
+					<h4 class="color-primary no-margin-bottom margin-large-top">Sequence Schedules</h4>
+				</div>
+			</div>
+
+			<h5 class="font-weight-700 color-neutral-dark no-margin-bottom margin-small-top">Days</h5>
+			<div class="flex-grid flex-grid-compact flex-grid-fixed margin-bottom">
+				<div class="flex-grid-col-xs-12 flex-col-sm-6 flex-col-md-3 flex-col-lg-2" >
+					<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+						<label class="input-label font-weight-400" for="secquence_start">From</label>
+						<select name="secquence_start" id="" class="input input-select">
+							<option value="12:00 AM">12:00 AM</option>
+							<option value="1:00 AM">1:00 AM</option>
+							<option value="2:00 AM">2:00 AM</option>
+							<option value="3:00 AM">3:00 AM</option>
+							<option value="4:00 AM">4:00 AM</option>
+							<option value="5:00 AM">5:00 AM</option>
+							<option value="6:00 AM">6:00 AM</option>
+							<option value="7:00 AM">7:00 AM</option>
+							<option value="8:00 AM">8:00 AM</option>
+							<option value="9:00 AM">9:00 AM</option>
+							<option value="10:00 AM">10:00 AM</option>
+							<option value="11:00 AM">11:00 AM</option>
+
+							<option value="12:00 PM">12:00 PM</option>
+							<option value="1:00 PM">1:00 PM</option>
+							<option value="2:00 PM">2:00 PM</option>
+							<option value="3:00 PM">3:00 PM</option>
+							<option value="4:00 PM">4:00 PM</option>
+							<option value="5:00 PM">5:00 PM</option>
+							<option value="6:00 PM">6:00 PM</option>
+							<option value="7:00 PM">7:00 PM</option>
+							<option value="8:00 PM">8:00 PM</option>
+							<option value="9:00 PM">9:00 PM</option>
+							<option value="10:00 PM">10:00 PM</option>
+							<option value="11:00 PM">11:00 PM</option>
+						</select>
+					</div>
+
+				</div>
+				<div class="flex-grid-col-xs-12 flex-col-sm-6 flex-col-md-3 flex-col-lg-2" >
+
+					<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+						<label class="input-label font-weight-400" for="secquence_end">To</label>
+						<select name="secquence_end" id="" class="input input-select">
+							<option value="12:00 AM">12:00 AM</option>
+							<option value="1:00 AM">1:00 AM</option>
+							<option value="2:00 AM">2:00 AM</option>
+							<option value="3:00 AM">3:00 AM</option>
+							<option value="4:00 AM">4:00 AM</option>
+							<option value="5:00 AM">5:00 AM</option>
+							<option value="6:00 AM">6:00 AM</option>
+							<option value="7:00 AM">7:00 AM</option>
+							<option value="8:00 AM">8:00 AM</option>
+							<option value="9:00 AM">9:00 AM</option>
+							<option value="10:00 AM">10:00 AM</option>
+							<option value="11:00 AM">11:00 AM</option>
+
+							<option value="12:00 PM">12:00 PM</option>
+							<option value="1:00 PM">1:00 PM</option>
+							<option value="2:00 PM">2:00 PM</option>
+							<option value="3:00 PM">3:00 PM</option>
+							<option value="4:00 PM">4:00 PM</option>
+							<option value="5:00 PM">5:00 PM</option>
+							<option value="6:00 PM">6:00 PM</option>
+							<option value="7:00 PM">7:00 PM</option>
+							<option value="8:00 PM">8:00 PM</option>
+							<option value="9:00 PM">9:00 PM</option>
+							<option value="10:00 PM">10:00 PM</option>
+							<option value="11:00 PM">11:00 PM</option>
+						</select>
+					</div>
+				</div>
+				<div class="flex-grid-col-xs-12 flex-col-md-6 flex-col-lg-5">
+
+					<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+						<label class="input-label font-weight-400" for="secquence_timezone">Timezone</label>
+						<select name="secquence_timezone" id="" class="input input-select">
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+							<option value="Timezone">Timezone</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+
+			<h5 class="font-weight-700 color-neutral-dark no-margin-bottom margin-small-top">Timing</h5>
+			<div class="flex-grid flex-grid-compact flex-grid-fixed">
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Monday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Monday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Tuesday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Wednesday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Thursday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Friday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Saturday
+					</label>
+				</div>
+				<div class="flex-child flex-0-0">
+					<label class="input-label font-weight-400">
+						<input type="checkbox" class="input-inline">
+						Sunday
+					</label>
+				</div>
+
+			</div>
+			
+
 		<!-- Notifications -->
 
 			<h4 class="color-primary no-margin-bottom margin-large-top">Notifications</h4>
