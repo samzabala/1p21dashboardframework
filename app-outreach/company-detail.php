@@ -24,6 +24,9 @@
 				)) ?>
 
 			
+			<!-- sequences -->
+				<?php app_get_component('components/module-sequences') ?>
+
 			<!-- tags -->
 				<?php app_get_component('components/module-tags') ?>
 
