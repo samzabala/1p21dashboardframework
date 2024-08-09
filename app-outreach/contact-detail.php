@@ -26,6 +26,8 @@
 					'has_social' => true,
 					'has_acct_owner' => true,
 				)) ?>
+			<!-- sequences -->
+				<?php app_get_component('components/module-sequences') ?>
 			</div>
 		</div>
 </div>
