@@ -4,7 +4,7 @@ Imports JS:
 Modal from framework/src/js/imports/modal
 
 -->
-<div class="modal modal-board" id="mb-editor-task" data-modal-title="Edit Task" data-modal-width="670px">
+<div class="modal modal-board" id="mb-editor-task" data-modal-title="Edit Task" data-modal-width="760px">
 	<form action="" class="flex-grid flex-grid-fixed">
 		<div class=" flex-col-xs-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
@@ -55,31 +55,7 @@ Modal from framework/src/js/imports/modal
 			</div>
 		</div>
 
-		<div class="flex-col-md-8 flex-col-xs-12">
-			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
-				<label for="task-schedule-date" class="input-label">Scheduled Date</label>
-				<a data-toggle-dropdown class="btn-group btn-block btn-group-horizontal btn-group-unite">
-					<div class="btn btn-default justify-content-flex-start">
-						<span class="REPLACE">Friday, April 20, 2069</span>
-					</div>
-					<div class="btn btn-symbol btn-default">
-						<i class="symbol symbol-calendar-alt"></i>
-					</div>
-				</a>
-				<div class="dropdown dropdown-top-flush dropdown-center-x no-padding" data-dropdown-width="100%">
-					<input type="text" name="task-schedule-date" class="input input-calendar" value="2069-04-20"/>
-				</div>
-			</div>
-		</div>
-
-		<div class="flex-col-md-4 flex-col-xs-12">
-			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-				<label for="task-schedule-time" class="input-label">Scheduled Time</label>
-				<input type="time" name="task-time" class="input input-single-line">
-			</div>
-		</div>
-
-		<div class="flex-col-md-5 flex-col-xs-12">
+		<div class="flex-col-md-6 flex-col-xs-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
 				<label for="task-due-date" class="input-label">Due Date</label>
 				<a data-toggle-dropdown class="btn-group btn-block btn-group-horizontal btn-group-unite">
@@ -103,7 +79,16 @@ Modal from framework/src/js/imports/modal
 			</div>
 		</div>
 
-		<div class="flex-col-md-4 flex-col-xs-12">
+		<div class="flex-col-md-3 flex-col-xs-12">
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+				<label for="task-duration" class="input-label">Duration</label>
+				<select class="input input-single-line" name="task-duration">
+					<option value="">Select duration</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="flex-col-md-8 flex-col-xs-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
 				<label for="task-asignee" class="input-label">Assignee</label>
 				<select type="text" name="task-asignee" class="input input-single-line">
@@ -120,6 +105,38 @@ Modal from framework/src/js/imports/modal
 			</div>
 		</div>
 
+		<div class="flex-col-md-4 flex-col-xs-12">
+		<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
+			<label for="task-bg-color" class="input-label required">Color</label>
+			<input type="color" name="task-bg-color" id="task-bg-color" class="input input-inline"
+				v-model="backgroundColor" :disabled="!editable" required>
+		</div>
+		</div>
+
+		<div class="flex-col-md-8 flex-col-xs-12">
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
+				<label for="task-schedule-date" class="input-label">Scheduled Date</label>
+				<a data-toggle-dropdown class="btn-group btn-block btn-group-horizontal btn-group-unite">
+					<div class="btn btn-default justify-content-flex-start">
+						<span class="REPLACE">Friday, April 20, 2069</span>
+					</div>
+					<div class="btn btn-symbol btn-default">
+						<i class="symbol symbol-calendar-alt"></i>
+					</div>
+				</a>
+				<div class="dropdown dropdown-top-flush dropdown-center-x no-padding" data-dropdown-width="100%">
+					<input type="text" name="task-schedule-date" class="input input-block input-calendar" value="2069-04-20"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-col-md-4 flex-col-xs-12">
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+				<label for="task-schedule-time" class="input-label">Scheduled Time</label>
+				<input type="time" name="task-time" class="input input-single-line">
+			</div>
+		</div>
+
 		<div class=" flex-col-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
 				<label for="task-note" class="input-label">Task Note</label>
@@ -128,6 +145,7 @@ Modal from framework/src/js/imports/modal
 				</textarea>
 			</div>
 		</div>
+
 		<div class=" flex-col-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
 				<label for="task-time" class="input-label">Add Attachments</label>
