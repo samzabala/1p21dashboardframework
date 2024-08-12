@@ -1,6 +1,6 @@
 <div class="module">
 	<div class="module-header">
-		<h3 class="module-title">Upcoming Events and Tasks</h3>
+		<h3 class="module-title">Sequence Subscriptions</h3>
 	</div>
 	<div class="module-content">
 	<!-- @if has squences -->
