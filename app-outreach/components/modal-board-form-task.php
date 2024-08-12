@@ -119,7 +119,7 @@ Modal from framework/src/js/imports/modal
 
 		<div class="flex-col-md-3 flex-col-xs-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-				<label for="task-category" class="input-label">Assignee</label>
+				<label for="task-category" class="input-label">Category</label>
 				<select type="text" name="task-category" class="input input-single-line">
 					<option value="">General</option>
 					<option value="">Emails</option>
