@@ -111,7 +111,7 @@
 						</div>
 					</div>
 
-					<div id="m-settings-mailbox-add-mailgun" class="modal modal-default" data-modal-width="360px" data-modal-title="Add Mailgun Mailbox">
+					<div id="m-settings-mailbox-add-mailgun" class="modal modal-default" data-modal-width="400px" data-modal-title="Add Virtual Mailbox">
 						<form action="">
 							<div class="flex-grid flex-grid-fixed no-margin-bottom">
 								<div class="flex-col-xs-12 flex-col-sm-6">
@@ -126,10 +126,25 @@
 										<input type="text" id="mailgun_last_name" class=" input input-single-line" placeholder="Last Name">
 									</div>
 								</div>
-								<div class="flex-col-xs-12">
+								<div class="flex-col-xs-6">
 									<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
-										<label class="input-label" for="mailgun_email">Email</label>
-										<input type="email" id="mailgun_email" class=" input input-single-line" placeholder="email@domain.com">
+										<label class="input-label" for="mailgun_email_name">Email Name</label>
+										<input type="text" id="mailgun_email_name" class=" input input-single-line" placeholder="email">
+									</div>
+								</div>
+								<div class="flex-child flex-0-0 align-self-flex-end no-margin-x">
+									<span class="input input-single-line background-transparent border-color-transparent">@</span>
+								</div>
+								<div class="flex-child flex-1-1 no-margin-x">
+									<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+										<label class="input-label" for="mailgun_email_name">Email Domain</label>
+										<select name="" id="mailgun_email_domain" class="input input-select">
+											<option value="gmail">gmail.com</option>
+											<option value="hotmail">hotmail.com</option>
+											<option value="yahoo">yahoo.com</option>
+											<option value="ymail">ymail.com</option>
+											<option value="other">other.com</option>
+										</select>
 									</div>
 								</div>
 								<div class="flex-col-xs-12">
