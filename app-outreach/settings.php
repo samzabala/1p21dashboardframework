@@ -103,10 +103,57 @@
 								<!-- @PLACEHOLDER. delete when ready -->
 									<li><a href="#" target="_blank">Office365</a></li>
 									<li><a href="#" target="_blank">Gmail</a></li>
-									<li><a href="#" target="_blank">Mailgun</a></li>
+									<li>
+										<a href="#m-settings-mailbox-add-mailgun" data-toggle-modal-default>Mailgun</a>
+									</li>
 									<li><a href="#m-settings-mailbox-add" data-toggle-modal-default-close>Cancel</a></li>
 							</ul>
 						</div>
+					</div>
+
+					<div id="m-settings-mailbox-add-mailgun" class="modal modal-default" data-modal-width="600px" data-modal-title="Add Virtual Mailbox">
+						<form action="">
+							<div class="flex-grid flex-grid-fixed no-margin-bottom">
+								<div class="flex-col-xs-12 flex-col-sm-6">
+									<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+										<label class="input-label" for="mailgun_first_name">First Name</label>
+										<input type="text"  id="mailgun_first_name" class=" input input-single-line" placeholder="First Name">
+									</div>
+								</div>
+								<div class="flex-col-xs-12 flex-col-sm-6">
+									<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+										<label class="input-label" for="mailgun_last_name">Last Name</label>
+										<input type="text" id="mailgun_last_name" class=" input input-single-line" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="flex-col-xs-6">
+									<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+										<label class="input-label" for="mailgun_email_name">Email Name</label>
+										<input type="text" id="mailgun_email_name" class=" input input-single-line" placeholder="email">
+									</div>
+								</div>
+								<div class="flex-child flex-0-0 align-self-flex-end no-margin-x">
+									<span class="input input-single-line background-transparent border-color-transparent">@</span>
+								</div>
+								<div class="flex-child flex-1-1 no-margin-x">
+									<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+										<label class="input-label" for="mailgun_email_name">Email Domain</label>
+										<select name="" id="mailgun_email_domain" class="input input-select">
+											<option value="gmail">gmail.com</option>
+											<option value="hotmail">hotmail.com</option>
+											<option value="yahoo">yahoo.com</option>
+											<option value="ymail">ymail.com</option>
+											<option value="other">other.com</option>
+										</select>
+									</div>
+								</div>
+								<div class="flex-col-xs-12">
+									<p class="no-margin-bottom margin-top">
+										<button type="submit" class="btn btn-block btn-primary">Submit</button>
+									</p>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
