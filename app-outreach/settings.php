@@ -111,7 +111,7 @@
 						</div>
 					</div>
 
-					<div id="m-settings-mailbox-add-mailgun" class="modal modal-default" data-modal-width="400px" data-modal-title="Add Virtual Mailbox">
+					<div id="m-settings-mailbox-add-mailgun" class="modal modal-default" data-modal-width="600px" data-modal-title="Add Virtual Mailbox">
 						<form action="">
 							<div class="flex-grid flex-grid-fixed no-margin-bottom">
 								<div class="flex-col-xs-12 flex-col-sm-6">
