@@ -88,7 +88,7 @@ Modal from framework/src/js/imports/modal
 			</div>
 		</div>
 
-		<div class="flex-col-md-8 flex-col-xs-12">
+		<div class="flex-col-md-3 flex-col-xs-12">
 			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
 				<label for="task-asignee" class="input-label">Assignee</label>
 				<select type="text" name="task-asignee" class="input input-single-line">
@@ -105,7 +105,32 @@ Modal from framework/src/js/imports/modal
 			</div>
 		</div>
 
-		<div class="flex-col-md-4 flex-col-xs-12">
+		<div class="flex-col-md-3 flex-col-xs-12">
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+				<label for="task-priority" class="input-label">Priority</label>
+				<select type="text" name="task-priority" class="input input-single-line">
+					<option value="">None</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="flex-col-md-3 flex-col-xs-12">
+			<div class="input-wrapper input-wrapper-block input-wrapper-vertical">
+				<label for="task-category" class="input-label">Category</label>
+				<select type="text" name="task-category" class="input input-single-line">
+					<option value="">General</option>
+					<option value="">Emails</option>
+					<option value="">Phone Calls</option>
+					<option value="">Price</option>
+					<option value="">Proposals</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="flex-col-md-3 flex-col-xs-12">
 		<div class="input-wrapper input-wrapper-block input-wrapper-vertical position-relative">
 			<label for="task-bg-color" class="input-label required">Color</label>
 			<input type="color" name="task-bg-color" id="task-bg-color" class="input input-inline"
