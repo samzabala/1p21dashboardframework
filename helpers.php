@@ -542,6 +542,7 @@ function app_init_content(){
 				case 'anonymous-visitors':
 				case 'company-detail':
 				case 'contact-detail':
+				case 'sequence-analytics':
 				case 'sequence-detail':
 				case 'sequence-members':
 				case 'sales-tracking':
