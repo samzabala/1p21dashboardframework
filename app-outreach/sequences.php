@@ -1,12 +1,32 @@
 
-<div id="outreach-sequences-heading" class="flex-grid justify-content-space-between align-items-center">
-	<div class="flex-col-12  flex-col-md-8">
+<div id="outreach-sequences-heading" class="flex-grid justify-content-space-between align-items-center margin-bottom">
+	<div class="flex-col-12 flex-col-md-8">
 		<h1 class="no-margin">
 			Sequences
 		</h1>
 	</div>
 	<div class="flex-col-12  flex-col-md-4 text-align-right">
+		<div class="module-functions">
 		<?php app_get_component('components/function-input-search') ?>
+		
+			<div class="module-function">
+				<a href="#" class="btn btn-primary-outline">
+					Upload in bulk&nbsp;<i class="symbol symbol-upload"></i>
+				</a>
+			</div>
+			
+			<div class="module-function">
+				
+				<a href="#" data-toggle-modal-default class="btn btn-primary">
+					Add new&nbsp;<i class="symbol symbol-plus"></i>
+				</a>
+				
+				<?php app_get_component('components/modal-form-sequence-addmember') ?>
+				</div>
+
+			</div>
+
+		</div>
 	</div>
 </div>
 
@@ -115,7 +135,6 @@
 				</td>
 				<td>
 					<a class="color-inherit" href="<?= app_create_link(array('template'=>'sequence-detail')) ?>">
-
 						<h5 class="company-name no-margin-y">
 							<span class="REPLACE">My very special sequence</span>
 						</h5>
