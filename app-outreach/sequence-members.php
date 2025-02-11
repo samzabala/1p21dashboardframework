@@ -142,7 +142,23 @@
 				</td>
 				<td class="text-nowrap">
 					<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Steps Completed</span>
-					<span class="color-neutral-lightest">
+					<!-- /* @NOTE
+						- Requires framework tooltip for hover tooltips to render
+							`import Tooltip from '../imports/tooltip'`;
+					*/ -->
+					<span class="color-neutral-lightest"
+						data-toggle-tooltip-hover
+						data-tooltip-width="min(100%,360px)"
+						data-tooltip-classes="padding-small"
+						data-tooltip-inverse="true"
+						data-tooltip-placement="bottom"
+						data-tooltip-content="
+							<h3 class='no-margin-top color-inherit'>Scheduled email</h3>
+							<p class='no-margin-bottom'>
+								This event will fire on <span class='REPLACE'>06/12/98</span> at <span class='REPLACE'>05:00PM</span>
+							</p>
+						"
+					>
 						<!-- @loop i: increment based on count($steps) -->
 						<!-- @NOTE:
 								classes to add:
@@ -230,7 +246,19 @@
 							</td>
 							<td class="text-nowrap">
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Steps Completed</span>
-								<span class="color-neutral-lightest">
+								<span class="color-neutral-lightest"
+									data-toggle-tooltip-hover
+									data-tooltip-width="min(100%,360px)"
+									data-tooltip-classes="padding-small"
+									data-tooltip-inverse="true"
+									data-tooltip-placement="bottom"
+									data-tooltip-content="
+										<h3 class='no-margin-top color-inherit'>Scheduled email</h3>
+										<p class='no-margin-bottom'>
+											This event will fire on <span class='REPLACE'>06/12/98</span> at <span class='REPLACE'>05:00PM</span>
+										</p>
+									"
+								>
 									<!-- @loop i: increment based on count($steps) -->
 									<!-- @NOTE:
 											classes to add:
@@ -313,7 +341,19 @@
 							</td>
 							<td class="text-nowrap">
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Steps Completed</span>
-								<span class="color-neutral-lightest">
+								<span class="color-neutral-lightest"
+									data-toggle-tooltip-hover
+									data-tooltip-width="min(100%,360px)"
+									data-tooltip-classes="padding-small"
+									data-tooltip-inverse="true"
+									data-tooltip-placement="bottom"
+									data-tooltip-content="
+										<h3 class='no-margin-top color-inherit'>Scheduled email</h3>
+										<p class='no-margin-bottom'>
+											This event will fire on <span class='REPLACE'>06/12/98</span> at <span class='REPLACE'>05:00PM</span>
+										</p>
+									"
+								>
 									<!-- @loop i: increment based on count($steps) -->
 									<!-- @NOTE:
 											classes to add:
@@ -396,7 +436,19 @@
 							</td>
 							<td class="text-nowrap">
 								<span class="hide-nonmobile no-margin outreach-table-mobile-label h6 color-neutral">Steps Completed</span>
-								<span class="color-neutral-lightest">
+								<span class="color-neutral-lightest"
+									data-toggle-tooltip-hover
+									data-tooltip-width="min(100%,360px)"
+									data-tooltip-classes="padding-small"
+									data-tooltip-inverse="true"
+									data-tooltip-placement="bottom"
+									data-tooltip-content="
+										<h3 class='no-margin-top color-inherit'>Scheduled email</h3>
+										<p class='no-margin-bottom'>
+											This event will fire on <span class='REPLACE'>06/12/98</span> at <span class='REPLACE'>05:00PM</span>
+										</p>
+									"
+								>
 									<!-- @loop i: increment based on count($steps) -->
 									<!-- @NOTE:
 											classes to add:
