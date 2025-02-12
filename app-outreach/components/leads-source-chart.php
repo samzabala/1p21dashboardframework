@@ -66,7 +66,9 @@
 					// same throughought. DO NOT CHANGE
 						y: yData,
 						type: 'bar',
-						orientation: 'h'
+						orientation: 'h',
+						textposition: "outside",
+						texttemplate: "%{value}%",
 				},
 
 			// MQLS
@@ -78,7 +80,9 @@
 					// same throughought. DO NOT CHANGE
 						y: yData,
 						type: 'bar',
-						orientation: 'h'
+						orientation: 'h',
+						textposition: "outside",
+						texttemplate: "%{value}%",
 				},
 
 
@@ -91,7 +95,9 @@
 					// same throughought. DO NOT CHANGE
 						y: yData,
 						type: 'bar',
-						orientation: 'h'
+						orientation: 'h',
+						textposition: "outside",
+						texttemplate: "%{value}%",
 				},
 
 
@@ -104,7 +110,9 @@
 					// same throughought. DO NOT CHANGE
 						y: yData,
 						type: 'bar',
-						orientation: 'h'
+						orientation: 'h',
+						textposition: "outside",
+						texttemplate: "%{value}%",
 				},
 
 
@@ -126,7 +134,7 @@
 					margin: {
 						// autoexpand: true,
 						l: 90,
-						r: 0,
+						r: 20,
 						t: 0,
 						b: 90,
 						pad: 0,
@@ -147,12 +155,15 @@
 						showline: true,
 						zerolinewidth: 1,
 						zerolinecolor: '#000000',
+						fixedrange: true,
 					},
 					yaxis: {
 						ticks: 'outside',
 						zeroline: true,
 						zerolinewidth: 1,
 						zerolinecolor: '#000000',
+						categoryorder: "geometric mean ascending",
+						fixedrange: true,
 					}
 				},
 				
