@@ -77,25 +77,40 @@
 							Source
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
-							Leads
+							<a href="#" class="color-inherit text-decoration-none">
+								Leads <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
-							MQLs
+							<a href="#" class="color-inherit text-decoration-none">
+								MQLs <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
-							% MQLs
+							<a href="#" class="color-inherit text-decoration-none">
+								% MQLs <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
-							SQLs
+							<a href="#" class="color-inherit text-decoration-none">
+								SQLs <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
-							% SQLs
+							<a href="#" class="color-inherit text-decoration-none">
+								% SQLs <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
+							<a href="#" class="color-inherit text-decoration-none">
+								New Clients <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 							New Clients
 						</th>
 						<th class="text-nowrap text-align-center" width="50">
-							New Client %
+							<a href="#" class="color-inherit text-decoration-none">
+								New Clients % <i class="symbol symbol-caret-down symbol-caret-up-toggle"></i>
+							</a>
 						</th>
 						
 					</tr>
