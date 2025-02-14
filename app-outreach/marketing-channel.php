@@ -134,37 +134,40 @@
 									<!-- @loop tr -->
 										<tr>
 											<td class="border-color-neutral-dark">
-												<span class="REPLACE">Prospect</span>
+												<span class="REPLACE">Lead</span>
 											</td>
 											<td class="border-color-neutral-dark">
 												<input type="datetime-local" class="input input-blend">
 											</td>
 											<td class="border-color-neutral-dark">
-												<select name="" id="" class="input input-blend font-weight-700">
-													<option value="">Select a source...</option>
-													<!-- @PLACEHOLDER: Deltete when ready -->
-														<option value="">Alert</option>
-														<option value="">Andrew Lemperle</option>
-														<option value="">Bing</option>
-														<option value="">Bing Paid Ads</option>
-														<option value="">chatGPT</option>
-														<option value="">Client Referral</option>
-														<option value="">Clutch</option>
-														<option value="">Cold call</option>
-														<option value="">Competitor Referral</option>
-														<option value="">Facebook Ads</option>
-														<option value="">Facebook Organic</option>
-														<option value="">Facebook Paid Ads</option>
-														<option value="">Instagram Organic</option>
-														<option value="">Instagram Paid</option>
-														<option value="">Joel Dubois</option>
-														<option value="">LawRank</option>
-														<option value="">Lawyerist</option>
-														<option value="">Leedfeeder</option>
-														<option value="">Linkedin Organic</option>
-														<option value="">Linkedin Paid</option>
-														<option value="">Other stuff I can't remember at the moment</option>
-												</select>
+												<!-- @if source is a lead -->
+													<select name="" id="" class="input input-blend font-weight-700">
+														<option value="">Select a source...</option>
+														<!-- @PLACEHOLDER: Deltete when ready -->
+															<option value="">Alert</option>
+															<option value="">Andrew Lemperle</option>
+															<option value="">Bing</option>
+															<option value="">Bing Paid Ads</option>
+															<option value="">chatGPT</option>
+															<option value="">Client Referral</option>
+															<option value="">Clutch</option>
+															<option value="">Cold call</option>
+															<option value="">Competitor Referral</option>
+															<option value="">Facebook Ads</option>
+															<option value="">Facebook Organic</option>
+															<option value="">Facebook Paid Ads</option>
+															<option value="">Instagram Organic</option>
+															<option value="">Instagram Paid</option>
+															<option value="">Joel Dubois</option>
+															<option value="">LawRank</option>
+															<option value="">Lawyerist</option>
+															<option value="">Leedfeeder</option>
+															<option value="">Linkedin Organic</option>
+															<option value="">Linkedin Paid</option>
+															<option value="">Other stuff I can't remember at the moment</option>
+														</select>
+													<!-- @ else` -->
+														&nbsp;
 											</td>
 											<td class="border-color-neutral-dark">
 												<a href="#" class="color-error">Delete Status</a>
@@ -182,31 +185,7 @@
 															</td>
 															<td class="border-color-neutral-dark">
 															
-																<select name="" id="" class="input input-blend font-weight-700">
-																	<option value="">Select a source...</option>
-																	<!-- @PLACEHOLDER: Deltete when ready -->
-																		<option value="">Alert</option>
-																		<option value="">Andrew Lemperle</option>
-																		<option value="">Bing</option>
-																		<option value="">Bing Paid Ads</option>
-																		<option value="">chatGPT</option>
-																		<option value="">Client Referral</option>
-																		<option value="">Clutch</option>
-																		<option value="">Cold call</option>
-																		<option value="">Competitor Referral</option>
-																		<option value="">Facebook Ads</option>
-																		<option value="">Facebook Organic</option>
-																		<option value="">Facebook Paid Ads</option>
-																		<option value="">Instagram Organic</option>
-																		<option value="">Instagram Paid</option>
-																		<option value="">Joel Dubois</option>
-																		<option value="">LawRank</option>
-																		<option value="">Lawyerist</option>
-																		<option value="">Leedfeeder</option>
-																		<option value="">Linkedin Organic</option>
-																		<option value="">Linkedin Paid</option>
-																		<option value="">Other stuff I can't remember at the moment</option>
-																</select>
+																&nbsp;
 															</td>
 															<td class="border-color-neutral-dark">
 																<a href="#" class="color-error">Delete Status</a>
@@ -304,107 +283,87 @@
 										To edit status date, click date displayed and update
 									</p>
 									<form action="">
-										<table class="table-expanded border-width-thin border-style-solid border-color-neutral-dark border-width-thin">
-											<tr>
-												<th class="border-color-neutral-dark">
-													<span class="color-dark font-weight-700 h5 no-margin-y">Status</span>
-												</th>
-												<th class="border-color-neutral-dark">
-													<span class="color-dark font-weight-700 h5 no-margin-y">Date</span>
-												</th>
-												<th class="border-color-neutral-dark">
-													<span class="color-dark font-weight-700 h5 no-margin-y">Lead Source</span>
-												</th>
-												<th class="border-color-neutral-dark">
-													<span class="color-dark font-weight-700 h5 no-margin-y">Delete Status</span>
-												</th>
-											</tr>
-				
-				
-											<!-- @loop tr -->
-												<tr>
-													<td class="border-color-neutral-dark">
-														<span class="REPLACE">Prospect</span>
-													</td>
-													<td class="border-color-neutral-dark">
-														<input type="datetime-local" class="input input-blend">
-													</td>
-													<td class="border-color-neutral-dark">
-														<select name="" id="" class="input input-blend font-weight-700">
-															<option value="">Select a source...</option>
-															<!-- @PLACEHOLDER: Deltete when ready -->
-																<option value="">Alert</option>
-																<option value="">Andrew Lemperle</option>
-																<option value="">Bing</option>
-																<option value="">Bing Paid Ads</option>
-																<option value="">chatGPT</option>
-																<option value="">Client Referral</option>
-																<option value="">Clutch</option>
-																<option value="">Cold call</option>
-																<option value="">Competitor Referral</option>
-																<option value="">Facebook Ads</option>
-																<option value="">Facebook Organic</option>
-																<option value="">Facebook Paid Ads</option>
-																<option value="">Instagram Organic</option>
-																<option value="">Instagram Paid</option>
-																<option value="">Joel Dubois</option>
-																<option value="">LawRank</option>
-																<option value="">Lawyerist</option>
-																<option value="">Leedfeeder</option>
-																<option value="">Linkedin Organic</option>
-																<option value="">Linkedin Paid</option>
-																<option value="">Other stuff I can't remember at the moment</option>
+								<table class="table-expanded border-width-thin border-style-solid border-color-neutral-dark border-width-thin">
+									<tr>
+										<th class="border-color-neutral-dark">
+											<span class="color-dark font-weight-700 h5 no-margin-y">Status</span>
+										</th>
+										<th class="border-color-neutral-dark">
+											<span class="color-dark font-weight-700 h5 no-margin-y">Date</span>
+										</th>
+										<th class="border-color-neutral-dark">
+											<span class="color-dark font-weight-700 h5 no-margin-y">Lead Source</span>
+										</th>
+										<th class="border-color-neutral-dark">
+											<span class="color-dark font-weight-700 h5 no-margin-y">Delete Status</span>
+										</th>
+									</tr>
+		
+		
+									<!-- @loop tr -->
+										<tr>
+											<td class="border-color-neutral-dark">
+												<span class="REPLACE">Lead</span>
+											</td>
+											<td class="border-color-neutral-dark">
+												<input type="datetime-local" class="input input-blend">
+											</td>
+											<td class="border-color-neutral-dark">
+												<!-- @if source is a lead -->
+													<select name="" id="" class="input input-blend font-weight-700">
+														<option value="">Select a source...</option>
+														<!-- @PLACEHOLDER: Deltete when ready -->
+															<option value="">Alert</option>
+															<option value="">Andrew Lemperle</option>
+															<option value="">Bing</option>
+															<option value="">Bing Paid Ads</option>
+															<option value="">chatGPT</option>
+															<option value="">Client Referral</option>
+															<option value="">Clutch</option>
+															<option value="">Cold call</option>
+															<option value="">Competitor Referral</option>
+															<option value="">Facebook Ads</option>
+															<option value="">Facebook Organic</option>
+															<option value="">Facebook Paid Ads</option>
+															<option value="">Instagram Organic</option>
+															<option value="">Instagram Paid</option>
+															<option value="">Joel Dubois</option>
+															<option value="">LawRank</option>
+															<option value="">Lawyerist</option>
+															<option value="">Leedfeeder</option>
+															<option value="">Linkedin Organic</option>
+															<option value="">Linkedin Paid</option>
+															<option value="">Other stuff I can't remember at the moment</option>
 														</select>
-													</td>
-													<td class="border-color-neutral-dark">
-														<a href="#" class="color-error">Delete Status</a>
-													</td>
-												</tr>
+													<!-- @ else` -->
+														&nbsp;
+											</td>
+											<td class="border-color-neutral-dark">
+												<a href="#" class="color-error">Delete Status</a>
+											</td>
+										</tr>
 
-												<!-- @PLACEHOLDER: DELETE WHEN READY -->
-														<?php for($j=1; $j<=4; $j++){ ?>
-																<tr>
-																	<td class="border-color-neutral-dark">
-																		<span class="REPLACE">Prospect</span>
-																	</td>
-																	<td class="border-color-neutral-dark">
-																		<input type="datetime-local" class="input input-blend">
-																	</td>
-																	<td class="border-color-neutral-dark">
-																		<select name="" id="" class="input input-blend font-weight-700">
-																			<option value="">Select a source...</option>
-																			<!-- @PLACEHOLDER: Deltete when ready -->
-																				<option value="">Alert</option>
-																				<option value="">Andrew Lemperle</option>
-																				<option value="">Bing</option>
-																				<option value="">Bing Paid Ads</option>
-																				<option value="">chatGPT</option>
-																				<option value="">Client Referral</option>
-																				<option value="">Clutch</option>
-																				<option value="">Cold call</option>
-																				<option value="">Competitor Referral</option>
-																				<option value="">Facebook Ads</option>
-																				<option value="">Facebook Organic</option>
-																				<option value="">Facebook Paid Ads</option>
-																				<option value="">Instagram Organic</option>
-																				<option value="">Instagram Paid</option>
-																				<option value="">Joel Dubois</option>
-																				<option value="">LawRank</option>
-																				<option value="">Lawyerist</option>
-																				<option value="">Leedfeeder</option>
-																				<option value="">Linkedin Organic</option>
-																				<option value="">Linkedin Paid</option>
-																				<option value="">Other stuff I can't remember at the moment</option>
-																		</select>
-																	</td>
-																	<td class="border-color-neutral-dark">
-																		<a href="#" class="color-error">Delete Status</a>
-																	</td>
-																</tr>
-														
-														<?php } ?>
-										</table>
-									</form>
+										<!-- @PLACEHOLDER: DELETE WHEN READY -->
+												<?php for($j=1; $j<=4; $j++){ ?>
+														<tr>
+															<td class="border-color-neutral-dark">
+																<span class="REPLACE">Prospect</span>
+															</td>
+															<td class="border-color-neutral-dark">
+																<input type="datetime-local" class="input input-blend">
+															</td>
+															<td class="border-color-neutral-dark">
+															
+																&nbsp;
+															</td>
+															<td class="border-color-neutral-dark">
+																<a href="#" class="color-error">Delete Status</a>
+															</td>
+														</tr>
+												
+												<?php } ?>
+								</table>
+							</form>
 									
 								</div>
 							</div>
