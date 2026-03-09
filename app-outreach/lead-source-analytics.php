@@ -121,19 +121,22 @@
 								<span class="REPLACE">Organic</span>
 							</td>
 							<td class="text-align-center">
-								<span class="REPLACE">234</span>
+								<a href="#" class="color-inherit">
+									<span class="REPLACE">234</span>
+								</a>
 							</td>
 							<td class="text-align-center">
-								<span class="REPLACE">666</span>
+								<a href="#" class="color-inherit">
+									<span class="REPLACE">666</span>
+								</a>
 							</td>
 							<td class="text-align-center">
 								<span class="REPLACE">31%</span>
 							</td>
 							<td class="text-align-center">
-								<span class="REPLACE">666</span>
-							</td>
-							<td class="text-align-center">
-								<span class="REPLACE">69%</span>
+								<a href="#" class="color-inherit">
+									<span class="REPLACE">666</span>
+								</a>
 							</td>
 
 							<td class="text-align-center">
@@ -142,7 +145,9 @@
 									color-error if negative 
 								-->
 								<strong class="color-primary">
-									<span class="REPLACE">69</span>
+									<a class="color-inherit" href="<?= app_create_link(array('template' => 'lead-source-analytics')); ?>">
+										<span class="REPLACE">69</span>
+									</a>
 								</strong>
 							</td>
 
@@ -167,16 +172,22 @@
 										<span class="REPLACE">Organic</span>
 									</td>
 									<td class="text-align-center">
-										<span class="REPLACE">234</span>
+										<a href="#" class="color-inherit">
+											<span class="REPLACE">234</span>
+										</a>
 									</td>
 									<td class="text-align-center">
-										<span class="REPLACE">666</span>
+										<a href="#" class="color-inherit">
+											<span class="REPLACE">666</span>
+										</a>
 									</td>
 									<td class="text-align-center">
 										<span class="REPLACE">31%</span>
 									</td>
 									<td class="text-align-center">
-										<span class="REPLACE">666</span>
+										<a href="#" class="color-inherit">
+											<span class="REPLACE">666</span>
+										</a>
 									</td>
 									<td class="text-align-center">
 										<span class="REPLACE">69%</span>
@@ -188,7 +199,9 @@
 											color-error if negative 
 										-->
 										<strong class="color-primary">
-											<span class="REPLACE">69</span>
+											<a class="color-inherit" href="<?= app_create_link(array('template' => 'lead-source-analytics')); ?>">
+												<span class="REPLACE">69</span>
+											</a>
 										</strong>
 									</td>
 

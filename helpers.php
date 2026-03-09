@@ -559,6 +559,7 @@ function app_init_content(){
 				case 'login':
 				case 'login-reset':
 				case 'login-forgot':
+				case 'marketing-channel':
 				case '404':
 				case '500':
 				case 'templates':
