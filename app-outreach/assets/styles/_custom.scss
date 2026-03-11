@@ -302,14 +302,14 @@ html,body {
 			&-details {
 				min-width: 0;
 			}
-	
+
 			&-thumbnail {
 				justify-self: center;
 
 				&-img {
 					width:64px;
 				}
-	
+
 				&-icon {
 					width: 28px;
 					display: block;
@@ -326,6 +326,17 @@ html,body {
 			&-company {
 				background-color: $brand-color-primary;
 				color: $brand-color-background;
+			}
+
+
+			&-sequence-completed.tag {
+				color: #3f3f3f !important;
+				background: #eeeeee !important;
+
+			}
+			&-sequence-active.tag {
+				color: #10d884 !important;
+				background: #eeeeee !important;
 			}
 		}
 	}
@@ -615,7 +626,7 @@ html,body {
 
 			padding: 1.5em;
 			position: relative;
-	
+
 			&::before {
 				content: "";
 				background: inherit;
@@ -625,7 +636,7 @@ html,body {
 				position: absolute;
 				top: 92%;
 			}
-	
+
 			&#{&}-right::before {
 				right: .3em;
 				clip-path: polygon(
@@ -634,7 +645,7 @@ html,body {
 					100% 100%
 				)
 			}
-	
+
 			&#{&}-left::before {
 				left: .3em;
 				clip-path: polygon(
@@ -662,6 +673,16 @@ html,body {
 			}
 
 		}
+
+		&-sequence-completed.btn {
+			background: #3f3f3f;
+			color: $brand-color-background;
+
+		}
+		&-sequence-active.btn {
+			background: #10d884;
+			color: $brand-color-background;
+		}
 	}
 
 	&-symbol-material {
@@ -673,8 +694,8 @@ html,body {
 		width: max-content;
 		max-width: 100%; //prevent overflow
 		text-overflow: ellipsis;
-	
-	
+
+
 		:where(
 			img,
 			picture,
@@ -765,5 +786,33 @@ form label.required:after
 			background-color: #4e9cf4;
 			color: var(--fw-color-background);
 		}
+	}
+}
+
+.outreach-table.lead-analytics {
+	caption {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+}
+
+option, optgroup {
+	all: initial;
+	font: inherit;
+	display: block;
+}
+
+.note-content {
+	dl > dt {
+		font-weight: bold;
+	}
+}
+
+span {
+	&.mention, &[data-mce-mentions-id], &[data-mention-id] {
+		text-decoration: underline;
+		font-weight: bolder;
+		color: var(--fw-color-primary);
 	}
 }

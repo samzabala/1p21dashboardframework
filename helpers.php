@@ -556,6 +556,7 @@ function app_init_content(){
 				case 'leads':
 				case 'companies':
 				case 'kanban':
+				case 'lead-rotation':
 				case 'login':
 				case 'login-reset':
 				case 'login-forgot':
