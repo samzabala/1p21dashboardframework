@@ -98,11 +98,83 @@
         </div>
 
         <div class="flex-col-xs-12 flex-col-sm-4">
-            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p position-relative">
                 <label for="team-sale" class="input-label">Team sale</label>
-                <select name="team-sale" id="team-sale" class="input input-select">
-                    <option value="0">Select user</option>
-                </select>
+                <!-- @note hidden input here if needed -->
+                <input type="hidden">
+                <a href="#" class="input input-select text-decoration-none color-inherit" data-toggle-dropdown>
+                    <!-- @if has input -->
+                        <span class="REPLACE">Jinseok Kim</span>
+                    <!-- @else -->
+                        Select user
+                </a>
+                <ul class="dropdown dropdown-top-flush dropdown-right" data-dropdown-width="100%" data-dropdown-max-height="200px">
+                    <li>
+                        <label class="input-label">
+                            <input type="checkbox" name="team-sale" value="all_users" class="input input-inline">
+                            All Users
+                        </label>
+                    </li>
+
+
+                    <li>
+                        <label class="input-label">
+                            <input type="checkbox" name="team-sale" value="REPLACEWithUserValue" class="input input-inline">
+                            <span class="REPLACE">User Name</span>
+                        </label>
+                    </li>
+
+                    <!-- @PLACEHOLDER: modify as needed -->
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" name="team-sale" value="Kim Namjoon" class="input input-inline">
+                                Kim Namjoon
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" checked name="team-sale" value="Kim Seokjin" class="input input-inline">
+                                Kim Seokjin
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" name="team-sale" value="Min Yoongi" class="input input-inline">
+                                Min Yoongi
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" name="team-sale" value="Jung Hoseok" class="input input-inline">
+                                Jung Hoseok
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" name="team-sale" value="Park Jimin" class="input input-inline">
+                                Park Jimin
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" name="team-sale" value="Kim Taehyung" class="input input-inline">
+                                Kim Taehyung
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="input-label">
+                                <input type="checkbox" name="team-sale" value="Jeon Jungkook" class="input input-inline">
+                                Jeon Jungkook
+                            </label>
+                        </li>
+                        
+                </ul>
             </div>
         </div>
 
