@@ -2,8 +2,8 @@
     <div class="flex-grid flex-grid-fixed flex-grid-no-gutter-y">
         <div class="flex-col-xs-12">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-type" class="input-label">Product</label>
-                <select name="sales-product-type" id="sales-product-type" class="input input-select">
+                <label for="sales-product-id" class="input-label">Product</label>
+                <select name="sales-product-id" id="sales-product-id" class="input input-select">
                     <option value="">Select Product Type... </option>
 
                     <!-- @PLACEHOLDER: modify as needed -->
@@ -15,22 +15,22 @@
                 </select>
             </div>
         </div>
-        <div class="flex-col-xs-12 flex-col-sm-4">
+        <div class="flex-col-xs-12 flex-col-sm-3">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-amount" class="input-label">Dollar Amount</label>
-                <input type="text" name="sales-product-amount"  id="sales-product-amount" class="input input-single-line" placeholder="$XXXXX.XX" />
+                <label for="sales-dollar-amount" class="input-label">Dollar Amount</label>
+                <input type="text" name="sales-dollar-amount"  id="sales-dollar-amount" class="input input-single-line" placeholder="$XXXXX.XX" />
             </div>
         </div>
-        <div class="flex-col-xs-12 flex-col-sm-4">
+        <div class="flex-col-xs-12 flex-col-sm-3">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-percentage" class="input-label">Percentage</label>
-                <input type="text" name="sales-product-percentage"  id="sales-product-percentage" class="input input-single-line" placeholder="XX.XX%" />
+                <label for="sales-percentage" class="input-label">Percentage</label>
+                <input type="text" name="sales-percentage"  id="sales-percentage" class="input input-single-line" placeholder="XX.XX%" />
             </div>
         </div>
-        <div class="flex-col-xs-12 flex-col-sm-4">
+        <div class="flex-col-xs-12 flex-col-sm-3">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-recurrence" class="input-label">Recurrence</label>
-                <select name="sales-product-recurrence" id="sales-product-recurrence" class="input input-select">
+                <label for="sales-recurrence" class="input-label">Recurrence</label>
+                <select name="sales-recurrence" id="sales-recurrence" class="input input-select">
                     <option value="">Select Recurrence... </option>
 
                     <!-- @PLACEHOLDER: modify as needed -->
@@ -40,10 +40,18 @@
                 </select>
             </div>
         </div>
-        <div class="flex-col-xs-12 flex-col-sm-6">
+        <div class="flex-col-xs-12 flex-col-sm-3">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-salesrep" class="input-label">Sales Rep</label>
-                <select name="sales-product-salesrep" id="sales-product-salesrep" class="input input-select">
+                <label for="sale-instalments" class="input-label">Instalments</label>
+                <select name="sale-instalments" id="sale-instalments" class="input input-select">
+                <option value="">Select instalments</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex-col-xs-12 flex-col-sm-3">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+               <label for="sale-sales-rep-id" class="input-label">Sales rep</label>
+                <select name="sale-sales-rep-id" id="sale-sales-rep-id" class="input input-select">
                     <option value="" selected>Select Sales Rep... </option>
 
                     <!-- @PLACEHOLDER: modify as needed -->
@@ -62,34 +70,70 @@
         </div>
         <div class="flex-col-xs-12 flex-col-sm-3">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-sales-date" class="input-label">Sales Date</label>
-                
-                <input type="date" name="sales-product-sales-date"  id="sales-product-sales-date" class="input input-single-line" placeholder="mm/dd/yyyy" />
+                <label for="sale-date" class="input-label">Sale date</label>
+                <input type="date" name="sale-date" id="sale-date" class="input input-single-line" placeholder="mm/dd/yyyy">
             </div>
         </div>
         <div class="flex-col-xs-12 flex-col-sm-3">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-launch" class="input-label">Product Launch</label>
-                
-                <input type="date" name="sales-product-launch"  id="sales-product-launch" class="input input-single-line" placeholder="mm/dd/yyyy" />
+                <label for="sale-launch-date" class="input-label">Launch date</label>
+                <input type="date" name="sale-launch-date" id="sale-launch-date" class="input input-single-line" placeholder="mm/dd/yyyy" />
+            </div>
+        </div>
+        <div class="flex-col-xs-12 flex-col-sm-3">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+                <label for="sale-type" class="input-label">Sale type</label>
+                <select name="sale-type" id="sale-type" class="input input-select">
+                <option value="">Select type</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex-col-xs-12 flex-col-sm-4">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+                <label for="sold-by-sales-rep" class="input-label">Sold by sales rep</label>
+                <select name="sold-by-sales-rep" id="sold-by-sales-rep" class="input input-select" required>
+                    <option value="0">Select user</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex-col-xs-12 flex-col-sm-4">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+                <label for="team-sale" class="input-label">Team sale</label>
+                <select name="team-sale" id="team-sale" class="input input-select">
+                    <option value="0">Select user</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex-col-xs-12 flex-col-sm-4">
+            <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
+                <label for="sold-by-admin" class="input-label">Sold by admin</label>
+                <select name="sold-by-admin" id="sold-by-admin" class="input input-select">
+                    <option value="0">Select user</option>
+                </select>
             </div>
         </div>
         <div class="flex-col-xs-12">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label for="sales-product-launch" class="input-label">Notes</label>
-                
-                <textarea name="sales-product-notes"  id="sales-product-notes" class="input input-multiple-line" placeholder="mm/dd/yyyy" >Body note. will be replaced by tinymce</textarea>
+                <label for="sale-notes" class="input-label">Notes</label>
+                <textarea name="sale-notes" id="sale-notes" class="input input-multiple-line" >Body note. will be replaced by tinymce</textarea>
             </div>
         </div>
         <div class="flex-col-xs-12">
             <div class="input-wrapper input-wrapper-vertical input-wrapper-block p">
-                <label class="input-label">
-                    <input type="checkbox" name="sales-product-isActive"  id="sales-product-isActive" class="input input-inline" placeholder="mm/dd/yyyy" />
-                    <span>Is Active?</span>
+                <label for="sale-is-active" class="input-label">
+                    <input type="checkbox" name="sale-is-active" id="sale-is-active" class="input input-inline">
+                    <span>Is active?</span>
                 </label>
             </div>
         </div>
-        <div class="flex-col-xs-12">
+        <div class="flex-col-xs-6">
+            <a href="#" class="btn btn-link float-left color-error">
+                Delete
+            </a>
+        </div>
+        <div class="flex-col-xs-6">
             <div class="text-align-right">
                 <button class="btn btn-primary">Submit</button>
             </div>
